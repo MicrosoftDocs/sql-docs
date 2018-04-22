@@ -25,11 +25,11 @@ manager: "jhubbard"
  The number of commands in the distribution database that have not been delivered to the selected Subscriber. A command consists of one Transact-SQL data manipulation language (DML) statement or one data definition language (DDL) statement.  
   
  **Estimated time to apply these commands, based on past performance**  
- The estimated amount of time to deliver commands to the Subscriber. If this value is greater than the amount of time required to generate and apply a snapshot to the Subscriber, consider reinitializing the Subscriber. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+ The estimated amount of time to deliver commands to the Subscriber. If this value is greater than the amount of time required to generate and apply a snapshot to the Subscriber, consider reinitializing the Subscriber. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 ## See Also  
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   
- [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

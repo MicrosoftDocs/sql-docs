@@ -19,12 +19,12 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Automatically Generate a Set of Join Filters Between Merge Articles (SQL Server Management Studio)
-  Automatically generate a set of join filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+  Automatically generate a set of join filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
->  If you automatically generate a set of join filters in the **Publication Properties - \<Publication>** dialog box after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+>  If you automatically generate a set of join filters in the **Publication Properties - \<Publication>** dialog box after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
- Join filters can be created manually for a set of tables, or replication can generate the filters automatically based on the foreign key to primary key relationships defined on the tables. For more information about creating join filters manually, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
+ Join filters can be created manually for a set of tables, or replication can generate the filters automatically based on the foreign key to primary key relationships defined on the tables. For more information about creating join filters manually, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ### To automatically generate a set of join filters between merge articles  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
     3.  Specify filter options.  
   
-         Select the option that matches how data will be shared among Subscribers: **A row from this table will go to multiple subscriptions** or **A row from this table will go to only one subscription**. If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+         Select the option that matches how data will be shared among Subscribers: **A row from this table will go to multiple subscriptions** or **A row from this table will go to only one subscription**. If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
 1.  On the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>**, select a filter in the **Filtered Tables** pane, and then click **Delete**.  
   
 ## See Also  
- [Join Filters](../../../2014/relational-databases/replication/join-filters.md)   
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)  
+ [Join Filters](join-filters.md)   
+ [Parameterized Row Filters](parameterized-row-filters.md)  
   
   

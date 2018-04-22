@@ -41,6 +41,6 @@ manager: "jhubbard"
  [Lesson 1: Create and Apply an Off By Default Policy](lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
 ## See Also  
- [Administer Servers by Using Policy-Based Management](../../database-engine/administer-servers-by-using-policy-based-management.md)  
+ [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)  
   
   

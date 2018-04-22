@@ -18,15 +18,15 @@ manager: "jhubbard"
 # Distributor Properties
   This section provides information on properties for the Distributor and the distribution database:  
   
--   [Distributor Properties, General](../../../2014/relational-databases/replication/distributor-properties-general.md)  
+-   [Distributor Properties, General](distributor-properties-general.md)  
   
--   [Distributor Properties, Publishers](../../../2014/relational-databases/replication/distributor-properties-publishers.md)  
+-   [Distributor Properties, Publishers](distributor-properties-publishers.md)  
   
--   [Distribution Database Properties](../../../2014/relational-databases/replication/distribution-database-properties.md)  
+-   [Distribution Database Properties](distribution-database-properties.md)  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

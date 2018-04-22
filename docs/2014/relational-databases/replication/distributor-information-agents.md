@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  The agents that are available in the **Agents** tab for a Distributor in Distributor view include all the agents that are available in the **Agents** tab for a Publisher. However, the **Agents** tab for a Distributor in Distributor view also includes a Distributor Agent and a Merge Agent.  
   
- For more information about the Snapshot, Log Reader, and Queue Reader agents, and maintenance jobs, see [Publisher Information, Agents](../../../2014/relational-databases/replication/publisher-information-agents.md). Notice that when you are viewing agent information on the **Agents** tab for a Distributor, Publisher information is present for the Snapshot and Log Reader agents. However, in the **Agents** tab for a Distributor in Distributor view, you can also select **Distributor Agent** and **Merge Agent**.  
+ For more information about the Snapshot, Log Reader, and Queue Reader agents, and maintenance jobs, see [Publisher Information, Agents](publisher-information-agents.md). Notice that when you are viewing agent information on the **Agents** tab for a Distributor, Publisher information is present for the Snapshot and Log Reader agents. However, in the **Agents** tab for a Distributor in Distributor view, you can also select **Distributor Agent** and **Merge Agent**.  
   
 ## Options  
  The following sections describe the data that is displayed on this tab for the Distributor Agent and Merge Agent.  
@@ -140,9 +140,9 @@ manager: "jhubbard"
  The number of conflicts occurring at the Subscriber during the merge process.  
   
 ## See Also  
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-publication-agents.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

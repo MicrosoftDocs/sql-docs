@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  By default, transactional replication propagates changes to Subscribers through a set of stored procedures that are installed on each Subscriber. When an insert, update or delete occurs on a table at the Publisher, the operation is translated into a call to a stored procedure at the Subscriber. The stored procedure accepts parameters that map to the columns in the table, allowing those columns to be changed at the Subscriber.  
   
- To set the propagation method for data changes to transactional articles, see [Set the Propagation Method for Data Changes to Transactional Articles](../../../2014/relational-databases/replication/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
+ To set the propagation method for data changes to transactional articles, see [Set the Propagation Method for Data Changes to Transactional Articles](set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
   
 ## Default and custom stored procedures  
  The three procedures that replication creates by default for each table article are:  
@@ -54,9 +54,9 @@ manager: "jhubbard"
   
 -   In order to avoid conflicts with the transactions used by replication, explicit transactions should not be used in custom procedures.  
   
--   The schema at the Subscriber is typically identical to the schema at the Publisher, but can also be a subset of the Publisher schema if column filtering is used. However, if you need to transform the schema as the data is moved such that the schema on the Subscriber is not a subset of the schema on the Publisher, [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] is the recommended solution. For more information, see [SQL Server Integration Services](../../../2014/integration-services/sql-server-integration-services.md).  
+-   The schema at the Subscriber is typically identical to the schema at the Publisher, but can also be a subset of the Publisher schema if column filtering is used. However, if you need to transform the schema as the data is moved such that the schema on the Subscriber is not a subset of the schema on the Publisher, [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] is the recommended solution. For more information, see [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).  
   
--   If you make schema changes to a published table, the custom procedures must be regenerated. For more information, see [Regenerate Custom Transactional Procedures to Reflect Schema Changes](../../../2014/relational-databases/replication/regenerate-custom-transactional-procedures-to-reflect-schema-changes.md).  
+-   If you make schema changes to a published table, the custom procedures must be regenerated. For more information, see [Regenerate Custom Transactional Procedures to Reflect Schema Changes](regenerate-custom-transactional-procedures-to-reflect-schema-changes.md).  
   
 -   If you use a value greater than 1 for **-SubscriptionStreams** parameter of the Distribution Agent, you must ensure that updates to primary key columns are successful. For example:  
   
@@ -212,6 +212,6 @@ go
 ```  
   
 ## See Also  
- [Article Options for Transactional Replication](../../../2014/relational-databases/replication/article-options-for-transactional-replication.md)  
+ [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

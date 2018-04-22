@@ -57,7 +57,7 @@ manager: "jhubbard"
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## See Also  
- [Log Shipping Tables and Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)   
  [About Log Shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   

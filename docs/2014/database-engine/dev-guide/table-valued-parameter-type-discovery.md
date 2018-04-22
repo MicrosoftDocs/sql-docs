@@ -30,7 +30,7 @@ manager: "jhubbard"
  After the type name is known, to retrieve the individual column information the consumer must either call IOpenRowset::OpenRowsetor obtain the DBSCHEMA_TABLE_TYPE_COLUMNS rowset by specifying the table-valued parameter type name as the table name.  
   
 ## See Also  
- [Table-Valued Parameters &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-ole-db.md)   
- [Use Table-Valued Parameters &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-table-valued-parameters-ole-db.md)  
+ [Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Use Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

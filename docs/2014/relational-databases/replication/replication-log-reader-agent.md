@@ -99,7 +99,7 @@ manager: "jhubbard"
 |**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
   
- For more information, see [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md).  
+ For more information, see [Security Overview &#40;Replication&#41;](security-overview-replication.md).  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
  Specifies the path and file name for the extended events XML configuration file. The extended events configuration file allows you to configure sessions and enable events for tracking.  
@@ -126,7 +126,7 @@ manager: "jhubbard"
  Specifies the maximum number of statements grouped into a transaction as the Log Reader writes commands to the distribution database. Using this parameter allows the Log Reader Agent and Distribution Agent to divide large transactions (consisting of many commands) at the Publisher into several smaller transactions when applied at the Subscriber. Specifying this parameter can reduce contention at the Distributor and reduce latency between the Publisher and Subscriber. Because the original transaction is applied in smaller units, the Subscriber can access rows of a large logical Publisher transaction prior to the end of the original transaction, breaking strict transactional atomicity. The default is **0**, which preserves the transaction boundaries of the Publisher.  
   
 > [!NOTE]  
->  This parameter is ignored for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications. For more information, see the section "Configuring the Transaction Set Job" in [Performance Tuning for Oracle Publishers](../../../2014/relational-databases/replication/performance-tuning-for-oracle-publishers.md).  
+>  This parameter is ignored for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications. For more information, see the section "Configuring the Transaction Set Job" in [Performance Tuning for Oracle Publishers](performance-tuning-for-oracle-publishers.md).  
   
  **-MessageInterval** *message_interval*  
  Is the time interval used for history logging. A history event is logged when the **MessageInterval** value is reached after the last history event is logged.  
@@ -156,7 +156,7 @@ manager: "jhubbard"
  Is how often, in seconds, the log is queried for replicated transactions. The default is 5 seconds.  
   
  **-ProfileName** *profile_name*  
- Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+ Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
  Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
@@ -185,9 +185,9 @@ manager: "jhubbard"
 ## Remarks  
   
 > [!IMPORTANT]  
->  If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run under a local system account instead of under a domain user account (the default), the service can access only the local computer. If the Log Reader Agent that runs under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Log Reader Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. For information about changing security accounts, see [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
+>  If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run under a local system account instead of under a domain user account (the default), the service can access only the local computer. If the Log Reader Agent that runs under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Log Reader Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. For information about changing security accounts, see [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md).  
   
- To start the Log Reader Agent, execute **logread.exe** from the command prompt. For information, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
+ To start the Log Reader Agent, execute **logread.exe** from the command prompt. For information, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
   
 ## Change History  
   
@@ -196,6 +196,6 @@ manager: "jhubbard"
 |Added the **-ExtendedEventConfigFile** parameter.|  
   
 ## See Also  
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)  
+ [Replication Agent Administration](replication-agent-administration.md)  
   
   

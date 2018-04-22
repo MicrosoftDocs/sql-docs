@@ -38,7 +38,7 @@ manager: "jhubbard"
  Replication is not supported if you have registered any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances by IP address or by Fully Qualified Domain Name (FQDN). If you had any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances registered by IP address or by FQDN in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] when you configured replication, this error could be raised.  
   
 ## User Action  
- If the error message specifies a particular instance, configure the server as a Distributor. For more information, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md).  
+ If the error message specifies a particular instance, configure the server as a Distributor. For more information, see [Configure Distribution](configure-distribution.md).  
   
  If the message does not specify a particular instance ('null'), verify that the Distributor instance is registered properly. If the network name of the computer and the name of the SQL Server instance differ, either:  
   
@@ -59,9 +59,9 @@ manager: "jhubbard"
   
      After you execute the [sp_addserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) stored procedure, you must restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service for the change to @@SERVERNAME to take effect.  
   
-     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

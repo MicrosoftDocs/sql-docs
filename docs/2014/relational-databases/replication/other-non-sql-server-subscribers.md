@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Other Non-SQL Server Subscribers
-  For a list of non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)], see [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md). This topic includes information about requirements for ODBC drivers and OLE DB providers.  
+  For a list of non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)], see [Non-SQL Server Subscribers](non-sql-server-subscribers.md). This topic includes information about requirements for ODBC drivers and OLE DB providers.  
   
 ## ODBC Driver Requirements  
  The ODBC driver:  
@@ -112,6 +112,6 @@ manager: "jhubbard"
  For more information about the OLE DB provider, see the documentation supplied with your OLE DB provider.  
   
 ## See Also  
- [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md)  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
   
   

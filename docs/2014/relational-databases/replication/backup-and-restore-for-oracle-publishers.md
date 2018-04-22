@@ -29,11 +29,11 @@ manager: "jhubbard"
   
 -   If the Publisher or Distributor must be restored, reinitialize all subscriptions.  
   
--   To restore a Subscriber from a backup (without having to reinitialize subscriptions), the transactions delivered to the distribution database after the last subscription database backup was completed must still be available. The length of time transactions are available depends on distribution retention settings. For information on these settings, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+-   To restore a Subscriber from a backup (without having to reinitialize subscriptions), the transactions delivered to the distribution database after the last subscription database backup was completed must still be available. The length of time transactions are available depends on distribution retention settings. For information on these settings, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
 -   If the Publisher or Distributor becomes out of sync as the result of a database restore, the replication agents log error messages. At this point, you must drop and recreate all relevant publications and subscriptions:  
   
-    1.  Script the definition of the publications and subscriptions. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+    1.  Script the definition of the publications and subscriptions. For more information, see [Scripting Replication](scripting-replication.md).  
   
          If the definition of the publications has changed between the versions of the Publisher and Distributor states, you will need to modify the scripts.  
   
@@ -44,8 +44,8 @@ manager: "jhubbard"
      If the Publisher must be dropped and reconfigured, drop the **MSSQLSERVERDISTRIBUTOR** public synonym and the configured Oracle replication user with the **CASCADE** option to remove all replication objects from the Oracle Publisher.  
   
 ## See Also  
- [Back Up and Restore Replicated Databases](../../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md)   
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)  
+ [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md)   
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   The replication topologies and how they align with the types of replication.  
   
- If you are new to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication, see [Types of Replication](../../../../2014/relational-databases/replication/types-of-replication.md).  
+ If you are new to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication, see [Types of Replication](../types-of-replication.md).  
   
 ## Defining Application Functionality  
  Once the replication topology has been defined, you should decide on the functionalities that your application will offer. These functionalities can range from a script that synchronizes a subscription to an application with a user interface to configure replication. Replication supports the following general programming tasks:  
@@ -80,9 +80,9 @@ manager: "jhubbard"
   
  The following topics provide information on security:  
   
--   [Security and Protection &#40;Replication&#41;](../../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+-   [Security and Protection &#40;Replication&#41;](../security-and-protection-replication.md)  
   
--   [Security Center for SQL Server Database Engine and Azure SQL Database](../../../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Security Center for SQL Server Database Engine and Azure SQL Database](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## Choosing a Development Environment  
  When developing a replication application, there are three basic development environments to consider. Each development environment has access to the same replication functionalities with some exceptions. Replication applications can be developed in each of the following environments.  
@@ -97,18 +97,18 @@ manager: "jhubbard"
   
 -   **Native code**  
   
-     Object-oriented development environment that utilizes direct access to the system or COM objects such that code is not managed by the CLR. Native code replication interfaces are deprecated or discontinued. For more information, see [Deprecated Features in SQL Server Replication](../../../../2014/relational-databases/replication/deprecated-features-in-sql-server-replication.md) or [Replication Backward Compatibility](../../../../2014/relational-databases/replication/replication-backward-compatibility.md).  
+     Object-oriented development environment that utilizes direct access to the system or COM objects such that code is not managed by the CLR. Native code replication interfaces are deprecated or discontinued. For more information, see [Deprecated Features in SQL Server Replication](../deprecated-features-in-sql-server-replication.md) or [Replication Backward Compatibility](../replication-backward-compatibility.md).  
   
 ## Choose the Appropriate Replication Programming Interface  
  The final planning step is choosing the appropriate replication programming interface that implements the desired replication functionality for the chosen development environment. The following table shows the replication programming interfaces available.  
   
 |Interface|Environment|Uses|  
 |---------------|-----------------|----------|  
-|[Replication Management Objects Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)|Managed code|Administration, monitoring, and synchronization.|  
+|[Replication Management Objects Concepts](replication-management-objects-concepts.md)|Managed code|Administration, monitoring, and synchronization.|  
 |<xref:Microsoft.SqlServer.Replication>|Managed code|Synchronization.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Managed code|Creation of business logic handlers to integrate custom logic with the merge synchronization process.|  
 |[Replication Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Scripting|Administration and monitoring.|  
-|[Replication Agent Executables Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)|Scripting|Synchronization.|  
+|[Replication Agent Executables Concepts](replication-agent-executables-concepts.md)|Scripting|Synchronization.|  
   
 ## Example  
  At [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)], data needs to be published for 200 sales representatives around the world. The sales representatives travel often and will need to use laptop computers or personal digital assistants (PDAs) to change customer data and add new orders. The changes will then need to be synchronized with the Publisher when the sales representative connects the laptop to the network.  
@@ -119,7 +119,7 @@ manager: "jhubbard"
   
 2.  In addition to the typical data access required for a sales application, this application should enable a salesperson to synchronize the pull subscription on demand by clicking a button. Since a sales representative will install and run the application, it also needs to be able to configure a subscription and apply the initial snapshot at the client. Optionally, the application will use the infrastructure provided by Windows for sensing wireless connectivity to automatically synchronize the subscription when a connection is detected.  
   
-3.  Follow all of the security guidelines for replication, including using Windows Authentication and a virtual private network (VPN) when connecting to the publisher. If implementing Web synchronization, use a secure sockets layer (SSL) connection. For more information, see [Configure Web Synchronization](../../../../2014/relational-databases/replication/configure-web-synchronization.md).  
+3.  Follow all of the security guidelines for replication, including using Windows Authentication and a virtual private network (VPN) when connecting to the publisher. If implementing Web synchronization, use a secure sockets layer (SSL) connection. For more information, see [Configure Web Synchronization](../configure-web-synchronization.md).  
   
 4.  In order to take advantage of the features of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], the application is developed using a managed code language.  
   

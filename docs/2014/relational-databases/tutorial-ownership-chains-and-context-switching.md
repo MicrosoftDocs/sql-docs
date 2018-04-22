@@ -22,7 +22,7 @@ manager: "jhubbard"
   This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  
->  To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](../database-engine/choose-an-authentication-mode.md).  
+>  To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](security/choose-an-authentication-mode.md).  
   
 ## Scenario  
  In this scenario, two users need accounts to access purchase order data stored in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The requirements are as follows:  
@@ -93,7 +93,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../../2014/database-engine/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../database-engine/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## 2. Create a Stored Procedure to Access Data  
  To switch context within a database, use the EXECUTE AS statement. EXECUTE AS requires IMPERSONATE permissions.  
@@ -320,6 +320,6 @@ GO
 ```  
   
 ## See Also  
- [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Security Center for SQL Server Database Engine and Azure SQL Database](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

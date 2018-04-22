@@ -28,10 +28,10 @@ manager: "jhubbard"
  Re-enter the password to confirm it was entered correctly.  
   
 ## See Also  
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)   
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
+ [Create a Publication](create-a-publication.md)   
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
   
   

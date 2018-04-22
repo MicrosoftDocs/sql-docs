@@ -62,7 +62,7 @@ manager: "jhubbard"
  For examples of typical **DTAXML** elements, see [XML Input File Samples &#40;DTA&#41;](../../2014/database-engine/xml-input-file-samples-dta.md).  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../2014/database-engine/xml-input-file-reference-database-engine-tuning-advisor.md)   
- [Start and Use the Database Engine Tuning Advisor](../../2014/database-engine/start-and-use-the-database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../relational-databases/performance/database-engine-tuning-advisor.md)   
+ [Start and Use the Database Engine Tuning Advisor](../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

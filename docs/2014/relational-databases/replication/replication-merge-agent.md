@@ -167,7 +167,7 @@ manager: "jhubbard"
 |**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
   
- For more information, see [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md).  
+ For more information, see [Security Overview &#40;Replication&#41;](security-overview-replication.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
@@ -181,7 +181,7 @@ manager: "jhubbard"
 |**2**|Agent should download data changes from the Publisher to the Subscriber.|  
 |**3** (default)|Agent should first upload data changes from the Subscriber to the Publisher and then download data changes from the Publisher to the Subscriber. You must use this option with Web synchronization.|  
   
- Download-only articles enable you to control the synchronization behavior of individual articles in a publication, and they can provide a performance benefit. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Download-only articles enable you to control the synchronization behavior of individual articles in a publication, and they can provide a performance benefit. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md).  
   
  If using `ExchangeType` to separate the upload and download phase of merge replication into separate sessions, you must run the merge agent with `ExchangeType` set to 1 first and then run the merge agent again with the value 2. Failure to run the merge agent with both parameters will cause metadata to be deleted and require you to reinitialize the subscription (without upload).  
   
@@ -291,7 +291,7 @@ manager: "jhubbard"
  Is how often, in seconds, the Publisher or Subscriber is queried for data changes. The default is 60 seconds.  
   
  **-ProfileName** *profile_name*  
- Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+ Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
  Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
@@ -374,7 +374,7 @@ manager: "jhubbard"
 |**3**|Rowcount and binary checksum validation.|  
   
 > [!NOTE]  
->  Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. For more information, see the section "Considerations for Data Validation" in [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md).  
+>  Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. For more information, see the section "Considerations for Data Validation" in [Validate Replicated Data](validate-replicated-data.md).  
   
  **-ValidateInterval** *validate_interval*  
  Is how often, in minutes, the subscription is validated in continuous mode. The default is **60** minutes.  
@@ -384,11 +384,11 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If you have installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run under a local system account rather than under a domain user account (the default), the service can access only the local computer. If the Merge Agent that runs under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Merge Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
- To start the Merge Agent, execute **replmerg.exe** from the command prompt. For information, see [Replication Agent Executables](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
+ To start the Merge Agent, execute **replmerg.exe** from the command prompt. For information, see [Replication Agent Executables](dev-guide/replication-agent-executables-concepts.md).  
   
  The merge agent history for the current session is not removed while running in continuous mode. A long running agent can result in a large number of entries in the merge history tables which could impact performance. To resolve this problem switch to scheduled mode, or continue to use continuous mode but create a dedicated job to periodically restart the merge agent, or reduce the verbosity of the history level to reduce the number of rows and therefor reduce the performance impact.  
   
 ## See Also  
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)  
+ [Replication Agent Administration](replication-agent-administration.md)  
   
   

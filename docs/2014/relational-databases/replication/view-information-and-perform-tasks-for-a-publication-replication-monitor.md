@@ -44,7 +44,7 @@ manager: "jhubbard"
   
      This tab allows you to measure latency, the amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber.  
   
- For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 ### To view information and perform tasks for a publication  
   
@@ -54,16 +54,16 @@ manager: "jhubbard"
   
 3.  To view information about subscriptions, click the **All Subscriptions** tab.  
   
-     To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+     To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
-4.  To view information about agents, click the **Agents** tab. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-publication-agents.md).  
+4.  To view information about agents, click the **Agents** tab. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
   
-5.  To view information about agent warnings and thresholds, click the **Warnings** tab. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md).  
+5.  To view information about agent warnings and thresholds, click the **Warnings** tab. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
-6.  To view information about tracer tokens, click the **Tracer Tokens** tab. For more information about how to use tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  To view information about tracer tokens, click the **Tracer Tokens** tab. For more information about how to use tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## See Also  
- [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

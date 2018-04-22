@@ -25,7 +25,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enhance Merge Replication Performance
-  After considering the general performance tips described in [Enhancing General Replication Performance](../../../2014/relational-databases/replication/enhance-general-replication-performance.md), consider these additional areas specific to merge replication.  
+  After considering the general performance tips described in [Enhancing General Replication Performance](enhance-general-replication-performance.md), consider these additional areas specific to merge replication.  
   
 ## Database Design  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
      Indexing all the columns used in join filters is also important. Each time the Merge Agent runs, it searches the base table to determine which rows in a parent table and which rows in related tables are included in a partition. Creating an index on the joined columns avoids having [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] read each row in the table every time the Merge Agent runs.  
   
-     For more information on filtering, see [Filter Published Data for Merge Replication](../../../2014/relational-databases/replication/filter-published-data-for-merge-replication.md).  
+     For more information on filtering, see [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md).  
   
 -   Consider overnormalizing tables that include Large Object (LOB) data types.  
   
@@ -49,29 +49,29 @@ manager: "jhubbard"
   
 -   Use appropriate publication retention settings.  
   
-     The publication retention period, which is the maximum amount of time before a subscription must be synchronized, determines how long tracking metadata is stored. A high value can affect storage and processing performance. For more information about setting the publication retention period, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+     The publication retention period, which is the maximum amount of time before a subscription must be synchronized, determines how long tracking metadata is stored. A high value can affect storage and processing performance. For more information about setting the publication retention period, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
--   Use download-only articles on those tables that are only changed at the Publisher. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md).  
+-   Use download-only articles on those tables that are only changed at the Publisher. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ### Filter Design and Use  
   
 -   Limit the complexity of row filter clauses.  
   
-     Limiting the complexity of the filtering criteria helps improve performance when the Merge Agent is evaluating row changes to send to Subscribers. Avoid using sub-selects within merge row filter clauses. Instead, consider using join filters, which are generally more efficient when used to partition data in one table based on the row filter clause in another table. For more information about filtering, see [Filter Published Data for Merge Replication](../../../2014/relational-databases/replication/filter-published-data-for-merge-replication.md).  
+     Limiting the complexity of the filtering criteria helps improve performance when the Merge Agent is evaluating row changes to send to Subscribers. Avoid using sub-selects within merge row filter clauses. Instead, consider using join filters, which are generally more efficient when used to partition data in one table based on the row filter clause in another table. For more information about filtering, see [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md).  
   
--   Use precomputed partitions with parameterized filters (this feature is used by default). For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../2014/relational-databases/replication/optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
+-   Use precomputed partitions with parameterized filters (this feature is used by default). For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
   
-     Precomputed partitions impose a number of limits on filtering behavior. If your application cannot adhere to these limitations, set the **keep_partition_changes** option to **True**, which provides a performance benefit. For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+     Precomputed partitions impose a number of limits on filtering behavior. If your application cannot adhere to these limitations, set the **keep_partition_changes** option to **True**, which provides a performance benefit. For more information, see [Parameterized Row Filters](parameterized-row-filters.md).  
   
 -   Use nonoverlapping partitions if data is filtered but not shared among users.  
   
-     Replication can optimize performance for data that is not shared between partitions or subscriptions. For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+     Replication can optimize performance for data that is not shared between partitions or subscriptions. For more information, see [Parameterized Row Filters](parameterized-row-filters.md).  
   
 -   Do not create complex join filter hierarchies.  
   
      Join filters with five or more tables can significantly impact performance during merge processing. We recommend that if you are generating join filters of five or more tables that you consider other solutions:  
   
-    -   Avoid filtering tables that are primarily lookup tables, smaller tables, and tables that are not subject to change. Make those tables part of the publication in their entirety. We recommend that you use join filters only between tables that must be partitioned among Subscribers. For more information, see [Join Filters](../../../2014/relational-databases/replication/join-filters.md).  
+    -   Avoid filtering tables that are primarily lookup tables, smaller tables, and tables that are not subject to change. Make those tables part of the publication in their entirety. We recommend that you use join filters only between tables that must be partitioned among Subscribers. For more information, see [Join Filters](join-filters.md).  
   
     -   Consider denormalizing the database design or using a mapping table if there are a large number of tables in a join. For example, if a sales person needs only the data for her customers, but it requires six joins to associate a customer with a sales person, consider adding a column to the customer table that identifies the sales person. The sales person data is redundant, but the costs of denormalizing the tables somewhat might be outweighed by the performance benefits for replication partitioning.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 -   Set the **join_unique_key** option to **1** if logic allows.  
   
-     Setting this parameter to **1** indicates that the relationship between the child and parent tables in a join filter is one to one or one to many. Only set this parameter to **1** if you have a constraint on the joining column in the child table that guarantees uniqueness. If the parameter is set to **1** incorrectly, non-convergence of data can occur. For more information, see [Join Filters](../../../2014/relational-databases/replication/join-filters.md).  
+     Setting this parameter to **1** indicates that the relationship between the child and parent tables in a join filter is one to one or one to many. Only set this parameter to **1** if you have a constraint on the joining column in the child table that guarantees uniqueness. If the parameter is set to **1** incorrectly, non-convergence of data can occur. For more information, see [Join Filters](join-filters.md).  
   
 -   Avoid executing batches with lots of changes when you use precomputed partitions.  
   
@@ -89,10 +89,10 @@ manager: "jhubbard"
   
 -   Stagger subscription synchronization schedules.  
   
-     If a large number of Subscribers synchronize with a Publisher, consider staggering the schedules so that Merge Agents run at different times. For more information, see [Specify Synchronization Schedules](../../../2014/relational-databases/replication/specify-synchronization-schedules.md).  
+     If a large number of Subscribers synchronize with a Publisher, consider staggering the schedules so that Merge Agents run at different times. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
 ## Merge Agent Parameters  
- For information about the Merge Agent and its parameters, see [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md).  
+ For information about the Merge Agent and its parameters, see [Replication Merge Agent](replication-merge-agent.md).  
   
 -   Upgrade all Subscribers for pull subscriptions to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version.  
   
@@ -102,17 +102,17 @@ manager: "jhubbard"
   
      [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced a new Merge Agent parameter: **–ParallelUploadDownload**. Setting this parameter allows the Merge Agent to process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber. This is useful in high volume environments with high network bandwidth. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
-    -   [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md)  
+    -   [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)  
   
-    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md)  
   
 -   Consider increasing the value of the **-MakeGenerationInterval** parameter, especially if synchronization involves more uploads from Subscribers than downloads to Subscribers.  
   
 -   When you synchronize data rows with a large amount of data, such as rows with LOB columns, Web synchronization can require additional memory allocation and hurt performance. This occurs when the Merge Agent generates an XML message that contains too many data rows with large amounts of data. If the Merge Agent is consuming too many resources during Web synchronization, reduce the number of rows sent in a single message in one of the following ways:  
   
-    -   Use the slow link agent profile for the Merge Agent. For more information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+    -   Use the slow link agent profile for the Merge Agent. For more information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
     -   Decrease the **-DownloadGenerationsPerBatch** and **-UploadGenerationsPerBatch** parameters for the Merge Agent to a value of 10 or less. The default value of these parameters is 50.  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
   
 -   Pre-generate snapshots and/or allow Subscribers to request snapshot generation and application the first time they synchronize.  
   
-     Use one or both of these options to provide snapshots for publications that use parameterized filters. If you do not specify one of these options, subscriptions are initialized using a series of SELECT and INSERT statements, rather than using the **bcp** utility; this process is much slower. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../2014/relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Use one or both of these options to provide snapshots for publications that use parameterized filters. If you do not specify one of these options, subscriptions are initialized using a series of SELECT and INSERT statements, rather than using the **bcp** utility; this process is much slower. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ## Maintenance and Monitoring Considerations  
   
@@ -142,6 +142,6 @@ manager: "jhubbard"
   
 -   Monitor synchronization performance using the **Synchronization History** tab in Replication Monitor.  
   
-     For merge replication, Replication Monitor displays detailed statistics in the **Synchronization History** tab for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For merge replication, Replication Monitor displays detailed statistics in the **Synchronization History** tab for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
   

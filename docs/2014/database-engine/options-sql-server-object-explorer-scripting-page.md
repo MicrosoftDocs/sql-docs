@@ -65,7 +65,7 @@ manager: "jhubbard"
  Includes a statement to check that each object does not exist in the database before trying to create the object. Default is False. For more information, see [IF...ELSE &#40;Transact-SQL&#41;](~/t-sql/language-elements/if-else-transact-sql.md) and [EXISTS &#40;Transact-SQL&#41;](~/t-sql/language-elements/exists-transact-sql.md).  
   
  **Schema qualify object names**  
- Qualifies object names with the object schema. Default is False. For more information, see [Create a Database Schema](../../2014/database-engine/create-a-database-schema.md).  
+ Qualifies object names with the object schema. Default is False. For more information, see [Create a Database Schema](../relational-databases/security/authentication-access/create-a-database-schema.md).  
   
  **Script extended properties**  
  Includes extended properties in the script if the object has extended properties. Default is False. For more information, see [sp_addextendedproperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md).  
@@ -74,7 +74,7 @@ manager: "jhubbard"
  Includes the owner in the generated script. Default is False.  
   
  **Script permissions**  
- Includes permissions on database objects in the script. Default is True. For more information, see [Permissions &#40;Database Engine&#41;](../../2014/database-engine/permissions-database-engine.md).  
+ Includes permissions on database objects in the script. Default is True. For more information, see [Permissions &#40;Database Engine&#41;](../relational-databases/security/permissions-database-engine.md).  
   
 ### Table/View Options  
  The following options apply only to scripts for tables or views.  
@@ -137,6 +137,6 @@ manager: "jhubbard"
  Includes system generated constraint names to enforce declarative referential integrity. Default is False. For more information, see [REFERENTIAL_CONSTRAINTS &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/referential-constraints-transact-sql.md).  
   
 ## See Also  
- [Generate Scripts &#40;SQL Server Management Studio&#41;](../../2014/database-engine/generate-scripts-sql-server-management-studio.md)  
+ [Generate Scripts &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)  
   
   

@@ -53,9 +53,9 @@ manager: "jhubbard"
   
 -   If you select logical record-level tracking, it is considered a conflict if changes are made to any row in the same logical record at more than one replication node (the columns affected in the corresponding rows need not be the same).  
   
- For more information, see [Detecting and Resolving Conflicts in Logical Records](../../../2014/relational-databases/replication/detecting-and-resolving-conflicts-in-logical-records.md).  
+ For more information, see [Detecting and Resolving Conflicts in Logical Records](detecting-and-resolving-conflicts-in-logical-records.md).  
   
- To specify the conflict tracking and resolution level for an article, see [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../2014/relational-databases/replication/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ To specify the conflict tracking and resolution level for an article, see [Specify the Conflict Tracking and Resolution Level for Merge Articles](specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## Conflict Resolution  
  After a conflict is detected, the Merge Agent launches the selected conflict resolver and uses the resolver to determine the conflict winner. The winning row is applied at the Publisher and Subscriber, and the data from the losing row is written to a conflict table. Conflicts are resolved immediately after the resolver executes, unless you select to resolve conflicts interactively.  
@@ -75,35 +75,35 @@ manager: "jhubbard"
   
 -   A business logic handler  
   
-     The business logic handler framework allows you to write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to conflicts and a number of other conditions during synchronization. For more information, see [Execute Business Logic During Merge Synchronization](../../../2014/relational-databases/replication/execute-business-logic-during-merge-synchronization.md).  
+     The business logic handler framework allows you to write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to conflicts and a number of other conditions during synchronization. For more information, see [Execute Business Logic During Merge Synchronization](execute-business-logic-during-merge-synchronization.md).  
   
 -   A COM-based custom resolver  
   
-     Merge replication provides an API for writing resolvers as COM objects in languages such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. For more information, see [COM-Based Custom Resolvers](../../../2014/relational-databases/replication/com-based-custom-resolvers.md).  
+     Merge replication provides an API for writing resolvers as COM objects in languages such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. For more information, see [COM-Based Custom Resolvers](com-based-custom-resolvers.md).  
   
 -   A COM-based resolver supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a number of COM-based resolvers. For more information, see [Microsoft COM-Based Resolvers](../../../2014/relational-databases/replication/microsoft-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a number of COM-based resolvers. For more information, see [Microsoft COM-Based Resolvers](microsoft-com-based-resolvers.md).  
   
- For information about how to select the appropriate type of resolver, see [Choose a Resolver](../../../2014/relational-databases/replication/choose-a-resolver.md).  
+ For information about how to select the appropriate type of resolver, see [Choose a Resolver](choose-a-resolver.md).  
   
 > [!NOTE]  
 >  Some article resolvers are written to handle conflicts only for certain operations. For example a resolver might handle updates, but not inserts or deletes. The default priority-based conflict resolver handles any conflicts not handled by the article resolver.  
   
  To specify a merge subscription type and conflict resolution priority, see  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming and Replication Management Objects (RMO) programming: [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md) and [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming and Replication Management Objects (RMO) programming: [Create a Pull Subscription](create-a-pull-subscription.md) and [Create a Push Subscription](create-a-push-subscription.md)  
   
 ### Interactive Resolver  
- Replication supplies an Interactive Resolver user interface that can be used in conjunction with either the default priority-based conflict resolver or an article resolver. When performing on-demand synchronization through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager, the Interactive Resolver displays conflict data at run-time, and lets you choose how to resolve conflicts. For more information about how to enable interactive resolution and launch the Interactive Resolver, see [Interactive Conflict Resolution](../../../2014/relational-databases/replication/interactive-conflict-resolution.md).  
+ Replication supplies an Interactive Resolver user interface that can be used in conjunction with either the default priority-based conflict resolver or an article resolver. When performing on-demand synchronization through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager, the Interactive Resolver displays conflict data at run-time, and lets you choose how to resolve conflicts. For more information about how to enable interactive resolution and launch the Interactive Resolver, see [Interactive Conflict Resolution](interactive-conflict-resolution.md).  
   
 ## Viewing Conflicts  
  The most straightforward way to view conflicts is to use the Replication Conflict Viewer, available from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also provides stored procedures that allow the conflict tables to be queried.). The Conflict Viewer and Interactive Resolver are similar tools, but the Interactive Resolver allows you to resolve conflicts as synchronization occurs, whereas the Conflict Viewer is designed for viewing conflicts after they have been resolved. If the conflict metadata is still available in the system tables (conflict metadata is retained for 14 days by default), you can override conflict resolution outcomes in the Conflict Viewer, but if direct intervention is regularly required, consider using the Interactive Resolver.  
   
 > [!NOTE]  
->  Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](view-conflict-information-for-merge-publications.md).  
   
  The Conflict Viewer displays information from three system tables:  
   
@@ -125,11 +125,11 @@ manager: "jhubbard"
   
  **To view conflicts**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] Programming: [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] Programming: [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](view-conflict-information-for-merge-publications.md)  
   
 ## See Also  
- [Synchronize Data](../../../2014/relational-databases/replication/synchronize-data.md)  
+ [Synchronize Data](synchronize-data.md)  
   
   

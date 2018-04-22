@@ -18,14 +18,14 @@ manager: "jhubbard"
 # Subscription Properties - &lt;Subscription&gt;
   This section provides information on the **Subscription Properties** dialog box:  
   
--   [Subscription Properties - Subscriber](../../../2014/relational-databases/replication/subscription-properties-subscriber.md) covers subscription properties available at the Subscriber (pull subscriptions only).  
+-   [Subscription Properties - Subscriber](subscription-properties-subscriber.md) covers subscription properties available at the Subscriber (pull subscriptions only).  
   
--   [Subscription Properties - Publisher](../../../2014/relational-databases/replication/subscription-properties-publisher.md) covers subscription properties available at the Publisher (pull and push subscriptions).  
+-   [Subscription Properties - Publisher](subscription-properties-publisher.md) covers subscription properties available at the Publisher (pull and push subscriptions).  
   
 ## See Also  
- [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+ [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
+ [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

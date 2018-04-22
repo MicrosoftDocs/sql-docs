@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ####  <a name="Permissions"></a> Permissions  
  **sys.sql.modules**, **sys.object**, **sys.triggers**, **sys.events**, **sys.trigger_events**  
- [!INCLUDE[ssCatViewPerm](../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../2014/database-engine/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
  Requires membership in the **public** role. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: ALTER, CONTROL, TAKE OWNERSHIP, or VIEW DEFINITION. These permissions are implicitly held by members of the **db_owner**, **db_ddladmin**, and **db_securityadmin** fixed database roles.  

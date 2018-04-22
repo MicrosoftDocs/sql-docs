@@ -255,7 +255,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Clustered and Nonclustered Indexes Described](../indexes/clustered-and-nonclustered-indexes-described.md)   
- [Create Nonclustered Indexes](../indexes/indexes.md)   
+ [Create Nonclustered Indexes](../indexes/create-nonclustered-indexes.md)   
  [Create Clustered Indexes](../indexes/create-clustered-indexes.md)   
  [Estimate the Size of a Table](estimate-the-size-of-a-table.md)   
  [Estimate the Size of a Clustered Index](estimate-the-size-of-a-clustered-index.md)   

@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  Using procedure parameters helps guard against SQL injection attacks. Since parameter input is treated as a literal value and not as executable code, it is more difficult for an attacker to insert a command into the [!INCLUDE[tsql](../includes/tsql-md.md)] statement(s) inside the procedure and compromise security.  
   
- Procedures can be encrypted, helping to obfuscate the source code. For more information, see [SQL Server Encryption](../../2014/database-engine/sql-server-encryption.md).  
+ Procedures can be encrypted, helping to obfuscate the source code. For more information, see [SQL Server Encryption](../relational-databases/security/encryption/sql-server-encryption.md).  
   
  Reuse of code  
  The code for any repetitious database operation is the perfect candidate for encapsulation in procedures. This eliminates needless rewrites of the same code, decreases code inconsistency, and allows the code to be accessed and executed by any user or application possessing the necessary permissions.  

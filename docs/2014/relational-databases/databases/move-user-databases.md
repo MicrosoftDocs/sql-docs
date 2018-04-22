@@ -125,7 +125,7 @@ manager: "jhubbard"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-     For more information about how to use the **sqlcmd** utility, see [Use the sqlcmd Utility](../../database-engine/use-the-sqlcmd-utility.md).  
+     For more information about how to use the **sqlcmd** utility, see [Use the sqlcmd Utility](../scripting/sqlcmd-use-the-utility.md).  
   
 4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   

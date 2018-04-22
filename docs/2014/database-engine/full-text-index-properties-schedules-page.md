@@ -44,7 +44,7 @@ manager: "jhubbard"
  Click to create a new schedule for populating the full-text index.  
   
 ## See Also  
- [Use the Full-Text Indexing Wizard](../../2014/database-engine/use-the-full-text-indexing-wizard.md)   
- [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md)  
+ [Use the Full-Text Indexing Wizard](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+ [Populate Full-Text Indexes](../relational-databases/search/populate-full-text-indexes.md)  
   
   

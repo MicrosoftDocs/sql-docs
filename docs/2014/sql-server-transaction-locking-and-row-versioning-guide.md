@@ -818,7 +818,7 @@ deadlock-list
   
  ![Logic flow diagram showing user process deadlock.](../2014/media/udb9-profilerdeadlockgraphc.gif "Logic flow diagram showing user process deadlock.")  
   
- For more information about running the [!INCLUDE[ssSqlProfiler](includes/sssqlprofiler-md.md)] deadlock graph, see [Save Deadlock Graphs &#40;SQL Server Profiler&#41;](../2014/database-engine/save-deadlock-graphs-sql-server-profiler.md).  
+ For more information about running the [!INCLUDE[ssSqlProfiler](includes/sssqlprofiler-md.md)] deadlock graph, see [Save Deadlock Graphs &#40;SQL Server Profiler&#41;](relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
   
 #### Handling Deadlocks  
  When an instance of the [!INCLUDE[ssDEnoversion](includes/ssdenoversion-md.md)] chooses a transaction as a deadlock victim, it terminates the current batch, rolls back the transaction, and returns error message 1205 to the application.  

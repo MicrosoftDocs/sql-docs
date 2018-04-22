@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  A *replication topology* defines the relationship between servers and copies of data and clarifies the logic that determines how data flows between servers. There are several replication processes (referred to as *agents*) that are responsible for copying and moving data between the Publisher and Subscribers. The following illustration is an overview of the components and processes involved in replication.  
   
- ![Replication components and data flow](../../../2014/relational-databases/replication/media/replintro1.gif "Replication components and data flow")  
+ ![Replication components and data flow](media/replintro1.gif "Replication components and data flow")  
   
 ## Publisher  
  The Publisher is a database instance that makes data available to other locations through replication. The Publisher can have one or more publications, each defining a logically related set of objects and data to replicate.  
@@ -60,11 +60,11 @@ manager: "jhubbard"
  A publication is a collection of one or more articles from one database. The grouping of multiple articles into a publication makes it easier to specify a logically related set of database objects and data that are replicated as a unit.  
   
 ## Subscription  
- A subscription is a request for a copy of a publication to be delivered to a Subscriber. The subscription defines what publication will be received, where, and when. There are two types of subscriptions: push and pull. For more information about push and pull subscriptions, see [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md).  
+ A subscription is a request for a copy of a publication to be delivered to a Subscriber. The subscription defines what publication will be received, where, and when. There are two types of subscriptions: push and pull. For more information about push and pull subscriptions, see [Subscribe to Publications](subscribe-to-publications.md).  
   
 ## See Also  
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)   
- [Types of Replication](../../../2014/relational-databases/replication/types-of-replication.md)   
+ [Replication Agents Overview](replication-agents-overview.md)   
+ [Types of Replication](types-of-replication.md)   
  [Configure Replication for AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
  [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

@@ -54,6 +54,6 @@ manager: "jhubbard"
  Package E does not use transactions.  
   
 ## Related Tasks  
- [Configure a Package to Use Transactions](../../2014/integration-services/configure-a-package-to-use-transactions.md)  
+ [Configure a Package to Use Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

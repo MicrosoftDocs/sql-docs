@@ -36,9 +36,9 @@ manager: "jhubbard"
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Specify synchronization schedules on the **Synchronization Schedule** page of the New Subscription Wizard. For more information about accessing this wizard, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md) and [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+ Specify synchronization schedules on the **Synchronization Schedule** page of the New Subscription Wizard. For more information about accessing this wizard, see [Create a Push Subscription](create-a-push-subscription.md) and [Create a Pull Subscription](create-a-pull-subscription.md).  
   
- Modify synchronization schedules in the **Job Schedule Properties** dialog box, which is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from the agent details windows in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ Modify synchronization schedules in the **Job Schedule Properties** dialog box, which is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from the agent details windows in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
  If you specify schedules from the **Jobs** folder, use the following table to determine the agent job name.  
   
@@ -163,25 +163,25 @@ manager: "jhubbard"
   
 #### To define the synchronization schedule for a pull subscription to a transactional publication  
   
-1.  Create a new pull subscription to a transactional publication. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+1.  Create a new pull subscription to a transactional publication. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 2.  At the Subscriber, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Distribution Agent job that synchronizes the subscription.  
   
 #### To define the synchronization schedule for a push subscription to a transactional publication  
   
-1.  Create a new push subscription to a transactional publication. For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+1.  Create a new push subscription to a transactional publication. For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
   
 2.  At the Subscriber, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify **@subscriber**, **@subscriber_db**, **@publication**, and the Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Distribution Agent job that synchronizes the subscription.  
   
 #### To define the synchronization schedule for a pull subscription to a merge publication  
   
-1.  Create a new pull subscription to a merge publication. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+1.  Create a new pull subscription to a merge publication. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 2.  At the Subscriber, execute [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and the Windows credentials under which the Merge Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Merge Agent job that synchronizes the subscription.  
   
 #### To define the synchronization schedule for a push subscription to a merge publication  
   
-1.  Create a new push subscription to a merge publication. For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+1.  Create a new push subscription to a merge publication. For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
   
 2.  At the Subscriber, execute [sp_addmergepushsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specify **@subscriber**, **@subscriber_db**, **@publication**, and the Windows credentials under which the Merge Agent at the Subscriber runs for **@job_name** and **@password**. Specify the synchronization parameters, detailed above, that define the schedule for the Merge Agent job that synchronizes the subscription.  
   
@@ -189,11 +189,11 @@ manager: "jhubbard"
  Replication uses the SQL Server Agent to schedule jobs for activities that occur periodically, such as snapshot generation and subscription synchronization. You can use Replication Management Objects (RMO) programmatically to specify schedules for replication agent jobs.  
   
 > [!NOTE]  
->  When you create a subscription and specify a value `false` for `CreateSyncAgentByDefault` (the default behavior for pull subscriptions) the agent job is not created and scheduling properties are ignored. In this case, the synchronization schedule must be determined by the application. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md) and [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+>  When you create a subscription and specify a value `false` for `CreateSyncAgentByDefault` (the default behavior for pull subscriptions) the agent job is not created and scheduling properties are ignored. In this case, the synchronization schedule must be determined by the application. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md) and [Create a Push Subscription](create-a-push-subscription.md).  
   
 #### To define a replication agent schedule when you create a push subscription to a transactional publication  
   
-1.  Create an instance of the <xref:Microsoft.SqlServer.Replication.TransSubscription> class for the subscription you are creating. For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+1.  Create an instance of the <xref:Microsoft.SqlServer.Replication.TransSubscription> class for the subscription you are creating. For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
   
 2.  Before you call <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, set one or more of the following fields of the <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> property:  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
   
 #### To define a replication agent schedule when you create a pull subscription to a transactional publication  
   
-1.  Create an instance of the <xref:Microsoft.SqlServer.Replication.TransPullSubscription> class for the subscription you are creating. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+1.  Create an instance of the <xref:Microsoft.SqlServer.Replication.TransPullSubscription> class for the subscription you are creating. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 2.  Before you call <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>, set one or more of the following fields of the <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> property:  
   
@@ -255,7 +255,7 @@ manager: "jhubbard"
   
 #### To define a replication agent schedule when you create a pull subscription to a merge publication  
   
-1.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergePullSubscription> class for the subscription you are creating. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+1.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergePullSubscription> class for the subscription you are creating. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 2.  Before you call <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>, set one or more of the following fields of the <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> property:  
   
@@ -286,7 +286,7 @@ manager: "jhubbard"
   
 #### To define a replication agent schedule when you create a push subscription to a merge publication  
   
-1.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergeSubscription> class for the subscription you are creating. For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+1.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergeSubscription> class for the subscription you are creating. For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
   
 2.  Before you call <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, set one or more of the following fields of the <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> property:  
   
@@ -323,10 +323,10 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## See Also  
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)   
- [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)   
- [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md)   
- [Synchronize Data](../../../2014/relational-databases/replication/synchronize-data.md)  
+ [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Synchronize a Push Subscription](synchronize-a-push-subscription.md)   
+ [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)   
+ [Synchronize Data](synchronize-data.md)  
   
   

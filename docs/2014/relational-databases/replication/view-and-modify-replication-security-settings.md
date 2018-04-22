@@ -22,7 +22,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View and Modify Replication Security Settings
-  This topic describes how to view and modify replication security settings in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). For example, you might want to change the connection of the Log Reader Agent to the Publisher from SQL Server Authentication to Windows Integrated Authentication, or you might need to change the credentials used to run an agent job when the Windows account password has changed. For information about the permissions required by each agent, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+  This topic describes how to view and modify replication security settings in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). For example, you might want to change the connection of the Log Reader Agent to the Publisher from SQL Server Authentication to Windows Integrated Authentication, or you might need to change the credentials used to run an agent job when the Windows account password has changed. For information about the permissions required by each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
  **In This Topic**  
   
@@ -60,13 +60,13 @@ manager: "jhubbard"
   
 1.  The **Update Replication Passwords** dialog box, which is available from the **Replication** folder of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If you change the password for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account or Windows account on a server in a replication topology, use this dialog box rather than updating the password for each agent that uses the account. If agents on more than one server use the same account, you must connect to each server and change the password. The password is updated in all of the places that replication uses the password. The password is not updated in other places, such as linked servers.  
   
-2.  The **Agent Security** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+2.  The **Agent Security** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
-3.  The **Subscription Properties - \<Subscription>** dialog box. For more information about accessing this dialog box, see [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md) and [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+3.  The **Subscription Properties - \<Subscription>** dialog box. For more information about accessing this dialog box, see [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) and [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md).  
   
-4.  The **Distributor Properties - \<Distributor>** and **Distribution Database Properties - \<Database>** dialog boxes. For more information about accessing these dialog boxes, see [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+4.  The **Distributor Properties - \<Distributor>** and **Distribution Database Properties - \<Database>** dialog boxes. For more information about accessing these dialog boxes, see [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  The **Publisher Properties - \<Publisher>** dialog box. For more information about accessing this dialog box, [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+5.  The **Publisher Properties - \<Publisher>** dialog box. For more information about accessing this dialog box, [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
   
 #### To change the password for an account used by one or more agents  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
   
 1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**...**) next to a Publisher.  
   
-2.  In the **Agent Connection to the Publisher** section, specify the login and password used by the replication administrative user schema you configured. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+2.  In the **Agent Connection to the Publisher** section, specify the login and password used by the replication administrative user schema you configured. For more information, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -568,12 +568,12 @@ manager: "jhubbard"
  After changing an agent login or password, you must stop and restart the agent before the change takes effect.  
   
 ## See Also  
- [Replication Management Objects Concepts](../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)   
- [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md)   
- [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)  
+ [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](upgrade-replication-scripts-replication-transact-sql-programming.md)   
+ [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
+ [Replication Agent Security Model](replication-agent-security-model.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)  
   
   

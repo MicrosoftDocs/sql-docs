@@ -54,14 +54,14 @@ manager: "jhubbard"
   
      Use a unique, strong password, and record it in a safe place.  
   
-     For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md) and [Create a Database Master Key](../create-a-database-master-key.md).  
+     For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md) and [Create a Database Master Key](../../relational-databases/security/encryption/create-a-database-master-key.md).  
   
 2.  In the **master** database, create an encrypted certificate on the server instance to use for its outbound connections for database mirroring.  
   
      For example, to create a certificate for the HOST_A system.  
   
     > [!IMPORTANT]  
-    >  If you intend to use the certificate for more than one year, specify the expiry date in UTC time by using the EXPIRY_DATE option in your CREATE CERTIFICATE statement. Also, we recommend that you use SQL Server Management Studio to create a Policy-Based Management rule to alert you when your certificates are expiring. Using the Policy Management **Create New Condition** dialog box, create this rule on the **@ExpirationDate** field of the **Certificate** facet. For more information, see [Administer Servers by Using Policy-Based Management](../administer-servers-by-using-policy-based-management.md) and [Securing SQL Server](../securing-sql-server.md).  
+    >  If you intend to use the certificate for more than one year, specify the expiry date in UTC time by using the EXPIRY_DATE option in your CREATE CERTIFICATE statement. Also, we recommend that you use SQL Server Management Studio to create a Policy-Based Management rule to alert you when your certificates are expiring. Using the Policy Management **Create New Condition** dialog box, create this rule on the **@ExpirationDate** field of the **Certificate** facet. For more information, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) and [Securing SQL Server](../../relational-databases/security/securing-sql-server.md).  
   
     ```  
     USE master;  
@@ -174,7 +174,7 @@ GO
  When copying a certificate to another system, use a secure copy method.  
   
 ## See Also  
- [Choose an Encryption Algorithm](../choose-an-encryption-algorithm.md)   
+ [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
  [Example: Setting Up Database Mirroring Using Certificates &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   

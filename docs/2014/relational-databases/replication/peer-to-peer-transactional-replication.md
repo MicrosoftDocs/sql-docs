@@ -38,16 +38,16 @@ manager: "jhubbard"
   
 -   There is always some latency involved when changes are replicated. For applications that require the latest change to be seen immediately, dynamically load balancing the application across multiple nodes can be problematic.  
   
- Peer-to-peer replication includes the option to enable conflict detection across a peer-to-peer topology. This option helps prevent the issues that are caused from undetected conflicts, including inconsistent application behavior and lost updates. By enabling this option, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved manually and the data is made consistent across the topology. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../../2014/relational-databases/replication/conflict-detection-in-peer-to-peer-replication.md).  
+ Peer-to-peer replication includes the option to enable conflict detection across a peer-to-peer topology. This option helps prevent the issues that are caused from undetected conflicts, including inconsistent application behavior and lost updates. By enabling this option, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved manually and the data is made consistent across the topology. For more information, see [Conflict Detection in Peer-to-Peer Replication](conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](../../../2014/relational-databases/replication/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](../../../2014/relational-databases/replication/detect-and-resolve-merge-replication-conflicts.md).  
+>  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](detect-and-resolve-merge-replication-conflicts.md).  
   
 ## Peer-to-Peer Topologies  
  The following scenarios illustrate typical uses for peer-to-peer replication.  
   
 ### Topology That Has Two Participating Databases  
- ![Peer-to-peer replication, two nodes](../../../2014/relational-databases/replication/media/repl-multinode-01.gif "Peer-to-peer replication, two nodes")  
+ ![Peer-to-peer replication, two nodes](media/repl-multinode-01.gif "Peer-to-peer replication, two nodes")  
   
  Both of the preceding illustrations show two participating databases, with user traffic directed to the databases through an application server. This configuration can be used for a variety of applications, from Web sites to workgroup applications, and provides the following benefits:  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
  Peer-to-peer replication can support either approach, but the central update example on the right is also often used with standard transactional replication.  
   
 ### Topologies That Have Three or More Participating Databases  
- ![Peer-to-peer replication to dispersed locations](../../../2014/relational-databases/replication/media/repl-multinode-02.gif "Peer-to-peer replication to dispersed locations")  
+ ![Peer-to-peer replication to dispersed locations](media/repl-multinode-02.gif "Peer-to-peer replication to dispersed locations")  
   
  The preceding illustration shows three participating databases that provide data for a worldwide software support organization, with offices in Los Angeles, London, and Taipei. The support engineers at each office take customer calls and enter and update information about each customer call. The time zones for the three offices are eight hours apart, so there is no overlap in the workday. As the Taipei office closes, the London office is opening for the day. If a call is still in progress as one office is closing, the call is transferred to a representative at the next office to open.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 -   Higher availability in case of failure or to allow maintenance at one or more of the participating databases.  
   
-     ![Peer-to-peer replication, three and four nodes](../../../2014/relational-databases/replication/media/repl-multinode-04.gif "Peer-to-peer replication, three and four nodes")  
+     ![Peer-to-peer replication, three and four nodes](media/repl-multinode-04.gif "Peer-to-peer replication, three and four nodes")  
   
  The preceding illustration shows the addition of a node to the three-node topology. A node could be added in this scenario for the following reasons:  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
   
     -   Object names, object schema, and publication names should be identical.  
   
-    -   Publications must allow schema changes to be replicated. (This is a setting of **1** for the publication property **replicate_ddl**, which is the default setting.) For more information, see [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md).  
+    -   Publications must allow schema changes to be replicated. (This is a setting of **1** for the publication property **replicate_ddl**, which is the default setting.) For more information, see [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md).  
   
     -   Row and column filtering are not supported.  
   
@@ -108,9 +108,9 @@ manager: "jhubbard"
   
 -   A publication must be enabled for peer-to-peer replication before any subscriptions are created.  
   
--   Subscriptions must be initialized by using a backup or with the **'replication support only'** option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   Subscriptions must be initialized by using a backup or with the **'replication support only'** option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   We do not recommend the use of identity columns. When using identities, you must manually manage the ranges assigned to the tables at each participating database. For more information, see the section "Assigning Ranges for Manual Identity Range Management" in [Replicate Identity Columns](../../../2014/relational-databases/replication/replicate-identity-columns.md).  
+-   We do not recommend the use of identity columns. When using identities, you must manually manage the ranges assigned to the tables at each participating database. For more information, see the section "Assigning Ranges for Manual Identity Range Management" in [Replicate Identity Columns](replicate-identity-columns.md).  
   
 ### Feature Restrictions  
  Peer-to-peer replication supports the core features of transactional replication, but does not support the following options:  
@@ -160,15 +160,15 @@ manager: "jhubbard"
   
 -   Restoring a node from a backup  
   
- For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/quiesce-a-replication-topology-replication-transact-sql-programming.md) and [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
+ For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md) and [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
 -   If you add a new node to a peer-to-peer topology, you should restore only from backups that were created after the new node was added.  
   
 -   You cannot reinitialize subscriptions in a peer-to-peer topology. If you have to ensure that a node has a new copy of the data, restore a backup at the node.  
   
 ## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../2014/relational-databases/replication/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Publication Types for Transactional Replication](../../../2014/relational-databases/replication/publication-types-for-transactional-replication.md)  
+ [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
+ [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)  
   
   

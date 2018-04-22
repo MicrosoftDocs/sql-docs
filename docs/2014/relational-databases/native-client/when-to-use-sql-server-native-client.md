@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [ODBC How-to Topics](../../../2014/database-engine/dev-guide/odbc-how-to-topics.md)   
- [OLE DB How-to Topics](../../../2014/database-engine/dev-guide/ole-db-how-to-topics.md)  
+ [ODBC How-to Topics](../native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [OLE DB How-to Topics](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

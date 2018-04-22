@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   Configure a single client application to use a different network protocol by creating an alias. For more information, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
--   Some client applications, such as sqlcmd.exe, can specify the protocol as part of the connection string. For more information, see [Connect to the Database Engine With sqlcmd](../connect-to-the-database-engine-with-sqlcmd.md).  
+-   Some client applications, such as sqlcmd.exe, can specify the protocol as part of the connection string. For more information, see [Connect to the Database Engine With sqlcmd](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
   

@@ -36,7 +36,7 @@ manager: "jhubbard"
   
     -   **@snapshot_in_defaultfolder** - specify a value of **false** if the snapshot is available only in a non-default location.  
   
-     For more information about creating publications, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+     For more information about creating publications, see [Create a Publication](create-a-publication.md).  
   
 ### To configure snapshot properties when creating a merge publication  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
     -   **@snapshot_in_defaultfolder** - specify a value of **false** if the snapshot is available only in a non-default location.  
   
-2.  For more information about creating publications, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+2.  For more information about creating publications, see [Create a Publication](create-a-publication.md).  
   
 ### To modify snapshot properties of an existing snapshot or transactional publication  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
-3.  Run the [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md) from the command prompt or start the Snapshot Agent job to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+3.  Run the [Replication Snapshot Agent](replication-snapshot-agent.md) from the command prompt or start the Snapshot Agent job to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 ### To modify snapshot properties of an existing merge publication  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
     -   **snapshot_in_defaultfolder** - also specify a value of either **true** or **false** to indicate whether the snapshot is available only in a non-default location.  
   
-2.  Run the [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md) from the command prompt or start the Snapshot Agent job to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Run the [Replication Snapshot Agent](replication-snapshot-agent.md) from the command prompt or start the Snapshot Agent job to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 ## Example  
  This example creates a publication that uses an alternate snapshot folder and a compressed snapshot.  
@@ -97,11 +97,11 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_mergealtsnapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubaltsnapshot.sql#sp_mergealtsnapshot)]  
   
 ## See Also  
- [Alternate Snapshot Folder Locations](../../../2014/relational-databases/replication/alternate-snapshot-folder-locations.md)   
- [Compressed Snapshots](../../../2014/relational-databases/replication/compressed-snapshots.md)   
- [Execute Scripts Before and After the Snapshot Is Applied](../../../2014/relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md)   
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)  
+ [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)   
+ [Compressed Snapshots](compressed-snapshots.md)   
+ [Execute Scripts Before and After the Snapshot Is Applied](execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)  
   
   

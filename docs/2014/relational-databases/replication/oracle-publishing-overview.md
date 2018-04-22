@@ -38,8 +38,8 @@ manager: "jhubbard"
  When an Oracle publication is created, triggers and tracking tables are created for each published table within the Oracle database. When data changes are made to the published tables, the database triggers on the tables fire and insert information into the replication tracking tables for each modified row. The Log Reader Agent on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor then moves the data change information from the tracking tables to the distribution database on the Distributor. Finally, as in standard transactional replication, the Distribution Agent moves changes from the Distributor to the Subscribers.  
   
 ## See Also  
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Glossary of Terms for Oracle Publishing](../../../2014/relational-databases/replication/glossary-of-terms-for-oracle-publishing.md)   
- [Heterogeneous Database Replication](../../../2014/relational-databases/replication/heterogeneous-database-replication.md)  
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Glossary of Terms for Oracle Publishing](glossary-of-terms-for-oracle-publishing.md)   
+ [Heterogeneous Database Replication](heterogeneous-database-replication.md)  
   
   

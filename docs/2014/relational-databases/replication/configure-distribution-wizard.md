@@ -20,19 +20,19 @@ manager: "jhubbard"
 # Configure Distribution Wizard
   This section provides information on the following pages of the Configure Distribution Wizard:  
   
--   [Distributor](../../../2014/relational-databases/replication/distributor.md)  
+-   [Distributor](distributor.md)  
   
--   [Snapshot Folder](../../../2014/relational-databases/replication/snapshot-folder.md)  
+-   [Snapshot Folder](snapshot-folder.md)  
   
--   [Distribution Database](../../../2014/relational-databases/replication/distribution-database.md)  
+-   [Distribution Database](distribution-database.md)  
   
--   [Publishers](../../../2014/relational-databases/replication/publishers.md)  
+-   [Publishers](publishers.md)  
   
--   [Distributor Password](../../../2014/relational-databases/replication/distributor-password.md)  
+-   [Distributor Password](distributor-password.md)  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

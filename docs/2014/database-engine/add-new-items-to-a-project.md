@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Solution Explorer](../../2014/database-engine/solution-explorer.md)   
- [Associate File Extensions to a Code Editor](../../2014/database-engine/associate-file-extensions-to-a-code-editor.md)   
+ [Associate File Extensions to a Code Editor](../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)   
  [Add Existing Items to a Project](../../2014/database-engine/add-existing-items-to-a-project.md)   
  [Remove or Delete an Item or Project](../../2014/database-engine/remove-or-delete-an-item-or-project.md)  
   

@@ -74,10 +74,10 @@ manager: "jhubbard"
  Click to save any changes to warnings and thresholds.  
   
 ## See Also  
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md)   
+ [Monitoring Replication](monitoring-replication.md)   
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

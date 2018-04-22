@@ -105,7 +105,7 @@ manager: "jhubbard"
  Is a user-specified password. Passwords are case sensitive. If the -U option is used and the **-P** option is not used, and the SQLCMDPASSWORD environment variable has not been set, `sqlcmd` prompts the user for a password. If the **-P** option is used at the end of the command prompt without a password `sqlcmd` uses the default password (NULL).  
   
 > [!IMPORTANT]  
->  Do not use a blank password. Use a strong password. For more information, see [Strong Passwords](../../2014/database-engine/strong-passwords.md).  
+>  Do not use a blank password. Use a strong password. For more information, see [Strong Passwords](../relational-databases/security/strong-passwords.md).  
   
  The password prompt is displayed by printing the password prompt to the console, as follows: `Password:`  
   
@@ -391,7 +391,7 @@ manager: "jhubbard"
   
 -   **!!** *command*  
   
- If the `-X` option is specified, it prevents environment variables from being passed on to `sqlcmd`. It also prevents the startup script specified by using the SQLCMDINI scripting variable from being executed. For more information about `sqlcmd` scripting variables, see [Use sqlcmd with Scripting Variables](../../2014/database-engine/use-sqlcmd-with-scripting-variables.md).  
+ If the `-X` option is specified, it prevents environment variables from being passed on to `sqlcmd`. It also prevents the startup script specified by using the SQLCMDINI scripting variable from being executed. For more information about `sqlcmd` scripting variables, see [Use sqlcmd with Scripting Variables](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  **-?**  
  Displays the syntax summary of `sqlcmd` options.  
@@ -401,7 +401,7 @@ manager: "jhubbard"
   
  When multiple results are returned, `sqlcmd` prints a blank line between each result set in a batch. In addition, the "\<x> rows affected" message does not appear when it does not apply to the statement executed.  
   
- To use `sqlcmd` interactively, type `sqlcmd` at the command prompt with any one or more of the options described earlier in this topic. For more information, see [Use the sqlcmd Utility](../../2014/database-engine/use-the-sqlcmd-utility.md)  
+ To use `sqlcmd` interactively, type `sqlcmd` at the command prompt with any one or more of the options described earlier in this topic. For more information, see [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
 >  The options **-L**, **-Q**, **-Z** or **-i** cause `sqlcmd` to exit after execution.  
@@ -749,12 +749,12 @@ manager: "jhubbard"
 -   Set time-out values for batch or query execution higher than you expect it will take to execute the batch or query.  
   
 ## See Also  
- [Start the sqlcmd Utility](../../2014/database-engine/start-the-sqlcmd-utility.md)   
- [Run Transact-SQL Script Files Using sqlcmd](../../2014/database-engine/run-transact-sql-script-files-using-sqlcmd.md)   
- [Use the sqlcmd Utility](../../2014/database-engine/use-the-sqlcmd-utility.md)   
- [Use sqlcmd with Scripting Variables](../../2014/database-engine/use-sqlcmd-with-scripting-variables.md)   
- [Connect to the Database Engine With sqlcmd](../../2014/database-engine/connect-to-the-database-engine-with-sqlcmd.md)   
- [Edit SQLCMD Scripts with Query Editor](../../2014/database-engine/edit-sqlcmd-scripts-with-query-editor.md)   
+ [Start the sqlcmd Utility](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
+ [Run Transact-SQL Script Files Using sqlcmd](../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
+ [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+ [Use sqlcmd with Scripting Variables](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
+ [Connect to the Database Engine With sqlcmd](../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
+ [Edit SQLCMD Scripts with Query Editor](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
  [Manage Job Steps](../../2014/database-engine/manage-job-steps.md)   
  [Create a CmdExec Job Step](../../2014/database-engine/create-a-cmdexec-job-step.md)  
   

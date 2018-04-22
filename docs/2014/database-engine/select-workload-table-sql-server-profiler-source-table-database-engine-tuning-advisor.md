@@ -43,6 +43,6 @@ manager: "jhubbard"
 ## See Also  
  [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../2014/database-engine/save-trace-results-to-a-table-sql-server-profiler.md)   
  [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   
- [Database Engine Tuning Advisor](../../2014/database-engine/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure IIS for Web Synchronization
-  The procedures in this topic make up the second step in configuring Web synchronization for merge replication. You perform this step after you enable a publication for Web synchronization. For an overview of the configuration process, see [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md). After you complete the procedures in this topic, continue to the third step, configuring a subscription to use Web synchronization. This third step is described in the following topics:  
+  The procedures in this topic make up the second step in configuring Web synchronization for merge replication. You perform this step after you enable a publication for Web synchronization. For an overview of the configuration process, see [Configure Web Synchronization](configure-web-synchronization.md). After you complete the procedures in this topic, continue to the third step, configuring a subscription to use Web synchronization. This third step is described in the following topics:  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
@@ -129,7 +129,7 @@ manager: "jhubbard"
   
 -   Creates a virtual directory and its associated alias. The alias is used when accessing the Web synchronization components. For example, if the IIS address is https://*server.domain.com* and you specify an alias of 'websync1', the address to access the replisapi.dll component is https://*server.domain.com*/websync1/replisapi.dll.  
   
--   Uses Basic Authentication. We recommend using Basic Authentication because Basic Authentication enables you to run IIS and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher/Distributor on separate computers (the recommended configuration) without requiring Kerberos delegation. Using SSL with Basic Authentication makes sure that logins, passwords, and all data are encrypted in transit. (SSL is required, regardless of the type of authentication that is used.) For more information about best practices for Web synchronization, see the section "Security Best Practices for Web Synchronization" in [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
+-   Uses Basic Authentication. We recommend using Basic Authentication because Basic Authentication enables you to run IIS and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher/Distributor on separate computers (the recommended configuration) without requiring Kerberos delegation. Using SSL with Basic Authentication makes sure that logins, passwords, and all data are encrypted in transit. (SSL is required, regardless of the type of authentication that is used.) For more information about best practices for Web synchronization, see the section "Security Best Practices for Web Synchronization" in [Configure Web Synchronization](configure-web-synchronization.md).  
   
 #### To configure the computer that is running IIS by using the Configure Web Synchronization Wizard  
   
@@ -169,7 +169,7 @@ manager: "jhubbard"
   
     1.  Click **Add**, and then in the **Select Users or Groups** dialog box, add the accounts under which Subscribers will make connections to IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* parameter.  
   
-9. On the **Snapshot Share Access** page, enter the snapshot share. The appropriate permissions are set on this share so that Subscribers can access the snapshot files. For more information about permissions for the share, see [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
+9. On the **Snapshot Share Access** page, enter the snapshot share. The appropriate permissions are set on this share so that Subscribers can access the snapshot files. For more information about permissions for the share, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
   
 10. On the **Completing the Wizard** page, click **Finish**.  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
   
  To configure the minimum permissions for the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener runs, complete the following procedure. The steps in the procedure apply to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] running IIS 6.0.  
   
- In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
+ In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](secure-the-publisher.md).  
   
 #### To configure the account and permissions  
   
@@ -356,6 +356,6 @@ manager: "jhubbard"
     2.  Connect to the server in diagnostic mode. If the certificate is installed properly, the **Security Alert** dialog box will not appear. If the dialog box appears, the Merge Agent will fail when it tries to connect to the computer that is running IIS. You must make sure that the certificate for the server that you are accessing has been added to the certificate store at the Subscriber as a trusted certificate. For more information about exporting certificates, see the IIS documentation.  
   
 ## See Also  
- [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md)  
+ [Configure Web Synchronization](configure-web-synchronization.md)  
   
   

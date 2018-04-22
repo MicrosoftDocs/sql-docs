@@ -24,7 +24,7 @@ manager: "jhubbard"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- With a filter of this type, it is usually assumed that two things always occur when the Merge Agent runs: rows that satisfy this filter are replicated to Subscribers; and rows that no longer satisfy this filter are cleaned up at Subscribers. (For more information about filtering with `HOST_NAME()`, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).) However, merge replication only replicates and cleans up data that has changed since the last synchronization, regardless of how you define a row filter for that data.  
+ With a filter of this type, it is usually assumed that two things always occur when the Merge Agent runs: rows that satisfy this filter are replicated to Subscribers; and rows that no longer satisfy this filter are cleaned up at Subscribers. (For more information about filtering with `HOST_NAME()`, see [Parameterized Row Filters](parameterized-row-filters.md).) However, merge replication only replicates and cleans up data that has changed since the last synchronization, regardless of how you define a row filter for that data.  
   
  For merge replication to process a row, the data in the row must satisfy the row filter, and it must have changed since the last synchronization. In the case of the **SalesOrderHeader** table, **OrderDate** is entered when a row is inserted. Rows are replicated to the Subscriber as expected because the insert is a data change. However, if there are rows at the Subscriber that no longer satisfy the filter (they are for orders older than seven days), they are not removed from the Subscriber unless they were updated for some other reason.  
   
@@ -42,7 +42,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   If the publication does not use precomputed partitions, filters are evaluated when the Merge Agent runs.  
   
- For more information about precomputed partitions, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../2014/relational-databases/replication/optimize-parameterized-filter-performance-with-precomputed-partitions.md). The time at which the filter is evaluated affects what data satisfies the filter. For example, if a publication uses precomputed partitions, and you synchronize data every two days, the subset of data for the salesperson could include rows up to two days older than expected.  
+ For more information about precomputed partitions, see [Optimize Parameterized Filter Performance with Precomputed Partitions](optimize-parameterized-filter-performance-with-precomputed-partitions.md). The time at which the filter is evaluated affects what data satisfies the filter. For example, if a publication uses precomputed partitions, and you synchronize data every two days, the subset of data for the salesperson could include rows up to two days older than expected.  
   
 ## Recommendations for Using Time-Based Row Filters  
  The following method provides a robust and straightforward approach to filtering based on time:  
@@ -90,7 +90,7 @@ GO
   
 ## See Also  
  [GETDATE &#40;Transact-SQL&#41;](~/t-sql/functions/getdate-transact-sql.md)   
- [Implement Jobs](../../../2014/database-engine/implement-jobs.md)   
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)  
+ [Implement Jobs](../../database-engine/implement-jobs.md)   
+ [Parameterized Row Filters](parameterized-row-filters.md)  
   
   

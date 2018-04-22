@@ -24,41 +24,41 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)  
   
--   [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../2014/relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+-   [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
--   [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
--   [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
+-   [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
--   [Initialize a Subscription Manually](../../../2014/relational-databases/replication/initialize-a-subscription-manually.md)  
+-   [Initialize a Subscription Manually](initialize-a-subscription-manually.md)  
   
--   [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md)  
+-   [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)  
   
--   [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
+-   [Synchronize a Push Subscription](synchronize-a-push-subscription.md)  
   
--   [Reinitialize a Subscription](../../../2014/relational-databases/replication/reinitialize-a-subscription.md)  
+-   [Reinitialize a Subscription](reinitialize-a-subscription.md)  
   
--   [Execute Scripts Before and After a Snapshot Is Applied &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/execute-scripts-before-and-after-a-snapshot-is-applied.md)  
+-   [Execute Scripts Before and After a Snapshot Is Applied &#40;SQL Server Management Studio&#41;](execute-scripts-before-and-after-a-snapshot-is-applied.md)  
   
--   [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)  
+-   [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](execute-scripts-during-synchronization-replication-transact-sql-programming.md)  
   
--   [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
--   [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../2014/relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)  
+-   [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](synchronize-a-subscription-using-windows-synchronization-manager.md)  
   
--   [Implement a Business Logic Handler for a Merge Article](../../../2014/relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md)  
   
--   [Debug a Business Logic Handler &#40;Replication Programming&#41;](../../../2014/relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)  
+-   [Debug a Business Logic Handler &#40;Replication Programming&#41;](debug-a-business-logic-handler-replication-programming.md)  
   
--   [Control the Behavior of Triggers and Constraints During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)  
+-   [Control the Behavior of Triggers and Constraints During Synchronization &#40;Replication Transact-SQL Programming&#41;](control-behavior-of-triggers-and-constraints-in-synchronization.md)  
   
--   [Implement a Custom Conflict Resolver for a Merge Article](../../../2014/relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+-   [Implement a Custom Conflict Resolver for a Merge Article](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
 ## See Also  
- [Synchronize Data](../../../2014/relational-databases/replication/synchronize-data.md)  
+ [Synchronize Data](synchronize-data.md)  
   
   

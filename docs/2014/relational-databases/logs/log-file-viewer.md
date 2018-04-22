@@ -50,7 +50,7 @@ manager: "jhubbard"
 |Provides Log File Viewer F1 Help.|[Log File Viewer F1 Help](log-file-viewer-f1-help.md)|  
   
 ## See Also  
- [SQL Server Audit &#40;Database Engine&#41;](../../database-engine/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40;Database Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server Agent Error Log](../../database-engine/sql-server-agent-error-log.md)  
   
   

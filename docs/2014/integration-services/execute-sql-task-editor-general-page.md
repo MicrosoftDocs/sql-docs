@@ -78,7 +78,7 @@ manager: "jhubbard"
  **BypassPrepare**  
  Indicate whether the SQL statement is prepared.  `true` skips preparation; `false` prepares the SQL statement before running it. This option is available only with OLE DB connections that support preparation.  
   
- **Related Topics:**  [Prepared Execution](../../2014/database-engine/dev-guide/prepared-execution.md)  
+ **Related Topics:**  [Prepared Execution](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **Browse**  
  Locate a file that contains a SQL statement by using the **Open** dialog box. Select a file to copy the contents of the file as a SQL statement into the **SQLStatement** property.  

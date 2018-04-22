@@ -27,11 +27,11 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Fetching BLOB Data Using IRow::GetColumns and ISequentialStream](../../../2014/database-engine/dev-guide/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md)  
+-   [Fetching BLOB Data Using IRow::GetColumns and ISequentialStream](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md)  
   
--   [Fetching BLOB Data Using IRow::Open and ISequentialStream](../../../2014/database-engine/dev-guide/fetching-blob-data-using-irow-open-and-isequentialstream.md)  
+-   [Fetching BLOB Data Using IRow::Open and ISequentialStream](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md)  
   
 ## See Also  
- [Fetching a Single Row with IRow](../../../2014/database-engine/dev-guide/fetching-a-single-row-with-irow.md)  
+ [Fetching a Single Row with IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

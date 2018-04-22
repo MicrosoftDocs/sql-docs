@@ -45,6 +45,6 @@ manager: "jhubbard"
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
  [PreConnect:Starting Event Class](preconnect-starting-event-class.md)   
- [Resource Governor](../../database-engine/resource-governor.md)  
+ [Resource Governor](../resource-governor/resource-governor.md)  
   
   

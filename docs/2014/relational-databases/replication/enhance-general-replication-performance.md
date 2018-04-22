@@ -70,17 +70,17 @@ manager: "jhubbard"
   
      Business logic in user-defined triggers at the Subscriber can slow down the replication of changes to the Subscriber:  
   
-    -   For transactional replication, it can be more efficient to include this logic in custom stored procedures used to apply the replicated commands. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
+    -   For transactional replication, it can be more efficient to include this logic in custom stored procedures used to apply the replicated commands. For more information, see [Specify How Changes Are Propagated for Transactional Articles](specify-how-changes-are-propagated-for-transactional-articles.md).  
   
-    -   For merge replication, it can be more efficient to use business logic handlers. For more information, see [Execute Business Logic During Merge Synchronization](../../../2014/relational-databases/replication/execute-business-logic-during-merge-synchronization.md).  
+    -   For merge replication, it can be more efficient to use business logic handlers. For more information, see [Execute Business Logic During Merge Synchronization](execute-business-logic-during-merge-synchronization.md).  
   
-     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify the Processing Order of Merge Articles](../../../2014/relational-databases/replication/specify-the-processing-order-of-merge-articles.md).  
+     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify the Processing Order of Merge Articles](specify-the-processing-order-of-merge-articles.md).  
   
 -   Limit the use of Large Object (LOB) data types.  
   
      LOBs require more storage space and processing than other column data types. Do not include these columns in articles unless necessary for your application. The data types `text`, `ntext`, and `image` are deprecated. If you do include LOBs, we recommend that you use the data types `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectively.  
   
-     For transactional replication, consider using the Distribution Agent profile called **Distribution Profile for OLEDB streaming**. For more information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+     For transactional replication, consider using the Distribution Agent profile called **Distribution Profile for OLEDB streaming**. For more information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
 ## Publication Design  
   
@@ -94,27 +94,27 @@ manager: "jhubbard"
   
      Changes can be partitioned by publishing subsets of data to each Subscriber or by having an application direct changes for a given row to a given node:  
   
-    -   Merge replication supports publishing subsets of data using parameterized filters with a single publication. For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+    -   Merge replication supports publishing subsets of data using parameterized filters with a single publication. For more information, see [Parameterized Row Filters](parameterized-row-filters.md).  
   
-    -   Transactional replication supports publishing subsets of data using static filters with multiple publications. For more information, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md).  
+    -   Transactional replication supports publishing subsets of data using static filters with multiple publications. For more information, see [Filter Published Data](filter-published-data.md).  
   
 -   Use row filters judiciously.  
   
      When a transactional publication includes one or more articles that use row filters, the Log Reader Agent must apply the filter to each row affected by an update to the table as it scans the transaction log. The throughput of the Log Reader Agent is therefore affected.  
   
-     Similarly, merge replication must evaluate changed or deleted rows to determine which Subscribers should receive those rows. When row filters are employed to reduce the data required at a Subscriber, this processing is more complex and can be slower than when you publish all rows in a table. Consider carefully the tradeoff between reduced storage requirements at each Subscriber and the need for achieving maximum throughput. For more information on filtering, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md).  
+     Similarly, merge replication must evaluate changed or deleted rows to determine which Subscribers should receive those rows. When row filters are employed to reduce the data required at a Subscriber, this processing is more complex and can be slower than when you publish all rows in a table. Consider carefully the tradeoff between reduced storage requirements at each Subscriber and the need for achieving maximum throughput. For more information on filtering, see [Filter Published Data](filter-published-data.md).  
   
 ## Subscription Considerations  
   
 -   Use pull subscriptions when there are a large number of Subscribers.  
   
-     The Distribution Agent and Merge Agent run at the Distributor for push subscriptions, and at Subscribers for pull subscriptions. Using pull subscriptions can improve performance by moving agent processing from the Distributor to Subscribers. For more information, see [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md).  
+     The Distribution Agent and Merge Agent run at the Distributor for push subscriptions, and at Subscribers for pull subscriptions. Using pull subscriptions can improve performance by moving agent processing from the Distributor to Subscribers. For more information, see [Subscribe to Publications](subscribe-to-publications.md).  
   
 -   Consider reinitialization of the subscription if Subscribers are too far behind.  
   
-     When large amounts of changes need to be sent to Subscribers, reinitializing them with a new snapshot might be faster than using replication to move the individual changes. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+     When large amounts of changes need to be sent to Subscribers, reinitializing them with a new snapshot might be faster than using replication to move the individual changes. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
-     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## Snapshot Considerations  
   
@@ -140,11 +140,11 @@ manager: "jhubbard"
   
      Compressing snapshot files in the alternate snapshot folder can reduce snapshot disk storage requirements and make it easier to transfer snapshot files on removable media.  
   
-     Compressed snapshots can, in some cases, improve the performance of transferring snapshot files across the network. However, compressing the snapshot requires additional processing by the Snapshot Agent when generating the snapshot files, and by the Distribution Agent or Merge Agent when applying the snapshot files. This may slow down snapshot generation and increase the time it takes to apply a snapshot in some cases. Additionally, compressed snapshots cannot be resumed if a network failure occurs; therefore they are not suitable for unreliable networks. Consider these tradeoffs carefully when using compressed snapshots across a network. For more information, see [Alternate Snapshot Folder Locations](../../../2014/relational-databases/replication/alternate-snapshot-folder-locations.md) and [Compressed Snapshots](../../../2014/relational-databases/replication/compressed-snapshots.md).  
+     Compressed snapshots can, in some cases, improve the performance of transferring snapshot files across the network. However, compressing the snapshot requires additional processing by the Snapshot Agent when generating the snapshot files, and by the Distribution Agent or Merge Agent when applying the snapshot files. This may slow down snapshot generation and increase the time it takes to apply a snapshot in some cases. Additionally, compressed snapshots cannot be resumed if a network failure occurs; therefore they are not suitable for unreliable networks. Consider these tradeoffs carefully when using compressed snapshots across a network. For more information, see [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) and [Compressed Snapshots](compressed-snapshots.md).  
   
 -   Consider initializing a subscription manually.  
   
-     In some scenarios, such as those involving large initial datasets, it is preferable to initialize a subscription using a method other than a snapshot. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+     In some scenarios, such as those involving large initial datasets, it is preferable to initialize a subscription using a method other than a snapshot. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ## Agent Parameters  
   
@@ -158,10 +158,10 @@ manager: "jhubbard"
   
  Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
--   [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md)  
+-   [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)  
   
--   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
+-   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
   
   

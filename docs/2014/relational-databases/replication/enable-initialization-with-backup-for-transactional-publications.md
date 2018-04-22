@@ -24,15 +24,15 @@ manager: "jhubbard"
 # Enable Initialization with a Backup for Transactional Publications (SQL Server Management Studio)
   To initialize a subscription to a transactional publication from a backup, enable the publication to allow initialization from a backup, and then specify backup information when creating the subscription:  
   
--   Enable the publication on the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+-   Enable the publication on the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
--   Specify backup information with the stored procedure [sp_addsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). For more information about the parameters required by **sp_addsubscription**, see [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md).  
+-   Specify backup information with the stored procedure [sp_addsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). For more information about the parameters required by **sp_addsubscription**, see [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](initialize-a-transactional-subscription-from-a-backup.md).  
   
 ### To enable initialization with a backup  
   
 1.  On the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box, select a value of **True** for the **Allow initialization from backup files** option.  
   
 ## See Also  
- [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)  
+ [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)  
   
   

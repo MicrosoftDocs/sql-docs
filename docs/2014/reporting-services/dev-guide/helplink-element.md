@@ -67,6 +67,6 @@ catch (SoapException e)
 ## See Also  
  [Introducing Exception Handling in Reporting Services](../../../2014/reporting-services/dev-guide/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException Class](../../../2014/reporting-services/dev-guide/reporting-services-soapexception-class.md)   
- [Using the Detail Property to Handle Specific Errors](../../../2014/reporting-services/dev-guide/using-the-detail-property-to-handle-specific-errors.md)  
+ [Using the Detail Property to Handle Specific Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

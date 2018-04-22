@@ -19,15 +19,15 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ODBC Table-Valued Parameter Programming Examples
-  This section describes how to perform common tasks with ODBC and table-valued parameters. For another sample demonstrating table-valued parameters, see [Use Table-Valued Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/use-table-valued-parameters-odbc.md).  
+  This section describes how to perform common tasks with ODBC and table-valued parameters. For another sample demonstrating table-valued parameters, see [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## In This Section  
   
--   [Sending Data as a Table-Valued Parameter with All Values in Memory &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)  
+-   [Sending Data as a Table-Valued Parameter with All Values in Memory &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)  
   
--   [Sending Data as a Table-Valued Parameter Using Data-At-Execution &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md)  
+-   [Sending Data as a Table-Valued Parameter Using Data-At-Execution &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md)  
   
 ## See Also  
- [Table-Valued Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-odbc.md)  
+ [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

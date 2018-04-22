@@ -31,7 +31,7 @@ manager: "jhubbard"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Specify data type mappings on the **Data Mapping** tab of the **Article Properties - \<Article>** dialog box. This is available from the **Articles** page of the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication from an Oracle Database](../../../2014/relational-databases/replication/create-a-publication-from-an-oracle-database.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Specify data type mappings on the **Data Mapping** tab of the **Article Properties - \<Article>** dialog box. This is available from the **Articles** page of the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To specify a data type mapping  
   
@@ -43,18 +43,18 @@ manager: "jhubbard"
   
     -   For some data types there is only one possible mapping, in which case the column in the property grid is read-only.  
   
-    -   For some types, there is more than one type that you can select. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default mapping unless your application requires a different mapping. For more information, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
+    -   For some types, there is more than one type that you can select. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default mapping unless your application requires a different mapping. For more information, see [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- You can specify custom data type mappings programmatically using replication stored procedures. You can also set the default mappings that are used when mapping data types between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management system (DBMS). For more information, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
+ You can specify custom data type mappings programmatically using replication stored procedures. You can also set the default mappings that are used when mapping data types between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management system (DBMS). For more information, see [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md).  
   
 #### To define custom data type mappings when creating an article belonging to an Oracle publication  
   
 1.  If one does not already exist, create an Oracle publication.  
   
-2.  At the Distributor, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **0** for **@use_default_datatypes**. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+2.  At the Distributor, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **0** for **@use_default_datatypes**. For more information, see [Define an Article](define-an-article.md).  
   
 3.  At the Distributor, execute [sp_helparticlecolumns](~/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) to view the existing mapping for a column in a published article.  
   
@@ -92,9 +92,9 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_number)]  
   
 ## See Also  
- [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md)   
- [Heterogeneous Database Replication](../../../2014/relational-databases/replication/heterogeneous-database-replication.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)  
+ [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
+ [Heterogeneous Database Replication](heterogeneous-database-replication.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)  
   
   

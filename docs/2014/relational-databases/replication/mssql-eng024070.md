@@ -47,8 +47,8 @@ manager: "jhubbard"
  Being a member of this security group grants to the new account the required permissions to run the replication agent job.  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)   
- [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md)   
- [SQL Server Configuration Manager](../../../2014/database-engine/sql-server-configuration-manager.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
+ [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
+ [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)  
   
   

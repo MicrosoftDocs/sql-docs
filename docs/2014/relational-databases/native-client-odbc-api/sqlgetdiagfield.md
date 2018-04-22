@@ -96,7 +96,7 @@ manager: "jhubbard"
 ## SQLGetDiagField and Table-Valued Parameters  
  SQLGetDiagField can be used to retrieve two diagnostic fields: SQL_DIAG_SS_TABLE_COLUMN_NUMBER and SQL_DIAG_SS_TABLE_ROW_NUMBER. These fields help you determine which value caused the error or warning associated with the diagnostic record.  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## See Also  
  [SQLGetDiagField Function](http://go.microsoft.com/fwlink/?LinkId=59352)   

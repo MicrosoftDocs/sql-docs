@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Describes how to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../../2014/database-engine/solution-explorer.md)|  
 |Describes how to connect [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[F1 Help for Server Connections &#40;SQL Server Management Studio&#41;](../../2014/database-engine/f1-help-for-server-connections-sql-server-management-studio.md)|  
 |Describes how to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../../2014/database-engine/visual-database-tools.md)|  
-|Describes how to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md)|  
+|Describes how to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
 ## See Also  
  [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   

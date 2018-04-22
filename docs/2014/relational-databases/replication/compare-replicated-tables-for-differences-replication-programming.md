@@ -21,14 +21,14 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Compare Replicated Tables for Differences (Replication Programming)
-  Article validation is used to determine if published data for table articles at the Publisher and Subscriber are not identical, which can indicate non-convergence. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md). However, validation only returns pass or fail information and does not provide any information about what is different between the source and destination tables. The **tablediff** command prompt utility returns detailed difference information between two tables and can even generate a [!INCLUDE[tsql](../../includes/tsql-md.md)] script to bring a subscription into convergence with data at the Publisher.  
+  Article validation is used to determine if published data for table articles at the Publisher and Subscriber are not identical, which can indicate non-convergence. For more information, see [Validate Replicated Data](validate-replicated-data.md). However, validation only returns pass or fail information and does not provide any information about what is different between the source and destination tables. The **tablediff** command prompt utility returns detailed difference information between two tables and can even generate a [!INCLUDE[tsql](../../includes/tsql-md.md)] script to bring a subscription into convergence with data at the Publisher.  
   
 > [!NOTE]  
 >  The **tablediff** utility is only supported for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servers.  
   
 ### To compare replicated tables for differences using tablediff  
   
-1.  From the command prompt at any server in a replication topology, run the [tablediff Utility](../../../2014/database-engine/tablediff-utility.md). Specify the following parameters:  
+1.  From the command prompt at any server in a replication topology, run the [tablediff Utility](../../database-engine/tablediff-utility.md). Specify the following parameters:  
   
     -   **-sourceserver** - name of the server on which the data is known to be correct, usually the Publisher.  
   
@@ -71,6 +71,6 @@ manager: "jhubbard"
     -   (Optional) Use **-strict** to enforce strict schema comparison between source and destination tables.  
   
 ## See Also  
- [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md)  
+ [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)  
   
   

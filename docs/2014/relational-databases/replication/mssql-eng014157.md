@@ -31,20 +31,20 @@ manager: "jhubbard"
 |Message Text|The subscription created by Subscriber '%s' to publication '%s' has expired and has been dropped.|  
   
 ## Explanation  
- A Subscriber must synchronize with the Publisher within the time specified in the publication retention period. If a Subscriber does not synchronize within this period, the subscription expires. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+ A Subscriber must synchronize with the Publisher within the time specified in the publication retention period. If a Subscriber does not synchronize within this period, the subscription expires. For more information, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
 ## User Action  
  The subscription must be re-created and initialized before the Subscriber can begin receiving data changes again:  
   
--   For information about creating subscriptions, see [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md).  
+-   For information about creating subscriptions, see [Subscribe to Publications](subscribe-to-publications.md).  
   
--   For information about initializing subscriptions, see [Initialize a Subscription](../../../2014/relational-databases/replication/initialize-a-subscription.md).  
+-   For information about initializing subscriptions, see [Initialize a Subscription](initialize-a-subscription.md).  
   
- If the subscription database contains changes that have not been synchronized with the Publisher, you can use the [tablediff Utility](../../../2014/database-engine/tablediff-utility.md) to determine which rows are different in the publication and subscription databases.  
+ If the subscription database contains changes that have not been synchronized with the Publisher, you can use the [tablediff Utility](../../database-engine/tablediff-utility.md) to determine which rows are different in the publication and subscription databases.  
   
- You can increase the publication retention period to avoid having subscriptions expire. Use caution in setting a high value, because this can result in more data and metadata being stored, which affects performance. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+ You can increase the publication retention period to avoid having subscriptions expire. Use caution in setting a high value, because this can result in more data and metadata being stored, which affects performance. For more information, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

@@ -19,7 +19,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Compress Snapshot Files (SQL Server Management Studio)
-  Specify that files should be compressed on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+  Specify that files should be compressed on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### To compress snapshot files  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
     1.  Select **Put files in the following folder**, and then click **Browse** to navigate to a directory, or enter the path to the directory in which the snapshot files should be stored.  
   
         > [!NOTE]  
-        >  The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\snapshot. For more information, see [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md)  
+        >  The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\computername\snapshot. For more information, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md)  
   
     2.  Clear **Put files in the default folder** unless you require snapshot files to be written to both locations.  
   
@@ -40,9 +40,9 @@ manager: "jhubbard"
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)   
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)   
- [Compressed Snapshots](../../../2014/relational-databases/replication/compressed-snapshots.md)   
- [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+ [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](configure-snapshot-properties-replication-transact-sql-programming.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
+ [Compressed Snapshots](compressed-snapshots.md)   
+ [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)  
   
   

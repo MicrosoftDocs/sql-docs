@@ -67,7 +67,7 @@ manager: "jhubbard"
  [Transfer Logins Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-logins-task-editor-general-page.md)   
  [Expressions Page](../../2014/integration-services/expressions-page.md)   
  [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md)   
- [Strong Passwords](../../2014/database-engine/strong-passwords.md)   
+ [Strong Passwords](../relational-databases/security/strong-passwords.md)   
  [Security Considerations for a SQL Server Installation](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

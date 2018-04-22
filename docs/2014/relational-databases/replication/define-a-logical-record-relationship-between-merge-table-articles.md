@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Define a Logical Record Relationship Between Merge Table Articles
   This topic describes how to define a logical record relationship between merge table articles in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
- Merge replication allows you to define a relationship between related rows in different tables. These rows can then be processed as a transactional unit during synchronization. A logical record can be defined between two articles whether or not they have a join filter relationship. For more information, see [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md).  
+ Merge replication allows you to define a relationship between related rows in different tables. These rows can then be processed as a transactional unit during synchronization. A logical record can be defined between two articles whether or not they have a join filter relationship. For more information, see [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -45,10 +45,10 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If you add, modify, or delete a logical record after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+-   If you add, modify, or delete a logical record after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Define logical records in the **Add Join** dialog box, which is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Define logical records in the **Add Join** dialog box, which is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
  Logical records can be defined in the **Add Join** dialog box only if they are applied to a join filter in a merge publication, and the publication follows the requirements for using precomputed partitions. To define logical records that are not applied to join filters and to set conflict detection and resolution at the logical record level, you must use stored procedures.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 1.  On the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box, select a row filter in the **Filtered Tables** pane.  
   
-     A logical record relationship is associated with a join filter, which extends a row filter. Therefore you must define a row filter before you can extend the filter with a join and apply a logical record relationship. After one join filter is defined, you can extend this join filter with another join filter. For more information about defining join filters, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
+     A logical record relationship is associated with a join filter, which extends a row filter. Therefore you must define a row filter before you can extend the filter with a join and apply a logical record relationship. After one join filter is defined, you can extend this join filter with another join filter. For more information about defining join filters, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 2.  Click **Add**, and then click **Add Join to Extend the Selected Filter**.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
     -   If the value is **0**, then execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of **use_partition_groups** for **@property** and a value of **true** for **@value**.  
   
         > [!NOTE]  
-        >  If the publication does not support precomputed partitions, then logical records cannot be used. For more information, see Requirements for Using Precomputed Partitions in the topic [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../2014/relational-databases/replication/optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
+        >  If the publication does not support precomputed partitions, then logical records cannot be used. For more information, see Requirements for Using Precomputed Partitions in the topic [Optimize Parameterized Filter Performance with Precomputed Partitions](optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
   
     -   If the value is NULL, then the Snapshot Agent needs to be run to generate the initial snapshot for the publication.  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
     -   To use the standard row- or column-level conflict detection and resolution, specify a value of `false` for **@logical_record_level_conflict_detection** and **@logical_record_level_conflict_resolution**, which is the default.  
   
-3.  Repeat step 2 for each article that will comprise the logical record. You must use the same conflict detection and resolution option for each article in the logical record. For more information, see [Detecting and Resolving Conflicts in Logical Records](../../../2014/relational-databases/replication/detecting-and-resolving-conflicts-in-logical-records.md).  
+3.  Repeat step 2 for each article that will comprise the logical record. You must use the same conflict detection and resolution option for each article in the logical record. For more information, see [Detecting and Resolving Conflicts in Logical Records](detecting-and-resolving-conflicts-in-logical-records.md).  
   
 4.  At the publisher on the publication database, execute [sp_addmergefilter](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Specify **@publication**, the name of one article in the relationship for **@article**, the name of the second article for **@join_articlename**, a name for the relationship for **@filtername**, a clause that defines the relationship between the two articles for **@join_filterclause**, the type of join for **@join_unique_key** and one of the following values for **@filter_type**:  
   
@@ -168,9 +168,9 @@ manager: "jhubbard"
   
     -   The name of the publication for <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>.  
   
-    -   (Optional) If the article is horizontally filtered, specify the row filter clause for the <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> property. Use this property to specify a static or parameterized row filter. For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+    -   (Optional) If the article is horizontally filtered, specify the row filter clause for the <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> property. Use this property to specify a static or parameterized row filter. For more information, see [Parameterized Row Filters](parameterized-row-filters.md).  
   
-     For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+     For more information, see [Define an Article](define-an-article.md).  
   
 6.  Call the <xref:Microsoft.SqlServer.Replication.Article.Create%2A> method.  
   
@@ -186,7 +186,7 @@ manager: "jhubbard"
   
     -   The expression that defines the relationship for the <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> property.  
   
-    -   A value of <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> for the <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> property. If the logical record relationship is also a join filter, specify a value of <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> for this property. For more information, see [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md).  
+    -   A value of <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> for the <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> property. If the logical record relationship is also a join filter, specify a value of <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> for this property. For more information, see [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md).  
   
 9. Call the <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> method on the object that represents the child article in the relationship. Pass the <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> object from step 8 to define the relationship.  
   
@@ -200,11 +200,11 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
 ## See Also  
- [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Define and Modify a Static Row Filter](../../../2014/relational-databases/replication/define-and-modify-a-static-row-filter.md)   
- [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md)   
- [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../2014/relational-databases/replication/optimize-parameterized-filter-performance-with-precomputed-partitions.md)   
- [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md)  
+ [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)   
+ [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md)   
+ [Optimize Parameterized Filter Performance with Precomputed Partitions](optimize-parameterized-filter-performance-with-precomputed-partitions.md)   
+ [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md)  
   
   

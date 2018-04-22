@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Use join filters to extend filters on merge table articles to related table articles.  
   
- For more information about filtering options, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md).  
+ For more information about filtering options, see [Filter Published Data](filter-published-data.md).  
   
 > [!NOTE]  
 >  Adding, editing, or deleting a filter requires a new snapshot for the publication and requires that all subscriptions be reinitialized.  
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   Avoid or reduce conflicts if Subscribers are updating data, because different data partitions can be sent to different Subscribers (no two Subscribers will be updating the same data values).  
   
--   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+-   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](parameterized-row-filters.md).  
   
 ## Options  
  **Filtered Tables**  
@@ -79,13 +79,13 @@ manager: "jhubbard"
  Contains the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition for the filter selected in the filter pane.  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [Reinitialize a Subscription](../../../2014/relational-databases/replication/reinitialize-a-subscription.md)   
- [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md)   
- [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md)   
- [Join Filters](../../../2014/relational-databases/replication/join-filters.md)   
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  
+ [Create a Publication](create-a-publication.md)   
+ [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)   
+ [Reinitialize a Subscription](reinitialize-a-subscription.md)   
+ [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [Filter Published Data](filter-published-data.md)   
+ [Join Filters](join-filters.md)   
+ [Parameterized Row Filters](parameterized-row-filters.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

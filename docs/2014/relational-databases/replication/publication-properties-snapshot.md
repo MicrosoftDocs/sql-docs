@@ -18,10 +18,10 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Properties, Snapshot
-  The **Snapshot** page of the **Publication Properties** dialog box allows you to set the snapshot format, snapshot folder location, and scripts to run before and after the application of the snapshot. The snapshot folder must be designated as a share and have sufficient permissions for the agents that read and write files to the folder. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
+  The **Snapshot** page of the **Publication Properties** dialog box allows you to set the snapshot format, snapshot folder location, and scripts to run before and after the application of the snapshot. The snapshot folder must be designated as a share and have sufficient permissions for the agents that read and write files to the folder. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
   
 > [!NOTE]  
->  Changes require a new snapshot for the publication. For more information, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+>  Changes require a new snapshot for the publication. For more information, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 ## Options  
  **Snapshot format**  
@@ -34,24 +34,24 @@ manager: "jhubbard"
  **Location of snapshot files**  
  Select the location to store snapshot files. They can be stored in the default location; they can also be stored in an alternate location instead of, or in addition to, the default location. Files stored in an alternate location can be compressed.  
   
--   Select **Put files in the default folder** to use the default snapshot folder for the Publisher. The snapshot folder location is read-only in this dialog box, because it can only be changed for the Publisher in the **Distributor Properties** dialog box. For more information, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md).  
+-   Select **Put files in the default folder** to use the default snapshot folder for the Publisher. The snapshot folder location is read-only in this dialog box, because it can only be changed for the Publisher in the **Distributor Properties** dialog box. For more information, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md).  
   
--   Select **Put files in the following folder** to specify an alternate location instead of, or in addition to, the default location. Enter a path in the text box or click **Browse** and navigate to a location. Select **Compress snapshot files in this folder** to compress the files in the alternate snapshot location. The alternate location can be on another server, on a network drive, or on removable media such as a CD-ROM or removable disk. For more information, see [Alternate Snapshot Folder Locations](../../../2014/relational-databases/replication/alternate-snapshot-folder-locations.md) and [Compressed Snapshots](../../../2014/relational-databases/replication/compressed-snapshots.md).  
+-   Select **Put files in the following folder** to specify an alternate location instead of, or in addition to, the default location. Enter a path in the text box or click **Browse** and navigate to a location. Select **Compress snapshot files in this folder** to compress the files in the alternate snapshot location. The alternate location can be on another server, on a network drive, or on removable media such as a CD-ROM or removable disk. For more information, see [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) and [Compressed Snapshots](compressed-snapshots.md).  
   
  **Run additional scripts**  
  Specify scripts to be executed before and after the snapshot is applied at the Subscriber. Scripts cannot be specified if **Snapshot format** is **Character**.  
   
- Scripts are optional, but they provide a convenient way to execute commands and apply administrative changes at Subscribers. For more information about executing scripts, see [Execute Scripts Before and After the Snapshot Is Applied](../../../2014/relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+ Scripts are optional, but they provide a convenient way to execute commands and apply administrative changes at Subscribers. For more information about executing scripts, see [Execute Scripts Before and After the Snapshot Is Applied](execute-scripts-before-and-after-the-snapshot-is-applied.md).  
   
 -   Enter a path in the **Before applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.  
   
 -   Enter a path in the **After applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md)   
- [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  
+ [Create a Publication](create-a-publication.md)   
+ [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)   
+ [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

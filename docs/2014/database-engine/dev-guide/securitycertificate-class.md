@@ -36,6 +36,6 @@ manager: "jhubbard"
 -   Verify the SHA thumbprint for the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See Also  
- [Encryption Hierarchy](../../../2014/database-engine/encryption-hierarchy.md)  
+ [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

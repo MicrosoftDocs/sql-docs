@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Service Principal Names (SPNs) in Client Connections (OLE DB)
-  This topic describes OLE DB properties and member functions that support service principal names (SPNs) in client applications. For more information about SPNs in client applications, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../features/service-principal-name-spn-support-in-client-connections.md). For a sample, see [Integrated Kerberos Authentication &#40;OLE DB&#41;](../../../database-engine/dev-guide/integrated-kerberos-authentication-ole-db.md).  
+  This topic describes OLE DB properties and member functions that support service principal names (SPNs) in client applications. For more information about SPNs in client applications, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../features/service-principal-name-spn-support-in-client-connections.md). For a sample, see [Integrated Kerberos Authentication &#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
   
 ## Provider Initialization String Keywords  
  The following provider initialization string keywords support SPNs in OLE DB applications. In the following table, the values in the keyword column are used for the provider string of IDBInitialize::Initialize. The values in the description column are used in initialization strings when connecting using ADO or IDataInitialize::GetDataSource.  

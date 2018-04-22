@@ -44,7 +44,7 @@ manager: "jhubbard"
 >  To use a remote server as the Distributor, the remote server must already be configured as a Distributor. The server against which this wizard is running must be enabled as a Publisher on that Distributor.  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
   
   

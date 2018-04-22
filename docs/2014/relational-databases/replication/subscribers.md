@@ -66,9 +66,9 @@ manager: "jhubbard"
     -   The publication allows anonymous subscriptions.  
   
 ## See Also  
- [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)   
- [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

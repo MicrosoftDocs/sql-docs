@@ -174,7 +174,7 @@ manager: "jhubbard"
   
 1.  To ensure that no new user transactions occur on the original primary databases, the WSFC cluster sends a request to the primary replica to go offline.  
   
-2.  If any log is waiting in the recovery queue of any secondary database, the secondary replica finishes rolling forward that secondary database. The amount of time required depends on the speed of the system, the recent workload, and the amount of log in the recovery queue. To learn the current size of the recovery queue, use the **Recovery Queue** performance counter. For more information, see [SQL Server, Database Replica](../../sql-server-database-replica.md).  
+2.  If any log is waiting in the recovery queue of any secondary database, the secondary replica finishes rolling forward that secondary database. The amount of time required depends on the speed of the system, the recent workload, and the amount of log in the recovery queue. To learn the current size of the recovery queue, use the **Recovery Queue** performance counter. For more information, see [SQL Server, Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
     > [!NOTE]  
     >  The failover time can be regulated by limiting the size of the recovery queue. However, this can cause the primary replica to slow down to allow the secondary replica to keep up.  

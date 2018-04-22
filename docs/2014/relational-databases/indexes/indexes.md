@@ -33,7 +33,7 @@ manager: "jhubbard"
 |Filtered|An optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes.|[Create Filtered Indexes](create-filtered-indexes.md)|  
 |Spatial|A spatial index provides the ability to perform certain operations more efficiently on spatial objects (*spatial data*) in a column of the **geometry** data type. The spatial index reduces the number of objects on which relatively costly spatial operations need to be applied.|[Spatial Indexes Overview](../../database-engine/spatial-indexes-overview.md)|  
 |XML|A shredded, and persisted, representation of the XML binary large objects (BLOBs) in the `xml` data type column.|[XML Indexes &#40;SQL Server&#41;](../../database-engine/xml-indexes-sql-server.md)|  
-|Full-text|A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data.|[Populate Full-Text Indexes](../../database-engine/populate-full-text-indexes.md)|  
+|Full-text|A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data.|[Populate Full-Text Indexes](../search/populate-full-text-indexes.md)|  
   
 ## Related Tasks  
   

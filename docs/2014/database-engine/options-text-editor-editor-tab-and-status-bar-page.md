@@ -91,6 +91,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Options &#40;Environment: Fonts and Colors Page&#41;](../../2014/database-engine/options-environment-fonts-and-colors-page.md)   
- [Color Coding in Query Editors](../../2014/database-engine/color-coding-in-query-editors.md)  
+ [Color Coding in Query Editors](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

@@ -43,7 +43,7 @@ manager: "jhubbard"
 -   You must associate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with a database user in the publication database before you add the login to the PAL.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- You use the publication access list (PAL) on the **Publication Access List** page of the **Publication Properties - \<Publication>** dialog box to manage logins. For more information about how to access this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ You use the publication access list (PAL) on the **Publication Access List** page of the **Publication Properties - \<Publication>** dialog box to manage logins. For more information about how to access this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To manage logins in the PAL  
   
@@ -69,8 +69,8 @@ manager: "jhubbard"
 1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](~/relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being removed.  
   
 ## See Also  
- [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md)   
- [Secure a Replication Topology](../../../2014/relational-databases/replication/secure-a-replication-topology.md)   
- [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md)  
+ [Replication Agent Security Model](replication-agent-security-model.md)   
+ [Secure a Replication Topology](secure-a-replication-topology.md)   
+ [Secure the Publisher](secure-the-publisher.md)  
   
   

@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  **To specify a tablespace for an article logging table**:  
   
--   Specify a tablespace in the **Article Properties** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+-   Specify a tablespace in the **Article Properties** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 -   Use [sp_changearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). To use **sp_changearticle**, specify the following:  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
     -   The name of the tablespace for the parameter **@value**.  
   
 ## See Also  
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Objects Created on the Oracle Publisher](../../../2014/relational-databases/replication/objects-created-on-the-oracle-publisher.md)  
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)  
   
   

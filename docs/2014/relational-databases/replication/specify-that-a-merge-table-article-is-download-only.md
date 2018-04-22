@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify That a Merge Table Article is Download-Only
-  This topic describes how to specify that a merge table article is download-only in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Download-only articles are designed for applications with data that is not updated at Subscribers. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md).  
+  This topic describes how to specify that a merge table article is download-only in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Download-only articles are designed for applications with data that is not updated at Subscribers. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **In This Topic**  
   
@@ -38,10 +38,10 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If you specify that an article is download-only after subscriptions have been initialized, all client subscriptions that received the article must be reinitialized. Server subscriptions do not have to be reinitialized. For more information on the effects of property changes, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+-   If you specify that an article is download-only after subscriptions have been initialized, all client subscriptions that received the article must be reinitialized. Server subscriptions do not have to be reinitialized. For more information on the effects of property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Specify that an article is download-only on the **Articles** page of the New Publication Wizard or the **Properties** tab of the **Article Properties - \<Article>** dialog box. This dialog box is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Specify that an article is download-only on the **Articles** page of the New Publication Wizard or the **Properties** tab of the **Article Properties - \<Article>** dialog box. This dialog box is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To specify that an article is download-only on the Articles page  
   
@@ -90,8 +90,8 @@ manager: "jhubbard"
         >  If the source table for an article is already published in another publication, the download-only behavior must be the same for both articles.  
   
 ## See Also  
- [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md)   
- [Define an Article](../../../2014/relational-databases/replication/define-an-article.md)   
- [View and Modify Article Properties](../../../2014/relational-databases/replication/view-and-modify-article-properties.md)  
+ [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md)   
+ [Define an Article](define-an-article.md)   
+ [View and Modify Article Properties](view-and-modify-article-properties.md)  
   
   

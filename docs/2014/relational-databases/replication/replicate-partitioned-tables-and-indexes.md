@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  The first set of properties related to partitioning are the article schema options that determine whether partitioning objects should be copied to the Subscriber. These schema options can be set in the following ways:  
   
--   In the **Article Properties** page of the New Publication Wizard or the Publication Properties dialog box. To copy the objects listed in the previous table, specify a value of `true` for the properties **Copy table partitioning schemes** and **Copy index partitioning schemes**. For information about how to access the **Article Properties** page, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+-   In the **Article Properties** page of the New Publication Wizard or the Publication Properties dialog box. To copy the objects listed in the previous table, specify a value of `true` for the properties **Copy table partitioning schemes** and **Copy index partitioning schemes**. For information about how to access the **Article Properties** page, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 -   By using the *schema_option* parameter of one of the following stored procedures:  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
     -   [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) or [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) for merge replication  
   
-     To copy the objects listed in the previous table, specify the appropriate schema option values. For information about how to specify schema options, see [Specify Schema Options](../../../2014/relational-databases/replication/specify-schema-options.md).  
+     To copy the objects listed in the previous table, specify the appropriate schema option values. For information about how to specify schema options, see [Specify Schema Options](specify-schema-options.md).  
   
  Replication copies objects to the Subscriber during the initial synchronization. If the partition scheme uses filegroups other than the PRIMARY filegroup, those filegroups must exist on the Subscriber before the initial synchronization.  
   
@@ -75,6 +75,6 @@ manager: "jhubbard"
  You can set these properties by using [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) when the publication is created, or by using [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) after the publication is created. As noted earlier, merge replication does not support partition switching. To execute SWITCH PARTITION on a table that is enabled for merge replication, remove the table from the publication.  
   
 ## See Also  
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

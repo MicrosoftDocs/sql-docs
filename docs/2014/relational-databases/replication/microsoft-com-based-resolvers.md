@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  The resolvers are installed during the installation process for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Execute the **sp_enumcustomresolvers** stored procedure to view all the conflict resolvers registered on a computer. Executing the procedure displays the description and globally unique identifier (GUID) for each resolver in a separate result set.  
   
- To specify a resolver, see [Specify a Merge Article Resolver](../../../2014/relational-databases/replication/specify-a-merge-article-resolver.md).  
+ To specify a resolver, see [Specify a Merge Article Resolver](specify-a-merge-article-resolver.md).  
   
  The following table describes the attributes of the specific resolvers.  
   
@@ -40,10 +40,10 @@ manager: "jhubbard"
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Priority Column Resolver|Name of the column to be used to determine the conflict winner. It must have an arithmetic data type (such as **int**, **smallint**, **numeric**, and so on).|Column with the larger numeric value determines the conflict winner. If one is set to NULL, the row containing the other is the winner.|Supports update conflicts, row and column tracking.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upload Only Conflict Resolver|No inputs.|Changes uploaded to the Publisher are accepted; changes are not downloaded to the Subscriber.|Supports all conflict types.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Download Only Conflict Resolver|No inputs.|Changes uploaded to the Publisher are rejected; changes are downloaded to the Subscriber.|Supports all conflict types.|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLServer Stored Procedure Resolver|Name of the stored procedure the resolver should call to handle the conflict.|Conflict resolution depends on the logic in the stored procedure you specify.|Supports update conflicts. For more information, see [Implement a Custom Conflict Resolver for a Merge Article](../../../2014/relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLServer Stored Procedure Resolver|Name of the stored procedure the resolver should call to handle the conflict.|Conflict resolution depends on the logic in the stored procedure you specify.|Supports update conflicts. For more information, see [Implement a Custom Conflict Resolver for a Merge Article](implement-a-custom-conflict-resolver-for-a-merge-article.md)|  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)  
   
   

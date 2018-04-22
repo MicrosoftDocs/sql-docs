@@ -24,9 +24,9 @@ manager: "jhubbard"
   
 |See…|For topics about…|  
 |----------|-----------------------|  
-|[Deprecated Full-Text Search Features in SQL Server 2014](../../2014/database-engine/deprecated-full-text-search-features-in-sql-server-2014.md)|Deprecated full-text search features in this release.|  
+|[Deprecated Full-Text Search Features in SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Deprecated full-text search features in this release.|  
 |[Discontinued Full-Text Search Features in SQL Server 2014](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|Discontinued full-text search features in this release.|  
-|[Breaking Changes to Full-Text Search](../../2014/database-engine/breaking-changes-to-full-text-search.md)|Full-text search changes that might require changes to applications.|  
+|[Breaking Changes to Full-Text Search](breaking-changes-to-full-text-search.md)|Full-text search changes that might require changes to applications.|  
 |[Behavior Changes to Full-Text Search](../../2014/database-engine/behavior-changes-to-full-text-search.md)|Other changes in behavior to full-text search.|  
   
 ## See Also  

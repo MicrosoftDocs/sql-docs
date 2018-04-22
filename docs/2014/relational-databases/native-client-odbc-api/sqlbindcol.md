@@ -32,9 +32,9 @@ manager: "jhubbard"
  For large value data types, if the user supplied buffer isn’t large enough to hold the entire value of the column, `SQL_SUCCESS_WITH_INFO` is returned and the “string data; right truncation” warning is issued. The `StrLen_or_IndPtr` argument will contain the number of chars/bytes stored in the buffer.  
   
 ## SQLBindCol Support for Enhanced Date and Time Features  
- Result column values of date/time types are converted as described in [Conversions from SQL to C](../../database-engine/dev-guide/conversions-from-sql-to-c.md). Note that to retrieve time and datetimeoffset columns as their corresponding structures (`SQL_SS_TIME2_STRUCT` and **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* must be specified as `SQL_C_DEFAULT` or `SQL_C_BINARY`.  
+ Result column values of date/time types are converted as described in [Conversions from SQL to C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Note that to retrieve time and datetimeoffset columns as their corresponding structures (`SQL_SS_TIME2_STRUCT` and **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* must be specified as `SQL_C_DEFAULT` or `SQL_C_BINARY`.  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLBindCol Support for Large CLR UDTs  
  **SQLBindCol** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

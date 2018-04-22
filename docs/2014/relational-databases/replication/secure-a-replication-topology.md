@@ -22,14 +22,14 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md)  
+-   [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)  
   
--   [Manage Logins in the Publication Access List](../../../2014/relational-databases/replication/manage-logins-in-the-publication-access-list.md)  
+-   [Manage Logins in the Publication Access List](manage-logins-in-the-publication-access-list.md)  
   
--   [Replicate Data in Encrypted Columns &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/replicate-data-in-encrypted-columns-sql-server-management-studio.md)  
+-   [Replicate Data in Encrypted Columns &#40;SQL Server Management Studio&#41;](replicate-data-in-encrypted-columns-sql-server-management-studio.md)  
   
 ## See Also  
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)   
- [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md)  
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
+ [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)  
   
   

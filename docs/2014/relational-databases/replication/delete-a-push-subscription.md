@@ -121,7 +121,7 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
 ## See Also  
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)  
   
   

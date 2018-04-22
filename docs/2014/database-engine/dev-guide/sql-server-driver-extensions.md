@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Bulk Copy Functions](../../../2014/database-engine/dev-guide/bulk-copy-functions.md)  
+-   [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41; Reference](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  

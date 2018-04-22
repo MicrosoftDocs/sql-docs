@@ -39,7 +39,7 @@ manager: "jhubbard"
  Select a role in the list  
   
 ## See Also  
- [Database-Level Roles](../../2014/database-engine/database-level-roles.md)   
+ [Database-Level Roles](../relational-databases/security/authentication-access/database-level-roles.md)   
  [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md)  
   
   

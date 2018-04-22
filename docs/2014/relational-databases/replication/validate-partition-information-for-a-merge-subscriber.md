@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Validate Partition Information for a Merge Subscriber
-  When you define a parameterized row filter for a merge publication, you use a function that references Subscriber information, such as the Subscriber's login name. By default, replication validates Subscriber information based on that function before each synchronization and whenever a snapshot is applied at the Subscriber. The validation process ensures that data is partitioned correctly for each Subscriber. Validation behavior is controlled by the **validate_subscriber_info** publication property, which can be changed using [sp_changemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) or on the **Subscription Options** page of the **Publication Properties** dialog box. For more information about changing publication properties, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+  When you define a parameterized row filter for a merge publication, you use a function that references Subscriber information, such as the Subscriber's login name. By default, replication validates Subscriber information based on that function before each synchronization and whenever a snapshot is applied at the Subscriber. The validation process ensures that data is partitioned correctly for each Subscriber. Validation behavior is controlled by the **validate_subscriber_info** publication property, which can be changed using [sp_changemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) or on the **Subscription Options** page of the **Publication Properties** dialog box. For more information about changing publication properties, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ## How Partition Validation Works  
  When a publication is filtered, for example, using the function **SUSER_SNAME()**, the Merge Agent applies the initial snapshot to each Subscriber based on data that is valid for the **SUSER_SNAME()** expression.  
@@ -32,9 +32,9 @@ manager: "jhubbard"
  When the Merge Agent validates a partition, in addition to validating the partition against the values returned by any functions used in filtering expressions, the agent also checks whether the snapshot was generated prior to changes that invalidate it, such as metadata cleanup operations or schema changes. If a partitioned snapshot is too old, the Merge Agent will return an error and you must regenerate a partitioned snapshot for that Subscriber based on a current regular snapshot.  
   
 ## See Also  
- [Administration &#40;Replication&#41;](../../../2014/relational-databases/replication/administration-replication.md)   
- [Best Practices for Replication Administration](../../../2014/relational-databases/replication/best-practices-for-replication-administration.md)   
- [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md)   
- [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md)  
+ [Administration &#40;Replication&#41;](administration-replication.md)   
+ [Best Practices for Replication Administration](best-practices-for-replication-administration.md)   
+ [Reinitialize Subscriptions](reinitialize-subscriptions.md)   
+ [Validate Replicated Data](validate-replicated-data.md)  
   
   

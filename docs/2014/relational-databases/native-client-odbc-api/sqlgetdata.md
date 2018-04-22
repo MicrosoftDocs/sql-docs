@@ -33,9 +33,9 @@ manager: "jhubbard"
 >  For large value types, *StrLen_or_IndPtr* will return SQL_NO_TOTAL in cases of data truncation.  
   
 ## SQLGetData Support for Enhanced Date and Time Features  
- Result column values of date/time types are converted as described in [Conversions from SQL to C](../../database-engine/dev-guide/conversions-from-sql-to-c.md).  
+ Result column values of date/time types are converted as described in [Conversions from SQL to C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLGetData Support for Large CLR UDTs  
  **SQLGetData** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

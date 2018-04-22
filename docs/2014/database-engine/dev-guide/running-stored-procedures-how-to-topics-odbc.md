@@ -23,11 +23,11 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Call Stored Procedures &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/call-stored-procedures-odbc.md)  
+-   [Call Stored Procedures &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
--   [Process Return Codes and Output Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/process-return-codes-and-output-parameters-odbc.md)  
+-   [Process Return Codes and Output Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)  
   
 ## See Also  
- [ODBC How-to Topics](../../../2014/database-engine/dev-guide/odbc-how-to-topics.md)  
+ [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

@@ -80,7 +80,7 @@ manager: "jhubbard"
   
 5.  If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured as a replication Distributor, locate the current backup of the distribution database.  
   
-6.  Ensure you have appropriate permissions to rebuild the system databases. To perform this operation, you must be a member of the `sysadmin` fixed server role. For more information, see [Server-Level Roles](../../database-engine/server-level-roles.md).  
+6.  Ensure you have appropriate permissions to rebuild the system databases. To perform this operation, you must be a member of the `sysadmin` fixed server role. For more information, see [Server-Level Roles](../security/authentication-access/server-level-roles.md).  
   
 7.  Verify that copies of the master, model, msdb data and log template files exist on the local server. The default location for the template files is C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Templates. These files are used during the rebuild process and must be present for Setup to succeed. If they are missing, run the Repair feature of Setup, or manually copy the files from your installation media. To locate the files on the installation media, navigate to the appropriate platform directory (x86 or x64) and then navigate to setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates.  
   

@@ -104,7 +104,7 @@ manager: "jhubbard"
      For information about the space requirements of sparse columns, see [Use Sparse Columns](../../database-engine/use-sparse-columns.md).  
   
 ## See Also  
- [Heaps &#40;Tables without Clustered Indexes&#41;](../indexes/indexes.md)   
+ [Heaps &#40;Tables without Clustered Indexes&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   
  [Clustered and Nonclustered Indexes Described](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [Create Clustered Indexes](../indexes/create-clustered-indexes.md)   
  [Create Nonclustered Indexes](../indexes/create-nonclustered-indexes.md)   

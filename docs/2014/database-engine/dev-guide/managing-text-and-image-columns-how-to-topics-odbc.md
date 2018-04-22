@@ -21,11 +21,11 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Use Data-at-Execution Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/use-data-at-execution-parameters-odbc.md)  
+-   [Use Data-at-Execution Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-parameters.md)  
   
--   [Use Data-at-Execution Columns &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/use-data-at-execution-columns-odbc.md)  
+-   [Use Data-at-Execution Columns &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
   
 ## See Also  
- [ODBC How-to Topics](../../../2014/database-engine/dev-guide/odbc-how-to-topics.md)  
+ [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

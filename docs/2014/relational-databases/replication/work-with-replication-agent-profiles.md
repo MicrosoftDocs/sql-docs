@@ -136,15 +136,15 @@ manager: "jhubbard"
   
 1.  At the Distributor, execute [sp_add_agent_profile &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Specify **@name**, a value of **1** for **@profile_type**, and one of the following values for **@agent_type**:  
   
-    -   **1** - [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)  
+    -   **1** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
-    -   **2** - [Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
-    -   **3** - [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](replication-distribution-agent.md)  
   
-    -   **4** - [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](replication-merge-agent.md)  
   
-    -   **9** - [Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
      If this profile will become the new default profile for its type of replication agent, specify a value of **1** for **@default**. The identifier for the new profile is returned using the **@profile_id** output parameter. This creates a new profile with a set of profile parameters based on the default profile for the given agent type.  
   
@@ -154,15 +154,15 @@ manager: "jhubbard"
   
 1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
   
-    -   **1** - [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)  
+    -   **1** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
-    -   **2** - [Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
-    -   **3** - [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](replication-distribution-agent.md)  
   
-    -   **4** - [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](replication-merge-agent.md)  
   
-    -   **9** - [Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
      This returns all profiles for the specified type of agent. Note the value of **profile_id** in the result set for the profile to change.  
   
@@ -185,15 +185,15 @@ manager: "jhubbard"
   
 1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
   
-    -   **1** - [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)  
+    -   **1** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
-    -   **2** - [Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
-    -   **3** - [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](replication-distribution-agent.md)  
   
-    -   **4** - [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](replication-merge-agent.md)  
   
-    -   **9** - [Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
      This returns all profiles for the specified type of agent. Note the value of **profile_id** in the result set for the profile to remove.  
   
@@ -203,19 +203,19 @@ manager: "jhubbard"
   
 1.  At the Distributor, execute [sp_help_agent_profile &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Specify one of the following values for **@agent_type**:  
   
-    -   **1** - [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)  
+    -   **1** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
-    -   **2** - [Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)  
+    -   **2** - [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
-    -   **3** - [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)  
+    -   **3** - [Replication Distribution Agent](replication-distribution-agent.md)  
   
-    -   **4** - [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)  
+    -   **4** - [Replication Merge Agent](replication-merge-agent.md)  
   
-    -   **9** - [Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)  
+    -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
      This returns all profiles for the specified type of agent. Note the value of `profile_name` in the result set for the profile to use.  
   
-2.  If the agent is started from an agent job, edit the job step that starts the agent to specify the value of `profile_name` obtained in step 1 after the **-ProfileName** command-line parameter. For more information, see [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md).  
+2.  If the agent is started from an agent job, edit the job step that starts the agent to specify the value of `profile_name` obtained in step 1 after the **-ProfileName** command-line parameter. For more information, see [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md).  
   
 3.  When starting the agent from the command prompt, specify the value of `profile_name` obtained in step 1 after the **-ProfileName** command-line parameter.  
   
@@ -286,11 +286,11 @@ manager: "jhubbard"
  Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent.  
   
 ## See Also  
- [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md)   
- [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)   
- [Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)   
- [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)   
- [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)  
+ [Replication Agent Profiles](replication-agent-profiles.md)   
+ [Replication Snapshot Agent](replication-snapshot-agent.md)   
+ [Replication Log Reader Agent](replication-log-reader-agent.md)   
+ [Replication Distribution Agent](replication-distribution-agent.md)   
+ [Replication Merge Agent](replication-merge-agent.md)   
+ [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
   

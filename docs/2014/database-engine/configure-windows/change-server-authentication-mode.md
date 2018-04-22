@@ -80,7 +80,7 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [Strong Passwords](../strong-passwords.md)   
+ [Strong Passwords](../../relational-databases/security/strong-passwords.md)   
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/alter-login-transact-sql.md)   
  [Connect to SQL Server When System Administrators Are Locked Out](connect-to-sql-server-when-system-administrators-are-locked-out.md)  

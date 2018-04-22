@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  **To send SQL Server Agent error messages**  
   
--   [Send SQL Server Agent Error Messages](../../2014/database-engine/send-sql-server-agent-error-messages.md)  
+-   [Send SQL Server Agent Error Messages](../relational-databases/native-client-odbc-error-messages/error-messages.md)  
   
  **To write execution trace messages to the SQL Server Agent error log**  
   

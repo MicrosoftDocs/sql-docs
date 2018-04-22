@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   **Replication: agent custom shutdown**  
   
- Configure these alerts from the **Alerts** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. For more information about accessing this tab, see [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Configure these alerts from the **Alerts** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. For more information about accessing this tab, see [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
  In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md) alerts infrastructure. For more information, see [Create a User-Defined Event](../../database-engine/create-a-user-defined-event.md).  
   
@@ -82,6 +82,6 @@ manager: "jhubbard"
 5.  Click **Close**.  
   
 ## See Also  
- [Use Alerts for Replication Agent Events](../../relational-databases/replication/use-alerts-for-replication-agent-events.md)  
+ [Use Alerts for Replication Agent Events](use-alerts-for-replication-agent-events.md)  
   
   

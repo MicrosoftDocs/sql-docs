@@ -45,7 +45,7 @@ manager: "jhubbard"
 -   Completed  
   
  **Agent**  
- The Snapshot Agent. This is the only agent associated with a merge publication. The Merge Agent is associated with subscriptions to this publication. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+ The Snapshot Agent. This is the only agent associated with a merge publication. The Merge Agent is associated with subscriptions to this publication. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
  **Last Start Time**  
  The last time the agent started.  
@@ -57,9 +57,9 @@ manager: "jhubbard"
  The last action performed during the most recent run of the agent.  
   
 ## See Also  
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-publication-agents.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

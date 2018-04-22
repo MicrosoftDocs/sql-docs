@@ -103,7 +103,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Describes how the use of training and testing data affects cross-validation.|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Provides information on the programmatic interfaces for working with training and testing sets in a mining structure.|[AMO Concepts and Object Model](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure Element &#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
 |Provides DMX syntax for creating holdout sets.|[CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md)|  
-|Retrieve information about cases in the training and testing sets.|[Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Retrieve information about cases in the training and testing sets.|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## See Also  
  [Data Mining Tools](data-mining-tools.md)   

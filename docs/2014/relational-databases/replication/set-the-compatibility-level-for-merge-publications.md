@@ -31,7 +31,7 @@ manager: "jhubbard"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Set the compatibility level on the **Subscriber Types** page of the New Publication Wizard. For more information on accessing this wizard, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md). After a publication snapshot is created, the compatibility level can be increased but cannot be decreased. Increase the compatibility level on the **General** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md). If you increase the publication compatibility level, any existing subscriptions at servers running versions prior to the compatibility level will no longer be able to synchronize.  
+ Set the compatibility level on the **Subscriber Types** page of the New Publication Wizard. For more information on accessing this wizard, see [Create a Publication](create-a-publication.md). After a publication snapshot is created, the compatibility level can be increased but cannot be decreased. Increase the compatibility level on the **General** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md). If you increase the publication compatibility level, any existing subscriptions at servers running versions prior to the compatibility level will no longer be able to synchronize.  
   
 > [!NOTE]  
 >  Because the compatibility level has implications for other publication properties and for which article properties are valid, do not change the compatibility level and other properties in the same use of the dialog box. The snapshot for the publication should be regenerated after the property is changed.  
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 #### To set the publication compatibility level for a merge publication  
   
-1.  At the Publisher, execute [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying a value for **@publication_compatibility_level** to make the publication compatible with older versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+1.  At the Publisher, execute [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying a value for **@publication_compatibility_level** to make the publication compatible with older versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To change the publication compatibility level of a merge publication  
   
@@ -99,7 +99,7 @@ GO
  This example changes the publication compatibility level for the merge publication.  
   
 > [!NOTE]  
->  Changing the publication compatibility level might not be allowed if the publication uses any features that require a particular compatibility level. For more information, see [Replication Backward Compatibility](../../../2014/relational-databases/replication/replication-backward-compatibility.md).  
+>  Changing the publication compatibility level might not be allowed if the publication uses any features that require a particular compatibility level. For more information, see [Replication Backward Compatibility](replication-backward-compatibility.md).  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -127,6 +127,6 @@ GO
 ```  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)  
+ [Create a Publication](create-a-publication.md)  
   
   

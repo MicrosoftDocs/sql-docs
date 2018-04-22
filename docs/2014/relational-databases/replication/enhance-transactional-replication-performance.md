@@ -27,7 +27,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enhance Transactional Replication Performance
-  After considering the general performance tips described in [Enhancing General Replication Performance](../../../2014/relational-databases/replication/enhance-general-replication-performance.md), consider these additional areas specific to transactional replication.  
+  After considering the general performance tips described in [Enhancing General Replication Performance](enhance-general-replication-performance.md), consider these additional areas specific to transactional replication.  
   
 ## Database Design  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   Configure the Distributor on a dedicated server.  
   
-     You can reduce processing overhead on the Publisher by configuring a remote Distributor. For more information, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md).  
+     You can reduce processing overhead on the Publisher by configuring a remote Distributor. For more information, see [Configure Distribution](configure-distribution.md).  
   
 -   Size the distribution database appropriately.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   Replicate stored procedure execution when making batch updates to published tables.  
   
-     If you have batch updates that occasionally affect a large number of rows at the Subscriber, you should consider updating the published table using a stored procedure and publish the execution of the stored procedure. Instead of sending an update or delete for every row affected, the Distribution Agent executes the same procedure at the Subscriber with the same parameter values. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../../../2014/relational-databases/replication/publishing-stored-procedure-execution-in-transactional-replication.md).  
+     If you have batch updates that occasionally affect a large number of rows at the Subscriber, you should consider updating the published table using a stored procedure and publish the execution of the stored procedure. Instead of sending an update or delete for every row affected, the Distribution Agent executes the same procedure at the Subscriber with the same parameter values. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 -   Spread articles across multiple publications.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
      Setting the agents to run continuously rather than creating frequent schedules (such as every minute) improves replication performance, because the agent does not have to start and stop. When you set the Distribution Agent to run continuously, changes are propagated with low latency to the other servers that are connected in the topology. For more information, see:  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../2014/relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](specify-synchronization-schedules.md)  
   
 ## Distribution Agent and Log Reader Agent Parameters  
   
@@ -94,10 +94,10 @@ manager: "jhubbard"
   
  Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
--   [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md)  
+-   [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)  
   
--   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md)  
   
   

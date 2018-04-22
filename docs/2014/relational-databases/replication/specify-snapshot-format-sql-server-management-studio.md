@@ -19,7 +19,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify Snapshot Format (SQL Server Management Studio)
-  Specify snapshot format on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+  Specify snapshot format on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### To specify snapshot format  
   
@@ -31,8 +31,8 @@ manager: "jhubbard"
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)   
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)   
- [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+ [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](configure-snapshot-properties-replication-transact-sql-programming.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
+ [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)  
   
   

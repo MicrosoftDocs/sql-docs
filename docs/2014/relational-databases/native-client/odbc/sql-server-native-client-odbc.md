@@ -37,31 +37,31 @@ manager: "jhubbard"
   
 -   [Creating a SQL Server Native Client ODBC Driver Application](creating-a-driver-application.md)  
   
--   [Communicating with SQL Server &#40;ODBC&#41;](../../../database-engine/dev-guide/communicating-with-sql-server-odbc.md)  
+-   [Communicating with SQL Server &#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [Executing Queries &#40;ODBC&#41;](../../../database-engine/dev-guide/executing-queries-odbc.md)  
+-   [Executing Queries &#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [Processing Results &#40;ODBC&#41;](../../../database-engine/dev-guide/processing-results-odbc.md)  
+-   [Processing Results &#40;ODBC&#41;](../../native-client-odbc-results/processing-results-odbc.md)  
   
--   [Using Cursors &#40;ODBC&#41;](../../../database-engine/dev-guide/using-cursors-odbc.md)  
+-   [Using Cursors &#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
   
 -   [Performing Transactions &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
--   [Handling Errors and Messages](../../../database-engine/dev-guide/handling-errors-and-messages.md)  
+-   [Handling Errors and Messages](../../native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
--   [Running Stored Procedures](../../../database-engine/dev-guide/running-stored-procedures.md)  
+-   [Running Stored Procedures](../../native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
 -   [Using Catalog Functions](using-catalog-functions.md)  
   
--   [Performing Bulk Copy Operations &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-bulk-copy-operations-odbc.md)  
+-   [Performing Bulk Copy Operations &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
--   [Managing Text and Image Columns](../../../database-engine/dev-guide/managing-text-and-image-columns.md)  
+-   [Managing Text and Image Columns](../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Profiling ODBC Driver Performance](profiling-odbc-driver-performance.md)  
   
--   [Table-Valued Parameters &#40;ODBC&#41;](../../../database-engine/dev-guide/table-valued-parameters-odbc.md)  
+-   [Table-Valued Parameters &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Date and Time Improvements &#40;ODBC&#41;](../../../database-engine/dev-guide/date-and-time-improvements-odbc.md)  
+-   [Date and Time Improvements &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
 -   [Large CLR User-Defined Types &#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 -   [SQL Server Native Client &#40;ODBC&#41; Reference](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
--   [ODBC How-to Topics](../../../database-engine/dev-guide/odbc-how-to-topics.md)  
+-   [ODBC How-to Topics](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
   
 ## See Also  
  [SQL Server Native Client Programming](../sql-server-native-client-programming.md)   

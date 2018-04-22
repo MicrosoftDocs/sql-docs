@@ -39,7 +39,7 @@ manager: "jhubbard"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- [!INCLUDE[ssCatViewPerm](../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../2014/database-engine/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../relational-databases/security/metadata-visibility-configuration.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

@@ -102,7 +102,7 @@ manager: "jhubbard"
  Database mirroring does not support FILESTREAM. A FILESTREAM filegroup cannot be created on the principal server. Database mirroring cannot be configured for a database that contains FILESTREAM filegroups.  
   
 ##  <a name="FullText"></a> Full-Text Indexing  
- [Full-text indexing](../indexes/indexes.md) works with a FILESTREAM column in the same way that it does with a `varbinary(max)` column. The FILESTREAM table must have a column that contains the file name extension for each FILESTREAM BLOB. For more information, see [Query with Full-Text Search](../../database-engine/query-with-full-text-search.md), [Configure and Manage Filters for Search](../../database-engine/configure-and-manage-filters-for-search.md), and [sys.fulltext_document_types &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
+ [Full-text indexing](../indexes/indexes.md) works with a FILESTREAM column in the same way that it does with a `varbinary(max)` column. The FILESTREAM table must have a column that contains the file name extension for each FILESTREAM BLOB. For more information, see [Query with Full-Text Search](../search/query-with-full-text-search.md), [Configure and Manage Filters for Search](../search/configure-and-manage-filters-for-search.md), and [sys.fulltext_document_types &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
   
  The full-text engine indexes the contents of the FILESTREAM BLOBs. Indexing files such as images might not be useful. When a FILESTREAM BLOB is updated it is reindexed.  
   

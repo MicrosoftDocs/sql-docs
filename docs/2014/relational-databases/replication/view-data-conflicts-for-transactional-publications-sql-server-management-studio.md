@@ -20,11 +20,11 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)
-  You can view conflicts for peer-to-peer transactional replication and transactional replication with queued updating subscriptions in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Replication Conflict Viewer. For information about how conflicts are detected and resolved, see [Conflict Detection in Peer-to-Peer Replication](../../../2014/relational-databases/replication/conflict-detection-in-peer-to-peer-replication.md) and [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
+  You can view conflicts for peer-to-peer transactional replication and transactional replication with queued updating subscriptions in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Replication Conflict Viewer. For information about how conflicts are detected and resolved, see [Conflict Detection in Peer-to-Peer Replication](conflict-detection-in-peer-to-peer-replication.md) and [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
   
  The availability of conflict data depends on the type of replication and the conflict retention period:  
   
--   For peer-to-peer replication, by default, the Distribution Agent fails when it detects a conflict. A conflict error is logged into the error log, but no conflict data is logged into the conflict table; therefore it is not available for viewing. If the Distribution Agent is allowed to continue, a conflict is logged locally on each node where it was detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../../2014/relational-databases/replication/conflict-detection-in-peer-to-peer-replication.md).  
+-   For peer-to-peer replication, by default, the Distribution Agent fails when it detects a conflict. A conflict error is logged into the error log, but no conflict data is logged into the conflict table; therefore it is not available for viewing. If the Distribution Agent is allowed to continue, a conflict is logged locally on each node where it was detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](conflict-detection-in-peer-to-peer-replication.md).  
   
 -   For queued updating subscriptions, data is available for every conflict. Conflict data is available in the Replication Conflict Viewer for the amount of time specified for the conflict retention period, with a default of 14 days. To set the conflict retention period, perform either of the following:  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
 6.  Close the Replication Conflict Viewer.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md)   
- [Queued Updating Conflict Detection and Resolution](../../../2014/relational-databases/replication/queued-updating-conflict-detection-and-resolution.md)  
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [Queued Updating Conflict Detection and Resolution](queued-updating-conflict-detection-and-resolution.md)  
   
   

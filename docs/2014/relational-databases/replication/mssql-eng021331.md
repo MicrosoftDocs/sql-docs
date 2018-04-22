@@ -37,8 +37,8 @@ manager: "jhubbard"
  Ensure that the correct path has been specified for the snapshot folder and that the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs at the Publisher has sufficient permissions.  
   
 ## See Also  
- [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)   
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)   
- [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)  
+ [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)   
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
+ [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)  
   
   

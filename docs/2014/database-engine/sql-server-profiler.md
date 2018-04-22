@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   Capturing the series of [!INCLUDE[tsql](../includes/tsql-md.md)] statements that lead to a problem. The saved trace can then be used to replicate the problem on a test server where the problem can be diagnosed.  
   
--   Monitoring the performance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to tune workloads. For information about tuning the physical database design for database workloads, see [Database Engine Tuning Advisor](../../2014/database-engine/database-engine-tuning-advisor.md).  
+-   Monitoring the performance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to tune workloads. For information about tuning the physical database design for database workloads, see [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md).  
   
 -   Correlating performance counters to diagnose problems.  
   
@@ -186,6 +186,6 @@ manager: "jhubbard"
  [Sessions Event Category](../relational-databases/event-classes/sessions-event-category.md)   
  [Stored Procedures Event Category](../relational-databases/event-classes/stored-procedures-event-category.md)   
  [TSQL Event Category](../relational-databases/event-classes/tsql-event-category.md)   
- [Server Performance and Activity Monitoring](../../2014/database-engine/server-performance-and-activity-monitoring.md)  
+ [Server Performance and Activity Monitoring](../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

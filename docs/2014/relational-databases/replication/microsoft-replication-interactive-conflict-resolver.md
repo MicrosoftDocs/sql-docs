@@ -21,7 +21,7 @@ manager: "jhubbard"
   The Interactive Conflict Resolver can be used for merge subscriptions that are synchronized using Windows Synchronization Manager. It allows you to view, compare, edit, and select the outcome for data conflicts. Replication also includes the Conflict Viewer, which allows you to view and modify conflict outcomes after they have been committed. The Interactive Conflict Resolver allows you to select the outcome during synchronization.  
   
 > [!NOTE]  
->  Conflicts that involve logical records are not displayed in the Interactive Resolver. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Conflicts that involve logical records are not displayed in the Interactive Resolver. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](view-conflict-information-for-merge-publications.md).  
   
 ## Options  
  **Column name**  
@@ -46,9 +46,9 @@ manager: "jhubbard"
  Logs the details of the conflict in system tables.  
   
 ## See Also  
- [Interactive Conflict Resolution](../../../2014/relational-databases/replication/interactive-conflict-resolution.md)   
- [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
- [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../2014/relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Interactive Conflict Resolution](interactive-conflict-resolution.md)   
+ [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](synchronize-a-subscription-using-windows-synchronization-manager.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

@@ -111,7 +111,7 @@ manager: "jhubbard"
 5.  Close the cursor.  
   
 ## Related Content  
- [Cursor Behaviors](../database-engine/dev-guide/cursor-behaviors.md) [How Cursors Are Implemented](../database-engine/dev-guide/how-cursors-are-implemented.md)  
+ [Cursor Behaviors](native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
 ## See Also  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-cursor-transact-sql.md)   

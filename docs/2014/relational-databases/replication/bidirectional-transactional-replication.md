@@ -25,6 +25,6 @@ manager: "jhubbard"
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, this topology is also supported by peer-to-peer transactional replication, but bidirectional replication can provide improved performance.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
   
   

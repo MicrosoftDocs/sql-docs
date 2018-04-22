@@ -19,9 +19,9 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Specify a Merge Subscription Type and Conflict Resolution Priority (SQL Server Management Studio)
-  Specify a merge subscription type and conflict resolution priority on the **Subscription Type** page of the New Subscription Wizard. For more information about using this wizard, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md) and [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+  Specify a merge subscription type and conflict resolution priority on the **Subscription Type** page of the New Subscription Wizard. For more information about using this wizard, see [Create a Pull Subscription](create-a-pull-subscription.md) and [Create a Push Subscription](create-a-push-subscription.md).  
   
- Subscription type cannot be modified after a subscription is created, but priority can be modified for the server subscription type in the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box. For more information about accessing this dialog box, see [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md) and [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ Subscription type cannot be modified after a subscription is created, but priority can be modified for the server subscription type in the **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box. For more information about accessing this dialog box, see [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) and [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md).  
   
 ### To specify a merge subscription type and conflict resolution priority  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

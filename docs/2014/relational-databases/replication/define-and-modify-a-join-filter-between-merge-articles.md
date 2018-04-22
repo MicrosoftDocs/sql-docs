@@ -43,14 +43,14 @@ manager: "jhubbard"
   
 -   To create a join filter, a publication must contain at least two related tables. A join filter extends a row filter; therefore you must define a row filter on one table before you can extend the filter with a join to another table. After one join filter is defined, you can extend this join filter with another join filter if the publication contains additional related tables.  
   
--   If you add, modify, or delete a join filter after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+-   If you add, modify, or delete a join filter after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   Join filters can be created manually for a set of tables, or replication can generate the filters automatically based on the relationships between foreign keys and primary keys defined on the tables. For more information on generating a set of join filters automatically, see [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/automatically-generate-join-filters-between-merge-articles.md).  
+-   Join filters can be created manually for a set of tables, or replication can generate the filters automatically based on the relationships between foreign keys and primary keys defined on the tables. For more information on generating a set of join filters automatically, see [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Define, modify, and delete join filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Define, modify, and delete join filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To define a join filter  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
         > [!CAUTION]  
         >  Selecting this option indicates that the relationship between the child and parent tables in a join filter is one to one or one to many. Only select this option if you have a constraint on the joining column in the child table that guarantees uniqueness. If the option is set incorrectly, non-convergence of data can occur.  
   
-    -   By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes in rows of both the filtered table and the joined table processed as a unit, select **Logical record** ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only). This option is available only if the article and publication requirements for using logical records are met. For more information see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md).  
+    -   By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes in rows of both the filtered table and the joined table processed as a unit, select **Logical record** ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only). This option is available only if the article and publication requirements for using logical records are met. For more information see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -106,11 +106,11 @@ manager: "jhubbard"
   
 1.  Define the filtering for the article being joined to, which is also known as the parent article.  
   
-    -   For an article filtered using a parameterized row filter, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+    -   For an article filtered using a parameterized row filter, see [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-    -   For an article filtered using a static row filter, see [Define and Modify a Static Row Filter](../../../2014/relational-databases/replication/define-and-modify-a-static-row-filter.md).  
+    -   For an article filtered using a static row filter, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define one or more related articles, which are also known as child articles, for the publication. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define one or more related articles, which are also known as child articles, for the publication. For more information, see [Define an Article](define-an-article.md).  
   
 3.  At the Publisher on the publication database, execute [sp_addmergefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Specify **@publication**, a unique name for this filter for **@filtername**, the name of the child article created in step 2 for **@article**, the name of the parent article being joined to for **@join_articlename**, and one of the following values for **@join_unique_key**:  
   
@@ -124,21 +124,21 @@ manager: "jhubbard"
     >  Only set **@join_unique_key** to **1** if you have a constraint on the joining column in the underlying table for the parent article that guarantees uniqueness. If **@join_unique_key** is set to **1** incorrectly, non-convergence of data may occur.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
- This example defines an article for a merge publication, where the `SalesOrderDetail` table article is filtered against the `SalesOrderHeader` table that is itself filtered using a static row filter. For more information, see [Define and Modify a Static Row Filter](../../../2014/relational-databases/replication/define-and-modify-a-static-row-filter.md).  
+ This example defines an article for a merge publication, where the `SalesOrderDetail` table article is filtered against the `SalesOrderHeader` table that is itself filtered using a static row filter. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
- This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the value of [HOST_NAME](~/t-sql/functions/host-name-transact-sql.md) in the **LoginID** column. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the value of [HOST_NAME](~/t-sql/functions/host-name-transact-sql.md) in the **LoginID** column. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
 ## See Also  
- [Join Filters](../../../2014/relational-databases/replication/join-filters.md)   
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)   
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)   
- [Filter Published Data for Merge Replication](../../../2014/relational-databases/replication/filter-published-data-for-merge-replication.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Define a Logical Record Relationship Between Merge Table Articles](../../../2014/relational-databases/replication/define-a-logical-record-relationship-between-merge-table-articles.md)   
- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
+ [Join Filters](join-filters.md)   
+ [Parameterized Row Filters](parameterized-row-filters.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
+ [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
   

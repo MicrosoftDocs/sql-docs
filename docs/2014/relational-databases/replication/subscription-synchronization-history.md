@@ -93,9 +93,9 @@ manager: "jhubbard"
  This text area displays the last message in the selected session. If an error has occurred, it displays detailed error information and the command that was attempted at the time of the error. It also includes links to additional content related to the error.  
   
 ## See Also  
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)  
+ [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Monitoring Replication](monitoring-replication.md)   
+ [Replication Agents Overview](replication-agents-overview.md)  
   
   

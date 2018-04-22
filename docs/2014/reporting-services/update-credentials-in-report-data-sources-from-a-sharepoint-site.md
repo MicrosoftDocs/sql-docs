@@ -20,7 +20,7 @@ manager: "mblythe"
   
  Many of your reports might include data sources or use shared data sources that are configured to use Windows Authentication. Under some circumstances, such as creating data alerts on reports saved to a SharePoint document library, you need to update the data source credentials to stored credentials or require no credentials.  
   
- To use stored credentials in reports, you might decide to create and use a new SQL Server login. For more information, see [Create a Login](../../2014/database-engine/create-a-login.md).  
+ To use stored credentials in reports, you might decide to create and use a new SQL Server login. For more information, see [Create a Login](../relational-databases/security/authentication-access/create-a-login.md).  
   
 ### To update an embedded data source to use stored credentials  
   

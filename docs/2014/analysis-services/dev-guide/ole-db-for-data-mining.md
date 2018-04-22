@@ -24,7 +24,7 @@ manager: "mblythe"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] has extended the specification by adding new schema rowsets, adding columns to existing schema rowsets, and adding syntax to the Data Mining Extensions (DMX) language for creating and managing mining structures.  
   
- **For More Information:** [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md), [ALTER MINING STRUCTURE &#40;DMX&#41;](~/dmx/alter-mining-structure-dmx.md), [DROP MINING STRUCTURE &#40;DMX&#41;](~/dmx/drop-mining-structure-dmx.md)  
+ **For More Information:** [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md), [ALTER MINING STRUCTURE &#40;DMX&#41;](~/dmx/alter-mining-structure-dmx.md), [DROP MINING STRUCTURE &#40;DMX&#41;](~/dmx/drop-mining-structure-dmx.md)  
   
 ## See Also  
  [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md)   

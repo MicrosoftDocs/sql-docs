@@ -30,7 +30,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Data Access from CLR Database Objects
-  A common language runtime (CLR) routine may easily access data stored in the instance of [!INCLUDE[msCoName](../../../../includes/ssnoversion-md.md)] in which it runs, as well as data stored in remote instances. Which particular data the routine can access is determined by the user context in which the code is running. Access data from within a CLR database object by using the .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] data from managed client and middle-tier applications. Because of this, you can leverage your knowledge of ADO.NET and `SqlClient` in client and middle-tier applications.  
+  A common language runtime (CLR) routine may easily access data stored in the instance of [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] in which it runs, as well as data stored in remote instances. Which particular data the routine can access is determined by the user context in which the code is running. Access data from within a CLR database object by using the .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data from managed client and middle-tier applications. Because of this, you can leverage your knowledge of ADO.NET and `SqlClient` in client and middle-tier applications.  
   
 > [!NOTE]  
 >  User-defined type methods and user-defined functions are not allowed to perform data access by default. You must set the `DataAccess` property of `SqlMethodAttribute` or `SqlFunctionAttribute` to `DataAccessKind.Read` to enable read-only data access from user-defined type (UDT) methods or user-defined functions. Data modification operations are not allowed from UDTs or user-defined functions, and throws exceptions at execution time if attempted.  
@@ -48,7 +48,7 @@ manager: "jhubbard"
  [SQL Server In-Process Specific Extensions to ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
  Discusses the in-process specific `SqlPipe`, `SqlContext`, `SqlTriggerContext`, and `SqlDataRecord` objects.  
   
- [CLR Integration and Transactions](../../clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [CLR Integration and Transactions](../../native-client-ole-db-transactions/transactions.md)  
  Describes how the new transaction framework provided in the System.Transactions namespace integrates with ADO.NET and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR integration.  
   
  [XML Serialization from CLR Database Objects](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  

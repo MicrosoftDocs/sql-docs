@@ -80,6 +80,6 @@ manager: "mblythe"
 |**DMTREEOP_DESCENDANTS**|`0x00000010`|  
   
 ## See Also  
- [Data Mining Schema Rowsets](data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
   
   

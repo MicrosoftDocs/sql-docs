@@ -54,6 +54,6 @@ manager: "jhubbard"
  For a usage example of this `Database` element, see the code example in [Workload Element &#40;DTA&#41;](../../2014/database-engine/workload-element-dta.md).  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../2014/database-engine/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

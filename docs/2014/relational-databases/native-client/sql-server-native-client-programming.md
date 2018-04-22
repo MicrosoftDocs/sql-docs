@@ -65,12 +65,12 @@ manager: "jhubbard"
  [Finding More SQL Server Native Client Information](finding-more-sql-server-native-client-information.md)  
  Provides additional resources about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, including links to external resources and getting further assistance.  
   
- [SQL Server Native Client Errors](../../database-engine/dev-guide/sql-server-native-client-errors.md)  
+ [SQL Server Native Client Errors](../native-client-ole-db-errors/errors.md)  
  Contains topics about runtime errors associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## See Also  
  [Updating an Application from SQL Server 2005 Native Client](applications/updating-an-application-from-sql-server-2005-native-client.md)   
- [ODBC How-to Topics](../../database-engine/dev-guide/odbc-how-to-topics.md)   
- [OLE DB How-to Topics](../../database-engine/dev-guide/ole-db-how-to-topics.md)  
+ [ODBC How-to Topics](../native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [OLE DB How-to Topics](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

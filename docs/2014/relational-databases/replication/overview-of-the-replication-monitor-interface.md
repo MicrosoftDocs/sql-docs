@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   Distributors, Publishers, and publications.  
   
- To view any information in Replication Monitor, you must first add a Publisher. For more information, see [Add and Remove Publishers from Replication Monitor](../../../2014/relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md).  
+ To view any information in Replication Monitor, you must first add a Publisher. For more information, see [Add and Remove Publishers from Replication Monitor](add-and-remove-publishers-from-replication-monitor.md).  
   
  The left pane helps answer the following questions:  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
      This tab displays detailed information about the agents and jobs used by all types of replication. The tab also allows you to start and stop each agent and job.  
   
- For more information, see [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ For more information, see [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
   
  Replication Monitor also provides a context menu for the Publisher node. Right-click a Publisher in the left pane to:  
   
@@ -145,7 +145,7 @@ manager: "jhubbard"
   
 -   **Warnings** tab  
   
-     This tab enables you to specify warnings and alerts for agents. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md).  
+     This tab enables you to specify warnings and alerts for agents. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 -   **Tracer Tokens** tab (transactional replication only)  
   
@@ -157,7 +157,7 @@ manager: "jhubbard"
   
          View the total time for a transaction to travel through the system and also compare it to previous times.  
   
-     This tab is not displayed for Distributors running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or earlier. For more information on tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md).  
+     This tab is not displayed for Distributors running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or earlier. For more information on tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 -   Detail windows for the agents associated with a publication. The following agents are associated with publications:  
   
@@ -175,7 +175,7 @@ manager: "jhubbard"
   
          The error messages available provide detailed information on why an agent is not running and provide a starting point for troubleshooting issues with the agents associated with a publication.  
   
- For more information, see [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) and [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-publication-agents.md).  
+ For more information, see [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) and [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
   
  Replication Monitor also provides a context menu for the publications node. Right-click a publication in the left pane to:  
   
@@ -214,10 +214,10 @@ manager: "jhubbard"
   
          This tab provides detailed statistics for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slowdowns and is the best place to troubleshoot performance issues with merge subscriptions.  
   
- For more information, see [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+ For more information, see [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## Viewing Information and Performing Tasks Related to Agent Profiles  
- Replication Monitor includes a number of dialog boxes for managing agent profiles. Agent profiles are sets of parameters for an agent that determine agent behavior. For more information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md). The dialog boxes are:  
+ Replication Monitor includes a number of dialog boxes for managing agent profiles. Agent profiles are sets of parameters for an agent that determine agent behavior. For more information, see [Replication Agent Profiles](replication-agent-profiles.md). The dialog boxes are:  
   
 -   **Agent Profiles**  
   
@@ -232,6 +232,6 @@ manager: "jhubbard"
      This dialog box allows you to create a new profile, optionally including the values from an existing profile.  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

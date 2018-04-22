@@ -43,7 +43,7 @@ manager: "jhubbard"
   
      This applies to merge replication. If the specified threshold is met or exceeded, the status is displayed as **Performance critical**. You can specify different thresholds for dialup and LAN connections.  
   
- For more information on the warnings **Performance critical** and **Long-running merge**, see [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md).  
+ For more information on the warnings **Performance critical** and **Long-running merge**, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md).  
   
  **In This Topic**  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 2.  In the **Configure Replication Alerts** dialog box, select an alert, and then click **Configure**.  
   
-     This dialog box displays alerts for all publication types, including alerts that are not related to monitoring thresholds. For more information, see [Use Alerts for Replication Agent Events](../../../2014/relational-databases/replication/use-alerts-for-replication-agent-events.md).  
+     This dialog box displays alerts for all publication types, including alerts that are not related to monitoring thresholds. For more information, see [Use Alerts for Replication Agent Events](use-alerts-for-replication-agent-events.md).  
   
 3.  Set options in the **\<AlertName> alert properties** dialog box:  
   
@@ -145,7 +145,7 @@ manager: "jhubbard"
   
 2.  In the **Configure Replication Alerts** dialog box, select an alert, and then click **Configure**.  
   
-     This dialog box displays alerts for all publication types, including alerts that are not related to monitoring thresholds. For more information, see [Use Alerts for Replication Agent Events](../../../2014/relational-databases/replication/use-alerts-for-replication-agent-events.md).  
+     This dialog box displays alerts for all publication types, including alerts that are not related to monitoring thresholds. For more information, see [Use Alerts for Replication Agent Events](use-alerts-for-replication-agent-events.md).  
   
 3.  Set options in the **\<AlertName> alert properties** dialog box:  
   
@@ -160,6 +160,6 @@ manager: "jhubbard"
 5.  Click **Close**.  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

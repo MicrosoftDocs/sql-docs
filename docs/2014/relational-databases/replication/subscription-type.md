@@ -36,8 +36,8 @@ manager: "jhubbard"
  For each Subscriber, select **Client** or **Server** from the drop-down list box in the **Subscription Type** column. For Subscribers with server subscriptions, enter a number between 0 and 99.99 in the **Priority for Conflict Resolution** column (the higher the number, the higher the priority for the Subscriber).  
   
 ## See Also  
- [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

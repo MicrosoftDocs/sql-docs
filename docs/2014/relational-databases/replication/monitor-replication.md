@@ -38,52 +38,52 @@ manager: "jhubbard"
 ## In This Section  
  The following topics provide information about Replication Monitor features.  
   
- [Overview of the Replication Monitor Interface](../../../2014/relational-databases/replication/overview-of-the-replication-monitor-interface.md)  
+ [Overview of the Replication Monitor Interface](overview-of-the-replication-monitor-interface.md)  
  Describes each window and tab in Replication Monitor and provides information on how to answer the questions listed above.  
   
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)  
+ [Start the Replication Monitor](start-the-replication-monitor.md)  
  Describes how to start the Replication Monitor.  
   
- [Allow Non-Administrators to Use Replication Monitor](../../../2014/relational-databases/replication/allow-non-administrators-to-use-replication-monitor.md)  
+ [Allow Non-Administrators to Use Replication Monitor](allow-non-administrators-to-use-replication-monitor.md)  
  Describes how to assign permissions to non-administrators so that they can use Replication Monitor.  
   
- [Add and Remove Publishers from Replication Monitor](../../../2014/relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md)  
+ [Add and Remove Publishers from Replication Monitor](add-and-remove-publishers-from-replication-monitor.md)  
  Describes how to add or remove Publishers from Replication Monitor.  
   
- [Refresh Data in Replication Monitor](../../../2014/relational-databases/replication/refresh-data-in-replication-monitor.md)  
+ [Refresh Data in Replication Monitor](refresh-data-in-replication-monitor.md)  
  Describes how to refresh data in Replication Monitor.  
   
- [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md)  
+ [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md)  
  Describes how to monitor performance in Replication Monitor, including information on setting performance thresholds. Includes information on article-level statistics for merge replication, which provide a detailed view of processing.  
   
- [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md)  
  Describes tracer tokens, which allow you to measure the performance of a transactional replication topology.  
   
- [Monitor Replication Agents](../../../2014/relational-databases/replication/monitor-replication-agents.md)  
+ [Monitor Replication Agents](monitor-replication-agents.md)  
  Describes how to find information about each replication agent.  
   
- [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
  Describes the warnings, thresholds, and alerts you can set in Replication Monitor. It is recommended that you enable warnings for your topology, so that you are informed about status and performance in a timely manner.  
   
- [Caching, Refresh, and Replication Monitor Performance](../../../2014/relational-databases/replication/caching-refresh-and-replication-monitor-performance.md)  
+ [Caching, Refresh, and Replication Monitor Performance](caching-refresh-and-replication-monitor-performance.md)  
  Describes how Replication Monitor caches data and calculations to improve performance; explains how refresh of the user interface relates to refresh of the cache.  
   
- [View Publication and Subscription Status in Replication Monitor](../../../2014/relational-databases/replication/view-publication-and-subscription-status-in-replication-monitor.md)  
+ [View Publication and Subscription Status in Replication Monitor](view-publication-and-subscription-status-in-replication-monitor.md)  
  Describes how to view status information a Publication or Subscription by using the Replication Monitor.  
   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
  Describes how to view information and perform tasks for a Publisher by using the Replication Monitor.  
   
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
+ [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
  Describes how to view information and perform tasks for a Publication by using the Replication Monitor.  
   
- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-publication-agents.md)  
+ [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md)  
  Describes how to view information and perform tasks for the agents associated with a Publication by using the Replication Monitor.  
   
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+ [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
  Describes how to view information and perform tasks for a Subscription by using the Replication Monitor.  
   
- [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md)  
+ [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md)  
  Describes how to view information and perform tasks for the agents associated with a Subscription by using the Replication Monitor.  
   
   

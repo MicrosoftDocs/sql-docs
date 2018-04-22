@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Start the Replication Monitor
-  Replication Monitor can be started from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] on any instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or from the command prompt. After starting Replication Monitor, add one or more Publishers to monitor. For more information, see [Add and Remove Publishers from Replication Monitor](../../../2014/relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md).  
+  Replication Monitor can be started from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] on any instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or from the command prompt. After starting Replication Monitor, add one or more Publishers to monitor. For more information, see [Add and Remove Publishers from Replication Monitor](add-and-remove-publishers-from-replication-monitor.md).  
   
 ### To start Replication Monitor from SQL Server Management Studio  
   
@@ -33,6 +33,6 @@ manager: "jhubbard"
 2.  Run sqlmonitor.exe.  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

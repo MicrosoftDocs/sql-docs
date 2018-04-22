@@ -20,30 +20,30 @@ manager: "jhubbard"
 # New Subscription Wizard (UI Reference)
   This section provides information on the following pages of the New Subscription Wizard:  
   
--   [&#60;AgentName&#62; Agent Location](../../../2014/relational-databases/replication/agentname-agent-location.md)  
+-   [&#60;AgentName&#62; Agent Location](agentname-agent-location.md)  
   
--   [Subscribers](../../../2014/relational-databases/replication/subscribers.md)  
+-   [Subscribers](subscribers.md)  
   
--   [Add Non-SQL Server Subscriber](../../../2014/relational-databases/replication/add-non-sql-server-subscriber.md)  
+-   [Add Non-SQL Server Subscriber](add-non-sql-server-subscriber.md)  
   
--   [&#60;AgentName&#62; Agent Security](../../../2014/relational-databases/replication/agentname-agent-security.md)  
+-   [&#60;AgentName&#62; Agent Security](agentname-agent-security.md)  
   
--   [Updatable Subscriptions](../../../2014/relational-databases/replication/updatable-subscriptions.md)  
+-   [Updatable Subscriptions](updatable-subscriptions.md)  
   
--   [Login for Updatable Subscriptions](../../../2014/relational-databases/replication/login-for-updatable-subscriptions.md)  
+-   [Login for Updatable Subscriptions](login-for-updatable-subscriptions.md)  
   
--   [Initialize Subscriptions](../../../2014/relational-databases/replication/initialize-subscriptions.md)  
+-   [Initialize Subscriptions](initialize-subscriptions.md)  
   
--   [Web Server Information](../../../2014/relational-databases/replication/web-server-information.md)  
+-   [Web Server Information](web-server-information.md)  
   
--   [Subscription Type](../../../2014/relational-databases/replication/subscription-type.md)  
+-   [Subscription Type](subscription-type.md)  
   
--   [HOST_NAME Values](../../../2014/relational-databases/replication/host-name-values.md)  
+-   [HOST_NAME Values](host-name-values.md)  
   
 ## See Also  
- [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

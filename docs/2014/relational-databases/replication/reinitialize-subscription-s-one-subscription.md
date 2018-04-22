@@ -40,6 +40,6 @@ manager: "jhubbard"
  Click to mark the subscription for reinitialization. After a valid snapshot is available, the next time the Distribution Agent or Merge Agent runs for the subscription, the snapshot is applied at the Subscriber.  
   
 ## See Also  
- [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md)  
+ [Reinitialize Subscriptions](reinitialize-subscriptions.md)  
   
   

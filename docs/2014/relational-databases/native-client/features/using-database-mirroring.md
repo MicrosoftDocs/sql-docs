@@ -61,7 +61,7 @@ manager: "jhubbard"
   
  The failover cache is maintained as long as the provider is loaded, which is until **CoUninitialize** is called or as long as the application has a reference to some object managed by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider such as a data source object.  
   
- For details about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider support for database mirroring, see [Initialization and Authorization Properties](../../../database-engine/dev-guide/initialization-and-authorization-properties.md).  
+ For details about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider support for database mirroring, see [Initialization and Authorization Properties](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## SQL Server Native Client ODBC Driver  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports database mirroring through connection and connection string attributes. Specifically, the SQL_COPT_SS_FAILOVER_PARTNER attribute has been added for use with the [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) and [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) functions; and the `Failover_Partner` keyword has been added as a new connection string attribute.  

@@ -40,7 +40,7 @@ manager: "jhubbard"
  System object definitions are publicly visible. The definition of user objects is visible to the object owner or grantees that have any one of the following permissions: ALTER, CONTROL, TAKE OWNERSHIP, or VIEW DEFINITION. These permissions are implicitly held by members of the **db_owner**, **db_ddladmin**, and **db_securityadmin** fixed database roles.  
   
  Object Catalog View: `sys.sql_modules`  
- The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../../2014/database-engine/metadata-visibility-configuration.md).  
+ The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../relational-databases/security/metadata-visibility-configuration.md).  
   
 ##  <a name="Procedures"></a> How to View the Definition of a Stored Procedure  
  You can use one of the following:  

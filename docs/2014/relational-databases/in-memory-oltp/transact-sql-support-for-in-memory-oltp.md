@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Transact-SQL Support for In-Memory OLTP
   You can access memory-optimized tables using any Transact-SQL query or DML statement (SELECT, INSERT, UPDATE, or DELETE), ad hoc statement, and SQL module such as stored procedures, table-value functions, scalar functions, triggers, and views. For more information see [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
- Stored procedures that only reference memory-optimized tables can be natively compiled into machine code and typically provide significant performance gains over interpreted (disk-based) stored procedures. For optimized access to memory-optimized tables use natively compiled stored procedures. For more information, see [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Stored procedures that only reference memory-optimized tables can be natively compiled into machine code and typically provide significant performance gains over interpreted (disk-based) stored procedures. For optimized access to memory-optimized tables use natively compiled stored procedures. For more information, see [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
  When creating and modifying database objects (DDL statements), the following statements have been modified:  
   
@@ -50,6 +50,6 @@ manager: "jhubbard"
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Supported SQL Server Features](unsupported-sql-server-features-for-in-memory-oltp.md)   
- [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

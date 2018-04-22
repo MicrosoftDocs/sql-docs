@@ -37,24 +37,24 @@ manager: "jhubbard"
   
 |Agent Executable|File Name|  
 |----------------------|---------------|  
-|[Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)|snapshot.exe|  
-|[Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)|distrib.exe|  
-|[Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)|logread.exe|  
-|[Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)|qrdrsvc.exe|  
-|[Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)|replmerg.exe|  
+|[Replication Snapshot Agent](replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Distribution Agent](replication-distribution-agent.md)|distrib.exe|  
+|[Replication Log Reader Agent](replication-log-reader-agent.md)|logread.exe|  
+|[Replication Queue Reader Agent](replication-queue-reader-agent.md)|qrdrsvc.exe|  
+|[Replication Merge Agent](replication-merge-agent.md)|replmerg.exe|  
   
  In addition to replication agents, replication has a number of jobs that perform scheduled and on-demand maintenance.  
   
  **To run agents and maintenance jobs**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Replication Monitor: [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Replication Monitor: [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   Replication programming: [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+-   Replication programming: [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md)  
   
 ## Agent Profiles  
- When replication is configured, a set of agent profiles is installed on the Distributor. An agent profile contains a set of parameters that are used each time an agent runs: each agent logs in to the Distributor during its startup process and queries for the parameters in its profile. Replication provides a default profile for each agent and additional predefined profiles for the Log Reader Agent, Distribution Agent, and Merge Agent. In addition to the profiles provided, you can create profiles suited to your application requirements. For more information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+ When replication is configured, a set of agent profiles is installed on the Distributor. An agent profile contains a set of parameters that are used each time an agent runs: each agent logs in to the Distributor during its startup process and queries for the parameters in its profile. Replication provides a default profile for each agent and additional predefined profiles for the Log Reader Agent, Distribution Agent, and Merge Agent. In addition to the profiles provided, you can create profiles suited to your application requirements. For more information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
- For information about specifying command line parameters directly, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
+ For information about specifying command line parameters directly, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
   
 ## Monitoring Replication Agents  
  Replication Monitor allows you to view information and perform tasks associated with each replication agent. The following list includes each agent, the tabs in the Replication Monitor on which it can be found, and a link to a topic that explains how to access these tabs:  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
     -   Queue Reader Agent  
   
-     Access information and tasks associated with these agents through the **Agents** tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-publication-agents.md).  
+     Access information and tasks associated with these agents through the **Agents** tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
   
 -   The following agents are associated with subscriptions in Replication Monitor:  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
   
     -   Merge Agent  
   
-     Access information and tasks associated with these agents through the following tabs: **Subscription Watch List** (available for each Publisher) or the **All Subscriptions** tab (available for each publication). For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Access information and tasks associated with these agents through the following tabs: **Subscription Watch List** (available for each Publisher) or the **All Subscriptions** tab (available for each publication). For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## Independent and Shared Agents  
  An independent agent is an agent that services one subscription. A shared agent services multiple subscriptions; if multiple subscriptions using the same shared agent need to synchronize, by default they wait in a queue, and the shared agent services them one at a time. Latency is reduced when using independent agents because the agent is ready whenever the subscription needs to be synchronized. Merge replication always uses independent agents, and transactional replication uses independent agents by default for publications created in the New Publication Wizard (in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], transactional replication used shared agents by default).  
@@ -93,6 +93,6 @@ manager: "jhubbard"
 |Replication monitoring refresher for distribution|Refreshes cached queries used by Replication Monitor..|Runs continuously.|  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

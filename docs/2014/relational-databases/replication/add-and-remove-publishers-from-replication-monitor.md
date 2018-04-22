@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Add and Remove Publishers from Replication Monitor
-  The server from which you launch Replication Monitor is automatically added to the monitor if it is a Publisher. Additional Publishers can be added through the **Add Publisher** dialog box. After adding a Publisher, it is displayed in a group in the left pane of the monitor. The **My Publishers** group is included by default, but you can create new groups to manage one or more replication topologies. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+  The server from which you launch Replication Monitor is automatically added to the monitor if it is a Publisher. Additional Publishers can be added through the **Add Publisher** dialog box. After adding a Publisher, it is displayed in a group in the left pane of the monitor. The **My Publishers** group is included by default, but you can create new groups to manage one or more replication topologies. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 ### To add a SQL Server Publisher  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 5.  The name of the Publisher and Distributor are displayed in the **Start monitoring the following Publisher(s)** grid.  
   
-6.  To specify refresh and connection options for the Publisher, select the Publisher in the grid, and modify options as necessary. For more information about refresh options, see [Caching, Refresh, and Replication Monitor Performance](../../../2014/relational-databases/replication/caching-refresh-and-replication-monitor-performance.md).  
+6.  To specify refresh and connection options for the Publisher, select the Publisher in the grid, and modify options as necessary. For more information about refresh options, see [Caching, Refresh, and Replication Monitor Performance](caching-refresh-and-replication-monitor-performance.md).  
   
 7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 5.  The name of the Publisher and Distributor are displayed in the **Start monitoring the following Publisher(s)** grid.  
   
-6.  To specify refresh and connection options for the Publisher, select the Publisher in the grid, and modify options as necessary. For more information about refresh options, see [Caching, Refresh, and Replication Monitor Performance](../../../2014/relational-databases/replication/caching-refresh-and-replication-monitor-performance.md).  
+6.  To specify refresh and connection options for the Publisher, select the Publisher in the grid, and modify options as necessary. For more information about refresh options, see [Caching, Refresh, and Replication Monitor Performance](caching-refresh-and-replication-monitor-performance.md).  
   
 7.  Select the group under which the Publisher should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 5.  The name of the Distributor and each Publisher are displayed in the **Start monitoring the following Publisher(s)** grid. If a Publisher has already been added to Replication Monitor, it does not appear in the grid.  
   
-6.  To specify refresh and connection options for the Publisher, select the Publisher in the grid, and modify options as necessary. For more information about refresh options, see [Caching, Refresh, and Replication Monitor Performance](../../../2014/relational-databases/replication/caching-refresh-and-replication-monitor-performance.md).  
+6.  To specify refresh and connection options for the Publisher, select the Publisher in the grid, and modify options as necessary. For more information about refresh options, see [Caching, Refresh, and Replication Monitor Performance](caching-refresh-and-replication-monitor-performance.md).  
   
 7.  Select the group under which Publishers should be displayed in Replication Monitor. To create a new group, click **New Group**, and then enter a group name; select the group in the **Show this Publisher(s) in the following group** list.  
   
@@ -103,7 +103,7 @@ manager: "jhubbard"
 2.  Right-click the Publisher group, and then click **Remove**.  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

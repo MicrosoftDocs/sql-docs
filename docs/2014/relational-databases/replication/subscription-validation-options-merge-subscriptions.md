@@ -30,7 +30,7 @@ manager: "jhubbard"
  In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the binary checksum algorithm. If the row count fails, the checksum is not performed. This option is not valid for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## See Also  
- [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md)  
+ [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)   
+ [Validate Replicated Data](validate-replicated-data.md)  
   
   

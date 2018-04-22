@@ -50,7 +50,7 @@ manager: "jhubbard"
  Select a time at which a tracer token was inserted to display latency information from that time. By default, information from the most recent time is displayed.  
   
 > [!NOTE]  
->  Tracer token information is retained for the same time period as other historical data, which is governed by the history retention period of the distribution database. For information about changing distribution database properties, see [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+>  Tracer token information is retained for the same time period as other historical data, which is governed by the history retention period of the distribution database. For information about changing distribution database properties, see [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
   
  **Subscription**  
  The name of each subscription to the publication.  
@@ -65,11 +65,11 @@ manager: "jhubbard"
  The elapsed time between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. This represents the end-to-end latency of the replication system for this Subscriber at this time. A value of **Pending** indicates that the token has not yet reached the Subscriber.  
   
 ## See Also  
- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   
- [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)  
+ [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md)   
+ [Monitoring Replication](monitoring-replication.md)   
+ [Replication Agents Overview](replication-agents-overview.md)  
   
   

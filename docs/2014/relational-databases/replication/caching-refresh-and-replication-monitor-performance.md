@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   All windows can be manually refreshed by pressing F5 or by right-clicking a node in the Replication Monitor tree and clicking **Refresh**. Manual refreshes force a refresh of the cache.  
   
- For more information, see [Refresh Data in Replication Monitor](../../../2014/relational-databases/replication/refresh-data-in-replication-monitor.md).  
+ For more information, see [Refresh Data in Replication Monitor](refresh-data-in-replication-monitor.md).  
   
 ## Performance Considerations  
  Although Replication Monitor is designed to run efficiently, be aware of the following:  
@@ -51,7 +51,7 @@ manager: "jhubbard"
 -   Avoid registering a large number of Distributors and setting Replication Monitor to automatically connect to all of them.  
   
 ## See Also  
- [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](run-replication-maintenance-jobs-sql-server-management-studio.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

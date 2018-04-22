@@ -69,6 +69,6 @@ manager: "mblythe"
  For examples of how to query this rowset, see [Query the Parameters Used to Create a Mining Model](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## See Also  
- [Data Mining Schema Rowsets](data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Security"></a> Security  
- For more information, see [Secure Deployment &#40;Replication&#41;](../../../2014/relational-databases/replication/secure-deployment-replication.md).  
+ For more information, see [Secure Deployment &#40;Replication&#41;](secure-deployment-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Configure distribution using the New Publication Wizard or the Configure Distribution Wizard. After the Distributor is configured, view and modify properties in the **Distributor Properties - \<Distributor>** dialog box. Use the Configure Distribution Wizard if you want to configure a Distributor so that members of the **db_owner** fixed database roles can create publications, or because you want to configure a remote Distributor that is not a Publisher.  
@@ -39,17 +39,17 @@ manager: "jhubbard"
   
 3.  Follow the Configure Distribution Wizard to:  
   
-    -   Select a Distributor. To use a local Distributor, select **'\<ServerName>' will act as its own Distributor; SQL Server will create a distribution database and log**. To use a remote Distributor, select **Use the following server as the Distributor**, and then select a server. The server must already be configured as a Distributor, and the Publisher must be enabled to use the Distributor. For more information, see [Enable a Remote Publisher at a Distributor &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).  
+    -   Select a Distributor. To use a local Distributor, select **'\<ServerName>' will act as its own Distributor; SQL Server will create a distribution database and log**. To use a remote Distributor, select **Use the following server as the Distributor**, and then select a server. The server must already be configured as a Distributor, and the Publisher must be enabled to use the Distributor. For more information, see [Enable a Remote Publisher at a Distributor &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).  
   
          If you select a remote Distributor, you must enter a password on the **Administrative Password** page for connections made from the Publisher to the Distributor. This password must match the password specified when the Publisher was enabled at the remote Distributor.  
   
-    -   Specify a root snapshot folder (for a local Distributor). The snapshot folder is simply a directory that you have designated as a share; agents that read from and write to this folder must have sufficient permissions to access it. Each Publisher that uses this Distributor creates a folder under the root folder, and each publication creates folders under the Publisher folder in which to store snapshot files. For more information on securing the folder appropriately, see [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
+    -   Specify a root snapshot folder (for a local Distributor). The snapshot folder is simply a directory that you have designated as a share; agents that read from and write to this folder must have sufficient permissions to access it. Each Publisher that uses this Distributor creates a folder under the root folder, and each publication creates folders under the Publisher folder in which to store snapshot files. For more information on securing the folder appropriately, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
   
     -   Specify the distribution database (for a local Distributor). The distribution database stores metadata and history data for all types of replication and transactions for transactional replication.  
   
     -   Optionally enable other Publishers to use the Distributor. If other Publishers are enabled to use the Distributor, you must enter a password on the **Distributor Password** page for connections made from these Publishers to the Distributor.  
   
-    -   Optionally script configuration settings. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+    -   Optionally script configuration settings. For more information, see [Scripting Replication](scripting-replication.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Replication publishing and distribution can be configured programmatically using replication stored procedures.  
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
 4.  Set the <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> property to the database name, and set the <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> property to the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> from step 1.  
   
-5.  Install the Distributor by calling the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Specify a secure password (used by the Publisher when connecting to the remote Distributor) and the <xref:Microsoft.SqlServer.Replication.DistributionDatabase> object from step 3. For more information, see [Secure the Distributor](../../../2014/relational-databases/replication/secure-the-distributor.md).  
+5.  Install the Distributor by calling the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Specify a secure password (used by the Publisher when connecting to the remote Distributor) and the <xref:Microsoft.SqlServer.Replication.DistributionDatabase> object from step 3. For more information, see [Secure the Distributor](secure-the-distributor.md).  
   
     > [!IMPORTANT]  
     >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -163,10 +163,10 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
 ## See Also  
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Replication Management Objects Concepts](../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)   
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Configure Distribution](configure-distribution.md)   
+ [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
  [Configure Replication for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

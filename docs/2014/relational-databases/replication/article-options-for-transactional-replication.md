@@ -21,15 +21,15 @@ manager: "jhubbard"
 # Article Options for Transactional Replication
   There are a number of options for articles in transactional publications. With transactional replication, you can do the following:  
   
--   Specify how changes are propagated from the Publisher to Subscribers. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
+-   Specify how changes are propagated from the Publisher to Subscribers. For more information, see [Specify How Changes Are Propagated for Transactional Articles](specify-how-changes-are-propagated-for-transactional-articles.md).  
   
--   Specify that the execution of a stored procedure be replicated. This is useful in replicating the results of maintenance-oriented stored procedures that affect large amounts of data. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../../../2014/relational-databases/replication/publishing-stored-procedure-execution-in-transactional-replication.md).  
+-   Specify that the execution of a stored procedure be replicated. This is useful in replicating the results of maintenance-oriented stored procedures that affect large amounts of data. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](publishing-stored-procedure-execution-in-transactional-replication.md).  
   
--   Specify schema options, such as whether constraints and triggers are copied to the Subscriber. For more information, see [Specify Schema Options](../../../2014/relational-databases/replication/specify-schema-options.md).  
+-   Specify schema options, such as whether constraints and triggers are copied to the Subscriber. For more information, see [Specify Schema Options](specify-schema-options.md).  
   
--   Use row filters and column filters. Filtering table articles enables you to create partitions of data to be published. For more information, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md).  
+-   Use row filters and column filters. Filtering table articles enables you to create partitions of data to be published. For more information, see [Filter Published Data](filter-published-data.md).  
   
 ## See Also  
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

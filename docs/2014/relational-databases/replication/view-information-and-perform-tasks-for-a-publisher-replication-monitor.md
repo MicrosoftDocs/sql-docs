@@ -34,7 +34,7 @@ manager: "jhubbard"
   
      This tab displays detailed information about the agents and jobs that are used by all types of replication. The tab also allows you to start and stop each agent and job.  
   
- To view more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ To view more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 ### To view information and perform tasks for a Publisher  
   
@@ -58,14 +58,14 @@ manager: "jhubbard"
   
     -   To view detailed information about the job that runs the agent (such as the schedule, job step details, and so on), right-click the agent, and then click **Properties**.  
   
-    -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md).  
+    -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md).  
   
     -   To start an agent that is not running, right-click the agent, and then click **Start Agent**.  
   
     -   To stop an agent that is running, right-click the agent, and then click **Stop Agent**.  
   
 ## See Also  
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

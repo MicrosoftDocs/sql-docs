@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Information and Perform Tasks for the Agents Associated With a Publication (Replication Monitor)
-  Replication Monitor provides the **Agents** tab, which includes information about the agents associated with the selected publication. The Distribution Agent and Merge Agent are associated with subscriptions; for more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+  Replication Monitor provides the **Agents** tab, which includes information about the agents associated with the selected publication. The Distribution Agent and Merge Agent are associated with subscriptions; for more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
  This tab displays information about the following agents:  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   The Queue Reader Agent, which is used by transactional publications enabled for queued updating subscriptions.  
   
- To view more information about the options on this tab, click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ To view more information about the options on this tab, click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 ### To view information and perform tasks for the agents associated with a publication  
   
@@ -42,16 +42,16 @@ manager: "jhubbard"
   
     -   To view detailed information about the job that runs the agent (such as the schedule, job step details, and so on), right-click the agent, and then click **Properties**.  
   
-    -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md).  
+    -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md).  
   
     -   To start an agent that is not running, right-click the agent, and then click **Start Agent**.  
   
     -   To stop an agent that is running, right-click the agent, and then click **Stop Agent**.  
   
 ## See Also  
- [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md)   
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Replication Agent Administration](replication-agent-administration.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

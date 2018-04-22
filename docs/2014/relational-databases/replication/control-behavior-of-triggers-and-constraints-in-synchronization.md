@@ -39,6 +39,6 @@ manager: "jhubbard"
 1.  When creating a new CHECK or FOREIGN KEY constraint, specify CHECK NOT FOR REPLICATION option in the constraint definition of [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md).  
   
 ## See Also  
- [Create Tables &#40;Database Engine&#41;](../../../2014/database-engine/create-tables-database-engine.md)  
+ [Create Tables &#40;Database Engine&#41;](../../database-engine/create-tables-database-engine.md)  
   
   

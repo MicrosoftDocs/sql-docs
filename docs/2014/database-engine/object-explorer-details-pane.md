@@ -85,7 +85,7 @@ manager: "jhubbard"
 ## SQL Server Object Search  
  Wildcards  
   
--   Standard wildcard characters are supported. For example, searching for **dm_os%counters** returns both dm_os_memory_cache_counters and dm_os_performance_counters. For more information, see [Search Text with Wildcards](../../2014/database-engine/search-text-with-wildcards.md).  
+-   Standard wildcard characters are supported. For example, searching for **dm_os%counters** returns both dm_os_memory_cache_counters and dm_os_performance_counters. For more information, see [Search Text with Wildcards](../relational-databases/scripting/search-text-with-wildcards.md).  
   
  Search Scope  
   

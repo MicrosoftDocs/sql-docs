@@ -22,9 +22,9 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Add Articles to and Drop Articles from a Publication (SQL Server Management Studio)
-  Initially add articles to a publication when you create it in the New Publication Wizard. For more information about using this wizard, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+  Initially add articles to a publication when you create it in the New Publication Wizard. For more information about using this wizard, see [Create a Publication](create-a-publication.md).  
   
- After a publication is created, add and delete articles on the **Articles** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md). For information about the considerations for adding and dropping articles, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ After a publication is created, add and delete articles on the **Articles** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md). For information about the considerations for adding and dropping articles, see [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### To add an article after a publication is created  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Define an Article](../../../2014/relational-databases/replication/define-an-article.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  
+ [Define an Article](define-an-article.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

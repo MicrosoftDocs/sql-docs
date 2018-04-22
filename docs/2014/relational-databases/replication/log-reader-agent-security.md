@@ -29,7 +29,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The Log Reader Agent makes connections to the Publisher even if the Publisher and Distributor are on the same computer. The Log Reader Agent also makes connections to the Distributor; these connections are always made by impersonating the Windows account under which the agent runs.  
   
-     For Oracle Publishers, specify the context under which the Log Reader Agent connects to the Publisher in the **Publisher Properties** dialog box (available from the **Distributor Properties** dialog box). For more information, see [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
+     For Oracle Publishers, specify the context under which the Log Reader Agent connects to the Publisher in the **Publisher Properties** dialog box (available from the **Distributor Properties** dialog box). For more information, see [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md).  
   
  All accounts must be valid, with the correct password specified for each account. Accounts and passwords are not validated until an agent runs.  
   
@@ -49,9 +49,9 @@ manager: "jhubbard"
  The Windows account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account used for the connection must at minimum be a member of the **db_owner** fixed database role in the publication database.  
   
 ## See Also  
- [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md)   
- [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)  
+ [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
+ [Replication Agent Security Model](replication-agent-security-model.md)   
+ [Replication Agents Overview](replication-agents-overview.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)  
   
   

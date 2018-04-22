@@ -20,21 +20,21 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Secure the Subscriber
-  Merge Agents and Distribution Agents connect to the Subscriber. These connections can be made under the context of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows login. It is important to provide an appropriate login for these agents while following the principle of granting the minimal rights necessary and also protecting the storage of all passwords. For information about the permissions required for each agent, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+  Merge Agents and Distribution Agents connect to the Subscriber. These connections can be made under the context of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows login. It is important to provide an appropriate login for these agents while following the principle of granting the minimal rights necessary and also protecting the storage of all passwords. For information about the permissions required for each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 ## Distribution Agent  
  There is either one Distribution Agent per subscription (an independent agent, the default for publications created in the New Publication Wizard) or one Distribution Agent per publication database and subscription database pair (a shared agent). T  
   
- To specify connection information for push subscriptions, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+ To specify connection information for push subscriptions, see [Create a Push Subscription](create-a-push-subscription.md).  
   
- To specify connection information for pull subscriptions, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)  
+ To specify connection information for pull subscriptions, see [Create a Pull Subscription](create-a-pull-subscription.md)  
   
 ## Merge Agent  
  Each merge subscription has its own Merge Agent that connects to and updates both the Publisher and the Subscriber.  
   
- To specify connection information for push subscriptions, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+ To specify connection information for push subscriptions, see [Create a Push Subscription](create-a-push-subscription.md).  
   
- To specify connection information for pull subscriptions, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+ To specify connection information for pull subscriptions, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 ## Immediate Updating Subscriptions  
  When you configure an immediate updating subscription, you specify an account at the Subscriber under which connections to the Publisher are made. Connections are used by the triggers that fire at the Subscriber and propagate changes to the Publisher. There are three options available for the type of connection:  
@@ -48,7 +48,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  To specify connection information, use the stored procedure [sp_link_publication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). You can also use the **Login for Updatable Subscriptions** page of the New Subscription Wizard, which calls **sp_link_publication**. Under certain conditions, this stored procedure can fail if the Subscriber is running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) or later, and the Publisher is running an earlier version. If the stored procedure fails in this scenario, upgrade the Publisher to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 or later.  
   
- For more information, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-updatable-subscription-transactional-publication-transact-sql.md) and [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
+ For more information, see [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md) and [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
 >  The account specified for the connection should only be granted permission to insert, update, and delete data on the views that replication creates in the publication database; it should not be given any additional permissions. Grant permissions on views in the publication database that are named in the form **syncobj_***\<HexadecimalNumber>* to the account you configured at each Subscriber.  
@@ -69,11 +69,11 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication for connections to Subscribers, and specify a different account for the connection to each Subscriber. If you use a pull subscription, replication always sets the connection to use Windows Authentication (for pull subscriptions, replication cannot access metadata at the Subscriber required to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication). In this case, change the connection to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication after the subscription is configured.  
   
-     For more information, see How to: Create an Updating Subscription to a Transactional Publication (SQL Server Management Studio) and [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
+     For more information, see How to: Create an Updating Subscription to a Transactional Publication (SQL Server Management Studio) and [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md).  
   
 ## See Also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+ [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

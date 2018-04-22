@@ -44,15 +44,15 @@ manager: "jhubbard"
   
  To configure a Subscriber to retrieve the Snapshot via FTP, first set up an FTP server with an FTP login and password that allows Subscribers read (or "get") access to allow the snapshot files to be downloaded.  
   
- To deliver snapshots through FTP, see [Deliver a Snapshot Through FTP](../../../2014/relational-databases/replication/deliver-a-snapshot-through-ftp.md).  
+ To deliver snapshots through FTP, see [Deliver a Snapshot Through FTP](deliver-a-snapshot-through-ftp.md).  
   
- For information about setting and changing the password for access to snapshots through FTP, see the section "FTP Snapshot Delivery" in the topic [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
+ For information about setting and changing the password for access to snapshots through FTP, see the section "FTP Snapshot Delivery" in the topic [Secure the Publisher](secure-the-publisher.md).  
   
 ## See Also  
- [Alternate Snapshot Folder Locations](../../../2014/relational-databases/replication/alternate-snapshot-folder-locations.md)   
- [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)   
- [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md)  
+ [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)   
+ [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
+ [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md)  
   
   

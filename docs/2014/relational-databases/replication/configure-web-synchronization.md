@@ -49,7 +49,7 @@ manager: "jhubbard"
 ## Creating New Accounts and Mapping SQL Server Logins  
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) connects to the Publisher by impersonating the account specified for the application pool that is associated with the replication web site.  
   
- The account used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener must have permissions as described in [Merge Agent Security](../../../2014/relational-databases/replication/merge-agent-security.md), under the section "Connect to the Publisher or Distributor." In summary, the account must:  
+ The account used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener must have permissions as described in [Merge Agent Security](merge-agent-security.md), under the section "Connect to the Publisher or Distributor." In summary, the account must:  
   
 -   Be a member of the Publication Access List (PAL).  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
  If this is the first time you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication, you will also need to create accounts and logins for the replication agents. For more information, see the "Configuring the Publication" and "Configuring the Subscription" sections in this topic.  
   
- Before you configure Web synchronization, we recommend that you read the "Security Best Practices for Web Synchronization" section in this topic. For more information about Web synchronization security, see [Security Architecture for Web Synchronization](../../../2014/relational-databases/replication/security-architecture-for-web-synchronization.md).  
+ Before you configure Web synchronization, we recommend that you read the "Security Best Practices for Web Synchronization" section in this topic. For more information about Web synchronization security, see [Security Architecture for Web Synchronization](security-architecture-for-web-synchronization.md).  
   
 ## Configuring the Computer That Is Running IIS  
  Web synchronization requires that you install and configure IIS. You will need the URL to the replication Web site before you can configure a publication to use Web synchronization.  
@@ -73,9 +73,9 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
   
  **To configure IIS for Web synchronization**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](configure-iis-7-for-web-synchronization.md)  
   
 ## Creating a Web Garden  
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener supports two concurrent synchronization operations per thread. Exceeding this limit may cause the Replication Listener to stop responding. The number of threads allocated to replisapi.dll is determined by the application pool Maximum Worker Processes property. By default, this property is set at 1.  
@@ -93,11 +93,11 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
 3.  On the Advanced Settings dialog, under the **Process Model** heading, click the row labeled **Maximum Worker Processes**. Change the property value, and then click **OK**.  
   
 ## Configuring the Publication  
- To use Web synchronization, create a publication in the same way that you would for a standard merge topology. For more information, see [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md).  
+ To use Web synchronization, create a publication in the same way that you would for a standard merge topology. For more information, see [Publish Data and Database Objects](publish-data-and-database-objects.md).  
   
  After the publication is created, enable the option to allow for Web synchronization by using one of the following methods: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). To enable Web synchronization, you will need to supply the Web server address for Subscriber connections.  
   
- If you are using a Publisher for the first time, you must also configure a Distributor and a snapshot share. The Merge Agent at each Subscriber must have read permissions on the snapshot share. For more information, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md) and [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
+ If you are using a Publisher for the first time, you must also configure a Distributor and a snapshot share. The Merge Agent at each Subscriber must have read permissions on the snapshot share. For more information, see [Configure Distribution](configure-distribution.md) and [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
   
  `gen` is a reserved word in websync xml files. Do not attempt to publish tables containing columns named `gen`.  
   
@@ -122,9 +122,9 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
   
 -   If you replicate large volumes of data, you might have to adjust the Merge Agent batch size.  
   
- Batch size for merge replication is measured in *generations*, which are collections of changes per article. The number of generations in a batch is specified by using the–`DownloadGenerationsPerBatch` and –`UploadGenerationsPerBatch` parameters of the Merge Agent. For more information, see [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md).  
+ Batch size for merge replication is measured in *generations*, which are collections of changes per article. The number of generations in a batch is specified by using the–`DownloadGenerationsPerBatch` and –`UploadGenerationsPerBatch` parameters of the Merge Agent. For more information, see [Replication Merge Agent](replication-merge-agent.md).  
   
- For large volumes of data, specify a small number for each of the batching parameters. We recommend that you start with a value of 10, and then tune based on application needs and performance. Typically, these parameters are specified in an agent profile. For more information about profiles, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+ For large volumes of data, specify a small number for each of the batching parameters. We recommend that you start with a value of 10, and then tune based on application needs and performance. Typically, these parameters are specified in an agent profile. For more information about profiles, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
 ## Security Best Practices for Web Synchronization  
  There are many choices for security-related settings in Web synchronization. We recommend the following approach:  
@@ -140,15 +140,15 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
   
 -   Specify that the Snapshot Agent should run under a Windows domain account, and specify that the agent should make connections as that account. (This is the default configuration.) Specify that each Merge Agent should run under the domain account of the user that uses the Subscriber computer, and specify that the agent should make connections as that account.  
   
-     For more information about the permissions that are required by agents, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+     For more information about the permissions that are required by agents, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 -   Specify the same domain account as the one the Merge Agent uses when you specify an account and password on the **Web Server Information** page of the New Subscription Wizard or when you specify values for the **@internet_url** and **@internet_login** parameters of [sp_addpullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). This account must have read permissions for the snapshot share.  
   
 -   Each publication should use a separate virtual directory for IIS.  
   
--   The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](configure-iis-for-web-synchronization.md).  
   
--   You can use FTP to deliver the snapshot from the Publisher to the computer that is running IIS. The snapshot is always delivered from the computer that is running IIS to the Subscriber by using HTTPS. For more information, see [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   You can use FTP to deliver the snapshot from the Publisher to the computer that is running IIS. The snapshot is always delivered from the computer that is running IIS to the Subscriber by using HTTPS. For more information, see [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md).  
   
 -   If servers in the replication topology are behind a firewall, you might need to open ports in the firewall to enable Web synchronization.  
   
@@ -156,12 +156,12 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
   
     -   The computer that is running IIS typically connects to the Publisher or Distributor using port 1433 (default instance). When the Publisher or Distributor is a named instance on a server with another default instance, port 1500 is typically used to connect to the named instance.  
   
-    -   If the computer running IIS is separated from the Distributor by a firewall and an FTP share is used for snapshot delivery, the ports used for FTP must be opened. For more information, see [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   If the computer running IIS is separated from the Distributor by a firewall and an FTP share is used for snapshot delivery, the ports used for FTP must be opened. For more information, see [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md).  
   
 > [!IMPORTANT]  
->  Opening ports in your firewall can leave your server exposed to malicious attacks. Make sure that you understand firewall systems before you open ports. For more information, see [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+>  Opening ports in your firewall can leave your server exposed to malicious attacks. Make sure that you understand firewall systems before you open ports. For more information, see [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ## See Also  
- [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

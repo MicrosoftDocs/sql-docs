@@ -72,7 +72,7 @@ manager: "jhubbard"
  Is a user-specified password. If the **-P** option is not used, **osql** prompts for a password. If the **-P** option is used at the end of the command prompt without any password, **osql** uses the default password (NULL).  
   
 > [!IMPORTANT]  
->  Do not use a blank password. Use a strong password. For more information, see [Strong Passwords](../../2014/database-engine/strong-passwords.md).  
+>  Do not use a blank password. Use a strong password. For more information, see [Strong Passwords](../relational-databases/security/strong-passwords.md).  
   
  Passwords are case-sensitive.  
   

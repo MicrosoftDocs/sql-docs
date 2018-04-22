@@ -20,18 +20,18 @@ manager: "jhubbard"
 # Configure Peer-to-Peer Topology Wizard
   This section provides information on all pages of the Configure Peer-to-Peer Topology Wizard:  
   
--   [Publication &#40;Peer-to-Peer Replication&#41;](../../../2014/relational-databases/replication/publication-peer-to-peer-replication.md)  
+-   [Publication &#40;Peer-to-Peer Replication&#41;](publication-peer-to-peer-replication.md)  
   
--   [Configure Topology &#40;Peer-to-Peer Replication&#41;](../../../2014/relational-databases/replication/configure-topology-peer-to-peer-replication.md)  
+-   [Configure Topology &#40;Peer-to-Peer Replication&#41;](configure-topology-peer-to-peer-replication.md)  
   
--   [Log Reader Agent Security &#40;Peer-to-Peer Replication&#41;](../../../2014/relational-databases/replication/log-reader-agent-security-peer-to-peer-replication.md)  
+-   [Log Reader Agent Security &#40;Peer-to-Peer Replication&#41;](log-reader-agent-security-peer-to-peer-replication.md)  
   
--   [Distribution Agent Security &#40;Peer-to-Peer Replication&#41;](../../../2014/relational-databases/replication/distribution-agent-security-peer-to-peer-replication.md)  
+-   [Distribution Agent Security &#40;Peer-to-Peer Replication&#41;](distribution-agent-security-peer-to-peer-replication.md)  
   
--   [New Peer Initialization &#40;Peer-to-Peer Replication&#41;](../../../2014/relational-databases/replication/new-peer-initialization-peer-to-peer-replication.md)  
+-   [New Peer Initialization &#40;Peer-to-Peer Replication&#41;](new-peer-initialization-peer-to-peer-replication.md)  
   
 ## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md)  
+ [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
   
   

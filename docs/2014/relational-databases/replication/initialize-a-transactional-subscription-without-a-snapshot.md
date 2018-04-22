@@ -42,21 +42,21 @@ manager: "jhubbard"
   
  To initialize a subscription with a backup, you first must enable the option when you create a publication, and then specify values for a number of options when you create a subscription. Publications can be enabled through the New Publication Wizard or programmatically. However, the values required for the subscription options can only be specified programmatically.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Replication Transact-SQL programming: [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
+-   Replication Transact-SQL programming: [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
->  If a subscription is initialized without using a snapshot, the account under which the SQL Server service runs at the Publisher must have write permissions on the snapshot folder at the Distributor. For more information about permissions, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+>  If a subscription is initialized without using a snapshot, the account under which the SQL Server service runs at the Publisher must have write permissions on the snapshot folder at the Distributor. For more information about permissions, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 ### Ensuring the suitability of a backup  
  A backup is suitable for initializing a Subscriber if all transactions that occur after the backup was taken are stored at the Distributor. Replication will display an error message if the backup is not suitable.  
   
  To help ensure that a backup is suitable for use, follow these guidelines:  
   
--   Use the latest backup available, and if the latest backup is older than the maximum distribution retention period, create a new backup before attempting to initialize a subscription with a backup. For more information about retention period, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+-   Use the latest backup available, and if the latest backup is older than the maximum distribution retention period, create a new backup before attempting to initialize a subscription with a backup. For more information about retention period, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
--   By default, the distribution cleanup job clears transactions older than 72 hours from the distribution database. Cleanup is based on the retention period set for the publication. When synchronizing with older backups, consider temporarily disabling the job before the backup you would like to restore and re-enabling it after the subscription is successfully created. This prevents removal of transactions from the distribution database that might be needed to synchronize successfully from the backup. For information about running cleanup jobs, see [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/run-replication-maintenance-jobs-sql-server-management-studio.md).  
+-   By default, the distribution cleanup job clears transactions older than 72 hours from the distribution database. Cleanup is based on the retention period set for the publication. When synchronizing with older backups, consider temporarily disabling the job before the backup you would like to restore and re-enabling it after the subscription is successfully created. This prevents removal of transactions from the distribution database that might be needed to synchronize successfully from the backup. For information about running cleanup jobs, see [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](run-replication-maintenance-jobs-sql-server-management-studio.md).  
   
  In some cases you must manually perform customizations in the restored Subscriber database after setting up subscriptions that are initialized with a backup. In general, manual modifications at the restored Subscriber database are required if the Publication is defined in such a way that the Subscriber database content is expected to be different from the Publisher database content.  
   
@@ -69,9 +69,9 @@ manager: "jhubbard"
   
  Unlike initializing with a backup, you or your application must ensure the data and schema are properly synchronized at the time you add the subscription. If, for example, there is activity on the Publisher between the time data and schema are copied to the Subscriber and the time at which the subscription is added, changes resulting from this activity might not be replicated to the Subscriber.  
   
- To initialize a subscription with an alternative method, see [Initialize a Subscription Manually](../../../2014/relational-databases/replication/initialize-a-subscription-manually.md).  
+ To initialize a subscription with an alternative method, see [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
 ## See Also  
- [Initialize a Subscription](../../../2014/relational-databases/replication/initialize-a-subscription.md)  
+ [Initialize a Subscription](initialize-a-subscription.md)  
   
   

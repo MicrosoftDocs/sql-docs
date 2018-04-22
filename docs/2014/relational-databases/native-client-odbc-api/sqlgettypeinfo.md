@@ -32,14 +32,14 @@ manager: "jhubbard"
 ## SQLGetTypeInfo and Table-Valued Parameters  
  The table type for table-valued parameters is effectively a meta-type—that is, a type used to define other types. Therefore, it does not have to be exposed through SQLGetTypeInfo. Applications must use SQLTables, rather than SQLGetTypeInfo, to retrieve metadata for table types used with table-valued parameters.  
   
- For more information, about retrieving metdata for table-valued parameters, see [Statement Attributes that Affect Table-Valued Parameters](../../database-engine/dev-guide/statement-attributes-that-affect-table-valued-parameters.md).  
+ For more information, about retrieving metdata for table-valued parameters, see [Statement Attributes that Affect Table-Valued Parameters](../native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLGetTypeInfo Support for Enhanced Date and Time Features  
- For the values returned for date/time types, see [Catalog Metadata](../../database-engine/dev-guide/catalog-metadata.md).  
+ For the values returned for date/time types, see [Catalog Metadata](../native-client-odbc-date-time/metadata-catalog.md).  
   
- For more general information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more general information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLGetTypeInfo Support for Large CLR UDTs  
  `SQLGetTypeInfo` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

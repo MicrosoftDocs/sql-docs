@@ -117,6 +117,6 @@ manager: "jhubbard"
 -   [Name Element for Table &#40;DTA&#41;](../../2014/database-engine/name-element-for-table-dta.md)  
   
 ## See Also  
- [Database Engine Tuning Advisor](../../2014/database-engine/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

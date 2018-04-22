@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   OK  
   
- The status value **Performance critical** is relevant for transactional subscriptions and merge subscriptions; for transactional subscriptions, it can be displayed only if a threshold is set. For information on performance measurements and setting thresholds, see [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md) and [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md).  
+ The status value **Performance critical** is relevant for transactional subscriptions and merge subscriptions; for transactional subscriptions, it can be displayed only if a threshold is set. For information on performance measurements and setting thresholds, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md) and [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Publication**  
  The name of each publication, in the form *PublicationDatabaseName: PublicationName*.  
@@ -78,11 +78,11 @@ manager: "jhubbard"
   
 -   Critical  
   
- For more information about how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md).  
+ For more information about how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md).  
   
 ## See Also  
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

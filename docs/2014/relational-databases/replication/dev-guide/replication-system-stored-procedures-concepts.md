@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   Use the script generation features that are provided in the replication wizards or  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information, see [Scripting Replication](../../../../2014/relational-databases/replication/scripting-replication.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information, see [Scripting Replication](../scripting-replication.md).  
   
 -   Use Replication Management Objects (RMOs) to programmatically generate the script to create an RMO object.  
   
@@ -126,9 +126,9 @@ GO
  Once created, a replication script can be executed in one of the following ways:  
   
 ### Creating a SQL Query File in SQL Server Management Studio  
- A replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] script file can be created as a SQL Query file in a [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] project. After the script is written, a connection can be made to the database for this query file and the script can be executed. For more information about how to create [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md).  
+ A replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] script file can be created as a SQL Query file in a [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] project. After the script is written, a connection can be made to the database for this query file and the script can be executed. For more information about how to create [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md).  
   
- To use a script that includes scripting variables, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] must be running in **sqlcmd** mode. In **sqlcmd** mode, the Query Editor accepts additional syntax specific to **sqlcmd**, such as `:setvar`, which is used to a value for a variable. For more information about **sqlcmd** mode, see [Edit SQLCMD Scripts with Query Editor](../../../../2014/database-engine/edit-sqlcmd-scripts-with-query-editor.md). In the following script, `:setvar` is used to provide a value for the `$(DistPubServer)` variable.  
+ To use a script that includes scripting variables, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] must be running in **sqlcmd** mode. In **sqlcmd** mode, the Query Editor accepts additional syntax specific to **sqlcmd**, such as `:setvar`, which is used to a value for a variable. For more information about **sqlcmd** mode, see [Edit SQLCMD Scripts with Query Editor](../../scripting/edit-sqlcmd-scripts-with-query-editor.md). In the following script, `:setvar` is used to provide a value for the `$(DistPubServer)` variable.  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -152,7 +152,7 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### Using the sqlcmd Utility from the Command Line  
- The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../../2014/database-engine/sqlcmd-utility.md):  
+ The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../database-engine/sqlcmd-utility.md):  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
@@ -222,8 +222,8 @@ REM -- The following must be supplied on one line.
 -   Synchronizing a pull subscription  
   
 ## See Also  
- [Replication Programming Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-programming-concepts.md)   
+ [Replication Programming Concepts](replication-programming-concepts.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Scripting Replication](../../../../2014/relational-databases/replication/scripting-replication.md)  
+ [Scripting Replication](../scripting-replication.md)  
   
   

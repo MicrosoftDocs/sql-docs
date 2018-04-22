@@ -33,7 +33,7 @@ manager: "jhubbard"
  Click this button to clear all filters that have been previously defined.  
   
 ## See Also  
- [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](../../../2014/relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)   
- [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](../../../2014/relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
+ [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](microsoft-replication-conflict-viewer-merge-replication.md)   
+ [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   
   

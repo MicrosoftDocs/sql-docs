@@ -50,10 +50,10 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   After a publication is created, some property changes require a new snapshot. If a publication has subscriptions, some changes also require all subscriptions to be reinitialized. For more information, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md) and [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
+-   After a publication is created, some property changes require a new snapshot. If a publication has subscriptions, some changes also require all subscriptions to be reinitialized. For more information, see [Change Publication and Article Properties](change-publication-and-article-properties.md) and [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- View and modify publication properties in the **Publication Properties - \<Publication>** dialog box, which is available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ View and modify publication properties in the **Publication Properties - \<Publication>** dialog box, which is available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
  The **Publication Properties - \<Publication>** dialog box includes the following pages:  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
 1.  Execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying the publication property to change in the **@property** parameter and the new value of this property in the **@value** parameter.  
   
     > [!NOTE]  
-    >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+    >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **@force_reinit_subscription**. For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 #### To view the properties of a merge publication  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
 1.  Execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying the publication property being changed in the **@property** parameter and the new value of this property in the **@value** parameter.  
   
     > [!NOTE]  
-    >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **@force_reinit_subscription** For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+    >  If the change will require the generation of a new snapshot, you must also specify a value of **1** for **@force_invalidate_snapshot**, and if the change will require that Subscribers be reinitialized, you must specify a value of **1** for **@force_reinit_subscription** For more information on the properties that, when changed, require a new snapshot or reinitialization, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 #### To view the properties of a snapshot  
   
@@ -186,12 +186,12 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
   
 ## See Also  
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)   
- [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-a-publication.md)   
- [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [View and Modify Article Properties](../../../2014/relational-databases/replication/view-and-modify-article-properties.md)  
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
+ [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [View and Modify Article Properties](view-and-modify-article-properties.md)  
   
   

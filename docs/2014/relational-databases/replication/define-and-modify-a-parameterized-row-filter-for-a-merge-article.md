@@ -26,7 +26,7 @@ manager: "jhubbard"
 # Define and Modify a Parameterized Row Filter for a Merge Article
   This topic describes how to define and modify a parameterized row filter in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- When creating table articles, you can use parameterized row filters. These filters use a [WHERE](~/t-sql/queries/where-transact-sql.md) clause to select the appropriate data to be published. Rather than specifying a literal value in the clause (as you do with a static row filter), you specify one or both of the following system functions: [SUSER_SNAME](~/t-sql/functions/suser-sname-transact-sql.md) and [HOST_NAME](~/t-sql/functions/host-name-transact-sql.md). For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+ When creating table articles, you can use parameterized row filters. These filters use a [WHERE](~/t-sql/queries/where-transact-sql.md) clause to select the appropriate data to be published. Rather than specifying a literal value in the clause (as you do with a static row filter), you specify one or both of the following system functions: [SUSER_SNAME](~/t-sql/functions/suser-sname-transact-sql.md) and [HOST_NAME](~/t-sql/functions/host-name-transact-sql.md). For more information, see [Parameterized Row Filters](parameterized-row-filters.md).  
   
  
   
@@ -34,15 +34,15 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If you add, modify, or delete a parameterized row filter after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+-   If you add, modify, or delete a parameterized row filter after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   For performance reasons, we recommend that you not apply functions to column names in parameterized row filter clauses, such as `LEFT([MyColumn]) = SUSER_SNAME()`. If you use HOST_NAME in a filter clause and override the HOST_NAME value, it might be necessary to convert data types using CONVERT. For more information about best practices for this case, see the section "Overriding the HOST_NAME() Value" in the topic [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+-   For performance reasons, we recommend that you not apply functions to column names in parameterized row filter clauses, such as `LEFT([MyColumn]) = SUSER_SNAME()`. If you use HOST_NAME in a filter clause and override the HOST_NAME value, it might be necessary to convert data types using CONVERT. For more information about best practices for this case, see the section "Overriding the HOST_NAME() Value" in the topic [Parameterized Row Filters](parameterized-row-filters.md).  
   
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Define, modify, and delete parameterized row filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Define, modify, and delete parameterized row filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To define a parameterized row filter  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
     -   **A row from this table will go to only one subscription**  
   
-     If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+     If you select **A row from this table will go to only one subscription**, merge replication can optimize performance by storing and processing less metadata. However, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](parameterized-row-filters.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -122,15 +122,15 @@ manager: "jhubbard"
     -   **3** - Filtering for the article yields nonoverlapping partitions that are unique for each subscription.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
- This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the **LoginID** column. During synchronization, the value returned by the [HOST_NAME](~/t-sql/functions/host-name-transact-sql.md) function is overridden. For more information, see Overriding the HOST_NAME() Value in the topic [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+ This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the **LoginID** column. During synchronization, the value returned by the [HOST_NAME](~/t-sql/functions/host-name-transact-sql.md) function is overridden. For more information, see Overriding the HOST_NAME() Value in the topic [Parameterized Row Filters](parameterized-row-filters.md).  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
   
 ## See Also  
- [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)   
- [Join Filters](../../../2014/relational-databases/replication/join-filters.md)   
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)  
+ [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
+ [Join Filters](join-filters.md)   
+ [Parameterized Row Filters](parameterized-row-filters.md)  
   
   

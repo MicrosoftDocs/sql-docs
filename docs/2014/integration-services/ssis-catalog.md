@@ -131,7 +131,7 @@ manager: "jhubbard"
   
  To change the **Encryption Algorithm** property setting, set the `SSISDB` database to the single-user mode and then call the catalog.configure_catalog stored procedure. Use ENCRYPTION_ALGORITHM for the *property_name* argument. For the supported property values, see [catalog.catalog_properties &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). For more information about the stored procedure, see [catalog.configure_catalog &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
- For more information about single-user mode, see [Set a Database to Single-user Mode](../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../../2014/database-engine/sql-server-encryption.md).  
+ For more information about single-user mode, see [Set a Database to Single-user Mode](../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../relational-databases/security/encryption/sql-server-encryption.md).  
   
  A database master key is used for the encryption. The key is created when you create the catalog. For more information, see [Create the SSIS Catalog](../../2014/integration-services/create-the-ssis-catalog.md).  
   
@@ -149,7 +149,7 @@ manager: "jhubbard"
 ## Permissions  
  Projects, environments, and packages are contained in folders that are securable objects. You can grant permissions to a folder, including the MANAGE_OBJECT_PERMISSIONS permission. MANAGE_OBJECT_PERMISSIONS enables you to delegate the administration of folder contents to a user without having to grant the user membership to the ssis_admin role. You can also grant permissions to projects, environments, and operations. Operations include initializing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], deploying projects, creating and starting executions, validating projects and packages, and configuring the `SSISDB` catalog.  
   
- For more information about database roles, see [Database-Level Roles](../../2014/database-engine/database-level-roles.md).  
+ For more information about database roles, see [Database-Level Roles](../relational-databases/security/authentication-access/database-level-roles.md).  
   
  The SSISDB catalog uses a DDL trigger, ddl_cleanup_object_permissions, to enforce the integrity of permissions information for SSIS securables. The trigger fires when a database principal, such as a database user, database role, or a database application role, is removed from the SSISDB database.  
   

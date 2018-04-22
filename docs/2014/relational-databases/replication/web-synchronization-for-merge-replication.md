@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  The [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] IT department has configured each portable computer with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and has enabled merge replication to use Web synchronization. The Merge Agent on each portable computer has an Internet URL that points to the replication components that are installed on a computer that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). These components synchronize the Subscriber with the Publisher. Each representative can now connect through any available Internet connection without using a remote dial-up connection, and can upload and download the appropriate data. The Internet connection uses Secure Sockets Layer (SSL); therefore, a virtual private network (VPN) is not required.  
   
- For information about how to configure the components that are required for Web synchronization, see [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md), [Configure IIS for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-for-web-synchronization.md), and [Configure IIS 7 for Web Synchronization](../../../2014/relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
+ For information about how to configure the components that are required for Web synchronization, see [Configure Web Synchronization](configure-web-synchronization.md), [Configure IIS for Web Synchronization](configure-iis-for-web-synchronization.md), and [Configure IIS 7 for Web Synchronization](configure-iis-7-for-web-synchronization.md).  
   
 > [!NOTE]  
 >  Web synchronization is designed for synchronizing data with portable computers, handheld devices, and other clients. Web synchronization is not intended for high-volume server-to-server applications.  
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  The following illustration shows some of the components that are involved in Web synchronization for merge replication.  
   
- ![Web synchronization components and data flow](../../../2014/relational-databases/replication/media/web-sync01.gif "Web synchronization components and data flow")  
+ ![Web synchronization components and data flow](media/web-sync01.gif "Web synchronization components and data flow")  
   
  Web synchronization is an option only for pull subscriptions; therefore, a Merge Agent will always run on the Subscriber. This Merge Agent can be the standard Merge Agent, the Merge Agent ActiveX control, or an application that provides synchronization through Replication Management Objects (RMO). To specify the location of the computer that is running IIS, use the **–InternetUrl** parameter for the Merge Agent.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
 3.  The Merge Agent at the Subscriber then accepts the HTTPS response and applies the download changes to the subscription database.  
   
 ## See Also  
- [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../../2014/relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Configure Web Synchronization](configure-web-synchronization.md)   
+ [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
   
   

@@ -70,7 +70,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |\<future content>||  
   
 ##  <a name="bkmk_windows_service"></a> Analysis Services Windows Service  
- The script in this section verifies the instance of [!INCLUDE[ssASnoversion](../../../../includes/ssasnoversion-md.md)] in SharePoint mode. Verify the service is **running**.  
+ The script in this section verifies the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in SharePoint mode. Verify the service is **running**.  
   
 ```  
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
@@ -281,7 +281,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows and ULS Logs  
  **Windows event log**  
   
- The following command will search the windows event log for events related to the instance of [!INCLUDE[ssASnoversion](../../../../includes/ssasnoversion-md.md)] in SharePoint mode. For information on disabling events or changing the event level, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+ The following command will search the windows event log for events related to the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in SharePoint mode. For information on disabling events or changing the event level, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
  **Service Name:** MSOLAP$POWERPIVOT  
   
@@ -448,7 +448,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
  [Use the Get-EvenLog cmdlet](http://technet.microsoft.com/library/ee176846.aspx)  
   
 ##  <a name="bkmk_full_script"></a> Full PowerShell Script  
- The Following script contains all of the commands from the previous sections. The script runs the commands in the same order as they are presented in this topic. The script contains some optional variations of the commands noted in this topic in case you need additional filtering. The variations are disabled with a comment character (#). The script also includes some statements for verifying [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode. The [!INCLUDE[ssRSnoversion](../../../../includes/ssrsnoversion-md.md)] statements are disabled with a comment character (#).  
+ The Following script contains all of the commands from the previous sections. The script runs the commands in the same order as they are presented in this topic. The script contains some optional variations of the commands noted in this topic in case you need additional filtering. The variations are disabled with a comment character (#). The script also includes some statements for verifying [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode. The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] statements are disabled with a comment character (#).  
   
 ```  
 # This script audits services related to PowerPivot for SharePoint  

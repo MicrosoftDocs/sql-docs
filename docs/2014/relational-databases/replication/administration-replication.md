@@ -25,25 +25,25 @@ manager: "jhubbard"
   This section contains information on administering replication topologies. We recommend that you read the best practices topic first, and then follow the links from that topic to more detailed information in this section and other sections.  
   
 ## In This Section  
- [Best Practices for Replication Administration](../../../2014/relational-databases/replication/best-practices-for-replication-administration.md)  
+ [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
  Describes a variety of best practices, including information about backup and restore, monitoring, performance, and maintenance tasks.  
   
- [Frequently Asked Questions for Replication Administrators](../../../2014/relational-databases/replication/frequently-asked-questions-for-replication-administrators.md)  
+ [Frequently Asked Questions for Replication Administrators](frequently-asked-questions-for-replication-administrators.md)  
  Addresses a wide variety of questions related to administrative tasks and how replication functions.  
   
- [Maintain Publications](../../../2014/relational-databases/replication/maintain-publications.md)  
+ [Maintain Publications](maintain-publications.md)  
  Describes how to add and drop articles from publications and provides a list of property changes that require reinitialization or the generation of a new snapshot.  
   
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)  
+ [Replication Agent Administration](replication-agent-administration.md)  
  Provides information on replication agents, agent profiles, and using alerts.  
   
- [Back Up and Restore Replicated Databases](../../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md)  
+ [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md)  
  Details considerations for backing up and restoring replicated databases, with strategies for each type of replication.  
   
- [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md)  
+ [Validate Replicated Data](validate-replicated-data.md)  
  Provides information on validating data at Subscribers to determine whether the data matches the data at the Publisher.  
   
 ## See Also  
- [Monitoring &#40;Replication&#41;](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring &#40;Replication&#41;](monitoring-replication.md)  
   
   

@@ -283,7 +283,7 @@
 ##### [Summary: Configuring Permissions on Database Objects](../t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md)
 #### [Lesson 3: Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)
 ##### [Deleting Database Objects](../t-sql/lesson-3-deleting-database-objects.md)
-### [Tutorial: Database Engine Tuning Advisor](../tools/dta/tutorial-database-engine-tuning-advisor.md)
+### [Tutorial: Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)
 #### [Lesson 1: Basic Navigation in Database Engine Tuning Advisor](../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)
 ##### [Launching Database Engine Tuning Advisor](../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md)
 ##### [Setting Tool Options and Layout](../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)

@@ -71,6 +71,6 @@ manager: "jhubbard"
  For a list of tutorials, see [Tutorials for SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
 ## See Also  
- [Administer Servers by Using Policy-Based Management](../../database-engine/administer-servers-by-using-policy-based-management.md)  
+ [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)  
   
   

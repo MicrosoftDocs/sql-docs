@@ -50,6 +50,6 @@ GO
  [clr enabled Server Configuration Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)   
- [Server-Level Roles](../../../2014/database-engine/server-level-roles.md)  
+ [Server-Level Roles](../security/authentication-access/server-level-roles.md)  
   
   

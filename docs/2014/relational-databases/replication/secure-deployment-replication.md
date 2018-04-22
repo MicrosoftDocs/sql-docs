@@ -22,26 +22,26 @@ manager: "jhubbard"
   This section provides information to help you better secure replication.  
   
 ## In This Section  
- [Secure the Distributor](../../../2014/relational-databases/replication/secure-the-distributor.md)  
+ [Secure the Distributor](secure-the-distributor.md)  
  Describes how to help secure a Distributor.  
   
- [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md)  
+ [Secure the Publisher](secure-the-publisher.md)  
  Describes the publication access list (PAL) and best practices for its use.  
   
- [Secure the Subscriber](../../../2014/relational-databases/replication/secure-the-subscriber.md)  
+ [Secure the Subscriber](secure-the-subscriber.md)  
  Describes connections made to Subscribers and considerations for transactional updating Subscribers.  
   
- [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md)  
+ [Secure the Snapshot Folder](secure-the-snapshot-folder.md)  
  Describes permissions required for access to the snapshot folder, best practices for defining folder location, and considerations for snapshot delivery through FTP.  
   
- [Securing Replication Over the Internet](../../../2014/relational-databases/replication/securing-replication-over-the-internet.md)  
+ [Securing Replication Over the Internet](securing-replication-over-the-internet.md)  
  Includes information about virtual private networks and Web synchronization.  
   
- [Security Considerations for SQL Server Compact Replication](../../../2014/relational-databases/replication/security-considerations-for-sql-server-compact-replication.md)  
+ [Security Considerations for SQL Server Compact Replication](security-considerations-for-sql-server-compact-replication.md)  
  Discusses Securing connectivity between an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## See Also  
- [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md)   
- [Secure Development &#40;Replication&#41;](../../../2014/relational-databases/replication/secure-development-replication.md)  
+ [Security Overview &#40;Replication&#41;](security-overview-replication.md)   
+ [Secure Development &#40;Replication&#41;](secure-development-replication.md)  
   
   

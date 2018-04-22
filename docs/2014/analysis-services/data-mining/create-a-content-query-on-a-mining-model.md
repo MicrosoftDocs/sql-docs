@@ -73,10 +73,10 @@ manager: "mblythe"
      The Results pane displays the contents of the model.  
   
     > [!NOTE]  
-    >  To view a list of all the schema rowsets that you can query on the current instance, use this query: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Or, for a list of schema rowsets specific to data mining, see [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+    >  To view a list of all the schema rowsets that you can query on the current instance, use this query: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Or, for a list of schema rowsets specific to data mining, see [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
 ## See Also  
  [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
   
   

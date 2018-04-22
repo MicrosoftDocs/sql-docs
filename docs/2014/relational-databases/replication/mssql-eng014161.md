@@ -33,18 +33,18 @@ manager: "jhubbard"
 ## Explanation  
  Replication lets you enable warnings for several conditions. This includes exceeding a specified latency for transactional subscriptions. Latency is the period of time that elapses between a data change being committed at the Publisher and the corresponding change being committed at the Subscriber.  
   
- When you enable a warning by using Replication Monitor or [sp_replmonitorchangepublicationthreshold](~/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md), you specify a threshold that determines when a warning is triggered. When that threshold is met or exceeded, a warning is displayed in Replication Monitor, and an event is written to the Windows event log. Reaching a threshold can also trigger a SQL Server Agent alert. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md) and [Programmatically Monitor Replication](../../../2014/relational-databases/replication/programmatically-monitor-replication.md).  
+ When you enable a warning by using Replication Monitor or [sp_replmonitorchangepublicationthreshold](~/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md), you specify a threshold that determines when a warning is triggered. When that threshold is met or exceeded, a warning is displayed in Replication Monitor, and an event is written to the Windows event log. Reaching a threshold can also trigger a SQL Server Agent alert. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md) and [Programmatically Monitor Replication](programmatically-monitor-replication.md).  
   
 ## User Action  
  If a subscription exceeds a latency threshold, you must determine whether there is a performance issue with the system or whether the threshold should be adjusted. After you configure replication, develop a performance baseline that will let you determine how replication behaves with a workload that is typical for your applications and topology. Include latency in this baseline so that you can set an appropriate value for the threshold.  
   
  If the threshold value is appropriate, but it is being exceeded, you must determine where the performance bottleneck is in the system. For more information about how to monitor and troubleshoot replication performance, see the following topics:  
   
--   [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md)  
   
--   [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md)  
+-   [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md)  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

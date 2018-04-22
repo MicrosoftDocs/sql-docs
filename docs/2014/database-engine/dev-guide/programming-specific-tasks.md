@@ -47,7 +47,7 @@ manager: "jhubbard"
 |[Using XML Schemas](../../../2014/database-engine/dev-guide/using-xml-schemas.md)|Describes how to use the XML data type in SMO.|  
 |[Using Synonyms](../../../2014/database-engine/dev-guide/using-synonyms.md)|Describes how to create synonyms in SMO.|  
 |[Using Messages](../../../2014/database-engine/dev-guide/using-messages.md)|Describes how to use system messages, and how to define your own user-defined messages.|  
-|[Implementing Full-Text Search](../../../2014/database-engine/dev-guide/implementing-full-text-search.md)|Describes how to implement full-text search catalogs and indexes in SMO.|  
+|[Implementing Full-Text Search](../../relational-databases/search/full-text-search.md)|Describes how to implement full-text search catalogs and indexes in SMO.|  
 |[Implementing Endpoints](../../../2014/database-engine/dev-guide/implementing-endpoints.md)|Describes how to create endpoints to handle payloads for Database Mirroring, SOAP requests, and Service Broker.|  
 |[Creating and Updating Statistics](../../../2014/database-engine/dev-guide/creating-and-updating-statistics.md)|Describes how to set up and monitor statistics on a database in SMO.|  
 |[Tracing and Replaying Events](../../../2014/database-engine/dev-guide/tracing-and-replaying-events.md)|Describes how to use the `Trace` and `Replay` objects in SMO to trace and replay events.|  

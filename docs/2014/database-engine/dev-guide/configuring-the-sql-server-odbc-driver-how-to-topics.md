@@ -21,11 +21,11 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Add a Data Source &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/add-a-data-source-odbc.md)  
+-   [Add a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
--   [Delete a Data Source &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/delete-a-data-source-odbc.md)  
+-   [Delete a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)  
   
 ## See Also  
- [ODBC How-to Topics](../../../2014/database-engine/dev-guide/odbc-how-to-topics.md)  
+ [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

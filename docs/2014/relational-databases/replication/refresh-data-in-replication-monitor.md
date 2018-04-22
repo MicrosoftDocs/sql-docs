@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Refresh Data in Replication Monitor
   In Replication Monitor, the main window and detail windows (those windows launched from the main window) can be refreshed automatically or manually. To refresh a window manually, press F5. By default, the main window is refreshed automatically every five seconds; the rate can be customized for each Publisher.  
   
- The data displayed in Replication Monitor is queried from a cache; for information about the relationship between the cache and refreshing Replication Monitor, see [Caching, Refresh, and Replication Monitor Performance](../../../2014/relational-databases/replication/caching-refresh-and-replication-monitor-performance.md). For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ The data displayed in Replication Monitor is queried from a cache; for information about the relationship between the cache and refreshing Replication Monitor, see [Caching, Refresh, and Replication Monitor Performance](caching-refresh-and-replication-monitor-performance.md). For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 ### To set refresh options for Replication Monitor  
   
@@ -43,6 +43,6 @@ manager: "jhubbard"
 2.  In the **Subscription \<SubscriptionName>** detail window, click **Action**, and then click **Auto Refresh**. The refresh rate is determined by the **Refresh rate** setting in the **Publisher Settings** dialog box.  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

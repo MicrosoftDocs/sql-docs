@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 -   Indexes on views can provide significant performance gains when the view contains aggregations, table joins, or a combination of aggregations and joins. The view does not have to be explicitly referenced in the query for the query optimizer to use it.  
   
--   Use the Database Engine Tuning Advisor to analyze your database and make index recommendations. For more information, see [Database Engine Tuning Advisor](../2014/database-engine/database-engine-tuning-advisor.md).  
+-   Use the Database Engine Tuning Advisor to analyze your database and make index recommendations. For more information, see [Database Engine Tuning Advisor](relational-databases/performance/database-engine-tuning-advisor.md).  
   
 ### Query Considerations  
  When you design an index, consider the following query guidelines:  
@@ -600,6 +600,6 @@ WHERE b = CONVERT(Varbinary(4), 1);
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [Partitioned Tables and Indexes](database-engine/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

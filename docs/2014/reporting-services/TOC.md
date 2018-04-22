@@ -790,7 +790,7 @@
 ####### [SetExtendedProtectionSettings Method (WMI MSReportServer_ConfigurationSetting)](setextendedprotectionsettings-method-wmi-msreportserver-configurationsetting.md)
 ## [Technical Reference](technical-reference-ssrs.md)
 ### [Errors and Events Reference](errors-and-events-reference-reporting-services.md)
-#### [Cause and Resolution of Reporting Services Errors](cause-and-resolution-of-reporting-services-errors.md)
+#### [Cause and Resolution of Reporting Services Errors](../relational-databases/native-client-ole-db-errors/errors.md)
 ##### [rsAccessedDenied - Reporting Services Error](rsaccesseddenied-reporting-services-error.md)
 ##### [rsInternalError - Reporting Services Error](rsinternalerror-reporting-services-error.md)
 ##### [rsModelGenerationError - Reporting Services Error](rsmodelgenerationerror-reporting-services-error.md)

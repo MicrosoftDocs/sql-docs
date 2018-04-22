@@ -93,9 +93,9 @@ manager: "jhubbard"
  The existing descriptor field identifier SQL_DESC_TYPE_NAME is used to indicate the name of the UDT. The SQL_DESC_TYPE field for a UDT type column is SQL_SS_UDT.  
   
 ## SQLColAttribute Support for Enhanced Date and Time Features  
- For the values returned for date/time types, see the "Information Returned in IRD Fields" section in [Parameter and Result Metadata](../../database-engine/dev-guide/parameter-and-result-metadata.md).  
+ For the values returned for date/time types, see the "Information Returned in IRD Fields" section in [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLColAttribute Support for Large CLR UDTs  
  `SQLColAttribute` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

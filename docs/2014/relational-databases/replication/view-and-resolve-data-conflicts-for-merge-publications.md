@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  Storage of conflict information is controlled by the **conflict_logging** publication property. For more information, see [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) and [sp_changemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
- Conflicts can also be resolved interactively during synchronization using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Interactive Resolver. The Interactive Resolver is available through the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager. For more information, see [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../2014/relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ Conflicts can also be resolved interactively during synchronization using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Interactive Resolver. The Interactive Resolver is available through the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager. For more information, see [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ### To view and resolve conflicts for merge publications  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
 6.  Close the Replication Conflict Viewer.  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Specify a Merge Article Resolver](../../../2014/relational-databases/replication/specify-a-merge-article-resolver.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Specify a Merge Article Resolver](specify-a-merge-article-resolver.md)  
   
   

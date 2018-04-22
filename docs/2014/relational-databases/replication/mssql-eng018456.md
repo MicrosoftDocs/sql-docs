@@ -34,9 +34,9 @@ manager: "jhubbard"
  Error MSSQL_ENG018456 is raised whenever a login attempt fails. If the error message includes the account **distributor_admin** (Login failed for user 'distributor_admin'.), the issue is with an account used by replication. Replication creates a remote server, **repl_distributor**, which allows communication between the Distributor and Publisher. The login **distributor_admin** is associated with this remote server and must have a valid password.  
   
 ## User Action  
- Ensure that you have specified a password for this account. For more information, see [Secure the Distributor](../../../2014/relational-databases/replication/secure-the-distributor.md).  
+ Ensure that you have specified a password for this account. For more information, see [Secure the Distributor](secure-the-distributor.md).  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

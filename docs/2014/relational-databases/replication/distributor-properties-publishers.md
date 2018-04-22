@@ -38,12 +38,12 @@ manager: "jhubbard"
   
 -   If you enable the first remote Publisher for this Distributor, you are prompted to enter a password.  
   
- For more information on security for Distributors, see [Secure the Distributor](../../../2014/relational-databases/replication/secure-the-distributor.md).  
+ For more information on security for Distributors, see [Secure the Distributor](secure-the-distributor.md).  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)   
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
+ [Create a Publication](create-a-publication.md)   
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
   
   

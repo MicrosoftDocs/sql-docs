@@ -55,7 +55,7 @@ manager: "jhubbard"
   
  The following illustration shows the principal components of snapshot replication.  
   
- ![Snapshot replication components and data flow](../../../2014/relational-databases/replication/media/snapshot.gif "Snapshot replication components and data flow")  
+ ![Snapshot replication components and data flow](media/snapshot.gif "Snapshot replication components and data flow")  
   
 ##  <a name="SnapshotAgent"></a> Snapshot Agent  
  For merge replication, a snapshot is generated every time the Snapshot Agent runs. For transactional replication, snapshot generation depends on the setting of the publication property **immediate_sync**. If the property is set to TRUE (the default when using the New Publication Wizard), a snapshot is generated every time the Snapshot Agent runs, and it can be applied to a Subscriber at any time. If the property is set to FALSE (the default when using **sp_addpublication**), the snapshot is generated only if a new subscription has been added since the last Snapshot Agent run; Subscribers must wait for the Snapshot Agent to complete before they can synchronize.  

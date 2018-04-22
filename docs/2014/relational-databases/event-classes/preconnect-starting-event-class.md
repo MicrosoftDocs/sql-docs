@@ -36,6 +36,6 @@ manager: "jhubbard"
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
  [PreConnect:Completed Event Class](preconnect-completed-event-class.md)   
- [Resource Governor](../../database-engine/resource-governor.md)  
+ [Resource Governor](../resource-governor/resource-governor.md)  
   
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
   
      This tab is intended to display information about subscriptions from all publications available at the selected Publisher that have errors, warnings, or the poorest performance. This tab is not displayed for Distributors running versions prior to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
- For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 ### To view information and perform tasks for the agents associated with a subscription (All Subscriptions tab)  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
     -   To validate a single merge subscription, right-click the subscription, and then click **Validate Subscription**. To validate all subscriptions to a merge publication, right-click the publication, and then click **Validate All Subscriptions**; to validate all subscriptions for a transactional publication, right-click the publication, and then click **Validate Subscriptions**.  
   
-    -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md).  
+    -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md).  
   
 ### To view information and perform tasks for the agents associated with a subscription (Subscription Watch List tab)  
   
@@ -66,10 +66,10 @@ manager: "jhubbard"
   
     -   To validate a single merge subscription, right-click the subscription, and then click **Validate Subscription**. To validate all subscriptions to a merge publication, right-click the publication, and then click **Validate All Subscriptions**; to validate all subscriptions for a transactional publication, right-click the publication, and then click **Validate Subscriptions**.  
   
-    -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md).  
+    -   To manage profiles for the agent, right-click the agent, and then click **Agent Profile**. For more information, see [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md).  
   
 ## See Also  
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

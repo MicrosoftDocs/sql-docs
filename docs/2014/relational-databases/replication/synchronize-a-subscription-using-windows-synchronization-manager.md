@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Synchronize a Subscription Using Windows Synchronization Manager (Windows Synchronization Manager)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager can only be used to synchronize subscriptions to Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on the same computer as Synchronization Manager (it can also be used to synchronize offline files and Web pages). To use Synchronization Manager:  
   
-1.  Enable the synchronization of pull subscriptions with Windows Synchronization Manager in the **Subscription Properties - \<Subscriber>: \<SubscriptionDatabase>** dialog box. For more information about accessing this dialog box, see [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+1.  Enable the synchronization of pull subscriptions with Windows Synchronization Manager in the **Subscription Properties - \<Subscriber>: \<SubscriptionDatabase>** dialog box. For more information about accessing this dialog box, see [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md).  
   
 2.  Access Synchronization Manager through the **Start** menu in Windows.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     The next time the subscription is synchronized, by default a new snapshot is applied to the subscription database. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+     The next time the subscription is synchronized, by default a new snapshot is applied to the subscription database. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 > [!NOTE]  
 >  Merge replication allows any outstanding changes to be uploaded to the Publisher before the snapshot is applied, but this option is not available from Synchronization Manager. To upload changes, synchronize the subscription before reinitializing it.  
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
     -   **Other**  
   
-     It is recommended to use Windows Authentication for all connections. For information about the permissions required by the Distribution Agent and the Merge Agent, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+     It is recommended to use Windows Authentication for all connections. For information about the permissions required by the Distribution Agent and the Merge Agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 ### To use the Interactive Resolver  
   
-1.  Enable the article and subscription to use interactive resolution. For more information, see [Specify Interactive Conflict Resolution for Merge Articles](../../../2014/relational-databases/replication/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Enable the article and subscription to use interactive resolution. For more information, see [Specify Interactive Conflict Resolution for Merge Articles](specify-interactive-conflict-resolution-for-merge-articles.md).  
   
 2.  After the subscription begins synchronizing in Synchronization Manager, the Interactive Resolver launches automatically if interactive conflict resolution is enabled and there are conflicts for one or more articles. The Interactive Resolver displays conflicts one at a time, with a suggested resolution for each conflict (based on the resolver specified when the publication and subscription were created).  
   
@@ -115,6 +115,6 @@ manager: "jhubbard"
 >  Edits are only applied if they are part of the row that is chosen for resolution. For example, if you make edits under **Publisher**, and then click **Accept Subscriber**, the edits are discarded.  
   
 ## See Also  
- [Interactive Conflict Resolution](../../../2014/relational-databases/replication/interactive-conflict-resolution.md)  
+ [Interactive Conflict Resolution](interactive-conflict-resolution.md)  
   
   

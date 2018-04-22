@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # &lt;AgentName&gt; Agent Security
-  The **\<AgentName> Agent Security** page allows you to specify the accounts under which the Distribution Agent (for transactional and snapshot replication) or Merge Agent (for merge replication) run and make connections to the computers in a replication topology. For information on permissions required by agents and best practices for replication security, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md) and [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md).  
+  The **\<AgentName> Agent Security** page allows you to specify the accounts under which the Distribution Agent (for transactional and snapshot replication) or Merge Agent (for merge replication) run and make connections to the computers in a replication topology. For information on permissions required by agents and best practices for replication security, see [Replication Agent Security Model](replication-agent-security-model.md) and [Replication Security Best Practices](replication-security-best-practices.md).  
   
 ## Options  
  Click the properties button (**...**) in the row for each Subscriber to access the **Distribution Agent Security** or **Merge Agent Security** dialog box. Click **Help** on the dialog box that is launched for more information on the permissions required for accounts used by the agents.  
@@ -50,10 +50,10 @@ manager: "jhubbard"
 -   For push subscriptions, the connection can also be made under the context of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
   
 ## See Also  
- [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md)   
- [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md)   
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+ [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
+ [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
+ [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
+ [Replication Agent Security Model](replication-agent-security-model.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

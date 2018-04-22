@@ -47,6 +47,6 @@ manager: "mblythe"
 |`FUNCTION_NAME`|`DBTYPE_WSTR`|Optional.|  
   
 ## See Also  
- [Data Mining Schema Rowsets](data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
   
   

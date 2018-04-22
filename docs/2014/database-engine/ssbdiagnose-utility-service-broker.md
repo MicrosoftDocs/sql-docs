@@ -228,7 +228,7 @@ WHERE database_id = DB_ID();
  If the **-P** option is specified without a password **ssbdiagnose** uses the default password (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)] For more information, see [Strong Passwords](../../2014/database-engine/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)] For more information, see [Strong Passwords](../relational-databases/security/strong-passwords.md).  
   
  The password prompt is displayed by printing the password prompt to the console, as follows: `Password:`  
   
@@ -304,7 +304,7 @@ WHERE database_id = DB_ID();
  Reports an issue that is preventing **ssbdiagnose** from completing a configuration analysis or from monitoring conversations.  
   
 ## sqlcmd Environment Variables  
- The **ssbdiagnose** utility supports the SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD, and SQLCMDLOGINTIMOUT environment variables that are also used by the **sqlcmd** utility. You can set the environment variables either by using the command prompt SET command, or by using the **setvar** command in [!INCLUDE[tsql](../includes/tsql-md.md)] scripts that you run by using **sqlcmd**. For more information about how to use **setvar** in **sqlcmd**, see [Use sqlcmd with Scripting Variables](../../2014/database-engine/use-sqlcmd-with-scripting-variables.md).  
+ The **ssbdiagnose** utility supports the SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD, and SQLCMDLOGINTIMOUT environment variables that are also used by the **sqlcmd** utility. You can set the environment variables either by using the command prompt SET command, or by using the **setvar** command in [!INCLUDE[tsql](../includes/tsql-md.md)] scripts that you run by using **sqlcmd**. For more information about how to use **setvar** in **sqlcmd**, see [Use sqlcmd with Scripting Variables](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
 ## Permissions  
  In each **connectionoptions** clause, the login specified with either **-E** or **-U** must be a member of the **sysadmin** fixed-server role in the instance specified in **-S**.  

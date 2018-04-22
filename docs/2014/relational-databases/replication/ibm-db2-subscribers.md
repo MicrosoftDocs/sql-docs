@@ -54,7 +54,7 @@ manager: "jhubbard"
   
      Most of the options in the string are specific to the DB2 server you are configuring, but the `Process Binary as Character` option should always be set to `False`. A value is required for the `Initial Catalog` option to identify the subscription database. The connection string will be entered in the New Subscription Wizard when you create the subscription.  
   
-3.  Create a snapshot or transactional publication, enable it for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, and then create a push subscription for the Subscriber. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../2014/relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Create a snapshot or transactional publication, enable it for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, and then create a push subscription for the Subscriber. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  Optionally, specify a custom creation script for one or more articles. When a table is published, a CREATE TABLE script is created for that table. For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, the script is created in the [!INCLUDE[tsql](../../includes/tsql-md.md)] dialect, and it is then translated to a more generic SQL dialect by the Distribution Agent before being applied at the Subscriber. To specify a custom creation script, either modify the existing [!INCLUDE[tsql](../../includes/tsql-md.md)] script or create a complete script that uses the DB2 SQL dialect; if a DB2 script is created, use the **bypass_translation** directive so that the Distribution Agent will apply the script at the Subscriber without translation.  
   
@@ -79,17 +79,17 @@ manager: "jhubbard"
     2.  Execute sp_changearticle, specifying the file path and name for the *creation_script* property.  
   
 ## Considerations for IBM DB2 Subscribers  
- In addition to the considerations covered in the topic [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md), consider the following issues when replicating to DB2 Subscribers:  
+ In addition to the considerations covered in the topic [Non-SQL Server Subscribers](non-sql-server-subscribers.md), consider the following issues when replicating to DB2 Subscribers:  
   
 -   The data and indexes for each replicated table are assigned to a DB2 tablespace. The page size of a DB2 tablespace controls the maximum number of columns and the maximum row size of the tables belonging to the tablespace. Ensure that the tablespace associated with replicated tables is appropriate based on the number of replicated columns and the maximum row size of the tables.  
   
 -   Do not publish tables to DB2 Subscribers using transactional replication if one or more primary key columns in the table is of data type DECIMAL(32-38, 0-38) or NUMERIC(32-38, 0-38). Transactional replication identifies rows using the primary key; this can result in failures because these data types are mapped to VARCHAR(41) at the Subscriber. Tables with primary keys that use these data types can be published using snapshot replication.  
   
--   If you want to pre-create tables at the Subscriber, rather than having replication create them, use the replication support only option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   If you want to pre-create tables at the Subscriber, rather than having replication create them, use the replication support only option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows longer table names and column names than DB2:  
   
-    -   If the publication database includes tables with names longer than those supported on the DB2 version at the Subscriber, specify an alternative name for the destination_table article property. For more information about setting properties when creating a publication, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+    -   If the publication database includes tables with names longer than those supported on the DB2 version at the Subscriber, specify an alternative name for the destination_table article property. For more information about setting properties when creating a publication, see [Create a Publication](create-a-publication.md) and [Define an Article](define-an-article.md).  
   
     -   It is not possible to specify alternative column names. You must ensure that published tables do not include column names longer than those supported on the DB2 version at the Subscriber.  
   
@@ -157,14 +157,14 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The specified length for the DB2 type, when combined with other column lengths, cannot exceed the maximum row size based upon the DB2 table space that the table data is assigned to.  
   
-     If there is no appropriate mapping for a large object column, consider using column filtering on the article so that the column is not replicated. For more information, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md).  
+     If there is no appropriate mapping for a large object column, consider using column filtering on the article so that the column is not replicated. For more information, see [Filter Published Data](filter-published-data.md).  
   
 -   When replicating [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `nchar` and `nvarchar` to DB2 CHAR and VARCHAR, replication uses the same length-specifier for the DB2 type as for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type. However, the data type length might too small for the generated DB2 table.  
   
      In some DB2 environments, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `char` data item is not restricted to single-byte characters; the length of a CHAR or VARCHAR item must take this into account. You must also take into account *shift in* and *shift out* characters if they are needed. If you are replicating tables with `nchar` and `nvarchar` columns, you might need to specify a larger maximum length for the data type in a custom creation script. For information about specifying a custom creation script, see step 5 in the section "Configuring an IBM DB2 Subscriber" in this topic.  
   
 ## See Also  
- [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

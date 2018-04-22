@@ -40,16 +40,16 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If you add, modify, or delete a static row filter after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+-   If you add, modify, or delete a static row filter after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 -   If the publication is enabled for peer-to-peer transactional replication, tables cannot be filtered.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   Because these filters are static, all subscribers will receive the same subset of the data. If you need to dynamically filter rows in a table article belonging to a merge publication so that each subscriber receives a different partition of the data, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Merge replication also enables you to filter related rows based on an existing row filter. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
+-   Because these filters are static, all subscribers will receive the same subset of the data. If you need to dynamically filter rows in a table article belonging to a merge publication so that each subscriber receives a different partition of the data, see [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Merge replication also enables you to filter related rows based on an existing row filter. For more information, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Define, modify, and delete static row filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Define, modify, and delete static row filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To define a static row filter  
   
@@ -105,11 +105,11 @@ manager: "jhubbard"
   
 #### To define a static row filter for a snapshot or transactional publication  
   
-1.  Define the article to filter. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+1.  Define the article to filter. For more information, see [Define an Article](define-an-article.md).  
   
 2.  At the Publisher on the publication database, execute [sp_articlefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Specify the name of the article for **@article**, the name of the publication for **@publication**, a name for the filter for **@filter_name**, and the filtering clause for **@filter_clause** (not including `WHERE`).  
   
-3.  If a column filter must still be defined, see [Define and Modify a Column Filter](../../../2014/relational-databases/replication/define-and-modify-a-column-filter.md). Otherwise, execute [sp_articleview &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Specify the publication name for **@publication**, the name of the filtered article for **@article**, and the filter clause specified in step 2 for **@filter_clause**. This creates the synchronization objects for the filtered article.  
+3.  If a column filter must still be defined, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Otherwise, execute [sp_articleview &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Specify the publication name for **@publication**, the name of the filtered article for **@article**, and the filter clause specified in step 2 for **@filter_clause**. This creates the synchronization objects for the filtered article.  
   
 #### To modify a static row filter for a snapshot or transactional publication  
   
@@ -117,45 +117,45 @@ manager: "jhubbard"
   
 2.  At the Publisher on the publication database, execute [sp_articleview &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Specify the publication name for **@publication**, the name of the filtered article for **@article**, and the filter clause specified in step 1 for **@filter_clause**. This re-creates the view that defines the filtered article.  
   
-3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
-4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 #### To delete a static row filter for a snapshot or transactional publication  
   
 1.  At the Publisher on the publication database, execute [sp_articlefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Specify the name of the article for **@article**, the name of the publication for **@publication**, a value of NULL for **@filter_name**, and a value of NULL for **@filter_clause**. Because this change will invalidate data in existing subscriptions, specify a value of **1** for **@force_reinit_subscription**.  
   
-2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
-3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 #### To define a static row filter for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the filtering clause for **@subset_filterclause** (not including `WHERE`). For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the filtering clause for **@subset_filterclause** (not including `WHERE`). For more information, see [Define an Article](define-an-article.md).  
   
-2.  If a column filter must still be defined, see [Define and Modify a Column Filter](../../../2014/relational-databases/replication/define-and-modify-a-column-filter.md).  
+2.  If a column filter must still be defined, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 #### To modify a static row filter for a merge publication  
   
 1.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify the publication name for **@publication**, the name of the filtered article for **@article**, a value of **subset_filterclause** for **@property**, and the new filtering clause for **@value** (not including `WHERE`). Because this change will invalidate data in existing subscriptions, specify a value of 1 for **@force_reinit_subscription**.  
   
-2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
-3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  In this transactional replication example, the article is filtered horizontally to remove all discontinued products.  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- In this merge replication example, the articles are filtered horizontally to return only rows that belong to the specified salesperson. A join filter is also used. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
+ In this merge replication example, the articles are filtered horizontally to return only rows that belong to the specified salesperson. A join filter is also used. For more information, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ## See Also  
- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)   
- [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md)   
- [Filter Published Data for Merge Replication](../../../2014/relational-databases/replication/filter-published-data-for-merge-replication.md)  
+ [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
+ [Filter Published Data](filter-published-data.md)   
+ [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md)  
   
   

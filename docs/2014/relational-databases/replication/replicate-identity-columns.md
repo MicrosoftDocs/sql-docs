@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   None. This option is recommended only for backwards compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is available only from the stored procedure interface for transactional publications.  
   
- To specify an identity range management option, see [Manage Identity Columns](../../../2014/relational-databases/replication/manage-identity-columns.md).  
+ To specify an identity range management option, see [Manage Identity Columns](manage-identity-columns.md).  
   
 ## Assigning Identity Ranges  
  Merge replication and transactional replication use different methods for assigning ranges; these methods are described in this section.  
@@ -65,7 +65,7 @@ manager: "jhubbard"
 |`decimal` and `numeric`|-10^38+1 through 10^38-1|  
   
 > [!NOTE]  
->  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../../2014/database-engine/sequence-numbers.md).  
+>  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../database-engine/sequence-numbers.md).  
   
 ### Merge Replication  
  Identity ranges are managed by the Publisher and propagated to Subscribers by the Merge Agent (in a republishing hierarchy, ranges are managed by the root Publisher and the republishers). The identity values are assigned from a pool at the Publisher. When you add an article with an identity column to a publication in the New Publication Wizard or by using [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), you specify values for:  

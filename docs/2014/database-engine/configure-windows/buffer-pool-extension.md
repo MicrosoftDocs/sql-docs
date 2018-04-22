@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 -   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
- Performance counters are available in the SQL Server, Buffer Manager Object to track the data pages in the buffer pool extension file. For more information, see [buffer pool extension performance counters](../sql-server-buffer-manager-object.md).  
+ Performance counters are available in the SQL Server, Buffer Manager Object to track the data pages in the buffer pool extension file. For more information, see [buffer pool extension performance counters](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).  
   
  The following Xevents are available.  
   
@@ -98,6 +98,6 @@ manager: "jhubbard"
 |Enable and configure the buffer pool extension.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Modify the buffer pool extension configuration|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |View the buffer pool extension configuration|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  
-|Monitor the buffer pool extension|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Performance counters](../sql-server-buffer-manager-object.md)|  
+|Monitor the buffer pool extension|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Performance counters](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   

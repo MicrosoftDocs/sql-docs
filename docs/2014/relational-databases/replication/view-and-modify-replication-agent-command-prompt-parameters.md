@@ -18,26 +18,26 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View and Modify Replication Agent Command Prompt Parameters (SQL Server Management Studio)
-  Replication agents are executables that accept command line parameters. By default, agents run under [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps, so these parameters can be viewed and modified using the **Job Properties - \<Job>** dialog box. This dialog box is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+  Replication agents are executables that accept command line parameters. By default, agents run under [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps, so these parameters can be viewed and modified using the **Job Properties - \<Job>** dialog box. This dialog box is available from the **Jobs** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent.  
   
- Although parameters can be modified directly, it is more common to modify them through an agent profile. For more information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+ Although parameters can be modified directly, it is more common to modify them through an agent profile. For more information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
  If you access agent jobs from the **Jobs** folder, use the following table to determine the agent job name and the parameters available for each agent.  
   
 |Agent|Job name|For a list of parameters, see…|  
 |-----------|--------------|------------------------------------|  
-|Snapshot Agent|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)|  
-|Snapshot Agent for a merge publication partition|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)|  
-|Log Reader Agent|**\<Publisher>-\<PublicationDatabase>-\<integer>**|[Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)|  
-|Merge Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)|  
-|Merge Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)|  
-|Distribution Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|[Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)|  
-|Distribution Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|[Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)|  
-|Distribution Agent for push subscriptions to non-SQL Server Subscribers|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)|  
-|Queue Reader Agent|**[\<Distributor>].\<integer>**|[Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)|  
+|Snapshot Agent|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
+|Snapshot Agent for a merge publication partition|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
+|Log Reader Agent|**\<Publisher>-\<PublicationDatabase>-\<integer>**|[Replication Log Reader Agent](replication-log-reader-agent.md)|  
+|Merge Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
+|Merge Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
+|Distribution Agent for push subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|Distribution Agent for pull subscriptions|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|Distribution Agent for push subscriptions to non-SQL Server Subscribers|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|Queue Reader Agent|**[\<Distributor>].\<integer>**|[Replication Queue Reader Agent](replication-queue-reader-agent.md)|  
   
  <sup>1</sup> For push subscriptions to Oracle publications, it is **\<Publisher>-\<Publisher**> rather than **\<Publisher>-\<PublicationDatabase>**  
   
@@ -92,8 +92,8 @@ manager: "jhubbard"
 6.  Click **OK** on both dialog boxes.  
   
 ## See Also  
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)   
- [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)  
+ [Replication Agent Administration](replication-agent-administration.md)   
+ [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md)   
+ [Replication Agents Overview](replication-agents-overview.md)  
   
   

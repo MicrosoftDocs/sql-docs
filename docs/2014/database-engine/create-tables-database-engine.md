@@ -74,7 +74,7 @@ manager: "jhubbard"
   
      ![Specifyatableschema](../../2014/database-engine/media/specifyatableschema.gif "Specifyatableschema")  
   
-     For more information about schemas, see [Create a Database Schema](../../2014/database-engine/create-a-database-schema.md).  
+     For more information about schemas, see [Create a Database Schema](../relational-databases/security/authentication-access/create-a-database-schema.md).  
   
 9. From the **File** menu, choose **Save** *table name*.  
   

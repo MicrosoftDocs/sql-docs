@@ -23,7 +23,7 @@ manager: "jhubbard"
 |Object Name|Object Type|Description|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Table|Change tracking table used to store information as changes are made to the published table. A change tracking table is created for each published table.|  
-|HREPL_Changes|Table|Table used internally by the Xactset Job to determine the number of changes waiting to be assigned to a transaction set. For more information about this job, see [Performance Tuning for Oracle Publishers](../../../2014/relational-databases/replication/performance-tuning-for-oracle-publishers.md).|  
+|HREPL_Changes|Table|Table used internally by the Xactset Job to determine the number of changes waiting to be assigned to a transaction set. For more information about this job, see [Performance Tuning for Oracle Publishers](performance-tuning-for-oracle-publishers.md).|  
 |HREPL_Distributor|Table|Distributor status table used to maintain information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher.|  
 |HREPL_Event|Table|Event table used for synchronizing snapshots and row count requests.|  
 |HREPL_Mutex|Table|Table used to ensure that the Oracle package procedure PopulatePollTable is not executed concurrently by both the Log Reader Agent and the database job.|  
@@ -47,8 +47,8 @@ manager: "jhubbard"
 |HREPL_Log_I_J_K|View|View created for each published table, used to query the change tracking table.|  
   
 ## See Also  
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Glossary of Terms for Oracle Publishing](../../../2014/relational-databases/replication/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)  
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Glossary of Terms for Oracle Publishing](glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

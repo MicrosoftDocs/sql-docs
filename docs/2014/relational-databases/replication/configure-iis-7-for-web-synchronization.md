@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  Configuring IIS 7 is the first of three steps needed to enable Web synchronization.  
   
- For an overview of the entire configuration process, see [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
+ For an overview of the entire configuration process, see [Configure Web Synchronization](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
 >  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] can cause errors, such as: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server."  
@@ -166,7 +166,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
  To configure the minimum permissions for the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener runs, complete the following procedure. The steps in the following procedure apply to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008 running IIS 7.0.  
   
- In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
+ In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](secure-the-publisher.md).  
   
  **Important** The account created in this section is the account that will connect to the Publisher and Distributor during synchronization. This account must be added as a SQL Login account on the distribution and publication server.  
   
@@ -233,7 +233,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
     3.  Enter a name for the application pool, leave the default values for the remaining fields, and then click **OK**.  
   
     > [!NOTE]  
-    >  If you anticipate having more than two concurrent synchronization clients, you might want to create a web garden. For more information, see "Creating a Web Garden" in [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
+    >  If you anticipate having more than two concurrent synchronization clients, you might want to create a web garden. For more information, see "Creating a Web Garden" in [Configure Web Synchronization](configure-web-synchronization.md).  
   
 5.  Associate the account with the application pool:  
   
@@ -316,7 +316,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
     2.  Connect to the server in diagnostic mode. If the certificate is installed properly, the **Security Alert** dialog box will not appear. If the dialog box appears, the Merge Agent will fail when it tries to connect to the computer that is running IIS. You must make sure that the certificate for the server that you are accessing has been added to the certificate store at the Subscriber as a trusted certificate. For more information about exporting certificates, see the IIS documentation.  
   
 ## See Also  
- [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md)   
- [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md)  
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)   
+ [Configure Web Synchronization](configure-web-synchronization.md)  
   
   

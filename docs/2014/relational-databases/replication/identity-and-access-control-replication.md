@@ -27,26 +27,26 @@ manager: "jhubbard"
   
 -   Agent security  
   
-     The replication agent security model allows fine-grained control over the accounts under which replication agents run and make connections. For detailed information about the agent security model, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md). For information about setting logins and passwords for agents, see [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md).  
+     The replication agent security model allows fine-grained control over the accounts under which replication agents run and make connections. For detailed information about the agent security model, see [Replication Agent Security Model](replication-agent-security-model.md). For information about setting logins and passwords for agents, see [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md).  
   
 -   Administration roles  
   
-     Ensure that the correct server and database roles are used for replication setup, maintenance, and processing. For more information, see [Security Role Requirements for Replication](../../../2014/relational-databases/replication/security-role-requirements-for-replication.md).  
+     Ensure that the correct server and database roles are used for replication setup, maintenance, and processing. For more information, see [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
   
 -   The publication access list (PAL)  
   
-     Grant access to publications through the PAL. The PAL functions similarly to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows access control list. When a Subscriber connects to the Publisher or Distributor and requests access to a publication, the authentication information passed by the agent is checked against the PAL. For more information and best practices for the PAL, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
+     Grant access to publications through the PAL. The PAL functions similarly to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows access control list. When a Subscriber connects to the Publisher or Distributor and requests access to a publication, the authentication information passed by the agent is checked against the PAL. For more information and best practices for the PAL, see [Secure the Publisher](secure-the-publisher.md).  
   
 ## Filtering Published Data  
- In addition to using authentication and authorization to control access to replicated data and objects, replication includes two options to control what data is available at a Subscriber: column filtering and row filtering. For more information about filtering, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md).  
+ In addition to using authentication and authorization to control access to replicated data and objects, replication includes two options to control what data is available at a Subscriber: column filtering and row filtering. For more information about filtering, see [Filter Published Data](filter-published-data.md).  
   
  When you define an article, you can publish only those columns that are necessary for the publication, and omit those that are unnecessary or contain sensitive data. For example, when publishing the **Customer** table from the Adventure Works database to sales representatives in the field, you can omit the **AnnualSales** column, which might be relevant only to executives at the company.  
   
- Filtering published data allows you to restrict access to data and allows you to specify the data that is available at the Subscriber. For example, you can filter the **Customer** table so that corporate partners only receive information about those customers whose **ShareInfo** column has a value of "yes." For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+ Filtering published data allows you to restrict access to data and allows you to specify the data that is available at the Subscriber. For example, you can filter the **Customer** table so that corporate partners only receive information about those customers whose **ShareInfo** column has a value of "yes." For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](parameterized-row-filters.md).  
   
 ## See Also  
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)   
- [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md)   
- [Threat and Vulnerability Mitigation &#40;Replication&#41;](../../../2014/relational-databases/replication/threat-and-vulnerability-mitigation-replication.md)  
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
+ [Security Overview &#40;Replication&#41;](security-overview-replication.md)   
+ [Threat and Vulnerability Mitigation &#40;Replication&#41;](threat-and-vulnerability-mitigation-replication.md)  
   
   

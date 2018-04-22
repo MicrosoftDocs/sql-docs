@@ -41,7 +41,7 @@ manager: "jhubbard"
  All replication types allow push and pull subscriptions. Merge replication uses two additional terms to distinguish subscriptions: client subscriptions and server subscriptions. Both client and server subscription types can be used with push and pull subscriptions. Client subscriptions are appropriate for most Subscribers, whereas server subscriptions are typically used for Subscribers that republish data to other Subscribers. Subscription choice also affects conflict resolution.  
   
 ## Non-SQL Server Subscribers  
- Oracle and IBM DB2 can subscribe to snapshot and transactional publications using push subscriptions. For more information, see [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md).  
+ Oracle and IBM DB2 can subscribe to snapshot and transactional publications using push subscriptions. For more information, see [Non-SQL Server Subscribers](non-sql-server-subscribers.md).  
   
 ## Creating Subscriptions  
  To create a subscription, you supply the following information:  
@@ -62,33 +62,33 @@ manager: "jhubbard"
   
  **To create a push subscription**  
   
- [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)  
+ [Create a Push Subscription](create-a-push-subscription.md)  
   
  **To view or modify push subscription properties**  
   
- [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md)  
+ [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)  
   
  **To delete a push subscription**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../../2014/relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  Deleting a subscription does not remove published objects from the Subscriber.  
   
  **To create a pull subscription**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](create-a-pull-subscription.md)  
   
  **To view or modify pull subscription properties**  
   
- [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md)  
+ [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)  
   
  **To delete a pull subscription**  
   
- [Delete a Pull Subscription](../../../2014/relational-databases/replication/delete-a-pull-subscription.md)  
+ [Delete a Pull Subscription](delete-a-pull-subscription.md)  
   
 ## See Also  
- [Secure the Subscriber](../../../2014/relational-databases/replication/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Secure the Subscriber](secure-the-subscriber.md)   
+ [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)  
   
   

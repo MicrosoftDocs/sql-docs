@@ -31,12 +31,12 @@ manager: "jhubbard"
   
  **To execute scripts before and after the snapshot is applied**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Execute Scripts Before and After a Snapshot is Applied \(SQL Server Management Studio\)](../../../2014/relational-databases/replication/execute-scripts-before-and-after-a-snapshot-is-applied.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Execute Scripts Before and After a Snapshot is Applied \(SQL Server Management Studio\)](execute-scripts-before-and-after-a-snapshot-is-applied.md)  
   
--   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](configure-snapshot-properties-replication-transact-sql-programming.md)  
   
 ## See Also  
- [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../../2014/relational-databases/replication/snapshot-options.md)  
+ [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
+ [Snapshot Options](snapshot-options.md)  
   
   

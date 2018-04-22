@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   Inserts and updates to a row are occurring at more than one node.  
   
-     Regardless of the type of replication used, we recommend that you partition inserts and updates whenever possible, because this reduces the processing required for conflict detection and resolution. For peer-to-peer transactional replication, partitioning inserts and updates is required. For more information, see [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md).  
+     Regardless of the type of replication used, we recommend that you partition inserts and updates whenever possible, because this reduces the processing required for conflict detection and resolution. For peer-to-peer transactional replication, partitioning inserts and updates is required. For more information, see [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md).  
   
 -   A row was inserted at a Subscriber that should be read-only.  
   
@@ -52,12 +52,12 @@ manager: "jhubbard"
   
 -   A table with an identity column is being used, but the column is not managed appropriately.  
   
-     For merge replication and transactional replication with updatable subscriptions, identity columns should be managed automatically by replication. For peer-to-peer transactional replication, they must be managed manually. For more information, see [Replicate Identity Columns](../../../2014/relational-databases/replication/replicate-identity-columns.md).  
+     For merge replication and transactional replication with updatable subscriptions, identity columns should be managed automatically by replication. For peer-to-peer transactional replication, they must be managed manually. For more information, see [Replicate Identity Columns](replicate-identity-columns.md).  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)   
- [Merge Replication](../../../2014/relational-databases/replication/merge-replication.md)   
- [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md)   
- [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
+ [Merge Replication](merge-replication.md)   
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)  
   
   

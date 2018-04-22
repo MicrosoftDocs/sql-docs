@@ -187,7 +187,7 @@ manager: "jhubbard"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adds new values or changes to many of the core OLE DB interfaces.  
   
 #### The ISSCommandWithParameters Interface  
- In order to support the **xml** data type through OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implements a number of changes including the addition of the [ISSCommandWithParameters](../../../database-engine/dev-guide/isscommandwithparameters-ole-db.md) interface. This new interface inherits from the core OLE DB interface **ICommandWithParameters**. In addition to the three methods inherited from **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, and **SetParameterInfo**; **ISSCommandWithParameters** provides the [GetParameterProperties](../../../database-engine/dev-guide/isscommandwithparameters-getparameterproperties-ole-db.md) and [SetParameterProperties](../../../database-engine/dev-guide/isscommandwithparameters-setparameterproperties-ole-db.md) methods that are used to handle server specific data types.  
+ In order to support the **xml** data type through OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implements a number of changes including the addition of the [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) interface. This new interface inherits from the core OLE DB interface **ICommandWithParameters**. In addition to the three methods inherited from **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, and **SetParameterInfo**; **ISSCommandWithParameters** provides the [GetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) and [SetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) methods that are used to handle server specific data types.  
   
 > [!NOTE]  
 >  The **ISSCommandWithParameters** interface also makes use of the new SSPARAMPROPS structure.  
@@ -268,6 +268,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Native Client Features](sql-server-native-client-features.md)   
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../../database-engine/dev-guide/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

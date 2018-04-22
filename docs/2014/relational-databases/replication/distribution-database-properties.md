@@ -30,7 +30,7 @@ manager: "jhubbard"
  The location of the database file and the log file (read-only).  
   
  **Transaction retention period**  
- Also known as the distribution retention period. The length of time transactions are stored for transactional replication. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+ Also known as the distribution retention period. The length of time transactions are stored for transactional replication. For more information, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **History retention period**  
  The length of time history metadata is stored for all types of replication.  
@@ -49,9 +49,9 @@ manager: "jhubbard"
  For more information, see  \\[Replication Agent Security Model](replication-agent-security-model.md).  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)   
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
   
   

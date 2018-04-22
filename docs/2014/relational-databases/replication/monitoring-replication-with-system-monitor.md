@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Monitoring Replication with System Monitor
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows System Monitor allows you to use graphs, charts, and reports to gauge the efficiency of your computer, and identify and troubleshoot possible problems (such as unbalanced resource use, insufficient hardware, or poor program design), and plan for additional hardware needs. For more information, see [Monitor Resource Usage &#40;System Monitor&#41;](../../../2014/database-engine/monitor-resource-usage-system-monitor.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows System Monitor allows you to use graphs, charts, and reports to gauge the efficiency of your computer, and identify and troubleshoot possible problems (such as unbalanced resource use, insufficient hardware, or poor program design), and plan for additional hardware needs. For more information, see [Monitor Resource Usage &#40;System Monitor&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md).  
   
  System Monitor uses performance objects and counters, which provide information on the performance of various processes. You can measure replication performance through counters associated with the replication agents:  
   
@@ -40,6 +40,6 @@ manager: "jhubbard"
 |Merge Agent|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Replication Merge|Uploaded Changes/sec|The number of rows per second replicated from the Subscriber to the Publisher.|  
   
 ## See Also  
- [Monitoring &#40;Replication&#41;](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring &#40;Replication&#41;](monitoring-replication.md)  
   
   

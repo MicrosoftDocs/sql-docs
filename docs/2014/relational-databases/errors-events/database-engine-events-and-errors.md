@@ -19,7 +19,7 @@ manager: "jhubbard"
   This topic provides information about errors and events for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ## In This Section  
- [Understanding Database Engine Errors](understanding-database-engine-errors.md)  
+ [Understanding Database Engine Errors](../native-client-ole-db-errors/errors.md)  
  Describes the format of [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages and explains how to view error messages and return error messages to applications.  
   
  [Cause and Resolution of Database Engine Errors](../../database-engine/cause-and-resolution-of-database-engine-errors.md)  

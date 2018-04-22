@@ -23,9 +23,9 @@ manager: "jhubbard"
 # Replication over the Internet
   Replicating data over the Internet allows remote, disconnected users to access data when they need it using a connection to the Internet. Replicate data over the Internet using:  
   
--   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](../../../2014/relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  
+-   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](publish-data-over-the-internet-using-vpn.md).  
   
--   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md).  
+-   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  All types of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but you should consider Web synchronization if you are using merge replication.  
   

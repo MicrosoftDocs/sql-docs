@@ -340,7 +340,7 @@ manager: "jhubbard"
 -   You cannot drop a database that currently belongs to an availability group.  
   
 ###  <a name="TDEdbs"></a> Follow Up for TDE Protected Databases  
- If you use transparent data encryption (TDE), the certificate or asymmetric key for creating and decrypting other keys must be the same on every server instance that hosts an availability replica for the availability group. For more information, see [Move a TDE Protected Database to Another SQL Server](../../move-a-tde-protected-database-to-another-sql-server.md).  
+ If you use transparent data encryption (TDE), the certificate or asymmetric key for creating and decrypting other keys must be the same on every server instance that hosts an availability replica for the availability group. For more information, see [Move a TDE Protected Database to Another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
 ###  <a name="PermissionsDbs"></a> Permissions (Availability Databases)  
  Requires ALTER permission on the database.  

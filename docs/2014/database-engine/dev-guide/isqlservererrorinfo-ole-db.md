@@ -27,10 +27,10 @@ manager: "jhubbard"
   
 |Method|Description|  
 |------------|-----------------|  
-|[ISQLServerErrorInfo::GetErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-geterrorinfo-ole-db.md)|Returns a pointer to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider SSERRORINFO structure that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error details.|  
+|[ISQLServerErrorInfo::GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|Returns a pointer to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider SSERRORINFO structure that contains the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error details.|  
   
 ## See Also  
  [Interfaces &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   
- [SQL Server Error Detail](../../../2014/database-engine/dev-guide/sql-server-error-detail.md)  
+ [SQL Server Error Detail](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
   
   

@@ -57,7 +57,7 @@ manager: "jhubbard"
   
  A Foreach Loop container can include multiple tasks and containers, but it can use only one type of enumerator. If the Foreach Loop container includes multiple tasks, you can map the enumerator collection value to multiple properties of each task.  
   
- You can set a transaction attribute on the Foreach Loop container to define a transaction for a subset of the package control flow. In this way, you can manage transactions at the level of the Foreach Loop instead of the package level. For example, if a Foreach Loop container repeats a control flow that updates dimensions and fact tables in a star schema, you can configure a transaction to ensure that all fact tables are updated successfully, or none are updated. For more information, see [Integration Services Transactions](../../2014/integration-services/integration-services-transactions.md).  
+ You can set a transaction attribute on the Foreach Loop container to define a transaction for a subset of the package control flow. In this way, you can manage transactions at the level of the Foreach Loop instead of the package level. For example, if a Foreach Loop container repeats a control flow that updates dimensions and fact tables in a star schema, you can configure a transaction to ensure that all fact tables are updated successfully, or none are updated. For more information, see [Integration Services Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md).  
   
 ## Enumerator Types  
  Enumerators are configurable, and you must provide different information, depending on the enumerator.  

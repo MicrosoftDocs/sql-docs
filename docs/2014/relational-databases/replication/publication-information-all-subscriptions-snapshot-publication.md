@@ -57,7 +57,7 @@ manager: "jhubbard"
   
  The status values **Expiring soon/Expired** and **Uninitialized subscription** are warnings. When a warning is displayed, the **Status** column also displays if an agent is running. For example, the status could be **Running, Expiring soon/Expired**.  
   
- The status value **Expiring soon/Expired** is displayed only if a threshold is set. For information on setting thresholds, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md).  
+ The status value **Expiring soon/Expired** is displayed only if a threshold is set. For information on setting thresholds, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Subscription**  
  The name of each subscription, in the form: *SubscriberName: SubscriptionDatabaseName*.  
@@ -66,9 +66,9 @@ manager: "jhubbard"
  The time at which the Distribution Agent last ran. If synchronization is in progress, **In progress** is displayed.  
   
 ## See Also  
- [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
+ [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

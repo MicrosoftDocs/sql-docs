@@ -41,6 +41,6 @@ manager: "jhubbard"
   
  The following diagram shows the components used in merge replication.  
   
- ![Merge replication components and data flow](../../../2014/relational-databases/replication/media/merge.gif "Merge replication components and data flow")  
+ ![Merge replication components and data flow](media/merge.gif "Merge replication components and data flow")  
   
   

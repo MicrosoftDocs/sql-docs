@@ -152,7 +152,7 @@ manager: "jhubbard"
 ##  <a name="auditing"></a> Auditing  
  Procedure level auditing is supported in natively compiled stored procedures. Statement level auditing is not supported.  
   
- For more information about auditing, see [Create a Server Audit and Database Audit Specification](../../database-engine/create-a-server-audit-and-database-audit-specification.md).  
+ For more information about auditing, see [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ##  <a name="tqh"></a> Table, Query, and Join Hints  
  The following are supported:  

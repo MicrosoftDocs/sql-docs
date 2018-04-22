@@ -18,14 +18,14 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # &lt;AgentName&gt; Agent Location
-  The Merge Agent (for merge subscriptions) and the Distribution Agent (for transactional and snapshot subscriptions) run at the Distributor or at the Subscriber. If the agent runs at the Distributor, the subscription is referred to as a push subscription; if the agent runs at the Subscriber, it is referred to as a pull subscription. For more information about push and pull subscriptions, see [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md). All subscriptions created in this pass through the wizard will be of the selected type. To create subscriptions of both types, you must run the wizard twice.  
+  The Merge Agent (for merge subscriptions) and the Distribution Agent (for transactional and snapshot subscriptions) run at the Distributor or at the Subscriber. If the agent runs at the Distributor, the subscription is referred to as a push subscription; if the agent runs at the Subscriber, it is referred to as a pull subscription. For more information about push and pull subscriptions, see [Subscribe to Publications](subscribe-to-publications.md). All subscriptions created in this pass through the wizard will be of the selected type. To create subscriptions of both types, you must run the wizard twice.  
   
 > [!NOTE]  
 >  Subscription type cannot be changed after a subscription is created.  
   
 ## See Also  
- [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
+ [Replication Agents Overview](replication-agents-overview.md)  
   
   

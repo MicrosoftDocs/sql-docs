@@ -51,35 +51,35 @@ manager: "jhubbard"
 # New Publication Wizard
   This section provides information on the following pages of the New Publication Wizard:  
   
--   [Oracle Publisher](../../../2014/relational-databases/replication/oracle-publisher.md)  
+-   [Oracle Publisher](oracle-publisher.md)  
   
--   [Administrative Password](../../../2014/relational-databases/replication/administrative-password.md)  
+-   [Administrative Password](administrative-password.md)  
   
--   [Publication Database](../../../2014/relational-databases/replication/publication-database.md)  
+-   [Publication Database](publication-database.md)  
   
--   [Publication Type](../../../2014/relational-databases/replication/publication-type.md)  
+-   [Publication Type](publication-type.md)  
   
--   [Subscriber Types](../../../2014/relational-databases/replication/subscriber-types.md)  
+-   [Subscriber Types](subscriber-types.md)  
   
--   [Agent Security &#40;New Publication Wizard&#41;](../../../2014/relational-databases/replication/agent-security-new-publication-wizard.md)  
+-   [Agent Security &#40;New Publication Wizard&#41;](agent-security-new-publication-wizard.md)  
   
--   [Articles](../../../2014/relational-databases/replication/articles.md)  
+-   [Articles](articles.md)  
   
--   [Article Issues](../../../2014/relational-databases/replication/article-issues.md)  
+-   [Article Issues](article-issues.md)  
   
--   [Filter Table Rows](../../../2014/relational-databases/replication/filter-table-rows.md)  
+-   [Filter Table Rows](filter-table-rows.md)  
   
--   [Add or Edit Filter](../../../2014/relational-databases/replication/add-or-edit-filter.md)  
+-   [Add or Edit Filter](add-or-edit-filter.md)  
   
--   [Add or Edit Join](../../../2014/relational-databases/replication/add-or-edit-join.md)  
+-   [Add or Edit Join](add-or-edit-join.md)  
   
--   [Generate Filters](../../../2014/relational-databases/replication/generate-filters.md)  
+-   [Generate Filters](generate-filters.md)  
   
--   [Snapshot Agent &#40;New Publication Wizard&#41;](../../../2014/relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
+-   [Snapshot Agent &#40;New Publication Wizard&#41;](snapshot-agent-new-publication-wizard.md)  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+ [Create a Publication](create-a-publication.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

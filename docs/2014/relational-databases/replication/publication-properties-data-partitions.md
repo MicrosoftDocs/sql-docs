@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Properties, Data Partitions
-  The **Data Partitions** page of the **Publication Properties** dialog box allows you to define data partitions for merge publications that use parameterized filtering. After defining partitions, you can then generate snapshots for these partitions, providing different initial data sets for different Subscribers based on the connection properties (login and/or computer name) of the Subscribers. You can also select to allow Subscribers to request snapshot delivery and generation if they do not have a snapshot available for their partition the first time they synchronize. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../2014/relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+  The **Data Partitions** page of the **Publication Properties** dialog box allows you to define data partitions for merge publications that use parameterized filtering. After defining partitions, you can then generate snapshots for these partitions, providing different initial data sets for different Subscribers based on the connection properties (login and/or computer name) of the Subscribers. You can also select to allow Subscribers to request snapshot delivery and generation if they do not have a snapshot available for their partition the first time they synchronize. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## Options  
  **Add**  
@@ -40,10 +40,10 @@ manager: "jhubbard"
  Select this option if you want to allow Subscribers to request snapshot generation and application. Subscribers might require this option if they do not have a snapshot available for their partition the first time they synchronize.  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md)   
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../2014/relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Create a Publication](create-a-publication.md)   
+ [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [Parameterized Row Filters](parameterized-row-filters.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

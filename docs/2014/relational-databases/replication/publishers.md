@@ -30,9 +30,9 @@ manager: "jhubbard"
  If the server you want to allow is not listed, click **Add** to add a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher or Oracle Publisher to the list of available Publishers.  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)   
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
+ [Create a Publication](create-a-publication.md)  
   
   

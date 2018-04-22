@@ -28,7 +28,7 @@ manager: "jhubbard"
  Displays all databases on the server that contain at least one publication that is enabled for peer-to-peer replication. Select a publication to continue.  
   
 ## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md)  
+ [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
   
   

@@ -72,7 +72,7 @@ manager: "jhubbard"
 -   Before preparing your secondary databases, we strongly recommend that you suspend scheduled log backups on the databases in the availability group until the initialization of secondary replicas has completed.  
   
 ###  <a name="Security"></a> Security  
- When a database is backed up, the [TRUSTWORTHY database property](../../trustworthy-database-property.md) is set to OFF. Therefore, TRUSTWORTHY is always OFF on a newly restored database.  
+ When a database is backed up, the [TRUSTWORTHY database property](../../../relational-databases/security/trustworthy-database-property.md) is set to OFF. Therefore, TRUSTWORTHY is always OFF on a newly restored database.  
   
 ####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles. For more information, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md).  

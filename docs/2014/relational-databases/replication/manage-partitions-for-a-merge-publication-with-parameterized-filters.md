@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage Partitions for a Merge Publication with Parameterized Filters
-  This topic describes how to manage partitions for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). Parameterized row filters can be used to generate nonoverlapping partitions. These partitions can be restricted so that only one subscription receives a given partition. In these cases, a large number of subscribers will result in a large number of partitions, which in turn requires an equal number of partitioned snapshots. For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+  This topic describes how to manage partitions for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). Parameterized row filters can be used to generate nonoverlapping partitions. These partitions can be restricted so that only one subscription receives a given partition. In these cases, a large number of subscribers will result in a large number of partitions, which in turn requires an equal number of partitioned snapshots. For more information, see [Parameterized Row Filters](parameterized-row-filters.md).  
   
  **In This Topic**  
   
@@ -40,12 +40,12 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   If you script a replication topology, which is recommended, publication scripts contain the stored procedure calls to create data partitions. The script provides a reference for the partitions created and a way in which to re-create one or more partitions if necessary. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+-   If you script a replication topology, which is recommended, publication scripts contain the stored procedure calls to create data partitions. The script provides a reference for the partitions created and a way in which to re-create one or more partitions if necessary. For more information, see [Scripting Replication](scripting-replication.md).  
   
--   When a publication has parameterized filters that yield subscriptions with nonoverlapping partitions, and if a particular subscription is lost and needs to be re-created, you must do the following: remove the partition that was subscribed to, re-create the subscription, and then re-create the partition. For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md). Replication generates creation scripts for existing Subscriber partitions when a publication creation script is generated. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+-   When a publication has parameterized filters that yield subscriptions with nonoverlapping partitions, and if a particular subscription is lost and needs to be re-created, you must do the following: remove the partition that was subscribed to, re-create the subscription, and then re-create the partition. For more information, see [Parameterized Row Filters](parameterized-row-filters.md). Replication generates creation scripts for existing Subscriber partitions when a publication creation script is generated. For more information, see [Scripting Replication](scripting-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Manage partitions on the **Data Partitions** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md). On this page you can: create and delete partitions; allow Subscribers to initiate snapshot generation and delivery; generate snapshots for one or more partitions; and clean up snapshots.  
+ Manage partitions on the **Data Partitions** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md). On this page you can: create and delete partitions; allow Subscribers to initiate snapshot generation and delivery; generate snapshots for one or more partitions; and clean up snapshots.  
   
 #### To create a partition  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 -   The last time that a partitioned snapshot job ran.  
   
- While the second part of the two-part snapshot can be generated on-demand when a new subscription is initialized, the procedures below enable you to control how this snapshot is generated and to pre-generate this snapshot when it is most convenient. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../2014/relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ While the second part of the two-part snapshot can be generated on-demand when a new subscription is initialized, the procedures below enable you to control how this snapshot is generated and to pre-generate this snapshot when it is most convenient. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 #### To view information on existing partitions  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
     -   **@host_name** - when the parameterized filter is defined by the value returned by [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md).  
   
-2.  Create and initialize the parameterized snapshot for this new partition. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../2014/relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+2.  Create and initialize the parameterized snapshot for this new partition. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### To delete a partition  
   
@@ -121,7 +121,7 @@ manager: "jhubbard"
      This also removes the snapshot job and any snapshot files for the partition.  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
- To better manage a publication with parameterized filters, you can programmatically create new Subscriber partitions, enumerate the existing Subscriber partitions, and delete Subscriber partitions by using Replication Management Objects (RMO). For information about how to create Subscriber partitions, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../2014/relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). The following information about existing partitions can be obtained:  
+ To better manage a publication with parameterized filters, you can programmatically create new Subscriber partitions, enumerate the existing Subscriber partitions, and delete Subscriber partitions by using Replication Management Objects (RMO). For information about how to create Subscriber partitions, see [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). The following information about existing partitions can be obtained:  
   
 -   The value and filtering function upon which the partition is based.  
   
@@ -158,7 +158,7 @@ manager: "jhubbard"
 7.  Repeat step 6 for each partition that is deleted.  
   
 ## See Also  
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../2014/relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Parameterized Row Filters](parameterized-row-filters.md)   
+ [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

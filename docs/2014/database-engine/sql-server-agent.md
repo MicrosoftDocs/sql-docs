@@ -175,6 +175,6 @@ manager: "jhubbard"
 |Describes how to automate administrative tasks using SQL Server Agent.|[Automated Administration Tasks &#40;SQL Server Agent&#41;](../../2014/database-engine/automated-administration-tasks-sql-server-agent.md)|  
   
 ## See Also  
- [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md)  
+ [Surface Area Configuration](../relational-databases/security/surface-area-configuration.md)  
   
   

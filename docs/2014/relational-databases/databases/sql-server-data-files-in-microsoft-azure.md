@@ -120,7 +120,7 @@ ON
  In SQL Server 2014, you can use PowerShell cmdlets to store SQL Server data files in Windows Azure Blob Storage service by referencing a Blob Storage URL path instead of a file path. You can access Blobs using the following URL format`: http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### SQL Server Object and performance counters support  
- Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Windows Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../../database-engine/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Windows Azure Storage.  
+ Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Windows Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../performance-monitor/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Windows Azure Storage.  
   
 ### SQL Server Management Studio support  
  SQL Server Management Studio allows you to use this feature via several dialog windows. For example, you can type the URL path of the storage container, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/` as a **Path** in several dialog windows, such as **New Database**, **Attach Database**, and **Restore Database**. For more information, see [Tutorial: SQL Server Data Files in Windows Azure Storage service](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  

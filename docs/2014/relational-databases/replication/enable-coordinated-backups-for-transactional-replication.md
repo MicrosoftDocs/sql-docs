@@ -24,7 +24,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable Coordinated Backups for Transactional Replication (Replication Transact-SQL Programming)
-  When enabling a database for transactional replication, you can specify that all transactions must be backed up before being delivered to the distribution database. You can also enable coordinated backup on the distribution database so that the transaction log for the publication database is not truncated until transactions that have been propagated to the Distributor have been backed up. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../2014/relational-databases/replication/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
+  When enabling a database for transactional replication, you can specify that all transactions must be backed up before being delivered to the distribution database. You can also enable coordinated backup on the distribution database so that the transaction log for the publication database is not truncated until transactions that have been propagated to the Distributor have been backed up. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
 ### To enable coordinated backups for a database published with transactional replication  
   

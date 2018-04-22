@@ -42,11 +42,11 @@ manager: "jhubbard"
   
  For transactional replication and merge replication, schema changes are propagated incrementally when the Distribution Agent or Merge Agent runs. For snapshot replication, schema changes are propagated when a new snapshot is applied at the Subscriber. In snapshot replication, a new copy of the schema is sent to the Subscriber each time synchronization occurs. Therefore, all schema changes (not just those listed above) to previously published objects are automatically propagated with each synchronization.  
   
- For information about adding and removing articles from publications, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ For information about adding and removing articles from publications, see [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  **To replicate schema changes**  
   
- The schema changes listed above are replicated by default. For information about disabling the replication of schema changes, see [Replicate Schema Changes](../../../2014/relational-databases/replication/replicate-schema-changes.md).  
+ The schema changes listed above are replicated by default. For information about disabling the replication of schema changes, see [Replicate Schema Changes](replicate-schema-changes.md).  
   
 ## Considerations for Schema Changes  
  Keep the following considerations in mind when replicating schema changes.  
@@ -69,9 +69,9 @@ manager: "jhubbard"
   
 -   Explicitly adding, dropping, or altering indexes is not supported. Indexes created implicitly for constraints (such as a primary key constraint) are supported.  
   
--   Altering or dropping identity columns that are managed by replication is not supported. For more information about automatic management of identity columns, see [Replicate Identity Columns](../../../2014/relational-databases/replication/replicate-identity-columns.md).  
+-   Altering or dropping identity columns that are managed by replication is not supported. For more information about automatic management of identity columns, see [Replicate Identity Columns](replicate-identity-columns.md).  
   
--   Schema changes that include nondeterministic functions are not supported because they can result in data at the Publisher and Subscriber being different (referred to as non-convergence). For example, if you issue the following command at the Publisher: `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, the values are different when the command is replicated to the Subscriber and executed. For more information about nondeterministic functions, see [Deterministic and Nondeterministic Functions](../../../2014/database-engine/deterministic-and-nondeterministic-functions.md).  
+-   Schema changes that include nondeterministic functions are not supported because they can result in data at the Publisher and Subscriber being different (referred to as non-convergence). For example, if you issue the following command at the Publisher: `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, the values are different when the command is replicated to the Subscriber and executed. For more information about nondeterministic functions, see [Deterministic and Nondeterministic Functions](../../database-engine/deterministic-and-nondeterministic-functions.md).  
   
 -   It is recommended that constraints be explicitly named. If a constraint is not explicitly named, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a name for the constraint, and these names will be different on the Publisher and each Subscriber. This can cause issues during the replication of schema changes. For example, if you drop a column at the Publisher and a dependent constraint is dropped, replication will attempt to drop the constraint at the Subscriber. The drop at the Subscriber will fail because the name of the constraint is different. If synchronization fails because of a constraint naming issue, manually drop the constraint at the Subscriber and then rerun the Merge Agent.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 -   To include an existing column in an existing publication, use [sp_articlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box.  
   
-     For more information, see [Define and Modify a Column Filter](../../../2014/relational-databases/replication/define-and-modify-a-column-filter.md). This will require subscriptions to be reinitialized.  
+     For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). This will require subscriptions to be reinitialized.  
   
 -   Adding an identity column to a published table is not supported, because it can result in non-convergence when the column is replicated to the Subscriber. The values in the identity column at the Publisher depend on the order in which the rows for the affected table are physically stored. The rows might be stored differently at the Subscriber; therefore the value for the identity column can be different for the same rows.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
 -   To drop a column from an existing publication but retain the column in the table at the Publisher, use [sp_articlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box.  
   
-     For more information, see [Define and Modify a Column Filter](../../../2014/relational-databases/replication/define-and-modify-a-column-filter.md). This will require a new snapshot to be generated.  
+     For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). This will require a new snapshot to be generated.  
   
 -   The column to be dropped cannot be used in the filter clauses of any article of any publication in the database.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 -   If the publication supports immediate updating or queued updating subscriptions, the system must be quiesced before making schema changes: all activity on the published table must be stopped at the Publisher and Subscribers, and pending data changes must be propagated to all nodes. After the schema changes have propagated to all nodes, activity can resume on the published tables.  
   
--   If the publication is in a peer-to-peer topology, the system must be quiesced before making schema changes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+-   If the publication is in a peer-to-peer topology, the system must be quiesced before making schema changes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 -   Adding a timestamp column to a table and mapping the timestamp to binary(8) causes the article to be reinitialized for all active subscriptions.  
   
@@ -160,7 +160,7 @@ manager: "jhubbard"
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-procedure-transact-sql.md)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-function-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-trigger-transact-sql.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Regenerate Custom Transactional Procedures to Reflect Schema Changes](../../../2014/relational-databases/replication/regenerate-custom-transactional-procedures-to-reflect-schema-changes.md)  
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Regenerate Custom Transactional Procedures to Reflect Schema Changes](regenerate-custom-transactional-procedures-to-reflect-schema-changes.md)  
   
   

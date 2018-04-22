@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Use join filters to extend filters on merge table articles to related table articles.  
   
- For more information about filtering options, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md). Filtering can be changed in the **Filter Rows** page of the **Publication Properties** dialog box.  
+ For more information about filtering options, see [Filter Published Data](filter-published-data.md). Filtering can be changed in the **Filter Rows** page of the **Publication Properties** dialog box.  
   
  To maximize application performance and reduce the amount of remote storage required, or to restrict the availability of certain data to specific Subscribers, you should publish only the data required. Your publication can include both unfiltered and filtered tables. For example, you could include the complete (unfiltered) table of company products and use row filters to provide a filtered table of customers for a specific region. By filtering published data, you can:  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Avoid or reduce conflicts if Subscribers are updating data, because different data partitions can be sent to different Subscribers (no two Subscribers will be updating the same data values).  
   
--   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+-   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](parameterized-row-filters.md).  
   
  A filter must not include the `rowguidcol` used by replication to identify rows. By default this is the column added at the time you set up merge replication and is named **rowguid**.  
   
@@ -78,11 +78,11 @@ manager: "jhubbard"
  Contains the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition for the filter selected in the filter pane.  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md)   
- [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md)   
- [Join Filters](../../../2014/relational-databases/replication/join-filters.md)   
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  
+ [Create a Publication](create-a-publication.md)   
+ [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [Filter Published Data](filter-published-data.md)   
+ [Join Filters](join-filters.md)   
+ [Parameterized Row Filters](parameterized-row-filters.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

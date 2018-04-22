@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publish Data over the Internet Using VPN
-  Virtual Private Networking (VPN) technology allows users working at home, branch offices, remote clients, and other companies to connect to a corporate network over the Internet, while maintaining secure communications. Users can use Windows Authentication as though they were on a Local Area Network (LAN). All types of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but consider using Web synchronization if you are using merge replication, because Web synchronization eliminates the need for a VPN. For more information, see [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md).  
+  Virtual Private Networking (VPN) technology allows users working at home, branch offices, remote clients, and other companies to connect to a corporate network over the Internet, while maintaining secure communications. Users can use Windows Authentication as though they were on a Local Area Network (LAN). All types of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but consider using Web synchronization if you are using merge replication, because Web synchronization eliminates the need for a VPN. For more information, see [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  A VPN includes client software so that computers connect over the Internet (or in special cases, even an intranet) to software in a dedicated computer or a server. Optionally, encryption at both ends, as well as user authentication methods, are used. The VPN connection over the Internet logically operates as a Wide Area Network (WAN) link between the sites.  
   
@@ -33,6 +33,6 @@ manager: "jhubbard"
  For more information about setting up a VPN, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows documentation.  
   
 ## See Also  
- [Replication over the Internet](../../../2014/relational-databases/replication/replication-over-the-internet.md)  
+ [Replication over the Internet](replication-over-the-internet.md)  
   
   

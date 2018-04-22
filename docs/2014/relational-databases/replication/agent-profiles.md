@@ -48,8 +48,8 @@ manager: "jhubbard"
  Select a profile, and then click **Change Existing Agents** to specify that all existing jobs for an agent of a given type should use the selected profile. For example, if you have created a number of subscriptions to a merge publication, and you want to change the profile to specify that the Merge Agent job for each of these subscriptions should use the **Slow link agent profile**, select that profile, and then click **Change Existing Agents**.  
   
 ## See Also  
- [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)   
- [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md)  
+ [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)   
+ [Replication Agents Overview](replication-agents-overview.md)   
+ [Replication Agent Profiles](replication-agent-profiles.md)  
   
   

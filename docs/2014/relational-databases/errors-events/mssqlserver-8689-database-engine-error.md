@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)   
- [Plan Guides](../../database-engine/plan-guides.md)  
+ [Plan Guides](../performance/plan-guides.md)  
   
   

@@ -32,7 +32,7 @@ manager: "mblythe"
  **Schema Rowsets**  
  A complete, but more difficult approach to retrieving metadata is through using schema rowsets. A schema rowset is an OLE DB rowset that encapsulates the description for all objects of a particular type in the database. Schema information in an analytical data source includes databases or catalogs available from the data source, cubes and mining models in a database, roles that exist for cubes at the data source, and so on. This metadata can be retrieved by using the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> method, passing in either a `GUID` or an XML for Analysis (XMLA) name.  
   
- For more information: [Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md)  
+ For more information: [Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md))  
   
  Each of these metadata retrieval methods access different types of metadata. The following table describes the different metadata available for each method, and the methods used to access it.  
   

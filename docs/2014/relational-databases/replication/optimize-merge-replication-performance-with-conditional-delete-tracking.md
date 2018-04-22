@@ -44,10 +44,10 @@ manager: "jhubbard"
   
  **To specify that deletes should not be tracked**  
   
--   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41;](specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
 ## See Also  
- [Article Options for Merge Replication](../../../2014/relational-databases/replication/article-options-for-merge-replication.md)   
- [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md)  
+ [Article Options for Merge Replication](article-options-for-merge-replication.md)   
+ [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

@@ -30,6 +30,6 @@ manager: "jhubbard"
   
  [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md)  
   
- [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

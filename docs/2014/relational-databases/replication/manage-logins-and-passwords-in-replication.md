@@ -22,11 +22,11 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Manage Logins and Passwords in Replication
-  Specify the logins and passwords for replication agents when you configure replication. After configuring replication, you can change logins and passwords. For more information, see [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md). If you change the password for an account used by a replication agent, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md).  
+  Specify the logins and passwords for replication agents when you configure replication. After configuring replication, you can change logins and passwords. For more information, see [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md). If you change the password for an account used by a replication agent, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md).  
   
 ## See Also  
- [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+ [Replication Agent Security Model](replication-agent-security-model.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

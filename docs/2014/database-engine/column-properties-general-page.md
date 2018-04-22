@@ -99,7 +99,7 @@ manager: "jhubbard"
  Displays whether the column participates in full-text queries.  
   
  **Statistical Semantics**  
- Indicates whether statistical semantic search is enabled for the column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../2014/database-engine/semantic-search-sql-server.md).  
+ Indicates whether statistical semantic search is enabled for the column. For more information, see [Semantic Search &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).  
   
  **Not For Replication**  
  Indicates whether the column is available for replication. Possible values are **True** and **False**.  

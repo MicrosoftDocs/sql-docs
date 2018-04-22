@@ -39,6 +39,6 @@ manager: "jhubbard"
 4.  The specified script will be executed at each Subscriber when the agent next runs to synchronize the subscription.  
   
 ## See Also  
- [Synchronize Data](../../../2014/relational-databases/replication/synchronize-data.md)  
+ [Synchronize Data](synchronize-data.md)  
   
   

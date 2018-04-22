@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 ### To configure a package to use transactions  
   
--   [Configure a Package to Use Transactions](../../2014/integration-services/configure-a-package-to-use-transactions.md)  
+-   [Configure a Package to Use Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 ## External Resources  
   

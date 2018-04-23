@@ -52,7 +52,7 @@ manager: "jhubbard"
   
  The sequence object generates numbers according to its definition, but the sequence object does not control how the numbers are used. Sequence numbers inserted into a table can have gaps when a transaction is rolled back, when a sequence object is shared by multiple tables, or when sequence numbers are allocated without using them in tables. When created with the CACHE option, an unexpected shutdown, such as a power failure, can lose the sequence numbers in the cache.  
   
- If there are multiple instances of the `NEXT VALUE FOR` function specifying the same sequence generator within a single [!INCLUDE[tsql](../../../../includes/tsql-md.md)] statement, all those instances return the same value for a given row processed by that [!INCLUDE[tsql](../../../../includes/tsql-md.md)] statement. This behavior is consistent with the ANSI standard.  
+ If there are multiple instances of the `NEXT VALUE FOR` function specifying the same sequence generator within a single [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement, all those instances return the same value for a given row processed by that [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. This behavior is consistent with the ANSI standard.  
   
 ## Typical Use  
  To create an integer sequence number that increments by 1 from -2,147,483,648 to 2,147,483,647, use the following statement.  
@@ -385,7 +385,7 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../../../includes/tsql-md.md)] statements that use `SELECT *` will receive the new column as the last column instead of the first column. If this is not acceptable, then you must create an entirely new table, move the data to it, and then recreate the permissions on the new table.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements that use `SELECT *` will receive the new column as the last column instead of the first column. If this is not acceptable, then you must create an entirely new table, move the data to it, and then recreate the permissions on the new table.  
   
 ## Related Content  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](~/t-sql/statements/create-sequence-transact-sql.md)  

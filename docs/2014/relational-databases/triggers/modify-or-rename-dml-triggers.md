@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 #### To modify a DML trigger  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../../includes/ssde-md.md)] and then expand that instance.  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)] and then expand that instance.  
   
 2.  Expand the database that you want, expand **Tables**, and then expand the table that contains the trigger that you want to modify.  
   
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 #### To modify a trigger using ALTER TRIGGER  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -121,7 +121,7 @@ GO
   
 #### To rename a trigger using DROP TRIGGER and ALTER TRIGGER  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 -   Executing User-defined Stored Procedures  
   
-     When executing a user-defined procedure, we recommend qualifying the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../../../../../includes/ssde-md.md)] does not have to search multiple schemas. It also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
+     When executing a user-defined procedure, we recommend qualifying the procedure name with the schema name. This practice gives a small performance boost because the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] does not have to search multiple schemas. It also prevents executing the wrong procedure if a database has procedures with the same name in multiple schemas.  
   
      The following example demonstrates the recommended method to execute a user-defined procedure. Notice that the procedure accepts one input parameter. For information about specifying input and output parameters, see [Specify Parameters](specify-parameters.md).  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     If a nonqualified user-defined procedure is specified, the [!INCLUDE[ssDE](../../../../../../includes/ssde-md.md)] searches for the procedure in the following order:  
+     If a nonqualified user-defined procedure is specified, the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] searches for the procedure in the following order:  
   
     1.  The **sys** schema of the current database.  
   
@@ -156,7 +156,7 @@ manager: "jhubbard"
   
 #### To execute a stored procedure  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -171,7 +171,7 @@ GO
   
 #### To set or clear a procedure for executing automatically  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -187,7 +187,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 #### To stop a procedure from executing automatically  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

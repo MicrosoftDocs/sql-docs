@@ -73,9 +73,9 @@ manager: "jhubbard"
   
 -   Default cache size - The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will select a size, however users should not rely upon the selection being consistent. [!INCLUDE[msCoName](../../includes/msconame-md.md)] might change the method of calculating the cache size without notice.  
   
--   No cache - [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] will not cache sequence numbers.  
+-   No cache - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will not cache sequence numbers.  
   
--   Cache with size - [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] will cache sequence values. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] keeps track of the current value and the number of values left in the cache. Therefore, the amount of memory that is required to store the cache is always two instances of the data type of the sequence object  
+-   Cache with size - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will cache sequence values. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] keeps track of the current value and the number of values left in the cache. Therefore, the amount of memory that is required to store the cache is always two instances of the data type of the sequence object  
   
  When created with the CACHE option, an unexpected shutdown, such as a power failure, can lose the sequence numbers in the cache.  
   

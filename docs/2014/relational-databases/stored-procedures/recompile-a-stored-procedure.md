@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 #### To recompile a stored procedure by using the WITH RECOMPILE option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -95,7 +95,7 @@ AS
   
 #### To recompile a stored procedure by using the WITH RECOMPILE option  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
@@ -113,7 +113,7 @@ GO
   
 #### To recompile a stored procedure by using sp_recompile  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

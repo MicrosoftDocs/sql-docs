@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 3.  Specify the destination for the captured event data using **sp_trace_create**.  
   
- For an example of using trace stored procedures, see [Create a Trace &#40;Transact-SQL&#41;](../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
+ For an example of using trace stored procedures, see [Create a Trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md).  
   
  **To set trace definition defaults**  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  [SQL Server Profiler](../../2014/database-engine/create-a-trace-sql-server-profiler.md)  
   
- [Transact-SQL](../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
+ [Transact-SQL](../sql-trace/create-a-trace-transact-sql.md)  
   
  **To add or remove events from a trace template**  
   

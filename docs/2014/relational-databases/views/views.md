@@ -41,13 +41,13 @@ manager: "jhubbard"
   
 |View Tasks|Topic|  
 |----------------|-----------|  
-|Describes how to create a view.|[Create Views](../relational-databases/views/views.md)|  
-|Describes how to create an indexed view.|[Create Indexed Views](../relational-databases/views/create-indexed-views.md)|  
-|Describes how to modify the view definition.|[Modify Views](../relational-databases/views/modify-views.md)|  
-|Describes how to modify data through a view.|[Modify Data Through a View](../relational-databases/views/modify-data-through-a-view.md)|  
-|Describes how to delete a view.|[Delete Views](../relational-databases/views/delete-views.md)|  
-|Describes how to return information about a view such as the view definition.|[Get Information About a View](../relational-databases/views/get-information-about-a-view.md)|  
-|Describes how to rename a view.|[Rename Views](../relational-databases/views/rename-views.md)|  
+|Describes how to create a view.|[Create Views](../views/views.md)|  
+|Describes how to create an indexed view.|[Create Indexed Views](../views/create-indexed-views.md)|  
+|Describes how to modify the view definition.|[Modify Views](../views/modify-views.md)|  
+|Describes how to modify data through a view.|[Modify Data Through a View](../views/modify-data-through-a-view.md)|  
+|Describes how to delete a view.|[Delete Views](../views/delete-views.md)|  
+|Describes how to return information about a view such as the view definition.|[Get Information About a View](../views/get-information-about-a-view.md)|  
+|Describes how to rename a view.|[Rename Views](../views/rename-views.md)|  
   
 ## See Also  
  [Create Views over XML Columns](../xml/create-views-over-xml-columns.md)   

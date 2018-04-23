@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-     [!code-sql[ProcedureDDL#CreateProc8](../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
+     [!code-sql[ProcedureDDL#CreateProc8](../../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
   
 5.  After the procedure is created, the second example uses the sys.dm_sql_referencing_entities function to display the objects that depend on the procedure.  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-     [!code-sql[ProcedureDDL#CreateProc8](../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
+     [!code-sql[ProcedureDDL#CreateProc8](../../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
   
 5.  After the procedure is created, the second example uses the sys.dm_sql_referenced_entities function to display the objects that the procedure depends on.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-     [!code-sql[ProcedureDDL#CreateProc8](../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
+     [!code-sql[ProcedureDDL#CreateProc8](../../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
   
 5.  After the procedure is created, the second example uses the sys.sql_expression_dependencies view to display the objects that depend on the procedure.  
   
@@ -158,7 +158,7 @@ manager: "jhubbard"
   
 4.  Copy and paste the following examples into the query editor. The first example creates the `uspVendorAllInfo` procedure, which returns the names of all the vendors in the [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] database, the products they supply, their credit ratings, and their availability.  
   
-     [!code-sql[ProcedureDDL#CreateProc8](../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
+     [!code-sql[ProcedureDDL#CreateProc8](../../snippets/tsql/SQL14/tsql/procedureddl/transact-sql/createproc.sql#createproc8)]  
   
 5.  After the procedure is created, the second example uses the sys.sql_expression_dependencies view to display the objects the procedure depends on.  
   

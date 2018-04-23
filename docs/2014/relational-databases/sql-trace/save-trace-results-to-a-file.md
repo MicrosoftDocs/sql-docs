@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_trace_create &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [Create a Trace &#40;Transact-SQL&#41;](../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [Create a Trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)   
  [Create a Trace &#40;SQL Server Profiler&#41;](../../2014/database-engine/create-a-trace-sql-server-profiler.md)  
   
   

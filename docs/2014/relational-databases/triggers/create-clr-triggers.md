@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 ## See Also  
  [DML Triggers](dml-triggers.md)   
- [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
- [Data Access from CLR Database Objects](../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
+ [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
+ [Data Access from CLR Database Objects](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

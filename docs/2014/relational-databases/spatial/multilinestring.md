@@ -41,7 +41,7 @@ manager: "jhubbard"
 -   Figure 6 is a simple, closed `MultiLineString` instance. It is closed because all its elements are closed. It is simple because none of its elements intersect at the interiors.  
   
 ### Accepted instances  
- For a `MultiLineString` instance to be accepted it must either be empty or comprised of only `LineString` intances that are accepted. For more information on accepted `LineString` instances, see [LineString](../relational-databases/spatial/linestring.md). The following are examples of accepted `MultiLineString` instances.  
+ For a `MultiLineString` instance to be accepted it must either be empty or comprised of only `LineString` intances that are accepted. For more information on accepted `LineString` instances, see [LineString](../spatial/linestring.md). The following are examples of accepted `MultiLineString` instances.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -94,7 +94,7 @@ SET @g.STSrid = 13;
 ## See Also  
  [STLength &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
- [LineString](../relational-databases/spatial/linestring.md)   
- [Spatial Data &#40;SQL Server&#41;](../relational-databases/spatial/spatial-data-sql-server.md)  
+ [LineString](../spatial/linestring.md)   
+ [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

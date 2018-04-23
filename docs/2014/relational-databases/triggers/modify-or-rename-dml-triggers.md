@@ -79,9 +79,9 @@ manager: "jhubbard"
   
 #### To rename a DML trigger  
   
-1.  [Delete the trigger](../relational-databases/triggers/dml-triggers.md) that you want to rename.  
+1.  [Delete the trigger](../triggers/dml-triggers.md) that you want to rename.  
   
-2.  [Re-create the trigger](../relational-databases/triggers/create-dml-triggers.md), specifying the new name.  
+2.  [Re-create the trigger](../triggers/create-dml-triggers.md), specifying the new name.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -150,7 +150,7 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-trigger-transact-sql.md)   
- [Get Information About DML Triggers](../relational-databases/triggers/get-information-about-dml-triggers.md)   
+ [Get Information About DML Triggers](../triggers/get-information-about-dml-triggers.md)   
  [sp_help &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   

@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  Using procedure parameters helps guard against SQL injection attacks. Since parameter input is treated as a literal value and not as executable code, it is more difficult for an attacker to insert a command into the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement(s) inside the procedure and compromise security.  
   
- Procedures can be encrypted, helping to obfuscate the source code. For more information, see [SQL Server Encryption](../relational-databases/security/encryption/sql-server-encryption.md).  
+ Procedures can be encrypted, helping to obfuscate the source code. For more information, see [SQL Server Encryption](../security/encryption/sql-server-encryption.md).  
   
  Reuse of code  
  The code for any repetitious database operation is the perfect candidate for encapsulation in procedures. This eliminates needless rewrites of the same code, decreases code inconsistency, and allows the code to be accessed and executed by any user or application possessing the necessary permissions.  
@@ -78,14 +78,14 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Task Description**|**Topic**|  
-|Describes how to create a stored procedure.|[Create a Stored Procedure](../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
-|Describes how to modify a stored procedure.|[Modify a Stored Procedure](../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
-|Describes how to delete a stored procedure.|[Delete a Stored Procedure](../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  
-|Describes how to execute a stored procedure.|[Execute a Stored Procedure](../relational-databases/stored-procedures/execute-a-stored-procedure.md)|  
-|Describes how to grant permissions on a stored procedure.|[Grant Permissions on a Stored Procedure](../relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md)|  
-|Describes how to return data from a stored procedure to an application.|[Return Data from a Stored Procedure](../relational-databases/stored-procedures/return-data-from-a-stored-procedure.md)|  
-|Describes how to recompile a stored procedure.|[Recompile a Stored Procedure](../relational-databases/stored-procedures/recompile-a-stored-procedure.md)|  
-|Describes how to rename a stored procedure.|[Rename a Stored Procedure](../relational-databases/stored-procedures/rename-a-stored-procedure.md)|  
+|Describes how to create a stored procedure.|[Create a Stored Procedure](../stored-procedures/create-a-stored-procedure.md)|  
+|Describes how to modify a stored procedure.|[Modify a Stored Procedure](../stored-procedures/modify-a-stored-procedure.md)|  
+|Describes how to delete a stored procedure.|[Delete a Stored Procedure](../stored-procedures/delete-a-stored-procedure.md)|  
+|Describes how to execute a stored procedure.|[Execute a Stored Procedure](../stored-procedures/execute-a-stored-procedure.md)|  
+|Describes how to grant permissions on a stored procedure.|[Grant Permissions on a Stored Procedure](../stored-procedures/grant-permissions-on-a-stored-procedure.md)|  
+|Describes how to return data from a stored procedure to an application.|[Return Data from a Stored Procedure](../stored-procedures/return-data-from-a-stored-procedure.md)|  
+|Describes how to recompile a stored procedure.|[Recompile a Stored Procedure](../stored-procedures/recompile-a-stored-procedure.md)|  
+|Describes how to rename a stored procedure.|[Rename a Stored Procedure](../stored-procedures/rename-a-stored-procedure.md)|  
 |Describes how to view the definition of a stored procedure.|[View the Definition of a Stored Procedure](view-the-definition-of-a-stored-procedure.md)|  
 |Describes how to view the dependencies on a stored procedure.|[View the Dependencies of a Stored Procedure](view-the-dependencies-of-a-stored-procedure.md)|  
   

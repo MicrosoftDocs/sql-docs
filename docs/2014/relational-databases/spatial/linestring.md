@@ -133,6 +133,6 @@ POINT(1 3) is a valid Point.
  [STIsRing &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisring-geometry-data-type.md)   
  [STIsClosed &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
- [Spatial Data &#40;SQL Server&#41;](../relational-databases/spatial/spatial-data-sql-server.md)  
+ [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

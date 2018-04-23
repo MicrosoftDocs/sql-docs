@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   It is an empty `MultiPolygon` instance.  
   
--   All instances comprising the `MultiPolygon` instance are accepted `Polygon` instances. For more information on accepted `Polygon` instances, see [Polygon](../relational-databases/spatial/polygon.md).  
+-   All instances comprising the `MultiPolygon` instance are accepted `Polygon` instances. For more information on accepted `Polygon` instances, see [Polygon](../spatial/polygon.md).  
   
  The following examples show accepted `MultiPolygon` instances.  
   
@@ -58,7 +58,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### Valid Instances  
  A `MultiPolygon` instance is valid if it is an empty `MultiPolygon` instance or if it meets the following criteria.  
   
-1.  All of the instances comprising the `MultiPolygon` instance are valid `Polygon` instances. For valid `Polygon` instances, see [Polygon](../relational-databases/spatial/polygon.md).  
+1.  All of the instances comprising the `MultiPolygon` instance are valid `Polygon` instances. For valid `Polygon` instances, see [Polygon](../spatial/polygon.md).  
   
 2.  None of the `Polygon` instances comprising the `MultiPolygon` instance overlap.  
   
@@ -90,10 +90,10 @@ SET @g = geometry::Parse('MULTIPOLYGON EMPTY');
 ```  
   
 ## See Also  
- [Polygon](../relational-databases/spatial/polygon.md)   
+ [Polygon](../spatial/polygon.md)   
  [STArea &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STCentroid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
  [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
- [Spatial Data &#40;SQL Server&#41;](../relational-databases/spatial/spatial-data-sql-server.md)  
+ [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

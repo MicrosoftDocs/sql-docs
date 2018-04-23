@@ -182,7 +182,7 @@ manager: "jhubbard"
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
- To return a non-null result, *geometry1* and *geometry2* must have the same [spatial reference identifier (SRID)](../relational-databases/spatial/spatial-reference-identifiers-srids.md). Otherwise, the method returns NULL.  
+ To return a non-null result, *geometry1* and *geometry2* must have the same [spatial reference identifier (SRID)](../spatial/spatial-reference-identifiers-srids.md). Otherwise, the method returns NULL.  
   
  Spatial indexes support the following predicate forms:  
   
@@ -207,7 +207,7 @@ manager: "jhubbard"
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   
- To return a non-null result, *geography1* and *geography2* must have the same [Spatial Reference Identifier (SRID)](../relational-databases/spatial/spatial-reference-identifiers-srids.md). Otherwise, the method returns NULL.  
+ To return a non-null result, *geography1* and *geography2* must have the same [Spatial Reference Identifier (SRID)](../spatial/spatial-reference-identifiers-srids.md). Otherwise, the method returns NULL.  
   
  Spatial indexes support the following predicate forms:  
   
@@ -240,6 +240,6 @@ ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]
 ```  
   
 ## See Also  
- [Spatial Data &#40;SQL Server&#41;](../relational-databases/spatial/spatial-data-sql-server.md)  
+ [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

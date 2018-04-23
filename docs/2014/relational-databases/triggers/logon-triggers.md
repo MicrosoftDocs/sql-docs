@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  You can use logon triggers to audit and control server sessions, such as by tracking login activity, restricting logins to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or limiting the number of sessions for a specific login. For example, in the following code, the logon trigger denies log in attempts to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] initiated by login *login_test* if there are already three user sessions created by that login.  
   
- [!code-sql[TriggerDDL#LogonTrigger1](../snippets/tsql/SQL14/tsql/triggerddl/transact-sql/snippet_create_alter_drop_trigger.sql#logontrigger1)]  
+ [!code-sql[TriggerDDL#LogonTrigger1](../../snippets/tsql/SQL14/tsql/triggerddl/transact-sql/snippet_create_alter_drop_trigger.sql#logontrigger1)]  
   
  Note that the LOGON event corresponds to the AUDIT_LOGIN SQL Trace event, which can be used in [Event Notifications](../service-broker/event-notifications.md). The primary difference between triggers and event notifications is that triggers are raised synchronously with events, whereas event notifications are asynchronous. This means, for example, that if you want to stop a session from being established, you must use a logon trigger. An event notification on an AUDIT_LOGIN event cannot be used for this purpose.  
   
@@ -61,6 +61,6 @@ manager: "jhubbard"
 |Describes how to capture logon trigger event data.||  
   
 ## See Also  
- [DDL Triggers](../relational-databases/triggers/ddl-triggers.md)  
+ [DDL Triggers](../triggers/ddl-triggers.md)  
   
   

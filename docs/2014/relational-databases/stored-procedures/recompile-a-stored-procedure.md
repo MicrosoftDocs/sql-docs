@@ -130,8 +130,8 @@ GO
 ```  
   
 ## See Also  
- [Create a Stored Procedure](../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [Modify a Stored Procedure](../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
+ [Create a Stored Procedure](../stored-procedures/create-a-stored-procedure.md)   
+ [Modify a Stored Procedure](../stored-procedures/modify-a-stored-procedure.md)   
  [Rename a Stored Procedure](rename-a-stored-procedure.md)   
  [View the Definition of a Stored Procedure](view-the-definition-of-a-stored-procedure.md)   
  [View the Dependencies of a Stored Procedure](view-the-dependencies-of-a-stored-procedure.md)   

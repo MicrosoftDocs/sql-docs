@@ -69,6 +69,6 @@ manager: "jhubbard"
 -   [sys.server_assembly_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
 ## See Also  
- [DDL Triggers](../relational-databases/triggers/ddl-triggers.md)  
+ [DDL Triggers](../triggers/ddl-triggers.md)  
   
   

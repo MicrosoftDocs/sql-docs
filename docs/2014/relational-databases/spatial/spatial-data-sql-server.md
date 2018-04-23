@@ -54,7 +54,7 @@ manager: "jhubbard"
  [Spatial Data Types Overview](spatial-data-types-overview.md)  
  Introduces the spatial data types.  
   
--   [Point](../../analysis-services/point.md)  
+-   [Point](point.md)  
   
 -   [LineString](../../database-engine/linestring.md)  
   
@@ -62,15 +62,15 @@ manager: "jhubbard"
   
 -   [CompoundCurve](compoundcurve.md)  
   
--   [Polygon](../../database-engine/polygon.md)  
+-   [Polygon](polygon.md)  
   
 -   [CurvePolygon](curvepolygon.md)  
   
 -   [MultiPoint](multipoint.md)  
   
--   [MultiLineString](../../database-engine/multilinestring.md)  
+-   [MultiLineString](multilinestring.md)  
   
--   [MultiPolygon](../../database-engine/multipolygon.md)  
+-   [MultiPolygon](multipolygon.md)  
   
 -   [GeometryCollection](geometrycollection.md)  
   

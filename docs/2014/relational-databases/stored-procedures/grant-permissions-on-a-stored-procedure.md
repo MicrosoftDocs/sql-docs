@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 7.  Click **Browse** to display the list of users or roles. Select the users or roles to whom permissions should be granted.  
   
-8.  In the **Explicit Permissions** grid, select the permissions to grant to the specified user or role. For a description of the permissions, see [Permissions &#40;Database Engine&#41;](../relational-databases/security/permissions-database-engine.md).  
+8.  In the **Explicit Permissions** grid, select the permissions to grant to the specified user or role. For a description of the permissions, see [Permissions &#40;Database Engine&#41;](../security/permissions-database-engine.md).  
   
  Selecting **Grant** indicates the grantee will be given the specified permission. Selecting **Grant With** indicates that the grantee will also be able to grant the specified permission to other principals.  
   
@@ -87,9 +87,9 @@ GO
 ## See Also  
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md)   
- [Create a Stored Procedure](../relational-databases/stored-procedures/create-a-stored-procedure.md)   
+ [Create a Stored Procedure](../stored-procedures/create-a-stored-procedure.md)   
  [Modify a Stored Procedure](modify-a-stored-procedure.md)   
- [Delete a Stored Procedure](../relational-databases/stored-procedures/delete-a-stored-procedure.md)   
+ [Delete a Stored Procedure](../stored-procedures/delete-a-stored-procedure.md)   
  [Rename a Stored Procedure](rename-a-stored-procedure.md)  
   
   

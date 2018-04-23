@@ -41,27 +41,27 @@ manager: "jhubbard"
   
  Simple types include:  
   
--   [Point](../relational-databases/spatial/point.md)  
+-   [Point](../spatial/point.md)  
   
--   [LineString](../relational-databases/spatial/linestring.md)  
+-   [LineString](../spatial/linestring.md)  
   
--   [CircularString](../relational-databases/spatial/circularstring.md)  
+-   [CircularString](../spatial/circularstring.md)  
   
--   [CompoundCurve](../relational-databases/spatial/compoundcurve.md)  
+-   [CompoundCurve](../spatial/compoundcurve.md)  
   
--   [Polygon](../relational-databases/spatial/polygon.md)  
+-   [Polygon](../spatial/polygon.md)  
   
--   [CurvePolygon](../relational-databases/spatial/curvepolygon.md)  
+-   [CurvePolygon](../spatial/curvepolygon.md)  
   
  Collection types include:  
   
--   [MultiPoint](../relational-databases/spatial/multipoint.md)  
+-   [MultiPoint](../spatial/multipoint.md)  
   
--   [MultiLineString](../relational-databases/spatial/multilinestring.md)  
+-   [MultiLineString](../spatial/multilinestring.md)  
   
--   [MultiPolygon](../relational-databases/spatial/multipolygon.md)  
+-   [MultiPolygon](../spatial/multipolygon.md)  
   
--   [GeometryCollection](../relational-databases/spatial/geometrycollection.md)  
+-   [GeometryCollection](../spatial/geometrycollection.md)  
   
   
 ##  <a name="differences"></a> Differences Between the geometry and geography Data Types  
@@ -204,7 +204,7 @@ SELECT @g.ToString(), @g.STLength();
   
   
 ## See Also  
- [Spatial Data &#40;SQL Server&#41;](../relational-databases/spatial/spatial-data-sql-server.md)   
+ [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
  [geometry Data Type Method Reference](~/t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)   
  [geography Data Type Method Reference](~/t-sql/spatial-geography/spatial-types-geography.md)   
  [STNumCurves &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   

@@ -116,7 +116,7 @@ manager: "jhubbard"
 |NEWID|RAND|  
 |NEWSEQUENTIALID|TEXTPTR|  
   
- For a list of deterministic and nondeterministic built-in system functions, see [Deterministic and Nondeterministic Functions](../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ For a list of deterministic and nondeterministic built-in system functions, see [Deterministic and Nondeterministic Functions](../user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ##  <a name="SchemaBound"></a> Schema-Bound Functions  
  CREATE FUNCTION supports a SCHEMABINDING clause that binds the function to the schema of any objects it references, such as tables, views, and other user-defined functions. An attempt to alter or drop any object referenced by a schema-bound function fails.  
@@ -139,13 +139,13 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Task Description**|**Topic**|  
-|Describes how to create a Transact-SQL user-defined function.|[Create User-defined Functions &#40;Database Engine&#41;](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
-|Describes how create a CLR function.|[Create CLR Functions](../relational-databases/user-defined-functions/create-clr-functions.md)|  
-|Describes how to create a user-defined aggregate function|[Create User-defined Aggregates](../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
-|Describes how to modify a Transact-SQL user-defined function.|[Modify User-defined Functions](../relational-databases/user-defined-functions/user-defined-functions.md)|  
-|Describes how to delete a user-defined function.|[Delete User-defined Functions](../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
-|Describes how to execute a user-defined function.|[Execute User-defined Functions](../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
-|Describes how to rename a user-defined function|[Rename User-defined Functions](../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
+|Describes how to create a Transact-SQL user-defined function.|[Create User-defined Functions &#40;Database Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
+|Describes how create a CLR function.|[Create CLR Functions](../user-defined-functions/create-clr-functions.md)|  
+|Describes how to create a user-defined aggregate function|[Create User-defined Aggregates](../user-defined-functions/create-user-defined-aggregates.md)|  
+|Describes how to modify a Transact-SQL user-defined function.|[Modify User-defined Functions](../user-defined-functions/user-defined-functions.md)|  
+|Describes how to delete a user-defined function.|[Delete User-defined Functions](../user-defined-functions/delete-user-defined-functions.md)|  
+|Describes how to execute a user-defined function.|[Execute User-defined Functions](../user-defined-functions/execute-user-defined-functions.md)|  
+|Describes how to rename a user-defined function|[Rename User-defined Functions](../user-defined-functions/rename-user-defined-functions.md)|  
 |Describes how to view the definition of a user-defined function.|[View User-defined Functions](view-user-defined-functions.md)|  
   
   

@@ -130,7 +130,7 @@ manager: "jhubbard"
  [FileTable Compatibility with Other SQL Server Features](filetable-compatibility-with-other-sql-server-features.md)  
  Describes how FileTables work with other features of SQL Server.  
   
- [FileTable DDL, Functions, Stored Procedures, and Views](filetable-ddl-functions-stored-procedures-and-views.md)  
+ [FileTable DDL, Functions, Stored Procedures, and Views](../views/views.md)  
  Lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that have been added or changed to support the FileTable feature.  
   
  

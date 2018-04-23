@@ -43,7 +43,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
   
-     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md).  
+     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](../relational-databases/sql-server-configuration-manager.md).  
   
 8.  In the **Package Source** list box, click the source of the package and then configure the options for the job step.  
   

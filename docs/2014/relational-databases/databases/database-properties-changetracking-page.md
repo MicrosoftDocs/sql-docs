@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Properties (ChangeTracking Page)
-  Use this page to view or modify change tracking settings for the selected database. For more information about the options available on this page, see [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../database-engine/enable-and-disable-change-tracking-sql-server.md).  
+  Use this page to view or modify change tracking settings for the selected database. For more information about the options available on this page, see [Enable and Disable Change Tracking &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md).  
   
 ## Options  
  **Change Tracking**  

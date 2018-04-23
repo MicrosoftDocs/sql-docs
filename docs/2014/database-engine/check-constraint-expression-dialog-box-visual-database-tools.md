@@ -65,7 +65,7 @@ NOT (payment_method = 'credit card') OR
 |NOT|Negates any Boolean expression (which can include keywords, such as LIKE, NULL, BETWEEN, IN, and EXISTS).<br /><br /> When more than one logical operator is used in a statement, NOT is processed first. You can change the order of execution by using parentheses.|  
   
 ## See Also  
- [Unique Constraints and Check Constraints](../../2014/database-engine/unique-constraints-and-check-constraints.md)   
- [Create Unique Constraints](../../2014/database-engine/create-unique-constraints.md)  
+ [Unique Constraints and Check Constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Create Unique Constraints](../relational-databases/tables/create-unique-constraints.md)  
   
   

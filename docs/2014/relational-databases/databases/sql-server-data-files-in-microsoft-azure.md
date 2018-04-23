@@ -126,7 +126,7 @@ ON
  SQL Server Management Studio allows you to use this feature via several dialog windows. For example, you can type the URL path of the storage container, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/` as a **Path** in several dialog windows, such as **New Database**, **Attach Database**, and **Restore Database**. For more information, see [Tutorial: SQL Server Data Files in Windows Azure Storage service](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ### SQL Server Management Objects support  
- When using the SQL Server Data Files in Windows Azure feature, all SQL Server Management Objects (SMO) are supported. If an SMO object requires a file path, use the BLOB URL format instead of a local file path, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. For more information about SQL Server Management Objects (SMO), see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md) in SQL Server Books Online.  
+ When using the SQL Server Data Files in Windows Azure feature, all SQL Server Management Objects (SMO) are supported. If an SMO object requires a file path, use the BLOB URL format instead of a local file path, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. For more information about SQL Server Management Objects (SMO), see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in SQL Server Books Online.  
   
 ### Transact-SQL support  
  This new feature has introduced the following change in the Transact-SQL surface area:  

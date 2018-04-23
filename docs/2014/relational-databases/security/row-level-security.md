@@ -31,6 +31,6 @@ manager: "jhubbard"
  [CREATE FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-function-transact-sql.md)   
  [sys.security_policies &#40;Azure SQL Database&#41;](~/relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
  [sys.security_predicates &#40;Azure SQL Database&#41;](~/relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
- [Create User-defined Functions &#40;Database Engine&#41;](../../database-engine/create-user-defined-functions-database-engine.md)  
+ [Create User-defined Functions &#40;Database Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   

@@ -19,7 +19,7 @@ manager: "jhubbard"
   This section provides checklists for installing SQL Server BI features in different combinations or in scale-out topologies. If you already know how to run a Setup program to install a BI feature, a checklist is the next step towards understanding the recommended installation order, and whether additional configuration changes are required to enable feature integration scenarios.  
   
 ## Checklists in this section  
- [Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](../../../2014/sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)  
+ [Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](../../relational-databases/spatial/point.md)  
   
  [Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   

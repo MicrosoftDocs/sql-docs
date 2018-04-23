@@ -51,6 +51,6 @@ manager: "jhubbard"
  [How to Create the SQL Server Change Database Instance](../../2014/integration-services/how-to-create-the-sql-server-change-database-instance.md)   
  [Edit Tables](../../2014/integration-services/edit-tables.md)   
  [Add Tables to a CDC Instance](../../2014/integration-services/add-tables-to-a-cdc-instance.md)   
- [Edit the Table Properties](../../2014/integration-services/edit-the-table-properties.md)  
+ [Edit the Table Properties](../relational-databases/tables/table-properties-ssms.md)  
   
   

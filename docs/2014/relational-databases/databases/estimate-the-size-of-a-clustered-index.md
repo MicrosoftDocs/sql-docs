@@ -217,7 +217,7 @@ manager: "jhubbard"
   
 -   Sparse columns  
   
-     For information about the space requirements of sparse columns, see [Use Sparse Columns](../../database-engine/use-sparse-columns.md).  
+     For information about the space requirements of sparse columns, see [Use Sparse Columns](../tables/use-sparse-columns.md).  
   
 ## See Also  
  [Clustered and Nonclustered Indexes Described](../indexes/clustered-and-nonclustered-indexes-described.md)   

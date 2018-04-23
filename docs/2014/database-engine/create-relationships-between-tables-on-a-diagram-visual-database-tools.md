@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Tables and Columns Dialog Box &#40;Visual Database Tools&#41;](../../2014/database-engine/tables-and-columns-dialog-box-visual-database-tools.md)   
- [Unique Constraints and Check Constraints](../../2014/database-engine/unique-constraints-and-check-constraints.md)   
+ [Unique Constraints and Check Constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Work with Tables in Database Diagram &#40;Visual Database Tools&#41;](../../2014/database-engine/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

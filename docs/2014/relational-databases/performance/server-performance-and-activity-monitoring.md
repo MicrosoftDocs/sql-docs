@@ -49,17 +49,17 @@ manager: "jhubbard"
   
  **To perform monitoring tasks with SQL Trace by using Transact-SQL stored procedures**  
   
--   [Create a Trace &#40;Transact-SQL&#41;](../../database-engine/create-a-trace-transact-sql.md)  
+-   [Create a Trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)  
   
 -   [Set a Trace Filter &#40;Transact-SQL&#41;](../../database-engine/set-a-trace-filter-transact-sql.md)  
   
--   [Modify an Existing Trace &#40;Transact-SQL&#41;](../../database-engine/modify-an-existing-trace-transact-sql.md)  
+-   [Modify an Existing Trace &#40;Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md)  
   
--   [View a Saved Trace &#40;Transact-SQL&#41;](../../database-engine/view-a-saved-trace-transact-sql.md)  
+-   [View a Saved Trace &#40;Transact-SQL&#41;](../sql-trace/view-a-saved-trace-transact-sql.md)  
   
--   [View Filter Information &#40;Transact-SQL&#41;](../../database-engine/view-filter-information-transact-sql.md)  
+-   [View Filter Information &#40;Transact-SQL&#41;](../sql-trace/view-filter-information-transact-sql.md)  
   
--   [Delete a Trace &#40;Transact-SQL&#41;](../../database-engine/delete-a-trace-transact-sql.md)  
+-   [Delete a Trace &#40;Transact-SQL&#41;](../sql-trace/delete-a-trace-transact-sql.md)  
   
  **To create and modify traces by using SQL Server Profiler**  
   

@@ -55,8 +55,8 @@ manager: "jhubbard"
 ## Related Content  
  [Indexes](../indexes/indexes.md)  
   
- [Views](../../database-engine/views.md)  
+ [Views](../views/views.md)  
   
- [Stored Procedures &#40;Database Engine&#41;](../../database-engine/stored-procedures-database-engine.md)  
+ [Stored Procedures &#40;Database Engine&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   

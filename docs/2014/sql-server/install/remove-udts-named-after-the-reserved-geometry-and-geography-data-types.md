@@ -33,6 +33,6 @@ manager: "jhubbard"
 ## External Resources  
  [Creating a User-Defined Type](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
- [Spatial Data Types Overview](../../../2014/database-engine/spatial-data-types-overview.md)  
+ [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

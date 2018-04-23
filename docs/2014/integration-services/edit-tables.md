@@ -33,7 +33,7 @@ manager: "jhubbard"
  Click **Add Tables** to open the Table Selection dialog box where you can [Add Tables to a CDC Instance](../../2014/integration-services/add-tables-to-a-cdc-instance.md). The first time this session that you access the Oracle database, you must [Connect to Oracle](../../2014/integration-services/connect-to-oracle.md).  
   
  **Edit**  
- Select a table from the list and select **Edit** to open the **Properties** dialog box for that table where you can [Edit the Table Properties](../../2014/integration-services/edit-the-table-properties.md).  
+ Select a table from the list and select **Edit** to open the **Properties** dialog box for that table where you can [Edit the Table Properties](../relational-databases/tables/table-properties-ssms.md).  
   
 > [!NOTE]  
 >  You cannot edit type mapping for tables that already have mirror tables. You can do this for new tables only.  

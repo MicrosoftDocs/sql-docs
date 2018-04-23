@@ -39,7 +39,7 @@ Union(expression, scope, recursive)
  (**Enumerated Type**) Optional. `Simple` (default) or `RdlRecursive`. Specifies whether to perform the aggregation recursively.  
   
 ## Return  
- Returns a spatial object, either `SqlGeometry` or `SqlGeography`, based on the expression type. For more information about `SqlGeometry` and `SqlGeography` spatial data types, see [Spatial Data Types Overview](../../2014/database-engine/spatial-data-types-overview.md).  
+ Returns a spatial object, either `SqlGeometry` or `SqlGeography`, based on the expression type. For more information about `SqlGeometry` and `SqlGeography` spatial data types, see [Spatial Data Types Overview](../relational-databases/spatial/spatial-data-types-overview.md).  
   
 ## Remarks  
  The set of data specified in the expression must have the same data type.  

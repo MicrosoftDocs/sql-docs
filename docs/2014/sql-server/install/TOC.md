@@ -103,7 +103,7 @@
 ####### [Restore Encryption Key (SSRS Native Mode)](restore-encryption-key-ssrs-native-mode.md)
 ###### [Scale-out Deployment (Native Mode Report Server)](scale-out-deployment-native-mode-report-server.md)
 ### [Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)](install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)
-#### [Deployment Topologies for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)
+#### [Deployment Topologies for SQL Server BI Features in SharePoint](../../relational-databases/spatial/point.md)
 #### [Guidance for Using SQL Server BI Features in a SharePoint 2010 Farm](guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)
 #### [Checklists for Installing BI Features with SharePoint](checklists-for-installing-bi-features-with-sharepoint.md)
 ##### [Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)

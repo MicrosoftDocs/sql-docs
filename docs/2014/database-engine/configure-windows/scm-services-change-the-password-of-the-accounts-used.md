@@ -72,6 +72,6 @@ manager: "jhubbard"
      On a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the password takes effect immediately, without restarting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. On a clustered instance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might take the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource offline, and require a restart.  
   
 ## See Also  
- [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../managing-services-how-to-topics-sql-server-configuration-manager.md)  
+ [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
   

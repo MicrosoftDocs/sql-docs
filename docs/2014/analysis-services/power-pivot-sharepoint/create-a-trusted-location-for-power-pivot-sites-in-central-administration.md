@@ -51,7 +51,7 @@ manager: "mblythe"
   
 7.  Accept all of the default settings for properties in Session Management, Workbook Properties, and Calculation Behavior.  
   
-8.  In Workbook Properties, set **Maximum Workbook Size** to **50**. This aligns the upper limit for workbook file size to the upper limit for file uploads to the parent web application. If your workbooks are larger than 50 megabytes, you must further increase the file size limit. For more information, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+8.  In Workbook Properties, set **Maximum Workbook Size** to **50**. This aligns the upper limit for workbook file size to the upper limit for file uploads to the parent web application. If your workbooks are larger than 50 megabytes, you must further increase the file size limit. For more information, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md).  
   
 9. In External Data, verify that Allow External Data is set to **Trusted data connection libraries and embedded**. This setting is required for PowerPivot data access in a workbook.  
   

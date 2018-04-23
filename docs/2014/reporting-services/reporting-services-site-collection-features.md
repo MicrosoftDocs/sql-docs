@@ -28,7 +28,7 @@ manager: "mblythe"
 |**Power View Integration Feature**|Enables interactive data exploration and visual presentation against PowerPivot work books and Analysis services tabular databases.<br /><br /> The feature can be accessed by the context menus of the following data sources:<br /><br /> .rdlx<br /><br /> .rsds<br /><br /> .bism connection file<br /><br /> <br /><br /> If [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] does not appear in the context menus, verify the **Power View Integration Feature** is activated.<br /><br /> This feature is deactivated by default.|  
   
 ## See Also  
- [Activate the Report Server and Power View Integration Features in SharePoint](../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
+ [Activate the Report Server and Power View Integration Features in SharePoint](../relational-databases/spatial/point.md)   
  [Reporting Services Site Settings and Site Features&#40;SharePoint Mode&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)   
  [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   

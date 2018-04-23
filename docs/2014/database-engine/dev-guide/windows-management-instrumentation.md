@@ -19,12 +19,12 @@ manager: "jhubbard"
 # Windows Management Instrumentation
   This section contains the following subjects:  
   
--   [WMI Provider for Configuration Management Concepts](../../../2014/database-engine/dev-guide/wmi-provider-for-configuration-management-concepts.md)  
+-   [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
--   [WMI Provider for Server Events Concepts](../../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)  
+-   [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
 -   [WMI Provider Events and Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
--   [WMI Provider for Configuration Management Classes](../../../2014/database-engine/dev-guide/wmi-provider-for-configuration-management-classes.md)  
+-   [WMI Provider for Configuration Management Classes](../../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)  
   
   

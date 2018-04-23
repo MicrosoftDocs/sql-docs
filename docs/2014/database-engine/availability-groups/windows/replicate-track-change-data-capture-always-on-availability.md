@@ -233,19 +233,19 @@ manager: "jhubbard"
   
  **Change data capture**  
   
--   [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../enable-and-disable-change-data-capture-sql-server.md)  
+-   [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
--   [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../administer-and-monitor-change-data-capture-sql-server.md)  
+-   [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
--   [Work with Change Data &#40;SQL Server&#41;](../../work-with-change-data-sql-server.md)  
+-   [Work with Change Data &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
  **Change tracking**  
   
--   [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../enable-and-disable-change-tracking-sql-server.md)  
+-   [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   
--   [Manage Change Tracking &#40;SQL Server&#41;](../../manage-change-tracking-sql-server.md)  
+-   [Manage Change Tracking &#40;SQL Server&#41;](../../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
--   [Work with Change Tracking &#40;SQL Server&#41;](../../work-with-change-tracking-sql-server.md)  
+-   [Work with Change Tracking &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
 ## See Also  
  [Replication Subscribers and AlwaysOn Availability Groups &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
@@ -253,10 +253,10 @@ manager: "jhubbard"
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn Availability Groups: Interoperability (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)
  [ AlwaysOn Failover Cluster Instances (SQL Server)](../../always-on-failover-cluster-instances-sql-server.md)   
- [About Change Data Capture &#40;SQL Server&#41;](../../about-change-data-capture-sql-server.md)   
- [About Change Tracking &#40;SQL Server&#41;](../../about-change-tracking-sql-server.md)   
+ [About Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [About Change Tracking &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server Replication](../../../relational-databases/replication/sql-server-replication.md)   
- [Track Data Changes &#40;SQL Server&#41;](../../track-data-changes-sql-server.md)   
+ [Track Data Changes &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

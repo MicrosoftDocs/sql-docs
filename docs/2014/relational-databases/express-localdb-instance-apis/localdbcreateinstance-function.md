@@ -101,7 +101,7 @@ HRESULT LocalDBCreateInstance(
   
  In cases when an existing instance becomes corrupted, subsequent calls to the `LocalDBCreateInstance` API method will fail. Corrupted instances must be fixed manually or explicitly deleted before they can be used again.  
   
- For a code sample that uses LocalDB API, see [SQL Server Express LocalDB Reference](../../database-engine/dev-guide/sql-server-express-localdb-reference.md).  
+ For a code sample that uses LocalDB API, see [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## See Also  
  [SQL Server Express LocalDB Header and Version Information](sql-server-express-localdb-header-and-version-information.md)  

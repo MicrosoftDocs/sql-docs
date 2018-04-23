@@ -57,6 +57,6 @@ manager: "mblythe"
   
 ## See Also  
  [Create and Configure a PowerPivot Service Application in Central Administration](create-and-configure-power-pivot-service-application-in-ca.md)   
- [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
+ [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md)  
   
   

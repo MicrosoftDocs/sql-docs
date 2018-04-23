@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Table-Valued Parameters (ODBC)
   ODBC support for table-valued parameters lets a client application send parameterized data to the server more efficiently, by sending multiple rows to the server with one call.  
   
- For information about table-valued parameters on the server, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../database-engine/use-table-valued-parameters-database-engine.md).  
+ For information about table-valued parameters on the server, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
  In ODBC, there are two ways that you can send table-valued parameters to the server:  
   

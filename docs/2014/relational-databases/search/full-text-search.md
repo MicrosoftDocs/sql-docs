@@ -230,7 +230,7 @@ manager: "jhubbard"
   
 ##  <a name="relcontent"></a> Related Content  
   
--   [Full-Text Search DDL, Functions, Stored Procedures, and Views](full-text-search-ddl-functions-stored-procedures-and-views.md)  
+-   [Full-Text Search DDL, Functions, Stored Procedures, and Views](../views/views.md)  
   
  [In This Topic](#top)  
   

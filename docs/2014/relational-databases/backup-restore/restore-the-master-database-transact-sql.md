@@ -57,7 +57,7 @@ manager: "jhubbard"
  [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)   
  [Rebuild System Databases](../databases/system-databases.md)   
  [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
- [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)   
+ [SQL Server Configuration Manager](../sql-server-configuration-manager.md)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  

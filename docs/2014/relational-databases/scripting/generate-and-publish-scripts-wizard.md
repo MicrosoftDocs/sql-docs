@@ -194,9 +194,9 @@ manager: "jhubbard"
   
  **Table/View Options** - The following options apply only to scripts for tables or views.  
   
--   **Script change tracking** - Scripts change tracking if it is enabled on the origin database or tables in the origin database. The default is **False**. For more information, see [About Change Tracking &#40;SQL Server&#41;](../../database-engine/about-change-tracking-sql-server.md).  
+-   **Script change tracking** - Scripts change tracking if it is enabled on the origin database or tables in the origin database. The default is **False**. For more information, see [About Change Tracking &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Script check constraints** – Adds `CHECK` constraints to the script. The default is **True**. `CHECK` constraints require data that is entered into a table to meet some specified condition. For more information, see [Unique Constraints and Check Constraints](../../database-engine/unique-constraints-and-check-constraints.md).  
+-   **Script check constraints** – Adds `CHECK` constraints to the script. The default is **True**. `CHECK` constraints require data that is entered into a table to meet some specified condition. For more information, see [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Script data compression options** - Scripts data compression options if they are configured on the origin database or tables in the origin database. For more information, see [Data Compression](../data-compression/data-compression.md). The default is **False**.  
   
@@ -208,9 +208,9 @@ manager: "jhubbard"
   
 -   **Script primary keys** - Scripts the creation of primary keys on tables. The default is **True**. Primary keys uniquely identify each row of a table.  
   
--   **Script triggers** - Scripts the creation of DML triggers on tables. The default is **False**. A DML trigger is an action programmed to execute when a data manipulation language (DML) event occurs in the database server. For more information, see [DML Triggers](../../database-engine/dml-triggers.md).  
+-   **Script triggers** - Scripts the creation of DML triggers on tables. The default is **False**. A DML trigger is an action programmed to execute when a data manipulation language (DML) event occurs in the database server. For more information, see [DML Triggers](../triggers/dml-triggers.md).  
   
--   **Script unique keys** - Scripts the creation of unique keys on tables. Unique keys prevent duplicate data from being entered. The default is **True**. For more information, see [Unique Constraints and Check Constraints](../../database-engine/unique-constraints-and-check-constraints.md).  
+-   **Script unique keys** - Scripts the creation of unique keys on tables. Unique keys prevent duplicate data from being entered. The default is **True**. For more information, see [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 ###  <a name="MgProviders"></a> Manage Providers Page  
  Use this dialog box to view, add, edit, delete, or test hosting provider connections. A hosting provider specifies the connection information for a Web service created by using the Database Publishing Service project in the SQL Server Hosting Toolkit on CodePlex.  
@@ -266,21 +266,21 @@ manager: "jhubbard"
   
  **Table/View Options** - The following options apply only to tables or views.  
   
-1.  **Publish check constraints** - Includes the creation of `CHECK` constraints in the publishing process. The default is **True**. `CHECK` constraints require data that is entered into a table to meet some specified condition. For more information, see [Unique Constraints and Check Constraints](../../database-engine/unique-constraints-and-check-constraints.md).  
+1.  **Publish check constraints** - Includes the creation of `CHECK` constraints in the publishing process. The default is **True**. `CHECK` constraints require data that is entered into a table to meet some specified condition. For more information, see [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
-2.  **Publish foreign keys** - Includes the creation of foreign keys in the publishing process. The default is **True**. Foreign keys indicate and enforce relationships between tables. For more information, see [Primary and Foreign Key Constraints](../../database-engine/primary-and-foreign-key-constraints.md).  
+2.  **Publish foreign keys** - Includes the creation of foreign keys in the publishing process. The default is **True**. Foreign keys indicate and enforce relationships between tables. For more information, see [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
 3.  **Publish full-text indexes** - Scripts the creation of full-text indexes. The default is **False**.  
   
 4.  **Publish indexes** - Includes indexes on tables in the publishing process. The default is **True**. Indexes help you find data quickly.  
   
-5.  **Publish primary keys** - Includes the creation of primary keys in the publishing process. The default is **True**. Primary keys uniquely identify each row of a table. For more information, see [Primary and Foreign Key Constraints](../../database-engine/primary-and-foreign-key-constraints.md).  
+5.  **Publish primary keys** - Includes the creation of primary keys in the publishing process. The default is **True**. Primary keys uniquely identify each row of a table. For more information, see [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
-6.  **Publish triggers** - Includes the creation of DML triggers in the publishing process. The default is **True**. A DML trigger is an action programmed to execute when a data manipulation language (DML) event occurs in the database server. For more information, see [DML Triggers](../../database-engine/dml-triggers.md).  
+6.  **Publish triggers** - Includes the creation of DML triggers in the publishing process. The default is **True**. A DML trigger is an action programmed to execute when a data manipulation language (DML) event occurs in the database server. For more information, see [DML Triggers](../triggers/dml-triggers.md).  
   
-7.  **Publish unique keys** - Includes the creation of unique keys on tables in the publishing process. Unique keys prevent duplicate data from being entered. The default is **True**. For more information, see [Unique Constraints and Check Constraints](../../database-engine/unique-constraints-and-check-constraints.md).  
+7.  **Publish unique keys** - Includes the creation of unique keys on tables in the publishing process. Unique keys prevent duplicate data from being entered. The default is **True**. For more information, see [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
-8.  **Publish change tracking** - Includes change tracking in the publishing process, if it is enabled on the origin database or tables in the origin database. The default is **False**. For more information, see [About Change Tracking &#40;SQL Server&#41;](../../database-engine/about-change-tracking-sql-server.md).  
+8.  **Publish change tracking** - Includes change tracking in the publishing process, if it is enabled on the origin database or tables in the origin database. The default is **False**. For more information, see [About Change Tracking &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
 9. **Publish data compression options** - Includes data compression options in the publishing process, if they are configured on the origin database or tables in the origin database. The default is **True**. For more information, see [Data Compression](../data-compression/data-compression.md).  
   
@@ -334,7 +334,7 @@ manager: "jhubbard"
  **Finish** - Click to close the wizard after processing has completed, or if an error occurs.  
   
 ## See Also  
- [Installing SMO](../../database-engine/dev-guide/installing-smo.md)   
+ [Installing SMO](../server-management-objects-smo/installing-smo.md)   
  [Copy Databases to Other Servers](../databases/copy-databases-to-other-servers.md)  
   
   

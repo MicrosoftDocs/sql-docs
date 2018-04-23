@@ -35,7 +35,7 @@ manager: "jhubbard"
 ## In This Section  
  In addition to the information in this topic, the following related topics are in this section of content.  
   
- [Deployment Topologies for SQL Server BI Features in SharePoint](../../../2014/sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)  
+ [Deployment Topologies for SQL Server BI Features in SharePoint](../../relational-databases/spatial/point.md)  
   
  [Guidance for Using SQL Server BI Features in a SharePoint 2010 Farm](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   

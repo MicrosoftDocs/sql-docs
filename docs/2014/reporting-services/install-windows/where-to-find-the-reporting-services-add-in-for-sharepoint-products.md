@@ -63,7 +63,7 @@ manager: "jhubbard"
  The most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center, [Microsoft SQL Server 2008 Reporting Services Add-in for Microsoft SharePoint Technologies](http://go.microsoft.com/fwlink/?LinkID=204813).  
   
 ## See Also  
- [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../relational-databases/spatial/point.md)   
  [Add Report Server Content Types to a Library &#40;Reporting Services in SharePoint Integrated Mode&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](http://support.microsoft.com/kb/2009212)  
   

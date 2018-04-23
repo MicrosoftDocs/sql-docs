@@ -24,6 +24,6 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|**Preparing to Use SMO**<br /><br /> -   [Syntax Conventions](../../../2014/database-engine/dev-guide/smo-syntax-conventions.md) describes the syntax conventions used in this section.<br />-   [System Requirements](../../../2014/database-engine/dev-guide/system-requirements.md) specifies the system requirements for installing and using SMO.<br />-   [Files and Version Numbers](../../../2014/database-engine/dev-guide/files-and-version-numbers.md) lists the SMO components and corresponding version numbers.|-   [Installing SMO](../../../2014/database-engine/dev-guide/installing-smo.md) provides instructions to install SMO.|  
+|**Preparing to Use SMO**<br /><br /> -   [Syntax Conventions](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) describes the syntax conventions used in this section.<br />-   [System Requirements](../../../2014/database-engine/dev-guide/system-requirements.md) specifies the system requirements for installing and using SMO.<br />-   [Files and Version Numbers](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) lists the SMO components and corresponding version numbers.|-   [Installing SMO](../../relational-databases/server-management-objects-smo/installing-smo.md) provides instructions to install SMO.|  
   
   

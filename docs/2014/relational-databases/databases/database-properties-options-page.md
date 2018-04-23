@@ -130,7 +130,7 @@ manager: "jhubbard"
  Specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keywords can be used as identifiers (an object or variable name) if enclosed in quotation marks. Possible values are `True` and `False`. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Recursive Triggers Enabled**  
- Specify whether triggers can be fired by other triggers. Possible values are `True` and `False`. When set to `True`, this enables recursive firing of triggers. When set to `False`, only direct recursion is prevented. To disable indirect recursion, set the nested triggers server option to 0 using sp_configure. For more information, see [Create Nested Triggers](../../database-engine/create-nested-triggers.md).  
+ Specify whether triggers can be fired by other triggers. Possible values are `True` and `False`. When set to `True`, this enables recursive firing of triggers. When set to `False`, only direct recursion is prevented. To disable indirect recursion, set the nested triggers server option to 0 using sp_configure. For more information, see [Create Nested Triggers](../triggers/create-nested-triggers.md).  
   
  `Trustworthy`  
  When displaying `True`, this read-only option indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows access to resources outside the database under an impersonation context established within the database. Impersonation contexts can be established within the database using the EXECUTE AS user statement or the EXECUTE AS clause on database modules.  

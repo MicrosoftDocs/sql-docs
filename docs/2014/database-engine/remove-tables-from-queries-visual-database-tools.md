@@ -24,7 +24,7 @@ manager: "jhubbard"
   You can remove a table — or any table-valued object — from the query.  
   
 > [!NOTE]  
->  Removing a table or table-valued object does not delete anything from the database; it only removes it from the current query. For details about removing a table from a database, see [Delete Tables &#40;Database Engine&#41;](../../2014/database-engine/delete-tables-database-engine.md).  
+>  Removing a table or table-valued object does not delete anything from the database; it only removes it from the current query. For details about removing a table from a database, see [Delete Tables &#40;Database Engine&#41;](../relational-databases/tables/delete-tables-database-engine.md).  
   
 ### To remove a table or table-structured object  
   

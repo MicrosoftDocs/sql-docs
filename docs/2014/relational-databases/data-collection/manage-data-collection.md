@@ -169,7 +169,7 @@ manager: "jhubbard"
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](~/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|Get the events that are logged when the Generic SQL Trace collector type is used to collect data.|  
   
 ## See Also  
- [Execute a Stored Procedure](../../database-engine/execute-a-stored-procedure.md)   
+ [Execute a Stored Procedure](../stored-procedures/execute-a-stored-procedure.md)   
  [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)   
  [Data Collection](data-collection.md)  
   

@@ -63,7 +63,7 @@ manager: "jhubbard"
  To use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], you need to understand the terms that describe the way the tool functions.  
   
 > [!NOTE]  
->  When working with [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], it is helpful to understand SQL Trace. For more information, see [SQL Trace](../../2014/database-engine/sql-trace.md).  
+>  When working with [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], it is helpful to understand SQL Trace. For more information, see [SQL Trace](../relational-databases/sql-trace/sql-trace.md).  
   
  **Event**  
  An event is an action generated within an instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Examples of these are:  

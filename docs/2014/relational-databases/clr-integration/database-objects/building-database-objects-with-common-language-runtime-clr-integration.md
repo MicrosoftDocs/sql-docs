@@ -58,7 +58,7 @@ manager: "jhubbard"
  [Overview of CLR Integration Custom Attributes](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
  Provides information about CLR integration custom attributes.  
   
- [CLR User-Defined Functions](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
+ [CLR User-Defined Functions](../../user-defined-functions/user-defined-functions.md)  
  Describes how to implement and use the various types of CLR functions: table-valued, scalar, and user-defined aggregate functions.  
   
  [CLR User-Defined Types](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  

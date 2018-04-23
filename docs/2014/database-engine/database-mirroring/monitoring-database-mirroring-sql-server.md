@@ -329,6 +329,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [WMI Provider for Server Events Concepts](../dev-guide/wmi-provider-for-server-events-concepts.md)  
+ [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

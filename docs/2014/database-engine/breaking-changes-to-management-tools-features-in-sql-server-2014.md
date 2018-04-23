@@ -27,7 +27,7 @@ manager: "jhubbard"
  To create a utility control point on an instance of [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], use [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Management Tools.  
   
 ### SMO has been reversioned in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- Code developed with SMO from [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] or earlier versions might not build against [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] without minor modifications. For more information, see [Backward Compatibility in SMO](../../2014/database-engine/dev-guide/backward-compatibility-in-smo.md).  
+ Code developed with SMO from [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] or earlier versions might not build against [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] without minor modifications. For more information, see [Backward Compatibility in SMO](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md).  
   
 ## See Also  
  [Backward Compatibility](../../2014/getting-started/backward-compatibility.md)  

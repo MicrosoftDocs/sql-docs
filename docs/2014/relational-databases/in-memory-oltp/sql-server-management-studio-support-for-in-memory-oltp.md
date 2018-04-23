@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 2.  To replace the template parameters, click **Specify Values for Template Parameters** on the **Query menu**.  
   
-     For more information on how to create a new stored procedure, see [Create a Stored Procedure](../../database-engine/create-a-stored-procedure.md).  
+     For more information on how to create a new stored procedure, see [Create a Stored Procedure](../stored-procedures/create-a-stored-procedure.md).  
   
 ### To create a user-defined memory-optimized table type  
   

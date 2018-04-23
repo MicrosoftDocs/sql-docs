@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Alerts](../../2014/database-engine/alerts.md)   
- [Using WQL with the WMI Provider for Server Events](../../2014/database-engine/dev-guide/using-wql-with-the-wmi-provider-for-server-events.md)   
+ [Using WQL with the WMI Provider for Server Events](../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Create an Alert Using an Error Number](../../2014/database-engine/create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](../../2014/database-engine/create-an-alert-using-severity-level.md)  
   

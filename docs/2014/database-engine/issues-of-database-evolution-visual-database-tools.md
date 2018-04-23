@@ -32,7 +32,7 @@ manager: "jhubbard"
  No matter how you alter the database design, you should retain a history of the alterations. One approach is to retain SQL scripts for all modifications that you ever make to your production database.  
   
 ## See Also  
- [Unique Constraints and Check Constraints](../../2014/database-engine/unique-constraints-and-check-constraints.md)   
+ [Unique Constraints and Check Constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Multiuser Environments &#40;Visual Database Tools&#41;](../../2014/database-engine/multiuser-environments-visual-database-tools.md)  
   
   

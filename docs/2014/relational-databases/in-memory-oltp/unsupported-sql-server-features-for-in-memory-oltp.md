@@ -96,7 +96,7 @@ manager: "jhubbard"
 |AUTO_CLOSE|AUTO_CLOSE is not supported. For more information, see [Set the AUTO_CLOSE Database Option to OFF](../policy-based-management/set-the-auto-close-database-option-to-off.md).|  
 |Database Snapshots|Database Snapshots are not supported. For more information, see [Database Snapshots &#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md).|  
 |Transactional DDL|Transactional DDL is not supported in In-Memory OLTP.|  
-|Event Notifications|Event notifications are not supported. For more information, see [Event Notifications](../../database-engine/event-notifications.md).|  
+|Event Notifications|Event notifications are not supported. For more information, see [Event Notifications](../service-broker/event-notifications.md).|  
 |Fiber mode|Fiber mode is not supported with In-Memory OLTP.|  
 |Policy-based management (PBM).|Prevent and log only modes of PBM are not supported. Existence of such policies on the server may prevent In-Memory OLTP DDL from executing successfully. On demand and on schedule modes are supported.|  
 |DACFX deploy/extract|DAC Framework deploy/extract is not supported in In-Memory OLTP.|  

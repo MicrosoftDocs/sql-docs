@@ -79,6 +79,6 @@ manager: "jhubbard"
  [SQLPrimaryKeys](../../native-client-odbc-api/sqlprimarykeys.md)   
  [SQLTablePrivileges](../../native-client-odbc-api/sqltableprivileges.md)   
  [SQLTables](../../native-client-odbc-api/sqltables.md)   
- [SQLStatistics](../../native-client-odbc-api/sqlstatistics.md)  
+ [SQLStatistics](../../statistics/statistics.md)  
   
   

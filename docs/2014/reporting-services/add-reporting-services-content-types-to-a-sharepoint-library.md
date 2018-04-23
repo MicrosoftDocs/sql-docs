@@ -106,7 +106,7 @@ manager: "mblythe"
 9. > [!NOTE]  
     >  If the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content type group **SQL Server Reporting Services Content Types** is not visible on the **Add Content Types** page, one of the following conditions is true:  
   
-    -   The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products has not been installed. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). The topic includes information on installing the add-in and stepping through a files only installation of the add-in to work around issues.  
+    -   The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products has not been installed. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../relational-databases/spatial/point.md). The topic includes information on installing the add-in and stepping through a files only installation of the add-in to work around issues.  
   
     -   The add-in is installed but the site collection feature **Report Server Integration Feature** is not active. Verify the site collection feature in **Site Settings**.  
   

@@ -72,7 +72,7 @@ manager: "jhubbard"
   
   
 ## See Also  
- [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)   
+ [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../sql-server-configuration-manager.md)   
  [Upgrade Full-Text Search](upgrade-full-text-search.md)  
   
   

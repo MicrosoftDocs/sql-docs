@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  This sample will not work with any version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- For more information about spatial storage, see [Spatial Data &#40;SQL Server&#41;](../../database-engine/spatial-data-sql-server.md).  
+ For more information about spatial storage, see [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ## Example  
  The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by this sample.  

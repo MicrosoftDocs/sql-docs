@@ -18,7 +18,7 @@ manager: "jhubbard"
 # FILESTREAM DDL, Functions, Stored Procedures, and Views
   Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that support FILESTREAM.  
   
- For the list of database objects that support the FileTable feature, see [FileTable DDL, Functions, Stored Procedures, and Views](filetable-ddl-functions-stored-procedures-and-views.md).  
+ For the list of database objects that support the FileTable feature, see [FileTable DDL, Functions, Stored Procedures, and Views](../views/views.md).  
   
 ##  <a name="ddl"></a> Transact-SQL Data Definition Language (DDL) Statements  
   

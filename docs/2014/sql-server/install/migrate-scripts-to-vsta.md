@@ -43,6 +43,6 @@ manager: "jhubbard"
  You cannot convert a VSA script that uses [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] to a VSTA script that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]. However, you can create a new VSTA script that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]. For more information, see [Coding and Debugging the Script Task](../../../2014/integration-services/dev-guide/coding-and-debugging-the-script-task.md) and [Coding and Debugging the Script Component](../../../2014/integration-services/dev-guide/coding-and-debugging-the-script-component.md).  
   
 ## See Also  
- [Extending Packages with Scripting](../../../2014/integration-services/dev-guide/extending-packages-with-scripting.md)  
+ [Extending Packages with Scripting](../../relational-databases/server-management-objects-smo/tasks/scripting.md)  
   
   

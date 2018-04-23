@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure and View SharePoint Log Files  and Diagnostic Logging (PowerPivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../relational-databases/spatial/point.md).  
   
  In this topic:  
   
@@ -125,6 +125,6 @@ manager: "mblythe"
 ## See Also  
  [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)   
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../relational-databases/spatial/point.md)  
   
   

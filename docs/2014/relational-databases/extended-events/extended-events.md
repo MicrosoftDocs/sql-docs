@@ -100,7 +100,7 @@ manager: "jhubbard"
  [DAC Support For SQL Server Objects and Versions](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Deploy a Data-tier Application](../data-tier-applications/deploy-a-data-tier-application.md)   
  [Monitor Data-tier Applications](../data-tier-applications/monitor-data-tier-applications.md)   
- [Extended Events Dynamic Management Views](~/relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
+ [Extended Events Dynamic Management Views](../views/views.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   
   

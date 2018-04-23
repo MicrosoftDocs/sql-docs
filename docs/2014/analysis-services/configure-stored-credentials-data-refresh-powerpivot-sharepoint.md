@@ -125,7 +125,7 @@ manager: "mblythe"
   
 ###  <a name="bkmk_verify"></a> Step 4: Verify account availability in data refresh configuration pages  
   
-1.  Open a data refresh configuration page for a published workbook that contains PowerPivot data. For instructions on how to open the page, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
+1.  Open a data refresh configuration page for a published workbook that contains PowerPivot data. For instructions on how to open the page, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../relational-databases/spatial/point.md).  
   
 2.  Verify that the **Connect using the credentials saved in Secure Store Service (SSS) to log on to the data source** option is enabled in the data refresh configuration page, and then enter the name of the target application.  
   
@@ -187,7 +187,7 @@ manager: "mblythe"
 17. Click **OK**.  
   
 ## See Also  
- [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
+ [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../relational-databases/spatial/point.md)   
  [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

@@ -170,7 +170,7 @@ manager: "jhubbard"
   
 4.  Perform a bitwise logical AND (`&` in Visual C# and `And` in Visual Basic) between the <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> property and <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. If the result is <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, set <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> to the result of a bitwise logical OR (`|` in Visual C# and `Or` in Visual Basic) between <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> and <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Then, call <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> to enable push subscriptions.  
   
-5.  If the subscription database does not exist, create it by using the <xref:Microsoft.SqlServer.Management.Smo.Database> class. For more information, see [Creating, Altering, and Removing Databases](../../database-engine/dev-guide/creating-altering-and-removing-databases.md).  
+5.  If the subscription database does not exist, create it by using the <xref:Microsoft.SqlServer.Management.Smo.Database> class. For more information, see [Creating, Altering, and Removing Databases](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
 6.  Create an instance of the <xref:Microsoft.SqlServer.Replication.TransSubscription> class.  
   
@@ -210,7 +210,7 @@ manager: "jhubbard"
   
 4.  Perform a bitwise logical AND (`&` in Visual C# and `And` in Visual Basic) between the <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> property and <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. If the result is <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, set <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> to the result of a bitwise logical OR (`|` in Visual C# and `Or` in Visual Basic) between <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> and <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Then, call <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> to enable push subscriptions.  
   
-5.  If the subscription database does not exist, create it by using the <xref:Microsoft.SqlServer.Management.Smo.Database> class. For more information, see [Creating, Altering, and Removing Databases](../../database-engine/dev-guide/creating-altering-and-removing-databases.md).  
+5.  If the subscription database does not exist, create it by using the <xref:Microsoft.SqlServer.Management.Smo.Database> class. For more information, see [Creating, Altering, and Removing Databases](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
 6.  Create an instance of the <xref:Microsoft.SqlServer.Replication.MergeSubscription> class.  
   

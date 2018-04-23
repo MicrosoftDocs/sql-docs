@@ -43,6 +43,6 @@ manager: "jhubbard"
 >  The columns you choose for the foreign key must have the same data type of the primary columns they correspond to. There must be an equal number of columns in each of the keys. For example, if the primary key of the table on the primary side of the relationship is made up of two columns, you will need to match each of those columns with a column in the table for the foreign key side of the relationship.  
   
 ## See Also  
- [Create Foreign Key Relationships](../../2014/database-engine/create-foreign-key-relationships.md)  
+ [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)  
   
   

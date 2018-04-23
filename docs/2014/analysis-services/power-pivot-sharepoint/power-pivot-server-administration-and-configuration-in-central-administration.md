@@ -47,7 +47,7 @@ manager: "mblythe"
   
 |Link|Type|Task Description|  
 |----------|----------|----------------------|  
-|[Deploy PowerPivot Solutions to SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Required|This step installs the solution files that add program files and application pages to the farm and to site collections.|  
+|[Deploy PowerPivot Solutions to SharePoint](../../relational-databases/spatial/point.md)|Required|This step installs the solution files that add program files and application pages to the farm and to site collections.|  
 |[Create and Configure a PowerPivot Service Application in Central Administration](create-and-configure-power-pivot-service-application-in-ca.md)|Required|This step provisions the PowerPivot System Service.|  
 |[Activate PowerPivot Feature Integration for Site Collections in Central Administration](activate-power-pivot-integration-for-site-collections-in-ca.md)|Required|This step turns on PowerPivot features at the site collection level.|  
 |[Add MSOLAP.5 as a Trusted Data Provider in Excel Services](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Required|This step adds the Analysis Services OLE DB provider as a trusted provider in Excel Services.|  

@@ -32,7 +32,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CLR Triggers
-  Because of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR), you can use any [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] language to create CLR triggers. This section covers information specific to triggers implemented with CLR integration. For a complete discussion of triggers, see [DDL Triggers](../../../2014/database-engine/ddl-triggers.md).  
+  Because of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR), you can use any [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] language to create CLR triggers. This section covers information specific to triggers implemented with CLR integration. For a complete discussion of triggers, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## What Are Triggers?  
  A trigger is a special type of stored procedure that automatically runs when a language event executes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two general types of triggers: data manipulation language (DML) and data definition language (DDL) triggers. DML triggers can be used when `INSERT`, `UPDATE`, or `DELETE` statements modify data in a specified table or view. DDL triggers fire stored procedures in response to a variety of DDL statements, which are primarily statements that begin with `CREATE`, `ALTER`, and `DROP`. DDL triggers can be used for administrative tasks, such as auditing and regulating database operations.  
@@ -656,8 +656,8 @@ DROP TABLE Table1;
   
 ## See Also  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
- [DML Triggers](../../../2014/database-engine/dml-triggers.md)   
- [DDL Triggers](../../../2014/database-engine/ddl-triggers.md)   
+ [DML Triggers](../../relational-databases/triggers/dml-triggers.md)   
+ [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](~/t-sql/language-elements/try-catch-transact-sql.md)   
  [Building Database Objects with Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)  

@@ -123,7 +123,7 @@ GO
 |---------------------------|---------|  
 |Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)|  
 |Connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](../../database-engine/sqlcmd-utility.md)|  
-|Network configuration and control for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)|  
+|Network configuration and control for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../sql-server-configuration-manager.md)|  
 |Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Manipulating symmetric keys for a report server|[rskeymgmt Utility &#40;SSRS&#41;](../../reporting-services/rskeymgmt-utility-ssrs.md)|  
   

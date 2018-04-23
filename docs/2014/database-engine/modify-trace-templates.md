@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  [Using SQL Server Profiler](../../2014/database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
- [Using Transact-SQL](../../2014/database-engine/modify-an-existing-trace-transact-sql.md)  
+ [Using Transact-SQL](../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **To add or remove events from a trace template or trace file**  
   

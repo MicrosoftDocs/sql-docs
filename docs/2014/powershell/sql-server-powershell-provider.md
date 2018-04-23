@@ -52,7 +52,7 @@ manager: "jhubbard"
 SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
 ```  
   
- For more information about the SMO object model hierarchy, see [SMO Object Model Diagram](../database-engine/dev-guide/smo-object-model-diagram.md).  
+ For more information about the SMO object model hierarchy, see [SMO Object Model Diagram](../relational-databases/server-management-objects-smo/smo-object-model-diagram.md).  
   
  Collection nodes in a path are associated with a collection class in the associated object model. Object name nodes are associated with an object class in the associated object model, as in the following table.  
   

@@ -36,9 +36,9 @@ manager: "jhubbard"
   
 4.  Copy the primary key columns from each of the other two tables to the junction table. You can add other columns to this table, just as you can to any other table.  
   
-5.  In the junction table, set the primary key to include all the primary key columns from the other two tables. For details, see [Create Primary Keys](../../2014/database-engine/create-primary-keys.md).  
+5.  In the junction table, set the primary key to include all the primary key columns from the other two tables. For details, see [Create Primary Keys](../relational-databases/tables/create-primary-keys.md).  
   
-6.  Define a one-to-many relationship between each of the two primary tables and the junction table. The junction table should be at the "many" side of both of the relationships you create. For details, see [Create Foreign Key Relationships](../../2014/database-engine/create-foreign-key-relationships.md).  
+6.  Define a one-to-many relationship between each of the two primary tables and the junction table. The junction table should be at the "many" side of both of the relationships you create. For details, see [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).  
   
     > [!NOTE]  
     >  The creation of a junction table in a database diagram does not insert data from the related tables into the junction table. For information about inserting data into a table, see [Create Insert Results Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/create-insert-results-queries-visual-database-tools.md).  

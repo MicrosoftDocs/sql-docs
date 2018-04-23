@@ -37,7 +37,7 @@ manager: "jhubbard"
  Expand to show the **Expression** property field.  
   
  **Expression**  
- Displays the expression for the selected check constraint. For new constraints, you must enter the expression before exiting this box. You can also edit existing check constraints. For more information, see [Unique Constraints and Check Constraints](../../2014/database-engine/unique-constraints-and-check-constraints.md).  
+ Displays the expression for the selected check constraint. For new constraints, you must enter the expression before exiting this box. You can also edit existing check constraints. For more information, see [Unique Constraints and Check Constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
  **Identity Category**  
  Expand to show properties for **Name** and **Description**.  
@@ -61,7 +61,7 @@ manager: "jhubbard"
  Indicates whether to enforce the constraint when a replication agent performs an insert or update on this table.  
   
 ## See Also  
- [Unique Constraints and Check Constraints](../../2014/database-engine/unique-constraints-and-check-constraints.md)   
+ [Unique Constraints and Check Constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Indexes and Keys Dialog Box &#40;Visual Database Tools&#41;](../../2014/database-engine/indexes-and-keys-dialog-box-visual-database-tools.md)  
   
   

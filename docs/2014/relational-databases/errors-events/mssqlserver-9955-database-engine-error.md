@@ -37,7 +37,7 @@ manager: "jhubbard"
  To resolve this error, terminate any running full-text filter daemon processes, and if necessary reconfigure the full-text daemon host account by using the SQL Server Configuration Manager.  
   
 ## See Also  
- [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)   
+ [SQL Server Configuration Manager](../sql-server-configuration-manager.md)   
  [Set the Service Account for the Full-text Filter Daemon Launcher](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Full-Text Search](../search/full-text-search.md)  
   

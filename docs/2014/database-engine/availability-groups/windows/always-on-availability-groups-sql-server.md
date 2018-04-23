@@ -112,9 +112,9 @@ manager: "jhubbard"
 ##  <a name="Interoperability"></a> Interoperability and Coexistence with Other Database Engine Features  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] can be used with the following features or components of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
--   [About Change Data Capture;SQL Server;](../../about-change-data-capture-sql-server.md)  
+-   [About Change Data Capture;SQL Server;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
--   [About Change Tracking;SQL Serve;](../../about-change-tracking-sql-server.md)  
+-   [About Change Tracking;SQL Serve;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
 -   [Contained databases](../../../relational-databases/databases/contained-databases.md)  
   

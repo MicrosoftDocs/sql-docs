@@ -27,13 +27,13 @@ manager: "jhubbard"
   
  An assembly in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is an object that references a managed application module (.dll file) that was created in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime. An assembly contains class metadata and managed code. Uploading an assembly to an instance of SQL Server is the first step toward creating any of the following database objects:  
   
--   CLR functions. For more information, see [Create CLR Functions](../../database-engine/create-clr-functions.md).  
+-   CLR functions. For more information, see [Create CLR Functions](../user-defined-functions/create-clr-functions.md).  
   
 -   CLR stored procedures. For more information, see [CLR Stored Procedures](../../database-engine/dev-guide/clr-stored-procedures.md).  
   
--   CLR triggers. For more information, see [Create CLR Triggers](../../database-engine/create-clr-triggers.md).  
+-   CLR triggers. For more information, see [Create CLR Triggers](../triggers/create-clr-triggers.md).  
   
--   User-defined aggregate functions. For more information, see [Create User-defined Aggregates](../../database-engine/create-user-defined-aggregates.md).  
+-   User-defined aggregate functions. For more information, see [Create User-defined Aggregates](../user-defined-functions/create-user-defined-aggregates.md).  
   
 -   User-defined types. For more information, see [Using User-Defined Types](../native-client/features/using-user-defined-types.md).  
   

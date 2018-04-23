@@ -102,7 +102,7 @@ manager: "jhubbard"
   
  `Restricting Data Access to Selected Data Elements`  
   
--   Restrict Data Access Using [Views](../../database-engine/views.md) and [Procedures](../../database-engine/stored-procedures-database-engine.md)  
+-   Restrict Data Access Using [Views](../views/views.md) and [Procedures](../stored-procedures/stored-procedures-database-engine.md)  
   
 -   [Row-Level Security](http://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
  **Custom Audit Implementation**  
   
--   Creating [DDL Triggers](../../database-engine/ddl-triggers.md) and [DML Triggers](../../database-engine/dml-triggers.md)  
+-   Creating [DDL Triggers](../triggers/ddl-triggers.md) and [DML Triggers](../triggers/dml-triggers.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Compliance**  
  **SQL Server**  

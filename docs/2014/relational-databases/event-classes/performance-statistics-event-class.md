@@ -155,6 +155,6 @@ manager: "jhubbard"
  [Extended Events](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Showplan XML for Query Compile Event Class](showplan-xml-for-query-compile-event-class.md)   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../views/views.md)  
   
   

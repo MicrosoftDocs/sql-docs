@@ -231,6 +231,6 @@ GO
   
 ## See Also  
  [FileTable Compatibility with Other SQL Server Features](filetable-compatibility-with-other-sql-server-features.md)   
- [FileTable DDL, Functions, Stored Procedures, and Views](filetable-ddl-functions-stored-procedures-and-views.md)  
+ [FileTable DDL, Functions, Stored Procedures, and Views](../views/views.md)  
   
   

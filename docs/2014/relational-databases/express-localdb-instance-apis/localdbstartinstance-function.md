@@ -113,7 +113,7 @@ HRESULT LocalDBStartInstance(
 |Present|NULL|Not allowed; incorrect input.|Returned result is LOCALDB_ERROR_INVALID_PARAMETER.|  
 |Present|Present|User wants to start the instance and needs the pipe name to connect to it after it is started.|Checks the buffer size, starts the instance, and returns the pipe name in the buffer. <br />The buffer size argument returns the length of the “server=” string, not including terminating nulls.|  
   
- For a code sample that uses LocalDB API, see [SQL Server Express LocalDB Reference](../../database-engine/dev-guide/sql-server-express-localdb-reference.md).  
+ For a code sample that uses LocalDB API, see [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## See Also  
  [SQL Server Express LocalDB Header and Version Information](sql-server-express-localdb-header-and-version-information.md)  

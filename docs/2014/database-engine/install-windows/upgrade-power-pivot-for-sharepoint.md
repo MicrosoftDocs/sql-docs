@@ -115,7 +115,7 @@ manager: "jhubbard"
   
     -   [PowerPivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
-    -   [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
+    -   [PowerShell Reference for PowerPivot for SharePoint](../../relational-databases/spatial/point.md)  
   
 5.  Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of PowerPivot servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this topic and the following section.  
   

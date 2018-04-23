@@ -41,6 +41,6 @@ manager: "mblythe"
 3.  Click the link and run the setup program that installs the service.  
   
 ## See Also  
- [Deploy PowerPivot Solutions to SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
+ [Deploy PowerPivot Solutions to SharePoint](../../relational-databases/spatial/point.md)  
   
   

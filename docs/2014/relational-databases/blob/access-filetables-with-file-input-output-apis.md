@@ -127,6 +127,6 @@ manager: "jhubbard"
  [Load Files into FileTables](load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Access FileTables with Transact-SQL](access-filetables-with-transact-sql.md)   
- [FileTable DDL, Functions, Stored Procedures, and Views](filetable-ddl-functions-stored-procedures-and-views.md)  
+ [FileTable DDL, Functions, Stored Procedures, and Views](../views/views.md)  
   
   

@@ -115,7 +115,9 @@ This section discusses [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] supp
   
 -   Back up a [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] cube and restoring on [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
- When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the database compatibility level will be changed from 90 to 100. (In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], valid values for the database compatibility level are 100, 110, 120, and 130.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
+> [!NOTE]  
+> When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the database compatibility level will be changed from 90 to 100. 
+> In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], valid values for the database compatibility level are 100, 110, 120, and 130. [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
   
 Any scenarios not specified in the list above are not supported, including but not limited to the following:  
   

@@ -24,29 +24,34 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: "Active"
-monikerRange: ">= sql-analysis-services-2016 || >= sql-server-2014 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2014 || >= sql-analysis-services-2016  || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
 # SQL Server Documentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on 
 ::: moniker range=">= sql-analysis-services-2017 || >= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
-both Windows and Linux. 
+SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on both Windows and Linux. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
+
 ::: moniker range="= sql-analysis-services-2016 || = sql-server-2014 || = sql-server-2016"
-Windows. 
+SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on Windows. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
-The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 
 ::: moniker range=">= sql-analysis-services-2016 || >= sql-server-linux-2017 || >= sql-server-2016  || = sqlallproducts-allversions"
 |What's new  | Release notes  |
 |---------|---------|
+|[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
+|[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 ::: moniker range="= sql-analysis-services-2017 || = sql-server-linux-2017 || = sql-server-2017 || = sqlallproducts-allversions"
+|What's new  | Release notes  |
+|---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 ::: moniker-end
 ::: moniker range="= sql-analysis-services-2016 || = sql-server-2016 || = sqlallproducts-allversions"
+|What's new  | Release notes  |
+|---------|---------|
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
@@ -60,16 +65,16 @@ The content includes end-to-end examples, code samples, and videos. For SQL Serv
 
 **Try SQL Server!**
 ::: moniker range=">= sql-analysis-services-2016 || >= sql-server-2014 || = sqlallproducts-allversions"
-    + [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 ::: moniker-end
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
-    + [![Install SQL Server on Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Install SQL Server on Linux](../linux/sql-server-linux-setup.md)
+- [![Install SQL Server on Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Install SQL Server on Linux](../linux/sql-server-linux-setup.md)
 ::: moniker-end
-    + [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-    + [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-    + [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
-::: moniker range=">=sql-server-2016 || = sqlallproducts-allversions"
+::: moniker range=">= sql-analysis-services-2016 || >= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## SQL Server Technologies
 
 |||

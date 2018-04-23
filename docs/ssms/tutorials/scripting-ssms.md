@@ -39,7 +39,8 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Download [AdventureWorks2016 sample databases](https://github.com/Microsoft/sql-server-samples/releases)
+- Download [AdventureWorks2016 sample databases](https://github.com/Microsoft/sql-server-samples/releases).
+
 Instructions for restoring databases in SSMS are here: [Restore a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
@@ -49,7 +50,7 @@ You can generate the associated T-SQL code for a task whenever you use the GUI i
 ### Script T-SQL when you back up a database
 1. Connect to a server that's running SQL Server.
 2. Expand the **Databases** node.
-3. Right-click the database **Adventureworks2016** > **Tasks** > **Back up**:
+3. Right-click the database **Adventureworks2016** > **Tasks** > **Back Up**:
 
     ![Back up a database](media/scripting-ssms/backupdb.png)
 
@@ -131,7 +132,7 @@ The following section teaches you to script out the database by using the **Scri
    > You can script the data for the database when you select *Schema and data* for the **Types of data to script** option. However, this isn't ideal with large databases. It can take more memory than SSMS can allocate. This limitation is okay for small databases. If you want to move data for a larger database, use the [Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 
-1. Select **OK** and then select **Next**. 
+1. Select **OK**, and then select **Next**.
 2. Select **Next** on the **Summary**. Then select **Next** again to generate the script in a **New Query** window. 
 3. On your keyboard, open the **Find** dialog box (Ctrl+F). Select the down arrow to open the **Replace** option. On the top **Find** line, enter *AdventureWorks2016*. On the bottom **Replace** line, enter *AdventureWorks2016b*. 
 4. Select **Replace All** to replace all instances of *AdventureWorks2016* with *AdventureWorks2016b*. 
@@ -146,7 +147,7 @@ This section covers how to script out tables from your database. Use this option
 2. Expand your **Databases** node.
 3. Expand your **AdventureWorks2016** database node. 
 4. Expand your **Tables** node.
-5. Right-click **dbo.ErrorLog** > **Script Table as** > **DROP and CREATE To** > **New Query Editor Window**:
+5. Right-click **dbo.ErrorLog** > **Script Table as** > **DROP And CREATE To** > **New Query Editor Window**:
     
     ![Script table](media/scripting-ssms/scripttable.png)
 
@@ -162,7 +163,7 @@ In this section, you'll learn how to drop and create a stored procedure.
 2. Expand your **Databases** node.
 3. Expand your **Programmability** node. 
 4. Expand your **Stored Procedure** node.
-5. Right-click the stored procedure **dbo.uspGetBillOfMaterials** > **Script Stored Procedure As** > **Drop and Create to** > **New Query Editor Window**:
+5. Right-click the stored procedure **dbo.uspGetBillOfMaterials** > **Script Stored Procedure As** > **DROP and CREATE To** > **New Query Editor Window**:
     
     ![Script stored procedures](media/scripting-ssms/scriptstoredprocedure.PNG)
 

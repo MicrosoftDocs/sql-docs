@@ -26,6 +26,7 @@
 ## [SQL Server 2012 Notes](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Notes](sql-server-2008-r2-sp2-release-notes.md)
 
+# [SQL Server on Linux](../linux/sql-server-linux-overview.md)
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Database Engine](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
@@ -39,6 +40,7 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Tutorials for SQL Server](tutorials-for-sql-server-2016.md)
+# [SQL Server Tools](../tools/overview-sql-tools.md)
 
 # Resources
 

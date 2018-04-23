@@ -134,8 +134,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
    
  -   Copy permissions  
    
-  Limitations to be determined:  
- -  
+### Limitations to be determined 
+ 
  -   Copy collation  
    
  -   Execution in a serialized transaction of the SP  

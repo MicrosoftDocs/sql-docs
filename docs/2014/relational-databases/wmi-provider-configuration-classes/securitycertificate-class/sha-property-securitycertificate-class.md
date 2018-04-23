@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [SecurityCertificate Class](../../../database-engine/dev-guide/securitycertificate-class.md) object that represents a security certificate.  
+ A [SecurityCertificate Class]securitycertificate-class.md) object that represents a security certificate.  
   
 ## Property Value/Return Value  
  A string value that specifies the SHA thumbprint attribute of the security certificate.  

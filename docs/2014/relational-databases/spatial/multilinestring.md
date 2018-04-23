@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## MultiLineString instances  
  The illustration below shows examples of `MultiLineString` instances.  
   
- ![Examples of geometry MultiLineString instances](../../2014/database-engine/media/multilinestring.gif "Examples of geometry MultiLineString instances")  
+ ![Examples of geometry MultiLineString instances](../../database-engine/media/multilinestring.gif "Examples of geometry MultiLineString instances")  
   
  As shown in the illustration:  
   

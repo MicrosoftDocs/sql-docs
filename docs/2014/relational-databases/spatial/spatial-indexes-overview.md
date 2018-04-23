@@ -32,14 +32,14 @@ manager: "jhubbard"
   
  The following illustration shows the decomposition for the upper-right cell at each level of the grid hierarchy into a 4x4 grid. In reality, all the cells are decomposed in this way. Thus, for example, decomposing a space into four levels of 4x4 grids actually produces a total of 65,536 level-four cells.  
   
- ![Four-levels of recursive tessellation](../../2014/database-engine/media/spndx-recursive-levels-telescoped.gif "Four-levels of recursive tessellation")  
+ ![Four-levels of recursive tessellation](../../database-engine/media/spndx-recursive-levels-telescoped.gif "Four-levels of recursive tessellation")  
   
 > [!NOTE]  
 >  The decomposition of space for a spatial index is independent of the unit of measurement that the application data uses.  
   
  Grid hierarchy cells are numbered in a linear fashion by using a variation of the Hilbert space-filling curve. For the purpose of illustration, however, this discussion uses a simple row-wise numbering, instead of the numbering that is actually produced by the Hilbert curve. In the following illustration, several polygons that represent buildings, and lines that represent streets, have already been placed into a 4x4, level-1 grid. The level-1 cells are numbered from 1 through 16, starting with the upper-left cell.  
   
- ![Polygons and lines placed into a 4x4 level-1 grid](../../2014/database-engine/media/spndx-level-1-objects.gif "Polygons and lines placed into a 4x4 level-1 grid")  
+ ![Polygons and lines placed into a 4x4 level-1 grid](../../database-engine/media/spndx-level-1-objects.gif "Polygons and lines placed into a 4x4 level-1 grid")  
   
 #### Grid Density  
  The number of cells along the axes of a grid determines its *density*: the larger the number, the denser the grid. For example, an 8x8 grid (which produces 64 cells), is denser than a 4x4 grid (which produces 16 cells). Grid density is defined on a per-level basis.  
@@ -86,7 +86,7 @@ manager: "jhubbard"
 #### Covering Rule  
  If an object completely covers a cell, that cell is said to be *covered* by the object. For example, in the following illustration, one of the second-level cells, 15.11, is completely covered by the middle portion of an octagon.  
   
- ![Covering optimization](../../2014/database-engine/media/spndx-opt-covering.gif "Covering optimization")  
+ ![Covering optimization](../../database-engine/media/spndx-opt-covering.gif "Covering optimization")  
   
  A covered cell is counted and recorded in the index, and the cell is not tessellated any further.  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
   
  In the following illustration, a relatively small diamond-shaped polygon is tessellated. The index uses the default cells-per-object limit of 16, which is not reached for this small object. Therefore, tessellation continues down to level 4. The polygon resides in the following level-1 through level-3 cells: 4, 4.4, and 4.4.10 and 4.4.14. However, using the deepest-cell rule, the tessellation counts only the twelve level-4 cells: 4.4.10.13-15 and 4.4.14.1-3, 4.4.14.5-7, and 4.4.14.9-11.  
   
- ![Deepest-cell optimization](../../2014/database-engine/media/spndx-opt-deepest-cell.gif "Deepest-cell optimization")  
+ ![Deepest-cell optimization](../../database-engine/media/spndx-opt-deepest-cell.gif "Deepest-cell optimization")  
   
 ###  <a name="schemes"></a> Tessellation Schemes  
  The behavior of a spatial index depends partly on its *tessellation scheme*. The tessellation scheme is data-type specific. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], spatial indexes support two tessellation schemes:  
@@ -145,7 +145,7 @@ manager: "jhubbard"
   
  The following illustration shows the points defined by the `(`*x-min***,***y-min*`)` and `(`*x-max***,***y-max*`)` coordinates of the bounding box. The top-level of the grid hierarchy is shown as a 4x4 grid. For the purpose of illustration, the lower levels are omitted. The space outside of the bounding box is indicated by a zero (0). Note that object 'A' extends partly beyond the box, and object 'B' lies completely outside the box in cell 0.  
   
- ![Bounding box showing coordinates and cell 0.](../../2014/database-engine/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0.")  
+ ![Bounding box showing coordinates and cell 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0.")  
   
  A bounding box corresponds to some portion of an application's spatial data. Whether the bounding-box of the index completely contains the data stored in the spatial column, or only contains a portion, is up to the application. Only operations computed on objects that are entirely inside of the bounding box benefit from the spatial index. Therefore, to gain the greatest advantage from a spatial index on a `geometry` column, you need to specify a bounding-box that contains all or most of the objects.  
   
@@ -169,11 +169,11 @@ manager: "jhubbard"
   
  The following illustration shows a schematic view of the three-step decomposition process. In the pyramids, the dotted lines represent the boundaries of the four facets of each pyramid. Steps 1 and 2 illustrate the geodetic ellipsoid, using a green horizontal line to represent the equatorial longitude line and a series of green vertical lines to represent several latitude lines. Step 1 shows the pyramids being projected over the two hemispheres. Step 2 shows the pyramids being flattened. Step 3 illustrates the flattened pyramids, after they have been combined to form a plane, showing a number of projected longitude lines. Notice that these projected lines are straightened and vary in length, depending on where they fall on the pyramids.  
   
- ![Projection of the ellipsoid onto a plane](../../2014/database-engine/media/spndx-geodetic-projection.gif "Projection of the ellipsoid onto a plane")  
+ ![Projection of the ellipsoid onto a plane](../../database-engine/media/spndx-geodetic-projection.gif "Projection of the ellipsoid onto a plane")  
   
  Once the space has been projected onto the plane, the plane is decomposed into the four-level grid hierarchy. Different levels can use different grid densities. The following illustration shows the plane after it has been decomposed into a 4x4 level-1 grid. For the purposes of illustration, the lower-levels of the grid hierarchy are omitted. In actuality, the plane is fully decomposed into a four-level grid hierarchy. After the decomposition process finishes, the geographic data is read, row by row, from the geography column, and the tessellation process is performed for each object in turn.  
   
- ![Level-1 geography grid](../../2014/database-engine/media/spndx-geodetic-level1grid.gif "Level-1 geography grid")  
+ ![Level-1 geography grid](../../database-engine/media/spndx-geodetic-level1grid.gif "Level-1 geography grid")  
   
 ##  <a name="methods"></a> Methods Supported by Spatial Indexes  
   

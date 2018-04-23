@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [ClientNetLibInfo Class](../../../database-engine/dev-guide/clientnetlibinfo-class.md) object that represents information about the client net library.  
+ A [ClientNetLibInfo Class](clientnetlibinfo-class.md) object that represents information about the client net library.  
   
 ## Property Value/Return Value  
  A uint32 value that specifies the date of the client network library file.  

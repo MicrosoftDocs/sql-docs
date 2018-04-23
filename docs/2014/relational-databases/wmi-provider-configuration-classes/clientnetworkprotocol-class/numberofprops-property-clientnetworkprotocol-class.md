@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # NumberOfProps Property (ClientNetworkProtocol Class)
-  Gets the number of properties of the client network protocol specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](../../../database-engine/dev-guide/clientnetworkprotocol-class.md).  
+  Gets the number of properties of the client network protocol specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](clientnetworkprotocol-class.md).  
   
 ## Syntax  
   
@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [ClientNetworkProtocol Class](../../../database-engine/dev-guide/clientnetworkprotocol-class.md) object that represents the network protocol used by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+ A [ClientNetworkProtocol Class](clientnetworkprotocol-class.md) object that represents the network protocol used by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
   
 ## Property Value/Return Value  
  A uint32 value that specifies the number of properties of the client network protocol.  

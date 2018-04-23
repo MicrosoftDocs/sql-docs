@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [ClientSettingsGeneralFlag Class](../../../database-engine/dev-guide/clientsettingsgeneralflag-class.md) object that represents a general flag for the server settings.  
+ A [ClientSettingsGeneralFlag Class](clientsettingsgeneralflag-class.md) object that represents a general flag for the server settings.  
   
 ## Property Value/Return Value  
  A string value that specifies the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  

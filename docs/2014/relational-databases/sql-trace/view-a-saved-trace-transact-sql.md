@@ -51,6 +51,6 @@ manager: "jhubbard"
   
 ## See Also  
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [View and Analyze Traces with SQL Server Profiler](../../2014/database-engine/view-and-analyze-traces-with-sql-server-profiler.md)  
+ [View and Analyze Traces with SQL Server Profiler](../../database-engine/view-and-analyze-traces-with-sql-server-profiler.md)  
   
   

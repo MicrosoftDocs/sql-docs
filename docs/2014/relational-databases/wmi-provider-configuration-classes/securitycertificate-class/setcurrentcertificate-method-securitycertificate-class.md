@@ -40,7 +40,7 @@ SHA , SQLInstance
   
 ## Parts  
  *object*  
- A [SecurityCertificate Class](../../../database-engine/dev-guide/securitycertificate-class.md) object that represents a security certificate.  
+ A [SecurityCertificate Class]securitycertificate-class.md) object that represents a security certificate.  
   
 #### Parameters  
   

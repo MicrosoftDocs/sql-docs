@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## CircularString instances  
  The drawing below shows valid `CircularString` instances:  
   
- ![](../../2014/database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
+ ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### Accepted instances  
  A `CircularString` instance is accepted if it is either empty or contains an odd number of points, n, where n > 1. The following `CircularString` instances are accepted.  

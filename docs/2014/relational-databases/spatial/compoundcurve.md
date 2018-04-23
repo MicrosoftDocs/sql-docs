@@ -32,7 +32,7 @@ manager: "jhubbard"
 ## CompoundCurve instances  
  The following illustration shows valid `CompoundCurve` types.  
   
- ![](../../2014/database-engine/media/f278742e-b861-4555-8b51-3d972b7602bf.png "f278742e-b861-4555-8b51-3d972b7602bf")  
+ ![](../../database-engine/media/f278742e-b861-4555-8b51-3d972b7602bf.png "f278742e-b861-4555-8b51-3d972b7602bf")  
   
 ### Accepted instances  
  `CompoundCurve` instance is accepted if it is an empty instance or meets the following criteria.  

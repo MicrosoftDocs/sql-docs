@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ProtocolOrder Property (ClientNetworkProtocol Class)
-  Gets the order number of the currently referenced client network protocol as specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](../../../database-engine/dev-guide/clientnetworkprotocol-class.md) method.  
+  Gets the order number of the currently referenced client network protocol as specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](clientnetworkprotocol-class.md) method.  
   
 ## Syntax  
   
@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [ClientNetworkProtocol Class](../../../database-engine/dev-guide/clientnetworkprotocol-class.md) object that represents the network protocol used by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+ A [ClientNetworkProtocol Class](clientnetworkprotocol-class.md) object that represents the network protocol used by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
   
 ## Property Value/Return Value  
  A `uint32` value that specifies the order number of the currently referenced client network protocol as set by the `OrderValue` method. If the client network protocol is disabled, this value will be zero.  

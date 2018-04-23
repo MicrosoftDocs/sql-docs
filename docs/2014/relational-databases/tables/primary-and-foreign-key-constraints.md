@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  As shown in the following illustration, the **ProductID** and **VendorID** columns in the **Purchasing.ProductVendor** table form a composite primary key constraint for this table. This makes sure that that every row in the **ProductVendor** table has a unique combination of **ProductID** and **VendorID**. This prevents the insertion of duplicate rows.  
   
- ![Composite PRIMARY KEY constraint](../../2014/database-engine/media/fund04.gif "Composite PRIMARY KEY constraint")  
+ ![Composite PRIMARY KEY constraint](../../database-engine/media/fund04.gif "Composite PRIMARY KEY constraint")  
   
 -   A table can contain only one primary key constraint.  
   

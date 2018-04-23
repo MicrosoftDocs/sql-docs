@@ -45,12 +45,12 @@ manager: "jhubbard"
 ### One-Way Synchronization Applications  
  One-way synchronization applications, such as a client or mid-tier caching application, can be built that use change tracking. As shown in the following illustration, a caching application requires data to be stored in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and to be cached in other data stores. The application must be able to keep the cache up-to-date with any changes that have been made to the database tables. There are no changes to pass back to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- ![Shows one-way synchronization applications](../../2014/database-engine/media/one-waysync.gif "Shows one-way synchronization applications")  
+ ![Shows one-way synchronization applications](../../database-engine/media/one-waysync.gif "Shows one-way synchronization applications")  
   
 ### Two-Way Synchronization Applications  
  Two-way synchronization applications can also be built that use change tracking. In this scenario, the data in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is synchronized with one or more data stores. The data in those stores can be updated and the changes must be synchronized back to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- ![Shows two-way synchronization applications](../../2014/database-engine/media/two-waysync.gif "Shows two-way synchronization applications")  
+ ![Shows two-way synchronization applications](../../database-engine/media/two-waysync.gif "Shows two-way synchronization applications")  
   
  A good example of two-way synchronization application is an occasionally connected application. In this type of application, a client application queries and updates a local store. When a connection is available between a client and server, the application will synchronize with a server, and changed data flows in both directions.  
   

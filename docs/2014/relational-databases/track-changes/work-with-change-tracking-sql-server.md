@@ -46,7 +46,7 @@ manager: "jhubbard"
   
      The following illustration shows how CHANGETABLE(CHANGES …) is used to obtain changes.  
   
-     ![Example of change tracking query output](../../2014/database-engine/media/queryoutput.gif "Example of change tracking query output")  
+     ![Example of change tracking query output](../../database-engine/media/queryoutput.gif "Example of change tracking query output")  
   
  CHANGE_TRACKING_CURRENT_VERSION() function  
  Is used to obtain the current version that will be used the next time when querying changes. This version represents the version of the last committed transaction.  

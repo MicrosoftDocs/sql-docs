@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ClientNetworkProtocolProperty Class
-  The [ClientNetworkProtocolProperty Class](../../../database-engine/dev-guide/clientnetworkprotocolproperty-class.md) represents properties of a client network protocol.  
+  The [ClientNetworkProtocolProperty Class](clientnetworkprotocolproperty-class.md) represents properties of a client network protocol.  
   
- With the [ClientNetworkProtocolProperty Class](../../../database-engine/dev-guide/clientnetworkprotocolproperty-class.md), you can perform the following tasks:  
+ With the [ClientNetworkProtocolProperty Class](clientnetworkprotocolproperty-class.md), you can perform the following tasks:  
   
 -   Set an index value to select a client network protocol property from the list of properties.  
   

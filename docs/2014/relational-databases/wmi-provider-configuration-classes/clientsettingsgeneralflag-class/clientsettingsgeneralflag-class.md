@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ClientSettingsGeneralFlag Class
-  The [ClientSettingsGeneralFlag Class](../../../database-engine/dev-guide/clientsettingsgeneralflag-class.md) represents the general flag settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+  The [ClientSettingsGeneralFlag Class](clientsettingsgeneralflag-class.md) represents the general flag settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
   
- The [ClientSettingsGeneralFlag Class](../../../database-engine/dev-guide/clientsettingsgeneralflag-class.md) can be used to do the following:  
+ The [ClientSettingsGeneralFlag Class](clientsettingsgeneralflag-class.md) can be used to do the following:  
   
 -   View the flag name.  
   

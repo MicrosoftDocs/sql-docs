@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## LineString Instances  
  The illustration below shows examples of `LineString` instances.  
   
- ![Examples of geometry LineString instances](../../2014/database-engine/media/linestring.gif "Examples of geometry LineString instances")  
+ ![Examples of geometry LineString instances](../../database-engine/media/linestring.gif "Examples of geometry LineString instances")  
   
  As shown in the illustration:  
   

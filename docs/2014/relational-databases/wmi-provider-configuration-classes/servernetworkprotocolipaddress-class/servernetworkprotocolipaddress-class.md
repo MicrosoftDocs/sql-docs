@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ServerNetworkProtocolIPAddress Class
-  The [ServerNetworkProtocolIPAddress Class](../../../database-engine/dev-guide/servernetworkprotocolipaddress-class.md) represents an IP address supported by the server network protocol.  
+  The [ServerNetworkProtocolIPAddress Class]servernetworkprotocolipaddress-class.md) represents an IP address supported by the server network protocol.  
   
- With the [ServerNetworkProtocolIPAddress Class](../../../database-engine/dev-guide/servernetworkprotocolipaddress-class.md) you can perform the following tasks:  
+ With the [ServerNetworkProtocolIPAddress Class]servernetworkprotocolipaddress-class.md) you can perform the following tasks:  
   
 -   Check the name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

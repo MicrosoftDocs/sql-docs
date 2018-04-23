@@ -27,7 +27,7 @@ manager: "jhubbard"
 ## Change Data Capture Data Flow  
  The following illustration shows the principal data flow for change data capture.  
   
- ![Change data capture data flow](../../2014/database-engine/media/cdcdataflow.gif "Change data capture data flow")  
+ ![Change data capture data flow](../../database-engine/media/cdcdataflow.gif "Change data capture data flow")  
   
  The source of change data for change data capture is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log. As inserts, updates, and deletes are applied to tracked source tables, entries that describe those changes are added to the log. The log serves as input to the capture process. This reads the log and adds information about changes to the tracked table’s associated change table. Functions are provided to enumerate the changes that appear in the change tables over a specified range, returning the information in the form of a filtered result set. The filtered result set is typically used by an application process to update a representation of the source in some external environment.  
   

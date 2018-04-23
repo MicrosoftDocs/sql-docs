@@ -27,7 +27,7 @@ manager: "jhubbard"
 ## SQL Trace Architecture  
  Event Sources can be any source that produces the trace event, such as [!INCLUDE[tsql](../../../includes/tsql-md.md)] batches or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] events, such as deadlocks. For more information about events, see [SQL Server Event Class Reference](../event-classes/sql-server-event-class-reference.md). After an event occurs, if the event class has been included in a trace definition, the event information is gathered by the trace. If filters have been defined for the event class in the trace definition, the filters are applied and the trace event information is passed to a queue. From the queue, the trace information is either written to a file or can be used by SMO in applications, such as [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. The following diagram shows how SQL Trace gathers events during a tracing.  
   
- ![Database Engine event tracing process](../../2014/database-engine/media/tracarch.gif "Database Engine event tracing process")  
+ ![Database Engine event tracing process](../../database-engine/media/tracarch.gif "Database Engine event tracing process")  
   
 ## SQL Trace Terminology  
  The following terms describe the key concepts of SQL Trace.  
@@ -148,7 +148,7 @@ manager: "jhubbard"
 |Describes how to save trace results to the file where the trace results are written.|[Save Trace Results to a File](../sql-trace/save-trace-results-to-a-file.md)|  
 |Describes how to improve access to trace data by using space in the **temp** directory.|[Improve Access to Trace Data](../sql-trace/improve-access-to-trace-data.md)|  
 |Describes how to use stored procedures to create a trace.|[Create a Trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)|  
-|Describes how to use stored procedures to create a filter that retrieves only the information you need on an event being traced.|[Set a Trace Filter &#40;Transact-SQL&#41;](../../2014/database-engine/set-a-trace-filter-transact-sql.md)|  
+|Describes how to use stored procedures to create a filter that retrieves only the information you need on an event being traced.|[Set a Trace Filter &#40;Transact-SQL&#41;](../../database-engine/set-a-trace-filter-transact-sql.md)|  
 |Describes how to use stored procedures to modify an existing trace.|[Modify an Existing Trace &#40;Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md)|  
 |Describes how to use built-in functions to view a saved trace.|[View a Saved Trace &#40;Transact-SQL&#41;](../sql-trace/view-a-saved-trace-transact-sql.md)|  
 |Describes how to use built-in functions to view trace filter information.|[View Filter Information &#40;Transact-SQL&#41;](../sql-trace/view-filter-information-transact-sql.md)|  
@@ -159,7 +159,7 @@ manager: "jhubbard"
 |Describes the two ways to schedule tracing in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Schedule Traces](../sql-trace/schedule-traces.md)|  
   
 ## See Also  
- [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler Templates and Permissions](../../database-engine/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

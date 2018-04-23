@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [SqlService Class](../../../database-engine/dev-guide/sqlservice-class.md) object that represents the service.  
+ A [SqlService Class](sqlservice-class.md) object that represents the service.  
   
 ## Property Value/Return Value  
  A uint32 value that specifies the mode of the service.  

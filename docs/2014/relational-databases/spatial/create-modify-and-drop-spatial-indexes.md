@@ -88,7 +88,7 @@ manager: "jhubbard"
   
 4.  In the **Spatial Indexes** dialog box, click **Add**.  
   
-5.  Select the new index in the **Selected Spatial Index** list, and in the grid to the right, set the properties for the spatial index. For information about the properties, see [Spatial Indexes Dialog Box &#40;Visual Database Tools&#41;](../../2014/database-engine/spatial-indexes-dialog-box-visual-database-tools.md).  
+5.  Select the new index in the **Selected Spatial Index** list, and in the grid to the right, set the properties for the spatial index. For information about the properties, see [Spatial Indexes Dialog Box &#40;Visual Database Tools&#41;](../../database-engine/spatial-indexes-dialog-box-visual-database-tools.md).  
   
   
 ###  <a name="alter"></a> To alter a spatial index  

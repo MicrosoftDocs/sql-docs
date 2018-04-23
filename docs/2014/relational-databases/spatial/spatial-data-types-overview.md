@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  The figure below depicts the `geometry` hierarchy upon which the `geometry` and `geography` data types are based. The instantiable types of `geometry` and `geography` are indicated in blue.  
   
- ![Hierarchy of the geometry type](../../2014/database-engine/media/geom-hierarchy.gif "Hierarchy of the geometry type")  
+ ![Hierarchy of the geometry type](../../database-engine/media/geom-hierarchy.gif "Hierarchy of the geometry type")  
   
  As the figure indicates, the ten instantiable types of the `geometry` and `geography` data types are `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`, and `GeometryCollection`. There is one additional instantiable type for the geography data type: `FullGlobe`. The `geometry` and `geography` types can recognize a specific instance as long as it is a well-formed instance, even if the instance is not defined explicitly. For example, if you define a `Point` instance explicitly using the STPointFromText() method, `geometry` and `geography` recognize the instance as a `Point`, as long as the method input is well-formed. If you define the same instance using the `STGeomFromText()` method, both the `geometry` and `geography` data types recognize the instance as a `Point`.  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
 ### LineString and CircularString comparison  
  The following diagram shows identical isosceles triangles (triangle A uses line segments to define the triangle and triangle B uses circular arc segments to defined the triangle):  
   
- ![](../../2014/database-engine/media/7e382f76-59da-4b62-80dc-caf93e637c14.png "7e382f76-59da-4b62-80dc-caf93e637c14")  
+ ![](../../database-engine/media/7e382f76-59da-4b62-80dc-caf93e637c14.png "7e382f76-59da-4b62-80dc-caf93e637c14")  
   
  This example shows how to store the above isosceles triangles using both a `LineString` instance and `CircularString` instance:  
   
@@ -153,7 +153,7 @@ LS LengthCS Length
   
  The following illustration shows how each type is stored (red line shows `LineString``@g1`, blue line shows `CircularString``@g2`):  
   
- ![](../../2014/database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
+ ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
  As the illustration above shows, `CircularString` instances use fewer points to store curve boundaries with greater precision than `LineString` instances. `CircularString` instances are useful for storing circular boundaries like a twenty-mile search radius from a specific point. `LineString` instances are good for storing boundaries that are linear like a square city block.  
   

@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [SecurityCertificate Class](../../../database-engine/dev-guide/securitycertificate-class.md) object that represents a security certificate.  
+ A [SecurityCertificate Class]securitycertificate-class.md) object that represents a security certificate.  
   
 ## Property Value/Return Value  
  A uint32 value that specifies the date when the security certificate starts being in effect.  

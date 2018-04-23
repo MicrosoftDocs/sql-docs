@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 1.  Specify the events to capture using **sp_trace_setevent**.  
   
-2.  Specify any event filters. For more information, see [Set a Trace Filter &#40;Transact-SQL&#41;](../../2014/database-engine/set-a-trace-filter-transact-sql.md).  
+2.  Specify any event filters. For more information, see [Set a Trace Filter &#40;Transact-SQL&#41;](../../database-engine/set-a-trace-filter-transact-sql.md).  
   
 3.  Specify the destination for the captured event data using **sp_trace_create**.  
   
@@ -44,21 +44,21 @@ manager: "jhubbard"
   
  **To set trace definition defaults**  
   
- [SQL Server Profiler](../../2014/database-engine/set-trace-definition-defaults-sql-server-profiler.md)  
+ [SQL Server Profiler](../../database-engine/set-trace-definition-defaults-sql-server-profiler.md)  
   
  **To set trace display defaults**  
   
- [SQL Server Profiler](../../2014/database-engine/set-trace-display-defaults-sql-server-profiler.md)  
+ [SQL Server Profiler](../../database-engine/set-trace-display-defaults-sql-server-profiler.md)  
   
  **To create a trace**  
   
- [SQL Server Profiler](../../2014/database-engine/create-a-trace-sql-server-profiler.md)  
+ [SQL Server Profiler](../../database-engine/create-a-trace-sql-server-profiler.md)  
   
  [Transact-SQL](../sql-trace/create-a-trace-transact-sql.md)  
   
  **To add or remove events from a trace template**  
   
- [SQL Server Profiler](../../2014/database-engine/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [SQL Server Profiler](../../database-engine/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [Transact-SQL](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  The following illustration shows the process.  
   
- ![Parsing XML with OPENXML](../../2014/database-engine/media/xmlsp.gif "Parsing XML with OPENXML")  
+ ![Parsing XML with OPENXML](../../database-engine/media/xmlsp.gif "Parsing XML with OPENXML")  
   
  Note that to understand OPENXML, familiarity with XPath queries and an understanding of XML is required. For more information about XPath support in SQL Server, see [Using XPath Queries in SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md).  
   
@@ -94,7 +94,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  The following illustration shows the parsed XML tree of the previous XML document that was created by using sp_xml_preparedocument.  
   
- ![Parsed XML tree](../../2014/database-engine/media/xmlparsedtree.gif "Parsed XML tree")  
+ ![Parsed XML tree](../../database-engine/media/xmlparsedtree.gif "Parsed XML tree")  
   
 ## OPENXML Parameters  
  The parameters to OPENXML include the following:  

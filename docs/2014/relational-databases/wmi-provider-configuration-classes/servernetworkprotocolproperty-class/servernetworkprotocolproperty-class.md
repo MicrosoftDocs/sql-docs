@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ServerNetworkProtocolProperty Class
-  The [ServerNetworkProtocolProperty Class](../../../database-engine/dev-guide/servernetworkprotocolproperty-class.md) represents the properties of a server network protocol.  
+  The [ServerNetworkProtocolProperty Class]servernetworkprotocolproperty-class.md) represents the properties of a server network protocol.  
   
- With the [ServerNetworkProtocolProperty Class](../../../database-engine/dev-guide/servernetworkprotocolproperty-class.md), you can perform the following tasks:  
+ With the [ServerNetworkProtocolProperty Class]servernetworkprotocolproperty-class.md), you can perform the following tasks:  
   
 -   Check the protocol that the current property belongs to.  
   

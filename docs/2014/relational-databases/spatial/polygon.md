@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  The illustration below shows examples of `Polygon` instances.  
   
- ![Examples of geometry Polygon instances](../../2014/database-engine/media/polygon.gif "Examples of geometry Polygon instances")  
+ ![Examples of geometry Polygon instances](../../database-engine/media/polygon.gif "Examples of geometry Polygon instances")  
   
  As shown in the illustration:  
   

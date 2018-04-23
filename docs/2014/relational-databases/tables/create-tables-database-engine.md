@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 4.  Type column names, choose data types, and choose whether to allow nulls for each column as shown in the following illustration.  
   
-     ![AddColumnsinTableDesigner](../../2014/database-engine/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
+     ![AddColumnsinTableDesigner](../../database-engine/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
 5.  To specify more properties for a column, such as identity or computed column values, click the column and in the column properties tab, choose the appropriate properties. For more information about column properties, see [Table Column Properties &#40;SQL Server Management Studio&#41;](../tables/table-column-properties-sql-server-management-studio.md).  
   
@@ -66,13 +66,13 @@ manager: "jhubbard"
   
 7.  To create foreign key relationships, check constraints, or indexes, right-click in the Table Designer pane and select an object from the list as shown in the following illustration.  
   
-     ![AddTableObjects](../../2014/database-engine/media/addtableobjects.gif "AddTableObjects")  
+     ![AddTableObjects](../../database-engine/media/addtableobjects.gif "AddTableObjects")  
   
      For more information about these objects, see [Create Foreign Key Relationships](../tables/create-foreign-key-relationships.md), [Create Check Constraints](../tables/create-check-constraints.md) and [Indexes](../indexes/indexes.md).  
   
 8.  By default, the table is contained in the **dbo** schema. To specify a different schema for the table, right-click in the Table Designer pane and select **Properties** as shown in the following illustration. From the **Schema** drop-down list, select the appropriate schema.  
   
-     ![Specifyatableschema](../../2014/database-engine/media/specifyatableschema.gif "Specifyatableschema")  
+     ![Specifyatableschema](../../database-engine/media/specifyatableschema.gif "Specifyatableschema")  
   
      For more information about schemas, see [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).  
   

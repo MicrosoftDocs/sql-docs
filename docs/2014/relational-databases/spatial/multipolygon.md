@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## Polygon Instances  
  The illustration below shows examples of `MultiPolygon` instances.  
   
- ![Examples of geometry MultiPolygon instances](../../2014/database-engine/media/multipolygon.gif "Examples of geometry MultiPolygon instances")  
+ ![Examples of geometry MultiPolygon instances](../../database-engine/media/multipolygon.gif "Examples of geometry MultiPolygon instances")  
   
  As shown in the illustration:  
   

@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ServerSettings Class
-  The [ServerSettings Class](../../../database-engine/dev-guide/serversettings-class.md) represents server settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  The [ServerSettings Class]serversettings-class.md) represents server settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- The [ServerSettings Class](../../../database-engine/dev-guide/serversettings-class.md) allows you to perform the following tasks:  
+ The [ServerSettings Class]serversettings-class.md) allows you to perform the following tasks:  
   
 -   Access general flag settings for the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

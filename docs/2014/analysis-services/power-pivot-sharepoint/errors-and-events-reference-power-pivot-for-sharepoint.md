@@ -21,7 +21,7 @@ manager: "mblythe"
  To view the list of error messages documented in this section, use the contents pane in Books Online.  
   
 ## See Also  
- [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../relational-databases/spatial/point.md)   
+ [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)  
   
   

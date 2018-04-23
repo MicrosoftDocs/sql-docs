@@ -59,7 +59,7 @@ manager: "mblythe"
   
  A link to the data feed library will appear in the navigation Quick Launch pane for the current site.  
   
- After you create a library, you can use it to create data service documents. For more information, see [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md).  
+ After you create a library, you can use it to create data service documents. For more information, see [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ##  <a name="addtolib"></a> Add the Data Feed Content Type to Any Library  
  If you do not want to create a dedicated data feed library, but you still want to create and manage data service documents from a SharePoint site, you can manually add and configure the data service document content type for any library that you will use to share data service document (.atomsvc) files.  
@@ -107,7 +107,7 @@ manager: "mblythe"
 4.  Click the down arrow on New Document, and select **Data Service Document**. The New Data Service Document page should appear.  
   
 ## See Also  
- [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md)   
+ [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
  [Delete a PowerPivot Data Feed Library](delete-a-power-pivot-data-feed-library.md)   
  [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [PowerPivot Data Feeds](power-pivot-data-feeds.md)  

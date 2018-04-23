@@ -77,7 +77,7 @@ manager: "mblythe"
   
 -   [PowerPivot Configuration using Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
--   [PowerShell Reference for PowerPivot for SharePoint](../../relational-databases/spatial/point.md)  
+-   [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
 > [!NOTE]  
 >  The tool does not configure Reporting Services. If you are adding Reporting Services to your SharePoint environment, you need to install and configure Reporting Services separately. For more information, see the following:  

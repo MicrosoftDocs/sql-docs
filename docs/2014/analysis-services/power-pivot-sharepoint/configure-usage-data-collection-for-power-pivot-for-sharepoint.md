@@ -188,7 +188,7 @@ manager: "mblythe"
 |Long Running Response Upper Limit|10000 (in milliseconds)|Integer|Sets an upper boundary that defines a long running request-response exchange. Any requests that exceed this upper limit fall into the Exceeded category, which has no upper threshold.|  
   
 ## See Also  
- [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md)   
+ [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)  
   
   

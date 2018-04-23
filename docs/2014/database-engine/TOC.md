@@ -231,7 +231,7 @@
 ####### [Run the Transact-SQL Debugger](../relational-databases/scripting/run-the-transact-sql-debugger.md)
 ####### [Step Through Transact-SQL Code](../relational-databases/scripting/step-through-transact-sql-code.md)
 ######## [Transact-SQL Breakpoints](../relational-databases/scripting/transact-sql-breakpoints.md)
-######### [Toggle a Breakpoint](../relational-databases/spatial/point.md)
+######### [Toggle a Breakpoint](../relational-databases/scripting/toggle-a-breakpoint.md)
 ######### [Enable, Disable, and Delete Breakpoints](../relational-databases/scripting/enable-disable-and-delete-breakpoints.md)
 ######### [Specify a Breakpoint Condition](../relational-databases/scripting/specify-a-breakpoint-condition.md)
 ######### [Specify a Hit Count](../relational-databases/scripting/specify-a-hit-count.md)

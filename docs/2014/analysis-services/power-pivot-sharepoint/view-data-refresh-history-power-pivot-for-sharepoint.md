@@ -70,7 +70,7 @@ manager: "mblythe"
 |Status|Provides a historical record of whether a refresh operation succeeded or failed.|  
   
 ## See Also  
- [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../relational-databases/spatial/point.md)   
+ [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
  [PowerPivot Data Refresh](power-pivot-data-refresh.md)  
   

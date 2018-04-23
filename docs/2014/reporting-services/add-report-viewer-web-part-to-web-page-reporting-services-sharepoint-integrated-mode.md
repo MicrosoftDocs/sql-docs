@@ -57,6 +57,6 @@ manager: "mblythe"
  [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Customize the Report Viewer Web Part](../../2014/reporting-services/customize-the-report-viewer-web-part.md)   
  [Granting Permissions on Report Server Items on a SharePoint Site](../../2014/reporting-services/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../relational-databases/spatial/point.md)  
+ [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

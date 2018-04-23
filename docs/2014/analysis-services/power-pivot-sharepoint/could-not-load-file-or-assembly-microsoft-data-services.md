@@ -44,6 +44,6 @@ manager: "mblythe"
 5.  Click **OK**.  
   
 ## See Also  
- [Deploy PowerPivot Solutions to SharePoint](../../relational-databases/spatial/point.md)  
+ [Deploy PowerPivot Solutions to SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

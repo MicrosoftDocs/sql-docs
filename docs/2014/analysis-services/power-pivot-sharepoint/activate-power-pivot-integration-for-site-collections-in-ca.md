@@ -43,7 +43,7 @@ manager: "mblythe"
   
 ## See Also  
  [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md)   
+ [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
  [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

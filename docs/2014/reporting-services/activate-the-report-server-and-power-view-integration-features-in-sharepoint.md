@@ -24,7 +24,7 @@ manager: "mblythe"
   
  "SharePoint web app 80 does not have root site collection"  
   
- The message will be found in the add-in installation log, named “RS_SP_#.log” where # is an incrementing number. The log file will be found in the current users Temp folder, for example C:\Users\\[user name]\AppData\Local\Temp. For more information on logging options with the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../relational-databases/spatial/point.md).  
+ The message will be found in the add-in installation log, named “RS_SP_#.log” where # is an incrementing number. The log file will be found in the current users Temp folder, for example C:\Users\\[user name]\AppData\Local\Temp. For more information on logging options with the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  In this topic:  
   
@@ -68,6 +68,6 @@ manager: "mblythe"
  After the feature is activated, you can continue with server integration.  
   
 ## See Also  
- [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../relational-databases/spatial/point.md)  
+ [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

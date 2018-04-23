@@ -26,7 +26,7 @@ manager: "mblythe"
  [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Error and Event Reference**  
- [Errors and Events Reference &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md)  
+ [Errors and Events Reference &#40;PowerPivot for SharePoint&#41;](../power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **PowerShell Reference**  
  [Analysis Services PowerShell](../analysis-services-powershell.md)  

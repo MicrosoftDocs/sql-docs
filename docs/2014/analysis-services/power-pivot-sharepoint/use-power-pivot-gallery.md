@@ -121,7 +121,7 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Click the Manage Data refresh button to create or view a schedule that retrieves updated data from connected data sources. For instructions on how to create a schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Click the Manage Data refresh button to create or view a schedule that retrieves updated data from connected data sources. For instructions on how to create a schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
 ##  <a name="delete"></a> Delete a workbook or report in PowerPivot Gallery  
  To delete a document from the library, switch to the All Documents view first.  
@@ -162,6 +162,6 @@ manager: "mblythe"
  [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Delete PowerPivot Gallery](delete-power-pivot-gallery.md)   
  [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md)   
- [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md)  
+ [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

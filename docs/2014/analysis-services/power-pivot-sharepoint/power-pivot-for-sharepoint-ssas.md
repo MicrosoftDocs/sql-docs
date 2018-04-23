@@ -77,7 +77,7 @@ manager: "mblythe"
  **In other sections**  
   
 ## Additional topics  
- [Upgrade PowerPivot for SharePoint](../../relational-databases/spatial/point.md)  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   

@@ -105,7 +105,7 @@ manager: "mblythe"
 ||Web Application Database Server|Default, if needed|The default database instance is pre-selected to store the application database, but you can specify a different SQL Server instance in the tool.|  
 ||Web Application Database Name|Default, if needed|The database name is based on the file naming conventions of SharePoint, but you can choose a different name.|  
 |**Deploy Web Application Solution**|URL|Default, if needed|The Default URL is from the default web application.|  
-||Maximum File Size (in MB)|Default, if needed|Default setting is 2047. SharePoint document libraries also have a maximum size and the PowerPivot setting should not exceed the document library setting. For more information, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](../relational-databases/spatial/point.md).|  
+||Maximum File Size (in MB)|Default, if needed|Default setting is 2047. SharePoint document libraries also have a maximum size and the PowerPivot setting should not exceed the document library setting. For more information, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md.)|  
 |**Create Site Collection**|Site Administrator|Default, if needed|The tool uses the default account. You can override it in the **Create Site Collection** page.|  
 ||Contact E-mail|Default, if needed|If Microsoft Outlook is configured on the server, the tool will use the email address of the current user. Otherwise, a placeholder value is used.|  
 ||Site URL|Default, if needed|The tool creates the site URL, using the same URL naming conventions as SharePoint.|  

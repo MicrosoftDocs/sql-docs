@@ -40,7 +40,7 @@ manager: "mblythe"
 ##  <a name="prereq"></a> Prerequisites  
  You must have a deployment of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot for SharePoint that adds [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] query processing to a SharePoint farm. Data Feed support is deployed through the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution package.  
   
- You must have a SharePoint library that supports the data service document content type. A default Data Feed library is recommended for this purpose, but you can manually add the content type to any library. For more information, see [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](../../relational-databases/spatial/point.md).  
+ You must have a SharePoint library that supports the data service document content type. A default Data Feed library is recommended for this purpose, but you can manually add the content type to any library. For more information, see [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   
  You must have a data service or online data source that provides XML tabular data in the Atom 1.0 format.  
   

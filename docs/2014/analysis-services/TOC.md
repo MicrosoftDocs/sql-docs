@@ -636,7 +636,7 @@
 ####### [Server Configuration Utility (Data Mining Add-ins for Excel)](server-configuration-utility-data-mining-add-ins-for-excel.md)
 ### [PowerPivot for SharePoint](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 #### [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)
-##### [Deploy PowerPivot Solutions](../relational-databases/spatial/point.md)
+##### [Deploy PowerPivot Solutions](deploy-power-pivot-solutions-to-sharepoint.md)
 ##### [Create and Configure a PowerPivot Service Application](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)
 ##### [Connect a PowerPivot Service Application to a SharePoint Web Application](power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)
 ##### [Activate PowerPivot Feature Integration for Site Collections](power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)

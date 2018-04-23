@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure the PowerPivot Unattended Data Refresh Account (PowerPivot for SharePoint)
-  The PowerPivot unattended data refresh account is a designated account for running PowerPivot data refresh jobs in a SharePoint farm. By configuring it, you enable the **Use the data refresh account configured by the administrator** option in a data refresh schedule page (see below). Workbook authors who schedule data refresh can choose this option if they want to use the PowerPivot unattended data refresh account to run a data refresh job. For more information about how to view the Credentials options in a data refresh schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../relational-databases/spatial/point.md).  
+  The PowerPivot unattended data refresh account is a designated account for running PowerPivot data refresh jobs in a SharePoint farm. By configuring it, you enable the **Use the data refresh account configured by the administrator** option in a data refresh schedule page (see below). Workbook authors who schedule data refresh can choose this option if they want to use the PowerPivot unattended data refresh account to run a data refresh job. For more information about how to view the Credentials options in a data refresh schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
@@ -146,7 +146,7 @@ manager: "mblythe"
   
 ###  <a name="bkmk_verify"></a> Step 5: Verify account availability in data refresh configuration pages  
   
-1.  Open a data refresh configuration page for a published workbook that contains PowerPivot data. For instructions on how to open the page, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../relational-databases/spatial/point.md).  
+1.  Open a data refresh configuration page for a published workbook that contains PowerPivot data. For instructions on how to open the page, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
 2.  Verify that the **Use the data refresh account configured by the administrator** option is enabled in the data refresh configuration page.  
   
@@ -188,7 +188,7 @@ manager: "mblythe"
   
 ## See Also  
  [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
- [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../relational-databases/spatial/point.md)   
+ [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
  [PowerPivot Data Refresh](power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

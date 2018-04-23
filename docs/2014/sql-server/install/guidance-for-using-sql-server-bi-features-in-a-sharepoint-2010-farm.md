@@ -16,7 +16,7 @@ ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Guidance for Using SQL Server BI Features in a SharePoint 2010 Farm
-  This topic summarizes feature availability based on the versions and editions of the software you are using. It also explains SharePoint 2010 installation requirements for using specific SQL Server features. For information related to SharePoint 2013, see [Deployment Topologies for SQL Server BI Features in SharePoint](../../relational-databases/spatial/point.md).  
+  This topic summarizes feature availability based on the versions and editions of the software you are using. It also explains SharePoint 2010 installation requirements for using specific SQL Server features. For information related to SharePoint 2013, see [Deployment Topologies for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
  In this topic:  
   

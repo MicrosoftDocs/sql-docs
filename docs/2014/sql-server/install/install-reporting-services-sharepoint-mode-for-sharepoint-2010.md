@@ -222,7 +222,7 @@ manager: "jhubbard"
   
 6.  Click **Activate**.  
   
- This procedure is completed per site collection. For more information, see [Activate the Report Server and Power View Integration Features in SharePoint](../../relational-databases/spatial/point.md).  
+ This procedure is completed per site collection. For more information, see [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  .  
   
 ##  <a name="bkmk_additional_config"></a> Additional Configuration  
  This section describes additional configuration steps that are important in most SharePoint deployments.  

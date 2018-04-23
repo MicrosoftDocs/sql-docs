@@ -89,7 +89,7 @@ manager: "mblythe"
  For more information on how to plan a cold standby scenario with [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], see [PowerPivot Disaster Recovery](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## Verification  
- For guidance and scripts to help you verify a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment before and after a disaster recovery cycle, see [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](../../relational-databases/spatial/point.md).  
+ For guidance and scripts to help you verify a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment before and after a disaster recovery cycle, see [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Links to more information  
   

@@ -21,7 +21,7 @@
 ##### [PowerShell cmdlets for Reporting Services SharePoint Mode](powershell-cmdlets-for-reporting-services-sharepoint-mode.md)
 ##### [Configuration and Administration (SharePoint Mode)](configure-administer-report-server-reporting-services-sharepoint-mode.md)
 ###### [Reporting Services Site Collection Features](reporting-services-site-collection-features.md)
-####### [Activate the Report Server and Power View Integration Features in SharePoint](../relational-databases/spatial/point.md)
+####### [Activate the Report Server and Power View Integration Features in SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)
 ###### [Reporting Services Site Settings and Site Features (SharePoint Mode)](reporting-services-site-settings-and-site-features-sharepoint-mode.md)
 ####### [Activate the Report Server File Sync Feature](activate-report-server-file-sync-feature-sharepoint-central-administration.md)
 ###### [Add Report Server Content Types to a Library (Reporting Services in SharePoint Integrated Mode)](add-reporting-services-content-types-to-a-sharepoint-library.md)

@@ -31,7 +31,7 @@
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [Failover clusters](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Install (Windows)](../sql-server/install/planning-a-sql-server-installation.md)
-# [Install (Linux)](../linux/setup.sql-server-linux-setup.md)
+# [Install (Linux)](../linux/sql-server-linux-setup.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)

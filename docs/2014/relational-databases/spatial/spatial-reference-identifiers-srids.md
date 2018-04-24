@@ -35,6 +35,6 @@ manager: "jhubbard"
 >  The spatial reference identification system is defined by the [European Petroleum Survey Group (EPSG)](http://go.microsoft.com/fwlink/?LinkId=99349) standard, which is a set of standards developed for cartography, surveying, and geodetic data storage. This standard is owned by the Oil and Gas Producers (OGP) Surveying and Positioning Committee.  
   
 ## See Also  
- [Spatial Data Types Overview](../../database-engine/spatial-data-types-overview.md)  
+ [Spatial Data Types Overview](spatial-data-types-overview.md)  
   
   

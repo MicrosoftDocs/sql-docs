@@ -85,7 +85,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- Create a spatial index on the column SpatialLocation to see how a Nearest Neighbor query uses a spatial index. For more information on creating spatial indexes, see [Create, Modify, and Drop Spatial Indexes](../../database-engine/indexes.md).  
+ Create a spatial index on the column SpatialLocation to see how a Nearest Neighbor query uses a spatial index. For more information on creating spatial indexes, see [Create, Modify, and Drop Spatial Indexes](create-modify-and-drop-spatial-indexes.md).  
   
 ## Example  
  The following code example shows a Nearest Neighbor query that cannot use a spatial index.  

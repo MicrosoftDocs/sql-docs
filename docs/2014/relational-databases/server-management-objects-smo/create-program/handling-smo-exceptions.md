@@ -34,12 +34,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The `SQLException` exception is declared in the **System.Data.SqlClient** namespace.  
   
- ![A diagram that shows the levels from which an excp](../../../2014/database-engine/dev-guide/media/exception-flow.gif "A diagram that shows the levels from which an excp")  
+ ![A diagram that shows the levels from which an excp](../../../database-engine/dev-guide/media/exception-flow.gif "A diagram that shows the levels from which an excp")  
   
  The diagram shows the flow of exceptions through the layers of the application.  
   
 ## Example  
- To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) or [Create a Visual Basic SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
+ To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) or [Create a Visual Basic SMO Project in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
   
 ## Catching an Exception in Visual Basic  
  This code example shows how to use the `Try…Catch…Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] statement to catch a SMO exception. All SMO exceptions have the type SmoException, and are listed in the SMO reference. The sequence of inner exceptions is displayed to show the root of the error. For more information, see the [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET documentation.  

@@ -52,7 +52,7 @@ FROM   Person.Contact
  For more information about the FOR XML clause, see [Constructing XML Using FOR XML](../../xml/for-xml-sql-server.md).  
   
 ## See Also  
- [Architecture of Client-side and Server-side XML Formatting &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/server-side-xml-formatting-sqlxml-4-0.md)   
+ [Architecture of Client-side and Server-side XML Formatting &#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [Client-side XML Formatting &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)  
   

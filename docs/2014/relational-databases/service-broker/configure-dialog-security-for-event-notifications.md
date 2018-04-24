@@ -87,7 +87,7 @@ manager: "jhubbard"
  [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Encryption Hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md)   
+ [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)   
  [Implement Event Notifications](event-notifications.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)   

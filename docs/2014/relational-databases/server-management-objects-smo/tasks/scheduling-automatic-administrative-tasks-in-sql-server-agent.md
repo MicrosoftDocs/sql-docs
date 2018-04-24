@@ -280,7 +280,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## See Also  
- [SQL Server Agent](../../../analysis-services/instances/sql-server-agent.md)   
+ [SQL Server Agent](../../../database-engine/sql-server-agent.md)   
  [Implement Jobs](../../../database-engine/implement-jobs.md)  
   
   

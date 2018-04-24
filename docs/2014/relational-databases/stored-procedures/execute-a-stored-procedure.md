@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ## See Also  
  [Specify Parameters](specify-parameters.md)   
- [Configure the scan for startup procs Server Configuration Option](configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
+ [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)   
  [Stored Procedures &#40;Database Engine&#41;](stored-procedures-database-engine.md)  

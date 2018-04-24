@@ -35,7 +35,7 @@ manager: "jhubbard"
 |[Handling SMO Events](handling-smo-events.md)|This section describes how to set up and handle events in SMO. Includes an example of how to set up an event handler and how to set up event subscription.|  
 |[Handling SMO Exceptions](handling-smo-exceptions.md)|This section describes how to trap exceptions in SMO. Includes examples of how to catch an exception and how to display an inner exception.|  
 |[Working with Data Types](working-with-data-types.md)|This section describes how to work with the different [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types. Describes how to construct a datatype with the specification in the object constructor. Also includes example of how to create a datatype by using the default constructor.|  
-|[Using Transactions](../../../analysis-services/multidimensional-models-adomd-net-client/transactions.md)|This section describes how to implement transaction processing in an SMO program. Includes example of how to use transactions in an SMO program.|  
+|[Using Transactions](using-transactions.md)|This section describes how to implement transaction processing in an SMO program. Includes example of how to use transactions in an SMO program.|  
 |[Using Capture Mode](using-capture-mode.md)|This section describes how to record the output of the SMO program. The example records the SMO program as [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements sent to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for later execution.|  
   
   

@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 |Task|Topic|  
 |----------|-----------|  
-|Describes how to create a DML trigger.|[Create DML Triggers](../../database-engine/dml-triggers.md)|  
+|Describes how to create a DML trigger.|[Create DML Triggers](create-dml-triggers.md)|  
 |Describes how to create a CLR trigger.|[Create CLR Triggers](create-clr-triggers.md)|  
 |Describes how to create a DML trigger to handle both single-row and multi-row data modifications.|[Create DML Triggers to Handle Multiple Rows of Data](create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
 |Describes how to nest triggers.|[Create Nested Triggers](create-nested-triggers.md)|  

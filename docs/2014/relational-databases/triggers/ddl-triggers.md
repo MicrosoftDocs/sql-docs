@@ -110,7 +110,7 @@ GO
   
 |Task|Topic|  
 |----------|-----------|  
-|Describes how to create, modify, delete or disable DDL triggers.|[Implement DDL Triggers](../../database-engine/ddl-triggers.md)|  
+|Describes how to create, modify, delete or disable DDL triggers.|[Implement DDL Triggers](implement-ddl-triggers.md)|  
 |Describes how to create a CLR DDL trigger.|[Create CLR Triggers](create-clr-triggers.md)|  
 |Describes how to return information about DDL triggers.|[Get Information About DDL Triggers](get-information-about-ddl-triggers.md)|  
 |Describes how to return information about an event that fires a DDL trigger by using the EVENTDATA function.|[Use the EVENTDATA Function](use-the-eventdata-function.md)|  

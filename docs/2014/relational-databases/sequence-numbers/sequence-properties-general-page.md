@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  Unlike identity columns values which are generated at the time of insert, an application can obtain the next sequence number without inserting the row by calling the [NEXT VALUE FOR function](~/t-sql/functions/next-value-for-transact-sql.md). Use [sp_sequence_get_range](~/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) to get multiple sequence numbers at once.  
   
- For information and scenarios that use both **CREATE SEQUENCE** and the **NEXT VALUE FOR** function, see [Sequence Numbers](../relational-databases/sequence-numbers/sequence-numbers.md).  
+ For information and scenarios that use both **CREATE SEQUENCE** and the **NEXT VALUE FOR** function, see [Sequence Numbers](sequence-numbers.md).  
   
  This page is accessed in two ways: either by right-clicking **Sequences** in Object Explorer and clicking **New Sequence**, or by right-clicking an existing sequence and clicking **Properties**. When you right-click an existing sequence and click **Properties**, the options are not editable. To change the sequence options use the [ALTER SEQUENCE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-sequence-transact-sql.md) statement or drop and recreate the sequence object.  
   

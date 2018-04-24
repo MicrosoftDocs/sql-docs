@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CInstance Class
-  The [CInstance Class](../../database-engine/dev-guide/cinstance-class.md) represents an instance of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
+  The [CInstance Class](cinstance-class.md) represents an instance of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   
  This class can be used to manage protocols and network libraries associated with the instance of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
   

@@ -40,6 +40,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Start SQL Server Profiler](../../database-engine/start-sql-server-profiler.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](../../database-engine/sql-server-profiler.md)  
   
   

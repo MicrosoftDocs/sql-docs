@@ -29,7 +29,7 @@ manager: "jhubbard"
 -   [Restoring or Attaching a Database Enabled for Change Data Capture](#RestoreOrAttach)  
   
 ##  <a name="ChangeTracking"></a> Change Tracking  
- Change data capture and [change tracking](../../database-engine/about-change-tracking-sql-server.md) can be enabled on the same database. No special considerations are required. For more information, see [Work with Change Tracking &#40;SQL Server&#41;](work-with-change-tracking-sql-server.md).  
+ Change data capture and [change tracking](about-change-tracking-sql-server.md) can be enabled on the same database. No special considerations are required. For more information, see [Work with Change Tracking &#40;SQL Server&#41;](work-with-change-tracking-sql-server.md).  
   
 ##  <a name="DatabaseMirroring"></a> Database Mirroring  
  A database that is enabled for change data capture can be mirrored. To ensure that capture and cleanup happen automatically after a failover, follow these steps:  
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  To change the configuration of a job, use the [sys.sp_cdc_change_job](~/relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) stored procedure.  
   
- For information about database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).  
+ For information about database mirroring, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ##  <a name="TransReplication"></a> Transactional Replication  
  Change data capture and transactional replication can coexist in the same database, but population of the change tables is handled differently when both features are enabled. Change data capture and transactional replication always use the same procedure, [sp_replcmds](~/relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md), to read changes from the transaction log. When change data capture is enabled on its own, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job calls `sp_replcmds`. When both features are enabled on the same database, the Log Reader Agent calls `sp_replcmds`. This agent populates both the change tables and the distribution database tables. For more information, see [Replication Log Reader Agent](../../relational-databases/replication/replication-log-reader-agent.md).  

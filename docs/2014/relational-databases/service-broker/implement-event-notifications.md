@@ -95,7 +95,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 -   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-event-notification-transact-sql.md)  
   
 ## See Also  
- [Get Information About Event Notifications](../relational-databases/service-broker/event-notifications.md)   
+ [Get Information About Event Notifications](event-notifications.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)  
   
   

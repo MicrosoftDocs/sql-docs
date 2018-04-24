@@ -108,7 +108,7 @@ ORDER BY s.name;
 ##  <a name="CreateStatistics"></a> When to Create Statistics  
  The query optimizer already creates statistics in the following ways:  
   
-1.  The query optimizer creates statistics for indexes on tables or views when the index is created. These statistics are created on the key columns of the index. If the index is a filtered index, the query optimizer creates filtered statistics on the same subset of rows specified for the filtered index. For more information about filtered indexes, see [Create Filtered Indexes](../relational-databases/indexes/indexes.md) and [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
+1.  The query optimizer creates statistics for indexes on tables or views when the index is created. These statistics are created on the key columns of the index. If the index is a filtered index, the query optimizer creates filtered statistics on the same subset of rows specified for the filtered index. For more information about filtered indexes, see [Create Filtered Indexes](../indexes/create-filtered-indexes.md) and [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
   
 2.  The query optimizer creates statistics for single columns in query predicates when AUTO_CREATE_STATISTICS is on.  
   
@@ -175,7 +175,7 @@ GO
 ### Query Identifies Missing Statistics  
  If an error or other event prevents the query optimizer from creating statistics, the query optimizer creates the query plan without using statistics. The query optimizer marks the statistics as missing and attempts to regenerate the statistics the next time the query is executed.  
   
- Missing statistics are indicated as warnings (table name in red text) when the execution plan of a query is graphically displayed using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Additionally, monitoring the **Missing Column Statistics** event class by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] indicates when statistics are missing. For more information, see [Errors and Warnings Event Category &#40;Database Engine&#41;](../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md).  
+ Missing statistics are indicated as warnings (table name in red text) when the execution plan of a query is graphically displayed using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Additionally, monitoring the **Missing Column Statistics** event class by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] indicates when statistics are missing. For more information, see [Errors and Warnings Event Category &#40;Database Engine&#41;](../event-classes/errors-and-warnings-event-category-database-engine.md).  
   
  If statistics are missing, perform the following steps:  
   
@@ -324,7 +324,7 @@ GO
 ```  
   
 ### Improving Cardinality Estimates with Plan Guides  
- For some applications, query design guidelines might not apply because you cannot change the query or using the RECOMPILE query hint might be cause too many recompiles. You can use plan guides to specify other hints, such as USE PLAN, to control the behavior of the query while investigating application changes with the application vendor. For more information about plan guides, see [Plan Guides](../relational-databases/performance/plan-guides.md).  
+ For some applications, query design guidelines might not apply because you cannot change the query or using the RECOMPILE query hint might be cause too many recompiles. You can use plan guides to specify other hints, such as USE PLAN, to control the behavior of the query while investigating application changes with the application vendor. For more information about plan guides, see [Plan Guides](../performance/plan-guides.md).  
   
  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#Top)  
   
@@ -337,6 +337,6 @@ GO
  [DROP STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/drop-statistics-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
- [Create Filtered Indexes](../relational-databases/indexes/indexes.md)  
+ [Create Filtered Indexes](../indexes/create-filtered-indexes.md)  
   
   

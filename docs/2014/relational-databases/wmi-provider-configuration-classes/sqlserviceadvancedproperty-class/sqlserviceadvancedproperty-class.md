@@ -25,9 +25,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SqlServiceAdvancedProperty Class
-  The [SqlServiceAdvancedProperty Class](../../../database-engine/dev-guide/sqlserviceadvancedproperty-class.md) represents an advanced property of the service that is referenced by the [SqlService Class](../sqlservice-class/sqlservice-class.md) object.  
+  The [SqlServiceAdvancedProperty Class](sqlserviceadvancedproperty-class.md) represents an advanced property of the service that is referenced by the [SqlService Class](../sqlservice-class/sqlservice-class.md) object.  
   
- The [AdvancedProperties Property (SqlService Class)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) references an array of [SqlServiceAdvancedProperty Class](../../../database-engine/dev-guide/sqlserviceadvancedproperty-class.md) objects.  
+ The [AdvancedProperties Property (SqlService Class)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) references an array of [SqlServiceAdvancedProperty Class](sqlserviceadvancedproperty-class.md) objects.  
   
  The [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) class represents properties that are unique to the service. These properties are not in the list of properties that is associated with the [SqlService Class](http://technet.microsoft.com/library/ms186497.aspx) class. The [SqlServiceAdvancedProperty Class](http://technet.microsoft.com/library/ms182447.aspx) class allows representation of string, numeric, or Boolean properties. You can use this class to view the unique properties of the specified service.  
   

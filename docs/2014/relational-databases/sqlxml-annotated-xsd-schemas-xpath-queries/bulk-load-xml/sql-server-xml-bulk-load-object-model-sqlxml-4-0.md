@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 -   Creates the necessary tables from the element and attribute names. Therefore, it is important that you do not use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reserved words for element and attribute names in the schema.  
   
--   Returns overflow data for any column designated using the [sql:overflow-field](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md) in [xml data type](~/t-sql/xml/xml-transact-sql.md) format.  
+-   Returns overflow data for any column designated using the [sql:overflow-field](annotation-interpretation-sql-overflow-field.md) in [xml data type](~/t-sql/xml/xml-transact-sql.md) format.  
   
  SGDropTables  
  Specifies whether existing tables should be dropped and re-created. You use this property when the SchemaGen property is set to TRUE. If SGDropTables is FALSE, the existing tables are retained. When this property is TRUE, the existing tables are deleted and re-created.  

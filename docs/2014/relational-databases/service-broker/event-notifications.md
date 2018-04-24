@@ -89,8 +89,8 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
   
 |Task|Topic|  
 |----------|-----------|  
-|Describes how to create and implement event notifications.|[Implement Event Notifications](../relational-databases/service-broker/event-notifications.md)|  
-|Describes how to configure [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog security for event notifications that send messages to a service broker on a remote server.|[Configure Dialog Security for Event Notifications](../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
+|Describes how to create and implement event notifications.|[Implement Event Notifications](event-notifications.md)|  
+|Describes how to configure [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog security for event notifications that send messages to a service broker on a remote server.|[Configure Dialog Security for Event Notifications](configure-dialog-security-for-event-notifications.md)|  
 |Describes how to return information about event notifications.|[Get Information About Event Notifications](get-information-about-event-notifications.md)|  
   
 ## See Also  

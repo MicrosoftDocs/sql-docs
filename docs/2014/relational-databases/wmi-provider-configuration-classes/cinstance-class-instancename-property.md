@@ -37,7 +37,7 @@ object
   
 ## Parts  
  *object*  
- A [CInstance Class](../../database-engine/dev-guide/cinstance-class.md) object that represents a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client instance.  
+ A [CInstance Class](cinstance-class.md) object that represents a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client instance.  
   
 ## Property Value/Return Value  
  A string value that specifies the name of the instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  

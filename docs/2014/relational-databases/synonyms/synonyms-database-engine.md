@@ -141,7 +141,7 @@ GO
 ```  
   
 ## Related Content  
- [Create Synonyms](../relational-databases/synonyms/create-synonyms.md)  
+ [Create Synonyms](create-synonyms.md)  
   
  [CREATE SYNONYM &#40;Transact-SQL&#41;](~/t-sql/statements/create-synonym-transact-sql.md)  
   

@@ -73,7 +73,7 @@ manager: "jhubbard"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports Shared Memory, TCP/IP, and Named Pipes protocols. For information about choosing a network protocols, see [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support the VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk, or NWLink IPX/SPX network protocols. Clients previously connecting with these protocols must select a different protocol to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You cannot use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to configure the WinSock proxy. To configure the WinSock proxy, see your ISA Server documentation.  
   
 ## Related Tasks  
- [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../database-engine/configure-windows/sql-server-configuration-manager.md)  
+ [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
   
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

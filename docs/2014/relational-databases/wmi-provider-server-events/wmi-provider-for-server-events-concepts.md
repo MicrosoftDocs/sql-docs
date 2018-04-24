@@ -26,7 +26,7 @@ manager: "jhubbard"
   The WMI Provider for Server Events lets you use Windows Management Instrumentation (WMI) to monitor events in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## In This Section  
- [Understanding the WMI Provider for Server Events](../../database-engine/dev-guide/understanding-the-wmi-provider-for-server-events.md)  
+ [Understanding the WMI Provider for Server Events](understanding-the-wmi-provider-for-server-events.md)  
  Provides an overview of the provider architecture and how SQL Server Agent can be programmed to work with it.  
   
  [Working with the WMI Provider for Server Events](working-with-the-wmi-provider-for-server-events.md)  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  [Sample: Use the WMI Event Provider with the .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  Provides an example of using the WMI Provider to return event data in a C# application.  
   
- [WMI Provider for Server Events Classes and Properties](../../database-engine/dev-guide/wmi-provider-for-server-events-classes-and-properties.md)  
+ [WMI Provider for Server Events Classes and Properties](wmi-provider-for-server-events-classes-and-properties.md)  
  Introduces the event classes and properties that make up the programming mode of the provider.  
   
   

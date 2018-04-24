@@ -48,7 +48,7 @@ manager: "jhubbard"
 -   An error that has severity greater than 20 is raised inside the trigger body.  
   
 ## Disabling a Logon Trigger  
- A logon trigger can effectively prevent successful connections to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] for all users, including members of the `sysadmin` fixed server role. When a logon trigger is preventing connections, members of the `sysadmin` fixed server role can connect by using the dedicated administrator connection, or by starting the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] in minimal configuration mode (-f). For more information, see [Database Engine Service Startup Options](configure-windows/database-engine-service-startup-options.md).  
+ A logon trigger can effectively prevent successful connections to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] for all users, including members of the `sysadmin` fixed server role. When a logon trigger is preventing connections, members of the `sysadmin` fixed server role can connect by using the dedicated administrator connection, or by starting the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] in minimal configuration mode (-f). For more information, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ## Related Tasks  
   

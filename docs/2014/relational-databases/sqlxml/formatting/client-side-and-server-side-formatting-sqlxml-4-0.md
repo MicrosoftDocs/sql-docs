@@ -34,7 +34,7 @@ manager: "jhubbard"
  [Architecture of Client-side and Server-side XML Formatting &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
  Provides architectural diagrams and describes the basics of client- and server-side formatting architecture in SQLXML.  
   
- [Server-side XML Formatting &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/server-side-xml-formatting-sqlxml-4-0.md)  
+ [Server-side XML Formatting &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
  Describes server-side XML formatting.  
   
  [Client-side XML Formatting &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)  

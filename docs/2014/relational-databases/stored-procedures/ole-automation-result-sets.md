@@ -46,6 +46,6 @@ manager: "jhubbard"
 ## Related Content  
  [OLE Automation Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   
- [Ole Automation Procedures Server Configuration Option](configure-windows/ole-automation-procedures-server-configuration-option.md)  
+ [Ole Automation Procedures Server Configuration Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
   
   

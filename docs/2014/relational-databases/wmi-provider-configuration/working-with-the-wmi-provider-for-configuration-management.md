@@ -54,6 +54,6 @@ manager: "jhubbard"
  Security certificates are supported by the WMI Provider for Configuration Management. For more information about certificates, see [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md).  
   
 ## See Also  
- [SQL Server Configuration Manager](../../database-engine/configure-windows/sql-server-configuration-manager.md)  
+ [SQL Server Configuration Manager](../sql-server-configuration-manager.md)  
   
   

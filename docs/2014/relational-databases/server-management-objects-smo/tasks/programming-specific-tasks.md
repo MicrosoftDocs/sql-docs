@@ -42,12 +42,12 @@ manager: "jhubbard"
 |[Backing Up and Restoring Databases and Transaction Logs](backing-up-and-restoring-databases-and-transaction-logs.md)|Describes how to back up and restore databases and transaction logs in SMO.|  
 |[Scripting](scripting.md)|Describes how to script objects and discover dependencies between objects in SMO.|  
 |[Transferring Data](transferring-data.md)|Describes how to transfer data in SMO.|  
-|[Using Database Mail](../../../database-engine/dev-guide/database-mail.md)|Describes how SMO makes use of e-mail services.|  
+|[Using Database Mail](using-database-mail.md)|Describes how SMO makes use of e-mail services.|  
 |[Managing Service Broker](managing-service-broker.md)|Describes how to set up Service Broker using SMO.|  
 |[Using XML Schemas](using-xml-schemas.md)|Describes how to use the XML data type in SMO.|  
 |[Using Synonyms](using-synonyms.md)|Describes how to create synonyms in SMO.|  
 |[Using Messages](using-messages.md)|Describes how to use system messages, and how to define your own user-defined messages.|  
-|[Implementing Full-Text Search](../../../database-engine/full-text-search.md)|Describes how to implement full-text search catalogs and indexes in SMO.|  
+|[Implementing Full-Text Search](implementing-full-text-search.md)|Describes how to implement full-text search catalogs and indexes in SMO.|  
 |[Implementing Endpoints](implementing-endpoints.md)|Describes how to create endpoints to handle payloads for Database Mirroring, SOAP requests, and Service Broker.|  
 |[Creating and Updating Statistics](../../statistics/statistics.md)|Describes how to set up and monitor statistics on a database in SMO.|  
 |[Tracing and Replaying Events](tracing-and-replaying-events.md)|Describes how to use the `Trace` and `Replay` objects in SMO to trace and replay events.|  

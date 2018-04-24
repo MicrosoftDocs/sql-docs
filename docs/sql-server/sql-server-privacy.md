@@ -35,7 +35,7 @@ Definition of *Permitted usage Scenarios*. For the context of this article, Micr
 
 ***
 
->## Access Control
+## Access Control
 
 Credential-related information used to secure logins, users, or accounts within a SQL Server installation.
 
@@ -52,7 +52,7 @@ Credential-related information used to secure logins, users, or accounts within 
 |Crash Dumps may contain Access Control Data.     |-         |Crash Dumps: Maximum 30 days.         |
 |These credentials never leave the user machine via User Feedback unless Customer injects it manually    |Limit to Microsoft internal use with no third-party access.         |User Feedback: Max 1 year         |
  |
->## Customer Content
+## Customer Content
 
 Customer content is defined as data stored within user tables, directly or indirectly. The data includes statistics or user literals within query texts that might be stored within user tables.
 
@@ -93,7 +93,7 @@ Data received from a user, or generated from their use of the product.
 |Customer Identification ID may be emitted to Microsoft to deliver new hybrid and cloud features that the users have subscribed to. |- |Currently no such hybrid or cloud features exist.|
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft.|Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
->## Internet-Based Services Data
+## Internet-Based Services Data
 
 Data needed to provide Internet-based services,  per the SQL Server EULA.
 
@@ -114,7 +114,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal use with no third-party access. |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |
 |Power View and SQL Reporting Services Map Item(s) may send data for use of Bing Maps. |Limit to session data |- |
 
->## System Metadata
+## System Metadata
 
 Data generated in the course of running the server.  The data does not contain Customer content.
 
@@ -146,7 +146,7 @@ May be used by Microsoft for future product planning. |Microsoft may share this 
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 |May use database name and application name to categorize databases and applications into known categories, for example, those that may be running software provided by Microsoft or other companies.|Limit to Microsoft internal with no third-party access.|Min 90 days - Max 3 years |
 
->## Object Metadata
+## Object Metadata
 
 Data that describes or is used to configure servers, databases, tables, and other resources.  Object metadata includes database table and column names but not the contents of database rows or other Customer Content. Customers should not place personal data, such as end-user identifiable information in Object Metadata fields or create applications designed to store personal data in these fields. For the permitted usage scenario's below, only hash form is used to determine usage patterns to improve the product. 
 
@@ -162,7 +162,7 @@ Data that describes or is used to configure servers, databases, tables, and othe
 |---------|---------|---------|
 |May be used by Microsoft to improve features and or fix bugs in current features. |Limited to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years|
 
-### Telemetry Controls
+## Telemetry Controls
 
 Instructions on how Telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
 

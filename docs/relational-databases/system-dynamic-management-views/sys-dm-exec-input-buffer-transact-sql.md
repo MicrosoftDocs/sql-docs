@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2017"
@@ -62,7 +62,7 @@ The request_id from [sys.dm_exec_requests](../../relational-databases/system-dyn
 |**event_info**|**nvarchar(max)**|The text of the statement in the input buffer for the given spid.|  
   
 ## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the user has VIEW SERVER STATE permission , the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  
+ On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the user has VIEW SERVER STATE permission, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  
   
  On [!INCLUDE[ssSDS](../../includes/sssds-md.md)], if the user is the database owner, the user will see all executing sessions on the [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; otherwise, the user will see only the current session.  
   

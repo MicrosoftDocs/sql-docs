@@ -19,7 +19,7 @@ See what’s new in the latest Appliance Updates for Microsoft® Analytics Platf
 These are the new features for APS AU7:
 
 ### Auto-create and auto-update statistics
-APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](link-to-new-topic.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) statement.
+APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) statement.
 
 ### T-SQL
 Select @var is now supported. For more information, see [select local variable] (/sql/t-sql/language-elements/select-local-variable-transact-sql) 
@@ -27,7 +27,7 @@ Select @var is now supported. For more information, see [select local variable] 
 Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query ] (/sql/t-sql/language-elements/hints-transact-sql-query)
 
 ### Feature Switch
-APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.
+APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.
 
 ### Known Issues
 With APS AU7 software, we are packaging and providing the Intel BIOS update that fixes “speculative execution side-channel attacks” (aka. Spectre and Meltdown vulnerabilities). Though packaged together, the BIOS update is installed manually and not part of the APS AU7 software install. Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments and found some workloads with significant degradation. We recommend that you test the performance effect of enabling BIOS update before you deploy them in a production environment. If the performance effect of enabling these features is too high for an existing application, you can consider whether isolating your APS Appliance from untrusted code running is a better mitigation for your application. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).

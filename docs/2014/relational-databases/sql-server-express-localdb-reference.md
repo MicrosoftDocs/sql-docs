@@ -19,7 +19,7 @@ manager: "jhubbard"
 # SQL Server Express LocalDB Reference
   This section contains information about the SQL Server Express LocalDB:  
   
--   [SQL Server Express LocalDB Error Message Reference](sql-server-express-localdb-reference-error-messages.md)  
+-   [SQL Server Express LocalDB Error Message Reference](express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  
   
 -   [SQL Server Express LocalDB Instance API Reference](express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)  
   

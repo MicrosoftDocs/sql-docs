@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Using Table and Index Partitioning
-  Data can be stored by using the storage algorithms provided by [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md). Partitioning can make large tables and indexes more manageable and scalable.  
+  Data can be stored by using the storage algorithms provided by [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Partitioning can make large tables and indexes more manageable and scalable.  
   
 ## Index and Table Partitioning  
  The feature enables index and table data to be spread across multiple file groups in partitions. A partition function defines how the rows of a table or index are mapped to a set of partitions based on the values of certain columns, referred to as partitioning columns. A partition scheme maps each partition specified by the partition function to a file group. This lets you develop archiving strategies that enable tables to be scaled across file groups, and therefore physical devices.  
@@ -134,6 +134,6 @@ $ps.Create()
 ```  
   
 ## See Also  
- [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  
   
   

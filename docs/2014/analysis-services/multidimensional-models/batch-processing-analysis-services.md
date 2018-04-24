@@ -70,7 +70,7 @@ manager: "mblythe"
 ##  <a name="bkmk_xmla"></a> Batch Processing using XMLA in Management Studio  
  You can create an XMLA script that performs batch processing. Start by generating an XMLA script in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] for each object, and then combine them into a single XMLA Query that you run interactively or inside a scheduled task.  
   
- For step by step instructions, see **Example 2** in [Schedule SSAS Administrative Tasks with SQL Server Agent](../../ssms/agent/sql-server-agent.md)  
+ For step by step instructions, see **Example 2** in [Schedule SSAS Administrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
 ## See Also  
  [Multidimensional Model Object Processing](processing-a-multidimensional-model-analysis-services.md)  

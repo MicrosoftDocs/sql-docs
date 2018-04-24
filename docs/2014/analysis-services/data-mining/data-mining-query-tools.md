@@ -94,6 +94,6 @@ manager: "mblythe"
  [Understanding the DMX Select Statement](~/dmx/understanding-the-dmx-select-statement.md)   
  [Structure and Usage of DMX Prediction Queries](~/dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Create a Prediction Query Using the Prediction Query Builder](create-a-prediction-query-using-the-prediction-query-builder.md)   
- [Create a DMX Query in SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
+ [Create a DMX Query in SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

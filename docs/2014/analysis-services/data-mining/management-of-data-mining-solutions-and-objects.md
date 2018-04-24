@@ -65,7 +65,7 @@ manager: "mblythe"
 ## Managing Data Mining Objects in SQL Server Management Studio  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can script, process, or delete mining structures and mining models. You can view only a limited set of properties by using Object Explorer; however, you can view additional metadata about mining models by opening a **DMX Query** window and selecting a mining structure.  
   
--   [Create a DMX Query in SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Create a DMX Query in SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## Managing Data Mining Objects Programmatically  
  You can create, alter, process, and delete data mining objects by using the following programming languages. Each language is designed for different tasks and as a result, there might be restrictions on the type of operations that you can perform. For example, some properties of data mining objects cannot be changed by using Data Mining Extensions (DMX); you must use XMLA or AMO.  

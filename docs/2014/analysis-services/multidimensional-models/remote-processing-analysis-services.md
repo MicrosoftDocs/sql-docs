@@ -46,7 +46,7 @@ manager: "mblythe"
   
  Use the following links to set permissions:  
   
--   [Configure SQL Server Agent](../../ssms/agent/sql-server-agent.md)  
+-   [Configure SQL Server Agent](../../database-engine/configure-sql-server-agent.md)  
   
 -   [SQL Server Agent Components](../../database-engine/sql-server-agent.md#Components) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
   

@@ -32,7 +32,7 @@ manager: "mblythe"
   
  [Analysis Services Template Reference](#bkmk_Ref)  
   
- This topic does not cover DMX templates. For examples of how to create data mining queries using the templates, see [Create a DMX Query in SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) or [Create a Singleton Prediction Query from a Template](../data-mining/create-a-singleton-prediction-query-from-a-template.md).  
+ This topic does not cover DMX templates. For examples of how to create data mining queries using the templates, see [Create a DMX Query in SQL Server Management Studio](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) or [Create a Singleton Prediction Query from a Template](../data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
 ##  <a name="bkmk_usingTE"></a> Open an Analysis Services Template  
  All templates for database engine queries and Analysis Services queries and commands are available in Template Explorer.  

@@ -33,6 +33,6 @@ manager: "mblythe"
   
 ## See Also  
  [Define Custom Member Formulas](attribute-properties-define-custom-member-formulas.md)   
- [Unary Operators in Parent-Child Dimensions](../../ssms/agent/operators.md)  
+ [Unary Operators in Parent-Child Dimensions](parent-child-dimension-attributes-unary-operators.md)  
   
   

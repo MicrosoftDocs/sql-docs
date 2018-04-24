@@ -56,7 +56,7 @@ manager: "mblythe"
  SQL Server Data Tools is built on a Visual Studio shell and uses projects to organize and contain the model. For more information, see [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
 ### SQL Server Management Studio  
- For database administrators, SQL Server Management Studio is an integrated environment for managing your SQL Server instances, including instances of Analysis Services and multidimensional databases. For more information, see [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) and [Connect to Analysis Services](../../instances/connect-to-analysis-services.md).  
+ For database administrators, SQL Server Management Studio is an integrated environment for managing your SQL Server instances, including instances of Analysis Services and multidimensional databases. For more information, see [SQL Server Management Studio](../../../database-engine/sql-server-management-studio.md) and [Connect to Analysis Services](../../instances/connect-to-analysis-services.md).  
   
 ##  <a name="bkmk_querylang"></a> Query Languages  
  MDX is an industry standard query and calculation language used to retrieve data from OLAP databases. In Analysis Services, MDX is the query language used to retrieve data, but also supports data definition and data manipulation. MDX editors are built into SQL Server Management Studio, Reporting Services, and SQL Server Data Tools. You can use the MDX editors to create ad hoc queries or reusable script if the data operation is repeatable.  

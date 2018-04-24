@@ -84,6 +84,6 @@ manager: "mblythe"
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## See Also  
- [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Command Prompt Utility Reference &#40;Database Engine&#41;](../../database-engine/command-prompt-utility-reference-database-engine.md)  
   
   

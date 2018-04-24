@@ -1,20 +1,14 @@
 ---
 title: "Auto-Statistics (Analytics Platform System)"
-author: "mzaman1" 
-manager: ""	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
 description: "Describes auto-stats feature introduced in Analytics Platform System AU7."
-author: "" 
+author: "mzaman1" 
+manager: "craigg"	  
+ms.prod: "sql"
+ms.technology: "mpp-data-warehouse"
+ms.topic: "conceptual"
+ms.date: "04/24/2018"
 ms.author: "murshedz"
-ms.date: "04/05/2018"
-ms.topic: "article"
-
+ms.reviewer: martinle
 ---
 
 # Configure auto-stats
@@ -24,7 +18,7 @@ Learn how to configure Parallel Data Warehouse to use auto-stats for creating an
 **Applies to: **APS (starting with AU7)
 
 ## What are statistics?
-Statistics for query optimization are objects that contain statistical information about the distribution of values in one or more columns of a table. The query optimizer uses these statistics to estimate the cardinality, or number of rows, in the query result. These cardinality estimates enable the query optimizer to create a high-quality query plan. As an example, in APS, the MPP query optimizer uses cardinality estimates to choose to shuffle or replicate the smaller of two tables used in a join clause and in doing so improve query performance.  For more information, see [Statistics](../ relational-databases/statistics/statistics.md) and [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+Statistics for query optimization are objects that contain statistical information about the distribution of values in one or more columns of a table. The query optimizer uses these statistics to estimate the cardinality, or number of rows, in the query result. These cardinality estimates enable the query optimizer to create a high-quality query plan. As an example, in APS, the MPP query optimizer uses cardinality estimates to choose to shuffle or replicate the smaller of two tables used in a join clause and in doing so improve query performance.  For more information, see [Statistics](../relational-databases/statistics/statistics.md) and [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
 ## What are auto-stats?
 Auto-stats are statistics that the query optimizer creates and updates automatically to improve the query plan. Statistics can become out-of-date after loads, inserts, updates and deletes operations. Without auto-stats, you need to do your own analysis to understand which columns need statistics and when the statistics need to be updated.

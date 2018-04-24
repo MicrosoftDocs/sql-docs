@@ -42,7 +42,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || 
 |-----------------|---------------|-----------------|  
 |**cpu_ticks**|**bigint**|Specifies the current CPU tick count. CPU ticks are obtained from the processor's RDTSC counter. It is a monotonically increasing number. Not nullable.|  
 |**ms_ticks**|**bigint**|Specifies the number of milliseconds since the computer started. Not nullable.|  
-c|**cpu_count**|**int**|Specifies the number of logical CPUs on the system. Not nullable.|  
+|**cpu_count**|**int**|Specifies the number of logical CPUs on the system. Not nullable.|  
 |**hyperthread_ratio**|**int**|Specifies the ratio of the number of logical or physical cores that are exposed by one physical processor package. Not nullable.|  
 |**physical_memory_in_bytes**|**bigint**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Specifies the total amount of physical memory on the machine. Not nullable.|  
 |**physical_memory_kb**|**bigint**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Specifies the total amount of physical memory on the machine. Not nullable.|  

@@ -49,6 +49,6 @@ manager: "jhubbard"
  View the current polling interval for the target server.  
   
 ## See Also  
- [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)  
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
   
   

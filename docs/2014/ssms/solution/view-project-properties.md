@@ -32,6 +32,6 @@ manager: "jhubbard"
  Project properties, such as the date created, are read-only and cannot be changed from the Properties window.  
   
 ## See Also  
- [Solution Explorer](../../analysis-services/multidimensional-models/solution-explorer.md)  
+ [Solution Explorer](solution-explorer.md)  
   
   

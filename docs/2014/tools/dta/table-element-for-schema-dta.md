@@ -56,7 +56,7 @@ manager: "jhubbard"
  If you do not specify a `Table` element, Database Engine Tuning Advisor will assume all tables on the specified database can be tuned.  
   
 ## Example  
- For a usage example, see [Server Element &#40;DTA&#41;](../../database-engine/server-element-dta.md).  
+ For a usage example, see [Server Element &#40;DTA&#41;](server-element-dta.md).  
   
 ## See Also  
  [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

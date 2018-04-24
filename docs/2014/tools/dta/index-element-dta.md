@@ -63,13 +63,13 @@ manager: "jhubbard"
   
 |Relationship|Elements|  
 |------------------|--------------|  
-|**Parent element**|[Create Element &#40;DTA&#41;](../tools/dta/create-element-dta.md)<br /><br /> `Drop` Element. For more information, see the Database Engine Tuning Advisor XML schema.|  
-|**Child elements**|[Name Element for Index &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Column Element for Index &#40;DTA&#41;](../tools/dta/column-element-for-index-dta.md)<br /><br /> `PartitionScheme` Element. For more information, see the Database Engine Tuning Advisor XML schema.<br /><br /> `PartitionColumn` Element. For more information, see the Database Engine Tuning Advisor XML schema.<br /><br /> [Filegroup Element for Index &#40;DTA&#41;](../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` Element. For more information, see the Database Engine Tuning Advisor XML schema.<br /><br /> `PercentUsage` Element. For more information, see the Database Engine Tuning Advisor XML schema.|  
+|**Parent element**|[Create Element &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` Element. For more information, see the Database Engine Tuning Advisor XML schema.|  
+|**Child elements**|[Name Element for Index &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Column Element for Index &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` Element. For more information, see the Database Engine Tuning Advisor XML schema.<br /><br /> `PartitionColumn` Element. For more information, see the Database Engine Tuning Advisor XML schema.<br /><br /> [Filegroup Element for Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` Element. For more information, see the Database Engine Tuning Advisor XML schema.<br /><br /> `PercentUsage` Element. For more information, see the Database Engine Tuning Advisor XML schema.|  
   
 ## Example  
  For a usage example of this element, see the [XML Input File Sample with User-specified Configuration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md) .  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 -   [Force a WSFC Cluster to Start Without a Quorum](force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
--   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 -   [View Cluster Quorum NodeWeight Settings](view-cluster-quorum-nodeweight-settings.md)  
   

@@ -52,6 +52,6 @@ manager: "jhubbard"
  Clear the status of the selected download instruction.  
   
 ## See Also  
- [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)  
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
   
   

@@ -31,7 +31,7 @@ manager: "jhubbard"
 2.  View the connection properties in the Properties window. You can change the **Execution Timeout**, **Database**, and **Login Timeout** properties.  
   
 ## See Also  
- [Solution Explorer](../../analysis-services/multidimensional-models/solution-explorer.md)   
+ [Solution Explorer](solution-explorer.md)   
  [Associate a Query with a Connection in a Project](associate-a-query-with-a-connection-in-a-project.md)   
  [Change the Connection Associated with a Query](change-the-connection-associated-with-a-query.md)  
   

@@ -57,7 +57,7 @@ manager: "jhubbard"
   
  The following figure shows the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay physical architecture:  
   
- ![Distributed Replay Architecture](../../2014/database-engine/media/distributedreplayarch.gif "Distributed Replay Architecture")  
+ ![Distributed Replay Architecture](../../database-engine/media/distributedreplayarch.gif "Distributed Replay Architecture")  
   
 ## Distributed Replay Tasks  
   

@@ -88,7 +88,7 @@ manager: "jhubbard"
   
 -   Run a job  
   
- For more information, see [Alerts](../../reporting-services/alerts.md).  
+ For more information, see [Alerts](alerts.md).  
   
 ### Operators  
  An *operator* defines contact information for an individual responsible for the maintenance of one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In some enterprises, operator responsibilities are assigned to one individual. In enterprises with multiple servers, many individuals can share operator responsibilities. An operator does not contain security information, and does not define a security principal.  
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
  To send notifications to operators by using e-mail or pagers, you must configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use Database Mail. For more information, see [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
- You can define an operator as the alias for a group of individuals. In this way, all members of that alias are notified at the same time. For more information, see [Operators](../../analysis-services/multidimensional-models/operators.md).  
+ You can define an operator as the alias for a group of individuals. In this way, all members of that alias are notified at the same time. For more information, see [Operators](operators.md).  
   
 ##  <a name="Security"></a> Security for SQL Server Agent Administration  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uses the **SQLAgentUserRole**, **SQLAgentReaderRole**, and **SQLAgentOperatorRole** fixed database roles in the **msdb** database to control access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for users who are not members of the `sysadmin` fixed server role. In addition to these fixed database roles, subsystems and proxies help database administrators ensure that each job step runs with the minimum permissions required to perform its task.  
@@ -158,14 +158,14 @@ manager: "jhubbard"
 > [!NOTE]  
 >  For the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is named SQLSERVERAGENT. For named instances, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is named SQLAgent$*instancename*.  
   
- If you are running multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use multiserver administration to automate tasks common across all instances. For more information, see [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md).  
+ If you are running multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use multiserver administration to automate tasks common across all instances. For more information, see [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md).  
   
  Use the following tasks to get started with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
   
 |||  
 |-|-|  
 |**Description**|**Topic**|  
-|Describes how to configure SQL Server Agent.|[Configure SQL Server Agent](../../analysis-services/instances/sql-server-agent.md)|  
+|Describes how to configure SQL Server Agent.|[Configure SQL Server Agent](configure-sql-server-agent.md)|  
 |Describes how to start, stop, and pause the SQL Server Agent service.|[Start, Stop, or Pause the SQL Server Agent Service](start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Describes considerations for specifying an account for the SQL Server Agent service.|[Select an Account for the SQL Server Agent Service](select-an-account-for-the-sql-server-agent-service.md)|  
 |Describes how to use the SQL Server Agent error log.|[SQL Server Agent Error Log](sql-server-agent-error-log.md)|  

@@ -49,7 +49,7 @@ manager: "jhubbard"
 ## Event Class Column Mapping  
  The following figure lists which columns of the result trace are available for each type of event class that is captured during the replay.  
   
- ![Event class column mapping](../../2014/database-engine/media/eventclassmappings.gif "Event class column mapping")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## Column Descriptions for Result Trace  
  The following table describes the columns of the result trace data.  
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
  [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configure Distributed Replay](configure-distributed-replay.md)  
   

@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 |Relationship|Elements|  
 |------------------|--------------|  
-|**Parent element**|[Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md)|  
+|**Parent element**|[Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
 |**Child elements**|[File Element &#40;DTA&#41;](file-element-dta.md)<br /><br /> [Database Element for Workload &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString Element &#40;DTA&#41;](eventstring-element-dta.md)|  
   
 ## Remarks  

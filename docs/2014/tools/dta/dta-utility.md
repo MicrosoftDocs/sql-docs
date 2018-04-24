@@ -132,7 +132,7 @@ dta -d AdventureWorks2012 ...
   
  If multiple database names are specified, then **dta** returns an error. The **-d** argument is optional.  
   
- If you are using an XML input file, you can specify the first database to which **dta** connects by using the `DatabaseToConnect` element that is located under the `TuningOptions` element. For more information, see [Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+ If you are using an XML input file, you can specify the first database to which **dta** connects by using the `DatabaseToConnect` element that is located under the `TuningOptions` element. For more information, see [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  If you are tuning only one database, the **-d** argument provides functionality that is similar to the **-d** argument in the **sqlcmd** utility, but it does not execute the USE *database_name* statement. For more information, see [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -169,7 +169,7 @@ dta -d AdventureWorks2012 ...
 |NCL_IDX|Nonclustered indexes only.|  
   
  **-fi**  
- Specifies that filtered indexes be considered for new recommendations. For more information, see [Create Filtered Indexes](../../database-engine/indexes.md).  
+ Specifies that filtered indexes be considered for new recommendations. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **-fk** *keep_existing_option*  
  Specifies what existing physical design structures **dta** must retain when generating its recommendation. The following table lists and describes the values that can be specified for this argument:  
@@ -388,6 +388,6 @@ dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.tx
   
 ## See Also  
  [Command Prompt Utility Reference &#40;Database Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

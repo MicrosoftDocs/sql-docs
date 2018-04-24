@@ -46,7 +46,7 @@ manager: "jhubbard"
  Type the name of an operator to receive net send notification of messages that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent writes to the log file.  
   
 ## See Also  
- [Operators](../../analysis-services/multidimensional-models/operators.md)   
+ [Operators](operators.md)   
  [SQL Server Agent Error Log](sql-server-agent-error-log.md)  
   
   

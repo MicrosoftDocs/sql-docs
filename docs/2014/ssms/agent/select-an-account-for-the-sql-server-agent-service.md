@@ -114,7 +114,7 @@ manager: "jhubbard"
 ## Common Tasks  
  **To specify the startup account for the SQL Server Agent service**  
   
--   [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/sql-server-configuration-manager.md)  
+-   [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
  **To specify the mail profile for SQL Server Agent**  
   

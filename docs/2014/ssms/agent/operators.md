@@ -120,6 +120,6 @@ manager: "jhubbard"
 |Tasks related to assigning alerts|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
   
 ## See Also  
- [Database Mail](../relational-databases/database-mail/database-mail.md)  
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

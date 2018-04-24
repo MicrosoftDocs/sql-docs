@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  **To send SQL Server Agent error messages**  
   
--   [Send SQL Server Agent Error Messages](../../relational-databases/express-localdb-error-messages/error-messages.md)  
+-   [Send SQL Server Agent Error Messages](send-sql-server-agent-error-messages.md)  
   
  **To write execution trace messages to the SQL Server Agent error log**  
   

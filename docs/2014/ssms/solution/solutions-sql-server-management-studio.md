@@ -51,7 +51,7 @@ manager: "jhubbard"
 |Describes how to rename a solution or the items in the solution.|[Rename Solutions and Project Items](rename-solutions-and-project-items.md)|  
   
 ## See Also  
- [Solution Explorer](../../analysis-services/multidimensional-models/solution-explorer.md)   
+ [Solution Explorer](solution-explorer.md)   
  [Projects &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)   
  [Solution Explorer Source Control](../../database-engine/solution-explorer-source-control.md)  
   

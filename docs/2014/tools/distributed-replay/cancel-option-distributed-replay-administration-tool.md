@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  The **cancel** option cancels the current operation that is running on the controller.  
   
- ![Topic link icon](../../2014/database-engine/media/topic-link.gif "Topic link icon") For more information about the syntax conventions that are used with the administration tool syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](~/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Topic link icon](../../database-engine/media/topic-link.gif "Topic link icon") For more information about the syntax conventions that are used with the administration tool syntax, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](~/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
   

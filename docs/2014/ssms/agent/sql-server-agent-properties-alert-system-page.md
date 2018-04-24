@@ -102,7 +102,7 @@ manager: "jhubbard"
  Select this check box to enable token replacement for jobs that are activated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerts.  
   
 ## See Also  
- [Operators](../../analysis-services/multidimensional-models/operators.md)   
+ [Operators](operators.md)   
  [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

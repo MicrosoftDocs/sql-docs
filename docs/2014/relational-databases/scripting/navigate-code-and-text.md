@@ -38,7 +38,7 @@ manager: "jhubbard"
 -   The **Go To** command.  
   
 > [!NOTE]  
->  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../database-engine/sql-server-management-studio-keyboard-shortcuts.md).  
+>  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## Navigating with Bookmarks  
  To edit a document elsewhere and then return to your original location, add a bookmark. You set bookmarks and move to them using keyboard shortcuts. View the bookmarks in the bookmark window.  

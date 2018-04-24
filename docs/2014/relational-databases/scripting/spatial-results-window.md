@@ -47,9 +47,9 @@ manager: "jhubbard"
 >  Point instances cannot be labeled.  
   
 ## See Also  
- [View Spatial Data in Object Explorer](view-spatial-data-in-object-explorer.md)   
+ [View Spatial Data in Object Explorer](../../ssms/object/object-explorer.md)   
  [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Query and Text Editors &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

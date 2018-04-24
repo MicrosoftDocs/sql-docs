@@ -145,7 +145,7 @@ manager: "mblythe"
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server Data Processing Extension  
  The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../includes/vcprx64-md.md)]-based platforms.  
   
- In [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], the query designer associated with this data extension is the [Visual Database Tool Designer](../../2014/database-engine/visual-database-tool-designers.md). If you use the query designer in graphical mode, the query is analyzed and possibly rewritten. Use the text-based query designer when you want to control the exact [!INCLUDE[tsql](../includes/tsql-md.md)] syntax that is used for a query. For more information, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../../2014/database-engine/query-and-view-designer-tools-visual-database-tools.md) and [Graphical Query Designer User Interface](../../2014/reporting-services/graphical-query-designer-user-interface.md).  
+ In [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], the query designer associated with this data extension is the [Visual Database Tool Designer](../ssms/visual-db-tools/visual-database-tool-designers.md). If you use the query designer in graphical mode, the query is analyzed and possibly rewritten. Use the text-based query designer when you want to control the exact [!INCLUDE[tsql](../includes/tsql-md.md)] syntax that is used for a query. For more information, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md) and [Graphical Query Designer User Interface](../../2014/reporting-services/graphical-query-designer-user-interface.md).  
   
  For more information, see [SQL Server Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-server-connection-type-ssrs.md).  
   
@@ -156,7 +156,7 @@ manager: "mblythe"
 ###  <a name="Azure"></a> Windows Azure SQL Database Processing Extension  
  The data source type **[!INCLUDE[ssSDS](../includes/sssds-md.md)]** wraps and extends the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- In [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], the graphical query designer associated with this data extension is the [Relational Query Designer User Interface](../../2014/reporting-services/relational-query-designer-user-interface.md), not the [Visual Database Tool Designer](../../2014/database-engine/visual-database-tool-designers.md) that you use with the **Microsoft SQL Server** data source type.  
+ In [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], the graphical query designer associated with this data extension is the [Relational Query Designer User Interface](../../2014/reporting-services/relational-query-designer-user-interface.md), not the [Visual Database Tool Designer](../ssms/visual-db-tools/visual-database-tool-designers.md) that you use with the **Microsoft SQL Server** data source type.  
   
  [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] automatically differentiates between **[!INCLUDE[ssSDS](../includes/sssds-md.md)]** and **Microsoft SQL Server** data source types and opens the graphical query designer associated with the data source type.  
   
@@ -167,7 +167,7 @@ manager: "mblythe"
  [Return to Data sources table](#DataSourcesTable)  
   
 ###  <a name="PWD"></a> Microsoft SQL Server Parallel Data Warehouse Processing Extension  
- In [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], the graphical query designer associated with this data extension is the [Relational Query Designer User Interface](../../2014/reporting-services/relational-query-designer-user-interface.md), not the [Visual Database Tool Designer](../../2014/database-engine/visual-database-tool-designers.md) that you use with the **Microsoft SQL Server** data source type.  
+ In [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], the graphical query designer associated with this data extension is the [Relational Query Designer User Interface](../../2014/reporting-services/relational-query-designer-user-interface.md), not the [Visual Database Tool Designer](../ssms/visual-db-tools/visual-database-tool-designers.md) that you use with the **Microsoft SQL Server** data source type.  
   
  [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] automatically differentiates between **SQL Server Parallel Data Warehouse** and **Microsoft SQL Server** data source types and opens the graphical query designer associated with the data source type.  
   
@@ -189,7 +189,7 @@ manager: "mblythe"
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  The OLE DB data processing extension requires the choice of an additional data provider layer based on the version of the data source you want to use in your report. If you do not select a specific data provider, a default is provided. Choose a specific data provider through the **Connection Properties** dialog box, accessed through the **Edit** button on the [Data Source](../../2014/reporting-services/data-source-properties-dialog-box-general.md) or [Shared Data Source](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md) dialog boxes.  
   
- For more information about the OLE DB associated query designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../../2014/database-engine/query-and-view-designer-tools-visual-database-tools.md) and [Graphical Query Designer User Interface](../../2014/reporting-services/graphical-query-designer-user-interface.md). For more information about specific support for OLE DB providers, see [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](http://support.microsoft.com/default.aspx/kb/811241) in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base.  
+ For more information about the OLE DB associated query designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md) and [Graphical Query Designer User Interface](../../2014/reporting-services/graphical-query-designer-user-interface.md). For more information about specific support for OLE DB providers, see [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](http://support.microsoft.com/default.aspx/kb/811241) in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base.  
   
  [Return to Data sources table](#DataSourcesTable)  
   
@@ -255,7 +255,7 @@ manager: "mblythe"
   
  You can retrieve data from stored procedures with multiple input parameters, but the stored procedure must return only one output cursor. For more information, see the Oracle section in [Retrieving Data Using the DataReader](http://go.microsoft.com/fwlink/?LinkId=81758).  
   
- For more information, see [Oracle Connection Type &#40;SSRS&#41;](../../2014/reporting-services/oracle-connection-type-ssrs.md). For more information about the associated query designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../../2014/database-engine/query-and-view-designer-tools-visual-database-tools.md) and [Graphical Query Designer User Interface](../../2014/reporting-services/graphical-query-designer-user-interface.md).  
+ For more information, see [Oracle Connection Type &#40;SSRS&#41;](../../2014/reporting-services/oracle-connection-type-ssrs.md). For more information about the associated query designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md) and [Graphical Query Designer User Interface](../../2014/reporting-services/graphical-query-designer-user-interface.md).  
   
  You can also create models based on an Oracle database.  
   

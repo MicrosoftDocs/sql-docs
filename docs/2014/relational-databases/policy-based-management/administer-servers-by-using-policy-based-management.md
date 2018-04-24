@@ -127,7 +127,7 @@ manager: "jhubbard"
 |Describes how to verify that a server instance, database, server object, or database object complies with a policy.|[Evaluate a Policy-Based Management Policy from an Object](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Evaluate a Policy-Based Management Policy from That Policy](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Evaluate a Policy-Based Management Policy on a Schedule](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |Describes how to view and copy a Policy-based Management facet state to a file.|[Working with Policy-Based Management Facets](working-with-policy-based-management-facets.md)|  
 |Provides a set of policy files that you can import as best practice policies, and describes how to evaluate the policies against a target set that includes instances, instance objects, databases, or database objects.|[Monitor and Enforce Best Practices by Using Policy-Based Management](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|Provides the F1 Help topics for the **PolicyManagement** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Policy Management Node &#40;Object Explorer&#41;](policy-management-node-object-explorer.md)|  
+|Provides the F1 Help topics for the **PolicyManagement** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Policy Management Node &#40;Object Explorer&#41;](../../ssms/object/object-explorer.md)|  
   
 ## See Also  
  [Policy-Based Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  

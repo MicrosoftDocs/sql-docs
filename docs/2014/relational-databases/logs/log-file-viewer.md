@@ -51,6 +51,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Audit &#40;Database Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)   
- [SQL Server Agent Error Log](../../database-engine/sql-server-agent-error-log.md)  
+ [SQL Server Agent Error Log](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

@@ -119,7 +119,7 @@ manager: "jhubbard"
 ## Rebuilding a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Failover Cluster Node  
  If you must rebuild a node in the failover cluster after updates were applied, follow these steps:  
   
-1.  Rebuild the node in the failover cluster. For more information about rebuilding a node, see [Recover from Failover Cluster Instance Failure](../../../2014/database-engine/recover-from-failover-cluster-instance-failure.md).  
+1.  Rebuild the node in the failover cluster. For more information about rebuilding a node, see [Recover from Failover Cluster Instance Failure](../failover-clusters/windows/recover-from-failover-cluster-instance-failure.md).  
   
 2.  Run the original [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup program to install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on the failover cluster node.  
   

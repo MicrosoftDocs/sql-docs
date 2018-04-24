@@ -74,9 +74,9 @@ manager: "jhubbard"
 |[Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md)|The Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review.|  
   
 ## See Also  
- [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)   
+ [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Database Engine Tuning Advisor](database-engine-tuning-advisor.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server Profiler](../../database-engine/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

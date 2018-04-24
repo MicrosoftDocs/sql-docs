@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Make sure you have all the information or scripts needed to re-create your user databases and all the objects in them.  
   
--   Export all your data using a tool such as the [bcp Utility](../../database-engine/bcp-utility.md). For more information, see [Bulk Import and Export of Data &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+-   Export all your data using a tool such as the [bcp Utility](../../tools/bcp-utility.md). For more information, see [Bulk Import and Export of Data &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
 -   Drop all the user databases.  
   

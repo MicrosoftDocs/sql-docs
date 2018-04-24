@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  This tutorial is divided into three lessons:  
   
- [Lesson 1: Basic Navigation in SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+ [Lesson 1: Basic Navigation in SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
  In this lesson you will learn how to use the components of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], how to reconfigure the environment layout, and how to restore the default layout.  
   
  [Lesson 2: Writing Transact-SQL](lesson-2-writing-transact-sql.md)  

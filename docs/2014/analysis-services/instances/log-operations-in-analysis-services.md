@@ -179,7 +179,7 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Instance Management](analysis-services-instance-management.md)   
- [Introduction to Monitoring Analysis Services with SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Introduction to Monitoring Analysis Services with SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)  
   
   

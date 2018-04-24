@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 -   [Change Roles Between Primary and Secondary Log Shipping Servers &#40;SQL Server&#41;](change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   
--   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## See Also  
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)   

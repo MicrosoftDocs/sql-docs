@@ -72,7 +72,7 @@ manager: "jhubbard"
   
      The monitor displays the status, including performance metrics, for a selected database on the **Status** tabbed page. The content of this page comes from both the principal and mirror server instances. The page is filled asynchronously as status is gathered through separate connections to the principal and mirror server instances. The monitor tries to update the status table at 30-second intervals. The update succeeds only if the table has not been updated within 15 seconds and the user is a member of the **sysadmin** fixed server role. For a summary of the information reported on the **Status** page, see [Status Displayed by the Database Mirroring Monitor](#perf_metrics_of_dbm_monitor), later in this topic.  
   
-     For an introduction to the Database Mirroring Monitor interface, see [Database Mirroring Monitor Overview](database-mirroring-monitor-overview.md). For information on launching Database Mirroring Monitor, see [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md).  
+     For an introduction to the Database Mirroring Monitor interface, see [Database Mirroring Monitor Overview](database-mirroring-monitor-overview.md). For information on launching Database Mirroring Monitor, see [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
 -   System stored procedures  
   
@@ -303,7 +303,7 @@ manager: "jhubbard"
   
 -   [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
--   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)  
+-   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   

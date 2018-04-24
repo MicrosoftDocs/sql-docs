@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ##  <a name="LaunchWiz"></a> Related Tasks  
   
--   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Use the Add Database to Availability Group Wizard &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   

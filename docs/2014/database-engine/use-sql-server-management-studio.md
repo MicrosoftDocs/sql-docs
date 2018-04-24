@@ -27,25 +27,25 @@ manager: "jhubbard"
  Download and install SSMS from the [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## In This Section  
- [Features in SQL Server Management Studio](../../2014/database-engine/features-in-sql-server-management-studio.md)  
+ [Features in SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
  Lists the rich feature set included in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Tool Windows in SQL Server Management Studio](../../2014/database-engine/tool-windows-in-sql-server-management-studio.md)  
+ [Tool Windows in SQL Server Management Studio](../ssms/tool-windows-in-sql-server-management-studio.md)  
  Describes the tools that are components of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Understand SQL Server Management Studio Windows Management](../../2014/database-engine/understand-sql-server-management-studio-windows-management.md)  
+ [Understand SQL Server Management Studio Windows Management](../ssms/understand-sql-server-management-studio-windows-management.md)  
  Describes how to manage the windows displayed in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Administer Servers with SQL Server Management Studio](../../2014/database-engine/administer-servers-with-sql-server-management-studio.md)  
+ [Administer Servers with SQL Server Management Studio](../ssms/administer-servers-with-sql-server-management-studio.md)  
  Describes how to administer instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Connect to Any SQL Server Component from SQL Server Management Studio](../../2014/database-engine/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
+ [Connect to Any SQL Server Component from SQL Server Management Studio](../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
  Describes how to connect to instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and how to perform certain tasks without a connection.  
   
- [Object Explorer](../../2014/database-engine/object-explorer.md)  
+ [Object Explorer](../ssms/object/object-explorer.md)  
  Describes the features of the Object Explorer.  
   
- [User Assistance in SQL Server Management Studio](../../2014/database-engine/user-assistance-in-sql-server-management-studio.md)  
+ [User Assistance in SQL Server Management Studio](../ssms/user-assistance-in-sql-server-management-studio.md)  
  Describes how to configure user assistance, such as Help, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  [Query and Text Editors &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
@@ -57,22 +57,22 @@ manager: "jhubbard"
  [Color Coding in Query Editors](../relational-databases/scripting/color-coding-in-query-editors.md)  
  Describes the meaning of the color coding in Code Editor windows.  
   
- [SQL Server Management Studio Keyboard Shortcuts](../../2014/database-engine/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
  Lists the keyboard shortcuts available in the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Customize Menus and Shortcut Keys](../../2014/database-engine/customize-menus-and-shortcut-keys.md)  
+ [Customize Menus and Shortcut Keys](../ssms/customize-menus-and-shortcut-keys.md)  
  Describes how to create custom menus and shortcuts.  
   
- [Solutions &#40;SQL Server Management Studio&#41;](../../2014/database-engine/solutions-sql-server-management-studio.md)  
+ [Solutions &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
  Describes how to develop script projects and solutions.  
   
- [Template Explorer](../../2014/database-engine/template-explorer.md)  
+ [Template Explorer](../ssms/template/template-explorer.md)  
  Describes how to use the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] templates and how to create custom templates.  
   
- [Property Pages in SQL Server Management Studio](../../2014/database-engine/property-pages-in-sql-server-management-studio.md)  
+ [Property Pages in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)  
  Describes the new property window layout in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Visual Database Tool Designers](../../2014/database-engine/visual-database-tool-designers.md)  
+ [Visual Database Tool Designers](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  Describes the Visual Database Tools that you can use to create queries, design or modify a database structure, or update data.  
   
 ## See Also  

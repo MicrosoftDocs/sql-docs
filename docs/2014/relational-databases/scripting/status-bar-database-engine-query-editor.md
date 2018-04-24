@@ -84,6 +84,6 @@ manager: "jhubbard"
 -   Fill in the rest of the connection information, and then select the **Connect** button.  
   
 ## See Also  
- [Query and Text Editors &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

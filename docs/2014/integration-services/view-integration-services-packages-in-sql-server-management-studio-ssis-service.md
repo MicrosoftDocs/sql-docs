@@ -44,6 +44,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Package Management &#40;SSIS Service&#41;](../../2014/integration-services/package-management-ssis-service.md)   
- [Use SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md)  
+ [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
   
   

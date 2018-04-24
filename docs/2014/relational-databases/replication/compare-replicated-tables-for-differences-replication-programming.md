@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 ### To compare replicated tables for differences using tablediff  
   
-1.  From the command prompt at any server in a replication topology, run the [tablediff Utility](../../database-engine/tablediff-utility.md). Specify the following parameters:  
+1.  From the command prompt at any server in a replication topology, run the [tablediff Utility](../../tools/tablediff-utility.md). Specify the following parameters:  
   
     -   **-sourceserver** - name of the server on which the data is known to be correct, usually the Publisher.  
   

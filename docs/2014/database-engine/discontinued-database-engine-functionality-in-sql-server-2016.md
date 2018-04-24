@@ -56,7 +56,7 @@ manager: "jhubbard"
 |Backup and Restore|**BACKUP { DATABASE &#124; LOG } WITH PASSWORD** and **BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD** are discontinued. **RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD**continues to be deprecated.|None|  
 |Backup and Restore|**RESTORE { DATABASE &#124; LOG } … WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } … … WITH RESTRICTED_USER**|  
 |Compatibility level|80 compatibility level|Databases must be set to at least compatibility level 90.|  
-|Configuration Options|`sp_configure 'user instance timeout'` and `'user instances enabled'`|Use the Local Database feature. For more information, see [SqlLocalDB Utility](sqllocaldb-utility.md)|  
+|Configuration Options|`sp_configure 'user instance timeout'` and `'user instances enabled'`|Use the Local Database feature. For more information, see [SqlLocalDB Utility](../tools/sqllocaldb-utility.md)|  
 |Connection protocols|Support for the VIA protocol is discontinued.|Use TCP instead.|  
 |Database objects|`WITH APPEND` clause on triggers|Re-create the whole trigger.|  
 |Database options|`sp_dboption`|`ALTER DATABASE`|  

@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 -   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## See Also  
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  

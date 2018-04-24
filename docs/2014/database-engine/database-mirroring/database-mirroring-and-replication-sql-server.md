@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   Replication supports mirroring the publication database for merge replication and for transactional replication with read-only Subscribers or queued updating Subscribers. Immediate updating Subscribers, Oracle Publishers, Publishers in a peer-to-peer topology, and republishing are not supported.  
   
--   Metadata and objects that exist outside the database are not copied to the mirror, including logins, jobs, linked servers, and so on. If you require the metadata and objects at the mirror, you must copy them manually. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+-   Metadata and objects that exist outside the database are not copied to the mirror, including logins, jobs, linked servers, and so on. If you require the metadata and objects at the mirror, you must copy them manually. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
 ## Configuring Replication with Database Mirroring  
  Configuring replication and database mirroring involves five steps. Each step is described in more detail in the following section.  

@@ -71,7 +71,7 @@ manager: "jhubbard"
 4.  In the **Job Properties - \<Job>** dialog box, modify any properties if necessary, and then click **OK**.  
   
 ## See Also  
- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [Replication Agent Administration](replication-agent-administration.md)  
   

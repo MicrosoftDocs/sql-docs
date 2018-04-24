@@ -22,20 +22,20 @@ manager: "jhubbard"
   Find the tools, languages, and administration programming reference documentation for the [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Feature Reference**  
- [Registered Servers F1 Help](../../2014/database-engine/registered-servers-f1-help.md)  
+ [Registered Servers F1 Help](../ssms/register-servers/registered-servers-f1-help.md)  
   
- [SQL Server Management Studio Menu Help](../../2014/database-engine/sql-server-management-studio-menu-help.md)  
+ [SQL Server Management Studio Menu Help](../ssms/menu-help/sql-server-management-studio-menu-help.md)  
   
- [Visual Database Tools F1 Help](../../2014/database-engine/visual-database-tools-f1-help.md)  
+ [Visual Database Tools F1 Help](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Command Prompt Utility Reference**  
- [bcp Utility](../../2014/database-engine/bcp-utility.md)  
+ [bcp Utility](../tools/bcp-utility.md)  
   
- [dta Utility](../../2014/database-engine/dta-utility.md)  
+ [dta Utility](../tools/dta/dta-utility.md)  
   
- [SqlLocalDB Utility](../../2014/database-engine/sqllocaldb-utility.md)  
+ [SqlLocalDB Utility](../tools/sqllocaldb-utility.md)  
   
- [More…](../../2014/database-engine/command-prompt-utility-reference-database-engine.md)  
+ [More…](../tools/command-prompt-utility-reference-database-engine.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Database Engine PowerShell Cmdlets**  
  [Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  

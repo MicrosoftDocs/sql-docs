@@ -147,7 +147,7 @@ manager: "jhubbard"
   
 -   [Remove Log Shipping &#40;SQL Server&#41;](/remove-log-shipping-sql-server.md)  
   
--   [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](/view-the-log-shipping-report-sql-server-management-studio.md)  
+-   [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Monitor Log Shipping &#40;Transact-SQL&#41;](/monitor-log-shipping-transact-sql.md)  
   
@@ -155,7 +155,7 @@ manager: "jhubbard"
   
 -   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

@@ -48,8 +48,8 @@ manager: "jhubbard"
 |**TSQL**|Information for job steps that execute [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## See Also  
- [Manage Job Steps](../../database-engine/manage-job-steps.md)   
- [Use Performance Objects](../../database-engine/use-performance-objects.md)   
+ [Manage Job Steps](../../ssms/agent/manage-job-steps.md)   
+ [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

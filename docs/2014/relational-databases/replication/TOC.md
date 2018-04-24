@@ -66,7 +66,7 @@
 ##### [Replication Agent Profiles](replication-agent-profiles.md)
 ##### [Use Alerts for Replication Agent Events](use-alerts-for-replication-agent-events.md)
 ##### [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)
-##### [Start and Stop a Replication Agent (SQL Server Management Studio)](start-and-stop-a-replication-agent-sql-server-management-studio.md)
+##### [Start and Stop a Replication Agent (SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)
 ##### [View and Modify Replication Agent Command Prompt Parameters (SQL Server Management Studio)](view-and-modify-replication-agent-command-prompt-parameters.md)
 ### [Republish Data](republish-data.md)
 ### [Replication over the Internet](replication-over-the-internet.md)

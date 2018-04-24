@@ -63,6 +63,6 @@ manager: "jhubbard"
  Returns the filter settings back to the default settings.  
   
 ## See Also  
- [Monitor Job Activity](../../database-engine/monitor-job-activity.md)  
+ [Monitor Job Activity](../../ssms/agent/monitor-job-activity.md)  
   
   

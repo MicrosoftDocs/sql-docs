@@ -170,9 +170,9 @@ manager: "jhubbard"
   
 -   [Create a Maintenance Plan](../maintenance-plans/create-a-maintenance-plan.md)  
   
--   [Create a Job](../../database-engine/create-a-job.md)  
+-   [Create a Job](../../ssms/agent/create-a-job.md)  
   
--   [Schedule a Job](../../database-engine/schedule-a-job.md)  
+-   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
   
 ### Working with Backup Devices and Backup Media  
   
@@ -249,7 +249,7 @@ manager: "jhubbard"
 ### Restoring Transaction Logs (Full Recovery Model)  
  **Using SQL Server Management Studio**  
   
--   [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
+-   [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   

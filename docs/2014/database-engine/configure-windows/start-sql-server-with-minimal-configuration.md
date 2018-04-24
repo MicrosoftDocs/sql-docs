@@ -35,9 +35,9 @@ manager: "jhubbard"
 >  Use the **sqlcmd** utility and the dedicated administrator connection (DAC) to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you use a typical connection, stop the SQL Server Agent service before connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in minimal configuration mode. Otherwise, the SQL Server Agent service uses the connection, thereby blocking it.  
   
 ## See Also  
- [Start, Stop, or Pause the SQL Server Agent Service](../start-stop-or-pause-the-sql-server-agent-service.md)   
+ [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Diagnostic Connection for Database Administrators](diagnostic-connection-for-database-administrators.md)   
- [sqlcmd Utility](../sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Database Engine Service Startup Options](database-engine-service-startup-options.md)  

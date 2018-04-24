@@ -42,6 +42,6 @@ manager: "jhubbard"
 6.  To view more information about an event, double-click the event.  
   
 ## See Also  
- [View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](view-the-sql-server-error-log-sql-server-management-studio.md)  
+ [View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

@@ -65,7 +65,7 @@ manager: "jhubbard"
  Enter the password for the login. This option is editable only if you have selected to connect by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
 ## See Also  
- [Policy Management Node &#40;Object Explorer&#41;](policy-management-node-object-explorer.md)   
+ [Policy Management Node &#40;Object Explorer&#41;](../../ssms/object/object-explorer.md)   
  [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)  
   
   

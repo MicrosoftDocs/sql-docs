@@ -45,7 +45,7 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [sqlcmd Utility](../sqlcmd-utility.md)   
- [osql Utility](../osql-utility.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [osql Utility](../../tools/osql-utility.md)  
   
   

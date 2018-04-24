@@ -37,7 +37,7 @@ manager: "jhubbard"
 ##  <a name="PShellJob"></a> Create a PowerShell Job Step  
  **To create a PowerShell job step**  
   
-1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](../database-engine/create-jobs.md).  
+1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](../ssms/agent/create-jobs.md).  
   
 2.  In the **Job Properties** dialog, click the **Steps** page, and then click **New**.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
 ##  <a name="CmdExecJob"></a> Create a Command Prompt Job Step  
  **To create a CmdExec job step**  
   
-1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](../database-engine/create-jobs.md).  
+1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](../ssms/agent/create-jobs.md).  
   
 2.  In the **Job Properties** dialog, click the **Steps** page, and then click **New**.  
   

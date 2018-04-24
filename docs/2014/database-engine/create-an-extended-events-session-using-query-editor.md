@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   Troubleshoot deadlocks  
   
- For information about how to create an Extended Events session using the New Session Wizard, see [Create an Extended Events Session Using the Wizard &#40;Object Explorer&#41;](../../2014/database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md). For information about how to create an Extended Events session using the New Session UI, see [Create an Extended Events Session Using the New Session Dialog](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
+ For information about how to create an Extended Events session using the New Session Wizard, see [Create an Extended Events Session Using the Wizard &#40;Object Explorer&#41;](../ssms/object/object-explorer.md). For information about how to create an Extended Events session using the New Session UI, see [Create an Extended Events Session Using the New Session Dialog](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
   
 ##  <a name="BeforeYouBegin"></a> Permissions  
  To create an Extended Events session, you must have the ALTER ANY EVENT SESSION permission.  

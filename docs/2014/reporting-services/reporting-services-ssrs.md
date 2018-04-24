@@ -47,7 +47,7 @@ manager: "mblythe"
   
  ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md)  
+ ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
  ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
   

@@ -19,7 +19,7 @@ manager: "jhubbard"
   By leveraging the extensive developer features of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offers the functionality that developers need for enterprise-level code management. You can create custom templates to support your repetitive tasks, save and manage complex script projects in a centralized and coordinated environment.  
   
 ## Return to SQL Server Tools Tutorials Portal  
- [Tutorial: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+ [Tutorial: SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
 ## See Also  
  [Tutorials for SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md)   

@@ -450,7 +450,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
 -   [Before Installing Failover Clustering](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   
--   [AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md)  
+-   [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
     > [!IMPORTANT]  
     >  All failover cluster installation commands require an underlying Windows cluster. All the nodes that will be part of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster must be part of the same Windows cluster.  
@@ -460,7 +460,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 #### Integrated Install Failover Cluster Parameters  
  Use the parameters in the following table to develop command-line scripts for failover cluster installation.  
   
- For more information about Integrated Installation, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+ For more information about Integrated Installation, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 > [!NOTE]  
 >  To add more nodes after the installation, use [Add Node](#AddNode) action.  
@@ -539,7 +539,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 ```  
   
 #### Prepare Failover Cluster Parameters  
- Use the parameters in the following table to develop command-line scripts for failover cluster prepare. This is the first step in advanced cluster installation, where you have to prepare the failover cluster instances on all the nodes of the failover cluster. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+ Use the parameters in the following table to develop command-line scripts for failover cluster prepare. This is the first step in advanced cluster installation, where you have to prepare the failover cluster instances on all the nodes of the failover cluster. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -599,7 +599,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 ```  
   
 #### Complete Failover Cluster Parameters  
- Use the parameters in the following table to develop command-line scripts for failover cluster complete. This is the second step in the advanced failover cluster install option. After you have run prepare on all the failover cluster nodes, you run this command on the node that owns the shared disks. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+ Use the parameters in the following table to develop command-line scripts for failover cluster complete. This is the second step in the advanced failover cluster install option. After you have run prepare on all the failover cluster nodes, you run this command on the node that owns the shared disks. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -657,7 +657,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ```  
   
 #### Upgrade Failover Cluster Parameters  
- Use the parameters in the following table to develop command-line scripts for failover cluster upgrade. For more information, see [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) and [AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+ Use the parameters in the following table to develop command-line scripts for failover cluster upgrade. For more information, see [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) and [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -727,7 +727,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 ```  
   
 #### Remove Node Parameters  
- Use the parameters in the following table to develop command-line scripts for RemoveNode. To uninstall a failover cluster, you must run RemoveNode on each failover cluster node. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+ Use the parameters in the following table to develop command-line scripts for RemoveNode. To uninstall a failover cluster, you must run RemoveNode on each failover cluster node. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  

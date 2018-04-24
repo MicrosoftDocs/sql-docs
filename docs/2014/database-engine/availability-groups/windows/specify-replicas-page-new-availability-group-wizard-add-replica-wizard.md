@@ -170,7 +170,7 @@ manager: "jhubbard"
  Displays the IPv4 or IPv6 address that you specified for a given subnet.  
   
  **Add**  
- Click to add a subnet to this listener. This opens the **Add IP Address** dialog box. For more information, see the [Add IP Address Dialog Box &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md) help topic.  
+ Click to add a subnet to this listener. This opens the **Add IP Address** dialog box. For more information, see the [Add IP Address Dialog Box &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md) help topic.  
   
  **Remove**  
  Click to remove the subnet that is currently selected in the grid.  

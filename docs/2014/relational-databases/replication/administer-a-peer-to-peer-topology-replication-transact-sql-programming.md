@@ -29,11 +29,11 @@ manager: "jhubbard"
   
 1.  Quiesce the system.  
   
-2.  Stop the Distribution Agent at each node in the topology. For more information, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+2.  Stop the Distribution Agent at each node in the topology. For more information, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Execute the CREATE TABLE statement to add the new table at each node in the topology.  
   
-4.  Bulk copy the data for the new table manually at all nodes by using the [bcp utility](../../database-engine/bcp-utility.md).  
+4.  Bulk copy the data for the new table manually at all nodes by using the [bcp utility](../../tools/bcp-utility.md).  
   
 5.  Execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) to create the new article at each node in the topology. For more information, see [Define an Article](define-an-article.md).  
   

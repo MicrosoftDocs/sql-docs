@@ -85,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 > [!NOTE]  
 >  These qualifiers disable checking of DEFAULT definitions on a table by these bulk-import commands. However, for any concurrent INSERT statements, DEFAULT definitions are expected.  
   
- For more information, see [bcp Utility](../../database-engine/bcp-utility.md) and [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
+ For more information, see [bcp Utility](../../tools/bcp-utility.md) and [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
   
 ### Examples  
  The examples in this section bulk import using **bcp** or BULK INSERT and keep null values.  
@@ -210,7 +210,7 @@ GO
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
- [bcp Utility](../../database-engine/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)  
   

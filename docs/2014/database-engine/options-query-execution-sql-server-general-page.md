@@ -48,6 +48,6 @@ manager: "jhubbard"
  Click to reset all values on this page to the original default values.  
   
 ## See Also  
- [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md)  
+ [sqlcmd Utility](../tools/sqlcmd-utility.md)  
   
   

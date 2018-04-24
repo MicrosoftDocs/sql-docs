@@ -341,7 +341,7 @@ GO
  [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/freetexttable-transact-sql.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../../database-engine/create-full-text-search-queries-visual-database-tools.md)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)   
  [Improve the Performance of Full-Text Queries](improve-the-performance-of-full-text-queries.md)  
   
   

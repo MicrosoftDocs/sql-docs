@@ -202,7 +202,7 @@ manager: "jhubbard"
  [c2 audit mode Server Configuration Option](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  Explains the C2 security compliance auditing mode in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Security Audit Event Category &#40;SQL Server Profiler&#41;](../../event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [Security Audit Event Category &#40;SQL Server Profiler&#41;](../../../tools/sql-server-profiler/sql-server-profiler.md)  
  Explains the audit events you can use in [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. For more information, see [SQL Server Profiler](../../../database-engine/sql-server-profiler.md).  
   
  [SQL Trace](../../sql-trace/sql-trace.md)  

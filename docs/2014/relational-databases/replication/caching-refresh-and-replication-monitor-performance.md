@@ -51,7 +51,7 @@ manager: "jhubbard"
 -   Avoid registering a large number of Distributors and setting Replication Monitor to automatically connect to all of them.  
   
 ## See Also  
- [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](run-replication-maintenance-jobs-sql-server-management-studio.md)   
+ [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Monitoring Replication](monitoring-replication.md)  
   
   

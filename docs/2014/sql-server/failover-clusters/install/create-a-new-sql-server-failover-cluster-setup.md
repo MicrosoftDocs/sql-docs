@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   Nodes on the same subnet or the same set of subnets - The IP address resource dependency is set to AND for these types of configurations.  
   
--   Nodes on different subnets - The IP address resource dependency is set to OR and this configuration is called a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster configuration. For more information, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../database-engine/sql-server-multi-subnet-clustering-sql-server.md).  
+-   Nodes on different subnets - The IP address resource dependency is set to OR and this configuration is called a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster configuration. For more information, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
  The following options are available for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation:  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
      If each of the IP addresses specified for the subnets are supported on all the prepared nodes, the dependency is set to AND.  
   
-     If each of the IP addresses specified for the subnets are not supported on all the prepared nodes, the dependency is set to OR. For more information, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../database-engine/sql-server-multi-subnet-clustering-sql-server.md).  
+     If each of the IP addresses specified for the subnets are not supported on all the prepared nodes, the dependency is set to OR. For more information, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
     > [!NOTE]  
     >  Complete Failover Cluster requires that the underlying Windows failover cluster exists. If the Windows failover cluster does not exist, Setup gives an error and exits.  
@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 -   [Security Considerations for a SQL Server Installation](../../install/security-considerations-for-a-sql-server-installation.md)  
   
--   [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../database-engine/sql-server-multi-subnet-clustering-sql-server.md)  
+-   [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
 > [!NOTE]  
 >  Take note of the location of the shared drive in the Cluster Administrator before you run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. You must have this information to create a new failover cluster.  

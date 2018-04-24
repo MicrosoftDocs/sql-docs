@@ -70,6 +70,6 @@ manager: "jhubbard"
 ## See Also  
  [Start SQL Server in Single-User Mode](start-sql-server-in-single-user-mode.md)   
  [Connect to SQL Server When System Administrators Are Locked Out](connect-to-sql-server-when-system-administrators-are-locked-out.md)   
- [Start, Stop, or Pause the SQL Server Agent Service](../start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

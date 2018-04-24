@@ -49,7 +49,7 @@ manager: "jhubbard"
   
      This can be done in either SQL Server Management Studio or using Transact-SQL:  
   
-    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
     -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   

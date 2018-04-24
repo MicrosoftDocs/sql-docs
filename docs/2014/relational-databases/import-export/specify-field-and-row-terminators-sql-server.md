@@ -102,7 +102,7 @@ manager: "jhubbard"
 |**-r** \n|Specifies the row terminator as a newline character. This is the default row terminator, so specifying it is optional.|  
 |**-T**|Specifies that the **bcp** utility connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with a trusted connection using integrated security. If **-T** is not specified, you need to specify **-U** and **-P** to successfully log in.|  
   
- For more information, see [bcp Utility](../../database-engine/bcp-utility.md).  
+ For more information, see [bcp Utility](../../tools/bcp-utility.md).  
   
  At the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt enter:  
   
@@ -186,7 +186,7 @@ GO
 ```  
   
 ## See Also  
- [bcp Utility](../../database-engine/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Specify Field Length by Using bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   

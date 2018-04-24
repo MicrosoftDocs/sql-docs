@@ -40,6 +40,6 @@ manager: "jhubbard"
 4.  On the **File** menu, click **Print.**  
   
 ## See Also  
- [Save Deadlock Graphs &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
+ [Save Deadlock Graphs &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

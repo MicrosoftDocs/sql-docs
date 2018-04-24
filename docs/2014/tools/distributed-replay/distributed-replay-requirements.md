@@ -42,7 +42,7 @@ manager: "jhubbard"
 -   A set of rollover trace files that follow the file rollover naming convention, for example: `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, … `<TraceFile>_n.trc`.  
   
 ### Input Trace Events and Columns  
- The input trace data must contain specific events and columns to be replayed by Distributed Replay. The **TSQL_Replay** template in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] contains all of the required events and columns, in addition to extra information. For more information about that template, see [Replay Requirements](../../database-engine/replay-requirements.md).  
+ The input trace data must contain specific events and columns to be replayed by Distributed Replay. The **TSQL_Replay** template in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] contains all of the required events and columns, in addition to extra information. For more information about that template, see [Replay Requirements](../sql-server-profiler/replay-requirements.md).  
   
 > [!WARNING]  
 >  If you do not use the **TSQL_Replay** template to capture the input trace data, or if the input trace requirements are not satisfied, you may receive unexpected replay results.  
@@ -156,8 +156,8 @@ manager: "jhubbard"
  Replaying events associated with missing or incorrect logins results in replay errors, but the replay operation continues.  
   
 ## See Also  
- [SQL Server Distributed Replay](../../database-engine/sql-server-distributed-replay.md)   
- [Distributed Replay Security](../../database-engine/distributed-replay-security.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Distributed Replay Security](distributed-replay-security.md)   
  [Install Distributed Replay](install-distributed-replay-overview.md)  
   
   

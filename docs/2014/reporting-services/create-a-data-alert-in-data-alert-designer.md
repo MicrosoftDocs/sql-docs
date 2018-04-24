@@ -116,6 +116,6 @@ manager: "mblythe"
 ## See Also  
  [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md)   
  [Data Alert Manager for Alerting Administrators](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

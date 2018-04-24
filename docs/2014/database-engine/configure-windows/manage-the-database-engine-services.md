@@ -67,7 +67,7 @@ manager: "jhubbard"
 |[Set an Instance of SQL Server to Start Automatically &#40;SQL Server Configuration Manager&#41;](scm-services-set-an-instance-to-start-automatically.md)|[Configure File System Permissions for Database Engine Access](configure-file-system-permissions-for-database-engine-access.md)|  
   
 ## Related Content  
- [Configure SQL Server Agent](../configure-sql-server-agent.md)  
+ [Configure SQL Server Agent](../../ssms/agent/sql-server-agent.md)  
   
  [Logging In to SQL Server](logging-in-to-sql-server.md)  
   

@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Use the Add Replica to Availability Group Wizard &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

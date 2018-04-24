@@ -136,7 +136,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  To continue, click **Next**.  
   
 ##  <a name="Connection_dialog"></a> Connection Dialog  
- On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](../../database-engine/connect-to-server-database-engine.md).  
+ On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  If the connection is encrypted, the encrypted connection will be used. If the connection is not encrypted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility will reconnect using an encrypted connection.  

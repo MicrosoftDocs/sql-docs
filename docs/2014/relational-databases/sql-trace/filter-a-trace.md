@@ -48,13 +48,13 @@ manager: "jhubbard"
   
  **To filter events in a trace template**  
   
- [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../database-engine/filter-events-in-a-trace-sql-server-profiler.md)  
+ [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
- [Set a Trace Filter &#40;Transact-SQL&#41;](../../database-engine/set-a-trace-filter-transact-sql.md)  
+ [Set a Trace Filter &#40;Transact-SQL&#41;](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md)  
   
  **To modify filters**  
   
- [Modify a Filter &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-filter-sql-server-profiler.md)  
+ [Modify a Filter &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)  
   
  Filter availability depends on the data column. Some data columns cannot be filtered. The data columns that can be filtered are filterable only by certain relational operators, as shown in the following table.  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
 |**ApplicationName**|LIKE, NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
 |**BigintData2**|=, <>, >=, <=|  
-|**BinaryData**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../database-engine/filter-traces-with-sql-server-profiler.md).|  
+|**BinaryData**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
 |**CPU**|=, <>, >=, <=|  
@@ -88,7 +88,7 @@ manager: "jhubbard"
 |**Error**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE, NOT LIKE|  
-|**GUID**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../database-engine/filter-traces-with-sql-server-profiler.md).|  
+|**GUID**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**Handle**|=, <>, >=, <=|  
 |**HostName**|LIKE, NOT LIKE|  
 |**IndexID**|=, <>, >=, <=|  
@@ -98,7 +98,7 @@ manager: "jhubbard"
 |**LineNumber**|=, <>, >=, <=|  
 |**LinkedServerName**|LIKE, NOT LIKE|  
 |**LoginName**|LIKE, NOT LIKE|  
-|**LoginSid**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../database-engine/filter-traces-with-sql-server-profiler.md).|  
+|**LoginSid**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**MethodName**|LIKE, NOT LIKE|  
 |**Mode**|=, <>, >=, <=|  
 |**NestLevel**|=, <>, >=, <=|  
@@ -122,12 +122,12 @@ manager: "jhubbard"
 |**Severity**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
-|**SqlHandle**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../database-engine/filter-traces-with-sql-server-profiler.md).|  
+|**SqlHandle**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
 |**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
-|**TargetLoginSid**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../database-engine/filter-traces-with-sql-server-profiler.md).|  
+|**TargetLoginSid**|Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to filter events in this data column. For more information, see [Filter Traces with SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
 |**TextData** <sup>1</sup>|LIKE, NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  

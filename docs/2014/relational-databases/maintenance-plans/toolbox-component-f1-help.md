@@ -35,7 +35,7 @@ manager: "jhubbard"
  To add or remove **Toolbox** items, on the **Tools** menu, click **Choose Toolbox Items**. Only **Maintenance Tasks** can be made available as **Toolbox** icons. All components are not always available. For instance, maintenance tasks are only available when creating a maintenance plan.  
   
 ## See Also  
- [Use the Toolbox](../../database-engine/use-the-toolbox.md)   
- [Choose Toolbox Items &#40;Maintenance Tasks Page&#41;](../../database-engine/choose-toolbox-items-maintenance-tasks-page.md)  
+ [Use the Toolbox](../../ssms/use-the-toolbox.md)   
+ [Choose Toolbox Items &#40;Maintenance Tasks Page&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
   
   

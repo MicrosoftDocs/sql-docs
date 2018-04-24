@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Spatial Results Window](spatial-results-window.md)   
- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Query and Text Editors &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -47,6 +47,6 @@ manager: "jhubbard"
 2.  If your server does not appear, in Registered Servers, right-click **Database Engine**, and then click **Update Local Server Registration**.  
   
 ## Next Task in Lesson  
- [Connect with Registered Servers and Object Explorer](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
+ [Connect with Registered Servers and Object Explorer](../object/object-explorer.md)  
   
   

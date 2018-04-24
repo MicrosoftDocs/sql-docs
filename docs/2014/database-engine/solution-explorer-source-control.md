@@ -56,9 +56,9 @@ manager: "jhubbard"
 |||  
   
 ## See Also  
- [Solution Explorer](../../2014/database-engine/solution-explorer.md)   
- [Solutions &#40;SQL Server Management Studio&#41;](../../2014/database-engine/solutions-sql-server-management-studio.md)   
- [Projects &#40;SQL Server Management Studio&#41;](../../2014/database-engine/projects-sql-server-management-studio.md)   
- [Files That Manage Solutions and Projects](../../2014/database-engine/files-that-manage-solutions-and-projects.md)  
+ [Solution Explorer](../ssms/solution/solution-explorer.md)   
+ [Solutions &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
+ [Projects &#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   
+ [Files That Manage Solutions and Projects](../ssms/solution/files-that-manage-solutions-and-projects.md)  
   
   

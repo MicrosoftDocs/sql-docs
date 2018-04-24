@@ -35,7 +35,7 @@ manager: "jhubbard"
  ![Partners switching twice between roles](../media/dbm-roleswitching.gif "Partners switching twice between roles")  
   
 > [!IMPORTANT]  
->  After a role switch, jobs that ran on the former principal database must be recreated on the new principal server to run there. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+>  After a role switch, jobs that ran on the former principal database must be recreated on the new principal server to run there. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  Three types of role switching exist: automatic failover, manual failover, and forced service (with possible data loss). Support for each form depends on the operating mode of the session.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
 |Manual failover|No|Yes|Yes|  
 |Forced service|Yes|Yes|No|  
   
- After a role switch, certain metadata must exist on both partners to ensure that all of the database users can access the new principal database. In addition, backup jobs must be created on the new principal server, to ensure that the database continues to be backed up on its regular schedule. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+ After a role switch, certain metadata must exist on both partners to ensure that all of the database users can access the new principal database. In addition, backup jobs must be created on the new principal server, to ensure that the database continues to be backed up on its regular schedule. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  During a role switch, the amount of time that database mirroring will be out of service depends on the type of role switching and on the cause. For more information, see [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
   
  **To initiate manual failover**  
   
--   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+-   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   

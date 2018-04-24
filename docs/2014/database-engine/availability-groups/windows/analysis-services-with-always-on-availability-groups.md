@@ -34,7 +34,7 @@ manager: "jhubbard"
  By default, both read-write and read-intent access are allowed to the primary replica and no connections are allowed to secondary replicas. Additional configuration is required to set up a read-only client connection to a secondary replica. Configuration requires setting properties on the secondary replica and running a T-SQL script that defines a read-only routing list. Use the following procedures to ensure you have performed both steps.  
   
 > [!NOTE]  
->  The following steps assume an existing AlwaysOn availability group and databases. If you are configuring a new group, use the New Availability Group Wizard to create the group and join the databases. The wizard checks for prerequisites, provides guidance for each step, and performs the initial synchronization. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md).  
+>  The following steps assume an existing AlwaysOn availability group and databases. If you are configuring a new group, use the New Availability Group Wizard to create the group and join the databases. The wizard checks for prerequisites, provides guidance for each step, and performs the initial synchronization. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md).  
   
 #### Step 1: Configure access on an availability replica  
   

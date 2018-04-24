@@ -44,7 +44,7 @@ manager: "jhubbard"
   
      Many IntelliSense features work automatically by default, but you can disable any feature.  
   
-     Even when automatic statement completion is disabled, you can use an IntelliSense feature. For more information, see [Configure IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md).  
+     Even when automatic statement completion is disabled, you can use an IntelliSense feature. For more information, see [Configure IntelliSense &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
 ## Database Engine Query IntelliSense  
  The following issues apply to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Query Editor:  

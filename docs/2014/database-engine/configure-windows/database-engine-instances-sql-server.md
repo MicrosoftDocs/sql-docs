@@ -40,7 +40,7 @@ manager: "jhubbard"
 |Describes how database applications can use database mail to send e-mail messages from the [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Database Mail](../../relational-databases/database-mail/database-mail.md)|  
 |Describes how to use extended events to capture performance data can be used to build performance baselines or to diagnose performance problems. Extended events are a light-weight, highly scalable system for gathering performance data.|[Extended Events](../../relational-databases/extended-events/extended-events.md)|  
 |Describes how to use SQL Trace to build a customized system for capturing and recording events in the [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[SQL Trace](../../relational-databases/sql-trace/sql-trace.md)|  
-|Describes how to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler to capture traces of application requests coming in to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. These traces can later be replayed for activities such as performance testing or problem diagnosis.|[SQL Server Profiler](../sql-server-profiler.md)|  
+|Describes how to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler to capture traces of application requests coming in to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. These traces can later be replayed for activities such as performance testing or problem diagnosis.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Describes the Change Data Capture (CDC) and Change Tracking features and describes how to use these features to track changes to data in a database.|[Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Describes how to use the Log File viewer to find and view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errors and messages in various logs, such as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] job history, the SQL Server logs, and Windows event logs.|[Log File Viewer](../../relational-databases/logs/log-file-viewer.md)|  
 |Describes how to use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor to analyze databases and make recommendations for addressing potential performance problems.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
@@ -50,7 +50,7 @@ manager: "jhubbard"
 |Describes how the buffer pool extension can be used to provide seamless integration of nonvolatile random access storage (solid-state drives) to the Database Engine buffer pool to significantly improve I/O throughput.|[Buffer Pool Extension File](buffer-pool-extension.md)|  
   
 ## See Also  
- [sqlservr Application](../sqlservr-application.md)   
+ [sqlservr Application](../../tools/sqlservr-application.md)   
  [Database Features](../../relational-databases/database-features.md)   
  [Database Engine Cross-Instance Features](../database-engine-cross-instance-features.md)  
   

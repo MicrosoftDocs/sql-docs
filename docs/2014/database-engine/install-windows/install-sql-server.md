@@ -68,6 +68,6 @@ manager: "jhubbard"
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Upgrade to SQL Server 2014](upgrade-sql-server.md)   
  [Uninstall SQL Server 2014](install-sql-server.md)   
- [High Availability Solutions &#40;SQL Server&#41;](../high-availability-solutions-sql-server.md)  
+ [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
   

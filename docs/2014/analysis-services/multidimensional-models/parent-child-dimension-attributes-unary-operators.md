@@ -44,7 +44,7 @@ manager: "mblythe"
   
 ## See Also  
  [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
- [Custom Rollup Operators in Parent-Child Dimensions](parent-child-dimension-attributes-custom-rollup-operators.md)   
+ [Custom Rollup Operators in Parent-Child Dimensions](../../ssms/agent/operators.md)   
  [Start the Business Intelligence Wizard in Dimension Designer](database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

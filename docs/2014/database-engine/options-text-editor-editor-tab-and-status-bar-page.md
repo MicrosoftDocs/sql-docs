@@ -90,7 +90,7 @@ manager: "jhubbard"
  Includes the server name. For local connections, this is the instance name. For remote connections, this is the remote computer name and instance name.  
   
 ## See Also  
- [Options &#40;Environment: Fonts and Colors Page&#41;](../../2014/database-engine/options-environment-fonts-and-colors-page.md)   
+ [Options &#40;Environment: Fonts and Colors Page&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Color Coding in Query Editors](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

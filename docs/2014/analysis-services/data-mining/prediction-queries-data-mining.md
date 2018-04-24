@@ -102,7 +102,7 @@ manager: "mblythe"
   
 -   When you build a query using Prediction Query Builder in either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can save the results of a prediction query to an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. For more information, see [View and Save the Results of a Prediction Query](view-and-save-the-results-of-a-prediction-query.md).  
   
--   When you create prediction queries using DMX in the Query pane of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can use the query output options to save the results to a file, or to the Query Results pane as text or in a grid. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
+-   When you create prediction queries using DMX in the Query pane of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can use the query output options to save the results to a file, or to the Query Results pane as text or in a grid. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
 -   When you run a prediction query using the Integration Services components, the tasks provides the ability to write the results to a database by using an available ADO.NET connection manager or OLEDB connection manager. For more information, see [Data Mining Query Task](../../integration-services/data-mining-query-task.md).  
   

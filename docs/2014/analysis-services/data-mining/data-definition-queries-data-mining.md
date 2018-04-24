@@ -57,7 +57,7 @@ manager: "mblythe"
   
 -   Define the data set used for training a model, by using [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) together with a data source query such as OPENROWSET.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides query templates that can help you create data definition queries. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides query templates that can help you create data definition queries. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
   
  In general, the templates that are provided for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contain only the general syntax definition, which you must customize, either by typing in the **Query** window, or by using the dialog box provided for entering parameters.  
   
@@ -79,7 +79,7 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|Work with templates for DMX queries.|[Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Work with templates for DMX queries.|[Use Analysis Services Templates in SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)|  
 |Design queries of all kinds, using Prediction Query Builder.|[Create a Prediction Query Using the Prediction Query Builder](create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |Capture query definitions by using SQL Server Profiler, and use traces to monitor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |Learn more about the scripting languages and programming languages provided for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML for Analysis  &#40;XMLA&#41; Reference](../xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Developing with Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  

@@ -46,6 +46,6 @@ manager: "mblythe"
   
 ## See Also  
  [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

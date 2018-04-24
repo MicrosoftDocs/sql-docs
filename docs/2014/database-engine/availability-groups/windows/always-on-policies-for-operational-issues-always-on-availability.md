@@ -78,7 +78,7 @@ manager: "jhubbard"
   
 -   Provides an health extended event viewer to show previous events for AlwaysOn-specific issues.  
   
--   If failing over the availability group is a possible remediation for an issue, provides a launch point for the links[Fail Over Availability Group Wizard](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). This wizard takes a database administrator through the manual failover process.  
+-   If failing over the availability group is a possible remediation for an issue, provides a launch point for the links[Fail Over Availability Group Wizard](../../../ssms/sql-server-management-studio-ssms.md). This wizard takes a database administrator through the manual failover process.  
   
 ##  <a name="ExtendHealthModel"></a> Extending the AlwaysOn Health Model  
  Extending the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] health model is simply a matter of creating your own user-defined policies and putting them into certain categories based on the type of object that you are monitoring.  After you a alter few settings, the AlwaysOn dashboard will automatically evaluate your own user-defined policies, as well as the AlwaysOn predefined policies.  
@@ -93,9 +93,9 @@ manager: "jhubbard"
   
 -   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+-   [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
--   [Force a WSFC Cluster to Start Without a Quorum](../../force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Force a WSFC Cluster to Start Without a Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
 -   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   

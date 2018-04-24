@@ -46,12 +46,12 @@ manager: "jhubbard"
  Changes the order of columns in the trace and groups results by one or more columns.  
   
 ## See Also  
- [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../../2014/database-engine/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [Organize Columns Displayed in a Trace &#40;SQL Server Profiler&#41;](../../2014/database-engine/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../2014/database-engine/filter-events-in-a-trace-sql-server-profiler.md)   
- [View Filter Information &#40;SQL Server Profiler&#41;](../../2014/database-engine/view-filter-information-sql-server-profiler.md)   
- [Modify a Filter &#40;SQL Server Profiler&#41;](../../2014/database-engine/modify-a-filter-sql-server-profiler.md)   
- [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   
+ [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Organize Columns Displayed in a Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
+ [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [View Filter Information &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [Modify a Filter &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
+ [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md)  
   
   

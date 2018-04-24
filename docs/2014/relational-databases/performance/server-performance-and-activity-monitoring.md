@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  **To perform monitoring tasks with SQL Server Management Studio**  
   
--   [View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](view-the-sql-server-error-log-sql-server-management-studio.md)  
+-   [View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   [Create a Trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)  
   
--   [Set a Trace Filter &#40;Transact-SQL&#41;](../../database-engine/set-a-trace-filter-transact-sql.md)  
+-   [Set a Trace Filter &#40;Transact-SQL&#41;](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md)  
   
 -   [Modify an Existing Trace &#40;Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md)  
   
@@ -63,91 +63,91 @@ manager: "jhubbard"
   
  **To create and modify traces by using SQL Server Profiler**  
   
--   [Create a Trace &#40;SQL Server Profiler&#41;](../../database-engine/create-a-trace-sql-server-profiler.md)  
+-   [Create a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
--   [Set Global Trace Options &#40;SQL Server Profiler&#41;](../../database-engine/set-global-trace-options-sql-server-profiler.md)  
+-   [Set Global Trace Options &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)  
   
--   [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../../database-engine/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+-   [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
--   [Create a Transact-SQL Script for Running a Trace &#40;SQL Server Profiler&#41;](../../database-engine/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)  
+-   [Create a Transact-SQL Script for Running a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)  
   
--   [Save Trace Results to a File &#40;SQL Server Profiler&#41;](../../database-engine/save-trace-results-to-a-file-sql-server-profiler.md)  
+-   [Save Trace Results to a File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
   
--   [Set a Maximum File Size for a Trace File &#40;SQL Server Profiler&#41;](../../database-engine/set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)  
+-   [Set a Maximum File Size for a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)  
   
--   [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../database-engine/save-trace-results-to-a-table-sql-server-profiler.md)  
+-   [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
   
--   [Set a Maximum Table Size for a Trace Table &#40;SQL Server Profiler&#41;](../../database-engine/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
+-   [Set a Maximum Table Size for a Trace Table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
--   [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../database-engine/filter-events-in-a-trace-sql-server-profiler.md)  
+-   [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
--   [View Filter Information &#40;SQL Server Profiler&#41;](../../database-engine/view-filter-information-sql-server-profiler.md)  
+-   [View Filter Information &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)  
   
--   [Modify a Filter &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-filter-sql-server-profiler.md)  
+-   [Modify a Filter &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)  
   
--   [Filter Events Based on the Event Start Time &#40;SQL Server Profiler&#41;](../../database-engine/filter-events-based-on-the-event-start-time-sql-server-profiler.md)  
+-   [Filter Events Based on the Event Start Time &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)  
   
--   [Filter Events Based on the Event End Time &#40;SQL Server Profiler&#41;](../../database-engine/filter-events-based-on-the-event-end-time-sql-server-profiler.md)  
+-   [Filter Events Based on the Event End Time &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)  
   
--   [Filter Server Process IDs &#40;SPIDs&#41; in a Trace &#40;SQL Server Profiler&#41;](../../database-engine/filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)  
+-   [Filter Server Process IDs &#40;SPIDs&#41; in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)  
   
--   [Organize Columns Displayed in a Trace &#40;SQL Server Profiler&#41;](../../database-engine/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
+-   [Organize Columns Displayed in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
  **To start, pause, and stop traces by using SQL Server Profiler**  
   
--   [Start a Trace Automatically after Connecting to a Server &#40;SQL Server Profiler&#41;](../../database-engine/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
+-   [Start a Trace Automatically after Connecting to a Server &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
   
--   [Pause a Trace &#40;SQL Server Profiler&#41;](../../database-engine/pause-a-trace-sql-server-profiler.md)  
+-   [Pause a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/pause-a-trace-sql-server-profiler.md)  
   
--   [Stop a Trace &#40;SQL Server Profiler&#41;](../../database-engine/stop-a-trace-sql-server-profiler.md)  
+-   [Stop a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/stop-a-trace-sql-server-profiler.md)  
   
--   [Run a Trace After It Has Been Paused or Stopped &#40;SQL Server Profiler&#41;](../../database-engine/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
+-   [Run a Trace After It Has Been Paused or Stopped &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
  **To open traces and configure how traces are displayed by using SQL Server Profiler**  
   
--   [Open a Trace File &#40;SQL Server Profiler&#41;](../../database-engine/open-a-trace-file-sql-server-profiler.md)  
+-   [Open a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
--   [Open a Trace Table &#40;SQL Server Profiler&#41;](../../database-engine/open-a-trace-table-sql-server-profiler.md)  
+-   [Open a Trace Table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
--   [Clear a Trace Window &#40;SQL Server Profiler&#41;](../../database-engine/clear-a-trace-window-sql-server-profiler.md)  
+-   [Clear a Trace Window &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/clear-a-trace-window-sql-server-profiler.md)  
   
--   [Close a Trace Window &#40;SQL Server Profiler&#41;](../../database-engine/close-a-trace-window-sql-server-profiler.md)  
+-   [Close a Trace Window &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/close-a-trace-window-sql-server-profiler.md)  
   
--   [Set Trace Definition Defaults &#40;SQL Server Profiler&#41;](../../database-engine/set-trace-definition-defaults-sql-server-profiler.md)  
+-   [Set Trace Definition Defaults &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)  
   
--   [Set Trace Display Defaults &#40;SQL Server Profiler&#41;](../../database-engine/set-trace-display-defaults-sql-server-profiler.md)  
+-   [Set Trace Display Defaults &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
  **To replay traces by using SQL Server Profiler**  
   
--   [Replay a Trace File &#40;SQL Server Profiler&#41;](../../database-engine/replay-a-trace-file-sql-server-profiler.md)  
+-   [Replay a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
--   [Replay a Trace Table &#40;SQL Server Profiler&#41;](../../database-engine/replay-a-trace-table-sql-server-profiler.md)  
+-   [Replay a Trace Table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)  
   
--   [Replay a Single Event at a Time &#40;SQL Server Profiler&#41;](../../database-engine/replay-a-single-event-at-a-time-sql-server-profiler.md)  
+-   [Replay a Single Event at a Time &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)  
   
--   [Replay to a Breakpoint &#40;SQL Server Profiler&#41;](../../database-engine/replay-to-a-breakpoint-sql-server-profiler.md)  
+-   [Replay to a Breakpoint &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)  
   
--   [Replay to a Cursor &#40;SQL Server Profiler&#41;](../../database-engine/replay-to-a-cursor-sql-server-profiler.md)  
+-   [Replay to a Cursor &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)  
   
--   [Replay a Transact-SQL Script &#40;SQL Server Profiler&#41;](../../database-engine/replay-a-transact-sql-script-sql-server-profiler.md)  
+-   [Replay a Transact-SQL Script &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
  **To create, modify, and use trace templates by using SQL Server Profiler**  
   
--   [Create a Trace Template &#40;SQL Server Profiler&#41;](../../database-engine/create-a-trace-template-sql-server-profiler.md)  
+-   [Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
 -   [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
--   [Derive a Template from a Running Trace &#40;SQL Server Profiler&#41;](../../database-engine/derive-a-template-from-a-running-trace-sql-server-profiler.md)  
+-   [Derive a Template from a Running Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)  
   
--   [Derive a Template from a Trace File or Trace Table &#40;SQL Server Profiler&#41;](../../database-engine/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)  
+-   [Derive a Template from a Trace File or Trace Table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)  
   
--   [Export a Trace Template &#40;SQL Server Profiler&#41;](../../database-engine/export-a-trace-template-sql-server-profiler.md)  
+-   [Export a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   
--   [Import a Trace Template &#40;SQL Server Profiler&#41;](../../database-engine/import-a-trace-template-sql-server-profiler.md)  
+-   [Import a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
  **To use SQL Server Profiler traces to collect and monitor server performance**  
   
--   [Find a Value or Data Column While Tracing &#40;SQL Server Profiler&#41;](../../database-engine/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
+-   [Find a Value or Data Column While Tracing &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   
 -   [Save Deadlock Graphs &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
   
@@ -155,7 +155,7 @@ manager: "jhubbard"
   
 -   [Save Showplan XML Statistics Profile Events Separately &#40;SQL Server Profiler&#41;](save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md)  
   
--   [Extract a Script from a Trace &#40;SQL Server Profiler&#41;](../../database-engine/extract-a-script-from-a-trace-sql-server-profiler.md)  
+-   [Extract a Script from a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)  
   
 -   [Correlate a Trace with Windows Performance Log Data &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   

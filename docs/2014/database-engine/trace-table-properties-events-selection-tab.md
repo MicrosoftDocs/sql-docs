@@ -46,8 +46,8 @@ manager: "jhubbard"
  After selecting **Events** and data columns to trace, click **Organize Columns** to force the grid to reorder the column in the trace results window.  
   
 ## See Also  
- [Open a Trace Table &#40;SQL Server Profiler&#41;](../../2014/database-engine/open-a-trace-table-sql-server-profiler.md)   
- [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   
+ [Open a Trace Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md)  
   
   

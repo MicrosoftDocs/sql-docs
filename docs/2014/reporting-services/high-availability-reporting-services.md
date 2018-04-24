@@ -35,7 +35,7 @@ manager: "mblythe"
  The Report Server Web service and Windows service are tightly integrated and run together as a single report server instance. You cannot configure availability for one service separately from the other.  
   
 ## See Also  
- [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md)   
+ [High Availability Solutions &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
  [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

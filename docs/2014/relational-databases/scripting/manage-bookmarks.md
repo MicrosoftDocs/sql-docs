@@ -91,6 +91,6 @@ manager: "jhubbard"
  Clears or enables the check boxes for all bookmarks in the **Bookmarks** window. Does not remove bookmarks, or alter the lines of code that they mark.  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../database-engine/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

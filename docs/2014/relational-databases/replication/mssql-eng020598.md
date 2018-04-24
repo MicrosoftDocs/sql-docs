@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 1.  If replication must continue while you identify the source of the error, specify the parameter **-SkipErrors 20598** for the Distribution Agent. This allows the agent to skip changes that result in error 20598, while allowing other changes to be replicated.  
   
-2.  Identify which rows at the Subscriber have been deleted or have a different primary key than the corresponding rows at the Publisher. You can use the [tablediff Utility](../../database-engine/tablediff-utility.md) to determine which rows are different in the publication and subscription databases. For information about using this utility with replicated databases, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
+2.  Identify which rows at the Subscriber have been deleted or have a different primary key than the corresponding rows at the Publisher. You can use the [tablediff Utility](../../tools/tablediff-utility.md) to determine which rows are different in the publication and subscription databases. For information about using this utility with replicated databases, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
 3.  Correct the rows at the Subscriber using the **tablediff** utility or another method.  
   

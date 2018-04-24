@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 6.  Select **Integration Services Package** for the job step type.  
   
-7.  In the **Run as** list, select **SQL Server Agent Service Account** or select a proxy account that has the credentials that the job step will use. For information about creating a proxy account, see [Create a SQL Server Agent Proxy](../../2014/database-engine/create-a-sql-server-agent-proxy.md).  
+7.  In the **Run as** list, select **SQL Server Agent Service Account** or select a proxy account that has the credentials that the job step will use. For information about creating a proxy account, see [Create a SQL Server Agent Proxy](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
      Using a proxy account instead of the **SQL Server Agent Service Account** may resolve common issues that can occur when executing a package using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. For more information about these issues, see the [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760).  
   
@@ -104,7 +104,7 @@ manager: "jhubbard"
     >  -   The **Environment** checkbox on the **Configuration** tab is not selected.  
     > -   The server environment that contains the variable is not selected in the list box on the **Configuration** tab.  
   
-10. To create a schedule for a job step, click **Schedules** in the **Select a page** pane. For information on how to configure a schedule, see [Schedule a Job](../../2014/database-engine/schedule-a-job.md).  
+10. To create a schedule for a job step, click **Schedules** in the **Select a page** pane. For information on how to configure a schedule, see [Schedule a Job](../ssms/agent/schedule-a-job.md).  
   
     > [!TIP]  
     >  When you name the schedule, consider using a name that is unique and descriptive so you can more easily distinguish the schedule from other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent schedules.  

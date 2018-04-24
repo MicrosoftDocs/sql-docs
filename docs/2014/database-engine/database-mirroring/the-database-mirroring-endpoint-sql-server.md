@@ -61,7 +61,7 @@ manager: "jhubbard"
      If your server instances use Windows Authentication, you can create database mirroring endpoints by using [!INCLUDE[tsql](../../includes/tsql-md.md)], PowerShell, or the New Availability Group Wizard.  
   
     > [!NOTE]  
-    >  If a server instance that is to host an availability replica lacks a database mirroring endpoint, the New Availability Group Wizard can automatically create a database mirroring endpoint that uses Windows Authentication. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
+    >  If a server instance that is to host an availability replica lacks a database mirroring endpoint, the New Availability Group Wizard can automatically create a database mirroring endpoint that uses Windows Authentication. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
 -   If any server instance is running under a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication. If you are using certificates for your database mirroring endpoints, your system administrator must configure each server instance to use certificates on both outbound and inbound connections.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 -   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
  **To View Information About the Database Mirroring Endpoint**  
   

@@ -148,7 +148,7 @@ manager: "jhubbard"
 |Describes how to save trace results to the file where the trace results are written.|[Save Trace Results to a File](../sql-trace/save-trace-results-to-a-file.md)|  
 |Describes how to improve access to trace data by using space in the **temp** directory.|[Improve Access to Trace Data](../sql-trace/improve-access-to-trace-data.md)|  
 |Describes how to use stored procedures to create a trace.|[Create a Trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)|  
-|Describes how to use stored procedures to create a filter that retrieves only the information you need on an event being traced.|[Set a Trace Filter &#40;Transact-SQL&#41;](../../database-engine/set-a-trace-filter-transact-sql.md)|  
+|Describes how to use stored procedures to create a filter that retrieves only the information you need on an event being traced.|[Set a Trace Filter &#40;Transact-SQL&#41;](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md)|  
 |Describes how to use stored procedures to modify an existing trace.|[Modify an Existing Trace &#40;Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md)|  
 |Describes how to use built-in functions to view a saved trace.|[View a Saved Trace &#40;Transact-SQL&#41;](../sql-trace/view-a-saved-trace-transact-sql.md)|  
 |Describes how to use built-in functions to view trace filter information.|[View Filter Information &#40;Transact-SQL&#41;](../sql-trace/view-filter-information-transact-sql.md)|  
@@ -159,7 +159,7 @@ manager: "jhubbard"
 |Describes the two ways to schedule tracing in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Schedule Traces](../sql-trace/schedule-traces.md)|  
   
 ## See Also  
- [SQL Server Profiler Templates and Permissions](../../database-engine/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler Templates and Permissions](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

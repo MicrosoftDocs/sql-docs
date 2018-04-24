@@ -112,7 +112,7 @@ manager: "jhubbard"
   
 -   [View Availability Replica Properties &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   

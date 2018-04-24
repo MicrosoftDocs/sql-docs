@@ -36,8 +36,8 @@ manager: "jhubbard"
  Specify the name of the table where you want to store the trace.  
   
 ## See Also  
- [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../2014/database-engine/save-trace-results-to-a-table-sql-server-profiler.md)   
- [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   
+ [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md)  
   
   

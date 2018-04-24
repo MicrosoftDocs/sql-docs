@@ -112,7 +112,7 @@ manager: "mblythe"
   
 5.  Close the dialog box. The script contains the processing command and options that were specified in the dialog box.  
   
-6.  Optionally, you can continue adding to the script if you want to process additional objects in the same batch. To continue, repeat the previous steps, appending the generated script so that you have a single script for all processing operations. To view an example, see [Schedule SSAS Administrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
+6.  Optionally, you can continue adding to the script if you want to process additional objects in the same batch. To continue, repeat the previous steps, appending the generated script so that you have a single script for all processing operations. To view an example, see [Schedule SSAS Administrative Tasks with SQL Server Agent](../../ssms/agent/sql-server-agent.md).  
   
 7.  From the menu bar, click **Query**, and then click **Execute**.  
   

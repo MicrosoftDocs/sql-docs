@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   [View Availability Group Properties &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
   
 ## UIElement List  
  **Availability group name**  

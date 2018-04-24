@@ -29,6 +29,6 @@ manager: "jhubbard"
 |[Progress Report: Online Index Operation Event Class](progress-report-online-index-operation-event-class.md)|Indicates the progress of an online index build operation.|  
   
 ## See Also  
- [SQL Server Profiler](../../database-engine/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

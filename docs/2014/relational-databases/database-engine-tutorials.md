@@ -21,7 +21,7 @@ manager: "jhubbard"
  [Tutorial: Getting Started with the Database Engine](tutorial-getting-started-with-the-database-engine.md)  
  This tutorial teaches how to connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+ [Tutorial: SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
  This tutorial introduces you to the integrated environment for managing your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] presents a graphical interface for configuring, monitoring, and administering instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also allows you to deploy, monitor, and upgrade the data-tier components used by your applications, such as databases and data warehouses. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] also provides [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX, and XML language editors for editing and debugging scripts.  
   
  [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)  

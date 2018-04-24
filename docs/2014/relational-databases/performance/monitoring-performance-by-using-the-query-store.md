@@ -520,7 +520,7 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
 ## See Also  
  [Monitor and Tune for Performance](../performance/monitor-and-tune-for-performance.md)   
  [Performance Monitoring and Tuning Tools](../performance/performance-monitoring-and-tuning-tools.md)   
- [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
+ [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Activity Monitor](../performance-monitor/activity-monitor.md)  
   
   

@@ -74,7 +74,7 @@ manager: "jhubbard"
 ## See Also  
  [Quick-Start Installation of SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [High Availability Solutions &#40;SQL Server&#41;](../../../2014/database-engine/high-availability-solutions-sql-server.md)   
+ [High Availability Solutions &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
  [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md)   
  [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   

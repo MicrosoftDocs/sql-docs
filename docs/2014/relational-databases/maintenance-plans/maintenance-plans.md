@@ -64,6 +64,6 @@ manager: "jhubbard"
 |**Description**|**Topic**|  
 |Describes how to create a maintenance plan by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Create a Maintenance Plan](create-a-maintenance-plan.md)|  
 |Describes how to create a maintenance plan by using the Maintenance Plan Design Surface.|[Create a Maintenance Plan &#40;Maintenance Plan Design Surface&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
-|Documents maintenance plan functionality available in Object Explorer.|[Maintenance Plans Node &#40;Object Explorer&#41;](maintenance-plans-node-object-explorer.md)|  
+|Documents maintenance plan functionality available in Object Explorer.|[Maintenance Plans Node &#40;Object Explorer&#41;](../../ssms/object/object-explorer.md)|  
   
   

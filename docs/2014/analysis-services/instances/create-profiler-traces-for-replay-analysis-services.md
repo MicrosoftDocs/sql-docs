@@ -55,6 +55,6 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Trace Events](../trace-events/analysis-services-trace-events.md)   
- [Introduction to Monitoring Analysis Services with SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
+ [Introduction to Monitoring Analysis Services with SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

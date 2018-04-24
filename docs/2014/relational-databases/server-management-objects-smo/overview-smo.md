@@ -57,9 +57,9 @@ manager: "jhubbard"
   
 -   The management of Database Mail that lets you create e-mail servers, e-mail profiles, and e-mail accounts in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Mail](../database-mail/database-mail.md).  
   
--   Registered Servers support for registering connection information. For more information, see [Register Servers](../../database-engine/register-servers.md).  
+-   Registered Servers support for registering connection information. For more information, see [Register Servers](../../ssms/register-servers/register-servers.md).  
   
--   Trace and replay of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. For more information, see [SQL Server Profiler](../../database-engine/sql-server-profiler.md), [SQL Trace](../sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../database-engine/sql-server-distributed-replay.md), and [Extended Events](../extended-events/extended-events.md).  
+-   Trace and replay of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. For more information, see [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), and [Extended Events](../extended-events/extended-events.md).  
   
 -   Support for certificates and keys for security control. For more information, see [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md).  
   

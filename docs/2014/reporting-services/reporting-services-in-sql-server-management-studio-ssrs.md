@@ -22,11 +22,11 @@ manager: "mblythe"
   
 -   Enable features, set server defaults, and manage running jobs.  
   
--   View and create custom reports. In Object Explorer, many nodes display a set of standard reports that are installed with [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. You must have administrator permissions. The schema of a custom report must match the schema of the installed reports. For more information, see [Custom Reports in Management Studio](../../2014/database-engine/custom-reports-in-management-studio.md) and [Find the Report Definition Schema Version &#40;SSRS&#41;](../../2014/reporting-services/find-the-report-definition-schema-version-ssrs.md).  
+-   View and create custom reports. In Object Explorer, many nodes display a set of standard reports that are installed with [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. You must have administrator permissions. The schema of a custom report must match the schema of the installed reports. For more information, see [Custom Reports in Management Studio](../ssms/object/custom-reports-in-management-studio.md) and [Find the Report Definition Schema Version &#40;SSRS&#41;](../../2014/reporting-services/find-the-report-definition-schema-version-ssrs.md).  
   
  Report authors can use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to:  
   
--   Visualize spatial data from a query result set for a map report. After you run the query, use the **Spatial results** tab in the result set pane. For more information, see [View Spatial Data in Object Explorer](../relational-databases/scripting/view-spatial-data-in-object-explorer.md).  
+-   Visualize spatial data from a query result set for a map report. After you run the query, use the **Spatial results** tab in the result set pane. For more information, see [View Spatial Data in Object Explorer](../ssms/object/object-explorer.md).  
   
  This section contains step-by-step instructions for performing various reporting tasks using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Creating and managing shared schedules can also be performed using Report Manager.  
   
@@ -44,6 +44,6 @@ manager: "mblythe"
   
 ## See Also  
  [Report Server in Management Studio F1 Help](../../2014/reporting-services/report-server-in-management-studio-f1-help.md)   
- [Introducing SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md)  
+ [Introducing SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
   
   

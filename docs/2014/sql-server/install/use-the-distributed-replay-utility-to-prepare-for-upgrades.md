@@ -16,9 +16,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the Distributed Replay Utility to Prepare for Upgrades
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility can use multiple computers to replay trace data, simulating a mission-critical workload. By performing a replay on a test server before and after a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrade, you can measure performance differences and look for any incompatibilities your application may have with the upgrade. For more information, see [SQL Server Distributed Replay](../../../2014/database-engine/sql-server-distributed-replay.md).  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility can use multiple computers to replay trace data, simulating a mission-critical workload. By performing a replay on a test server before and after a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrade, you can measure performance differences and look for any incompatibilities your application may have with the upgrade. For more information, see [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
 ## See Also  
- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../../2014/database-engine/administration-tool-command-line-options-distributed-replay-utility.md)  
+ [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)  
   
   

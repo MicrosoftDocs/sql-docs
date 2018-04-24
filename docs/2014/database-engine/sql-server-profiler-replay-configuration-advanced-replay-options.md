@@ -22,7 +22,7 @@ manager: "jhubbard"
 # SQL Server Profiler - Replay Configuration (Advanced Replay Options)
   In the **Replay Configuration** dialog box, use the **Advanced Replay Options** tab to specify how to replay a trace file.  
   
- To view this window, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../../2014/database-engine/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, connect to the instance of SQL Server where you want to replay the trace, and then click the **Advanced Replay Options** tab.  
+ To view this window, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, connect to the instance of SQL Server where you want to replay the trace, and then click the **Advanced Replay Options** tab.  
   
 ## Options  
  **Replay system SPIDs**  
@@ -56,8 +56,8 @@ manager: "jhubbard"
  Configures how often the blocked processes monitor searches for blocked or blocking processes.  
   
 ## See Also  
- [Replay a Trace Table &#40;SQL Server Profiler&#41;](../../2014/database-engine/replay-a-trace-table-sql-server-profiler.md)   
- [Replay a Trace File &#40;SQL Server Profiler&#41;](../../2014/database-engine/replay-a-trace-file-sql-server-profiler.md)   
- [Replay Traces](../../2014/database-engine/replay-traces.md)  
+ [Replay a Trace Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Replay a Trace File &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
+ [Replay Traces](../tools/sql-server-profiler/replay-traces.md)  
   
   

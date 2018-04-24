@@ -30,7 +30,7 @@ manager: "jhubbard"
  Type a new template name, or select a template name from the list. If you are exporting a template, you can only select a template name from the list.  
   
 ## See Also  
- [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../2014/database-engine/modify-a-trace-template-sql-server-profiler.md)   
- [Export a Trace Template &#40;SQL Server Profiler&#41;](../../2014/database-engine/export-a-trace-template-sql-server-profiler.md)  
+ [Modify a Trace Template &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Export a Trace Template &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   
   

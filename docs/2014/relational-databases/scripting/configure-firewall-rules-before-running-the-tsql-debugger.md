@@ -161,6 +161,6 @@ manager: "jhubbard"
  [Run the Transact-SQL Debugger](run-the-transact-sql-debugger.md)   
  [Step Through Transact-SQL Code](step-through-transact-sql-code.md)   
  [Transact-SQL Debugger Information](transact-sql-debugger-information.md)   
- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

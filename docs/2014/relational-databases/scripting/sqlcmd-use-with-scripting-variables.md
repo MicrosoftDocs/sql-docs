@@ -31,7 +31,7 @@ manager: "jhubbard"
  This topic also includes examples defining environmental variables at the Cmd.exe command prompt by using **SET**.  
   
 ## Setting Scripting Variables by Using the setvar Command  
- The **setvar** command is used to define scripting variables. Variables that are defined by using the **setvar** command are stored internally. Scripting variables should not be confused with environment variables that are defined at the command prompt by using **SET**. If a script references a variable that is not an environment variable or is not defined by using **setvar**, an error message is returned and the execution of the script will stop. For more information, see the **-b** option in [sqlcmd Utility](../../database-engine/sqlcmd-utility.md).  
+ The **setvar** command is used to define scripting variables. Variables that are defined by using the **setvar** command are stored internally. Scripting variables should not be confused with environment variables that are defined at the command prompt by using **SET**. If a script references a variable that is not an environment variable or is not defined by using **setvar**, an error message is returned and the execution of the script will stop. For more information, see the **-b** option in [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
   
 ## Variable Precedence (Low to High)  
  If more than one type of variable has the same name, the variable with the highest precedence is used.  
@@ -340,7 +340,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Use the sqlcmd Utility](sqlcmd-use-the-utility.md)   
- [sqlcmd Utility](../../database-engine/sqlcmd-utility.md)   
- [Command Prompt Utility Reference &#40;Database Engine&#41;](../../database-engine/command-prompt-utility-reference-database-engine.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

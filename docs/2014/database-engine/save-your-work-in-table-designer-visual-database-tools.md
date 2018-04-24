@@ -40,6 +40,6 @@ manager: "jhubbard"
 >  To save changes to all open items, such as tables, views, stored procedures, from the **File** menu choose **Save All**.  
   
 ## See Also  
- [Table Properties &#40;Visual Database Tools&#41;](../../2014/database-engine/table-properties-visual-database-tools.md)  
+ [Table Properties &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)  
   
   

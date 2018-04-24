@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  If you are installing a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, review the following:  
   
--   [AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+-   [AlwaysOn Failover Cluster Instances (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md).  
   

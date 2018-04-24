@@ -28,9 +28,9 @@ manager: "jhubbard"
   
 |Topic Description|Topic|  
 |-----------------------|-----------|  
-|Describes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering concepts, and provides links to associated content and tasks.|[AlwaysOn Failover Cluster Instances (SQL Server)](../../../database-engine/always-on-failover-cluster-instances-sql-server.md)|  
-|Describes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover policy concepts, and provides links to configuring the failover policy to suit your organizational requirements.|[Failover Policy for Failover Cluster Instances](../../../database-engine/failover-policy-for-failover-cluster-instances.md)|  
-|Describes how to maintain and your existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.|[Failover Cluster Instance Administration and Maintenance](../../../database-engine/failover-cluster-instance-administration-and-maintenance.md)|  
+|Describes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering concepts, and provides links to associated content and tasks.|[AlwaysOn Failover Cluster Instances (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
+|Describes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover policy concepts, and provides links to configuring the failover policy to suit your organizational requirements.|[Failover Policy for Failover Cluster Instances](../windows/failover-policy-for-failover-cluster-instances.md)|  
+|Describes how to maintain and your existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.|[Failover Cluster Instance Administration and Maintenance](../windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Explains how to install [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] on a Windows Server Failover Cluster (WSFC).|[How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
   
@@ -231,7 +231,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (WSFC) must be configured on at least one node of your server cluster. You must also run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence, or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard in conjunction with WSFC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise support failover clusters with up to 16 nodes. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard supports two-node failover clusters.  
   
--   The resource DLL for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service exports two functions used by WSFC Cluster Manager to check for availability of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource. For more information, see [Failover Policy for Failover Cluster Instances](../../../database-engine/failover-policy-for-failover-cluster-instances.md).  
+-   The resource DLL for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service exports two functions used by WSFC Cluster Manager to check for availability of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource. For more information, see [Failover Policy for Failover Cluster Instances](../windows/failover-policy-for-failover-cluster-instances.md).  
   
 -   WSFC must be able to verify that the failover clustered instance is running by using the IsAlive check. This requires connecting to the server by using a trusted connection. By default, the account that runs the cluster service is not configured as an administrator on nodes in the cluster, and the BUILTIN\Administrators group does not have permission to log into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. These settings change only if you change permissions on the cluster nodes.  
   
@@ -265,6 +265,6 @@ manager: "jhubbard"
 ## See Also  
  [Hardware and Software Requirements for Installing SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Check Parameters for the System Configuration Checker](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
- [Failover Cluster Instance Administration and Maintenance](../../../database-engine/failover-cluster-instance-administration-and-maintenance.md)  
+ [Failover Cluster Instance Administration and Maintenance](../windows/failover-cluster-instance-administration-and-maintenance.md)  
   
   

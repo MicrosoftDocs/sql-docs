@@ -70,7 +70,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  It is recommended that a long-running extended stored procedure should call srv_got_attention periodically so that the procedure can terminate itself if the connection is killed or the batch is aborted.  
   
- To debug an extended stored procedure DLL, copy it to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn directory. To specify the executable for the debugging session, enter the path and file name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executable file (for example, C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). For information about sqlservr arguments, see [sqlservr Application](../../database-engine/sqlservr-application.md).  
+ To debug an extended stored procedure DLL, copy it to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn directory. To specify the executable for the debugging session, enter the path and file name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executable file (for example, C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). For information about sqlservr arguments, see [sqlservr Application](../../tools/sqlservr-application.md).  
   
 ## See Also  
  [srv_got_attention &#40;Extended Stored Procedure API&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

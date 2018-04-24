@@ -42,8 +42,8 @@ manager: "jhubbard"
 |**Schedules**|Information for jobs started by schedules.|  
   
 ## See Also  
- [Implement Jobs](../../database-engine/implement-jobs.md)   
- [Use Performance Objects](../../database-engine/use-performance-objects.md)   
+ [Implement Jobs](../../ssms/agent/implement-jobs.md)   
+ [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

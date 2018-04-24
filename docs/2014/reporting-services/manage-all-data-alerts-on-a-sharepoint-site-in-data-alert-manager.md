@@ -44,10 +44,10 @@ manager: "mblythe"
 -   Right-click the data alert that you want to delete and click **Delete**.  
   
     > [!NOTE]  
-    >  After you delete the alert, no further alert messages are sent. However, if you query the alerting database you might find that the alert definition still exists. The alerting service performs clean up on a schedule and the alert definition is deleted permanently in the next cleanup. The default cleanup interval is 20 minutes. This and other cleanup intervals are configurable. For more information, see [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md).  
+    >  After you delete the alert, no further alert messages are sent. However, if you query the alerting database you might find that the alert definition still exists. The alerting service performs clean up on a schedule and the alert definition is deleted permanently in the next cleanup. The default cleanup interval is 20 minutes. This and other cleanup intervals are configurable. For more information, see [Reporting Services Data Alerts](../ssms/agent/alerts.md).  
   
 ## See Also  
  [Data Alert Manager for Alerting Administrators](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

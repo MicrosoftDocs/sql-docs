@@ -65,7 +65,7 @@ manager: "jhubbard"
  The elapsed time between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. This represents the end-to-end latency of the replication system for this Subscriber at this time. A value of **Pending** indicates that the token has not yet reached the Subscriber.  
   
 ## See Also  
- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Start the Replication Monitor](start-the-replication-monitor.md)   
  [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md)   
  [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md)   

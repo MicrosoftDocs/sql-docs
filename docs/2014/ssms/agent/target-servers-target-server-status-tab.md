@@ -52,6 +52,6 @@ manager: "jhubbard"
  Specify how often the information on this page is refreshed.  
   
 ## See Also  
- [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)  
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
   
   

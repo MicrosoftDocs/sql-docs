@@ -49,7 +49,7 @@ GO
 ```  
   
 ## See Also  
- [Automated Administration Tasks &#40;SQL Server Agent&#41;](../automated-administration-tasks-sql-server-agent.md)   
- [Start, Stop, or Pause the SQL Server Agent Service](../start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md)   
+ [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

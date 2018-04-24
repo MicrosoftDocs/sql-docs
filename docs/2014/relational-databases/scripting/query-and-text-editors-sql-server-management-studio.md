@@ -107,7 +107,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to view and use the basic features in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.|[Database Engine Query Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|Describes how to view and use the basic features in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.|[Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)|  
 |Describes how to view and use the basic features in the MDX Query Editor.|[MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |Describes how to view and use the basic features in the DMX Query Editor.|[DMX Query Editor &#40;Analysis Services - Data Mining&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Describes how to view and use the basic features in the XML/A Editor.|[XML Editor &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
@@ -129,6 +129,6 @@ manager: "jhubbard"
 |Describes how to set custom colors for different instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and have those colors set as the background of the status bar in [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows.|[Status Bar &#40;Database Engine Query Editor&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../database-engine/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

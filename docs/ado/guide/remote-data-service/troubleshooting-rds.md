@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting RDS | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "troubleshooting RDS [ADO]"
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20

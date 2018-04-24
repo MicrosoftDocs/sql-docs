@@ -2,7 +2,7 @@
 title: How Online Index Operations Work | Microsoft Docs
 ms.custom: ""
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.reviewer: ""
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""

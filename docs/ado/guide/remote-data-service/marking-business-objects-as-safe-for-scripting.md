@@ -1,6 +1,6 @@
 ---
 title: "Marking Business Objects as Safe for Scripting | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "business objects in RDS [ADO]"
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a

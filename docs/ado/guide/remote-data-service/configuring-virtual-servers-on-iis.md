@@ -1,6 +1,6 @@
 ---
 title: "Configuring Virtual Servers on IIS | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "virtual servers in RDS [ADO]"
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff

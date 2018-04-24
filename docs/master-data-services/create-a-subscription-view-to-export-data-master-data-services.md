@@ -23,6 +23,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Subscription View to Export Data (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Create a subscription view to export Master Data Services data to subscribing systems. You're creating a view of your data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
 ## Prerequisites  

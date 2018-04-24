@@ -1,6 +1,6 @@
 ---
 title: "CubeDefs Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CubeDefs collection [ADO MD], members"
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1

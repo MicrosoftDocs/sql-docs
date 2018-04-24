@@ -1,6 +1,6 @@
 ---
 title: "ADO Dynamic Properties | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: 
 ms.component: "ado"
@@ -10,11 +10,11 @@ ms.custom:
 ms.date: "01/19/2017"
 ms.reviewer: 
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dynamic properties [ADO]"
   - "properties [ADO], dynamic"

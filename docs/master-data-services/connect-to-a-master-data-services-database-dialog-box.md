@@ -22,6 +22,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to a Master Data Services Database Dialog Box
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Use the **Connect to a Master Data Services Database** dialog box to select a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
  In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], this dialog is available from the following pages:  

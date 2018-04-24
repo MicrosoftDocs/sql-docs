@@ -36,7 +36,7 @@ The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determi
 
 ## Configuration settings for System Administrators
 After upgrading to APS AU7, auto-stats is enabled by default. The system administrator can enable or disable auto-stats with the [Feature Switch](appliance-feature-switch.md) option in the Appliance Configuration Manager.  Once enabled, users can change the statistics settings per database.
-Changing any feature switch values require a service restart on APS.
+Changing any feature switch values requires a service restart on APS.
 
 ## Change auto-stats settings on a database
 When auto-stats is enabled by the system administrator, you can use [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) to change the statistics settings on a database. 

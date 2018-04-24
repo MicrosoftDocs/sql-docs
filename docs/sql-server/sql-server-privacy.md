@@ -67,7 +67,7 @@ Customer content is defined as data stored within user tables, directly or indir
 |Crash Dumps may contain Customer Content and be emitted to Microsoft. |- |Crash Dumps: Max 30 days. |
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
->## End-user identifiable information (EUII)
+## End-user identifiable information (EUII)
 
 Data received from a user, or generated from their use of the product.
 - Linkable to an individual user.

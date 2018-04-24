@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "04/24/2018"
+ms.date: "04/25/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -22,20 +22,22 @@ ms.workload: "Inactive"
 
 ## April 2018 (April Public Preview)
 
-release date: April 24, 2018  
-version: 0.28.3
+release date: April 25, 2018  
+version: 0.28.6
 
-The *April Public Preview* contains several additional bug fixes and improvements. 
+The *April Public Preview* contains bug fixes and improvements. 
 
+- Improvements to the SQL Agent Preview extension.
 - Improved large and protected file support for saving Admin protected and >256M files within SQL Operations Studio.
 - Integrated Terminal splitting to work with multiple open terminals at once.
 - Reduced installation on-disk file count foot print for faster installs and startup times.
-- Improvements to SQL Agent Preview extension.
 - Continue to fix GitHub issues:
    - Fix #37 When the chart viewer throws an error, unexpected behavior occurs.
    - Fix #462 Feature Request: Option for Server Groups to be expanded by default.
+   - Fix #606 intellisense - Bad suggestion for 'update' command.
    - Fix #967 Expect query plan when select XML showplan in the result grid.
    - Fix #1023 Add square brackets for ms_foreachdb call from flyfishingdba.
+   - Fix #1048 Pre-login SSL/TLS handshake error.
    - Fix #1050 Clear insights view before showing error.
    - Fix #1057 Restore and new query actions in explorer-widget are broken.
    - Fix #1068 Dashboard Output windows pops-up with error message for Azure SQL Database.
@@ -48,7 +50,7 @@ The *April Public Preview* contains several additional bug fixes and improvement
    - Fix #1104 SQL extension tabs stopped working.
 
 
-A significant highlight for this build is the Visual Studio Code 1.21 platform source code refresh. This brings in several updates to the core editor and workbench from the previous 1.19 sync point. Some examples include the following:
+A significant highlight for the April Public Preview is the Visual Studio Code 1.21 platform source code refresh. This brings in several updates to the core editor and workbench from the previous 1.19 sync point. Some examples include the following:
 
 - [New Notifications UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) - Easily manage and review SQL Operations Studio notifications.
 - [Integrated Terminal splitting](https://code.visualstudio.com/updates/v1_21#_split-terminals) - Work with multiple open terminals at once.

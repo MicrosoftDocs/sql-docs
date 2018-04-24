@@ -44,7 +44,7 @@ Credential-related information used to secure logins, users, or accounts within 
 
 ### Permitted usage scenarios
 
-|Scenario  |Access Restrictions  |Retention Requirements |
+|Scenario  |Access restrictions  |Retention requirements |
 |---------|---------|---------|
 |These credentials never leave the user machine via Usage Feedback.     |-         |-         |
 |Crash Dumps may contain Access Control Data.     |-         |Crash Dumps: Maximum 30 days.         |
@@ -61,7 +61,7 @@ Customer content is defined as data stored within user tables, directly or indir
 - Query texts containing literal values.
 
 ### Permitted usage scenarios
-|Scenario  |Access Restrictions  |Retention Requirements |
+|Scenario  |Access restrictions  |Retention requirements |
 |---------|---------|---------|
 |This data does not leave the user machine via Usage Feedback. |- |- |
 |Crash Dumps may contain Customer Content and be emitted to Microsoft. |- |Crash Dumps: Max 30 days. |
@@ -73,7 +73,7 @@ Data received from a user, or generated from their use of the product.
 - Linkable to an individual user.
 - Does not contain content.
 
-### Examples end-User identifiable information
+### Examples of end-user identifiable information
 
 - Interface Identification. The Full IP address
 - Machine Name
@@ -84,12 +84,12 @@ Data received from a user, or generated from their use of the product.
 
 ### Permitted usage scenarios
 
-|Scenario  |Access Restrictions  |Retention Requirements|
+|Scenario  |Access restrictions  |Retention requirements|
 |---------|---------|---------|
 |This data does not leave the user machine via Usage Feedback. |- |- |
-|Crash Dumps may contain EUII and be emitted to Microsoft. |- |Crash Dumps: Max 30 days |
-|Customer Identification ID may be emitted to Microsoft to deliver new hybrid and cloud features that the users have subscribed to. |- |Currently no such hybrid or cloud features exist.|
-|Customers with their consent can send User Feedback that contains Customer Content to Microsoft.|Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
+|Crash dumps may contain EUII and be emitted to Microsoft. |- |Crash dumps: Max 30 days |
+|Customer identification ID may be emitted to Microsoft to deliver new hybrid and cloud features that the users have subscribed to. |- |Currently no such hybrid or cloud features exist.|
+|Customers with their consent can send User Feedback that contains customer content to Microsoft.|Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer. |User feedback: Max 1 year |
 
 ## Internet-based services data
 
@@ -97,16 +97,16 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 
 ### Examples of Internet-based services data
 
-- Computer Specification Information
+- Computer specification information
 - Browser name/version
 - SQL Server version
-- Language Code
-- An IP Address with certain octets removed
-- Map Data
+- Language code
+- An IP address with certain octets removed
+- Map data
 
 ### Permitted usage scenarios
 
-|Scenario  |Access Restrictions  |Retention Requirements|
+|Scenario  |Access restrictions  |Retention requirements|
 |---------|---------|---------| 
 |May be used by Microsoft to improve features and/or fix bugs in current features. |Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer.  For example, dashboards |Min 90 days - Max 3 years |
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal use with no third-party access. |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |
@@ -114,31 +114,30 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 
 ## System metadata
 
-Data generated in the course of running the server.  The data does not contain Customer content.
+Data generated in the course of running the server.  The data does not contain customer content.
 
 ### Examples of system metadata
 
 The following are considered system metadata when they do not inlcude customer content, customer access control, or EUII:
 
 - Database GUID
-- Hash of Machine Name
-- Hash of Instance Name
-- Application Name
-- Behavioral/Usage Data
+- Hash of machine name
+- Hash of instance name
+- Application name
+- Behavioral/usage data
 - SQL Customer Experience improvement program data  (SQLCEIP)
 - Server configuration data, for example settings of sp_configure
 - Feature configuration data
-- Event Names and Error Codes
+- Event names and error codes
 
-Microsoft does examine Application Name values set by other programs that use SQL Server (example: Sharepoint or 3rd party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not
-place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
+Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or 3rd party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
 
 ### Permitted usage scenarios
 
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
 |May be used by Microsoft to improve features and or fix bugs in current features.|Limit to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years |
-|May be used to make suggestions to the customer.  For example, “Based on your usage of the product, consider using feature X since it would perform better.” |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |
+|May be used to make suggestions to the customer.  For example, “Based on your usage of the product, consider using feature *X* since it would perform better.” |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |
 May be used by Microsoft for future product planning. |Microsoft may share this information with other hardware and software vendors to improve how their products run with Microsoft software. |Min 90 days - Max 3 years|
 |May be used by Microsoft to provide cloud-based services based on emitted Usage Feedback. For example, a customer dashboard showing feature usage across all SQL Server installations in an organization. |Microsoft can expose the data to the original customer, for example, through dashboards. |Min 90 days - Max 3 years |
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
@@ -151,12 +150,12 @@ Data that describes or is used to configure servers, databases, tables, and othe
 ### Examples of object metadata
 
 - SQL Server database names
-- Table names and Column names
-- Statistics Names
+- Table names and column names
+- Statistics names
 
 ### Permitted usage scenarios
 
-|Scenario  |Access Restrictions  |Retention Requirements|
+|Scenario  |Access restrictions  |Retention requirements|
 |---------|---------|---------|
 |May be used by Microsoft to improve features and or fix bugs in current features. |Limited to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years|
 

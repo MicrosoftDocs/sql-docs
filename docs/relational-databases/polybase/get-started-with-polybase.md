@@ -63,7 +63,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9 - 5.12 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux  
   
 -   Azure Blob Storage  
  

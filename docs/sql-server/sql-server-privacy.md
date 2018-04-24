@@ -21,12 +21,15 @@ ms.workload: "Active"
 # SQL Server Privacy Supplement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
+This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. This article serves as an addendum to the overall Microsoft Privacy Statement. The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 
 - Azure SQL Database
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
 - SQL Operations Studio
+- Database Migration Assistant
+- SQL Server Migration Assistant
+- MS-SQL Extension
 
 Definition of *Permitted usage Scenarios*. For the context of this article, Microsoft defines “Permitted Usages Scenarios” as actions or activities that are initiated by Microsoft.
 
@@ -122,12 +125,15 @@ The following are considered system metadata when they do not inlcude customer c
 - Database GUID
 - Hash of Machine Name
 - Hash of Instance Name
-- Hash of Application Name
+- Application Name
 - Behavioral/Usage Data
 - SQL Customer Experience improvement program data  (SQLCEIP)
 - Server configuration data, for example settings of sp_configure
 - Feature configuration data
 - Event Names and Error Codes
+
+Microsoft does examine Application Name values set by other programs that use SQL Server (example: Sharepoint or 3rd party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not
+place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
 
 ### Permitted Usage Scenarios
 
@@ -138,10 +144,11 @@ The following are considered system metadata when they do not inlcude customer c
 May be used by Microsoft for future product planning. |Microsoft may share this information with other hardware and software vendors to improve how their products run with Microsoft software. |Min 90 days - Max 3 years|
 |May be used by Microsoft to provide cloud-based services based on emitted Usage Feedback. For example, a customer dashboard showing feature usage across all SQL Server installations in an organization. |Microsoft can expose the data to the original customer, for example, through dashboards. |Min 90 days - Max 3 years |
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
+|May use database name and application name to categorize databases and applications into known categories, for example, those that may be running software provided by Microsoft or other companies.|Limit to Microsoft internal with no third-party access.|Min 90 days - Max 3 years |
 
 >## Object Metadata
 
-Data that describes or is used to configure servers, databases, tables, and other resources.  Object metadata includes database table and column names but not the contents of database rows or other Customer Content. Customers should not place personal data, such as end-user identifiable information in Object Metadata fields or create applications designed to store personal data in these fields.
+Data that describes or is used to configure servers, databases, tables, and other resources.  Object metadata includes database table and column names but not the contents of database rows or other Customer Content. Customers should not place personal data, such as end-user identifiable information in Object Metadata fields or create applications designed to store personal data in these fields. For the permitted usage scenario's below, only hash form is used to determine usage patterns to improve the product. 
 
 ### Examples of object metadata
 
@@ -154,5 +161,9 @@ Data that describes or is used to configure servers, databases, tables, and othe
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
 |May be used by Microsoft to improve features and or fix bugs in current features. |Limited to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years|
+
+### Telemetry Controls
+
+Instructions on how Telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

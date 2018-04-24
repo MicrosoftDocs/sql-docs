@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Purge Version Members (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], deleting a member only deactivates, or soft-deletes, it. The  data still resides in the database. This topic describes how to purge (permanently delete) all soft-deleted members in a model version.  
   
 ## Prerequisites  

@@ -2,7 +2,7 @@
 title: "SQLFetch (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,7 +18,7 @@ ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFetch (Cursor Library)

@@ -2,7 +2,7 @@
 title: "Known Issues in this Version of the Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/14/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -17,7 +17,7 @@ helpviewer_keywords:
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Known Issues in this Version of the Driver

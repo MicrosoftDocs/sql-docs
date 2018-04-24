@@ -2,7 +2,7 @@
 title: "View Replicated Commands and Information in Distribution Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "viewing replicated commands"
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

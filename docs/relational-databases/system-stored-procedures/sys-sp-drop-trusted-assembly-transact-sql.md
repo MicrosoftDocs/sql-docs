@@ -1,8 +1,8 @@
----
+﻿---
 title: "sys.sp_drop_trusted_assembly (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-stored-procedures"
@@ -27,6 +27,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

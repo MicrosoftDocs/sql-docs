@@ -2,7 +2,7 @@
 title: "LocalDBGetVersions Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "localdb"
@@ -19,8 +19,8 @@ apilocation:
 apitype: "DLLExport"
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

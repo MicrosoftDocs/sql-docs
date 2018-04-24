@@ -2,7 +2,7 @@
 title: "Set the Propagation Method for Data Changes to Transactional Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "propagating data changes [SQL Server replication]"
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

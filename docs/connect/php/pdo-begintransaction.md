@@ -2,7 +2,7 @@
 title: "PDO::beginTransaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,7 @@ ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::beginTransaction
@@ -35,13 +35,13 @@ bool PDO::beginTransaction();
 true if the method call succeeded, false otherwise.  
   
 ## Remarks  
-The transaction begun with PDO::beginTransaction will end when [PDO::commit](../../connect/php/pdo-commit.md) or [PDO::rollback](../../connect/php/pdo-rollback.md) is called.  
+The transaction begun with PDO::beginTransaction ends when [PDO::commit](../../connect/php/pdo-commit.md) or [PDO::rollback](../../connect/php/pdo-rollback.md) is called.  
   
 PDO::beginTransaction is not affected by (and does not affect) the value of PDO::ATTR_AUTOCOMMIT.  
   
 You are not allowed to call PDO::beginTransaction before the previous PDO::beginTransaction is ended with PDO::rollback or PDO::commit.  
   
-The connection will return to auto commit mode if this method fails.  
+The connection returns to auto commit mode if this method fails.  
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -62,6 +62,7 @@ The following example uses a database called Test and a table called Table1. It 
 ```  
   
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

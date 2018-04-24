@@ -2,7 +2,7 @@
 title: "Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.configuredistributionwizard.enablepublishers.f1"
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

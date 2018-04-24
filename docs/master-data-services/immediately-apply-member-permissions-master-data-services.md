@@ -17,12 +17,15 @@ helpviewer_keywords:
   - "permissions [Master Data Services], applying member permissions immediately"
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Immediately Apply Member Permissions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], instead of waiting for member security to be applied at regular intervals, you can apply member permissions immediately.  
   
 ## Prerequisites  

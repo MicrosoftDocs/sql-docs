@@ -2,7 +2,7 @@
 title: "Configure IIS 7 for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Web synchronization, IIS 7 servers"
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 11
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

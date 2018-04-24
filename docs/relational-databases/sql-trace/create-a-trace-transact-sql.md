@@ -2,7 +2,7 @@
 title: "Create a Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "sql-trace"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "traces [SQL Server], creating"
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

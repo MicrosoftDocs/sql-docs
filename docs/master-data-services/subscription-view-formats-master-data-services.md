@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 caps.latest.revision: 9
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Subscription View Formats (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Based on the entity or derived hierarchy you select, the following formats are available for your subscription view.  
   
 ## Subscription View Formats  

@@ -16,10 +16,13 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage DQS Databases
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  
   
 ##  <a name="BackupRestore"></a> Backup and Restore the DQS Databases  

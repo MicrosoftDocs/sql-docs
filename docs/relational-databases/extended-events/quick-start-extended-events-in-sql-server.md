@@ -1,16 +1,13 @@
----
+﻿---
 title: "Quick Start: Extended events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
-ms.component: "extended-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "xevents"
+ms.technology: "xevents"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
@@ -19,6 +16,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Quick Start: Extended events in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -651,7 +649,7 @@ Here are links to documentation related to these SELECTs, and to permissions:
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - For Azure SQL Database especially, [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
 - Blog: [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
-- Zoomable [poster](http://go.microsoft.com/fwlink/?LinkId=229142), as a PDF, that displays the hierarchy of all SQL Server permissions.
+- Zoomable [poster](https://aka.ms/sql-permissions-poster), as a PDF, that displays the hierarchy of all SQL Server permissions.
 
 
 

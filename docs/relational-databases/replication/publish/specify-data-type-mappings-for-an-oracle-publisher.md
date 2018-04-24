@@ -2,7 +2,7 @@
 title: "Specify Data Type Mappings for an Oracle Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "mapping data types [SQL Server replication]"
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

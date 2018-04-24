@@ -2,7 +2,7 @@
 title: "Topologies for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "IIS server configuration [SQL Server replication]"
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

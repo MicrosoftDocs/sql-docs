@@ -2,7 +2,7 @@
 title: "Connecting to Microsoft Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,7 @@ ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting to Microsoft Azure SQL Database

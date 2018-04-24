@@ -2,7 +2,7 @@
 title: "Publication Types for Transactional Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "transactional replication, publications"
 ms.assetid: ad66aa34-3e37-401e-a6a1-fc1514eb6d50
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

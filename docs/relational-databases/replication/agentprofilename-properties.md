@@ -2,7 +2,7 @@
 title: "&lt;AgentProfileName&gt; Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Agent Profile Properties dialog box"
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

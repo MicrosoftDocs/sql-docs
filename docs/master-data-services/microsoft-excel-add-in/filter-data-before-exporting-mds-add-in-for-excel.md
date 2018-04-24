@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filter Data before Exporting (MDS Add-in for Excel)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filter data when you want to limit the size or scope of data that you are exporting to Excel.  
   
 ## Prerequisites  

@@ -2,7 +2,7 @@
 title: "Replication Snapshot Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Snapshot Agent, parameter reference"
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

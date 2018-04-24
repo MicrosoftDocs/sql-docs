@@ -2,7 +2,7 @@
 title: "Maintenance Plan (Manage Connections) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "maintenance-plans"
@@ -31,7 +31,10 @@ ms.workload: "Inactive"
   
  **Authentication**  
  Indicates whether the connection is made with Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
-  
+
+> [!IMPORTANT]  
+> The package is stored in **msdb** database with its **ProtectionLevel** set to **ServerStorage**, so when *SQL Server Authentication* is used, the password will not be encrypted in **msdb**. You can use *SQL Server Authentication* as long as **msdb** is secured, but using *Windows Authentication* is recommended
+
 ## See Also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   

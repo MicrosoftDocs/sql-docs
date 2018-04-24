@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
 # What&#39;s New in Master Data Services (MDS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   This topic summarizes the changes and updates in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 

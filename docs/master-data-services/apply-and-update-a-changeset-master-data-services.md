@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Apply and Update a Changeset (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   A changeset is a collection of the pending changes on the master data. You can apply the changeset locally to view, add, update and delete the pending changes in the changeset.  
   
 ## Prerequisites  

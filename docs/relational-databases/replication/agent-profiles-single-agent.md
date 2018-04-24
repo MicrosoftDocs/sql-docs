@@ -2,7 +2,7 @@
 title: "Agent Profiles (single agent) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Agent Profile dialog box"
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -1,24 +1,13 @@
 ---
-title: "Troubleshoot data collection for machine learning - SQL Server"
-ms.custom: ""
-ms.date: "06/16/2017"
-ms.prod: "machine-learning-services"
-ms.prod_service: "machine-learning-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Troubleshoot data collection for machine learning - SQL Server
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Troubleshoot data collection for machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,7 +37,7 @@ If you need help to determine which edition and version you have, see this artic
 
 Depending on the edition of SQL Server you're using, some machine learning functionality might be unavailable, or limited.
 
-See the following topics for a list of machine learning features in Enterprise, Developer, Standard, and Express editions.
+See the following articles for a list of machine learning features in Enterprise, Developer, Standard, and Express editions.
 
 * [Editions and supported features of SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [Differences in R features between editions of SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)

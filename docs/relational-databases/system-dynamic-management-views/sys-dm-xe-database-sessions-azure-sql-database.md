@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.dm_xe_database_sessions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -18,6 +18,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_xe_database_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

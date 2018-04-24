@@ -2,7 +2,7 @@
 title: "Define and Modify a Join Filter Between Merge Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "join filters"
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 caps.latest.revision: 46
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

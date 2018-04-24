@@ -2,7 +2,7 @@
 title: "sys.dm_exec_valid_use_hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "dmv's"

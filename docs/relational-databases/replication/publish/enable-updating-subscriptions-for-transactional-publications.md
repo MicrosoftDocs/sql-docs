@@ -2,7 +2,7 @@
 title: "Enable Updating Subscriptions for Transactional Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], updatable"
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

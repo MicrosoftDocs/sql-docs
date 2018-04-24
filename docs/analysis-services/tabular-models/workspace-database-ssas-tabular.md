@@ -1,7 +1,7 @@
 ---
-title: "Workspace Database (SSAS Tabular) | Microsoft Docs"
+title: "Workspace database in SQL Server Data Tools| Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "03/30/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Workspace Database (SSAS Tabular)
+# Workspace database 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   The tabular model workspace database, used during model authoring, is created when you create a new tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
@@ -31,8 +31,6 @@ ms.workload: "On Demand"
 **Integrated workspace** - Utilizes SSDT's own internal Analysis Services instance.
 
 **Workspace server** - A workspace database is created on an explicit Analysis Services instance,  often on the same computer as SSDT or another computer in the same network.
-
-
   
 ### Integrated workspace
 With Integrated workspace, a working database is created in-memory using SSDTs own implicit Analysis Services instance. Integrated workspace mode significantly reduces the complexity of authoring tabular projects in SSDT because a separate explicit installation of SQL Server Analysis Services is not required.
@@ -55,7 +53,7 @@ By using the Workspace Database and Workspace Server properties for model.bim, y
   
  After you've added data to your model project by using the Table Import Wizard or by using copy/paste, when you view the tables, columns, and data in the model designer, you are viewing the workspace database. If you add additional tables, columns, relationships, etc. you are changing the workspace database.  
   
- When you deploy a tabular model project, the deployed model database, which is essentially a copy of the workspace database, is created on the Analysis Services server instance specified in the Deployment Server property. For more information about the Deployment Server property, see [Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
+ When you deploy a tabular model project, the deployed model database, which is essentially a copy of the workspace database, is created on the Analysis Services server instance specified in the Deployment Server property. For more information about the Deployment Server property, see [Project properties](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
   
  The model workspace database typically resides on localhost or a local named instance of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. You can use a remote instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to host the workspace database, however, this configuration is not recommended due to latency during data queries and other restrictions. Optimally, the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that will host the workspace databases is on the same computer as [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Authoring model projects on the same computer as the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that hosts the workspace database can improve performance.  
   
@@ -81,7 +79,7 @@ By using the Workspace Database and Workspace Server properties for model.bim, y
  Workspace database properties are included in the model properties. To view model properties, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], in **Solution Explorer**, click the **Model.bim** file. Model properties can be configured using the **Properties** window. Workspace database specific properties include:  
   
 > [!NOTE]  
->  **Integrated Workspace Mode**, **Workspace Server**, **Workspace Retention**, and **Data Backup** properties have default settings applied when you create a new model project. You can change the default settings for new model projects on the **Data Modeling** page in **Analysis Server** settings in the Tools\Options dialog box. These properties, as well as others, can also be set for each model project in the **Properties** window. Changing default settings will not apply to model projects already created. For more information, see [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  **Integrated Workspace Mode**, **Workspace Server**, **Workspace Retention**, and **Data Backup** properties have default settings applied when you create a new model project. You can change the default settings for new model projects on the **Data Modeling** page in **Analysis Server** settings in the Tools\Options dialog box. These properties, as well as others, can also be set for each model project in the **Properties** window. Changing default settings will not apply to model projects already created. For more information, see [Configure default data modeling and deployment properties](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  
@@ -93,7 +91,7 @@ By using the Workspace Database and Workspace Server properties for model.bim, y
 ##  <a name="bkmk_use_ssms"></a> Using SSMS to Manage the Workspace Database  
  You can use SQL Server Management Studio (SSMS) to connect to a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server that hosts a workspace database. Typically, there is no management of the workspace database necessary; the exception, is to detach or delete a workspace database, which must be done from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Do not use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage the workspace database while the project is open in the model designer. Doing so could lead to data loss.
    
-## See Also  
-[Model Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+## See also  
+[Model properties](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

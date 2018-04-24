@@ -2,7 +2,7 @@
 title: "Microsoft Replication Conflict Viewer and Interactive Resolver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "interactive resolver [SQL Server replication]"
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

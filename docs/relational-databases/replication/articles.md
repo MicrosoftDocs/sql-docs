@@ -2,7 +2,7 @@
 title: "Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.newpubwizard.articles.f1"
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

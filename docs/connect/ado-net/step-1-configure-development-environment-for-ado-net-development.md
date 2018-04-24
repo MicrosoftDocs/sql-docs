@@ -2,7 +2,7 @@
 title: "Step 1: Configure development environment for ADO.NET development | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado-net"
@@ -16,7 +16,7 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 1: Configure development environment for ADO.NET development

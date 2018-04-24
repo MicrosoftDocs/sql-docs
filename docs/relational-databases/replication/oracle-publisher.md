@@ -2,7 +2,7 @@
 title: "Oracle Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.newpubwizard.selectoraclepublisher.f1"
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

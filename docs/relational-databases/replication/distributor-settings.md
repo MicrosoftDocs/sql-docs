@@ -2,7 +2,7 @@
 title: "Distributor Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Distributor Settings dialog box"
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

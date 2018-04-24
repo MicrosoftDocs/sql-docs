@@ -2,7 +2,7 @@
 title: "PDO::errorInfo | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,7 @@ ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::errorInfo
@@ -40,7 +40,7 @@ An array of error information about the most recent operation on the database ha
   
 -   The driver-specific error message.  
   
-If there is no error, or if the SQLSTATE is not set, the driver-specific fields will be NULL.  
+If there is no error, or if the SQLSTATE is not set, then the driver-specific fields are NULL.  
   
 ## Remarks  
 PDO::errorInfo only retrieves error information for operations performed directly on the database. Use PDOStatement::errorInfo when a PDOStatement instance is created using PDO::prepare or PDO::query.  
@@ -63,6 +63,7 @@ print_r ($conn->errorInfo());
 ```  
   
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 caps.latest.revision: 5
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rollback Member Revision History (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   A member revision history is recorded each time a member is changed. You can rollback a member revision history to a previous version.  
   
 ## Prerequisites  

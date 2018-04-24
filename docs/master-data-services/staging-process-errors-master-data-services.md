@@ -16,12 +16,15 @@ helpviewer_keywords:
   - "staging process [Master Data Services], error messages"
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 caps.latest.revision: 8
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Staging Process Errors (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   When the staging process is complete, all processed records in the staging tables have a value in the ErrorCode column. These values are listed in the following table.  
   
 |Code|Error|Occurs When/Details|Applies to Table|  

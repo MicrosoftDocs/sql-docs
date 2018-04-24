@@ -1,8 +1,8 @@
----
+﻿---
 title: "CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -29,12 +29,15 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE SERVER AUDIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Creates a server audit object using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

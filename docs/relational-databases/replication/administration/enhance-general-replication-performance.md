@@ -2,7 +2,7 @@
 title: "Enhance General Replication Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "transactional replication, performance"
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

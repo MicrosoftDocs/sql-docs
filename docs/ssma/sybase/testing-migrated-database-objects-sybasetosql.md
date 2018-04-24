@@ -19,7 +19,7 @@ ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Testing Migrated Database Objects (SybaseToSQL)

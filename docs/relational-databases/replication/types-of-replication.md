@@ -2,7 +2,7 @@
 title: "Types of Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "replication [SQL Server], types"
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Active"
 ---

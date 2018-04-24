@@ -2,7 +2,7 @@
 title: "Properties Reference (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "F1 Help [SQL Server replication]"
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

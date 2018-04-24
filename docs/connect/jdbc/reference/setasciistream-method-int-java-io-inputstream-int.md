@@ -2,7 +2,7 @@
 title: "setAsciiStream Method (int, java.io.InputStream, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 9436c39f-f1a1-484a-a75b-776a72ca70f4
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setAsciiStream Method (int, java.io.InputStream, int)

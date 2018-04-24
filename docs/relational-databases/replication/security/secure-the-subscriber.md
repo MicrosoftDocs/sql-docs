@@ -2,7 +2,7 @@
 title: "Secure the Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "security [SQL Server replication], Subscribers"
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

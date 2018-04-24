@@ -2,7 +2,7 @@
 title: "FriendlyName Property (SecurityCertificate Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "FriendlyName property"
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

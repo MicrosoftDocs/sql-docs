@@ -2,7 +2,7 @@
 title: "Replication Log Reader Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "command prompt [SQL Server replication]"
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

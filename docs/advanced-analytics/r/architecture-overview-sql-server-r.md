@@ -1,29 +1,20 @@
 ---
-title: "Architecture Overview (SQL Server R Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/11/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 9
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Architecture overview of R language support in SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Architecture overview for R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This section provides an overview of the architecture of SQL Server 2016 R Services, and of SQL Server 2017 Machine Learning Services.
 
-The architecture for the extensibility architecture is the same or very similar for the SQL Server 2016 and SQL Server 2017 releases, and similar also for R and Python. However, to simplify the discussion, this topic discusses only the R components, including new components added in the SQL Server database engine to support external script execution, security, R libraries, and interoperability with open source R.
+The architecture for the extensibility architecture is the same or very similar for the SQL Server 2016 and SQL Server 2017 releases, and similar also for R and Python. However, to simplify the discussion, this article discusses only the R components, including new components added in the SQL Server database engine to support external script execution, security, R libraries, and interoperability with open source R.
 
 Additional details are provided in the links for each section.
 

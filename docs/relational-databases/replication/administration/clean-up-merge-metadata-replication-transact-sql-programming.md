@@ -2,7 +2,7 @@
 title: "Clean Up Merge Metadata (Replication Transact-SQL Programming) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_mergemetadataretentioncleanup"
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

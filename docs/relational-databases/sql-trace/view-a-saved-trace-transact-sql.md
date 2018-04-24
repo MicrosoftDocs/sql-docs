@@ -2,7 +2,7 @@
 title: "View a Saved Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "sql-trace"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "viewing traces"
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

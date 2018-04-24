@@ -17,12 +17,15 @@ helpviewer_keywords:
   - "derived hierarchies, deleting"
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete a Derived Hierarchy (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a derived hierarchy when you are sure you no longer need it.  
   
 > [!NOTE]  

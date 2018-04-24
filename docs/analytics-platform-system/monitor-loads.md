@@ -1,24 +1,18 @@
 ---
-title: "Monitor Loads for Parallel Data Warehouse"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "You can monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) System Views."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: 6
-
+title: Monitor loads for Parallel Data Warehouse | Microsoft Docs
+description: Monitor active and recent loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) System Views."
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Monitor loads
-You can monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) [System Views](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+
+# Monitor loads into Parallel Data Warehouse
+Monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) [System Views](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
   
 > [!TIP]  
 > Some loads are initiated by using INSERT statements or business intelligence tools that use SQL statements to perform the load. 

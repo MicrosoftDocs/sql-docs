@@ -2,7 +2,7 @@
 title: "Create an Updatable Subscription to a Transactional Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "updateable transactional subscriptions, SSMS"
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

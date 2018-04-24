@@ -16,12 +16,15 @@ helpviewer_keywords:
   - "attributes [Master Data Services], changing name"
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 caps.latest.revision: 9
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Change an Attribute Name and Data Type (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of an attribute.  
   
 ## Prerequisites  

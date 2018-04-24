@@ -2,7 +2,7 @@
 title: "Configure an Oracle Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], configuring"
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

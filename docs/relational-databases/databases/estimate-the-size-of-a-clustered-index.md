@@ -1,8 +1,8 @@
----
+﻿---
 title: "Estimate the Size of a Clustered Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.reviewer: ""
 ms.suite: "SQL"
 ms.prod_service: database-engine, sql-database
@@ -29,6 +29,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Estimate the Size of a Clustered Index
 

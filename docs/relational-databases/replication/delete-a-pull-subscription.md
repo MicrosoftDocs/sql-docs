@@ -2,7 +2,7 @@
 title: "Delete a Pull Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], pull"
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

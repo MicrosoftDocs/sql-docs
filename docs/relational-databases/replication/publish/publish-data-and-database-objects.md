@@ -2,7 +2,7 @@
 title: "Publish Data and Database Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -45,8 +45,8 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server replication]"
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

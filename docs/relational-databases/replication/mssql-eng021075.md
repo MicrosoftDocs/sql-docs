@@ -2,7 +2,7 @@
 title: "MSSQL_ENG021075 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_ENG021075 error"
 ms.assetid: c8c29543-d1f6-49d5-b6c8-e8c3aa373090
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

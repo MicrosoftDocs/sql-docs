@@ -2,7 +2,7 @@
 title: "SetEnable Method (ClientNetworkProtocol Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetEnable method"
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

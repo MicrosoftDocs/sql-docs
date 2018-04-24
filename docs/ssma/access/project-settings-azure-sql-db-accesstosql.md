@@ -22,7 +22,7 @@ ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (Azure SQL DB) (AccessToSQL)

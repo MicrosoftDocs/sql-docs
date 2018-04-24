@@ -2,7 +2,7 @@
 title: "MSSQL_ENG004929 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_ENG004929 error"
 ms.assetid: 1d9b1d88-1fbf-4089-b392-687d3b0220ca
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

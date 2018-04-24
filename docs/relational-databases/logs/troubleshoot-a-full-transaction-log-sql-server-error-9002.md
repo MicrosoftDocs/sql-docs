@@ -2,7 +2,7 @@
 title: "Troubleshoot a Full Transaction Log (SQL Server Error 9002) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "logs"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "full transaction logs [SQL Server]"
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Active"
 ---

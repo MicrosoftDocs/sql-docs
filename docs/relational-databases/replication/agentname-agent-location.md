@@ -2,7 +2,7 @@
 title: "&lt;AgentName&gt; Agent Location | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.newsubwizard.agentlocation.f1"
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -19,7 +19,7 @@ ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # User Interface Reference (SybaseToSQL)

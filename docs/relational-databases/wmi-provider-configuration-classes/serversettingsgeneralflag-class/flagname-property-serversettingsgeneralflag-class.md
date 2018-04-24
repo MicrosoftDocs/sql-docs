@@ -2,7 +2,7 @@
 title: "FlagName Property (ServerSettingsGeneralFlag Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "FlagName property"
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

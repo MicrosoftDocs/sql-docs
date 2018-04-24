@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 caps.latest.revision: 32
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Installation Tasks for Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This article provides an overview of the installation tasks, with links to instructions. For a walkthrough of installing and configuring Master Data Services, see [Master Data Services Installation and Configuration](../../master-data-services/master-data-services-installation-and-configuration.md) 
   
 -   [Pre-Installation Tasks](#preinstall): Verify system requirements before you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  

@@ -2,7 +2,7 @@
 title: "The Memory Optimized Filegroup | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "in-memory-oltp"
@@ -14,8 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

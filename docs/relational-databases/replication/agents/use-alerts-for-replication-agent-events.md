@@ -2,7 +2,7 @@
 title: "Use Alerts for Replication Agent Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "Snapshot Agent, alerts"
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

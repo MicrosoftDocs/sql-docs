@@ -1,34 +1,24 @@
 ---
-title: "Upgrade machine learning components in a SQL Server instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/31/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server (starting with 2016 CTP3)"
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "On Demand"
+title: Bind machine learning components on SQL Server to Microsoft Machine Learning Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Upgrade machine learning components in a SQL Server instance
+# Bind machine learning components on SQL Server to Microsoft Machine Learning Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains the process of _binding_, which you can use to upgrade the machine learning components used in SQL Server. The process of binding locks the server into an update cadence based on releases of Machine Learning Server, rather than using the SQL Server release and update schedule.
+This article explains the process of *binding* an (In-Database) instance of SQL Server Machine Learning Services or SQL Server R Services to Microsoft Machine Learning Server for the purpose of upgrading R and Python packages on a faster release cadence. 
 
-> [!IMPORTANT]
-> You do not need to use this upgrade process if you want to get upgrades as a part of SQL Server updates. Whenever you install a new service pack or service release, machine learning components are always automatically upgraded to the latest version. Only use the _binding_ process if you want to upgrade components at a faster pace than is afforded by SQL Server service releases.
+The process of binding changes the service update mechanism. Without binding, the version of R and Python packages are refreshed only when you install a service pack or cumulative update (CU). With binding, newer package versions can be applied to your instance, independently of the CU release schedule.
 
-If at any time you want to stop upgrading on the Machine Learning Server schedule, you must _unbind_ the instance as described in [this section](#bkmk_Unbind), and uninstall Machine Learning Server.
+Binding affects just the Machine Learning or R components of the database engine instance, not the database engine instance itself. It only applies to an (In-Database) instance. A (Standalone) installation is not in scope.
+
+If at any time you want to revert to SQL Server servicing for your machine learning components, you can _unbind_ the instance as described in [this section](#bkmk_Unbind), and uninstall Machine Learning Server.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 

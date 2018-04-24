@@ -2,7 +2,7 @@
 title: "Specify Interactive Conflict Resolution for Merge Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "conflict resolution [SQL Server replication], merge replication"
 ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

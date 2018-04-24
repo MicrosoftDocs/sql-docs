@@ -2,7 +2,7 @@
 title: "Publication Information, Agents (Transactional Publication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1"
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

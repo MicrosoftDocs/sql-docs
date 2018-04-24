@@ -16,12 +16,15 @@ keywords:
   - "master data services"
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Entity Dependencies Explorer
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 adds a new explorer page, Entity Dependencies, that provides an alternate way to visualize relationships between entity members within a model, as specified by their domain-based attribute (DBA) values, but without having to first define a Derived Hierarchy.   
   

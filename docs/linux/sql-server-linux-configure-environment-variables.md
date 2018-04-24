@@ -4,7 +4,7 @@ description: This article describes how to use environment variables to configur
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -44,7 +44,12 @@ You can use several different environment variables to configure SQL Server 2017
 | **MSSQL_DATA_DIR** | Change the directory where the new SQL Server database data files (.mdf) are created. |
 | **MSSQL_LOG_DIR** | Change the directory where the new SQL Server database log (.ldf) files are created. |
 | **MSSQL_DUMP_DIR** | Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default. |
-| **MSSQL_ENABLE_HADR** | Enable Availability Groups. |
+| **MSSQL_ENABLE_HADR** | Enable Availability Group. For example, '1' is enabled, and '0' is disabled |
+| **MSSQL_AGENT_ENABLED** | Enable SQL Server Agent. For example, 'true' is enabled and 'false' is disabled. By default, agent is disabled.  |
+| **MSSQL_MASTER_DATA_FILE** | Sets the location of the master database data file. |
+| **MSSQL_MASTER_LOG_FILE** | Sets the location of the master database log file. |
+| **MSSQL_ERROR_LOG_FILE** | Sets the location of the errorlog files. |
+
 
 ## Example: initial setup
 

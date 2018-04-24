@@ -2,7 +2,7 @@
 title: "Publication Properties, Publication Access List | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.newpubwizard.pubproperties.publicationaccesslist.f1"
 ms.assetid: 9587bb9e-c66c-4e70-8171-09b943ec2d50
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

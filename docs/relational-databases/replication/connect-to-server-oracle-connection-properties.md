@@ -2,7 +2,7 @@
 title: "Connect to Server (Oracle), Connection Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Connect to Server dialog box, replication"
 ms.assetid: 1bb7396f-cbb2-4f88-b82b-543287ed4172
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

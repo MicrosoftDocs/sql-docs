@@ -1,31 +1,23 @@
 ---
-title: "Architecture overview for SQL Server Machine Learning Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2017"
-ms.prod: "machine-learning-services"
-ms.prod_service: "machine-learning-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Architecture overview for SQL Server Machine Learning Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 
 # Architecture overview for SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the goals of the extensibility framework that supports execution of Python and R script in SQL Server.
+This article describes the goals of the extensibility framework that supports execution of Python and R script in SQL Server.
 
 It also provides an overview of how the architecture is designed to meet these goals, how R and Python are supported and executed by SQL Server, and the benefits of integration.
 
-Overall, the extensibility framework is almost identical for R and Python, with some minor differences in the details of the launchers that are called, configuration options, and so forth. For further information about the implementation for a specific language, see these topics:
+Overall, the extensibility framework is almost identical for R and Python, with some minor differences in the details of the launchers that are called, configuration options, and so forth. For further information about the implementation for a specific language, see these articles:
 
 - [Architecture Overview for SQL Server R Services](r/architecture-overview-sql-server-r.md)
 - [Architecture Overview for Python in SQL Server](python/architecture-overview-sql-server-python.md)

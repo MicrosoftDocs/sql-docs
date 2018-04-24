@@ -19,7 +19,7 @@ ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to Azure SQL DB  (SybaseToSQL)

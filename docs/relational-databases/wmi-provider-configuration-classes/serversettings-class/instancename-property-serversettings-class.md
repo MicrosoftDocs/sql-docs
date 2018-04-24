@@ -2,7 +2,7 @@
 title: "InstanceName property (ServerSettings Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

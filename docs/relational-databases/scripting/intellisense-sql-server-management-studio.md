@@ -1,8 +1,8 @@
----
+﻿---
 title: "IntelliSense (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-scripting"
@@ -18,9 +18,10 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] support [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options that reduce typing, provide quick access to syntax information, or make it easier to view the delimiters of complex expressions.  
   
 ## Benefits of IntelliSense  

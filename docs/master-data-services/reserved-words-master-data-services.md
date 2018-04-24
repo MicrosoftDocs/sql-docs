@@ -17,12 +17,15 @@ helpviewer_keywords:
   - "Master Data Services, reserved words"
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 caps.latest.revision: 11
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Reserved Words (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], when you create model objects or members, some words cannot be used. Using these words may cause errors.  
   
 > [!NOTE]  

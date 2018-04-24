@@ -2,7 +2,7 @@
 title: "GetCurrentCertificate Method (SInstance Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "GetCurrentCertificate method"
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

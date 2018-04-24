@@ -2,7 +2,7 @@
 title: "Distributor and Publisher Information Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Distributors [SQL Server replication], information scripts"
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

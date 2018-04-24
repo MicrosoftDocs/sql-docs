@@ -21,12 +21,15 @@ helpviewer_keywords:
   - "security [Master Data Services], database logins"
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 caps.latest.revision: 9
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Logins, Users, and Roles (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] includes logins, users, and roles that are automatically installed on the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] instance that hosts the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. These logins, users, and roles should not be modified.  
   
 ## Logins  

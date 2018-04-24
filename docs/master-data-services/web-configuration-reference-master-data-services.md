@@ -16,12 +16,15 @@ helpviewer_keywords:
   - "web configuration file [Master Data Services]"
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Web Configuration Reference (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] uses a Web.config file to contain the configuration settings that enable Internet Information Services (IIS) to host the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web application and the Web service. This Web.config file is located in the WebApplication folder of the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] installation path. For more information about the path and permissions, see [Folder and File Permissions &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).  
   
 ## Web.Config Elements  

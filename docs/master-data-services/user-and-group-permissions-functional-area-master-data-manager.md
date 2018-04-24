@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # User and Group Permissions Functional Area (Master Data Manager)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In the User and Group Permissions functional area, administrators can grant permission to functional areas, to attributes (on the Models tab), and to members (on the Hierarchy Members tab). Overlapping permissions are resolved to determine a user’s permission to each individual attribute value.  
   
  [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  

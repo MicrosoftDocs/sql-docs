@@ -4,7 +4,7 @@ description: This quickstart shows how to install SQL Server 2017 on Ubuntu and 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: database-engine
@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: "Active"
 ---
-# Install SQL Server and create a database on Ubuntu
+# Quickstart: Install SQL Server and create a database on Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -91,29 +91,45 @@ At this point, SQL Server is running on your Ubuntu machine and is ready to use!
 
 To create a database, you need to connect with a tool that can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools: [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
-1. Import the public repository GPG keys:
+Use the following steps to install the **mssql-tools** on Ubuntu. 
+
+1. Import the public repository GPG keys.
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Register the Microsoft Ubuntu repository:
+1. Register the Microsoft Ubuntu repository.
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Update the sources list and run the installation command with the unixODBC developer package:
+1. Update the sources list and run the installation command with the unixODBC developer package.
 
    ```bash
-   sudo apt-get update
-   sudo apt-get install -y mssql-tools unixodbc-dev
+   sudo apt-get update 
+   sudo apt-get install mssql-tools unixodbc-dev
    ```
 
-1. For convenience, add `/opt/mssql-tools/bin/` to your **PATH** environment variable. This enables you to run the tools without specifying the full path. Run the following commands to modify the **PATH** for both login sessions and interactive/non-login sessions:
+   > [!Note] 
+   > To update to the latest version of **mssql-tools** run the following commands:
+   >    ```bash
+   >   sudo apt-get update 
+   >   sudo apt-get install mssql-tools 
+   >   ```
+
+1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
+
+   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the **~/.bash_profile** file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+
+   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the **~/.bashrc** file with the following command:
+
+   ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```

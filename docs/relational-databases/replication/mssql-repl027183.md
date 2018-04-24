@@ -2,7 +2,7 @@
 title: "MSSQL_REPL027183 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_REPL027183 error"
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

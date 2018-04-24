@@ -2,7 +2,7 @@
 title: "InstanceName Property (ServerSettingsGeneralFlag Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

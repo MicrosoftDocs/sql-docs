@@ -19,7 +19,7 @@ ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (GUI) (DB2ToSQL)

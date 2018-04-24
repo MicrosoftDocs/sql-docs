@@ -2,7 +2,7 @@
 title: "Snapshot Agent (New Publication Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.newpubwizard.configuresnapshotagent.f1"
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

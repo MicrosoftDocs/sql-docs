@@ -1,6 +1,6 @@
 ﻿---
 title: "About SQL Server Analysis Services | Microsoft Docs"
-ms.date: "01/26/2018"
+ms.date: "02/21/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -31,7 +31,7 @@ ms.workload: "Active"
 
 Analysis Services is an analytical data engine used in decision support and business analytics. It provides enterprise-grade semantic data models for business reports and client applications such as Power BI, Excel, Reporting Services reports, and other data visualization tools.  
 
-A typical workflow includes creating a multidimensional or tabular data model project in Visual Studio, deploying the model as a database to a server instance, setting up recurring data processing, and assigning permissions to allow data access by end-users. When it's ready to go, your semantic data model can be accessed by client applications supporting Analysis Services as a data source.  
+A typical workflow includes creating a tabular or multidimensional data model project in Visual Studio, deploying the model as a database to a server instance, setting up recurring data processing, and assigning permissions to allow data access by end-users. When it's ready to go, your semantic data model can be accessed by client applications supporting Analysis Services as a data source.  
 
 Analysis Services is available in two different platforms: 
 
@@ -40,21 +40,19 @@ Analysis Services is available in two different platforms:
 **SQL Server Analysis Services** - Supports tabular models at all compatibility levels, multidimensional models, data mining, and Power Pivot for SharePoint.
  
  ## Documentation by area  
-In general, [Azure Analysis Services documentation](https://docs.microsoft.com/azure/analysis-services/) is included with Azure documentation. If you're interested in having your tabular models in the cloud, it's best to start there. 
-
-This article and documentation in this section is mostly for SQL Server Analysis Services. However, at least for tabular models, how you create and deploy your projects is much the same, regardless of the platform you're using. Check out these sections to learn more:
+In general, [Azure Analysis Services documentation](https://docs.microsoft.com/azure/analysis-services/) is included with Azure documentation. If you're interested in having your tabular models in the cloud, it's best to start there. This article and documentation in this section is mostly for SQL Server Analysis Services. However, at least for tabular models, how you create and deploy your tabular model projects is much the same, regardless of the platform you're using. Check out these sections to learn more:
 
    
 *  [Comparing Tabular and Multidimensional Solutions](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [Install SQL Server Analysis Services](../analysis-services/instances/install-windows/install-analysis-services.md)
-*  [Tabular Models](../analysis-services/tabular-models/tabular-models-ssas.md)  
-*  [Multidimensional Models](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
+*  [Tabular models](../analysis-services/tabular-models/tabular-models-ssas.md)  
+*  [Multidimensional models](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [Data Mining](../analysis-services/data-mining/data-mining-ssas.md)  
 *  [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
-*  [Instance Management](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)   
-*  [Developer Documentation](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
-*  [Technical Reference](../analysis-services/powershell/technical-reference-ssas.md)
+*  [Server management](../analysis-services/instances/analysis-services-instance-management.md)    
+*  [Developer documentation](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
+*  [Technical reference](../analysis-services/powershell/technical-reference-ssas.md)
 
 See also
 

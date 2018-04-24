@@ -2,7 +2,7 @@
 title: "PDO::prepare | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,7 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::prepare
@@ -137,6 +137,7 @@ print_r($row);
 ```  
   
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -27,7 +27,7 @@ ms.workload: "On Demand"
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   The tasks in this topic describe how to process a tabular model database, table, or partitions manually by using the **Process \<object>** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- For more information about tabular model processing, see [Process Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ For more information about tabular model processing, see [Process Data](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_process_tasks"></a> Tasks  
   
@@ -81,7 +81,7 @@ ms.workload: "On Demand"
 4.  In the **Process** checkbox column, select the partitions you want to process with the selected mode, and then click **Ok**.  
   
 ## See Also  
- [Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Tabular Model Partitions](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
+ [Create and Manage Tabular Model Partitions](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

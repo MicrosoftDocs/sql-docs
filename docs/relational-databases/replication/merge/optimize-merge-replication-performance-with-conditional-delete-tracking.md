@@ -2,7 +2,7 @@
 title: "Optimize Merge Replication Performance with Conditional Delete Tracking | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], conditional delete tracking"
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

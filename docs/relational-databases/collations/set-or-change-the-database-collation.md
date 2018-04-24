@@ -1,8 +1,8 @@
----
+﻿---
 title: "Set or Change the Database Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "collations"
@@ -17,15 +17,19 @@ helpviewer_keywords:
   - "database collations [SQL Server]"
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Set or Change the Database Collation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
-  
+ 
+> [!NOTE]
+> You cannot change the collation for an Azure SQL Database after it is created.
+
  **In This Topic**  
   
 -   **Before you begin:**  

@@ -2,7 +2,7 @@
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -60,12 +60,14 @@ ms.workload: "Active"
 
   Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Simple Syntax  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -75,7 +77,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## Syntax  
+## Full Syntax  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -1257,7 +1259,9 @@ SELECT * FROM tempdb.sys.database_files
   
 ## Permissions  
  Requires CREATE TABLE permission in the database and ALTER permission on the schema in which the table is being created.  
-  
+ 
+ If any columns in the CREATE TABLE statement are defined to be of a user-defined type, REFERENCES permission on the user-defined type is required. 
+ 
  If any columns in the CREATE TABLE statement are defined to be of a CLR user-defined type, either ownership of the type or REFERENCES permission on it is required.  
   
  If any columns in the CREATE TABLE statement have an XML schema collection associated with them, either ownership of the XML schema collection or REFERENCES permission on it is required.  
@@ -1557,7 +1561,7 @@ CREATE SCHEMA History
 GO  
 CREATE TABLE dbo.Department   
 (  
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,   
+    DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,   
     DepartmentName varchar(50) NOT NULL,   
     ManagerID int  NULL,   
     ParentDepartmentNumber char(10) NULL,   

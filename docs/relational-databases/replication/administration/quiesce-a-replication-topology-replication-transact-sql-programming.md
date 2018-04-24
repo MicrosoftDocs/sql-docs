@@ -2,7 +2,7 @@
 title: "Quiesce a Replication Topology (Replication Transact-SQL Programming) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "transactional replication, backup and restore"
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -2,7 +2,7 @@
 title: "SetDefaults Method (ServerSettings Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetDefaults method"
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -2,7 +2,7 @@
 title: "FlagValue Property (ClientSettingsGeneralFlag Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "FlagValue property"
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

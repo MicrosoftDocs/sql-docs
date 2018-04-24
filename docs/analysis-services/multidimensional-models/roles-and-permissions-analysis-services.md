@@ -62,6 +62,6 @@ ms.workload: "On Demand"
 -   [Grant custom access to cell data &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## See Also  
- [Create and Manage Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
+ [Create and Manage Roles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
   
   

@@ -3,7 +3,7 @@ title: "Store JSON documents in SQL Server or SQL Database | Microsoft Docs"
 ms.description: "This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents."
 ms.custom: ""
 ms.date: "01/04/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "json"
@@ -15,8 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 
 caps.latest.revision: 
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

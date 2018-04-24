@@ -2,7 +2,7 @@
 title: "Understanding the WMI Provider for Server Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "WMI Provider for Server Events, about WMI Provider for Server Events"
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

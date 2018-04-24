@@ -2,7 +2,7 @@
 title: "Publish Execution of Stored Procedure in Transactional Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server replication], publishing"
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

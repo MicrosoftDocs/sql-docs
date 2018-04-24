@@ -1,8 +1,8 @@
----
+﻿---
 title: "Comparing Disk-Based Table Storage to Memory-Optimized Table Storage | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "in-memory-oltp"
@@ -14,10 +14,11 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Comparing Disk-Based Table Storage to Memory-Optimized Table Storage
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

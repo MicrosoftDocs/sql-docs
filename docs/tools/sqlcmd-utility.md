@@ -1,4 +1,4 @@
----
+﻿---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
@@ -34,12 +34,14 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > For SQL Server 2014 and lower, see [sqlcmd Utility](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
+ > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
 
   The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt, in **Query Editor** in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a  SQL Server  Agent job. This utility uses ODBC to execute Transact-SQL batches. 
   
@@ -58,7 +60,7 @@ You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by 
  
  Other topics:
 - [Start the sqlcmd Utility](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## Syntax  
   

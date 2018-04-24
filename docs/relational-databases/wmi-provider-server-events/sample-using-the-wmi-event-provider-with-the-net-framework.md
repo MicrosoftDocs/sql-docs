@@ -2,7 +2,7 @@
 title: "Sample: Using the WMI Event Provider with the .NET Framework | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "managed code [WMI]"
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

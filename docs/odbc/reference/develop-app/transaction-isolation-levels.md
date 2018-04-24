@@ -2,7 +2,7 @@
 title: "Transaction Isolation Levels | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -27,7 +27,7 @@ ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Transaction Isolation Levels

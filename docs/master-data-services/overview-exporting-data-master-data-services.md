@@ -18,12 +18,15 @@ helpviewer_keywords:
   - "subscription views [Master Data Services], about subscription views"
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 caps.latest.revision: 12
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Overview: Exporting Data (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This article introduces the types of subscription view formats and how to determine when views need to be edited due to changes to model objects.  
   
  You create a subscription view to export [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] data to a subscribing system such as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You  use the subscribing system to view the data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  For information on how to create the subscription view, see [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Initialize a Transactional Subscription Without a Snapshot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "replication"
@@ -18,10 +18,11 @@ helpviewer_keywords:
   - "initializing subscriptions [SQL Server replication], without snapshots"
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Initialize a Transactional Subscription Without a Snapshot
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

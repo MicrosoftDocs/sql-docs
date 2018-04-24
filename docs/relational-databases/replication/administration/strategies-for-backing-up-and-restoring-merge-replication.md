@@ -2,7 +2,7 @@
 title: "Strategies for Backing Up and Restoring Merge Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], backup and restore"
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

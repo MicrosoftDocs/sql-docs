@@ -19,10 +19,13 @@ ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Run the Data Quality Client Application
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Run [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], and log on to a [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

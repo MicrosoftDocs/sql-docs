@@ -2,7 +2,7 @@
 title: "getClientConnectionID Method (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getClientConnectionID Method (SQLServerConnection)
@@ -26,7 +26,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```vb  
+``` 
 public Java.util.UUID SQLServerConnection.getClientConnectionID();  
 ```  
   

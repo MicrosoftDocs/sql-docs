@@ -2,7 +2,7 @@
 title: "Control Behavior of Triggers and Constraints in Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "NFR option"
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

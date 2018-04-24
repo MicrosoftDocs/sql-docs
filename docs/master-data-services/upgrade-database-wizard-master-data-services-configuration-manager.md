@@ -14,12 +14,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Upgrade Database Wizard (Master Data Services Configuration Manager)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Use the **Upgrade Database Wizard** to upgrade a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
 ## Action  

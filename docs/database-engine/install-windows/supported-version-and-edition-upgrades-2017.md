@@ -2,7 +2,7 @@
 title: "Supported Version and Edition Upgrades - SQL Server 2017| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install-windows"
@@ -50,9 +50,7 @@ manager: "craigg"
 -   You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], you can add features by using the [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
  
 -   Failover Clusters are not supported in WOW mode.  
-  
--   Upgrade from an Evaluation edition of a previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not supported.
-  
+    
 ## Upgrades from Earlier Versions to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
  
 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] supports upgrade from the following versions of SQL Server:

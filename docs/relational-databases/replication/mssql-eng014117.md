@@ -2,7 +2,7 @@
 title: "MSSQL_ENG014117 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_ENG014117 error"
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

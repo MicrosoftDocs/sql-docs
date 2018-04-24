@@ -74,7 +74,7 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Supported Data Sources &#40;SSAS - Multidimensional&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Multidimensional Model Solutions &#40;SSAS&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Multidimensional Model Solutions ](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Data Mining Solutions](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

@@ -16,12 +16,15 @@ helpviewer_keywords:
   - "staging process [Master Data Services], viewing errors"
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 caps.latest.revision: 8
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Errors that Occur During Staging (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can view errors that occur during the staging process. In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, there are two views that show errors:  
   
 -   stg.viw_name_MemberErrorDetails for leaf or consolidated member updates.  

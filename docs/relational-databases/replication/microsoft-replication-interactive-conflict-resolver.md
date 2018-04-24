@@ -1,8 +1,8 @@
----
+﻿---
 title: "Microsoft Replication Interactive Conflict Resolver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "replication"
@@ -16,10 +16,11 @@ f1_keywords:
   - "sql13.rep.replconflictviewer.interactiveresolver.f1"
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Microsoft Replication Interactive Conflict Resolver
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

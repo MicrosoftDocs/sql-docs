@@ -19,7 +19,7 @@ ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assessing DB2 Schemas for Conversion (DB2ToSQL)

@@ -2,7 +2,7 @@
 title: "Set Queued Updating Conflict Resolution Options (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "queued updating subscriptions [SQL Server replication]"
 ms.assetid: bb6b6c71-42c7-421a-a0fa-d5594d27e35d
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

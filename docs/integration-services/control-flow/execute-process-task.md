@@ -71,7 +71,7 @@ ms.workload: "On Demand"
   
      For more information, see the topic, [My.Application.CommandLineArgs Property](http://go.microsoft.com/fwlink/?LinkId=129200), in the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] reference.  
   
--   If you use Microsoft Visual C# to write the applicate, use the **Main** method.  
+-   If you use Microsoft Visual C# to write the application, use the **Main** method.  
   
      For more information, see the topic, [Command-Line Arguments (C# Programming Guide)](http://go.microsoft.com/fwlink/?LinkId=129406), in the C# Programming Guide.  
   

@@ -1,8 +1,8 @@
----
+﻿---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -34,12 +34,15 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates a [!INCLUDE[ssDE](../../includes/ssde-md.md)] login for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -239,15 +242,17 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO  
 ```  
   
-### B. Creating a login with a password  
+### B. Creating a login with a password that must be changed
  The following example creates a login for a particular user and assigns a password. The `MUST_CHANGE` option requires users to change this password the first time they connect to the server.  
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' MUST_CHANGE;  
+CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' 
+    MUST_CHANGE,  CHECK_EXPIRATION = ON;
 GO  
 ```  
+[!NOTE] The MUST_CHANGE option cannot be used when CHECK_EXPIRATION is OFF.
   
 ### C. Creating a login mapped to a credential  
  The following example creates the login for a particular user, using the user. This login is mapped to the credential.  

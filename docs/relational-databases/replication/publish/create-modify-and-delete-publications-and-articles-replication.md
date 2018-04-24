@@ -2,7 +2,7 @@
 title: "Create, Modify, and Delete Publications and Articles (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], defining"
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

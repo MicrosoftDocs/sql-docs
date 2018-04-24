@@ -2,7 +2,7 @@
 title: "Datetime Data Type Changes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -23,7 +23,7 @@ ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Datetime Data Type Changes

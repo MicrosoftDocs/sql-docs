@@ -2,7 +2,7 @@
 title: "Monitoring Replication with System Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "performance counters [SQL Server replication]"
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -2,7 +2,7 @@
 title: "GeneralFlags Property (ServerSettings Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "GeneralFlags property"
 ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

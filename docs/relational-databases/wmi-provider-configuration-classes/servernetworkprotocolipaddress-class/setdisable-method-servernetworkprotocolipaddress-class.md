@@ -2,7 +2,7 @@
 title: "SetDisable Method (ServerNetworkProtocolIPAddress Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetDisable method"
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

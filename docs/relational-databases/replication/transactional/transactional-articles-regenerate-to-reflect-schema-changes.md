@@ -2,7 +2,7 @@
 title: "Regenerate Custom Transactional Procedures to Reflect Schema Changes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "schemas [SQL Server replication], replicating changes"
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

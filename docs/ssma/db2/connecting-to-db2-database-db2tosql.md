@@ -19,7 +19,7 @@ ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connecting to DB2 Database (DB2ToSQL)

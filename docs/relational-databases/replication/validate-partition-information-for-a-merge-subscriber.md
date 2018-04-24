@@ -2,7 +2,7 @@
 title: "Validate Partition Information for a Merge Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "validating partition information"
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

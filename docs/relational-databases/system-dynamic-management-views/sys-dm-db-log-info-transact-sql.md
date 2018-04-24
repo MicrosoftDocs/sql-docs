@@ -1,8 +1,8 @@
----
+﻿---
 title: "sys.dm_db_log_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/11/2018"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "dmv's"
@@ -27,6 +27,7 @@ author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
 ms.workload: "Inactive"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -80,19 +81,33 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### B. Determing the status of last `VLF` in transaction log before shrinking the log file
+### B. Determing the position of the last `VLF` in transaction log before shrinking the log file
 
-The following query can be used to determine the status of last VLF before running shrinkfile on transaction log to determine if transaction log can shrink.
+The following query can be used to determine the position of the last active VLF before running shrinkfile on transaction log to determine if transaction log can shrink.
 
 ```sql
 USE AdventureWorks2016
 GO
 
-SELECT TOP 1 DB_NAME(database_id) AS "Database Name", file_id, vlf_size_mb, vlf_sequence_number, vlf_active, vlf_status
-FROM sys.dm_db_log_info(DEFAULT)
-ORDER BY vlf_sequence_number DESC
+;WITH cte_vlf AS (
+SELECT ROW_NUMBER() OVER(ORDER BY vlf_begin_offset) AS vlfid, DB_NAME(database_id) AS [Database Name], vlf_sequence_number, vlf_active, vlf_begin_offset, vlf_size_mb
+	FROM sys.dm_db_log_info(DEFAULT)),
+cte_vlf_cnt AS (SELECT [Database Name], COUNT(vlf_sequence_number) AS vlf_count,
+	(SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 0) AS vlf_count_inactive,
+	(SELECT COUNT(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS vlf_count_active,
+	(SELECT MIN(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_min_vlf_active,
+	(SELECT MIN(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS min_vlf_active,
+	(SELECT MAX(vlfid) FROM cte_vlf WHERE vlf_active = 1) AS ordinal_max_vlf_active,
+	(SELECT MAX(vlf_sequence_number) FROM cte_vlf WHERE vlf_active = 1) AS max_vlf_active
+	FROM cte_vlf
+	GROUP BY [Database Name])
+SELECT [Database Name], vlf_count, min_vlf_active, ordinal_min_vlf_active, max_vlf_active, ordinal_max_vlf_active,
+((ordinal_min_vlf_active-1)*100.00/vlf_count) AS free_log_pct_before_active_log,
+((ordinal_max_vlf_active-(ordinal_min_vlf_active-1))*100.00/vlf_count) AS active_log_pct,
+((vlf_count-ordinal_max_vlf_active)*100.00/vlf_count) AS free_log_pct_after_active_log
+FROM cte_vlf_cnt
+GO
 ```
-
 
 ## See Also  
 [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

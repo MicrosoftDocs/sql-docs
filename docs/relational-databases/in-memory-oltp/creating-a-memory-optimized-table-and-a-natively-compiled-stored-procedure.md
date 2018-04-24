@@ -2,7 +2,7 @@
 title: "Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "in-memory-oltp"
@@ -14,8 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

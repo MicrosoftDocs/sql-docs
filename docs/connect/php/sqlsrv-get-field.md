@@ -2,7 +2,7 @@
 title: "sqlsrv_get_field | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -23,7 +23,7 @@ ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_get_field
@@ -54,7 +54,7 @@ The combination of **sqlsrv_fetch** and **sqlsrv_get_field** provides forward-on
 The combination of **sqlsrv_fetch**/**sqlsrv_get_field** loads only one field of a result set row into script memory and allows PHP return type specification. (For information about how to specify the PHP return type, see [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).) This combination of functions also allows data to be retrieved as a stream. (For information about retrieving data as a stream, see [Retrieving Data as a Stream Using the SQLSRV Driver](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).)  
   
 ## Example  
-The following example retrieves a row of data that contains a product review and the name of the reviewer. To retrieve data from the result set, **sqlsrv_get_field** is used. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example retrieves a row of data that contains a product review and the name of the reviewer. To retrieve data from the result set, **sqlsrv_get_field** is used. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -114,6 +114,8 @@ sqlsrv_close( $conn);
   
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Retrieving Data](../../connect/php/retrieving-data.md)  
+
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

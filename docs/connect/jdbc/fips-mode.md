@@ -1,8 +1,8 @@
 ---
 title: "FIPS Mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/28/2017"
-ms.prod: "sql-non-specified"
+ms.date: "01/19/2018"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -31,13 +31,13 @@ The Microsoft JDBC Driver for SQL Server supports *FIPS 140 Compliant Mode*. For
 * Appropriate Configuration Parameters. 
 
 
-## FIPS Configured JVM:
+## FIPS Configured JVM
 
 To see the approved modules for FIPS Configuration, refer to the [Validated FIPS 140-1 and FIPS 140-2 Cryptographic Modules](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
 
 Vendors may have some additional steps to configure JVM with FIPS.
 
-### Ensure your JVM is in FIPS Mode:
+### Ensure your JVM is in FIPS Mode
 In order to ensure your JVM is FIPS enabled, execute the following snippet: 
 
 ````
@@ -47,10 +47,10 @@ public boolean isFIPS() throws Exception {
 }
 ````
 
-## Appropriate SSL Certificate:
+## Appropriate SSL Certificate
 In order to connect SQL Server in FIPS mode, a valid SSL Certificate is required. Install or import it in the Java Key Store on the client machine (JVM) where FIPS is enabled. If you did not import / install the appropriate certificate, you could not be able to connect to SQL Server as a secure connection cannot be made.
 
-### Importing SSL Certificate in Java KeyStore:
+### Importing SSL Certificate in Java KeyStore
 For FIPS, most likely you need to import the certificate (.cert) to either PKCS or in a provider-specific format. 
 Use the following snippet to import the SSL certificate and store it in a working directory with the appropriate KeyStore format. _TRUST_STORE_PASSWORD_ is your password for Java KeyStore. 
 
@@ -74,14 +74,14 @@ Use the following snippet to import the SSL certificate and store it in a workin
 ````
 
 
-In the following example, we are importing an Azure SSL Certificate in PKCS12 format with BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore_PKCS12_ by using the following snippet:
+The following example is importing an Azure SSL Certificate in PKCS12 format with BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore_PKCS12_ by using the following snippet:
 
 ` saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer"); `
 
-## Appropriate policy files: 
+## Appropriate policy files
 For some FIPS Providers, unrestricted Policy jars are needed. In such cases, for Sun / Oracle, download the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) or [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
 
-## Appropriate Configuration Parameters: 
+## Appropriate Configuration Parameters
 In order to run the JDBC Driver in FIPS-compliant mode, configure connection properties as shown in following table. 
 
 **Properties**: 
@@ -89,12 +89,12 @@ In order to run the JDBC Driver in FIPS-compliant mode, configure connection pro
 |Property|Type|Default|Description|Notes|
 |---|---|---|---|---|
 |encrypt|boolean ["true / false"]|"false"|For FIPS enabled JVM encrypt property should be **true**||
-|TrustServerCertificate|boolean ["true / false"]|"false"|For FIPS we need to validate certificate chain, so we should use **"false"** value for this property. ||
+|TrustServerCertificate|boolean ["true / false"]|"false"|For FIPS, the user needs to validate certificate chain, so the user should use **"false"** value for this property. ||
 |trustStore|String|null|Your Java Keystore file path where you imported your certificate. If you install certificate on your system, then no need to pass anything. Driver uses cacerts or jssecacerts files.||
 |trustStorePassword|String|null|The password used to check the integrity of the trustStore data.||
-|fips|boolean ["true / false"]|"false"|For fips enabled JVM this property should be **true**|Added in 6.1.4||
-|fipsProvider|String|null|FIPS provider configured in JVM. For example, BCFIPS or SunPKCS11-NSS |Added in 6.1.2|
-|trustStoreType|String|JKS|For FIPS mode set trust store type either PKCS12 or type defined by FIPS provider |Added in 6.1.2||
+|fips|boolean ["true / false"]|"false"|For fips enabled JVM this property should be **true**|Added in 6.1.4 (Stable release 6.2.2)||
+|fipsProvider|String|null|FIPS provider configured in JVM. For example, BCFIPS or SunPKCS11-NSS |Added in 6.1.2 (Stable release 6.2.2), deprecated in 6.4.0 - see the details [Here](https://github.com/Microsoft/mssql-jdbc/pull/460).|
+|trustStoreType|String|JKS|For FIPS mode set trust store type either PKCS12 or type defined by FIPS provider |Added in 6.1.2 (Stable release 6.2.2)||
 
 
 

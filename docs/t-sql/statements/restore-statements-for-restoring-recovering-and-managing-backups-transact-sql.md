@@ -1,8 +1,8 @@
----
+﻿---
 title: "RESTORE Statements for Restoring, Recovering, Managing Backups (T-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/30/2018"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -29,12 +29,15 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   This section describes the RESTORE statements for backups. In addition to the main RESTORE {DATABASE | LOG} statement for restoring and recovering backups, a number of auxiliary RESTORE statements help you manage your backups and plan your restore sequences. The auxiliary RESTORE commands include: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY, and RESTORE VERIFYONLY.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!IMPORTANT]  
 >  In previous versions of SQL Server, any user could obtain information about backup sets and backup devices by using the RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, and RESTORE VERIFYONLY Transact-SQL statements. Because they reveal information about the content of the backup files, in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions these statements require CREATE DATABASE permission. This requirement secures your backup files and protects your backup information more fully than in previous versions. For information about this permission, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   

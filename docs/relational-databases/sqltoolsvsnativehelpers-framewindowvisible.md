@@ -1,8 +1,8 @@
----
+﻿---
 title: "FrameWindowVisible | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "relational-databases-misc"
@@ -14,10 +14,11 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SqlToolsVSNativeHelpers - FrameWindowVisible
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

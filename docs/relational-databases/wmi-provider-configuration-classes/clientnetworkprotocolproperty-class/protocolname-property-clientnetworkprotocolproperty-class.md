@@ -2,7 +2,7 @@
 title: "ProtocolName Property (ClientNetworkProtocolProperty Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ProtocolName property"
 ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

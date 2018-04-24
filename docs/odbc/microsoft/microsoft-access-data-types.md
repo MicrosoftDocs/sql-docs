@@ -2,7 +2,7 @@
 title: "Microsoft Access Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -23,7 +23,7 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Microsoft Access Data Types

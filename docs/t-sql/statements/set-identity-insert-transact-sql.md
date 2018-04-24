@@ -2,7 +2,7 @@
 title: "SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -42,7 +42,7 @@ ms.workload: "Active"
   
 ```  
   
-SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }  
+SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }  
 ```  
   
 ## Arguments  

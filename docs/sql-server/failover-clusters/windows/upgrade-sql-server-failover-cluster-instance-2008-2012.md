@@ -2,7 +2,7 @@
 title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters | Microsoft Docs"
 ms.date: "1/25/2018"
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.prod_service: database engine
 ms.component: "failover-clustuers"
 ms.technology: 
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], upgrading"
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 

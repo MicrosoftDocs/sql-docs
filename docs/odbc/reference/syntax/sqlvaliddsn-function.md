@@ -2,7 +2,7 @@
 title: "SQLValidDSN Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -25,7 +25,7 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLValidDSN Function

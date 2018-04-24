@@ -1,8 +1,8 @@
 ---
 title: "SQLServerException Members | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "01/19/2018"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerException Members
@@ -25,7 +25,10 @@ ms.workload: "Inactive"
   The following tables list the members exposed by the [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) class.  
   
 ## Constructors  
- None.  
+
+|Name|Description|  
+|----------|-----------------|  
+|[SQLServerException ](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initializes a new instance of the SQLServerException class.|  
   
 ## Fields  
  None.  

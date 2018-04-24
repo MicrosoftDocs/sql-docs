@@ -16,12 +16,15 @@ helpviewer_keywords:
   - "version flags [Master Data Services], changing name"
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 caps.latest.revision: 8
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change a Version Flag Name (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of a version flag.  
   
 ## Prerequisites  

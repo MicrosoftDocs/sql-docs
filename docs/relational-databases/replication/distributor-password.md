@@ -2,7 +2,7 @@
 title: "Distributor Password | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.configuredistributionwizard.distributorpassword.f1"
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 caps.latest.revision: 24
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -2,7 +2,7 @@
 title: "SetStrValue Method (SqlServiceAdvancedProperty Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetStrValue method"
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

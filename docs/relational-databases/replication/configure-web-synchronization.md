@@ -2,7 +2,7 @@
 title: "Configure Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -36,8 +36,8 @@ helpviewer_keywords:
   - "Web synchronization, configuring"
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 74
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

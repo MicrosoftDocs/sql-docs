@@ -2,7 +2,7 @@
 title: "Specify That Deletes Should Not Be Tracked For Merge Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], conditional delete tracking"
 ms.assetid: 0fe330ca-5fb5-422e-ad6f-92fb5d6a3b6c
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

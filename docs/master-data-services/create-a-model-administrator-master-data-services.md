@@ -16,12 +16,15 @@ helpviewer_keywords:
   - "administrators [Master Data Services], creating"
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Model Administrator (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a model administrator when you want a group or user to have all permissions to all objects in one or more models.  
   
 > [!TIP]  

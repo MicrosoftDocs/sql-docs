@@ -17,12 +17,15 @@ helpviewer_keywords:
   - "versions [Master Data Services], assigning flags"
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assign a Flag to a Version (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], assign a flag to a version to indicate the version that users or subscribing systems should use.  
   
 > [!NOTE]  

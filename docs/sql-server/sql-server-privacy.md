@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Privacy Supplement | Microsoft Docs"
+title: "SQL Server privacy supplement | Microsoft Docs"
 ms.date: "4/24/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: craigg
 ms.workload: "Active"
 ---
-# SQL Server Privacy Supplement
+# SQL Server privacy supplement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. This article serves as an addendum to the overall Microsoft Privacy Statement. The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
@@ -33,9 +33,7 @@ This article summarizes the behavior of different data objects used within SQL S
 
 Definition of *Permitted usage Scenarios*. For the context of this article, Microsoft defines “Permitted Usages Scenarios” as actions or activities that are initiated by Microsoft.
 
-***
-
-## Access Control
+## Access control
 
 Credential-related information used to secure logins, users, or accounts within a SQL Server installation.
 
@@ -44,7 +42,7 @@ Credential-related information used to secure logins, users, or accounts within 
 - Passwords
 - Certificates
 
-### Permitted Usage Scenarios
+### Permitted usage scenarios
 
 |Scenario  |Access Restrictions  |Retention Requirements |
 |---------|---------|---------|
@@ -52,7 +50,7 @@ Credential-related information used to secure logins, users, or accounts within 
 |Crash Dumps may contain Access Control Data.     |-         |Crash Dumps: Maximum 30 days.         |
 |These credentials never leave the user machine via User Feedback unless Customer injects it manually    |Limit to Microsoft internal use with no third-party access.         |User Feedback: Max 1 year         |
  |
-## Customer Content
+## Customer content
 
 Customer content is defined as data stored within user tables, directly or indirectly. The data includes statistics or user literals within query texts that might be stored within user tables.
 
@@ -62,14 +60,14 @@ Customer content is defined as data stored within user tables, directly or indir
 - Statistics objects containing copies of values within the rows of any user table.
 - Query texts containing literal values.
 
-### Permitted Usage Scenarios
+### Permitted usage scenarios
 |Scenario  |Access Restrictions  |Retention Requirements |
 |---------|---------|---------|
 |This data does not leave the user machine via Usage Feedback. |- |- |
 |Crash Dumps may contain Customer Content and be emitted to Microsoft. |- |Crash Dumps: Max 30 days. |
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
->## End-User Identifiable Information (EUII)
+>## End-user identifiable information (EUII)
 
 Data received from a user, or generated from their use of the product.
 - Linkable to an individual user.
@@ -84,7 +82,7 @@ Data received from a user, or generated from their use of the product.
 - Location Information
 - Customer Identification
 
-### Permitted Usage Scenarios
+### Permitted usage scenarios
 
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
@@ -93,7 +91,7 @@ Data received from a user, or generated from their use of the product.
 |Customer Identification ID may be emitted to Microsoft to deliver new hybrid and cloud features that the users have subscribed to. |- |Currently no such hybrid or cloud features exist.|
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft.|Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
-## Internet-Based Services Data
+## Internet-based services data
 
 Data needed to provide Internet-based services,  per the SQL Server EULA.
 
@@ -106,7 +104,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 - An IP Address with certain octets removed
 - Map Data
 
-### Permitted Usage Scenarios
+### Permitted usage scenarios
 
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------| 
@@ -114,7 +112,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal use with no third-party access. |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |
 |Power View and SQL Reporting Services Map Item(s) may send data for use of Bing Maps. |Limit to session data |- |
 
-## System Metadata
+## System metadata
 
 Data generated in the course of running the server.  The data does not contain Customer content.
 
@@ -135,7 +133,7 @@ The following are considered system metadata when they do not inlcude customer c
 Microsoft does examine Application Name values set by other programs that use SQL Server (example: Sharepoint or 3rd party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not
 place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
 
-### Permitted Usage Scenarios
+### Permitted usage scenarios
 
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
@@ -146,7 +144,7 @@ May be used by Microsoft for future product planning. |Microsoft may share this 
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 |May use database name and application name to categorize databases and applications into known categories, for example, those that may be running software provided by Microsoft or other companies.|Limit to Microsoft internal with no third-party access.|Min 90 days - Max 3 years |
 
-## Object Metadata
+## Object metadata
 
 Data that describes or is used to configure servers, databases, tables, and other resources.  Object metadata includes database table and column names but not the contents of database rows or other Customer Content. Customers should not place personal data, such as end-user identifiable information in Object Metadata fields or create applications designed to store personal data in these fields. For the permitted usage scenario's below, only hash form is used to determine usage patterns to improve the product. 
 
@@ -156,14 +154,14 @@ Data that describes or is used to configure servers, databases, tables, and othe
 - Table names and Column names
 - Statistics Names
 
-### Permitted Usage Scenarios
+### Permitted usage scenarios
 
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
 |May be used by Microsoft to improve features and or fix bugs in current features. |Limited to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years|
 
-## Telemetry Controls
+## Telemetry controls
 
-Instructions on how Telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
+Instructions on how telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -39,7 +39,7 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Converting Access Database Objects (AccessToSQL)

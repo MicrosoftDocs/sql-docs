@@ -1,6 +1,6 @@
 ---
 title: "put_OLEDBCommand Method | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "put_OLEDBCommand method [ADO]"
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d

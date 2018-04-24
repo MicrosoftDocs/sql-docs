@@ -19,7 +19,7 @@ ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assessment Report (MySQLToSQL)

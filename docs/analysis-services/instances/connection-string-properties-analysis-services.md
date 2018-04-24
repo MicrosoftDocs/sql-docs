@@ -27,23 +27,7 @@ ms.workload: "On Demand"
   
  Developers who build custom connection strings in application code should review the API documentation for ADOMD.NET client to view a more detailed list: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- The properties described in this topic are used by the Analysis Services client libraries, ADOMD.NET, AMO, and the OLE DB provider for Analysis Services. The majority of connection string properties can be used with all three client libraries. Exceptions are called out in the description.  
-  
- This topic includes the following sections:  
-  
- [Connection parameters in common use](#bkmk_common)  
-  
- [Authentication and Security](#bkmk_auth)  
-  
- [Special-purpose parameters](#bkmk_special)  
-  
- [Reserved for future use](#bkmk_reserved)  
-  
- [Example connection strings](#bkmk_examples)  
-  
- [Connection string formats used in Analysis Services](#bkmk_supportedstrings)  
-  
- [Encrypting Connection Strings](#bkmk_encrypt)  
+ The properties described in this topic are used by the Analysis Services client libraries, ADOMD.NET, AMO, and the OLE DB provider for Analysis Services. The majority of connection string properties can be used with all three client libraries. Exceptions are called out in the description.
   
 > [!NOTE]  
 >  When setting properties, if you inadvertently set the same property twice, the last one in the connection string is used.  

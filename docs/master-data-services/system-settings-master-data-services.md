@@ -17,12 +17,15 @@ helpviewer_keywords:
   - "system settings [Master Data Services]"
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # System Settings (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   For all web applications and web services associated with a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, you can configure system settings.  
   
  Many of these settings can be configured in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] on the **Database** page. Others can be configured in the System Settings table (mdm.tblSystemSetting) in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

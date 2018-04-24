@@ -2,7 +2,7 @@
 title: "Set a Trace Filter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "sql-trace"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -2,7 +2,7 @@
 title: "Log File Viewer F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "logs"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Log File Viewer"
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

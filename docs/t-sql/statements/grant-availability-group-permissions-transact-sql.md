@@ -2,7 +2,7 @@
 title: "GRANT Availability Group Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -92,7 +92,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
- For a chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions, see [Database Engine Permission Poster](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions, see [Database Engine Permission Poster](https://aka.ms/sql-permissions-poster).  
   
 ## Permissions  
  Requires CONTROL permission on the availability group or ALTER ANY AVAILABILTIY GROUP permission on the server.  

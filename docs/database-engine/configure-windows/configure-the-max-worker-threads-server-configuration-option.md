@@ -2,7 +2,7 @@
 title: "Configure the max worker threads Server Configuration Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"
@@ -74,7 +74,7 @@ ms.workload: "On Demand"
     |Number of CPUs|32-bit computer|64-bit computer|  
     |------------|------------|------------| 
     |\<= 4 processors|256|512|
-    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU’s - 4) * 8)| 
+    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU’s - 4) * 16)| 
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier.   We recommend 1024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  

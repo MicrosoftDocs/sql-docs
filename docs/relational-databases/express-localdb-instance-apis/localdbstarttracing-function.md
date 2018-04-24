@@ -2,7 +2,7 @@
 title: "LocalDBStartTracing Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "localdb"
@@ -19,8 +19,8 @@ apilocation:
 apitype: "DLLExport"
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

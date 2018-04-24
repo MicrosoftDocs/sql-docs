@@ -19,7 +19,7 @@ ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to Azure SQL DB (MySQLToSQL)

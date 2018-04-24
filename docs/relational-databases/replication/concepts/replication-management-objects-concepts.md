@@ -2,7 +2,7 @@
 title: "Replication Management Objects Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "programming [SQL Server replication], RMO"
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 caps.latest.revision: 61
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

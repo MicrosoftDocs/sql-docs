@@ -1,111 +1,107 @@
 ---
-title: "R packages installed with SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/04/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "On Demand"
+title: Default package libraries for machine learning on SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# R packages installed with SQL Server
+# Default package libraries for machine learning on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the R packages that are installed with SQL Server if you install and enable machine learning features. This article also describes how to manage and view existing packages, or add new packages to a SQL Server instance.
+This article describes the default libraries for R and Python that are installed with SQL Server. This article provides the default locations for these libraries, and explains how you can determine which packages and which version of R or Python are installed in each instance library.
 
-**Applies to:** SQL Server 2017 Machine Learning Services (In-Database), SQL Server 2016 R Services (In-Database)
+## Using the default instance library
 
-## What is the instance library and where is it?
+When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. SQL Server cannot access packages installed to other libraries.
 
-Any R solution that runs in SQL Server can use only packages that are installed in the default R library associated with the instance. When you install R features in SQL Server, the R package library is located under the instance folder.
+If you connect to the server from a remote client, any R or Python code that you want to run in the server compute context can use only packages installed in the instance library.
 
-+ Default instance *MSSQLSERVER* 
+To protect server assets, the default instance library is installed to a secured folder that is registered with SQL Server and can be modified only by a computer administrator. If you are not the owner of the computer, you might need to get permission from an administrator to install packages to this library. 
 
-    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` 
-    
-    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
+Even if you own the computer, you should consider the usefulness of any particular R or Python package in a server environment before adding the package to the instance library. Consider factors such as the size of package files and the need for multiple versions, as well as whether the package requires network or internet access.
 
-+ Named instance *MyNamedInstance* 
+### SQL Server
 
-    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` 
-    
-    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library`
+|Version | Instance name|Default path|
+|------|------|------|
+| SQL Server 2016 |default instance|`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`|
+| SQL Server 2016 |named instance |`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library`|
+| SQL Server 2017 with R|default instance |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` |
+| SQL Server 2017 with R|named instance|`C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` |
+| SQL Server 2017 with Python |default instance |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library` |
+| SQL Server 2017 with Python|named instance|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library` |
 
-You can run the following statement to verify the default library for the current instance of R.
+### R Server (standalone) or Machine Learning Server (Standalone)
 
-```sql
-EXECUTE sp_execute_external_script  @language = N'R'
-, @script = N'OutputDataSet <- data.frame(.libPaths());'
-WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
-GO
-```
+This table lists the default paths of the binaries when the standalone server is installed using SQL Server setup. 
 
-Alternatiely, you can use the new [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function, if executing sp\_execute\_external\_script directly on the target computer. The function cannot return library paths for remote connections.
+|Version| Installation|Default path|
+|------|------|------|
+| SQL Server 2016|R Server (Standalone)| |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
+|SQL Server 2017|Machine Learning Server, with R |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
+|SQL Server 2017|Machine Learning Server, with Python |`C:\Program Files\Microsoft SQL Server\130\PYTHON_SERVER`|
 
-```sql
-EXEC sp_execute_external_script
-  @language =N'R',
-  @script=N'
-  sql_r_path <- rxSqlLibPaths("local")
-  print(sql_r_path)
-```
+If you install Microsoft R Server or Machine Learning server using the separate Windows installer, the default paths are different: typically, something like `C:\Program Files\Microsoft\R Server\R_SERVER`. For more information, see:
+ 
++ [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
++ [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 
-> [!NOTE]
-> If you use binding to upgrade the R components in an instance, the path to the instance library can change. Be sure to verify which library is being used by SQL Server.
+## What is included in a default installation
 
-## R packages installed with SQL Server
+This section provides a summary of the R or Python features that are installed by default.
+
+### Default R installation for SQL Server
 
 By default the R **base** packages are installed. Base packages include core functionality provided by packages such as `stats` and `utils`.
 
-Installation of R in SQL Server 2016 or SQL Server 2017 always includes the **RevoScaleR** package, and related enhanced packages and providers, which supports remote compute contexts, streaming, parallel execution of rx function, and many other features. To upgrade the RevoScaleR package, either use binding to upgrade just the machine learning components, or patch or upgrade your instance to a newer version of SQL Server.
+A base installation of R also includes numerous sample datasets, and standard R tools such as RGui (a lightweight interactive editor) and RTerm (an R command prompt).
+
+Installation of R in SQL Server 2016 or SQL Server 2017 also includes the **RevoScaleR** package, and related enhanced packages and providers, which supports remote compute contexts, streaming, parallel execution of rx function, and many other features.
+
+To upgrade the RevoScaleR package, either use binding to upgrade just the machine learning components, or patch or upgrade your instance to a newer version of SQL Server.
 
 + For an overview of the enhanced R features, see [About Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
 
 + To download the RevoScaleR libraries onto a client computer, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
-## Permissions required for installing R packages
+### Default Python installation for SQL Server
 
-In SQL Server 2016, an administrator had to install new R packages on an instance-wide basis. 
+If you select the machine learning features and the Python language option, an Anaconda distribution is installed. The exact version depends on the version of SQL Server you have installed and whether you have upgraded the instance using Machine Learning Server installer.
 
-SQL Server 2017 introduced new features for package installation and management:
+|Release| Anaconda version| Other changes|
+|------|------|------|
+| SQL Server 2017 RTM| 3.5.2| New: revoscalepy|
+| update via Machine Learning Server 9.2.1 Sept 2017| Anaconda 4.2| updates to revoscalepy |
+| SQL Server 2017 CU3| Anaconda 4.2| updates to revoscalepy |
 
-+ You can use R commands from a remote client to install packages using either private or shared scope. This feature requires either [Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install) or  [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), as well as dbo privileges on the instance.
-+ New database features have been added to support package management by database administrators without using T-SQL. In future, these features provide DBAs with the ability to delegate most facets of package management to privileged users.
+In addition to Python code libraries, the standard installation includes sample data, unit tests, and sample scripts.
 
-This section describes the permissions required to install and manage packages per version.
+## Restrictions and known issues
 
-+ SQL Server 2016 R Services (In-Database)
+Any solution that runs in SQL Server can use **only** packages that are installed in the default library associated with the instance.
 
-    To install a new R package on a computer that is running [!INCLUDE[ssCurrent](..\..\includes\sscurrent-md.md)], you must have administrative rights to the computer. It is the task of the database administrator or other administrator on the server to ensure that all required packages are installed on the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instance.
+If you use binding to upgrade the R components in an instance, the path to the instance library can change. Be sure to verify the path of the library currently used by SQL Server.
 
-    If you do not have administrative privileges on the computer that hosts the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instance, you can provide to the administrator information about how to install R packages, and provide access to a secure package repository where packages requested by users can be obtained.
+## Administrative permissions required for package installation
 
-+ SQL Server 2017 Machine Learning Services
+The permissions required for package installation have changed between SQL Server 2016 and SQL Server 2017.
 
-    If you are an administrator on the SQL Server instance, you can install new packages at will. Just be sure to use the default library that is associated with the instance. Packages installed to other locations cannot run when called from a stored procedure. Any R code that runs using the SQL Server as a compute context also requires that packages be available in the instance library.
++ In SQL Server 2016, administrative access is required for installation of new R packages.
 
-    This release also includes some new features intended to support easier package management by DBAs in a later release. For now, we recommend that you continue to install R packages on an instance-wide basis.
++ In SQL Server 2017, you can continue to install packages as an administrator for both R and Python, and this is probably the easiest method.
 
-+ R Server (Standalone)
+    The DDL statement, CREATE EXTERNAL LIBRARY, allows the database administrator  to install packages without using R tools. 
 
-    You need administrative rights to the computer to install new R packages.
+    If you use the package management feature for Machine Learning Server, you can use RevoScaleR to install R packages at the database level. The database administrator must enable the feature and then grant users the ability to install their own packages on a per database basis. For more information, see [Enable package management using DDLs](r-package-how-to-enable-or-disable.md).
 
-+ Other client environments
+### User libraries are not supported
 
-    If you are installing a new R package on a computer that is being used as an R workstation and the computer does **not** have an instance of [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installed, you still need administrative rights to the computer to install the package. After you have installed the package, you can run it locally.
+Users who cannot install a package to a secured location often resort to installing a package to a user library. However, this is not possible in the SQL Server environment.Even file system access is often restricted on the server.
 
-## Managing or viewing installed packages
+Even if you have admin rights and access to a user document folder on the server, the external script runtime that executes in SQL Server cannot access any packages installed outside the default instance library.
 
-There are multiple ways that you can get a complete list of the packages currently installed. For more information, see [Determine which packages are installed on SQL Server](determine-which-packages-are-installed-on-sql-server.md).
+For tips on how to resolve problems related to user libraries, see [Package installed in user libraries](packages-installed-in-user-libraries.md).

@@ -2,7 +2,7 @@
 title: "Mapping Replacement Functions for Compatibility of Apps - ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -24,7 +24,7 @@ ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Mapping Replacement Functions for Backward Compatibility of Applications

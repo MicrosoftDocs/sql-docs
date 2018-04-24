@@ -2,7 +2,7 @@
 title: "ClientSettings Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ClientSettings class"
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

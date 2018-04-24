@@ -1,8 +1,8 @@
----
+﻿---
 title: "Showplan Logical and Physical Operators Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "relational-databases-misc"
@@ -143,6 +143,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Showplan Logical and Physical Operators Reference
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

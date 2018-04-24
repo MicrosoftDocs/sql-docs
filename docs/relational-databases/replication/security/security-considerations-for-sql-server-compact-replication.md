@@ -2,7 +2,7 @@
 title: "Security Considerations for SQL Server Compact Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "security [SQL Server replication], SQL Server Compact"
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -2,15 +2,13 @@
 title: "sys.dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "database-engine-imoltp"
+ms.technology: "relational-databases"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5

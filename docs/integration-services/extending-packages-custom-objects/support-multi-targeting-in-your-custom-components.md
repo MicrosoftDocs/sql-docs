@@ -99,7 +99,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **Error message.** Unable to cast COM object of type 'System.__ComObject' to interface type 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100'. This operation failed because the QueryInterface call on the COM component for the interface with IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' failed due to the following error: No such interface supported (Exception from HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
-**Solution.** If your custom extension references SSIS interop assemblies such as Microsoft.SqlServer.DTSPipelineWrap or Microsoft.SqlServer.DTSRuntimeWrap, set the value of the **Embed Interop Types** property to **False".
+**Solution.** If your custom extension references SSIS interop assemblies such as Microsoft.SqlServer.DTSPipelineWrap or Microsoft.SqlServer.DTSRuntimeWrap, set the value of the **Embed Interop Types** property to **False**.
 
 ![Embed Interop Types](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

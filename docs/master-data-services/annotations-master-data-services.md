@@ -17,12 +17,15 @@ helpviewer_keywords:
   - "annotations [Master Data Services], about annotations"
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Annotations (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], annotations are comments that you enter to provide details about transactions.  
   
  You can annotate a transaction to provide information about why an action was taken. You must select a transaction to add a related annotation. Annotations are displayed along with transactions in:  

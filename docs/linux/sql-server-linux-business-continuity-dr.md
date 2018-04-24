@@ -1,4 +1,4 @@
----
+﻿---
 title: Disaster recovery for SQL Server on Linux | Microsoft Docs
 description: 
 author: "allanhirt"
@@ -16,6 +16,7 @@ ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ms.workload: "Inactive"
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Business continuity and database recovery - SQL Server on Linux
 

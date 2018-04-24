@@ -28,7 +28,7 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Migration Wizard (AccessToSQL)

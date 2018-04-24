@@ -2,7 +2,7 @@
 title: "Updatable Subscriptions for Transactional Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "updatable subscriptions"
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

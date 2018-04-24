@@ -2,7 +2,7 @@
 title: "Replicate Schema Changes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "schemas [SQL Server replication], replicating changes"
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 caps.latest.revision: 43
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

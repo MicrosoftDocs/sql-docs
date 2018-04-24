@@ -2,7 +2,7 @@
 title: "Operator Precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "t-sql|language-elements"
@@ -37,7 +37,7 @@ ms.workload: "On Demand"
 |-----------|---------------|  
 |1|~ (Bitwise NOT)|  
 |2|* (Multiplication), / (Division), % (Modulus)|  
-|3|+ (Positive), - (Negative), + (Addition), (+ Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
+|3|+ (Positive), - (Negative), + (Addition), + (Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
 |4|=, >, \<, >=, <=, <>, !=, !>, !< (Comparison operators)|  
 |5|NOT|  
 |6|AND|  

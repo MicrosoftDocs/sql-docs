@@ -19,7 +19,7 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Modes (MySQLToSQL)

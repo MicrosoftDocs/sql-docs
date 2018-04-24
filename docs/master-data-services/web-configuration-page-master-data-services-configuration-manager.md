@@ -16,12 +16,15 @@ f1_keywords:
   - "sql13.mds.configmanager.webconfigpg.f1"
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Use the **Web Configuration** page to configure a website and web application. You can also enable Data Quality Services.  
   
 ## Configure the Web Application  

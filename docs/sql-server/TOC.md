@@ -22,10 +22,7 @@
 ## [SQL Server 2017 Notes](sql-server-2017-release-notes.md)
 ## [SQL Server 2016 Notes](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 Notes](sql-server-2014-release-notes.md)
-## [SQL Server 2012 SP4 Notes](sql-server-2012-sp4-release-notes.md)
-## [SQL Server 2012 SP3 Notes](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 Notes](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 Notes](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 Service Pack release notes](sql-server-2012-sp4-release-notes.md)
 ## [SQL Server 2012 Notes](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Notes](sql-server-2008-r2-sp2-release-notes.md)
 
@@ -55,6 +52,7 @@
 ### [SQL on Channel 9](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
 
 ## Feedback and help
+### [Contribute to SQL Documentation!](sql-server-docs-contribute.md)
 ### [UserVoice - Suggest a SQL Server Improvement](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)

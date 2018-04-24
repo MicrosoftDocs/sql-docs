@@ -1,6 +1,6 @@
 ---
 title: "Stream Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Stream object [ADO], members"
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94

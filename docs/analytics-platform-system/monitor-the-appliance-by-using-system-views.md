@@ -1,25 +1,18 @@
 ---
-title: "Monitor the Appliance by Using System Views (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: 8
-
+title: Monitor with system views - Analytics Platform System | Microsoft Docs
+description: This article lists the system views that you can use for monitoring the Analytics Platform system appliance.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Monitor the Appliance by Using System Views
-This topic lists the system views that you can use for monitoring SQL Server PDW.  
+
+# Monitor the appliance with system views - Analytics Platform System
+This article lists the system views that you can use for monitoring SQL Server PDW.  
   
 ## To Monitor the Appliance by Using System Views  
 SQL Server PDW includes comprehensive system views that enable you to obtain detailed information about the appliance health, state, and performance. This table provides links to system views that can be used for each monitoring capability.  

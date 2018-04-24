@@ -2,7 +2,7 @@
 title: "AcceptPause Property (SqlService Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "AcceptPause property"
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

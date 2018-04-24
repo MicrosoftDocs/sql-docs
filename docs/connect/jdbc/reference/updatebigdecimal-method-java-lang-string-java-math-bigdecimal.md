@@ -2,7 +2,7 @@
 title: "updateBigDecimal Method (java.lang.String, java.math.BigDecimal) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBigDecimal Method (java.lang.String, java.math.BigDecimal)

@@ -2,7 +2,7 @@
 title: "Optimize SQL Trace | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "sql-trace"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "performance [SQL Server], trace"
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

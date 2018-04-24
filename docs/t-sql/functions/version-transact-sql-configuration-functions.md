@@ -1,8 +1,8 @@
----
+﻿---
 title: "@@VERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/18/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/20/2018"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|functions"
@@ -28,6 +28,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # &#x40;&#x40;Version - Transact SQL Configuration Functions
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,15 +65,24 @@ ms.workload: "Active"
   
  For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the following information is returned.  
   
--   Edition- "Windows Azure SQL Database"  
+-   Edition- "Microsoft SQL Azure"  
   
--   Product level- "(CTP)" or "(RTM)"  
+-   Product level- "(RTM)"  
   
 -   Product version  
   
 -   Build date  
   
 -   Copyright statement  
+
+> [!NOTE]  
+> We are aware of an issue where the product version reported by @@VERSION is incorrect for Azure SQL Database. 
+> The version of the SQL Server database engine run by Azure SQL Database is always ahead of the on-premises version of SQL Server, and includes the latest security fixes. This means that the patch level is always on par with or ahead of the on-premises version of SQL Server, and that the latest features available in SQL Server are available in Azure SQL Database.
+>
+> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for standalone databases and '8' for managed instances in Azure SQL Database. 
+>
+> We will update the documentation once this issue is resolved.
+
   
 ## Examples  
   

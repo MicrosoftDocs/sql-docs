@@ -2,7 +2,7 @@
 title: "Replication Agent Security Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2015"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 caps.latest.revision: 72
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

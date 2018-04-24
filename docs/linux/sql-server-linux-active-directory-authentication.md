@@ -1,8 +1,8 @@
 ---
-title: Active Directory Authentication with SQL Server on Linux | Microsoft Docs
+title: Active Directory authentication tutorial for SQL Server on Linux | Microsoft Docs
 description: This tutorial provides the configuration steps for AAD authentication for SQL Server on Linux.
 author: meet-bhagdev
-ms.date: 01/30/2018
+ms.date: 02/23/2018
 ms.author: meetb 
 manager: craigg
 ms.topic: article
@@ -17,18 +17,11 @@ helpviewer_keywords:
   - "Linux, AAD authentication"
 ms.workload: "On Demand"
 ---
-# Active Directory Authentication with SQL Server on Linux
+# Tutorial: Use Active Directory authentication with SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This tutorial explains how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. AD Authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol.
-
-AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication:
-
-* Users authenticate via single sign-on, without being prompted for a password.   
-* By creating logins for AD groups, you can manage access and permissions in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD group memberships.  
-* Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
-* AD enables you to enforce a centralized password policy across your organization.   
+This tutorial explains how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 
 This tutorial consists of the following tasks:
 
@@ -49,12 +42,7 @@ Before you configure AD Authentication, you need to:
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-> [!IMPORTANT]
-> Limitations:
-> - At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
-> - Third-party AD tools like Centrify, Powerbroker, and Vintela are not supported 
-
-## Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
+## <a id="join"></a> Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 
 Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to an Active Directory domain:
 
@@ -144,6 +132,8 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
    > If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distribution's package manager before running the `realm join` command again.
    >
    > If you receive an error, "Insufficient permissions to join the domain," then you need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
+   >
+   > If you receive an error, "KDC reply did not match expectations," then you may not have specified the correct realm name for the user. Realm names are case-sensitive, usually uppercase, and can be identified with the command `realm discover contoso.com`.
    
    > SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SID's). SSSD must be configured and running in order for SQL Server to create AD logins successfully. Realmd usually does this automatically as part of joining the domain, but in some cases you must do this separately.
    >
@@ -174,7 +164,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
-## Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
+## <a id="createuser"></a> Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
   > [!NOTE]
   > The next steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
@@ -203,7 +193,7 @@ For more information, see the Red Hat documentation for [Discovering and Joining
 
 3. For more information, see [Register a Service Principal Name for Kerberos Connections](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
+## <a id="configurekeytab"></a> Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
 
 1. Check the Key Version Number (kvno) for the AD account created in the previous step. Usually it is 2, but it could be another integer if you changed the account's password multiple times. On the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine, run the following:
 
@@ -244,7 +234,7 @@ For more information, see the Red Hat documentation for [Discovering and Joining
    sudo systemctl restart mssql-server
    ```
 
-## Create AD-based logins in Transact-SQL
+## <a id="createsqllogins"></a> Create AD-based logins in Transact-SQL
 
 1. Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and create a new, AD-based login:
 
@@ -258,7 +248,7 @@ For more information, see the Red Hat documentation for [Discovering and Joining
    SELECT name FROM sys.server_principals;
    ```
 
-## Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
+## <a id="connect"></a> Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
 
 Log in to a client machine using your domain credentials. Now you can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] without reentering your password, by using AD Authentication. If you create a login for an AD group, any AD user who is a member of that group can connect in the same way.
 

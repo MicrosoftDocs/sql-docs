@@ -5,7 +5,7 @@ title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
 author: "barbkess" 
 ms.author: "barbkess"
-ms.topic: "article"
+ms.topic: "hub-page"
 ms.technology: 
   - "database-engine"
 ---

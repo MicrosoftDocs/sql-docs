@@ -2,7 +2,7 @@
 title: "Group Changes to Related Rows with Logical Records | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "logical records [SQL Server replication]"
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: 55
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

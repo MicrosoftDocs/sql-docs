@@ -2,7 +2,7 @@
 title: "SQL Server Express LocalDB Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "relational-databases-misc"
@@ -14,8 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

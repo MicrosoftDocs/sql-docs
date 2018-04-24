@@ -17,12 +17,15 @@ helpviewer_keywords:
   - "permissions [Master Data Services], entities"
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Entity Permissions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Entity permissions apply to:  
   
 -   All of the entity's attributes, including **Name** and **Code**, for both leaf and consolidated members.  

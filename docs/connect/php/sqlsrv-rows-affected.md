@@ -2,7 +2,7 @@
 title: "sqlsrv_rows_affected | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -22,7 +22,7 @@ ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_rows_affected
@@ -44,7 +44,7 @@ sqlsrv_rows_affected( resource $stmt)
 An integer indicating the number of rows modified by the last executed statement. If no rows were modified, zero (0) is returned. If no information about the number of modified rows is available, negative one (-1) is returned. If an error occurred in retrieving the number of modified rows, **false** is returned.  
   
 ## Example  
-The following example displays the number of rows modified by an UPDATE statement. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example displays the number of rows modified by an UPDATE statement. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -94,6 +94,9 @@ sqlsrv_close( $conn);
   
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
   

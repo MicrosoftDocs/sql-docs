@@ -1,4 +1,4 @@
-# [About SQL Server Analysis Services?](analysis-services.md)
+# [About SQL Server Analysis Services](analysis-services.md)
 
 # Overview
 ## [What's new in SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
@@ -16,8 +16,26 @@
 ### [Currency conversions](currency-conversions-analysis-services.md)  
 ### [Tips and best practices](globalization-tips-and-best-practices-analysis-services.md) 
 
-# Tutorials
-## [Tabular Modeling (1200 compatibility level)](tabular-modeling-adventure-works-tutorial.md)  
+# [Tutorials](analysis-services-tutorials-ssas.md)
+## [Tabular modeling (1400 compatibility level)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+### [1 - Create a tabular model project](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+### [2 - Get data](tutorial-tabular-1400/as-lesson-2-get-data.md)
+### [3 - Mark as Date Table](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+### [4 - Create relationships](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+### [5 - Create calculated columns](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+### [6 - Create measures](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+### [7 - Create Key Performance Indicators](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+### [8 - Create perspectives](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+### [9 - Create hierarchies](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+### [10 - Create partitions](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+### [11 - Create roles](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+### [12 - Analyze in Excel](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+### [13 - Deploy](tutorial-tabular-1400/as-lesson-13-deploy.md)
+### [Supplemental lesson - Detail Rows](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+### [Supplemental lesson - Dynamic security](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+### [Supplemental lesson - Ragged hierarchies](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
+
+## [Tabular modeling (1200 compatibility level)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Lesson 2: Add Data](lesson-2-add-data.md)  
 ### [Lesson 3: Mark as Date Table](lesson-3-mark-as-date-table.md)  
@@ -84,8 +102,8 @@
 ## [Data Mining](data-mining-tutorials-analysis-services.md)  
 
 # How-to
-## [Tabular modeling](../analysis-services/tabular-models/tabular-models-ssas.md)
-## [Multidimensional modeling](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [Tabular models](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [Multidimensional models](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
 ## [Data mining](../analysis-services/data-mining/data-mining-ssas.md)
 ## [Power Pivot for Sharepoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 ## [Manage servers](../analysis-services/instances/analysis-services-instance-management.md)

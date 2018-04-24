@@ -19,6 +19,7 @@ manager: jhubbard
 ms.workload: "Active"
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # SQL Server 2016 Release Notes
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
@@ -27,14 +28,12 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 - [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
 - [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
-
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 includes all cumulative updates released after 2016 SP1, up to and including CU8. 
-Download [SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+[![Microsoft Download Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Download SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
 
-- [![Microsoft Download Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
-
-### 	Performance and Scale
+### Performance and Scale
 
 - **Improved Distribution DB cleanup procedure** - An oversized distribution database tables caused blocking and deadlock situation. An improved cleanup procedure aims to eliminate some of these blocking or deadlock scenarios.
 - **Change Tracking Cleanup** - Improved change tracking cleanup performance and efficiency for Change Tracking side tables. 

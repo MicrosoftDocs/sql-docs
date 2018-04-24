@@ -63,11 +63,11 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to configure Distributed Replay.|[Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)|  
-|Describes how to prepare the input trace data.|[Prepare the Input Trace Data](../tools/distributed-replay/prepare-the-input-trace-data.md)|  
-|Describes how to replay trace data.|[Replay Trace Data](../tools/distributed-replay/replay-trace-data.md)|  
-|Describes how to review the Distributed Replay trace data results.|[Review the Replay Results](../tools/distributed-replay/review-the-replay-results.md)|  
-|Describes how to use the administration tool to initiate, monitor, and cancel operations on the controller.|[Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
+|Describes how to configure Distributed Replay.|[Configure Distributed Replay](configure-distributed-replay.md)|  
+|Describes how to prepare the input trace data.|[Prepare the Input Trace Data](prepare-the-input-trace-data.md)|  
+|Describes how to replay trace data.|[Replay Trace Data](replay-trace-data.md)|  
+|Describes how to review the Distributed Replay trace data results.|[Review the Replay Results](review-the-replay-results.md)|  
+|Describes how to use the administration tool to initiate, monitor, and cancel operations on the controller.|[Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## See Also  
  [SQL Server Distributed Replay Forum](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

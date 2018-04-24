@@ -50,10 +50,10 @@ dreplay status –m localhost -f 60
 ## Permissions  
  You must run the administration tool as an interactive user, as either a local user or a domain user account. To use a local user account, the administration tool and controller must be running on the same computer.  
   
- For more information, see [Distributed Replay Security](../tools/distributed-replay/distributed-replay-security.md).  
+ For more information, see [Distributed Replay Security](distributed-replay-security.md).  
   
 ## See Also  
- [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Transact-SQL Debugger](../relational-databases/scripting/transact-sql-debugger.md)  
   
   

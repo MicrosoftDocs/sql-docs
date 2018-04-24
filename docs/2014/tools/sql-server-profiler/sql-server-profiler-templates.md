@@ -55,7 +55,7 @@ manager: "jhubbard"
  To navigate to the **Trace Template Properties** dialog box, on the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, choose **Templates**, and then click **New Template** or **Edit Template**.  
   
 > [!NOTE]  
->  The default template is specific for a given server type. Changing the default for one server type does not affect the default template for any other server type. For more information about setting a default template for a specific server, see [Set Trace Definition Defaults &#40;SQL Server Profiler&#41;](../../analysis-services/instances/sql-server-profiler.md).  
+>  The default template is specific for a given server type. Changing the default for one server type does not affect the default template for any other server type. For more information about setting a default template for a specific server, see [Set Trace Definition Defaults &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md).  
   
 ## See Also  
  [Create a Trace Template &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   

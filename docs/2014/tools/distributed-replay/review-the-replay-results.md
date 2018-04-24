@@ -16,13 +16,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Review the Replay Results
-  After the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay feature completes a distributed replay, the replay activity for each client can be captured and saved in result trace files on each client. In order to capture this activity, you must use the **-o** parameter when you run the administration tool with the **replay** option. For more information about the replay option, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+  After the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay feature completes a distributed replay, the replay activity for each client can be captured and saved in result trace files on each client. In order to capture this activity, you must use the **-o** parameter when you run the administration tool with the **replay** option. For more information about the replay option, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md).  
   
  The location of where the result trace files are stored is specified by the `<ResultDirectory>` XML element in the client configuration file, `DReplayClient.xml`, located on each client. The trace files in the client result directory are overwritten on each replay.  
   
  To specify what kind of output should be captured in the result trace files, modify the replay configuration file, `DReplay.exe.replay.config`. You can use the `<OutputOptions>` XML element to specify whether the row count or result set contents should be recorded.  
   
- For more information about these configuration settings, see [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).  
+ For more information about these configuration settings, see [Configure Distributed Replay](configure-distributed-replay.md).  
   
 ## Event Classes Captured in Result Trace Files  
  The following table lists all of the event classes that are captured in the result trace data.  
@@ -75,9 +75,9 @@ manager: "jhubbard"
 |ApplicationName|`nvarchar`|The name of the client application that created the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connection during capture.|17|  
   
 ## See Also  
- [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)   
- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)  
+ [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)  
   
   

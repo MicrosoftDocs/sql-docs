@@ -36,6 +36,6 @@ manager: "jhubbard"
  [SQL Server Profiler Templates and Permissions](sql-server-profiler-templates-and-permissions.md)   
  [Create a Trace Template &#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
  [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

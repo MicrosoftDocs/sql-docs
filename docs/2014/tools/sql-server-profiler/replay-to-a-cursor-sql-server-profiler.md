@@ -43,6 +43,6 @@ manager: "jhubbard"
 ## See Also  
  [Replay to a Breakpoint &#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
  [Replay Traces](replay-traces.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

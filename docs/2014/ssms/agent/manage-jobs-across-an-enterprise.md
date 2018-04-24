@@ -75,11 +75,11 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  **To force a target server to poll the master server**  
   
--   [SQL Server Management Studio](../ssms/agent/force-a-target-server-to-poll-the-master-server.md)  
+-   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   
 -   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)  
   
 ## See Also  
- [Manage Events](../ssms/agent/manage-events.md)  
+ [Manage Events](manage-events.md)  
   
   

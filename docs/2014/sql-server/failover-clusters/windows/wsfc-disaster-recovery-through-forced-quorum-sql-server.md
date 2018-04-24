@@ -103,13 +103,13 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Force a WSFC Cluster to Start Without a Quorum](../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Force a WSFC Cluster to Start Without a Quorum](force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
 -   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [View Cluster Quorum NodeWeight Settings](../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [View Cluster Quorum NodeWeight Settings](view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configure Cluster Quorum NodeWeight Settings](../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
   
@@ -120,6 +120,6 @@ manager: "jhubbard"
 -   [Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
   
 ## See Also  
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

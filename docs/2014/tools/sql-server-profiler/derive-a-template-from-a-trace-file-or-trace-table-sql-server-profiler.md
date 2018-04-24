@@ -36,6 +36,6 @@ manager: "jhubbard"
  [Create a Trace Template &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Derive a Template from a Running Trace &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

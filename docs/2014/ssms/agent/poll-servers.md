@@ -56,6 +56,6 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 -   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)  
   
 ## See Also  
- [Manage Events](../ssms/agent/manage-events.md)  
+ [Manage Events](manage-events.md)  
   
   

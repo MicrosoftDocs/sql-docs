@@ -36,6 +36,6 @@ manager: "jhubbard"
 >  Comparison operators with assigned values are formatted bold.  
   
 ## See Also  
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

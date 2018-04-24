@@ -46,6 +46,6 @@ manager: "jhubbard"
 2.  Optionally, apply filters to the trace. For more information, see [Filter Events in a Trace &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
   
 ## See Also  
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

@@ -65,7 +65,7 @@ manager: "jhubbard"
  To perform tracing with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], users must also have the ALTER TRACE permission.  
   
 ## See Also  
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

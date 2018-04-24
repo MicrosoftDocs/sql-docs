@@ -129,6 +129,6 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```  
   
 ## See Also  
- [Failover Policy for Failover Cluster Instances](../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
   
   

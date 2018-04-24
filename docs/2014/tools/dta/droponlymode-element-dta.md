@@ -59,6 +59,6 @@ manager: "jhubbard"
 ```  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../database-engine/database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

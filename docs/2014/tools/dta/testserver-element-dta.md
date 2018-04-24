@@ -51,6 +51,6 @@ manager: "jhubbard"
  For a usage example of this element, see [Reduce the Production Server Tuning Load](../../relational-databases/performance/reduce-the-production-server-tuning-load.md).  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../database-engine/database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

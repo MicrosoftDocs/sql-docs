@@ -99,11 +99,11 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
 ## Permissions  
  You must run the administration tool as an interactive user, as either a local user or a domain user account. To use a local user account, the administration tool and controller must be running on the same computer.  
   
- For more information, see [Distributed Replay Security](../tools/distributed-replay/distributed-replay-security.md).  
+ For more information, see [Distributed Replay Security](distributed-replay-security.md).  
   
 ## See Also  
- [Prepare the Input Trace Data](../tools/distributed-replay/prepare-the-input-trace-data.md)   
- [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)  
+ [Prepare the Input Trace Data](prepare-the-input-trace-data.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)  
   
   

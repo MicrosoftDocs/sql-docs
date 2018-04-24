@@ -33,6 +33,6 @@ manager: "jhubbard"
 ## See Also  
  [View and Analyze Traces with SQL Server Profiler](sql-server-profiler.md)   
  [Save Traces and Trace Templates](save-traces-and-trace-templates.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

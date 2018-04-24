@@ -24,7 +24,7 @@ manager: "jhubbard"
  The following section contains the context-sensitive help topics for [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. These topics are available from the user interface by pressing the F1 key or by clicking **Help** in dialog boxes.  
   
 ## See Also  
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [Server Performance and Activity Monitoring](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

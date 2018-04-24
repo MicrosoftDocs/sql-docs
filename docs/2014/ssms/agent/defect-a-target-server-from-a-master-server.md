@@ -75,8 +75,8 @@ sp_msx_defect ;
  Use the `MsxDefect Method`.  
   
 ## See Also  
- [Create a Multiserver Environment](../ssms/agent/create-a-multiserver-environment.md)   
- [Automated Administration Across an Enterprise](../ssms/agent/automated-administration-across-an-enterprise.md)   
+ [Create a Multiserver Environment](create-a-multiserver-environment.md)   
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)   
  [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
   
   

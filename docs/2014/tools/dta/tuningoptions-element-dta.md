@@ -52,6 +52,6 @@ manager: "jhubbard"
  For examples of the `TuningOptions` element, see the [XML Input File Samples &#40;DTA&#41;](xml-input-file-samples-dta.md).  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../database-engine/database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

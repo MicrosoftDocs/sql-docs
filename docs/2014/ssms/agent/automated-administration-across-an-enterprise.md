@@ -55,28 +55,28 @@ manager: "jhubbard"
 >  Multiserver administration features are intended for members of the sysadmin role. However, a member of the sysadmin role on the target server cannot edit the operations that are performed on the target server by the master server. This security measure prevents job steps from being accidentally deleted and operations on the target server from being interrupted.  
   
 ## In This Section  
- [Create a Multiserver Environment](../ssms/agent/create-a-multiserver-environment.md)  
+ [Create a Multiserver Environment](create-a-multiserver-environment.md)  
  Contains information about how to create and manage master and target servers.  
   
- [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
+ [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
  Contains information about how using nonadministrative Windows accounts or the Local System account for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent service can affect multiserver environments.  
   
- [Set Encryption Options on Target Servers](../ssms/agent/set-encryption-options-on-target-servers.md)  
+ [Set Encryption Options on Target Servers](set-encryption-options-on-target-servers.md)  
  Contains information about setting the MsxEncryptChannelOptions[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent registry subkey on target servers.  
   
- [Manage Jobs Across an Enterprise](../ssms/agent/manage-jobs-across-an-enterprise.md)  
+ [Manage Jobs Across an Enterprise](manage-jobs-across-an-enterprise.md)  
  Contains information about checking job status, changing target servers for jobs, synchronizing target server clocks, and polling master servers for their current job status.  
   
- [Troubleshoot Multiserver Jobs That Use Proxies](../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  
+ [Troubleshoot Multiserver Jobs That Use Proxies](troubleshoot-multiserver-jobs-that-use-proxies.md)  
  Contains information about troubleshooting multiserver jobs that use proxies which fail.  
   
- [Poll Servers](../ssms/agent/poll-servers.md)  
+ [Poll Servers](poll-servers.md)  
  Contains information about how to implicitly and explicitly make target servers poll master servers to synchronize jobs information.  
   
- [Manage Events](../ssms/agent/manage-events.md)  
+ [Manage Events](manage-events.md)  
  Contains information about event forwarding from target servers to master servers.  
   
- [Tune Automated Administration Across an Enterprise](../ssms/agent/automated-administration-across-an-enterprise.md)  
+ [Tune Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
  Contains information about how automated administration in a multiserver environment takes advantage of the self-tuning features of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## See Also  

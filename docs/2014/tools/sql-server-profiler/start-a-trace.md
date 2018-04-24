@@ -42,7 +42,7 @@ manager: "jhubbard"
 >  When working with existing traces, you can view the properties, but you cannot modify the properties. To modify the properties, stop or pause the trace.  
   
 ## See Also  
- [Start a Trace Automatically after Connecting to a Server &#40;SQL Server Profiler&#41;](../../analysis-services/instances/sql-server-profiler.md)   
+ [Start a Trace Automatically after Connecting to a Server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Pause a Trace &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [Stop a Trace &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [Clear a Trace Window &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

@@ -16,13 +16,13 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Replay Trace Data
-  You can start a distributed replay with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay feature after you have prepared the input trace data. For more information, see [Prepare the Input Trace Data](../tools/distributed-replay/prepare-the-input-trace-data.md).  
+  You can start a distributed replay with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay feature after you have prepared the input trace data. For more information, see [Prepare the Input Trace Data](prepare-the-input-trace-data.md).  
   
  Use the administration tool **replay** option to initiate the event replay stage of the distributed replay. This stage consists of two parts: the trace data dispatch and the starting and synchronizing of the distributed replay.  
   
  ![Distributed Event Replay](../../2014/database-engine/media/eventreplay.gif "Distributed Event Replay")  
   
- You can replay trace data in one of two sequencing modes: stress mode or synchronization mode. The default behavior is to replay trace data in stress mode. For more information about the event replay stage and sequencing modes, see [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)  
+ You can replay trace data in one of two sequencing modes: stress mode or synchronization mode. The default behavior is to replay trace data in stress mode. For more information about the event replay stage and sequencing modes, see [SQL Server Distributed Replay](sql-server-distributed-replay.md)  
   
 > [!NOTE]  
 >  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../tools/sql-server-profiler/replay-requirements.md).  
@@ -37,9 +37,9 @@ manager: "jhubbard"
   
     3.  When initiating the event replay stage (the next step), use the *config_file* parameter of the **replay** option to specify the location of the modified configuration file.  
   
-     For more information about the replay configuration file, see [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).  
+     For more information about the replay configuration file, see [Configure Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Initiate the event replay stage**: To start the distributed replay, you must run the administration tool with the **replay** option. For more information, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+2.  **Initiate the event replay stage**: To start the distributed replay, you must run the administration tool with the **replay** option. For more information, see [Replay Option &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md).  
   
     1.  Open the Windows Command Prompt utility (`CMD.exe`), and navigate to the installation location of the Distributed Replay administration tool (`DReplay.exe`).  
   
@@ -61,11 +61,11 @@ manager: "jhubbard"
   
      `dreplay replay -d c:\WorkingDir -o -w client1,client2 -c c:\modifiedreplay.config`  
   
-3.  When the distributed replay has finished, the administration tool returns summary information. If you specified the **-o** option, the replay activity has been saved in result trace files on each client. For more information about the result trace files, see [Review the Replay Results](../tools/distributed-replay/review-the-replay-results.md).  
+3.  When the distributed replay has finished, the administration tool returns summary information. If you specified the **-o** option, the replay activity has been saved in result trace files on each client. For more information about the result trace files, see [Review the Replay Results](review-the-replay-results.md).  
   
 ## See Also  
  [Distributed Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)   
- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)  
+ [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)  
   
   

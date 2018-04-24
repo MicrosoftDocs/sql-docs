@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  **To create an alert based on severity levels**  
   
--   [SQL Server Management Studio](../ssms/agent/create-an-alert-using-severity-level.md)  
+-   [SQL Server Management Studio](create-an-alert-using-severity-level.md)  
   
 -   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)  
   

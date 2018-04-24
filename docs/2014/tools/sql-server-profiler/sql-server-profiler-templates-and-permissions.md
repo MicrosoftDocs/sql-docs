@@ -43,7 +43,7 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[SQL Server Profiler Templates](sql-server-profiler-templates.md)|Contains information about the predefined trace templates that ship with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
-|[Permissions Required to Run SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)|Contains information about the permissions that are required to run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
+|[Permissions Required to Run SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)|Contains information about the permissions that are required to run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Save Traces and Trace Templates](save-traces-and-trace-templates.md)|Contains information about saving trace output and about saving trace definitions into a template.|  
 |[Modify Trace Templates](modify-trace-templates.md)|Contains information about modifying trace templates by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or by using [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Start a Trace](start-a-trace.md)|Contains information about what happens when you start, pause, or stop a trace.|  
@@ -55,7 +55,7 @@ manager: "jhubbard"
 |[Replay Traces](replay-traces.md)|Contains information that explains what replaying a trace means and what is required to replay a trace.|  
   
 ## See Also  
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [Start SQL Server Profiler](start-sql-server-profiler.md)  
   
   

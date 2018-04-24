@@ -135,7 +135,7 @@ GO;
  For more information, see [sp_msx_enlist &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md).  
   
 ## See Also  
- [Create a Multiserver Environment](../ssms/agent/create-a-multiserver-environment.md)   
- [Automated Administration Across an Enterprise](../ssms/agent/automated-administration-across-an-enterprise.md)  
+ [Create a Multiserver Environment](create-a-multiserver-environment.md)   
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
   
   

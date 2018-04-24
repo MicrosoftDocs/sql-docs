@@ -88,6 +88,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Implement Jobs](implement-jobs.md)   
- [Create Jobs](../ssms/agent/create-jobs.md)  
+ [Create Jobs](create-jobs.md)  
   
   

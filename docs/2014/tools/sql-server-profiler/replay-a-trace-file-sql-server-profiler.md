@@ -60,6 +60,6 @@ manager: "jhubbard"
  [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)   
  [Replay Traces](replay-traces.md)   
  [Open a Trace File &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

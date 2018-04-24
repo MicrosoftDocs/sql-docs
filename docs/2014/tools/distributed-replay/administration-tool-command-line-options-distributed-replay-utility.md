@@ -57,22 +57,22 @@ Usage:
   
  For detailed syntax information that includes the command arguments and examples, see the following topics:  
   
--   [Preprocess Option &#40;Distributed Replay Administration Tool&#41;](../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [Preprocess Option &#40;Distributed Replay Administration Tool&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Replay Option &#40;Distributed Replay Administration Tool&#41;](../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [Replay Option &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Status Option &#40;Distributed Replay Administration Tool&#41;](../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [Status Option &#40;Distributed Replay Administration Tool&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [Cancel Option &#40;Distributed Replay Administration Tool&#41;](../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [Cancel Option &#40;Distributed Replay Administration Tool&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  RPCs are replayed as RPCs and not as language events.  
   
 ## Permissions  
  You must run the administration tool as an interactive user, as either a local user or a domain user account. To use a local user account, the administration tool and controller must be running on the same computer.  
   
- For more information, see [Distributed Replay Security](../tools/distributed-replay/distributed-replay-security.md).  
+ For more information, see [Distributed Replay Security](distributed-replay-security.md).  
   
 ## See Also  
- [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)  
   
   

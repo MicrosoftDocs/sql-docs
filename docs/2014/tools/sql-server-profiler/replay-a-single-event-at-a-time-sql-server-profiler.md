@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Replay Traces](replay-traces.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

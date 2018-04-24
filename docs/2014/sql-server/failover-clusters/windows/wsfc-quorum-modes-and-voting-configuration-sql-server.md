@@ -116,9 +116,9 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [View Cluster Quorum NodeWeight Settings](../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [View Cluster Quorum NodeWeight Settings](view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configure Cluster Quorum NodeWeight Settings](../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -132,6 +132,6 @@ manager: "jhubbard"
   
 ## See Also  
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

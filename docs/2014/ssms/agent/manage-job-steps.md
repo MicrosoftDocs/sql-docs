@@ -198,19 +198,19 @@ Set oServer = nothing
 |||  
 |-|-|  
 |**Description**|**Topic**|  
-|Describes how to create a job step with an executable program.|[Create a CmdExec Job Step](../ssms/agent/create-a-cmdexec-job-step.md)|  
-|Describes how to reset [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent permissions.|[Configure a User to Create and Manage SQL Server Agent Jobs](../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|Describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] job step.|[Create a Transact-SQL Job Step](../ssms/agent/create-a-transact-sql-job-step.md)|  
-|Describes how to define options for Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Transact-SQL job steps.|[Define Transact-SQL Job Step Options](../ssms/agent/define-transact-sql-job-step-options.md)|  
-|Describes how to create an ActiveX script job step.|[Create an ActiveX Script Job Step](../ssms/agent/create-an-activex-script-job-step.md)|  
-|Describes how to create and define [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps that execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services commands and queries.|[Create an Analysis Services Job Step](../ssms/agent/create-an-analysis-services-job-step.md)|  
+|Describes how to create a job step with an executable program.|[Create a CmdExec Job Step](create-a-cmdexec-job-step.md)|  
+|Describes how to reset [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent permissions.|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|Describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] job step.|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
+|Describes how to define options for Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Transact-SQL job steps.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Describes how to create an ActiveX script job step.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
+|Describes how to create and define [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps that execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services commands and queries.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
 |Describes what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should take if a failure occurs during job execution.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |Describes how to view job step details in the Job Step Properties dialog.|[View Job Step Information](view-job-step-information.md)|  
-|Describes how to delete a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step log.|[Delete a Job Step Log](../ssms/agent/delete-a-job-step-log.md)|  
+|Describes how to delete a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step log.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## See Also  
  [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql.md)   
- [Create Jobs](../ssms/agent/create-jobs.md)   
+ [Create Jobs](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
   
   

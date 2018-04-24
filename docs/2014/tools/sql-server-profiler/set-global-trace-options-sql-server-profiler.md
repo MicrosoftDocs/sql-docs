@@ -66,6 +66,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Set Trace Display Defaults &#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

@@ -30,6 +30,6 @@ manager: "jhubbard"
 2.  On the **File** menu, click **Stop Trace**.  
   
 ## See Also  
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

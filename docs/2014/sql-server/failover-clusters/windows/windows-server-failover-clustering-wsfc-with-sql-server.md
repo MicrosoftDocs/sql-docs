@@ -95,7 +95,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  An AlwaysOn Failover Cluster Instance requires symmetrical shared disk storage such as a storage area network (SAN) or SMB file share.  The shared disk storage volumes must be available to all potential failover nodes in the WSFC cluster.  
   
- For more information, see: [AlwaysOn Failover Cluster Instances](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ For more information, see: [AlwaysOn Failover Cluster Instances](always-on-failover-cluster-instances-sql-server.md)  
   
 ### Database-level High Availability with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  An *availability group* is a set of user databases that fail over together. An availability group consists of a primary *availability replica* and one to four secondary replicas that are maintained through SQL Server log-based data movement for data protection without the need for shared storage. Each replica is hosted by an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on a different node of the WSFC cluster. The availability group and a corresponding virtual network name are registered as resources in the WSFC cluster.  
@@ -121,7 +121,7 @@ manager: "jhubbard"
   
  Failover of an availability group replica does not affect the underlying [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  Failover of a FCI moves the hosted availability group replicas with the instance.  
   
- For more information, see: [Failover Policy for Failover Cluster Instances](../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ For more information, see: [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
   
 ### WSFC Resource Health Detection  
  Each resource in a WSFC cluster node can report its status and health, periodically or on-demand. A variety of circumstances may indicate resource failure; e.g. power failure, disk or memory errors, network communication errors, or non-responsive services.  
@@ -138,7 +138,7 @@ manager: "jhubbard"
 > [!TIP]  
 >  It is best practice to always have an odd number of quorum votes in a WSFC cluster.  For the purposes of quorum voting, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not have to be installed on all nodes in the cluster. An additional server can act as a quorum member, or the WSFC quorum model can be configured to use a remote file share as a tie-breaker.  
 >   
->  For more information, see: [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
+>  For more information, see: [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
 ### Disaster Recovery Through Forced Quorum  
  Depending upon operational practices and WSFC cluster configuration, you can incur both automatic and manual failovers, and still maintain a robust, fault-tolerant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn solution. However, if a quorum of the eligible voting nodes in the WSFC cluster cannot communicate with one another, or if the WSFC cluster otherwise fails health validation, then the WSFC cluster may go offline.  
@@ -147,7 +147,7 @@ manager: "jhubbard"
   
  Afterwards, a series of steps must also be taken to reconfigure the WSFC cluster, recover the affected database replicas, and to re-establish a new quorum.  
   
- For more information, see: [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ For more information, see: [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcRelationship"></a> Relationship of SQL Server AlwaysOn Components to WSFC  
  Several layers of relationships exist between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn and WSFC features and components.  
@@ -171,11 +171,11 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [View Cluster Quorum NodeWeight Settings](../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [View Cluster Quorum NodeWeight Settings](view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configure Cluster Quorum NodeWeight Settings](../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Force a WSFC Cluster to Start Without a Quorum](../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Force a WSFC Cluster to Start Without a Quorum](force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -188,10 +188,10 @@ manager: "jhubbard"
 -   [Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
   
 ## See Also  
- [AlwaysOn Failover Cluster Instances (SQL Server)](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [AlwaysOn Failover Cluster Instances (SQL Server)](always-on-failover-cluster-instances-sql-server.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
- [Failover Policy for Failover Cluster Instances](../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
+ [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)   
+ [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
   

@@ -53,6 +53,6 @@ manager: "jhubbard"
  For a usage example, see the [XML Input File Sample with Inline Workload &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../database-engine/database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

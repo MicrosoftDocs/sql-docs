@@ -124,7 +124,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>  
 ```  
   
- To specify a stress sequencing mode, the `<SequencingMode>` element of the `DReplay.exe.replay.config` file is set equal to the value `stress`. The `<ConnectTimeScale>` and `<ThinkTimeScale>` elements are set to the value `50` (to specify 50 percent). For more information about connect time and think time, see [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md). These changes are shown in the following XML example:  
+ To specify a stress sequencing mode, the `<SequencingMode>` element of the `DReplay.exe.replay.config` file is set equal to the value `stress`. The `<ConnectTimeScale>` and `<ThinkTimeScale>` elements are set to the value `50` (to specify 50 percent). For more information about connect time and think time, see [Configure Distributed Replay](configure-distributed-replay.md). These changes are shown in the following XML example:  
   
 ```  
 <?xml version='1.0'?>  
@@ -150,13 +150,13 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 ## Permissions  
  You must run the administration tool as an interactive user, as either a local user or a domain user account. To use a local user account, the administration tool and controller must be running on the same computer.  
   
- For more information, see [Distributed Replay Security](../tools/distributed-replay/distributed-replay-security.md).  
+ For more information, see [Distributed Replay Security](distributed-replay-security.md).  
   
 ## See Also  
- [Replay Trace Data](../tools/distributed-replay/replay-trace-data.md)   
- [Review the Replay Results](../tools/distributed-replay/review-the-replay-results.md)   
- [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)   
+ [Replay Trace Data](replay-trace-data.md)   
+ [Review the Replay Results](review-the-replay-results.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Configure Distributed Replay](configure-distributed-replay.md)   
  [SQL Server Distributed Replay Forum](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Using Distributed Replay to Load Test Your SQL Server – Part 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [Using Distributed Replay to Load Test Your SQL Server - Part 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  

@@ -55,7 +55,7 @@ manager: "jhubbard"
 ## See Also  
  [Permissions Required to Run SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler Templates and Permissions](sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)   
+ [SQL Server Profiler](sql-server-profiler.md)   
  [Correlate a Trace with Windows Performance Log Data &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

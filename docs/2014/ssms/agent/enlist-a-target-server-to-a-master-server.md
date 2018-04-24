@@ -57,6 +57,6 @@ manager: "jhubbard"
 ##  <a name="PowerShellProcedure"></a> Using SQL Server Management Objects (SMO)  
   
 ## See Also  
- [Automated Administration Across an Enterprise](../ssms/agent/automated-administration-across-an-enterprise.md)  
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
   
   

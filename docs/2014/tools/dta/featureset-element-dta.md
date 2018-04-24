@@ -52,6 +52,6 @@ manager: "jhubbard"
  For a usage example of this element, see the [Simple XML Input File Sample &#40;DTA&#41;](simple-xml-input-file-sample-dta.md).  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../database-engine/database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

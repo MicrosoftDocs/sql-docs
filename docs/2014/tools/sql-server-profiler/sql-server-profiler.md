@@ -127,7 +127,7 @@ manager: "jhubbard"
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Lists the predefined templates that SQL Server provides for monitoring certain types of events, and the permissions required to use to replay traces.|[SQL Server Profiler Templates and Permissions](sql-server-profiler-templates-and-permissions.md)|  
-|Describes how to run SQL Server Profiler.|[Permissions Required to Run SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)|  
+|Describes how to run SQL Server Profiler.|[Permissions Required to Run SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)|  
 |Describes how to create a trace.|[Create a Trace &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)|  
 |Describes how to specify events and data columns for a trace file.|[Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |Describes how to save trace results to a file.|[Save Trace Results to a File &#40;SQL Server Profiler&#41;](save-trace-results-to-a-file-sql-server-profiler.md)|  

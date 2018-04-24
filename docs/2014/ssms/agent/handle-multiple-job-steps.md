@@ -45,7 +45,7 @@ manager: "jhubbard"
  [dbo.sysjobhistory &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)   
  [dbo.sysjobs &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobsteps &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)   
- [Implement Jobs](../ssms/agent/implement-jobs.md)   
- [Manage Job Steps](../ssms/agent/manage-job-steps.md)  
+ [Implement Jobs](implement-jobs.md)   
+ [Manage Job Steps](manage-job-steps.md)  
   
   

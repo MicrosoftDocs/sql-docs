@@ -25,10 +25,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)
-  You can create queries that include any number of search conditions, linked with any number of AND and OR operators. A query with a combination of AND and OR clauses can become complex, so it is helpful to understand how such a query is interpreted when you execute it, and how such a query is represented in the [Criteria Pane](../ssms/visual-db-tools/visual-database-tools.md) and [SQL Pane](../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+  You can create queries that include any number of search conditions, linked with any number of AND and OR operators. A query with a combination of AND and OR clauses can become complex, so it is helpful to understand how such a query is interpreted when you execute it, and how such a query is represented in the [Criteria Pane](visual-database-tools.md) and [SQL Pane](sql-pane-visual-database-tools.md).  
   
 > [!NOTE]  
->  For details about search conditions that contain only one AND or OR operator, see [Specify Multiple Search Conditions for One Column &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) and [Specify Multiple Search Conditions for Multiple Columns &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md).  
+>  For details about search conditions that contain only one AND or OR operator, see [Specify Multiple Search Conditions for One Column &#40;Visual Database Tools&#41;](specify-multiple-search-conditions-for-one-column-visual-database-tools.md) and [Specify Multiple Search Conditions for Multiple Columns &#40;Visual Database Tools&#41;](specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md).  
   
  Below you will find information about:  
   
@@ -117,7 +117,7 @@ WHERE
 ```  
   
 ## How Multiple AND and OR Clauses Are Represented in the Criteria Pane  
- The Query and View Designer represents your search conditions in the [Criteria Pane](../ssms/visual-db-tools/visual-database-tools.md). However, in some cases that involve multiple clauses linked with AND and OR, the representation in the Criteria Pane might not be what you expect. In addition, if you modify your query in the Criteria Pane or [Diagram Pane](../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), you might find that your SQL statement has been changed from what you entered.  
+ The Query and View Designer represents your search conditions in the [Criteria Pane](visual-database-tools.md). However, in some cases that involve multiple clauses linked with AND and OR, the representation in the Criteria Pane might not be what you expect. In addition, if you modify your query in the Criteria Pane or [Diagram Pane](diagram-pane-visual-database-tools.md), you might find that your SQL statement has been changed from what you entered.  
   
  In general, these rules dictate how AND and OR clauses appear in the Criteria Pane:  
   
@@ -137,7 +137,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  The Query and View Designer represents this WHERE clause in the Criteria Pane as follows:  
   
- ![OR clause precedence in the Criteria Pane](../../2014/database-engine/media/vs-criteriapane1.gif "OR clause precedence in the Criteria Pane")  
+ ![OR clause precedence in the Criteria Pane](../../../database-engine/media/vs-criteriapane1.gif "OR clause precedence in the Criteria Pane")  
   
  However, if the linked OR clauses take precedence over an AND clause, the AND clause is repeated for each OR clause. This causes the AND clause to be distributed to each OR clause. For example, in the SQL pane you might create a WHERE clause such as the following:  
   
@@ -149,7 +149,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  The Query and View Designer represents this WHERE clause in the Criteria Pane as follows:  
   
- ![Multiple AND and OR clauses in the Criteria Pane](../../2014/database-engine/media/vs-criteriapane2.gif "Multiple AND and OR clauses in the Criteria Pane")  
+ ![Multiple AND and OR clauses in the Criteria Pane](../../../database-engine/media/vs-criteriapane2.gif "Multiple AND and OR clauses in the Criteria Pane")  
   
  If the linked OR clauses involve only one data column, the Query and View Designer can place the entire OR clause into a single cell of the grid, avoiding the need to repeat the AND clause. For example, in the SQL pane you might create a WHERE clause such as the following:  
   
@@ -160,11 +160,11 @@ WHERE (hire_date < '01/01/95' ) AND
   
  The Query and View Designer represents this WHERE clause in the Criteria Pane as follows:  
   
- ![Linked OR clauses defined in the Criteria Pane](../../2014/database-engine/media/vs-criteriapane3.gif "Linked OR clauses defined in the Criteria Pane")  
+ ![Linked OR clauses defined in the Criteria Pane](../../../database-engine/media/vs-criteriapane3.gif "Linked OR clauses defined in the Criteria Pane")  
   
  If you make a change to the query (such as changing one of the values in the Criteria Pane), the Query and View Designer recreates the SQL statement in the SQL pane. The recreated SQL statement will resemble the Criteria Pane display rather than your original statement. For example, if the Criteria Pane contains distributed AND clauses, the resulting statement in the SQL pane will be recreated with explicit distributed AND clauses. For details, see "How AND Works with Multiple OR Clauses" earlier in this topic.  
   
 ## See Also  
- [Specify Search Criteria &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+ [Specify Search Criteria &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

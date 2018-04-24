@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  For example, you might want to see the average price of a book in the `titles` table, but break the results down by publisher. To do so, you group the query by publisher (for example, `pub_id`). The resulting query output might look like this:  
   
- ![Query results: average price grouped by publisher](../../2014/database-engine/media/dv3w9e1.gif "Query results: average price grouped by publisher")  
+ ![Query results: average price grouped by publisher](../../../database-engine/media/dv3w9e1.gif "Query results: average price grouped by publisher")  
   
  When you group data, you can display only summary or grouped data, such as:  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   Values produced by aggregate functions such as SUM( ) and AVG( ). In the example above, the second column is produced by using the AVG( ) function with the `price` column.  
   
- You cannot display values from individual rows. For example, if you group only by publisher, you cannot also display individual titles in the query. Therefore, if you add columns to the query output, the [Query and View Designer](../ssms/visual-db-tools/visual-database-tools.md) automatically adds them to the GROUP BY clause of the statement in the [SQL pane](../ssms/visual-db-tools/sql-pane-visual-database-tools.md). If you want a column to be aggregated instead, you can specify an aggregate function for that column.  
+ You cannot display values from individual rows. For example, if you group only by publisher, you cannot also display individual titles in the query. Therefore, if you add columns to the query output, the [Query and View Designer](visual-database-tools.md) automatically adds them to the GROUP BY clause of the statement in the [SQL pane](sql-pane-visual-database-tools.md). If you want a column to be aggregated instead, you can specify an aggregate function for that column.  
   
  If you group by more than one column, each group in the query shows the aggregate values for all grouping columns.  
   
@@ -46,7 +46,7 @@ GROUP BY pub_id, type
   
  The resulting output might look like this:  
   
- ![Query results: price grouped by publisher and type](../../2014/database-engine/media/dv3w9e2.gif "Query results: price grouped by publisher and type")  
+ ![Query results: price grouped by publisher and type](../../../database-engine/media/dv3w9e2.gif "Query results: price grouped by publisher and type")  
   
 ### To group rows  
   
@@ -68,9 +68,9 @@ GROUP BY pub_id, type
   
 5.  In the **Group By** grid cell for the column that is going to be aggregated, select the appropriate aggregate function.  
   
-     The Query and View Designer automatically assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+     The Query and View Designer automatically assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-     ![Adding a column alias to the query result set](../../2014/database-engine/media/dv3w9e3.gif "Adding a column alias to the query result set")  
+     ![Adding a column alias to the query result set](../../../database-engine/media/dv3w9e3.gif "Adding a column alias to the query result set")  
   
      The corresponding statement in the **SQL** pane might look like this:  
   
@@ -81,6 +81,6 @@ GROUP BY pub_id, type
     ```  
   
 ## See Also  
- [Sort and Group Query Results &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+ [Sort and Group Query Results &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

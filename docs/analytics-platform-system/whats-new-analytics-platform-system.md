@@ -106,7 +106,7 @@ A new appliance from HPE or DELL includes all the latest updates plus:
 Installing or upgrading to APS 2016 is faster and requires less downtime than previous releases. To reduce downtime, the install or upgrade: 
 
  - Streamlines applying WSUS updates by using an image that contains all the updates through June 2016
- - Applies security udpates with the driver and firmware updates
+ - Applies security updates with the driver and firmware updates
  - Places the latest hotfixes and the appliance verification utility (PAV) on your appliance so they are ready to install with no need to download them.
 
 

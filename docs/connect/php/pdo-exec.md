@@ -2,7 +2,7 @@
 title: "PDO::exec | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,7 @@ ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::exec
@@ -50,7 +50,7 @@ The following attributes affect the behavior of PDO::exec:
   
 -   PDO::SQLSRV_ATTR_QUERY_TIMEOUT  
   
-See [PDO::setAttribute](../../connect/php/pdo-setattribute.md) for more information.  
+For more information, see [PDO::setAttribute](../../connect/php/pdo-setattribute.md). 
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -68,6 +68,7 @@ This example deletes rows in Table1 that have 'xxxyy' in col1. The example then 
 ```  
   
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

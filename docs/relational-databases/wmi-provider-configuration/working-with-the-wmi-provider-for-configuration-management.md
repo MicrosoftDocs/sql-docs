@@ -2,7 +2,7 @@
 title: "Working with the WMI Provider for Configuration Management | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "wmi"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "binding [WMI]"
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "security"
@@ -20,6 +20,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Getting Started with Database Engine Permissions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -159,9 +160,9 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  The first permission listed above (`GRANT SELECT ON OBJECT::Region TO Ted;`) is the most granular, that is, that statement is the least permission possible that grants the `SELECT`. No permissions to subordinate objects come with it. It's a good principal to always grant the least permission possible, but (contradicting that) grant at higher levels in order to simplify the granting system. So if Ted needs permissions to the entire schema, grant `SELECT` once at the schema level, instead of granting `SELECT` at the table or view level many times. The design of the database has a great deal of impact on how successful this strategy can be. This strategy will work best when your database is designed so that objects needing identical permissions are included in a single schema.  
   
 ## List of Permissions  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] has 230 permissions. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] has 219 permissions. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] has 214 permissions. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] has 195 permissions. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], and [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] have fewer permissions because they expose only a portion of the database engine, though each have some permissions that do not apply to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. In this topic, the poster is far to small to read. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
-  
-[![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] has 230 permissions. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] has 219 permissions. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] has 214 permissions. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] has 195 permissions. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], and [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] have fewer permissions because they expose only a portion of the database engine, though each have some permissions that do not apply to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+ 
+ [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
  For a graphic showing the relationships among the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] principals and server and database objects,  see [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   

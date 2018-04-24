@@ -19,7 +19,7 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Getting Started with SSMA for SAP ASE (SybaseToSQL)

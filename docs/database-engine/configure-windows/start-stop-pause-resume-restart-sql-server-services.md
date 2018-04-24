@@ -2,7 +2,7 @@
 title: "Start, Stop, Pause, Resume, Restart SQL Server Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/26/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"

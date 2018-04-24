@@ -2,7 +2,7 @@
 title: "Replication Language Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"
@@ -17,8 +17,8 @@ applies_to:
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 caps.latest.revision: 5
 author: "MashaMSFT"
-ms.author: "mblythe"
-manager: "erikre"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Language Reference

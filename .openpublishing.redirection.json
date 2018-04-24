@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "docs/advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md",
+            "redirect_url": "https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/setup-or-configure-r-tools.md",
+            "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/python/index.md",
             "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
             "redirect_document_id": false
@@ -18,6 +28,66 @@
         {
             "source_path": "docs/advanced-analytics/r/r-services.md",
             "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/setup-python-machine-learning-services.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/set-up-sql-server-r-services-in-database.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-r-services-windows-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/create-a-standalone-r-server.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/installing-ml-components-without-internet-access.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/unattended-installs-of-sql-server-python-services.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-ml-component-commandline-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/unattended-installs-of-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-ml-component-commandline-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/install-microsoft-r-server-from-the-command-line.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-ml-component-commandline-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/monitoring-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/monitoring-python-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/managing-and-monitoring-python-solutions.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-server-standalone",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/getting-started-with-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services",
             "redirect_document_id": false
         },
         {
@@ -1056,6 +1126,21 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/oledb/oledb-driver-for-sql-server-programming.md",
+            "redirect_url": "/sql/connect/oledb/oledb-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/oledb/ole-db/filestream-support-ole-db.md",
+            "redirect_url": "/sql/connect/oledb/features/filestream-support",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db.md",
+            "redirect_url": "/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/t-sql/statements/alter-statements-transact-sql.md",
             "redirect_url": "/sql/t-sql/statements/statements",
             "redirect_document_id": false
@@ -1588,6 +1673,16 @@
         {
             "source_path": "docs/analysis-services/tabular-models/data-sources-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/properties-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/tabular-models/tabular-models-ssas",
             "redirect_document_id": false
         },
         {
@@ -3330,15 +3425,258 @@
 	  "redirect_url": "/sql/sql-server/sql-server-2012-sp4-release-notes",
 	  "redirect_document_id": false
 	  },
-	  {
-	  "source_path": "docs/sql-server/sql-server-2012-sp2-release-notes.md",
-	  "redirect_url": "/sql/sql-server/sql-server-2012-sp4-release-notes",
+      
+      {
+	  "source_path": "docs/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md",
+	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
 	  },
-	  {
-	  "source_path": "docs/sql-server/sql-server-2012-sp3-release-notes.md",
-	  "redirect_url": "/sql/sql-server/sql-server-2012-sp4-release-notes",
+      
+      {
+	  "source_path": "docs/ssms/tutorials/lesson-1-1-start-sql-server-management-studio.md",
+	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
-	  }
+      },
+
+	  {
+        "source_path": "docs/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
+        "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+        "redirect_document_id": false
+      }  ,  
+
+	  {
+        "source_path": "docs/ssms/tutorials/lesson-1-3-change-the-environment-layout.md",
+        "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
+        "redirect_document_id": false
+        },
+    
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-1-4-display-the-query-window.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
+	  "redirect_document_id": false
+      },
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-1-5-show-the-object-explorer-details-page.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
+	  "redirect_document_id": false
+      },
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
+	  "redirect_document_id": false
+      },
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-1-7-set-the-startup-options.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
+	  "redirect_document_id": false
+      },
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
+	  "redirect_document_id": false
+      },
+
+      	  {
+	  "source_path": "docs/ssms/tutorials/lesson-1-9-summary-basic-navigation.md",
+	  "redirect_url": "/sql/docs/ssms/tutorials/ssms-configuration",
+	  "redirect_document_id": false
+      },
+
+	  {
+      "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",	  
+      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+	  "redirect_document_id": false
+      },
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-2-1-connecting-with-query-editor.md",
+	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+	  "redirect_document_id": false
+      },
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-2-3-maximizing-query-editor.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
+	  "redirect_document_id": false
+      },
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-2-4-using-comments.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-tricks",
+	  "redirect_document_id": false
+      },
+
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
+	  "redirect_document_id": false
+      },
+
+
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-2-6-script-a-table.md",
+	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
+	  "redirect_document_id": false
+      },
+      {
+	  "source_path": "docs/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md",
+	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-3-1-create-scripts-using-templates.md",
+	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
+	  "redirect_document_id": false
+      },
+      {
+	  "source_path": "docs/ssms/tutorials/lesson-3-2-create-custom-templates.md",
+	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md",
+	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects.md",
+	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/relational-databases/server-management-objects-smo/link-to-programming-samples.md",
+	  "redirect_url": "/sql/relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net",
+	  "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/relational-databases/replication/lesson-1-creating-windows-accounts-for-replication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-preparing-the-server-for-replication",
+        "redirect_document_id": false
+        },
+  
+  
+        {
+        "source_path": "docs/relational-databases/replication/lesson-2-preparing-the-snapshot-folder.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-preparing-the-server-for-replication",
+        "redirect_document_id": false
+        },
+  
+  
+        {
+        "source_path": "docs/relational-databases/replication/lesson-3-configuring-distribution.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-preparing-the-server-for-replication",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-3-validating-the-subscription-and-measuring-latency.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-with-mobile-clients",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-with-mobile-clients",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-3-synchronizing-the-subscription-to-the-merge-publication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-with-mobile-clients",
+        "redirect_document_id": false
+        },
+
+	  {
+	  "source_path": "docs/sample/microsoft-sql-server-samples.md",
+	  "redirect_url": "/sql/samples/sql-samples-where-are",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/database-catalog-oltp.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-oltp-database-catalog",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/database-catalog-wwi-olap.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-dw-database-catalog",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/data-generation.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-generate-data",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/etl-workflow.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-perform-etl",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/installation-and-configuration-olap.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-dw-install-configure",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/installation-and-configuration-wwi-oltp.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-oltp-install-configure",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/overview.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/sample-queries-oltp.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/sample-queries-wwi-olap.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/use-of-sql-server-features-and-capabilities-olap.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-dw-use-of-sql-server-features",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/use-of-sql-server-features-and-capabilities-wwi-oltp.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-oltp-use-of-sql-server-features",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-documentation.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-olap-database.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-oltp-database.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      }
     ]
 }

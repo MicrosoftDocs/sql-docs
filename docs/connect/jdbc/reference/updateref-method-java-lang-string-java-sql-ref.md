@@ -2,7 +2,7 @@
 title: "updateRef Method (java.lang.String, java.sql.Ref) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 7740d17d-282f-4f1d-91f9-c68a873b069a
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateRef Method (java.lang.String, java.sql.Ref)

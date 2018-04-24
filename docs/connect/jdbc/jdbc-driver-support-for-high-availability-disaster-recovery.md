@@ -1,8 +1,8 @@
 ---
 title: "JDBC Driver Support for High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/04/2018"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 caps.latest.revision: 40
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # JDBC Driver Support for High Availability, Disaster Recovery
@@ -89,29 +89,11 @@ If you are using Microsoft JDBC Driver 4.2 (or lower) for SQL Server and if **mu
  If you upgrade a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] application that currently uses database mirroring to a multi-subnet scenario, you should remove the **failoverPartner** connection property and replace it with **multiSubnetFailover** set to **true** and replace the server name in the connection string with a availability group listener. If a connection string uses **failoverPartner** and **multiSubnetFailover=true**, the driver will generate an error. However, if a connection string uses **failoverPartner** and **multiSubnetFailover=false** (or **ApplicationIntent=ReadWrite**), the application will use database mirroring.  
   
  The driver will return an error if database mirroring is used on the primary database in the AG, and if **multiSubnetFailover=true** is used in the connection string that connects to a primary database instead of to an availability group listener.  
-  
-## Specifying Application Intent  
- When **applicationIntent=ReadOnly**, the client requests a read-only workload when connecting to an AlwaysOn enabled database. The server will enforce the intent at connection time and during a USE database statement but only to an AlwaysOn enabled database.  
-  
- The **applicationIntent** keyword does not work with legacy, read-only databases.  
-  
- A database can allow or disallow read workloads on the targeted AlwaysOn database. (This is done with the **ALLOW_CONNECTIONS** clause of the **PRIMARY_ROLE** and **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)] statements.)  
-  
- The **applicationIntent** keyword is used to enable read-only routing.  
-  
-## Read-Only Routing  
- Read-only routing is a feature that can ensure the availability of a read-only replica of a database. To enable read-only routing:  
-  
-1.  You must connect to an AlwaysOn Availability Group availability group listener.  
-  
-2.  The **applicationIntent** connection string keyword must be set to **ReadOnly**.  
-  
-3.  The Availability Group must be configured by the database administrator to enable read-only routing.  
-  
- It is possible that multiple connections using read-only routing will not all connect to the same read-only replica. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. To ensure that all read-only requests connect to the same read-only replica, do not pass an availability group listener or virtual IP address to the **serverName** connection string keyword. Instead, specify the name of the read-only instance.  
-  
- Read-only routing may take longer than connecting to the primary because read-only routing first connects to the primary and then looks for the best available readable secondary. Because of this, you should increase your login timeout.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## New Methods Supporting multiSubnetFailover and applicationIntent  
  The following methods give you programmatic access to the **multiSubnetFailover**, **applicationIntent** and **transparentNetworkIPResolution** connection string keywords:  
   

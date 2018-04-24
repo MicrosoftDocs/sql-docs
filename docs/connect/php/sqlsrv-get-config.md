@@ -2,7 +2,7 @@
 title: "sqlsrv_get_config | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -22,7 +22,7 @@ ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_get_config
@@ -48,6 +48,8 @@ If **false** is returned by **sqlsrv_get_config**, you must call [sqlsrv_errors]
   
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
+
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
   

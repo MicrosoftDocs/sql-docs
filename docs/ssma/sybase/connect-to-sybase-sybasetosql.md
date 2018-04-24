@@ -19,7 +19,7 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to Sybase (SybaseToSQL)

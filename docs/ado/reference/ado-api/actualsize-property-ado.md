@@ -1,17 +1,17 @@
 ---
 title: "ActualSize Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/20/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Field20::ActualSize"
@@ -25,7 +25,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ActualSize Property (ADO)
-Indicates the actual length of a field???s value in bytes.  
+Indicates the actual length of a field's value in bytes.  
   
 ## Settings and Return Values  
  Returns a **Long** value.  

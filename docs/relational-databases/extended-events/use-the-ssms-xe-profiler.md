@@ -1,16 +1,13 @@
----
+﻿---
 title: "Use the SSMS XEvent Profiler | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
-ms.component: "extended-events"
 ms.reviewer: "genemi"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "xevents"
+ms.technology: "xevents"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -23,6 +20,7 @@ author: "yualan"
 ms.author: "alayu"
 manager: "craigg"   
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use the SSMS XEvent Profiler
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

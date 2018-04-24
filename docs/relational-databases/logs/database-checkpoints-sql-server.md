@@ -1,7 +1,7 @@
----
+﻿---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
 ms.date: "09/23/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "logs"
@@ -30,10 +30,11 @@ helpviewer_keywords:
   - "active logs"
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Database Checkpoints (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Choose the Agent Service Account for Multiserver Environments | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -21,9 +21,14 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Choose the Right SQL Server Agent Service Account for Multiserver Environments
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 The Windows account you choose for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service can affect the behavior of a multiserver environment, as follows:  
   
 -   If you run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service under an account that is not a member of the local Windows Administrators group, enlisting target servers to master servers may fail. If it does, the following error message is returned:  

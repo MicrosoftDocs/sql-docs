@@ -19,7 +19,7 @@ ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Migration Report (DB2ToSQL)

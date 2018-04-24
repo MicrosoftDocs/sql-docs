@@ -2,7 +2,7 @@
 title: "WMI Error 0x8007052f | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "relational-databases-misc"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "0x8007052f (WMI error)"
 ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

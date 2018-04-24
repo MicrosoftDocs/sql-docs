@@ -2,7 +2,7 @@
 title: "Perform a planned manual failover of an availability group (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "availability-groups"
@@ -37,7 +37,7 @@ A planned manual failover is supported only when the primary replica and the tar
 ##  <a name="BeforeYouBegin"></a> Before you begin 
 
 >[!IMPORTANT]
->There are specific procedures to fail over a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over the primary replica on a read-scale availability group](#Fail-over-the-primary-replica-on-a-read-scale-availability-group).
+>There are specific procedures to fail over a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over the primary replica on a read-scale availability group](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
 
 ###  <a name="Restrictions"></a> Limitations and restrictions 
   

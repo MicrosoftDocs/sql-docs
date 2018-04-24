@@ -1,6 +1,6 @@
 ---
 title: "Step 2: Invoke the Server Program (RDS Tutorial) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS tutorial [ADO], invoking server program"
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e

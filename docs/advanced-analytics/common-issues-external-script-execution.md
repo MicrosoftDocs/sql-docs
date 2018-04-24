@@ -1,23 +1,13 @@
 ---
-title: "Common issues with external script execution in SQL Server| Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/11/2017"
-ms.prod: "machine-learning-services"
-ms.prod_service: "machine-learning-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Common issues with external script execution in SQL Server| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Common issues with external script execution in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -158,7 +148,7 @@ If the Windows group for R users (also used for Python) cannot log on to the ins
 
     * *Security logs indicate that the account NT SERVICE was unable to log on*
 
-For information about how to grant this user group the necessary permissions, see [Set up SQL Server R Services](r/set-up-sql-server-r-services-in-database.md).
+For information about how to grant this user group the necessary permissions, see [Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.

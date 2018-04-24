@@ -2,7 +2,7 @@
 title: "Creating Mailing Labels in Microsoft Word Using Visual FoxPro Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -22,7 +22,7 @@ ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Creating Mailing Labels in Microsoft Word Using Visual FoxPro Data

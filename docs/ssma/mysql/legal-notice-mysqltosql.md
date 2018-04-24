@@ -19,7 +19,7 @@ ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Legal Notice (MySQLToSql)

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/09/2018"
+ms.date: "04/10/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -18,6 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,26 +26,57 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
+
+
+## SSDT for Visual Studio 2017 (15.6.0)
+Build number: 14.0.16162.0  
+Release date: April 10, 2018
+  
+### What's New?
+
+**SSIS:**
+
+1.	Fix an issue that AS processing task doesn’t log any processing steps when targeting to SQLServer2016 and SQLServer2017
+2.	Fix an issue that access violation will happen when opening dtsx with very long non-English task names in SSDT
+3.	Fix an issue that sometimes variable list of ScriptTask will disappear in task UI
+4.	Fix an issue that adding copy of existing package will fail when the package location is SQL Server
+5.	Fix an issue that focus gets stuck while accessing the combo box in some editor dialog box.
+6.	Fix an issue that background will not change while switching VS theme.
+7.	Fix an issue that annotation and loading label is invisible in dark theme.
+8.	Fix an issue that the state property is not defined correctly for SSIS toolbox disabled items.
+9.	Fix an issue that it always fails to execute WebServiceTask.
+10.	Fix an issue that package deployment will fail if connection string is set to variable having expression dependent on project parameters.
+
+**Installer:**
+
+1.	Add the link of “Customer Experience Improvement Program for SQL Server Data Tools” in privacy disclaimer.
+2.	Fix an issue that VS installer window will popup when selecting “Install new SQL Server Data Tools for Visual Studio 2017 instance”
+
+### Known issues:
+1.	SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+
 ## SSDT for Visual Studio 2017 (15.5.2)
 Build number: 14.0.16156.0
   
 ### What's New?
 
 **SSIS**
-1.	Fix an issue that migrating SSIS 2008 projects will fail when both SSAS and SSIS are installed to same VS 2017 instance.
+1.	Fix an issue that migrating SSIS 2008 projects will fail when both SSAS and SSIS are installed to the same VS 2017 instance.
 2.	Fix an issue that Rdlc projects cannot be built when both Rdlc report designer and SSIS are installed to same VS 2017 instance.
 3.	Fix an issue that the annotation color can't update.
 4.	Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
 5.	Fix an issue that some strings are truncated in OData connection manager editor.
 6.	Fix an issue that some strings are truncated in Integration Services import project wizard window.
-7.	Fix an issue that the title in SSIS tool box information window.
+7.	Fix an issue with the title in the SSIS tool box information window.
 8.	Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
 
 **Installer**
-- Fix an issue that sometimes downloading payload will fail with error "The system cannot find the file specified (0x80070002)"  
+- Fix an issue that sometimes downloading payload will fail with error "The system cannot find the file specified (0x80070002)".  
 
 ### Known issues
-- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
 
 

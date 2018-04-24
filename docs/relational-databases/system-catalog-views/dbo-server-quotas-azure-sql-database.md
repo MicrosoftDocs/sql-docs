@@ -1,4 +1,4 @@
----
+﻿---
 title: "dbo.server_quotas (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
 ms.date: "08/02/2016"
@@ -26,6 +26,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

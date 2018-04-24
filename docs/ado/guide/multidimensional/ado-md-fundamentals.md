@@ -1,6 +1,6 @@
 ---
 title: "ADO MD Fundamentals | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO MD, fundamentals"
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d

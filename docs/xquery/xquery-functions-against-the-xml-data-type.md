@@ -24,7 +24,7 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # XQuery Functions against the xml Data Type

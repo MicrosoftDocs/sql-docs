@@ -8,16 +8,14 @@ ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
+ms.technology: "setup-install"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 caps.latest.revision: 27
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Install SQL Server Business Intelligence Features

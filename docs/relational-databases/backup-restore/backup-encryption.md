@@ -2,7 +2,7 @@
 title: "Backup Encryption | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "backup-restore"
@@ -96,7 +96,7 @@ ms.workload: "On Demand"
 ### Using Transact SQL  
  Following is a sample Transact-SQL statement to encrypt the backup file:  
   
-```  
+```sql  
 BACKUP DATABASE [MYTestDB]  
 TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
 WITH  

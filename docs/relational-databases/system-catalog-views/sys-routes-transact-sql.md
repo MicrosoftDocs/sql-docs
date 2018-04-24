@@ -1,8 +1,8 @@
----
+﻿---
 title: "sys.routes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.date: "03/30/2018"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-catalog-views"
@@ -27,11 +27,14 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.routes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   This catalog views contains one row per route. Service Broker uses routes to locate the network address for a service.   
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,7 +44,7 @@ ms.workload: "Inactive"
 |**remote_service_name**|**nvarchar(256)**|Name of the remote service. NULLABLE.|  
 |**broker_instance**|**nvarchar(128)**|Identifier of the broker that hosts the remote service. NULLABLE.|  
 |**lifetime**|**datetime**|The date and time when the route expires. Notice that this value does not use the local time zone. Instead, the value shows the expiration time for UTC. NULLABLE.|  
-|**address**|**nvarchar(256)**|Network address to which Service Broker sends messages for the remote service. NULLABLE.|  
+|**address**|**nvarchar(256)**|Network address to which Service Broker sends messages for the remote service. NULLABLE. For SQL Database Managed Instance, address must be local.|  
 |**mirror_address**|**nvarchar(256)**|Network address of the mirroring partner for the server specified in the address. NULLABLE.|  
   
 ## Permissions  

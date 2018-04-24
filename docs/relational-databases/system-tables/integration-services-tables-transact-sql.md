@@ -2,7 +2,7 @@
 title: "Integration Services Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-tables"
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SSIS, system tables"
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 caps.latest.revision: 21
-author: "spelluru"
-ms.author: "spelluru"
-manager: "erikre"
+author: "douglasl"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Integration Services Tables (Transact-SQL)

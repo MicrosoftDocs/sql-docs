@@ -2,7 +2,7 @@
 title: "xml_schema_namespace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|xml"
@@ -65,10 +65,10 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  You cannot use this function to construct XML schema documents from the **sys.sys** XML schema collection.  
   
 ## Examples  
- The following example retrieves the  XML schema collection `ProductDescriptionSchemaCollection` from the production relational schema in the `AdventureWorks2012` database.  
+ The following example retrieves the  XML schema collection `ProductDescriptionSchemaCollection` from the production relational schema in the `AdventureWorks` database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
 SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection');  
 GO  

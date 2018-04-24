@@ -19,7 +19,7 @@ ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (Synchronization) (MySQLToSQL)

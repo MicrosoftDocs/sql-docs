@@ -2,7 +2,7 @@
 title: "sysssispackagefolders (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-tables"
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysssispackagefolders system table"
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
 caps.latest.revision: 22
-author: "spelluru"
-ms.author: "spelluru"
-manager: "erikre"
+author: "douglasl"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysssispackagefolders (Transact-SQL)

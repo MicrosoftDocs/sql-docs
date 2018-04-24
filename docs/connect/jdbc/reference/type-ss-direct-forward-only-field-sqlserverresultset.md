@@ -2,7 +2,7 @@
 title: "TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: f8eb2fc2-f624-4fd5-a408-ae4bb1de4913
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet)

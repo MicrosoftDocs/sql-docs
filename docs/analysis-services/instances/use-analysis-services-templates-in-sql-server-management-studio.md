@@ -28,18 +28,6 @@ ms.workload: "Inactive"
   
  This topic includes a list of the templates for multidimensional models and tabular models, and provides examples of how to build an MDX query and XMLA statement by using the Metadata Explorer and the Template Explorer.  
   
- This topic includes the following sections:  
-  
- [Open an Analysis Services Template](#bkmk_usingTE)  
-  
- [Build and Run an MDX Query on a Tabular Model using a Template](#BKMK_Building_Queries)  
-  
- [Create XMLA Script from a Template](#bkmk_backup)  
-  
- [Generate a Schema Rowset Query using an XMLA Template](#bkmk_schemarowset)  
-  
- [Analysis Services Template Reference](#bkmk_Ref)  
-  
  This topic does not cover DMX templates. For examples of how to create data mining queries using the templates, see [Create a DMX Query in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md) or [Create a Singleton Prediction Query from a Template](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
 ##  <a name="bkmk_usingTE"></a> Open an Analysis Services Template  

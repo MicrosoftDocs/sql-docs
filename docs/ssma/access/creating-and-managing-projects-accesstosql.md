@@ -27,7 +27,7 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating and Managing Projects (AccessToSQL)

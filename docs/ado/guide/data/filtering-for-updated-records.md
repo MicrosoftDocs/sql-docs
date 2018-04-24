@@ -1,6 +1,6 @@
 ---
 title: "Filtering for Updated Records | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filtering for updated records [ADO]"
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9

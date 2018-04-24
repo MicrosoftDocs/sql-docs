@@ -22,7 +22,7 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mapping MySQL Databases to SQL Server Schemas (MySQLToSQL)

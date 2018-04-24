@@ -1,7 +1,7 @@
-﻿---
+---
 title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/30/2017"
+ms.date: "04/23/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -30,7 +30,7 @@ ms.workload: "Inactive"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Returns a table that displays total space in tempdb used by version store records for each database. **sys.dm_tran_version_store_space_usage** is efficient and not expensive to run, as it does not navigate through individual version store records, and returns aggregated version store space consumed in tempdb per database.
   

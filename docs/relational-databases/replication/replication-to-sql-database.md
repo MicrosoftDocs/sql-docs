@@ -1,7 +1,7 @@
 ﻿---
 title: "Replication to SQL Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2016"
+ms.date: "04/24/2016"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -38,6 +38,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  - The publisher and distributor must be at least at one of the following versions:  
    
  -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+ 
+ -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
    
  -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3  
    
@@ -73,7 +75,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] does not support bi-directional, immediate, updatable, or peer to peer replication.      
    
  ## Replication Architecture  
- - ![replication-to-sql-database](../../relational-databases/replication/media/replication-to-sql-database.png "replication-to-sql-database")  
+ ![replication-to-sql-database](../../relational-databases/replication/media/replication-to-sql-database.png "replication-to-sql-database")  
    
  ## Scenarios  
    

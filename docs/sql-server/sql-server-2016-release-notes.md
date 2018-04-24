@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
-ms.date: "03/14/2018"
+ms.date: "04/24/2018"
 ms.prod: "sql"
 ms.prod_service: "sql-non-specified"
 ms.reviewer: ""
@@ -23,14 +23,64 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
-> [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
->
-> [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
->
-> [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+- [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
+- [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+
+
+## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 includes all cumulative updates released after 2016 SP1, up to and including CU8. 
+Download [SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+
+- [![Microsoft Download Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+
+### 	Performance and Scale
+
+- **Improved Distribution DB cleanup procedure** - An oversized distribution database tables caused blocking and deadlock situation. An improved cleanup procedure aims to eliminate some of these blocking or deadlock scenarios.
+- **Change Tracking Cleanup** - Improved change tracking cleanup performance and efficiency for Change Tracking side tables. 
+- **Support for cancelling request through setting CPU time out in Resource Governor** – Improves the handling of query requests by actually cancelling the request, if CPU thresholds for a request is reached.
+- **Select INTO to create target table in the desired filegroup** - Starting SQL Server 2016 SP2, SELECT INTO T-SQL syntax supports loading a table into a filegroup other than a default filegroup of the user using the ON <Filegroup name> keyword in TSQL syntax.
+- **Improved Indirect Checkpoint for TempDB** - Indirect checkpointing for TempDB is improved to minimize the spinlock contention on DPLists. This improvement allows TempDB workload on SQL Server 2016 to scale out of the box if indirect checkpointing is ON for TempDB.
+- **Improved database backup performance on large memory machines** - SQL Server 2016 SP2 optimizes the way we drain the on-going I/O during backup resulting in dramatic gains in backup performance for small to medium databases. We have seen more than 100x improvement when taking system database backups on a 2TB machine. More extensive performance testing results on various database sizes is shared below. The performance gain reduces as the database size increases as the pages to backup and backup IO takes more time compared to iterating buffer pool. This improvement will help improve the backup performance for customers hosting multiple small databases on a large high end servers with large memory.
+- **VDI backup compression support for TDE enabled databases** - SQL Server 2016 SP2, adds VDI support to allow VDI backup solutions to leverage compression for TDE enabled databases. With this improvement, a new backup format has been introduced to support backup compression for TDE enabled databases. The SQL Server engine will transparently handle new and old backup formats to restore the backups. 
+- **Dynamic loading of replication agent profile parameters** - This new enhancements allows replication agents parameters to be loaded dynamically without having to restart the agent. This change is applicable only to the most commonly used agent profile parameters.
+- **Support MAXDOP option for statistics create/update** - This enhancement allows to specify the MAXDOP option for a CREATE/UPDATE statistics statement, as well as make sure the right MAXDOP setting is used when statistics are updated as part of create or rebuild for all types of indexes (if the MAXDOP option is present)
+- **Improved Auto Statistics Update for Incremental Statistics** - In certain scenarios, when a number of data changes happened across multiple partitions in a table in a way that the total modification counter for incremented statistics exceeds the auto update threshold, but none of the individual partitions exceed the auto update threshold, statistics update may be delayed until much more modifications happen in the table. This behavior is corrected under trace flag 11024.
+
+###	Supportability and Diagnostics
+- **Full DTC support for databases in an Availability Group** –  Cross-databases transactions for databases which are part of an Availability Group are currently not supported for SQL Server 2016. With SQL Server 2016 SP2, we are introducing full support for distributed transactions with Availability Group Databases. 
+- **Update to Sys.databases is_encrypted column to accurately reflect encryption status for TempDB** - The value of is_encrypted column in sys.databases is 1 for TempDB even after you turn off encryption for all user databases and restart SQL Server. The expected behavior would be that the value for this is 0 since TempDB is no longer encrypted in this situation. Starting SQL Server 2016 SP2, sys.databases.is_encrypted now accurately reflects encryption status for TempDB.
+- **NEW DBCC CLONEDATABASE Options to generate verified clone and backup** - "With SQL Server 2016 SP2, DBCC CLONEDATABASE allows two new options to produce a) verified clone b) backup clones. When a clone database is created using WITH VERIFY_CLONEDB option, a consistent database clone is created and verified which will be supported by Microsoft for production use. A new property is introduced to validate if the clone is verified SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone'). When a clone is created with BACKUP_CLONEDB option, a backup is generated in the same folder as the data file to make it easy for customers to move the clone to different server or to send it to Microsoft CSS for troubleshooting.
+- **New DMV to monitor TempDB version store space usage** - This new DMV will be useful in monitoring TempDB for version store usage for dbas who can proactively plan TempDB sizing based on the version store usage requirement per database without any performance toll or overheads of running it on production servers.
+- **Full Dumps support for Replication Agents** - Today if replication agents encounter a unhandled exception, the default is to create a mini dump of the exception symptoms. This makes troubleshooting unhandled exception issues very difficult. Through this change we are introducing a new Registry key, which would allow to create a full dump for Replication Agents.
+- **Add CXPACKET wait type to showplan XML** - Parallel query execution frequently involves CXPACKET waits, but this type of waits was not reporting in actual showplan XML. This enhancement adds this wait type.
+- **Provide information about statistics used during query plan compilation in showplan XML** - This improvement extends showplan XML by adding information on which statistics were used to compile the query plan, including statistics name, modification counter, sampling percent, and when the statistics was updated last time (note this is added for CE models 120 and later only, i.e. is not supported for legacy CE). 
+- **Service Broker support for DBCC CLONEDATABASE** – Enhanced DBCC CloneDatabase command to allow scripting of SSB objects. 
+- **XEvents enhancement for read routing failure for an Availability Group** - Currently the read_only_rout_fail XEvent only gets fired if there is a routing list present, but none of the servers in the routing list are available for connections. In this improvement we are including additional information to assist with troubleshooting and also expand on the code points where this XEvent gets fired. 
+- **New DMV to monitor VLF information** - A new DMV sys.dm_db_log_info is introduced in SQL Server 2016 SP2 to expose the VLF information similar to DBCC LOGINFO to monitor, alert and avert potential T-Log issues experienced by customers. 
+- **Processor Information in Sys.dm_os_sys_info DMV** – 3 new columns added to the sys.dm_os_sys_info DMV to expose the processor related information like socket_count, cores_per_numa etc.
+- **Extent modified information in sys.dm_db_file_space_usage** –  A new column has been added to sys.dm_db_file_space_usage to track the number of modified extents since the last full backup.
+- **Number of columnstore segments skipped and read** - New column to sys.dm_exec_query_stats to track number of columnstore segments skipped and read.
+- **Track data spilled to TempDB during query processing** - New column added to sys.dm_db_exec_query_stats, sys.dm_db_exec_procedure_stats, sys.dm_db_exec_trigger_stats to track how much data spilled to TempDB during query processing. 
+- **Setting correct compatibility level for distribution database** - After Service Pack Installation the Distribution database compatibility level changes to 90. This was because of an code path in sp_vupgrade_replication stored procedure. The SP has now been changed to set the correct compatibility level for the distribution database.
+- **Expose last known good DBCC CHECKDB information** – A new database option has been added to programmatically return the date of the last successful DBCC CHECKDB run. Users can now query DATABASEPROPERTYEX([database], 'lastgoodcheckdbtime') to obtain a single value representing the date/time of the last successful DBCC CHECKDB run on the specified database.
+- **Dynamic reloading of some replication agent profile parameters** – In the current implementation of replication agents any change in the agent profile parameter requires the agent to be stopped and restarted. This improvements allows for the parameters to be dynamically reloaded without having to restart the replication agent.
+- **Exchange_spill** - Exchange_spill extended event and actual showplan XML warning extended to report number of pages written to tempdb.
+- **Deadlock graph** - Deadlock graph xml extended to add information about parallelism-related intra-query deadlocks.
+- **Showplan XML** - Showplan XML can include new attribute EstimateRowsWithoutRowgoal if Query Optimizer uses “row goal” logic.
+- **Actual showplan XML**- Actual showplan XML extended to add UdfCpuTime and UdfElapsedTime to track time spent in scalar User-Defined Functions.
+- **Replication Support for databases with Supplemental characters collations** – Replication is now supportable on databases which use the Supplemental Character Collation. 
+- **Proper handling of Service Broker with Availability group failover** - In the current implementation when Service Broker is enabled on an Availability Group Databases, during an AG failover all Service broker connections which originated on the Primary Replica are left open. This improvement targets to close all such open connections during an AG failover.
+- **Improved parallelism waits troubleshooting by adding a new CXConsumer wait**. Additionally, sys.dm_exec_session_wait_stats now tracks CXPACKET and CXCONSUMER waits consistently with sys.dm_os_wait_stats.
+- **Improved troubleshooting of intra-query parallelism deadlocks**. This improvements includes:
+  - The exchange_spill xEvent reports how much data parallelism operators spill per each thread, in the event field name worktable_physical_writes. 
+  - The DMVs sys.dm_exec_query_stats, sys.dm_exec_procedure_stats, and sys.dm_exec_trigger_stats now include the data spilled by parallelism operators, in the columns total_spills, last_spills, max_spills, and min_spills.
+  - A showplan warning is reported at run time if there are parallelism spills. This warning will be rendered in a showplan xml attribute (<ExchangeSpillDetails WritesToTempDb=”spill_amount” />)
+  - The XML deadlock graph is improved for parallelism deadlock scenarios, with more attributes added to the exchangeEvent resource. 
+  - The XML deadlock graph is improved for deadlocks involving batch-mode operators, with more attributes added to the SyncPoint resource in: 
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1  includes all the fixes up to SQL Server 2016 RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and includes the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016. 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 includes all cumulative updates up to SQL Server 2016 RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and includes the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016.
 
 The following features are available in the Standard, Web, Express, and Local DB editions of SQL Server SP1 (except as noted):
 - Always encrypted

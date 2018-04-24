@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 -   Sparse columns  
   
-     For information about the space requirements of sparse columns, see [Use Sparse Columns](../../database-engine/use-sparse-columns.md).  
+     For information about the space requirements of sparse columns, see [Use Sparse Columns](../tables/use-sparse-columns.md).  
   
 ## See Also  
  [Heaps &#40;Tables without Clustered Indexes&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   

@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  
   
- For instructions on how to install [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same server, see [Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](../../../2014/sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
+ For instructions on how to install [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same server, see [Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
 ## Prerequisites  
   
@@ -145,7 +145,7 @@ manager: "jhubbard"
   
 ## See Also  
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](../../../2014/sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
+ [Deployment Checklist: Reporting Services, Power View, and PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
  [Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
  [Deployment Checklist: Multi-Server Installation of PowerPivot for SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   

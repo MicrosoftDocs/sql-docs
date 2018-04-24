@@ -46,6 +46,6 @@ manager: "jhubbard"
  [Configure WMI to Show Server Status in SQL Server Tools](../configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
 ## Related Content  
- [WMI Provider for Configuration Management Concepts](../dev-guide/wmi-provider-for-configuration-management-concepts.md)  
+ [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

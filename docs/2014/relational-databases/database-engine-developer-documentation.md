@@ -29,16 +29,16 @@ manager: "jhubbard"
  [SQL Server Native Client Programming](native-client/sql-server-native-client-programming.md)  
  Describes how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client can be used to create new applications or enhance existing applications to take advantage of new [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features such as multiple active result sets (MARS), user-defined data types (UDT), query notifications, snapshot isolation, and XML data type support.  
   
- [SQLXML 4.0 Programming Concepts](../database-engine/dev-guide/sqlxml-4-0-programming-concepts.md)  
+ [SQLXML 4.0 Programming Concepts](sqlxml/sqlxml-4-0-programming-concepts.md)  
  Describes the latest version of SQLXML, which delivers the same functionality as SQLXML 3.0 as well as additional updates to accommodate new features introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], such as the xml data type.  
   
- [WMI Provider for Configuration Management Concepts](../database-engine/dev-guide/wmi-provider-for-configuration-management-concepts.md)  
+ [WMI Provider for Configuration Management Concepts](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
  Describes a published layer that is used with the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager snap-in for Microsoft Management Console (MMC) and the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. It provides a unified way for interfacing with the API calls that manage the registry operations requested by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager and provides enhanced control and manipulation over the selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services.  
   
- [WMI Provider for Server Events Concepts](../database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)  
+ [WMI Provider for Server Events Concepts](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  Describes how to use Windows Management Instrumentation (WMI) to monitor events in an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md)  
+ [SQL Server Management Objects &#40;SMO&#41; Programming Guide](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
  Contains information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO), a collection of objects that are designed for programming all aspects of managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Database Engine Extended Stored Procedure Programming](database-engine-extended-stored-procedure-programming.md)  

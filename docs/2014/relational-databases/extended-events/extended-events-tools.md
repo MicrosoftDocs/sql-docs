@@ -81,7 +81,7 @@ manager: "jhubbard"
 |[trace_xe_action_map &#40;Transact-SQL&#41;](~/relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|Contains one row for each Extended Events action that is mapped to a SQL Trace column ID.|  
   
 ## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../views/views.md)   
  [Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server Extended Events Tables &#40;Transact-SQL&#41;](~/relational-databases/system-tables/system-tables-transact-sql.md)   
  [Use the system_health Session](use-the-ssms-xe-profiler.md)   

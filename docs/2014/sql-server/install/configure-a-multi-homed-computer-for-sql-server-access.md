@@ -138,6 +138,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Connect to SQL Server Through a Proxy Server &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
+ [Connect to SQL Server Through a Proxy Server &#40;SQL Server Configuration Manager&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
   

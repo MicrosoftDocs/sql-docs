@@ -27,15 +27,15 @@ manager: "jhubbard"
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQL Server Native Client Programming](relational-databases/native-client/sql-server-native-client-programming.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQLXML 4.0 Programming Concepts](../2014/database-engine/dev-guide/sqlxml-4-0-programming-concepts.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQLXML 4.0 Programming Concepts](relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [WMI Provider for Configuration Management Concepts](../2014/database-engine/dev-guide/wmi-provider-for-configuration-management-concepts.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [WMI Provider for Configuration Management Concepts](relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [WMI Provider for Server Events Concepts](../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [WMI Provider for Server Events Concepts](relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [WMI Provider Events and Errors](relational-databases/native-client-ole-db-errors/errors.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../2014/database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQL Server Management Objects &#40;SMO&#41; Programming Guide](relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Database Engine Extended Stored Procedure Programming](relational-databases/database-engine-extended-stored-procedure-programming.md)  
   

@@ -18,4 +18,4 @@ manager: "jhubbard"
 ---
 # SQL Server Management Objects
 
-[See SQL Server Management Objects Programming Guide](sql-server-management-objects-smo-programming-guide.md).
+[See SQL Server Management Objects Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).

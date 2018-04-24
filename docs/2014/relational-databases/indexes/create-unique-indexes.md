@@ -23,7 +23,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create Unique Indexes
-  This topic describes how to create a unique index on a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. There are no significant differences between creating a UNIQUE constraint and creating a unique index that is independent of a constraint. Data validation occurs in the same manner, and the query optimizer does not differentiate between a unique index created by a constraint or manually created. However, creating a UNIQUE constraint on the column makes the objective of the index clear. For more information on UNIQUE constraints, see [Unique Constraints and Check Constraints](../../database-engine/unique-constraints-and-check-constraints.md).  
+  This topic describes how to create a unique index on a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. There are no significant differences between creating a UNIQUE constraint and creating a unique index that is independent of a constraint. Data validation occurs in the same manner, and the query optimizer does not differentiate between a unique index created by a constraint or manually created. However, creating a UNIQUE constraint on the column makes the objective of the index clear. For more information on UNIQUE constraints, see [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
  When you create a unique index, you can set an option to ignore duplicate keys. If this option is set to **Yes** and you attempt to create duplicate keys by adding data that affects multiple rows (with the INSERT statement), the row containing a duplicate is not added. If it is set to **No**, the entire insert operation fails and all the data is rolled back.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
      When you create a UNIQUE constraint, a unique nonclustered index is created to enforce a UNIQUE constraint by default. You can specify a unique clustered index if a clustered index on the table does not already exist.  
   
-     For more information, see [Unique Constraints and Check Constraints](../../database-engine/unique-constraints-and-check-constraints.md) and [Primary and Foreign Key Constraints](../../database-engine/primary-and-foreign-key-constraints.md).  
+     For more information, see [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md) and [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
 -   **Index independent of a constraint**  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 -   **Indexed view**  
   
-     To create an indexed view, a unique clustered index is defined on one or more view columns. The view is executed and the result set is stored in the leaf level of the index in the same way table data is stored in a clustered index. For more information, see [Create Indexed Views](../../database-engine/create-indexed-views.md).  
+     To create an indexed view, a unique clustered index is defined on one or more view columns. The view is executed and the result set is stored in the leaf level of the index in the same way table data is stored in a clustered index. For more information, see [Create Indexed Views](../views/views.md).  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   

@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Stored Procedures
-  A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../../database-engine/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports:  
+  A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../stored-procedures/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports:  
   
 -   Stored procedures  
   

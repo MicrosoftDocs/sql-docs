@@ -22,7 +22,7 @@ manager: "jhubbard"
 ## Remarks  
  For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see:  
   
--   [SQL Server Express LocalDB Reference](../../../database-engine/dev-guide/sql-server-express-localdb-reference.md)  
+-   [SQL Server Express LocalDB Reference](../../sql-server-express-localdb-reference.md)  
   
 -   [SQL Server 2014 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
   

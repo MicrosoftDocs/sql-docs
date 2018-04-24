@@ -30,7 +30,7 @@ manager: "jhubbard"
 |[Data Collection](../relational-databases/data-collection/data-collection.md)|  
 |[Monitor Resource Usage &#40;System Monitor&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|  
 |[Administer Multiple Servers Using Central Management Servers](../relational-databases/administer-multiple-servers-using-central-management-servers.md)|  
-|[SQL Server Configuration Manager](../../2014/database-engine/sql-server-configuration-manager.md)|  
+|[SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|  
 |[Activity Monitor](../relational-databases/performance-monitor/activity-monitor.md)|  
   
   

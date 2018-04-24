@@ -112,7 +112,7 @@ manager: "jhubbard"
  Specify whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance. The recommended setting is **Yes**.  
   
 ## See Also  
- [Unique Constraints and Check Constraints](../../2014/database-engine/unique-constraints-and-check-constraints.md)   
- [Primary and Foreign Key Constraints](../../2014/database-engine/primary-and-foreign-key-constraints.md)  
+ [Unique Constraints and Check Constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Primary and Foreign Key Constraints](../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

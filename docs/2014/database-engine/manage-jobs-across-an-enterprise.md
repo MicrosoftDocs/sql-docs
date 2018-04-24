@@ -49,7 +49,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)  
   
--   [SQL Server Management Objects (SMO)](../../2014/database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md)  
+-   [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
  **To change the target servers for a job**  
   
@@ -57,7 +57,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)  
   
--   [SQL Server Management Objects (SMO)](../../2014/database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md)  
+-   [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
  **To change the location of a target server**  
   
@@ -65,7 +65,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)  
   
--   [SQL Server Management Objects (SMO)](../../2014/database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md)  
+-   [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
  **To synchronize target server clocks**  
   

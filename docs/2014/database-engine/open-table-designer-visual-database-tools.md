@@ -41,7 +41,7 @@ manager: "jhubbard"
      The **Table Designer** menu is added to the main menu and the table opens in the designer panes.  
   
 ## See Also  
- [Design Tables &#40;Visual Database Tools&#41;](../../2014/database-engine/design-tables-visual-database-tools.md)   
- [Tables](../../2014/database-engine/tables.md)  
+ [Design Tables &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
+ [Tables](../relational-databases/tables.md)  
   
   

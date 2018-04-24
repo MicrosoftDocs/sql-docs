@@ -173,7 +173,7 @@ manager: "jhubbard"
 >  If a value greater than the number of available CPUs is specified, the actual number of available CPUs is used.  
   
 ##  <a name="Spatial"></a> Spatial Page Index Options  
- Use the **Spatial** page to view or specify the values of the spatial properties. For more information, see [Spatial Data &#40;SQL Server&#41;](../../database-engine/spatial-data-sql-server.md).  
+ Use the **Spatial** page to view or specify the values of the spatial properties. For more information, see [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ### Bounding Box  
  The *bounding box* is the perimeter of the top-level grid of a geometric plane. The bounding-box parameters exist only in the geometry grid tessellation. These parameters are unavailable if the **Tessellation Scheme** is **Geography grid**.  
@@ -208,7 +208,7 @@ manager: "jhubbard"
  **Geography Auto grid**  
  This option is enabled for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] when database compatibility level is set to 110 or higher.  
   
- For information about how [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implements tessellation, see [Spatial Data &#40;SQL Server&#41;](../../database-engine/spatial-data-sql-server.md).  
+ For information about how [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implements tessellation, see [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
  **Cells Per Object**  
  Indicates the number of tessellation cells-per-object that can be used for a single spatial object in the index. This number can be any integer between 1 and 8192, inclusive. The default is 16, and 8 for earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] when database compatibility level is set to 110 or higher.  

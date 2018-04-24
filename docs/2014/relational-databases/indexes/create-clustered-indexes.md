@@ -51,7 +51,7 @@ manager: "jhubbard"
   
      When you create a UNIQUE constraint, a unique nonclustered index is created to enforce a UNIQUE constraint by default. You can specify a unique clustered index if a clustered index on the table does not already exist.  
   
-     An index created as part of the constraint is automatically given the same name as the constraint name. For more information, see [Primary and Foreign Key Constraints](../../database-engine/primary-and-foreign-key-constraints.md) and [Unique Constraints and Check Constraints](../../database-engine/unique-constraints-and-check-constraints.md).  
+     An index created as part of the constraint is automatically given the same name as the constraint name. For more information, see [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md) and [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Index independent of a constraint**  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 2.  Right-click the **Tables** folder and click **New Table…**.  
   
-3.  Create a new table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../../database-engine/create-tables-database-engine.md).  
+3.  Create a new table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../tables/create-tables-database-engine.md).  
   
 4.  Right-click the new table created above and click **Design**.  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
  For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
   
 ## See Also  
- [Create Primary Keys](../../database-engine/create-primary-keys.md)   
- [Create Unique Constraints](../../database-engine/create-unique-constraints.md)  
+ [Create Primary Keys](../tables/create-primary-keys.md)   
+ [Create Unique Constraints](../tables/create-unique-constraints.md)  
   
   

@@ -91,6 +91,6 @@ manager: "jhubbard"
 -   On the toolbar of the **Breakpoints** window, click the **Delete All Breakpoints** button.  
   
 ## See Also  
- [Toggle a Breakpoint](toggle-a-breakpoint.md)  
+ [Toggle a Breakpoint](../spatial/point.md)  
   
   

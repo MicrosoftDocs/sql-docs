@@ -46,6 +46,6 @@ manager: "jhubbard"
  [Database Engine Events and Errors](../relational-databases/native-client-ole-db-errors/errors.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Showplan Logical and Physical Operators Reference**  
- [Showplan Logical and Physical Operators Reference](../../2014/database-engine/showplan-logical-and-physical-operators-reference.md)  
+ [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
   

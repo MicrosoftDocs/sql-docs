@@ -390,7 +390,7 @@
 #### [Lesson 5: Automating the Cleansing and Matching using SSIS](lesson-5-automating-the-cleansing-and-matching-using-ssis.md)
 ##### [Task 1 (Prerequisite): Removing Supplier Data in MDS](task-1-prerequisite-removing-supplier-data-in-mds.md)
 ##### [Task 2 (Optional): Creating a MDS Subscription View using Master Data Manager](task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)
-##### [Task 3 (Optional): Reviewing the Subscription Views](task-3-optional-reviewing-the-subscription-views.md)
+##### [Task 3 (Optional): Reviewing the Subscription Views](../relational-databases/views/views.md)
 ##### [Task 4: Creating an SSIS Project using SQL Server Data Tools](task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
 ##### [Task 5: Adding Data Flow Task](task-5-adding-data-flow-task.md)
 ##### [Task 6: Adding Excel Source to the Data Flow](task-6-adding-excel-source-to-the-data-flow.md)

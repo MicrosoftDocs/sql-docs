@@ -727,7 +727,7 @@
 ####### [GetReportServerUrls](getreportserverurls-method-wmi-msreportserver-instance.md)
 ##### [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)
 ###### [MSReportServer_ConfigurationSetting Members](msreportserver-configurationsetting-members.md)
-###### [MSReportServer_ConfigurationSetting Properties](msreportserver-configurationsetting-properties.md)
+###### [MSReportServer_ConfigurationSetting Properties](../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)
 ####### [ConnectionPoolSize](connectionpoolsize-property-wmi-msreportserver-configurationsetting.md)
 ####### [DatabaseLogonAccount](databaselogonaccount-property-wmi-msreportserver-configurationsetting.md)
 ####### [DatabaseLogonTimeout](databaselogontimeout-property-wmi-msreportserver-configurationsetting.md)

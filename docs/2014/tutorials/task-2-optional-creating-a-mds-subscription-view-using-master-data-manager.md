@@ -45,6 +45,6 @@ manager: "jhubbard"
 10. Click **Save** on the toolbar to save the subscription view. This action creates a view in SQL Server named **Suppliers**. You can verify this using SQL Server Management Studio (SSMS).  
   
 ## Next Step  
- [Task 3 &#40;Optional&#41;: Reviewing the Subscription Views](../../2014/tutorials/task-3-optional-reviewing-the-subscription-views.md)  
+ [Task 3 &#40;Optional&#41;: Reviewing the Subscription Views](../relational-databases/views/views.md)  
   
   

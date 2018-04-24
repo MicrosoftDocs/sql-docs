@@ -32,6 +32,6 @@ manager: "mblythe"
   
  [Deployment Checklist: Install Reporting Services into an Existing SharePoint Farm](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
- [Deployment Topologies for SQL Server BI Features in SharePoint](../../2014/sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)  
+ [Deployment Topologies for SQL Server BI Features in SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)    
   
   

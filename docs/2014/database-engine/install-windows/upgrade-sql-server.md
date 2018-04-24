@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   [Upgrade Master Data Services](upgrade-master-data-services.md)  
   
--   [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
+-   [Upgrade PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)  
   
 -   [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   

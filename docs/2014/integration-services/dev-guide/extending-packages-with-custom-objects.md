@@ -53,7 +53,7 @@ manager: "jhubbard"
  Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  
- [Extending Packages with Scripting](../../../2014/integration-services/dev-guide/extending-packages-with-scripting.md)  
+ [Extending Packages with Scripting](../../relational-databases/server-management-objects-smo/tasks/scripting.md)  
  Discusses how to extend the control flow by using the Script task, or extend the data flow by using the Script component.  
   
  [Building Packages Programmatically](../../../2014/integration-services/dev-guide/building-packages-programmatically.md)  

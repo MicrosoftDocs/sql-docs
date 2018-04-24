@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 -   [SQLSpecialColumns](sqlspecialcolumns.md)  
   
--   [SQLStatistics](sqlstatistics.md)  
+-   [SQLStatistics](../statistics/statistics.md)  
   
 -   [SQLTablePrivileges](sqltableprivileges.md)  
   

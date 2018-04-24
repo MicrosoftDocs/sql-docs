@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Statistics for Memory-Optimized Tables
   The query optimizer uses statistics about columns to create query plans that improve query performance. Statistics are collected from the tables in the database and stored in the database metadata.  
   
- Statistics are created automatically, but can also be created manually. For example, statistics are created automatically for index key columns when the index is created. For more information about creating statistics see [Statistics](../../database-engine/statistics.md).  
+ Statistics are created automatically, but can also be created manually. For example, statistics are created automatically for index key columns when the index is created. For more information about creating statistics see [Statistics](../statistics/statistics.md).  
   
  Table data typically changes over time as rows are inserted, updated, and deleted. This means statistics need to be updated periodically. By default, statistics on disk-based tables are updated automatically when the optimizer determines they might be out of date.  
   

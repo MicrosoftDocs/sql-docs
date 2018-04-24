@@ -163,7 +163,7 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [Configure WMI to Show Server Status in SQL Server Tools](../configure-wmi-to-show-server-status-in-sql-server-tools.md)   
- [SQL Server Configuration Manager](../sql-server-configuration-manager.md)   
+ [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Configuration Functions &#40;Transact-SQL&#41;](~/t-sql/functions/configuration-functions-transact-sql.md)   
  [Server-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)  
   

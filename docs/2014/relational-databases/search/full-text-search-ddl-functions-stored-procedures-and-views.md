@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  This list does not include deprecated objects.  
   
- For the list of database objects that support semantic search, see [Semantic Search DDL, Functions, Stored Procedures, and Views](semantic-search-ddl-functions-stored-procedures-and-views.md).  
+ For the list of database objects that support semantic search, see [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md).  
   
 ##  <a name="ddl"></a> Transact-SQL Data Definition Language (DDL) Statements  
   

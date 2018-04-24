@@ -24,13 +24,13 @@ manager: "jhubbard"
   This section documents the [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML Managed Classes object model.  
   
 ## In This Section  
- [SqlXmlCommand Object &#40;SQLXML Managed Classes&#41;](../../../2014/database-engine/dev-guide/sqlxmlcommand-object-sqlxml-managed-classes.md)  
+ [SqlXmlCommand Object &#40;SQLXML Managed Classes&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  Provides methods for executing commands.  
   
- [SqlXmlParameter Object &#40;SQLXML Managed Classes&#41;](../../../2014/database-engine/dev-guide/sqlxmlparameter-object-sqlxml-managed-classes.md)  
+ [SqlXmlParameter Object &#40;SQLXML Managed Classes&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
  Represents the name and value of a parameter.  
   
- [SqlXmlAdapter Object &#40;SQLXML Managed Classes&#41;](../../../2014/database-engine/dev-guide/sqlxmladapter-object-sqlxml-managed-classes.md)  
+ [SqlXmlAdapter Object &#40;SQLXML Managed Classes&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
  Provides methods to interact with the dataset in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
   

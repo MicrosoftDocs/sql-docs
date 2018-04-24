@@ -154,7 +154,7 @@ manager: "jhubbard"
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### Server-Level Event Notifications  
- Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](~/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../../database-engine/event-notifications.md).  
+ Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](~/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../service-broker/event-notifications.md).  
   
  Additionally, event notifications are delivered by using [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Routes for incoming messages are not included in the database that contains a service. Instead, explicit routes are stored in **msdb**. If your service uses an explicit route in the **msdb** database to route incoming messages to the service, when you attach a database in a different instance, you must re-create this route.  
   
@@ -162,7 +162,7 @@ manager: "jhubbard"
  The WMI Provider for Server Events lets you use the Windows Management Instrumentation (WMI) to monitor events in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Any application that relies on server-level events exposed through the WMI provider on which a database relies must be defined the computer of the destination server instance. WMI Event provider creates event notifications with a target service that is defined in **msdb**.  
   
 > [!NOTE]  
->  For more information, see [WMI Provider for Server Events Concepts](../../database-engine/dev-guide/wmi-provider-for-server-events-concepts.md).  
+>  For more information, see [WMI Provider for Server Events Concepts](../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
  **To create a WMI alert using SQL Server Management Studio**  
   
@@ -346,7 +346,7 @@ manager: "jhubbard"
 ##  <a name="triggers"></a> Triggers (at Server Level)  
  DDL triggers fire stored procedures in response to a variety of Data Definition Language (DDL) events. These events primarily correspond to [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that start with the keywords CREATE, ALTER, and DROP. Certain system stored procedures that perform DDL-like operations can also fire DDL triggers.  
   
- For more information about this feature, see [DDL Triggers](../../database-engine/ddl-triggers.md).  
+ For more information about this feature, see [DDL Triggers](../triggers/ddl-triggers.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -357,7 +357,7 @@ manager: "jhubbard"
  [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)   
+ [SQL Server Configuration Manager](../sql-server-configuration-manager.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../database-engine/troubleshoot-orphaned-users-sql-server.md)  
   
   

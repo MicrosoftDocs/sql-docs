@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   [SQL Server Native Client Configuration Properties &#40;Flags Tab&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
   
--   [Client Protocols &#40;SQL Server Configuration Manager&#41;](../../../2014/tools/configuration-manager/client-protocols-sql-server-configuration-manager.md)  
+-   [Client Protocols &#40;SQL Server Configuration Manager&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
     -   [Client Protocols Properties &#40;Order Tab&#41;](../../../2014/tools/configuration-manager/client-protocols-properties-order-tab.md)  
   

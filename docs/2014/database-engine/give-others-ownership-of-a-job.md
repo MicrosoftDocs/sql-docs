@@ -84,7 +84,7 @@ manager: "jhubbard"
 ##  <a name="SMOProc2"></a> Using SQL Server Management Objects  
  **To give others ownership of a job**  
   
-1.  Call the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For example code, see [Scheduling Automatic Administrative Tasks in SQL Server Agent](../../2014/database-engine/dev-guide/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  
+1.  Call the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For example code, see [Scheduling Automatic Administrative Tasks in SQL Server Agent](../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  
   
 ## See Also  
  [Implement Jobs](../../2014/database-engine/implement-jobs.md)   

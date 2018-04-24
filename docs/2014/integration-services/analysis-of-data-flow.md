@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Analysis of Data Flow
-  You can use the [catalog.execution_data_statistics](~/integration-services/system-views/catalog-execution-data-statistics.md)`SSISDB` database view to analyze the data flow of packages. This view displays a row each time a data flow component sends data to a downstream component. The information can be used to gain a deeper understanding of the rows that are sent to each component.  
+  You can use the [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md)`SSISDB` database view to analyze the data flow of packages. This view displays a row each time a data flow component sends data to a downstream component. The information can be used to gain a deeper understanding of the rows that are sent to each component.  
   
 > [!NOTE]  
 >  The logging level must be set to **Verbose** in order to capture information with the catalog.execution_data_statistics view.  

@@ -26,14 +26,14 @@ manager: "jhubbard"
   The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML functionality through ADO.  
   
 ## In This Section  
- [Introduction to the SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [Introduction to the SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Provides basic information about the SQLXMLOLEDB Provider and lists SQLXMLOLEDB-specific properties.  
   
- [Using the SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [Using the SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Provides examples of various tasks with the SQLXMLOLEDB Provider.  
   
 ## See Also  
- [SQLXML Managed Classes](../../../2014/database-engine/dev-guide/sqlxml-managed-classes.md)   
+ [SQLXML Managed Classes](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

@@ -37,7 +37,7 @@ manager: "jhubbard"
 >  Do not mark a function as deterministic if the function does not always produces the same output values, given the same input values and the same database state. Marking a function as deterministic, when the function isn't truly deterministic can result in corrupted indexed views and computed columns. You mark a function as deterministic by setting the `IsDeterministic` property to true.  
   
 ### Table-Valued Parameters  
- Table-valued parameters (TVPs), user-defined table types that are passed into a procedure or function, provide an efficient way to pass multiple rows of data to the server. TVPs provide similar functionality to parameter arrays, but offer greater flexibility and closer integration with [!INCLUDE[tsql](../../includes/tsql-md.md)]. They also provide the potential for better performance. TVPs also help reduce the number of round trips to the server. Instead of sending multiple requests to the server, such as with a list of scalar parameters, data can be sent to the server as a TVP. A user-defined table type cannot be passed as a table-valued parameter to, or be returned from, a managed stored procedure or function executing in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information about TVPs, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../database-engine/use-table-valued-parameters-database-engine.md).  
+ Table-valued parameters (TVPs), user-defined table types that are passed into a procedure or function, provide an efficient way to pass multiple rows of data to the server. TVPs provide similar functionality to parameter arrays, but offer greater flexibility and closer integration with [!INCLUDE[tsql](../../includes/tsql-md.md)]. They also provide the potential for better performance. TVPs also help reduce the number of round trips to the server. Instead of sending multiple requests to the server, such as with a list of scalar parameters, data can be sent to the server as a TVP. A user-defined table type cannot be passed as a table-valued parameter to, or be returned from, a managed stored procedure or function executing in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information about TVPs, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## Example of a CLR Scalar-Valued Function  
  Here is a simple SVF that accesses data and returns an integer value:  
@@ -152,7 +152,7 @@ GO
 ## See Also  
  [Mapping CLR Parameter Data](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Overview of CLR Integration Custom Attributes](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
- [User-Defined Functions](../../database-engine/user-defined-functions.md)   
+ [User-Defined Functions](../user-defined-functions/user-defined-functions.md)   
  [Data Access from CLR Database Objects](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

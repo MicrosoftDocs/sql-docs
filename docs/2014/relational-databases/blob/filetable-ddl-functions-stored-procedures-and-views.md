@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  The Status column in the following tables indicates whether the item is new in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or was present in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but has been changed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to support semantic search.  
   
- For the list of statements and database objects that support FILESTREAM, see [FILESTREAM DDL, Functions, Stored Procedures, and Views](filestream-ddl-functions-stored-procedures-and-views.md).  
+ For the list of statements and database objects that support FILESTREAM, see [FILESTREAM DDL, Functions, Stored Procedures, and Views](../views/views.md).  
   
 ##  <a name="ddl"></a> Transact-SQL Data Definition Language (DDL) Statements  
   

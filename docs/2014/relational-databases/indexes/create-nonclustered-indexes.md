@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   **UNIQUE constraints**  
   
-     When you create a UNIQUE constraint, a unique nonclustered index is created to enforce a UNIQUE constraint by default. You can specify a unique clustered index if a clustered index on the table does not already exist. For more information, see [Unique Constraints and Check Constraints](../../database-engine/unique-constraints-and-check-constraints.md).  
+     When you create a UNIQUE constraint, a unique nonclustered index is created to enforce a UNIQUE constraint by default. You can specify a unique clustered index if a clustered index on the table does not already exist. For more information, see [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Index independent of a constraint**  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   **Nonclustered index on an indexed view**  
   
-     After a unique clustered index has been created on a view, nonclustered indexes can be created. For more information, see [Create Indexed Views](../../database-engine/create-indexed-views.md).  
+     After a unique clustered index has been created on a view, nonclustered indexes can be created. For more information, see [Create Indexed Views](../views/views.md).  
   
 ###  <a name="Security"></a> Security  
   

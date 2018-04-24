@@ -27,7 +27,7 @@ manager: "jhubbard"
  [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../2014/database-engine/filter-events-in-a-trace-sql-server-profiler.md)   
  [Filter Events Based on the Event End Time &#40;SQL Server Profiler&#41;](../../2014/database-engine/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
  [Filter Events Based on the Event Start Time &#40;SQL Server Profiler&#41;](../../2014/database-engine/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
- [Filter a Trace](../../2014/database-engine/filter-a-trace.md)   
+ [Filter a Trace](../relational-databases/sql-trace/filter-a-trace.md)   
  [Filter Traces with SQL Server Profiler](../../2014/database-engine/filter-traces-with-sql-server-profiler.md)  
   
   

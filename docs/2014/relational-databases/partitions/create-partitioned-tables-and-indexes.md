@@ -103,7 +103,7 @@ manager: "jhubbard"
   
 8.  Continue adding rows until you have created at least one file for each filegroup.  
   
-9. Expand the **Tables** folder and create a table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../../database-engine/create-tables-database-engine.md). Alternatively, you can specify an existing table in the next procedure.  
+9. Expand the **Tables** folder and create a table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../tables/create-tables-database-engine.md). Alternatively, you can specify an existing table in the next procedure.  
   
 #### To create a partitioned table  
   

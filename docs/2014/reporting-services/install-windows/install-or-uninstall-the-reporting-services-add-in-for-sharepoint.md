@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   You must be a Site Collection administrator to activate the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integration feature.  
   
--   For diagrams of example deployments with the add-in, see [Deployment Topologies for SQL Server BI Features in SharePoint](../../../2014/sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
+-   For diagrams of example deployments with the add-in, see [Deployment Topologies for SQL Server BI Features in SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_whatinstalled"></a> What Does The Add-in Install?  
  The add-in setup process is composed of two phases, both are completed automatically when you complete a standard installation:  

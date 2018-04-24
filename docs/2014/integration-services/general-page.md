@@ -53,6 +53,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md)   
- [Extending Packages with Scripting](../../2014/integration-services/dev-guide/extending-packages-with-scripting.md)  
+ [Extending Packages with Scripting](../relational-databases/server-management-objects-smo/tasks/scripting.md)  
   
   

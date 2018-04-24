@@ -39,6 +39,6 @@ manager: "jhubbard"
  Describes how to implement and use user-defined aggregates.  
   
 ## See Also  
- [User-Defined Functions](../../database-engine/user-defined-functions.md)  
+ [User-Defined Functions](../user-defined-functions/user-defined-functions.md)  
   
   

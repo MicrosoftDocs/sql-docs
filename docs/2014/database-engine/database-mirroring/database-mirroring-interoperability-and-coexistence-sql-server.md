@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 -   [AlwaysOn Failover Cluster Instances (SQL Server Failover Clustering)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
--   [Change data capture (and change tracking)](../change-data-capture-and-other-sql-server-features.md)  
+-   [Change data capture (and change tracking)](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
 -   [Database snapshots](../../relational-databases/databases/database-snapshots-sql-server.md)  
   

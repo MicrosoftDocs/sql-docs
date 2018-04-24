@@ -30,6 +30,6 @@ manager: "jhubbard"
  [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../2014/database-engine/filter-events-in-a-trace-sql-server-profiler.md)  
   
 ## See Also  
- [Filter a Trace](../../2014/database-engine/filter-a-trace.md)  
+ [Filter a Trace](../relational-databases/sql-trace/filter-a-trace.md)  
   
   

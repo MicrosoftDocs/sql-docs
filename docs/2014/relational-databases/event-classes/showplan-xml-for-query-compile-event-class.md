@@ -61,6 +61,6 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Showplan Logical and Physical Operators Reference](../../database-engine/showplan-logical-and-physical-operators-reference.md)  
+ [Showplan Logical and Physical Operators Reference](../showplan-logical-and-physical-operators-reference.md)  
   
   

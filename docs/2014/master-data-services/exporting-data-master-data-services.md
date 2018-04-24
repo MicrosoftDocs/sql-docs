@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Exporting Data (Master Data Services)
-  You can export [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] data to subscribing systems by creating subscriptions views. Any subscribing system can then view the published data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For more information about views, see [Views](../../2014/database-engine/views.md).  
+  You can export [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] data to subscribing systems by creating subscriptions views. Any subscribing system can then view the published data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For more information about views, see [Views](../relational-databases/views/views.md).  
   
 ## Subscription View Formats  
  When you create a view in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], you choose from a set of standard view formats that [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] provides. You can use these formats to create views that show:  
@@ -51,6 +51,6 @@ manager: "jhubbard"
   
 -   [Subscription View Formats &#40;Master Data Services&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
   
--   [Views](../../2014/database-engine/views.md)  
+-   [Views](../relational-databases/views/views.md)  
   
   

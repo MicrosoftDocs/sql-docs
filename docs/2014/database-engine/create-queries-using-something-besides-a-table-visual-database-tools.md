@@ -145,6 +145,6 @@ FROM
   
 ```  
   
- "VPA30890F" is the emp_id of the manager whose organization you want to retrieve. For more information about adding a user-defined function to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/add-tables-to-queries-visual-database-tools.md). For a complete description of user-defined functions, see [User-Defined Functions](../../2014/database-engine/user-defined-functions.md).  
+ "VPA30890F" is the emp_id of the manager whose organization you want to retrieve. For more information about adding a user-defined function to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/add-tables-to-queries-visual-database-tools.md). For a complete description of user-defined functions, see [User-Defined Functions](../relational-databases/user-defined-functions/user-defined-functions.md).  
   
   

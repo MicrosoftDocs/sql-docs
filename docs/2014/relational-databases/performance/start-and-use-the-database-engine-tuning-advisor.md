@@ -98,7 +98,7 @@ manager: "jhubbard"
   
     -   [Save Trace Results to a File &#40;SQL Server Profiler&#41;](../../database-engine/save-trace-results-to-a-file-sql-server-profiler.md)  
   
-         Database Engine Tuning Advisor assumes that the workload trace file is a rollover file. For more information about rollover files, see [Limit Trace File and Table Sizes](../../database-engine/limit-trace-file-and-table-sizes.md).  
+         Database Engine Tuning Advisor assumes that the workload trace file is a rollover file. For more information about rollover files, see [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
     -   [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../database-engine/save-trace-results-to-a-table-sql-server-profiler.md)  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 -   **SP:StmtCompleted**  
   
- You can also use the **Starting** versions of these trace events. For example, **SQL:BatchStarting**. However, the **Completed** versions of these trace events include the **Duration** column, which allows Database Engine Tuning Advisor to more effectively tune the workload. Database Engine Tuning Advisor does not tune other types of trace events. For more information about these trace events, see [Stored Procedures Event Category](../event-classes/stored-procedures-event-category.md) and [TSQL Event Category](../event-classes/tsql-event-category.md). For information about using the SQL Trace stored procedures to create a trace file workload, see [Create a Trace &#40;Transact-SQL&#41;](../../database-engine/create-a-trace-transact-sql.md).  
+ You can also use the **Starting** versions of these trace events. For example, **SQL:BatchStarting**. However, the **Completed** versions of these trace events include the **Duration** column, which allows Database Engine Tuning Advisor to more effectively tune the workload. Database Engine Tuning Advisor does not tune other types of trace events. For more information about these trace events, see [Stored Procedures Event Category](../event-classes/stored-procedures-event-category.md) and [TSQL Event Category](../event-classes/tsql-event-category.md). For information about using the SQL Trace stored procedures to create a trace file workload, see [Create a Trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md).  
   
 ### Trace File or Trace Table Workloads That Contain the LoginName Data Column  
  Database Engine Tuning Advisor submits Showplan requests as part of the tuning process. When a trace table or file that contains the **LoginName** data column is consumed as a workload, Database Engine Tuning Advisor impersonates the user specified in **LoginName**. If this user has not been granted the SHOWPLAN permission, which enables the user to execute and produce Showplans for the statements contained in the trace, Database Engine Tuning Advisor will not tune those statements.  
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
 2.  Check the tuning log for statements that were not tuned due to inadequate permissions. For more information, see [View and Work with the Output from the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
-3.  Create a new workload by deleting the **LoginName** column from the events that were not tuned, and then save only the untuned events in a new trace file or table. For more information about deleting data columns from a trace, see [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../../database-engine/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md) or [Modify an Existing Trace &#40;Transact-SQL&#41;](../../database-engine/modify-an-existing-trace-transact-sql.md).  
+3.  Create a new workload by deleting the **LoginName** column from the events that were not tuned, and then save only the untuned events in a new trace file or table. For more information about deleting data columns from a trace, see [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../../database-engine/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md) or [Modify an Existing Trace &#40;Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md).  
   
 4.  Resubmit the new workload without the **LoginName** column to Database Engine Tuning Advisor.  
   
@@ -186,7 +186,7 @@ manager: "jhubbard"
     database_name.schema_name.table_name  
     ```  
   
-     To search for a workload file or table, click **Browse**. Database Engine Tuning Advisor assumes that workload files are rollover files. For more information about rollover files, see [Limit Trace File and Table Sizes](../../database-engine/limit-trace-file-and-table-sizes.md).  
+     To search for a workload file or table, click **Browse**. Database Engine Tuning Advisor assumes that workload files are rollover files. For more information about rollover files, see [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
      When using a trace table as a workload, that table must exist on the same server that Database Engine Tuning Advisor is tuning. If you create the trace table on a different server, move it to the server that Database Engine Tuning Advisor is tuning before using it as your workload.  
   
@@ -349,7 +349,7 @@ manager: "jhubbard"
  Specify a name for the session. The session name associates a name with a tuning session. You can refer to this name to review the tuning session later.  
   
  **File**  
- Specify a .sql script or trace file for a workload. Specify the path and filename in the associated text box. Database Engine Tuning Advisor assumes that the workload trace file is a rollover file. For more information about rollover files, see [Limit Trace File and Table Sizes](../../database-engine/limit-trace-file-and-table-sizes.md).  
+ Specify a .sql script or trace file for a workload. Specify the path and filename in the associated text box. Database Engine Tuning Advisor assumes that the workload trace file is a rollover file. For more information about rollover files, see [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
  **Table**  
  Specify a trace table for a workload. Specify the fully qualified name of the trace table in the associated text box as follows:  

@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Sparse Columns Support in SQL Server Native Client
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports sparse columns. For more information about sparse columns in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Use Sparse Columns](../../../database-engine/use-sparse-columns.md) and [Use Column Sets](../../../database-engine/use-column-sets.md).  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports sparse columns. For more information about sparse columns in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Use Sparse Columns](../../tables/use-sparse-columns.md) and [Use Column Sets](../../tables/use-column-sets.md).  
   
  For more information about sparse column support in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Sparse Columns Support &#40;ODBC&#41;](../odbc/sparse-columns-support-odbc.md) and [Sparse Columns Support &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md).  
   

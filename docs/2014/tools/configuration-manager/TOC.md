@@ -1,6 +1,6 @@
 # [SQL Server Configuration Manager Help](sql-server-configuration-manager-help.md)
 ## [SQL Server Services](sql-server-services.md)
-### [Analysis Server <server> (SQL Server Configuration Manager)](analysis-server-server-sql-server-configuration-manager.md)
+### [Analysis Server <server> (SQL Server Configuration Manager)](../../relational-databases/sql-server-configuration-manager.md)
 ### [Analysis Server Properties (Log On Tab)](analysis-server-properties-log-on-tab.md)
 ### [Analysis Server Properties (Service Tab)](analysis-server-properties-service-tab.md)
 ### [Analysis Server Properties (Advanced Tab)](analysis-server-properties-advanced-tab.md)

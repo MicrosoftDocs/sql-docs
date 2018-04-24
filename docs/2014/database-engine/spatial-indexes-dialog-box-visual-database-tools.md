@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Spatial Indexes Dialog Box (Visual Database Tools)
   Use the **Spatial Indexes** dialog box to create indexes for columns of the **geometry** or **geography** data type (*spatial columns*), which cannot be indexed using the **Index/Keys** dialog box. Each spatial column can have more than one spatial index, but they must be created one at a time.  
   
- For information about restrictions on spatial index creation, see [Spatial Indexes Overview](../../2014/database-engine/spatial-indexes-overview.md).  
+ For information about restrictions on spatial index creation, see [Spatial Indexes Overview](../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## Options  
  **Selected Spatial Index**  
@@ -114,6 +114,6 @@ manager: "jhubbard"
  Specifies whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance.  
   
 ## See Also  
- [Spatial Indexes Overview](../../2014/database-engine/spatial-indexes-overview.md)  
+ [Spatial Indexes Overview](../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

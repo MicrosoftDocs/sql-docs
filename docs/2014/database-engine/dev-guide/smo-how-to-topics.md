@@ -22,7 +22,7 @@ manager: "jhubbard"
  [Create a Visual Basic SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
  Describes how to set up the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET programming environment to create an SMO console application by using [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
- [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
+ [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
  Describes how to set up the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET programming environment to create an SMO console application by using Visual C#.  
   
   

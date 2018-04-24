@@ -137,6 +137,6 @@ manager: "jhubbard"
 ##  <a name="SMOProcedure"></a> Using SQL Server Management Objects  
  **To create a SQL Server Agent job**  
   
- Call the `Create` method of the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For example code, see [Scheduling Automatic Administrative Tasks in SQL Server Agent](../../2014/database-engine/dev-guide/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  
+ Call the `Create` method of the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For example code, see [Scheduling Automatic Administrative Tasks in SQL Server Agent](../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  
   
 ##  <a name="SSMSProc2"></a>  

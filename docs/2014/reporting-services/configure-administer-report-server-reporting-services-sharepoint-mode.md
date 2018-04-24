@@ -39,7 +39,7 @@ manager: "mblythe"
   
 -   [Reporting Services Site Collection Features](../../2014/reporting-services/reporting-services-site-collection-features.md)  
   
--   [Activate the Report Server and Power View Integration Features in SharePoint](../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
+-   [Activate the Report Server and Power View Integration Features in SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
 -   [Reporting Services Site Settings and Site Features&#40;SharePoint Mode&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   

@@ -34,6 +34,6 @@ manager: "jhubbard"
     >  If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is not listening on IPv4, the attempted IPv4 connection must wait for the time-out period before the IPv6 address is attempted. To avoid this, connect directly to the IPv6 IP address or configure an alias on the client with the IPv6 address.  
   
 ## See Also  
- [SQL Server Configuration Manager](../../../2014/database-engine/sql-server-configuration-manager.md)  
+ [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)  
   
   

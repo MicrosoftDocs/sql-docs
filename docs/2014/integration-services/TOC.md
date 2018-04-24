@@ -790,7 +790,7 @@
 ###### [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)
 ###### [Edit Tables](edit-tables.md)
 ###### [Add Tables to a CDC Instance](add-tables-to-a-cdc-instance.md)
-###### [Edit the Table Properties](edit-the-table-properties.md)
+###### [Edit the Table Properties](../relational-databases/tables/table-properties-ssms.md)
 ###### [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)
 ###### [Edit the Advanced Properties](edit-the-advanced-properties.md)
 #### [Change Data Capture Designer for Oracle by Attunity How to Guide](change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)

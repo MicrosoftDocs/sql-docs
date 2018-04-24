@@ -39,9 +39,9 @@ manager: "jhubbard"
   
  For more information about how to view offline log files programmatically through WMI and WQL queries, see the following topics:  
   
--   [SqlErrorLogEvent Class](../../database-engine/dev-guide/sqlerrorlogevent-class.md) (This topic shows how to retrieve values for logged events in a specified log file.)  
+-   [SqlErrorLogEvent Class](../wmi-provider-configuration-classes/sqlerrorlogevent-class.md) (This topic shows how to retrieve values for logged events in a specified log file.)  
   
--   [SqlErrorLogFile Class](../../database-engine/dev-guide/sqlerrorlogfile-class.md) (This topic shows how to retrieve information about all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files on a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
+-   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (This topic shows how to retrieve information about all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files on a specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 ##  <a name="BeforeYouBegin"></a> Permissions  
  To connect to an offline log file, you must have the following permissions on both the local and remote computers:  

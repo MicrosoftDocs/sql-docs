@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../2014/database-engine/work-with-database-diagrams-visual-database-tools.md)   
- [Delete Tables &#40;Database Engine&#41;](../../2014/database-engine/delete-tables-database-engine.md)  
+ [Delete Tables &#40;Database Engine&#41;](../relational-databases/tables/delete-tables-database-engine.md)  
   
   

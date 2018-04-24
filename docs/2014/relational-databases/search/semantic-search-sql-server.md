@@ -113,7 +113,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  Describes the process of semantic indexing and the tasks related to monitoring and managing the indexes.  
   
 ##  <a name="relcontent"></a> Related Content  
- [Semantic Search DDL, Functions, Stored Procedures, and Views](semantic-search-ddl-functions-stored-procedures-and-views.md)  
+ [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)  
  Lists the Transact-SQL statements and the SQL Server database objects added or changed to support statistical semantic search.  
   
   

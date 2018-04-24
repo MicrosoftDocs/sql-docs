@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI Provider for Configuration Management Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-configuration-management-concepts.md)   
- [WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)  
+ [WMI Provider for Configuration Management Concepts](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [WMI Provider for Server Events Concepts](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

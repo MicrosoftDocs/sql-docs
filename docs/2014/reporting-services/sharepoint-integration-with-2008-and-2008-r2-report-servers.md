@@ -34,7 +34,7 @@ manager: "mblythe"
  The report server synchronizes operations and data with SharePoint and tracks information about the files it processes. When you modify properties or settings for any report server item, the change is stored in a SharePoint database and then copied to a report server database that provides internal storage to a report server.  
   
 ## Related Content  
- [Activate the Report Server and Power View Integration Features in SharePoint](../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
+ [Activate the Report Server and Power View Integration Features in SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
  Describes how to activate the Report Server feature needed for integration with report servers from previous releases.  
   
   

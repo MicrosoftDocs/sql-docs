@@ -43,6 +43,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Foreach Loop Container](../../2014/integration-services/foreach-loop-container.md)   
- [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../2014/database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md)  
+ [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

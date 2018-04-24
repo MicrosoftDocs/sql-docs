@@ -205,10 +205,10 @@ manager: "jhubbard"
  [Security Audit Event Category &#40;SQL Server Profiler&#41;](../../event-classes/security-audit-event-category-sql-server-profiler.md)  
  Explains the audit events you can use in [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. For more information, see [SQL Server Profiler](../../../database-engine/sql-server-profiler.md).  
   
- [SQL Trace](../../../database-engine/sql-trace.md)  
+ [SQL Trace](../../sql-trace/sql-trace.md)  
  Explains how SQL Trace can be used from within your own applications to create traces manually, instead of using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Profiler.  
   
- [DDL Triggers](../../../database-engine/ddl-triggers.md)  
+ [DDL Triggers](../../triggers/ddl-triggers.md)  
  Explains how you can use Data Definition Language (DDL) triggers to track changes to your databases.  
   
  [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Security and Protection](http://go.microsoft.com/fwlink/?LinkId=101152)  

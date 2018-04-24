@@ -54,6 +54,6 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [OLE Automation Objects in Transact-SQL](../../database-engine/ole-automation-objects-in-transact-sql.md)  
+ [OLE Automation Objects in Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
   

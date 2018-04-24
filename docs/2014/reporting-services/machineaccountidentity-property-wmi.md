@@ -37,6 +37,6 @@ public string MachineAccountIdentity;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../includes/ssrswminmspca-md.md)]  
   
 ## See Also  
- [MSReportServer_ConfigurationSetting Properties](../../2014/reporting-services/msreportserver-configurationsetting-properties.md)  
+ [MSReportServer_ConfigurationSetting Properties](../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)  
   
   

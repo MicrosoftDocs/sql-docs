@@ -2,7 +2,7 @@
 ## [Integration Services Programming Overview](integration-services-programming-overview.md)
 ## [Understanding Synchronous and Asynchronous Transformations](understanding-synchronous-and-asynchronous-transformations.md)
 ## [Working with Connection Managers Programmatically](working-with-connection-managers-programmatically.md)
-## [Extending Packages with Scripting](extending-packages-with-scripting.md)
+## [Extending Packages with Scripting](../../relational-databases/server-management-objects-smo/tasks/scripting.md)
 ### [Comparing the Script Task and the Script Component](comparing-the-script-task-and-the-script-component.md)
 ### [Comparing Scripting Solutions and Custom Objects](comparing-scripting-solutions-and-custom-objects.md)
 ### [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md)

@@ -66,8 +66,6 @@ sys.dm_db_log_info ( database_id )
 ## Remarks
  The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement.    
  
- This dynamic management fun
- 
 ## Permissions  
  Requires the `VIEW DATABASE STATE` permission in the database.  
   

@@ -30,7 +30,7 @@ ms.workload: "Inactive"
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016sp2-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016sp2-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Returns [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) information of the transaction log. Note all transaction log files are combined in the table output. Each row in the output represents a VLF in the transaction log and provides information relevant to that VLF in the log.
 

@@ -32,22 +32,22 @@ The *April Public Preview* contains bug fixes and improvements.
 - Integrated Terminal splitting to work with multiple open terminals at once.
 - Reduced installation on-disk file count foot print for faster installs and startup times.
 - Continue to fix GitHub issues:
-   - Fix #37 When the chart viewer throws an error, unexpected behavior occurs.
-   - Fix #462 Feature Request: Option for Server Groups to be expanded by default.
-   - Fix #606 intellisense - Bad suggestion for 'update' command.
-   - Fix #967 Expect query plan when select XML showplan in the result grid.
-   - Fix #1023 Add square brackets for ms_foreachdb call from flyfishingdba.
-   - Fix #1048 Pre-login SSL/TLS handshake error.
-   - Fix #1050 Clear insights view before showing error.
-   - Fix #1057 Restore and new query actions in explorer-widget are broken.
-   - Fix #1068 Dashboard Output windows pops-up with error message for Azure SQL Database.
-   - Fix #1069 Connection Dialog shows Server Required error when initially displayed.
-   - Fix #1070 Server Groups now require a double-click to expand.
-   - Fix #1072 Select control background is semi-transparent.
-   - Fix #1115 Fix all high contrast accessibility issues in SQL Operations Studio.
-   - Fix #1101 Extension fails to upgrade "Download Manually" link goes to wrong location.
-   - Fix #1103 V Scroll not working on Home Tab.
-   - Fix #1104 SQL extension tabs stopped working.
+   - Fix [issue 37](https://github.com/Microsoft/sqlopsstudio/issues/37): When the chart viewer throws an error, unexpected behavior occurs.
+   - Fix [issue 462](https://github.com/Microsoft/sqlopsstudio/issues/462): Feature Request: Option for Server Groups to be expanded by default.
+   - Fix [issue 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense - Bad suggestion for 'update' command.
+   - Fix [issue 967](https://github.com/Microsoft/sqlopsstudio/issues/967): Expect query plan when select XML showplan in the result grid.
+   - Fix [issue 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): Add square brackets for ms_foreachdb call from flyfishingdba.
+   - Fix [issue 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): Pre-login SSL/TLS handshake error.
+   - Fix [issue 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050): Clear insights view before showing error.
+   - Fix [issue 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057): Restore and new query actions in explorer-widget are broken.
+   - Fix [issue 1068](https://github.com/Microsoft/sqlopsstudio/issues/1068): Dashboard Output windows pops-up with error message for Azure SQL Database.
+   - Fix [issue 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069): Connection Dialog shows Server Required error when initially displayed.
+   - Fix [issue 1070](https://github.com/Microsoft/sqlopsstudio/issues/1070): Server Groups now require a double-click to expand.
+   - Fix [issue 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072): Select control background is semi-transparent.
+   - Fix [issue 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115): Fix all high contrast accessibility issues in SQL Operations Studio.
+   - Fix [issue 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101): Extension fails to upgrade "Download Manually" link goes to wrong location.
+   - Fix [issue 1103](https://github.com/Microsoft/sqlopsstudio/issues/1103): V Scroll not working on Home Tab.
+   - Fix [issue 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL extension tabs stopped working.
 
 
 A significant highlight for the April Public Preview is the Visual Studio Code 1.21 platform source code refresh. This brings in several updates to the core editor and workbench from the previous 1.19 sync point. Some examples include the following:

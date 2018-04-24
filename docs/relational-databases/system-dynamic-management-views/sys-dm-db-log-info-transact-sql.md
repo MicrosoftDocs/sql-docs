@@ -64,10 +64,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[Log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the log record that created the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 
 ## Remarks
- The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement.    
+The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement.    
  
 ## Permissions  
- Requires the `VIEW DATABASE STATE` permission in the database.  
+Requires the `VIEW DATABASE STATE` permission in the database.  
   
 ## Examples  
   

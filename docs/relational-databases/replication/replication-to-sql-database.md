@@ -37,7 +37,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  ## Versions  
  - The publisher and distributor must be at least at one of the following versions:  
    
- -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+ -   [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
  -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
    

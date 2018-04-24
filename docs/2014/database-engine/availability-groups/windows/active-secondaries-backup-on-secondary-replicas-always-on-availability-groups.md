@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 -   [Use the Maintenance Plan Wizard](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
--   [Implement Jobs](../../../ssms/agent/implement-jobs.md)  
+-   [Implement Jobs](../../implement-jobs.md)  
   
   
 ## See Also  

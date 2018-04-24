@@ -25,7 +25,7 @@ manager: "jhubbard"
   This topic describes how to use the **Object Explorer Details** pane of [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] to monitor and manage existing AlwaysOn availability groups, availability replicas, and availability databases.  
   
 > [!NOTE]  
->  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](../../../ssms/object/object-explorer-details-pane.md).  
+>  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](../../object-explorer-details-pane.md).  
   
 -   **Before you begin:**  [Prerequisites](#Prerequisites)  
   
@@ -142,7 +142,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)   
+ [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [View Availability Group Properties &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
  [View Availability Replica Properties &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   

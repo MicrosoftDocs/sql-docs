@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 4.  Select the **Show Dashboard** command.  
   
- For information about how to use the AlwaysOn Dashboard, see [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md).  
+ For information about how to use the AlwaysOn Dashboard, see [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **Use AlwaysOn policies to view the health of an availability group**  

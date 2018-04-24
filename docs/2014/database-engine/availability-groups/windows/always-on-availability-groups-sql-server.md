@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   Supports a flexible failover policy for greater control over availability-group failover. For more information, see [Failover and Failover Modes; Always On Availability Groups;](failover-and-failover-modes-always-on-availability-groups.md).  
   
--   Supports automatic page repair for protection against page corruption. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+-   Supports automatic page repair for protection against page corruption. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring;](../../automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
   
 -   Supports encryption and compression, which provide a secure, high performing transport.  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] tools, as follows:  
   
-        -   The [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] creates and configures an availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the New Availability Group Dialog Box;SQL Server Management Studio;](../../../ssms/sql-server-management-studio-ssms.md).  
+        -   The [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] creates and configures an availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the New Availability Group Dialog Box;SQL Server Management Studio;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
         -   The [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] adds one or more primary databases to an existing availability group. In some environments, this wizard can also automatically prepare the secondary databases and start data synchronization for each of them. For more information, see [Use the Add Database to Availability Group Wizard (SQL Server)](availability-group-add-database-to-group-wizard.md).  
   
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
 -   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
--   [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)  
+-   [SQL Server Agent](../../sql-server-agent.md)  
   
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   

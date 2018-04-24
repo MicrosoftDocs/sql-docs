@@ -36,6 +36,6 @@ manager: "jhubbard"
  If you have defined your own AlwaysOn policy, click this option to enable your policy.  
   
 ## See Also  
- [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
+ [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

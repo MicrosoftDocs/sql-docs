@@ -1,20 +1,14 @@
 ---
 title: "What's new in Analytics Platform System – a scale-out data warehouse"
-author: "mzaman1" 
-manager: "craigg-msft"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
 description: "See what’s new in Microsoft® Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
-author: "happynicolle" 
+author: "mzaman1"
+manager: "craigg"
+ms.prod: "sql"
+ms.technology: "data-warehouse"
+ms.topic: "conceptual"
+ms.date: "04/24/2018"
 ms.author: "murshedz"
-ms.date: "04/03/2018"
-ms.topic: "article"
-
+ms.reviewer: "martinle"
 ---
 
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
@@ -33,7 +27,7 @@ Select @var is now supported. For more information, see [select local variable] 
 Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query ] (/sql/t-sql/language-elements/hints-transact-sql-query)
 
 ### Feature Switch
-APS AU7 introduces Feature Switch in [Configuration Manager] (/sql/analytics-platform-system/launch-the-configuration-manager). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.
+APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.
 
 ### Known Issues
 With APS AU7 software, we are packaging and providing the Intel BIOS update that fixes “speculative execution side-channel attacks” (aka. Spectre and Meltdown vulnerabilities). Though packaged together, the BIOS update is installed manually and not part of the APS AU7 software install. Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments and found some workloads with significant degradation. We recommend that you test the performance effect of enabling BIOS update before you deploy them in a production environment. If the performance effect of enabling these features is too high for an existing application, you can consider whether isolating your APS Appliance from untrusted code running is a better mitigation for your application. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).

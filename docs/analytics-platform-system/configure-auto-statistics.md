@@ -4,7 +4,7 @@ description: "Describes auto-stats feature introduced in Analytics Platform Syst
 author: "mzaman1" 
 manager: "craigg"	  
 ms.prod: "sql"
-ms.technology: "mpp-data-warehouse"
+ms.technology: "data-warehouse"
 ms.topic: "conceptual"
 ms.date: "04/24/2018"
 ms.author: "murshedz"
@@ -39,7 +39,7 @@ After upgrading to APS AU7, auto-stats is enabled by default. The system adminis
 Changing any feature switch values require a service restart on APS.
 
 ## Change auto-stats settings on a database
-When auto-stats is enabled by the system administrator, you can use [ALTER Database (Parallel Data Warehouse](../t-sql/statements/alter-database-parallel-data-warehouse-transact-sql.md) to change the statistics settings on a database. 
+When auto-stats is enabled by the system administrator, you can use [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) to change the statistics settings on a database. 
 All databases that existed before the upgrade to AU7 have auto-stats disabled. If auto-stats feature switch is enabled by the system administrator, then any new databases created after the upgrade to AU7 has auto-stats enabled.
 The following example enables auto-stats on the existing database myPDW.
 

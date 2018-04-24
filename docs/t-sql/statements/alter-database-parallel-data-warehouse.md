@@ -95,7 +95,7 @@ ALTER DATABASE database_name
  Requires the ALTER permission on the database.  
   
 ## Error Messages
-If auto-stats is disabled and you try to alter the statistics settings, PDW gives the error "This option is not supported in PDW." The system administrator can enable auto-stats by enabling the feature switch [AutoStatsEnabled](link).
+If auto-stats is disabled and you try to alter the statistics settings, PDW gives the error "This option is not supported in PDW." The system administrator can enable auto-stats by enabling the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
 
 ## General Remarks  
  The values for REPLICATED_SIZE, DISTRIBUTED_SIZE, and LOG_SIZE can be greater than, equal to, or less than the current values for the database.  

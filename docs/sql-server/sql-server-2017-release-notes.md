@@ -152,4 +152,6 @@ There are no release notes for SQL Server on Windows related to this release. Se
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

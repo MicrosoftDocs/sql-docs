@@ -30,7 +30,7 @@ manager: "jhubbard"
 # Query and View Designer Tools (Visual Database Tools)
   When you design a query, view, in-line function, or single-statement stored procedure, the designer you use consists of four panes: the Diagram pane, the Criteria pane, the SQL pane, and the Results pane.  
   
- ![Query Designer](../../../database-engine/media/vs-queryviewdsgpanes.gif "Query Designer")  
+ ![Query Designer](../../database-engine/media/vs-queryviewdsgpanes.gif "Query Designer")  
   
 -   The Diagram pane displays the tables and other table-valued objects that you are querying. Each rectangle represents a table or table-valued object and shows the available data columns. Joins are indicated by lines between the rectangles. For more information, see [Diagram Pane &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   

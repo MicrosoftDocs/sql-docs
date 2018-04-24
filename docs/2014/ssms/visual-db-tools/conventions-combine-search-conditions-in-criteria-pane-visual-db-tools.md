@@ -137,7 +137,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  The Query and View Designer represents this WHERE clause in the Criteria Pane as follows:  
   
- ![OR clause precedence in the Criteria Pane](../../../database-engine/media/vs-criteriapane1.gif "OR clause precedence in the Criteria Pane")  
+ ![OR clause precedence in the Criteria Pane](../../database-engine/media/vs-criteriapane1.gif "OR clause precedence in the Criteria Pane")  
   
  However, if the linked OR clauses take precedence over an AND clause, the AND clause is repeated for each OR clause. This causes the AND clause to be distributed to each OR clause. For example, in the SQL pane you might create a WHERE clause such as the following:  
   
@@ -149,7 +149,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  The Query and View Designer represents this WHERE clause in the Criteria Pane as follows:  
   
- ![Multiple AND and OR clauses in the Criteria Pane](../../../database-engine/media/vs-criteriapane2.gif "Multiple AND and OR clauses in the Criteria Pane")  
+ ![Multiple AND and OR clauses in the Criteria Pane](../../database-engine/media/vs-criteriapane2.gif "Multiple AND and OR clauses in the Criteria Pane")  
   
  If the linked OR clauses involve only one data column, the Query and View Designer can place the entire OR clause into a single cell of the grid, avoiding the need to repeat the AND clause. For example, in the SQL pane you might create a WHERE clause such as the following:  
   
@@ -160,7 +160,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  The Query and View Designer represents this WHERE clause in the Criteria Pane as follows:  
   
- ![Linked OR clauses defined in the Criteria Pane](../../../database-engine/media/vs-criteriapane3.gif "Linked OR clauses defined in the Criteria Pane")  
+ ![Linked OR clauses defined in the Criteria Pane](../../database-engine/media/vs-criteriapane3.gif "Linked OR clauses defined in the Criteria Pane")  
   
  If you make a change to the query (such as changing one of the values in the Criteria Pane), the Query and View Designer recreates the SQL statement in the SQL pane. The recreated SQL statement will resemble the Criteria Pane display rather than your original statement. For example, if the Criteria Pane contains distributed AND clauses, the resulting statement in the SQL pane will be recreated with explicit distributed AND clauses. For details, see "How AND Works with Multiple OR Clauses" earlier in this topic.  
   

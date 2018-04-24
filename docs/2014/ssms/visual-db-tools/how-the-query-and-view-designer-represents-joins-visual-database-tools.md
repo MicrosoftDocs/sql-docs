@@ -25,11 +25,11 @@ manager: "jhubbard"
 ## Diagram Pane  
  In the Diagram pane the Query and View Designer displays a join line between the data columns involved in the join. The Query and View Designer displays one join line for each join condition. For example, the following illustration shows a join line between two tables that are joined:  
   
- ![Join line shows relationship between two tables](../../../database-engine/media/dv3wbig.gif "Join line shows relationship between two tables")  
+ ![Join line shows relationship between two tables](../../database-engine/media/dv3wbig.gif "Join line shows relationship between two tables")  
   
  If tables are joined using more than one join condition, the Query and View Designer displays multiple join lines, as in the following example:  
   
- ![Tables joined using more than one join condition](../../../database-engine/media/dv3w9n1.gif "Tables joined using more than one join condition")  
+ ![Tables joined using more than one join condition](../../database-engine/media/dv3w9n1.gif "Tables joined using more than one join condition")  
   
  If the joined data columns are not displayed (for example, the rectangle representing the table or table-structured object is minimized or the join involves an expression), the Query and View Designer places the join line at the title bar of the rectangle representing the table or table-structured object.  
   
@@ -37,19 +37,19 @@ manager: "jhubbard"
   
 |**Join line icon**|**Description**|  
 |------------------------|---------------------|  
-|![Visual Database Tools icon](../../../database-engine/media/dv3wbih.gif "Visual Database Tools icon")|Inner join (created using an equal sign).|  
-|![Visual Database Tools icon](../../../database-engine/media/dv3wbii.gif "Visual Database Tools icon")|Inner join based on the "greater than" operator.|  
-|![Visual Database Tools icon](../../../database-engine/media/dv3wbij.gif "Visual Database Tools icon")|Outer join in which all rows from the table represented on the left will be included, even if they do not have matches in the related table.|  
-|![Visual Database Tools icon](../../../database-engine/media/dv3wbik.gif "Visual Database Tools icon")|Outer join in which all rows from the table represented on the right will be included, even if they do not have matches in the related table.|  
-|![Visual Database Tools icon](../../../database-engine/media/dv3wbil.gif "Visual Database Tools icon")|Full outer join in which all rows from both tables will be included, even if they do not have matches in the related table.|  
+|![Visual Database Tools icon](../../database-engine/media/dv3wbih.gif "Visual Database Tools icon")|Inner join (created using an equal sign).|  
+|![Visual Database Tools icon](../../database-engine/media/dv3wbii.gif "Visual Database Tools icon")|Inner join based on the "greater than" operator.|  
+|![Visual Database Tools icon](../../database-engine/media/dv3wbij.gif "Visual Database Tools icon")|Outer join in which all rows from the table represented on the left will be included, even if they do not have matches in the related table.|  
+|![Visual Database Tools icon](../../database-engine/media/dv3wbik.gif "Visual Database Tools icon")|Outer join in which all rows from the table represented on the right will be included, even if they do not have matches in the related table.|  
+|![Visual Database Tools icon](../../database-engine/media/dv3wbil.gif "Visual Database Tools icon")|Full outer join in which all rows from both tables will be included, even if they do not have matches in the related table.|  
   
  The symbols on the ends of the join line indicate the type of join. The following table lists the types of joins and the icons displayed on the ends of the join line.  
   
 |**Icon on ends of join line**|**Type of join**|  
 |-----------------------------------|----------------------|  
-|![Visual Database Tools icon](../../../database-engine/media/dv3wbim.gif "Visual Database Tools icon")|One-to-one join.|  
-|![Visual Database Tools icon](../../../database-engine/media/dv3wbin.gif "Visual Database Tools icon")|One-to-many join.|  
-|![Visual Database Tools icon](../../../database-engine/media/dv3wbio.gif "Visual Database Tools icon")|Query and View Designer cannot determine the join type. This situation occurs most often when you have created a join manually.|  
+|![Visual Database Tools icon](../../database-engine/media/dv3wbim.gif "Visual Database Tools icon")|One-to-one join.|  
+|![Visual Database Tools icon](../../database-engine/media/dv3wbin.gif "Visual Database Tools icon")|One-to-many join.|  
+|![Visual Database Tools icon](../../database-engine/media/dv3wbio.gif "Visual Database Tools icon")|Query and View Designer cannot determine the join type. This situation occurs most often when you have created a join manually.|  
   
 ## SQL Pane  
  A join can be expressed in a number of ways in an SQL statement. The exact syntax depends on the database you are using and on how you have defined the join.  

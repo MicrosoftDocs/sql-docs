@@ -184,11 +184,11 @@ In this section, you add a subscriber to the publication that you previously cre
 
 7. The **New Database** dialog box appears. Enter **ProductReplica** in the **Database name** box, select **OK**, and then select **Next**: 
   
-   ![Product Replica DB](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
+   ![Entering a name for the subscription database](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. In the **Distribution Agent Security** dialog box, select the ellipsis (**…**) button. Enter <*Publisher_Machine_Name*>**\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**:
+8. On the **Distribution Agent Security** page, select the ellipsis (**…**) button. Enter <*Publisher_Machine_Name*>**\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**:
 
-   ![Add Distribution Account](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
+   ![Distribution account information in the "Distribution Agent Security" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
 9. Select **Finish** to accept the default values on the remaining pages and complete the wizard.  
   
@@ -200,7 +200,7 @@ In this section, you add a subscriber to the publication that you previously cre
 
    b. On the **User Mappings** page, grant the login **db_owner** for the **ProductReplica** database. 
 
-   ![Login on Subscriber](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
+   ![Selections for configuring the login on the subscriber](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
 2. Select **OK** to close the **New Login** dialog box. 
 
@@ -211,7 +211,7 @@ In this section, you add a subscriber to the publication that you previously cre
   
 2. In the **Local Publications** folder, expand the **AdvWorksProductTrans** publication, right-click the subscription in the **ProductReplica** database, and then select **View Synchronization Status**. The current synchronization status of the subscription appears:
 
-   ![View Synchronization Status](media/tutorial-replicating-data-between-continuously-connected-servers/viewsyncstatus.png)
+   ![Selections for opening the "View Synchronization Status" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/viewsyncstatus.png)
 3. If the subscription is not visible under **AdvWorksProductTrans**, select the F5 key to refresh the list.  
   
 For more information, see:  
@@ -224,21 +224,21 @@ In this section, you use tracer tokens to verify that changes are being replicat
   
 1. Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**:
 
-   ![Launch Replication Monitor](media/tutorial-replicating-data-between-continuously-connected-servers/launchreplmonitor.png)
+   ![The "Launch Replication Monitor" command on the shortcut menu](media/tutorial-replicating-data-between-continuously-connected-servers/launchreplmonitor.png)
 
 2. Expand a publisher group in the left pane, expand the publisher instance, and then select the **AdvWorksProductTrans** publication.  
   
    a. Select the **Tracer Tokens** tab.  
    b. Select **Insert Tracer**.    
-   c. View elapsed time for the tracer token in the following columns: **Publisher to Distributor**, **Distributor to Subscriber**, **Total Latency**. A value of **Pending** indicates that the token has not reached a given point.
+   c. View elapsed time for the tracer token in the following columns: **Publisher to Distributor**, **Distributor to Subscriber**, **Total Latency**. A value of **Pending** indicates that the token has not reached a specified point.
 
-   ![Tracer Token](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
+   ![Information for the tracer token](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
 For more information, see [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).
 
 ## Error troubleshooting methodology
-This section teaches you how to troubleshoot basic replication synchronization failures. This section introduces you to navigating the replication components with the aim of troubleshooting. However, the actual errors that you encounter might be different from what is discussed here--and might need a different resolution. If that is the case, further troubleshooting is necessary and is outside the scope of this tutorial. 
+This section teaches you how to troubleshoot basic replication synchronization failures by using the replication components. The actual errors that you encounter might be different from what's discussed here--and might need a different resolution. If that's the case, further troubleshooting is necessary and is outside the scope of this tutorial. 
 
 
 ### Troubleshoot errors with the Snapshot Agent
@@ -251,11 +251,11 @@ The Snapshot Agent generates the snapshot and writes it to the specified snapsho
 
    b. Right-click the **Snapshot Agent** and select **View History**. 
 
-   ![Snapshot Agent History](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenthistory.png)
+   ![Selections for viewing the Snapshot Agent history](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenthistory.png)
     
-1. In the Snapshot Agent history, select the relevant log entry. This will usually be a line or two *before* the entry reporting the error. (Errors are indicated by the red X.) Review the message text in the text box below the logs: 
+1. In the Snapshot Agent history, select the relevant log entry. This will usually be a line or two *before* the entry that's reporting the error. (The red X indicates the errors.) Review the message text in the box below the logs: 
 
-   ![Snapshot Agent Access Denied](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotaccessdenied.png)
+   ![Selected log entry with message text](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotaccessdenied.png)
 
        The replication agent had encountered an exception. 
        Exception Message: Access to path '\\node1\repldata.....' is denied.
@@ -268,28 +268,28 @@ The Log Reader Agent connects to  your publisher database and scans the transact
 
 1. Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**:  
 
-   ![Launch Repl Monitor](media/tutorial-replicating-data-between-continuously-connected-servers/launchreplmonitor.png)
+   !["Launch Repl Monitor" command on the shortcut menu](media/tutorial-replicating-data-between-continuously-connected-servers/launchreplmonitor.png)
   
    Replication Monitor opens: 
    
-   ![Replication Monitor](media/tutorial-replicating-data-between-continuously-connected-servers/replmonitor.png) 
+   ![Replication Monitor with error status](media/tutorial-replicating-data-between-continuously-connected-servers/replmonitor.png) 
    
 2. The red X is an indication that the publication is not synchronizing. Expand **My Publishers** on the left side, and then expand the relevant publisher server.  
   
 3. Select the **AdvWorksProductTrans** publication on the left, and then look for the red X on one of the tabs to identify where the problem is. In this case, the red X is on the **Agents** tab, indicating that one of the agents is running into an error: 
 
-   ![Agent Error](media/tutorial-replicating-data-between-continuously-connected-servers/agenterror.png)
+   ![Red X on the "Agents" tab](media/tutorial-replicating-data-between-continuously-connected-servers/agenterror.png)
 
 4. Select the **Agents** tab to identify which agent is encountering the error: 
 
-   ![Log Reader Failing](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentfailure.png)
+   !["Agents" tab with failing Log Reader Agent](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentfailure.png)
 
 
 5. This view shows you two agents, the Snapshot Agent and the Log Reader Agent. The one that's encountering an error will have the red X. In this case, the Log Reader Agent has the Red X. 
 
    Double-click the line that's reporting the error--in this case, **Log Reader Agent**. The agent history appears for the agent that you've selected. In this case, it's the Log Reader Agent history. It provides more information about the error: 
     
-    ![Log Reader Error](media/tutorial-replicating-data-between-continuously-connected-servers/logreadererror.png)
+   ![Log Reader Error](media/tutorial-replicating-data-between-continuously-connected-servers/logreadererror.png)
 
        Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
        The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.

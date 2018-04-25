@@ -65,7 +65,7 @@ When you export a transparent data encryption-protected database, the exported c
 
 For example, if the BACPAC file is exported from an on-premises SQL Server instance, the imported content of the new database isn't automatically encrypted. Likewise, if the BACPAC file is exported to an on-premises SQL Server instance, the new database also isn't automatically encrypted.
 
-The one exception is when you export to and from a SQL database. Transparent data encryption is enabled in the new database, but the PACPAC file itself still isn't encrypted.
+The one exception is when you export to and from a SQL database. Transparent data encryption is enabled in the new database, but the BACPAC file itself still isn't encrypted.
 
 ## Manage transparent data encryption in the Azure portal
 

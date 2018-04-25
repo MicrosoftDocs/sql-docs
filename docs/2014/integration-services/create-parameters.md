@@ -84,6 +84,6 @@ manager: "jhubbard"
     >  You can in-place edit in the list or use the **Properties** window to modify the values of parameter properties. You can delete a parameter by using the **Delete (X)** toolbar button. Using the last toolbar button to open the **Manage Parameter Values** dialog box, you can specify a value for a parameter that is used only when you execute the package in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Parameters](../../2014/integration-services/integration-services-ssis-parameters.md)  
+ [Integration Services &#40;SSIS&#41; Parameters](integration-services-ssis-package-and-project-parameters.md)  
   
   

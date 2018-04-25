@@ -60,6 +60,6 @@ manager: "jhubbard"
  Specify an alternate name to use for the output column.  
   
 ## See Also  
- [Raw File Destination](../../2014/integration-services/raw-file-destination.md)  
+ [Raw File Destination](data-flow/raw-file-destination.md)  
   
   

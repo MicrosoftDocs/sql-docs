@@ -93,7 +93,7 @@ manager: "jhubbard"
 |`Upper()`|String Upper (String*_expression*)<br /><br /> Returns the string after converting all lowercase characters to uppercase.|*expression* - Is the source string expression.|Returns a string that represents the source string expression after all lowercase characters are converted to uppercase.|`Len('HeLlO')` returns `'HELLO'` in this example.|  
   
 ## See Also  
- [Create New Condition or Open Condition Dialog Box, General Page](create-new-condition-or-open-condition-dialog-box-general-page.md)   
+ [Create New Condition or Open Condition Dialog Box, General Page](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)  
   
   

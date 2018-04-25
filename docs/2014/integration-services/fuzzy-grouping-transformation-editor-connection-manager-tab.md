@@ -25,7 +25,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The server specified by the connection must be running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The Fuzzy Grouping transformation creates temporary data objects in tempdb that may be as large as the full input to the transformation. While the transformation executes, it issues server queries against these temporary objects. This can affect overall server performance.  
   
- To learn more about the Fuzzy Grouping transformation, see [Fuzzy Grouping Transformation](../../2014/integration-services/fuzzy-grouping-transformation.md).  
+ To learn more about the Fuzzy Grouping transformation, see [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
 ## Options  
  **OLE DB connection manager**  
@@ -36,6 +36,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Identify Similar Data Rows by Using the Fuzzy Grouping Transformation](../../2014/integration-services/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [Identify Similar Data Rows by Using the Fuzzy Grouping Transformation](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

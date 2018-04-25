@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Lookup Transformation Editor (Columns Page)
   Use the **Columns** page of the **Lookup Transformation Editor** dialog box to specify the join between the source table and the reference table, and to select lookup columns from the reference table.  
   
- To learn more about the Lookup transformation, see [Lookup Transformation](../../2014/integration-services/lookup-transformation.md).  
+ To learn more about the Lookup transformation, see [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **Available Input Columns**  
@@ -51,10 +51,10 @@ manager: "jhubbard"
  Type an alias for the output for each lookup column. The default is the name of the lookup column; however, you can select any unique, descriptive name.  
   
 ## See Also  
- [Lookup Transformation Editor &#40;General Page&#41;](../../2014/integration-services/lookup-transformation-editor-general-page.md)   
+ [Lookup Transformation Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Lookup Transformation Editor &#40;Connection Page&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Lookup Transformation Editor &#40;Advanced Page&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [Lookup Transformation Editor &#40;Error Output Page&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
- [Fuzzy Lookup Transformation](../../2014/integration-services/fuzzy-lookup-transformation.md)  
+ [Fuzzy Lookup Transformation](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

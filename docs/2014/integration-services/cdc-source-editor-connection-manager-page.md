@@ -20,7 +20,7 @@ manager: "jhubbard"
 # CDC Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **CDC Source Editor** dialog box to select the ADO.NET connection manager for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database that the CDC source reads change rows from (the CDC database). Once the CDC database is selected you need to select a captured table in the database.  
   
- For more information about the CDC source, see [CDC Source](../../2014/integration-services/cdc-source.md).  
+ For more information about the CDC source, see [CDC Source](data-flow/cdc-source.md).  
   
 ## Task List  
  **To open the CDC Source Editor Connection Manager Page**  
@@ -63,14 +63,14 @@ manager: "jhubbard"
 >  For all Net change options, the source table must have a primary key or unique index. For tables without a primary key or unique indes, you must yse the **All** option.  
   
  **Variable containing the CDC state**  
- Select the SSIS string package variable that maintains the CDC state for the current CDC context. For more information about the CDC state variable, see [Define a State Variable](../../2014/integration-services/define-a-state-variable.md).  
+ Select the SSIS string package variable that maintains the CDC state for the current CDC context. For more information about the CDC state variable, see [Define a State Variable](data-flow/define-a-state-variable.md).  
   
  **Include reprocessing indicator column**  
  Select this check box to create a special output column called **__$reprocessing**.  
   
  This column has a value of **true** when the CDC processing range overlaps with the initial processing range (the range of LSNs corresponding to the period of initial load) or when a CDC processing range is reprocessed following an error in a previous run. This indicator column lets the SSIS developer handle errors differently when reprocessing changes (for example, actions such as a delete of a non-existing row and an insert that failed on a duplicate key can be ignored).  
   
- For more information, see [CDC Source Custom Properties](../../2014/integration-services/cdc-source-custom-properties.md).  
+ For more information, see [CDC Source Custom Properties](data-flow/cdc-source-custom-properties.md).  
   
 ## See Also  
  [CDC Source Editor &#40;Columns Page&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   

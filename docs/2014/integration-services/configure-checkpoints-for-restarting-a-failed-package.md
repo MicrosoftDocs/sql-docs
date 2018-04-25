@@ -52,6 +52,6 @@ manager: "jhubbard"
     -   Set the FailPackageOnFailure property to `True` for each selected task and container.  
   
 ## See Also  
- [Restart Packages by Using Checkpoints](../../2014/integration-services/restart-packages-by-using-checkpoints.md)  
+ [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md)  
   
   

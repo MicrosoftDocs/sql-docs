@@ -22,13 +22,13 @@ manager: "jhubbard"
 # Analysis Services Execute DDL Task Editor (DDL Page)
   Use the **DDL** page of the **Analysis Services Execute DDL Task Editor** dialog box to specify a connection to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database and to provide information about the source of data definition language (DDL) statements.  
   
- To learn about this task, see [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md).  
+ To learn about this task, see [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md).  
   
 ## Static Options  
  **Connection**  
  Select an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connection manager in the list, or click \<**New connection...**> and use the **Add Analysis Services Connection Manager** dialog box to create a new connection.  
   
- **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference](../../2014/integration-services/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md)  
+ **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Specify the source type of the DDL statements. This property has the options listed in the following table:  
@@ -49,19 +49,19 @@ manager: "jhubbard"
  **Source**  
  Select a File connection in the list, or click \<**New connection...**> and use the **File Connection Manager** dialog box to create a new connection.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md)  
   
 ### SourceType = Variable  
  **Source**  
  Select a variable in the list, or click \<**New variable...**> and use the **Add Variable** dialog box to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services Execute DDL Task Editor &#40;General Page&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-general-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)   
+ [Analysis Services Execute DDL Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [Expressions Page](expressions/expressions-page.md)   
+ [Control Flow](control-flow/control-flow.md)   
  [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [XML for Analysis  &#40;XMLA&#41; Reference](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   

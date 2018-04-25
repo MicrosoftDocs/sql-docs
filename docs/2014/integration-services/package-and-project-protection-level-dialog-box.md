@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Package and Project Protection Level Dialog Box
   Use the **Package Protection Level** dialog box to update the protection level of a package. The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only.  
   
- To understand the requirements and options for package security, you may find it useful to see [Access Control for Sensitive Data in Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md) and [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md).  
+ To understand the requirements and options for package security, you may find it useful to see [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md) and [Security Overview &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
 ## Options  
  **Package protection level**  

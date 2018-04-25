@@ -25,7 +25,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The FTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
   
- To learn more about the FTP connection manager, see [FTP Connection Manager](../../2014/integration-services/ftp-connection-manager.md).  
+ To learn more about the FTP connection manager, see [FTP Connection Manager](connection-manager/ftp-connection-manager.md).  
   
 ## Options  
  **Server name**  

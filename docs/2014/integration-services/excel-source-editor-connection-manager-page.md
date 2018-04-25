@@ -23,9 +23,9 @@ manager: "jhubbard"
   Use the **Connection Manager** node of the **Excel Source Editor** dialog box to select the [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] workbook for the source to use. The Excel source reads data from a worksheet or named range in an existing workbook.  
   
 > [!NOTE]  
->  The `CommandTimeout` property of the Excel source is not available in the **Excel Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [Excel Custom Properties](../../2014/integration-services/excel-custom-properties.md).  
+>  The `CommandTimeout` property of the Excel source is not available in the **Excel Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
- To learn more about the Excel source, see [Excel Source](../../2014/integration-services/excel-source.md).  
+ To learn more about the Excel source, see [Excel Source](data-flow/excel-source.md).  
   
 ## Static Options  
  **OLE DB connection manager**  
@@ -41,7 +41,7 @@ manager: "jhubbard"
 |-----------|-----------------|  
 |Table or view|Retrieve data from a worksheet or named range in the Excel file.|  
 |Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)|  
-|SQL command|Retrieve data from the Excel file by using a SQL query. For information about query syntax, see [Excel Source](../../2014/integration-services/excel-source.md).|  
+|SQL command|Retrieve data from the Excel file by using a SQL query. For information about query syntax, see [Excel Source](data-flow/excel-source.md).|  
 |SQL command from variable|Specify the SQL query text in a variable.|  
   
  **Preview**  
@@ -81,7 +81,7 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Excel Source Editor &#40;Columns Page&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Excel Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
- [Excel Connection Manager](../../2014/integration-services/excel-connection-manager.md)   
- [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../2014/integration-services/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Excel Connection Manager](connection-manager/excel-connection-manager.md)   
+ [Loop through Excel Files and Tables by Using a Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

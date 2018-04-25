@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Term Extraction Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Extraction Transformation Editor** dialog box to specify properties for the extraction such as frequency, length, and whether to extract words or phrases.  
   
- To learn more about the Term Extraction transformation, see [Term Extraction Transformation](../../2014/integration-services/term-extraction-transformation.md).  
+ To learn more about the Term Extraction transformation, see [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
 ## Options  
  **Noun**  
@@ -56,6 +56,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Term Extraction Transformation Editor &#40;Term Extraction Tab&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Term Extraction Transformation Editor &#40;Exclusion Tab&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Term Lookup Transformation](../../2014/integration-services/term-lookup-transformation.md)  
+ [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

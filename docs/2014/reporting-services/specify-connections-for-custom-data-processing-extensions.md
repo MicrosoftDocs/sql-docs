@@ -44,7 +44,7 @@ manager: "mblythe"
  In previous releases of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], all custom data processing extensions were called under user impersonation. In this release, only the Open method will be called while impersonating the user. If you have an existing data processing extension that requires integrated security, you must modify your code to use the Open method or store the user identity object.  
   
 ## Connections for Custom .NET Framework Data Providers  
- When configuring a report to use a specific data source, you set properties that determine the data source type, connection string, and credentials that are used to access the data source. The following table describes the credential types that are supported for [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] data providers. For more information about setting report data source properties, see [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md).  
+ When configuring a report to use a specific data source, you set properties that determine the data source type, connection string, and credentials that are used to access the data source. The following table describes the credential types that are supported for [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] data providers. For more information about setting report data source properties, see [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md).  
   
 |Credentials|Connections|  
 |-----------------|-----------------|  
@@ -76,7 +76,7 @@ manager: "mblythe"
   
 ## See Also  
  [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Implementing a Data Processing Extension](../../2014/reporting-services/dev-guide/implementing-a-data-processing-extension.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

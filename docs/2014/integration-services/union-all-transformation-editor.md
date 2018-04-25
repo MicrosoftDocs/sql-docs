@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Union All Transformation Editor
   Use the **Union All Transformation Editor** dialog box to merge several input rowsets into a single output rowset. By including the Union All transformation in a data flow, you can merge data from multiple data flows, create complex datasets by nesting Union All transformations, and re-merge rows after you correct errors in the data.  
   
- To learn more about the Union All transformation, see [Union All Transformation](../../2014/integration-services/union-all-transformation.md).  
+ To learn more about the Union All transformation, see [Union All Transformation](data-flow/transformations/union-all-transformation.md).  
   
 ## Options  
  **Output Column Name**  
@@ -36,8 +36,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Merge Data by Using the Union All Transformation](../../2014/integration-services/merge-data-by-using-the-union-all-transformation.md)   
- [Merge Transformation](../../2014/integration-services/merge-transformation.md)   
- [Merge Join Transformation](../../2014/integration-services/merge-join-transformation.md)  
+ [Merge Data by Using the Union All Transformation](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
+ [Merge Transformation](data-flow/transformations/merge-transformation.md)   
+ [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)  
   
   

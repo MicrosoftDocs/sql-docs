@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Flat File Connection Manager Editor (Preview Page)
   Use the **Preview** node of the **Flat File Connection Manager Editor** dialog box to view the contents of the source file in a tabular format.  
   
- To learn more about the Flat File connection manager, see [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md).  
+ To learn more about the Flat File connection manager, see [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## Options  
  **Connection manager name**  
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Flat File Connection Manager Editor &#40;General Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-general-page.md)   
+ [Flat File Connection Manager Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Flat File Connection Manager Editor &#40;Columns Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Flat File Connection Manager Editor &#40;Advanced Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   

@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ODBC Source Editor (Error Output Page)
   Use the **Error Output** page of the **ODBC Source Editor** dialog box to select error handling options.  
   
- To learn more about the ODBC source, see [CDC Source](../../2014/integration-services/cdc-source.md).  
+ To learn more about the ODBC source, see [CDC Source](data-flow/cdc-source.md).  
   
 ## Task List  
  **To open the ODBC Source Editor Error Output Page**  
@@ -64,7 +64,7 @@ manager: "jhubbard"
  The error or the truncation is ignored.  
   
 ### Redirect Flow  
- The row that is causing the error or the truncation is directed to the error output of the ODBC source. For more information, see [ODBC Source](../../2014/integration-services/odbc-source.md).  
+ The row that is causing the error or the truncation is directed to the error output of the ODBC source. For more information, see [ODBC Source](data-flow/odbc-source.md).  
   
 ## See Also  
  [ODBC Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   

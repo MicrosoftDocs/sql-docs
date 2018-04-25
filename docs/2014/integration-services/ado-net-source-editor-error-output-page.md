@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ADO NET Source Editor (Error Output Page)
   Use the **Error Output** page of the **ADO NET Source Editor** dialog box to select error handling options and to set properties on error output columns.  
   
- To learn more about the ADO NET source, see [ADO NET Source](../../2014/integration-services/ado-net-source.md).  
+ To learn more about the ADO NET source, see [ADO NET Source](data-flow/ado-net-source.md).  
   
  **To open the Error Output page**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
  **Error**  
  Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
   
- **Related Topics:** [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ **Related Topics:** [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Specify what should happen when a truncation occurs: ignore the failure, redirect the row, or fail the component.  
@@ -57,6 +57,6 @@ manager: "jhubbard"
 ## See Also  
  [ADO NET Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [ADO NET Source Editor &#40;Columns Page&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [ADO.NET Connection Manager](../../2014/integration-services/ado-net-connection-manager.md)  
+ [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)  
   
   

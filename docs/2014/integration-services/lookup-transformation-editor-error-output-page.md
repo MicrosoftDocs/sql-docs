@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Lookup Transformation Editor (Error Output Page)
   Use the **Error Output** page of the **Lookup Transformation Editor** dialog box to specify error handling options.  
   
- To learn more about the Lookup transformation, see [Lookup Transformation](../../2014/integration-services/lookup-transformation.md).  
+ To learn more about the Lookup transformation, see [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **Input/Output**  
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  This option is not available when you select **Redirect rows to no match output** in the **Specify how to handle rows with no matching entries** list. This list is on the **General** page of the **Lookup Transformation Editor** dialog box.  
   
- **Related Topics:** [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ **Related Topics:** [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Specify what should happen when data truncation occurs:  

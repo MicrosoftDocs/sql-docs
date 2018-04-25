@@ -22,13 +22,13 @@ manager: "jhubbard"
 # Execute SQL Task Editor (Parameter Mapping Page)
   Use the **Parameter Mapping** page of the **Execute SQL Task Editor** dialog box to map variables to parameters in the SQL statement.  
   
- To learn about this task, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+ To learn about this task, see [Execute SQL Task](control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 ## Options  
  **Variable Name**  
  After you have added a parameter mapping by clicking **Add**, select a system or user-defined variable from the list or click \<**New variable...**> to add a new variable by using the **Add Variable** dialog box.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)  
   
  **Direction**  
  Select the direction of the parameter. Map each variable to an input parameter, output parameter, or a return code.  
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Execute SQL Task Editor &#40;General Page&#41;](../../2014/integration-services/execute-sql-task-editor-general-page.md)   
+ [Execute SQL Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Execute SQL Task Editor &#40;Result Set Page&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md)  
   

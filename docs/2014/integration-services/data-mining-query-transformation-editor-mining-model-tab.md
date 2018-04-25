@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Data Mining Query Transformation Editor (Mining Model Tab)
   Use the **Mining Model** tab of the **Data Mining Query Transformation Editor** dialog box to select the data mining structure and its mining models.  
   
- To learn more about the Data Mining Query transformation, see [Data Mining Query Transformation](../../2014/integration-services/data-mining-query-transformation.md).  
+ To learn more about the Data Mining Query transformation, see [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md).  
   
 ## Options  
  **Connection**  

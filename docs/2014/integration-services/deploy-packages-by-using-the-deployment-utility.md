@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  If the package includes configurations that you want to modify for use on the destination computer, you can update the values of the properties by using the wizard.  
   
- In addition to installing packages by using the Package Installation Wizard, you can copy and move packages by using the **dtutil** command prompt utility. For more information, see [dtutil Utility](../../2014/integration-services/dtutil-utility.md).  
+ In addition to installing packages by using the Package Installation Wizard, you can copy and move packages by using the **dtutil** command prompt utility. For more information, see [dtutil Utility](dtutil-utility.md).  
   
 ### To deploy packages to an instance of SQL Server  
   
@@ -63,6 +63,6 @@ manager: "jhubbard"
 8.  If you elected to validate packages after installation, view the validation results of the deployed packages.  
   
 ## See Also  
- [Package Deployment &#40;SSIS&#41;](../../2014/integration-services/package-deployment-ssis.md)  
+ [Package Deployment &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Destination Database Files
-  Use the **Destination Database Files** dialog box to view or change the database file names and locations on the destination server, or to specify a network file location for the Transfer Database task. For more information about this task, see [Transfer Database Task](../../2014/integration-services/transfer-database-task.md).  
+  Use the **Destination Database Files** dialog box to view or change the database file names and locations on the destination server, or to specify a network file location for the Transfer Database task. For more information about this task, see [Transfer Database Task](control-flow/transfer-database-task.md).  
   
  To automatically populate this dialog box with the database file names and locations on the source server, specify the **SourceConnection**, **SourceDatabaseName**, and **SourceDatabaseFiles** first in the **Databases** page of the **Transfer Database Task Editor** dialog box.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transfer Database Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-database-task-editor-general-page.md)   
+ [Transfer Database Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Transfer Database Task Editor &#40;Databases Page&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

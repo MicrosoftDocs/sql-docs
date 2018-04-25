@@ -23,9 +23,9 @@ manager: "jhubbard"
   Use the **Columns** node of the **Flat File Source Editor** dialog box to map an output column to each external (source) column.  
   
 > [!NOTE]  
->  The `FileNameColumnName` property of the Flat File source and the `FastParse` property of its output columns are not available in the **Flat File Source Editor**, but can be set by using the **Advanced Editor**. For more information on these properties, see the Flat File Source section of [Flat File Custom Properties](../../2014/integration-services/flat-file-custom-properties.md).  
+>  The `FileNameColumnName` property of the Flat File source and the `FastParse` property of its output columns are not available in the **Flat File Source Editor**, but can be set by using the **Advanced Editor**. For more information on these properties, see the Flat File Source section of [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
   
- To learn more about the Flat File source, see [Flat File Source](../../2014/integration-services/flat-file-source.md).  
+ To learn more about the Flat File source, see [Flat File Source](data-flow/flat-file-source.md).  
   
 ## Options  
  **Available External Columns**  
@@ -41,6 +41,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Flat File Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [Flat File Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md)  
+ [Flat File Connection Manager](connection-manager/file-connection-manager.md)  
   
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
 5.  To save the updated package, click **Save Selected Item** on the **File** menu.  
   
 ## See Also  
- [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)   
+ [Precedence Constraints](control-flow/precedence-constraints.md)   
  [Connect Tasks and Containers by Using a Default Precedence Constraint](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Set the Properties of a Precedence Constraint](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
  [Use an Expression in a Precedence Constraint](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  

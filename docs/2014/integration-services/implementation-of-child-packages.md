@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   Exporting packages by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Deploying packages by building a deployment utility for the project that contains the packages you want to deploy, and then running the Package Installation Wizard to install the packages to the file system or to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Package Deployment &#40;SSIS&#41;](../../2014/integration-services/package-deployment-ssis.md).  
+-   Deploying packages by building a deployment utility for the project that contains the packages you want to deploy, and then running the Package Installation Wizard to install the packages to the file system or to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Package Deployment &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  You must repeat the deployment to each remote server you want to use.  
   

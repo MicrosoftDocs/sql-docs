@@ -41,7 +41,7 @@ manager: "jhubbard"
   
          The Maintenance Plan Wizard enables you to control backup compression for each set full or differential database backups or log backups that you schedule.  
   
-    -   Integration Services (SSIS) [Back Up Database task](../../integration-services/back-up-database-task.md)  
+    -   Integration Services (SSIS) [Back Up Database task](../../integration-services/control-flow/back-up-database-task.md)  
   
          You can control the backup compression behavior when creating a package for backing up a single database or multiple databases.  
   

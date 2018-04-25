@@ -21,11 +21,11 @@ manager: "jhubbard"
  For more information about environments, see [Create and Map a Server Environment](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
 > [!NOTE]  
->  As in earlier versions of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], in the current release you can also deploy your packages to an instance of SQL Server and use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service to run and manage the packages. You use the package deployment model. For more information, see [Package Deployment &#40;SSIS&#41;](../../2014/integration-services/package-deployment-ssis.md).  
+>  As in earlier versions of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], in the current release you can also deploy your packages to an instance of SQL Server and use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service to run and manage the packages. You use the package deployment model. For more information, see [Package Deployment &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  To deploy a project to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, complete the following tasks:  
   
-1.  Create an SSISDB catalog, if you haven’t already. For more information, see [Create the SSIS Catalog](../../2014/integration-services/create-the-ssis-catalog.md).  
+1.  Create an SSISDB catalog, if you haven’t already. For more information, see [Create the SSIS Catalog](catalog/ssis-catalog.md).  
   
 2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
   

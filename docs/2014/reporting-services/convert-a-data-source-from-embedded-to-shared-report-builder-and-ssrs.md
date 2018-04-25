@@ -60,7 +60,7 @@ manager: "mblythe"
      In the Report Data pane, the data source icon changes to the shared data source icon.  
   
 ## See Also  
- [Manage Report Data Sources](../../2014/reporting-services/manage-report-data-sources.md)   
+ [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

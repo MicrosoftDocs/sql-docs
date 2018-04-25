@@ -48,6 +48,6 @@ manager: "jhubbard"
  [Step 4: Adding a Data Flow Task to the Package](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## See Also  
- [OLE DB Connection Manager](ole-db-connection-manager.md)  
+ [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)  
   
   

@@ -36,6 +36,6 @@ manager: "jhubbard"
 |**Tentatively-deleted rows touched/sec**|The number of expiring rows touched by cursors (on average), per second. A row is expiring if the transaction that deleted it is still active (i.e. has not yet committed or aborted.)|  
   
 ## See Also  
- [XTP &#40;In-Memory OLTP&#41; Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)  
+ [XTP &#40;In-Memory OLTP&#41; Performance Counters](../../integration-services/performance/performance-counters.md)  
   
   

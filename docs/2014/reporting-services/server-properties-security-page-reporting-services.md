@@ -38,7 +38,7 @@ manager: "mblythe"
 ## See Also  
  [Set Report Server Properties &#40;Management Studio&#41;](../../2014/reporting-services/set-report-server-properties-management-studio.md)   
  [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Report Server in Management Studio F1 Help](../../2014/reporting-services/report-server-in-management-studio-f1-help.md)  
   
   

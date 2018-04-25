@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [OLE DB for Data Mining](../2014/analysis-services/dev-guide/ole-db-for-data-mining.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Integration Services Developer's Guide](../2014/integration-services/dev-guide/developer-s-guide-integration-services.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Integration Services Developer's Guide](integration-services/integration-services-developer-documentation.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Replication Developer's Guide](../2014/relational-databases/replication/dev-guide/developer-s-guide-replication.md)  
   

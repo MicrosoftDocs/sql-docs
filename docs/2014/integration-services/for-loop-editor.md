@@ -20,7 +20,7 @@ manager: "jhubbard"
 # For Loop Editor
   Use the **For Loop** page of the **For Loop Editor** dialog box to configure a loop that repeats a workflow until a specified condition evaluates to false.  
   
- To learn about the For Loop container and how to use it in packages, see [For Loop Container](../../2014/integration-services/for-loop-container.md).  
+ To learn about the For Loop container and how to use it in packages, see [For Loop Container](control-flow/for-loop-container.md).  
   
 ## Options  
  **InitExpression**  
@@ -43,8 +43,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [Foreach Loop Container](../../2014/integration-services/foreach-loop-container.md)   
+ [Expressions Page](expressions/expressions-page.md)   
+ [Foreach Loop Container](control-flow/foreach-loop-container.md)   
  [Configure a For Loop Container](../../2014/integration-services/configure-a-for-loop-container.md)  
   
   

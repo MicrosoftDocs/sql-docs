@@ -26,6 +26,6 @@ manager: "jhubbard"
 |**Log records written/sec**|The number of records written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log by the XTP engine (on average), per second.|  
   
 ## See Also  
- [XTP &#40;In-Memory OLTP&#41; Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)  
+ [XTP &#40;In-Memory OLTP&#41; Performance Counters](../../integration-services/performance/performance-counters.md)  
   
   

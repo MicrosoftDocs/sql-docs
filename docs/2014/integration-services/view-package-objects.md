@@ -42,11 +42,11 @@ manager: "jhubbard"
 -   [View Package Objects in Package Explorer](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
   
 ## See Also  
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
- [Integration Services Containers](../../2014/integration-services/integration-services-containers.md)   
- [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)   
- [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40;SSIS&#41; Event Handlers](../../2014/integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md)  
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
+ [Integration Services Containers](control-flow/integration-services-containers.md)   
+ [Precedence Constraints](control-flow/precedence-constraints.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Event Handlers](integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
   
   

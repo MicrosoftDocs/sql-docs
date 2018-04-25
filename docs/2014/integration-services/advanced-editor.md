@@ -42,13 +42,13 @@ manager: "jhubbard"
   
 -   [Common Properties](../../2014/integration-services/common-properties.md)  
   
--   [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md)  
+-   [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)  
   
 -   [Path Properties](../../2014/integration-services/path-properties.md)  
   
  For more information about the specific component that you are editing, see the description of the component in the Data Flow Elements section of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Objects and Concepts documentation:  
   
--   [Integration Services Transformations](../../2014/integration-services/integration-services-transformations.md)  
+-   [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)  

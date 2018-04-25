@@ -94,6 +94,6 @@ manager: "jhubbard"
 13. Click **OK** to close the **Script Transformation Editor** dialog box.  
   
 ## Next Steps  
- [Step 4: Adding a Flat File Destination](lesson-4-4-adding-a-flat-file-destination.md)  
+ [Step 4: Adding a Flat File Destination](data-flow/flat-file-destination.md)  
   
   

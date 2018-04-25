@@ -22,7 +22,7 @@ manager: "jhubbard"
 # SQL Destination Editor (Advanced Page)
   Use the **Advanced** page of the **SQL Destination Editor** dialog box to specify advanced bulk insert options.  
   
- To learn more about the SQL Server destination, see [SQL Server Destination](../../2014/integration-services/sql-server-destination.md).  
+ To learn more about the SQL Server destination, see [SQL Server Destination](data-flow/sql-server-destination.md).  
   
 ## Options  
  **Keep identity**  
@@ -68,6 +68,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [SQL Destination Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [SQL Destination Editor &#40;Mappings Page&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
- [Bulk Load Data by Using the SQL Server Destination](../../2014/integration-services/bulk-load-data-by-using-the-sql-server-destination.md)  
+ [Bulk Load Data by Using the SQL Server Destination](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

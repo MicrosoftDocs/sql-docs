@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # OData Source Editor (Connection Page)
-  Use the **Connection** page of the **OData Source Editor** dialog box to select the OData connection manager for the OData source. This page also lets you specify a collection or a resource path and any query options to indicate what data needs to be retrieved from the OData source. To learn more about the OData source, see [OData Source](../../2014/integration-services/odata-source.md).  
+  Use the **Connection** page of the **OData Source Editor** dialog box to select the OData connection manager for the OData source. This page also lets you specify a collection or a resource path and any query options to indicate what data needs to be retrieved from the OData source. To learn more about the OData source, see [OData Source](data-flow/odata-source.md).  
   
 ## Static Options  
  **OData connection manager**  
@@ -57,6 +57,6 @@ manager: "jhubbard"
 ## See Also  
  [OData Source Editor &#40;Columns Page&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [OData Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData Connection Manager](../../2014/integration-services/odata-connection-manager.md)  
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

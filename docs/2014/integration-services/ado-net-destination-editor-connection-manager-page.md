@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ADO NET Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **ADO NET Destination Editor** dialog box to select the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection for the destination. This page also lets you select a table or view from the database.  
   
- To learn more about the ADO NET destination, see [ADO NET Destination](../../2014/integration-services/ado-net-destination.md).  
+ To learn more about the ADO NET destination, see [ADO NET Destination](data-flow/ado-net-destination.md).  
   
  **To open the Connection Manager page**  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  You can use the .NET Data Provider for SQL Server (SqlClient) to connect to [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
- If you select **Use bulk insert when available**, and set the **Error** option to **Redirect the row**, the batch of data that the destination redirects to the error output may include good rows.For more information about handling errors in bulk operations, see [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md). For more information about the **Error** option, see [ADO NET Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
+ If you select **Use bulk insert when available**, and set the **Error** option to **Redirect the row**, the batch of data that the destination redirects to the error output may include good rows.For more information about handling errors in bulk operations, see [Error Handling in Data](data-flow/error-handling-in-data.md). For more information about the **Error** option, see [ADO NET Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
 >  If a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or Sybase source table includes an identity column, you must use Execute SQL tasks to run a SET IDENTITY_INSERT statement before and after the ADO NET destination. The identity column property specifies an incremental value for the column. The SET IDENTITY_INSERT statement enables explicit values to be inserted into the identity column. To run the CREATE TABLE and SET IDENTITY statements on the same database connection, set the `RetainSameConnection` property of the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager to `True`. Also, use the same [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager for the Execute SQL tasks and the ADO NET destination.  
@@ -69,7 +69,7 @@ manager: "jhubbard"
 ## See Also  
  [ADO NET Destination Editor &#40;Mappings Page&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
  [ADO NET Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
- [ADO.NET Connection Manager](../../2014/integration-services/ado-net-connection-manager.md)   
- [Execute SQL Task](../../2014/integration-services/execute-sql-task.md)  
+ [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)   
+ [Execute SQL Task](control-flow/execute-sql-task.md)  
   
   

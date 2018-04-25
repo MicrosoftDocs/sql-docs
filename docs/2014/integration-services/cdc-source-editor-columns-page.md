@@ -20,7 +20,7 @@ manager: "jhubbard"
 # CDC Source Editor (Columns Page)
   Use the **Columns** page of the **CDC Source Editor** dialog box to map an output column to each external (source) column.  
   
- To learn more about the CDC source, see [CDC Source](../../2014/integration-services/cdc-source.md).  
+ To learn more about the CDC source, see [CDC Source](data-flow/cdc-source.md).  
   
 ## Task List  
  **To open the CDC Source Editor Columns Page**  

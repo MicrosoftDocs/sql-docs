@@ -30,7 +30,7 @@ manager: "jhubbard"
 >  You can also access the **Package Configuration Organizer**, by clicking the ellipsis button next to the **Configuration** property. The Configuration property appears in the properties window for the package.  
   
 > [!NOTE]  
->  Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md).  
+>  Configurations are available for the package deployment model. Parameters are used in place of configurations for the project deployment model. The project deployment model enables you to deploy [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the deployment models, see [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  In the **Package Configuration Organizer** dialog box, you can enable packages to use configurations, add and delete configurations, and set the preferred order in which configurations should be loaded.  
   
@@ -116,7 +116,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Package Configurations](../../2014/integration-services/package-configurations.md)   
- [Package Deployment &#40;SSIS&#41;](../../2014/integration-services/package-deployment-ssis.md)   
- [Working with Variables Programmatically](../../2014/integration-services/dev-guide/working-with-variables-programmatically.md)  
+ [Package Deployment &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [Working with Variables Programmatically](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

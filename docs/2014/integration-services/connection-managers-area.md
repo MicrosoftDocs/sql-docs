@@ -25,7 +25,7 @@ manager: "jhubbard"
  Right-click in this area, and then on the menu, click the option for the task you want to perform.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Connections](../../2014/integration-services/integration-services-ssis-connections.md)   
- [SSIS Designer](../../2014/integration-services/ssis-designer.md)  
+ [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md)   
+ [SSIS Designer](ssis-designer.md)  
   
   

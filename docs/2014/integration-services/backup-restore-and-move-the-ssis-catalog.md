@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Backup, Restore, and Move the SSIS Catalog
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] includes the SSISDB database. You query views in the SSISDB database to inspect objects, settings, and operational data that are stored in the **SSISDB** catalog. This topic provides instructions for backing up and restoring the database.  
   
- The **SSISDB** catalog stores the packages that you’ve deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](../../2014/integration-services/ssis-catalog.md).  
+ The **SSISDB** catalog stores the packages that you’ve deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](catalog/ssis-catalog.md).  
   
 ##  <a name="backup"></a> To Back up the SSIS Database  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 3.  Restore the SSISDB database from the backup by using the **Restore Database** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see the following topics.  
   
-    -   [Restore Database &#40;General Page&#41;](../relational-databases/backup-restore/restore-database-general-page.md)  
+    -   [Restore Database &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)  
   
     -   [Restore Database &#40;Files Page&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   

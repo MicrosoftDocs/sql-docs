@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Query Options Pages F1 Help
   This section contains the F1 Help topics for the **Query Options** pages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Analysis Services Query Execution Options &#40;General Page&#41;](../../2014/database-engine/analysis-services-query-execution-options-general-page.md)  
+ [Analysis Services Query Execution Options &#40;General Page&#41;](../integration-services/general-page-of-integration-services-designers-options.md)  
   
  [Analysis Services Query Results &#40;General Page&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)  
   

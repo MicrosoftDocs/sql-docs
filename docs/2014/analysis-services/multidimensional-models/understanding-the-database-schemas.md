@@ -94,6 +94,6 @@ manager: "mblythe"
   
 ## See Also  
  [Understanding Incremental Generation](understanding-incremental-generation.md)   
- [Manage Changes to Data Source Views and Data Sources](manage-changes-to-data-source-views-and-data-sources.md)  
+ [Manage Changes to Data Source Views and Data Sources](../../integration-services/connection-manager/data-sources.md)  
   
   

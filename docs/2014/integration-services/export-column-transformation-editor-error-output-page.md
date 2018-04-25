@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Export Column Transformation Editor (Error Output Page)
   Use the **Error Output** page of the **Export Column Transformation Editor** dialog box to specify how to handle errors.  
   
- To learn more about the Export Column transformation, see [Export Column Transformation](../../2014/integration-services/export-column-transformation.md).  
+ To learn more about the Export Column transformation, see [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
 ## Options  
  **Input/Output**  

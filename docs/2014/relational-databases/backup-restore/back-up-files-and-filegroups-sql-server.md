@@ -235,7 +235,7 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Backup History and Header Information &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
- [Back Up Database &#40;General Page&#41;](back-up-database-general-page.md)   
+ [Back Up Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md)   
  [Full File Backups &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   

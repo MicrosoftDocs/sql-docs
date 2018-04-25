@@ -166,7 +166,7 @@ GO
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md)   
- [Back Up Database &#40;General Page&#41;](back-up-database-general-page.md)   
+ [Back Up Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)   

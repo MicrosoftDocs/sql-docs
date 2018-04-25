@@ -62,7 +62,7 @@ manager: "jhubbard"
 ## See Also  
  [Save Copy of Package](../../2014/integration-services/save-copy-of-package.md)   
  [Export Package Dialog Box UI Reference](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
- [Save Packages](../../2014/integration-services/save-packages.md)   
+ [Save Packages](save-packages.md)   
  [Import and Export Packages &#40;SSIS Service&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

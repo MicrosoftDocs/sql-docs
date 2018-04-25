@@ -23,12 +23,12 @@ manager: "jhubbard"
   Use the **Connection Manager** page of the **OLE DB Destination Editor** dialog box to select the OLE DB connection for the destination. This page also lets you select a table or view from the database.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../2014/integration-services/connect-to-an-excel-workbook.md).  
+>  If the data source is [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](connection-manager/connect-to-an-excel-workbook.md).  
   
 > [!NOTE]  
->  The `CommandTimeout` property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](../../2014/integration-services/ole-db-custom-properties.md).  
+>  The `CommandTimeout` property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
- To learn more about the OLE DB destination, see [OLE DB Destination](../../2014/integration-services/ole-db-destination.md).  
+ To learn more about the OLE DB destination, see [OLE DB Destination](data-flow/ole-db-destination.md).  
   
 ## Static Options  
  **OLE DB connection manager**  
@@ -38,14 +38,14 @@ manager: "jhubbard"
  Create a new connection manager by using the **Configure OLE DB Connection Manager** dialog box.  
   
  **Data access mode**  
- Specify the method for loading data into the destination. Loading double-byte character set (DBCS) data requires use of one of the fast load options. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../2014/integration-services/ole-db-destination.md).  
+ Specify the method for loading data into the destination. Loading double-byte character set (DBCS) data requires use of one of the fast load options. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](data-flow/ole-db-destination.md).  
   
 |Option|Description|  
 |------------|-----------------|  
 |Table or view|Load data into a table or view in the OLE DB destination.|  
-|Table or view - fast load|Load data into a table or view in the OLE DB destination and use the fast load option. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../2014/integration-services/ole-db-destination.md).|  
+|Table or view - fast load|Load data into a table or view in the OLE DB destination and use the fast load option. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](data-flow/ole-db-destination.md).|  
 |Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)|  
-|Table name or view name variable - fast load|Specify the table or view name in a variable, and use the fast load option to load the data. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../2014/integration-services/ole-db-destination.md).|  
+|Table name or view name variable - fast load|Specify the table or view name in a variable, and use the fast load option to load the data. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](data-flow/ole-db-destination.md).|  
 |SQL command|Load data into the OLE DB destination by using a SQL query.|  
   
  **Preview**  
@@ -146,7 +146,7 @@ manager: "jhubbard"
  Enter the text of a SQL query, build the query by clicking **Build Query**, or locate the file that contains the query text by clicking **Browse**.  
   
 > [!NOTE]  
->  The OLE DB destination does not support parameters. If you need to execute a parameterized INSERT statement, consider the OLE DB Command transformation. For more information, see [OLE DB Command Transformation](../../2014/integration-services/ole-db-command-transformation.md).  
+>  The OLE DB destination does not support parameters. If you need to execute a parameterized INSERT statement, consider the OLE DB Command transformation. For more information, see [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md).  
   
  **Build query**  
  Use the **Query Builder** dialog box to construct the SQL query visually.  
@@ -161,6 +161,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB Destination Editor &#40;Mappings Page&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [OLE DB Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
- [Load Data by Using the OLE DB Destination](../../2014/integration-services/load-data-by-using-the-ole-db-destination.md)  
+ [Load Data by Using the OLE DB Destination](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

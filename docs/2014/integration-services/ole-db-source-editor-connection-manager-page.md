@@ -23,14 +23,14 @@ manager: "jhubbard"
   Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.  
   
 > [!NOTE]  
->  To load data from a data source that uses [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md).  
+>  To load data from a data source that uses [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
 >   
 >  To load data from a data source that uses [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  The `CommandTimeout` property of the OLE DB source is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [OLE DB Custom Properties](../../2014/integration-services/ole-db-custom-properties.md).  
+>  The `CommandTimeout` property of the OLE DB source is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
- To learn more about the OLE DB source, see [OLE DB Source](../../2014/integration-services/ole-db-source.md).  
+ To learn more about the OLE DB source, see [OLE DB Source](data-flow/ole-db-source.md).  
   
 ## Open the OLE DB Source Editor (Connection Manager Page  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB Source Editor &#40;Columns Page&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [OLE DB Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [Extract Data by Using the OLE DB Source](../../2014/integration-services/extract-data-by-using-the-ole-db-source.md)   
+ [Extract Data by Using the OLE DB Source](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md)  
   
   

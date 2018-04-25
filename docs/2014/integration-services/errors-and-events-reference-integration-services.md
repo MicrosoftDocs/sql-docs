@@ -47,7 +47,7 @@ manager: "jhubbard"
 |DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|Indicates that the column metadata in the data source does not match the column metadata in the source or destination component that is connected to the data source.|  
   
 ## Events (SQLISPackage)  
- For more information, see [Events Logged by an Integration Services Package](../../2014/integration-services/events-logged-by-an-integration-services-package.md).  
+ For more information, see [Events Logged by an Integration Services Package](performance/events-logged-by-an-integration-services-package.md).  
   
 |Event|Description|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ manager: "jhubbard"
 |SQLISPackage_12557|Indicates that a package has finished running.|  
   
 ## Events (SQLISService)  
- For more information, see [Events Logged by the Integration Services Service](../../2014/integration-services/events-logged-by-the-integration-services-service.md).  
+ For more information, see [Events Logged by the Integration Services Service](service/events-logged-by-the-integration-services-service.md).  
   
 |Event|Description|  
 |-----------|-----------------|  

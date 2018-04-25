@@ -62,9 +62,9 @@ manager: "jhubbard"
   
 9. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
-     Although the package has been signed, you must now configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to check or verify the digital signature before loading the package. For more information, see [Identify the Source of Packages with Digital Signatures](../../2014/integration-services/identify-the-source-of-packages-with-digital-signatures.md).  
+     Although the package has been signed, you must now configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to check or verify the digital signature before loading the package. For more information, see [Identify the Source of Packages with Digital Signatures](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## See Also  
- [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md)  
+ [Security Overview &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

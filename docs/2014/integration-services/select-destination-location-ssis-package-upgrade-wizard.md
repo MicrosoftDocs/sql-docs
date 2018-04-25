@@ -42,7 +42,7 @@ manager: "jhubbard"
 |Value|Description|  
 |-----------|-----------------|  
 |**File System**|Indicates that the upgraded packages are to be saved to a folder on the local computer.|  
-|**SSIS Package Store**|Indicates that the upgraded packages are to be saved to the Integration Services package store. The package store consists of the set of file system folders that the Integration Services service manages. For more information, see [Package Management &#40;SSIS Service&#41;](../../2014/integration-services/package-management-ssis-service.md).<br /><br /> Selecting this value displays the corresponding **Package source** dynamics options.|  
+|**SSIS Package Store**|Indicates that the upgraded packages are to be saved to the Integration Services package store. The package store consists of the set of file system folders that the Integration Services service manages. For more information, see [Package Management &#40;SSIS Service&#41;](service/package-management-ssis-service.md).<br /><br /> Selecting this value displays the corresponding **Package source** dynamics options.|  
 |**Microsoft SQL Server**|Indicates that the upgraded packages are to be saved to an existing instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Selecting this value displays the corresponding dynamic **Package source** dynamic options.|  
   
  **Folder**  

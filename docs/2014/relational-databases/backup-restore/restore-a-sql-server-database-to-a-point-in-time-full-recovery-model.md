@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 9. After you have specified a specific point in time, the Database Recovery Advisor ensures that only backups that are required for restoring to that point in time are selected in the **Restore** column of the **Backup sets to restore** grid. These selected backups make up the recommended restore plan for your point-in-time restore. You should use only the selected backups for your point-in-time restore operation.  
   
-     For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](restore-database-general-page.md). For information about the Database Recovery Advisor, see [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md).  
+     For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md). For information about the Database Recovery Advisor, see [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md).  
   
 10. On the **Options** page, in the **Restore options** panel, you can select any of the following options, if appropriate for your situation:  
   

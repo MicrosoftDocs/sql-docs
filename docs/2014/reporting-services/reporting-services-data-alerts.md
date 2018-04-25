@@ -54,7 +54,7 @@ manager: "mblythe"
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports a variety of credential types in reports. You can create data alerts on reports with data source configured to use stored credentials, or no credentials. You cannot create alerts on reports configured to use integrated security credentials or prompt for credentials. The report is run as part of processing the alert definition and the processing fails without credentials. For more information, see the following:  
   
--   [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)  
+-   [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)  
   
 -   [Roles and Permissions &#40;Reporting Services&#41;](../../2014/reporting-services/roles-and-permissions-reporting-services.md)  
   

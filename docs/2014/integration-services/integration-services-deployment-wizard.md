@@ -52,6 +52,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
- [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md)  
+ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

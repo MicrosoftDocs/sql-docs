@@ -45,6 +45,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Set Package Properties](../../2014/integration-services/set-package-properties.md)  
+ [Set Package Properties](set-package-properties.md)  
   
   

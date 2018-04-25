@@ -46,7 +46,7 @@ manager: "mblythe"
   
  [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
- [Compute Capacity Limits by Edition of SQL Server](../../getting-started/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   

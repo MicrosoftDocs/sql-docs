@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Web Service Task Editor (General Page)
   Use the **General** page of the **Web Services Task Editor** dialog box to specify an HTTP connection manager, specify the location of the Web Services Description Language (WSDL) file the Web Service task uses, describe the Web Services task, and download the WSDL file.  
   
- For more information about this task, see [Web Service Task](../../2014/integration-services/web-service-task.md).  
+ For more information about this task, see [Web Service Task](control-flow/web-service-task.md).  
   
 ## Options  
  **HTTPConnection**  
@@ -31,7 +31,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The HTTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
   
- **Related Topics:**  [HTTP Connection Manager](../../2014/integration-services/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Server Page&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Related Topics:**  [HTTP Connection Manager](connection-manager/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Server Page&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(…)** and locate this file.  
@@ -72,6 +72,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Web Service Task Editor &#40;Input Page&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [Web Service Task Editor &#40;Output Page&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

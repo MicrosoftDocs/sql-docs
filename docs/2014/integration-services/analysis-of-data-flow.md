@@ -57,11 +57,11 @@ order by source_component_name desc
 ```  
   
 ## Related Tasks  
- [Debugging Data Flow](../../2014/integration-services/debugging-data-flow.md)  
+ [Debugging Data Flow](data-flow/data-flow.md)  
   
- [Troubleshooting Tools for Package Execution](../../2014/integration-services/troubleshooting-tools-for-package-execution.md)  
+ [Troubleshooting Tools for Package Execution](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
 ## See Also  
- [Data in Data Flows](../../2014/integration-services/data-in-data-flows.md)  
+ [Data in Data Flows](data-flow/data-in-data-flows.md)  
   
   

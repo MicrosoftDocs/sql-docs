@@ -73,7 +73,7 @@ manager: "jhubbard"
  **Configuration**  
  Select an existing connection manager in the list, or click \<**New connection...**> to create a new connection manager. Depending on the type of log provider, you can configure an OLE DB connection manager or a File connection manager. The log provider for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Event Log requires no connection.  
   
- Related Topics: [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md) manager, [File Connection Manager](../../2014/integration-services/file-connection-manager.md)  
+ Related Topics: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) manager, [File Connection Manager](connection-manager/file-connection-manager.md)  
   
  **Delete**  
  Select a log provider and then click **Delete**.  

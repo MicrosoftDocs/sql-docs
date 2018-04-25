@@ -44,7 +44,7 @@ manager: "jhubbard"
  [Step 6: Adding and Configuring the Lookup Transformations](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## See Also  
- [Flat File Source](flat-file-source.md)   
- [Flat File Connection Manager Editor &#40;General Page&#41;](flat-file-connection-manager-editor-general-page.md)  
+ [Flat File Source](data-flow/flat-file-source.md)   
+ [Flat File Connection Manager Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)  
   
   

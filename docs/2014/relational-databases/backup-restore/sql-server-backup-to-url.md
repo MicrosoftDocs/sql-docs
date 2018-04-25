@@ -231,7 +231,7 @@ manager: "jhubbard"
   
  When you select URL as the destination, certain options in the **Media Options** page are disabled.  The following topics have more information on the Back Up Database dialog:  
   
- [Back Up Database &#40;General Page&#41;](back-up-database-general-page.md)  
+ [Back Up Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
  [Back Up Database &#40;Media Options Page&#41;](back-up-database-media-options-page.md)  
   

@@ -63,7 +63,7 @@ manager: "jhubbard"
   
     -   To use the Foreach SMO enumerator, select an existing ADO.NET connection or click **New connection** in the **Connection** list, and then either type the string to use or click **Browse**. If you click **Browse**, in the **Select SMO Enumeration** dialog box, select the object type to enumerate and the enumeration type, and click **OK**.  
   
-6.  Optionally, click the browse button **(…)** in the **Expressions** text box on the **Collection** page to create expressions that update property values. For more information, see [Add or Change a Property Expression](../../2014/integration-services/add-or-change-a-property-expression.md).  
+6.  Optionally, click the browse button **(…)** in the **Expressions** text box on the **Collection** page to create expressions that update property values. For more information, see [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  The properties listed in the **Property** list varies by enumerator.  
@@ -79,11 +79,11 @@ manager: "jhubbard"
         > [!NOTE]  
         >  The index value indicates which column in the item to map to the variable. Only the For Each Item enumerator can use an index value other than 0.  
   
-8.  Optionally, click **Expressions** and, on the **Expressions** page, create property expressions for the properties of the Foreach Loop container. For more information, see [Add or Change a Property Expression](../../2014/integration-services/add-or-change-a-property-expression.md).  
+8.  Optionally, click **Expressions** and, on the **Expressions** page, create property expressions for the properties of the Foreach Loop container. For more information, see [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md).  
   
 9. Click **OK**.  
   
 ## See Also  
- [Foreach Loop Container](../../2014/integration-services/foreach-loop-container.md)  
+ [Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Excel Source Editor (Columns Page)
   Use the **Columns** page of the **Excel Source Editor** dialog box to map an output column to each external (source) column.  
   
- To learn more about the Excel source, see [Excel Source](../../2014/integration-services/excel-source.md).  
+ To learn more about the Excel source, see [Excel Source](data-flow/excel-source.md).  
   
 ## Options  
  **Available External Columns**  
@@ -38,7 +38,7 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Excel Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [Excel Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
- [Excel Connection Manager](../../2014/integration-services/excel-connection-manager.md)   
- [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../2014/integration-services/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Excel Connection Manager](connection-manager/excel-connection-manager.md)   
+ [Loop through Excel Files and Tables by Using a Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

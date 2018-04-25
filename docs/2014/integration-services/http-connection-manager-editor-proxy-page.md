@@ -22,7 +22,7 @@ manager: "jhubbard"
 # HTTP Connection Manager Editor (Proxy Page)
   Use the **Proxy** tab of the **HTTP Connection Manager Editor** dialog box to configure the HTTP Connection Manager to use a proxy server. An HTTP connection enables a package to access a Web server by using HTTP to send or receive files.  
   
- To learn more about the HTTP connection manager, see [HTTP Connection Manager](../../2014/integration-services/http-connection-manager.md). To learn more about a common usage scenario for the HTTP Connection Manager, see [Web Service Task](../../2014/integration-services/web-service-task.md).  
+ To learn more about the HTTP connection manager, see [HTTP Connection Manager](connection-manager/http-connection-manager.md). To learn more about a common usage scenario for the HTTP Connection Manager, see [Web Service Task](control-flow/web-service-task.md).  
   
 ## Options  
  **Use proxy**  

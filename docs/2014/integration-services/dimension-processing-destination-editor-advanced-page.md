@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Dimension Processing Destination Editor (Advanced Page)
   Use the **Advanced** page of the **Dimension Processing Destination Editor** dialog box to configure error handling.  
   
- To learn more about the Dimension Processing destination, see [Dimension Processing Destination](../../2014/integration-services/dimension-processing-destination.md).  
+ To learn more about the Dimension Processing destination, see [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
 ## Options  
  **Use default error configuration.**  

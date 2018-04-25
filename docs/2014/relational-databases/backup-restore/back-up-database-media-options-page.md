@@ -84,7 +84,7 @@ manager: "jhubbard"
  The backup operation is to continue even after encountering one or more errors.  
   
 ### Transaction log  
- The options of the **Transaction log** panel control the behavior of a transaction log backup. These options are relevant only under the full recovery model or bulk-logged recovery model. They are activated only if **Transaction log** has been selected in the **Backup type** field on the [General](back-up-database-general-page.md) page of the **Back Up Database** dialog box.  
+ The options of the **Transaction log** panel control the behavior of a transaction log backup. These options are relevant only under the full recovery model or bulk-logged recovery model. They are activated only if **Transaction log** has been selected in the **Backup type** field on the [General](../../integration-services/general-page-of-integration-services-designers-options.md) page of the **Back Up Database** dialog box.  
   
 > [!NOTE]  
 >  For information about transaction log backups, see [Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
@@ -98,7 +98,7 @@ manager: "jhubbard"
  Selecting this option is equivalent to specifying WITH NO_TRUNCATE, NORECOVERY in a [BACKUP](~/t-sql/statements/backup-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]). For more information, see [Tail-Log Backups &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
   
 ### Tape drive  
- The options of the **Tape drive** panel control tape management during the backup operation. These options are activated only if **Tape** has been selected in the **Destination** panel on the [General](back-up-database-general-page.md) page of the **Back Up Database** dialog box.  
+ The options of the **Tape drive** panel control tape management during the backup operation. These options are activated only if **Tape** has been selected in the **Destination** panel on the [General](../../integration-services/general-page-of-integration-services-designers-options.md) page of the **Back Up Database** dialog box.  
   
 > [!NOTE]  
 >  For information about how to use tape devices, see [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md).  

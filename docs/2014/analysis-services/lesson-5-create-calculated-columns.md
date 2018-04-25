@@ -23,7 +23,7 @@ manager: "jhubbard"
  Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
- This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 5: Create Relationships](lesson-4-create-relationships.md).  
+ This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 5: Create Relationships](../integration-services/data-flow/transformations/create-relationships.md).  
   
 ## Create Calculated Columns  
   

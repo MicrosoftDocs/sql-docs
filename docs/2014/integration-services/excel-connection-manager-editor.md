@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Excel Connection Manager Editor
   Use the **Excel Connection Manager Editor** dialog box to add a connection to an existing or a new [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] workbook file.  
   
- To learn more about the Excel connection manager, see [Excel Connection Manager](../../2014/integration-services/excel-connection-manager.md).  
+ To learn more about the Excel connection manager, see [Excel Connection Manager](connection-manager/excel-connection-manager.md).  
   
 > [!NOTE]  
 >  You cannot connect to a password-protected Excel file.  
@@ -52,6 +52,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../2014/integration-services/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Loop through Excel Files and Tables by Using a Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

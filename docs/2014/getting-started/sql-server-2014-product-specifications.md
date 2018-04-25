@@ -30,16 +30,16 @@ manager: "jhubbard"
 # SQL Server 2014 Product Specifications
   The topics in the following table provide product specification details for this release:  
   
- [Compute Capacity Limits by Edition of SQL Server](../../2014/getting-started/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
  The maximum number of processors supported by each edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Editions and Components of SQL Server 2014](../../2014/getting-started/editions-and-components-of-sql-server-2014.md)  
+ [Editions and Components of SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)  
  Selecting components and features to install.  
   
  [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
  The features supported by each edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Maximum Capacity Specifications for SQL Server](../../2014/getting-started/maximum-capacity-specifications-for-sql-server.md)  
+ [Maximum Capacity Specifications for SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
  Maximum capacities for various [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  
   
   

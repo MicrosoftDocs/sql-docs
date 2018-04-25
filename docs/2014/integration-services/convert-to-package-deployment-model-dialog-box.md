@@ -33,8 +33,8 @@ manager: "jhubbard"
 >  To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
 ## See Also  
- [Deployment of Projects and Packages](../../2014/integration-services/deployment-of-projects-and-packages.md)   
- [Package Deployment &#40;SSIS&#41;](../../2014/integration-services/package-deployment-ssis.md)   
+ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [Package Deployment &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
   
   

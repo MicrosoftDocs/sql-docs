@@ -38,13 +38,13 @@ manager: "jhubbard"
   
 5.  Optionally, type an assignment expression in the **AssignExpression** text box.  
   
-6.  Optionally, click **Expressions** and, on the **Expressions** page, create property expressions for the properties of the For Loop container. For more information, see [Add or Change a Property Expression](../../2014/integration-services/add-or-change-a-property-expression.md).  
+6.  Optionally, click **Expressions** and, on the **Expressions** page, create property expressions for the properties of the For Loop container. For more information, see [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md).  
   
 7.  Click **OK** to close the **For Loop Editor**.  
   
 ## See Also  
- [For Loop Container](../../2014/integration-services/for-loop-container.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md)   
- [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md)  
+ [For Loop Container](control-flow/for-loop-container.md)   
+ [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)   
+ [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md)  
   
   

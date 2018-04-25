@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Multiple Flat Files Connection Manager Editor (General Page)
   Use the **General** page of the **Multiple Flat Files Connection Manager Editor** dialog box to select a group of files that have the same data format, and to specify their data format. A multiple flat files connection enables a package to connect to a group of text files that have the same format.  
   
- To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](../../2014/integration-services/multiple-flat-files-connection-manager.md).  
+ To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
 ## Options  
  **Connection manager name**  

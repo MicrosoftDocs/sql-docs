@@ -22,11 +22,11 @@ manager: "jhubbard"
 # Fuzzy Lookup Transformation Editor (Columns Tab)
   Use the **Columns** tab of the **Fuzzy Lookup Transformation Editor** dialog box to set properties for input and output columns.  
   
- To learn more about the Fuzzy Lookup transformation, see [Fuzzy Lookup Transformation](../../2014/integration-services/fuzzy-lookup-transformation.md).  
+ To learn more about the Fuzzy Lookup transformation, see [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **Available Input Columns**  
- Drag input columns to connect them to available lookup columns. These columns must have matching, supported data types. Select a mapping line and right-click to edit the mappings in the [Create Relationships](../../2014/integration-services/create-relationships.md) dialog box.  
+ Drag input columns to connect them to available lookup columns. These columns must have matching, supported data types. Select a mapping line and right-click to edit the mappings in the [Create Relationships](data-flow/transformations/create-relationships.md) dialog box.  
   
  **Name**  
  View the names of the available input columns.  

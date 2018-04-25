@@ -82,7 +82,7 @@ manager: "mblythe"
  On the other hand, if you change the data source connection string to a different database from the previous generation, no error is generated. The new database is used, and no change is made to the previous database.  
   
 ## See Also  
- [Manage Changes to Data Source Views and Data Sources](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Manage Changes to Data Source Views and Data Sources](../../integration-services/connection-manager/data-sources.md)   
  [Schema Generation Wizard &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

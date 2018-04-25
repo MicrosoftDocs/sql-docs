@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Multicast Transformation Editor
   Use the **Multicast Transformation Editor** dialog box to view and set the properties for each transformation output.  
   
- To learn more about the Multicast Transformation, see [Multicast Transformation](../../2014/integration-services/multicast-transformation.md).  
+ To learn more about the Multicast Transformation, see [Multicast Transformation](data-flow/transformations/multicast-transformation.md).  
   
 ## Options  
  **Outputs**  
@@ -33,6 +33,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Conditional Split Transformation](../../2014/integration-services/conditional-split-transformation.md)  
+ [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)  
   
   

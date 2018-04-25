@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Save a Copy of a Package](../../2014/integration-services/save-a-copy-of-a-package.md)   
- [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md)   
+ [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

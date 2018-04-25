@@ -39,12 +39,12 @@ manager: "jhubbard"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gives you the ability to import and export packages, and by doing this change the storage format and location of packages. Using the import and export features, you can add packages to the file system, package store, or msdb database, and copy packages from one storage format to another. For example, packages saved in msdb can be copied to the file system and vice versa.  
   
- You can also copy a package to a different format using the **dtutil** command prompt utility (dtutil.exe). For more information, see [dtutil Utility](../../2014/integration-services/dtutil-utility.md).  
+ You can also copy a package to a different format using the **dtutil** command prompt utility (dtutil.exe). For more information, see [dtutil Utility](dtutil-utility.md).  
   
 ## To import or export a package  
   
 > [!IMPORTANT]  
->  This topic discusses the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service that is part of [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supports the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service for backward compatibility with [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. For information about managing packages in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], see [Integration Services &#40;SSIS&#41; Server](../../2014/integration-services/integration-services-ssis-server.md).  
+>  This topic discusses the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service that is part of [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supports the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service for backward compatibility with [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. For information about managing packages in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], see [Integration Services &#40;SSIS&#41; Server](catalog/integration-services-ssis-server-and-catalog.md).  
   
  You can import or export an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package from or to the following locations:  
   
@@ -131,6 +131,6 @@ manager: "jhubbard"
 8.  Click **OK** to complete the export.  
   
 ## See Also  
- [Package Management &#40;SSIS Service&#41;](../../2014/integration-services/package-management-ssis-service.md)  
+ [Package Management &#40;SSIS Service&#41;](service/package-management-ssis-service.md)  
   
   

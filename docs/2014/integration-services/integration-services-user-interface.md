@@ -77,10 +77,10 @@ manager: "jhubbard"
   
 |Editor type|Access|  
 |-----------------|------------|  
-|Container. For more information, see [Integration Services Containers](../../2014/integration-services/integration-services-containers.md).|On the design surface of the **Control Flow** tab, double-click the container.|  
-|Task. For more information, see [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md).|On the design surface of the **Control Flow** tab, double-click the task.|  
+|Container. For more information, see [Integration Services Containers](control-flow/integration-services-containers.md).|On the design surface of the **Control Flow** tab, double-click the container.|  
+|Task. For more information, see [Integration Services Tasks](control-flow/integration-services-tasks.md).|On the design surface of the **Control Flow** tab, double-click the task.|  
 |Source.|On the design surface of the **Data Flow** tab, double-click the source.|  
-|Transformation. For more information, see [Integration Services Transformations](../../2014/integration-services/integration-services-transformations.md).|On the design surface of the **Data Flow** tab, double-click the transformation.|  
+|Transformation. For more information, see [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md).|On the design surface of the **Data Flow** tab, double-click the transformation.|  
 |Destination.|On the design surface of the **Data Flow** tab, double-click the destination.|  
   
 ## Advanced Editor  
@@ -112,9 +112,9 @@ manager: "jhubbard"
  For more information about additional windows and menus, see the Visual Studio documentation.  
   
 ## Related Tasks  
- For information about how to create packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md)  
+ For information about how to create packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)  
   
 ## See Also  
- [SSIS Designer](../../2014/integration-services/ssis-designer.md)  
+ [SSIS Designer](ssis-designer.md)  
   
   

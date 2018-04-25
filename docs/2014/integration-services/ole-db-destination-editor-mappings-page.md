@@ -22,7 +22,7 @@ manager: "jhubbard"
 # OLE DB Destination Editor (Mappings Page)
   Use the **Mappings** page of the **OLE DB Destination Editor** dialog box to map input columns to destination columns.  
   
- To learn more about the OLE DB destination, see [OLE DB Destination](../../2014/integration-services/ole-db-destination.md).  
+ To learn more about the OLE DB destination, see [OLE DB Destination](data-flow/ole-db-destination.md).  
   
 ## Options  
  **Available Input Columns**  
@@ -41,6 +41,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB Destination Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [OLE DB Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
- [Load Data by Using the OLE DB Destination](../../2014/integration-services/load-data-by-using-the-ole-db-destination.md)  
+ [Load Data by Using the OLE DB Destination](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

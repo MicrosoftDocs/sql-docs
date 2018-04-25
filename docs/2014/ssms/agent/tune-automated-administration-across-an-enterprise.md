@@ -23,6 +23,6 @@ manager: "jhubbard"
   Multiserver administration with Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent takes advantage of the self-tuning features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Therefore, under normal conditions, additional job tuning is not necessary. However, network loads increase when you run jobs, generate alerts, and notify operators. You can tune automated administration across an enterprise to minimize the network traffic these activities cause.  
   
 ## See Also  
- [Performance Counters](../../integration-services/performance-counters.md)  
+ [Performance Counters](../../integration-services/performance/performance-counters.md)  
   
   

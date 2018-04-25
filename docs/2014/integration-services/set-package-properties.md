@@ -63,7 +63,7 @@ manager: "jhubbard"
  The following tables list the package properties by category.  
   
 ###  <a name="Checkpoints"></a> Checkpoints  
- You can use the properties in this category to restart the package from a point of failure in the package control flow, instead of rerunning the package from the beginning of its control flow. For more information, see [Restart Packages by Using Checkpoints](../../2014/integration-services/restart-packages-by-using-checkpoints.md).  
+ You can use the properties in this category to restart the package from a point of failure in the package control flow, instead of rerunning the package from the beginning of its control flow. For more information, see [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md).  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -72,7 +72,7 @@ manager: "jhubbard"
 |`SaveCheckpoints`|Specifies whether the checkpoints are written to the checkpoint file when the package runs. The default value of this property is `False`.|  
   
 > [!NOTE]  
->  The `/CheckPointing on` option of dtexec is equivalent to setting the `SaveCheckpoints` property of the package to True, and the `CheckpointUsage` property to Always. For more information, see [dtexec Utility](../../2014/integration-services/dtexec-utility.md).  
+>  The `/CheckPointing on` option of dtexec is equivalent to setting the `SaveCheckpoints` property of the package to True, and the `CheckpointUsage` property to Always. For more information, see [dtexec Utility](packages/dtexec-utility.md).  
   
 ###  <a name="Execution"></a> Execution  
  The properties in this category configure the run-time behavior of the package object.  
@@ -111,12 +111,12 @@ manager: "jhubbard"
 |`PackageType`|The package type. The values are `Default`, `DTSDesigner`, `DTSDesigner100`, `DTSWizard`, `SQLDBMaint`, and `SQLReplication`. The default value of this property is `Default`. For more information, see <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
 ###  <a name="Misc"></a> Misc  
- The properties in this category are used to access the configurations and expressions that a package uses and to provide information about the locale and logging mode of the package. For more information, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).  
+ The properties in this category are used to access the configurations and expressions that a package uses and to provide information about the locale and logging mode of the package. For more information, see [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md).  
   
 |Property|Description|  
 |--------------|-----------------|  
 |`Configurations`|The collection of configurations that the package uses. Click the browse button **(…)** to view and configure package configurations.|  
-|`Expressions`|Click the browse button **(…)** to create expressions for package properties.<br /><br /> Note: You can create property expressions for all the package properties that object model includes, not just the properties listed in the Properties window.<br /><br /> For more information, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).<br /><br /> To view existing property expressions, expand `Expressions`. Click the browse button **(…)** in an expression text box to modify and evaluate an expression.|  
+|`Expressions`|Click the browse button **(…)** to create expressions for package properties.<br /><br /> Note: You can create property expressions for all the package properties that object model includes, not just the properties listed in the Properties window.<br /><br /> For more information, see [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md).<br /><br /> To view existing property expressions, expand `Expressions`. Click the browse button **(…)** in an expression text box to modify and evaluate an expression.|  
 |`ForceExecutionResult`|The execution result of the package. The values are `None`, `Success`, `Failure`, and `Completion`. The default value of this property is `None`. For more information, see T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |`LocaleId`|A Microsoft Win32 locale. The default value of this property is the locale of the operating system on the local computer.|  
 |`LoggingMode`|A value that specifies the logging behavior of the package. The values are `Disabled`, `Enabled`, and `UseParentSetting`. The default value of this property is `UseParentSetting`. For more information, see <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
@@ -125,7 +125,7 @@ manager: "jhubbard"
 |`UpdateObjects`|Indicates whether the package is updated to use newer versions of the objects it contains, if newer versions are available. For example, if this property is set to `True`, a package that includes a Bulk Insert task is updated to use the newer version of the Bulk Insert task that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides. The default value of this property is `False`.|  
   
 ###  <a name="Security"></a> Security  
- The properties in this category are used to set the protection level of the package. For more information, see [Access Control for Sensitive Data in Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md).  
+ The properties in this category are used to set the protection level of the package. For more information, see [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
 |Property|Description|  
 |--------------|-----------------|  

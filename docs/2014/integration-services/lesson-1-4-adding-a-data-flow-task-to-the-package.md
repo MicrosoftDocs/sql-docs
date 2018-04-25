@@ -37,9 +37,9 @@ manager: "jhubbard"
 4.  Right-click the Data Flow task, click **Properties**, and in the Properties window, verify that the `LocaleID` property is set to **English (United States)**.  
   
 ## Next Task in Lesson  
- [Step 5: Adding and Configuring the Flat File Source](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [Step 5: Adding and Configuring the Flat File Source](data-flow/flat-file-source.md)  
   
 ## See Also  
- [Data Flow Task](data-flow-task.md)  
+ [Data Flow Task](control-flow/data-flow-task.md)  
   
   

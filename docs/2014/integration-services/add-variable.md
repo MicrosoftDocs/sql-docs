@@ -42,8 +42,8 @@ manager: "jhubbard"
  Select to make the variable read-only.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)   
- [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Integration Services Data Types](data-flow/integration-services-data-types.md)   
  [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)  
   
   

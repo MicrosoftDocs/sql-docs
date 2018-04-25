@@ -39,9 +39,9 @@ manager: "jhubbard"
  Click to configure a selected data viewer by using the **Configure Data Viewer** dialog box.  
   
 ## See Also  
- [Data Flow Path Editor &#40;General Page&#41;](../../2014/integration-services/data-flow-path-editor-general-page.md)   
+ [Data Flow Path Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Data Flow Path Editor &#40;Metadata Page&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Use Annotations in Packages](../../2014/integration-services/use-annotations-in-packages.md)  
+ [Data Flow](data-flow/data-flow.md)   
+ [Use Annotations in Packages](use-annotations-in-packages.md)  
   
   

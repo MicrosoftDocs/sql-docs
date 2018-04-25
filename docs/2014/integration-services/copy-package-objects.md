@@ -60,9 +60,9 @@ manager: "jhubbard"
 6.  Right-click in the **Connection Managers** area and click **Paste**.  
   
 ## See Also  
- [Control Flow](../../2014/integration-services/control-flow.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Integration Services &#40;SSIS&#41; Connections](../../2014/integration-services/integration-services-ssis-connections.md)   
+ [Control Flow](control-flow/control-flow.md)   
+ [Data Flow](data-flow/data-flow.md)   
+ [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md)   
  [Copy Project Items](../../2014/integration-services/copy-project-items.md)  
   
   

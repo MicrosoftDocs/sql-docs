@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Excel Source Editor (Error Output Page)
   Use the **Error Output** page of the **Excel Source Editor** dialog box to select error handling options and to set properties on error output columns.  
   
- To learn more about the Excel source, see [Excel Source](../../2014/integration-services/excel-source.md).  
+ To learn more about the Excel source, see [Excel Source](data-flow/excel-source.md).  
   
 ## Options  
  **Input or Output**  
@@ -34,7 +34,7 @@ manager: "jhubbard"
  **Error**  
  Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
   
- **Related Topics:** [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ **Related Topics:** [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Specify what should happen when a truncation occurs: ignore the failure, redirect the row, or fail the component.  
@@ -52,7 +52,7 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Excel Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [Excel Source Editor &#40;Columns Page&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Excel Connection Manager](../../2014/integration-services/excel-connection-manager.md)   
- [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../2014/integration-services/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Excel Connection Manager](connection-manager/excel-connection-manager.md)   
+ [Loop through Excel Files and Tables by Using a Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

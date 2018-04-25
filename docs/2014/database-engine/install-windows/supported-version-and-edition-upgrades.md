@@ -57,7 +57,7 @@ manager: "jhubbard"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64-bit versions can be upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64-bit server only.  
   
 > [!NOTE]  
->  When you upgrade to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] from a prior version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choose between Enterprise Edition: Core-based Licensing and Enterprise Edition. These Enterprise editions differ only with respect to the licensing modes and the maximum number of cores supported. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../getting-started/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  When you upgrade to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] from a prior version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choose between Enterprise Edition: Core-based Licensing and Enterprise Edition. These Enterprise editions differ only with respect to the licensing modes and the maximum number of cores supported. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] supports upgrade from the following versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

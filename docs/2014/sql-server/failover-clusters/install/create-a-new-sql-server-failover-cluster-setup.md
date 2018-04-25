@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 6.  The System Configuration Checker verifies the system state of your computer before Setup continues. After the check is complete, click **Next** to continue. You can view the details on the screen by clicking **Show Details**, or as an HTML report by clicking **View detailed report**.  
   
-7.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2014](../../../getting-started/editions-and-components-of-sql-server-2014.md).  
+7.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
   
 8.  On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Click **Next** to continue. To end Setup, click **Cancel**.  
   
@@ -250,7 +250,7 @@ manager: "jhubbard"
   
      To continue, click **Next**.  
   
-8.  On the Product key page, click to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2014](../../../getting-started/editions-and-components-of-sql-server-2014.md).  
+8.  On the Product key page, click to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
   
     > [!NOTE]  
     >  You must specify the same product key on all the nodes that you are preparing for the same failover cluster.  

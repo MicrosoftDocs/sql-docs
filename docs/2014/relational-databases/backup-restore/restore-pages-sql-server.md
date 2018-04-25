@@ -114,7 +114,7 @@ manager: "jhubbard"
 3.  Right-click the database, point to **Tasks**, point to **Restore**, and then click **Page**, which opens the **Restore Page** dialog box.  
   
      **Restore**  
-     This section performs the same function as that of **Restore to** on the [Restore Database (General Page)](restore-database-general-page.md).  
+     This section performs the same function as that of **Restore to** on the [Restore Database (General Page)](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
      **Database**  
      Specifies the database to restore. You can enter a new database or select an existing database from the drop-down list. The list includes all databases on the server, except the system databases **master** and **tempdb**.  

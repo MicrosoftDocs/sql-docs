@@ -46,6 +46,6 @@ manager: "jhubbard"
  [Lesson 5: Adding Package Configurations for the Package Deployment Model](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## See Also  
- [Execution of Projects and Packages](../../2014/integration-services/execution-of-projects-and-packages.md)  
+ [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md)  
   
   

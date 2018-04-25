@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ODBC Source Editor (Columns Page)
   Use the **Columns** page of the **ODBC Source Editor** dialog box to map an output column to each external (source) column.  
   
- To learn more about the ODBC source, see [ODBC Source](../../2014/integration-services/odbc-source.md).  
+ To learn more about the ODBC source, see [ODBC Source](data-flow/odbc-source.md).  
   
 ## Task List  
  **To open the ODBC Source Editor Columns Page**  

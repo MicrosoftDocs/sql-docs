@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Term Lookup Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Lookup Transformation Editor** dialog box to specify whether lookup should be case-sensitive.  
   
- To learn more about the Term Lookup transformation, see [Term Lookup Transformation](../../2014/integration-services/term-lookup-transformation.md).  
+ To learn more about the Term Lookup transformation, see [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **Use case-sensitive term lookup**  
@@ -35,6 +35,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Term Lookup Transformation Editor &#40;Reference Table Tab&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
  [Term Lookup Transformation Editor &#40;Term Lookup Tab&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [Term Extraction Transformation](../../2014/integration-services/term-extraction-transformation.md)  
+ [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md)  
   
   

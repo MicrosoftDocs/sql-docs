@@ -47,7 +47,7 @@ manager: "jhubbard"
  Lists the file names that the restored files are to be saved as. Enter or search for the appropriate file name.  
   
 ## See Also  
- [Restore Database &#40;General Page&#41;](restore-database-general-page.md)   
+ [Restore Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Restore Database &#40;Options Page&#41;](restore-database-options-page.md)   
  [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   

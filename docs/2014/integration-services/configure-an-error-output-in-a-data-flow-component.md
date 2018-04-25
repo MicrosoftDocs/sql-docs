@@ -92,6 +92,6 @@ manager: "jhubbard"
 8.  To save the updated package, on the **File** menu, click **Save Selected Items**.  
   
 ## See Also  
- [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
   

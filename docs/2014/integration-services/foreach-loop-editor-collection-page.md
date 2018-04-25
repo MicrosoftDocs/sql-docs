@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Foreach Loop Editor (Collection Page)
   Use the **Collection** pageof the **Foreach Loop Editor** dialog box to specify the enumerator type and configure the enumerator.  
   
- To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../2014/integration-services/foreach-loop-container.md) and [Configure a Foreach Loop Container](../../2014/integration-services/configure-a-foreach-loop-container.md).  
+ To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## Static Options  
  **Enumerator**  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  **Expressions**  
  Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(…)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
   
- **Related Topics:**  [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md), [Property Expressions Editor](../../2014/integration-services/property-expressions-editor.md), [Expression Builder](../../2014/integration-services/expression-builder.md)  
+ **Related Topics:**  [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [Property Expressions Editor](expressions/property-expressions-editor.md), [Expression Builder](expressions/expression-builder.md)  
   
 ## Enumerator Dynamic Options  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The variable must have the Object data type, otherwise an error occurs.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   
  **Rows in first table**  
  Select to enumerate only rows in the first table.  
@@ -138,7 +138,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The ADO.NET connection manager must use a .NET provider for OLE DB. If connecting to SQL Server, the recommended provider to use is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, listed in the **.Net Providers for OleDb** section of the **Connection Manager** dialog box.  
   
- **Related Topics:** [ADO Connection Manager](../../2014/integration-services/ado-connection-manager.md), [Configure ADO.NET Connection Manager](../../2014/integration-services/configure-ado-net-connection-manager.md)  
+ **Related Topics:** [ADO Connection Manager](connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)  
   
  **Schema**  
  Select the schema to enumerate.  
@@ -154,7 +154,7 @@ manager: "jhubbard"
  **Variable**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   
 ### Enumerator = Foreach NodeList Enumerator  
  You use the Foreach Nodelist enumerator to enumerate the set of XML nodes that results from applying an XPath expression to an XML file. For example, if the Foreach Loop includes a Script task, you can use the Foreach NodeList enumerator to pass a value that meets the XPath expression criteria from the XML file to the Script task.  
@@ -177,11 +177,11 @@ manager: "jhubbard"
   
  If **DocumentSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  If **DocumentSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md).  
   
  **EnumerationType**  
  Select an enumeration type from the list. This property has the options listed in the following table.  
@@ -207,11 +207,11 @@ manager: "jhubbard"
   
  If **OuterXPathStringSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  If **OuterXPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
  If **EnumerationType** is set to `ElementCollection`, select the type of inner element in the list.  
@@ -230,11 +230,11 @@ manager: "jhubbard"
   
  If **InnerXPathStringSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  If **InnerXPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md).  
   
 ### Enumerator = Foreach SMO Enumerator  
  You use the Foreach SMO enumerator to enumerate SQL Server Management Object (SMO) objects. For example, if the Foreach Loop includes an Execute SQL task, you can use the Foreach SMO enumerator to enumerate the tables in the **AdventureWorks** database and run queries that counts the number of rows in each table.  
@@ -242,7 +242,7 @@ manager: "jhubbard"
  **Connection**  
  Select an existing ADO.NET connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- Related Topics: [ADO.NET Connection Manager](../../2014/integration-services/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../2014/integration-services/configure-ado-net-connection-manager.md)  
+ Related Topics: [ADO.NET Connection Manager](../../2014/integration-services/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)  
   
  **Enumerate**  
  Specify the SMO object to enumerate.  
@@ -258,7 +258,7 @@ manager: "jhubbard"
  **Azure storage connection manager**  
  Select an existing Azure Storage Connection Manager or create a new one that refers to an Azure Storage Account.  
   
- Related Topics: [Azure Storage Connection Manager](../../2014/integration-services/azure-storage-connection-manager.md).  
+ Related Topics: [Azure Storage Connection Manager](connection-manager/azure-storage-connection-manager.md).  
   
  **Blob container name**  
  Specify the name of the blob container that contains the blob files to be enumerated..  
@@ -294,9 +294,9 @@ Specifies whether to search recursively within the specified directory.
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Foreach Loop Editor &#40;General Page&#41;](../../2014/integration-services/foreach-loop-editor-general-page.md)   
+ [Foreach Loop Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Foreach Loop Editor &#40;Variable Mappings Page&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [For Loop Container](../../2014/integration-services/for-loop-container.md)  
+ [Expressions Page](expressions/expressions-page.md)   
+ [For Loop Container](control-flow/for-loop-container.md)  
   
   

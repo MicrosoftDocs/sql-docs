@@ -63,7 +63,7 @@ manager: "jhubbard"
 9. On the **File** menu, click **Exit**.  
   
 ## See Also  
- [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md)   
- [Identify the Source of Packages with Digital Signatures](../../2014/integration-services/identify-the-source-of-packages-with-digital-signatures.md)  
+ [Security Overview &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Identify the Source of Packages with Digital Signatures](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

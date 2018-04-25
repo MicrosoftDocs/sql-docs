@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Message Queue Task Editor (Send Page)
   Use the **Send** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to send messages from a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  
   
- To learn about this task, see [Message Queue Task](../../2014/integration-services/message-queue-task.md).  
+ To learn about this task, see [Message Queue Task](control-flow/message-queue-task.md).  
   
 ## Options  
  **UseEncryption**  
@@ -64,8 +64,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Message Queue Task Editor &#40;General Page&#41;](../../2014/integration-services/message-queue-task-editor-general-page.md)   
+ [Message Queue Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Message Queue Task Editor &#40;Receive Page&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

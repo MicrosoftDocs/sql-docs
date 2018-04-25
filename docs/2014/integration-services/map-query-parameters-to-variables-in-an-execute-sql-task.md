@@ -25,7 +25,7 @@ manager: "jhubbard"
 # Map Query Parameters to Variables in an Execute SQL Task
   This topic describes how to use a parameterized SQL statement in the Execute SQL task and create mappings between variables and the parameters in the SQL statement.  
   
- To learn more about the Execute SQL task, the parameter markers, and parameter names you use with different connection types, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+ To learn more about the Execute SQL task, the parameter markers, and parameter names you use with different connection types, see [Execute SQL Task](control-flow/execute-sql-task.md) and [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 ### To map a query parameter to a variable  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 3.  Click the **Control Flow** tab.  
   
-4.  If the package does not already include an Execute SQL task, add one to the control flow of the package. For more information, see [Add or Delete a Task or a Container in a Control Flow](../../2014/integration-services/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
+4.  If the package does not already include an Execute SQL task, add one to the control flow of the package. For more information, see [Add or Delete a Task or a Container in a Control Flow](control-flow/control-flow.md).  
   
 5.  Double-click the Execute SQL task.  
   
@@ -100,8 +100,8 @@ manager: "jhubbard"
 14. Click **OK**.  
   
 ## See Also  
- [Execute SQL Task](../../2014/integration-services/execute-sql-task.md)   
+ [Execute SQL Task](control-flow/execute-sql-task.md)   
  [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)  
   
   

@@ -24,7 +24,7 @@ manager: "jhubbard"
   This procedure describes how to create a package configuration that uses the parent variable configuration type. This configuration type enables a child package that is run from a parent package to access a variable in the parent.  
   
 > [!NOTE]  
->  You can also pass values to a child package by configuring the Execute Package Task to map parent package variables or parameters, or project parameters, to child package parameters. For more information, see [Execute Package Task](../../2014/integration-services/execute-package-task.md).  
+>  You can also pass values to a child package by configuring the Execute Package Task to map parent package variables or parameters, or project parameters, to child package parameters. For more information, see [Execute Package Task](control-flow/execute-package-task.md).  
   
  It is not necessary to create the variable in the parent package before you create the package configuration in the child package. You can add the variable to the parent package at any time, but you must use the exact name of the parent variable in the package configuration. However, before you can create a parent variable configuration, there must be an existing variable in the child package that the configuration can update. For more information about adding and configuring variables, see [Add, Delete, Change Scope of User-Defined Variable in a Package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
   
@@ -104,7 +104,7 @@ manager: "jhubbard"
 ## See Also  
  [Package Configurations](../../2014/integration-services/package-configurations.md)   
  [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)   
- [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
  [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)  
   
   

@@ -23,9 +23,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Add Expressions to Precedence Constraints
-  A precedence constraint can use an expression to define the constraint between two executables: the precedence executable and the constrained executable. The executables can be tasks or containers. The expression can be used alone or in combination with the execution result of the precedence executable. The execution result of an executable is either success or failure. When you configure the execution result of a precedence constraint, you can set the execution result to `Success`, `Failure`, or `Completion`. `Success` requires that the precedence executable succeed, `Failure` requires that the precedence executable fail, and `Completion` indicates that the constrained executable should run regardless of whether the precedence task succeeds or fails. For more information, see [Precedence Constraints](../../2014/integration-services/precedence-constraints.md).  
+  A precedence constraint can use an expression to define the constraint between two executables: the precedence executable and the constrained executable. The executables can be tasks or containers. The expression can be used alone or in combination with the execution result of the precedence executable. The execution result of an executable is either success or failure. When you configure the execution result of a precedence constraint, you can set the execution result to `Success`, `Failure`, or `Completion`. `Success` requires that the precedence executable succeed, `Failure` requires that the precedence executable fail, and `Completion` indicates that the constrained executable should run regardless of whether the precedence task succeeds or fails. For more information, see [Precedence Constraints](control-flow/precedence-constraints.md).  
   
- The expression must evaluate to `True` or `False` and it must be a valid [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression. The expression can use literals, system and custom variables, and the functions and operators that the [!INCLUDE[ssIS](../includes/ssis-md.md)] expression grammar provides. For example, the expression `@Count == SQRT(144) + 10` uses the variable `Count`, the SQRT function , and the equal (==) and add (+) operators. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md).  
+ The expression must evaluate to `True` or `False` and it must be a valid [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] expression. The expression can use literals, system and custom variables, and the functions and operators that the [!INCLUDE[ssIS](../includes/ssis-md.md)] expression grammar provides. For example, the expression `@Count == SQRT(144) + 10` uses the variable `Count`, the SQRT function , and the equal (==) and add (+) operators. For more information, see [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md).  
   
  In the following illustration, task A and task B are linked by a precedence constraint that uses an execution result and an expression. The constraint value is set to `Success` and the expression is  `@X >== @Z`. Task B, the constrained task, runs only if task A completes successfully and the value of variable `X` is greater than or equal to the value of variable `Z`.  
   
@@ -68,6 +68,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Multiple Precedence Constraints](../../2014/integration-services/multiple-precedence-constraints.md)   
- [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)  
+ [Precedence Constraints](control-flow/precedence-constraints.md)  
   
   

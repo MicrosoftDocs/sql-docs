@@ -20,9 +20,9 @@ manager: "jhubbard"
 # Cache Transformation Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **Cache Transformation Editor** dialog box to select an existing Cache connection manager or create a new one.  
   
- To learn more about the Cache Transform transformation, see [Cache Transform](../../2014/integration-services/cache-transform.md).  
+ To learn more about the Cache Transform transformation, see [Cache Transform](data-flow/transformations/cache-transform.md).  
   
- To learn more about the Cache connection manager, see [Cache Connection Manager](../../2014/integration-services/cache-connection-manager.md).  
+ To learn more about the Cache connection manager, see [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## Options  
  **Cache connection manager**  

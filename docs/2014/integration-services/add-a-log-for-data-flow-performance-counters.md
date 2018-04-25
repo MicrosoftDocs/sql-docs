@@ -61,7 +61,7 @@ manager: "jhubbard"
     >  You must start the Performance Logs and Alerts service using a local account or a domain account that is a member of the Administrators group.  
   
 ## See Also  
- [Performance Counters](../../2014/integration-services/performance-counters.md)   
+ [Performance Counters](performance/performance-counters.md)   
  [View Log Entries in the Log Events Window](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   
   

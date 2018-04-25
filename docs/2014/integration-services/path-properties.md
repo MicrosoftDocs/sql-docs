@@ -37,9 +37,9 @@ manager: "jhubbard"
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|The output associated with the path.|  
   
 ## See Also  
- [Integration Services Paths](../../2014/integration-services/integration-services-paths.md)   
+ [Integration Services Paths](data-flow/integration-services-paths.md)   
  [Common Properties](../../2014/integration-services/common-properties.md)   
- [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md)   
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
  [Data Flow Properties that Can Be Set by Using Expressions](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  
   
   

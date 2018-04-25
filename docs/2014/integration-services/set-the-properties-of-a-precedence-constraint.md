@@ -68,7 +68,7 @@ manager: "jhubbard"
     |--------------------------|--------------------------|  
     |Description|Provide a description.|  
     |EvalOp|Select an evaluation operation. If the `Expression`, **ExpressionAndConstant**, or **ExpressionOrConstant** operation is selected, you can specify an expression.|  
-    |Expression|If the evaluation operation includes and expression, provide an expression. The expression must evaluate to a Boolean. For more information about the expression language, see [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md).|  
+    |Expression|If the evaluation operation includes and expression, provide an expression. The expression must evaluate to a Boolean. For more information about the expression language, see [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Set `LogicalAnd` to specify whether the precedence constraint is evaluated in concert with other precedence constraints, when multiple executables precede and are linked to the constrained executable|  
     |Name|Update the name of the precedence constraint.|  
     |ShowAnnotation|Specify the type of annotation to use. Choose **Never** to disable annotations, **AsNeeded** to enable annotation on demand, **ConstraintName** to automatically annotate using the value of the Name property, **ConstraintDescription** to automatically annotate using the value of the Description property, and **ConstraintOptions** to automatically annotate using the values of the Value and Expression properties.|  
@@ -79,7 +79,7 @@ manager: "jhubbard"
 6.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)   
+ [Precedence Constraints](control-flow/precedence-constraints.md)   
  [Connect Tasks and Containers by Using a Default Precedence Constraint](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Set the Value of a Precedence Constraint by Using the Shortcut Menu](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Use an Expression in a Precedence Constraint](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  

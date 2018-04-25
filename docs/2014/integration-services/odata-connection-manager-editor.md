@@ -34,6 +34,6 @@ manager: "jhubbard"
  Click this button to test connection to the OData source.  
   
 ## See Also  
- [OData Connection Manager](../../2014/integration-services/odata-connection-manager.md)  
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

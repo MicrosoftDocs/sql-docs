@@ -140,7 +140,7 @@ manager: "mblythe"
 ## See Also  
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Manage Report Data Sources](../../2014/reporting-services/manage-report-data-sources.md)   
+ [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../2014/reporting-services/configure-data-source-properties-for-a-report-report-manager.md)  

@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   The ValueType property contains the data type of the value in the Value property. When Value is set by an expression, ValueType is automatically updated to a data type that is compatible with the evaluation result of the expression. For example, if Value contains 0 and ValueType property contains **Int32** and you then set Expression to GETDATE(), Value contains the current date and time and ValueType is set to `DateTime`.  
   
--   The **Properties** window for the variable provides access to the **Expression Builder** dialog box. You can use this tool to build, validate, and evaluate expressions. For more information, see [Expression Builder](../../2014/integration-services/expression-builder.md) and [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md).  
+-   The **Properties** window for the variable provides access to the **Expression Builder** dialog box. You can use this tool to build, validate, and evaluate expressions. For more information, see [Expression Builder](expressions/expression-builder.md) and [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md).  
   
  When you use the **Variables** window to set expressions on a user-defined variable:  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   When you assign an expression to a variable, a special icon marker displays next to the variable. This special icon marker also displays next to connection managers and tasks that have expressions set on them.  
   
--   The **Variables** window for the variable provides access to the **Expression Builder** dialog box. You can use this tool to build, validate, and evaluate expressions. For more information, see [Expression Builder](../../2014/integration-services/expression-builder.md) and [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md).  
+-   The **Variables** window for the variable provides access to the **Expression Builder** dialog box. You can use this tool to build, validate, and evaluate expressions. For more information, see [Expression Builder](expressions/expression-builder.md) and [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md).  
   
  In both the **Variables** and **Properties** window, if you assign an expression to the variable, and `EvaluateAsExpression` is set to `True`, you cannot change the variable data type.  
   
@@ -90,12 +90,12 @@ manager: "jhubbard"
   
 7.  In the **Properties** window, update the read/write variable properties. Some properties are read/read only for user-defined variables.  
   
-     For more information about the properties, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).  
+     For more information about the properties, see [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
 8.  To save the updated package, on the **File** menu, click **Save Selected Items**.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
  [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)   
  [Add, Delete, Change Scope of User-Defined Variable in a Package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

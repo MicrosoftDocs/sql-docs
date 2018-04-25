@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ADO NET Destination Editor (Mappings Page)
   Use the **Mappings** page of the **ADO NET Destination Editor** dialog box to map input columns to destination columns.  
   
- To learn more about the ADO NET destination, see [ADO NET Destination](../../2014/integration-services/ado-net-destination.md).  
+ To learn more about the ADO NET destination, see [ADO NET Destination](data-flow/ado-net-destination.md).  
   
  **To open the Mappings page**  
   

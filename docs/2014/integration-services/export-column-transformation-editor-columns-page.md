@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Export Column Transformation Editor (Columns Page)
   Use the **Columns** page of the **Export Column Transformation Editor** dialog box to specify columns in the data flow to extract to files. You can specify whether the Export Column transformation appends data to a file or overwrites an existing file.  
   
- To learn more about the Export Column transformation, see [Export Column Transformation](../../2014/integration-services/export-column-transformation.md).  
+ To learn more about the Export Column transformation, see [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
 ## Options  
  **Extract Column**  

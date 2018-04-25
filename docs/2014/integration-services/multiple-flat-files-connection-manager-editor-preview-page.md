@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Multiple Flat Files Connection Manager Editor (Preview Page)
   Use the **Preview** page of the **Multiple Flat Files ConnectionManager Editor** dialog box to view the contents of the first selected source file divided into columns as you have defined them.  
   
- To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](../../2014/integration-services/multiple-flat-files-connection-manager.md).  
+ To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
 ## Options  
  **Connection manager name**  
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Multiple Flat Files Connection Manager Editor &#40;General Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)   
+ [Multiple Flat Files Connection Manager Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Multiple Flat Files Connection Manager Editor &#40;Columns Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [Multiple Flat Files Connection Manager Editor &#40;Advanced Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   

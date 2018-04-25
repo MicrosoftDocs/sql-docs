@@ -48,7 +48,7 @@ manager: "jhubbard"
 7.  In the **Properties** window, set the TransactionOption property to `Supported`.  
   
     > [!NOTE]  
-    >  To enlist a connection in a transaction, enroll the tasks that use the connection in the transaction. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../2014/integration-services/integration-services-ssis-connections.md).  
+    >  To enlist a connection in a transaction, enroll the tasks that use the connection in the transaction. For more information, see [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md).  
   
 8.  Repeat steps 6 and 7 for each task and container that you want to enroll in the transaction.  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
 9. In the **Properties** window, set the TransactionOption property to `Supported`.  
   
     > [!NOTE]  
-    >  To enlist a connection in a transaction, enroll the tasks that use the connection in the transaction. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../2014/integration-services/integration-services-ssis-connections.md).  
+    >  To enlist a connection in a transaction, enroll the tasks that use the connection in the transaction. For more information, see [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md).  
   
 10. Repeat steps 6 through 9 for each task and container that starts a transaction.  
   

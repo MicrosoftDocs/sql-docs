@@ -50,6 +50,6 @@ manager: "jhubbard"
 9. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
   
   

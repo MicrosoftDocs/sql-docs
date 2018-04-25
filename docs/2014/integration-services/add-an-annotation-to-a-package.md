@@ -46,6 +46,6 @@ manager: "jhubbard"
 8.  To save the updated package, on the **File** menu, click **Save All**.  
   
 ## See Also  
- [Use Annotations in Packages](../../2014/integration-services/use-annotations-in-packages.md)  
+ [Use Annotations in Packages](use-annotations-in-packages.md)  
   
   

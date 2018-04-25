@@ -106,7 +106,7 @@ manager: "jhubbard"
   
 6.  In the **Backup sets to restore** grid, select the backups to restore. This grid displays the backups available for the specified location. By default, a recovery plan is suggested. To override the suggested recovery plan, you can change the selections in the grid. Backups that depend on the restoration of an earlier backup are automatically deselected when the earlier backup is deselected.  
   
-     For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](restore-database-general-page.md).  
+     For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
 7.  To specify the new location of the database files, select the **Files** page, and then click **Relocate all files to folder**. Provide a new location for the **Data file folder** and **Log file folder**. For more information about this grid, see [Restore Database &#40;Files Page&#41;](restore-database-files-page.md).  
   

@@ -66,7 +66,7 @@ manager: "jhubbard"
  **Folder**  
  Type the package path, or navigate to the package by clicking **Browse**.  
   
- The following options display on the page when you select **SSIS Package Store** in the **Source** drop-down list. For more information about the package store, see [Package Management &#40;SSIS Service&#41;](../../2014/integration-services/package-management-ssis-service.md).  
+ The following options display on the page when you select **SSIS Package Store** in the **Source** drop-down list. For more information about the package store, see [Package Management &#40;SSIS Service&#41;](service/package-management-ssis-service.md).  
   
  **Server**  
  Type the server name or select the server.  
@@ -126,7 +126,7 @@ manager: "jhubbard"
  Type the project name.  
   
  **Protection level**  
- Select the protection level. For more information, see [Access Control for Sensitive Data in Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md).  
+ Select the protection level. For more information, see [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
  **Project description**  
  Type an optional description for the project.  
@@ -140,7 +140,7 @@ manager: "jhubbard"
  Lists the project name.  
   
  **Protection level**  
- Select a protection level for the packages contained in the project. For more information about protection levels, see [Access Control for Sensitive Data in Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md).  
+ Select a protection level for the packages contained in the project. For more information about protection levels, see [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
  **Project description**  
  Type an optional project description.  

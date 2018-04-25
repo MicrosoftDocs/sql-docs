@@ -49,6 +49,6 @@ manager: "jhubbard"
  [Lesson 2: Adding Looping](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## See Also  
- [Execution of Projects and Packages](../../2014/integration-services/execution-of-projects-and-packages.md)  
+ [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md)  
   
   

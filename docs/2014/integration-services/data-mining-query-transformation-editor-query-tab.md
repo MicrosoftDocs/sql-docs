@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Data Mining Query Transformation Editor (Query Tab)
   Use the **Query** tab of the **Data Mining Query Transformation Editor** dialog box to create a prediction query.  
   
- To learn more about the Data Mining Query transformation, see [Data Mining Query Transformation](../../2014/integration-services/data-mining-query-transformation.md).  
+ To learn more about the Data Mining Query transformation, see [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md).  
   
 ## Options  
  **Data mining query**  

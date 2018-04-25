@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Flat File Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Flat File Destination Editor** dialog box to map input columns to destination columns.  
   
- To learn more about the Flat File destination, see [Flat File Destination](../../2014/integration-services/flat-file-destination.md).  
+ To learn more about the Flat File destination, see [Flat File Destination](data-flow/flat-file-destination.md).  
   
 ## Options  
  **Available Input Columns**  

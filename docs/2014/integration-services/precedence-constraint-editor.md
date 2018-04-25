@@ -51,9 +51,9 @@ manager: "jhubbard"
 >  This type of precedence constraint appears as a dotted green, highlighted, or blue line.  
   
 ## See Also  
- [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)   
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
- [Integration Services Containers](../../2014/integration-services/integration-services-containers.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md)  
+ [Precedence Constraints](control-flow/precedence-constraints.md)   
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
+ [Integration Services Containers](control-flow/integration-services-containers.md)   
+ [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)  
   
   

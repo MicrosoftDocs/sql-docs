@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Excel Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Excel Destination Editor** dialog box to map input columns to destination columns.  
   
- To learn more about the Excel destination, see [Excel Destination](../../2014/integration-services/excel-destination.md).  
+ To learn more about the Excel destination, see [Excel Destination](data-flow/excel-destination.md).  
   
 ## Options  
  **Available Input Columns**  
@@ -41,6 +41,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Excel Destination Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Excel Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
- [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../2014/integration-services/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Loop through Excel Files and Tables by Using a Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

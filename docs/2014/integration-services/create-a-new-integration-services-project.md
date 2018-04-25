@@ -49,7 +49,7 @@ manager: "jhubbard"
 8.  Click **OK** to add the solution to **Solution Explore**r and add the project to the solution.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Projects](../../2014/integration-services/integration-services-ssis-projects.md)   
+ [Integration Services &#40;SSIS&#41; Projects](integration-services-ssis-projects-and-solutions.md)   
  [Add or Remove an Integration Services Project in a Solution](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
   

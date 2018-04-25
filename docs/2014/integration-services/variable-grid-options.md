@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Variable Grid Options
-  Use the **Variable Grid Options** dialog box to select the columns that will display in the **Variables** window and to select the filters to apply to the list of variables. For more information about the corresponding variable properties, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).  
+  Use the **Variable Grid Options** dialog box to select the columns that will display in the **Variables** window and to select the filters to apply to the list of variables. For more information about the corresponding variable properties, see [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
 ## Options for Filter  
  **Show system variables**  
@@ -31,7 +31,7 @@ manager: "jhubbard"
  **Show variables of all scopes**  
  Select to show variables within the scope the package, and within the scope of containers, tasks, and event handlers in the package. Clear this option to show only variables within the scope of the package and within the scope of a selected container, task, or event handler.  
   
- For more information about variable scope, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).  
+ For more information about variable scope, see [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
 ## Options for Columns  
  Select the columns that you want to appear in the **Variables** window.  
@@ -52,8 +52,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Variables Window](../../2014/integration-services/variables-window.md)   
- [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
  [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)   
- [Integration Services &#40;SSIS&#41; Event Handlers](../../2014/integration-services/integration-services-ssis-event-handlers.md)  
+ [Integration Services &#40;SSIS&#41; Event Handlers](integration-services-ssis-event-handlers.md)  
   
   

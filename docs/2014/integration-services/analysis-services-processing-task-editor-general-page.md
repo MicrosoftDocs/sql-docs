@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Analysis Services Processing Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  
   
- To learn about this task, see [Analysis Services Processing Task](../../2014/integration-services/analysis-services-processing-task.md).  
+ To learn about this task, see [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md).  
   
 ## Options  
  **Name**  
@@ -37,6 +37,6 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services Processing Task Editor &#40;Analysis Services Page&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
- [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md)  
+ [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md)  
   
   

@@ -69,7 +69,7 @@ manager: "mblythe"
 ## See Also  
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)   
  [Set Report Processing Properties](../../2014/reporting-services/set-report-processing-properties.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   
  [Preload the Cache &#40;Report Manager&#41;](../../2014/reporting-services/preload-the-cache-report-manager.md)  
   

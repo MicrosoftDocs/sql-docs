@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  By default, the length of string columns is 50 characters. You can resize the length of these columns to prevent truncation of data or excess column width. You can also update other metadata to enable compatibility with destination columns. For example, you might change the data type of a column that contains only integer data to a numeric data type, such as DT_I2. You can make these modifications manually, or you can click the **Select Types** button to use the **Suggest Column Types** dialog box to evaluate sample data and make some of these changes for you automatically.  
   
- To learn more about the Flat File connection manager, see [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md).  
+ To learn more about the Flat File connection manager, see [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## Options  
  **Connection manager name**  
@@ -40,12 +40,12 @@ manager: "jhubbard"
 |--------------|-----------------|  
 |**ColumnType**|Denotes whether the column is delimited, fixed width, or ragged right. This property is read-only. Ragged right files are files in which every column has a fixed width, except for the last column. It is delimited by the row delimiter.|  
 |**OutputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this value corresponds to a count of characters. In the Data Flow task, this value is used to set the output column width for the Flat File source.<br /><br /> Note: In the object model, the name of this property is MaximumWidth.|  
-|**DataType**|Select from the list of available data types. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).|  
+|**DataType**|Select from the list of available data types. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indicates whether text data is surrounded by text qualifier characters such as quote characters. Valid values are:<br /><br /> **True**: Text data in the flat file is qualified.<br /><br /> **False**: Text data in the flat file is not qualified.|  
 |**Name**|Provide a descriptive column name. If you do not enter a name, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] automatically creates a name in the format Column 0, Column 1 and so forth.|  
-|**DataScale**|Specify the scale of numeric data. Scale refers to the number of decimal places. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).|  
+|**DataScale**|Specify the scale of numeric data. Scale refers to the number of decimal places. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Select from the list of available column delimiters. Choose delimiters that are not likely to occur in the text. This value is ignored for fixed-width columns.<br /><br /> **{CR}{LF}**. Columns are delimited by a carriage return-line feed combination.<br /><br /> **{CR}**. Columns are delimited by a carriage return.<br /><br /> **{LF}**. Columns are delimited by a line feed.<br /><br /> **Semicolon {;}**. Columns are delimited by a semicolon.<br /><br /> **Colon {:}**. Columns are delimited by a colon.<br /><br /> **Comma {,}**. Columns are delimited by a comma.<br /><br /> **Tab {t}**. Columns are delimited by a tab.<br /><br /> **Vertical bar {&#124;}**. Columns are delimited by a vertical bar.|  
-|**DataPrecision**|Specify the precision of numeric data. Precision refers to the number of digits. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).|  
+|**DataPrecision**|Specify the precision of numeric data. Precision refers to the number of digits. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this will display as a count of characters. This value is ignored for delimited columns.<br /><br /> **Note** In the object model, the name of this property is ColumnWidth.|  
   
  **New**  
@@ -61,11 +61,11 @@ manager: "jhubbard"
  Select a column, and then remove it by clicking **Delete**.  
   
  **Suggest Types**  
- Use the **Suggest Column Types** dialog box to evaluate sample data in the file and to obtain suggestions for the data type and length of each column. For more information, see [Suggest Column Types Dialog Box UI Reference](../../2014/integration-services/suggest-column-types-dialog-box-ui-reference.md).  
+ Use the **Suggest Column Types** dialog box to evaluate sample data in the file and to obtain suggestions for the data type and length of each column. For more information, see [Suggest Column Types Dialog Box UI Reference](connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Flat File Connection Manager Editor &#40;General Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-general-page.md)   
+ [Flat File Connection Manager Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Flat File Connection Manager Editor &#40;Columns Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Flat File Connection Manager Editor &#40;Preview Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   

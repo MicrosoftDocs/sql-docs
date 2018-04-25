@@ -31,7 +31,7 @@ manager: "jhubbard"
  Beginning in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the database engine in the Standard edition has a memory capacity of 128 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the database engine in the Standard edition had a memory capacity of 64 GB.  
   
 ## See Also  
- [What's New in SQL Server 2014](../../../2014/getting-started/what-s-new-in-sql-server-2014.md)   
+ [What's New in SQL Server 2014](../what-s-new-in-sql-server-2016.md)   
  [Product Specifications for SQL Server 2014](../../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [Planning a SQL Server Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  

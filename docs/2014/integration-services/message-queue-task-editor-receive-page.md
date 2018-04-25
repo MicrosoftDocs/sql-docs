@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Message Queue Task Editor (Receive Page)
   Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) messages.  
   
- To learn about this task, see [Message Queue Task](../../2014/integration-services/message-queue-task.md).  
+ To learn about this task, see [Message Queue Task](control-flow/message-queue-task.md).  
   
 ## Options  
  **RemoveFromMessageQueue**  
@@ -71,7 +71,7 @@ manager: "jhubbard"
  **Identifier**  
  If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
   
- **Related Topics:** [Select a Package](../../2014/integration-services/select-a-package.md)  
+ **Related Topics:** [Select a Package](control-flow/select-a-package.md)  
   
 ### MessageType = Variable message  
  **Filter**  
@@ -97,7 +97,7 @@ manager: "jhubbard"
  **Identifier**  
  If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
   
- **Related Topics:** [Select a Package](../../2014/integration-services/select-a-package.md)  
+ **Related Topics:** [Select a Package](control-flow/select-a-package.md)  
   
 ### MessageType = String message  
  **Compare**  
@@ -134,9 +134,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Message Queue Task Editor &#40;General Page&#41;](../../2014/integration-services/message-queue-task-editor-general-page.md)   
+ [Message Queue Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Message Queue Task Editor &#40;Send Page&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [Message Queue Task](../../2014/integration-services/message-queue-task.md)  
+ [Expressions Page](expressions/expressions-page.md)   
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

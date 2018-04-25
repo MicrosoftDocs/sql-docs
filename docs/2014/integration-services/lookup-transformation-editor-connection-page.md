@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Lookup Transformation Editor (Connection Page)
   Use the **Connection** page of the **Lookup Transformation Editor** dialog box to select a connection manager. If you select an OLE DB connection manager, you also select a query, table, or view to generate the reference dataset.  
   
- To learn more about the Lookup transformation, see [Lookup Transformation](../../2014/integration-services/lookup-transformation.md).  
+ To learn more about the Lookup transformation, see [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  The following options are available when you select **Full cache** and **Cache connection manager** on the General page of the **Lookup Transformation Editor** dialog box.  
@@ -69,10 +69,10 @@ manager: "jhubbard"
  Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
- [Lookup Transformation Editor &#40;General Page&#41;](../../2014/integration-services/lookup-transformation-editor-general-page.md)   
+ [Lookup Transformation Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Lookup Transformation Editor &#40;Columns Page&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Lookup Transformation Editor &#40;Advanced Page&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [Lookup Transformation Editor &#40;Error Output Page&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
- [Fuzzy Lookup Transformation](../../2014/integration-services/fuzzy-lookup-transformation.md)  
+ [Fuzzy Lookup Transformation](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

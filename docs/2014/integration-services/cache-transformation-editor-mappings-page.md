@@ -23,9 +23,9 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Each input column must be mapped to a destination column, and the column data types must match. Otherwise, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Designer displays an error message.  
   
- To learn more about the Cache Transform, see [Cache Transform](../../2014/integration-services/cache-transform.md).  
+ To learn more about the Cache Transform, see [Cache Transform](data-flow/transformations/cache-transform.md).  
   
- To learn more about the Cache connection manager, see [Cache Connection Manager](../../2014/integration-services/cache-connection-manager.md).  
+ To learn more about the Cache connection manager, see [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## Options  
  **Available Input Columns**  

@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   [Columns tab](#columnstab)  
   
- To learn more about the Cache Connection Manager, see [Cache Connection Manager](../../2014/integration-services/cache-connection-manager.md).  
+ To learn more about the Cache Connection Manager, see [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ##  <a name="generaltab"></a> General Tab  
  Use the **General** tab of the **Cache Connection ManagerEditor** dialog box to indicate whether to read the cache from a file or save the cache to a file.  
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  If you configure the cache connection manager to use a cache file, the connection manager will do one of the following actions:  
   
--   Save data to the file when a Cache Transform transformation is configured to write data from a data source in the data flow to the Cache connection manager. For more information, see [Cache Transform](../../2014/integration-services/cache-transform.md).  
+-   Save data to the file when a Cache Transform transformation is configured to write data from a data source in the data flow to the Cache connection manager. For more information, see [Cache Transform](data-flow/transformations/cache-transform.md).  
   
 -   Read data from the cache file.  
   
@@ -97,6 +97,6 @@ manager: "jhubbard"
  Specifies the code page for the column type. If applicable to the data type, you can update `Code Page`.  
   
 ## See Also  
- [Lookup Transformation](../../2014/integration-services/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

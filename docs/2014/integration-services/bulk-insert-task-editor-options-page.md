@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Bulk Insert Task Editor (Options Page)
   Use the **Options** page of the **Bulk Insert Task Editor** dialog box to set properties for the bulk insert operation. The Bulk Insert task copies large amounts of data into a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table or view.  
   
- To learn about working with bulk inserts, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md) and [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
+ To learn about working with bulk inserts, see [Bulk Insert Task](control-flow/bulk-insert-task.md) and [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
   
 ## Options  
  **CodePage**  
@@ -60,9 +60,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Bulk Insert Task Editor &#40;General Page&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [Bulk Insert Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Bulk Insert Task Editor &#40;Connection Page&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)  
+ [Expressions Page](expressions/expressions-page.md)   
+ [Control Flow](control-flow/control-flow.md)  
   
   

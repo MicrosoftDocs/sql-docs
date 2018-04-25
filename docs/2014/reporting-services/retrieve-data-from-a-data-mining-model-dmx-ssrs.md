@@ -51,7 +51,7 @@ manager: "mblythe"
   
 6.  Click **Credentials**.  
   
-     Set the credentials to use to connect to the data source. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md).  
+     Set the credentials to use to connect to the data source. For more information, see [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md).  
   
     > [!NOTE]  
     >  To test the data source connection, click **Edit**. In the **Connection Properties** dialog box, click **Test Connection**. If the test is successful, you will see the information message "Test connection succeeded." If the test fails, you will see a warning message with more information about why the test was not successful.  

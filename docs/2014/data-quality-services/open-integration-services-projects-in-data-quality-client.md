@@ -61,7 +61,7 @@ manager: "jhubbard"
  ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#Intro)  
   
 ## See Also  
- [DQS Cleansing Transformation](../../2014/integration-services/dqs-cleansing-transformation.md)   
- [Integration Services &#40;SSIS&#41; Projects](../../2014/integration-services/integration-services-ssis-projects.md)  
+ [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
+ [Integration Services &#40;SSIS&#41; Projects](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

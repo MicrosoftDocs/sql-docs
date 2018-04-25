@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Derived Column Transformation Editor
   Use the **Derived Column Transformation Editor** dialog box to create expressions that populate new or replacement columns.  
   
- To learn more about the Derived Column transformation, see [Derived Column Transformation](../../2014/integration-services/derived-column-transformation.md).  
+ To learn more about the Derived Column transformation, see [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md).  
   
 ## Options  
  **Variables and Columns**  
@@ -42,10 +42,10 @@ manager: "jhubbard"
   
  The value of this property can be specified by using a property expression.  
   
- **Related topics**: [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md), [Operators &#40;SSIS Expression&#41;](../../2014/integration-services/operators-ssis-expression.md), and [Functions &#40;SSIS Expression&#41;](../../2014/integration-services/functions-ssis-expression.md)  
+ **Related topics**: [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [Operators &#40;SSIS Expression&#41;](expressions/operators-ssis-expression.md), and [Functions &#40;SSIS Expression&#41;](expressions/functions-ssis-expression.md)  
   
  **Data Type**  
- If adding data to a new column, the **Derived Column TransformationEditor** dialog box automatically evaluates the expression and sets the data type appropriately. The value of this column is read-only. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ If adding data to a new column, the **Derived Column TransformationEditor** dialog box automatically evaluates the expression and sets the data type appropriately. The value of this column is read-only. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  **Length**  
  If adding data to a new column, the **Derived Column TransformationEditor** dialog box automatically evaluates the expression and sets the column length for string data. The value of this column is read-only.  
@@ -64,6 +64,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Derive Column Values by Using the Derived Column Transformation](../../2014/integration-services/derive-column-values-by-using-the-derived-column-transformation.md)  
+ [Derive Column Values by Using the Derived Column Transformation](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
   

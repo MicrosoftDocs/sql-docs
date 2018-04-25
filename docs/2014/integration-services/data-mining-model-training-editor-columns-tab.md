@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Data Mining Model Training Editor (Columns Tab)
   Use the **Columns** page of the **Data Mining Model Training Editor** dialog box to map input columns to columns in the mining structure.  
   
- To learn more about the Data Mining Model Training destination, see [Data Mining Model Training Destination](../../2014/integration-services/data-mining-model-training-destination.md).  
+ To learn more about the Data Mining Model Training destination, see [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## Options  
  **Available Input Columns**  

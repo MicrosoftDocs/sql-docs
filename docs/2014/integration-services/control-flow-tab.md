@@ -39,8 +39,8 @@ manager: "jhubbard"
  To add these functions to individual tasks or containers in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, right-click the object on the design surface, and then select the option.  
   
 ## See Also  
- [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)   
- [SSIS Designer](../../2014/integration-services/ssis-designer.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)  
+ [Precedence Constraints](control-flow/precedence-constraints.md)   
+ [SSIS Designer](ssis-designer.md)   
+ [Control Flow](control-flow/control-flow.md)  
   
   

@@ -92,7 +92,7 @@ manager: "mblythe"
  Click to save your changes.  
   
 ## See Also  
- [Manage Report Data Sources](../../2014/reporting-services/manage-report-data-sources.md)   
+ [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   

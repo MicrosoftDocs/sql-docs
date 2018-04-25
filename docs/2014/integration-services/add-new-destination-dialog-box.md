@@ -29,6 +29,6 @@ manager: "jhubbard"
 |OK|Click to save your changes and open any subsequent dialog boxes to configure additional options.|  
   
 ## See Also  
- [Add a Destination using Destination Assistant](../../2014/integration-services/add-a-destination-using-destination-assistant.md)  
+ [Add a Destination using Destination Assistant](data-flow/destination-assistant.md)  
   
   

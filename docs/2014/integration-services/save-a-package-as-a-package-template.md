@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  You can designate multiple packages to use as templates. Before you can implement custom packages as templates, you must create the packages.  
   
- When you create package using custom packages as templates, the new packages have the same name and GUID as the template. To differentiate among packages you should update the value of the `Name` property and generate a new GUID for the `ID` property. For more information, see [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md) and [Set Package Properties](../../2014/integration-services/set-package-properties.md).  
+ When you create package using custom packages as templates, the new packages have the same name and GUID as the template. To differentiate among packages you should update the value of the `Name` property and generate a new GUID for the `ID` property. For more information, see [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) and [Set Package Properties](set-package-properties.md).  
   
 ### To designate a custom package as a package template  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 4.  Click **Add**.  
   
 ## See Also  
- [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md)   
+ [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

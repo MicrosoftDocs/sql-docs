@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ODBC Destination Editor (Error Output Page)
   Use the **Error Output** page of the **ODBC Destination Editor** dialog box to select error handling options.  
   
- To learn more about the ODBC destination, see [ODBC Destination](../../2014/integration-services/odbc-destination.md).  
+ To learn more about the ODBC destination, see [ODBC Destination](data-flow/odbc-destination.md).  
   
  **To open the ODBC Destination Editor Error Output Page**  
   

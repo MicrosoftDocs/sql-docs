@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Dimension Processing Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Dimension Processing Destination Editor** dialog box to map input columns to dimension columns.  
   
- To learn more about the Dimension Processing destination, see [Dimension Processing Destination](../../2014/integration-services/dimension-processing-destination.md).  
+ To learn more about the Dimension Processing destination, see [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
 ## Options  
  **Available Input Columns**  

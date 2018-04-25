@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 ## Differences between Oracle and SQL Server  
   
--   Oracle has different maximum size limits for some objects. Any objects created in the Oracle publication database should adhere to the maximum size limits for the corresponding objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about limits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Maximum Capacity Specifications for SQL Server](../../getting-started/maximum-capacity-specifications-for-sql-server.md).  
+-   Oracle has different maximum size limits for some objects. Any objects created in the Oracle publication database should adhere to the maximum size limits for the corresponding objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about limits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 -   By default Oracle object names are created in upper case. Ensure that you supply the names of Oracle objects in upper case when publishing them through a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor if they are upper case on the Oracle database. Failure to specify the objects in the correct case may result in an error message indicating that the object cannot be found.  
   

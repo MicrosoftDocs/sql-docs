@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  ![Screenshot of SSIS Designer and Toolbox](../../2014/integration-services/media/denali-designerandtoolbox.gif "Screenshot of SSIS Designer and Toolbox")  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes additional dialog boxes and windows for adding functionality to packages, and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides windows and dialog boxes for configuring the development environment and working with packages. For more information, see [Integration Services User Interface](../../2014/integration-services/integration-services-user-interface.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes additional dialog boxes and windows for adding functionality to packages, and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides windows and dialog boxes for configuring the development environment and working with packages. For more information, see [Integration Services User Interface](integration-services-user-interface.md).  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer has no dependency on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service, the service that manages and monitors packages, and it is not required that the service be running to create or modify packages in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. However, if you stop the service while [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer is open, you can no longer open the dialog boxes that [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides and you may receive the error message "RPC server is unavailable." To reset [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and continue working with the package, you must close the designer, exit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then reopen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and the package.  
   
@@ -62,17 +62,17 @@ manager: "jhubbard"
 ### Control Flow Tab  
  You construct the control flow in a package on the design surface of the **Control Flow** tab. Drag items from **Toolbox** to the design surface and connect them into a control flow by clicking the icon for the item, and then dragging the arrow from one item to another.  
   
- For more information, see [Control Flow](../../2014/integration-services/control-flow.md).  
+ For more information, see [Control Flow](control-flow/control-flow.md).  
   
 ### Data Flow Tab  
  If a package contains a Data flow task, you can add data flows to the package. You construct the data flows in a package on the design surface of the **Data Flow** tab. Drag items from **Toolbox** to the design surface and connect them into a data flow by clicking the icon for the item, and then dragging the arrow from one item to another.  
   
- For more information, see [Data Flow](../../2014/integration-services/data-flow.md).  
+ For more information, see [Data Flow](data-flow/data-flow.md).  
   
 ### Parameters Tab  
  Integration Services (SSIS) parameters allow you to assign values to properties within packages at the time of package execution. You can create project parameters at the project level and package parameters at the package level. Project parameters are used to supply any external input the project receives to one or more packages in the project. Package parameters allow you to modify package execution without having to edit and redeploy the package. This tab allows you to manage package parameters.  
   
- For more information about parameters, see [Integration Services &#40;SSIS&#41; Parameters](../../2014/integration-services/integration-services-ssis-parameters.md).  
+ For more information about parameters, see [Integration Services &#40;SSIS&#41; Parameters](integration-services-ssis-package-and-project-parameters.md).  
   
 > [!IMPORTANT]  
 >  Parameters are available only to projects developed for the project deployment model. Therefore, you will see the Parameters tab only for packages that are part of a project configured to use the project deployment model.  
@@ -85,7 +85,7 @@ manager: "jhubbard"
 ### Package Explorer Tab  
  Packages can be complex, including many tasks, connection managers, variables, and other elements. The explorer view of the package lets you see a complete list of package elements.  
   
- For more information, see [View Package Objects](../../2014/integration-services/view-package-objects.md).  
+ For more information, see [View Package Objects](view-package-objects.md).  
   
 #### Progress/Execution Result Tab  
  While a package is running, the **Progress** tab shows the execution progress of the package. After the package has finished running, the execution results remain available on the **Execution Result** tab.  
@@ -96,13 +96,13 @@ manager: "jhubbard"
 ##### Connection Managers Area  
  You add and modify the connection managers that a package uses in the **Connection Managers** area. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes connection managers to connect to a variety of data sources, such as text files, OLE DB databases, and .NET providers.  
   
- For more information, see [Integration Services &#40;SSIS&#41; Connections](../../2014/integration-services/integration-services-ssis-connections.md) and [Create Connection Managers](../../2014/integration-services/create-connection-managers.md).  
+ For more information, see [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](../../2014/integration-services/create-connection-managers.md).  
   
 ## Related Tasks  
   
--   [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)  
   
 ## See Also  
- [Integration Services User Interface](../../2014/integration-services/integration-services-user-interface.md)  
+ [Integration Services User Interface](integration-services-user-interface.md)  
   
   

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Logins Task Editor (General Page)
-  Use the **General** page of the **Transfer Logins Task Editor** dialog box to name and describe the Transfer Logins task. For more information about this task, see [Transfer Logins Task](../../2014/integration-services/transfer-logins-task.md).  
+  Use the **General** page of the **Transfer Logins Task Editor** dialog box to name and describe the Transfer Logins task. For more information about this task, see [Transfer Logins Task](control-flow/transfer-logins-task.md).  
   
 ## Options  
  **Name**  
@@ -34,8 +34,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
  [Transfer Logins Task Editor &#40;Logins Page&#41;](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

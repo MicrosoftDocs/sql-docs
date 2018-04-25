@@ -70,7 +70,7 @@ manager: "jhubbard"
  Select the logging level for the package execution. For more information, see [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md).  
   
  **Dump on errors**  
- Specify whether a dump file is created when errors occur during the package execution. For more information, see [Generating Dump Files for Package Execution](../../2014/integration-services/generating-dump-files-for-package-execution.md).  
+ Specify whether a dump file is created when errors occur during the package execution. For more information, see [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md).  
   
  **32-bit runtime**  
  Specify that the package will execute on a 32-bit system.  

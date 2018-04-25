@@ -78,7 +78,7 @@ manager: "mblythe"
 ## Other Sampling Options  
  If the sampling options in this wizard do not meet your needs, you can use the sampling transformation in SQL Server Integration Services (SSIS) to sample rows from multiple data sources.  
   
- For more information, see [Row Sampling Transformation](../../2014/integration-services/row-sampling-transformation.md) and [Percentage Sampling Transformation](../../2014/integration-services/percentage-sampling-transformation.md).  
+ For more information, see [Row Sampling Transformation](../integration-services/data-flow/transformations/row-sampling-transformation.md) and [Percentage Sampling Transformation](../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
   
 ## See Also  
  [Checklist of Preparation for Data Mining](checklist-of-preparation-for-data-mining.md)  

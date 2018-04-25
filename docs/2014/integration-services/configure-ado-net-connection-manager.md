@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Configure ADO.NET Connection Manager
   Use the **Configure ADO.NET Connection Manager** dialog box to add a connection to a data source that can be accessed by using a .NET Framework data provider, such as the SqlClient provider. The connection manager can use an existing connection, or you can create a new one.  
   
- To learn more about the ADO.NET connection manager, see [ADO.NET Connection Manager](../../2014/integration-services/ado-net-connection-manager.md).  
+ To learn more about the ADO.NET connection manager, see [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md).  
   
 ## Options  
  **Data connections**  

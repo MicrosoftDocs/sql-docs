@@ -34,6 +34,6 @@ manager: "jhubbard"
 |**Transactions created/sec**|The number of transactions created in the system (on average), per second.<br /><br /> XTP transactions are counted differently than disk-based transactions (as reflected in Databases:Transactions/sec). For example, Transactions created/sec counts read/only transactions, while Databases:Transactions/sec does not.|  
   
 ## See Also  
- [XTP &#40;In-Memory OLTP&#41; Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)  
+ [XTP &#40;In-Memory OLTP&#41; Performance Counters](../../integration-services/performance/performance-counters.md)  
   
   

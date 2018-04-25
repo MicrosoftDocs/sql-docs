@@ -25,7 +25,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Source components have outputs and no inputs, while destination components have inputs but no outputs. Transformations have both inputs and outputs.  
   
- To learn more about the Script component, see [Script Component](../../2014/integration-services/script-component.md) and [Configuring the Script Component in the Script Component Editor](../../2014/integration-services/dev-guide/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](../../2014/integration-services/dev-guide/extending-the-data-flow-with-the-script-component.md).  
+ To learn more about the Script component, see [Script Component](data-flow/transformations/script-component.md) and [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## Options  
  **Inputs and outputs**  
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  [Common Properties](../../2014/integration-services/common-properties.md)  
   
- [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md)  
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)  
   
  **Add Output**  
  Add an additional output to the list.  
@@ -53,6 +53,6 @@ manager: "jhubbard"
  [Script Transformation Editor &#40;Input Columns Page&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Script Transformation Editor &#40;Script Page&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Script Transformation Editor &#40;Connection Managers Page&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
- [Additional Script Component Examples](../../2014/integration-services/dev-guide/additional-script-component-examples.md)  
+ [Additional Script Component Examples](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
 # SMO Connection Manager Editor
   Use the **SMO Connection Manager Editor** to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connection for use by the various tasks that transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  
   
- To learn more about the SMO connection manager, see [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md).  
+ To learn more about the SMO connection manager, see [SMO Connection Manager](connection-manager/smo-connection-manager.md).  
   
 ## Options  
  **Server name**  

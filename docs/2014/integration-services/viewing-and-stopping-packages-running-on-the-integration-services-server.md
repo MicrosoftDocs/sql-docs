@@ -59,7 +59,7 @@ manager: "jhubbard"
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
   
 ## See Also  
- [Execution of Projects and Packages](../../2014/integration-services/execution-of-projects-and-packages.md)   
- [Troubleshooting Reports for Package Execution](../../2014/integration-services/troubleshooting-reports-for-package-execution.md)  
+ [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md)   
+ [Troubleshooting Reports for Package Execution](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

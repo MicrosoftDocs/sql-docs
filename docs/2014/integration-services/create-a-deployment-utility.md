@@ -61,6 +61,6 @@ manager: "jhubbard"
  [Package Configurations](../../2014/integration-services/package-configurations.md)   
  [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)   
  [Deploy Packages by Using the Deployment Utility](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [Package Deployment &#40;SSIS&#41;](../../2014/integration-services/package-deployment-ssis.md)  
+ [Package Deployment &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

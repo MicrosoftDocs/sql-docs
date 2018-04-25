@@ -93,7 +93,7 @@ manager: "mblythe"
   
 -   [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/analysis-services-connection-type-for-mdx-ssrs.md)  
   
--   [Analysis Services Connection Manager](../../integration-services/analysis-services-connection-manager.md)  
+-   [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
 >  When using SQL Server Data Tools to work on an existing Analysis Services project, remember that you can connect offline using a local or version controlled project, or connect in online mode to update Analysis Services objects while the database is running. For more information, see [Connect in Online Mode to an Analysis Services Database](../multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md). More commonly, connections from [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] are in project mode, where changes are deployed to the database only when you explicitly deploy the project.  

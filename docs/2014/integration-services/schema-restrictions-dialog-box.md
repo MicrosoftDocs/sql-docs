@@ -29,13 +29,13 @@ manager: "jhubbard"
  **Variable**  
  Use a variable to define restrictions. Select a variable in the list, or click **New variable...** to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md) , [Add Variable](../../2014/integration-services/add-variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md) , [Add Variable](../../2014/integration-services/add-variable.md)  
   
  **Text**  
  Provide the text to define restrictions.  
   
 ## See Also  
  [Foreach Loop Editor &#40;Collection Page&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Foreach Loop Container](../../2014/integration-services/foreach-loop-container.md)  
+ [Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

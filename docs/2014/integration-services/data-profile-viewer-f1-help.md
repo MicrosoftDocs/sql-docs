@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Data Profile Viewer F1 Help
   Use the Data Profile Viewer to view the output of the Data Profiling task.  
   
- For more information about how to use the Data Profile Viewer, see [Data Profile Viewer](../../2014/integration-services/data-profile-viewer.md). For more information about how to use the Data Profiling task, which creates the profile output that you analyze in the Data Profile Viewer, see [Setup of the Data Profiling Task](../../2014/integration-services/setup-of-the-data-profiling-task.md).  
+ For more information about how to use the Data Profile Viewer, see [Data Profile Viewer](control-flow/data-profile-viewer.md). For more information about how to use the Data Profiling task, which creates the profile output that you analyze in the Data Profile Viewer, see [Setup of the Data Profiling Task](control-flow/data-profiling-task.md).  
   
 ## Static Options  
  **Open**  
@@ -197,7 +197,7 @@ manager: "jhubbard"
  Displays the number of rows in which the specified column has the value shown in the first column.  
   
 ## See Also  
- [Data Profile Viewer](../../2014/integration-services/data-profile-viewer.md)   
- [Data Profiling Task and Viewer](../../2014/integration-services/data-profiling-task-and-viewer.md)  
+ [Data Profile Viewer](control-flow/data-profile-viewer.md)   
+ [Data Profiling Task and Viewer](control-flow/data-profiling-task-and-viewer.md)  
   
   

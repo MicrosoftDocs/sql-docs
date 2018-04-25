@@ -22,7 +22,7 @@ manager: "jhubbard"
 # FTP Task Editor (File Transfer Page)
   Use the **File Transfer** page of the **FTP Task Editor** dialog box to configure the FTP operation that the task performs.  
   
- To learn about this task, see [FTP Task](../../2014/integration-services/ftp-task.md).  
+ To learn about this task, see [FTP Task](control-flow/ftp-task.md).  
   
 ## Options  
  **IsRemotePathVariable**  
@@ -67,13 +67,13 @@ manager: "jhubbard"
  **RemoteVariable**  
  Select an existing user-defined variable, or click \<**New variable...**> to create a user-defined variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), Add Variable  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), Add Variable  
   
 ### IsRemotePathVariable = False  
  **RemotePath**  
  Select an existing FTP connection manager, or click \<**New connection…**> to create a connection manager.  
   
- **Related Topics:** [FTP Connection Manager](../../2014/integration-services/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Related Topics:** [FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## IsLocalPathVariable Dynamic Options  
   
@@ -81,17 +81,17 @@ manager: "jhubbard"
  **LocalVariable**  
  Select an existing user-defined variable, or click \<**New variable...**> to create a variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), Add Variable  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), Add Variable  
   
 ### IsLocalPathVariable = False  
  **LocalPath**  
  Select an existing File connection manager, or click \<**New connection…**> to create a connection manager.  
   
- **Related Topics**: [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics**: [Flat File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [FTP Task Editor &#40;General Page&#41;](../../2014/integration-services/ftp-task-editor-general-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [FTP Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [Expressions Page](expressions/expressions-page.md)  
   
   

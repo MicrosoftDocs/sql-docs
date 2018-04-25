@@ -32,7 +32,7 @@ manager: "jhubbard"
  [Modify Join Operators &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Specify that tables should be joined using an operator other than equal (=).  
   
- [How the Query and View Designer Represents Joins &#40;Visual Database Tools&#41;](../../database-engine/how-the-query-and-view-designer-represents-joins-visual-database-tools.md)  
+ [How the Query and View Designer Represents Joins &#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)  
  Explains the graphic representation of the join as you see it in the Diagram pane.  
   
  [Join Tables Automatically &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)  

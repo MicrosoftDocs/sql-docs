@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ### To manually create a multicolumn join  
   
-1.  Add to the [Diagram pane](../../database-engine/diagram-pane-visual-database-tools.md) the tables you want to join.  
+1.  Add to the [Diagram pane](diagram-pane-visual-database-tools.md) the tables you want to join.  
   
 2.  Drag the name of the first join column in the first table window and drop it onto the related column in the second table window. You cannot base a join on text, ntext, or image columns.  
   

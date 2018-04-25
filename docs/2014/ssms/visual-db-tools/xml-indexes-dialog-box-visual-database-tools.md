@@ -86,6 +86,6 @@ manager: "jhubbard"
  Specify whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance.  
   
 ## See Also  
- [Create XML Indexes](../../database-engine/indexes.md)  
+ [Create XML Indexes](indexes.md)  
   
   

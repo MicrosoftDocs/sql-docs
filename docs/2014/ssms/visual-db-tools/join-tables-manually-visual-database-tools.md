@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ### To manually join tables or table-structured objects  
   
-1.  Add to the [Diagram pane](../../database-engine/diagram-pane-visual-database-tools.md) the objects you want to join.  
+1.  Add to the [Diagram pane](diagram-pane-visual-database-tools.md) the objects you want to join.  
   
 2.  Drag the name of the join column in the first table or table-structured object and drop it onto the related column in the second table or table-structured object. You cannot base a join on `text`, `ntext`, or i`mage` columns.  
   

@@ -55,8 +55,8 @@ manager: "jhubbard"
  [Create Queries &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Run Queries &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Diagram Pane &#40;Visual Database Tools&#41;](../../database-engine/diagram-pane-visual-database-tools.md)   
+ [Diagram Pane &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [Criteria Pane &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
- [Results Pane &#40;Visual Database Tools&#41;](../../database-engine/results-pane-visual-database-tools.md)  
+ [Results Pane &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

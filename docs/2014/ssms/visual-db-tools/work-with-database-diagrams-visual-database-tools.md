@@ -26,7 +26,7 @@ manager: "jhubbard"
   You can create a visual diagram of your database using the Database Designer. The following topics cover the basics of using the designer to work with database diagrams.  
   
 ## In This Section  
- [Create a New Database Diagram &#40;Visual Database Tools&#41;](../../database-engine/visual-database-tools.md)  
+ [Create a New Database Diagram &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
  [Save Database Diagrams &#40;Visual Database Tools&#41;](save-database-diagrams-visual-database-tools.md)  
   

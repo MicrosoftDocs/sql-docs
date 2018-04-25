@@ -98,7 +98,7 @@ manager: "jhubbard"
  Includes the **sp_bindefault** and **sp_bindrule** binding stored procedure calls. Default is True. For more information, see [sp_bindefault &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) and [sp_bindrule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).  
   
  **Script CHECK constraints**  
- Adds [CHECK constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md) to the script. Default is True.  
+ Adds [CHECK constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) to the script. Default is True.  
   
  **Script defaults**  
  Includes column default values in the script. Default is False. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md).  
@@ -107,7 +107,7 @@ manager: "jhubbard"
  Specifies the filegroup in the ON clause for table definitions. Default is False. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md).  
   
  **Script foreign keys**  
- Includes [FOREIGN KEY constraints](../relational-databases/tables/primary-and-foreign-key-constraints.md) in the script. Default is False.  
+ Includes [FOREIGN KEY constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md) in the script. Default is False.  
   
  **Script full-text indexes**  
  Includes full-text indexes in the script. Default is False. For more information, see [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md).  
@@ -119,7 +119,7 @@ manager: "jhubbard"
  Includes table partitioning schemes in the script. Default is False. For more information, see [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](~/t-sql/statements/create-partition-scheme-transact-sql.md).  
   
  **Script primary keys**  
- Includes [Primary and Foreign Key Constraints](../relational-databases/tables/primary-and-foreign-key-constraints.md) in the script. Default is True.  
+ Includes [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md) in the script. Default is True.  
   
  **Script statistics**  
  Includes user-defined statistics in the script. Default is False. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md).  
@@ -128,7 +128,7 @@ manager: "jhubbard"
  Include triggers in the script. Default is False. For more information, see [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md).  
   
  **Script unique keys**  
- Includes [Unique Constraints and Check Constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md) in the script. Default is False.  
+ Includes [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) in the script. Default is False.  
   
  **Script view columns**  
  Declares view columns in view headers. Default is False. For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md).  

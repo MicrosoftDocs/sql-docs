@@ -38,7 +38,7 @@ manager: "jhubbard"
  If the Query and View Designer does not automatically join the tables in your query, you can create a join yourself. For details, see [Join Tables Manually &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
 ## See Also  
- [How the Query and View Designer Represents Joins &#40;Visual Database Tools&#41;](../../database-engine/how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
+ [How the Query and View Designer Represents Joins &#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
  [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Query with Joins &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   

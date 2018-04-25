@@ -24,7 +24,7 @@ manager: "jhubbard"
   In order to replay trace data with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or the Distributed Replay Utility, a specific set of event classes and columns must be captured in the trace. These settings are enabled by default if the **TSQL_Replay** trace template is used to configure a trace that is later used for replay. This topic describes these settings and other replay requirements.  
   
 > [!NOTE]  
->  We recommend using the Distributed Replay Utility for replaying an intensive OLTP application (with many active concurrent connections or high throughput). The Distributed Replay Utility can replay trace data from multiple computers, better simulating a mission-critical workload. For more information, see [SQL Server Distributed Replay](../../database-engine/sql-server-distributed-replay.md).  
+>  We recommend using the Distributed Replay Utility for replaying an intensive OLTP application (with many active concurrent connections or high throughput). The Distributed Replay Utility can replay trace data from multiple computers, better simulating a mission-critical workload. For more information, see [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md).  
   
 ## Event Classes Required for Replay  
  To be replayed by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], the following set of event classes, in addition to any other event classes you want to monitor, must be captured in the trace:  
@@ -125,6 +125,6 @@ manager: "jhubbard"
  [Replay a Trace File &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)   
- [SQL Server Distributed Replay](../../database-engine/sql-server-distributed-replay.md)  
+ [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)  
   
   

@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ### To clear query results of a view  
   
--   Right-click in the [Results pane](../../database-engine/visual-database-tools.md), point to **Pane**, and then click **Clear Results**.  
+-   Right-click in the [Results pane](visual-database-tools.md), point to **Pane**, and then click **Clear Results**.  
   
      If a query is being executed when you clear the Results pane, the Query and View Designer stops the query.  
   

@@ -31,6 +31,6 @@ manager: "jhubbard"
 -   [XML Input File Sample with User-specified Configuration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)  
   
 ## See Also  
- [Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

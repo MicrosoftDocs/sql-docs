@@ -205,11 +205,11 @@ manager: "jhubbard"
 -   Copy the diagram to a bitmap  
   
 ## See Also  
- [Customize the Amount of Information Displayed in Diagrams &#40;Visual Database Tools&#41;](../../database-engine/visual-database-tools.md)   
+ [Customize the Amount of Information Displayed in Diagrams &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [Add Tables to Diagrams &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
  [Create Relationships Between Tables on a Diagram &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
- [Create XML Indexes](../../database-engine/indexes.md)   
+ [Create XML Indexes](indexes.md)   
  [Copy an Image of a Database Diagram to the Clipboard &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Work with Diagram Layout &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   

@@ -32,7 +32,7 @@ manager: "jhubbard"
 ## Returning the results set  
  You can return results from either a query or a view and can choose whether to open just the results pane or all panes. In either case the query or view will open in Query and View Designer. The difference is that one opens with only the Results pane showing and the other opens with all windows that have been selected in the Options dialog box. The default is all four panes (Results, SQL, Diagram, and Criteria).  
   
- For more information see [Open Queries &#40;Visual Database Tools&#41;](../../database-engine/visual-database-tools.md).  
+ For more information see [Open Queries &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
  To change the design of the query or view so it returns a different set of results or returns records in a different order see the topics listed in [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md).  
   

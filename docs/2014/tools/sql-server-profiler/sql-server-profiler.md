@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   Capturing the series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that lead to a problem. The saved trace can then be used to replicate the problem on a test server where the problem can be diagnosed.  
   
--   Monitoring the performance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to tune workloads. For information about tuning the physical database design for database workloads, see [Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+-   Monitoring the performance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to tune workloads. For information about tuning the physical database design for database workloads, see [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
 -   Correlating performance counters to diagnose problems.  
   
@@ -182,10 +182,10 @@ manager: "jhubbard"
 |Lists the system stored procedures that are used by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity.|[SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
 ## See Also  
- [Locks Event Category](../relational-databases/event-classes/locks-event-category.md)   
- [Sessions Event Category](../relational-databases/event-classes/sessions-event-category.md)   
- [Stored Procedures Event Category](../relational-databases/event-classes/stored-procedures-event-category.md)   
- [TSQL Event Category](../relational-databases/event-classes/tsql-event-category.md)   
- [Server Performance and Activity Monitoring](../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+ [Locks Event Category](../../relational-databases/event-classes/locks-event-category.md)   
+ [Sessions Event Category](../../relational-databases/event-classes/sessions-event-category.md)   
+ [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md)   
+ [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md)   
+ [Server Performance and Activity Monitoring](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

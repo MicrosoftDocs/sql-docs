@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Rules for Updating Results (Visual Database Tools)
   In many cases, you can update the result set displayed in the [Results Pane](visual-database-tools.md). However, in some cases you cannot.  
   
- In general, in order to update results, the [Query and View Designer](../../database-engine/query-and-view-designer-tools-visual-database-tools.md) must have sufficient information to uniquely identify the row in the table. An example is if the query includes a primary key in the output list. In addition, you must have sufficient permission to update the database.  
+ In general, in order to update results, the [Query and View Designer](query-and-view-designer-tools-visual-database-tools.md) must have sufficient information to uniquely identify the row in the table. An example is if the query includes a primary key in the output list. In addition, you must have sufficient permission to update the database.  
   
  If your query is based on a view, you might be able to update it. The same guidelines apply, except that they apply to the underlying tables in the view, not just to the view itself.  
   

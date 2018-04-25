@@ -58,7 +58,7 @@ region = 'UK' OR region = 'US'
   
  For details about combining search conditions, see the following topics:  
   
--   [Conventions for Combining Search Conditions in the Criteria Pane &#40;Visual Database Tools&#41;](../../database-engine/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+-   [Conventions for Combining Search Conditions in the Criteria Pane &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
   
 -   [Specify Multiple Search Conditions for One Column &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   

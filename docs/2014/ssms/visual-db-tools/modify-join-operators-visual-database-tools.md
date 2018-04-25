@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### To modify join operators  
   
-1.  In the [Diagram pane](../../database-engine/diagram-pane-visual-database-tools.md), right-click the join line you want to modify, and then choose **Properties** from the shortcut menu.  
+1.  In the [Diagram pane](diagram-pane-visual-database-tools.md), right-click the join line you want to modify, and then choose **Properties** from the shortcut menu.  
   
 2.  In the Property window, click **Join Condition and Type** and click the **ellipses (…)** to the right of the property.  
   

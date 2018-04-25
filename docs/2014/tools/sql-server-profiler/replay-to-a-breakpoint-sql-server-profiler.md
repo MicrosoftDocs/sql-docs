@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 1.  Open the trace file or trace table you want to replay. For more information, see [Open a Trace File &#40;SQL Server Profiler&#41;](sql-server-profiler.md) or [Open a Trace Table &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
-     Make sure that the trace file or table you open contains the event classes necessary for replay. For more information, see [Replay Requirements](../distributed-replay/replay-requirements.md).  
+     Make sure that the trace file or table you open contains the event classes necessary for replay. For more information, see [Replay Requirements](replay-requirements.md).  
   
 2.  In the trace window, click an event that you want to use as a breakpoint. Use one of the following three methods to set a breakpoint:  
   

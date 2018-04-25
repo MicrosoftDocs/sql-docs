@@ -36,7 +36,7 @@ manager: "jhubbard"
  [Rules for Entering Search Values &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Explains how to enter text, numbers, dates, or logical values.  
   
- [Conventions for Combining Search Conditions in the Criteria Pane &#40;Visual Database Tools&#41;](../../database-engine/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+ [Conventions for Combining Search Conditions in the Criteria Pane &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
  Explains the concepts behind using the AND and OR operators.  
   
  [Specify Search Conditions &#40;Visual Database Tools&#41;](specify-search-conditions-visual-database-tools.md)  

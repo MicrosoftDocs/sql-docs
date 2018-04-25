@@ -162,7 +162,7 @@ manager: "jhubbard"
 ```  
   
 ## See Also  
- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../database-engine/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay Forum](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Using Distributed Replay to Load Test Your SQL Server – Part 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   

@@ -85,7 +85,7 @@ manager: "jhubbard"
 >  This version of Visual Database Tools does not support Microsoft SQL Server version 7 and earlier.  
   
 ## See Also  
- [Design Database Diagrams &#40;Visual Database Tools&#41;](../../database-engine/design-database-diagrams-visual-database-tools.md)   
+ [Design Database Diagrams &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
  [Design Tables &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
  [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

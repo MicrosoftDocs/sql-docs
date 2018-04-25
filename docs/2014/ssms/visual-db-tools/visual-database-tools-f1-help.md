@@ -23,7 +23,7 @@ manager: "jhubbard"
  To access dialog box topics, press F1 when you have a dialog box open and it has focus. To access properties window topics, click in the Properties window and press F1.  
   
 ## See Also  
- [Design Tables &#40;Visual Database Tools&#41;](../../database-engine/visual-database-tools.md)   
+ [Design Tables &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -79,7 +79,7 @@ manager: "jhubbard"
  [Create Queries using Something Besides a Table &#40;Visual Database Tools&#41;](create-queries-using-something-besides-a-table-visual-database-tools.md)  
  Provides steps for creating queries that use table-valued objects, such as table-valued functions and views.  
   
- [Show Column Names in the Diagram Pane &#40;Visual Database Tools&#41;](../../database-engine/diagram-pane-visual-database-tools.md)  
+ [Show Column Names in the Diagram Pane &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)  
  Provides steps for customizing how tables and table-valued objects look in the Diagram pane.  
   
  [Use the Query and View Designer with International Data &#40;Visual Database Tools&#41;](use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
@@ -89,7 +89,7 @@ manager: "jhubbard"
  [Query and View Designer Tools &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  
  Describes the features and capabilities of the Query and View Designer.  
   
- [Query Properties &#40;Visual Database Tools&#41;](../../database-engine/query-properties-visual-database-tools.md)  
+ [Query Properties &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
  Describes the properties available for queries.  
   
 ## Related Sections  

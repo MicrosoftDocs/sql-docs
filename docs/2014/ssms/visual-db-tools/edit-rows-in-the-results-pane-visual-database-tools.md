@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Edit Rows in the Results Pane (Visual Database Tools)
-  In many cases, you can edit the data in the [Results Pane](visual-database-tools.md). For more detailed information about changing data see [Rules for Updating Results &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) and [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](../../database-engine/work-with-data-in-the-visual-database-tools.md).  
+  In many cases, you can edit the data in the [Results Pane](visual-database-tools.md). For more detailed information about changing data see [Rules for Updating Results &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) and [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](work-with-data-in-the-visual-database-tools.md).  
   
 ### To edit data in the Results pane  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
 4.  Save your changes by leaving the row.  
   
 ## See Also  
- [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](../../database-engine/work-with-data-in-the-visual-database-tools.md)   
+ [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](work-with-data-in-the-visual-database-tools.md)   
  [Rules for Updating Results &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md)  
   
   

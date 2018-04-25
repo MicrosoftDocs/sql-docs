@@ -48,7 +48,7 @@ manager: "jhubbard"
  [Sort Multiple Columns in Queries &#40;Visual Database Tools&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
  Provides steps for setting the order of results sets for multiple columns.  
   
- [Group Rows in Query Results &#40;Visual Database Tools&#41;](../../database-engine/group-rows-in-query-results-visual-database-tools.md)  
+ [Group Rows in Query Results &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
  Provides steps for creating subsets of summary information by organizing data into groups.  
   
  [Specify Conditions for Groups &#40;Visual Database Tools&#41;](specify-conditions-for-groups-visual-database-tools.md)  

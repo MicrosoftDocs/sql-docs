@@ -81,7 +81,7 @@ WHERE (title LIKE '%Cook%') AND
 ```  
   
 ## See Also  
- [Conventions for Combining Search Conditions in the Criteria Pane &#40;Visual Database Tools&#41;](../../database-engine/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Conventions for Combining Search Conditions in the Criteria Pane &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Specify Search Criteria &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

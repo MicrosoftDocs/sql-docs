@@ -87,7 +87,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 >  To find out the paths of the backup and copy directories, you can run the **sp_help_log_shipping_secondary_database** stored procedure or view the **log_shipping_secondary** table in **msdb**. The paths of the backup directory and destination directory are in the **backup_source_directory** and **backup_destination_directory** columns, respectively.  
   
 ## See Also  
- [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)   
+ [About Log Shipping &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](~/relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   

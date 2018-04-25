@@ -43,13 +43,13 @@ FROM titles
  When you create a single aggregation value for all rows in a table, you display only the aggregate values themselves. For example, if you are totaling the value of the `price` column of the `titles` table, you would not also display individual titles, publisher names, and so on.  
   
 > [!NOTE]  
->  If you are subtotaling — that is, creating groups — you can display column values for each group. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](../../database-engine/group-rows-in-query-results-visual-database-tools.md).  
+>  If you are subtotaling — that is, creating groups — you can display column values for each group. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
   
 ### To aggregate values for all rows  
   
 1.  Be sure the table you want to aggregate is already present in the Diagram pane.  
   
-2.  Right-click the background of the Diagram pane, then choose **Group By** from the shortcut menu. The [Query and View Designer](../../database-engine/query-and-view-designer-tools-visual-database-tools.md) adds a **Group By** column to the grid in the Criteria pane.  
+2.  Right-click the background of the Diagram pane, then choose **Group By** from the shortcut menu. The [Query and View Designer](query-and-view-designer-tools-visual-database-tools.md) adds a **Group By** column to the grid in the Criteria pane.  
   
 3.  Add the column you want to aggregate to the Criteria pane. Be sure that the column is marked for output.  
   

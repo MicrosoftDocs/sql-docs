@@ -76,7 +76,7 @@ manager: "jhubbard"
 ## See Also  
  [Combine Conditions When AND Has Precedence &#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
  [Combine Conditions When OR Has Precedence &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [Conventions for Combining Search Conditions in the Criteria Pane &#40;Visual Database Tools&#41;](../../database-engine/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Conventions for Combining Search Conditions in the Criteria Pane &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Specify Search Criteria &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

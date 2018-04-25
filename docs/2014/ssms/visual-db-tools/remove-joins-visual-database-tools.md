@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ### To remove a join  
   
--   In the [Diagram pane](../../database-engine/diagram-pane-visual-database-tools.md), select the join line for the join to remove, and then press the DELETE key. You can select and delete multiple join lines at one time.  
+-   In the [Diagram pane](diagram-pane-visual-database-tools.md), select the join line for the join to remove, and then press the DELETE key. You can select and delete multiple join lines at one time.  
   
  The Query and View Designer removes the join line and alters the statement in the [SQL pane](sql-pane-visual-database-tools.md).  
   

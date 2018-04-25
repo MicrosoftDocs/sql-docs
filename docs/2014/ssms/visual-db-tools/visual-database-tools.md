@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 |**Description**|**Topic**|  
 |---------------------|---------------|  
-|Describes the database diagram tool.|[Design Database Diagrams &#40;Visual Database Tools&#41;](../../database-engine/visual-database-tools.md)|  
+|Describes the database diagram tool.|[Design Database Diagrams &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)|  
 |Describes the visual table design tool.|[Design Tables &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)|  
 |Describes the visual query designer.|[Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)|  
   

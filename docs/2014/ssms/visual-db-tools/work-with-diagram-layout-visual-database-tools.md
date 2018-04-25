@@ -23,7 +23,7 @@ manager: "jhubbard"
   You can customize the way your database diagrams look.  
   
 ## In This Section  
- [Customize the Amount of Information Displayed in Diagrams &#40;Visual Database Tools&#41;](../../database-engine/visual-database-tools.md)  
+ [Customize the Amount of Information Displayed in Diagrams &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
  [Add Text Annotations to Diagrams &#40;Visual Database Tools&#41;](add-text-annotations-to-diagrams-visual-database-tools.md)  
   

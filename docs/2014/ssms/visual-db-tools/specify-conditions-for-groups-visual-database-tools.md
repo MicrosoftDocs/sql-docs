@@ -30,13 +30,13 @@ manager: "jhubbard"
   
 ### To specify a condition for a group  
   
-1.  Specify the groups for your query. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](../../database-engine/group-rows-in-query-results-visual-database-tools.md).  
+1.  Specify the groups for your query. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
   
 2.  If it is not already in the [Criteria pane](criteria-pane-visual-database-tools.md), add the column on which you want to base the condition. (Most often the condition involves a column that is already a group or summary column.) You cannot use a column that is not part of an aggregate function or of the GROUP BY clause.  
   
 3.  In the **Filter** column, specify the condition to apply to the group.  
   
-     The [Query and View Designer](../../database-engine/query-and-view-designer-tools-visual-database-tools.md) automatically creates a HAVING clause in the statement in the [SQL pane](sql-pane-visual-database-tools.md), such as in the following example:  
+     The [Query and View Designer](query-and-view-designer-tools-visual-database-tools.md) automatically creates a HAVING clause in the statement in the [SQL pane](sql-pane-visual-database-tools.md), such as in the following example:  
   
     ```  
     SELECT pub_id, AVG(price)  

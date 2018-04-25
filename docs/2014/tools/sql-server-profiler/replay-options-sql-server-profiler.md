@@ -26,7 +26,7 @@ manager: "jhubbard"
  This topic describes the options specified with the **Replay Configuration** dialog box.  
   
 > [!NOTE]  
->  We recommend using the Distributed Replay Utility for replaying an intensive OLTP application (with many active concurrent connections or high throughput). The Distributed Replay Utility can replay trace data from multiple computers, better simulating a mission-critical workload. For more information, see [SQL Server Distributed Replay](../../database-engine/sql-server-distributed-replay.md).  
+>  We recommend using the Distributed Replay Utility for replaying an intensive OLTP application (with many active concurrent connections or high throughput). The Distributed Replay Utility can replay trace data from multiple computers, better simulating a mission-critical workload. For more information, see [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md).  
   
 ## Basic Replay Options  
  **Replay server**  

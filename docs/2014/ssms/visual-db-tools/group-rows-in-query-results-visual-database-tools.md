@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  For example, you might want to see the average price of a book in the `titles` table, but break the results down by publisher. To do so, you group the query by publisher (for example, `pub_id`). The resulting query output might look like this:  
   
- ![Query results: average price grouped by publisher](../../database-engine/media/dv3w9e1.gif "Query results: average price grouped by publisher")  
+ ![Query results: average price grouped by publisher](../../database-engine/media//dv3w9e1.gif "Query results: average price grouped by publisher")  
   
  When you group data, you can display only summary or grouped data, such as:  
   
@@ -46,7 +46,7 @@ GROUP BY pub_id, type
   
  The resulting output might look like this:  
   
- ![Query results: price grouped by publisher and type](../../database-engine/media/dv3w9e2.gif "Query results: price grouped by publisher and type")  
+ ![Query results: price grouped by publisher and type](../../database-engine/media//dv3w9e2.gif "Query results: price grouped by publisher and type")  
   
 ### To group rows  
   
@@ -70,7 +70,7 @@ GROUP BY pub_id, type
   
      The Query and View Designer automatically assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-     ![Adding a column alias to the query result set](../../database-engine/media/dv3w9e3.gif "Adding a column alias to the query result set")  
+     ![Adding a column alias to the query result set](../../database-engine/media//dv3w9e3.gif "Adding a column alias to the query result set")  
   
      The corresponding statement in the **SQL** pane might look like this:  
   

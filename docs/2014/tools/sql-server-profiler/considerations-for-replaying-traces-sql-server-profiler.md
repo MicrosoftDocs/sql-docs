@@ -35,7 +35,7 @@ manager: "jhubbard"
  For information about what permissions are required to replay a trace, see [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md).  
   
 ## See Also  
- [bcp Utility](../../database-engine/bcp-utility.md)   
+ [bcp Utility](../bcp-utility.md)   
  [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_getbindtoken &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [sp_bindsession &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   

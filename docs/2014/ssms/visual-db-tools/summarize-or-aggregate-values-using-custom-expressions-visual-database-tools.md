@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 2.  Move to a blank row of the Criteria pane, and then type the expression in the **Columns** column.  
   
-     The [Query and View Designer](../../database-engine/query-and-view-designer-tools-visual-database-tools.md) automatically assigns a column alias to the expression to create a useful column heading in query output. For more details, see [Create Column Aliases &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
+     The [Query and View Designer](query-and-view-designer-tools-visual-database-tools.md) automatically assigns a column alias to the expression to create a useful column heading in query output. For more details, see [Create Column Aliases &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
 3.  In the **Group By** column for the expression, select **Expression**.  
   

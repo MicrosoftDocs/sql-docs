@@ -33,13 +33,13 @@ manager: "jhubbard"
 -   Schedule information flows between enterprise servers for data warehousing.  
   
 > [!NOTE]  
->  As part of [!INCLUDE[msCoName](../../includes/msconame-md.md)] ongoing efforts to reduce the total cost of ownership, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced two features:  a method of managing servers that is called Policy-Based Management, and multiserver queries that use configuration servers and server groups. These features can be used with, or instead of, some of the features that are described in this topic. For more information, see [Administer Servers by Using Policy-Based Management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) and [Administer Multiple Servers Using Central Management Servers](../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  As part of [!INCLUDE[msCoName](../../includes/msconame-md.md)] ongoing efforts to reduce the total cost of ownership, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced two features:  a method of managing servers that is called Policy-Based Management, and multiserver queries that use configuration servers and server groups. These features can be used with, or instead of, some of the features that are described in this topic. For more information, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) and [Administer Multiple Servers Using Central Management Servers](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  To take advantage of multiserver administration, you must have at least one master server and at least one target server. A master server distributes jobs to, and receives events from, target servers. A master server also stores the central copy of job definitions for jobs that are run on target servers. Target servers connect periodically to the master server to update their schedule of jobs. If a new job exists on the master server, the target server downloads the job. After the target server completes the job, it reconnects to the master server and reports the status of the job.  
   
  The following illustration shows the relationship between master and target servers:  
   
- ![Multiserver administration configuration](../../2014/database-engine/media/multisvr.gif "Multiserver administration configuration")  
+ ![Multiserver administration configuration](../../database-engine/media/multisvr.gif "Multiserver administration configuration")  
   
  If you administer departmental servers across a large corporation, you can define the following:  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)   
- [Register Servers](../ssms/register-servers/register-servers.md)   
+ [Register Servers](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   

@@ -60,13 +60,13 @@ manager: "jhubbard"
   
  The following diagram shows this process of checking permission when replaying traces:  
   
- ![SQL Server Profiler replay trace permissions](../../2014/database-engine/media/replaytracedecisiontree.gif "SQL Server Profiler replay trace permissions")  
+ ![SQL Server Profiler replay trace permissions](../../database-engine/media/replaytracedecisiontree.gif "SQL Server Profiler replay trace permissions")  
   
 ## See Also  
  [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
- [Replay Traces](../tools/sql-server-profiler/replay-traces.md)   
- [Create a Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
- [Replay a Trace Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
- [Replay a Trace File &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
+ [Replay Traces](replay-traces.md)   
+ [Create a Trace &#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
+ [Replay a Trace Table &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [Replay a Trace File &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)  
   
   

@@ -21,7 +21,7 @@ ms.workload: "Active"
 # SQL Server privacy supplement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. This article serves as an addendum to the overall Microsoft Privacy Statement. The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
+This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 
 - Azure SQL Database
 - SQL Server Management Studio (SSMS)
@@ -48,7 +48,7 @@ Credential-related information used to secure logins, users, or accounts within 
 |---------|---------|---------|
 |These credentials never leave the user machine via Usage Feedback.     |-         |-         |
 |Crash Dumps may contain Access Control Data.     |-         |Crash Dumps: Maximum 30 days.         |
-|These credentials never leave the user machine via User Feedback unless Customer injects it manually    |Limit to Microsoft internal use with no third-party access.         |User Feedback: Max 1 year         |
+|These credentials never leave the user machine via User Feedback unless customer injects it manually    |Limit to Microsoft internal use with no third-party access.         |User Feedback: Max 1 year         |
  |
 ## Customer content
 

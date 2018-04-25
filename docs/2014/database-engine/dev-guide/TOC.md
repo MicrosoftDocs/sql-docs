@@ -289,7 +289,7 @@
 #### [Communicating with SQL Server (ODBC)](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)
 ##### [Allocating an Environment Handle](../../relational-databases/native-client-odbc-communication/allocating-an-environment-handle.md)
 ##### [Allocating a Connection Handle](../../relational-databases/native-client-odbc-communication/allocating-a-connection-handle.md)
-##### [SQL Server Native Client ODBC Data Sources](../../integration-services/connection-manager/data-sources.md)
+##### [SQL Server Native Client ODBC Data Sources](../../relational-databases/native-client-odbc-communication/sql-server-native-client-odbc-data-sources.md)
 ##### [Connecting to a Data Source (ODBC)](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)
 ##### [Disconnecting from a Data Source](../../relational-databases/native-client-odbc-communication/disconnecting-from-a-data-source.md)
 #### [Executing Queries (ODBC)](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)

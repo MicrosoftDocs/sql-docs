@@ -35,7 +35,7 @@ manager: "mblythe"
   
  [Physical Architecture &#40;Analysis Services - Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)  
   
- [Data Mining Services and Data Sources](../../integration-services/connection-manager/data-sources.md)  
+ [Data Mining Services and Data Sources](data-mining-services-and-data-sources.md)  
   
  [Management of Data Mining Solutions and Objects](management-of-data-mining-solutions-and-objects.md)  
   

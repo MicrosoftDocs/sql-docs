@@ -36,6 +36,6 @@ manager: "jhubbard"
 3.  In the **Mark as Date Table** dialog box, in the **Date** listbox, select the **Date** column as the unique identifier.  
   
 ## Next Steps  
- To continue this tutorial, go to the next lesson: [Lesson 5: Create Relationships](../integration-services/data-flow/transformations/create-relationships.md).  
+ To continue this tutorial, go to the next lesson: [Lesson 5: Create Relationships](lesson-4-create-relationships.md).  
   
   

@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|[New Full-Text Catalog &#40;General Page&#41;](../integration-services/general-page-of-integration-services-designers-options.md)|[Full-Text Index Properties &#40;Schedules Page&#41;](../../2014/database-engine/full-text-index-properties-schedules-page.md)|  
+|[New Full-Text Catalog &#40;General Page&#41;](new-full-text-catalog-general-page.md)|[Full-Text Index Properties &#40;Schedules Page&#41;](../../2014/database-engine/full-text-index-properties-schedules-page.md)|  
 |[Full-Text Catalog Properties &#40;General Page&#41;](../../2014/database-engine/full-text-catalog-properties-general-page.md)|[New Full-Text Stoplist &#40;General Page&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md)|  
 |[Full-Text Catalog Properties &#40;Population Schedule Page&#41;](../../2014/database-engine/full-text-catalog-properties-population-schedule-page.md)|[Full-Text Stoplist Properties](../../2014/database-engine/full-text-stoplist-properties.md)|  
 |[Full-Text Catalog Properties &#40;Tables and Views Page&#41;](../../2014/database-engine/full-text-catalog-properties-tables-and-views-page.md)|[New Search Property List](../../2014/database-engine/new-search-property-list.md)|  

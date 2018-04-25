@@ -75,18 +75,18 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
 2. Right-click **SQL Server Agent** and select **Start**. The SQL Server Agent should be running before you create the publication. If this step does not start your agent, you'll need to do so manually from SQL Server Configuration Manager. 
 3. Expand the **Replication** folder, right-click the **Local Publications** folder, and select **New Publication**. This step starts the New Publication Wizard:  
 
-   ![New Publication](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
+   ![Selections for starting the New Publication Wizard](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
   
   
 3. On the **Publication Database** page, select [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], and then select **Next**.  
   
 4. On the **Publication Type** page, select **Transactional publication**, and then select **Next**:  
 
-   ![Transactional Replication](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
+   !["Publication Type" page of the wizard](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
   
 5. On the **Articles** page, expand the **Tables** node and select the **Product** check box. Then expand **Product** and clear the check boxes next to  **ListPrice** and **StandardCost**. Select **Next**.  
 
-   ![Articles to publish](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
+   !["Articles" page of the wizard, with selected articles to publish](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
   
 6. On the **Filter Table Rows** page, select **Add**.   
   
@@ -96,23 +96,23 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
    WHERE [SafetyStockLevel] < 500  
    ```
   
-   ![Filter Statement](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
+   !["Filter Table Flows" page of the wizard and "Add Filter" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
   
 8. Select **OK**, and then select **Next**.  
   
 9. Select the **Create a snapshot immediately and keep the snapshot available to initialize subscriptions** check box, and select **Next**:  
 
-   ![Snapshot Agent](media/tutorial-replicating-data-between-continuously-connected-servers/snapshot.png)
+   !["Snapshot Agent" page of the wizard with check box selected](media/tutorial-replicating-data-between-continuously-connected-servers/snapshot.png)
   
 10. On the **Agent Security** page, clear the **Use the security settings from the Snapshot Agent** check box.   
   
     Select **Security Settings** for the Snapshot Agent, enter <*Publisher_Machine_Name*>**\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**:  
 
-    ![Snapshot Agent Security](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
+    !["Agent Security" page of the wizard and "Snapshot Agent Security" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
 12. Repeat the previous step to set <*Publisher_Machine_Name*>**\repl_logreader** as the process account for the Log Reader Agent. Then select **OK**.  
 
-    ![Log Reader Agent Security](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
+    !["Log Reader Agent Security" dialog box and "Agent Security" page of the wizard](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
   
 13. On the **Complete the Wizard** page, type **AdvWorksProductTrans** in the **Publication name** box, and select **Finish**:  

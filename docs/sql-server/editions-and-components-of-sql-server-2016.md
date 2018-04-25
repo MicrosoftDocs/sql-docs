@@ -3,7 +3,7 @@ title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: sql
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""

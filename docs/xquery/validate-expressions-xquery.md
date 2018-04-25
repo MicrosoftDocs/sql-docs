@@ -3,7 +3,7 @@ title: "Validate Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""

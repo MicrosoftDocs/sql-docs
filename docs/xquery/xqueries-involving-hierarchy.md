@@ -3,7 +3,7 @@ title: "XQueries Involving Hierarchy | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""

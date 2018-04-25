@@ -49,7 +49,7 @@ manager: "jhubbard"
   
  The following diagram shows a Foreach Loop container that has a File System task. The Foreach loop uses the Foreach File enumerator, and the File System task is configured to copy a file. If the folder that the enumerator specifies contains four files, the loop repeats four times and copies four files.  
   
- ![A Foreach Loop container that enumerates a folder](../../2014/integration-services/media/ssis-foreachloop.gif "A Foreach Loop container that enumerates a folder")  
+ ![A Foreach Loop container that enumerates a folder](../media/ssis-foreachloop.gif "A Foreach Loop container that enumerates a folder")  
   
  You can use a combination of variables and property expressions to update the property of the package object with the enumerator collection value. First you map the collection value to a user-defined variable, and then you implement a property expression on the property that uses the variable. For example, the collection value of the Foreach File enumerator is mapped to a variable called `MyFile` and the variable is then used in the property expression for the Subject property of a Send Mail task. When the package runs, the Subject property is updated with the name of a file each time that the loop repeats. For more information, see [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md).  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
  For details about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click one of the following topics:  
   
--   [Configure a Foreach Loop Container](control-flow/foreach-loop-container.md)  
+-   [Configure a Foreach Loop Container](foreach-loop-container.md)  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
  Blog entry, [SSIS For Each Node List Enumerator](http://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
   
 ## See Also  
- [Control Flow](control-flow/control-flow.md)   
- [Integration Services Containers](control-flow/integration-services-containers.md)  
+ [Control Flow](control-flow.md)   
+ [Integration Services Containers](integration-services-containers.md)  
   
   

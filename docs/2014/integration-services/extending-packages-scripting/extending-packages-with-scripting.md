@@ -44,7 +44,7 @@ manager: "jhubbard"
  Discusses how to create custom data flow sources, transformations, and destinations by using the Script component. A data flow component is typically called one time for each row of data that is processed.  
   
 ## Reference  
- [Integration Services Error and Message Reference](../../../2014/integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services Error and Message Reference](../integration-services-error-and-message-reference.md)  
  Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  
@@ -56,9 +56,9 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [SQL Server Integration Services](../../../2014/integration-services/sql-server-integration-services.md)  
+ [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

@@ -45,7 +45,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The data flow engine passes its own version number into the <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> method in the *pipelineVersion* parameter. This parameter is not useful in version 1.0 of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], but may become useful in subsequent versions.  
   
- The sample code uses only the two enumeration values that map directly to the prior Boolean values for the custom property. Users can select the other available enumeration values through the component's custom user interface, in the Advanced Editor, or programmatically. For information on displaying enumeration values for a custom property in the Advanced Editor, see "Creating Custom Properties" in [Design-time Methods of a Data Flow Component](../extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ The sample code uses only the two enumeration values that map directly to the prior Boolean values for the custom property. Users can select the other available enumeration values through the component's custom user interface, in the Advanced Editor, or programmatically. For information on displaying enumeration values for a custom property in the Advanced Editor, see "Creating Custom Properties" in [Design-time Methods of a Data Flow Component](/design-time-methods-of-a-data-flow-component.md).  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -180,6 +180,6 @@ public class PerformUpgradeCS :
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
   

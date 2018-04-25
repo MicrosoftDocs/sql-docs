@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  The following diagram shows a simple data flow with a source component, two transformations, a destination component, and the paths that connect them.  
   
- ![Data flow](../../2014/integration-services/media/mw-dts-08.gif "Data flow")  
+ ![Data flow](media/mw-dts-08.gif "Data flow")  
   
  After two components are connected, you can view the metadata of the data that moves through the path and the properties of the path in **Data Flow Path Editor**. For more information, see [Integration Services Paths](data-flow/integration-services-paths.md).  
   

@@ -24,9 +24,9 @@ manager: "jhubbard"
  Switch view button  
  Click an icon to switch between the design and query pane. By default, the design pane is open.  
   
- To switch to the design pane, click the ![Design icon](../../2014/integration-services/media/ssis-designicon.gif "Design icon") icon.  
+ To switch to the design pane, click the ![Design icon](../media/ssis-designicon.gif "Design icon") icon.  
   
- To switch to the query pane, click the ![SQL icon](../../2014/integration-services/media/ssis-queryicon.gif "SQL icon") icon.  
+ To switch to the query pane, click the ![SQL icon](../media/ssis-queryicon.gif "SQL icon") icon.  
   
  **Mining Model**  
  Displays the selected mining model on which you want to base predictions.  

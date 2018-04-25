@@ -103,7 +103,7 @@ manager: "jhubbard"
 ## Next Step  
  After you calculate the starting point and ending point for a range of changes, the next step is to determine whether the change data is ready.  
   
- **Next topic:** [Determine Whether the Change Data Is Ready](change-data-capture/determine-whether-the-change-data-is-ready.md)  
+ **Next topic:** [Determine Whether the Change Data Is Ready](determine-whether-the-change-data-is-ready.md)  
   
 ## See Also  
  [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)   

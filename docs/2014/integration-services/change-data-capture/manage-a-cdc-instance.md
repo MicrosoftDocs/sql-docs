@@ -45,16 +45,16 @@ manager: "jhubbard"
  Click **OK** in the confirmation dialog box to confirm that you want to delete the CDC instance.  
   
  **Oracle Logging Script**  
- Click this link to display the Oracle Logging script dialog box with the Oracle supplemental-logging script. For information on what you can do in this dialog box, see [Oracle Supplemental Logging Script](change-data-capture/oracle-supplemental-logging-script.md).  
+ Click this link to display the Oracle Logging script dialog box with the Oracle supplemental-logging script. For information on what you can do in this dialog box, see [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md).  
   
 > [!NOTE]  
->  When you run the supplemental logging scripts, the Oracle Credentials for Running Script dialog box opens where you provide a valid Oracle user name and password. For information on how to provide the proper Oracle credentials, see [Oracle Credentials for Running Script](change-data-capture/oracle-credentials-for-running-script.md).  
+>  When you run the supplemental logging scripts, the Oracle Credentials for Running Script dialog box opens where you provide a valid Oracle user name and password. For information on how to provide the proper Oracle credentials, see [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md).  
   
  **CDC Instance Deployment Script**  
- Click this link to display the CDC Instance Deployment Script dialog box that displays the CDC instance deployment script. For information about this dialog box, see [CDC Instance Deployment Script](change-data-capture/cdc-instance-deployment-script.md).  
+ Click this link to display the CDC Instance Deployment Script dialog box that displays the CDC instance deployment script. For information about this dialog box, see [CDC Instance Deployment Script](cdc-instance-deployment-script.md).  
   
  **Properties**  
- Click this link to open the property editor. You edit the CDC instance configuration using the property editor. For more information about editing the properties for a CDC instance, see [Edit Instance Properties](change-data-capture/edit-instance-properties.md).  
+ Click this link to open the property editor. You edit the CDC instance configuration using the property editor. For more information about editing the properties for a CDC instance, see [Edit Instance Properties](edit-instance-properties.md).  
   
  **Viewer Tabs**  
   
@@ -67,10 +67,10 @@ manager: "jhubbard"
   
     |||  
     |-|-|  
-    |![Error](../../2014/integration-services/media/error.gif "Error")|**Error**. The Oracle CDC Instance is not running because a non-retryable error occurred. The following sub-statuses are available:<br /><br /> **Misconfigured**: A configuration error occurred that requires manual intervention.<br /><br /> **Password Required**: No password was set for the Oracle CDC Instance or the password is not valid.<br /><br /> **Unexpected**. All other non-recoverable errors.|  
-    |![Okay](../../2014/integration-services/media/okay.gif "Okay")|**Running**: The CDC Instance is running and is processing change records. The following sub-statuses are available.<br /><br /> **Idle**: All change records have been processed and stored in the target change tables. There are no more active transactions.<br /><br /> **Processing**: There are change records being process that are not yet written to the change tables.|  
-    |![Stop](../../2014/integration-services/media/stop.gif "Stop")|**Stopped**: The CDC instance is not running. The stopped status indicates that the CDC instance was stopped in a normal manner.|  
-    |![Paused](../../2014/integration-services/media/paused.gif "Paused")|**Paused**: The CDC instance is running but processing is suspended because of a retryable error. The following sub-statuses are available:<br /><br /> **Disconnected**: The connection to the source Oracle database cannot be established. Processing resumes when the connection is restored.<br /><br /> **Storage**: The storage is full. Processing resumes when additional storage becomes available.<br /><br /> **Logger**: The logger is connected to Oracle but cannot read the Oracle transaction logs due to a temporary problem, for example, a required transaction log is not available.|  
+    |![Error](../media/error.gif "Error")|**Error**. The Oracle CDC Instance is not running because a non-retryable error occurred. The following sub-statuses are available:<br /><br /> **Misconfigured**: A configuration error occurred that requires manual intervention.<br /><br /> **Password Required**: No password was set for the Oracle CDC Instance or the password is not valid.<br /><br /> **Unexpected**. All other non-recoverable errors.|  
+    |![Okay](../media/okay.gif "Okay")|**Running**: The CDC Instance is running and is processing change records. The following sub-statuses are available.<br /><br /> **Idle**: All change records have been processed and stored in the target change tables. There are no more active transactions.<br /><br /> **Processing**: There are change records being process that are not yet written to the change tables.|  
+    |![Stop](../media/stop.gif "Stop")|**Stopped**: The CDC instance is not running. The stopped status indicates that the CDC instance was stopped in a normal manner.|  
+    |![Paused](../media/paused.gif "Paused")|**Paused**: The CDC instance is running but processing is suspended because of a retryable error. The following sub-statuses are available:<br /><br /> **Disconnected**: The connection to the source Oracle database cannot be established. Processing resumes when the connection is restored.<br /><br /> **Storage**: The storage is full. Processing resumes when additional storage becomes available.<br /><br /> **Logger**: The logger is connected to Oracle but cannot read the Oracle transaction logs due to a temporary problem, for example, a required transaction log is not available.|  
   
 -   **Detailed Status**: The current substatus.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
     -   **Active transactions**: The current number of source Oracle transactions that are being processed by the Oracle CDC Instance and are not yet decided (commit/rollback).  
   
-    -   **Staged transactions**: The current number source Oracle transactions that are staged to the [cdc.xdbcdc_staged_transactions](change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) table.  
+    -   **Staged transactions**: The current number source Oracle transactions that are staged to the [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) table.  
   
 -   **Counters**: You monitor the following information in this section.  
   
@@ -103,22 +103,22 @@ manager: "jhubbard"
  **Oracle**  
  Displays information about the CDC instance and its connection to the Oracle database. This tab is read only. To edit these properties, right-click the instance in the left pane and select **Properties** or click **Properties** in the right pane to open the \<instance> Properties dialog box.  
   
- For information about these properties and how to edit them, see [Edit the Oracle Database Properties](change-data-capture/edit-the-oracle-database-properties.md).  
+ For information about these properties and how to edit them, see [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
  **Tables**  
  Displays information about the tables included in the CDC instance. Column information is also available here. This tab is read only. To edit these properties, right-click the instance in the left pane and select **Properties** or click **Properties** in the right pane to open the \<instance> Properties dialog box.  
   
- For information about these properties and how to edit them, see [Edit Tables](change-data-capture/edit-tables.md).  
+ For information about these properties and how to edit them, see [Edit Tables](edit-tables.md).  
   
  **Advanced**  
  Displays the advanced properties for the CDC instance and the property values. This tab is read only. To edit these properties, right-click the instance in the left pane and select **Properties** or click **Properties** in the right pane to open the \<instance> Properties dialog box.  
   
- For information about these properties and how to edit them, see [Edit the Advanced Properties](change-data-capture/edit-the-advanced-properties.md).  
+ For information about these properties and how to edit them, see [Edit the Advanced Properties](edit-the-advanced-properties.md).  
   
 ## See Also  
- [How to Create the SQL Server Change Database Instance](change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [How to View the CDC Instance Properties](change-data-capture/how-to-view-the-cdc-instance-properties.md)   
- [How to Edit the CDC Instance Properties](change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Use the New Instance Wizard](change-data-capture/use-the-new-instance-wizard.md)  
+ [How to Create the SQL Server Change Database Instance](how-to-create-the-sql-server-change-database-instance.md)   
+ [How to View the CDC Instance Properties](how-to-view-the-cdc-instance-properties.md)   
+ [How to Edit the CDC Instance Properties](how-to-edit-the-cdc-instance-properties.md)   
+ [Use the New Instance Wizard](use-the-new-instance-wizard.md)  
   
   

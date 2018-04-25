@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  The following diagram shows a simple data flow that has a source, two transformations, and a destination.  
   
- ![Data flow](../../2014/integration-services/media/mw-dts-08.gif "Data flow")  
+ ![Data flow](../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] transformations provide the following functionality:  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Performing tasks such as exporting and importing data, providing audit information, and working with slowly changing dimensions.  
   
- For more information, see [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md).  
+ For more information, see [Integration Services Transformations](/integration-services-transformations.md).  
   
  You can also write custom transformations. For more information, see [Developing a Custom Data Flow Component](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
@@ -46,21 +46,21 @@ manager: "jhubbard"
   
 ### To add a transformation to a data flow  
   
--   [Add or Delete a Component in a Data Flow](data-flow/data-flow.md)  
+-   [Add or Delete a Component in a Data Flow](data-flow.md)  
   
 ### To connect a transformation to a data flow  
   
--   [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md)  
+-   [Connect Components in a Data Flow](connect-components-in-a-data-flow.md)  
   
 ### To set the properties of a transformation  
   
--   [Set the Properties of a Data Flow Component](data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
   
 ## See Also  
  [Data Flow Task](control-flow/data-flow-task.md)   
  [Data Flow](../../2014/integration-services/data-flow.md)   
  [Connect Components with Paths](../../2014/integration-services/connect-components-with-paths.md)   
- [Error Handling in Data](data-flow/error-handling-in-data.md)   
+ [Error Handling in Data](error-handling-in-data.md)   
  [Data Flow](../../2014/integration-services/data-flow.md)  
   
   

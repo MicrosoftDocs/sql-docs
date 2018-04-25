@@ -30,9 +30,9 @@ manager: "jhubbard"
   
  **CDC Data Flow Components**:  
   
- [CDC Source](data-flow/cdc-source.md)  
+ [CDC Source](cdc-source.md)  
   
- [CDC Splitter](data-flow/cdc-splitter.md)  
+ [CDC Splitter](cdc-splitter.md)  
   
 ## Installation  
  This section describes the installation procedures for the CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)].  
@@ -77,7 +77,7 @@ manager: "jhubbard"
 ## Getting Started with the Change Data Capture Components  
  A typical CDC package processes changes to a group of tables. The basic control flow part of this type of CDC package is shown in the figure below. This package is called a trickle-feed processing package.  
   
- ![Trickle Feed Processing Package Control Flow](../../2014/integration-services/media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
+ ![Trickle Feed Processing Package Control Flow](../media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
   
  This [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Control Flow contains two CDC Control Tasks and the Data Flow task. The first task called **Get CDC Processing Range** establishes the LSN range for the changes that are processed in the data-flow task called **Process Changes**. This range is established based on what was processed during the last package run and was saved in a persistent store.  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
  The following figure shows the **Process Changes** data flow, which conceptually shows how the changes are processes.  
   
- ![Process Changes Data Flow](../../2014/integration-services/media/processchangesdataflow.gif "Process Changes Data Flow")  
+ ![Process Changes Data Flow](../media/processchangesdataflow.gif "Process Changes Data Flow")  
   
  The steps illustrated in this figure are:  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
  For more information about the CDC Source, see:  
   
- [CDC Source](data-flow/cdc-source.md)  
+ [CDC Source](cdc-source.md)  
   
  [CDC Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
   
  For more information about the CDC Splitter, see:  
   
- [CDC Splitter](data-flow/cdc-splitter.md)  
+ [CDC Splitter](cdc-splitter.md)  
   
  One of the basic issues that require attention when building CDC packages is how the change processing interacts with the initial loading (or initial processing) of the data.  
   
@@ -121,11 +121,11 @@ manager: "jhubbard"
   
  The following figure shows an SSIS package that could handle the first two scenarios:  
   
- ![SSIS package handling first two scenarios](../../2014/integration-services/media/scenarioonetwo.gif "SSIS package handling first two scenarios")  
+ ![SSIS package handling first two scenarios](../media/scenarioonetwo.gif "SSIS package handling first two scenarios")  
   
  The following figure shows an SSIS package that could handle the third scenario:  
   
- ![SSIS package handling third scenario](../../2014/integration-services/media/scenario3.gif "SSIS package handling third scenario")  
+ ![SSIS package handling third scenario](../media/scenario3.gif "SSIS package handling third scenario")  
   
  Following the initial load package, a trickle-feed update package is run repeatedly according to a schedule to process changes as they become available for consumption.  
   
@@ -184,21 +184,21 @@ manager: "jhubbard"
   
  For example, at the end of an initial load package, when trying to set the state to ILEND, if the state is TFSTART then the CDC group is in an error state and the Trickle-Feed Update package does not run (the Initial Load package does run).  
   
- ![State Diagram](../../2014/integration-services/media/statediagram.gif "State Diagram")  
+ ![State Diagram](../media/statediagram.gif "State Diagram")  
   
  Once the Initial Load package runs successfully, the Trickle-Feed Update package runs repeatedly under a predetermined schedule to process changes to the source tables. Each run of the Trickle-Feed Update package is a CDC run.  
   
 ## In This Section  
   
--   [CDC Source](data-flow/cdc-source.md)  
+-   [CDC Source](cdc-source.md)  
   
--   [CDC Splitter](data-flow/cdc-splitter.md)  
+-   [CDC Splitter](cdc-splitter.md)  
   
 ## Related Tasks  
   
--   [Direct the CDC Stream According to the Type of Change](data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
+-   [Direct the CDC Stream According to the Type of Change](direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
--   [Define a State Variable](data-flow/define-a-state-variable.md)  
+-   [Define a State Variable](define-a-state-variable.md)  
   
 ## Related Content  
   

@@ -103,15 +103,15 @@ manager: "jhubbard"
   
  For more information about how to set properties, click one of the following topics:  
   
--   [Bulk Load Data by Using the SQL Server Destination](data-flow/sql-server-destination.md)  
+-   [Bulk Load Data by Using the SQL Server Destination](sql-server-destination.md)  
   
--   [Set the Properties of a Data Flow Component](data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
   
 ## Related Tasks  
   
--   [Bulk Load Data by Using the SQL Server Destination](data-flow/sql-server-destination.md)  
+-   [Bulk Load Data by Using the SQL Server Destination](sql-server-destination.md)  
   
--   [Set the Properties of a Data Flow Component](data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
   
 ## Related Content  
   
@@ -122,6 +122,6 @@ manager: "jhubbard"
 -   Technical article, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701), on simple-talk.com.  
   
 ## See Also  
- [Data Flow](data-flow/data-flow.md)  
+ [Data Flow](data-flow.md)  
   
   

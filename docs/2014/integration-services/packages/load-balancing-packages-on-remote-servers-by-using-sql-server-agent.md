@@ -33,7 +33,7 @@ manager: "jhubbard"
 ## Illustration of Load-Balancing  
  The following diagram shows a parent package on a server. The parent package contains multiple Execute SQL Job Agent tasks. Each task in the parent package calls a SQL Server Agent on a remote server. Those remote servers contain SQL Server Agent jobs that include a step that calls a package on that server.  
   
- ![Overview of SSIS load balancing architecture](../../2014/integration-services/media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
+ ![Overview of SSIS load balancing architecture](../media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
   
  The steps required for load balancing in this architecture are not new concepts. Instead, load balancing is achieved by using existing concepts and common SSIS objects in a new way.  
   

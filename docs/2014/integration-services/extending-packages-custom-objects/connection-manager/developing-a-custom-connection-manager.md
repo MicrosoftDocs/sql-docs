@@ -35,13 +35,13 @@ manager: "jhubbard"
 ## In This Section  
  This section describes how to create, configure, and code a custom connection manager and its optional custom user interface. The code snippets shown in this section are drawn from the Sql Server Custom Connection Manager Sample.  
   
- [Creating a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
+ [Creating a Custom Connection Manager](creating-a-custom-connection-manager.md)  
  Describes how to create the classes for a custom connection manager project.  
   
- [Coding a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
+ [Coding a Custom Connection Manager](coding-a-custom-connection-manager.md)  
  Describes how to implement a custom connection manager by overriding the methods and properties of the base class.  
   
- [Developing a User Interface for a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [Developing a User Interface for a Custom Connection Manager](developing-a-user-interface-for-a-custom-connection-manager.md)  
  Describes how to implement the user interface class and the form that is used to configure the custom connection manager.  
   
 ## Related Sections  
@@ -75,6 +75,6 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
   

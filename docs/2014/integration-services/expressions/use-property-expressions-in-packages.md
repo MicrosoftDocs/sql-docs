@@ -44,13 +44,13 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The names of user-defined and system variables are case-sensitive.  
   
- For more information, see [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md).  
+ For more information, see [Integration Services &#40;SSIS&#41; Expressions](integration-services-ssis-expressions.md).  
   
  An important use of property expressions is to customize configurations for each deployed instance of a package. This makes it possible to dynamically update package properties for different environments. For example, you can create a property expression that assigns a variable to the connection string of a connection manager, and then update the variable when the package is deployed, ensuring that the connection string is correct at run time. Package configurations are loaded before the property expressions are evaluated.  
   
  A property can use only one property expression and a property expression can apply only to one property. However, you can build multiple identical property expressions and assign them to different properties.  
   
- Some properties are set by using values from enumerators. When you reference the enumerator member in a property expression, you must use the numeric value that is equivalent to the friendly name of the enumerator member. For example, if a property expression sets the `LoggingMode` property, which uses a value from the `DTSLoggingMode` enumeration, the property expression must use 0, 1, or 2 instead of the friendly names `Enabled`, `Disabled`, or `UseParentSetting`. For more information, see [Enumerated Constants in Property Expressions](expressions/enumerated-constants-in-property-expressions.md).  
+ Some properties are set by using values from enumerators. When you reference the enumerator member in a property expression, you must use the numeric value that is equivalent to the friendly name of the enumerator member. For example, if a property expression sets the `LoggingMode` property, which uses a value from the `DTSLoggingMode` enumeration, the property expression must use 0, 1, or 2 instead of the friendly names `Enabled`, `Disabled`, or `UseParentSetting`. For more information, see [Enumerated Constants in Property Expressions](enumerated-constants-in-property-expressions.md).  
   
 ## Property Expression User Interface  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides a set of tools for building and managing property expressions.  
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  The following diagram shows the user interfaces that you use to add, change, and remove property expressions.  
   
- ![The user interface for property expressions](../../2014/integration-services/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
+ ![The user interface for property expressions](../media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
  In the **Properties** window and the **Expressions** page, click the browse button **(…)** at the **Expressions** collection level to open the **Property Expressions Editor** dialog box. The Property Expressions Editor allows you to map a property to an expression and to type a property expression. If you want to use the graphical expression tools to create and then validate the expression, click the browse button **(…)** at the expression level to open the **Expression Builder** dialog box, and then create or modify and optionally validate the expression.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 #### To work with property expressions  
   
--   [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md)  
+-   [Add or Change a Property Expression](add-or-change-a-property-expression.md)  
   
 ### Setting Property Expressions of Data Flow Components  
  If you construct a package in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the properties of data flow components that support property expressions are exposed on the Data Flow task to which they belong. To add, change, and remove the property expressions of data flow components, you right-click the Data Flow task for the data flow to which the data flow components belong and click **Properties**. The Properties window lists the properties of data flow components with which you can use property expressions. For example, to create or modify a property expression for the SamplingValue property of a Row Sampling transformation in a data flow named SampleCustomer, right-click the Data Flow task for the data flow to which the Row Sampling transformation belongs and click **Properties**. The SamplingValue property is listed in the Properties window, and has the format [SampleCustomer].[SamplingValue].  

@@ -49,7 +49,7 @@ manager: "jhubbard"
  Discusses how to program custom data flow sources, transformations, and destinations.  
   
 ## Reference  
- [Integration Services Error and Message Reference](../../../2014/integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services Error and Message Reference](../integration-services-error-and-message-reference.md)  
  Lists the predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  
@@ -61,10 +61,10 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the rss feeds available on the page.|  
+|![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the rss feeds available on the page.|  
   
 ## See Also  
  [Comparing Scripting Solutions and Custom Objects](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
- [SQL Server Integration Services](../../../2014/integration-services/sql-server-integration-services.md)  
+ [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

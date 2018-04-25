@@ -39,11 +39,11 @@ manager: "jhubbard"
   
 -   Control a precedence constraint by its use in an expression. A precedence constraint can include variables in the constraint definition. For more information, see [Add Expressions to Precedence Constraints](../control-flow/precedence-constraints.md).  
   
--   Control the conditional repeat of a For Loop container. For more information, see [Add Iteration to a Control Flow](../../../2014/integration-services/add-iteration-to-a-control-flow.md).  
+-   Control the conditional repeat of a For Loop container. For more information, see [Add Iteration to a Control Flow](../add-iteration-to-a-control-flow.md).  
   
 -   Build expressions that include variable values.  
   
--   You can create custom variables for all container types: packages, **Foreach Loop** containers, **For Loop** containers, **Sequence** containers, TaskHosts, and event handlers. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md) and [Use Variables in Packages](../../../2014/integration-services/use-variables-in-packages.md).  
+-   You can create custom variables for all container types: packages, **Foreach Loop** containers, **For Loop** containers, **Sequence** containers, TaskHosts, and event handlers. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md) and [Use Variables in Packages](../use-variables-in-packages.md).  
   
 ## Scope  
  Each container has its own <xref:Microsoft.SqlServer.Dts.Runtime.Variables> collection. When a new variable is created, it is within the scope of its parent container. Because the package container is at the top of the container hierarchy, variables with package scope function like global variables, and are visible to all containers within the package. The collection of variables for the container can also be accessed by the children of the container through the <xref:Microsoft.SqlServer.Dts.Runtime.Variables> collection, by using either the variable name or the variable's index in the collection.  
@@ -225,14 +225,14 @@ End Module
  The expression must be a valid expression that uses the [!INCLUDE[ssIS](../../includes/ssis-md.md)] expression syntax. Literals are permitted in variable expressions, in addition to the operators and functions that the expression syntax provides, but expressions cannot reference other variables or columns. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md).  
   
 ## Configuration Files  
- If a configuration file includes a custom variable, the variable can be updated at run time. What this means is that when the package runs, the value of the variable originally in the package is replaced with a new value from the configuration file. This replacement technique is useful when a package is deployed to multiple servers that require different variable values. For example, a variable can specify the number of times a **Foreach Loop** container repeats its workflow, or list the recipients that an event handler sends e-mail to when an error is raised, or change the number of errors that can occur before the package fails. These variables are dynamically provided in configuration files for each environment. Therefore, only variables that are read/write are allowed in configuration files. For more information, see [Create Package Configurations](../../../2014/integration-services/create-package-configurations.md).  
+ If a configuration file includes a custom variable, the variable can be updated at run time. What this means is that when the package runs, the value of the variable originally in the package is replaced with a new value from the configuration file. This replacement technique is useful when a package is deployed to multiple servers that require different variable values. For example, a variable can specify the number of times a **Foreach Loop** container repeats its workflow, or list the recipients that an event handler sends e-mail to when an error is raised, or change the number of errors that can occur before the package fails. These variables are dynamically provided in configuration files for each environment. Therefore, only variables that are read/write are allowed in configuration files. For more information, see [Create Package Configurations](../create-package-configurations.md).  
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
- [Use Variables in Packages](../../../2014/integration-services/use-variables-in-packages.md)  
+ [Use Variables in Packages](../use-variables-in-packages.md)  
   
   

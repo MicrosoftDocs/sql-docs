@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  The following diagram shows a For Loop container with a Send Mail task. If the initialization expression is `@Counter = 0`, the evaluation expression is `@Counter < 4`, and the iteration expression is `@Counter = @Counter + 1`, the loop repeats four times and sends four e-mail messages.  
   
- ![A For Loop container repeats a task four times](../../2014/integration-services/media/ssis-forloop.gif "A For Loop container repeats a task four times")  
+ ![A For Loop container repeats a task four times](../media/ssis-forloop.gif "A For Loop container repeats a task four times")  
   
  The expressions must be valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expressions.  
   
@@ -58,12 +58,12 @@ manager: "jhubbard"
 ## Related Tasks  
  For information about how to configure a For Loop Container, see the following topics.  
   
--   [Configure a For Loop Container](control-flow/for-loop-container.md)  
+-   [Configure a For Loop Container](for-loop-container.md)  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## See Also  
- [Control Flow](control-flow/control-flow.md)   
+ [Control Flow](control-flow.md)   
  [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)  
   
   

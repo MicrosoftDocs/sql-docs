@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   [Common Properties](../../2014/integration-services/common-properties.md)  
   
--   [ADO NET Custom Properties](data-flow/ado-net-custom-properties.md)  
+-   [ADO NET Custom Properties](ado-net-custom-properties.md)  
   
  For more information about how to set properties, see [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md).  
   

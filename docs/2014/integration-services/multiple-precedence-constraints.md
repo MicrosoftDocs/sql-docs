@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  Assembling complex constraint scenarios by grouping constraints enables you to implement complex control flow in packages. For example, in the following illustration, Task D is linked to Task A by a `Success` constraint, Task D is linked to Task B by a `Failure` constraint, and Task D is linked to Task C by a `Success` constraint. The precedence constraints between Task D and Task A, between Task D and Task B, and between Task D and Task C participate in a logical *and* relationship. Therefore, for Task D to run, Task A must run successfully, Task B must fail, and Task C must run successfully.  
   
- ![Tasks linked by precedence constraints](../../2014/integration-services/media/precedenceconstraints.gif "Tasks linked by precedence constraints")  
+ ![Tasks linked by precedence constraints](media/precedenceconstraints.gif "Tasks linked by precedence constraints")  
   
 ## LogicalAnd Property  
  If a task or a container has multiple constraints, the `LogicalAnd` property specifies whether a precedence constraint is evaluated singly or in concert with other constraints.  

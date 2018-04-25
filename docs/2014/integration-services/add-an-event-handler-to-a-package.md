@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 3.  Click the **Event Handlers** tab.  
   
-     ![Screenshot of design surface with event handler](../../2014/integration-services/media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![Screenshot of design surface with event handler](media/eventhandlers.gif "Screenshot of design surface with event handler")  
   
      Creating the control flow and data flows in an event handler is similar to creating the control flow and data flows in a package. For more information, see [Control Flow](control-flow/control-flow.md) and [Data Flow](data-flow/data-flow.md).  
   

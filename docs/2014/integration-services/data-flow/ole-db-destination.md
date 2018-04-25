@@ -112,11 +112,11 @@ manager: "jhubbard"
   
 -   [Common Properties](../../2014/integration-services/common-properties.md)  
   
--   [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)  
+-   [OLE DB Custom Properties](ole-db-custom-properties.md)  
   
  For more information about how to set properties, click one of the following topics:  
   
--   [Load Data by Using the OLE DB Destination](data-flow/ole-db-destination.md)  
+-   [Load Data by Using the OLE DB Destination](ole-db-destination.md)  
   
 -   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
   
@@ -125,6 +125,6 @@ manager: "jhubbard"
   
  [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)  
   
- [Data Flow](data-flow/data-flow.md)  
+ [Data Flow](data-flow.md)  
   
   

@@ -74,10 +74,10 @@ public class MyLogProvider : LogProviderBase
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Coding a Custom Log Provider](../extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)   
- [Developing a User Interface for a Custom Log Provider](../extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
+ [Coding a Custom Log Provider](coding-a-custom-log-provider.md)   
+ [Developing a User Interface for a Custom Log Provider](developing-a-user-interface-for-a-custom-log-provider.md)  
   
   

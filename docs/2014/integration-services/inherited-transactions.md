@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   **TransactionOption** is set to **NotSupported** on package E, and on the tasks Execute Package C and Execute Package E.  
   
- ![Flow of inherited transactions](../../2014/integration-services/media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![Flow of inherited transactions](media/mw-dts-executepack.gif "Flow of inherited transactions")  
   
  Only packages B, D, and F can inherit transactions from their parent packages.  
   

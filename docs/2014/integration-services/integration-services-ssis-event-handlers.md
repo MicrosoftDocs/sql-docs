@@ -41,11 +41,11 @@ manager: "jhubbard"
   
  The following diagram shows a simple package that has a For Loop container that contains one Execute SQL task.  
   
- ![Package, For Loop, task host, and Execute SQL task](../../2014/integration-services/media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
+ ![Package, For Loop, task host, and Execute SQL task](media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
   
  Only the package has an event handler, for its `OnError` event. If an error occurs when the Execute SQL task runs, the `OnError` event handler for the package runs. The following diagram shows the sequence of calls that causes the `OnError` event handler for the package to execute.  
   
- ![Event handler flow](../../2014/integration-services/media/mw-dts-eventhandlers.gif "Event handler flow")  
+ ![Event handler flow](media/mw-dts-eventhandlers.gif "Event handler flow")  
   
  Event handlers are members of an event handler collection, and all containers include this collection. If you create the package using [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, you can see the members of the event handler collections in the **Event Handlers** folders on the **Package Explorer** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   

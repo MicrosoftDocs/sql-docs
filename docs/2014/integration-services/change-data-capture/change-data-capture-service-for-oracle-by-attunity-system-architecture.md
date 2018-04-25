@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Change Data Capture Service for Oracle by Attunity System Architecture
   The CDC Service for Oracle captures changes made to selected tables in one or more source Oracle databases into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CDC databases located on a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. The following diagram shows the components that make up the CDC Service for Oracle.  
   
- ![Service Architecture](../../2014/integration-services/media/service-architecture.gif "Service Architecture")  
+ ![Service Architecture](../media/service-architecture.gif "Service Architecture")  
   
  This figure illustrates four platforms that are used. In many cases, these platforms can overlap, however this diagram represents a standard use case. For example, it makes sense that the Oracle and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases each run on a separate computer and are not shared with the Oracle CDC Service platform or the platform from which the CDC Service is designed. The platforms illustrated in this figure are:  
   

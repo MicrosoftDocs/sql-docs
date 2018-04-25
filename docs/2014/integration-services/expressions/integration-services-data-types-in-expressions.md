@@ -27,16 +27,16 @@ manager: "jhubbard"
  For more information about [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types and the mapping of Variant data types to [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ## Literals  
- In addition, expressions can include string, Boolean, and numeric literals. For more information about converting numeric literals to numeric [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types, see [Literals &#40;SSIS&#41;](expressions/numeric-string-and-boolean-literals.md).  
+ In addition, expressions can include string, Boolean, and numeric literals. For more information about converting numeric literals to numeric [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types, see [Literals &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  
   
 ## Implicit Data Conversion  
  An implicit conversion of a data type occurs when the expression evaluator automatically converts the data from one data type to another. For example, if a `smallint` is compared to an `int`, the `smallint` is implicitly converted to `int` before the comparison is performed.  
   
- The expression evaluator cannot perform implicit data conversion when the arguments and operands have incompatible data types. In addition, the expression evaluator cannot implicitly convert any value to a Boolean. Instead, the arguments and operands must be explicitly converted by using the cast operator. For more information, see [Cast &#40;SSIS Expression&#41;](expressions/cast-ssis-expression.md).  
+ The expression evaluator cannot perform implicit data conversion when the arguments and operands have incompatible data types. In addition, the expression evaluator cannot implicitly convert any value to a Boolean. Instead, the arguments and operands must be explicitly converted by using the cast operator. For more information, see [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   
  The following diagram shows the result type of implicit conversions of BINARY operations. The intersection of column and row in this table is the result type of a binary operation with operands of the left (From) and right (To) types.  
   
- ![Implicit data type conversion between data types](../../2014/integration-services/media/mw-dts-impl-conver-02.gif "Implicit data type conversion between data types")  
+ ![Implicit data type conversion between data types](../media/mw-dts-impl-conver-02.gif "Implicit data type conversion between data types")  
   
  The intersection of a signed and an unsigned integer is a signed integer that is potentially larger than either argument.  
   
@@ -51,17 +51,17 @@ manager: "jhubbard"
   
  For more information, see the following topics:  
   
--   [== &#40;Equal&#41; &#40;SSIS Expression&#41;](expressions/equal-ssis-expression.md)  
+-   [== &#40;Equal&#41; &#40;SSIS Expression&#41;](equal-ssis-expression.md)  
   
--   [!= &#40;Unequal&#41; &#40;SSIS Expression&#41;](expressions/unequal-ssis-expression.md)  
+-   [!= &#40;Unequal&#41; &#40;SSIS Expression&#41;](unequal-ssis-expression.md)  
   
--   [&#62; &#40;Greater Than&#41; &#40;SSIS Expression&#41;](expressions/greater-than-ssis-expression.md)  
+-   [&#62; &#40;Greater Than&#41; &#40;SSIS Expression&#41;](greater-than-ssis-expression.md)  
   
--   [&#60; &#40;Less Than&#41; &#40;SSIS Expression&#41;](expressions/less-than-ssis-expression.md)  
+-   [&#60; &#40;Less Than&#41; &#40;SSIS Expression&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;Greater Than or Equal To&#41; &#40;SSIS Expression&#41;](expressions/greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;Greater Than or Equal To&#41; &#40;SSIS Expression&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;Less Than or Equal To&#41; &#40;SSIS Expression&#41;](expressions/less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;Less Than or Equal To&#41; &#40;SSIS Expression&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  A function that uses a single argument returns a result with the same data type as the argument, with the following exceptions:  
   
@@ -94,9 +94,9 @@ manager: "jhubbard"
   
 -   Arguments passed to date and time functions must evaluate to a valid date. For example, DAY(GETDATE()). Some functions, such as DATEADD, require an additional integer argument for the number of days the function adds to a date.  
   
- Operations that combine an unsigned eight-byte integer and a signed integer require an explicit cast to clarify the result format. For more information, see [Cast &#40;SSIS Expression&#41;](expressions/cast-ssis-expression.md).  
+ Operations that combine an unsigned eight-byte integer and a signed integer require an explicit cast to clarify the result format. For more information, see [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   
- Results of many operations and functions have predetermined data types. This can be the data type of the argument or the data type to which the expression evaluator casts the result. For example, the result of a logical OR operator (||) is always a Boolean, the result of the ABS function is the numeric data type of the argument, and the result of multiplication is the smallest numeric data type that can hold the result without loss. For more information about the data types of results, see [Operators &#40;SSIS Expression&#41;](expressions/operators-ssis-expression.md) and [Functions &#40;SSIS Expression&#41;](expressions/functions-ssis-expression.md).  
+ Results of many operations and functions have predetermined data types. This can be the data type of the argument or the data type to which the expression evaluator casts the result. For example, the result of a logical OR operator (||) is always a Boolean, the result of the ABS function is the numeric data type of the argument, and the result of multiplication is the smallest numeric data type that can hold the result without loss. For more information about the data types of results, see [Operators &#40;SSIS Expression&#41;](operators-ssis-expression.md) and [Functions &#40;SSIS Expression&#41;](functions-ssis-expression.md).  
   
 ## Related Tasks  
  [Use an Expression in a Data Flow Component](../../2014/integration-services/use-an-expression-in-a-data-flow-component.md)  

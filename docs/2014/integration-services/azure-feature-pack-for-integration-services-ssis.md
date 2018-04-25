@@ -92,17 +92,17 @@ You must install the following prerequisites before installing this feature pack
   
 5.  Use the Azure HDInsight Blob Download Task to download the Pig/Hive output data from the Azure Blob Storage.  
   
- ![SSIS-AzureConnector-BigDataScenario](../../2014/integration-services/media/ssis-azureconnector-bigdatascenario.png "SSIS-AzureConnector-BigDataScenario")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS-AzureConnector-BigDataScenario")  
   
 ### Cloud Data Archiving  
  Use the Azure Blob Destination in an SSIS package to write output data to an Azure Blob Storage, or use the Azure Blob Source to read data from an Azure Blob Storage.  
   
- ![SSIS-AzureConnector-CloudArchive-1](../../2014/integration-services/media/ssis-azureconnector-cloudarchive-1.png "SSIS-AzureConnector-CloudArchive-1")  
+ ![SSIS-AzureConnector-CloudArchive-1](media/ssis-azureconnector-cloudarchive-1.png "SSIS-AzureConnector-CloudArchive-1")  
   
- ![SSIS-AzureConnector-CloudArchive-2](../../2014/integration-services/media/ssis-azureconnector-cloudarchive-2.png "SSIS-AzureConnector-CloudArchive-2")  
+ ![SSIS-AzureConnector-CloudArchive-2](media/ssis-azureconnector-cloudarchive-2.png "SSIS-AzureConnector-CloudArchive-2")  
   
  And use the Foreach Loop Container with Azure Blob Enumerator to process data in multiple bob files.  
   
- ![SSIS-AzureConnector-CloudArchive-3](../../2014/integration-services/media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
+ ![SSIS-AzureConnector-CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
   
   

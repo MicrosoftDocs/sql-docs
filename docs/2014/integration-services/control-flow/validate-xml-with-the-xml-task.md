@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  The following screen shot shows the **XML Task Editor** with the settings required for XML validation with rich error output.  
   
- ![XML task properties in the XML Task Editor](../../2014/integration-services/media/xmltaskproperties.jpg "XML task properties in the XML Task Editor")  
+ ![XML task properties in the XML Task Editor](../media/xmltaskproperties.jpg "XML task properties in the XML Task Editor")  
   
  Before the `ValidationDetails` property was available, XML validation by the XML Task returned only a true or false result, with no information about errors or their locations. Now, when you set `ValidationDetails` to true, the output file contains detailed information about every error including the line number and the position. You can use this information to understand, locate, and fix errors in XML documents.  
   
@@ -114,10 +114,10 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Here is the result in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] of the second sample query shown in the preceding text.  
   
- ![Query to group XML errors in Management Studio](../../2014/integration-services/media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
+ ![Query to group XML errors in Management Studio](../media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
   
 ## See Also  
- [XML Task](control-flow/xml-task.md)   
+ [XML Task](xml-task.md)   
  [XML Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)  
   
   

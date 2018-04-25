@@ -25,7 +25,7 @@ manager: "jhubbard"
 ## Listing Child Packages  
  If you deploy your project that contains a parent package and child package(s) to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, you can view a list of the child packages that are executed by the parent package. When you run the parent package, an **Overview** report for the parent package is automatically generated in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. The report lists the child packages that were executed by the Execute Package task contained in the parent package, as shown in the following image.  
   
- ![Overview Report with list of child packages](../../2014/integration-services/media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
+ ![Overview Report with list of child packages](media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
   
  For information about accessing the **Overview** report, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   

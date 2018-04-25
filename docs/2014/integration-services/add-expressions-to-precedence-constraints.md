@@ -29,11 +29,11 @@ manager: "jhubbard"
   
  In the following illustration, task A and task B are linked by a precedence constraint that uses an execution result and an expression. The constraint value is set to `Success` and the expression is  `@X >== @Z`. Task B, the constrained task, runs only if task A completes successfully and the value of variable `X` is greater than or equal to the value of variable `Z`.  
   
- ![Precedence constraint between two tasks](../../2014/integration-services/media/mw-dts-03.gif "Precedence constraint between two tasks")  
+ ![Precedence constraint between two tasks](media/mw-dts-03.gif "Precedence constraint between two tasks")  
   
  Executables can also be linked by using multiple precedence constraints that contain different expressions. For example, in the following illustration, tasks B and C are linked to task A by precedence constraints that use execution results and expressions. Both of the constraint values are set to `Success.` One precedence constraint includes the expression `@X >== @Z`, and the other precedence constraint includes the expression `@X < @Z`. Depending on the values of variable `X` and variable `Z`, either task C or task B runs.  
   
- ![Expressions on precedence constraints](../../2014/integration-services/media/mw-dts-04.gif "Expressions on precedence constraints")  
+ ![Expressions on precedence constraints](media/mw-dts-04.gif "Expressions on precedence constraints")  
   
  You can add or modify an expression by using the **Precedence Constraint Editor** in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and the Properties window that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides. However, the Properties window does not provide verification of the expression syntax.  
   

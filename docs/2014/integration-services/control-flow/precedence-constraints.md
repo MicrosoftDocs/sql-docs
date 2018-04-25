@@ -27,13 +27,13 @@ manager: "jhubbard"
   
  A precedence constraint links two executables: the precedence executable and the constrained executable. The precedence executable runs before the constrained executable, and the execution result of the precedence executable may determine whether the constrained executable runs. The following diagram shows two executables linked by a precedence constraint.  
   
- ![Executables connected by a precedence constraint](../../2014/integration-services/media/ssis-pcsimple.gif "Executables connected by a precedence constraint")  
+ ![Executables connected by a precedence constraint](../media/ssis-pcsimple.gif "Executables connected by a precedence constraint")  
   
  In a linear control flow, that is, one without branching, precedence constraints alone govern the sequence in which tasks run. If a control flow branches, the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] run-time engine determines the execution order among the tasks and containers that immediately follow the branching. The run-time engine also determines execution order among unconnected workflows in a control flow.  
   
  The nested-container architecture of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enables all containers, except for the task host container that encapsulates only a single task, to include other containers, each with its own control flow. The For Loop, Foreach Loop, and Sequence containers can include multiple tasks and other containers, which in turn can include multiple tasks and containers. For example, a package with a Script task and a Sequence container has a precedence constraint that links the Script task and the Sequence container. The Sequence container includes three Script tasks, and its precedence constraints link the three Script tasks into a control flow. The following diagram shows the precedence constraints in a package with two levels of nesting.  
   
- ![Precedence contraints in a package](../../2014/integration-services/media/mw-dts-12.gif "Precedence contraints in a package")  
+ ![Precedence contraints in a package](../media/mw-dts-12.gif "Precedence contraints in a package")  
   
  Because the package is at the top of the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] container hierarchy, multiple packages cannot be linked by precedence constraints; however, you can add an Execute Package task to a package and indirectly link another package into the control flow.  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
  Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
- [Add Expressions to Precedence Constraints](control-flow/precedence-constraints.md)   
+ [Add Expressions to Precedence Constraints](precedence-constraints.md)   
  [Multiple Precedence Constraints](../../2014/integration-services/multiple-precedence-constraints.md)  
   
   

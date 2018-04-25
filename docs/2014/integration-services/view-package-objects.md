@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  The following diagram shows a tree view of a simple package.  
   
- ![Screenshot of the Package Explorer tab](../../2014/integration-services/media/packageexplorer.gif "Screenshot of the Package Explorer tab")  
+ ![Screenshot of the Package Explorer tab](media/packageexplorer.gif "Screenshot of the Package Explorer tab")  
   
 ### To view package content  
   

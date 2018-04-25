@@ -50,13 +50,13 @@ manager: "jhubbard"
 -   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## Related Tasks  
- For more information about how to set properties of the component, see [Set the Properties of a Data Flow Component](data-flow/set-the-properties-of-a-data-flow-component.md).  
+ For more information about how to set properties of the component, see [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md).  
   
 ## Related Content  
  Sample, [SortDeDuplicateDelimitedString Custom SSIS Component](http://go.microsoft.com/fwlink/?LinkId=220821), on codeplex.com.  
   
 ## See Also  
- [Data Flow](data-flow/data-flow.md)   
- [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md)  
+ [Data Flow](data-flow.md)   
+ [Integration Services Transformations](/integration-services-transformations.md)  
   
   

@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  The following diagram shows the five unrelated transactions in the package. One transaction is started by the Sequence container and four transactions are started by the Execute SQL tasks.  
   
- ![Implementation of multiple transactions](../../2014/integration-services/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
+ ![Implementation of multiple transactions](media/mw-dts-trans2.gif "Implementation of multiple transactions")  
   
 ## Related Tasks  
  [Configure a Package to Use Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  

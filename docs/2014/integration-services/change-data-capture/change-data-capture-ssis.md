@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  Once an administrator has enabled change data capture on the database, you can create a package that performs an incremental load of the change data. The following diagram shows the steps for creating such a package that performs an incremental load from a single table:  
   
- ![Change Data Capture Package Creation Steps](../../2014/integration-services/media/cdc-package-creation.gif "Change Data Capture Package Creation Steps")  
+ ![Change Data Capture Package Creation Steps](../media/cdc-package-creation.gif "Change Data Capture Package Creation Steps")  
   
  As shown in the previous diagram, creating a package that performs an incremental load of changed data involves the following steps:  
   
@@ -45,26 +45,26 @@ manager: "jhubbard"
   
      To calculate these values, use an Execute SQL task or [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] expressions with `datetime` functions. You then store these endpoints in package variables for use later in the package.  
   
-     **For more information:**  [Specify an Interval of Change Data](change-data-capture/specify-an-interval-of-change-data.md)  
+     **For more information:**  [Specify an Interval of Change Data](specify-an-interval-of-change-data.md)  
   
 -   Determine whether the change data for the selected interval is ready. This step is necessary because the asynchronous capture process might not yet have reached the selected endpoint.  
   
      To determine whether the data is ready, start with a For Loop container to delay execution, if necessary, until the change data for the selected interval is ready. Inside the loop container, use an Execute SQL task to query the time mapping tables maintained by change data capture. Then, use a Script task that calls the `Thread.Sleep` method, or another Execute SQL task with a `WAITFOR` statement, to delay the execution of the package temporarily, if necessary. Optionally, use another Script task to log an error condition or a timeout.  
   
-     **For more information:**  [Determine Whether the Change Data Is Ready](change-data-capture/determine-whether-the-change-data-is-ready.md)  
+     **For more information:**  [Determine Whether the Change Data Is Ready](determine-whether-the-change-data-is-ready.md)  
   
 -   Prepare the query string that will be used to query for the change data.  
   
      Use a Script task or an Execute SQL task to assemble the SQL statement that will be used to query for changes.  
   
-     **For more information:**  [Prepare to Query for the Change Data](change-data-capture/prepare-to-query-for-the-change-data.md)  
+     **For more information:**  [Prepare to Query for the Change Data](prepare-to-query-for-the-change-data.md)  
   
  **Step 2: Setting Up the Query for Change Data**  
  Create the table-valued function that will query for the data.  
   
  Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to develop and save the query.  
   
- **For more information:**  [Retrieve and Understand the Change Data](change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **For more information:**  [Retrieve and Understand the Change Data](retrieve-and-understand-the-change-data.md)  
   
  **Step 3: Designing the Data Flow**  
  In the data flow of the package, the following tasks need to be defined:  
@@ -73,22 +73,22 @@ manager: "jhubbard"
   
      To retrieve the data, use a source component to query the change tables for the changes that fall within the selected interval. The source calls a Transact-SQL table-valued function that you must have previously created.  
   
-     **For more information:**  [Retrieve and Understand the Change Data](change-data-capture/retrieve-and-understand-the-change-data.md)  
+     **For more information:**  [Retrieve and Understand the Change Data](retrieve-and-understand-the-change-data.md)  
   
 -   Split the changes into inserts, updates, and deletes for processing.  
   
      To split the changes, use a Conditional Split transformation to direct inserts, updates, and deletes to different outputs for appropriate processing.  
   
-     **For more information:**  [Process Inserts, Updates, and Deletes](change-data-capture/process-inserts-updates-and-deletes.md)  
+     **For more information:**  [Process Inserts, Updates, and Deletes](process-inserts-updates-and-deletes.md)  
   
 -   Apply the inserts, deletes, and updates to the destination.  
   
      To apply the changes to the destination, use a destination component to apply the inserts to the destination. Also, use OLE DB Command transformations with parameterized UPDATE and DELETE statements to apply updates and deletes to the destination. You can also apply updates and deletes by using destination components to save the rows to temporary tables. Then, use Execute SQL tasks to perform bulk update and bulk delete operations against the destination from the temporary tables.  
   
-     **For more information:**  [Apply the Changes to the Destination](change-data-capture/apply-the-changes-to-the-destination.md)  
+     **For more information:**  [Apply the Changes to the Destination](apply-the-changes-to-the-destination.md)  
   
 ### Change Data from Multiple Tables  
- The process outlined in the previous diagram and steps involves an incremental load from a single table. When having to perform an incremental load from multiple tables, the overall process is the same. However, the design of the package needs to be changed to accommodate the processing of multiple tables. For more information on how to create a package that performs an incremental load from multiples tables, see [Perform an Incremental Load of Multiple Tables](change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
+ The process outlined in the previous diagram and steps involves an incremental load from a single table. When having to perform an incremental load from multiple tables, the overall process is the same. However, the design of the package needs to be changed to accommodate the processing of multiple tables. For more information on how to create a package that performs an incremental load from multiples tables, see [Perform an Incremental Load of Multiple Tables](perform-an-incremental-load-of-multiple-tables.md).  
   
 ## Samples of Change Data Capture Packages  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides two samples that demonstrate how to use change data capture in packages. For more information, see the following topics:  
@@ -99,21 +99,21 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Specify an Interval of Change Data](change-data-capture/specify-an-interval-of-change-data.md)  
+-   [Specify an Interval of Change Data](specify-an-interval-of-change-data.md)  
   
--   [Determine Whether the Change Data Is Ready](change-data-capture/determine-whether-the-change-data-is-ready.md)  
+-   [Determine Whether the Change Data Is Ready](determine-whether-the-change-data-is-ready.md)  
   
--   [Prepare to Query for the Change Data](change-data-capture/prepare-to-query-for-the-change-data.md)  
+-   [Prepare to Query for the Change Data](prepare-to-query-for-the-change-data.md)  
   
--   [Create the Function to Retrieve the Change Data](change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+-   [Create the Function to Retrieve the Change Data](create-the-function-to-retrieve-the-change-data.md)  
   
--   [Retrieve and Understand the Change Data](change-data-capture/retrieve-and-understand-the-change-data.md)  
+-   [Retrieve and Understand the Change Data](retrieve-and-understand-the-change-data.md)  
   
--   [Process Inserts, Updates, and Deletes](change-data-capture/process-inserts-updates-and-deletes.md)  
+-   [Process Inserts, Updates, and Deletes](process-inserts-updates-and-deletes.md)  
   
--   [Apply the Changes to the Destination](change-data-capture/apply-the-changes-to-the-destination.md)  
+-   [Apply the Changes to the Destination](apply-the-changes-to-the-destination.md)  
   
--   [Perform an Incremental Load of Multiple Tables](change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
+-   [Perform an Incremental Load of Multiple Tables](perform-an-incremental-load-of-multiple-tables.md)  
   
 ## Related Content  
  Blog entry, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  

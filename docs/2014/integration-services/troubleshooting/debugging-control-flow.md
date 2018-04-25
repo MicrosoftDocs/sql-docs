@@ -95,7 +95,7 @@ manager: "jhubbard"
   
  The following diagram shows the **Progress** tab.  
   
- ![Progress tab of SSIS Designer](../../2014/integration-services/media/mw-dtsflow04.gif "Progress tab of SSIS Designer")  
+ ![Progress tab of SSIS Designer](../media/mw-dtsflow04.gif "Progress tab of SSIS Designer")  
   
 ## Debug Windows  
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] includes many windows that you can use to work with breakpoints, and to debug packages that contain breakpoints. To learn more about each window, open the window, and then press F1 to display Help for the window.  

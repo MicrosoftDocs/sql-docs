@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Coding a Custom Log Provider
   After you have created a class that inherits from the <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> base class, and applied the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> attribute to the class, you must override the implementation of the properties and methods of the base class to provide your custom functionality.  
   
- For working samples of custom log providers, see [Developing a User Interface for a Custom Log Provider](../extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
+ For working samples of custom log providers, see [Developing a User Interface for a Custom Log Provider](developing-a-user-interface-for-a-custom-log-provider.md).  
   
 ## Configuring the Log Provider  
   
@@ -189,10 +189,10 @@ End Sub
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Creating a Custom Log Provider](../extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
- [Developing a User Interface for a Custom Log Provider](../extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
+ [Creating a Custom Log Provider](creating-a-custom-log-provider.md)   
+ [Developing a User Interface for a Custom Log Provider](developing-a-user-interface-for-a-custom-log-provider.md)  
   
   

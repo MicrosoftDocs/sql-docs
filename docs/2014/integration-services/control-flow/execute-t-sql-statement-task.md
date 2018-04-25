@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Execute T-SQL Statement Task
   The Execute T-SQL Statement task runs Transact-SQL statements. For more information, see [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md) and [Integration Services &#40;SSIS&#41; Queries](../integration-services-ssis-queries.md).  
   
- This task is similar to the Execute SQL task. However, the Execute T-SQL Statement task supports only the Transact-SQL version of the SQL language and you cannot use this task to run statements on servers that use other dialects of the SQL language. If you need to run parameterized queries, save the query results to variables, or use property expressions, you should use the Execute SQL task instead of the Execute T-SQL Statement task. For more information, see [Execute SQL Task](control-flow/execute-sql-task.md).  
+ This task is similar to the Execute SQL task. However, the Execute T-SQL Statement task supports only the Transact-SQL version of the SQL language and you cannot use this task to run statements on servers that use other dialects of the SQL language. If you need to run parameterized queries, save the query results to variables, or use property expressions, you should use the Execute SQL task instead of the Execute T-SQL Statement task. For more information, see [Execute SQL Task](execute-sql-task.md).  
   
 ## Configuration of the Execute T-SQL Task  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer. This task is in the **Maintenance Plan Tasks** section of the **Toolbox** in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Tasks](integration-services-tasks.md)   
- [Control Flow](control-flow/control-flow.md)   
+ [Control Flow](control-flow.md)   
  [MERGE in Integration Services Packages](merge-in-integration-services-packages.md)  
   
   

@@ -28,40 +28,40 @@ manager: "jhubbard"
   The data flow task consists of components that connect to a variety of data sources and then transform and route that data at high speed. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides an extensible object model that lets developers create custom sources, transformations, and destinations that you can use in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] and in deployed packages. This section contains topics that will guide you in developing custom data flow components.  
   
 ## In This Section  
- [Creating a Custom Data Flow Component](../extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
+ [Creating a Custom Data Flow Component](/creating-a-custom-data-flow-component.md)  
  Describes the initial steps in creating a custom data flow component.  
   
- [Design-time Methods of a Data Flow Component](../extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
+ [Design-time Methods of a Data Flow Component](/design-time-methods-of-a-data-flow-component.md)  
  Describes the design-time methods to implement in a custom data flow component.  
   
- [Run-time Methods of a Data Flow Component](../extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
+ [Run-time Methods of a Data Flow Component](/run-time-methods-of-a-data-flow-component.md)  
  Describes the run-time methods to implement in a custom data flow component.  
   
- [Execution Plan and Buffer Allocation](../extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
+ [Execution Plan and Buffer Allocation](/execution-plan-and-buffer-allocation.md)  
  Describes the data flow execution plan and the allocation of data buffers.  
   
  [Working with Data Types in the Data Flow](../data-flow/data-flow.md)  
  Explains how the data flow maps [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types to .NET Framework managed data types.  
   
- [Validating a Data Flow Component](../extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
+ [Validating a Data Flow Component](/validating-a-data-flow-component.md)  
  Explains the methods used to validate component configuration and to reconfigure component metadata.  
   
- [Implementing External Metadata](../extending-packages-custom-objects/data-flow/implementing-external-metadata.md)  
+ [Implementing External Metadata](/implementing-external-metadata.md)  
  Explains how to use external metadata columns for data validation.  
   
- [Raising and Defining Events in a Data Flow Component](../extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
+ [Raising and Defining Events in a Data Flow Component](/raising-and-defining-events-in-a-data-flow-component.md)  
  Explains how to raise predefined and custom events.  
   
- [Logging and Defining Log Entries in a Data Flow Component](../extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
+ [Logging and Defining Log Entries in a Data Flow Component](/logging-and-defining-log-entries-in-a-data-flow-component.md)  
  Explains how to create and write to custom log entries.  
   
- [Using Error Outputs in a Data Flow Component](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [Using Error Outputs in a Data Flow Component](/using-error-outputs-in-a-data-flow-component.md)  
  Explains how to redirect error rows to an alternative output.  
   
- [Upgrading the Version of a Data Flow Component](../extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
+ [Upgrading the Version of a Data Flow Component](/upgrading-the-version-of-a-data-flow-component.md)  
  Explains how to update saved component metadata when a new version of your component is first used.  
   
- [Developing a User Interface for a Data Flow Component](../extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
+ [Developing a User Interface for a Data Flow Component](/developing-a-user-interface-for-a-data-flow-component.md)  
  Explains how to implement a custom editor for a component.  
   
  [Developing Specific Types of Data Flow Components](../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
@@ -77,7 +77,7 @@ manager: "jhubbard"
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>  
  Contains the classes and interfaces used to create the user interface for data flow components.  
   
- [Integration Services Error and Message Reference](../../../2014/integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services Error and Message Reference](../../integration-services-error-and-message-reference.md)  
  Lists the predefined [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Extending the Data Flow with the Script Component](../data-flow/transformations/script-component.md)   

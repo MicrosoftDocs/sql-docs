@@ -33,24 +33,24 @@ manager: "jhubbard"
   
 -   Set the column length of string data and the precision and scale on numeric data. For more information, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](~/t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
--   Specify a code page. For more information, see [Comparing String Data](data-flow/comparing-string-data.md).  
+-   Specify a code page. For more information, see [Comparing String Data](comparing-string-data.md).  
   
     > [!NOTE]  
     >  When copying between columns with a string data type, the two columns must use the same code page.  
   
- If the length of an output column of string data is shorter than the length of its corresponding input column, the output data is truncated. For more information, see [Error Handling in Data](data-flow/error-handling-in-data.md).  
+ If the length of an output column of string data is shorter than the length of its corresponding input column, the output data is truncated. For more information, see [Error Handling in Data](error-handling-in-data.md).  
   
  This transformation has one input, one output, and one error output.  
   
 ## Related Tasks  
- You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md) and [Data Conversion Transformation Editor](../../2014/integration-services/data-conversion-transformation-editor.md). For information about setting properties of this transformation programmatically, see [Common Properties](../../2014/integration-services/common-properties.md) and [Transformation Custom Properties](transformation-custom-properties.md).  
+ You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](/data-conversion-transformation.md) and [Data Conversion Transformation Editor](../../2014/integration-services/data-conversion-transformation-editor.md). For information about setting properties of this transformation programmatically, see [Common Properties](../../2014/integration-services/common-properties.md) and [Transformation Custom Properties](transformation-custom-properties.md).  
   
 ## Related Content  
  Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
   
 ## See Also  
  [Fast Parse](../../2014/integration-services/fast-parse.md)   
- [Data Flow](data-flow/data-flow.md)   
+ [Data Flow](data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   
   

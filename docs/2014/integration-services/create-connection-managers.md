@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  The following diagram shows the **Connection Managers** area on the **Control Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
- ![Screenshot of control flow designer with package](../../2014/integration-services/media/samplecontrolflow.gif "Screenshot of control flow designer with package")  
+ ![Screenshot of control flow designer with package](media/samplecontrolflow.gif "Screenshot of control flow designer with package")  
   
 #### To add, configure, or delete a connection manager in SSIS Designer  
   

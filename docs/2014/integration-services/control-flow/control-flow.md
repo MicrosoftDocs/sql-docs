@@ -22,11 +22,11 @@ manager: "jhubbard"
 # Control Flow
   A package consists of a control flow and, optionally, one or more data flows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of control flow elements: containers that provide structures in packages, tasks that provide functionality, and precedence constraints that connect the executables, containers, and tasks into an ordered control flow.  
   
- For more information, see [Precedence Constraints](control-flow/precedence-constraints.md), [Integration Services Containers](control-flow/integration-services-containers.md), and [Integration Services Tasks](control-flow/integration-services-tasks.md).  
+ For more information, see [Precedence Constraints](precedence-constraints.md), [Integration Services Containers](integration-services-containers.md), and [Integration Services Tasks](integration-services-tasks.md).  
   
  The following diagram shows a control flow that has one container and six tasks. Five of the tasks are defined at the package level, and one task is defined at the container level. The task is inside a container.  
   
- ![Control flow with six tasks and a container](../../2014/integration-services/media/ssis-controlflowelmt.gif "Control flow with six tasks and a container")  
+ ![Control flow with six tasks and a container](../media/ssis-controlflowelmt.gif "Control flow with six tasks and a container")  
   
  The [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] architecture supports the nesting of containers, and a control flow can include multiple levels of nested containers. For example, a package could contain a container such as a Foreach Loop container, which in turn could contain another Foreach Loop container and so on.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  The following diagram shows the control flow of a simple package in the control flow designer. The control flow shown in the diagram is made up of three package-level tasks and one package-level container that contains three tasks. The tasks and container are connected by using precedence constraints.  
   
- ![Screenshot of control flow designer with package](../../2014/integration-services/media/samplecontrolflow.gif "Screenshot of control flow designer with package")  
+ ![Screenshot of control flow designer with package](../media/samplecontrolflow.gif "Screenshot of control flow designer with package")  
   
  Creating a control flow includes the following tasks:  
   
@@ -45,13 +45,13 @@ manager: "jhubbard"
   
 -   Adding tasks that support data flow, prepare data, perform workflow and business intelligence functions, and implement script.  
   
-     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes a variety of tasks that you can use to create control flow that meets the business requirements of the package. If the package has to work with data, the control flow must include at least one Data Flow task. For example, a package might have to extract data, aggregate data values, and then write the results to a data source.  For more information, see [Integration Services Tasks](control-flow/integration-services-tasks.md) and [Add or Delete a Task or a Container in a Control Flow](control-flow/control-flow.md).  
+     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes a variety of tasks that you can use to create control flow that meets the business requirements of the package. If the package has to work with data, the control flow must include at least one Data Flow task. For example, a package might have to extract data, aggregate data values, and then write the results to a data source.  For more information, see [Integration Services Tasks](integration-services-tasks.md) and [Add or Delete a Task or a Container in a Control Flow](control-flow.md).  
   
 -   Connecting containers and tasks into an ordered control flow by using precedence constraints.  
   
      After you add a task or container to the design surface of the **Control Flow** tab, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer automatically adds a connector to the item. If a package includes two or more items, tasks or containers, you can join them into a control flow by dragging their connectors from one item to another.  
   
-     The connector between two items represents a precedence constraint. A precedence constraint defines the relationship between the two connected items. It specifies the order in which tasks and containers are executed at run time and the conditions under which tasks and containers run. For example, a precedence constraint can specify that a task must succeed for the next task in the control flow to run. For more information, see [Precedence Constraints](control-flow/precedence-constraints.md).  
+     The connector between two items represents a precedence constraint. A precedence constraint defines the relationship between the two connected items. It specifies the order in which tasks and containers are executed at run time and the conditions under which tasks and containers run. For example, a precedence constraint can specify that a task must succeed for the next task in the control flow to run. For more information, see [Precedence Constraints](precedence-constraints.md).  
   
 -   Adding connection managers.  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Add or Delete a Task or a Container in a Control Flow](control-flow/control-flow.md)  
+-   [Add or Delete a Task or a Container in a Control Flow](control-flow.md)  
   
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   

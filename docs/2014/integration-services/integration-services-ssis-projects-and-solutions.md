@@ -40,7 +40,7 @@ manager: "jhubbard"
 ### Folders in Integration Services Projects  
  The following diagram shows the folders in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- ![Folders in an Integration Services project](../../2014/integration-services/media/solutionexplorer.gif "Folders in an Integration Services project")  
+ ![Folders in an Integration Services project](media/solutionexplorer.gif "Folders in an Integration Services project")  
   
  The following table describes the folders that appear in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   

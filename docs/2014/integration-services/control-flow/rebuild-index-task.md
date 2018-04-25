@@ -57,7 +57,7 @@ manager: "jhubbard"
  For more about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
   
 ## See Also  
- [Integration Services Tasks](control-flow/integration-services-tasks.md)   
- [Control Flow](control-flow/control-flow.md)  
+ [Integration Services Tasks](integration-services-tasks.md)   
+ [Control Flow](control-flow.md)  
   
   

@@ -72,12 +72,12 @@ manager: "jhubbard"
   
      The following diagram shows an example of a data flow that supports fixed attribute, changing attribute, and historical attribute changes, inferred members, and changes to matching records.  
   
-     ![Data flow from Slowly Changing Dimension Wizard](../../2014/integration-services/media/dimensionwizard.gif "Data flow from Slowly Changing Dimension Wizard")  
+     ![Data flow from Slowly Changing Dimension Wizard](../media/dimensionwizard.gif "Data flow from Slowly Changing Dimension Wizard")  
   
 ## Updating Slowly Changing Dimension Outputs  
  The simplest way to update the configuration of the Slowly Changing Dimension transformation outputs is to rerun the Slowly Changing Dimension Wizard and modify properties from the wizard pages. You can also update the Slowly Changing Dimension transformation using the **Advanced Editor** dialog box or programmatically.  
   
 ## See Also  
- [Slowly Changing Dimension Transformation](data-flow/transformations/slowly-changing-dimension-transformation.md)  
+ [Slowly Changing Dimension Transformation](/slowly-changing-dimension-transformation.md)  
   
   

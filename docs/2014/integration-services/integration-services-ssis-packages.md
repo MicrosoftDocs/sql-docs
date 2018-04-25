@@ -32,7 +32,7 @@ manager: "jhubbard"
   
  The following diagram shows a simple package that contains a control flow with a Data Flow task, which in turn contains a data flow.  
   
- ![A package with a control flow and a data flow](../../2014/integration-services/media/ssis-package.gif "A package with a control flow and a data flow")  
+ ![A package with a control flow and a data flow](media/ssis-package.gif "A package with a control flow and a data flow")  
   
  After you have created the basic package, you can add advanced features such as logging and variables to extend package functionality. For more information, see the section about Objects that Extend Package Functionality.  
   

@@ -37,22 +37,22 @@ manager: "jhubbard"
 ## In This Section  
  This section describes how to create, configure, and code a custom task and its optional custom user interface.  
   
- [Creating a Custom Task](../extending-packages-custom-objects/task/creating-a-custom-task.md)  
+ [Creating a Custom Task](creating-a-custom-task.md)  
  Describes the first step, which is creating the custom task.  
   
- [Coding a Custom Task](../extending-packages-custom-objects/task/coding-a-custom-task.md)  
+ [Coding a Custom Task](coding-a-custom-task.md)  
  Describes how to code the principal methods of a custom task.  
   
- [Connecting to Data Sources in a Custom Task](../extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
+ [Connecting to Data Sources in a Custom Task](connecting-to-data-sources-in-a-custom-task.md)  
  Describes how to connect a custom task to a data source.  
   
- [Raising and Defining Events in a Custom Task](../extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
+ [Raising and Defining Events in a Custom Task](raising-and-defining-events-in-a-custom-task.md)  
  Describes how to raise events and define custom events from the custom task.  
   
- [Adding Support for Debugging in a Custom Task](../extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
+ [Adding Support for Debugging in a Custom Task](adding-support-for-debugging-in-a-custom-task.md)  
  Describes how to create breakpoint targets in the custom task.  
   
- [Developing a User Interface for a Custom Task](../extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [Developing a User Interface for a Custom Task](developing-a-user-interface-for-a-custom-task.md)  
  Describes how to create a user interface that shows in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer to configure properties on the custom task.  
   
 ## Related Sections  
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 ||  
 |-|  
-|![Integration Services icon (small)](../../../2014/integration-services/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+|![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Extending the Package with the Script Task](../control-flow/script-task.md)   

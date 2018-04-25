@@ -30,11 +30,11 @@ manager: "jhubbard"
   
  Additionally, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides paths that connect the output of one component to the input of another component. Paths define the sequence of components, and let you add annotations to the data flow or view the source of the column.  
   
- You connect data flow components by connecting the output of sources and destinations to the input of transformations and destinations. When constructing a data flow you typically connect the second and subsequent components as you add them to the data flow. After you connect the component, the input columns are available for use in configuring the component. When no input columns are available, you will have to complete the configuration of the component after it is connected to the data flow. For more information, see [Integration Services Paths](data-flow/integration-services-paths.md) and [Connect Components with Paths](../../2014/integration-services/connect-components-with-paths.md).  
+ You connect data flow components by connecting the output of sources and destinations to the input of transformations and destinations. When constructing a data flow you typically connect the second and subsequent components as you add them to the data flow. After you connect the component, the input columns are available for use in configuring the component. When no input columns are available, you will have to complete the configuration of the component after it is connected to the data flow. For more information, see [Integration Services Paths](integration-services-paths.md) and [Connect Components with Paths](../../2014/integration-services/connect-components-with-paths.md).  
   
  The following diagram shows a data flow that has a source, a transformation with one input and one output, and a destination. The diagram includes the inputs, outputs, and error outputs in addition to the input, output, and external columns.  
   
- ![Data flow components and their inputs and outputs](../../2014/integration-services/media/mw-dts-dataflow.gif "Data flow components and their inputs and outputs")  
+ ![Data flow components and their inputs and outputs](../media/mw-dts-dataflow.gif "Data flow components and their inputs and outputs")  
   
 ## Data Flow Implementation  
  Adding a Data Flow task to the control flow of a package is the first step in implementing a data flow in a package. A package can include multiple Data Flow tasks, each with its own data flow. For example, if a package requires that data flows be run in a specified sequence, or that other tasks be performed between the data flows, you must use a separate Data Flow task for each data flow.  
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   Configuring error outputs on components to handle problems.  
   
-     At run time, row-level errors may occur when data flow components convert data, perform a lookup, or evaluate expressions. For example, a data column with a string value cannot be converted to an integer, or an expression tries to divide by zero. Both operations cause errors, and the rows that contain the errors can be processed separately using an error flow. For more information about how to use error flows in package data flow, see [Error Handling in Data](data-flow/error-handling-in-data.md).  
+     At run time, row-level errors may occur when data flow components convert data, perform a lookup, or evaluate expressions. For example, a data column with a string value cannot be converted to an integer, or an expression tries to divide by zero. Both operations cause errors, and the rows that contain the errors can be processed separately using an error flow. For more information about how to use error flows in package data flow, see [Error Handling in Data](error-handling-in-data.md).  
   
 -   Include annotations to make the data flow self-documenting. For more information, see [Use Annotations in Packages](use-annotations-in-packages.md).  
   
@@ -88,9 +88,9 @@ manager: "jhubbard"
   
  The following sources have properties that can be updated by property expressions:  
   
--   [ADO NET Source](data-flow/ado-net-source.md)  
+-   [ADO NET Source](ado-net-source.md)  
   
--   [XML Source](data-flow/xml-source.md)  
+-   [XML Source](xml-source.md)  
   
 ### Sources Available for Download  
  The following table lists additional sources that you can download from the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] website.  
@@ -112,27 +112,27 @@ manager: "jhubbard"
   
  The following transformations have properties that can be updated by property expressions:  
   
--   [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)  
+-   [Conditional Split Transformation](transformations/conditional-split-transformation.md)  
   
--   [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)  
+-   [Derived Column Transformation](transformations/derived-column-transformation.md)  
   
--   [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)  
+-   [Fuzzy Grouping Transformation](transformations/fuzzy-grouping-transformation.md)  
   
--   [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+-   [Fuzzy Lookup Transformation](transformations/lookup-transformation.md)  
   
--   [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)  
+-   [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)  
   
--   [Percentage Sampling Transformation](data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Percentage Sampling Transformation](transformations/percentage-sampling-transformation.md)  
   
--   [Pivot Transformation](data-flow/transformations/pivot-transformation.md)  
+-   [Pivot Transformation](transformations/pivot-transformation.md)  
   
--   [Row Sampling Transformation](data-flow/transformations/row-sampling-transformation.md)  
+-   [Row Sampling Transformation](transformations/row-sampling-transformation.md)  
   
--   [Sort Transformation](data-flow/transformations/sort-transformation.md)  
+-   [Sort Transformation](transformations/sort-transformation.md)  
   
--   [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)  
+-   [Unpivot Transformation](transformations/unpivot-transformation.md)  
   
- For more information, see [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md).  
+ For more information, see [Integration Services Transformations](transformations/integration-services-transformations.md).  
   
 ## Destinations  
  A destination is the data flow component that writes the data from a data flow to a specific data store, or creates an in-memory dataset. You can load data into flat files, process analytic objects, and provide data to other processes. You can also load data by accessing tables and views in databases and by running queries.  
@@ -149,9 +149,9 @@ manager: "jhubbard"
   
  The following destinations have properties that can be updated by property expressions:  
   
--   [Flat File Destination](data-flow/flat-file-destination.md)  
+-   [Flat File Destination](flat-file-destination.md)  
   
--   [SQL Server Compact Edition Destination](data-flow/sql-server-compact-edition-destination.md)  
+-   [SQL Server Compact Edition Destination](sql-server-compact-edition-destination.md)  
   
 ### Destinations Available for Download  
  The following table lists additional destinations that you can download from the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] website.  
@@ -184,7 +184,7 @@ manager: "jhubbard"
 ### Error Outputs  
  Sources, destinations, and transformations can include error outputs. You can specify how the data flow component responds to errors in each input or column by using the **Configure Error Output** dialog box. If an error or data truncation occurs at run time and the data flow component is configured to redirect rows, the data rows with the error are sent to the error output. The error output can be connected to transformations that apply additional transformations or direct data to a different destination. By default, an error output contains the output columns and two error columns: **ErrorCode** and **ErrorColumn**. The output columns contain the data from the row that failed, **ErrorCode** provides the error code, and **ErrorColumn** identifies the failing column.  
   
- For more information, see [Error Handling in Data](data-flow/error-handling-in-data.md).  
+ For more information, see [Error Handling in Data](error-handling-in-data.md).  
   
 ### Columns  
  Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type—input, output, or external—[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
@@ -192,7 +192,7 @@ manager: "jhubbard"
 ## Paths  
  Paths connect data flow components. In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, you can view and modify the path properties, view the output metadata for the path start point, and attach data viewers to a path.  
   
- For more information, see [Integration Services Paths](data-flow/integration-services-paths.md) and [Debugging Data Flow](data-flow/data-flow.md).  
+ For more information, see [Integration Services Paths](integration-services-paths.md) and [Debugging Data Flow](data-flow.md).  
   
 ## Configuration of Data Flow Components  
  Data flow components can be configured at the component level; at the input, output, and error output levels; and at the column level.  
@@ -205,13 +205,13 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, you can set element properties using the custom dialog boxes provided for each element type, or by using the Properties window or the **Advanced Editor** dialog box.  
   
- For more information about how to set properties by using [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, see [Set the Properties of a Data Flow Component](data-flow/set-the-properties-of-a-data-flow-component.md).  
+ For more information about how to set properties by using [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, see [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md).  
   
 ## Related Tasks  
   
--   [Add or Delete a Component in a Data Flow](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
+-   [Add or Delete a Component in a Data Flow](add-or-delete-a-component-in-a-data-flow.md)  
   
--   [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md)  
+-   [Connect Components in a Data Flow](connect-components-in-a-data-flow.md)  
   
 ## Related Content  
  Video, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369), on technet.microsoft.com.  

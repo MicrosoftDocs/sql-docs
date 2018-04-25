@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  The following diagram shows [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and the **Toolbox** window.  
   
- ![Screenshot of SSIS Designer and Toolbox](../../2014/integration-services/media/denali-designerandtoolbox.gif "Screenshot of SSIS Designer and Toolbox")  
+ ![Screenshot of SSIS Designer and Toolbox](media/denali-designerandtoolbox.gif "Screenshot of SSIS Designer and Toolbox")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes additional dialog boxes and windows for adding functionality to packages, and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides windows and dialog boxes for configuring the development environment and working with packages. For more information, see [Integration Services User Interface](integration-services-user-interface.md).  
   

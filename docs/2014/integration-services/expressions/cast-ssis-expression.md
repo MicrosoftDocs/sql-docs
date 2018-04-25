@@ -45,7 +45,7 @@ manager: "jhubbard"
 ## Remarks  
  The following diagram shows legal cast operations.  
   
- ![Legal and not legal casts between data types](../../2014/integration-services/media/data-conversion.gif "Legal and not legal casts between data types")  
+ ![Legal and not legal casts between data types](../media/data-conversion.gif "Legal and not legal casts between data types")  
   
  Casting to some data types requires parameters. The following table lists these data types and their parameters.  
   
@@ -141,9 +141,9 @@ manager: "jhubbard"
 ```  
   
 ## See Also  
- [Operator Precedence and Associativity](expressions/operator-precedence-and-associativity.md)   
- [Operators &#40;SSIS Expression&#41;](expressions/operators-ssis-expression.md)   
- [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)   
- [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md)  
+ [Operator Precedence and Associativity](operator-precedence-and-associativity.md)   
+ [Operators &#40;SSIS Expression&#41;](operators-ssis-expression.md)   
+ [Integration Services &#40;SSIS&#41; Expressions](integration-services-ssis-expressions.md)   
+ [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)  
   
   

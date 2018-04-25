@@ -27,16 +27,16 @@ manager: "jhubbard"
   
  The following diagram shows a data set before the data is unpivoted on the Product column.  
   
- ![Dataset after it is unpivoted](../../2014/integration-services/media/mw-dts-18.gif "Dataset after it is unpivoted")  
+ ![Dataset after it is unpivoted](../media/mw-dts-18.gif "Dataset after it is unpivoted")  
   
  The following diagram shows a data set after it has been unpivoted on the Product column.  
   
- ![Dataset before it is unpivoted](../../2014/integration-services/media/mw-dts-17.gif "Dataset before it is unpivoted")  
+ ![Dataset before it is unpivoted](../media/mw-dts-17.gif "Dataset before it is unpivoted")  
   
  Under some circumstances, the unpivot results may contain rows with unexpected values. For example, if the sample data to unpivot shown in the diagram had null values in all the Qty columns for Fred, then the output would include only one row for Fred, not five. The Qty column would contain either null or zero, depending on the column data type.  
   
 ## Configuration of the Unpivot Transformation  
- The Unpivot transformation includes the `PivotKeyValue` custom property. This property can be updated by a property expression when the package is loaded. For more information, see [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md), and [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+ The Unpivot transformation includes the `PivotKeyValue` custom property. This property can be updated by a property expression when the package is loaded. For more information, see [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md), and [Transformation Custom Properties](/transformation-custom-properties.md).  
   
  This transformation has one input and one output. It has no error output.  
   
@@ -50,8 +50,8 @@ manager: "jhubbard"
   
 -   [Common Properties](../../2014/integration-services/common-properties.md)  
   
--   [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)  
+-   [Transformation Custom Properties](/transformation-custom-properties.md)  
   
- For more information about how to set the properties, see [Set the Properties of a Data Flow Component](data-flow/set-the-properties-of-a-data-flow-component.md).  
+ For more information about how to set the properties, see [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md).  
   
   

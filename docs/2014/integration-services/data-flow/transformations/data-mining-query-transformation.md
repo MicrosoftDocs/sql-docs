@@ -44,6 +44,6 @@ manager: "jhubbard"
   
 -   [Transformation Custom Properties](transformation-custom-properties.md)  
   
- For more information about how to set properties, see [Set the Properties of a Data Flow Component](data-flow/set-the-properties-of-a-data-flow-component.md).  
+ For more information about how to set properties, see [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md).  
   
   

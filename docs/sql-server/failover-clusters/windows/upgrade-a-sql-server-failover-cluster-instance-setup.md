@@ -2,7 +2,7 @@
 title: "Upgrade a SQL Server Failover Cluster Instance (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"

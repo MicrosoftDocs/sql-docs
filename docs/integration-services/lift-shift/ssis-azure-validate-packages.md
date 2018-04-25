@@ -2,7 +2,7 @@
 title: "Validate SSIS packages deployed to Azure | Microsoft Docs"
 ms.date: "11/27/2017"
 ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "lift-shift"

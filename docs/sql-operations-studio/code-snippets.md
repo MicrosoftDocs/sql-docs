@@ -4,7 +4,7 @@ description: Learn how to create and use SQL code snippets in SQL Operations Stu
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
 ms.reviewer: "alayu; erickang; sstein"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos

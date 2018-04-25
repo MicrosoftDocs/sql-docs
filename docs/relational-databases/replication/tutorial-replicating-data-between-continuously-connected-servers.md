@@ -82,11 +82,11 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
   
 4. On the **Publication Type** page, select **Transactional publication**, and then select **Next**:  
 
-   !["Publication Type" page of the wizard](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
+   !["Publication Type" page with the publication type selected](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
   
 5. On the **Articles** page, expand the **Tables** node and select the **Product** check box. Then expand **Product** and clear the check boxes next to  **ListPrice** and **StandardCost**. Select **Next**.  
 
-   !["Articles" page of the wizard, with selected articles to publish](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
+   !["Articles" page, with selected articles to publish](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
   
 6. On the **Filter Table Rows** page, select **Add**.   
   
@@ -96,34 +96,34 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
    WHERE [SafetyStockLevel] < 500  
    ```
   
-   !["Filter Table Flows" page of the wizard and "Add Filter" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
+   !["Filter Table Flows" page and "Add Filter" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
   
 8. Select **OK**, and then select **Next**.  
   
 9. Select the **Create a snapshot immediately and keep the snapshot available to initialize subscriptions** check box, and select **Next**:  
 
-   !["Snapshot Agent" page of the wizard with check box selected](media/tutorial-replicating-data-between-continuously-connected-servers/snapshot.png)
+   !["Snapshot Agent" page with check box selected](media/tutorial-replicating-data-between-continuously-connected-servers/snapshot.png)
   
 10. On the **Agent Security** page, clear the **Use the security settings from the Snapshot Agent** check box.   
   
     Select **Security Settings** for the Snapshot Agent, enter <*Publisher_Machine_Name*>**\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**:  
 
-    !["Agent Security" page of the wizard and "Snapshot Agent Security" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
+    !["Agent Security" page and "Snapshot Agent Security" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
 12. Repeat the previous step to set <*Publisher_Machine_Name*>**\repl_logreader** as the process account for the Log Reader Agent. Then select **OK**.  
 
-    !["Log Reader Agent Security" dialog box and "Agent Security" page of the wizard](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
+    !["Log Reader Agent Security" dialog box and "Agent Security" page](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
   
 13. On the **Complete the Wizard** page, type **AdvWorksProductTrans** in the **Publication name** box, and select **Finish**:  
 
-    ![Name the Publication](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
+    !["Complete the Wizard" page with publication name](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. After the publication is created, select **Close** to complete the wizard. 
 
-You might encounter the following error if your SQL Server Agent is not running when  you attempt to create the publication. This is an indication that your publication was created successfully, but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. Instructions for this are covered in the next section. 
+You might encounter the following error if your SQL Server Agent is not running when  you attempt to create the publication. This is an indication that your publication was created successfully, but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. The next section gives instructions. 
 
-![Snapshot Agent Fails to Start](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenterror.png)
+![Warning that the Snapshot Agent has failed to start](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenterror.png)
     
   
 ### View the status of snapshot generation  
@@ -131,13 +131,13 @@ You might encounter the following error if your SQL Server Agent is not running 
 1. Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
 2. In the **Local Publications** folder, right-click **AdvWorksProductTrans**, and then select **View Snapshot Agent Status**:  
-   ![Snapshot Agent Status](media/tutorial-replicating-data-between-continuously-connected-servers/viewsnapshot.png)
+   ![Command on the shortcut menu for viewing the Snapshot Agent status](media/tutorial-replicating-data-between-continuously-connected-servers/viewsnapshot.png)
   
 3. The current status of the Snapshot Agent job for the publication is displayed. Verify that the snapshot job has succeeded before you continue to the next section.
           
 If your SQL Server Agent was not running when you created the publication, you'll see that the Snapshot Agent was never run when you check the Snapshot Agent status for your publication. If that's the case, select **Start** to start your Snapshot Agent: 
 
-![Start Snapshot Agent](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
+!["Start" button and change in status message to show that the Snapshot Agent has run](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
 If you see an error here, see [Troubleshoot errors with the Snapshot Agent](#troubleshoot-errors-with-the-snapshot-agent). 
 
@@ -152,7 +152,7 @@ If you see an error here, see [Troubleshoot errors with the Snapshot Agent](#tro
    b. In the **Add Publication Access** dialog box, select <*Publisher_Machine_Name*>**\repl_distribution**, and select **OK**.
 
    
-   ![Add Login to PAL List](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
+   ![Selections for adding a login to the publication access list](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
 For more information, see [Replication Programming Concepts](../../relational-databases/replication/concepts/replication-programming-concepts.md).  
   
@@ -164,23 +164,23 @@ In this section, you add a subscriber to the publication that you previously cre
   
 1. Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
-2. In the **Local Publications** folder, right-click the **AdvWorksProductTrans** publication, and then select **New Subscriptions**.  The New Subscription Wizard starts: 
+2. In the **Local Publications** folder, right-click the **AdvWorksProductTrans** publication, and then select **New Subscriptions**. The New Subscription Wizard starts: 
  
-   ![New Subscription](media/tutorial-replicating-data-between-continuously-connected-servers/newsub.png)     
+   ![Selections to start the New Subscription Wizard](media/tutorial-replicating-data-between-continuously-connected-servers/newsub.png)     
   
 3. On the **Publication** page, select **AdvWorksProductTrans**, and then select **Next**:  
 
-   ![Select Tran Publisher](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
+   !["Publication" page with publication selected](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
 4. On the **Distribution Agent Location** page, select **Run all agents at the Distributor**, and then select **Next**.  For more information on pull and push subscriptions, see [Subscribe to publications](https://docs.microsoft.com/en-us/sql/relational-databases/replication/subscribe-to-publications):
 
-   ![Run Agents at Dist](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
+   !["Distribution Agent Location" page with the option selected to run all agents at the distributor](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   
 5. On the **Subscribers** page, if the name of the subscriber instance is not displayed, select **Add Subscriber**, and then select **Add SQL Server Subscriber** from the drop-down list. This step opens the **Connect to Server** dialog box. Enter the subscriber instance name and then select **Connect**.  
     
-   After the Subscriber has been added, select the check box next to the instance name of your subscriber. Then select **New Database** under **Subscription Database**.   
+   After the subscriber has been added, select the check box next to the instance name of your subscriber. Then select **New Database** under **Subscription Database**.   
 
-   ![Add Subscriber Server](media/tutorial-replicating-data-between-continuously-connected-servers/addsub.png)
+   !["Subscribers" page with selections for adding a subscriber server](media/tutorial-replicating-data-between-continuously-connected-servers/addsub.png)
 
 7. The **New Database** dialog box appears. Enter **ProductReplica** in the **Database name** box, select **OK**, and then select **Next**: 
   

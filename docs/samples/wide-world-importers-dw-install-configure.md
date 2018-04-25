@@ -1,7 +1,7 @@
 ---
 title: "WideWorldImporters OLAP sample database - install and configure - SQL | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.service: ""
 ms.component: "samples"
 ms.technology:

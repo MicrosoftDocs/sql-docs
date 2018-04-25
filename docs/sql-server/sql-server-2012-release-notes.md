@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2012 Release Notes | Microsoft Docs"
 ms.prod: "sql"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.technology: "supportability"
 ms.custom: ""
 ms.date: "01/31/2017"

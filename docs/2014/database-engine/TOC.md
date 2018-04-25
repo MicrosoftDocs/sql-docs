@@ -1173,7 +1173,7 @@
 ###### [Display an Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)
 ###### [Save an Execution Plan in XML Format](../relational-databases/performance/save-an-execution-plan-in-xml-format.md)
 ### [Database Engine Cross-Instance Features](database-engine-cross-instance-features.md)
-#### [SQL Server Management Studio](../ssms/sql-server-management-studio.md)
+#### [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)
 ##### [Use SQL Server Management Studio](use-sql-server-management-studio.md)
 ###### [The SQL Server Management Studio Environment](../ssms/the-sql-server-management-studio-environment.md)
 ####### [General User Interface Elements](../ssms/general-user-interface-elements.md)

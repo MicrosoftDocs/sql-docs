@@ -206,7 +206,7 @@ SELECT NAME,
 FROM sys.databases;
 ```
 ### F. Enable auto-create and auto-update stats for a database
-Use the following statement to enable create and update statistics automatically and asynchronously for database, myPDW.  This creates and updates single-column statistics as necessary to create high quality query plans.
+Use the following statement to enable create and update statistics automatically and asynchronously for database, CustomerSales.  This creates and updates single-column statistics as necessary to create high quality query plans.
 
 ```sql
 ALTER DATABASE CustomerSales

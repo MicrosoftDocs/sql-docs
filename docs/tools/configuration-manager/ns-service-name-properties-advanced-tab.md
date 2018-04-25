@@ -2,7 +2,7 @@
 title: "NS$&lt;service name&gt; Properties (Advanced Tab) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "configuration-manager"

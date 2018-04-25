@@ -2,7 +2,7 @@
 title: "Load data from or to Excel with SSIS | Microsoft Docs"
 ms.description: "Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations."
 ms.date: "04/10/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "non-specific"

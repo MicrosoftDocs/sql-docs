@@ -3,7 +3,7 @@ title: "Walkthrough: Set Up SQL Server Integration Services Scale Out | Microsof
 ms.description: "This article walks you through the setup and configuration of SSIS Scale Out"
 ms.custom: ""
 ms.date: "12/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "scale-out"

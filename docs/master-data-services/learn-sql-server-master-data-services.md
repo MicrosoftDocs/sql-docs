@@ -2,7 +2,7 @@
 title: "Learn SQL Server Master Data Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"

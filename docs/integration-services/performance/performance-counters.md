@@ -2,7 +2,7 @@
 title: "Performance Counters | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "performance"

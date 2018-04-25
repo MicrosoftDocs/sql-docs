@@ -3,7 +3,7 @@ title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/30/2017"
 ms.prod: "sql"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: supportability

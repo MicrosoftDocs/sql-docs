@@ -2,7 +2,7 @@
 title: "Deploy an SSIS project with SSMS | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "quick-start"

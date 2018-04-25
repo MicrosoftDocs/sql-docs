@@ -2,7 +2,7 @@
 title: "Loop through Excel Files and Tables by Using a Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"

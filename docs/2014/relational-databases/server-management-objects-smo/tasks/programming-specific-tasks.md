@@ -38,7 +38,7 @@ manager: "jhubbard"
 |[Managing Users, Roles, and Logins](managing-users-roles-and-logins.md)|Describes how to use security roles in SMO.|  
 |[Granting, Revoking, and Denying Permissions](granting-revoking-and-denying-permissions.md)|Describes how to use the SMO to grant, revoke, and deny permissions to users or members of a role.|  
 |[Using Encryption](using-encryption.md)|Describes how to protect data using encryption in SMO.|  
-|[Scheduling Automatic Administrative Tasks in SQL Server Agent](scheduling-automatic-administrative-tasks-in-sql-server-agent.md)|Describes how to use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to monitor, report, and schedule jobs in SMO.|  
+|[Scheduling Automatic Administrative Tasks in SQL Server Agent](../../../ssms/agent/sql-server-agent.md)|Describes how to use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to monitor, report, and schedule jobs in SMO.|  
 |[Backing Up and Restoring Databases and Transaction Logs](backing-up-and-restoring-databases-and-transaction-logs.md)|Describes how to back up and restore databases and transaction logs in SMO.|  
 |[Scripting](scripting.md)|Describes how to script objects and discover dependencies between objects in SMO.|  
 |[Transferring Data](transferring-data.md)|Describes how to transfer data in SMO.|  

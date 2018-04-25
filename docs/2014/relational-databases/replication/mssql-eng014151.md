@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## User Action  
  This error can occur in a number of situations; use the following approaches as necessary:  
   
--   Restart the failed agent to see if it will now run without failures. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+-   Restart the failed agent to see if it will now run without failures. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
   
 -   Check the agent history and job history for other errors that occurred around the same time. For information about viewing agent status and error details in Replication Monitor, see the following topics:  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
     -   For the Distribution Agent and Merge Agent, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
--   Verify that basic connectivity is working between the computers accessed by the agent, and then connect to each computer with a utility like the [sqlcmd Utility](../../database-engine/sqlcmd-utility.md). When connecting, use the same account under which the agent makes connections. For more information about the permissions required by each agent account, see [Replication Agent Security Model](replication-agent-security-model.md).  
+-   Verify that basic connectivity is working between the computers accessed by the agent, and then connect to each computer with a utility like the [sqlcmd Utility](../../tools/sqlcmd-utility.md). When connecting, use the same account under which the agent makes connections. For more information about the permissions required by each agent account, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 -   If the error occurs while creating or applying a snapshot, check the files in the snapshot directory for errors.  
   

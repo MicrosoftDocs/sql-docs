@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Import and Export Bulk Data by Using the bcp Utility (SQL Server)
-  This topic provides an overview for using the [bcp utility](../../database-engine/bcp-utility.md) to export data from anywhere in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database where a SELECT statement works, including partitioned views.  
+  This topic provides an overview for using the [bcp utility](../../tools/bcp-utility.md) to export data from anywhere in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database where a SELECT statement works, including partitioned views.  
   
  The bcp utility (Bcp.exe) is a command-line tool that uses the Bulk Copy Program (BCP) API. The bcp utility performs the following tasks:  
   
@@ -41,12 +41,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The bcp utility is written by using the ODBC bulk-copy  
   
- For a description of the **bcp** command syntax, see [bcp Utility](../../database-engine/bcp-utility.md).  
+ For a description of the **bcp** command syntax, see [bcp Utility](../../tools/bcp-utility.md).  
   
 ## Examples  
  For **bcp** examples, see:  
   
--   [bcp Utility](../../database-engine/bcp-utility.md)  
+-   [bcp Utility](../../tools/bcp-utility.md)  
   
 -   [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
 ## See Also  
  [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
  [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)   
- [bcp Utility](../../database-engine/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [Prepare to Bulk Import Data &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   

@@ -58,7 +58,7 @@ manager: "jhubbard"
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|This stored procedure retrieves the settings for a given primary database on the secondary server.|Secondary server|  
   
 ## See Also  
- [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)   
+ [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Log Shipping Stored Procedures and Tables](log-shipping-tables-and-stored-procedures.md)  
   
   

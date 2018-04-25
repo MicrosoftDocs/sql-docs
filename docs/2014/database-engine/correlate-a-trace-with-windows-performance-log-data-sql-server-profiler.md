@@ -62,7 +62,7 @@ manager: "jhubbard"
 11. Click **OK** to create the performance log.  
   
 ## See Also  
- [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   
- [Start SQL Server Profiler](../../2014/database-engine/start-sql-server-profiler.md)  
+ [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Start SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -49,6 +49,6 @@ manager: "jhubbard"
 4.  On the **Execution plan** tab of the SQL Query Editor click the icons of the operators to view information about the operators in the Properties window.  
   
 ## See Also  
- [Properties Window &#40;Management Studio&#41;](../../database-engine/properties-window-management-studio.md)  
+ [Properties Window &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
   
   

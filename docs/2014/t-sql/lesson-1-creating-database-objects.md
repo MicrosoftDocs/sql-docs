@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 -   By using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This tutorial assumes that you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], but you can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, which is available as a free download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?linkid=67359).  
   
--   By using the [sqlcmd utility](../database-engine/sqlcmd-utility.md).  
+-   By using the [sqlcmd utility](../tools/sqlcmd-utility.md).  
   
 -   By connecting from an application that you create.  
   

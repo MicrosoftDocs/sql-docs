@@ -99,7 +99,7 @@ manager: "jhubbard"
  The total amount of physical memory on the server, in megabytes.  
   
 ## See Also  
- [Property Pages in SQL Server Management Studio](../../2014/database-engine/property-pages-in-sql-server-management-studio.md)   
- [Connect to Server &#40;Login Page&#41; Database Engine](../../2014/database-engine/connect-to-server-login-page-database-engine.md)  
+ [Property Pages in SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)   
+ [Connect to Server &#40;Login Page&#41; Database Engine](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

@@ -33,8 +33,8 @@ manager: "jhubbard"
  Use this template by default, for traces created for this server type.  
   
 ## See Also  
- [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../2014/database-engine/modify-a-trace-template-sql-server-profiler.md)   
- [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md)  
+ [Modify a Trace Template &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
+ [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

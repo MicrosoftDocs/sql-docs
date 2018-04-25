@@ -144,10 +144,10 @@ manager: "jhubbard"
 >  This tab is only enabled if the **Cached** option is configured for **Data collection and upload**.  
   
  **Server**  
- Displays the name of the server that hosts the management data warehouse. For more information, see [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md).  
+ Displays the name of the server that hosts the management data warehouse. For more information, see [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
  **Management data warehouse**  
- Displays the name of the management data warehouse. For more information, see [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md).  
+ Displays the name of the management data warehouse. For more information, see [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
  **Last upload**  
  Displays date and time information for the last upload done for the collection set.  

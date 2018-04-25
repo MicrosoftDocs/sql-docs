@@ -133,6 +133,6 @@ manager: "jhubbard"
  This toolbar tab changes the dialog box to a **Find in Symbols** dialog box.  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../database-engine/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

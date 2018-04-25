@@ -43,6 +43,6 @@ manager: "jhubbard"
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] can be installed by running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup or by downloading and installing from [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
   
 ## See Also  
- [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+ [Tutorial: SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
   
   

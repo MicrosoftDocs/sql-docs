@@ -51,6 +51,6 @@ manager: "jhubbard"
 4.  In the **Editor** box, click the code editor that you wish to use to open this file type, click **Add**, and then click **OK**.  
   
 ## See Also  
- [Ssms Utility](../../database-engine/ssms-utility.md)  
+ [Ssms Utility](../../ssms/ssms-utility.md)  
   
   

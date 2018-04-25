@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 -   When disconnected from the primary replica or during cluster quorum loss, readable secondary replicas now remain available for read workloads.  
   
--   Failover cluster instances (FCIs) can now use Cluster Shared Volumes (CSVs) as cluster shared disks. For more information, see [Always On Failover Cluster Instances](always-on-failover-cluster-instances-sql-server.md).  
+-   Failover cluster instances (FCIs) can now use Cluster Shared Volumes (CSVs) as cluster shared disks. For more information, see [Always On Failover Cluster Instances](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   A new system function, [sys.fn_hadr_is_primary_replica](~/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md), and a new DMV, [sys.dm_io_cluster_valid_path_names](~/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md), is available.  
   

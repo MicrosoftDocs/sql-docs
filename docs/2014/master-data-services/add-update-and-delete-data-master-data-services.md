@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 2.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and connect to the Database Engine instance for your [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
-     For more information, see [SQL Server Management Studio](../../2014/database-engine/sql-server-management-studio.md).  
+     For more information, see [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Import data into the staging tables by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export wizard.  
   

@@ -53,7 +53,7 @@ manager: "jhubbard"
 -   Each field in the data file must be compatible with the corresponding column in the target table. For example, an `int` field cannot be loaded into a `datetime` column. For more information, see [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) and [Specify Data Formats for Compatibility when Using bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
-    >  To specify a subset of rows to import from a data file rather than the entire file, you can use a **bcp** command with the **-F** *first_row* switch and/or **-L** *last_row* switch. For more information, see [bcp Utility](../../database-engine/bcp-utility.md).  
+    >  To specify a subset of rows to import from a data file rather than the entire file, you can use a **bcp** command with the **-F** *first_row* switch and/or **-L** *last_row* switch. For more information, see [bcp Utility](../../tools/bcp-utility.md).  
   
 -   To import data from data files with fixed-length or fixed-width fields, you must use a format file. For more information, see [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
 |Added information about using the OLE DB Provider for Jet to import CSV data.|  
   
 ## See Also  
- [bcp Utility](../../database-engine/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
  [Use Character Format to Import or Export Data &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)   

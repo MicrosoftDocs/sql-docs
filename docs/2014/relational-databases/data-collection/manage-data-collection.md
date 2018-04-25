@@ -25,7 +25,7 @@ manager: "jhubbard"
 ## Manage Data Collection by Using SQL Server Management Studio  
  You can perform the following data collector-related tasks by using Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
--   [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
+-   [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  Unlike regular stored procedures, the data collector stored procedures use strictly typed parameters and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
- You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create and execute the provided code samples. For more information, see [Object Explorer](../../database-engine/object-explorer.md). As an alternative you can create the query in any editor and save it in a text file that has a .sql file name extension. You can execute the query from the Windows command prompt using the `sqlcmd` utility. For more information, see [Use the sqlcmd Utility](../scripting/sqlcmd-use-the-utility.md).  
+ You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create and execute the provided code samples. For more information, see [Object Explorer](../../ssms/object/object-explorer.md). As an alternative you can create the query in any editor and save it in a text file that has a .sql file name extension. You can execute the query from the Windows command prompt using the `sqlcmd` utility. For more information, see [Use the sqlcmd Utility](../scripting/sqlcmd-use-the-utility.md).  
   
 ### Stored Procedures and Views  
  **Working with the data collector**  

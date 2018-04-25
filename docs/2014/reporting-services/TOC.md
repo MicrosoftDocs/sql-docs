@@ -541,7 +541,7 @@
 #### [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)
 #### [Monitor Reporting Services Subscriptions](monitor-reporting-services-subscriptions.md)
 #### [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)
-### [Data Alerts](reporting-services-data-alerts.md)
+### [Data Alerts](../ssms/agent/alerts.md)
 #### [Data Alert Designer](data-alert-designer.md)
 #### [Data Alert Manager for SharePoint Users](data-alert-manager-for-sharepoint-users.md)
 #### [Data Alert Manager for Alerting Administrators](data-alert-manager-for-alerting-administrators.md)

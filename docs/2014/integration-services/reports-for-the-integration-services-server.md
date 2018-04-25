@@ -74,7 +74,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  When you add custom reports to the **SSISDB** node under the **Databases** node, the SSISDB prefix is not necessary.  
   
- For instructions on how to create and add a custom report, see [Add a Custom Report to Management Studio](../../2014/database-engine/add-a-custom-report-to-management-studio.md).  
+ For instructions on how to create and add a custom report, see [Add a Custom Report to Management Studio](../ssms/object/add-a-custom-report-to-management-studio.md).  
   
 ## Related Tasks  
  [View Reports for the Integration Services Server](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  

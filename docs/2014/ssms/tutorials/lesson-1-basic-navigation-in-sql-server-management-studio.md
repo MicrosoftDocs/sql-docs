@@ -39,6 +39,6 @@ manager: "jhubbard"
 -   Summary  
   
 ## Next Task in Lesson  
- [Start SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
+ [Start SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

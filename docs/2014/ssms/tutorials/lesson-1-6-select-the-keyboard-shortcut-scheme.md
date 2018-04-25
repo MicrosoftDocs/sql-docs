@@ -34,7 +34,7 @@ manager: "jhubbard"
  [Set the Startup Options](lesson-1-7-set-the-startup-options.md)  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../database-engine/sql-server-management-studio-keyboard-shortcuts.md)   
- [Customize Menus and Shortcut Keys](../../database-engine/customize-menus-and-shortcut-keys.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../sql-server-management-studio-keyboard-shortcuts.md)   
+ [Customize Menus and Shortcut Keys](../customize-menus-and-shortcut-keys.md)  
   
   

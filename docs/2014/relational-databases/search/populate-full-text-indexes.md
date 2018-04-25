@@ -198,7 +198,7 @@ GO
          This opens the **New Full-Text Indexing Table Schedule** dialog box, where you can modify the schedule.  
   
         > [!NOTE]  
-        >  For information about modifying a job, see [Modify a Job](../../database-engine/modify-a-job.md).  
+        >  For information about modifying a job, see [Modify a Job](../../ssms/agent/modify-a-job.md).  
   
     -   To remove a schedule, select it and click **Delete**.  
   

@@ -105,7 +105,7 @@ manager: "jhubbard"
 -   [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## See Also  
- [bcp Utility](../../database-engine/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md)   
  [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)  

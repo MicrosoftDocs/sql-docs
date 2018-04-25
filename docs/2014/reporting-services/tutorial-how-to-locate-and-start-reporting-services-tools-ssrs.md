@@ -104,7 +104,7 @@ manager: "mblythe"
  **Next Steps:** [Configure Report Manager &#40;Native Mode&#41;](../../2014/reporting-services/configure-report-manager-native-mode.md).  
   
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- Report server administrators can use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] component servers. For more information, see [Use SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md).  
+ Report server administrators can use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] component servers. For more information, see [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 #### To Start SQL Server Management Studio  
   

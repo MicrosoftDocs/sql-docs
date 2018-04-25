@@ -70,7 +70,7 @@ manager: "jhubbard"
   
     -   CollectorSchedule_Every_6h  
   
-     If you do not want to use one of the schedules that are provided, you can create a new schedule and use it for the collection set. For more information, see [Create and Attach Schedules to Jobs](../../database-engine/create-and-attach-schedules-to-jobs.md).  
+     If you do not want to use one of the schedules that are provided, you can create a new schedule and use it for the collection set. For more information, see [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
 ### Define and create a collection item  
   
@@ -160,7 +160,7 @@ GO
   
 ## See Also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Manage Schedules](../../database-engine/manage-schedules.md)   
+ [Manage Schedules](../../ssms/agent/manage-schedules.md)   
  [Start or Stop a Collection Set](start-or-stop-a-collection-set.md)  
   
   

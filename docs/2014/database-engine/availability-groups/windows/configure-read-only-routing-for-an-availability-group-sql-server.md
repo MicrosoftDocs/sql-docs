@@ -189,7 +189,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
  Once the current primary replica and the readable secondary replicas are configured to support read-only routing in both roles, the readable secondary replicas can receive read read-intent connection requests from clients that connect via the availability group listener.  
   
 > [!TIP]  
->  When using the [bcp Utility](../../bcp-utility.md) or [sqlcmd Utility](../../sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the `-K ReadOnly` switch.  
+>  When using the [bcp Utility](../../../tools/bcp-utility.md) or [sqlcmd Utility](../../../tools/sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the `-K ReadOnly` switch.  
   
 ###  <a name="ConnStringReqsRecs"></a> Requirements and Recommendations for Client Connection-Strings  
  For a client application to use read-only routing, its connection string must satisfy the following requirements:  

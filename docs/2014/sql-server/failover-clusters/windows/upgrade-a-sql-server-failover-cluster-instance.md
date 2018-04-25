@@ -38,7 +38,7 @@ manager: "jhubbard"
   
     -   You cannot downgrade a failover cluster node to a stand-alone instance.  
   
--   For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../../database-engine/always-on-failover-cluster-instances-sql-server.md).  
+-   For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
   
 ## Upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Multi-Subnet Failover Cluster  
  You cannot directly upgrade a non–multi-subnet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster. For more information, see [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  

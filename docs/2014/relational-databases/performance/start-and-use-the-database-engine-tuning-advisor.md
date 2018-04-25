@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 #### To start the Database Engine Tuning Advisor from the SQL Server Management Studio Query Editor  
   
-1.  Open a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
+1.  Open a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
 2.  Select a query in the [!INCLUDE[tsql](../../includes/tsql-md.md)] script, or select the entire script, right-click the selection, and choose **Analyze Query in Database Engine Tuning Advisor**. The Database Engine Tuning Advisor GUI opens and imports the script as an XML file workload. You can specify a session name and tuning options to tune the selected [!INCLUDE[tsql](../../includes/tsql-md.md)] queries as your workload.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
 ###  <a name="SSMS"></a> To create Transact-SQL script workloads  
   
-1.  Launch the Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
+1.  Launch the Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
 2.  Type your [!INCLUDE[tsql](../../includes/tsql-md.md)] script into the Query Editor. This script should contain a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute against the database or databases that you want to tune.  
   
@@ -94,13 +94,13 @@ manager: "jhubbard"
   
 2.  Create a trace file or table as described in the following procedures that uses the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** template:  
   
-    -   [Create a Trace &#40;SQL Server Profiler&#41;](../../database-engine/create-a-trace-sql-server-profiler.md)  
+    -   [Create a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
-    -   [Save Trace Results to a File &#40;SQL Server Profiler&#41;](../../database-engine/save-trace-results-to-a-file-sql-server-profiler.md)  
+    -   [Save Trace Results to a File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
   
          Database Engine Tuning Advisor assumes that the workload trace file is a rollover file. For more information about rollover files, see [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
-    -   [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../database-engine/save-trace-results-to-a-table-sql-server-profiler.md)  
+    -   [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)  
   
          Make sure that tracing has stopped before using a trace table as a workload.  
   
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
 2.  Check the tuning log for statements that were not tuned due to inadequate permissions. For more information, see [View and Work with the Output from the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
-3.  Create a new workload by deleting the **LoginName** column from the events that were not tuned, and then save only the untuned events in a new trace file or table. For more information about deleting data columns from a trace, see [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../../database-engine/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md) or [Modify an Existing Trace &#40;Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md).  
+3.  Create a new workload by deleting the **LoginName** column from the events that were not tuned, and then save only the untuned events in a new trace file or table. For more information about deleting data columns from a trace, see [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md) or [Modify an Existing Trace &#40;Transact-SQL&#41;](../sql-trace/modify-an-existing-trace-transact-sql.md).  
   
 4.  Resubmit the new workload without the **LoginName** column to Database Engine Tuning Advisor.  
   
@@ -210,7 +210,7 @@ manager: "jhubbard"
 >  Pausing Database Engine Tuning Advisor is not supported. If you click the **Start Analysis** toolbar button after clicking either the **Stop Analysis** or **Stop Analysis (With Recommendations)** toolbar buttons, Database Engine Tuning Advisor starts a new tuning session.  
   
 ###  <a name="dta"></a> Use the dta Utility  
- The [dta utility](../../database-engine/dta-utility.md) provides a command prompt executable file that you can use to tune databases. It enables you to use Database Engine Tuning Advisor functionality in batch files and scripts. The **dta** utility takes plan cache entries, trace files, trace tables, and [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts as workloads. It also takes XML input that conforms to the Database Engine Tuning Advisor XML schema, which is available at this [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100).  
+ The [dta utility](../../tools/dta/dta-utility.md) provides a command prompt executable file that you can use to tune databases. It enables you to use Database Engine Tuning Advisor functionality in batch files and scripts. The **dta** utility takes plan cache entries, trace files, trace tables, and [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts as workloads. It also takes XML input that conforms to the Database Engine Tuning Advisor XML schema, which is available at this [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100).  
   
  Consider the following before you begin tuning a workload with the **dta** utility:  
   
@@ -220,7 +220,7 @@ manager: "jhubbard"
   
 -   If a tuning session continues running longer than you had anticipated it would run, you can press CTRL+C to stop the tuning session and generate recommendations based on the analysis **dta** has completed up to this point. You will be prompted to decide whether you want to generate recommendations or not. Press CTRL+C again to stop the tuning session without generating recommendations.  
   
- For more information about **dta** utility syntax and examples, see [dta Utility](../../database-engine/dta-utility.md).  
+ For more information about **dta** utility syntax and examples, see [dta Utility](../../tools/dta/dta-utility.md).  
   
 ##### To tune a database by using the plan cache  
   
@@ -291,7 +291,7 @@ manager: "jhubbard"
   
      where `-E` specifies a trusted connection, `-S` specifies a remote server and instance, or a named instance on the local server, `-s` specifies a tuning session name, and `-ix` specifies the XML input file to use for the tuning session.  
   
-5.  After the utility finishes tuning the workload, you can view the results of tuning sessions with the Database Engine Tuning Advisor GUI. As an alternative, you can also specify that the tuning recommendations be written to an XML file with the **-ox** option. For more information, see [dta Utility](../../database-engine/dta-utility.md).  
+5.  After the utility finishes tuning the workload, you can view the results of tuning sessions with the Database Engine Tuning Advisor GUI. As an alternative, you can also specify that the tuning recommendations be written to an XML file with the **-ox** option. For more information, see [dta Utility](../../tools/dta/dta-utility.md).  
   
 ##  <a name="XMLInput"></a> Create an XML Input File  
  If you are an experienced XML developer, you can create XML-formatted files that [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor can use to tune workloads. To create these XML files, use your favorite XML tools to edit a sample file or to generate an instance from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML schema.  
@@ -310,14 +310,14 @@ manager: "jhubbard"
   
 2.  Create an XML input file by one of the following methods:  
   
-    -   Copy and paste one of the [XML Input File Samples &#40;DTA&#41;](../../database-engine/xml-input-file-samples-dta.md) into your favorite XML editor. Change the values to specify the appropriate arguments for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, and save the XML file.  
+    -   Copy and paste one of the [XML Input File Samples &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md) into your favorite XML editor. Change the values to specify the appropriate arguments for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, and save the XML file.  
   
     -   Using your favorite XML tool, generate an instance from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML schema.  
   
 3.  After creating the XML input file, use it as input to the **dta** command-line utility to tune the workload. For information about using XML input files with this utility, see the section [Use the dta Utililty](#dta) earlier in this topic.  
   
 > [!NOTE]  
->  If you want to use an inline workload, which is a workload that is specified directly in the XML input file, use the sample [XML Input File Sample with Inline Workload &#40;DTA&#41;](../../database-engine/xml-input-file-sample-with-inline-workload-dta.md).  
+>  If you want to use an inline workload, which is a workload that is specified directly in the XML input file, use the sample [XML Input File Sample with Inline Workload &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
 ##  <a name="UI"></a> User Interface Descriptions  
   
@@ -505,6 +505,6 @@ database_name.owner_name.table_name
   
 ## See Also  
  [View and Work with the Output from the Database Engine Tuning Advisor](database-engine-tuning-advisor.md)   
- [dta Utility](../../database-engine/dta-utility.md)  
+ [dta Utility](../../tools/dta/dta-utility.md)  
   
   

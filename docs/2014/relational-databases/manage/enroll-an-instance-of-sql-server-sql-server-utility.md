@@ -90,12 +90,12 @@ manager: "jhubbard"
  To continue, click **Next**.  
   
 ##  <a name="Instance_name"></a> Specify the Instance of SQL Server  
- To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog box, click **Connect…**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName. For more information, see [Connect to Server &#40;Database Engine&#41;](../../database-engine/connect-to-server-database-engine.md).  
+ To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog box, click **Connect…**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName. For more information, see [Connect to Server &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  To continue, click **Next**.  
   
 ##  <a name="Connection_dialog"></a> Connection Dialog  
- On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](../../database-engine/connect-to-server-database-engine.md).  
+ On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  If the connection is encrypted, the encrypted connection is used. If the connection is not encrypted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility reconnects using an encrypted connection.  

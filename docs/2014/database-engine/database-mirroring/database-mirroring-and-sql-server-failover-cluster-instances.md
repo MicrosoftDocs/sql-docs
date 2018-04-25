@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Mirroring and SQL Server Failover Cluster Instances
-  A failover cluster is a combination of one or more physical disks in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS) cluster group, known as a resource group, that are participating nodes of the cluster. The resource group is configured as a failover clustered instance that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover clustered instance appears on the network as if it were a single computer, but has functionality that provides failover from one node to another if one node becomes unavailable. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../always-on-failover-cluster-instances-sql-server.md).  
+  A failover cluster is a combination of one or more physical disks in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS) cluster group, known as a resource group, that are participating nodes of the cluster. The resource group is configured as a failover clustered instance that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover clustered instance appears on the network as if it were a single computer, but has functionality that provides failover from one node to another if one node becomes unavailable. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
  Failover clusters provide high-availability support for an entire [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, in contrast to database mirroring, which provides high-availability support for a single database. Database mirroring works between failover clusters and, also, between a failover cluster and a nonclustered host.  
   
@@ -64,6 +64,6 @@ manager: "jhubbard"
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
- [AlwaysOn Failover Cluster Instances (SQL Server)](../always-on-failover-cluster-instances-sql-server.md) 
+ [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

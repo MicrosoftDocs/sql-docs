@@ -28,6 +28,6 @@ manager: "jhubbard"
 |Describes how to build your own custom snippets and add them to the set of SQL Server snippets.|[Add Transact-SQL Snippets](add-transact-sql-snippets.md)|  
   
 ## See Also  
- [Query and Text Editors &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

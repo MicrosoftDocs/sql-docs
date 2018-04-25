@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  For more information about the `LocalDB` API, see [SQL Server Express LocalDB Instance API Reference](http://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) and [LocalDBStartInstance Function](http://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
   
- The SqlLocalDb utility can create new instances of `LocalDB`, start and stop an instance of `LocalDB`, and includes options to help you manage `LocalDB`.  For more information about the SqlLocalDb utility, see [SqlLocalDB Utility](../sqllocaldb-utility.md).  
+ The SqlLocalDb utility can create new instances of `LocalDB`, start and stop an instance of `LocalDB`, and includes options to help you manage `LocalDB`.  For more information about the SqlLocalDb utility, see [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md).  
   
  The instance collation for `LocalDB` is set to SQL_Latin1_General_CP1_CI_AS and cannot be changed. Database-level, column-level, and expression-level collations are supported normally. Contained databases follow the metadata and tempdb collations rules defined by [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
 >  The first time a user on a computer tries to connect to `LocalDB`, the automatic instance must be both created and started. The extra time for the instance to be created can cause the connection attempt to fail with a timeout message. When this happens, wait a few seconds to let the creation process complete, and then connect again.  
   
 ### Creating and Connecting to a Named Instances  
- In addition to the automatic instance, `LocalDB` also supports named instances. Use the SqlLocalDB.exe program to create, start, and stop an named instance of `LocalDB`. For more information about SqlLocalDB.exe, see [SqlLocalDB Utility](../sqllocaldb-utility.md).  
+ In addition to the automatic instance, `LocalDB` also supports named instances. Use the SqlLocalDB.exe program to create, start, and stop an named instance of `LocalDB`. For more information about SqlLocalDB.exe, see [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md).  
   
 ```ms-dos  
 REM Create an instance of LocalDB  
@@ -110,6 +110,6 @@ REM Gather information about the instance of LocalDB
 >  `LocalDB` always runs under the users security context; that is, `LocalDB` never runs with credentials from the local Administrator’s group. This means that all database files used by a `LocalDB` instance must be accessible using the owning user’s Windows account, without considering membership in the local Administrators group.  
   
 ## See Also  
- [SqlLocalDB Utility](../sqllocaldb-utility.md)  
+ [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md)  
   
   

@@ -33,10 +33,10 @@ manager: "jhubbard"
   Replication uses a number of standalone programs, called agents, to carry out the tasks associated with tracking changes and distributing data. By default, replication agents run as jobs scheduled under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must be running for the jobs to run. Replication agents can also be run from the command line and by applications that use Replication Management Objects (RMO). Replication agents can be administered from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Monitor and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent hosts and schedules the agents used in replication and provides an easy way to run replication agents. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent also controls and monitors operations outside of replication. For more information, see [Configure SQL Server Agent](../../database-engine/configure-sql-server-agent.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent hosts and schedules the agents used in replication and provides an easy way to run replication agents. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent also controls and monitors operations outside of replication. For more information, see [Configure SQL Server Agent](../../ssms/agent/sql-server-agent.md).  
   
 > [!IMPORTANT]  
->  By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed unless you explicitly choose to autostart the service during installation. For more information about starting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, see [Start, Stop, or Pause the SQL Server Agent Service](../../database-engine/start-stop-or-pause-the-sql-server-agent-service.md).  
+>  By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed unless you explicitly choose to autostart the service during installation. For more information about starting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, see [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
   
 ## Snapshot Agent  
  The Snapshot Agent is typically used with all types of replication. It prepares schema and initial data files of published tables and other objects, stores the snapshot files, and records information about synchronization in the distribution database. The Snapshot Agent runs at the Distributor. For more information, see [Replication Snapshot Agent](replication-snapshot-agent.md).  
@@ -57,7 +57,7 @@ manager: "jhubbard"
  Replication has a number of maintenance jobs that perform scheduled and on-demand maintenance. For more information, see [Replication Agent Administration](replication-agent-administration.md).  
   
 ## See Also  
- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md)   
  [Replication Agent Administration](replication-agent-administration.md)  

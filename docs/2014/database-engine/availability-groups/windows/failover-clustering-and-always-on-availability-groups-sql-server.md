@@ -42,7 +42,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster. If you delete and re-create a WSFC cluster, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosted an availability replica on the original WSFC cluster.  
   
- For information about running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows Server Failover Clustering (WSFC) nodes and about WSFC quorum, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md).  
+ For information about running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows Server Failover Clustering (WSFC) nodes and about WSFC quorum, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ### Cross-Cluster Migration of AlwaysOn Availability Groups for OS Upgrade  
  Beginning with [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports cross-cluster migration of availability groups for deployments to a new Windows Server Failover Clustering (WSFC) cluster. A cross-cluster migration moves one availability group or a batch of availability groups to the new, destination WSFC cluster with minimal downtime. The cross-cluster migration process enables you to maintain your service level agreements (SLAs) when upgrading to a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] cluster. [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (or a later version) must be installed and enabled for AlwaysOn on the destination WSFC cluster. The success of a cross-cluster migration depends on thorough planning and preparation of the destination WSFC cluster.  
@@ -95,7 +95,7 @@ manager: "jhubbard"
  At some point `fciInstance1` becomes unavailable on `NODE01`, and the WSFC cluster causes a failover of `fciInstance1` to `NODE02`. After the failover, `fciInstance1` is a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-enabled instance running under the primary role on `NODE02`. However, `Instance3` now resides on the same WSFC node as `fciInstance1`. This violates the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] constraint.  
  To correct the problem that this scenario presents, the stand-alone instance, `Instance3`, must reside on another node in the same WSFC cluster as `NODE01` and `NODE02`.  
   
- For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering, see [AlwaysOn Failover Cluster Instances &#40;SQL Server&#41;](../../always-on-failover-cluster-instances-sql-server.md).  
+ For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering, see [AlwaysOn Failover Cluster Instances &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 ##  <a name="FCMrestrictions"></a> Restrictions on Using The WSFC Failover Cluster Manager with Availability Groups  
  Do not use the Failover Cluster Manager to manipulate availability groups, for example:  
@@ -130,6 +130,6 @@ manager: "jhubbard"
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) 
  [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md) 
  [Monitor Availability Groups &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
- [AlwaysOn Failover Cluster Instances &#40;SQL Server&#41;](../../always-on-failover-cluster-instances-sql-server.md) 
+ [AlwaysOn Failover Cluster Instances &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

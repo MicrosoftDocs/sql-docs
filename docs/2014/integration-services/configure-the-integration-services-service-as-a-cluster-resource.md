@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 7.  To add dependencies, on the **Dependencies** page, select a resource under **Available resources**, and then click **Add**. In case of a failover, both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the shared disk that stores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages should come back online before [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is brought online. After you have selected the dependencies, click **Next**.  
   
-     For more information, see [Add Dependencies to a SQL Server Resource](../../2014/database-engine/add-dependencies-to-a-sql-server-resource.md).  
+     For more information, see [Add Dependencies to a SQL Server Resource](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md).  
   
 8.  On the **Generic Service Parameters** page, enter **MsDtsServer** as the name of the service. Click **Next**.  
   

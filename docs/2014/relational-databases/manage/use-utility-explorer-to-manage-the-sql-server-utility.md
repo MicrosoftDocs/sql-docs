@@ -65,6 +65,6 @@ manager: "jhubbard"
 ## See Also  
  [SQL Server Utility Features and Tasks](sql-server-utility-features-and-tasks.md)   
  [Configure Health Policies &#40;SQL Server Utility&#41;](configure-health-policies-sql-server-utility.md)   
- [Object Explorer](../../database-engine/object-explorer.md)  
+ [Object Explorer](../../ssms/object/object-explorer.md)  
   
   

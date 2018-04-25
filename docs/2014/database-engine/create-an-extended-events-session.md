@@ -31,7 +31,7 @@ manager: "jhubbard"
 ## In This Section  
  [Create an Extended Events Session Using Query Editor](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)  
   
- [Create an Extended Events Session Using the Wizard &#40;Object Explorer&#41;](../../2014/database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md)  
+ [Create an Extended Events Session Using the Wizard &#40;Object Explorer&#41;](../ssms/object/object-explorer.md)  
   
  [Create an Extended Events Session Using the New Session Dialog](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   

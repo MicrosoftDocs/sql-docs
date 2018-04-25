@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Collection](data-collection.md)   
- [Custom Reports in Management Studio](../../database-engine/custom-reports-in-management-studio.md)   
- [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
+ [Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)   
+ [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

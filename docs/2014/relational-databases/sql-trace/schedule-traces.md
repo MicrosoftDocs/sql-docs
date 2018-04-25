@@ -38,11 +38,11 @@ manager: "jhubbard"
   
  **To set an end time filter for a trace**  
   
- [Filter Events Based on the Event End Time &#40;SQL Server Profiler&#41;](../../database-engine/filter-events-based-on-the-event-end-time-sql-server-profiler.md)  
+ [Filter Events Based on the Event End Time &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
 ## See Also  
- [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../database-engine/automated-administration-tasks-sql-server-agent.md)  
+ [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md)  
   
   

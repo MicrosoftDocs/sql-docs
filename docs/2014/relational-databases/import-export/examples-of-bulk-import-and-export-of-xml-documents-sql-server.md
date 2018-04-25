@@ -139,7 +139,7 @@ GO
 > [!IMPORTANT]  
 >  We recommended that you not enable support for Document Type Definitions (DTDs) if it is not required in your XML environment. Turning on DTD support increases the attackable surface area of your server, and may expose it to a denial-of-service attack. If you must enable DTD support, you can reduce this security risk by processing only trusted XML documents.  
   
- During an attempt to use a [bcp](../../database-engine/bcp-utility.md) command to import XML data from a file that contains a DTD, an error similar to the following can occur:  
+ During an attempt to use a [bcp](../../tools/bcp-utility.md) command to import XML data from a file that contains a DTD, an error similar to the following can occur:  
   
  "SQLState = 42000, NativeError = 6359"  
   
@@ -258,7 +258,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ## See Also  
  [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
  [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)   
- [bcp Utility](../../database-engine/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)  

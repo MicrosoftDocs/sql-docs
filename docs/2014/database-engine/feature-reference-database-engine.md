@@ -32,10 +32,10 @@ manager: "jhubbard"
  [SQL Server Monitor Overview](configure-windows/sql-server-monitor-overview.md)  
  Provides help for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Monitor and the Database Mirroring Monitor.  
   
- [SQL Server Profiler F1 Help](../../2014/database-engine/sql-server-profiler-f1-help.md)  
+ [SQL Server Profiler F1 Help](../tools/sql-server-profiler/sql-server-profiler-f1-help.md)  
  Provides help for [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] and its related dialog boxes.  
   
- [Visual Database Tools F1 Help](../../2014/database-engine/visual-database-tools-f1-help.md)  
+ [Visual Database Tools F1 Help](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
  Provides help for the Database Diagram Designer, Table Designer, and Query and View Designer tools and related dialog boxes.  
   
   

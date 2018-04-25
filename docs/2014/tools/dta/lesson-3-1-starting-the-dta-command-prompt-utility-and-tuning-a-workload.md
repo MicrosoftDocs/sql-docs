@@ -51,14 +51,14 @@ manager: "jhubbard"
 3.  After Database Engine Tuning Advisor finishes tuning the workload, it displays a message indicating that your tuning session completed successfully. You can view the tuning results, by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to open the files MySession2OutputScript.sql and MySession2Output.xml. Alternatively, you can also open the MySession2 tuning session in the Database Engine Tuning Advisor GUI and view its recommendations and reports in the same way that you did in [Viewing Tuning Recommendations](lesson-1-2-viewing-tuning-recommendations.md) and [Viewing Tuning Reports](lesson-1-3-viewing-tuning-reports.md).  
   
 ## Summary  
- You have completed tuning a simple workload from the command prompt by using the **dta** utility. This tool provides many other tuning options. Refer to the tool Help (**dta -?**) and the reference topic [dta Utility](../../database-engine/dta-utility.md) for more information.  
+ You have completed tuning a simple workload from the command prompt by using the **dta** utility. This tool provides many other tuning options. Refer to the tool Help (**dta -?**) and the reference topic [dta Utility](dta-utility.md) for more information.  
   
 ## After You Finish This Tutorial  
  After you finish the lessons in this tutorial, refer to the following topics for more information about Database Engine Tuning Advisor:  
   
 -   [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) for descriptions of how to perform tasks with this tool.  
   
--   [dta Utility](../../database-engine/dta-utility.md) for reference material on the command prompt utility and the optional XML file you can use to control the operation of the utility.  
+-   [dta Utility](dta-utility.md) for reference material on the command prompt utility and the optional XML file you can use to control the operation of the utility.  
   
  To return to the start of the tutorial, see [Tutorial: Database Engine Tuning Advisor](tutorial-database-engine-tuning-advisor.md).  
   

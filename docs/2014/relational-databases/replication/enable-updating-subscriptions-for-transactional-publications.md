@@ -103,7 +103,7 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## See Also  
- [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
+ [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   

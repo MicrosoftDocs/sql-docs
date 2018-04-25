@@ -65,8 +65,8 @@ manager: "mblythe"
  [MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [XMLA Query Editor &#40;Analysis Services - Multidimensional Data&#41;](xmla-query-editor-analysis-services-multidimensional-data.md)   
  [Query and Text Editors &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
- [SQL Server Management Studio Keyboard Shortcuts](../../2014/database-engine/sql-server-management-studio-keyboard-shortcuts.md)   
- [Customize Menus and Shortcut Keys](../../2014/database-engine/customize-menus-and-shortcut-keys.md)   
+ [SQL Server Management Studio Keyboard Shortcuts](../ssms/sql-server-management-studio-keyboard-shortcuts.md)   
+ [Customize Menus and Shortcut Keys](../ssms/customize-menus-and-shortcut-keys.md)   
  [Color Coding in Query Editors](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

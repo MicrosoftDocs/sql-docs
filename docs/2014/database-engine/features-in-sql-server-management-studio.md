@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 -   Access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent on replication servers for administration.  
   
- For more information, see [Object Explorer](../../2014/database-engine/object-explorer.md).  
+ For more information, see [Object Explorer](../ssms/object/object-explorer.md).  
   
 ## Extensibility  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is built upon the Visual Studio Isolated Shell, which inherently supports extensibility (add-ins/plug-ins). It is possible to tap into the Visual Studio extensibility services to surface custom capabilities within [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]; however, such extensibility is not supported.  
@@ -83,6 +83,6 @@ manager: "jhubbard"
  Microsoft does not support [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installations with [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] extensions present, so if you have installed [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] extensions, you may want to remove them before calling Microsoft Customer Support about a [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] issue.  
   
 ## See Also  
- [Use SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md)  
+ [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
   
   

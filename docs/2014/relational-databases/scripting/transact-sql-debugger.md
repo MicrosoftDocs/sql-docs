@@ -64,6 +64,6 @@ manager: "jhubbard"
 |Describes how to use the debugger to view [!INCLUDE[tsql](../../includes/tsql-md.md)] data, such as parameters and variables, and system information.|[Transact-SQL Debugger Information](transact-sql-debugger-information.md)|  
   
 ## See Also  
- [Query and Text Editors &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

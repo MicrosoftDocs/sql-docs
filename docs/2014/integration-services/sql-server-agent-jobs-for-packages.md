@@ -33,17 +33,17 @@ manager: "jhubbard"
 -   [Troubleshooting scheduled packages](#trouble)  
   
 ##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is the service installed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that lets you automate and schedule tasks by running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service must be running before jobs can run automatically. For more information, see [Configure SQL Server Agent](../../2014/database-engine/configure-sql-server-agent.md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is the service installed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that lets you automate and schedule tasks by running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service must be running before jobs can run automatically. For more information, see [Configure SQL Server Agent](../ssms/agent/sql-server-agent.md).  
   
  The **SQL Server Agent** node appears in Object Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] when you connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
- To automate a recurring task, you create a job by using the **New Job** dialog box. For more information, see [Implement Jobs](../../2014/database-engine/implement-jobs.md).  
+ To automate a recurring task, you create a job by using the **New Job** dialog box. For more information, see [Implement Jobs](../ssms/agent/implement-jobs.md).  
   
- After you create the job, you must add at least one step. A job can include multiple steps, and each step can perform a different task. For more information, see [Manage Job Steps](../../2014/database-engine/manage-job-steps.md).  
+ After you create the job, you must add at least one step. A job can include multiple steps, and each step can perform a different task. For more information, see [Manage Job Steps](../ssms/agent/manage-job-steps.md).  
   
- After you create the job and the job steps, you can create a schedule for running the job. However you can also create an unscheduled job that you run manually. For more information, see [Create and Attach Schedules to Jobs](../../2014/database-engine/create-and-attach-schedules-to-jobs.md).  
+ After you create the job and the job steps, you can create a schedule for running the job. However you can also create an unscheduled job that you run manually. For more information, see [Create and Attach Schedules to Jobs](../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- You can enhance the job by setting notification options, such as specifying an operator to send an e-mail message to when the job finishes, or adding alerts. For more information, see [Alerts](../../2014/database-engine/alerts.md).  
+ You can enhance the job by setting notification options, such as specifying an operator to send an e-mail message to when the job finishes, or adding alerts. For more information, see [Alerts](../ssms/agent/alerts.md).  
   
 ##  <a name="packages"></a> Scheduling Integration Services Packages  
  When you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job to schedule [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages, you must add at least one step and set the type of the step to **SQL Server Integration Services Package**. A job can include multiple steps, and each step can run a different package.  

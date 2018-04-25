@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) for descriptions of how to perform tasks with this tool.  
   
--   [dta Utility](../../database-engine/dta-utility.md) for reference material on the command prompt utility and the optional XML file you can use to control the operation of the utility.  
+-   [dta Utility](dta-utility.md) for reference material on the command prompt utility and the optional XML file you can use to control the operation of the utility.  
   
 ## Next Lesson  
  [Lesson 1: Basic Navigation in Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  

@@ -47,8 +47,8 @@ manager: "jhubbard"
  The date and time the trace file was modified.  
   
 ## See Also  
- [Open a Trace File &#40;SQL Server Profiler&#41;](../../2014/database-engine/open-a-trace-file-sql-server-profiler.md)   
- [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md)   
- [SQL Server Profiler Templates and Permissions](../../2014/database-engine/sql-server-profiler-templates-and-permissions.md)  
+ [Open a Trace File &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

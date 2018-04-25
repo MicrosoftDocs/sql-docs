@@ -166,7 +166,7 @@ manager: "mblythe"
   
  You can also provide a description to include in the data alert message in the **Description** option. Including a description, especially if you have data alerts that are similar, will help you quickly differentiate and understand your alert messages. In addition to the alert message that is sent when report data satisfied the specified rules, an alert message is sent to all recipients when an error occurs. For more information, see [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
   
- For more information about how the email is generated, see [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md).  
+ For more information about how the email is generated, see [Reporting Services Data Alerts](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Create a Data Alert Definition  
  If you are granted the SharePoint View Items and Create Alerts permissions you can create a data alert definition for any report that you have permission to view as long as the report uses stored credentials or no credentials. You run the report from a SharePoint library. The data that is available for you to use in Data Alert Designer comes from the report. If the report is parameterized, you might need to run the report using different parameter values to ensure the data that that you are interested in appears in the report. After the report is open, you click the **New Data Alert** option on the **Actions** menu on the report toolbar to open Data Alert Designer. The following picture shows you how to open Data Alert Designer.  
@@ -204,7 +204,7 @@ manager: "mblythe"
   
   
 ## See Also  
- [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md)   
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)   
  [Data Alert Manager for Alerting Administrators](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

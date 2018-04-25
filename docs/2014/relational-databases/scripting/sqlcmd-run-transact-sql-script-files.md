@@ -65,6 +65,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Start the sqlcmd Utility](sqlcmd-start-the-utility.md)   
- [sqlcmd Utility](../../database-engine/sqlcmd-utility.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

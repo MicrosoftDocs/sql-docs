@@ -81,7 +81,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  When executed from the command line, the **sqlcmd** utility permits full interaction with the operating system. When you use the Query Editor in **SQLCMD Mode**, you must be careful not to execute interactive statements. The Query Editor cannot respond to operating system prompts.  
   
- For more information about how to run SQLCMD, see [sqlcmd Utility](../../database-engine/sqlcmd-utility.md), or take the SQLCMD tutorial.  
+ For more information about how to run SQLCMD, see [sqlcmd Utility](../../tools/sqlcmd-utility.md), or take the SQLCMD tutorial.  
   
 ## Enable SQLCMD Scripting by Default  
  To turn SQLCMD scripting on by default, on the **Tools** menu select **Options**, expand **Query Execution**, and **SQL Server**, click the **General** page, and then check the **By default open new queries in SQLCMD Mode** box.  
@@ -157,6 +157,6 @@ GO
 ```  
   
 ## See Also  
- [sqlcmd Utility](../../database-engine/sqlcmd-utility.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

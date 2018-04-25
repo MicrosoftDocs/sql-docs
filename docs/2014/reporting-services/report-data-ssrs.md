@@ -71,7 +71,7 @@ manager: "mblythe"
 |Create datasets and queries|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Manage data sources after they are published|[Manage Report Data Sources](../../2014/reporting-services/manage-report-data-sources.md)|  
 |Manage shared datasets after they are published|[Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md)|  
-|Create and manage data alerts|[Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md)|  
+|Create and manage data alerts|[Reporting Services Data Alerts](../ssms/agent/alerts.md)|  
 |Cache a shared dataset|[Cache Shared Datasets &#40;SSRS&#41;](../../2014/reporting-services/cache-shared-datasets-ssrs.md)|  
 |Schedule a shared dataset to preload the cache|[Schedules](../../2014/reporting-services/schedules.md)|  
 |Add a data extension|[Implementing a Data Processing Extension](../../2014/reporting-services/dev-guide/implementing-a-data-processing-extension.md)|  

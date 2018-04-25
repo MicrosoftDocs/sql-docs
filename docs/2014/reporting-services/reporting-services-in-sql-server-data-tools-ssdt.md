@@ -321,7 +321,7 @@ manager: "mblythe"
  ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
   
 ## See Also  
- [Solution Explorer](../../2014/database-engine/solution-explorer.md)   
+ [Solution Explorer](../ssms/solution/solution-explorer.md)   
  [Reporting Services Reports &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-reports-ssrs.md)   
  [Report Definition Language &#40;SSRS&#41;](../../2014/reporting-services/report-definition-language-ssrs.md)   
  [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

@@ -56,6 +56,6 @@ manager: "mblythe"
   
 ## See Also  
  [Feature Reference (Reporting Services)](../../2014/reporting-services/feature-reference-reporting-services.md)   
- [Introducing SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md)  
+ [Introducing SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
   
   

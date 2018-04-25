@@ -78,7 +78,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Use the **Object Explorer** to manage event sessions.|[Manage Event Sessions in the Object Explorer](manage-event-sessions-in-the-object-explorer.md)|  
+|Use the **Object Explorer** to manage event sessions.|[Manage Event Sessions in the Object Explorer](../../ssms/object/object-explorer.md)|  
 |Describes how to create an Extended Events session.|[Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md)|  
 |Describes how to view and refresh target data.|[View Event Session Data](../../database-engine/view-event-session-data.md)|  
 |Describes how to use Extended Events tools to create and manage your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events sessions.|[Extended Events Tools](extended-events-tools.md)|  

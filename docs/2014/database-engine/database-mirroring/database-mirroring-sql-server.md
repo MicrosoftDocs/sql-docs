@@ -51,7 +51,7 @@ manager: "jhubbard"
   
      Database mirroring provides complete or almost complete redundancy of the data, depending on whether the operating mode is high-safety or high-performance. For more information, see [Operating Modes](#OperatingModes), later in this topic.  
   
-     A database mirroring partner running on [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] or later versions automatically tries to resolve certain types of errors that prevent reading a data page. The partner that is unable to read a page requests a fresh copy from the other partner. If this request succeeds, the unreadable page is replaced by the copy, which usually resolves the error. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
+     A database mirroring partner running on [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] or later versions automatically tries to resolve certain types of errors that prevent reading a data page. The partner that is unable to read a page requests a fresh copy from the other partner. If this request succeeds, the unreadable page is replaced by the copy, which usually resolves the error. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Improves the availability of the production database during upgrades.  
   
@@ -313,7 +313,7 @@ manager: "jhubbard"
   
  **SQL Server Management Studio**  
   
--   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
@@ -325,7 +325,7 @@ manager: "jhubbard"
   
 ## See Also  
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../automatic-page-repair-for-availability-groups-and-database-mirroring.md)   
+ [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Database Mirroring: Interoperability and Coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Prerequisites, Restrictions, and Recommendations for Database Mirroring](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   

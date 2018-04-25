@@ -47,7 +47,7 @@ manager: "jhubbard"
  Click the hyperlink to open a Web page that is related to this policy. The Additional Help hyperlink is configured when the policy is created and might be blank or unavailable.  
   
 ## See Also  
- [Policy Management Node &#40;Object Explorer&#41;](policy-management-node-object-explorer.md)   
+ [Policy Management Node &#40;Object Explorer&#41;](../../ssms/object/object-explorer.md)   
  [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)  
   
   

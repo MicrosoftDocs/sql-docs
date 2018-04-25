@@ -104,7 +104,7 @@ manager: "jhubbard"
   
  The following operations, which are fully logged under the full recovery model, are minimally logged under the simple and bulk-logged recovery model:  
   
--   Bulk import operations ([bcp](../../database-engine/bcp-utility.md), [BULK INSERT](~/t-sql/statements/bulk-insert-transact-sql.md), and [INSERT... SELECT](~/t-sql/statements/insert-transact-sql.md)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Bulk import operations ([bcp](../../tools/bcp-utility.md), [BULK INSERT](~/t-sql/statements/bulk-insert-transact-sql.md), and [INSERT... SELECT](~/t-sql/statements/insert-transact-sql.md)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  When transactional replication is enabled, BULK INSERT operations are fully logged even under the Bulk Logged recovery model.  

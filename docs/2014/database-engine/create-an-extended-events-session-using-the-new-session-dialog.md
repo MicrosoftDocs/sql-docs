@@ -27,7 +27,7 @@ manager: "jhubbard"
 # Create an Extended Events Session Using the New Session Dialog
   The New Session dialog lets you define an Extended Events session that captures, displays, and analyzes your data. The New Session dialog exposes all Extended Events functionality.  
   
- The [New Session Wizard](../../2014/database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md) also lets you define an Extended Events session, supporting most Extended Events functionality.  
+ The [New Session Wizard](../ssms/object/object-explorer.md) also lets you define an Extended Events session, supporting most Extended Events functionality.  
   
 ## Before you Begin  
  To open the New Session dialog, in Object Explorer, expand the **Management** node, and then expand **Extended Events**. Right-click **Sessions**, and then click **New Session**.  
@@ -208,7 +208,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Create an Extended Events Session Using Query Editor](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
- [Create an Extended Events Session Using the Wizard &#40;Object Explorer&#41;](../../2014/database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md)   
+ [Create an Extended Events Session Using the Wizard &#40;Object Explorer&#41;](../ssms/object/object-explorer.md)   
  [Script an Extended Event Session](../../2014/database-engine/script-an-extended-event-session.md)  
   
   

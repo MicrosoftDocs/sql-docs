@@ -22,7 +22,7 @@ manager: "jhubbard"
 # SQL Server Profiler - Replay Configuration (Basic Replay Options)
   In the **Replay Configuration** dialog box, use the **Basic Replay Options** page to specify how to replay a trace file or table.  
   
- To view this window, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../../2014/database-engine/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, and then connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where you want to replay the trace.  
+ To view this window, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to open a trace file or table that contains the appropriate events for replay. For more information, see [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md). While the trace file or table is open, on the **Replay** menu, click **Start**, and then connect to the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] where you want to replay the trace.  
   
 ## Options  
  **Replay server**  
@@ -50,8 +50,8 @@ manager: "jhubbard"
  Display replay results in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
 ## See Also  
- [Replay a Trace Table &#40;SQL Server Profiler&#41;](../../2014/database-engine/replay-a-trace-table-sql-server-profiler.md)   
- [Replay a Trace File &#40;SQL Server Profiler&#41;](../../2014/database-engine/replay-a-trace-file-sql-server-profiler.md)   
- [Replay Traces](../../2014/database-engine/replay-traces.md)  
+ [Replay a Trace Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Replay a Trace File &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
+ [Replay Traces](../tools/sql-server-profiler/replay-traces.md)  
   
   

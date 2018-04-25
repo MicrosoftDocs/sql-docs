@@ -22,12 +22,12 @@ manager: "jhubbard"
   
  This lesson contains the following topics:  
   
--   [Perform an On-Demand Evaluation by Using Object Explorer](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-object-explorer.md) (for a single instance)  
+-   [Perform an On-Demand Evaluation by Using Object Explorer](../ssms/object/object-explorer.md) (for a single instance)  
   
 -   [Perform an On-Demand Evaluation by Using Registered Servers](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md) (for one or more instances)  
   
 ## Next Task in Lesson  
- [Perform an On-Demand Evaluation by Using Object Explorer](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-object-explorer.md)  
+ [Perform an On-Demand Evaluation by Using Object Explorer](../ssms/object/object-explorer.md)  
   
 ## See Also  
  [Lesson 2: Evaluate Best Practices Policies on a Scheduled Basis](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  

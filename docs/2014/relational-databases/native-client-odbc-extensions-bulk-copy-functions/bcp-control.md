@@ -95,7 +95,7 @@ iValue
 >  XML format files are only supported when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed along with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  BCPHINTS  
- *iValue* contains an SQLTCHAR character string pointer. The string addressed specifies either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-copy processing hints or a Transact-SQL statement that returns a result set. If a Transact-SQL statement is specified that returns more than one result set, all result sets after the first are ignored. For more information about bulk-copy processing hints, see [bcp Utility](../../database-engine/bcp-utility.md).  
+ *iValue* contains an SQLTCHAR character string pointer. The string addressed specifies either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-copy processing hints or a Transact-SQL statement that returns a result set. If a Transact-SQL statement is specified that returns more than one result set, all result sets after the first are ignored. For more information about bulk-copy processing hints, see [bcp Utility](../../tools/bcp-utility.md).  
   
  BCPKEEPIDENTITY  
  When *iValue* is TRUE, specifies that bulk copy functions insert data values supplied for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columns defined with an identity constraint. The input file must supply values for the identity columns. If this is not set, new identity values are generated for the inserted rows. Any data present in the file for the identity columns is ignored.  

@@ -59,6 +59,6 @@ manager: "jhubbard"
 |[Logging for Load Balanced Packages on Remote Servers](../database-engine/configure-windows/remote-servers.md)|Describes the logging scenario for the remote packages.|  
   
 ## Related Tasks  
- [Schedule a Package by using SQL Server Agent](../../2014/integration-services/schedule-a-package-by-using-sql-server-agent.md)  
+ [Schedule a Package by using SQL Server Agent](../ssms/agent/sql-server-agent.md)  
   
   

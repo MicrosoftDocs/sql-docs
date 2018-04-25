@@ -39,11 +39,11 @@ manager: "jhubbard"
   
  If [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is used, it allows you to save trace results to a file or to a table. Saving trace results to a table allows the same access as saving the trace to a file plus you can query the table to search for specific events.  
   
- For more information about saving trace results, see [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../database-engine/save-trace-results-to-a-table-sql-server-profiler.md) and [Save Trace Results to a File &#40;SQL Server Profiler&#41;](../../database-engine/save-trace-results-to-a-file-sql-server-profiler.md).  
+ For more information about saving trace results, see [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md) and [Save Trace Results to a File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md).  
   
 ## See Also  
  [sp_trace_create &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [Create a Trace &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)   
- [Create a Trace &#40;SQL Server Profiler&#41;](../../database-engine/create-a-trace-sql-server-profiler.md)  
+ [Create a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
   

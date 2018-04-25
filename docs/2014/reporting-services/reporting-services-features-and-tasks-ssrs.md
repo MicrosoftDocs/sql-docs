@@ -36,7 +36,7 @@ manager: "mblythe"
   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)  
   
- [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
  [Reporting Services Security and Protection](../../2014/reporting-services/reporting-services-security-and-protection.md)  
   

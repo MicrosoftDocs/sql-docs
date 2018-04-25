@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   Proxy accounts  
   
- For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../database-engine/automated-administration-tasks-sql-server-agent.md).  
+ For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) is used to execute packages that collect data from individual data providers. You should be familiar with the following [!INCLUDE[ssIS](../../includes/ssis-md.md)] tools and concepts:  
   

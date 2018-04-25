@@ -30,7 +30,7 @@ manager: "mblythe"
  `http: //<site name>/_layouts/ReportServer/ SiteDataAlerts.aspx`  
   
 > [!NOTE]  
->  As an alerting administrator, you can grant permission to information workers to access the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts features. For more information about the required permissions, see [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md).  
+>  As an alerting administrator, you can grant permission to information workers to access the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts features. For more information about the required permissions, see [Reporting Services Data Alerts](../ssms/agent/alerts.md).  
   
 ##  <a name="ViewingAlerts"></a> Viewing Data Alert Information  
  When Reporting Services is installed and configured in SharePoint, the Site Settings SharePoint page includes the **Reporting Services** options. Alerting administrators click the **Manage Data Alerts** option within Reporting Service to open Data Alert Manager. The following picture shows from where on the Site Settings page you open Data Alert Manager.  
@@ -58,7 +58,7 @@ manager: "mblythe"
   
  A SharePoint alerting administrators can list and then delete alert definitions created by all users of the site. For more information, see [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../../2014/reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
- After you delete the alert definition, no further alerts are sent. However, if you query the alerting database you might find that the alert definition still exists. The alerting service performs clean up on a schedule and the alert definition is deleted permanently in the next cleanup. The default cleanup interval is 20 minutes. This and other cleanup intervals are configurable. For more information, see [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md).  
+ After you delete the alert definition, no further alerts are sent. However, if you query the alerting database you might find that the alert definition still exists. The alerting service performs clean up on a schedule and the alert definition is deleted permanently in the next cleanup. The default cleanup interval is 20 minutes. This and other cleanup intervals are configurable. For more information, see [Reporting Services Data Alerts](../ssms/agent/alerts.md).  
   
   
 ##  <a name="HowTo"></a> Related Tasks  
@@ -68,6 +68,6 @@ manager: "mblythe"
   
   
 ## See Also  
- [Reporting Services Data Alerts](../../2014/reporting-services/reporting-services-data-alerts.md)  
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

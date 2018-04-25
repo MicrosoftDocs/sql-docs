@@ -10,7 +10,7 @@
 ## [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)
 ### [About the SQL Server Database Engine](../../database-engine/sql-server-database-engine-overview.md)
 ### [Install Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)
-#### [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)
+#### [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)
 #### [Install Distributed Replay (Setup)](install-distributed-replay-setup.md)
 #### [Install Distributed Replay from the Command Prompt](../../tools/distributed-replay/../../tools/distributed-replay/install-distributed-replay-overview.md)
 #### [Install Distributed Replay Using a Configuration File](install-distributed-replay-using-a-configuration-file.md)

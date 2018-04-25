@@ -106,7 +106,7 @@ manager: "jhubbard"
   
     1.  Ensure that all backups taken automatically by the log shipping backup jobs have been applied. To check which backup jobs have been applied, use the [sp_help_log_shipping_monitor](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md) system stored procedure on the monitor server or on the primary and secondary servers. The same file should be listed in the **last_backup_file**, **last_copied_file**, and **last_restored_file** columns. If any of the backup files have not been copied and restored, manually invoke the agent copy and restore jobs for the log shipping configuration.  
   
-         For information about starting a job, see [Start a Job](../start-a-job.md).  
+         For information about starting a job, see [Start a Job](../../ssms/agent/start-a-job.md).  
   
     2.  Copy your the final log backup file that you created in step 1 from the file share to the local location that is used by log shipping on the secondary server.  
   

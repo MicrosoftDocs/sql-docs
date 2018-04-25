@@ -28,6 +28,6 @@ manager: "jhubbard"
  [Summary: Basic Navigation](lesson-1-9-summary-basic-navigation.md)  
   
 ## See Also  
- [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)  
+ [Use SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

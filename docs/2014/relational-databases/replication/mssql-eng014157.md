@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   For information about initializing subscriptions, see [Initialize a Subscription](initialize-a-subscription.md).  
   
- If the subscription database contains changes that have not been synchronized with the Publisher, you can use the [tablediff Utility](../../database-engine/tablediff-utility.md) to determine which rows are different in the publication and subscription databases.  
+ If the subscription database contains changes that have not been synchronized with the Publisher, you can use the [tablediff Utility](../../tools/tablediff-utility.md) to determine which rows are different in the publication and subscription databases.  
   
  You can increase the publication retention period to avoid having subscriptions expire. Use caution in setting a high value, because this can result in more data and metadata being stored, which affects performance. For more information, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   

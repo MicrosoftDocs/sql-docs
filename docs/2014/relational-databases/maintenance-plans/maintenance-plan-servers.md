@@ -25,8 +25,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Maintenance Plans](maintenance-plans.md)   
- [Create a Multiserver Environment](../../database-engine/create-a-multiserver-environment.md)   
- [Make a Master Server](../../database-engine/make-a-master-server.md)   
- [Make a Target Server](../../database-engine/make-a-target-server.md)  
+ [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md)   
+ [Make a Master Server](../../ssms/agent/make-a-master-server.md)   
+ [Make a Target Server](../../ssms/agent/make-a-target-server.md)  
   
   

@@ -65,13 +65,13 @@ manager: "jhubbard"
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:** Verify and perform the below additional actions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:  
   
--   Fix the registry settings if SQL Agent is configured for event forwarding. For more information, see [Designate an Events Forwarding Server &#40;SQL Server Management Studio&#41;](../../../database-engine/designate-an-events-forwarding-server-sql-server-management-studio.md).  
+-   Fix the registry settings if SQL Agent is configured for event forwarding. For more information, see [Designate an Events Forwarding Server &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md).  
   
 -   Fix the master server (MSX) and target servers (TSX) instance names when machines / cluster network name is renamed. For more information, see the following topics:  
   
-    -   [Defect Multiple Target Servers from a Master Server](../../../database-engine/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [Create a Multiserver Environment](../../../database-engine/create-a-multiserver-environment.md)  
+    -   [Create a Multiserver Environment](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   Reconfigure the Log Shipping so that updated server name is used to backup and restore logs. For more information, see the following topics:  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
     -   [Remove Log Shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   Update the Jobsteps that depend on server name. For more information, see [Manage Job Steps](../../../database-engine/manage-job-steps.md).  
+-   Update the Jobsteps that depend on server name. For more information, see [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
 ## See Also  
  [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

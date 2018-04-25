@@ -40,7 +40,7 @@ manager: "jhubbard"
 ## See Also  
  [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)   
  [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](configure-snapshot-properties-replication-transact-sql-programming.md)   
- [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)   
+ [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)  
   

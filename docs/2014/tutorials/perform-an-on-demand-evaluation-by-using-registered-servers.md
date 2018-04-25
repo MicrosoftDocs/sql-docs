@@ -24,11 +24,11 @@ manager: "jhubbard"
 ## Prerequisites  
  To perform this task, you must have configured one or more server registrations in Registered Servers. For more information, see the following topics:  
   
--   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../../2014/database-engine/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
   
--   [Register a Connected Server &#40;SQL Server Management Studio&#41;](../../2014/database-engine/register-a-connected-server-sql-server-management-studio.md).  
+-   [Register a Connected Server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
   
--   [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../../2014/database-engine/create-a-central-management-server-and-server-group.md)  
+-   [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
 ### To evaluate best practices policies against a server group  
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   Replication maintenance jobs.  
   
- For more information about starting the Merge Agent and the Distribution Agent, see [Synchronize a Push Subscription](synchronize-a-push-subscription.md) and [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). For more information about maintenance jobs, see [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](run-replication-maintenance-jobs-sql-server-management-studio.md).  
+ For more information about starting the Merge Agent and the Distribution Agent, see [Synchronize a Push Subscription](synchronize-a-push-subscription.md) and [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). For more information about maintenance jobs, see [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
  For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   

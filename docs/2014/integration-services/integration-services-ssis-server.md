@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
--   [Run a Package on the SSIS Server Using SQL Server Management Studio](../../2014/integration-services/run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
+-   [Run a Package on the SSIS Server Using SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
   
 ## Related Content  
  Blog entry, [SSIS with AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  

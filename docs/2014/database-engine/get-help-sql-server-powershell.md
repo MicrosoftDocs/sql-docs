@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  The *-Query* or *-QueryFromFile* input can contain:  
   
--   **sqlcmd** variables and commands. For information about these variables and commands, see the Remarks section of [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md).  
+-   **sqlcmd** variables and commands. For information about these variables and commands, see the Remarks section of [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)] statements. For more information about the [!INCLUDE[tsql](../includes/tsql-md.md)] language, see [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md).  
   

@@ -34,7 +34,7 @@ manager: "jhubbard"
  Select this check box to include an additional column that provides the login that was used to connect to the server that provided each row.  
   
 ## See Also  
- [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../../2014/database-engine/create-a-central-management-server-and-server-group.md)   
- [Execute Statements Against Multiple Servers Simultaneously &#40;SQL Server Management Studio&#41;](../../2014/database-engine/execute-statements-against-multiple-servers-simultaneously.md)  
+ [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+ [Execute Statements Against Multiple Servers Simultaneously &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

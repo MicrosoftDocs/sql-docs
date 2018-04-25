@@ -187,7 +187,7 @@ manager: "jhubbard"
 ## Replication Maintenance  
   
 ### How do I determine if the data at Subscribers is synchronized with data at the Publisher?  
- Use validation. Validation reports on whether a given Subscriber is synchronized with the Publisher. For more information, see [Validate Replicated Data](validate-replicated-data.md). Validation does not provide information on which rows if any are not synchronized correctly, but the [tablediff utility](../../database-engine/tablediff-utility.md) does.  
+ Use validation. Validation reports on whether a given Subscriber is synchronized with the Publisher. For more information, see [Validate Replicated Data](validate-replicated-data.md). Validation does not provide information on which rows if any are not synchronized correctly, but the [tablediff utility](../../tools/tablediff-utility.md) does.  
   
 ### How do I add a table to an existing publication?  
  It is not necessary to stop activity on the publication or subscription databases in order to add a table (or another object). Add a table to a publication through the **Publication Properties - \<Publication>** dialog box or the stored procedures [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). For more information, see [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).  

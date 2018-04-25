@@ -25,7 +25,7 @@ manager: "jhubbard"
 # Use the sqlcmd Utility
   The `sqlcmd` utility is a command-line utility for ad hoc, interactive execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and scripts and for automating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripting tasks. To use `sqlcmd` interactively, or to build script files to be run using `sqlcmd`, users must understand [!INCLUDE[tsql](../../includes/tsql-md.md)]. The `sqlcmd` utility is typically used in the following ways:  
   
--   Users interactively enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, click **Start**, click **All Programs**, point to **Accessories**, and then click **Command Prompt**. At the command prompt, type `sqlcmd` followed by a list of options that you want. For a complete list of the options that are supported by `sqlcmd`, see [sqlcmd Utility](../../database-engine/sqlcmd-utility.md).  
+-   Users interactively enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, click **Start**, click **All Programs**, point to **Accessories**, and then click **Command Prompt**. At the command prompt, type `sqlcmd` followed by a list of options that you want. For a complete list of the options that are supported by `sqlcmd`, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
   
 -   Users submit a `sqlcmd` job either by specifying a single [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to execute, or by pointing the utility to a text file that contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to execute. The output is usually directed to a text file, but it can also be displayed at the command prompt.  
   
@@ -559,10 +559,10 @@ SQLCMD –E –N –C
  If the provider specifies `ForceProtocolEncryption = True` then encryption is enabled even if `Encrypt=No` in the connection string.  
   
 ## See Also  
- [sqlcmd Utility](../../database-engine/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [Use sqlcmd with Scripting Variables](sqlcmd-use-with-scripting-variables.md)   
  [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-with-query-editor.md)   
- [Manage Job Steps](../../database-engine/manage-job-steps.md)   
- [Create a CmdExec Job Step](../../database-engine/create-a-cmdexec-job-step.md)  
+ [Manage Job Steps](../../ssms/agent/manage-job-steps.md)   
+ [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

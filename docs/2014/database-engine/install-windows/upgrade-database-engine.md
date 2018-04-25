@@ -118,7 +118,7 @@ manager: "jhubbard"
 ## After Upgrading the Database Engine  
  After upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], complete the following tasks:  
   
--   Re-register your servers. For more information about registering servers, see [Register Servers](../register-servers.md).  
+-   Re-register your servers. For more information about registering servers, see [Register Servers](../../ssms/register-servers/register-servers.md).  
   
 -   Re-populate full-text catalogs to ensure semantic consistency in query results.  
   

@@ -53,6 +53,6 @@ manager: "jhubbard"
 ## See Also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md)   
- [Monitor and Respond to Events](../../database-engine/monitor-and-respond-to-events.md)  
+ [Monitor and Respond to Events](../../ssms/agent/monitor-and-respond-to-events.md)  
   
   

@@ -37,7 +37,7 @@ manager: "jhubbard"
      If any of your applications use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication or a local Windows login, see [Logins Of Applications That Use SQL Server Authentication or a Local Windows Login](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md#SSauthentication), later in this topic.  
   
     > [!NOTE]  
-    >  A database user for which the SQL Server login is undefined or is incorrectly defined on a server instance cannot log in to the instance. Such a user is said to be an *orphaned user* of the database on that server instance. If a user is orphaned on a given server instance, you can set up the user logins at any time. For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md).  
+    >  A database user for which the SQL Server login is undefined or is incorrectly defined on a server instance cannot log in to the instance. Such a user is said to be an *orphaned user* of the database on that server instance. If a user is orphaned on a given server instance, you can set up the user logins at any time. For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
 -   **Additional metadata**  
   
@@ -59,13 +59,13 @@ manager: "jhubbard"
   
 -   [Create a Database User](../relational-databases/security/authentication-access/create-a-database-user.md).  
   
--   [Create a Job](../../2014/database-engine/create-a-job.md)  
+-   [Create a Job](../ssms/agent/create-a-job.md)  
   
 -   [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Contained Databases](../relational-databases/databases/contained-databases.md)   
- [Create Jobs](../../2014/database-engine/create-jobs.md)  
+ [Create Jobs](../ssms/agent/create-jobs.md)  
   
   

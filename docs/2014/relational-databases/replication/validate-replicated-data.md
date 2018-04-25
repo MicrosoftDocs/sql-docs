@@ -42,11 +42,11 @@ manager: "jhubbard"
   
  To handle validation failures, consider the following:  
   
--   Configure the replication alert named **Replication: Subscriber has failed data validation** so that you are notified of the failure. For more information, see [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configure the replication alert named **Replication: Subscriber has failed data validation** so that you are notified of the failure. For more information, see [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
 -   Is the fact that validation failed an issue for your application? If the validation failure is an issue, manually update the data so that it is synchronized, or reinitialize the subscription:  
   
-    -   Data can be updated using the [tablediff utility](../../database-engine/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
+    -   Data can be updated using the [tablediff utility](../../tools/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
     -   For more information about reinitializaton, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   

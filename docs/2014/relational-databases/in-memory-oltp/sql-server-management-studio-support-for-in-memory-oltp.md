@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # SQL Server Management Studio Support for In-Memory OLTP
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is an integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides tools to configure, monitor, and administer instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SQL Server Management Studio](../../database-engine/sql-server-management-studio.md)  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is an integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides tools to configure, monitor, and administer instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
  The tasks in this topic describe how to use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage memory-optimized tables; indexes on memory-optimized tables; natively compiled stored procedures; and user-defined, memory-optimized table types.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 2.  To replace the template parameters, click **Specify Values for Template Parameters** on the **Query** menu.  
   
-     For more information on how to use templates, see [Template Explorer](../../database-engine/template-explorer.md).  
+     For more information on how to use templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
   
 3.  In **Object Explorer**, tables will be ordered first by disk-based tables followed by memory-optimized tables. Use **Object Explorer Details** to see all tables ordered by name.  
   

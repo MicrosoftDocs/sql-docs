@@ -87,15 +87,15 @@ manager: "jhubbard"
   
 8.  In the criteria pane, in the **Append** column, for each target column choose a column from which you want to copy data.  
   
-9. Specify the rows to copy by entering search conditions in the criteria pane. For details, see [Specify Search Conditions &#40;Visual Database Tools&#41;](../../database-engine/specify-search-conditions-visual-database-tools.md).  
+9. Specify the rows to copy by entering search conditions in the criteria pane. For details, see [Specify Search Conditions &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
      If you do not specify a search condition, all rows from the source table will be copied to the destination table.  
   
-10. If you want to copy summary information, specify **Group By** options. For details, see [Summarize or Aggregate Values for All Rows in a Table &#40;Visual Database Tools&#41;](../../database-engine/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
+10. If you want to copy summary information, specify **Group By** options. For details, see [Summarize or Aggregate Values for All Rows in a Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
   
 11. Click the **Execute SQL button** to run the query.  
   
-     When you execute an insert results query, no results are reported in the [Results Pane](../../database-engine/results-pane-visual-database-tools.md). Instead, a message appears indicating how many rows were copied.  
+     When you execute an insert results query, no results are reported in the [Results Pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Instead, a message appears indicating how many rows were copied.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

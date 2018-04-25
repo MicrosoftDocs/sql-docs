@@ -68,11 +68,11 @@ manager: "jhubbard"
 ##  <a name="Follow_Up"></a> Follow-up Tasks  
  The following tasks are necessary to complete the configuration of Agent to send alerts and notifications.  
   
--   [Alerts](../../database-engine/alerts.md)  
+-   [Alerts](../../ssms/agent/alerts.md)  
   
      Alerts can be configured to notify an operator of a particular database event or operating system condition.  
   
--   [Operators](../../database-engine/operators.md)  
+-   [Operators](../../ssms/agent/operators.md)  
   
      Operators are aliases for people or groups that can receive electronic notification  
   

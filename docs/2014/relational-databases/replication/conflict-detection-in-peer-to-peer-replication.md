@@ -88,7 +88,7 @@ manager: "jhubbard"
   
     2.  Restart the Distribution Agent.  
   
-    3.  Verify the conflicts that were detected by using the conflict viewer and determine the rows that were involved, the type of conflict, and the winner. The conflict is resolved based on the originator ID value that you specified during configuration: the row that originated at the node with the highest ID wins the conflict. For more information, see [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
+    3.  Verify the conflicts that were detected by using the conflict viewer and determine the rows that were involved, the type of conflict, and the winner. The conflict is resolved based on the originator ID value that you specified during configuration: the row that originated at the node with the highest ID wins the conflict. For more information, see [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
   
     4.  Run validation to ensure that the conflicting rows converged correctly. For more information, see [Validate Replicated Data](validate-replicated-data.md).  
   

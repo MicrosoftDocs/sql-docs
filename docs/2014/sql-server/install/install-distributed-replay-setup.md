@@ -35,9 +35,9 @@ manager: "jhubbard"
   
  **Prerequisites:**  
   
--   Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).  
+-   Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
--   Before you begin this procedure, you create the domain user accounts that the controller and client services will run under. We recommend that these accounts are not members of the Windows Administrators group. For more information, see the User and Service Accounts section in the [Distributed Replay Security](../../../2014/database-engine/distributed-replay-security.md) topic.  
+-   Before you begin this procedure, you create the domain user accounts that the controller and client services will run under. We recommend that these accounts are not members of the Windows Administrators group. For more information, see the User and Service Accounts section in the [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md) topic.  
   
     > [!NOTE]  
     >  You can use local user accounts if you are running the administration tool, controller service, and client service on the same computer.  
@@ -126,13 +126,13 @@ manager: "jhubbard"
 -   [Install Distributed Replay Using a Configuration File](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
   
 ## .NET Framework Security  
- You must have administrative permissions in order to install any of the Distributed Replay features. Only a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login having sysadmin permissions can add the client service accounts to the sysadmin server role of the test server. For more information about Distributed Replay security considerations, see [Distributed Replay Security](../../../2014/database-engine/distributed-replay-security.md).  
+ You must have administrative permissions in order to install any of the Distributed Replay features. Only a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login having sysadmin permissions can add the client service accounts to the sysadmin server role of the test server. For more information about Distributed Replay security considerations, see [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [SQL Server Distributed Replay](../../../2014/database-engine/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../../2014/database-engine/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../../../2014/database-engine/configure-distributed-replay.md)  
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

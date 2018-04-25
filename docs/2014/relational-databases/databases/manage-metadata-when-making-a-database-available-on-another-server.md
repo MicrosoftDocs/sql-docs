@@ -166,7 +166,7 @@ manager: "jhubbard"
   
  **To create a WMI alert using SQL Server Management Studio**  
   
--   [Create a WMI Event Alert](../../database-engine/create-a-wmi-event-alert.md)  
+-   [Create a WMI Event Alert](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### How Event Notifications Work for a Mirrored Database  
  Cross-database delivery of event notifications that involves a mirrored database is remote, by definition, because the mirrored database can fail over. [!INCLUDE[ssSB](../../includes/sssb-md.md)] provides special support for mirrored databases, in the form of *mirrored routes*. A mirrored route has two addresses: one for the principal server instance and one for the mirror server instance.  
@@ -218,11 +218,11 @@ manager: "jhubbard"
   
 -   The login used by the job  
   
-     To create or execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](../../database-engine/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
+     To create or execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service startup account  
   
-     The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../../database-engine/select-an-account-for-the-sql-server-agent-service.md).  
+     The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -233,35 +233,35 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxies  
   
-     A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](../../database-engine/create-a-sql-server-agent-proxy.md) and [Troubleshoot Multiserver Jobs That Use Proxies](../../database-engine/troubleshoot-multiserver-jobs-that-use-proxies.md).  
+     A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md) and [Troubleshoot Multiserver Jobs That Use Proxies](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  For more information, see also:  
   
--   [Implement Jobs](../../database-engine/implement-jobs.md)  
+-   [Implement Jobs](../../ssms/agent/implement-jobs.md)  
   
--   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
+-   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
   
 -   [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Configure SQL Server Agent](../../database-engine/configure-sql-server-agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configure SQL Server Agent](../../ssms/agent/sql-server-agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Implement SQL Server Agent Security](../../database-engine/implement-sql-server-agent-security.md)  
+-   [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **To view existing jobs and their properties**  
   
--   [Monitor Job Activity](../../database-engine/monitor-job-activity.md)  
+-   [Monitor Job Activity](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [View Job Step Information](../../database-engine/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **To create a job**  
   
--   [Create a Job](../../database-engine/create-a-job.md)  
+-   [Create a Job](../../ssms/agent/create-a-job.md)  
   
--   [Create a Job](../../database-engine/create-a-job.md)  
+-   [Create a Job](../../ssms/agent/create-a-job.md)  
   
 #### Best Practices for Using a Script to Re-create a Job  
  We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you to identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  
@@ -274,7 +274,7 @@ manager: "jhubbard"
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Logins** option to **True**.  
   
 > [!NOTE]  
->  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+>  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -358,6 +358,6 @@ manager: "jhubbard"
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [SQL Server Configuration Manager](../sql-server-configuration-manager.md)   
- [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../database-engine/troubleshoot-orphaned-users-sql-server.md)  
+ [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   

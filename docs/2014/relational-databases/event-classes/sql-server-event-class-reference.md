@@ -52,6 +52,6 @@ manager: "jhubbard"
 |The [User-Configurable Event Category](user-configurable-event-category.md) includes event classes that you can define.|[User-Configurable Event Class](user-configurable-event-class.md)|  
   
 ## See Also  
- [SQL Server Profiler](../../database-engine/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

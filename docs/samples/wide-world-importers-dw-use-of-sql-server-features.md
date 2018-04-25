@@ -1,6 +1,6 @@
 ---
 title: "WideWorldImporters OLAP database - use of SQL Server | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-non-specified"
 ms.service: ""
 ms.component: "samples"

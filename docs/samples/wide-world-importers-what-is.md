@@ -1,6 +1,6 @@
 ---
 title: "Wide World Importers - Sample database for SQL | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-non-specified"
 ms.service: ""
 ms.component: "samples"

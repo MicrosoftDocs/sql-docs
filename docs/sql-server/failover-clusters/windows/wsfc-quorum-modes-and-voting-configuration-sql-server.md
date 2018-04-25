@@ -2,7 +2,7 @@
 title: "WSFC Quorum Modes and Voting Configuration (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"

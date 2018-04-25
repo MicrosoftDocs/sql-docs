@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Privacy Supplement | Microsoft Docs"
 ms.date: "2/22/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-non-specified"
 ms.service: ""
 ms.component: "sql-non-specified"

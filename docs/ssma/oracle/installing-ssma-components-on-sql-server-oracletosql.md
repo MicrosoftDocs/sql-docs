@@ -1,6 +1,6 @@
 ---
 title: "Installing SSMA Components on SQL Server (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"

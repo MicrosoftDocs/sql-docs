@@ -1,6 +1,6 @@
 ---
 title: "WideWorldImportersDW - ETL workflow | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-non-specified"
 ms.service: ""
 ms.component: "samples"

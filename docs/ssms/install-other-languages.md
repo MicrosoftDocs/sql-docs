@@ -3,7 +3,7 @@ title: "Install non-English language versions of SQL Server Management Studio (S
 description: "Install non-English language versions of SQL Server Management Studio (SSMS)"
 ms.custom: ""
 ms.date: "12/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

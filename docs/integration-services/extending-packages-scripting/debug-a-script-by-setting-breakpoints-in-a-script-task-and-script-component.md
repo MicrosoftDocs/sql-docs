@@ -2,7 +2,7 @@
 title: "Debug a Script by Setting Breakpoints in a Script Task and Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "extending-packages-scripting"

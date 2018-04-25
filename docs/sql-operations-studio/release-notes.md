@@ -64,7 +64,7 @@ A significant highlight for the April Public Preview is the Visual Studio Code 1
 - [Git submodule support](https://code.visualstudio.com/updates/v1_20#_git-submodules) - Perform Git operations on nested Git repositories.
 - [Terminal screen reader support](https://code.visualstudio.com/updates/v1_20#_screen-reader-support) - Integrated Terminal now has "Screen Reader Optimized" mode.
 - [Centered editor layout](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout) - Maximize your code viewing screen real estate.
-- [Horizontal search results (preview)(https://code.visualstudio.com/updates/v1_21#_horizontal-search) - You can now view search results in a horizontal panel.
+- [Horizontal search results (preview)](https://code.visualstudio.com/updates/v1_21#_horizontal-search) - You can now view search results in a horizontal panel.
 
 For additional details, checkout the [Visual Studio Code February Release Notes](https://code.visualstudio.com/updates/v1_21), and the [Visual Studio Code January Release Notes](https://code.visualstudio.com/updates/v1_20).
 

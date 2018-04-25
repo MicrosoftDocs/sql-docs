@@ -2,7 +2,7 @@
 title: "Delete a Subscription View (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -23,6 +23,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete a Subscription View (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a subscription view when it is no longer needed. Deleting a subscription view in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] removes the view from the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. You can also edit a subscription view.  
   
 ## Prerequisites  

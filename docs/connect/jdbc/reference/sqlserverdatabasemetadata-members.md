@@ -2,7 +2,7 @@
 title: "SQLServerDatabaseMetaData Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerDatabaseMetaData Members

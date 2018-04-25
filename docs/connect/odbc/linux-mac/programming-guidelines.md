@@ -2,7 +2,7 @@
 title: "Programming Guidelines (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Programming Guidelines

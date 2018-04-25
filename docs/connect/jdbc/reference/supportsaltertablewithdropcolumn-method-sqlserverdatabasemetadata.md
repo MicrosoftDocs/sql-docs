@@ -2,7 +2,7 @@
 title: "supportsAlterTableWithDropColumn Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 55a182c1-28e5-4d32-aeb1-166a8ac76758
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsAlterTableWithDropColumn Method (SQLServerDatabaseMetaData)

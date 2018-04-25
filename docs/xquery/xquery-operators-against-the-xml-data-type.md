@@ -2,8 +2,8 @@
 title: "XQuery Operators Against the xml Data Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""
@@ -24,7 +24,7 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # XQuery Operators Against the xml Data Type

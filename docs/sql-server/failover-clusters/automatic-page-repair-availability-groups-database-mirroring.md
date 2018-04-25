@@ -2,7 +2,7 @@
 title: "Automatic Page Repair (Availability Groups: Database Mirroring) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -21,7 +21,7 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Automatic Page Repair (Availability Groups: Database Mirroring)

@@ -2,7 +2,7 @@
 title: "Server Configuration (MDS Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -22,6 +22,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Server Configuration (MDS Configuration Manager)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Use the **Server Configuration** page to view configuration information for the local server computer.  
   
 ## Server Configuration  

@@ -2,7 +2,7 @@
 title: "Open, Unlock, Rename, and Delete a Data Quality Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"
@@ -27,6 +27,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Open, Unlock, Rename, and Delete a Data Quality Project
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to manage a data quality project by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] such as open, unlock, rename, and delete a data quality project.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

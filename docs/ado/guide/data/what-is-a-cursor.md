@@ -1,6 +1,6 @@
 ---
 title: "What is a Cursor? | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cursors [ADO], about cursors"
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161

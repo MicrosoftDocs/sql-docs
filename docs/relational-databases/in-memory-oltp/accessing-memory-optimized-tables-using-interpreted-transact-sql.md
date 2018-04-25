@@ -1,8 +1,8 @@
----
+﻿---
 title: "Accessing Memory-Optimized Tables Using Interpreted Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/31/2016"
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,6 +15,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Accessing Memory-Optimized Tables Using Interpreted Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

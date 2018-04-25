@@ -1,8 +1,8 @@
 ---
 title: "SQL Server Privacy Supplement | Microsoft Docs"
 ms.date: "2/22/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
@@ -15,7 +15,7 @@ f1_keywords:
 helpviewer_keywords: 
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # SQL Server Privacy Supplement

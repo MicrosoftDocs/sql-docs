@@ -1,4 +1,4 @@
----
+﻿---
 title: "Database Suspect Data Page Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -23,6 +23,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Database Suspect Data Page Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

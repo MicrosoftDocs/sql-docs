@@ -2,7 +2,7 @@
 title: "Configure FailureConditionLevel Property Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -16,7 +16,7 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Configure FailureConditionLevel Property Settings

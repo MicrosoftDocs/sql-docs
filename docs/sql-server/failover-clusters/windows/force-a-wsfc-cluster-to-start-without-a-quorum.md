@@ -2,7 +2,7 @@
 title: "Force a WSFC Cluster to Start Without a Quorum | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -19,7 +19,7 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 caps.latest.revision: 21
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Force a WSFC Cluster to Start Without a Quorum

@@ -1,4 +1,4 @@
----
+﻿---
 title: "ALTER DATABASE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2018"
@@ -19,6 +19,7 @@ caps.latest.revision: 20
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
+monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Dynamic Data Masking | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/26/2016"
+ms.date: "04/23/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -18,6 +18,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Dynamic Data Masking
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ As an example, a call center support person may identify callers by several digi
   
 -   Using `SELECT INTO` or `INSERT INTO` to copy data from a masked column into another table results in masked data in the target table.  
   
--   Dynamic Data Masking is applied when running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export. A database containing masked columns will result in a backup file with masked data (assuming it is exported by a user without **UNMASK** privileges), and the imported database will contain statically masked data.  
+-   Dynamic Data Masking is applied when running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export. A database containing masked columns will result in an exported data file with masked data (assuming it is exported by a user without **UNMASK** privileges), and the imported database will contain statically masked data.  
   
 ## Querying for Masked Columns  
  Use the **sys.masked_columns** view to query for table-columns that have a masking function applied to them. This view inherits from the **sys.columns** view. It returns all columns in the **sys.columns** view, plus the **is_masked** and **masking_function** columns, indicating if the column is masked, and if so, what masking function is defined. This view only shows the columns on which there is a masking function applied.  

@@ -2,7 +2,7 @@
 title: "Master Data Manager Web Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/20/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Master Data Manager Web Application
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   The [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application is used primarily by administrators to perform administrative tasks. For example, only administrators can create models, business rules, or versions of data. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  

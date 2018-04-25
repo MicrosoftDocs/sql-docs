@@ -2,8 +2,8 @@
 title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
@@ -16,7 +16,7 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Tutorials for SQL Server
@@ -49,3 +49,5 @@ ms.workload: "Active"
  - [Tutorials for SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

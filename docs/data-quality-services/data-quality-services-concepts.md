@@ -2,7 +2,7 @@
 title: "Data Quality Services Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/01/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"
@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Quality Services Concepts
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic provides a brief summary of [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) concepts in knowledge management, data quality projects, and data quality administration.  
   
 ##  <a name="Knowledge"></a> Knowledge Management Concepts  

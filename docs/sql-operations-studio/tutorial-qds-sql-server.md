@@ -3,7 +3,7 @@ title: "Tutorial: Enable the five slowest queries sample widget - SQL Operations
 description: This tutorial demonstrates how to enable the five slowest queries sample widget on the database dashboard.
 ms.custom: "tools|sos"
 ms.date: "03/15/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools

@@ -2,7 +2,7 @@
 title: "Before Installing Failover Clustering | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -20,7 +20,7 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 141
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Before Installing Failover Clustering

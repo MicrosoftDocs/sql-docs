@@ -2,7 +2,7 @@
 title: "ODBC API Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -17,7 +17,7 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # ODBC API Reference

@@ -1,6 +1,6 @@
 ---
 title: "ADOX Fundamentals | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADOX, fundamentals"
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8

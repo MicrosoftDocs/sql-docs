@@ -2,7 +2,7 @@
 title: "Derived Hierarchies with Explicit Caps (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -24,6 +24,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Derived Hierarchies with Explicit Caps (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], when the levels from an explicit hierarchy are used as the top levels of a derived hierarchy, this is called a derived hierarchy with an explicit cap.  
   
  The explicit hierarchy must be based on the same entity as the entity at the top of the derived hierarchy.  

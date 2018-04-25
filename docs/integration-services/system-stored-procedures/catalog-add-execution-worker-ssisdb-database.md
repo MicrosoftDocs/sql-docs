@@ -1,8 +1,8 @@
----
+﻿---
 title: "catalog.add_execution_worker (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "system-stored-procedures"
@@ -18,6 +18,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # catalog.add_execution_worker (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

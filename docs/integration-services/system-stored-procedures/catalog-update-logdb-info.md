@@ -1,8 +1,8 @@
----
+﻿---
 title: "catalog.update_logdb_info (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "system-stored-procedures"
@@ -17,6 +17,7 @@ author: "haoqian"
 ms.author: "haoqian"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # catalog.update_logdb_info (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "Upgrade a SQL Server Failover Cluster Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -20,7 +20,7 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 caps.latest.revision: 47
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Upgrade a SQL Server Failover Cluster Instance

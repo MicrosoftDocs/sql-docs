@@ -2,7 +2,7 @@
 title: "Recover from Failover Cluster Instance Failure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -21,7 +21,7 @@ ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Recover from Failover Cluster Instance Failure

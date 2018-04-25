@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lock:Released Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,9 +20,10 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Lock:Released Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The Lock:Released event class indicates that a lock on a resource, such as a page, has been released.  
   
  The Lock:Acquired and Lock:Released event classes can be used to monitor when objects are being locked, the type of locks taken, and for how long the locks were retained. Locks retained for long periods of time may cause contention issues and should be investigated. For example, an application can be acquiring locks on rows in a table, and then waiting for user input. Because the user input can take a long time to occur, the locks can block other users. In this instance, the application should be redesigned to make lock requests only when needed and not require user input when locks have been acquired.  

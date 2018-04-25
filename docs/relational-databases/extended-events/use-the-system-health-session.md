@@ -1,4 +1,4 @@
----
+﻿---
 title: "Use the system_health Session | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2016"
@@ -21,6 +21,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use the system_health Session
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

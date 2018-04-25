@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2017"
@@ -27,6 +27,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ Uniquely identifies a query plan for a batch that is cached or is currently exec
 |**text**|**nvarchar(max** **)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+ Requires `VIEW SERVER STATE` permission on the server.  
   
 ## Remarks  
 For ad hoc queries, the SQL handles are hash values based on the SQL text being submitted to the server, and can originate from any database. 

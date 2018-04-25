@@ -2,7 +2,7 @@
 title: "Download SQL Server PowerShell Module | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/05/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "powershell"
 ms.service: ""
 ms.component: "powershell"

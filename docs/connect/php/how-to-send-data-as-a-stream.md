@@ -2,7 +2,7 @@
 title: "How to: Send Data as a Stream | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -19,7 +19,7 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Send Data as a Stream

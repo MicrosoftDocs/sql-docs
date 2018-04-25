@@ -1,6 +1,6 @@
 ---
 title: "Minimizing Log File Space Usage | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "log file space in RDS [ADO]"
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98

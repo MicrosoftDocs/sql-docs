@@ -2,7 +2,7 @@
 title: "Business Rules (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -23,6 +23,9 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Business Rules (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a business rule is a rule that you use to ensure the quality and accuracy of your master data. You can use a business rule to automatically update data, to send email, or to start a business process or workflow.  
   
  To view examples of business rules, see [Business Rule Examples &#40;Master Data Services&#41;](../master-data-services/business-rule-examples-master-data-services.md).  

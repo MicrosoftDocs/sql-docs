@@ -2,7 +2,7 @@
 title: "Deploy, run, and monitor an SSIS package on Azure | Microsoft Docs"
 ms.date: "02/05/2018"
 ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "lift-shift"

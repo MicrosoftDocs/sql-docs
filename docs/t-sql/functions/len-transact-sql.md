@@ -1,4 +1,4 @@
----
+﻿---
 title: "LEN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/03/2015"
@@ -27,6 +27,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +69,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
   
 ## Examples  
- The following example selects the number of characters and the data in `FirstName` for people located in `Australia`. This example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example selects the number of characters and the data in `FirstName` for people located in `Australia`. This example uses the AdventureWorks database.  
   
 ```  
 SELECT LEN(FirstName) AS Length, FirstName, LastName   

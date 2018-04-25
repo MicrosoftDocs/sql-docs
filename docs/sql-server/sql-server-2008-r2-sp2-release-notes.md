@@ -1,10 +1,8 @@
 ---
 title: "SQL Server 2008 R2 SP2 Release Notes | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
-ms.technology: "server-general"
+ms.prod: "sql"
+ms.prod_service: sql
+ms.technology: "supportability"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.reviewer: ""
@@ -15,11 +13,11 @@ helpviewer_keywords:
   - "SQL Server 2008 R2 SP2"
   - "Release Notes, SQL Server 2008 R2 SP2"
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ms.workload: "Inactive"
+monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "Monitor DQS Activities | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"
@@ -25,6 +25,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Monitor DQS Activities
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to centrally monitor the following activities in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): knowledge discovery, domain management, matching policy, data cleansing, data matching, and SSIS cleansing.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

@@ -2,7 +2,7 @@
 title: "sqlsrv_query | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -23,7 +23,7 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 caps.latest.revision: 46
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # sqlsrv_query

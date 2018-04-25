@@ -2,7 +2,7 @@
 title: "sqlsrv_send_stream_data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -23,7 +23,7 @@ ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_send_stream_data

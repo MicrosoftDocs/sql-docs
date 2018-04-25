@@ -3,7 +3,7 @@ title: "Comparability for IRowsetFind | Microsoft Docs"
 description: "Comparability for IRowsetFind"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-date-time"
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "IRowsetFind comparability"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Comparability for IRowsetFind

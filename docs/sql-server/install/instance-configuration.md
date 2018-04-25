@@ -2,7 +2,7 @@
 title: "Installation Wizard Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "2017-04-21"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 62
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 robots: noindex,nofollow
 ms.workload: "On Demand"
 ---

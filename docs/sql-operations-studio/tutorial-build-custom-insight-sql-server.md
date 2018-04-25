@@ -3,7 +3,7 @@ title: "Tutorial: Build a custom insight widget in SQL Operations Studio (previe
 description: This tutorial demonstrates how to build custom insight widgets and add them to database and server dashboards in SQL Operations Studio (preview).
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools

@@ -2,7 +2,7 @@
 title: "Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-tutorial"
@@ -41,31 +41,31 @@ The SQL Server Management Studio (SSMS) tutorial introduces you to the integrate
 
 These tutorials will help you understand the presentation of information in SSMS and how to take advantage of its features.
   
-The best way to get acquainted with SSMS is through hands-on practice. These tutorials will familiarize you with the various features avaialable within SSMS.  These tutorials will teach you how to manage the components of SSMS and how to find the features that you use regularly.  
+The best way to get acquainted with SSMS is through hands-on practice. These tutorials will familiarize you with the various features available within SSMS.  These tutorials will teach you how to manage the components of SSMS and how to find the features that you use regularly.  
 
-Here is what the tutorials will cover: 
+Here is what the tutorials cover: 
 
   
 - [Tutorial: Connect & Query SQL Server using SSMS](connect-query-sql-server.md)
 
-    In this section, you will learn how to connect to your SQL Server instance. You will also learn some basic Transact-SQL (T-SQL) commands to create and then query a new database. 
+    In this Tutorial, you learn how to connect to your SQL Server instance. You will also learn some basic Transact-SQL (T-SQL) commands to create and then query a new database. 
 
 - [Tutorial: Scripting Objects in SSMS](scripting-ssms.md)
 
-    In this section, you will learn how to script out various objects in SSMS, including databases and queries. 
+    In this Tutorial, you learn how to script out various objects in SSMS, including databases and queries. 
 
 - [Tutorial: Using Templates in SSMS](templates-ssms.md)
    
-    In this section, you will learn how to work with the pre-built Templates within SSMS. 
+    In this Tutorial, you learn how to work with the pre-built Templates within SSMS. The templates are a little-known feature that store a number of Transact-SQL code snippets for various database administration tasks. 
 
 - [Tutorial: SSMS Configuration](ssms-configuration.md)
 
-    In this section, you will learn the basics of configuring your SSMS environment. 
+    In this Tutorial, you learn the basics of configuring your SSMS environment, such as the changing the environmental layout. This Tutorial also explains what the different SSMS components are. 
   
 
 - [Tutorial: Additional Tips and Tricks for using SSMS](ssms-tricks.md)
 
-    In this section, you will learn additional tips and tricks for using SSMS. The tutorial includes the following:
+    In this Tutorial, you will learn additional tips and tricks for using SSMS. The Tutorial includes the following:
     - Commenting and uncommenting text
     - Indenting text
     - Filtering Objects in Object Explorer

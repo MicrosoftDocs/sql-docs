@@ -2,8 +2,8 @@
 title: "XML Construction (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""
@@ -29,7 +29,7 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # XML Construction (XQuery)

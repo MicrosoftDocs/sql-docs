@@ -1,24 +1,17 @@
 ---
-title: "Load Data With Integration Services"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-
+title: Load with Integration Services - Parallel Data Warehouse | Microsoft Docs
+description: Provides reference and deployment information for loading data into Parallel Data Warehouse (PDW) by using SQL Server Integration Services (SSIS) packages.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Load data with Integration Services
+# Load data with Integration Services to Parallel Data Warehouse
 Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages.  
   
 <!-- MISSING LINKS

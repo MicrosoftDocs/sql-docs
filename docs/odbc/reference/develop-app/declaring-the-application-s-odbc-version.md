@@ -2,7 +2,7 @@
 title: "Declaring the Application&#39;s ODBC Version | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -23,7 +23,7 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Declaring the Application&#39;s ODBC Version

@@ -2,7 +2,7 @@
 title: "Feature Dependencies of Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 caps.latest.revision: 57
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Feature Dependencies of Microsoft JDBC Driver for SQL Server

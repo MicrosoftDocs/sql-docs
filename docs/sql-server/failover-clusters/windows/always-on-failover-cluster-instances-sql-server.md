@@ -2,7 +2,7 @@
 title: "Always On Failover Cluster Instances (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -26,7 +26,7 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 caps.latest.revision: 80
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Always On Failover Cluster Instances (SQL Server)

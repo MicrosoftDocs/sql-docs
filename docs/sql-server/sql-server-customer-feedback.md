@@ -3,11 +3,11 @@ title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
 description: 
 author: annashres 
 ms.author: anshrest 
-manager: jhubbard
+manager: craigg
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.suite: "sql"

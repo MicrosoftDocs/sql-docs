@@ -2,7 +2,7 @@
 title: "Run from command line (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "dma"
 ms.service: ""
 ms.component:

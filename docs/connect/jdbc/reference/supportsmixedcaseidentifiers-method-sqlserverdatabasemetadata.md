@@ -2,7 +2,7 @@
 title: "supportsMixedCaseIdentifiers Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 0f68d9f7-0d8d-4d8d-9188-14e253a2576a
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsMixedCaseIdentifiers Method (SQLServerDatabaseMetaData)

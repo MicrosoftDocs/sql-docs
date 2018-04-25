@@ -2,7 +2,7 @@
 title: "Failover Cluster Troubleshooting | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -20,7 +20,7 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Failover Cluster Troubleshooting

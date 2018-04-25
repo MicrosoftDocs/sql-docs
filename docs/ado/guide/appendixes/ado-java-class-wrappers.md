@@ -1,6 +1,6 @@
 ---
 title: "ADO Java Class Wrappers | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "class wrappers [ADO]"
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca

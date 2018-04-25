@@ -2,7 +2,7 @@
 title: "Windows Dialog Box (Microsoft Document Explorer Help) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-menu"

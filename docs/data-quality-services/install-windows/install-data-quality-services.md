@@ -2,7 +2,7 @@
 title: "Install Data Quality Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "install-windows"
@@ -19,6 +19,9 @@ ms.author: "douglasl"
 manager: "craigg"
 ---
 # Install Data Quality Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contains the following two components: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** and **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
 |DQS Component|Description|  

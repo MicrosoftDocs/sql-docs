@@ -3,7 +3,7 @@ title: "Working with Snapshot Isolation | Microsoft Docs"
 description: "Working with snapshot isolation in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "oledb|features"
@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Working with Snapshot Isolation

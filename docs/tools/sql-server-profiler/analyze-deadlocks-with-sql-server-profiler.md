@@ -2,7 +2,7 @@
 title: "Analyze Deadlocks with SQL Server Profiler | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "sql-server-profiler"

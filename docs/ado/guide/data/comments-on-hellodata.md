@@ -1,6 +1,6 @@
 ---
 title: "Comments on HelloData | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hellodata sample application [ADO]"
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed

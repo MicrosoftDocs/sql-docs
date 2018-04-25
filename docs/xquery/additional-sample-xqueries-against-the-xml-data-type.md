@@ -2,8 +2,8 @@
 title: "Additional Sample XQueries Against the xml Data Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""
@@ -23,7 +23,7 @@ ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Additional Sample XQueries Against the xml Data Type

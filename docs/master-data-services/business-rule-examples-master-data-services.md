@@ -2,7 +2,7 @@
 title: "Business Rule Examples (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/05/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Business Rule Examples (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 This article shows examples of business rules for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. You'll find these examples in the sample models that are included with your installation of [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
 For instructions on how to deploy the sample models, see [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md).  

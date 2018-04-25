@@ -4,7 +4,7 @@ description: Lists of third-party partners with solutions to monitor Server.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
+manager: craigg
 editor: ''
 ms.assetid: 
 ms.service: ""
@@ -16,7 +16,7 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: ""
 ms.date: 17/09/2017    
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.author: mikeray
 

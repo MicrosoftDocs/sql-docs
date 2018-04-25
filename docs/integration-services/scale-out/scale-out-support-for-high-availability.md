@@ -3,7 +3,7 @@ title: "SQL Server Integration Services (SSIS) Scale Out Support for High Availa
 ms.description: "This article describes how to configure SSIS Scale Out for high availability"
 ms.custom: ""
 ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "scale-out"
@@ -23,9 +23,11 @@ ms.workload: "Inactive"
 
 In SSIS Scale Out, high availability on the Scale Out Worker side is provided by executing packages with multiple Scale Out Workers.
 
-High availability on the Scale Out Master side is achieved with [Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows failover clustering In this solution, multiple instances of Scale Out Master are hosted in a Windows failover cluster. When the Scale Out Master service or SSISDB is down on the primary node, the service or SSISDB on the secondary node continues to accept user requests and communicate with Scale Out Workers. 
+High availability on the Scale Out Master side is achieved with [Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows failover clustering. In this solution, multiple instances of Scale Out Master are hosted in a Windows failover cluster. When the Scale Out Master service or SSISDB is down on the primary node, the service or SSISDB on the secondary node continues to accept user requests and communicate with Scale Out Workers.
 
-To set up high availability on the Scale Out Master side, do the following things:
+Alternatively, high availability on the Scale Out Master side can be achieved with SQL Server failover cluster instance. See [Scale Out support for high availability via SQL Server failover cluster instance](scale-out-failover-cluster-instance.md).
+
+To set up high availability on the Scale Out Master side with always on for SSIS catalog, do the following things:
 
 ## 1. Prerequisites
 Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) for instructions. Install the feature and tools on all cluster nodes.

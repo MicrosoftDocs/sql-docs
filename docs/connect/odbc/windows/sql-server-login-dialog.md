@@ -2,7 +2,7 @@
 title: "SQL Server Login Dialog Box (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/21/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -16,7 +16,7 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "v-jizho2"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Server Login Dialog Box (ODBC)

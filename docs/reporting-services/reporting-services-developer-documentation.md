@@ -41,7 +41,7 @@ ms.workload: "On Demand"
  [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)  
  The Report Server Web service provides access to the full functionality of the report server. The Web service uses SOAP over HTTP and is designed to act as a communications interface between client programs and the report server. The Web service and its methods expose the functionality of the report server and allow you to create custom tools for any part of the report life cycle, from management to execution.  
  
-[Develop with the REST APIs for Reporting Services](developer/rest-api.md)
+[Develop with the REST APIs for Reporting Services](developer/rest-api.md)</br>
 The Reporting Services REST APIs provide programmatic access to the objects in Reporting Services report server catalog. When using the REST APIs, you can navigate to a folder hierarchy, discover the contents of a folder, or download a report definition. You can also create, update, and delete objects.
 
  [URL Access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  

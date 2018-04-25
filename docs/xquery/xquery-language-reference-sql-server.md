@@ -2,7 +2,7 @@
 title: "XQuery Language Reference (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-non-specified"
 ms.service: ""
 ms.component: "xquery"

@@ -2,7 +2,7 @@
 title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/22/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "misc"

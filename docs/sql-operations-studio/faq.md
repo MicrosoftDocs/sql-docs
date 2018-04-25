@@ -3,7 +3,7 @@ title: SQL Operations Studio (preview) FAQ | Microsoft Docs
 description: Frequently asked questions (FAQ) for SQL Operations Studio (preview).
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools

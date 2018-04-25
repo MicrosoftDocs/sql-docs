@@ -2,7 +2,7 @@
 title: "SSIS Toolbox | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "non-specific"

@@ -2,7 +2,7 @@
 title: SQL Server help content and Help Viewer | Microsoft Docs
 ms.custom: ""
 ms.date: "12/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-non-specified"
 ms.service: ""
 ms.component: "sql-non-specified"

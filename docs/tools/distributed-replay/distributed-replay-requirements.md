@@ -2,7 +2,7 @@
 title: "Distributed Replay Requirements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/18/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "distributed-replay"

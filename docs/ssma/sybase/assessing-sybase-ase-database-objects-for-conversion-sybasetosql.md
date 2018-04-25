@@ -2,7 +2,7 @@
 title: "Assessing SAP ASE Database Objects for Conversion (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-sybase"

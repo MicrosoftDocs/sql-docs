@@ -2,7 +2,7 @@
 title: "Migrate Sybase ASE Data into SQL Server - Azure SQL DB | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-sybase"

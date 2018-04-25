@@ -2,7 +2,7 @@
 title: "Microsoft Connectors for Oracle and Teradata by Attunity (SSIS) | Microsoft Docs"
 
 ms.date: "05/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "non-specific"

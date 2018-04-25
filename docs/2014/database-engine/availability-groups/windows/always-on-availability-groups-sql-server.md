@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   Supports a flexible failover policy for greater control over availability-group failover. For more information, see [Failover and Failover Modes; Always On Availability Groups;](failover-and-failover-modes-always-on-availability-groups.md).  
   
--   Supports automatic page repair for protection against page corruption. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring;](../../../sql-server/failover-clusters/automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
+-   Supports automatic page repair for protection against page corruption. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Supports encryption and compression, which provide a secure, high performing transport.  
   

@@ -203,7 +203,7 @@ manager: "jhubbard"
  Explains the C2 security compliance auditing mode in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Security Audit Event Category &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
- Explains the audit events you can use in [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. For more information, see [SQL Server Profiler](../../../database-engine/sql-server-profiler.md).  
+ Explains the audit events you can use in [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. For more information, see [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md).  
   
  [SQL Trace](../../sql-trace/sql-trace.md)  
  Explains how SQL Trace can be used from within your own applications to create traces manually, instead of using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Profiler.  

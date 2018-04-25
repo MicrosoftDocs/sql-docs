@@ -29,7 +29,7 @@ manager: "jhubbard"
 ## In This Section  
  [Add Tables to Diagrams &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
- [Add Related Tables to Diagrams &#40;Visual Database Tools&#41;](../../2014/database-engine/add-related-tables-to-diagrams-visual-database-tools.md)  
+ [Add Related Tables to Diagrams &#40;Visual Database Tools&#41;](../../database-engine/add-related-tables-to-diagrams-visual-database-tools.md)  
   
  [Save Selected Tables on a Diagram &#40;Visual Database Tools&#41;](save-selected-tables-on-a-diagram-visual-database-tools.md)  
   

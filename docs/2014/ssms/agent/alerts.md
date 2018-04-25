@@ -151,6 +151,6 @@ manager: "jhubbard"
 -   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)  
   
 ## See Also  
- [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md)  
+ [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   

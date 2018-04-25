@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  Every job step runs in a specific security context. If the job step specifies a proxy, the job step runs in the security context of the credential for the proxy. If a job step does not specify a proxy, the job step runs in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. Only members of the sysadmin fixed server role can create jobs that do not explicitly specify a proxy.  
   
- Because job steps run in the context of a specific [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user, that user must have the permissions and configuration necessary for the job step to execute. For example, if you create a job that requires a drive letter or a Universal Naming Convention (UNC) path, the job steps may run under your Windows user account while testing the tasks. However, the Windows user for the job step must also have the necessary permissions, drive letter configurations, or access to the required drive. Otherwise, the job step fails. To prevent this problem, ensure that the proxy for each job step has the necessary permissions for the task that the job step performs. For more information, see [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
+ Because job steps run in the context of a specific [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user, that user must have the permissions and configuration necessary for the job step to execute. For example, if you create a job that requires a drive letter or a Universal Naming Convention (UNC) path, the job steps may run under your Windows user account while testing the tasks. However, the Windows user for the job step must also have the necessary permissions, drive letter configurations, or access to the required drive. Otherwise, the job step fails. To prevent this problem, ensure that the proxy for each job step has the necessary permissions for the task that the job step performs. For more information, see [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## Job Step Logs  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can write output from some job steps either to an operating system file or to the sysjobstepslogs table in the msdb database. The following job step types can write output to both destinations:  
@@ -145,7 +145,7 @@ Set oServer = nothing
   
 -   Queue Reader Agent (QueueReader job)  
   
- When replication is set up, you can specify to run the replication agents in one of three ways: continuously after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is started, on demand, or according to a schedule. For more information about replication agents, see [Replication Agents Overview](../../2014/relational-databases/replication/replication-agents-overview.md).  
+ When replication is set up, you can specify to run the replication agents in one of three ways: continuously after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is started, on demand, or according to a schedule. For more information about replication agents, see [Replication Agents Overview](../../relational-databases/replication/replication-agents-overview.md).  
   
 ## Analysis Services Job Steps  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supports two distinct types of Analysis Services job steps, command job steps, and query job steps.  
@@ -164,7 +164,7 @@ Set oServer = nothing
   
 -   Type the statement to execute. The statement must be a multidimensional expressions (MDX) query.  
   
- For more information on MDX, see [MDX Query Fundamentals &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
+ For more information on MDX, see [MDX Query Fundamentals &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
   
 ## Integration Services Packages  
  When you create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package job step, you must do the following:  
@@ -191,7 +191,7 @@ Set oServer = nothing
   
  Note that if you deployed the package to the SSIS Catalog and you specify **SSIS Catalog** as the package source, much of this configuration information is obtained automatically from the package. Under the **Configuration** tab you can specify the environment, parameter values, connection manager values, property overrides, and whether the package runs in a 32-bit runtime environment.  
   
- For more information about creating job steps that run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, see [SQL Server Agent Jobs for Packages](../../2014/integration-services/sql-server-agent-jobs-for-packages.md).  
+ For more information about creating job steps that run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, see [SQL Server Agent Jobs for Packages](../../integration-services/sql-server-agent-jobs-for-packages.md).  
   
 ## Related Tasks  
   

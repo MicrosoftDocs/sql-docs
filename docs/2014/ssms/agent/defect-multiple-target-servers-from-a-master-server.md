@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Create a Multiserver Environment](create-a-multiserver-environment.md)   
- [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)   
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)   
  [Defect a Target Server from a Master Server](defect-a-target-server-from-a-master-server.md)  
   
   

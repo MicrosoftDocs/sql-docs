@@ -26,9 +26,9 @@ manager: "jhubbard"
 |Description|Topic|  
 |-----------------|-----------|  
 |Describes common tasks performed by using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], such as customizing keyboard shortcuts and viewing property pages.|[Use SQL Server Management Studio](sql-server-management-studio-ssms.md)|  
-|Describes using **Object Explorer** to view and manage all of the objects in one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Object Explorer](../database-engine/object-explorer.md)|  
+|Describes using **Object Explorer** to view and manage all of the objects in one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Object Explorer](object/object-explorer.md)|  
 |Describes how to use **Template Explorer** to build and manage files of boilerplate text that can be used to speed the development of queries and scripts.|[Template Explorer](template/template-explorer.md)|  
-|Describes how to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../analysis-services/multidimensional-models/solution-explorer.md)|  
+|Describes how to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](solution/solution-explorer.md)|  
 |Describes how to connect [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[F1 Help for Server Connections &#40;SQL Server Management Studio&#41;](f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|  
 |Describes how to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](visual-db-tools/visual-database-tools.md)|  
 |Describes how to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  

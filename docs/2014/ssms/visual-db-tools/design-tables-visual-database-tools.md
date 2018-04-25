@@ -25,7 +25,7 @@ manager: "jhubbard"
  [Open Table Designer &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Open a new or existing database table.  
   
- [Save Your Work in Table Designer &#40;Visual Database Tools&#41;](save-your-work-in-table-designer-visual-database-tools.md)  
+ [Save Your Work in Table Designer &#40;Visual Database Tools&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
  Save changes to specific tables or to all tables open in the Table Designer.  
   
   

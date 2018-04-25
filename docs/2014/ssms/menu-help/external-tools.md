@@ -45,7 +45,7 @@ manager: "jhubbard"
  Specify the path to the .exe, .com, .pif, .bat, .cmd, or other file that you intend to launch. The output from `.bat`, `.com`, and other files can be viewed in the Output window if you select the **Use output window** check box.  
   
  **Arguments**  
- Specify the variables that are passed to the tool when the tool is selected on the menu. Arguments can specify values that are passed to the tool or command when it is launched. For example, a value can specify a file name or directory. Use the **Arrow** button to select from a list of predefined arguments. You can add more than one. For a complete list of predefined arguments and their definitions, see [Arguments for External Tools](../../database-engine/external-tools.md). You can also enter custom arguments (command-prompt switches, for example), depending on the command or tool you use.  
+ Specify the variables that are passed to the tool when the tool is selected on the menu. Arguments can specify values that are passed to the tool or command when it is launched. For example, a value can specify a file name or directory. Use the **Arrow** button to select from a list of predefined arguments. You can add more than one. For a complete list of predefined arguments and their definitions, see [Arguments for External Tools](external-tools.md). You can also enter custom arguments (command-prompt switches, for example), depending on the command or tool you use.  
   
  **Initial directory**  
  Specify the working directory of the tool. Use the **Arrow** button to select directories. You can select more than one.  

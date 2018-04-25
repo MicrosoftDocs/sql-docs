@@ -25,7 +25,7 @@ manager: "jhubbard"
  To configure the Object Explorer settings, on the **Tools** menu, click **Options**, and then click **SQL Server Object Explorer**.  
   
 ## See Also  
- [Object Explorer](../../database-engine/object-explorer.md)   
+ [Object Explorer](object-explorer.md)   
  [Connect to an Instance From Object Explorer](connect-to-an-instance-from-object-explorer.md)   
  [Manage Objects by Using Object Explorer](manage-objects-by-using-object-explorer.md)   
  [Object Explorer Details Pane](object-explorer-details-pane.md)   

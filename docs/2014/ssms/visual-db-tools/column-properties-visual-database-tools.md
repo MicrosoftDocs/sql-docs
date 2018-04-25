@@ -139,7 +139,7 @@ manager: "jhubbard"
  Indicates the language used to index the column.  
   
  **Statistical Semantics**  
- Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).  
+ Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
  If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** option is set to **No** and cannot be modified. If you select **Yes** for the **Statistical Semantics** option prior to selecting a **Language**, then the languages available in the **Language** column will be restricted to those for which there is Semantic Language Model support.  
   

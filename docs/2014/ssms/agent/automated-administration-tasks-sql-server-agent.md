@@ -30,6 +30,6 @@ manager: "jhubbard"
   
  [Monitor and Respond to Events](monitor-and-respond-to-events.md)  
   
- [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)  
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
   
   

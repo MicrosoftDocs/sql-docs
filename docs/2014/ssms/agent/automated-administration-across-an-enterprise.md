@@ -76,11 +76,11 @@ manager: "jhubbard"
  [Manage Events](manage-events.md)  
  Contains information about event forwarding from target servers to master servers.  
   
- [Tune Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
+ [Tune Automated Administration Across an Enterprise](tune-automated-administration-across-an-enterprise.md)  
  Contains information about how automated administration in a multiserver environment takes advantage of the self-tuning features of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## See Also  
- [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server Database Engine Backward Compatibility](../../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Register Servers](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   

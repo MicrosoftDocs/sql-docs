@@ -21,7 +21,7 @@ manager: "jhubbard"
 # SQL Server Management Studio Menu Help
   This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- [About SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+ [About SQL Server Management Studio](about-sql-server-management-studio.md)  
   
  [Advanced Save Options](advanced-save-options.md)  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  [Customize &#40;Toolbars Page&#41;](customize-toolbars-page.md)  
   
- [External Tools](../../database-engine/external-tools.md)  
+ [External Tools](external-tools.md)  
   
  [Open With &#40;New File&#41;](open-with-new-file.md)  
   

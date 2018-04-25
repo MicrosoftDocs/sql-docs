@@ -39,7 +39,7 @@ manager: "jhubbard"
 |[824](../../relational-databases/errors-events/mssqlserver-824-database-engine-error.md)|Logical errors.|Logical data errors, such as torn write or bad page checksum.|  
 |829|A page has been marked as restore pending.|All.|  
   
- To view recent 823 CRC errors and 824 errors, see the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) table in the [msdb](../relational-databases/databases/msdb-database.md) database.  
+ To view recent 823 CRC errors and 824 errors, see the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) table in the [msdb](../../relational-databases/databases/msdb-database.md) database.  
   
   
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 4.  After the automatic page-repair attempt fixes a suspect page, the page is marked in the **suspect_pages** table as restored (**event_type** = 5).  
   
-5.  If the page I/O error caused any [deferred transactions](../relational-databases/backup-restore/deferred-transactions-sql-server.md), after you repair the page, the principal/primary tries to resolve those transactions.  
+5.  If the page I/O error caused any [deferred transactions](../../relational-databases/backup-restore/deferred-transactions-sql-server.md), after you repair the page, the principal/primary tries to resolve those transactions.  
   
 
   
@@ -104,8 +104,8 @@ manager: "jhubbard"
  
   
 ## See Also  
- [Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)  
+ [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

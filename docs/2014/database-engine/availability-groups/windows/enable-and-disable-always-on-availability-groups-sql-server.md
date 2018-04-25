@@ -224,7 +224,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 -   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a> Follow Up: After Disabling AlwaysOn  
- After you disable AlwaysOn Availability Groups, the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must be restarted. SQL Configuration Manager restarts the server instance automatically. However, if you used the `Disable-SqlAlwaysOn` cmdlet, you will need to restart the server instance manually. For more information, see [sqlservr Application](../../sqlservr-application.md).  
+ After you disable AlwaysOn Availability Groups, the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must be restarted. SQL Configuration Manager restarts the server instance automatically. However, if you used the `Disable-SqlAlwaysOn` cmdlet, you will need to restart the server instance manually. For more information, see [sqlservr Application](../../../tools/sqlservr-application.md).  
   
  On the restarted server instance:  
   

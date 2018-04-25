@@ -29,7 +29,7 @@ manager: "jhubbard"
 ##  <a name="VisualElement"></a> SQL Server Multi-Subnet Failover Cluster (Two-Nodes, Two-Subnets)  
  The following illustration represents a two node, two subnet failover cluster instance (FCI) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Multi-Subnet Architecture with MultiSubnetFailover](../../2014/database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Multi-Subnet Architecture with MultiSubnetFailover")  
+ ![Multi-Subnet Architecture with MultiSubnetFailover](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Multi-Subnet Architecture with MultiSubnetFailover")  
   
 
   
@@ -77,9 +77,9 @@ manager: "jhubbard"
   
 |Content Description|Topic|  
 |-------------------------|-----------|  
-|Installing a SQL Server Failover Cluster|[Create a New SQL Server Failover Cluster &#40;Setup&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|Installing a SQL Server Failover Cluster|[Create a New SQL Server Failover Cluster &#40;Setup&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |In-place upgrade of your existing SQL Server Failover Cluster|[Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
-|Maintaining your existing SQL Server Failover Cluster|[Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
+|Maintaining your existing SQL Server Failover Cluster|[Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |Windows Failover Clustering|[Windows 2008 R2 Failover Multi-Site Clustering](http://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
 |Use the Failover Cluster Management snap-in to view WSFC events and logs|[View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
 |Use Windows PowerShell to create a log file for all nodes (or a specific a node) in a WSFC failover cluster|[Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)|  

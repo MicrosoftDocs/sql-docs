@@ -74,7 +74,7 @@ manager: "jhubbard"
  Includes the owner in the generated script. Default is False.  
   
  **Script permissions**  
- Includes permissions on database objects in the script. Default is True. For more information, see [Permissions &#40;Database Engine&#41;](../relational-databases/security/permissions-database-engine.md).  
+ Includes permissions on database objects in the script. Default is True. For more information, see [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
 ### Table/View Options  
  The following options apply only to scripts for tables or views.  
@@ -86,7 +86,7 @@ manager: "jhubbard"
  Adds the SET ANSI_PADDING statement before and after each CREATE TABLE statement. Default is True. For more information, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-padding-transact-sql.md).  
   
  **Include collation**  
- Includes collation in column definition. Default is True. For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Includes collation in column definition. Default is True. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  **Include IDENTITY property**  
  Includes definitions for IDENTITY seed and IDENTITY increment. Default is True. For more information, see [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql-identity-property.md).  

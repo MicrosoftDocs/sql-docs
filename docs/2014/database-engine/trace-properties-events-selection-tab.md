@@ -50,6 +50,6 @@ manager: "jhubbard"
  [View Filter Information &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [Modify a Filter &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md)  
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

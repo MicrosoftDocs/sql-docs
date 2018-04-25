@@ -126,7 +126,7 @@ manager: "jhubbard"
 |**Unknown quorum**|The cluster quorum status is unavailable.|  
 |**Not applicable**|The node that hosts the availability replica has no quorum.|  
   
- For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+ For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
  **Choose a new primary replica**  
  Use this grid to select a secondary replica to become the new primary replica. The columns in this grid are as follows:  
@@ -203,6 +203,6 @@ manager: "jhubbard"
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
- [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
   

@@ -34,7 +34,7 @@ manager: "jhubbard"
  Remove the selected alert from the job, and delete the alert.  
   
 ## See Also  
- [Alerts](../../reporting-services/alerts.md)   
+ [Alerts](alerts.md)   
  [Implement Jobs](implement-jobs.md)  
   
   

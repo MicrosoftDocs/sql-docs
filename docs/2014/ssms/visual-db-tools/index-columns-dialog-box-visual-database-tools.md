@@ -28,7 +28,7 @@ manager: "jhubbard"
  Select a sort order for the specified column. Available options are **Ascending** or **Descending**.  
   
 ## See Also  
- [Create Clustered Indexes](indexes.md)   
+ [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Indexes and Keys Dialog Box &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can monitor and automatically respond to *events*, such as messages from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specific performance conditions, and Windows Management Instrumentation (WMI) events.  
   
 ## In This Section  
- [Alerts](../../reporting-services/alerts.md)  
+ [Alerts](alerts.md)  
  Contains information about naming an alert and selecting the events or performance conditions to which alerts respond.  
   
  [Create a User-Defined Event](create-a-user-defined-event.md)  

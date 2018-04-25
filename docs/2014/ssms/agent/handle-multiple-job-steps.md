@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Handle Multiple Job Steps
   If your job has more than one job step, you must specify the order in which the job steps run. This is called *control of flow**.* You can add new job steps and rearrange the flow of job steps at any time; the changes take effect the next time the job is run. This illustration shows the control of flow for a database backup job.  
   
- ![SQL Server Agent job steps control of flow](../../2014/database-engine/media/dbflow01.gif "SQL Server Agent job steps control of flow")  
+ ![SQL Server Agent job steps control of flow](../../../database-engine/media/dbflow01.gif "SQL Server Agent job steps control of flow")  
   
  The first step is Backup Database. If this step fails, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent reports failure to the operator who is defined to receive notification. If the Backup Database step succeeds, the job proceeds to the next step, "Scrub" Customer Data. If this step fails, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent skips forward to Restore Database. If "Scrub" Customer Data succeeds, the job proceeds to the next step, Update Statistics, and so on, until the final step either results in Report Success or Report Failure.  
   

@@ -160,7 +160,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ## See Also  
  [AlwaysOn Availability Groups (SQL Server)](always-on-availability-groups-sql-server.md)
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

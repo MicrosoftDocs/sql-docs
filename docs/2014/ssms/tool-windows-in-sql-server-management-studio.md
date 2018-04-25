@@ -24,8 +24,8 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Tool**|**Purpose**|  
-|[Object Explorer](../database-engine/object-explorer.md)|Browse servers, create and locate objects, manage data sources, and view logs. This tool is accessed from the **View** menu.|  
-|[Solution Explorer](../analysis-services/multidimensional-models/solution-explorer.md)|Store and organize scripts and related connection information in projects called [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Scripts. You can store several [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Scripts as Solutions and use source control to manage scripts as they evolve over time. This tool is accessed from the **View** menu.|  
+|[Object Explorer](object/object-explorer.md)|Browse servers, create and locate objects, manage data sources, and view logs. This tool is accessed from the **View** menu.|  
+|[Solution Explorer](solution/solution-explorer.md)|Store and organize scripts and related connection information in projects called [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Scripts. You can store several [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Scripts as Solutions and use source control to manage scripts as they evolve over time. This tool is accessed from the **View** menu.|  
 |[Template Explorer](template/template-explorer.md)|Create queries based on existing templates. You can also create your custom queries or alter the existing templates to fit your scenarios. This tool is accessed from the **View** menu.|  
 |[Dynamic Help](sql-server-management-studio-ssms.md)|Show a list of related Help topics as you click on a component or type code.|  
   

@@ -40,7 +40,7 @@ manager: "jhubbard"
  A WSFC resource group is created for every availability group that you create. The WSFC cluster monitors this resource group to evaluate the health of the primary replica. The quorum for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is based on all nodes in the WSFC cluster regardless of whether a given cluster node hosts any availability replicas. In contrast to database mirroring, there is no witness role in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 > [!NOTE]  
->  For information about the relationship of SQL Server AlwaysOn components to the WSFC cluster, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md).  
+>  For information about the relationship of SQL Server AlwaysOn components to the WSFC cluster, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
  The following illustration shows an availability group that contains one primary replica and four secondary replicas. Up to eight secondary replicas are supported, including one primary replica and two synchronous-commit secondary replicas.  
   
@@ -137,7 +137,7 @@ manager: "jhubbard"
 ##  <a name="APR"></a> Automatic Page Repair  
  Each availability replica tries to automatically recover from corrupted pages on a local database by resolving certain types of errors that prevent reading a data page. If a secondary replica cannot read a page, the replica requests a fresh copy of the page from the primary replica. If the primary replica cannot read a page, the replica broadcasts a request for a fresh copy to all the secondary replicas and gets the page from the first to respond. If this request succeeds, the unreadable page is replaced by the copy, which usually resolves the error.  
   
- For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
+ For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

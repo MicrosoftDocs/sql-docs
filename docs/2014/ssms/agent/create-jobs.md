@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  To create a job, a user must be a member of one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles or the **sysadmin** fixed server role. A job can be edited only by its owner or members of the **sysadmin** role. Members of the **sysadmin** role can assign job ownership to other users, and they can run any job, regardless of the job owner. For more information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles, see [SQL Server Agent Fixed Database Roles](sql-server-agent-fixed-database-roles.md).  
   
- Jobs can be written to run on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or on multiple instances across an enterprise. To run jobs on multiple servers, you must set up at least one master server and one or more target servers. For more information about master and target servers, see [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)  
+ Jobs can be written to run on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or on multiple instances across an enterprise. To run jobs on multiple servers, you must set up at least one master server and one or more target servers. For more information about master and target servers, see [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent records job and job step information in the job history.  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Manage Job Steps](manage-job-steps.md)   
- [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)   
+ [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)   
  [Create and Attach Schedules to Jobs](create-and-attach-schedules-to-jobs.md)   
  [Run Jobs](run-jobs.md)   
  [View or Modify Jobs](view-or-modify-jobs.md)  

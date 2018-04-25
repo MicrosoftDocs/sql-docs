@@ -96,6 +96,6 @@ manager: "jhubbard"
 -   Searching large object sets can take a long time and slow server performance.  
   
 ## See Also  
- [Object Explorer](../../database-engine/object-explorer.md)  
+ [Object Explorer](object-explorer.md)  
   
   

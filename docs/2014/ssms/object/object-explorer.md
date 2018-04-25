@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 |Description|Topic|  
 |-----------------|-----------|  
-|Describes how to open the Object Explorer and configure the options that define the behavior of the explorer.|[Open and Configure Object Explorer](../../database-engine/object-explorer.md)|  
+|Describes how to open the Object Explorer and configure the options that define the behavior of the explorer.|[Open and Configure Object Explorer](open-and-configure-object-explorer.md)|  
 |Describes how to connect Object Explorer to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Connect to an Instance From Object Explorer](connect-to-an-instance-from-object-explorer.md)|  
 |Describes how to manage objects represented as nodes in the Object Explorer hierarchy.|[Manage Objects by Using Object Explorer](manage-objects-by-using-object-explorer.md)|  
 |Describes the Object Explorer Details Pane, a tabular view of all of the objects in the server with a user interface to manage them.|[Object Explorer Details Pane](object-explorer-details-pane.md)|  

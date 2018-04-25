@@ -115,7 +115,7 @@ manager: "jhubbard"
     >   
     >  For more information, see [Use AlwaysOn Policies to View the Health of an Availability Group &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md) and [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md).  
   
--   The Windows Server Failover Clustering (WSFC) cluster has quorum. For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+-   The Windows Server Failover Clustering (WSFC) cluster has quorum. For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 -   The primary replica has become unavailable, and the failover-condition levels defined by your the flexible failover policy have been met. For information about failover-condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md).  
   
@@ -144,7 +144,7 @@ manager: "jhubbard"
   
 2.  Set the failover mode to automatic. For more information, see [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md).  
   
-3.  Optionally, change the flexible failover policy of the availability group to specify the sorts of failures that can cause an automatic failover to occur. For more information, see [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover &#40;AlwaysOn Availability Groups&#41;](configure-flexible-automatic-failover-policy.md) HYPERLINK "file:///C:\\\Users\\\marshow\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\6a8d98a9-6e6a-40d1-9809-efa9013d7452\\\HTM\\\html\\\1ed564b4-9835-4245-ae35-9ba67419a4ce"  and [Failover Policy for Failover Cluster Instances](../../failover-policy-for-failover-cluster-instances.md).  
+3.  Optionally, change the flexible failover policy of the availability group to specify the sorts of failures that can cause an automatic failover to occur. For more information, see [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover &#40;AlwaysOn Availability Groups&#41;](configure-flexible-automatic-failover-policy.md) HYPERLINK "file:///C:\\\Users\\\marshow\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\6a8d98a9-6e6a-40d1-9809-efa9013d7452\\\HTM\\\html\\\1ed564b4-9835-4245-ae35-9ba67419a4ce"  and [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
 ##  <a name="ManualFailover"></a> Planned Manual Failover (Without Data Loss)  
  A manual failover causes a synchronized secondary replica to transition to the primary role after a database administrator issues a manual-failover command on the server instance that hosts the target secondary replica. To support manual failover, the secondary replica and the current primary replica must both be configured for synchronous-commit mode, if any. Every secondary database on the availability replica must be joined to the availability group and synchronized with its corresponding primary database (that is, the secondary replica must be synchronized). This guarantees that every transaction that was committed on a former primary database has also been committed on the new primary database. Therefore, the new primary databases are identical to the old primary databases.  
@@ -197,7 +197,7 @@ manager: "jhubbard"
  Forcing failover of an availability group (with possible data loss) is a disaster recovery method that allows you to use a secondary replica as a warm standby server.Because forcing failover risks possible data loss, it should be used cautiously and sparingly. We recommend forcing failover only if you must restore service to your availability databases immediately and are willing to risk losing data. For more information about the prerequisites and recommendations for forcing failover and for an example scenario that uses a forced failover to recover from a catastrophic failure, see [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 > [!WARNING]  
->  Forcing failover requires that the WSFC cluster have quorum. For information about configuring quorum and forcing quorum, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md).  
+>  Forcing failover requires that the WSFC cluster have quorum. For information about configuring quorum and forcing quorum, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
   
 ###  <a name="ForcedFailoverHowWorks"></a> How Forced Failover Works  
@@ -297,11 +297,11 @@ manager: "jhubbard"
   
  **To configure WSFC Quorum Configuration**  
   
--   [Configure Cluster Quorum NodeWeight Settings](../../configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configure Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [View Cluster Quorum NodeWeight Settings](../../view-cluster-quorum-nodeweight-settings.md)  
+-   [View Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Force a WSFC Cluster to Start Without a Quorum](../../force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Force a WSFC Cluster to Start Without a Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -312,9 +312,9 @@ manager: "jhubbard"
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Modes &#40;AlwaysOn Availability Groups&#41;](availability-modes-always-on-availability-groups.md)   
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
- [Failover Policy for Failover Cluster Instances](../../failover-policy-for-failover-cluster-instances.md)   
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)  
   
   

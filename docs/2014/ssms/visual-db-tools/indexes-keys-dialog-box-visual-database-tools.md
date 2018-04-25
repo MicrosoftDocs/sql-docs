@@ -59,7 +59,7 @@ manager: "jhubbard"
  When expanded, shows information for **Create as Clustered**.  
   
  **Create as Clustered**  
- Make the key or index clustered. Only one clustered index is allowed on a table. Data in the table is stored in the order of the clustered index. For more information, see [Create Clustered Indexes](../relational-databases/indexes/indexes.md) and [Create Nonclustered Indexes](../relational-databases/indexes/create-nonclustered-indexes.md).  
+ Make the key or index clustered. Only one clustered index is allowed on a table. Data in the table is stored in the order of the clustered index. For more information, see [Create Clustered Indexes](../../relational-databases/indexes/indexes.md) and [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
  **Data Space Specification**  
  When expanded, shows information for **(Data Space Type)**, **Filegroup or Partition Scheme Name**, and **Partition Column List**.  
@@ -112,7 +112,7 @@ manager: "jhubbard"
  Specify whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance. The recommended setting is **Yes**.  
   
 ## See Also  
- [Unique Constraints and Check Constraints](../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [Primary and Foreign Key Constraints](../relational-databases/tables/primary-and-foreign-key-constraints.md)  
+ [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

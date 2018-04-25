@@ -6,7 +6,7 @@ ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-non-specified"
 ms.service: ""
 ms.component: "sql-non-specified"

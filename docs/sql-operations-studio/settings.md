@@ -3,7 +3,7 @@ title: SQL Operations Studio (preview) User and Workspace Settings | Microsoft D
 description: How to modify SQL Operations Studio (preview) User and Workspace Settings.
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools

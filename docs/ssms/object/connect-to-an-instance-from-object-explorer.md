@@ -2,7 +2,7 @@
 title: "Connect to a SQL Server or Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-objects"

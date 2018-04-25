@@ -2,7 +2,7 @@
 title: "Azure HDInsight Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "connection-manager"

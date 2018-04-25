@@ -39,7 +39,7 @@ manager: "jhubbard"
 5.  Click **OK** to save the change.  
   
 ## See Also  
- [Start SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server Profiler](../../database-engine/sql-server-profiler.md)  
+ [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)   
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

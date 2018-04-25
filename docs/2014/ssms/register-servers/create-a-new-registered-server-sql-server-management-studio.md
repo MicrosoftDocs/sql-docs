@@ -99,7 +99,7 @@ manager: "jhubbard"
  To execute queries against all the servers that are registered with a Central Management Server, expand the Central Management Server, right-click the server group, point to click **Connect**, and then click **New Query**. When queries are executed in the new Query Editor window, they will execute against all of the servers in the server group, using the stored connection information and using the Windows Authentication context of the user.  
   
 ## See Also  
- [Hide System Objects in Object Explorer](hide-system-objects-in-object-explorer.md)   
+ [Hide System Objects in Object Explorer](../object/hide-system-objects-in-object-explorer.md)   
  [Export Registered Server Information &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)   
  [Import Registered Server Information &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  
   

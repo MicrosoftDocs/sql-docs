@@ -22,8 +22,8 @@ manager: "jhubbard"
  [Tutorial: SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
 ## See Also  
- [Tutorials for SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md)   
+ [Tutorials for SQL Server 2014](tutorial-sql-server-management-studio.md)   
  [Database Engine Tutorials](../../relational-databases/database-engine-tutorials.md)   
- [SQL Server Management Studio](../sql-server-management-studio.md)  
+ [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

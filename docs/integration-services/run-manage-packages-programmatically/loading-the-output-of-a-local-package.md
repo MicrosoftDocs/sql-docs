@@ -2,7 +2,7 @@
 title: "Loading the Output of a Local Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "run-manage-packages-programmatically"

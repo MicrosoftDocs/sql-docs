@@ -2,7 +2,7 @@
 title: "Migrating SQL Server logins (Data Migration Assistant) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "dma"
 ms.service: ""
 ms.component:

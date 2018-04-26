@@ -219,7 +219,7 @@ Sometimes the errors we find in the agent history prove to be insufficient in he
     ![output](media/troubleshooting-tran-repl-errors/output.png)
 
     
-1. To disable verbose logging, follow the same steps as before but this time remove everything after -Output. 
+1. To disable verbose logging, follow the same steps as before but this time remove the entire line you just added, starting with -Output. 
 
 For more information, please see [Enabling verbose logging for replication agents](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se) 
 

@@ -32,14 +32,14 @@ manager: "jhubbard"
   
 3.  Click the **Control Flow** tab.  
   
-4.  If the package does not already include an Execute SQL task, add one to the control flow of the package. For more information, see [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  If the package does not already include an Execute SQL task, add one to the control flow of the package. For more information, see [Add or Delete a Task or a Container in a Control Flow](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Double-click the Execute SQL task.  
   
 6.  In the **Execute SQL Task Editor** dialog box, on the **General** page, select the **Single row**, **Full result set**, or **XML** result set type.  
   
-     For descriptions of the different result sets, see [Result Sets in the Execute SQL Task](control-flow/execute-sql-task.md)  
+     For descriptions of the different result sets, see [Result Sets in the Execute SQL Task](result-sets-in-the-execute-sql-task.md)  
   
 7.  Click **Result Set**.  
   

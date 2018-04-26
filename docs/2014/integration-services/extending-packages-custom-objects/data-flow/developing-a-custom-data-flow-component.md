@@ -77,7 +77,7 @@ manager: "jhubbard"
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>  
  Contains the classes and interfaces used to create the user interface for data flow components.  
   
- [Integration Services Error and Message Reference](../../../integration-services-error-and-message-reference.md)  
+ [Integration Services Error and Message Reference](../../integration-services-error-and-message-reference.md)  
  Lists the predefined [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] error codes with their symbolic names and descriptions.  
   
 ## Related Sections  

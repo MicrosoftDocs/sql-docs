@@ -68,20 +68,20 @@ manager: "jhubbard"
 ## Managing Package Storage  
  To organize packages, you can add custom folders to the root package store folders that the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service lists in its configuration file. By default, the root folders are the **File System** and **MSDB** folders. For example, you might want to add to the **File System** folder a **Data Cleaning** folder that contains all the packages used for cleaning data. You can add custom folders to custom folders, creating a nested folder hierarchy to suit your needs. The custom folders can be deleted and renamed; however, you cannot rename or delete the root folders that the configuration file specifies. To update the root folders that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lists, you must update the configuration file.  
   
- For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](integration-services-service-ssis-service.md).  
+ For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 ## Importing and Exporting Packages  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages can be saved to either to the msdb database or to the file system. You can copy a package from one storage type to the other by using the import or export feature that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides. You can also import a package to the same storage type and give the package a different name, to create a copy of a package. The **dtutil** command prompt utility (dtutil.exe) can also be used to import and export packages.  
   
- For more information, see [dtutil Utility](dtutil-utility.md).  
+ For more information, see [dtutil Utility](../dtutil-utility.md).  
   
 ## Related Tasks  
   
--   [Import and Export Packages &#40;SSIS Service&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+-   [Import and Export Packages &#40;SSIS Service&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../../2014/integration-services/view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## See Also  
- [Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/integration-services-service-ssis-service.md)  
+ [Integration Services Service &#40;SSIS Service&#41;](integration-services-service-ssis-service.md)  
   
   

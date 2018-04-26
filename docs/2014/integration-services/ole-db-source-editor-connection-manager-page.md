@@ -98,6 +98,6 @@ manager: "jhubbard"
  [OLE DB Source Editor &#40;Columns Page&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [OLE DB Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extract Data by Using the OLE DB Source](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md)  
+ [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)  
   
   

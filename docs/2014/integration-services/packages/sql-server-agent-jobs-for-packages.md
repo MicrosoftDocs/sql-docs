@@ -33,7 +33,7 @@ manager: "jhubbard"
 -   [Troubleshooting scheduled packages](#trouble)  
   
 ##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is the service installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that lets you automate and schedule tasks by running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be running before jobs can run automatically. For more information, see [Configure SQL Server Agent](../../analysis-services/instances/sql-server-agent.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is the service installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that lets you automate and schedule tasks by running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be running before jobs can run automatically. For more information, see [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
  The **SQL Server Agent** node appears in Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] when you connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  After you create the job and the job steps, you can create a schedule for running the job. However you can also create an unscheduled job that you run manually. For more information, see [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- You can enhance the job by setting notification options, such as specifying an operator to send an e-mail message to when the job finishes, or adding alerts. For more information, see [Alerts](../../reporting-services/alerts.md).  
+ You can enhance the job by setting notification options, such as specifying an operator to send an e-mail message to when the job finishes, or adding alerts. For more information, see [Alerts](../../ssms/agent/alerts.md).  
   
 ##  <a name="packages"></a> Scheduling Integration Services Packages  
  When you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job to schedule [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, you must add at least one step and set the type of the step to **SQL Server Integration Services Package**. A job can include multiple steps, and each step can run a different package.  

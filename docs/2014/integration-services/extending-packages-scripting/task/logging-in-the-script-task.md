@@ -33,7 +33,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Although you can perform logging directly from your Script task, you may want to consider implementing events rather than logging. When using events, not only can you enable the logging of event messages, but you can also respond to the event with default or user-defined event handlers.  
   
- For more information about logging, see [Integration Services &#40;SSIS&#41; Logging](../performance/integration-services-ssis-logging.md).  
+ For more information about logging, see [Integration Services &#40;SSIS&#41; Logging](../../performance/integration-services-ssis-logging.md).  
   
 ## Logging Example  
  The following example demonstrates logging from the Script task by logging a value that represents the number of rows processed.  
@@ -100,6 +100,6 @@ public class ScriptMain
 |![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; Logging](../../performance/integration-services-ssis-logging.md)  
   
   

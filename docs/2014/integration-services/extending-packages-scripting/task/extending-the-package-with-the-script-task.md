@@ -40,7 +40,7 @@ manager: "jhubbard"
  [Configuring the Script Task in the Script Task Editor](configuring-the-script-task-in-the-script-task-editor.md)  
  Explains how the properties that you configure in the **Script Task Editor** affect the capabilities and the performance of the code in the Script task.  
   
- [Coding and Debugging the Script Task](../control-flow/script-task.md)  
+ [Coding and Debugging the Script Task](../../control-flow/script-task.md)  
  Explains how to use [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) to develop the scripts that are contained in the Script task.  
   
  [Using Variables in the Script Task](using-variables-in-the-script-task.md)  

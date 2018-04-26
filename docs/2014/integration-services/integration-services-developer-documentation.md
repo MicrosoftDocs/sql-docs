@@ -62,10 +62,10 @@ manager: "jhubbard"
  [Extending Packages with Scripting](extending-packages-scripting/extending-packages-with-scripting.md)  
  Describes how to extend the control flow by using the Script task, or the data flow by using the Script component.  
   
- [Extending Packages with Custom Objects](dev-guide/extending-packages-with-custom-objects.md)  
+ [Extending Packages with Custom Objects](extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Describes how to create and program custom tasks, data flow components, and other package objects for use in multiple packages.  
   
- [Building Packages Programmatically](dev-guide/building-packages-programmatically.md)  
+ [Building Packages Programmatically](building-packages-programmatically/building-packages-programmatically.md)  
  Describes how to create, configure, and save [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages programmatically.  
   
  [Running and Managing Packages Programmatically](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  

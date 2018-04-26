@@ -45,18 +45,18 @@ manager: "jhubbard"
 ## Execution and Logging  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages can be enabled for logging and you can capture run-time information in log files. For more information, see [Integration Services &#40;SSIS&#41; Logging](../performance/integration-services-ssis-logging.md).  
   
- You can monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that are deployed to and run on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using operation reports. The reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+ You can monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that are deployed to and run on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using operation reports. The reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Reports for the Integration Services Server](../reports-for-the-integration-services-server.md).  
   
 ## Related Tasks  
   
--   [Schedule a Package by using SQL Server Agent](../ssms/agent/sql-server-agent.md)  
+-   [Schedule a Package by using SQL Server Agent](../../ssms/agent/sql-server-agent.md)  
   
--   [Run a Package in SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)  
+-   [Run a Package in SQL Server Data Tools](run-a-package-in-sql-server-data-tools.md)  
   
--   [Run a Package on the SSIS Server Using SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
+-   [Run a Package on the SSIS Server Using SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
 ## See Also  
  [dtexec Utility](dtexec-utility.md)   
- [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+ [SQL Server Import and Export Wizard](../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
   

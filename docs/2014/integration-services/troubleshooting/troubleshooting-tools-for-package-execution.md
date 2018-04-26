@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   **Add friendly information to the error outputs**. You can make it easier to analyze the error output by adding descriptive information in addition to the two numeric identifiers that are supplied by the error output.  
   
-     **Add the description of the error**. It is easy to look up the error description by using a Script component. For more information, see [Enhancing an Error Output for the Script Component](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-for-the-script-component.md).  
+     **Add the description of the error**. It is easy to look up the error description by using a Script component. For more information, see [Enhancing an Error Output for the Script Component](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
      **Add the name of the error column**. Looking up the column name that corresponds to the column ID saved by the error output cannot easily be done in the Script component and requires additional steps. Each column ID in a data flow is unique within that Data Flow task, and is persisted in the package at design time. The following approach is one suggestion for adding the column name to the error output. For an example of how to use this approach, see [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546) on dougbert.com.  
   

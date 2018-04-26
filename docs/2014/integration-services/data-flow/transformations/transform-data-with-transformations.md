@@ -57,7 +57,7 @@ manager: "jhubbard"
 -   [Set the Properties of a Data Flow Component](../set-the-properties-of-a-data-flow-component.md)  
   
 ## See Also  
- [Data Flow Task](../control-flow/data-flow-task.md)   
+ [Data Flow Task](../../control-flow/data-flow-task.md)   
  [Data Flow](../data-flow.md)   
  [Connect Components with Paths](../../connect-components-with-paths.md)   
  [Error Handling in Data](../error-handling-in-data.md)   

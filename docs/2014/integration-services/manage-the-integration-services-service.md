@@ -51,8 +51,8 @@ manager: "jhubbard"
 -   [View Events for the Integration Services Service](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
 ## See Also  
- [Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/integration-services-service-ssis-service.md)   
- [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md)   
+ [Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md)   
+ [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md)   
  [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [dtexec Utility](packages/dtexec-utility.md)   
  [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md)  

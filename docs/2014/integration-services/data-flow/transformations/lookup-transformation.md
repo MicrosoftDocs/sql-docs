@@ -85,7 +85,7 @@ manager: "jhubbard"
   
 -   ***Share the cache file between multiple packages. For more information, see***  [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
--   Deploy the cache file with a package. ***You can then use the data on multiple computers.*** For more information, see [Create and Deploy a Cache for the Lookup Transformation](lookup-transformation.md).  
+-   Deploy the cache file with a package. ***You can then use the data on multiple computers.*** For more information, see [Create and Deploy a Cache for the Lookup Transformation](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Use the Raw File source to read data from the cache file. You can then use other data flow components to transform or move the data. For more information, see [Raw File Source](../raw-file-source.md).  
   
@@ -141,6 +141,6 @@ manager: "jhubbard"
  [Fuzzy Lookup Transformation](fuzzy-lookup-transformation.md)   
  [Term Lookup Transformation](term-lookup-transformation.md)   
  [Data Flow](../data-flow.md)   
- [Integration Services Transformations](../integration-services-transformations.md)  
+ [Integration Services Transformations](integration-services-transformations.md)  
   
   

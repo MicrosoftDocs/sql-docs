@@ -75,10 +75,10 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Assign a Reader and Writer Role to a Package](../../2014/integration-services/assign-a-reader-and-writer-role-to-a-package.md)  
+-   [Assign a Reader and Writer Role to a Package](../assign-a-reader-and-writer-role-to-a-package.md)  
   
--   [Create a User-Defined Role](../../2014/integration-services/create-a-user-defined-role.md)  
+-   [Create a User-Defined Role](../create-a-user-defined-role.md)  
   
--   [Connect to Integration Services](../../2014/integration-services/connect-to-integration-services.md)  
+-   [Connect to Integration Services](../connect-to-integration-services.md)  
   
   

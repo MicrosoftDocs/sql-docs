@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Using Variables in the Script Component
-  Variables store values that a package and its containers, tasks, and event handlers can use at run time. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  
+  Variables store values that a package and its containers, tasks, and event handlers can use at run time. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md).  
   
  You can make existing variables available for read-only or read/write access by your custom script by entering comma-delimited lists of variables in the `ReadOnlyVariables` and `ReadWriteVariables` fields on the **Script** page of the **Script Transformation Editor**. Keep in mind that variable names are case-sensitive. Use the `Value` property to read from and write to individual variables. The Script component handles any required locking behind the scenes as your script manipulates the variables at run time.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
 |![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md)   
  [Use Variables in Packages](../../use-variables-in-packages.md)  
   
   

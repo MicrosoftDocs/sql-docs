@@ -77,9 +77,9 @@ manager: "jhubbard"
 ## Tasks Connections and Groups  
  If the task contains more than one task, they are connected and sequenced in the control flow by precedence constraints. For more information, see [Precedence Constraints](precedence-constraints.md).  
   
- Tasks can be grouped together and performed as a single unit of work, or repeated in a loop. For more information, see [Foreach Loop Container](../foreach-loop-container.md), [For Loop Container](../for-loop-container.md), and [Sequence Container](sequence-container.md).  
+ Tasks can be grouped together and performed as a single unit of work, or repeated in a loop. For more information, see [Foreach Loop Container](foreach-loop-container.md), [For Loop Container](for-loop-container.md), and [Sequence Container](sequence-container.md).  
   
 ## Related Tasks  
- [Add or Delete a Task or a Container in a Control Flow](../control-flow.md)  
+ [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

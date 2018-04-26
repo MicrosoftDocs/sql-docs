@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 -   [Configure a Foreach Loop Container](foreach-loop-container.md)  
   
--   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
  For details about programmatically setting these properties, click the following topic:  
   

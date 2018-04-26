@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Export Column Transformation](export-column-transformation.md)   
- [Data Flow](../../data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   
   

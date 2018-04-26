@@ -133,7 +133,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Unpivot Transformation](pivot-transformation.md)   
- [Data Flow](../../data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   
   

@@ -51,7 +51,7 @@ REPLACE(character_expression,searchstring,replacementstring)
   
  The *searchstring* and *replacementstring* arguments can use variables and columns.  
   
- REPLACE works only with the DT_WSTR data type. *character_expression1, character_expression2,* and *character_expression3* arguments that are string literals or data columns with the DT_STR data type are implicitly cast to the DT_WSTR data type before REPLACE performs its operation. Other data types must be explicitly cast to the DT_WSTR data type. For more information, see [Cast &#40;SSIS Expression&#41;](../cast-ssis-expression.md).  
+ REPLACE works only with the DT_WSTR data type. *character_expression1, character_expression2,* and *character_expression3* arguments that are string literals or data columns with the DT_STR data type are implicitly cast to the DT_WSTR data type before REPLACE performs its operation. Other data types must be explicitly cast to the DT_WSTR data type. For more information, see [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   
  REPLACE returns a null result if any argument is null.  
   

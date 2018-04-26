@@ -18,15 +18,15 @@ manager: "jhubbard"
 # Working with the Oracle CDC Service
   This section describes some important concepts of the Oracle CDC Service. The concepts included in this section are:  
   
--   [The MSXDBCDC Database](the-oracle-cdc-service.md#bkmk_msxdbcdc)  
+-   [The MSXDBCDC Database](#BKMK_MSXDBCDC)  
   
      This section describes the tables that are included in this database and how it is important to CDC.  
   
--   [The CDC Databases](the-oracle-cdc-service.md#bkmk_cdcdatabase)  
+-   [The CDC Databases](#BKMK_CDCdatabas)  
   
      This section provides a brief description of the CDC databases. These databases are created using the Oracle CDC Designer Console. See the documentation included with your installation of the CDC Designer Console for more information about the CDC databases.  
   
--   [Using the Command Line to Configure the CDC Service](the-oracle-cdc-service.md#bkmk_commandconfigcdc)  
+-   [Using the Command Line to Configure the CDC Service](#BKMK_CommandConfigCDC)  
   
      This section describes the command-line commands that can be used to configure the Oracle CDC Service.  
   
@@ -55,11 +55,11 @@ manager: "jhubbard"
 ### The MSXDBCDC Database Tables  
  This section describes the following tables in the MSXDBCDC database.  
   
--   [dbo.xdbcdc_trace](the-oracle-cdc-service.md#bkmk_dboxdbcdc_trace)  
+-   [dbo.xdbcdc_trace](the-oracle-cdc-service.md#BKMK_dboxdbcdc_trace)  
   
--   [dbo.xdbcdc_databases](the-oracle-cdc-service.md#bkmk_dboxdbcdc_databases)  
+-   [dbo.xdbcdc_databases](the-oracle-cdc-service.md#BKMK_dboxdbcdc_databases)  
   
--   [dbo.xdbcdc_services](the-oracle-cdc-service.md#bkmk_dboxdbcdc_services)  
+-   [dbo.xdbcdc_services](the-oracle-cdc-service.md#BKMK_dboxdbcdc_services)  
   
 ###  <a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
  This table stores tracing information for the Oracle CDC Service. The information stored in this table includes notable status changes and trace records.  
@@ -112,15 +112,15 @@ manager: "jhubbard"
 ### The MSXDBCDC Database Stored Procedures  
  This section describes the following stored procedures in the MSXDBCDC database.  
   
--   [dbo.xcbcdc_reset_db(Database Name)](the-oracle-cdc-service.md#bkmk_dboxcbcdc_reset_db)  
+-   [dbo.xcbcdc_reset_db(Database Name)](#BKMK_dboxcbcdc_reset_db)  
   
--   [dbo.xdbcdc_disable_db(dbname)](the-oracle-cdc-service.md#bkmk_dboxdbcdc_disable_db)  
+-   [dbo.xdbcdc_disable_db(dbname)](#BKMK_dboxdbcdc_disable_db)  
   
--   [dbo.xcbcdc_add_service(svcname,sqlusr)](the-oracle-cdc-service.md#bkmk_dboxcbcdc_add_service)  
+-   [dbo.xcbcdc_add_service(svcname,sqlusr)](#BKMK_dboxcbcdc_add_service)  
   
--   [dbo.xdbcdc_start(dbname)](the-oracle-cdc-service.md#bkmk_dboxdbcdc_start)  
+-   [dbo.xdbcdc_start(dbname)](#BKMK_dboxdbcdc_start)  
   
--   [dbo.xdbcdc_stop(dbname)](the-oracle-cdc-service.md#bkmk_dboxdbcdc_stop)  
+-   [dbo.xdbcdc_stop(dbname)](#BKMK_dboxdbcdc_stop)  
   
 ###  <a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db(Database Name)  
  This procedure clears the data of an Oracle CDC instance. It is used:  
@@ -184,11 +184,11 @@ manager: "jhubbard"
 ### Service Program Commands  
  The section describes the following commands that are used to configure the CDC service.  
   
--   [Config](the-oracle-cdc-service.md#bkmk_config)  
+-   [Config](#BKMK_config)  
   
--   [Create](the-oracle-cdc-service.md#bkmk_create)  
+-   [Create](#BKMK_create)  
   
--   [Delete](the-oracle-cdc-service.md#bkmk_delete)  
+-   [Delete](#BKMK_delete)  
   
 ###  <a name="BKMK_config"></a> Config  
  Use `Config` to update an Oracle CDC Service configuration from a script. The command can be used to update only specific parts of the CDC service configuration (for example, only the connection string without knowing the asymmetric key password). The command must be run by a computer administrator. The following is an example of the `Config` command.  

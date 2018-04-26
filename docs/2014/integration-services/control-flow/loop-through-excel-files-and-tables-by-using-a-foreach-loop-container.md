@@ -30,7 +30,7 @@ manager: "jhubbard"
   
      If you do not use a variable for the Extended Properties argument, then you must add it manually to the expression that contains the connection string.  
   
-3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop Container, see [Configure a Foreach Loop Container](../foreach-loop-container.md).  
+3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop Container, see [Configure a Foreach Loop Container](foreach-loop-container.md).  
   
 4.  On the **Collection** page of the **Foreach Loop Editor**, select the Foreach File enumerator, specify the folder in which the Excel workbooks are located, and specify the file filter (ordinarily *.xls).  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
 2.  Create a string variable that will receive the name of the current table on each iteration of the loop.  
   
-3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](../foreach-loop-container.md).  
+3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](foreach-loop-container.md).  
   
 4.  On the **Collection** page of the **Foreach Loop Editor**, select the Foreach ADO.NET Schema Rowset enumerator.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
 9. Create tasks in the Foreach Loop container that use the Excel connection manager to perform the same operations on each Excel table in the specified workbook. If you use a Script Task to examine the enumerated table name or to work with each table, remember to add the string variable to the ReadOnlyVariables property of the Script task.  
   
 ## See Also  
- [Configure a Foreach Loop Container](../foreach-loop-container.md)   
+ [Configure a Foreach Loop Container](foreach-loop-container.md)   
  [Add or Change a Property Expression](../expressions/add-or-change-a-property-expression.md)   
  [Excel Connection Manager](../connection-manager/excel-connection-manager.md)   
  [Excel Source](../data-flow/excel-source.md)   

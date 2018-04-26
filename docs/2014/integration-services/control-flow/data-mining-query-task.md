@@ -60,7 +60,7 @@ manager: "jhubbard"
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
 ## Programmatic Configuration of Data Mining Query Task  
  For more information about programmatically setting these properties, click one of the following topics:  

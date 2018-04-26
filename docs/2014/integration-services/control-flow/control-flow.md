@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 -   [Add or Delete a Task or a Container in a Control Flow](control-flow.md)  
   
--   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
 -   [Group or Ungroup Components](group-or-ungroup-components.md)  
   

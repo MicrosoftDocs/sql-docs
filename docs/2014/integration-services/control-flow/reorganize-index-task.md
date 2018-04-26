@@ -39,7 +39,7 @@ manager: "jhubbard"
 -   [Reorganize Index Task &#40;Maintenance Plan&#41;](../relational-databases/maintenance-plans/reorganize-index-task-maintenance-plan.md)  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md).  
   
 ## See Also  
  [Integration Services Tasks](integration-services-tasks.md)   

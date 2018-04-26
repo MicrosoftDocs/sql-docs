@@ -56,9 +56,9 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click one of the following topic:  
   
--   [Configure ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)  
+-   [Configure ADO.NET Connection Manager](../configure-ado-net-connection-manager.md)  
   
- For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](building-packages-programmatically/adding-connections-programmatically.md).  
+ For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](integration-services-ssis-connections.md)  

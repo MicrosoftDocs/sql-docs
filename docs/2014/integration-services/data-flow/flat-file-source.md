@@ -70,6 +70,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Flat File Destination](flat-file-destination.md)   
- [Data Flow](../data-flow.md)  
+ [Data Flow](data-flow.md)  
   
   

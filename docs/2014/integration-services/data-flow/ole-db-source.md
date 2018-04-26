@@ -119,6 +119,6 @@ manager: "jhubbard"
 ## See Also  
  [OLE DB Destination](ole-db-destination.md)   
  [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
- [Data Flow](../data-flow.md)  
+ [Data Flow](data-flow.md)  
   
   

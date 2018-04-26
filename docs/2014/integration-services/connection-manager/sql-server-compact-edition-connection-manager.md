@@ -48,6 +48,6 @@ manager: "jhubbard"
   
 -   [SQL Server Compact Edition Connection Manager Editor &#40;All Page&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
- For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../dev-guide/adding-connections-programmatically.md).  
+ For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

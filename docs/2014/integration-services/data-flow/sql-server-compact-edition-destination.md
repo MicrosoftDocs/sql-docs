@@ -48,6 +48,6 @@ manager: "jhubbard"
  For more information about how to set properties of this component, see [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md).  
   
 ## See Also  
- [Data Flow](../data-flow.md)  
+ [Data Flow](data-flow.md)  
   
   

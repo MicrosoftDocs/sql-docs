@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 -   [Multiple Flat Files Connection Manager Editor &#40;Preview Page&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../dev-guide/adding-connections-programmatically.md).  
+ For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## See Also  
  [Flat File Source](../data-flow/flat-file-source.md)   

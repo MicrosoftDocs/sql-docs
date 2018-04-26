@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  This means that the FTP task can receive multiple files and delete multiple remote files; but the task can send only one file and delete only one local file if it uses a connection manager, because a File connection manager can access only one file. To access multiple local files, the FTP task must use a variable to provide the path information. For example, a variable that contains "C:\Test\\*.txt" provides a path that supports deleting or sending all the files that have a .txt extension in the Test directory.  
   
- To send multiple files and access multiple local files and directories, you can also execute the FTP task multiple times by including the task in a Foreach Loop. The Foreach Loop can enumerate across files in a directory using the For Each File enumerator. For more information, see [Foreach Loop Container](../foreach-loop-container.md).  
+ To send multiple files and access multiple local files and directories, you can also execute the FTP task multiple times by including the task in a Foreach Loop. The Foreach Loop can enumerate across files in a directory using the For Each File enumerator. For more information, see [Foreach Loop Container](foreach-loop-container.md).  
   
  The FTP task supports the *?* and *\** wildcard characters in paths. This lets the task access multiple files. However, you can use wildcard characters only in the part of the path that specifies the file name. For example, C:\MyDirectory\\*.txt is a valid path, but C:\\\*\MyText.txt is not.  
   
@@ -76,6 +76,6 @@ manager: "jhubbard"
  [FTP Task Editor &#40;General Page&#41;](../general-page-of-integration-services-designers-options.md)   
  [FTP Task Editor &#40;File Transfer Page&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services Tasks](integration-services-tasks.md)   
- [Control Flow](../control-flow.md)  
+ [Control Flow](control-flow.md)  
   
   

@@ -21,7 +21,7 @@ manager: "jhubbard"
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to prepare to query for the change data and add a Data Flow task.  
   
 > [!NOTE]  
->  The second task for the control flow is to ensure that the change data for the selected interval is ready. For more information about this task, see [Determine Whether the Change Data Is Ready](determine-whether-the-change-data-is-ready.md). For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](../change-data-capture-ssis.md).  
+>  The second task for the control flow is to ensure that the change data for the selected interval is ready. For more information about this task, see [Determine Whether the Change Data Is Ready](determine-whether-the-change-data-is-ready.md). For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
   
 ## Design Considerations  
  To retrieve the change data, you will call a Transact-SQL table-valued function that accepts the endpoints of the interval as input parameters and returns change data for the specified interval. A source component in the data flow calls this function. For information about this source component, see [Retrieve and Understand the Change Data](retrieve-and-understand-the-change-data.md).  

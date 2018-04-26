@@ -54,7 +54,7 @@ manager: "jhubbard"
  For information about how to set properties of the component in the [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md).  
   
 ## See Also  
- [Add or Delete a Task or a Container in a Control Flow](../control-flow.md)   
+ [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Connect Tasks and Containers by Using a Default Precedence Constraint](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Integration Services Containers](integration-services-containers.md)  
   

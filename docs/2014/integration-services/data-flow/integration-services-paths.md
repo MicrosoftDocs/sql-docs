@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Integration Services Paths
   A path connects two components in a data flow by connecting the output of one data flow component to the input of another component. A path has a source and a destination. For example, if a path connects an OLE DB source and a Sort transformation, the OLE DB source is the source of the path, and the Sort transformation is the destination of the path. The source is the component where the path starts, and the destination is the component where the path ends.  
   
- If you run a package in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, you can view the data in a data flow by attaching data viewers to a path. A data viewer can be configured to display data in a grid. A data viewer is a useful debugging tool. For more information, see [Debugging Data Flow](../data-flow.md).  
+ If you run a package in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, you can view the data in a data flow by attaching data viewers to a path. A data viewer can be configured to display data in a grid. A data viewer is a useful debugging tool. For more information, see [Debugging Data Flow](data-flow.md).  
   
 ## Configuration of the Path  
  The [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides the **Data Flow Path Editor** dialog box for setting path properties, viewing the metadata of the data columns that pass through the path, and configuring data viewers.  
@@ -54,6 +54,6 @@ manager: "jhubbard"
 -   [Connect Components in a Data Flow](connect-components-in-a-data-flow.md)  
   
 ## See Also  
- [Data Flow](../data-flow.md)  
+ [Data Flow](data-flow.md)  
   
   

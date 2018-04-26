@@ -77,6 +77,6 @@ manager: "jhubbard"
   
 -   [Flat File Connection Manager Editor &#40;Preview Page&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../dev-guide/adding-connections-programmatically.md).  
+ For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

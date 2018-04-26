@@ -41,7 +41,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
  DT_I4  
   
 ## Remarks  
- FINDSTRING works only with the DT_WSTR data type.  *character_expression* and *searchstring* arguments that are string literals or data columns with the DT_STR data type are implicitly cast to the DT_WSTR data type before FINDSTRING performs its operation. Other data types must be explicitly cast to the DT_WSTR data type. For more information, see [Integration Services Data Types](../data-flow/integration-services-data-types.md) and [Cast &#40;SSIS Expression&#41;](../cast-ssis-expression.md).  
+ FINDSTRING works only with the DT_WSTR data type.  *character_expression* and *searchstring* arguments that are string literals or data columns with the DT_STR data type are implicitly cast to the DT_WSTR data type before FINDSTRING performs its operation. Other data types must be explicitly cast to the DT_WSTR data type. For more information, see [Integration Services Data Types](../data-flow/integration-services-data-types.md) and [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   
  FINDSTRING returns null if either *character_expression* or *searchstring* are null.  
   

@@ -39,10 +39,10 @@ manager: "jhubbard"
 4.  Configure the Foreach Loop container. For more information, see [Configure a Foreach Loop Container](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## See Also  
- [Add or Delete a Task or a Container in a Control Flow](control-flow/control-flow.md)   
+ [Add or Delete a Task or a Container in a Control Flow](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Group or Ungroup Components](group-or-ungroup-components.md)   
  [Precedence Constraints](control-flow/precedence-constraints.md)   
- [Add Iteration to a Control Flow](../../2014/integration-services/add-iteration-to-a-control-flow.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)  
+ [Add Iteration to a Control Flow](add-iteration-to-a-control-flow.md)   
+ [Control Flow](control-flow/control-flow.md)  
   
   

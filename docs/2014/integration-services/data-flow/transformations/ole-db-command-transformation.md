@@ -48,7 +48,7 @@ manager: "jhubbard"
  You can configure the transformation by either using the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or the object model. For details about configuring the transformation using the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] designer, see  [Configure the OLE DB Command Transformation](../../ole-db-command-transformation.md). See the Developer Guide for details about programmatically configuring this transformation.  
   
 ## See Also  
- [Data Flow](../../data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   
   

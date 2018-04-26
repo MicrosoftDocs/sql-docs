@@ -40,6 +40,6 @@ manager: "jhubbard"
  Copy data in the current buffer to the Clipboard.  
   
 ## See Also  
- [Debugging Data Flow](../data-flow.md)  
+ [Debugging Data Flow](../troubleshooting/debugging-data-flow.md)  
   
   

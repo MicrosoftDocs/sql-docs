@@ -44,6 +44,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Tasks](integration-services-tasks.md)   
- [Control Flow](../control-flow.md)  
+ [Control Flow](control-flow.md)  
   
   

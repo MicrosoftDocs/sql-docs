@@ -21,7 +21,7 @@ manager: "jhubbard"
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the second task is to ensure that the change data for the selected interval is ready. This step is necessary because the asynchronous capture process might not yet have processed all the changes up to the selected endpoint.  
   
 > [!NOTE]  
->  The first task for the control flow is to calculate the endpoints of the change interval. For more information about this task, see [Specify an Interval of Change Data](specify-an-interval-of-change-data.md). For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](../change-data-capture-ssis.md).  
+>  The first task for the control flow is to calculate the endpoints of the change interval. For more information about this task, see [Specify an Interval of Change Data](specify-an-interval-of-change-data.md). For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
   
 ## Understanding the Components of the Solution  
  The solution described in this topic uses 4 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components:  

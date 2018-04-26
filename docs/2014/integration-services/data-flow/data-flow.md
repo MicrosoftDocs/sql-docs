@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  Additionally, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides paths that connect the output of one component to the input of another component. Paths define the sequence of components, and let you add annotations to the data flow or view the source of the column.  
   
- You connect data flow components by connecting the output of sources and destinations to the input of transformations and destinations. When constructing a data flow you typically connect the second and subsequent components as you add them to the data flow. After you connect the component, the input columns are available for use in configuring the component. When no input columns are available, you will have to complete the configuration of the component after it is connected to the data flow. For more information, see [Integration Services Paths](integration-services-paths.md) and [Connect Components with Paths](../../2014/integration-services/connect-components-with-paths.md).  
+ You connect data flow components by connecting the output of sources and destinations to the input of transformations and destinations. When constructing a data flow you typically connect the second and subsequent components as you add them to the data flow. After you connect the component, the input columns are available for use in configuring the component. When no input columns are available, you will have to complete the configuration of the component after it is connected to the data flow. For more information, see [Integration Services Paths](integration-services-paths.md) and [Connect Components with Paths](../connect-components-with-paths.md).  
   
  The following diagram shows a data flow that has a source, a transformation with one input and one output, and a destination. The diagram includes the inputs, outputs, and error outputs in addition to the input, output, and external columns.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
 ## Data Flow Implementation  
  Adding a Data Flow task to the control flow of a package is the first step in implementing a data flow in a package. A package can include multiple Data Flow tasks, each with its own data flow. For example, if a package requires that data flows be run in a specified sequence, or that other tasks be performed between the data flows, you must use a separate Data Flow task for each data flow.  
   
- After the control flow includes a Data Flow task, you can begin to build the data flow that a package uses. For more information, see [Data Flow Task](control-flow/data-flow-task.md).  
+ After the control flow includes a Data Flow task, you can begin to build the data flow that a package uses. For more information, see [Data Flow Task](../control-flow/data-flow-task.md).  
   
  Creating a data flow includes the following steps:  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
  When the **Data Flow** tab is active, the Toolbox contains the sources, transformations, and destinations that you can add to the data flow.  
   
 ## Expressions  
- A number of the data flow components—sources, transformations, and destinations—support the use of property expressions in some of their properties. A property expression is an expression that replaces the value of the property when the package is loaded. At run time, the package uses the updated property values. The expressions are built using the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] expression syntax and can include [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] functions, operators, identifiers, and variables. For more information, see [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), and [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md).  
+ A number of the data flow components—sources, transformations, and destinations—support the use of property expressions in some of their properties. A property expression is an expression that replaces the value of the property when the package is loaded. At run time, the package uses the updated property values. The expressions are built using the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] expression syntax and can include [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] functions, operators, identifiers, and variables. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md), [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md), and [Use Property Expressions in Packages](../expressions/use-property-expressions-in-packages.md).  
   
  If you construct a package in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the properties of any data flow components that support property expressions are exposed on the Data Flow task to which they belong. To add, change, and remove the property expressions of data flow components, click the Data Flow task, and then use the Properties window or the editor for the task to add, change, or delete property expressions. Property expressions for the Data Flow task itself are managed in the Properties window.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
   
  All the output columns are available as input columns to the next data flow component in the data flow.  
   
- You can also write custom sources. For more information, see [Developing a Custom Data Flow Component](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
+ You can also write custom sources. For more information, see [Developing a Custom Data Flow Component](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
  The following sources have properties that can be updated by property expressions:  
   
@@ -145,7 +145,7 @@ manager: "jhubbard"
   
  The [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model does not restrict the number of regular inputs and error outputs that destinations can have, and you can create custom destinations that implement multiple inputs and error outputs.  
   
- You can also write custom destinations. For more information, see [Developing a Custom Data Flow Component](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
+ You can also write custom destinations. For more information, see [Developing a Custom Data Flow Component](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
  The following destinations have properties that can be updated by property expressions:  
   
@@ -165,7 +165,7 @@ manager: "jhubbard"
  For a demonstration on how to leverage the performance gains of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity, see [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369).  
   
 ## Connection Managers  
- Many data flow components connect to data sources, and you must add the connection managers that the components require to the package before the component can be configured correctly. You can add the connection managers as you construct the data flow, or before you start to construct the data flow. For more information, see [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](../../2014/integration-services/create-connection-managers.md).  
+ Many data flow components connect to data sources, and you must add the connection managers that the components require to the package before the component can be configured correctly. You can add the connection managers as you construct the data flow, or before you start to construct the data flow. For more information, see [Integration Services &#40;SSIS&#41; Connections](../connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](../create-connection-managers.md).  
   
 ## External Metadata  
  When you create a data flow in a package using [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the metadata from the sources and destinations is copied to the external columns on sources and destinations, serving as a snapshot of the schema. When [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] validates the package, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer compares this snapshot against the schema of the source or destination, and posts errors and warnings, depending on the changes.  
@@ -192,7 +192,7 @@ manager: "jhubbard"
 ## Paths  
  Paths connect data flow components. In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, you can view and modify the path properties, view the output metadata for the path start point, and attach data viewers to a path.  
   
- For more information, see [Integration Services Paths](integration-services-paths.md) and [Debugging Data Flow](data-flow.md).  
+ For more information, see [Integration Services Paths](integration-services-paths.md) and [Debugging Data Flow](../troubleshooting/debugging-data-flow.md).  
   
 ## Configuration of Data Flow Components  
  Data flow components can be configured at the component level; at the input, output, and error output levels; and at the column level.  

@@ -82,6 +82,6 @@ manager: "jhubbard"
 ## See Also  
  [Transfer SQL Server Objects Task](transfer-sql-server-objects-task.md)   
  [Integration Services Tasks](integration-services-tasks.md)   
- [Control Flow](../control-flow.md)  
+ [Control Flow](control-flow.md)  
   
   

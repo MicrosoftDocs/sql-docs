@@ -41,11 +41,11 @@ manager: "jhubbard"
 ## Configuration of the Sort Transformation  
  You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in the **Sort Transformation Editor** dialog box, see [Sort Transformation Editor](../../2014/integration-services/sort-transformation-editor.md).  
+ For information about the properties that you can set in the **Sort Transformation Editor** dialog box, see [Sort Transformation Editor](../../sort-transformation-editor.md).  
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Transformation Custom Properties](transformation-custom-properties.md)  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  Sample, [SortDeDuplicateDelimitedString Custom SSIS Component](http://go.microsoft.com/fwlink/?LinkId=220821), on codeplex.com.  
   
 ## See Also  
- [Data Flow](data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Integration Services Transformations](/integration-services-transformations.md)  
   
   

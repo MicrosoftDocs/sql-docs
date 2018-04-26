@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 -   [Configure a For Loop Container](for-loop-container.md)  
   
--   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
 ## See Also  
  [Control Flow](control-flow.md)   

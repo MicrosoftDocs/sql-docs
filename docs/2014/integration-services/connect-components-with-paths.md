@@ -47,8 +47,8 @@ manager: "jhubbard"
 -   [Add a Data Viewer to a Data Flow](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
 ## See Also  
- [Data Flow Task](control-flow/data-flow-task.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
+ [Data Flow Task](data-flow/data-flow-task.md)   
+ [Data Flow](data-flow/data-flow.md)   
  [Transform Data with Transformations](data-flow/transformations/transform-data-with-transformations.md)   
  [Error Handling in Data](data-flow/error-handling-in-data.md)  
   

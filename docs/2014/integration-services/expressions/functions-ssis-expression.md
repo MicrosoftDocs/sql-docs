@@ -67,7 +67,7 @@ manager: "jhubbard"
 |[RIGHT &#40;SSIS Expression&#41;](right-ssis-expression.md)|Returns the specified number of characters from the rightmost portion of the given character expression.|  
 |[RTRIM &#40;SSIS Expression&#41;](rtrim-ssis-expression.md)|Returns a character expression after removing trailing spaces.|  
 |[SUBSTRING &#40;SSIS Expression&#41;](substring-ssis-expression.md)|Returns a part of a character expression.|  
-|[TRIM &#40;SSIS Expression&#41;](../trim-ssis-expression.md)|Returns a character expression after removing leading and trailing spaces.|  
+|[TRIM &#40;SSIS Expression&#41;](trim-ssis-expression.md)|Returns a character expression after removing leading and trailing spaces.|  
 |[UPPER &#40;SSIS Expression&#41;](upper-ssis-expression.md)|Returns a character expression after converting lowercase characters to uppercase characters.|  
   
  The expression evaluator provides the following date and time functions.  
@@ -88,7 +88,7 @@ manager: "jhubbard"
 |Function|Description|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS Expression&#41;](null-ssis-expression.md)|Returns a Boolean result based on whether an expression is null.|  
-|[NULL &#40;SSIS Expression&#41;](../null-ssis-expression.md)|Returns a null value of a requested data type.|  
+|[NULL &#40;SSIS Expression&#41;](null-ssis-expression.md)|Returns a null value of a requested data type.|  
   
  Expression names are shown in uppercase characters, but expression names are not case-sensitive. For example, using "null" works as well as using "NULL".  
   

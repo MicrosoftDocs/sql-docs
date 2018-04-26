@@ -68,7 +68,7 @@ manager: "jhubbard"
   
     |Connection manager|Options|  
     |------------------------|-------------|  
-    |[ADO Connection Manager](connection-manager/ado-connection-manager.md)|[Configure OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)|  
+    |[ADO Connection Manager](connection-manager/ado-connection-manager.md)|[Configure OLE DB Connection Manager](configure-ole-db-connection-manager.md)|  
     |[ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)|[Configure ADO.NET Connection Manager](../../2014/integration-services/configure-ado-net-connection-manager.md)|  
     |[Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)|[Add Analysis Services Connection Manager Dialog Box UI Reference](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Excel Connection Manager](connection-manager/excel-connection-manager.md)|[Excel Connection Manager Editor](../../2014/integration-services/excel-connection-manager-editor.md)|  
@@ -80,7 +80,7 @@ manager: "jhubbard"
     |[HTTP Connection Manager](connection-manager/http-connection-manager.md)|[HTTP Connection Manager Editor &#40;Server Page&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP Connection Manager Editor &#40;Proxy Page&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ Connection Manager](connection-manager/msmq-connection-manager.md)|[MSMQ Connection Manager Editor](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[ODBC Connection Manager](connection-manager/odbc-connection-manager.md)|[ODBC Connection Manager UI Reference](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md)|[Configure OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)|  
+    |[OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)|[Configure OLE DB Connection Manager](configure-ole-db-connection-manager.md)|  
     |[SMO Connection Manager](connection-manager/smo-connection-manager.md)|[SMO Connection Manager Editor](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[SMTP Connection Manager](connection-manager/smtp-connection-manager.md)|[SMTP Connection Manager Editor](../../2014/integration-services/smtp-connection-manager-editor.md)|  
     |[SQL Server Compact Edition Connection Manager](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition Connection Manager Editor &#40;Connection Page&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition Connection Manager Editor &#40;All Page&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
@@ -104,7 +104,7 @@ manager: "jhubbard"
   
     |Connection manager|Options|  
     |------------------------|-------------|  
-    |[ADO Connection Manager](connection-manager/ado-connection-manager.md)|[Configure OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)|  
+    |[ADO Connection Manager](connection-manager/ado-connection-manager.md)|[Configure OLE DB Connection Manager](configure-ole-db-connection-manager.md)|  
     |[ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)|[Configure ADO.NET Connection Manager](../../2014/integration-services/configure-ado-net-connection-manager.md)|  
     |[Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)|[Add Analysis Services Connection Manager Dialog Box UI Reference](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Excel Connection Manager](connection-manager/excel-connection-manager.md)|[Excel Connection Manager Editor](../../2014/integration-services/excel-connection-manager-editor.md)|  
@@ -116,7 +116,7 @@ manager: "jhubbard"
     |[HTTP Connection Manager](connection-manager/http-connection-manager.md)|[HTTP Connection Manager Editor &#40;Server Page&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP Connection Manager Editor &#40;Proxy Page&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ Connection Manager](connection-manager/msmq-connection-manager.md)|[MSMQ Connection Manager Editor](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[ODBC Connection Manager](connection-manager/odbc-connection-manager.md)|[ODBC Connection Manager UI Reference](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md)|[Configure OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)|  
+    |[OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)|[Configure OLE DB Connection Manager](configure-ole-db-connection-manager.md)|  
     |[SMO Connection Manager](connection-manager/smo-connection-manager.md)|[SMO Connection Manager Editor](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[SMTP Connection Manager](connection-manager/smtp-connection-manager.md)|[SMTP Connection Manager Editor](../../2014/integration-services/smtp-connection-manager-editor.md)|  
     |[SQL Server Compact Edition Connection Manager](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition Connection Manager Editor &#40;Connection Page&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition Connection Manager Editor &#40;All Page&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  

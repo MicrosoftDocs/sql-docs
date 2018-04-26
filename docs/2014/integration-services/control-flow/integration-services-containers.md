@@ -37,8 +37,8 @@ manager: "jhubbard"
   
 |Container|Description|  
 |---------------|-----------------|  
-|[Foreach Loop Container](../foreach-loop-container.md)|Runs a control flow repeatedly by using an enumerator.|  
-|[For Loop Container](../for-loop-container.md)|Runs a control flow repeatedly by testing a condition.|  
+|[Foreach Loop Container](foreach-loop-container.md)|Runs a control flow repeatedly by using an enumerator.|  
+|[For Loop Container](for-loop-container.md)|Runs a control flow repeatedly by testing a condition.|  
 |[Sequence Container](sequence-container.md)|Groups tasks and containers into control flows that are subsets of the package control flow.|  
 |[Task Host Container](task-host-container.md)|Provides services to a single task.|  
   
@@ -96,6 +96,6 @@ manager: "jhubbard"
  When you set a breakpoint on a container and the break condition is **Break when the container recevies the OnVariableValueChanged event**, define the variable in the container scope.  
   
 ## See Also  
- [Control Flow](../control-flow.md)  
+ [Control Flow](control-flow.md)  
   
   

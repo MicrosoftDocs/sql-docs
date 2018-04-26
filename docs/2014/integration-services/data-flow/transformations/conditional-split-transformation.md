@@ -68,7 +68,7 @@ manager: "jhubbard"
  [Split a Dataset by Using the Conditional Split Transformation](conditional-split-transformation.md)  
   
 ## See Also  
- [Data Flow](../../data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   
   

@@ -86,6 +86,6 @@ manager: "jhubbard"
 ## See Also  
  [DataReader Destination](datareader-destination.md)   
  [ADO NET Destination](ado-net-destination.md)   
- [Data Flow](../data-flow.md)  
+ [Data Flow](data-flow.md)  
   
   

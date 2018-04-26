@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 |Operator|Description|  
 |--------------|-----------------|  
-|[Cast &#40;SSIS Expression&#41;](../cast-ssis-expression.md)|Converts an expression from one data type to a different data type.|  
+|[Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md)|Converts an expression from one data type to a different data type.|  
 |[&#40;&#41; &#40;Parentheses&#41; &#40;SSIS Expression&#41;](parentheses-ssis-expression.md)|Identifies the evaluation order of expressions.|  
 |[+ &#40;Add&#41; &#40;SSIS&#41;](add-ssis.md)|Adds two numeric expressions.|  
 |[+ &#40;Concatenate&#41; &#40;SSIS Expression&#41;](concatenate-ssis-expression.md)|Concatenates two expressions.|  

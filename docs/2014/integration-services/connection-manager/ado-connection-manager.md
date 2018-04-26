@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   [Configure OLE DB Connection Manager](ole-db-connection-manager.md)  
   
- For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](building-packages-programmatically/adding-connections-programmatically.md).  
+ For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](integration-services-ssis-connections.md)  

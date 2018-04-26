@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  To maintain the `SSISDB` database, it is recommended that you apply standard enterprise policies for managing user databases. For information about creating maintenance plans, see [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- The `SSISDB` catalog and the `SSISDB` database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../../database-engine/availability-groups/windows/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
+ The `SSISDB` catalog and the `SSISDB` database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../../powershell/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
   
  For more information about viewing operations data, see [Monitoring for Package Executions and Other Operations](../performance/monitor-running-packages-and-other-operations.md).  
   
@@ -131,9 +131,9 @@ manager: "jhubbard"
   
  To change the **Encryption Algorithm** property setting, set the `SSISDB` database to the single-user mode and then call the catalog.configure_catalog stored procedure. Use ENCRYPTION_ALGORITHM for the *property_name* argument. For the supported property values, see [catalog.catalog_properties &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). For more information about the stored procedure, see [catalog.configure_catalog &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
- For more information about single-user mode, see [Set a Database to Single-user Mode](../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../relational-databases/security/encryption/sql-server-encryption.md).  
+ For more information about single-user mode, see [Set a Database to Single-user Mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
- A database master key is used for the encryption. The key is created when you create the catalog. For more information, see [Create the SSIS Catalog](catalog/ssis-catalog.md).  
+ A database master key is used for the encryption. The key is created when you create the catalog. For more information, see [Create the SSIS Catalog](ssis-catalog.md).  
   
  The following table lists the property names shown in the **Catalog Properties** dialog box and the corresponding properties in the database view.  
   
@@ -149,7 +149,7 @@ manager: "jhubbard"
 ## Permissions  
  Projects, environments, and packages are contained in folders that are securable objects. You can grant permissions to a folder, including the MANAGE_OBJECT_PERMISSIONS permission. MANAGE_OBJECT_PERMISSIONS enables you to delegate the administration of folder contents to a user without having to grant the user membership to the ssis_admin role. You can also grant permissions to projects, environments, and operations. Operations include initializing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], deploying projects, creating and starting executions, validating projects and packages, and configuring the `SSISDB` catalog.  
   
- For more information about database roles, see [Database-Level Roles](../relational-databases/security/authentication-access/database-level-roles.md).  
+ For more information about database roles, see [Database-Level Roles](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  The SSISDB catalog uses a DDL trigger, ddl_cleanup_object_permissions, to enforce the integrity of permissions information for SSIS securables. The trigger fires when a database principal, such as a database user, database role, or a database application role, is removed from the SSISDB database.  
   
@@ -162,9 +162,9 @@ manager: "jhubbard"
   
  To manage permissions using the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI, use the following dialog boxes.  
   
--   For a folder, use the **Permissions** page of the [Folder Properties Dialog Box](catalog/folder-properties-dialog-box.md).  
+-   For a folder, use the **Permissions** page of the [Folder Properties Dialog Box](folder-properties-dialog-box.md).  
   
--   For a project, use the **Permissions** page in the [Project Properties Dialog Box](catalog/project-properties-dialog-box.md).  
+-   For a project, use the **Permissions** page in the [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
  To manage permissions using Transact-SQL, call [catalog.grant_permission &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) and [catalog.revoke_permission &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md). To view effective permissions for the current principal for all objects, query [catalog.effective_object_permissions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md). This topic provides descriptions of the different types of permissions. To view permissions that have been explicitly assigned to the user, query [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md).  
   
@@ -180,7 +180,7 @@ manager: "jhubbard"
 -   [catalog.set_folder_description &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
 ## Projects and Packages  
- Each project can contain multiple packages. Both projects and packages can contain parameters and references to environments. You can access the parameters and environment references by using the [Configure Dialog Box](catalog/configure-dialog-box.md).  
+ Each project can contain multiple packages. Both projects and packages can contain parameters and references to environments. You can access the parameters and environment references by using the [Configure Dialog Box](configure-dialog-box.md).  
   
  You can carry out other project tasks by calling the following stored procedures.  
   
@@ -190,7 +190,7 @@ manager: "jhubbard"
   
 -   [catalog.get_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
   
--   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+-   [catalog.move_project &#40;&#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
   
 -   [catalog.restore_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
   
@@ -275,9 +275,9 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Create the SSIS Catalog](catalog/ssis-catalog.md)  
+-   [Create the SSIS Catalog](ssis-catalog.md)  
   
--   [Backup, Restore, and Move the SSIS Catalog](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
+-   [Backup, Restore, and Move the SSIS Catalog](../backup-restore-and-move-the-ssis-catalog.md)  
   
 ## Related Content  
   

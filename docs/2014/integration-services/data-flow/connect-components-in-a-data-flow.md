@@ -41,6 +41,6 @@ manager: "jhubbard"
 ## See Also  
  [Add or Delete a Component in a Data Flow](data-flow.md)   
  [Configure an Error Output in a Data Flow Component](../configure-an-error-output-in-a-data-flow-component.md)   
- [Data Flow](../data-flow.md)  
+ [Data Flow](data-flow.md)  
   
   

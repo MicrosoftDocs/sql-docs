@@ -42,7 +42,7 @@ character_expression1 + character_expression2
   
  The concatenation of the DT_STR and DT_WSTR data types returns a result of the DT_WSTR type. The length of the string is the sum of the lengths of the original strings expressed in characters.  
   
- Only data with the string data types DT_STR and DT_WSTR or the Binary Large Object Block (BLOB) data types DT_TEXT, DT_NTEXT, and DT_IMAGE can be concatenated. Other data types must be explicitly converted to one of these data types before concatenation occurs. For more information about legal casts between data types, see [Cast &#40;SSIS Expression&#41;](../cast-ssis-expression.md).  
+ Only data with the string data types DT_STR and DT_WSTR or the Binary Large Object Block (BLOB) data types DT_TEXT, DT_NTEXT, and DT_IMAGE can be concatenated. Other data types must be explicitly converted to one of these data types before concatenation occurs. For more information about legal casts between data types, see [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   
  Both expressions must be of the same data type, or one expression must be implicitly convertible to the data type of the other expression. For example, if the string "Order date is " and the column **OrderDate** are concatenated, the values in **OrderDate** are implicitly converted to a string data type. To concatenate two numeric values, both numeric values must be explicitly cast to a string data type.  
   

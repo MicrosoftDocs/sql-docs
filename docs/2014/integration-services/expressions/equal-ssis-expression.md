@@ -21,7 +21,7 @@ manager: "jhubbard"
 # == (Equal) (SSIS Expression)
   Performs a comparison to determine if two expressions are equal. The expression evaluator automatically converts many data types before it performs the comparison. For more information, see [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
- However, some data types require that the expression include an explicit cast before the expression can be evaluated successfully. For more information about legal casts between data types, see [Cast &#40;SSIS Expression&#41;](../cast-ssis-expression.md).  
+ However, some data types require that the expression include an explicit cast before the expression can be evaluated successfully. For more information about legal casts between data types, see [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   
 ## Syntax  
   

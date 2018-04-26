@@ -112,7 +112,7 @@ manager: "jhubbard"
 ## See Also  
  [Excel Source](excel-source.md)   
  [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
- [Data Flow](../data-flow.md)   
+ [Data Flow](data-flow.md)   
  [Working with Excel Files with the Script Task](../control-flow/script-task.md)  
   
   

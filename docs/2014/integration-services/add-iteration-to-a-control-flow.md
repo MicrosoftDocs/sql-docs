@@ -53,10 +53,10 @@ manager: "jhubbard"
 4.  Configure the For Loop container. For more information, see [Configure a For Loop Container](../../2014/integration-services/configure-a-for-loop-container.md).  
   
 ## See Also  
- [Add or Delete a Task or a Container in a Control Flow](control-flow/control-flow.md)   
+ [Add or Delete a Task or a Container in a Control Flow](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Group or Ungroup Components](group-or-ungroup-components.md)   
  [Connect Tasks and Containers by Using a Default Precedence Constraint](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Add Enumeration to a Control Flow](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)  
+ [Control Flow](control-flow/s/control-flow.md)  
   
   

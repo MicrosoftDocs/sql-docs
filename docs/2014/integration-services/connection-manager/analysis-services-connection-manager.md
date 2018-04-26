@@ -45,6 +45,6 @@ manager: "jhubbard"
   
 -   [Add Analysis Services Connection Manager Dialog Box UI Reference](add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
- For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../dev-guide/adding-connections-programmatically.md).  
+ For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

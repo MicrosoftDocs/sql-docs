@@ -72,7 +72,7 @@ manager: "jhubbard"
 ## See Also  
  [Merge Join Transformation](merge-join-transformation.md)   
  [Union All Transformation](union-all-transformation.md)   
- [Data Flow](../../data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   
   

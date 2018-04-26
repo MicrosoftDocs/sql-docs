@@ -26,7 +26,7 @@ manager: "jhubbard"
 # Integration Services Data Types
   When data enters a data flow in a package, the source that extracts the data converts the data to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type. Numeric data is assigned a numeric data type, string data is assigned a character data type, and dates are assigned a date data type. Other data, such as GUIDs and Binary Large Object Blocks (BLOBs), are also assigned appropriate [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types. If data has a data type that is not convertible to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type, an error occurs.  
   
- Some data flow components convert data types between the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types and the managed data types of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. For more information about the mapping between [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and managed data types, see [Working with Data Types in the Data Flow](../data-flow.md).  
+ Some data flow components convert data types between the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types and the managed data types of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. For more information about the mapping between [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and managed data types, see [Working with Data Types in the Data Flow](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
  The following table lists the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types. Some of the data types in the table have precision and scale information that applies to them. For more information about precision and scale, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](~/t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
@@ -248,7 +248,7 @@ manager: "jhubbard"
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
 |DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   
- For information on mapping data types in the data flow, see [Working with Data Types in the Data Flow](../data-flow.md).  
+ For information on mapping data types in the data flow, see [Working with Data Types in the Data Flow](data-flow.md).  
   
 ## Related Content  
  Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  

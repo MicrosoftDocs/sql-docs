@@ -21,7 +21,7 @@ manager: "jhubbard"
   In the data flow of an Integration Services package that performs an incremental load of change data, the second task is to separate inserts, updates, and deletes. Then, you can use appropriate commands to apply them to the destination.  
   
 > [!NOTE]  
->  The first task in designing the data flow of a package that performs an incremental load of change data is to configure the source component that runs the query that retrieves the change data. For more information about this component, see [Retrieve and Understand the Change Data](retrieve-and-understand-the-change-data.md). For a description of the overall process for creating a package that performs an incremental load of change data, see [Change Data Capture &#40;SSIS&#41;](../change-data-capture-ssis.md).  
+>  The first task in designing the data flow of a package that performs an incremental load of change data is to configure the source component that runs the query that retrieves the change data. For more information about this component, see [Retrieve and Understand the Change Data](retrieve-and-understand-the-change-data.md). For a description of the overall process for creating a package that performs an incremental load of change data, see [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
   
 ## Associating Friendly Values to Separate Inserts, Updates, and Deletes  
  In the example query that retrieves change data, the **cdc.fn_cdc_get_net_changes_<capture_instance>** function returns only the column of metadata named **__$operation**. This metadata column contains an ordinal value that indicates which operation caused the change.  

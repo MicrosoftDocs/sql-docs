@@ -40,7 +40,7 @@ manager: "jhubbard"
  Is a valid expression.  
   
 ## Result Types  
- The data type of *type_spec*. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ The data type of *type_spec*. For more information, see [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## Remarks  
  The following diagram shows legal cast operations.  
@@ -61,11 +61,11 @@ manager: "jhubbard"
  When a string is cast to a DT_DATE, or vice versa, the locale of the transformation is used. However, the date is in the ISO format of YYYY-MM-DD, regardless of whether the locale preference uses the ISO format.  
   
 > [!NOTE]  
->  To convert a string to a date data type other than DT_DATE, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+>  To convert a string to a date data type other than DT_DATE, see [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  If the code page is a multibyte character code page, the number of bytes and characters may differ. Casting from a DT_WSTR to a DT_STR with the same *charcount* value may cause truncation of the final characters in the converted string. If sufficient storage is available in the column of the destination table, set the value of the *charcount* parameter to reflect the number of bytes that the multibyte code page requires. For example, if you cast character data to a DT_STR data type using the 936 code page, you should set *charcount* to a value up to two times greater than the number of characters that you expect the data to contain; if you cast character data using the UTF-8 code page, you should set *charcount* to a value up to four times greater.  
   
- For more information about the structure of date data types, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ For more information about the structure of date data types, see [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## SSIS Expression Examples  
  This example casts a numeric value to an integer.  

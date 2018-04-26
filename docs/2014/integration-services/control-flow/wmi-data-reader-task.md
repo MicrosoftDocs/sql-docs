@@ -97,6 +97,6 @@ Select * FROM Win32_QuickFixEngineering
   
 ## See Also  
  [Integration Services Tasks](integration-services-tasks.md)   
- [Control Flow](../control-flow.md)  
+ [Control Flow](control-flow.md)  
   
   

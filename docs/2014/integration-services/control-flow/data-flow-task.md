@@ -101,7 +101,7 @@ manager: "jhubbard"
   
  For more information about how to set these properties in the **Properties** window, click the following topic:  
   
--   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
 ## Programmatic Configuration of the Data Flow Task  
  For more information about programmatically adding a data flow task to a package and setting data flow properties, click the following topic:  
@@ -109,7 +109,7 @@ manager: "jhubbard"
 -   [Adding the Data Flow Task Programmatically](building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## Related Tasks  
- [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+ [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
 ## Related Content  
  Video, [Balanced Data Distributer](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  

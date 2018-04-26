@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  **CDC Control Flow Component**:  
   
- [CDC Control Task](control-flow/cdc-control-task.md)  
+ [CDC Control Task](../control-flow/cdc-control-task.md)  
   
  **CDC Data Flow Components**:  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
  This [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Control Flow contains two CDC Control Tasks and the Data Flow task. The first task called **Get CDC Processing Range** establishes the LSN range for the changes that are processed in the data-flow task called **Process Changes**. This range is established based on what was processed during the last package run and was saved in a persistent store.  
   
- For more information about using the CDC Control Task, see [CDC Control Task](control-flow/cdc-control-task.md) and [CDC Control Task Editor](../../2014/integration-services/cdc-control-task-editor.md).  
+ For more information about using the CDC Control Task, see [CDC Control Task](../control-flow/cdc-control-task.md) and [CDC Control Task Editor](../cdc-control-task-editor.md).  
   
  The following figure shows the **Process Changes** data flow, which conceptually shows how the changes are processes.  
   
@@ -99,11 +99,11 @@ manager: "jhubbard"
   
  [CDC Source](cdc-source.md)  
   
- [CDC Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)  
+ [CDC Source Editor &#40;Connection Manager Page&#41;](../cdc-source-editor-connection-manager-page.md)  
   
- [CDC Source Editor &#40;Columns Page&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
+ [CDC Source Editor &#40;Columns Page&#41;](../cdc-source-editor-columns-page.md)  
   
- [CDC Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md)  
   
  For more information about the CDC Splitter, see:  
   
@@ -167,16 +167,16 @@ manager: "jhubbard"
 -   A trickle-feed update package that reads changes made to the source tables and applies the changes to the target tables. This package should be executed on a regularly scheduled basis.  
   
 ## CDC State  
- Each CDC group has a state associated with it, which is represented by a string with a specific format. For more information, see [CDC Control Task](control-flow/cdc-control-task.md). The following table shows the possible CDC state values.  
+ Each CDC group has a state associated with it, which is represented by a string with a specific format. For more information, see [CDC Control Task](../control-flow/cdc-control-task.md). The following table shows the possible CDC state values.  
   
 |State|Description|  
 |-----------|-----------------|  
-|0-(INITIAL)|The state that exists before any packages are run on the current CDC group. This is also the state when the CDC state is empty.<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](control-flow/cdc-control-task.md).|  
-|1-ILSTART (Initial-Load-Started)|This is the state that exists when the initial load package starts. This occurs after the **MarkInitialLoadStart** operation call to the CDC Control task.<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](control-flow/cdc-control-task.md).|  
-|2- ILEND (Initial-Load-Ended)|This is the state that exists when the initial load package ends successfully. This occurs after the MarkInitialLoadEnd operation call to the CDC Control task.<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](control-flow/cdc-control-task.md).|  
-|3-ILUPDATE (Initial Load Update)|This is the state that exists after the first run of the Update package after the initial load while still processing the initial processing range. This occurs after the **GetProcessingRange** operation call to the CDC control task.<br /><br /> If using the **_$reprocessing** column, it is set to 1 to indicate that the package may be reprocessing rows already at the target.<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](control-flow/cdc-control-task.md).|  
+|0-(INITIAL)|The state that exists before any packages are run on the current CDC group. This is also the state when the CDC state is empty.<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](../control-flow/cdc-control-task.md).|  
+|1-ILSTART (Initial-Load-Started)|This is the state that exists when the initial load package starts. This occurs after the **MarkInitialLoadStart** operation call to the CDC Control task.<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](../control-flow/cdc-control-task.md).|  
+|2- ILEND (Initial-Load-Ended)|This is the state that exists when the initial load package ends successfully. This occurs after the MarkInitialLoadEnd operation call to the CDC Control task.<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](../control-flow/cdc-control-task.md).|  
+|3-ILUPDATE (Initial Load Update)|This is the state that exists after the first run of the Update package after the initial load while still processing the initial processing range. This occurs after the **GetProcessingRange** operation call to the CDC control task.<br /><br /> If using the **_$reprocessing** column, it is set to 1 to indicate that the package may be reprocessing rows already at the target.<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|This is the state expected for regular CDC runs. It indicates that the previous run completed successfully and that a new run with a new processing range can be started.|  
-|5-TFSTART (Trickle-Feed-Update-Started)|This is the state that exists on subsequent runs of the Update package after the **GetProcessingRange** operation call to the CDC control task.<br /><br /> This indicates that a regular CDC run is started, but is not finished or has not yet finished, cleanly (**MarkProcessedRange**).<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](control-flow/cdc-control-task.md).|  
+|5-TFSTART (Trickle-Feed-Update-Started)|This is the state that exists on subsequent runs of the Update package after the **GetProcessingRange** operation call to the CDC control task.<br /><br /> This indicates that a regular CDC run is started, but is not finished or has not yet finished, cleanly (**MarkProcessedRange**).<br /><br /> For more information about CDC Control task operations, see [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|This is the state on a **GetProcessingRange** that occurs after TFSTART. This indicates that the previous run did not complete successfully.<br /><br /> If using the __$reprocessing column, it is set to 1 to indicate that the package may be reprocessing rows already at the target.|  
 |7-ERROR|The CDC group is in an ERROR state.|  
   
@@ -215,6 +215,6 @@ manager: "jhubbard"
 -   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](http://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
   
 ## See Also  
- [CDC Control Task](control-flow/cdc-control-task.md)  
+ [CDC Control Task](../control-flow/cdc-control-task.md)  
   
   

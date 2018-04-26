@@ -21,7 +21,7 @@ manager: "jhubbard"
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to calculate the endpoints of the change interval. These endpoints are `datetime` values and will be stored in package variables for use later in the package.  
   
 > [!NOTE]  
->  For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](../change-data-capture-ssis.md).  
+>  For a description of the overall process of designing the control flow, see [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
   
 ## Set Up Package Variables for the Endpoints  
  Before configuring the Execute SQL task to calculate the endpoints, the package variables that will store the endpoints have to be defined.  

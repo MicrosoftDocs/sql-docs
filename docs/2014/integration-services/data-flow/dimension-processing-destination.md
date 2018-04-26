@@ -57,7 +57,7 @@ manager: "jhubbard"
  For more information about how to set the properties, see [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md).  
   
 ## See Also  
- [Data Flow](../data-flow.md)   
+ [Data Flow](data-flow.md)   
  [Integration Services Transformations](transformations/integration-services-transformations.md)  
   
   

@@ -38,7 +38,7 @@ LEN(character_expression)
 ## Remarks  
  The *character_expression* argument can be a DT_WSTR, DT_TEXT, DT_NTEXT, or DT_IMAGE data type. For more information, see [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
- If *character_expression* is a string literal or a data column with the DT_STR data type, it is implicitly cast to the DT_WSTR data type before LEN performs its operation. Other data types must be explicitly cast to the DT_WSTR data type. For more information, see [Cast &#40;SSIS Expression&#41;](../cast-ssis-expression.md).  
+ If *character_expression* is a string literal or a data column with the DT_STR data type, it is implicitly cast to the DT_WSTR data type before LEN performs its operation. Other data types must be explicitly cast to the DT_WSTR data type. For more information, see [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   
  If the argument passed to the LEN function has a Binary Large Object Block (BLOB) data type, such as DT_TEXT, DT_NTEXT, or DT_IMAGE, the function returns a byte count.  
   

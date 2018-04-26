@@ -21,7 +21,7 @@ manager: "jhubbard"
   After completing the control flow for an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the next task is to create a table-valued function that retrieves the change data. You only have to create this function one time before the first incremental load.  
   
 > [!NOTE]  
->  The creation of a function to retrieve the change data is the second step in the process of creating a package that performs an incremental load of change data. For a description of the overall process for creating this package, see [Change Data Capture &#40;SSIS&#41;](../change-data-capture-ssis.md).  
+>  The creation of a function to retrieve the change data is the second step in the process of creating a package that performs an incremental load of change data. For a description of the overall process for creating this package, see [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
   
 ## Design Considerations for Change Data Capture Functions  
  To retrieve change data, a source component in the data flow of the package calls one of the following change data capture query functions:  

@@ -24,7 +24,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  This operator does not support comparisons that use the DT_TEXT, DT_NTEXT, or DT_IMAGE data types.  
   
- However, some data types require that the expression include an explicit cast before the expression can be evaluated successfully. For more information about legal casts between data types, see [Cast &#40;SSIS Expression&#41;](../cast-ssis-expression.md).  
+ However, some data types require that the expression include an explicit cast before the expression can be evaluated successfully. For more information about legal casts between data types, see [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   
 ## Syntax  
   

@@ -96,7 +96,7 @@ manager: "jhubbard"
 ## Configuring the Slowly Changing Dimension Transformation Outputs  
  Coordinating the update and insertion of records in dimension tables can be a complex task, especially if both Type 1 and Type 2 changes are used. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer provides two ways to configure support for slowly changing dimensions:  
   
--   The **Advanced Editor** dialog box, in which you to select a connection, set common and custom component properties, choose input columns, and set column properties on the six outputs. To complete the task of configuring support for a slowly changing dimension, you must manually create the data flow for the outputs that the Slowly Changing Dimension transformation uses. For more information, see [Data Flow](../../data-flow.md).  
+-   The **Advanced Editor** dialog box, in which you to select a connection, set common and custom component properties, choose input columns, and set column properties on the six outputs. To complete the task of configuring support for a slowly changing dimension, you must manually create the data flow for the outputs that the Slowly Changing Dimension transformation uses. For more information, see [Data Flow](../data-flow.md).  
   
 -   The Load Dimension Wizard, which guides you though the steps to configure the Slowly Changing Dimension transformation and build the data flow for transformation outputs. To change the configuration for slowly change dimensions, rerun the Load Dimension Wizard. For more information, see [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   

@@ -50,7 +50,7 @@ manager: "jhubbard"
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
 ## See Also  
  [Integration Services Tasks](integration-services-tasks.md)   

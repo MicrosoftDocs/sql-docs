@@ -67,7 +67,7 @@ manager: "jhubbard"
 |Type|Description|Topic|  
 |----------|-----------------|-----------|  
 |ADO|Connects to ActiveX Data Objects (ADO) objects.|[ADO Connection Manager](ado-connection-manager.md)|  
-|ADO.NET|Connects to a data source by using a .NET provider.|[ADO.NET Connection Manager](../ado-net-connection-manager.md)|  
+|ADO.NET|Connects to a data source by using a .NET provider.|[ADO.NET Connection Manager](ado-net-connection-manager.md)|  
 |CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](cache-connection-manager.md)|  
 |DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Connects to an Excel workbook file.|[Excel Connection Manager](excel-connection-manager.md)|  

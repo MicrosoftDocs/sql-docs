@@ -230,7 +230,7 @@ ORDER BY YearlyIncome;
 ### F. Creating a new table as a copy of another table and loading it a specified filegroup
 The following example demonstrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
 
- **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

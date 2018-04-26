@@ -40,7 +40,7 @@ In this tutorial, you will learn how to:
 > * Synchronize the subscription to the merge publication.
   
 ## Prerequisites  
-This tutorial is for users who are familiar with fundamental database operations, but who have limited experience with replication. Before you start this Tutorial, you must complete [Tutorial: preparing the server for replication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+This tutorial is for users who are familiar with fundamental database operations, but who have limited experience with replication. Before you start this tutorial, you must complete [Tutorial: preparing the server for replication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 To use this tutorial, make sure that your system has the following products and components installed:  
   
@@ -57,7 +57,7 @@ To use this tutorial, make sure that your system has the following products and 
  
   
 >[!NOTE]
-> - Replication is not supported on SQL Server instances that are more than two versions apart. For more information, [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - Replication is not supported on SQL Server instances that are more than two versions apart. For more information, see [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
 > - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the publisher and subscriber by using a login that is a member of the **sysadmin** fixed server role. For more information on this role, see [Server-level roles](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
@@ -74,7 +74,7 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
 2. Start the SQL Server Agent by right-clicking it in Object Explorer and selecting **Start**. If this step doesn't start the agent, you'll need to manually do so from SQL Server Configuration Manager.  
 3. Expand the **Replication** folder, right-click **Local Publications**, and select **New Publication**. The New Publication Wizard starts:  
 
-   ![Launch New Publication Wizard](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
+   ![Selections to start the New Publication Wizard](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
   
 3. On the **Publication Database** page, select [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], and then select **Next**. 
 
@@ -83,17 +83,17 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
    
 5. On the **Subscriber Types** page, ensure that only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later is selected, and then select **Next**: 
 
-    ![Merge Replication](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
+    !["Publication Type" and "Subscriber Types" pages](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
 6. On the **Articles** page, expand the **Tables** node. Select the following three tables: **Employee**, **SalesOrderHeader**, and **SalesOrderDetail**. Select **Next**.  
 
-   ![Merge Articles](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
+   ![Table selections on the "articles" page](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
    >[!NOTE]
-   > The **Employee** table contains a column (**OrganizationNode**) that has the **hierarchyid** data type. This data type is supported for replication only in SQL 2017. 
+   > The **Employee** table contains a column (**OrganizationNode**) that has the **hierarchyid** data type. This data type is supported for replication only in SQL Server 2017. 
    >
-   > If you're using a build earlier than SQL 2017, a message appears at the bottom of the screen to notify you of potential data loss for using this column in bidirectional replication. For the purpose of this tutorial, you can ignore this message. However, this data type should not be replicated in a production environment unless you're using the supported build.
+   > If you're using a build earlier than SQL Server 2017, a message appears at the bottom of the screen to notify you of potential data loss for using this column in bidirectional replication. For the purpose of this tutorial, you can ignore this message. However, this data type should not be replicated in a production environment unless you're using the supported build.
    > 
    > For more information about replicating the **hierarchyid** data type, see [Using hierarchyid columns in replication](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
     
@@ -106,9 +106,9 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
     WHERE [LoginID] = HOST_NAME()  
    ```  
   
-   Select **A row from this table will go to only one subscription**, and select **OK**:  
+   Select **A row from this table will go to only one subscription**, and select **OK**.  
  
-   ![Add Filter](media/tutorial-replicating-data-with-mobile-clients/mergeaddfilter.png)
+   ![Selections for adding a filter](media/tutorial-replicating-data-with-mobile-clients/mergeaddfilter.png)
 
     
   
@@ -120,9 +120,9 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    b. In **Specify join options**, select **Unique key**, and then select **OK**:
+    b. In **Specify join options**, select **Unique key**, and then select **OK**.
 
-    ![Add Join to Filter](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
+    ![Selections for adding a join to the filter](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. On the **Filter Table Rows** page, select **SalesOrderHeader**, select **Add**, and then select **Add Join to Extend the Selected Filter**.  
@@ -137,19 +137,19 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
   
     d. In **Specify join options**, select **Unique key**, and then select **OK**. Select **Next**. 
 
-    ![Join Sales Order Tables](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
+    ![Selections for adding another join, for sales orders](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
 21. Select **Create a snapshot immediately**, clear **Schedule the snapshot agent to run at the following times**, and select **Next**:  
 
-    ![Create Snapshot Immediately](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
+    ![Selection for creating a snapshot immediately](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. On the **Agent Security** page, select **Security Settings**, enter <*Publisher_Machine_Name*>**\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**. Select **Next**.  
+22. On the **Agent Security** page, select **Security Settings**. Enter <*Publisher_Machine_Name*>**\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**. Select **Next**.  
 
-    ![Snapshot Agent Security](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
+    ![Selections for setting Snapshot Agent security](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
 23. On the **Complete the Wizard** page, enter **AdvWorksSalesOrdersMerge** in the **Publication name** box and select **Finish**:  
 
-    ![Name Merge Replication](media/tutorial-replicating-data-with-mobile-clients/namemergerepl.png)
+    !["Complete the Wizard" page with publication name](media/tutorial-replicating-data-with-mobile-clients/namemergerepl.png)
   
 24. After the publication is created, select **Close**. Under the **Replication** node in **Object Explorer**, right-click **Local Publications** and select **Refresh** to view your new merge replication.  
   
@@ -157,23 +157,23 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
   
 1. Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
-2. In the Local Publications folder, right-click **AdvWorksSalesOrdersMerge**, and then select **View Snapshot Agent Status**:  
+2. In the **Local Publications** folder, right-click **AdvWorksSalesOrdersMerge**, and then select **View Snapshot Agent Status**:  
 
-   ![View Snapshot Agent Status](media/tutorial-replicating-data-with-mobile-clients/viewsnapshotagentstatus.png)
+   ![Selections for viewing Snapshot Agent status](media/tutorial-replicating-data-with-mobile-clients/viewsnapshotagentstatus.png)
   
-3. The current status of the Snapshot Agent job for the publication is displayed. Ensure that the snapshot job has succeeded before you continue to the next lesson.  
+3. The current status of the Snapshot Agent job for the publication appears. Ensure that the snapshot job has succeeded before you continue to the next lesson.  
   
 ### Add the Merge Agent login to the PAL  
   
-1. Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
+1. Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
-2. In the Local Publications folder, right-click **AdvWorksSalesOrdersMerge**, and then select **Properties**.  
+2. In the **Local Publications** folder, right-click **AdvWorksSalesOrdersMerge**, and then select **Properties**.  
   
    a. Select the **Publication Access List** page, and select **Add**. 
   
-   b. In the Add Publication Access dialog box, select <*Publisher_Machine_Name*>**\repl_merge** and select **OK**. Select **OK** again. 
+   b. In the **Add Publication Access** dialog box, select <*Publisher_Machine_Name*>**\repl_merge** and select **OK**. Select **OK** again. 
 
-   ![Merge PAL](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
+   ![Selections for adding the Merge Agent login](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
   
 For more information, see:  
@@ -189,41 +189,41 @@ In this section, you add a subscription to the merge publication that you create
   
 1. Connect to the subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and expand the server node. Expand the **Replication** folder, right-click the **Local Subscriptions** folder, and then select **New Subscriptions**. The New Subscription Wizard starts:
 
-    ![New Subscription](media/tutorial-replicating-data-with-mobile-clients/newsub.png)
+   ![Selections to start the New Subscription Wizard](media/tutorial-replicating-data-with-mobile-clients/newsub.png)
   
 2. On the **Publication** page, select **Find SQL Server Publisher** in the **Publisher** list.  
   
-   In the **Connect to Server** dialog box, enter the name of the publisher instance in the **Server name** box, and select **Connect**: 
+   In the **Connect to Server** dialog box, enter the name of the publisher instance in the **Server name** box, and select **Connect**. 
 
-   ![Add Publisher in Publication](media/tutorial-replicating-data-with-mobile-clients/publication.png)
+   ![Selections for adding a publisher](media/tutorial-replicating-data-with-mobile-clients/publication.png)
   
 4. Select **AdvWorksSalesOrdersMerge**, and select **Next**.  
   
-5. On the Merge Agent Location page, select **Run each agent at its Subscriber**, and then select **Next**:  
+5. On the **Merge Agent Location** page, select **Run each agent at its Subscriber**, and then select **Next**:  
 
-   ![Pull Subscription](media/tutorial-replicating-data-with-mobile-clients/pullsub.png)
+   !["Run each agent at its Subscriber" option](media/tutorial-replicating-data-with-mobile-clients/pullsub.png)
   
 6. On the **Subscribers** page, select the instance name of the subscriber server. Under **Subscription Database**, select **New Database** from the list.  
   
    In the **New Database** dialog box, enter **SalesOrdersReplica** in the **Database name** box. Select **OK**, and then select **Next**. 
 
-   ![Add DB to Sub](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
+   ![Selections for adding a database to the subscriber](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
 8. On the **Merge Agent Security** page, select the ellipsis (**…**) button. Enter <*Subscriber_Machine_Name*>**\repl_merge** in the **Process account** box, and supply the password for this account. Select **OK**, select **Next**, and then select **Next** again.  
 
-   ![Merge Agent Security](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
+   ![Selections for Merge Agent security](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
 9. On the **Synchronization Schedule** page, set **Agent Schedule** to **Run on demand only**. Select **Next**.  
 
-   ![Synchronization Schedule](media/tutorial-replicating-data-with-mobile-clients/mergesyncschedule.png)
+   !["Run on demand only" selection for the agent](media/tutorial-replicating-data-with-mobile-clients/mergesyncschedule.png)
   
 9. On the **Initialize Subscriptions** page, select **At first synchronization** from the **Initialize When** list. Select **Next**, and then select **Next** again. 
 
-   ![First Sync](media/tutorial-replicating-data-with-mobile-clients/firstsync.png)
+   ![Selections for initializing subscriptions at first synchronization](media/tutorial-replicating-data-with-mobile-clients/firstsync.png)
 
-10. On the HOST_NAME Values page, enter a value of **adventure-works\pamela0** in the **HOST_NAME Value** box. Then select **Finish**.  
+10. On the **HOST_NAME Values** page, enter a value of **adventure-works\pamela0** in the **HOST_NAME Value** box. Then select **Finish**.  
 
-    ![Hostname](media/tutorial-replicating-data-with-mobile-clients/hostname.png)
+    !["HOST_NAME Values" page](media/tutorial-replicating-data-with-mobile-clients/hostname.png)
   
 11. Select **Finish** again. After the subscription is created, select **Close**.  
 
@@ -233,11 +233,11 @@ In this section, you add a subscription to the merge publication that you create
   
    On the **General** page, select **Search** and then enter <*Subscriber_ Machine_Name*>**\repl_merge** in the **Enter the Object Name** box. Select **Check Names**, and then select **OK**. 
     
-   ![Login on Subscriber](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
+   ![Selections for setting the login](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   
 1. On the **User Mapping** page, select the **SalesOrdersReplica** database and select the **db_owner** role. On the **Securables** page, grant the **Explicit** permission to **Alter Trace**. Select **OK**.
 
-   ![Set login as DBO on Sub](media/tutorial-replicating-data-with-mobile-clients/setdbo.png)
+   !["User Mapping" and "Securables" pages](media/tutorial-replicating-data-with-mobile-clients/setdbo.png)
   
 ### Create the filtered data snapshot for the subscription  
   
@@ -249,7 +249,7 @@ In this section, you add a subscription to the merge publication that you create
    b. In the **Add Data Partition** dialog box, enter **adventure-works\pamela0** in the **HOST_NAME Value** box, and then select **OK**.  
    c. Select the newly added partition, select **Generate the selected snapshots now**, and then select **OK**. 
 
-   ![Add Partition](media/tutorial-replicating-data-with-mobile-clients/partition.png)
+   ![Selections for adding a partition](media/tutorial-replicating-data-with-mobile-clients/partition.png)
   
   
 For more information, see:  
@@ -270,21 +270,21 @@ In this section, you start the Merge Agent to initialize the subscription by usi
   
    Select **Start** to initialize the subscription. 
 
-   ![Sync Status](media/tutorial-replicating-data-with-mobile-clients/mergesyncstatus.png)
+   ![Synchronization status with "Start" button](media/tutorial-replicating-data-with-mobile-clients/mergesyncstatus.png)
     
   
   
 ## Next steps  
 You have successfully configured both your publisher and your subscriber for your merge replication. You can also:
 
-1. Insert, update, or delete data in the **SalesOrderHeader** or **SalesOrderDetail** tables at the publisher or subscriber
-2. Repeat this procedure when network connectivity is available to synchronize data between the publisher and the subscriber
-3. Query the **SalesOrderHeader** or **SalesOrderDetail** tables at the other server to view the replicated changes.  
+1. Insert, update, or delete data in the **SalesOrderHeader** or **SalesOrderDetail** table at the publisher or subscriber.
+2. Repeat this procedure when network connectivity is available to synchronize data between the publisher and the subscriber.
+3. Query the **SalesOrderHeader** or **SalesOrderDetail** table at the other server to view the replicated changes.  
   
 For more information, see:   
-[Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-[Synchronize Data](../../relational-databases/replication/synchronize-data.md)  
-[Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
+[Initialize a subscription with a snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+[Synchronize data](../../relational-databases/replication/synchronize-data.md)  
+[Synchronize a pull subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   
   
   

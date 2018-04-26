@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  If you use a parameterized query, you can map variables to parameters to specify the values for individual parameters in the SQL statements.  
   
- This source uses an OLE DB connection manager to connect to a data source, and the connection manager specifies the OLE DB provider to use. For more information, see [OLE DB Connection Manager](../ole-db-connection-manager.md).  
+ This source uses an OLE DB connection manager to connect to a data source, and the connection manager specifies the OLE DB provider to use. For more information, see [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
   
  An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project also provides the data source object from which you can create an OLE DB connection manager, making data sources and data source views available to the OLE DB source.  
   

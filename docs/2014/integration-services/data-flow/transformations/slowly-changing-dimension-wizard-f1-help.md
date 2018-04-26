@@ -45,6 +45,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)   
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

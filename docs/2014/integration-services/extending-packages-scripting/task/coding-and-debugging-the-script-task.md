@@ -250,6 +250,6 @@ To open Help, press F1.
   
 ## See Also  
  [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md)   
- [Configuring the Script Task in the Script Task Editor](task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [Configuring the Script Task in the Script Task Editor](configuring-the-script-task-in-the-script-task-editor.md)  
   
   

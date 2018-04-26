@@ -80,7 +80,7 @@ manager: "jhubbard"
   
  The lookup table must be a table in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an Access database. If the output of the Term Extraction transformation is saved to a table, this table can be used as the reference table, but other tables can also be used. Text in flat files, Excel workbooks or other sources must be imported to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database or an Access database before you can use the Term Lookup transformation.  
   
- The Term Lookup transformation uses a separate OLE DB connection to connect to the reference table. For more information, see [OLE DB Connection Manager](../../ole-db-connection-manager.md).  
+ The Term Lookup transformation uses a separate OLE DB connection to connect to the reference table. For more information, see [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
  The Term Lookup transformation works in a fully precached mode. At run time, the Term Lookup transformation reads the terms from the reference table and stores them in its private memory before it processes any transformation input rows.  
   

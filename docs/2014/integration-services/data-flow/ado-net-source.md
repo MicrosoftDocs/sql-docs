@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  For more information about the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types, supported data type conversions, and data type mapping across certain databases including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Integration Services Data Types](integration-services-data-types.md).  
   
- For information about mapping [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types to managed data types, see [Working with Data Types in the Data Flow](data-flow.md).  
+ For information about mapping [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types to managed data types, see [Working with Data Types in the Data Flow](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## ADO NET Source Troubleshooting  
  You can log the calls that the ADO NET source makes to external data providers. You can use this logging capability to troubleshoot the loading of data from external data sources that the ADO NET source performs. To log the calls that the ADO NET source makes to external data providers, enable package logging and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -69,7 +69,7 @@ manager: "jhubbard"
 >   
 >  **Column <column_name> cannot be found at the datasource.**  
   
- The ADO NET source uses an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager to connect to a data source, and the connection manager specifies the .NET provider. For more information, see [ADO.NET Connection Manager](../ado-net-connection-manager.md).  
+ The ADO NET source uses an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager to connect to a data source, and the connection manager specifies the .NET provider. For more information, see [ADO.NET Connection Manager](../connection-manager/ado-net-connection-manager.md).  
   
  The ADO NET source has one regular output and one error output.  
   

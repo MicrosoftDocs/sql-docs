@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 -   [Excel Custom Properties](excel-custom-properties.md)  
   
- For information about looping through a group of Excel files, see [Loop through Excel Files and Tables by Using a Foreach Loop Container](../foreach-loop-container.md).  
+ For information about looping through a group of Excel files, see [Loop through Excel Files and Tables by Using a Foreach Loop Container](../control-flow/foreach-loop-container.md).  
   
 ## Related Tasks  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
 -   [Sort Data for the Merge and Merge Join Transformations](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Loop through Excel Files and Tables by Using a Foreach Loop Container](../foreach-loop-container.md)  
+-   [Loop through Excel Files and Tables by Using a Foreach Loop Container](../control-flow/foreach-loop-container.md)  
   
 ## Related Content  
   

@@ -38,7 +38,7 @@ dividend % divisor
  Is the numeric expression to divide the dividend by. *divisor* can be any valid numeric expression except zero.  
   
 ## Result Types  
- Determined by data types of the two arguments. For more information, see [Integration Services Data Types in Expressions](../integration-services-data-types-in-expressions.md).  
+ Determined by data types of the two arguments. For more information, see [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
 ## Remarks  
  Both expressions must evaluate to signed or unsigned integer data types.  

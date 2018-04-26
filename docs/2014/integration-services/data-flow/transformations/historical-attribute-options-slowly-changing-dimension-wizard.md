@@ -42,6 +42,6 @@ manager: "jhubbard"
 |**Variable to set date values**|Select a date variable from the list.|  
   
 ## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

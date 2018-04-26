@@ -27,6 +27,6 @@ manager: "jhubbard"
  Confirm that the list of outputs is appropriate for your purposes.  
   
 ## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

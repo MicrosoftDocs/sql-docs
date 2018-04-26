@@ -33,6 +33,6 @@ manager: "jhubbard"
  Select a dimension column, and remove it from the list of mapped columns by clicking **Remove**.  
   
 ## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

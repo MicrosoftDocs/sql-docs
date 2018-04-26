@@ -98,7 +98,7 @@ manager: "jhubbard"
   
 -   The **Advanced Editor** dialog box, in which you to select a connection, set common and custom component properties, choose input columns, and set column properties on the six outputs. To complete the task of configuring support for a slowly changing dimension, you must manually create the data flow for the outputs that the Slowly Changing Dimension transformation uses. For more information, see [Data Flow](../data-flow.md).  
   
--   The Load Dimension Wizard, which guides you though the steps to configure the Slowly Changing Dimension transformation and build the data flow for transformation outputs. To change the configuration for slowly change dimensions, rerun the Load Dimension Wizard. For more information, see [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
+-   The Load Dimension Wizard, which guides you though the steps to configure the Slowly Changing Dimension transformation and build the data flow for transformation outputs. To change the configuration for slowly change dimensions, rerun the Load Dimension Wizard. For more information, see [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
 ## Related Tasks  
  [Set the Properties of a Data Flow Component](../set-the-properties-of-a-data-flow-component.md)  

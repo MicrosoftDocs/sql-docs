@@ -27,7 +27,7 @@ manager: "jhubbard"
 # Lookup Transformation
   The Lookup transformation performs lookups by joining data in input columns with columns in a reference dataset. You use the lookup to access additional information in a related table that is based on values in common columns.  
   
- The reference dataset can be a cache file, an existing table or view, a new table, or the result of an SQL query. The Lookup transformation uses either an OLE DB connection manager or a Cache connection manager to connect to the reference dataset. For more information, see [OLE DB Connection Manager](../../ole-db-connection-manager.md) and [Cache Connection Manager](../../connection-manager/cache-connection-manager.md)  
+ The reference dataset can be a cache file, an existing table or view, a new table, or the result of an SQL query. The Lookup transformation uses either an OLE DB connection manager or a Cache connection manager to connect to the reference dataset. For more information, see [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md) and [Cache Connection Manager](../../connection-manager/cache-connection-manager.md)  
   
  You can configure the Lookup transformation in the following ways:  
   

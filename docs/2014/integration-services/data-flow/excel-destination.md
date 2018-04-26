@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 -   [Connect to an Excel Workbook](../connection-manager/connect-to-an-excel-workbook.md)  
   
--   [Loop through Excel Files and Tables by Using a Foreach Loop Container](../foreach-loop-container.md)  
+-   [Loop through Excel Files and Tables by Using a Foreach Loop Container](../control-flow/foreach-loop-container.md)  
   
 -   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
   

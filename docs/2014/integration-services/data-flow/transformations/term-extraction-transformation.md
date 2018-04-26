@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  When you add a term to the exclusion list, all the terms—words or noun phrases—that contain the term are also excluded. For example, if the exclusion list includes the single word *data*, then all the terms that contain this word, such as *data*, *data mining*, *data integrity*, and *data validation* will also be excluded. If you want to exclude only compounds that contain the word *data*, you must explicitly add those compound terms to the exclusion list. For example, if you want to extract incidences of *data*, but exclude *data validation*, you would add *data validation* to the exclusion list, and make sure that *data* is removed from the exclusion list.  
   
- The reference table must be a table in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an Access database. The Term Extraction transformation uses a separate OLE DB connection to connect to the reference table. For more information, see [OLE DB Connection Manager](../../ole-db-connection-manager.md).  
+ The reference table must be a table in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an Access database. The Term Extraction transformation uses a separate OLE DB connection to connect to the reference table. For more information, see [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
  The Term Extraction transformation works in a fully precached mode. At run time, the Term Extraction transformation reads the exclusion terms from the reference table and stores them in its private memory before it processes any transformation input rows.  
   

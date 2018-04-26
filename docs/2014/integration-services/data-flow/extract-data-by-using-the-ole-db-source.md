@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 4.  Double-click the OLE DB source.  
   
-5.  In the **OLE DB Source Editor** dialog box, on the **Connection Manager** page, select an existing OLE DB connection manager or click **New** to create a new connection manager. For more information, see [OLE DB Connection Manager](../ole-db-connection-manager.md).  
+5.  In the **OLE DB Source Editor** dialog box, on the **Connection Manager** page, select an existing OLE DB connection manager or click **New** to create a new connection manager. For more information, see [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
   
 6.  Select the data access method:  
   
@@ -66,6 +66,6 @@ manager: "jhubbard"
  [OLE DB Source](ole-db-source.md)   
  [Integration Services Transformations](transformations/integration-services-transformations.md)   
  [Integration Services Paths](integration-services-paths.md)   
- [Data Flow Task](../data-flow-task.md)  
+ [Data Flow Task](../control-flow/data-flow-task.md)  
   
   

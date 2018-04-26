@@ -54,7 +54,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The CREATE TABLE statement that the **OLE DB Destination Editor** dialog box generates may require modification depending on the destination type. For example, some destinations do not support the data types that the CREATE TABLE statement uses.  
   
- This destination uses an OLE DB connection manager to connect to a data source and the connection manager specifies the OLE DB provider to use. For more information, see [OLE DB Connection Manager](../ole-db-connection-manager.md).  
+ This destination uses an OLE DB connection manager to connect to a data source and the connection manager specifies the OLE DB provider to use. For more information, see [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
   
  An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project also provides the data source object from which you can create an OLE DB connection manager, to make data sources and data source views available to the OLE DB destination.  
   

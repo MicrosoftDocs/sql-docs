@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 6.  For **Specify how to handle rows with no matching entries** list, select an error handling option from the list.  
   
-7.  On the **Connection** page, select a connection manager from the **OLE DB connection manager** list or click **New** to create a new connection manager. For more information, see [OLE DB Connection Manager](../../ole-db-connection-manager.md).  
+7.  On the **Connection** page, select a connection manager from the **OLE DB connection manager** list or click **New** to create a new connection manager. For more information, see [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
 8.  Do one of the following steps:  
   

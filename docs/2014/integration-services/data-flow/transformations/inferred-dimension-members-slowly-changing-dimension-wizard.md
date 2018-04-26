@@ -36,6 +36,6 @@ manager: "jhubbard"
  If you have chosen to use a Boolean column to indicate inferred members as described above, select the column from the list.  
   
 ## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 5.  Double-click the destination.  
   
-6.  In the **SQL Server Destination Editor**, on the **Connection Manager** page, select an existing OLE DB connection manager or click **New** to create a new connection manager. For more information, see [OLE DB Connection Manager](../ole-db-connection-manager.md).  
+6.  In the **SQL Server Destination Editor**, on the **Connection Manager** page, select an existing OLE DB connection manager or click **New** to create a new connection manager. For more information, see [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
   
 7.  To specify the table or view into which to load the data, do one of the following:  
   
@@ -67,6 +67,6 @@ manager: "jhubbard"
  [SQL Server Destination](sql-server-destination.md)   
  [Integration Services Transformations](transformations/integration-services-transformations.md)   
  [Integration Services Paths](integration-services-paths.md)   
- [Data Flow Task](../data-flow-task.md)  
+ [Data Flow Task](../control-flow/data-flow-task.md)  
   
   

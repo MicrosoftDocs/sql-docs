@@ -27,6 +27,6 @@ manager: "jhubbard"
  Skip the welcome page the next time you open the wizard.  
   
 ## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

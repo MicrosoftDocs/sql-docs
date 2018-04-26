@@ -49,7 +49,7 @@ expression1 <= expression2
   
  The expression set, *expression1* and *expression2*, must follow one of these rules:  
   
--   **Numeric** Both *expression1* and *expression2* must be a numeric data type. The intersection of the data types must be a numeric data type as specified in the rules about the implicit numeric conversions that the expression evaluator performs. The intersection of the two numeric data types cannot be null. For more information, see [Integration Services Data Types in Expressions](../integration-services-data-types-in-expressions.md).  
+-   **Numeric** Both *expression1* and *expression2* must be a numeric data type. The intersection of the data types must be a numeric data type as specified in the rules about the implicit numeric conversions that the expression evaluator performs. The intersection of the two numeric data types cannot be null. For more information, see [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
 -   **Character** Both *expression1* and *expression2* must evaluate to either a DT_STR or a DT_WSTR data type. The two expressions can evaluate to different string data types.  
   
@@ -65,7 +65,7 @@ expression1 <= expression2
   
     -   When the two expressions evaluate to the same data type, a comparison of that data type is performed.  
   
-    -   If one expression is a DT_DBTIMESTAMPOFFSET data type, the other expression is implicitly converted to DT_DBTIMESTAMPOFFSET and a DT_DBTIMESTAMPOFFSET comparison is performed. For more information, see [Integration Services Data Types in Expressions](../integration-services-data-types-in-expressions.md).  
+    -   If one expression is a DT_DBTIMESTAMPOFFSET data type, the other expression is implicitly converted to DT_DBTIMESTAMPOFFSET and a DT_DBTIMESTAMPOFFSET comparison is performed. For more information, see [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
     -   If one expression is a DT_DBTIMESTAMP2 data type, the other expression is implicitly converted to DT_DBTIMESTAMP2 and a DT_DBTIMESTAMP2 comparison is performed.  
   

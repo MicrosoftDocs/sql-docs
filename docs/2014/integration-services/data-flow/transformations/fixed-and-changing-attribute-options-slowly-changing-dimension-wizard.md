@@ -30,6 +30,6 @@ manager: "jhubbard"
  For changing attributes, indicate whether the task should change outdated or expired records, in addition to current records, when a change is detected in a changing attribute. An expired record is a record that has been replaced with a newer record by a change in a historical attribute (a Type 2 change). Selecting this option may impose additional processing requirements on a multidimensional object constructed on the relational data warehouse.  
   
 ## See Also  
- [Configure Outputs Using the Slowly Changing Dimension Wizard](../../configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

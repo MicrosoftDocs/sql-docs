@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 6.  Optionally, display a link to samples and Help content for the custom object, in the **SSIS Toolbox**.  
   
-7.  Build, deploy, and debug your new custom object as described in [Building, Deploying, and Debugging Custom Objects](../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
+7.  Build, deploy, and debug your new custom object as described in [Building, Deploying, and Debugging Custom Objects](building-deploying-and-debugging-custom-objects.md).  
   
 ## Base Classes, Attributes, and Important Methods  
  This table provides an easy reference to the most important elements in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model for each type of custom object that you can develop.  
@@ -114,7 +114,7 @@ manager: "jhubbard"
 |![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Persisting Custom Objects](../extending-packages-custom-objects/persisting-custom-objects.md)   
- [Building, Deploying, and Debugging Custom Objects](../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
+ [Persisting Custom Objects](persisting-custom-objects.md)   
+ [Building, Deploying, and Debugging Custom Objects](building-deploying-and-debugging-custom-objects.md)  
   
   

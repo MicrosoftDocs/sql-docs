@@ -34,7 +34,7 @@ numeric_expression1 – numeric_expression2
  Is any valid expression of a numeric data type. For more information, see [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## Result Types  
- Determined by the data types of the two arguments. For more information, see [Integration Services Data Types in Expressions](../integration-services-data-types-in-expressions.md).  
+ Determined by the data types of the two arguments. For more information, see [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
 ## Remarks  
  Enclose the minus unary expression in parenthesis to ensure that the expression is evaluated in the correct order  

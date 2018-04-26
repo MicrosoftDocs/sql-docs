@@ -63,7 +63,7 @@ manager: "jhubbard"
   
  For more information about the data types the expression evaluator uses, see [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
- Expressions can include numeric literals with different data types. When the expression evaluator evaluates these expressions, it converts the data to compatible types. For more information, see [Integration Services Data Types in Expressions](../integration-services-data-types-in-expressions.md).  
+ Expressions can include numeric literals with different data types. When the expression evaluator evaluates these expressions, it converts the data to compatible types. For more information, see [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
  However, conversion between some data types requires an explicit cast. The expression evaluator provides the cast operator for performing explicit data type conversion. For more information, see [Cast &#40;SSIS Expression&#41;](cast-ssis-expression.md).  
   

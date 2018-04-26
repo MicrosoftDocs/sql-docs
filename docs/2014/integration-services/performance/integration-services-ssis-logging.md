@@ -159,7 +159,7 @@ manager: "jhubbard"
  For information about programmatically setting these properties, see the documentation for the <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> class.  
   
 ### Logging for Data Flow Tasks  
- The Data Flow task provides many custom log entries that can be used to monitor and adjust performance. For example, you can monitor components that might cause memory leaks, or keep track of how long it takes to run a particular component. For a list of these custom log entries and sample logging output, see [Data Flow Task](../data-flow-task.md).  
+ The Data Flow task provides many custom log entries that can be used to monitor and adjust performance. For example, you can monitor components that might cause memory leaks, or keep track of how long it takes to run a particular component. For a list of these custom log entries and sample logging output, see [Data Flow Task](../control-flow/data-flow-task.md).  
   
 #### Use the PipelineComponentTime Event  
  Perhaps the most useful custom log entry is the PipelineComponentTime event. This log entry reports the number of milliseconds that each component in the data flow spends on each of the five major processing steps. The following table describes these processing steps. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] developers will recognize these steps as the principal methods of a <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  

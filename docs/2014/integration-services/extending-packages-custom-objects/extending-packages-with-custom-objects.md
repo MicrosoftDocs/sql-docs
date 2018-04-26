@@ -24,28 +24,28 @@ manager: "jhubbard"
  When your custom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] solution requires more flexibility than the Script task and the Script component provide, or when you need a component that you can reuse in multiple packages, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model lets you build custom tasks, data flow components, and other package objects in managed code from the ground up.  
   
 ## In This Section  
- [Developing Custom Objects for Integration Services](../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
+ [Developing Custom Objects for Integration Services](developing-custom-objects-for-integration-services.md)  
  Discusses the custom objects that can be created for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and summarizes the essential steps and settings.  
   
- [Persisting Custom Objects](../extending-packages-custom-objects/persisting-custom-objects.md)  
+ [Persisting Custom Objects](persisting-custom-objects.md)  
  Discusses the default persistence of custom objects, and the process of implementing custom persistence.  
   
- [Building, Deploying, and Debugging Custom Objects](../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
+ [Building, Deploying, and Debugging Custom Objects](building-deploying-and-debugging-custom-objects.md)  
  Discusses the common approaches to building, deploying and testing the various types of custom objects.  
   
- [Developing a Custom Task](../extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Developing a Custom Task](task/developing-a-custom-task.md)  
  Describes the process of coding a custom task.  
   
- [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
+ [Developing a Custom Connection Manager](connection-manager/developing-a-custom-connection-manager.md)  
  Describes the process of coding a custom connection manager.  
   
- [Developing a Custom Log Provider](../extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
+ [Developing a Custom Log Provider](log-provider/developing-a-custom-log-provider.md)  
  Describes the process of coding a custom log provider.  
   
- [Developing a Custom ForEach Enumerator](../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
+ [Developing a Custom ForEach Enumerator](foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Describes the process of coding a custom enumerator.  
   
- [Developing a Custom Data Flow Component](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
+ [Developing a Custom Data Flow Component](data-flow/developing-a-custom-data-flow-component.md)  
  Discusses how to program custom data flow sources, transformations, and destinations.  
   
 ## Reference  

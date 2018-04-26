@@ -51,7 +51,7 @@ manager: "jhubbard"
  For a list of Integration Services errors, warnings, and other messages, see [Integration Services Error and Message Reference](../integration-services-error-and-message-reference.md).  
   
 ## Error and Truncation Options  
- Errors fall into one of two categories: errors or truncations. An error indicates an unequivocal failure, and generates a NULL result. Such errors can include data conversion errors or expression evaluation errors. For example, an attempt to convert a string that contains alphabetical characters to a number causes an error. Data conversions, expression evaluations, and assignments of expression results to variables, properties, and data columns may fail because of illegal casts and incompatible data types. For more information see, [Cast &#40;SSIS Expression&#41;](expressions/cast-ssis-expression.md), [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md), and [Integration Services Data Types](integration-services-data-types.md).  
+ Errors fall into one of two categories: errors or truncations. An error indicates an unequivocal failure, and generates a NULL result. Such errors can include data conversion errors or expression evaluation errors. For example, an attempt to convert a string that contains alphabetical characters to a number causes an error. Data conversions, expression evaluations, and assignments of expression results to variables, properties, and data columns may fail because of illegal casts and incompatible data types. For more information see, [Cast &#40;SSIS Expression&#41;](../expressions/cast-ssis-expression.md), [Integration Services Data Types in Expressions](../expressions/integration-services-data-types-in-expressions.md), and [Integration Services Data Types](integration-services-data-types.md).  
   
  A truncation is less serious than an error. A truncation generates results that might be usable or even desirable. You can elect to treat truncations as errors or as acceptable conditions. For example, if you are inserting a 15-character string into a column that is only one character wide, you can elect to truncate the string.  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
  [Data Flow](data-flow.md)   
  [Transform Data with Transformations](transformations/transform-data-with-transformations.md)   
  [Connect Components with Paths](../connect-components-with-paths.md)   
- [Data Flow Task](control-flow/data-flow-task.md)   
+ [Data Flow Task](../control-flow/data-flow-task.md)   
  [Data Flow](data-flow.md)  
   
   

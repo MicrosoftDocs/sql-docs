@@ -34,7 +34,7 @@ monikerRange: ">= sql-server-2014 || >= sql-analysis-services-2016  || >= sql-se
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on both Windows and Linux. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
 
-::: moniker range="<= sql-analysis-services-2016 || <= sql-server-2016"
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on Windows. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
 
@@ -63,7 +63,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/sql/)
 ::: moniker-end
 
-::: moniker range="<= sql-analysis-services-2016 || <= sql-server-2016"
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
 **Try SQL Server!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
@@ -95,15 +95,17 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|
 ::: moniker-end
 
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
 ## Migrate and move data
 
-::: moniker range="<= sql-analysis-services-2016 || <= sql-server-2016"
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 ::: moniker-end
 
 ::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+## Migrate and move data
+
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migrate data to SQL Server on Linux](../linux/sql-server-linux-migrate-overview.md)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)

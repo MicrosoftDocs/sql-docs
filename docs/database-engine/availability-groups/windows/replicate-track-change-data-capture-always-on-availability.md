@@ -1,7 +1,7 @@
 ---
 title: "Replication, Change Tracking, & Change Data Capture - Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/02/2017"
+ms.date: "04/25/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -202,8 +202,6 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
   
     -   Pull subscription: The publisher, distributor, and subscriber databases must be on at least [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. This is because the merge agent on the subscriber must understand how an availability group can fail over to its secondary.  
   
--   Placing the distribution database on an availability group is not supported.  
-  
 -   The Publisher instances satisfy all the prerequisites required to participate in an Always On availability group. For more information see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### Restrictions  
@@ -219,7 +217,7 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
   
  *Failover to the replica database is a manual procedure. Automatic failover is not provided.  
   
- **The Distributor database is not supported for use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring.  
+ **The Distributor database is not supported for use with database mirroring.  
   
 ### Considerations  
   

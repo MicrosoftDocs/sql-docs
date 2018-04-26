@@ -75,6 +75,7 @@
         "mdx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
         "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "relational-databases/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017 || = sqlallproducts-allversions",
         "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "samples/**/*.md": "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",

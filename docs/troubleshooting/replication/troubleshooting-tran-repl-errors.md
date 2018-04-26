@@ -202,7 +202,7 @@ Sometimes the errors we find in the agent history prove to be insufficient in he
 
     ![Edit Steps](media/troubleshooting-tran-repl-errors/edit-steps.png)
 
-1. In the **Command** window, start a new line, and enter in the following text and select **Ok**: -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+1. In the **Command** window, start a new line, and enter in the following text and select **OK**: -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
     - You can modify the location and verbosity level per preference.
 
     ![Verbose Output](media/troubleshooting-tran-repl-errors/verbose.png)

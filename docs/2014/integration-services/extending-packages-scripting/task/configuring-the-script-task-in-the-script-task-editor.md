@@ -45,7 +45,7 @@ manager: "jhubbard"
  If you change the name of the method in the VSTA project, you must change the value of the `EntryPoint` property.  
   
 ### ReadOnlyVariables and ReadWriteVariables Properties  
- You can enter comma-delimited lists of existing variables as the values of these properties to make the variables available for read-only or read/write access within the Script task code. Variables of both types are accessed in code through the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> property of the `Dts` object. For more information, see [Using Variables in the Script Task](../control-flow/script-task.md).  
+ You can enter comma-delimited lists of existing variables as the values of these properties to make the variables available for read-only or read/write access within the Script task code. Variables of both types are accessed in code through the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> property of the `Dts` object. For more information, see [Using Variables in the Script Task](../extending-packages-scripting/task/using-variables-in-the-script-task.md).  
   
 > [!NOTE]  
 >  Variable names are case-sensitive.  

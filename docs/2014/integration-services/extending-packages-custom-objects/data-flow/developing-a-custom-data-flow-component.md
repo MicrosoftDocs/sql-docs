@@ -40,7 +40,7 @@ manager: "jhubbard"
  [Execution Plan and Buffer Allocation](execution-plan-and-buffer-allocation.md)  
  Describes the data flow execution plan and the allocation of data buffers.  
   
- [Working with Data Types in the Data Flow](../data-flow/data-flow.md)  
+ [Working with Data Types in the Data Flow](working-with-data-types-in-the-data-flow.md)  
  Explains how the data flow maps [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types to .NET Framework managed data types.  
   
  [Validating a Data Flow Component](validating-a-data-flow-component.md)  
@@ -114,7 +114,7 @@ manager: "jhubbard"
 |![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Extending the Data Flow with the Script Component](../../data-flow/transformations/script-component.md)   
+ [Extending the Data Flow with the Script Component](../../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md   
  [Comparing Scripting Solutions and Custom Objects](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   

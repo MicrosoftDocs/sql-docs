@@ -404,7 +404,7 @@ manager: "jhubbard"
   
  The input, the input columns, the output, and the output columns of the OLE DB Command transformation have no custom properties.  
   
- For more information, see [OLE DB Command Transformation](../../ole-db-command-transformation.md).  
+ For more information, see [OLE DB Command Transformation](ole-db-command-transformation.md).  
   
 ##  <a name="percent"></a> Percentage Sampling Transformation Custom Properties  
  The Percentage Sampling transformation has both custom properties and the properties common to all data flow components.  

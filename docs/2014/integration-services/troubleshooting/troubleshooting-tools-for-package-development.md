@@ -81,7 +81,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  When you debug a package that contains multiple Script tasks, the debugger hits breakpoints in only one Script task and will ignore breakpoints in the other Script tasks. If a Script task is part of a Foreach Loop or For Loop container, the debugger ignores breakpoints in the Script task after the first iteration of the loop.  
   
- For more information, see [Debugging Script](debugging-script.md). For suggestions about how to debug the Script component, see [Coding and Debugging the Script Component](../data-flow/transformations/script-component.md).  
+ For more information, see [Debugging Script](debugging-script.md). For suggestions about how to debug the Script component, see [Coding and Debugging the Script Component](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ## Troubleshooting Errors without a Description  
  If you encounter an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error number without an accompanying description during package development, you can locate the description in [Integration Services Error and Message Reference](../integration-services-error-and-message-reference.md). The list does not include troubleshooting information at this time.  

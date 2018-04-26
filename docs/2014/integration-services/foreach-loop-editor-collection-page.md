@@ -138,7 +138,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The ADO.NET connection manager must use a .NET provider for OLE DB. If connecting to SQL Server, the recommended provider to use is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, listed in the **.Net Providers for OleDb** section of the **Connection Manager** dialog box.  
   
- **Related Topics:** [ADO Connection Manager](connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)  
+ **Related Topics:** [ADO Connection Manager](connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
  **Schema**  
  Select the schema to enumerate.  
@@ -242,7 +242,7 @@ manager: "jhubbard"
  **Connection**  
  Select an existing ADO.NET connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- Related Topics: [ADO.NET Connection Manager](../../2014/integration-services/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)  
+ Related Topics: [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
  **Enumerate**  
  Specify the SMO object to enumerate.  

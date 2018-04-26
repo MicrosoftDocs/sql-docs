@@ -113,6 +113,6 @@ manager: "jhubbard"
  [Excel Source](excel-source.md)   
  [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
  [Data Flow](data-flow.md)   
- [Working with Excel Files with the Script Task](../control-flow/script-task.md)  
+ [Working with Excel Files with the Script Task](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

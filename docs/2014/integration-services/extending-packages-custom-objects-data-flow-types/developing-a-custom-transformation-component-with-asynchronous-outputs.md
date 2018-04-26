@@ -324,6 +324,6 @@ End Namespace
 ## See Also  
  [Developing a Custom Transformation Component with Synchronous Outputs](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [Understanding Synchronous and Asynchronous Transformations](../understanding-synchronous-and-asynchronous-transformations.md)   
- [Creating an Asynchronous Transformation with the Script Component](../data-flow/transformations/script-component.md)  
+ [Creating an Asynchronous Transformation with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   

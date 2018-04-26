@@ -92,7 +92,7 @@ manager: "jhubbard"
  While moving data from sources through transformations to destinations, a data flow component must sometimes convert data types between the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] types defined in the <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> enumeration and the managed data types of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] defined in the **System** namespace. In addition, a component must sometimes convert one [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data type to another before that type can be converted to a managed type.  
   
 > [!NOTE]  
->  The mapping files in XML format that are installed by default to C:\Program Files\Microsoft SQL Server\120\DTS\MappingFiles are not related to the data type mapping discussed in this topic. These files map data types from one database version or system to another (for example, from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to Oracle), and are used only by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Import and Export Wizard. For more information on these mapping files, see [SQL Server Import and Export Wizard](..\import-export-data\import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
+>  The mapping files in XML format that are installed by default to C:\Program Files\Microsoft SQL Server\120\DTS\MappingFiles are not related to the data type mapping discussed in this topic. These files map data types from one database version or system to another (for example, from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to Oracle), and are used only by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Import and Export Wizard. For more information on these mapping files, see [SQL Server Import and Export Wizard](../../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
 ### Mapping between Integration Services and Managed Data Types  
  The <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> and the <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> methods map [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types to managed data types.  
@@ -152,7 +152,7 @@ manager: "jhubbard"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_IMAGE>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BYTES>|  
   
 > [!NOTE]  
->  The <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> method does not return a value for the DT_DBTIMESTAMPOFFSET data type, and a <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> occurs. You must convert the DT_DBTIMESTAMPOFFSET data type to one of the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data type. For a list of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data types, see the table in the previous section, "Mapping between Integration Services and Managed Data Types." For information about converting data types, see [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+>  The <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> method does not return a value for the DT_DBTIMESTAMPOFFSET data type, and a <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> occurs. You must convert the DT_DBTIMESTAMPOFFSET data type to one of the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data type. For a list of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data types, see the table in the previous section, "Mapping between Integration Services and Managed Data Types." For information about converting data types, see [Integration Services Data Types](../../data-flow/integration-services-data-types.md).  
   
 ||  
 |-|  
@@ -162,6 +162,6 @@ manager: "jhubbard"
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>   
- [Integration Services Data Types](../data-flow/integration-services-data-types.md)  
+ [Integration Services Data Types](../../data-flow/integration-services-data-types.md)  
   
   

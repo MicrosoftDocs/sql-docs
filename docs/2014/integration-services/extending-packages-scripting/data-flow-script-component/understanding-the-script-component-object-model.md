@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Understanding the Script Component Object Model
-  As discussed in [Coding and Debugging the Script Component](../data-flow/transformations/script-component.md), the Script component project contains three project items:  
+  As discussed in [Coding and Debugging the Script Component](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, the Script component project contains three project items:  
   
 1.  The `ScriptMain` item, which contains the `ScriptMain` class in which you write your code. The `ScriptMain` class inherits from the `UserComponent` class.  
   
@@ -206,6 +206,6 @@ public override void ReleaseConnections()
   
 ## See Also  
  [Configuring the Script Component in the Script Component Editor]((configuring-the-script-component-in-the-script-component-editor.md)   
- [Coding and Debugging the Script Component](../data-flow/transformations/script-component.md)  
+ [Coding and Debugging the Script Component](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

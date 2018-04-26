@@ -604,6 +604,6 @@ manager: "jhubbard"
  [Integration Services &#40;SSIS&#41; Packages](../integration-services-ssis-packages.md)   
  [Integration Services Containers](../control-flow/integration-services-containers.md)   
  [Integration Services Tasks](../control-flow/integration-services-tasks.md)   
- [Precedence Constraints](../precedence-constraints.md)  
+ [Precedence Constraints](../control-flow/precedence-constraints.md)  
   
   

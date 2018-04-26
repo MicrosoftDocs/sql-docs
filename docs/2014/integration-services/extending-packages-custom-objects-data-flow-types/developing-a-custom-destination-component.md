@@ -486,6 +486,6 @@ End Namespace
   
 ## See Also  
  [Developing a Custom Source Component](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
- [Creating a Destination with the Script Component](../data-flow/transformations/script-component.md)  
+ [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destinationwith-the-script-component.md)  
   
   

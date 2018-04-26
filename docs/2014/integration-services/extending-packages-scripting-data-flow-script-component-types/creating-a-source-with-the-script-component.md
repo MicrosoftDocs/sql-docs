@@ -25,7 +25,7 @@ manager: "jhubbard"
 # Creating a Source with the Script Component
   You use a source component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to load data from a data source to pass on to downstream transformations and destinations. Ordinarily you connect to the data source through an existing connection manager.  
   
- For an overview of the Script component, see [Extending the Data Flow with the Script Component](../data-flow/transformations/script-component.md).  
+ For an overview of the Script component, see [Extending the Data Flow with the Script Component](../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
   
  The Script component and the infrastructure code that it generates for you simplify significantly the process of developing a custom data flow component. However, to understand how the Script component works, you may find it useful to read through the steps that are involved in developing a custom data flow component. See the section [Developing a Custom Data Flow Component](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), especially the topic [Developing a Custom Source Component](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   

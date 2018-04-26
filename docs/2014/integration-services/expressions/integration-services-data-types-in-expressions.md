@@ -99,7 +99,7 @@ manager: "jhubbard"
  Results of many operations and functions have predetermined data types. This can be the data type of the argument or the data type to which the expression evaluator casts the result. For example, the result of a logical OR operator (||) is always a Boolean, the result of the ABS function is the numeric data type of the argument, and the result of multiplication is the smallest numeric data type that can hold the result without loss. For more information about the data types of results, see [Operators &#40;SSIS Expression&#41;](operators-ssis-expression.md) and [Functions &#40;SSIS Expression&#41;](functions-ssis-expression.md).  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](../../2014/integration-services/use-an-expression-in-a-data-flow-component.md)  
+ [Use an Expression in a Data Flow Component](../use-an-expression-in-a-data-flow-component.md)  
   
 ## Related Content  
   

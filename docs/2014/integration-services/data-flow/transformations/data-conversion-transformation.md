@@ -33,12 +33,12 @@ manager: "jhubbard"
   
 -   Set the column length of string data and the precision and scale on numeric data. For more information, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](~/t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
--   Specify a code page. For more information, see [Comparing String Data](comparing-string-data.md).  
+-   Specify a code page. For more information, see [Comparing String Data](../comparing-string-data.md).  
   
     > [!NOTE]  
     >  When copying between columns with a string data type, the two columns must use the same code page.  
   
- If the length of an output column of string data is shorter than the length of its corresponding input column, the output data is truncated. For more information, see [Error Handling in Data](error-handling-in-data.md).  
+ If the length of an output column of string data is shorter than the length of its corresponding input column, the output data is truncated. For more information, see [Error Handling in Data](../error-handling-in-data.md).  
   
  This transformation has one input, one output, and one error output.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Fast Parse](../../fast-parse.md)   
- [Data Flow](data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   
   

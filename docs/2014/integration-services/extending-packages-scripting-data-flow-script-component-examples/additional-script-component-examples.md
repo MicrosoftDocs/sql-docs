@@ -29,7 +29,7 @@ manager: "jhubbard"
 >  If you want to create components that you can more easily reuse across multiple Data Flow tasks and multiple packages, consider using the code in these Script component samples as the starting point for custom data flow components. For more information, see [Developing a Custom Data Flow Component](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## In This Section  
- [Simulating an Error Output for the Script Component](../data-flow/transformations/script-component.md)  
+ [Simulating an Error Output for the Script Component](../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)  
  The Script component does not support a standard error output, but you can simulate a standard error output with very little additional configuration and coding.  
   
  [Enhancing an Error Output with the Script Component](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)  

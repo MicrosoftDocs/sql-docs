@@ -80,7 +80,7 @@ manager: "jhubbard"
 |[Merge Join Transformation](merge-join-transformation.md)|The transformation that joins two data sets using a FULL, LEFT, or INNER join.|  
 |[Lookup Transformation](lookup-transformation.md)|The transformation that looks up values in a reference table using an exact match.|  
 |[Cache Transform](cache-transform.md)|The transformation that writes data from a connected data source in the data flow to a Cache connection manager that saves the data to a cache file. The Lookup transformation performs lookups on the data in the cache file.|  
-|[Balanced Data Distributor Transformation](../../balanced-data-distributor-transformation.md)|The transformation distributes buffers of incoming rows uniformly across outputs on separate threads to improve performance of SSIS packages running on multi-core and multi-processor servers.|  
+|[Balanced Data Distributor Transformation](balanced-data-distributor-transformation.md)|The transformation distributes buffers of incoming rows uniformly across outputs on separate threads to improve performance of SSIS packages running on multi-core and multi-processor servers.|  
   
 ## Auditing Transformations  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes the following transformations to add audit information and count rows.  

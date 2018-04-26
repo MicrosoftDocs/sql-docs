@@ -72,7 +72,7 @@ manager: "jhubbard"
 -   No Match output. The no match output handles rows in the input that do not match at least one entry in the reference dataset. If you configure the Lookup transformation to treat the rows without matching entries as errors, the rows are redirected to the error output. Otherwise, the transformation would redirect those rows to the no match output.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], the Lookup transformation had only one output. For more information about how to run a Lookup transformation that was created in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], see [Upgrade Lookup Transformations](../..../sql-server/install/upgrade-lookup-transformations.md).  
+    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], the Lookup transformation had only one output. For more information about how to run a Lookup transformation that was created in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], see [Upgrade Lookup Transformations](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Error output.  
   
@@ -141,6 +141,6 @@ manager: "jhubbard"
  [Fuzzy Lookup Transformation](fuzzy-lookup-transformation.md)   
  [Term Lookup Transformation](term-lookup-transformation.md)   
  [Data Flow](../data-flow.md)   
- [Integration Services Transformations](integration-services-transformations.md)  
+ [Integration Services Transformations](../integration-services-transformations.md)  
   
   

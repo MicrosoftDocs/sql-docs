@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   When the Script task is configured for the [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] programming language, the `ScriptMain` class has a public subroutine, `Main`. The `ScriptMain.Main` subroutine is the method that the runtime calls when you run your Script task.  
   
-     By default, the only code in the `Main` subroutine of a new script is the line `Dts.TaskResult = ScriptResults.Success`. This line informs the runtime that the task was successful in its operation. The `Dts.TaskResult` property is discussed in [Returning Results from the Script Task](../control-flow/script-task.md).  
+     By default, the only code in the `Main` subroutine of a new script is the line `Dts.TaskResult = ScriptResults.Success`. This line informs the runtime that the task was successful in its operation. The `Dts.TaskResult` property is discussed in [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   When the Script task is configured for the Visual C# programming language, the `ScriptMain` class has a public method, `Main`. The method is called when the Script task runs.  
   

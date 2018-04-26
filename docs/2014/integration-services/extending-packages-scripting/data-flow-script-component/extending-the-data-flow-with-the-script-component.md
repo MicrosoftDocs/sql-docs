@@ -45,7 +45,7 @@ manager: "jhubbard"
  [Configuring the Script Component in the Script Component Editor]((configuring-the-script-component-in-the-script-component-editor.md)  
  Properties that you configure in the **Script Transformation Editor** affect the capabilities and the performance of Script component code.  
   
- [Coding and Debugging the Script Component](../data-flow/transformations/script-component.md)  
+ [Coding and Debugging the Script Component](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
  You use the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) development environment to develop the scripts contained in the Script component.  
   
  [Understanding the Script Component Object Model]((understanding-the-script-component-object-model.md)  

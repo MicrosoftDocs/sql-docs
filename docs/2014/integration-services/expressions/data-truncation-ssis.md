@@ -32,6 +32,6 @@ manager: "jhubbard"
  The expression evaluator identifies explicit casts that may cause truncation and issues a warning when the expression is parsed. For example, the expression evaluator warns you if a 30-character string is cast into a 20-character string.  
   
 > [!NOTE]  
->  Truncation is not checked at run time; data is truncated without warning. However, most data adapters and transformations support error outputs that can handle the disposition of error rows. For more information about handling truncation of data, see [Error Handling in Data](../error-handling-in-data.md).  
+>  Truncation is not checked at run time; data is truncated without warning. However, most data adapters and transformations support error outputs that can handle the disposition of error rows. For more information about handling truncation of data, see [Error Handling in Data](../data-flow/error-handling-in-data.md).  
   
   

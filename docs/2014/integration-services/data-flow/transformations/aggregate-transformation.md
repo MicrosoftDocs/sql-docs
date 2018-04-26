@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 -   [Aggregate Values in a Dataset by Using the Aggregate Transformation](/aggregate-transformation.md)  
   
--   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
+-   [Set the Properties of a Data Flow Component](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Sort Data for the Merge and Merge Join Transformations](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
  [Aggregate Values in a Dataset by Using the Aggregate Transformation](/aggregate-transformation.md)  
   
 ## See Also  
- [Data Flow](data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   
   

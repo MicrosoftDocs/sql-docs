@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  The following diagram shows a simple example of using the BDD transformation. In this example, the BDD transformation picks one pipeline buffer at a time from the input data from a flat file source and sends it down one of the three output paths in a round robin fashion. In SQL Server Data Tools, you can check the values of a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(default size of the pipeline buffer) and <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(default maximum number of rows in a pipeline buffer) in the **Properties** window displaying properties of a data flow task.  
   
- ![Balanced Data Distributor](../media/balanceddatadistributor.JPG "Balanced Data Distributor")  
+ ![Balanced Data Distributor](../../media/balanceddatadistributor.JPG "Balanced Data Distributor")  
   
  The Balanced Data Distributor transformation helps improve performance of a package in a scenario that satisfies the following conditions:  
   

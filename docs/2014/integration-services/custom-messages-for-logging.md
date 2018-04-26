@@ -166,7 +166,7 @@ manager: "jhubbard"
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Reports the results of implementing logging in the script. A log entry is written for each call to the `Log` method of the `Dts` object. The entry is written when the code is run. For more information, see [Logging in the Script Task](control-flow/script-task.md).|  
+|`ScriptTaskLogEntry`|Reports the results of implementing logging in the script. A log entry is written for each call to the `Log` method of the `Dts` object. The entry is written when the code is run. For more information, see [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ###  <a name="SendMail"></a> Send Mail Task  
  The following table lists the custom log entries for the Send Mail task.  

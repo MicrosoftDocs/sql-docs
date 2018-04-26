@@ -33,7 +33,7 @@ manager: "jhubbard"
 ### Example Topics  
  This section contains code examples that demonstrate various uses of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classes that you can incorporate into an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Script task:  
   
- [Detecting an Empty Flat File with the Script Task](../control-flow/script-task.md)  
+ [Detecting an Empty Flat File with the Script Task](../extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md)  
  Checks a flat file to determine whether it contains rows of data, and saves the result to a variable for use in control flow branching.  
   
  [Gathering a List for the ForEach Loop with the Script Task](../extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md)  

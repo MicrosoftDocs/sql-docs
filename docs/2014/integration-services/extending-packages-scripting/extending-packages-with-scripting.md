@@ -28,7 +28,7 @@ manager: "jhubbard"
  The Script task and the Script component let you extend both the control flow and the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package with very little coding. Both objects use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) development environment and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# programming languages, and benefit from all the functionality offered by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class library, as well as custom assemblies. The Script task and the Script component let the developer create custom functionality without having to write all the infrastructure code that is typically required when developing a custom task or custom data flow component.  
   
 ## In This Section  
- [Comparing the Script Task and the Script Component](../data-flow/transformations/script-component.md)  
+ [Comparing the Script Task and the Script Component](../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
  Discusses the similarities and differences between the Script task and the Script component.  
   
  [Comparing Scripting Solutions and Custom Objects](comparing-scripting-solutions-and-custom-objects.md)  
@@ -37,7 +37,7 @@ manager: "jhubbard"
  [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md)  
  Discusses the steps required to reference and use external assemblies and namespaces in a scripting project.  
   
- [Extending the Package with the Script Task](../control-flow/script-task.md)  
+ [Extending the Package with the Script Task](../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
  Discusses how to create custom tasks by using the Script task. A task is typically called one time per package execution, or one time for each data source opened by a package.  
   
  [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  

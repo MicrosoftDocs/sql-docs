@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  The Character Map transformation can convert column data in place or add a column to the transformation output and put the converted data in the new column. You can apply different sets of mapping operations to the same input column and put the results in different columns. For example, you can convert the same column to uppercase and lowercase and put the results in two different columns.  
   
- Mapping can, under some circumstances, cause data to be truncated. For example, truncation can occur when single-byte characters are mapped to characters with a multibyte representation. The Character Map transformation includes an error output, which can be used to direct truncated data to separate output. For more information, see [Error Handling in Data](../../error-handling-in-data.md).  
+ Mapping can, under some circumstances, cause data to be truncated. For example, truncation can occur when single-byte characters are mapped to characters with a multibyte representation. The Character Map transformation includes an error output, which can be used to direct truncated data to separate output. For more information, see [Error Handling in Data](../error-handling-in-data.md).  
   
  This transformation has one input, one output, and one error output.  
   

@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Reports the results of implementing logging in the script. The task writes a log entry for each call to the `Log` method of the `Dts` object. The task writes these entries when the code is run. For more information, see [Logging in the Script Task](script-task.md).|  
+|`ScriptTaskLogEntry`|Reports the results of implementing logging in the script. The task writes a log entry for each call to the `Log` method of the `Dts` object. The task writes these entries when the code is run. For more information, see [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see the following topics:  
   

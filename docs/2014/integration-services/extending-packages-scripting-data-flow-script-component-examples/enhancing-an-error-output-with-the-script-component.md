@@ -32,7 +32,7 @@ manager: "jhubbard"
 ## Example  
  The example shown here uses a Script component configured as a transformation to add an error description column to existing error output data in the data flow.  
   
- For more information about how to configure the Script component for use as a transformation in the data flow, see [Creating a Synchronous Transformation with the Script Component](../data-flow/transformations/script-component.md) and [Creating an Asynchronous Transformation with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ For more information about how to configure the Script component for use as a transformation in the data flow, see [Creating a Synchronous Transformation with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)and [Creating an Asynchronous Transformation with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### To configure this Script Component example  
   
@@ -91,6 +91,6 @@ public class ScriptMain:
 ## See Also  
  [Error Handling in Data](../data-flow/error-handling-in-data.md)   
  [Using Error Outputs in a Data Flow Component](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
- [Creating a Synchronous Transformation with the Script Component](../data-flow/transformations/script-component.md)  
+ [Creating a Synchronous Transformation with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 
   
   

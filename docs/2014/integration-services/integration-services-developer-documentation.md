@@ -59,7 +59,7 @@ manager: "jhubbard"
  [Working with Connection Managers Programmatically](working-with-connection-managers-programmatically.md)  
  Lists the connection managers that you can use from managed code, and the values that the connection managers return when the code calls the `AcquireConnection` method.  
   
- [Extending Packages with Scripting](dev-guide/scripting.md)  
+ [Extending Packages with Scripting](extending-packages-scripting/extending-packages-with-scripting.md)  
  Describes how to extend the control flow by using the Script task, or the data flow by using the Script component.  
   
  [Extending Packages with Custom Objects](dev-guide/extending-packages-with-custom-objects.md)  

@@ -155,7 +155,7 @@ public class ScriptMain : UserComponent
  All the items that you add are persisted inside the package.  
   
 #### References in the Script Component Project  
- You can add references to managed assemblies by right-clicking the Script task project in **Project Explorer**, and then clicking **Add Reference**. For more information, see [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md).  
+ You can add references to managed assemblies by right-clicking the Script task project in **Project Explorer**, and then clicking **Add Reference**. For more information, see [Referencing Other Assemblies in Scripting Solutions](../referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
 >  You can view project references in the VSTA IDE in **Class View** or in **Project Explorer**. You open either of these windows from the **View** menu. You can add a new reference from the **Project** menu, from **Project Explorer**, or from **Class View**.  
@@ -185,19 +185,19 @@ public class ScriptMain : UserComponent
   
 -   Interrupt execution and display a modal message by using the `MessageBox.Show` method in the **System.Windows.Forms** namespace. (Remove this code after you complete the debugging process.)  
   
--   Raise events for informational messages, warnings, and errors. The FireInformation, FireWarning, and FireError methods display the event description in the Visual Studio **Output** window. However, the FireProgress method, the Console.Write method, and Console.WriteLine method do not display any information in the **Output** window. Messages from the FireProgress event appear on the **Progress** tab of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer. For more information, see [Raising Events in the Script Component](../data-flow/transformations/script-component.md).  
+-   Raise events for informational messages, warnings, and errors. The FireInformation, FireWarning, and FireError methods display the event description in the Visual Studio **Output** window. However, the FireProgress method, the Console.Write method, and Console.WriteLine method do not display any information in the **Output** window. Messages from the FireProgress event appear on the **Progress** tab of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer. For more information, see [Raising Events in the Script Component](../../data-flow/transformations/script-component.md).  
   
 -   Log events or user-defined messages to enabled logging providers. For more information, see [Logging in the Script Component]((logging-in-the-script-component.md).  
   
- If you just want to examine the output of a Script component configured as a source or as a transformation, without saving the data to a destination, you can stop the data flow with a [Row Count Transformation](../data-flow/transformations/row-count-transformation.md) and attach a data viewer to the output of the Script component. For information about data viewers, see [Debugging Data Flow](../data-flow/data-flow.md).  
+ If you just want to examine the output of a Script component configured as a source or as a transformation, without saving the data to a destination, you can stop the data flow with a [Row Count Transformation](../../data-flow/transformations/row-count-transformation.md) and attach a data viewer to the output of the Script component. For information about data viewers, see [Debugging Data Flow](../../troubleshooting/debugging-data-flow.md).  
   
 ## In This Section  
  For more information about coding the Script component, see the following topics in this section.  
   
- [Understanding the Script Component Object Model]((understanding-the-script-component-object-model.md)  
+ [Understanding the Script Component Object Model](understanding-the-script-component-object-model.md)  
  Explains how to use the objects, methods, and properties available in the Script component.  
   
- [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md)  
+ [Referencing Other Assemblies in Scripting Solutions](../referencing-other-assemblies-in-scripting-solutions.md)  
  Explains how to reference objects from the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] class library in the Script component.  
   
  [Simulating an Error Output for the Script Component](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)  
@@ -212,6 +212,6 @@ public class ScriptMain : UserComponent
 |![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Configuring the Script Component in the Script Component Editor]((configuring-the-script-component-in-the-script-component-editor.md)  
+ [Configuring the Script Component in the Script Component Editor](../../configuring-the-script-component-in-the-script-component-editor.md)  
   
   

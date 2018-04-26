@@ -248,7 +248,7 @@ manager: "jhubbard"
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
 |DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   
- For information on mapping data types in the data flow, see [Working with Data Types in the Data Flow](../extending-packages-custom-objects/working-with-data-types-in-the-data-flow.md).  
+ For information on mapping data types in the data flow, see [Working with Data Types in the Data Flow](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## Related Content  
  Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  

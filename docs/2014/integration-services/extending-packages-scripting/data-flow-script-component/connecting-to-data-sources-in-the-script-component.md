@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Connecting to Data Sources in the Script Component
-  A connection manager is a convenient unit that encapsulates and stores the information that is required to connect to a data source of a particular type. For more information, see [Integration Services &#40;SSIS&#41; Connections](../connection-manager/integration-services-ssis-connections.md).  
+  A connection manager is a convenient unit that encapsulates and stores the information that is required to connect to a data source of a particular type. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../connection-manager/integration-services-ssis-connections.md).  
   
  You can make existing connection managers available for access by the custom script in the source or destination component by clicking the **Add** and **Remove** buttons on the **Connection Managers** page of the **Script Transformation Editor**. However, you must write your own custom code to load or save your data, and possibly to open and close the connection to the data source. For more information about the **Connection Managers** page of the **Script Transformation Editor**, see [Configuring the Script Component in the Script Component Editor]((configuring-the-script-component-in-the-script-component-editor.md) and [Script Transformation Editor &#40;Connection Managers Page&#41;](../../script-transformation-editor-connection-managers-page.md).  
   
@@ -51,14 +51,14 @@ manager: "jhubbard"
 >   
 >  If you need to call the AcquireConnection method of a connection manager that returns an unmanaged object, use an ADO.NET connection manager. When you configure the ADO.NET connection manager to use an OLE DB provider, it connects by using the .NET Framework Data Provider for OLE DB. In this case, the AcquireConnection method returns a `System.Data.OleDb.OleDbConnection` instead of an unmanaged object. To configure an ADO.NET connection manager for use with an Excel data source, select the Microsoft OLE DB Provider for Jet, specify an Excel workbook, and then enter `Excel 8.0` (for Excel 97 and later) as the value of **Extended Properties** on the **All** page of the **Connection Manager** dialog box.  
   
- For more information about how to use connection managers with the script component, see [Creating a Source with the Script Component](../data-flow/transformations/script-component.md) and [Creating a Destination with the Script Component](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
+ For more information about how to use connection managers with the script component, see [Creating a Source with the Script Component](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) and [Creating a Destination with the Script Component](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
 ||  
 |-|  
 |![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Connections](../connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;SSIS&#41; Connections](../../connection-manager/integration-services-ssis-connections.md)   
  [Create Connection Managers](../../create-connection-managers.md)  
   
   

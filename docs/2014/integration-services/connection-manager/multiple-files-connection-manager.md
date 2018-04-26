@@ -26,7 +26,7 @@ manager: "jhubbard"
   A Multiple Files connection manager enables a package to reference existing files and folders, or to create files and folders at run time.  
   
 > [!NOTE]  
->  The built-in tasks and data flow components in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not use the Multiple Files connection manager. However, you can use this connection manager in the Script task or Script component. For information about how to use connection managers in the Script task, see [Connecting to Data Sources in the Script Task](../control-flow/script-task.md). For information about how to use connection managers in the Script component, see [Connecting to Data Sources in the Script Component](../data-flow/transformations/script-component.md).  
+>  The built-in tasks and data flow components in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not use the Multiple Files connection manager. However, you can use this connection manager in the Script task or Script component. For information about how to use connection managers in the Script task, see [Connecting to Data Sources in the Script Task](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). For information about how to use connection managers in the Script component, see [Connecting to Data Sources in the Script Component](../extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
   
 ## Usage Types of the Multiple Files Connection Manager  
  The `FileUsageType` property of the Multiple Files connection manager specifies how the connection is used. The Multiple Files connection manager can create files, create folders, use existing files, and use existing folders.  

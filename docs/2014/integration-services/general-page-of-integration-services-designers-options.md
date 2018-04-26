@@ -53,6 +53,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Security Overview &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
- [Extending Packages with Scripting](dev-guide/scripting.md)  
+ [Extending Packages with Scripting](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

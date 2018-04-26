@@ -29,7 +29,7 @@ manager: "jhubbard"
 ## Selecting the Type of Component to Create  
  When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box appears. You preconfigure the component as a source, transformation, or destination. After you make this initial selection, you can continue to configure the component in the **Script Transformation Editor**.  
   
- To set the default script language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../general-page-of-integration-services-designers-options.md).  
+ To set the default script language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../../general-page-of-integration-services-designers-options.md).  
   
 ## Understanding the Two Design-Time Modes  
  In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode.  
@@ -73,7 +73,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  For more information about configuring inputs and outputs for a specific type of data flow component see the appropriate example under [Developing Specific Types of Script Components](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 > [!NOTE]  
->  Although you cannot directly configure an output as an error output in the Script component for automatic handling of error rows, you can reproduce the functionality of an error output by creating an additional output and using script to direct rows to this output when appropriate. For more information, see [Simulating an Error Output for the Script Component](../data-flow/transformations/script-component.md).  
+>  Although you cannot directly configure an output as an error output in the Script component for automatic handling of error rows, you can reproduce the functionality of an error output by creating an additional output and using script to direct rows to this output when appropriate. For more information, see [Simulating an Error Output for the Script Component](../../data-flow/transformations/script-component.md).  
   
 #### ExclusionGroup and SynchronousInputID Properties of Outputs  
  The `ExclusionGroup` property has a non-zero value only in transformations with synchronous outputs, where your code performs filtering or branching and directs each row to one of the outputs that share the same non-zero `ExclusionGroup` value. For example, the transformation can direct rows either to the default output or to an error output. When you create additional outputs for this scenario, make sure to set the value of the `SynchronousInputID` property to the integer that matches the `ID` of the component's input.  

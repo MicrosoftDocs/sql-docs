@@ -67,6 +67,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Script Task](../../control-flow/script-task.md)   
- [Comparing the Script Task and the Script Component](../../data-flow/transformations/script-component.md)  
+ [Comparing the Script Task and the Script Component](../../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   
   

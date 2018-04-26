@@ -275,7 +275,7 @@ manager: "jhubbard"
   
 7.  In the Main procedure, enter code to log an error by calling the `Dts.Log` method, or to raise an event by calling one of the methods of the `Dts.Events` interface. Inform the package of the error by returning `Dts.TaskResult = Dts.Results.Failure`.  
   
-     The following sample shows how to write a message to the log. For more information, see [Logging in the Script Task](../control-flow/script-task.md), [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md), and [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     The following sample shows how to write a message to the log. For more information, see [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md), [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md), and [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
     ```  
     ' User variables.  

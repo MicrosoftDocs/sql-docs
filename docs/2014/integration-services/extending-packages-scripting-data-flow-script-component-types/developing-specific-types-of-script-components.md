@@ -32,7 +32,7 @@ manager: "jhubbard"
  For additional examples of the Script component, see [Additional Script Component Examples](../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
   
 ## In This Section  
- [Creating a Source with the Script Component](../data-flow/transformations/script-component.md)  
+ [Creating a Source with the Script Component](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
  Explains and demonstrates how to create a data flow source by using the Script component.  
   
  [Creating a Synchronous Transformation with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

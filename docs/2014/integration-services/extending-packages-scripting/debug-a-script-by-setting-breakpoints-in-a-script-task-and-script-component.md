@@ -25,7 +25,7 @@ manager: "jhubbard"
  After you set breakpoints in the script, the **Set Breakpoints - \<object name>** dialog box lists the breakpoints, along with the built-in breakpoints.  
   
 > [!IMPORTANT]  
->  Under certain circumstances, breakpoints in the Script task and Script component are ignored. For more information, see the **Debugging the Script Task** section in [Coding and Debugging the Script Task](../control-flow/script-task.md) and the **Debugging the Script Component** section in [Coding and Debugging the Script Component](../data-flow/transformations/script-component.md).  
+>  Under certain circumstances, breakpoints in the Script task and Script component are ignored. For more information, see the **Debugging the Script Task** section in [Coding and Debugging the Script Task](../control-flow/script-task.md) and the **Debugging the Script Component** section in [Coding and Debugging the Script Component](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ### To set a breakpoint in script  
   

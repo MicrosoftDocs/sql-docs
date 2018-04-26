@@ -105,6 +105,6 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 ## See Also  
  [Error Handling in Data](../data-flow/error-handling-in-data.md)   
  [Using Error Outputs in a Data Flow Component](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
- [Creating a Synchronous Transformation with the Script Component](../data-flow/transformations/script-component.md)  
+ [Creating a Synchronous Transformation with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 
   
   

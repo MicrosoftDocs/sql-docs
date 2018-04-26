@@ -69,7 +69,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
   
 ## Examples  
- The following example selects the number of characters and the data in `FirstName` for people located in `Australia`. This example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example selects the number of characters and the data in `FirstName` for people located in `Australia`. This example uses the AdventureWorks database.  
   
 ```  
 SELECT LEN(FirstName) AS Length, FirstName, LastName   

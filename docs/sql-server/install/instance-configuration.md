@@ -2,7 +2,7 @@
 title: "Installation Wizard Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "2017-04-21"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install"

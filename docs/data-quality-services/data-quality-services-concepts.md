@@ -2,7 +2,7 @@
 title: "Data Quality Services Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/01/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"

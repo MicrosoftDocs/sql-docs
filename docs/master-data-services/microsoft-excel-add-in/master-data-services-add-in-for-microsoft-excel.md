@@ -2,7 +2,7 @@
 title: "Master Data Services Add-in for Microsoft Excel | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "microsoft-excel-add-in"

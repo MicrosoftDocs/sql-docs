@@ -2,7 +2,7 @@
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "dma"
 ms.service: ""
 ms.component:

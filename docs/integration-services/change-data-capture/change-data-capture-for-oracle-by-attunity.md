@@ -2,7 +2,7 @@
 title: "Change Data Capture for Oracle by Attunity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "change-data-capture"

@@ -2,7 +2,7 @@
 title: "Create a Knowledge Base | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/04/2013"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"

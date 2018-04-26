@@ -2,7 +2,7 @@
 title: "Generating Dump Files for Package Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "troubleshooting"

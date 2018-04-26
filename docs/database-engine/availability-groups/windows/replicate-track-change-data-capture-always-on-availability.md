@@ -94,7 +94,7 @@ ms.workload: "On Demand"
   
      The following example creates the capture job.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -106,7 +106,7 @@ ms.workload: "On Demand"
   
      To ensure that appropriate cleanup occurs at the new primary database, a local cleanup job should always be created. The following example creates the cleanup job.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -132,7 +132,7 @@ ms.workload: "On Demand"
   
      Use the following query to determine whether an availability group listener name has been defined for the availability group hosting a CDC database. The query will return the availability group listener name if one has been created.  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -148,7 +148,7 @@ ms.workload: "On Demand"
   
      The following query can be used to determine whether read-only intent is needed to connect to a readable secondary replica.  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -160,7 +160,7 @@ ms.workload: "On Demand"
   
      When **sp_addlinkedserver** is used to create a linked server to access the secondary, the *@datasrc* parameter is used for the availability group listener name or the explicit server name, and the *@provstr* parameter is used to specify read-only intent.  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  

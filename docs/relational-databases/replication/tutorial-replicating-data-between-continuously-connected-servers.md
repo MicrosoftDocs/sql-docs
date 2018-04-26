@@ -140,7 +140,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
 
        ![Start Snapshot Agent](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-       If you see an error here, please see [Troubleshooting Snapshot Agent Errors](../../troubleshooting/replication/troubleshooting-tran-repl-errors.md#troubleshoot-erros-with-snapshot-agent). 
+       If you see an error here, please see [Troubleshooting Snapshot Agent Errors](../../troubleshooting/replication/troubleshooting-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent). 
 
   
 ### To add the Distribution Agent login to the PAL  

@@ -76,7 +76,7 @@ End Function
 ```  
   
 ### Persisting the Log Provider  
- Ordinarily you do not have to implement custom persistence for a connection manager. Custom persistence is required only when the properties of an object use complex data types. For more information, see [Developing Custom Objects for Integration Services](../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ Ordinarily you do not have to implement custom persistence for a connection manager. Custom persistence is required only when the properties of an object use complex data types. For more information, see [Developing Custom Objects for Integration Services](../developing-custom-objects-for-integration-services.md).  
   
 ## Logging with the Log Provider  
  There are three run-time methods that must be overridden by all log providers: <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, and <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  

@@ -69,7 +69,7 @@ manager: "jhubbard"
     |Connection manager|Options|  
     |------------------------|-------------|  
     |[ADO Connection Manager](connection-manager/ado-connection-manager.md)|[Configure OLE DB Connection Manager](configure-ole-db-connection-manager.md)|  
-    |[ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)|[Configure ADO.NET Connection Manager](../../2014/integration-services/configure-ado-net-connection-manager.md)|  
+    |[ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)|[Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)|  
     |[Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)|[Add Analysis Services Connection Manager Dialog Box UI Reference](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Excel Connection Manager](connection-manager/excel-connection-manager.md)|[Excel Connection Manager Editor](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[File Connection Manager](connection-manager/file-connection-manager.md)|[File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)|  
@@ -105,7 +105,7 @@ manager: "jhubbard"
     |Connection manager|Options|  
     |------------------------|-------------|  
     |[ADO Connection Manager](connection-manager/ado-connection-manager.md)|[Configure OLE DB Connection Manager](configure-ole-db-connection-manager.md)|  
-    |[ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)|[Configure ADO.NET Connection Manager](../../2014/integration-services/configure-ado-net-connection-manager.md)|  
+    |[ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)|[Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)|  
     |[Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)|[Add Analysis Services Connection Manager Dialog Box UI Reference](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Excel Connection Manager](connection-manager/excel-connection-manager.md)|[Excel Connection Manager Editor](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[File Connection Manager](connection-manager/file-connection-manager.md)|[File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)|  

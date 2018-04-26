@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  The <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> base class does not contain any implementation code for the methods discussed in this topic. Therefore it is unnecessary, but harmless, to add a call to the base class implementation to your own implementation of the method.  
   
- For information about how to use the methods and properties of these classes in a particular type of Script component, see the section [Additional Script Component Examples](../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). The example topics also contain complete code samples.  
+ For information about how to use the methods and properties of these classes in a particular type of Script component, see the section [Additional Script Component Examples](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). The example topics also contain complete code samples.  
   
 ## AcquireConnections Method  
  Sources and destinations generally must connect to an external data source. Override the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> method of the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> base class to retrieve the connection or the connection information from the appropriate connection manager.  

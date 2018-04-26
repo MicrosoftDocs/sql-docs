@@ -185,7 +185,7 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
 ```  
   
 ### Persisting the Connection Manager  
- Usually, you do not have to implement custom persistence for a connection manager. Custom persistence is required only when the properties of an object use complex data types. For more information, see [Developing Custom Objects for Integration Services](../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ Usually, you do not have to implement custom persistence for a connection manager. Custom persistence is required only when the properties of an object use complex data types. For more information, see [Developing Custom Objects for Integration Services](../developing-custom-objects-for-integration-services.md).  
   
 ## Working with the External Data Source  
  The methods that support connecting to an external data source are the most important methods of a custom connection manager. The <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> and <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> methods are called at various times during both design time and run time.  

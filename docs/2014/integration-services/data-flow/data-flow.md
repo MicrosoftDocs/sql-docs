@@ -57,10 +57,10 @@ manager: "jhubbard"
   
      At run time, row-level errors may occur when data flow components convert data, perform a lookup, or evaluate expressions. For example, a data column with a string value cannot be converted to an integer, or an expression tries to divide by zero. Both operations cause errors, and the rows that contain the errors can be processed separately using an error flow. For more information about how to use error flows in package data flow, see [Error Handling in Data](error-handling-in-data.md).  
   
--   Include annotations to make the data flow self-documenting. For more information, see [Use Annotations in Packages](use-annotations-in-packages.md).  
+-   Include annotations to make the data flow self-documenting. For more information, see [Use Annotations in Packages](../use-annotations-in-packages.md).  
   
 > [!NOTE]  
->  When you create a new package, you can also use a wizard to help you configure connection managers, sources, and destinations correctly. For more information, see [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
+>  When you create a new package, you can also use a wizard to help you configure connection managers, sources, and destinations correctly. For more information, see [Create Packages in SQL Server Data Tools](../create-packages-in-sql-server-data-tools.md).  
   
  When the **Data Flow** tab is active, the Toolbox contains the sources, transformations, and destinations that you can add to the data flow.  
   
@@ -176,7 +176,7 @@ manager: "jhubbard"
  Sources have outputs, destinations have inputs, and transformations have both inputs and outputs. Additionally, many data flow components can be configured to use an error output.  
   
 ### Inputs  
- Destinations and transformations have inputs. An input contains one or more input columns, which can refer to external columns if the data flow component has been configured to use them. Inputs can be configured to monitor and control the flow of data: For example, you can specify if the component should fail in response to an error, ignore errors, or redirect error rows to the error output. You can also assign a description to the input or update the input name. In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, inputs are configured by using the **Advanced Editor** dialog box. For more information about the **Advanced Editor,** see [Integration Services User Interface](integration-services-user-interface.md).  
+ Destinations and transformations have inputs. An input contains one or more input columns, which can refer to external columns if the data flow component has been configured to use them. Inputs can be configured to monitor and control the flow of data: For example, you can specify if the component should fail in response to an error, ignore errors, or redirect error rows to the error output. You can also assign a description to the input or update the input name. In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, inputs are configured by using the **Advanced Editor** dialog box. For more information about the **Advanced Editor,** see [Integration Services User Interface](../integration-services-user-interface.md).  
   
 ### Outputs  
  Sources and transformations always have outputs. An output contains one or more output columns, which can refer to external columns if the data flow component has been configured to use them. Outputs can be configured to provide information useful to downstream processing of the data. For example, you can indicate whether the output is sorted. You can also provide a description for the output, or update the output name. In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, outputs are configured by using the **Advanced Editor** dialog box.  

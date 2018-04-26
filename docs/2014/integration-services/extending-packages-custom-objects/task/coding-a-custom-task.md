@@ -150,7 +150,7 @@ End Class
 ```  
   
 ### Persisting the Task  
- Ordinarily you do not have to implement custom persistence for a task. Custom persistence is required only when the properties of an object use complex data types. For more information, see [Developing Custom Objects for Integration Services](../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ Ordinarily you do not have to implement custom persistence for a task. Custom persistence is required only when the properties of an object use complex data types. For more information, see [Developing Custom Objects for Integration Services](../developing-custom-objects-for-integration-services.md).  
   
 ## Executing the Task  
  This section describes how to use the `Execute` method that is inherited and overridden by tasks. This section also explains various ways of providing information about the results of task execution.  

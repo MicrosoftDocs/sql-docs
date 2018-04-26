@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 -   Specify a time-out for the bulk load operation.  
   
- This destination uses an OLE DB connection manager to connect to a data source, and the connection manager specifies the OLE DB provider to use. For more information, see [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
+ This destination uses an OLE DB connection manager to connect to a data source, and the connection manager specifies the OLE DB provider to use. For more information, see [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
   
  An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project also provides the data source object from which you can create an OLE DB connection manager. This makes data sources and data source views available to the SQL Server destination.  
   

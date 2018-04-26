@@ -53,11 +53,11 @@ manager: "jhubbard"
   
  The Lookup transformation tries to perform an equi-join between values in the transformation input and values in the reference dataset. (An equi-join means that each row in the transformation input must match at least one row from the reference dataset.) If an equi-join is not possible, the Lookup transformation takes one of the following actions:  
   
--   If there is no matching entry in the reference dataset, no join occurs. By default, the Lookup transformation treats rows without matching entries as errors. However, you can configure the Lookup transformation to redirect such rows to a no match output. For more information, see [Lookup Transformation Editor &#40;General Page&#41;](../../general-page-of-integration-services-designers-options.md) and [Lookup Transformation Editor &#40;Error Output Page&#41;](../../lookup-transformation-editor-error-output-page.md).  
+-   If there is no matching entry in the reference dataset, no join occurs. By default, the Lookup transformation treats rows without matching entries as errors. However, you can configure the Lookup transformation to redirect such rows to a no match output. For more information, see [Lookup Transformation Editor &#40;General Page&#41;](../../lookup-transformation-editor-general-page.md) and [Lookup Transformation Editor &#40;Error Output Page&#41;](../../lookup-transformation-editor-error-output-page.md).  
   
 -   If there are multiple matches in the reference table, the Lookup transformation returns only the first match returned by the lookup query. If multiple matches are found, the Lookup transformation generates an error or warning only when the transformation has been configured to load all the reference dataset into the cache. In this case, the Lookup transformation generates a warning when the transformation detects multiple matches as the transformation fills the cache.  
   
- The join can be a composite join, which means that you can join multiple columns in the transformation input to columns in the reference dataset. The transformation supports join columns with any data type, except for DT_R4, DT_R8, DT_TEXT, DT_NTEXT, or DT_IMAGE. For more information, see [Integration Services Data Types](../integration-services-data-types.md).  
+ The join can be a composite join, which means that you can join multiple columns in the transformation input to columns in the reference dataset. The transformation supports join columns with any data type, except for DT_R4, DT_R8, DT_TEXT, DT_NTEXT, or DT_IMAGE. For more information, see [Integration Services Data Types](../../integration-services-data-types.md).  
   
  Typically, values from the reference dataset are added to the transformation output. For example, the Lookup transformation can extract a product name from a table using a value from an input column, and then add the product name to the transformation output. The values from the reference table can replace column values or can be added to new columns.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
 -   No Match output. The no match output handles rows in the input that do not match at least one entry in the reference dataset. If you configure the Lookup transformation to treat the rows without matching entries as errors, the rows are redirected to the error output. Otherwise, the transformation would redirect those rows to the no match output.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], the Lookup transformation had only one output. For more information about how to run a Lookup transformation that was created in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], see [Upgrade Lookup Transformations](../../2014/sql-server/install/upgrade-lookup-transformations.md).  
+    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], the Lookup transformation had only one output. For more information about how to run a Lookup transformation that was created in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], see [Upgrade Lookup Transformations](../..../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Error output.  
   
@@ -83,16 +83,16 @@ manager: "jhubbard"
   
  The following are additional benefits of persisting the cache to a file:  
   
--   ***Share the cache file between multiple packages. For more information, see***  [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Share the cache file between multiple packages. For more information, see***  [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
--   Deploy the cache file with a package. ***You can then use the data on multiple computers.*** For more information, see [Create and Deploy a Cache for the Lookup Transformation](/lookup-transformation.md).  
+-   Deploy the cache file with a package. ***You can then use the data on multiple computers.*** For more information, see [Create and Deploy a Cache for the Lookup Transformation](lookup-transformation.md).  
   
--   Use the Raw File source to read data from the cache file. You can then use other data flow components to transform or move the data. For more information, see [Raw File Source](raw-file-source.md).  
+-   Use the Raw File source to read data from the cache file. You can then use other data flow components to transform or move the data. For more information, see [Raw File Source](../raw-file-source.md).  
   
     > [!NOTE]  
     >  The Cache connection manager does not support cache files that are created or modified by using the Raw File destination.  
   
--   Perform operations and set attributes on the cache file by using the File System task. For more information, see and [File System Task](control-flow/file-system-task.md).  
+-   Perform operations and set attributes on the cache file by using the File System task. For more information, see and [File System Task](../../control-flow/file-system-task.md).  
   
  The following are the caching options:  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
      This caching option is compatible with the full caching option that is available for the Lookup transformation in [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
--   The reference dataset is generated from a connected data source in the data flow or from a cache file, and is loaded into cache before the Lookup transformation runs. You use the Cache connection manager, and, optionally, the Cache transformation, to access the dataset. For more information, see [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) and [Cache Transform](/cache-transform.md).  
+-   The reference dataset is generated from a connected data source in the data flow or from a cache file, and is loaded into cache before the Lookup transformation runs. You use the Cache connection manager, and, optionally, the Cache transformation, to access the dataset. For more information, see [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) and [Cache Transform](cache-transform.md).  
   
 -   The reference dataset is generated by using a table, view, or SQL query during the execution of the Lookup transformation. The rows with matching entries in the reference dataset and the rows without matching entries in the dataset are loaded into cache.  
   
@@ -117,13 +117,13 @@ manager: "jhubbard"
 ## Related Tasks  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For more details, see the following topics.  
   
--   [Implement a Lookup in No Cache or Partial Cache Mode](/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
+-   [Implement a Lookup in No Cache or Partial Cache Mode](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
--   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
+-   [Set the Properties of a Data Flow Component](../set-the-properties-of-a-data-flow-component.md)  
   
 ## Related Content  
   
@@ -138,9 +138,9 @@ manager: "jhubbard"
      For information on installing [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] product samples and sample databases, see [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## See Also  
- [Fuzzy Lookup Transformation](/fuzzy-lookup-transformation.md)   
+ [Fuzzy Lookup Transformation](fuzzy-lookup-transformation.md)   
  [Term Lookup Transformation](term-lookup-transformation.md)   
- [Data Flow](data-flow.md)   
- [Integration Services Transformations](/integration-services-transformations.md)  
+ [Data Flow](../data-flow.md)   
+ [Integration Services Transformations](integration-services-transformations.md)  
   
   

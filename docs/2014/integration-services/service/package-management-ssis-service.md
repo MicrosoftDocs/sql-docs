@@ -50,7 +50,7 @@ manager: "jhubbard"
   
  When you open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you will see the msdb folders that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service manages listed within the Stored Packages folder. If the configuration file specifies root file system folders, the Stored Packages folder also lists packages saved to the file system in those folders and in all subfolders.  
   
- You can store packages in any file system folder, but they will not be listed in subfolders of the **Stored Packages** folder unless you add the folder to the list of folders in the configuration file for the package store. For more information about the configuration file, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+ You can store packages in any file system folder, but they will not be listed in subfolders of the **Stored Packages** folder unless you add the folder to the list of folders in the configuration file for the package store. For more information about the configuration file, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](integration-services-service-ssis-service.md).  
   
  The **Running Packages** folder contains no subfolders and it is not extensible.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
 ## Managing Package Storage  
  To organize packages, you can add custom folders to the root package store folders that the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service lists in its configuration file. By default, the root folders are the **File System** and **MSDB** folders. For example, you might want to add to the **File System** folder a **Data Cleaning** folder that contains all the packages used for cleaning data. You can add custom folders to custom folders, creating a nested folder hierarchy to suit your needs. The custom folders can be deleted and renamed; however, you cannot rename or delete the root folders that the configuration file specifies. To update the root folders that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lists, you must update the configuration file.  
   
- For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+ For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](integration-services-service-ssis-service.md).  
   
 ## Importing and Exporting Packages  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages can be saved to either to the msdb database or to the file system. You can copy a package from one storage type to the other by using the import or export feature that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides. You can also import a package to the same storage type and give the package a different name, to create a copy of a package. The **dtutil** command prompt utility (dtutil.exe) can also be used to import and export packages.  

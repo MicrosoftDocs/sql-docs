@@ -57,7 +57,7 @@ order by source_component_name desc
 ```  
   
 ## Related Tasks  
- [Debugging Data Flow](data-flow/data-flow.md)  
+ [Debugging Data Flow](troubleshooting/debugging-data-flow.md)  
   
  [Troubleshooting Tools for Package Execution](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

@@ -51,7 +51,7 @@ manager: "jhubbard"
 >   
 >  If you need to call the AcquireConnection method of a connection manager that returns an unmanaged object, use an ADO.NET connection manager. When you configure the ADO.NET connection manager to use an OLE DB provider, it connects by using the .NET Framework Data Provider for OLE DB. In this case, the AcquireConnection method returns a `System.Data.OleDb.OleDbConnection` instead of an unmanaged object. To configure an ADO.NET connection manager for use with an Excel data source, select the Microsoft OLE DB Provider for Jet, specify an Excel workbook, and then enter `Excel 8.0` (for Excel 97 and later) as the value of **Extended Properties** on the **All** page of the **Connection Manager** dialog box.  
   
- For more information about how to use connection managers with the script component, see [Creating a Source with the Script Component](../data-flow/transformations/script-component.md) and [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
+ For more information about how to use connection managers with the script component, see [Creating a Source with the Script Component](../data-flow/transformations/script-component.md) and [Creating a Destination with the Script Component](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
 ||  
 |-|  

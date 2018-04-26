@@ -23,10 +23,10 @@ manager: "jhubbard"
   
  To implement an expression in a transformation, the package must already include at least one Data Flow task and a source. For information about adding items to packages, see the following topics:  
   
--   [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [Add or Delete a Task or a Container in a Control Flow](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
     
   
--   [Add or Delete a Component in a Data Flow](data-flow/data-flow.md)  
+-   [Add or Delete a Component in a Data Flow](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
 -   [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md)  
   

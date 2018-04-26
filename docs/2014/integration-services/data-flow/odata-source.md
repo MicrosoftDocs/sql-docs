@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   [Install and Uninstall OData Source Component](../install-and-uninstall-odata-source-component.md)  
   
--   [Tutorial: Using the OData Source &#91;SSIS&#93;](../tutorial-using-the-odata-source-[ssis].md)  
+-   [Tutorial: Using the OData Source &#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
   
 -   [Modify OData Source Query at Runtime](modify-odata-source-query-at-runtime.md)  
   

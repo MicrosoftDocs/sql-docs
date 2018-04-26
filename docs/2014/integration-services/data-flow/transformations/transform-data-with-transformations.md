@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  The following diagram shows a simple data flow that has a source, two transformations, and a destination.  
   
- ![Data flow](../media/mw-dts-08.gif "Data flow")  
+ ![Data flow](../../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] transformations provide the following functionality:  
   
@@ -38,29 +38,29 @@ manager: "jhubbard"
   
 -   Performing tasks such as exporting and importing data, providing audit information, and working with slowly changing dimensions.  
   
- For more information, see [Integration Services Transformations](/integration-services-transformations.md).  
+ For more information, see [Integration Services Transformations](integration-services-transformations.md).  
   
- You can also write custom transformations. For more information, see [Developing a Custom Data Flow Component](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
+ You can also write custom transformations. For more information, see [Developing a Custom Data Flow Component](../../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
  After you add the transformation to the data flow designer, but before you configure the transformation, you connect the transformation to the data flow by connecting the output of another transformation or source in the data flow to the input of this transformation. The connector between two data flow components is called a path. For more information about connecting components and working with paths, see [Connect Components with Paths](../../connect-components-with-paths.md).  
   
 ### To add a transformation to a data flow  
   
--   [Add or Delete a Component in a Data Flow](data-flow.md)  
+-   [Add or Delete a Component in a Data Flow](../add-or-delete-a-component-in-a-data-flow.md)  
   
 ### To connect a transformation to a data flow  
   
--   [Connect Components in a Data Flow](connect-components-in-a-data-flow.md)  
+-   [Connect Components in a Data Flow](../connect-components-in-a-data-flow.md)  
   
 ### To set the properties of a transformation  
   
--   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  
+-   [Set the Properties of a Data Flow Component](../set-the-properties-of-a-data-flow-component.md)  
   
 ## See Also  
  [Data Flow Task](control-flow/data-flow-task.md)   
- [Data Flow](../../data-flow.md)   
+ [Data Flow](../data-flow.md)   
  [Connect Components with Paths](../../connect-components-with-paths.md)   
  [Error Handling in Data](error-handling-in-data.md)   
- [Data Flow](../../data-flow.md)  
+ [Data Flow](../data-flow.md)  
   
   

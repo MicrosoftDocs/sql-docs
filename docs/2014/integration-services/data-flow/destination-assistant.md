@@ -25,6 +25,6 @@ manager: "jhubbard"
 >  Destination Assistant replaces the Integration Services Connections project and the corresponding wizard.  
   
 ## Related Tasks  
- For instructions about how to add a destination and a connection manager using the Source Assistant, see [Add a Destination using Destination Assistant](../destination-assistant.md).  
+ For instructions about how to add a destination and a connection manager using the Source Assistant, see [Add a Destination using Destination Assistant](../add-a-destination-using-destination-assistant.md).  
   
   

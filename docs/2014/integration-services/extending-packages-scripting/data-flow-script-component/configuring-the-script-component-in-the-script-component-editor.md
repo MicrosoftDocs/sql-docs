@@ -55,7 +55,7 @@ Dim currentCustomerID as Integer = CustomerInput.CustomerID
 Dim currentCustomerName as String = CustomerInput.CustomerName  
 ```  
   
- For more information about how to configure input columns for a specific type of data flow component, see the appropriate example under [Developing Specific Types of Script Components](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ For more information about how to configure input columns for a specific type of data flow component, see the appropriate example under [Developing Specific Types of Script Components](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 ### Inputs and Outputs Page of the Script Transformation Editor  
  The **Input and Outputs** page of the **Script Transformation Editor** is displayed for sources, transformations, and destinations. On this page, you add, remove, and configure inputs, outputs, and output columns that you want to use in your custom script, within the following limitations:  
@@ -70,7 +70,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
  You can configure output columns only on the **Input and Outputs** page. You can select input columns for transformations and destinations on the **Input Columns** page. The typed accessor properties created for you in the BufferWrapper project item will be write-only for output columns. The accessor properties for input columns will be read-only or read/write depending on the usage type that you have selected for each column on the **Input Columns** page.  
   
- For more information about configuring inputs and outputs for a specific type of data flow component see the appropriate example under [Developing Specific Types of Script Components](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ For more information about configuring inputs and outputs for a specific type of data flow component see the appropriate example under [Developing Specific Types of Script Components](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 > [!NOTE]  
 >  Although you cannot directly configure an output as an error output in the Script component for automatic handling of error rows, you can reproduce the functionality of an error output by creating an additional output and using script to direct rows to this output when appropriate. For more information, see [Simulating an Error Output for the Script Component](../data-flow/transformations/script-component.md).  
@@ -87,7 +87,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >   
 >  If you are creating a component with asynchronous outputs, each output must have its `SynchronousInputID` property set to zero. Therefore, the first output must have its `SynchronousInputID` value changed from the `ID` of the component’s input to zero.  
   
- For an example of directing rows to one of two synchronous outputs in the Script component, see [Creating a Synchronous Transformation with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
+ For an example of directing rows to one of two synchronous outputs in the Script component, see [Creating a Synchronous Transformation with the Script Component](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   
 ### Object Names in Generated Script  
  The Script component parses the names of inputs and outputs, and parse the names of columns in the inputs and outputs, and based on these names generates classes and properties in the BufferWrapper project item. If the found names include characters that do not belong to the Unicode categories `UppercaseLetter`, `LowercaseLetter`, `TitlecaseLetter`, `ModifierLetter`, `OtherLetter`, or `DecimalDigitLetter`, the invalid characters are dropped in the generated names. For example, spaces are dropped, therefore two input columns that have the names **FirstName** and [**First Name**] are both interpreted as having the column name **FirstName**, with unpredictable results. To avoid this situation, the names of inputs and outputs and of input and output columns used by the Script component should contain only characters in the Unicode categories listed in this section.  

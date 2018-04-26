@@ -49,28 +49,28 @@ manager: "jhubbard"
 ### Information Common to all Custom Objects  
  For information that is common to all the type of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], see the following topics:  
   
- [Developing Custom Objects for Integration Services](../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
+ [Developing Custom Objects for Integration Services](../developing-custom-objects-for-integration-services.md)  
  Describes the basic steps in implementing all types of custom objects for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
- [Persisting Custom Objects](../extending-packages-custom-objects/persisting-custom-objects.md)  
+ [Persisting Custom Objects](../persisting-custom-objects.md)  
  Describes custom persistence and explains when it is necessary.  
   
- [Building, Deploying, and Debugging Custom Objects](../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
+ [Building, Deploying, and Debugging Custom Objects](../building-deploying-and-debugging-custom-objects.md)  
  Describes the techniques for building, signing, deploying, and debugging custom objects.  
   
 ### Information about Other Custom Objects  
  For information on the other types of custom objects that you can create in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], see the following topics:  
   
- [Developing a Custom Task](../extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Developing a Custom Task](../task/developing-a-custom-task.md)  
  Discusses how to program custom tasks.  
   
- [Developing a Custom Log Provider](../extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
+ [Developing a Custom Log Provider](../log-provider/developing-a-custom-log-provider.md)  
  Discusses how to program custom log providers.  
   
- [Developing a Custom ForEach Enumerator](../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
+ [Developing a Custom ForEach Enumerator](../foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Discusses how to program custom enumerators.  
   
- [Developing a Custom Data Flow Component](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
+ [Developing a Custom Data Flow Component](../data-flow/developing-a-custom-data-flow-component.md)  
  Discusses how to program custom data flow sources, transformations, and destinations.  
   
 ||  

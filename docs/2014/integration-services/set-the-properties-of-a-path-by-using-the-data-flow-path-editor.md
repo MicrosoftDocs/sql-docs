@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Set the Properties of a Path by Using the Data Flow Path Editor
-  Paths connect two data flow components. Before you can set path properties, the data flow must contain at least two connected data flow components. For more information, see [Add or Delete a Component in a Data Flow](data-flow/data-flow.md) and [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md).  
+  Paths connect two data flow components. Before you can set path properties, the data flow must contain at least two connected data flow components. For more information, see [Add or Delete a Component in a Data Flow](data-flow/add-or-delete-a-component-in-a-data-flow.md) and [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md).  
   
 ### To set path properties  
   
@@ -36,6 +36,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Paths](data-flow/integration-services-paths.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)  
+ [Data Flow](data-flow/data-flow.md)  
   
   

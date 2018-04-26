@@ -63,10 +63,10 @@ manager: "jhubbard"
  [Logging in the Script Component]((logging-in-the-script-component.md)  
  You can log information to log providers enabled on the package.  
   
- [Developing Specific Types of Script Components](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
+ [Developing Specific Types of Script Components](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
  These simple examples explain and demonstrate how to use the Script component to develop data flow sources, transformations, and destinations.  
   
- [Additional Script Component Examples](../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [Additional Script Component Examples](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  These simple examples explain and demonstrate a few possible uses for the Script component.  
   
 ||  

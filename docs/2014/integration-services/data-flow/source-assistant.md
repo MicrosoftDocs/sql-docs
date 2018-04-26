@@ -24,6 +24,6 @@ manager: "jhubbard"
 >  Source Assistant replaces the Integration Services Connections project and the corresponding wizard.  
   
 ## Related Tasks  
- For instructions about how to add a source and a connection manager using the Source Assistant, see [Add a Source using Source Assistant](../source-assistant.md).  
+ For instructions about how to add a source and a connection manager using the Source Assistant, see [Add a Source using Source Assistant](../add-a-source-using-source-assistant.md).  
   
   

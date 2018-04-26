@@ -61,6 +61,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Pivot Transformation](data-flow/transformations/pivot-transformation.md.md)  
+ [Pivot Transformation](data-flow/transformations/pivot-transformation.md)  
   
   

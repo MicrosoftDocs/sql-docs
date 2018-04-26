@@ -191,7 +191,7 @@ The steps to enable verbose logging are the same for each agent.
 
     ![Job Activity Monitor](media/troubleshooting-tran-repl-errors/job-activity-monitor.png)    
 
-1. Sorty by **Category** and identify the agent of interest. We chose the **Log Reader**. Right-click the agent of interest > **Properties**.
+1. Sort by **Category** and identify the agent of interest. We chose the **Log Reader**. Right-click the agent of interest > **Properties**.
 
     ![Agent Properties](media/troubleshooting-tran-repl-errors/log-agent-properties.png)
 

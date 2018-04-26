@@ -78,7 +78,7 @@ The **Snapshot Agent** is the agent that generates the snapshot, and writes it t
         Exception Message: Access to path '\\node1\repldata.....' is denied.
 
 
-  If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions to the folder where your snapshot is stored, and make sure that the account used to run the **Snapshot Agent** has adequate permissions to access to the share.  
+    If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions to the folder where your snapshot is stored, and make sure that the account used to run the **Snapshot Agent** has adequate permissions to access to the share.  
 
 ## Troubleshoot Errors with Log Reader Agent
 The **Log Reader Agent** connects to  your publisher database and scans the transaction log for any transactions that are marked 'for replication'. It then adds those transactions to the **Distribution** database. 
@@ -184,7 +184,10 @@ The **Distribution Agent** takes data it finds in the **Distribution** database 
 
 
 ## Enable Verbose Logging
-The steps to enable verbose logging are the same for each agent. 
+Sometimes the errors we find in the agent history prove to be insufficient in helping determine what's going wrong. As such,  you have the ability to enable verbose logging on each agent - the steps are the same for each agent, you just need to make sure you're selecting the correct agent in **Job Activity Monitor**. 
+
+   >[!NOTE]   
+   > The agents may either be on the publisher, or the subscriber, depending on if it's a pull or push subscription. If you can't find the agent you're looking for on the server you're looking at, try checking the other server as well.  
 
 1. Decide where you want the verbose logging to be saved, and ensure that folder exists. We chose c:\temp. 
 2. Expand the **SQL Server Agent** node in **Object Explorer** and open **Job Activity Monitor**. 

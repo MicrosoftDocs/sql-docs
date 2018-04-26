@@ -55,16 +55,16 @@ manager: "jhubbard"
   
 -   Adding connection managers.  
   
-     Many tasks require a connection to a data source, and you have to add the connection managers that the task requires to the package. Depending on the enumerator type it uses, the Foreach Loop container may also require a connection manager. You can add the connection managers as you construct the control flow item by item or before you start to construct the control flow. For more information, see [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](../../2014/integration-services/create-connection-managers.md).  
+     Many tasks require a connection to a data source, and you have to add the connection managers that the task requires to the package. Depending on the enumerator type it uses, the Foreach Loop container may also require a connection manager. You can add the connection managers as you construct the control flow item by item or before you start to construct the control flow. For more information, see [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](../create-connection-managers.md).  
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer also includes many design-time features that you can use to manage the design surface and make the control flow self-documenting.  
   
 ## Related Tasks  
   
--   [Add or Delete a Task or a Container in a Control Flow](control-flow.md)  
+-   [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  
   
--   [Group or Ungroup Components](group-or-ungroup-components.md)  
+-   [Group or Ungroup Components](../group-or-ungroup-components.md)  
   
   

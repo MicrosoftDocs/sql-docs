@@ -35,7 +35,8 @@ manager: "jhubbard"
   
 3.  Click the **Control Flow** tab.  
   
-4.  If the package does not already include an Execute SQL task, add one to the control flow of the package. For more information, see [Add or Delete a Task or a Container in a Control Flow](control-flow/control-flow.md).  
+4.  If the package does not already include an Execute SQL task, add one to the control flow of the package. For more information, see [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
 5.  Double-click the Execute SQL task.  
   

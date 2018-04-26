@@ -86,6 +86,6 @@ manager: "jhubbard"
 10. Repeat steps 6 through 9 for each task and container that starts a transaction.  
   
 ## See Also  
- [Integration Services Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Integration Services Transactions](../integration-services-transactions.md)  
   
   

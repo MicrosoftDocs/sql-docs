@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 #### To add a data viewer  
   
--   [Add a Data Viewer to a Data Flow](../data-flow.md)  
+-   [Add a Data Viewer to a Data Flow](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## Row Counts  
  The number of rows that have passed through a path is displayed on the design surface of the **Data Flow** tab in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer next to the path. The number is updated periodically while the data moves through the path.  

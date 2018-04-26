@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  A For Loop container can have only one evaluation expression. This means that the For Loop container runs all its control flow elements the same number of times. Because the For Loop container can include other For Loop containers, you can build nested loops and implement complex looping in packages.  
   
- You can set a transaction property on the For Loop container to define a transaction for a subset of the package control flow. In this way, you can manage transactions at a more granular level. For example, if a For Loop container repeats a control flow that updates data in a table multiple times, you can configure the For Loop and its control flow to use a transaction to ensure that if not all data is updated successfully, no data is updated. For more information, see [Integration Services Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md).  
+ You can set a transaction property on the For Loop container to define a transaction for a subset of the package control flow. In this way, you can manage transactions at a more granular level. For example, if a For Loop container repeats a control flow that updates data in a table multiple times, you can configure the For Loop and its control flow to use a transaction to ensure that if not all data is updated successfully, no data is updated. For more information, see [Integration Services Transactions](../integration-services-transactions.md).  
   
 ## Configuration of the For Loop Container  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  

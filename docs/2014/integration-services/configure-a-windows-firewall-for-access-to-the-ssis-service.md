@@ -87,6 +87,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md)   
- [Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/integration-services-service-ssis-service.md)  
+ [Integration Services Service &#40;SSIS Service&#41;](integration-services-service-ssis-service.md)  
   
   

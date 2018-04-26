@@ -42,7 +42,7 @@ manager: "jhubbard"
  ![Data flows](../media/mw-dts-09.gif "Data flows")  
   
 ## Log Entries  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md). The Data Flow task includes the following custom log entries:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../custom-messages-for-logging.md). The Data Flow task includes the following custom log entries:  
   
 |Log entry|Description|  
 |---------------|-----------------|  
@@ -62,9 +62,9 @@ manager: "jhubbard"
   
  For more information about how to use these log entries to monitor and improve the performance of the data flow, see one of the following topics:  
   
--   [Performance Counters](performance/performance-counters.md)  
+-   [Performance Counters](../performance/performance-counters.md)  
   
--   [Data Flow Performance Features](data-flow/data-flow-performance-features.md)  
+-   [Data Flow Performance Features](../data-flow/data-flow-performance-features.md)  
   
 ### Sample Messages From a Data Flow Task  
  The following table lists sample messages for log entries for a very simple package. The package uses an OLE DB source to extract data from a table, a Sort transformation to sort the data, and an OLE DB destination to writes the data to a different table.  
@@ -106,7 +106,7 @@ manager: "jhubbard"
 ## Programmatic Configuration of the Data Flow Task  
  For more information about programmatically adding a data flow task to a package and setting data flow properties, click the following topic:  
   
--   [Adding the Data Flow Task Programmatically](building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [Adding the Data Flow Task Programmatically](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## Related Tasks  
  [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md)  

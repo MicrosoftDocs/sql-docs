@@ -106,7 +106,7 @@ manager: "jhubbard"
  **Next topic:** [Determine Whether the Change Data Is Ready](determine-whether-the-change-data-is-ready.md)  
   
 ## See Also  
- [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)   
+ [Use Variables in Packages](../use-variables-in-packages.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md)   
  [Execute SQL Task](../control-flow/execute-sql-task.md)   
  [Script Task](../control-flow/script-task.md)  

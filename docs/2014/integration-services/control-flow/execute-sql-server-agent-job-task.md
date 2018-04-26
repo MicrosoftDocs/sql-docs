@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Execute SQL Server Agent Job Task &#40;Maintenance Plan&#41;](../relational-databases/maintenance-plans/execute-sql-server-agent-job-task-maintenance-plan.md)  
+-   [Execute SQL Server Agent Job Task &#40;Maintenance Plan&#41;](../../relational-databases/maintenance-plans/execute-sql-server-agent-job-task-maintenance-plan.md)  
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click the following topic:  
   

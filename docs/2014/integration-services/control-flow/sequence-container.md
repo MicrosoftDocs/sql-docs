@@ -25,7 +25,7 @@ manager: "jhubbard"
 # Sequence Container
   The Sequence container defines a control flow that is a subset of the package control flow. Sequence containers group the package into multiple separate control flows, each containing one or more tasks and containers that run within the overall package control flow.  
   
- The Sequence container can include multiple tasks in addition to other containers. Adding tasks and containers to a Sequence container is similar to adding them to a package, except you drag the tasks and containers to the Sequence container instead of to the package container. If the Sequence container includes more than one task or container, you can connect them using precedence constraints just as you do in a package. For more information, see [Precedence Constraints](../precedence-constraints.md).  
+ The Sequence container can include multiple tasks in addition to other containers. Adding tasks and containers to a Sequence container is similar to adding them to a package, except you drag the tasks and containers to the Sequence container instead of to the package container. If the Sequence container includes more than one task or container, you can connect them using precedence constraints just as you do in a package. For more information, see [Precedence Constraints](precedence-constraints.md).  
   
  There are many benefits of using a Sequence container:  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   Set a transaction attribute on the Sequence container to define a transaction for a subset of the package control flow. In this way, you can manage transactions at a more granular level.  
   
-     For example, if a Sequence container includes two related tasks, one task that deletes data in a table and another task that inserts data into a table, you can configure a transaction to ensure that the delete action is rolled back if the insert action fails. For more information, see [Integration Services Transactions](../../analysis-services/multidimensional-models-adomd-net-client/transactions.md).  
+     For example, if a Sequence container includes two related tasks, one task that deletes data in a table and another task that inserts data into a table, you can configure a transaction to ensure that the delete action is rolled back if the insert action fails. For more information, see [Integration Services Transactions](../integration-services-transactions.md).  
   
 ## Configuration of the Sequence Container  
  The Sequence container has no custom user interface and you can configure it only in the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or programmatically.  

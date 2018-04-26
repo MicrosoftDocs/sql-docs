@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To connect components in a data flow  
   
--   [Connect Components in a Data Flow](data-flow/data-flow.md)  
+-   [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md)  
   
 ### To set path properties  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
 -   [Add a Data Viewer to a Data Flow](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
 ## See Also  
- [Data Flow Task](data-flow/data-flow-task.md)   
+ [Data Flow Task](control-flow/data-flow-task.md)   
  [Data Flow](data-flow/data-flow.md)   
  [Transform Data with Transformations](data-flow/transformations/transform-data-with-transformations.md)   
  [Error Handling in Data](data-flow/error-handling-in-data.md)  

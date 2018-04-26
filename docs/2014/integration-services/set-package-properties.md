@@ -133,7 +133,7 @@ manager: "jhubbard"
 |`ProtectionLevel`|The protection level of the package. The values are `DontSaveSensitive`, `EncryptSensitiveWithUserKey`, `EncryptSensitiveWithPassword`, `EncryptAllWithPassword`, and **ServerStorage**. The default value of this property is `EncryptSensitiveWithUserKey`. For more information, see <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
   
 ###  <a name="Transactions"></a> Transactions  
- The properties in this category configure the isolation level and the transaction option of the package. For more information, see [Integration Services Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md).  
+ The properties in this category configure the isolation level and the transaction option of the package. For more information, see [Integration Services Transactions](../integration-services-transactions.md).  
   
 |Property|Description|  
 |--------------|-----------------|  

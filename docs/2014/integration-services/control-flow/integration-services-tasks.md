@@ -68,9 +68,9 @@ manager: "jhubbard"
 ## Configuration of Tasks  
  An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package can contain a single task, such as an Execute SQL task that deletes records in a database table when the package runs. However, packages typically contain several tasks, and each task is set to run within the context of the package control flow. Event handlers, which are workflows that run in response to run-time events, can also have tasks.  
   
- For more information about adding a task to a package using [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Add or Delete a Task or a Container in a Control Flow](../control-flow.md).  
+ For more information about adding a task to a package using [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
- For more information about adding a task to a package programmatically, see [Adding Tasks Programmatically](../dev-guide/adding-tasks-programmatically.md).  
+ For more information about adding a task to a package programmatically, see [Adding Tasks Programmatically](../building-packages-programmatically/adding-tasks-programmatically.md).  
   
  Each task can be configured individually using the custom dialog boxes for each task that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides, or the Properties window included in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A package can include multiple tasks of the same type—for example, six Execute SQL tasks—and each task can be configured differently. For more information, see [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md).  
   

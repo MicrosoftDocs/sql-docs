@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 #### To set breakpoints  
   
--   [Debug a Package by Setting Breakpoints on a Task or a Container](../../2014/integration-services/debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [Debug a Package by Setting Breakpoints on a Task or a Container](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## Progress Reporting  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer includes two types of progress reporting: color-coding on the design surface of the **Control Flow** tab, and progress messages on the **Progress** tab.  
@@ -111,6 +111,6 @@ manager: "jhubbard"
 |Immediate|Used to debug and evaluate expressions and print variable values.|  
   
 ## See Also  
- [Troubleshooting Tools for Package Development](troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [Troubleshooting Tools for Package Development](troubleshooting-tools-for-package-development.md)  
   
   

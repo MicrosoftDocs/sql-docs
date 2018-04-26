@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Reorganize Index Task
-  The Reorganize Index task reorganizes indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database tables and views. For more information about managing indexes, see [Reorganize and Rebuild Indexes](../../database-engine/indexes.md).  
+  The Reorganize Index task reorganizes indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database tables and views. For more information about managing indexes, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
  By using the Reorganize Index task, a package can reorganize indexes in a single database or multiple databases. If the task reorganizes only the indexes in a single database, you can choose the views or the tables whose indexes the task reorganizes. The Reorganize Index task also includes an option to compact large object data. Large object data is data with the `image`, `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, or `xml` data type. For more information, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  For information about the properties that you can set in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Reorganize Index Task &#40;Maintenance Plan&#41;](../relational-databases/maintenance-plans/reorganize-index-task-maintenance-plan.md)  
+-   [Reorganize Index Task &#40;Maintenance Plan&#41;](../../relational-databases/maintenance-plans/reorganize-index-task-maintenance-plan.md)  
   
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../set-the-properties-of-a-task-or-container.md).  

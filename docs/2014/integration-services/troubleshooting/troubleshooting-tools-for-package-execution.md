@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  You can also use the following tips and techniques to avoid problems with running packages  
   
--   **Help to ensure data integrity by using transactions**. For more information, see [Integration Services Transactions](../../analysis-services/multidimensional-models-adomd-net-client/transactions.md).  
+-   **Help to ensure data integrity by using transactions**. For more information, see [Integration Services Transactions](../integration-services-transactions.md).  
   
 -   **Restart packages from the point of failure by using checkpoints**. For more information, see [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 ## Troubleshoot Bad Data by Using Error Outputs  
  You can use the error output available on many data flow components to direct rows that contain errors to a separate destination for later analysis.  
   
--   **Capture bad data by using error outputs**. Send rows that contain errors to a separate destination such as an error table or a text file. The error output automatically adds two numeric columns that contain the number of the error that caused the row to be rejected, and the ID of the column in which the error occurred. For more information, see [Error Handling in Data](../error-handling-in-data.md).  
+-   **Capture bad data by using error outputs**. Send rows that contain errors to a separate destination such as an error table or a text file. The error output automatically adds two numeric columns that contain the number of the error that caused the row to be rejected, and the ID of the column in which the error occurred. For more information, see [Error Handling in Data](../data-flow/error-handling-in-data.md).  
   
 -   **Add friendly information to the error outputs**. You can make it easier to analyze the error output by adding descriptive information in addition to the two numeric identifiers that are supplied by the error output.  
   

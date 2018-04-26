@@ -43,10 +43,10 @@ manager: "jhubbard"
 |Connection type|Connection manager|  
 |---------------------|------------------------|  
 |EXCEL|[Excel Connection Manager](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[OLE DB Connection Manager](../ole-db-connection-manager.md)|  
+|OLE DB|[OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)|  
 |ODBC|[ODBC Connection Manager](../connection-manager/odbc-connection-manager.md)|  
 |ADO|[ADO Connection Manager](../connection-manager/ado-connection-manager.md)|  
-|ADO.NET|[ADO.NET Connection Manager](../ado-net-connection-manager.md)|  
+|ADO.NET|[ADO.NET Connection Manager](../connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[SQL Server Compact Edition Connection Manager](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
   
 ## Creating SQL Statements  
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  If the SQL statements are stored in a file, the task uses a File connection manager to connect to the file. For more information, see [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
- In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, you can use the **Execute SQL Task Editor** dialog box to type SQL statements, or use **Query Builder**, a graphical user interface for creating SQL queries. For more information, see [Execute SQL Task Editor &#40;General Page&#41;](../general-page-of-integration-services-designers-options.md) and [Query Builder](../../analysis-services/data-mining/query-builder.md).  
+ In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, you can use the **Execute SQL Task Editor** dialog box to type SQL statements, or use **Query Builder**, a graphical user interface for creating SQL queries. For more information, see [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md) and [Query Builder](../query-builder.md).  
   
 > [!NOTE]  
 >  Valid SQL statements written outside the Execute SQL task may not be parsed successfully by the Execute SQL task.  
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
   
--   [Execute SQL Task Editor &#40;General Page&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md)  
   
 -   [Execute SQL Task Editor &#40;Parameter Mapping Page&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   

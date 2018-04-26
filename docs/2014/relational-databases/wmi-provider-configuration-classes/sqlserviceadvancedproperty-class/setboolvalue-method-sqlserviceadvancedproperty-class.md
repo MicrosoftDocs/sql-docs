@@ -43,6 +43,6 @@ manager: "jhubbard"
  Specify the number of hits at which to trigger a break. This option is not available if the breakpoint is always in effect.  
   
 ## See Also  
- [Debugging Control Flow](../../../integration-services/control-flow.md)  
+ [Debugging Control Flow](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

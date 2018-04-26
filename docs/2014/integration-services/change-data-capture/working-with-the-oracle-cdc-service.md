@@ -55,11 +55,11 @@ manager: "jhubbard"
 ### The MSXDBCDC Database Tables  
  This section describes the following tables in the MSXDBCDC database.  
   
--   [dbo.xdbcdc_trace](the-oracle-cdc-service.md#BKMK_dboxdbcdc_trace)  
+-   [dbo.xdbcdc_trace](#BKMK_dboxdbcdc_trace)  
   
--   [dbo.xdbcdc_databases](the-oracle-cdc-service.md#BKMK_dboxdbcdc_databases)  
+-   [dbo.xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
   
--   [dbo.xdbcdc_services](the-oracle-cdc-service.md#BKMK_dboxdbcdc_services)  
+-   [dbo.xdbcdc_services](#BKMK_dboxdbcdc_services)  
   
 ###  <a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
  This table stores tracing information for the Oracle CDC Service. The information stored in this table includes notable status changes and trace records.  

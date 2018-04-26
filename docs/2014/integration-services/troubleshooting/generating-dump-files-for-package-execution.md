@@ -31,7 +31,7 @@ manager: "jhubbard"
   
      Call this stored procedure to cause a running package to pause and create a dump file.  
   
- If you are deploying packages using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](packages/dtexec-utility.md) and [dtutil Utility](dtutil-utility.md). For more information about the package deployment model, see [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md) and [Package Deployment &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ If you are deploying packages using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](../packages/dtexec-utility.md) and [dtutil Utility](../dtutil-utility.md). For more information about the package deployment model, see [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md) and [Package Deployment &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
   
 ## Debug Dump File Format  
  When you specify a debug dump option, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates the following debug dump files:  
@@ -51,6 +51,6 @@ manager: "jhubbard"
 |Recent messages|Recent messages issued by the system. Includes the time, type, description, and thread ID of each message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( @ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: The component is missing, not registered, not upgradeable, or missing required interfaces. The contact information for this component is "".|  
   
 ## Related Content  
- [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)  
+ [Execute Package Dialog Box](../execute-package-dialog-box.md)  
   
   

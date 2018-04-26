@@ -44,9 +44,11 @@ manager: "jhubbard"
   
 ### To implement a For Loop container in a control flow  
   
-1.  Add the For Loop container to the package. For more information, see [Add or Delete a Task or a Container in a Control Flow](control-flow/control-flow.md).  
+1.  Add the For Loop container to the package. For more information, see [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
-2.  Add tasks and containers to the For Loop container. For more information, see [Add or Delete a Task or a Container in a Control Flow](control-flow/control-flow.md).  
+2.  Add tasks and containers to the For Loop container. For more information, see [Add or Delete a Task or a Container in a Control Flow](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  .  
   
 3.  Connect tasks and containers in the For Loop container using precedence constraints. For more information, see [Connect Tasks and Containers by Using a Default Precedence Constraint](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
   
@@ -57,6 +59,6 @@ manager: "jhubbard"
  [Group or Ungroup Components](group-or-ungroup-components.md)   
  [Connect Tasks and Containers by Using a Default Precedence Constraint](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Add Enumeration to a Control Flow](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
- [Control Flow](control-flow/s/control-flow.md)  
+ [Control Flow](control-flow/control-flow.md)  
   
   

@@ -39,6 +39,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Paths](data-flow/integration-services-paths.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)  
+ [Data Flow](data-flow/data-flow.md)  
   
   

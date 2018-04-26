@@ -60,7 +60,7 @@ manager: "jhubbard"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer uses color to identify the type of precedence constraint. The Success constraint is green, the Failure constraint is red, and the Completion constraint is blue. To display text labels in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] designer that show the type of the constraint, you must configure the accessibility features of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
   
- The expression must be a valid [!INCLUDE[ssIS](../../../includes/ssis-md.md)] expression, and it can include functions, operators, and system and custom variables. For more information, see [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md) and [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ The expression must be a valid [!INCLUDE[ssIS](../../../includes/ssis-md.md)] expression, and it can include functions, operators, and system and custom variables. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md) and [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
 ## Execution Results  
  The precedence constraint can use the following execution results alone or in combination with an expression.  
@@ -77,18 +77,18 @@ manager: "jhubbard"
 ## Configuration of the Precedence Constraint  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, see [Precedence Constraint Editor](../../2014/integration-services/precedence-constraint-editor.md).  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, see [Precedence Constraint Editor](../precedence-constraint-editor.md).  
   
  For information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.  
   
 ## Related Tasks  
  For details about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click one of the following topics:  
   
--   [Set the Properties of a Precedence Constraint](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
+-   [Set the Properties of a Precedence Constraint](../set-the-properties-of-a-precedence-constraint.md)  
   
--   [Set the Value of a Precedence Constraint by Using the Shortcut Menu](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
+-   [Set the Value of a Precedence Constraint by Using the Shortcut Menu](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
   
--   [Connect Tasks and Containers by Using a Default Precedence Constraint](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)  
+-   [Connect Tasks and Containers by Using a Default Precedence Constraint](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)  
   
      This topic provides information on how to set the default behavior for precedence constraints, and how to connect executables using the default precedence constraints, see.  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
  Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
- [Add Expressions to Precedence Constraints](precedence-constraints.md)   
- [Multiple Precedence Constraints](../../2014/integration-services/multiple-precedence-constraints.md)  
+ [Add Expressions to Precedence Constraints](../add-expressions-to-precedence-constraints.md)   
+ [Multiple Precedence Constraints](../multiple-precedence-constraints.md)  
   
   

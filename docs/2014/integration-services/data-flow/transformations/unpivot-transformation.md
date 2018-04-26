@@ -44,11 +44,11 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in the **Unpivot Transformation Editor** dialog box, click one of the following topics:  
   
--   [Unpivot Transformation Editor](../../2014/integration-services/unpivot-transformation-editor.md)  
+-   [Unpivot Transformation Editor](../../unpivot-transformation-editor.md)  
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Transformation Custom Properties](/transformation-custom-properties.md)  
   

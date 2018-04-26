@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  You can also write custom transformations. For more information, see [Developing a Custom Data Flow Component](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- After you add the transformation to the data flow designer, but before you configure the transformation, you connect the transformation to the data flow by connecting the output of another transformation or source in the data flow to the input of this transformation. The connector between two data flow components is called a path. For more information about connecting components and working with paths, see [Connect Components with Paths](../../2014/integration-services/connect-components-with-paths.md).  
+ After you add the transformation to the data flow designer, but before you configure the transformation, you connect the transformation to the data flow by connecting the output of another transformation or source in the data flow to the input of this transformation. The connector between two data flow components is called a path. For more information about connecting components and working with paths, see [Connect Components with Paths](../../connect-components-with-paths.md).  
   
 ### To add a transformation to a data flow  
   
@@ -58,9 +58,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Flow Task](control-flow/data-flow-task.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Connect Components with Paths](../../2014/integration-services/connect-components-with-paths.md)   
+ [Data Flow](../../data-flow.md)   
+ [Connect Components with Paths](../../connect-components-with-paths.md)   
  [Error Handling in Data](error-handling-in-data.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)  
+ [Data Flow](../../data-flow.md)  
   
   

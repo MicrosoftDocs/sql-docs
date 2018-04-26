@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   Foreach ADO enumerator to enumerate rows in tables. For example, you can get the rows in an ADO recordset.  
   
-     The Recordset destination saves data in memory in a recordset that is stored in a package variable of `Object` data type. You typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The variable specified for the Foreach ADO enumerator must be of Object data type. For more information about the Recordeset destination, see [Use a Recordset Destination](data-flow/recordset-destination.md).  
+     The Recordset destination saves data in memory in a recordset that is stored in a package variable of `Object` data type. You typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The variable specified for the Foreach ADO enumerator must be of Object data type. For more information about the Recordeset destination, see [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
 -   Foreach ADO.NET Schema Rowset enumerator to enumerate the schema information about a data source. For example, you can enumerate and get a list of the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
   

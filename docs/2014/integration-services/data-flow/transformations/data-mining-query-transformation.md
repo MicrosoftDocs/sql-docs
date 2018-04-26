@@ -34,13 +34,13 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in the **Data Mining Query Transformation Editor** dialog box, click one of the following topics:  
   
--   [Data Mining Query Transformation Editor &#40;Mining Model Tab&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Data Mining Query Transformation Editor &#40;Mining Model Tab&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Data Mining Query Transformation Editor &#40;Mining Model Tab&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Data Mining Query Transformation Editor &#40;Mining Model Tab&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Transformation Custom Properties](transformation-custom-properties.md)  
   

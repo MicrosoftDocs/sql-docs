@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  For more information, see [Data Flow](data-flow.md) and [Integration Services Paths](integration-services-paths.md).  
   
- For a list of Integration Services errors, warnings, and other messages, see [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md).  
+ For a list of Integration Services errors, warnings, and other messages, see [Integration Services Error and Message Reference](../integration-services-error-and-message-reference.md).  
   
 ## Error and Truncation Options  
  Errors fall into one of two categories: errors or truncations. An error indicates an unequivocal failure, and generates a NULL result. Such errors can include data conversion errors or expression evaluation errors. For example, an attempt to convert a string that contains alphabetical characters to a number causes an error. Data conversions, expression evaluations, and assignments of expression results to variables, properties, and data columns may fail because of illegal casts and incompatible data types. For more information see, [Cast &#40;SSIS Expression&#41;](expressions/cast-ssis-expression.md), [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md), and [Integration Services Data Types](integration-services-data-types.md).  
@@ -70,12 +70,12 @@ manager: "jhubbard"
   
 ### To configure an error output  
   
--   [Configure an Error Output in a Data Flow Component](../../2014/integration-services/configure-an-error-output-in-a-data-flow-component.md)  
+-   [Configure an Error Output in a Data Flow Component](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## See Also  
  [Data Flow](data-flow.md)   
  [Transform Data with Transformations](transformations/transform-data-with-transformations.md)   
- [Connect Components with Paths](../../2014/integration-services/connect-components-with-paths.md)   
+ [Connect Components with Paths](../connect-components-with-paths.md)   
  [Data Flow Task](control-flow/data-flow-task.md)   
  [Data Flow](data-flow.md)  
   

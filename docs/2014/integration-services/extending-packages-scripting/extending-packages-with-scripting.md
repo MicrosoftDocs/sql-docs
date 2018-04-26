@@ -31,16 +31,16 @@ manager: "jhubbard"
  [Comparing the Script Task and the Script Component](../data-flow/transformations/script-component.md)  
  Discusses the similarities and differences between the Script task and the Script component.  
   
- [Comparing Scripting Solutions and Custom Objects](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
+ [Comparing Scripting Solutions and Custom Objects](comparing-scripting-solutions-and-custom-objects.md)  
  Discusses the criteria to use in choosing between a scripting solution and the development of a custom object.  
   
- [Referencing Other Assemblies in Scripting Solutions](../extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)  
+ [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md)  
  Discusses the steps required to reference and use external assemblies and namespaces in a scripting project.  
   
  [Extending the Package with the Script Task](../control-flow/script-task.md)  
  Discusses how to create custom tasks by using the Script task. A task is typically called one time per package execution, or one time for each data source opened by a package.  
   
- [Extending the Data Flow with the Script Component](../extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
  Discusses how to create custom data flow sources, transformations, and destinations by using the Script component. A data flow component is typically called one time for each row of data that is processed.  
   
 ## Reference  

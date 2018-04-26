@@ -110,13 +110,13 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in the **Aggregate Transformation Editor** dialog box, click one of the following topics:  
   
--   [Aggregate Transformation Editor &#40;Aggregations Tab&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)  
+-   [Aggregate Transformation Editor &#40;Aggregations Tab&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Aggregate Transformation Editor &#40;Advanced Tab&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)  
+-   [Aggregate Transformation Editor &#40;Advanced Tab&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Transformation Custom Properties](transformation-custom-properties.md)  
   

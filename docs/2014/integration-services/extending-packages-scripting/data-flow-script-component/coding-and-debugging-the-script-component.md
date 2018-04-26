@@ -155,7 +155,7 @@ public class ScriptMain : UserComponent
  All the items that you add are persisted inside the package.  
   
 #### References in the Script Component Project  
- You can add references to managed assemblies by right-clicking the Script task project in **Project Explorer**, and then clicking **Add Reference**. For more information, see [Referencing Other Assemblies in Scripting Solutions](../extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
+ You can add references to managed assemblies by right-clicking the Script task project in **Project Explorer**, and then clicking **Add Reference**. For more information, see [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
 >  You can view project references in the VSTA IDE in **Class View** or in **Project Explorer**. You open either of these windows from the **View** menu. You can add a new reference from the **Project** menu, from **Project Explorer**, or from **Class View**.  
@@ -197,7 +197,7 @@ public class ScriptMain : UserComponent
  [Understanding the Script Component Object Model]((understanding-the-script-component-object-model.md)  
  Explains how to use the objects, methods, and properties available in the Script component.  
   
- [Referencing Other Assemblies in Scripting Solutions](../extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)  
+ [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md)  
  Explains how to reference objects from the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] class library in the Script component.  
   
  [Simulating an Error Output for the Script Component](../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)  

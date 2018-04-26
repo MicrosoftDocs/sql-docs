@@ -102,15 +102,15 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in the **OLE DB Destination Editor** dialog box, click one of the following topics:  
   
--   [OLE DB Destination Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)  
+-   [OLE DB Destination Editor &#40;Connection Manager Page&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB Destination Editor &#40;Mappings Page&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)  
+-   [OLE DB Destination Editor &#40;Mappings Page&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [OLE DB Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)  
+-   [OLE DB Destination Editor &#40;Error Output Page&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [OLE DB Custom Properties](ole-db-custom-properties.md)  
   

@@ -43,13 +43,13 @@ manager: "jhubbard"
  This transformation has one input, one output, and one error output.  
   
 ## Related Tasks  
- You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](/data-conversion-transformation.md) and [Data Conversion Transformation Editor](../../2014/integration-services/data-conversion-transformation-editor.md). For information about setting properties of this transformation programmatically, see [Common Properties](../../2014/integration-services/common-properties.md) and [Transformation Custom Properties](transformation-custom-properties.md).  
+ You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](/data-conversion-transformation.md) and [Data Conversion Transformation Editor](../../data-conversion-transformation-editor.md). For information about setting properties of this transformation programmatically, see [Common Properties](../../common-properties.md) and [Transformation Custom Properties](transformation-custom-properties.md).  
   
 ## Related Content  
  Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
   
 ## See Also  
- [Fast Parse](../../2014/integration-services/fast-parse.md)   
+ [Fast Parse](../../fast-parse.md)   
  [Data Flow](data-flow.md)   
  [Integration Services Transformations](integration-services-transformations.md)  
   

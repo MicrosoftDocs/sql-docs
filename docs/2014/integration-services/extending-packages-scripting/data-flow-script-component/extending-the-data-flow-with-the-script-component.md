@@ -75,6 +75,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Script Component](../../script-component.md)   
- [Comparing the Script Task and the Script Component](../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
+ [Comparing the Script Task and the Script Component](comparing-the-script-task-and-the-script-component.md)  
   
   

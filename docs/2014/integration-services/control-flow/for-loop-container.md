@@ -49,9 +49,9 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click one of the following topics:  
   
--   [For Loop Editor](../../2014/integration-services/for-loop-editor.md)  
+-   [For Loop Editor](../for-loop-editor.md)  
   
--   [Expressions Page](expressions/expressions-page.md)  
+-   [Expressions Page](../expressions/expressions-page.md)  
   
  For more information about programmatically setting these properties, see documentation for the **T:Microsoft.SqlServer.Dts.Runtime.ForLoop** class in the Developer Guide.  
   
@@ -64,6 +64,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Control Flow](control-flow.md)   
- [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS&#41; Expressions](../expressions/integration-services-ssis-expressions.md)  
   
   

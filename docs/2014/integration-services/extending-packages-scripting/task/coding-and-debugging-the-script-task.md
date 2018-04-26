@@ -199,7 +199,7 @@ To open Help, press F1.
  The Script task project can include items other than the default `ScriptMain` item. You can add classes, modules, and code files to the project. You can also use folders to organize groups of items. All the items that you add are persisted inside the package.  
   
 ### References in the Script Task Project  
- You can add references to managed assemblies by right-clicking the Script task project in **Project Explorer**, and then clicking **Add Reference**. For more information, see [Referencing Other Assemblies in Scripting Solutions](../extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
+ You can add references to managed assemblies by right-clicking the Script task project in **Project Explorer**, and then clicking **Add Reference**. For more information, see [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
 >  You can view project references in the VSTA IDE in **Class View** or in **Project Explorer**. You open either of these windows from the **View** menu. You can add a new reference from the **Project** menu, from **Project Explorer**, or from **Class View**.  
@@ -249,7 +249,7 @@ To open Help, press F1.
 |![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Referencing Other Assemblies in Scripting Solutions](../extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
- [Configuring the Script Task in the Script Task Editor](../extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md)   
+ [Configuring the Script Task in the Script Task Editor](task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   

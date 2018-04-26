@@ -19,7 +19,7 @@ manager: "jhubbard"
   The `dtexec` command prompt utility is used to configure and execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The `dtexec` utility provides access to all the package configuration and execution features, such as parameters, connections, properties, variables, logging, and progress indicators. The `dtexec` utility lets you load packages from these sources: the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, an .ispac project file, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
   
 > [!NOTE]  
->  When you use the version of the `dtexec` utility that comes with [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] to run a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] or a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] temporarily upgrades the package to [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. However, you cannot use the `dtexec` utility to save these upgraded changes. For more information about how to permanently upgrade a package to [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)], see [Upgrade Integration Services Packages](../install-windows/upgrade-integration-services-packages.md).  
+>  When you use the version of the `dtexec` utility that comes with [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] to run a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] or a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] temporarily upgrades the package to [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. However, you cannot use the `dtexec` utility to save these upgraded changes. For more information about how to permanently upgrade a package to [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)], see [Upgrade Integration Services Packages](../../install-windows/upgrade-integration-services-packages.md).  
   
  This topic includes the following sections:  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 -   [Examples](#example)  
   
 ##  <a name="server"></a> Integration Services Server and Project File  
- When you use `dtexec` to run packages on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, `dtexec` calls the [catalog.create_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) stored procedures to create an execution, set parameter values and start the execution. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+ When you use `dtexec` to run packages on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, `dtexec` calls the [catalog.create_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) stored procedures to create an execution, set parameter values and start the execution. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../reports-for-the-integration-services-server.md).  
   
  The following is an example of executing a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- When you use `dtexec` to run a package from the .ispac project file, the related options are: /Proj[ect] and /Pack[age] that are used to specify the project path and package stream name. When you convert a project to the project deployment model by running the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], the wizard generates an .ispac projec file. For more information, see [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
+ When you use `dtexec` to run a package from the .ispac project file, the related options are: /Proj[ect] and /Pack[age] that are used to specify the project path and package stream name. When you convert a project to the project deployment model by running the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], the wizard generates an .ispac projec file. For more information, see [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md).  
   
  You can use `dtexec` with third-party scheduling tools to schedule packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
@@ -138,7 +138,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **xp_cmdshell** option is disabled by default on new installations. The option can be enabled by running the **sp_configure** system stored procedure. For more information, see [xp_cmdshell Server Configuration Option](../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **xp_cmdshell** option is disabled by default on new installations. The option can be enabled by running the **sp_configure** system stored procedure. For more information, see [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Syntax  
   
@@ -170,19 +170,19 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Conf[igFile]** *filespec*: Optional. Specifies a configuration file to extract values from. Using this option, you can set a run-time configuration that differs from the configuration that was specified at design time for the package. You can store different configuration settings in an XML configuration file and then load the settings before package execution by using the **/ConfigFile** option.  
   
-     You can use the **/ConfigFile** option to load additional configurations at run time that you did not specify at design time. However, you cannot use the **/ConfigFile** option to replace configured values that you also specified at design time. To understand how package configurations are applied, see [Package Configurations](../../2014/integration-services/package-configurations.md).  
+     You can use the **/ConfigFile** option to load additional configurations at run time that you did not specify at design time. However, you cannot use the **/ConfigFile** option to replace configured values that you also specified at design time. To understand how package configurations are applied, see [Package Configurations](../package-configurations.md).  
   
 -   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*:   
                   Optional. Specifies that the connection manager with the specified name or GUID is located in the package, and specifies a connection string.  
   
-     This option requires that both parameters be specified: the connection manager name or GUID must be provided in the *id_or_name* argument, and a valid connection string must be specified in the *connection_string* argument. For more information, see [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md).  
+     This option requires that both parameters be specified: the connection manager name or GUID must be provided in the *id_or_name* argument, and a valid connection string must be specified in the *connection_string* argument. For more information, see [Integration Services &#40;SSIS&#41; Connections](../connection-manager/integration-services-ssis-connections.md).  
   
-     At run time, you can use the **/Connection** option to load package configurations from a location other than the location that you specified at design time. The values of these configurations then replace the values that were originally specified. However you can use the **/Connection** option only for configurations, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurations, that use a connection manager. To understand how package configurations are applied, see [Package Configurations](../../2014/integration-services/package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+     At run time, you can use the **/Connection** option to load package configurations from a location other than the location that you specified at design time. The values of these configurations then replace the values that were originally specified. However you can use the **/Connection** option only for configurations, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurations, that use a connection manager. To understand how package configurations are applied, see [Package Configurations](../package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2014](../behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: Optional. Displays specified log entries to the console during package execution. If this option is omitted, no log entries are shown in the console. If the option is specified without parameters that limit the display, every log entry will display. To limit the entries that are displayed to the console, you can specify the columns to show by using the *displayoptions* parameter, and limit the log entry types by using the *list_options* parameter.  
   
     > [!NOTE]  
-    >  When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the `/ISSERVER` parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+    >  When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the `/ISSERVER` parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../reports-for-the-integration-services-server.md).  
   
      The *displayoptions* values are as follows:  
   
@@ -425,7 +425,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     You can use the **/Set** option to change the location from which package configurations are loaded. However, you cannot use the **/Set** option to override a value that was specified by a configuration at design time. To understand how package configurations are applied, see [Package Configurations](../../2014/integration-services/package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+     You can use the **/Set** option to change the location from which package configurations are loaded. However, you cannot use the **/Set** option to override a value that was specified by a configuration at design time. To understand how package configurations are applied, see [Package Configurations](../package-configurations.md) and [Behavior Changes to Integration Services Features in SQL Server 2014](../behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 -   `/Ser[ver]` *server*:  
                   Optional. When the `/SQL` or `/DTS` option is specified, this option specifies the name of the server from which to retrieve the package. If you omit the `/Server` option and the `/SQL` or `/DTS` option is specified, package execution is tried against the local server. The *server_instance* value may be quoted.  
@@ -664,7 +664,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## Related Tasks  
- [Run a Package in SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)  
+ [Run a Package in SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
   
 ## Related Content  
  Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](http://go.microsoft.com/fwlink/?LinkId=251523), on www.mattmasson.com.  

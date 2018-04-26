@@ -89,15 +89,15 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in the **SQL Server Destination Editor** dialog box, click one of the following topics:  
   
--   [SQL Destination Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)  
+-   [SQL Destination Editor &#40;Connection Manager Page&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [SQL Destination Editor &#40;Mappings Page&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)  
+-   [SQL Destination Editor &#40;Mappings Page&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [SQL Destination Editor &#40;Advanced Page&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)  
+-   [SQL Destination Editor &#40;Advanced Page&#41;](../sql-destination-editor-advanced-page.md)  
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [SQL Server Destination Custom Properties](sql-server-destination-custom-properties.md)  
   

@@ -24,7 +24,7 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: "Active"
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # SQL Server Documentation
@@ -43,13 +43,11 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
-::: moniker range="=sql-server-2014"
 ![info_tip](../sql-server/media/info-tip.png) The SQL Server 2014 content will soon be merged into the .docs site.  For now, see:
 - [Books Online for SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
 - [What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
 - [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/sql/)
-::: moniker-end
 
 **Try SQL Server!**
     + [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)

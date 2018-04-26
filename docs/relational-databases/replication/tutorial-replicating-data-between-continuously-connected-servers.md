@@ -37,7 +37,7 @@ In this tutorial, you will learn how to:
 > * Create a publisher via Transactional Replication
 > * Create a subscriber for the Transactional publisher
 > * Validate the Subscription and measure latency
-> * Error Troubleshooting Methodology
+
   
   
 ## Prerequisites  
@@ -121,7 +121,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
   
 14. After the publication is created, select **Close** to complete the wizard. 
 
-    You may encounter the following error if your SQL Server Agent is not running when  you attempt to create the publication. This is an indication that your publication was created successfully, but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. Instructions for this are covered in the next section: 
+    You may encounter the following error if your SQL Server Agent is not running when you attempt to create the publication. This is an indication that your publication was created successfully, but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. Instructions for this are covered in the next section: 
 
     ![Snapshot Agent Fails to Start](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenterror.png)
     
@@ -140,7 +140,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
 
        ![Start Snapshot Agent](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-       If you see an error here, please see [Troubleshoot Errors with Snapshot Agent](#troubleshoot-erros-with-snapshot-agent). 
+       If you see an error here, please see [Troubleshooting Snapshot Agent Errors](../../troubleshooting/replication/troubleshooting-tran-repl-errors.md#troubleshoot-erros-with-snapshot-agent). 
 
   
 ### To add the Distribution Agent login to the PAL  

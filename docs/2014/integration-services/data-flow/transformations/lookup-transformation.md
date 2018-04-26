@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   If there are multiple matches in the reference table, the Lookup transformation returns only the first match returned by the lookup query. If multiple matches are found, the Lookup transformation generates an error or warning only when the transformation has been configured to load all the reference dataset into the cache. In this case, the Lookup transformation generates a warning when the transformation detects multiple matches as the transformation fills the cache.  
   
- The join can be a composite join, which means that you can join multiple columns in the transformation input to columns in the reference dataset. The transformation supports join columns with any data type, except for DT_R4, DT_R8, DT_TEXT, DT_NTEXT, or DT_IMAGE. For more information, see [Integration Services Data Types](../../integration-services-data-types.md).  
+ The join can be a composite join, which means that you can join multiple columns in the transformation input to columns in the reference dataset. The transformation supports join columns with any data type, except for DT_R4, DT_R8, DT_TEXT, DT_NTEXT, or DT_IMAGE. For more information, see [Integration Services Data Types](../integration-services-data-types.md).  
   
  Typically, values from the reference dataset are added to the transformation output. For example, the Lookup transformation can extract a product name from a table using a value from an input column, and then add the product name to the transformation output. The values from the reference table can replace column values or can be added to new columns.  
   

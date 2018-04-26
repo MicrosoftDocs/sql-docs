@@ -28,7 +28,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Coding and Debugging the Script Component
-  In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode. When you open the **Script Transformation Editor**, the component enters metadata design mode, in which you configure metadata and set component properties. After you have set the properties of the Script component and configured the input and outputs in metadata design mode, you can switch to code design mode to write your custom script. For more information about metadata design mode and code design mode, see [Configuring the Script Component in the Script Component Editor](../../configuring-the-script-component-in-the-script-component-editor.md).  
+  In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode. When you open the **Script Transformation Editor**, the component enters metadata design mode, in which you configure metadata and set component properties. After you have set the properties of the Script component and configured the input and outputs in metadata design mode, you can switch to code design mode to write your custom script. For more information about metadata design mode and code design mode, see [Configuring the Script Component in the Script Component Editor](configuring-the-script-component-in-the-script-component-editor.md).  
   
 ## Writing the Script in Code Design Mode  
   
@@ -212,6 +212,6 @@ public class ScriptMain : UserComponent
 |![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
- [Configuring the Script Component in the Script Component Editor](../../configuring-the-script-component-in-the-script-component-editor.md)  
+ [Configuring the Script Component in the Script Component Editor](configuring-the-script-component-in-the-script-component-editor.md)  
   
   

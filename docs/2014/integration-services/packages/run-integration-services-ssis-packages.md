@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   [Schedule a Package by using SQL Server Agent](../../ssms/agent/sql-server-agent.md)  
   
--   [Run a Package in SQL Server Data Tools](run-a-package-in-sql-server-data-tools.md)  
+-   [Run a Package in SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
   
 -   [Run a Package on the SSIS Server Using SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   

@@ -3,7 +3,7 @@ title: "Customer Experience Improvement Program for SQL Server Data Tools | Micr
 ms.custom: ""
 ms.date: "10/21/2016"
 ms.prod: sql
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""

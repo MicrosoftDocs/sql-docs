@@ -1,7 +1,7 @@
 ---
 title: "Install and configure WideWorldImporters sample database - SQL | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.service: ""
 ms.component: "samples"
 ms.technology:

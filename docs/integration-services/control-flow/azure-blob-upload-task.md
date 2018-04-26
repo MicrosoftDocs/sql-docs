@@ -2,7 +2,7 @@
 title: "Azure Blob Upload Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"

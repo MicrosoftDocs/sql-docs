@@ -16,7 +16,7 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: ""
 ms.date: 11/02/2017 
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.author: mikeray
 

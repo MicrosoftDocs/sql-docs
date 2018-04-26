@@ -77,7 +77,7 @@ Uniquely identifies a query plan for a batch that is cached or is currently exec
 |**text**|**nvarchar(max** **)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+ Requires `VIEW SERVER STATE` permission on the server.  
   
 ## Remarks  
 For ad hoc queries, the SQL handles are hash values based on the SQL text being submitted to the server, and can originate from any database. 

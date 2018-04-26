@@ -2,7 +2,7 @@
 title: "Configure WMI to Show Server Status in SQL Server Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms"

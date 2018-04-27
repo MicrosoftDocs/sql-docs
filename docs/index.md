@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
-author: "barbkess" 
-ms.author: "barbkess"
+author: "craigg-msft" 
+ms.author: "craiggs"
 ms.topic: "hub-page"
 ms.technology: 
   - "database-engine"
@@ -35,7 +35,7 @@ ms.technology:
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
                                                     <li><a class="barLink" href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/hh278312(v=sql.10).aspx">SQL Server 2012</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">Previous Versions (2005 - 2012)</a></li>
                                                     <li><a class="barLink" href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
                                                     <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
                                                     <li><a class="barLink" href="/sql/analytics-platform-system/index">Analytics Platform System - Parallel Data Warehouse</a><li>

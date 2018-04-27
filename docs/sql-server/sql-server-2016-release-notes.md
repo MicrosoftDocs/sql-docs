@@ -75,8 +75,8 @@ Supportability and Diagnostics related improvements included in SQL Server 2016 
 |Replication Support for databases with Supplemental characters collations	|	Replication is now supportable on databases which use the Supplemental Character Collation.	|		|
 |Proper handling of Service Broker with Availability group failover	|	In the current implementation when Service Broker is enabled on an Availability Group Databases, during an AG failover all Service broker connections which originated on the Primary Replica are left open. This improvement targets to close all such open connections during an AG failover.	|		|
 |Improved parallelism waits troubleshooting	|	by adding a new [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/) wait.	|		|
-|Improved consistency between DMVs for same information	|	The sys.dm_exec_session_wait_stats DMV now tracks CXPACKET and CXCONSUMER waits consistently with the sys.dm_os_wait_stats DMV	|		|
-|Improved troubleshooting of intra-query parallelism deadlocks. | A new exchange_spill Extended Event to report the number of pages written to TempDB during a parallelism operator spill, in the xEvent field name worktable_physical_writes.| |
+|Improved consistency between DMVs for same information	|	The sys.dm_exec_session_wait_stats DMV now tracks CXPACKET and CXCONSUMER waits consistently with the sys.dm_os_wait_stats DMV.	|		|
+|Improved troubleshooting of intra-query parallelism deadlocks | A new exchange_spill Extended Event to report the number of pages written to TempDB during a parallelism operator spill, in the xEvent field name worktable_physical_writes.| |
 | |The spills columns in the sys.dm_exec_query_stats, sys.dm_exec_procedure_stats, and sys.dm_exec_trigger_stats DMVs (such as total_spills) now also include the data spilled by parallelism operators.| |
 | |The XML deadlock graph is improved for parallelism deadlock scenarios, with more attributes added to the exchangeEvent resource.| |
 | |The XML deadlock graph is improved for deadlocks involving batch-mode operators, with more attributes added to the SyncPoint resource.| |

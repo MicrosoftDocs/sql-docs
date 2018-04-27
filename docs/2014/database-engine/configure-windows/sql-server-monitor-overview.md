@@ -25,7 +25,7 @@ manager: "jhubbard"
  To use one of these modules, select that module on the **Go** menu. The currently selected module owns the content of the navigation and detail panes, user interaction in the detail panes, and the queries for content and status.  
   
 > [!NOTE]  
->  For more information about these monitors, see [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md) and [Monitoring Database Mirroring &#40;SQL Server&#41;](../database-mirroring/database-mirroring-sql-server.md).  
+>  For more information about these monitors, see [Monitoring Replication](../../relational-databases/replication/monitoring-replication.md) and [Monitoring Database Mirroring &#40;SQL Server&#41;](../database-mirroring/database-mirroring-sql-server.md).  
   
 ## Permissions  
   

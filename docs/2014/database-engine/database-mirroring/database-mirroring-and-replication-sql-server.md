@@ -93,7 +93,7 @@ manager: "jhubbard"
   
     -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
      We recommend adding the **–PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
   

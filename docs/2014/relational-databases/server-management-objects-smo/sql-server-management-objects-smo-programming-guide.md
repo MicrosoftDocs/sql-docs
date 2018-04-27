@@ -26,9 +26,9 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Creating SMO Programs](create-program/creating-smo-programs.md)<br /><br /> [Programming Specific Tasks](tasks/programming-specific-tasks.md)|Provides information about programming the SMO objects in the Microsoft.SqlServer.management, Microsoft.SqlServer.Management.NotificationServices, Microsoft.SqlServer.Management.Smo, Microsoft.SqlServer.Management.Smo.Agent, Microsoft.SqlServer.Management.Smo.Broker, Microsoft.SqlServer.Management.Smo.Mail, Microsoft.SqlServer.Management.Smo.RegisteredServers, Microsoft.SqlServer.Management.Smo.Wmi, and Microsoft.SqlServer.Management.Trace namespaces.<br /><br /> This includes instructions to write programs that define databases and manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use SMO to create databases, perform backups, create jobs, configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assign permissions, and to perform many other administrative tasks.|  
-|[Developer's Guide &#40;Replication&#41;](../replication/dev-guide/developer-s-guide-replication.md)|Provides information about programming the RMO objects in the Microsoft.SqlServer.Replication namespace.|  
+|[Developer's Guide &#40;Replication&#41;](../replication/concepts/replication-developer-documentation.md)|Provides information about programming the RMO objects in the Microsoft.SqlServer.Replication namespace.|  
   
 ## See Also  
- [Developer's Guide &#40;Replication&#41;](../replication/dev-guide/developer-s-guide-replication.md)  
+ [Developer's Guide &#40;Replication&#41;](../replication/concepts/replication-developer-documentation.md)  
   
   

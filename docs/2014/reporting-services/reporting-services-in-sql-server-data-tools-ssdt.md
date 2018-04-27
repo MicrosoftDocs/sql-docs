@@ -41,7 +41,7 @@ manager: "mblythe"
   
 -   **Report Server Project Wizard.** When you select a Report Server Wizard Project, a report server project is automatically created, and the Report Wizard opens. In the wizard, you can create a report by following instructions on each page to create a connection string to a data source, set data source credentials, design a query, add a table or matrix data region, specify report data and groups, pick a font and color style, publish the report to a report server, and preview the report locally. After you create a report with the wizard, you can change the report data and the report designer by using Report Designer in the Report Server project.  
   
- ![New Project templates in SSDT](../../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
+ ![New Project templates in SSDT](../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
   
  ![Arrow icon used with Back to Top link](../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
   

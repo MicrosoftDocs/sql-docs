@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 -   [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  For more information about running the Merge Agent, see the following topics:  
   

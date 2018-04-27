@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Integration Services Developer's Guide](integration-services/integration-services-developer-documentation.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Replication Developer's Guide](../2014/relational-databases/replication/dev-guide/developer-s-guide-replication.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Replication Developer's Guide](../2014/relational-databases/replication/concepts/replication-developer-documentation.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Reporting Services Developer's Guide](../2014/reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   

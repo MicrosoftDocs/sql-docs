@@ -1,6 +1,6 @@
 ---
 title: "Auto-Statistics (Analytics Platform System)"
-description: "Describes auto-stats feature introduced in Analytics Platform System AU7."
+description: "Describes auto statistics feature introduced in Analytics Platform System AU7."
 author: "mzaman1" 
 manager: "craigg"	  
 ms.prod: "sql"
@@ -11,19 +11,19 @@ ms.author: "murshedz"
 ms.reviewer: martinle
 ---
 
-# Configure auto-stats
+# Configure auto statistics
 
-Learn how to configure Parallel Data Warehouse to use auto-stats for creating and updating statistics automatically.  Use this capability to improve query plans, and therefore improve query performance.
+Learn how to configure Parallel Data Warehouse to use auto statistics for creating and updating statistics automatically.  Use this capability to improve query plans, and therefore improve query performance.
 
 **Applies to: **APS (starting with AU7)
 
 ## What are statistics?
 Statistics for query optimization are objects that contain statistical information about the distribution of values in one or more columns of a table. The query optimizer uses these statistics to estimate the cardinality, or number of rows, in the query result. These cardinality estimates enable the query optimizer to create a high-quality query plan. As an example, in APS, the MPP query optimizer uses cardinality estimates to choose to shuffle or replicate the smaller of two tables used in a join clause and in doing so improve query performance.  For more information, see [Statistics](../relational-databases/statistics/statistics.md) and [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
-## What are auto-stats?
-Auto-stats are statistics that the query optimizer creates and updates automatically to improve the query plan. Statistics can become out-of-date after loads, inserts, updates and deletes operations. Without auto-stats, you need to do your own analysis to understand which columns need statistics and when the statistics need to be updated.
+## What are auto statistics?
+auto statistics are statistics that the query optimizer creates and updates automatically to improve the query plan. Statistics can become out-of-date after loads, inserts, updates and deletes operations. Without auto statistics, you need to do your own analysis to understand which columns need statistics and when the statistics need to be updated.
 
-Auto-stats includes the following three settings: 
+auto statistics includes the following three settings: 
 
 ### AUTO_CREATE_STATISTICS
 When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a histogram in an existing statistics object.
@@ -35,13 +35,12 @@ When the automatic update statistics option, AUTO_UPDATE_STATISTICS, is on, the 
 The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. For APS, the asynchronous statistics update option is ON by default, and the Query Optimizer updates statistics asynchronously. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the CREATE STATISTICS statement.
 
 ## Configuration settings for System Administrators
-After upgrading to APS AU7, auto-stats is enabled by default. The system administrator can enable or disable auto-stats with the [Feature Switch](appliance-feature-switch.md) option in the Appliance Configuration Manager.  Once enabled, users can change the statistics settings per database.
+After upgrading to APS AU7, auto statistics is enabled by default. The system administrator can enable or disable auto statistics with the [Feature Switch](appliance-feature-switch.md) option in the Appliance Configuration Manager.  Once enabled, users can change the statistics settings per database.
 Changing any feature switch values requires a service restart on APS.
 
-## Change auto-stats settings on a database
-When auto-stats is enabled by the system administrator, you can use [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) to change the statistics settings on a database. 
-All databases that existed before the upgrade to AU7 have auto-stats disabled. If auto-stats feature switch is enabled by the system administrator, then any new databases created after the upgrade to AU7 has auto-stats enabled.
-The following example enables auto-stats on the existing database myPDW.
+## Change auto statistics settings on a database
+When auto statistics is enabled by the system administrator, you can use [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) to change the statistics settings on a database. If auto statistics feature switch is enabled by the system administrator, any new databases created after the upgrade to AU7 will have auto statistics enabled. All databases that existed before the upgrade to AU7 have auto statistics disabled. 
+The following example enables auto statistics on the existing database myPDW.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON
@@ -52,13 +51,13 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
 AUTO_UPDATE STATISTICS_ASYNC option only works if AUTO_UPDATE_STATISTICS is ON.  Therefore, statistics are not updated when AUTO_UPDATE_STATISTICS is OFF and AUTO_UPDATE_STATISTICS_ASYNC is ON. 
 
 ### Error messages
-You could receive the error message “This option is not supported in PDW”.  This error occurs when the system administrator has not enabled auto-stats, and you try to set any of the auto-stats options in ALTER DATABASE. 
+You could receive the error message “This option is not supported in PDW”.  This error occurs when the system administrator has not enabled auto statistics, and you try to set any of the auto statistics options in ALTER DATABASE. 
 
 ### Limitations and Restrictions
-Auto-stats does not work on external tables. 
+Auto statistics does not work on external tables. 
 
 ### Check the current values
-The following query returns the current values of the auto-stats settings for all databases.
+The following query returns the current values of the auto statistics settings for all databases.
 
 ```sql
 SELECT NAME

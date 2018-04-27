@@ -199,7 +199,8 @@ SQLDUMPEREDUMPFLAGS
  *windows_cluster*  
  The netwirj name of a WSFC. You can specify either the short name or the full domain name. To find the target IP address of a short name, ALTER SERVER CONFIGURATION uses DNS resolution. Under some situations, a short name could cause confusion, and DNS could return the wrong IP address. Therefore, we recommend that you specify the full domain name.  
   
-  [NOTE] A cross cluster migrations using which this setting is no longer supported. To perform a cross cluster migration, use a Distributed Availability Group or some other method such as log shipping. 
+  > [!NOTE] 
+  > A cross-cluster migrations using this setting is no longer supported. To perform a cross-cluster migration, use a Distributed Availability Group or some other method such as log shipping. 
   
  LOCAL  
  The local WSFC.  

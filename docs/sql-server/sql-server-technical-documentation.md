@@ -24,19 +24,26 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: "Active"
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-
 # SQL Server Documentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-::: moniker range=">= sql-analysis-services-2017 || >= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on both Windows and Linux. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
 
-::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+::: moniker range="= sql-server-2016"
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on Windows. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
+
+
+
+
+
+<!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
+ at any one time, regardless of user's moniker choice.
+-->
 
 ::: moniker range="= sqlallproducts-allversions"
 |What's new  | Release notes  |
@@ -44,16 +51,22 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
-::: moniker range="= sql-analysis-services-2017 || = sql-server-linux-2017 || = sql-server-2017"
+
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 ::: moniker-end
-::: moniker range="=sql-server-2016 || =sqlallproducts-allversions"
+
+::: moniker range="=sql-server-2016"
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
+
+
+
+
 
 ![info_tip](../sql-server/media/info-tip.png) The SQL Server 2014 content will soon be merged into the .docs site.  For now, see:
 - [Books Online for SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
@@ -61,7 +74,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
 - [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/sql/)
 
-::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+::: moniker range="= sql-server-2016"
 **Try SQL Server!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
@@ -69,7 +82,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
-::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 **Try SQL Server!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Install SQL Server on Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Install SQL Server on Linux](../linux/sql-server-linux-setup.md)
@@ -78,7 +91,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
-::: moniker range=">= sql-analysis-services-2016 || >= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## SQL Server Technologies
 
 |||
@@ -93,7 +106,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|
 ::: moniker-end
 
-::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+::: moniker range="= sql-server-2016"
 ## Migrate and move data
 
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
@@ -101,7 +114,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 ::: moniker-end
 
-::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ## Migrate and move data
 
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)

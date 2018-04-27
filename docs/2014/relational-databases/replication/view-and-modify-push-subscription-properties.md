@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   The **Subscription Properties - \<Publisher>: \<PublicationDatabase>** dialog box, which is available from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   The **All Subscriptions** tab, which is available in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
+-   The **All Subscriptions** tab, which is available in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](monitor/start-the-replication-monitor.md).  
   
 #### To view and modify push subscription properties in Management Studio  
   
@@ -138,8 +138,8 @@ manager: "jhubbard"
 7.  (Optional) To view the new settings, call the <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> method to reload the properties for the subscription.  
   
 ## See Also  
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

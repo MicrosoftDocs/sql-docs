@@ -62,11 +62,11 @@ manager: "jhubbard"
 |Merge publication|Merge subscription/merge publication|Merge subscription|  
 |Merge publication|Merge subscription/transactional publication|Transactional subscription|  
   
- <sup>1</sup>You should set the `@published_in_tran_pub` property on the merge publication. By default, transactional replication expects tables at the Subscriber to be treated as read-only. If merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this risk, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md).  
+ <sup>1</sup>You should set the `@published_in_tran_pub` property on the merge publication. By default, transactional replication expects tables at the Subscriber to be treated as read-only. If merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this risk, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Initialize a Subscription](initialize-a-subscription.md)   
  [Synchronize Data](synchronize-data.md)  

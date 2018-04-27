@@ -49,7 +49,7 @@ manager: "mblythe"
   
  You can also perform a command line installation and include options such as making the installation silent and writing log files for the installation. The documentation for Windows Installer that runs .msi files provides information about the available options.  
   
- For more information, see [Install the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/install-the-stand-alone-version-of-report-builder-report-builder.md).  
+ For more information, see [Install the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](install-windows/install-report-builder.md).  
   
  An administrator can also use software such as Microsoft Systems Manager Server (SMS) to push the program to your computer. To learn how to use specific software to install Report Builder, consult the documentation for the software.   
   
@@ -63,7 +63,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  If the **New Document** menu does not list the **Report Builder Report**, **Report Builder Model**, and **Report Data Source** options, their content types need to be added to the SharePoint library.   
   
- You can open Report Builder from Report Manager or a SharePoint library. For more information about opening Report Builder, see [Start Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/start-report-builder-report-builder.md).  
+ You can open Report Builder from Report Manager or a SharePoint library. For more information about opening Report Builder, see [Start Report Builder &#40;Report Builder&#41;](report-builder/start-report-builder.md).  
   
 ### Report Builder Languages  
  Report Builder is available in 21 languages in addition to English. When you download the stand-alone version of Report Builder, you select the language version that you want to install. You must repeat the download for each language version that you want to use.  
@@ -101,7 +101,7 @@ manager: "mblythe"
 ##  <a name="Uninstalling"></a> Uninstalling Report Builder  
  You can uninstall the stand-alone version of Report Builder from the control panel or the command line. This applies only to the stand-alone version of Report Builder. The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] of Report Builder cannot be uninstalled separately. It is always installed and uninstalled with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- For more information, see [Uninstall the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/uninstall-the-stand-alone-version-of-report-builder-report-builder.md).  
+ For more information, see [Uninstall the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](install-windows/uninstall-report-builder.md).  
   
   
 ##  <a name="Supporting"></a> Supporting Report Builder  
@@ -172,14 +172,14 @@ manager: "mblythe"
 ##  <a name="HowTo"></a> How-to Topics  
  This section lists procedures that show you how to install and uninstall Report Builder.  
   
- [Install the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/install-the-stand-alone-version-of-report-builder-report-builder.md)  
+ [Install the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](install-windows/install-report-builder.md)  
   
- [Uninstall the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/uninstall-the-stand-alone-version-of-report-builder-report-builder.md)  
+ [Uninstall the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](install-windows/uninstall-report-builder.md)  
   
- [Start Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/start-report-builder-report-builder.md)  
+ [Start Report Builder &#40;Report Builder&#41;](report-builder/start-report-builder.md)  
   
   
 ## See Also  
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

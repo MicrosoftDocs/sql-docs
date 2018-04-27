@@ -31,7 +31,7 @@ manager: "mblythe"
  Enter a connection string for the data source. Click **Edit** to build the connection string using the **Connection Properties** dialog box. Click the Expressions (**fx**) button to edit the expression.  
   
 ## See Also  
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Shared Data Source Properties Dialog Box, Credentials](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)  

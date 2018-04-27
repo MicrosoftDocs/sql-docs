@@ -166,7 +166,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
  To configure the minimum permissions for the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener runs, complete the following procedure. The steps in the following procedure apply to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008 running IIS 7.0.  
   
- In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](secure-the-publisher.md).  
+ In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](security/secure-the-publisher.md).  
   
  **Important** The account created in this section is the account that will connect to the Publisher and Distributor during synchronization. This account must be added as a SQL Login account on the distribution and publication server.  
   
@@ -316,7 +316,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
     2.  Connect to the server in diagnostic mode. If the certificate is installed properly, the **Security Alert** dialog box will not appear. If the dialog box appears, the Merge Agent will fail when it tries to connect to the computer that is running IIS. You must make sure that the certificate for the server that you are accessing has been added to the certificate store at the Subscriber as a trusted certificate. For more information about exporting certificates, see the IIS documentation.  
   
 ## See Also  
- [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)   
+ [Web Synchronization for Merge Replication](merge/merge-replication.md)   
  [Configure Web Synchronization](configure-web-synchronization.md)  
   
   

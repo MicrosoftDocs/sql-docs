@@ -21,7 +21,7 @@ manager: "mblythe"
   This section provides F1 Help for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  
   
 ## See Also  
- [Feature Reference &#40;Reporting Services&#41;](../../2014/reporting-services/feature-reference-reporting-services.md)   
+ [Feature Reference &#40;Reporting Services&#41;](feature-reference-reporting-services.md)   
  [Reporting Services Reports &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-reports-ssrs.md)  
   
   

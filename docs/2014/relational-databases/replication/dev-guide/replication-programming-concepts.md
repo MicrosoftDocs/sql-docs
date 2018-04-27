@@ -80,7 +80,7 @@ manager: "jhubbard"
   
  The following topics provide information on security:  
   
--   [Security and Protection &#40;Replication&#41;](../security-and-protection-replication.md)  
+-   [Security and Protection &#40;Replication&#41;](../security/security-and-protection-replication.md)  
   
 -   [Security Center for SQL Server Database Engine and Azure SQL Database](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

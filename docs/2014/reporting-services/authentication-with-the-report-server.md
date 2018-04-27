@@ -82,11 +82,11 @@ manager: "mblythe"
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
  [Create and Manage Role Assignments](../../2014/reporting-services/create-and-manage-role-assignments.md)   
  [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
- [Implementing a Security Extension](../../2014/reporting-services/dev-guide/implementing-a-security-extension.md)   
+ [Implementing a Security Extension](extensions/security-extension/implementing-a-security-extension.md)   
  [Configure SSL Connections on a Native Mode Report Server](../../2014/reporting-services/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configure Report Builder Access](../../2014/reporting-services/configure-report-builder-access.md)   
- [Security Extensions Overview](../../2014/reporting-services/dev-guide/security-extensions-overview.md)   
- [Authentication in Reporting Services](../../2014/reporting-services/dev-guide/authentication-in-reporting-services.md)   
- [Authorization in Reporting Services](../../2014/reporting-services/dev-guide/authorization-in-reporting-services.md)  
+ [Security Extensions Overview](extensions/security-extension/security-extensions-overview.md)   
+ [Authentication in Reporting Services](extensions/security-extension/authentication-in-reporting-services.md)   
+ [Authorization in Reporting Services](extensions/security-extension/authorization-in-reporting-services.md)  
   
   

@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 ## Next Steps  
   
--   [Move Members within a Hierarchy &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
+-   [Move Members within a Hierarchy &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
   
 ## See Also  
  [Create an Explicit Hierarchy &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

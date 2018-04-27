@@ -129,12 +129,12 @@ manager: "mblythe"
 ## See Also  
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
- [CSV Device Information Settings](../../2014/reporting-services/csv-device-information-settings.md)   
- [Excel Device Information Settings](../../2014/reporting-services/excel-device-information-settings.md)   
- [HTML Device Information Settings](../../2014/reporting-services/html-device-information-settings.md)   
- [Image Device Information Settings](../../2014/reporting-services/image-device-information-settings.md)   
- [MHTML Device Information Settings](../../2014/reporting-services/mhtml-device-information-settings.md)   
- [PDF Device Information Settings](../../2014/reporting-services/pdf-device-information-settings.md)   
+ [CSV Device Information Settings](csv-device-information-settings.md)   
+ [Excel Device Information Settings](excel-device-information-settings.md)   
+ [HTML Device Information Settings](html-device-information-settings.md)   
+ [Image Device Information Settings](image-device-information-settings.md)   
+ [MHTML Device Information Settings](mhtml-device-information-settings.md)   
+ [PDF Device Information Settings](pdf-device-information-settings.md)   
  [XML Device Information Settings](../../2014/reporting-services/xml-device-information-settings.md)  
   
   

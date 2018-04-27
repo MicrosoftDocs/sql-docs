@@ -28,7 +28,7 @@ manager: "jhubbard"
 # Subscription Expiration and Deactivation
   Subscriptions can be deactivated or can expire if they are not synchronized within a specified *retention period*. The action that occurs depends on the type of replication and the retention period that is exceeded.  
   
- To set retention periods, see [Set the Expiration Period for Subscriptions](set-the-expiration-period-for-subscriptions.md), [Set the Distribution Retention Period for Transactional Publications &#40;SQL Server Management Studio&#41;](set-distribution-retention-period-for-transactional-publications.md), and [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
+ To set retention periods, see [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md), [Set the Distribution Retention Period for Transactional Publications &#40;SQL Server Management Studio&#41;](set-distribution-retention-period-for-transactional-publications.md), and [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
   
 ## Transactional Replication  
  Transactional replication uses the maximum distribution retention period (the **@max_distretention** parameter of [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) and the publication retention period (the **@retention** parameter of [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Reinitialize Subscriptions](reinitialize-subscriptions.md)   
- [Replication Agent Administration](replication-agent-administration.md)   
+ [Replication Agent Administration](agents/replication-agent-administration.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

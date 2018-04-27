@@ -62,8 +62,8 @@ manager: "mblythe"
  Click to verify that the data source connection works by using the specified credentials. If the connection cannot be made, you need to verify your credentials and the server availability. You can test data source connections for embedded and shared data sources.  
   
 ## See Also  
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
- [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Data Source Properties Dialog Box, Credentials &#40;Report Builder&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  

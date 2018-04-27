@@ -40,6 +40,6 @@ manager: "jhubbard"
  When you assign permissions to collections, you can read or update the name, code, description and owner ID. You can also read the model name.  
   
 ## See Also  
- [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [How Permissions Are Determined &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
   
   

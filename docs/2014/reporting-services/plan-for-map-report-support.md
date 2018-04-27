@@ -45,9 +45,9 @@ manager: "mblythe"
   
 -   When map data must be embedded map data, adjust the viewport center and zoom level to include just the map data that is needed for the report.  
   
- For more information, [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md).  
+ For more information, [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## See Also  
- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

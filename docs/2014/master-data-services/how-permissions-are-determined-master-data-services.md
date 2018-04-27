@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   Any objects at the same level as the entity are implicitly denied.  
   
--   Any objects at a higher level are given navigational access. For more information about navigational access, see [Navigational Access &#40;Master Data Services&#41;](../../2014/master-data-services/navigational-access-master-data-services.md).  
+-   Any objects at a higher level are given navigational access. For more information about navigational access, see [Navigational Access &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
  In this example, **Read-only** permission is assigned to an entity and that permission is inherited by its attribute, which is at a lower level in the model structure. The model provides navigational access to this entity and its attribute. The other entity in the model has no explicit permission assigned and does not inherit any permissions, so it is implicitly denied.  
   

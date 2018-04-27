@@ -59,7 +59,7 @@ manager: "mblythe"
   
  If the report is parameterized and you do not see the data and columns that you expect in the report data feed, rerun the report using the appropriate parameter values. The columns and values must be present in the report to be included in the data feed.  
   
- Depending on the layout of the report, it might not be intuitive how many data feeds a report has, nor what data is included in which data feed. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Atom rendering extension generates the data feeds that you use with alerts. The Atom rendering extension provides report data as flattened rowsets, a tabular format in which all columns have the same number of rows. These rowsets are the contents of the data feeds. Because report layout is often complex and contains multiple peer or nested data regions, multiple data feeds are needed to make available all the report data.. For more information about how data feeds are generated from reports, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generating-data-feeds-from-reports-report-builder-and-ssrs.md) and see [Generate Data Feeds from a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Depending on the layout of the report, it might not be intuitive how many data feeds a report has, nor what data is included in which data feed. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Atom rendering extension generates the data feeds that you use with alerts. The Atom rendering extension provides report data as flattened rowsets, a tabular format in which all columns have the same number of rows. These rowsets are the contents of the data feeds. Because report layout is often complex and contains multiple peer or nested data regions, multiple data feeds are needed to make available all the report data.. For more information about how data feeds are generated from reports, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) and see [Generate Data Feeds from a Report &#40;Report Builder and SSRS&#41;](report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
  When you choose a data feed, the data from the feed displays in a table with rows and columns in the alert data pane of Data Alert Designer. The metadata from the data source that the report uses or the report itself specifies the column names and the data feed populates the field list that you use to define rules in the data condition. The data feed also provides metadata such as the data types of table columns that restrict the values and comparison operators that you can use with fields when you create the rules.  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
 ### Alert Name  
  By default, the alert definition has the same name as the report. You can change the alert name to be more meaningful. This makes it easier for you to manage your alerts, determining which alerts to update, delete and so on.  
   
- You can create multiple alerts on a report. It is possible to have multiple alert definitions with the same name, but it is recommended that you make alert names unique. It makes it easier to differentiate and manage alert definitions. You can view a list of all the alerts you created in Data Alert Manager. For more information, see [Data Alert Manager for Alerting Administrators](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) and [Manage My Data Alerts in Data Alert Manager](../../2014/reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+ You can create multiple alerts on a report. It is possible to have multiple alert definitions with the same name, but it is recommended that you make alert names unique. It makes it easier to differentiate and manage alert definitions. You can view a list of all the alerts you created in Data Alert Manager. For more information, see [Data Alert Manager for Alerting Administrators](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) and [Manage My Data Alerts in Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   
 ### Rules and Clauses  
  The scope of data changes and the in the alert rules define the data changes that trigger the alert. The scope of the data changes are as follow:  
@@ -173,7 +173,7 @@ manager: "mblythe"
   
  ![Open Alert Designer from SharePoint library](../../2014/reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
- For more information, see [Create a Data Alert in Data Alert Designer](../../2014/reporting-services/create-a-data-alert-in-data-alert-designer.md).  
+ For more information, see [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md).  
   
   
 ##  <a name="SaveAlert"></a> Save a Data Alert Definition  
@@ -182,7 +182,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  The parameter values you chose to run the report are saved in the alert definition and will be used when report is rerun as a step in processing the alert definition. To use different parameter values, you must create a new alert definition.  
   
- Before the alert definition is saved, it is validated. You must correct any errors before the alert definition can be saved successfully. For more information, see [Create a Data Alert in Data Alert Designer](../../2014/reporting-services/create-a-data-alert-in-data-alert-designer.md).  
+ Before the alert definition is saved, it is validated. You must correct any errors before the alert definition can be saved successfully. For more information, see [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md).  
   
   
 ##  <a name="EditAlert"></a> Edit a Data Alert Definition  
@@ -192,15 +192,15 @@ manager: "mblythe"
   
  ![Open Data Alert Designer by clicking Edit](../../2014/reporting-services/media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
   
- For more information, see [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md).  
+ For more information, see [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md).  
   
   
 ##  <a name="HowTo"></a> Related Tasks  
  This section lists procedures that show you how to create and edit alerts.  
   
--   [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md)  
   
--   [Create a Data Alert in Data Alert Designer](../../2014/reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md)  
   
   
 ## See Also  

@@ -47,7 +47,7 @@ manager: "jhubbard"
 |**Deny**|The attribute is not displayed.<br /><br /> Note: You cannot explicitly deny access to Name and Code attributes.|  
   
 ## See Also  
- [Assign Model Object Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Assign Model Object Permissions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)   
  [Leaf Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [Model Object Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   

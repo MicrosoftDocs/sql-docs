@@ -100,14 +100,14 @@ manager: "mblythe"
   
  If the shared dataset definition specifies the option **Omit from query** for a parameter, you do not need to provide a default value. This flag indicates that the dataset parameter is not used in the query. For example, the parameter appears in the shared dataset definition because it is a report parameter that is used in the dataset filter only.  
   
- To view or change dataset parameter options, you must edit the shared dataset definition. For more information, see [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md).  
+ To view or change dataset parameter options, you must edit the shared dataset definition. For more information, see [Manage Shared Datasets](report-data/manage-shared-datasets.md).  
   
 ### Report Parameters  
  For a report, each parameter value must be valid before you can successfully create a cache refresh plan. You must type or select a default value for each report parameter. The value that you set overrides the default value that is defined for the report parameter on the report server.  
   
  Parameters must conform to the requirements specified in the parameter properties on the report server. For example, if the property AllowBlank is false for a report parameter, an empty string is not a valid value.  
   
- To view or change report parameter options, you must edit the report parameters in the report, or independently, on the report server. For more information, see [Report Parameters Concept &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-parameters-concept-report-builder-and-ssrs.md).  
+ To view or change report parameter options, you must edit the report parameters in the report, or independently, on the report server. For more information, see [Report Parameters Concept &#40;Report Builder and SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ## Conditions that Cause a Cache Refresh Plan to be Inactive  
  The following conditions can cause a shared dataset or report cache refresh plan to become inactive.  
@@ -130,6 +130,6 @@ manager: "mblythe"
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
  [Caching Reports &#40;SSRS&#41;](../../2014/reporting-services/caching-reports-ssrs.md)   
- [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md)  
+ [Manage Shared Datasets](report-data/manage-shared-datasets.md)  
   
   

@@ -45,7 +45,7 @@ manager: "mblythe"
   
 ## See Also  
  [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   

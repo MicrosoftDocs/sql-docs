@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Legend Properties Dialog Box, General (Report Builder and SSRS)
-  Use the **Legend** dialog box to define the appearance and layout of the legend in the chart. For more information, see [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-the-legend-on-a-chart-report-builder-and-ssrs.md).  
+  Use the **Legend** dialog box to define the appearance and layout of the legend in the chart. For more information, see [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
 ## Options  
  **Name**  
@@ -45,13 +45,13 @@ manager: "mblythe"
  Select this option to display the legend outside the chart area. This option is only applicable when the legend is docked to a chart area.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-the-legend-on-a-chart-report-builder-and-ssrs.md)   
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Plot Data on a Secondary Axis &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-the-legend-on-a-chart-report-builder-and-ssrs.md)   
- [Add a Moving Average to a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [Plot Data on a Secondary Axis &#40;Report Builder and SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Add a Moving Average to a Chart &#40;Report Builder and SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

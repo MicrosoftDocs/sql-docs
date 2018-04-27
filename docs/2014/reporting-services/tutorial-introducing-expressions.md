@@ -671,7 +671,7 @@ manager: "mblythe"
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Save"></a> (optional) Save the Report  
- You can save reports to a report server, SharePoint library, or your computer. For more information, see [Saving Reports &#40;Report Builder&#41;](../../2014/reporting-services/saving-reports-report-builder.md).  
+ You can save reports to a report server, SharePoint library, or your computer. For more information, see [Saving Reports &#40;Report Builder&#41;](report-builder/saving-reports-report-builder.md).  
   
  In this tutorial, save the report to a report server. If you do not have access to a report server, save the report to your computer.  
   
@@ -702,11 +702,11 @@ manager: "mblythe"
 4.  Click **Save**.  
   
 ## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-examples-report-builder-and-ssrs.md)   
- [Indicators &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/indicators-report-builder-and-ssrs.md)   
- [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Tables &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/tables-report-builder-and-ssrs.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)  
+ [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
+ [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Indicators &#40;Report Builder and SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
+ [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Tables &#40;Report Builder  and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

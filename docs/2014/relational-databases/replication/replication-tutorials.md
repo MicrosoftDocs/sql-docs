@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Replication Tutorials
   Replication includes tutorials that you can use to learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](replication-publishing-model-overview.md).  
+ In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
 >  Most of the tasks shown in these tutorials can be performed programmatically. For more information, see [Developer's Guide &#40;Replication&#41;](dev-guide/developer-s-guide-replication.md).  
@@ -38,6 +38,6 @@ manager: "jhubbard"
  Learn how to use merge replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
 ## See Also  
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+ [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
   
   

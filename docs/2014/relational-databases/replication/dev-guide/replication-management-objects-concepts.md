@@ -34,19 +34,19 @@ manager: "jhubbard"
  [Configure Distribution](../configure-distribution.md)  
  Topics in this section show how to use RMO to configure publishing and distribution.  
   
- [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
  Topics in this section show how to use RMO to create, delete, and modify publications and articles.  
   
  [Subscribe to Publications](../subscribe-to-publications.md)  
  Topics in this section show how to use RMO to create, delete, and modify subscriptions.  
   
- [Secure a Replication Topology](../secure-a-replication-topology.md)  
+ [Secure a Replication Topology](../security/secure-a-replication-topology.md)  
  Topics in this section show how to use RMO to view and modify security settings.  
   
  [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-subscriptions-replication.md)  
  Topics in this section show how to synchronize subscriptions.  
   
- [Monitoring Replication](../monitoring-replication.md)  
+ [Monitoring Replication](../monitor/monitoring-replication.md)  
  Topics in this section show how to programmatically monitor a replication topology.  
   
 ## Introduction to RMO Programming  

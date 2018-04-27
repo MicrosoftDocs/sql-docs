@@ -22,7 +22,7 @@ manager: "mblythe"
   Use the **Cube Selection** dialog box to select a different cube as a data source for your report. By selecting a different cube, your query may no longer be valid.  
   
 ## See Also  
- [Analysis Services MDX Query Designer User Interface](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface.md)   
- [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../2014/reporting-services/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Analysis Services MDX Query Designer User Interface](report-data/analysis-services-mdx-query-designer-user-interface.md)   
+ [Analysis Services Connection Type for MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

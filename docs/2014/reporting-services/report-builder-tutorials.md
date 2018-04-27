@@ -66,8 +66,8 @@ manager: "mblythe"
  Follow the steps in this tutorial to learn how to use expressions to concatenate, calculate, and lookup field values and show them a report. You will also learn how to conditionally display different images and indicator states using expressions.  
   
 ## See Also  
- [Report Design View &#40;Report Builder&#41;](report-design-view-report-builder.md)   
- [Report Builder in SQL Server 2014](report-builder-in-sql-server-2014.md)   
- [Tutorial: Create a Quick Chart Report Offline &#40;Report Builder&#41;](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Report Design View &#40;Report Builder&#41;](report-builder/report-design-view-report-builder.md)   
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
+ [Tutorial: Create a Quick Chart Report Offline &#40;Report Builder&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

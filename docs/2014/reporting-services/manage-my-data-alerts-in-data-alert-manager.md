@@ -44,13 +44,13 @@ manager: "mblythe"
   
 -   Right-click the data alert for which you want to edit the alert definition and click **Edit**.  
   
-     The alert definition opens in Data Alert Designer. For more information, see [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md) and [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md).  
+     The alert definition opens in Data Alert Designer. For more information, see [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md) and [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md).  
   
     > [!NOTE]  
     >  Only the user that created the data alert definition can edit it.  
   
     > [!NOTE]  
-    >  If the report has changed and the data feeds generated from the report have changed the alert definition might no longer be valid. This occurs when a column that the alert references in its rules is deleted from the report, changes data type, or is included in a different data feed or the report is deleted or moved. You can open an alert definition that is not valid, but you cannot resave it until it is valid based on the current version of the report data feed that it is built upon. To learn more about how data feeds are generated from reports, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+    >  If the report has changed and the data feeds generated from the report have changed the alert definition might no longer be valid. This occurs when a column that the alert references in its rules is deleted from the report, changes data type, or is included in a different data feed or the report is deleted or moved. You can open an alert definition that is not valid, but you cannot resave it until it is valid based on the current version of the report data feed that it is built upon. To learn more about how data feeds are generated from reports, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ### To delete an alert definition  
   

@@ -26,11 +26,11 @@ manager: "mblythe"
   
  [Reporting Services Reports &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-reports-ssrs.md)  
   
- [Report Data &#40;SSRS&#41;](../../2014/reporting-services/report-data-ssrs.md)  
+ [Report Data &#40;SSRS&#41;](report-data/report-data-ssrs.md)  
   
- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md)  
+ [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
   
- [Report Parts in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/report-parts-in-report-designer-ssrs.md)  
+ [Report Parts in Report Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
   
  [Schedules](../../2014/reporting-services/schedules.md)  
   
@@ -42,12 +42,12 @@ manager: "mblythe"
   
  [URL Access &#40;SSRS&#41;](../../2014/reporting-services/url-access-ssrs.md)  
   
- [Extensions &#40;SSRS&#41;](../../2014/reporting-services/extensions-ssrs.md)  
+ [Extensions &#40;SSRS&#41;](extensions-ssrs.md)  
   
  [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)  
   
 ## See Also  
- [Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-ssrs.md)   
+ [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
   
   

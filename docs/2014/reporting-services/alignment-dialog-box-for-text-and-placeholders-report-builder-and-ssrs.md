@@ -27,7 +27,7 @@ manager: "mblythe"
  **Horizontal**  
  Specify a value or type an expression that evaluates to the position where the text is positioned horizontally within a selected cell or data region. Click the **Expression** (*fx*) button to edit the expression.  
   
--   **General** Display the text as calculated by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For more information about how general text alignment is calculated, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+-   **General** Display the text as calculated by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For more information about how general text alignment is calculated, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 -   **Left** Display the text as aligned to the left.  
   
@@ -36,9 +36,9 @@ manager: "mblythe"
 -   **Right** Display the text as aligned to the right.  
   
 ## See Also  
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)   
- [Add HTML into a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-html-into-a-report-report-builder-and-ssrs.md)   
- [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Formatting Report Items &#40;Report Builder and SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
+ [Add HTML into a Report &#40;Report Builder and SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

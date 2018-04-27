@@ -42,7 +42,7 @@ manager: "jhubbard"
   
     -   For subscriptions to merge publications, specify credentials on the **Merge Agent Security** page.  
   
-     For information about the permissions required by each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
+     For information about the permissions required by each agent, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 -   Specify a synchronization schedule and when the Subscriber should be initialized.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
     -   If the value of **allow_pull** is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_pull** for **@property** and `true` for **@value**.  
   
-2.  At the Subscriber, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specify **@publisher** and **@publication**. For information about updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  At the Subscriber, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specify **@publisher** and **@publication**. For information about updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  At the Subscriber, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify the following:  
   
@@ -120,7 +120,7 @@ manager: "jhubbard"
   
     -   **@subscription_priority** – Specify a priority for the subscription (**0.00** to **99.99**). This is only required for a server subscription.  
   
-         For more information, see [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
+         For more information, see [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  At the Subscriber, execute [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specify the following parameters:  
   
@@ -135,7 +135,7 @@ manager: "jhubbard"
   
     -   (Optional) A value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**, if you need to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher.  
   
-    -   A schedule for the Merge Agent job for this subscription. For more information, see [Create an Updatable Subscription to a Transactional Publication](create-an-updatable-subscription-to-a-transactional-publication.md).  
+    -   A schedule for the Merge Agent job for this subscription. For more information, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  At the Publisher, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, **@subscriber_db**, and a value of **pull** for **@subscription_type**. This registers the pull subscription.  
   
@@ -184,7 +184,7 @@ manager: "jhubbard"
     -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Distribution Agent runs at the Subscriber. This account is used to make local connections to the Subscriber and to make remote connections using Windows Authentication.  
   
         > [!NOTE]  
-        >  Setting <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the `sysadmin` fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](replication-agent-security-model.md).  
+        >  Setting <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the `sysadmin` fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
     -   (Optional) A value of `true` for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> to create an agent job that is used to synchronize the subscription. If you specify `false` (the default), the subscription can only be synchronized programmatically and you must specify additional properties of <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> when you access this object from the <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> property. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -226,7 +226,7 @@ manager: "jhubbard"
     -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Merge Agent runs at the Subscriber. This account is used to make local connections to the Subscriber and to make remote connections using Windows Authentication.  
   
         > [!NOTE]  
-        >  Setting <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the `sysadmin` fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](replication-agent-security-model.md).  
+        >  Setting <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the `sysadmin` fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
     -   (Optional) A value of `true` for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> to create an agent job that is used to synchronize the subscription. If you specify `false` (the default), the subscription can only be synchronized programmatically and you must specify additional properties of <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> when you access this object from the <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> property. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -268,6 +268,6 @@ manager: "jhubbard"
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
  [Configure Web Synchronization](configure-web-synchronization.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)  
+ [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

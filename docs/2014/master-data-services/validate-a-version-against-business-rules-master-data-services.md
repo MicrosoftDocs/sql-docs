@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Validate a Version against Business Rules (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], validate a version to apply business rules to all members in the model version.  
   
- This procedure explains how to use the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application to validate data. If you have permission in the MDS database, you can use a stored procedure instead. For more information, see [Validation Stored Procedure &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md).  
+ This procedure explains how to use the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application to validate data. If you have permission in the MDS database, you can use a stored procedure instead. For more information, see [Validation Stored Procedure &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 > [!NOTE]  
 >  All members must pass validation before a version can be committed.  
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Validation Statuses &#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
- [Validation Stored Procedure &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
+ [Validation Stored Procedure &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)   
  [Versions &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Business Rules &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  

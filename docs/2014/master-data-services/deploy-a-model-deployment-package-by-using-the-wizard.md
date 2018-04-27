@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   A model deployment package must exist. For more information, see [Create a Model Deployment Package by Using the Wizard](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
--   You must be an administrator in the environment where you are deploying the model. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   You must be an administrator in the environment where you are deploying the model. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 ### To deploy a model deployment package of model objects only  
   

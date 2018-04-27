@@ -27,11 +27,11 @@ manager: "mblythe"
   
     -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../2014/reporting-services/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
-    -   [Update Credentials in Report Data Sources from a SharePoint Site](../../2014/reporting-services/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
+    -   [Update Credentials in Report Data Sources from a SharePoint Site](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
-    -   [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md)  
+    -   [Manage Shared Datasets](report-data/manage-shared-datasets.md)  
   
-    -   [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-parameters-published-report-reporting-services-sharepoint-integrated-mode.md)  
+    -   [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
     -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
@@ -53,6 +53,6 @@ manager: "mblythe"
   
 -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- For more general information about [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-ssrs.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../2014/books-online-for-sql-server-2014.md).  
+ For more general information about [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../2014/books-online-for-sql-server-2014.md).  
   
   

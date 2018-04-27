@@ -151,7 +151,7 @@ manager: "mblythe"
  If you choose to view the report without script support, the report is rendered in HTML without report viewer capabilities such as the report toolbar and the document map.  
   
 > [!NOTE]  
->  The report toolbar is part of the HTML Viewer component. By default the toolbar appears at the top of every report that is rendered in a browser window. The report viewer provides features include the ability to search the report for information, scroll to a specific page, and adjust the page size for viewing purposes. For more information about the report toolbar or HTML Viewer, see [HTML Viewer and the Report Toolbar](../../2014/reporting-services/html-viewer-and-the-report-toolbar.md).  
+>  The report toolbar is part of the HTML Viewer component. By default the toolbar appears at the top of every report that is rendered in a browser window. The report viewer provides features include the ability to search the report for information, scroll to a specific page, and adjust the page size for viewing purposes. For more information about the report toolbar or HTML Viewer, see [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md).  
   
 ##  <a name="bkmk_controls"></a> Browser Support for ReportViewer Web Server Controls in Visual Studio  
  The ReportViewer Web server control is used to embed report functionality in an ASP.NET web application. The controls are included with Visual Studio and support different browsers and browser versions than the other components described in this topic. The type of browser used to view the application determines the kind of ReportViewer functionality that you can provide in your application. Use the table provided in this topic to determine which of the supported browsers are subject to report functionality restrictions and the supported platforms.  
@@ -195,7 +195,7 @@ manager: "mblythe"
 ## See Also  
  [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [HTML Viewer and the Report Toolbar](../../2014/reporting-services/html-viewer-and-the-report-toolbar.md)   
+ [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)   
  [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md)  
   
   

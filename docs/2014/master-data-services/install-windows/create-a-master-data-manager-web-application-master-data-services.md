@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ## Prerequisites  
   
--   For information about the requirements for the computer that hosts the web application, see [Web Application Requirements &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md).  
+-   For information about the requirements for the computer that hosts the web application, see [Web Application Requirements &#40;Master Data Services&#41;](../master-data-services-installation-and-configuration.md).  
   
 ## To create a Master Data Manager web application in a new website  
  When you create a new website, the root web application is the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application. The web application is also added to a new application pool.  

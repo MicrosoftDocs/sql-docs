@@ -47,6 +47,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Initialize a Subscription](initialize-a-subscription.md)   
- [Secure the Snapshot Folder](secure-the-snapshot-folder.md)  
+ [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md)  
   
   

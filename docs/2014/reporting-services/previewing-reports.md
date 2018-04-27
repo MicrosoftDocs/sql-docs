@@ -54,9 +54,9 @@ manager: "mblythe"
  You can also test reports by publishing them to a test server. Publishing a report to a test server is the same as publishing to a production server. For information about publishing a report, see [Publishing Reports to a Report Server](../../2014/reporting-services/publishing-reports-to-a-report-server.md).  
   
 ## See Also  
- [Print Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/print-reports-report-builder-and-ssrs.md)   
- [Print a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/print-a-report-report-builder-and-ssrs.md)   
+ [Print Reports &#40;Report Builder and SSRS&#41;](report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Print a Report &#40;Report Builder and SSRS&#41;](report-builder/print-a-report-report-builder-and-ssrs.md)   
  [Publish Reports](../../2014/reporting-services/publish-reports.md)   
- [Using Custom Assemblies with Reports](../../2014/reporting-services/dev-guide/using-custom-assemblies-with-reports.md)  
+ [Using Custom Assemblies with Reports](custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

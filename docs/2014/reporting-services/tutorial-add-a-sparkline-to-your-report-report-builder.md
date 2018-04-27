@@ -295,7 +295,7 @@ manager: "mblythe"
 ##  <a name="Title"></a> 8. (Optional) Add a Report Title  
  A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. In this tutorial, you will use the text box that is automatically placed at the top of the report body.  
   
- The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 #### To add a report title  
   
@@ -345,10 +345,10 @@ manager: "mblythe"
 4.  Click **Save**.  
   
 ## Next Steps  
- This concludes the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+ This concludes the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## See Also  
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -40,7 +40,7 @@ manager: "jhubbard"
   
     -   Expired subscription cleanup  
   
- For more information about these jobs, see [Replication Agent Administration](replication-agent-administration.md).  
+ For more information about these jobs, see [Replication Agent Administration](agents/replication-agent-administration.md).  
   
 ## Options  
  To display information about an agent or job, select from the **Agent and Job Types** drop-down menu. For more detailed information and tasks that are related to an agent or job, right-click the row for that agent or job, and then click an option on the shortcut menu. To change the way that the grid displays data, right-click the grid, and then click one of the following options:  
@@ -193,9 +193,9 @@ manager: "jhubbard"
  The last action performed during the most recent run of the job.  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md)   
- [Monitoring Replication](monitoring-replication.md)  
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Monitoring Replication](monitor/monitoring-replication.md)  
   
   

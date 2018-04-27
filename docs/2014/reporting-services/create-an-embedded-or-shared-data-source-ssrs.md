@@ -50,7 +50,7 @@ manager: "mblythe"
   
     -   Click **Edit** to open the **Connection Properties** dialog box for the data source type you chose in step 2.  
   
-         Fill in the fields in the **Connection Properties** dialog box as appropriate for the data source type. Connection properties include the type of data source, the name of the data source, and the credentials to use. After you specify values in this dialog box, click **Test Connection** to verify that the data source is available and that the credentials you specified are correct. For more information about specific data source types, see topics in [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md).  
+         Fill in the fields in the **Connection Properties** dialog box as appropriate for the data source type. Connection properties include the type of data source, the name of the data source, and the credentials to use. After you specify values in this dialog box, click **Test Connection** to verify that the data source is available and that the credentials you specified are correct. For more information about specific data source types, see topics in [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md).  
   
 4.  For a shared data source, verify that **Use shared data source reference** is selected.  
   
@@ -83,11 +83,11 @@ manager: "mblythe"
 -   Click **Embedded Connection** and finish creating the embedded data source as described in an earlier procedure.  
   
 ## See Also  
- [Store Credentials in a Reporting Services Data Source](../../2014/reporting-services/store-credentials-in-a-reporting-services-data-source.md)   
+ [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md)   
  [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Convert a Data Source from Embedded to Shared &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs.md)   
- [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../2014/reporting-services/configure-data-source-properties-for-a-report-report-manager.md)   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Convert a Data Source from Embedded to Shared &#40;Report Builder and SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
+ [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

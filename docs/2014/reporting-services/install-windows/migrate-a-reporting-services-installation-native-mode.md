@@ -188,17 +188,17 @@ manager: "jhubbard"
   
 3.  Modify the configuration files to add entries for your custom component. The entries will vary depending on the kind of assembly you are using. For instructions on where to place files and add configuration entries, see the following:  
   
-    1.  [Deploying a Custom Assembly](../dev-guide/deploying-a-custom-assembly.md)  
+    1.  [Deploying a Custom Assembly](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [How to: Deploy a Custom Report Item](../dev-guide/how-to-deploy-a-custom-report-item.md)  
+    2.  [How to: Deploy a Custom Report Item](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
-    3.  [Deploying a Data Processing Extension](../dev-guide/deploying-a-data-processing-extension.md)  
+    3.  [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   
-    4.  [Deploying a Delivery Extension](../dev-guide/deploying-a-delivery-extension.md)  
+    4.  [Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md)  
   
-    5.  [Deploying a Rendering Extension](../dev-guide/deploying-a-rendering-extension.md)  
+    5.  [Deploying a Rendering Extension](../extensions/rendering-extension/deploying-a-rendering-extension.md)  
   
-    6.  [Implementing a Security Extension](../dev-guide/implementing-a-security-extension.md)  
+    6.  [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)  
   
 ##  <a name="bkmk_configure_reportserver"></a> Configure the Report Server  
  Configure URLs for the Report Server Web service and Report Manager, and configure the connection to the report server database.  

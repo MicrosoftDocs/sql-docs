@@ -24,7 +24,7 @@ manager: "mblythe"
   
  Filters for an embedded dataset affect only the report in which they are defined.  
   
- For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ## Options  
  **Add**  
@@ -47,7 +47,7 @@ manager: "mblythe"
   
  The values in **Expression** and **Value** must evaluate to the same data type. For example, if **Expression** is set to a field that has the data type System.Int32 and **Value** is set to 7, from the drop-down list, choose **Integer**.  
   
- If the data type option you need is not in the drop-down list, write an expression to convert the value to the correct data type. For more information, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-equation-examples-report-builder-and-ssrs.md).  
+ If the data type option you need is not in the drop-down list, write an expression to convert the value to the correct data type. For more information, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
  **Operator**  
  Choose the operator to use to compare the expression and the value.  
@@ -56,9 +56,9 @@ manager: "mblythe"
  Type the expression or value to use when evaluating the expression specified in the **Expression** box. Click the Expression (**fx**) button to edit the expression.  
   
 ## See Also  
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md)   
- [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

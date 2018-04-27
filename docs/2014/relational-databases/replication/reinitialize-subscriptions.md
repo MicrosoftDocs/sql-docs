@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   You explicitly mark a subscription for reinitialization.  
   
--   You perform an action, such as a property change, that requires a reinitialization. For more information about actions that require reinitialization, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
+-   You perform an action, such as a property change, that requires a reinitialization. For more information about actions that require reinitialization, see [Change Publication and Article Properties](publish/change-publication-and-article-properties.md).  
   
  In both cases, the most recent snapshot is applied to the Subscriber the next time the Distribution Agent or the Merge Agent runs. For snapshot and transactional replication, when reinitialization occurs, any changes made at the Subscriber, but not yet synchronized with the Publisher, are overwritten by the application of the new snapshot.  
   

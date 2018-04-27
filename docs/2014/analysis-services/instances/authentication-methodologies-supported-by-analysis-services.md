@@ -74,7 +74,7 @@ manager: "mblythe"
   
  Most middle tier application services include functionality for storing a user name and password subsequently used to retrieve data from a down-level data store, such as Analysis Services or the SQL Server relational engine. As such, stored credentials provide a fifth alternative for retrieving data. Limitations with this approach include maintenance overhead associated with keeping user names and passwords up to date, and the use of a single identity on the connection. If your solution requires the identity of the original caller, then stored credentials would not be a viable alternative.  
   
- For more information about stored credentials, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md) and [Use Excel Services with Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
+ For more information about stored credentials, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) and [Use Excel Services with Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
   
 ## See Also  
  [Using Impersonation with Transport Security](http://go.microsoft.com/fwlink/?LinkId=311727)   

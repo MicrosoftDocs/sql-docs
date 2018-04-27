@@ -41,6 +41,6 @@ manager: "mblythe"
  If report items have a circular reference, you won't be able to publish them as report parts. For example, a report item points to a dataset, which in turn points to a parameter. The parameter, in turn, points to the dataset¸ too. You'll need to delete one of the references first before you can publish the report part.  
   
 ## See Also  
- [Report Parts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-parts-report-builder-and-ssrs.md)  
+ [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md)  
   
   

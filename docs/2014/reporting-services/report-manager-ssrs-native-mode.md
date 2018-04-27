@@ -96,7 +96,7 @@ manager: "mblythe"
  You can customize Report Manager in very limited ways. For example, you can modify the application title on the Site Settings page. If you are a Web developer, you can modify the style sheets that contain the style information used by Report Manager. Because Report Manager is not specifically designed to support customization, you must thoroughly test any modification that you make. If you find that Report Manager does not meet your needs, you can develop a custom report viewer or configure SharePoint Web parts to find and view reports in a SharePoint site. For more information, see [Configure Report Manager &#40;Native Mode&#41;](../../2014/reporting-services/configure-report-manager-native-mode.md).  
   
 ##  <a name="bkmk_icon_descriptions"></a> Icon Descriptions  
- The following table describes the icons that are used in Report Manager. For more information about the icons that appear in the report toolbar, see [HTML Viewer and the Report Toolbar](../../2014/reporting-services/html-viewer-and-the-report-toolbar.md).  
+ The following table describes the icons that are used in Report Manager. For more information about the icons that appear in the report toolbar, see [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md).  
   
 |Icon|Description|Action|  
 |----------|-----------------|------------|  

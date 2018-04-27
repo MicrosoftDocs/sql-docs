@@ -24,9 +24,9 @@ manager: "jhubbard"
   
 -   The Log Reader Agent for all transactional publications.  
   
--   The Queue Reader Agent for transactional publications that allow updatable subscriptions. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. For more information about updatable subscriptions, see [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md).  
+-   The Queue Reader Agent for transactional publications that allow updatable subscriptions. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. For more information about updatable subscriptions, see [Updatable Subscriptions for Transactional Replication](transactional/transactional-replication.md).  
   
- For information about permissions required by agents and best practices for replication security, see [Replication Agent Security Model](replication-agent-security-model.md) and [Replication Security Best Practices](replication-security-best-practices.md).  
+ For information about permissions required by agents and best practices for replication security, see [Replication Agent Security Model](security/replication-agent-security-model.md) and [Replication Security Best Practices](security/replication-security-best-practices.md).  
   
 ## Options  
  **Snapshot Agent**  
@@ -51,12 +51,12 @@ manager: "jhubbard"
 >  There is one Queue Reader Agent for each distribution database (and all Publishers that it serves). If a transactional publication that allows queued updating subscriptions already exists on any of the Publishers that use a given distribution database, the security settings are read-only. You can change the account under which the Queue Reader Agent runs and makes connections in the **Distributor Properties** dialog box, but changes affect publications at all Publishers that use the distribution database.  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
+ [Create a Publication](publish/create-a-publication.md)   
  [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
- [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Replication Agents Overview](replication-agents-overview.md)  
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
+ [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

@@ -24,7 +24,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
  
-Transactional replication enables changes made at a Subscriber to be propagated back to the Publisher using either immediate or queued updating subscriptions. You can create an updating subscription programmatically using replication stored procedures. (Also, see [Create an Updatable Subscription to a Transactional Publication (Management Studio)](create-an-updatable-subscription-to-a-transactional-publication.md).) 
+Transactional replication enables changes made at a Subscriber to be propagated back to the Publisher using either immediate or queued updating subscriptions. You can create an updating subscription programmatically using replication stored procedures. (Also, see [Create an Updatable Subscription to a Transactional Publication (Management Studio)](publish/create-an-updatable-subscription-to-a-transactional-publication.md).) 
 
 ## To create an immediate updating pull subscription ##
 
@@ -271,8 +271,8 @@ GO
 
 ## See Also ##
 
-[Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)
+[Updatable Subscriptions for Transactional Replication](transactional/transactional-replication.md)
 
 [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)
 
-[Create an Updatable Subscription to a Transactional Publication (Management Studio)](create-an-updatable-subscription-to-a-transactional-publication.md)
+[Create an Updatable Subscription to a Transactional Publication (Management Studio)](publish/create-an-updatable-subscription-to-a-transactional-publication.md)

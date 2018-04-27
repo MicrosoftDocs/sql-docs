@@ -111,8 +111,8 @@ manager: "jhubbard"
  You have successfully created the merge publication. Next, you will subscribe to this publication. See [Lesson 2: Creating a Subscription to the Merge Publication](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## See Also  
- [Filter Published Data](filter-published-data.md)   
- [Parameterized Row Filters](parameterized-row-filters.md)   
- [Define an Article](define-an-article.md)  
+ [Filter Published Data](publish/filter-published-data.md)   
+ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Define an Article](publish/define-an-article.md)  
   
   

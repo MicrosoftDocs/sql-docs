@@ -36,7 +36,7 @@ manager: "mblythe"
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. Not all data source types support graphical query designers.|  
-|**Import**|Import an existing query from a file or report. Only file types sql and rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Import**|Import an existing query from a file or report. Only file types sql and rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the result set in the Result pane.|  
 |**Command Type**|Select **Text**, **StoredProcedure**, or **TableDirect**. If a stored procedure has parameters, the **Define Query Parameters** dialog box appears when you click **Run** on the toolbar, and you can fill in values as needed. Note that if a stored procedure returns more than one result set, only the first result set is used to populate the dataset.<br /><br /> Support for command type varies by data source type. For example, only OLE DB and ODBC support **TableDirect**.|  
   
@@ -88,12 +88,12 @@ uspGetEmployeeManagers;
  When you enter the table name Sales.Customer, it is the equivalent of creating the [!INCLUDE[tsql](../includes/tsql-md.md)] statement `SELECT * FROM Sales.Customer;`.  
   
 ## See Also  
- [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md)   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [SQL Server Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-server-connection-type-ssrs.md)   
- [OLE DB Connection Type &#40;SSRS&#41;](../../2014/reporting-services/ole-db-connection-type-ssrs.md)   
- [ODBC Connection Type &#40;SSRS&#41;](../../2014/reporting-services/odbc-connection-type-ssrs.md)   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [SQL Server Connection Type &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
+ [OLE DB Connection Type &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
+ [ODBC Connection Type &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)  
   
   

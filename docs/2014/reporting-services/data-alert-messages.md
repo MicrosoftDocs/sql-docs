@@ -54,9 +54,9 @@ manager: "mblythe"
 ##  <a name="HowTo"></a> Related Tasks  
  This section lists procedures that show you how to create and edit the data alert definitions that provide much of the information that you see in data alert messages.  
   
--   [Create a Data Alert in Data Alert Designer](../../2014/reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md)  
   
--   [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md)  
   
 
   

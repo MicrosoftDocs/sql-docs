@@ -21,7 +21,7 @@ manager: "jhubbard"
   The **Add Join** and **Edit Join** dialog boxes allow you to add and edit join filters for merge publications.  
   
 > [!NOTE]  
->  Editing a filter in an existing publication requires a new snapshot for the publication. If a publication has subscriptions, the subscriptions must be reinitialized. For more information about property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
+>  Editing a filter in an existing publication requires a new snapshot for the publication. If a publication has subscriptions, the subscriptions must be reinitialized. For more information about property changes, see [Change Publication and Article Properties](publish/change-publication-and-article-properties.md).  
   
  A join filter allows a table to be filtered based on how a related table in the publication is filtered. Typically a parent table is filtered using a parameterized row filter; then one or more join filters are defined in much the same way that you define a join between tables. The join filters extend the row filter so that the data in the related tables is replicated only if it matches the join filter clause.  
   
@@ -56,16 +56,16 @@ manager: "jhubbard"
         > [!CAUTION]  
         >  Selecting this option indicates that the relationship between the child and parent tables in a join filter is one to one or one to many. Only select this option if you have a constraint on the joining column in the parent table that guarantees uniqueness. If the option is set incorrectly, non-convergence of data can occur.  
   
-    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes processed as a unit, select **Logical record**. This option is available only if the article and publication requirements for using logical records are met. For more information, see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md).  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. By default, merge replication processes changes on a row-by-row basis during synchronization. To have related changes processed as a unit, select **Logical record**. This option is available only if the article and publication requirements for using logical records are met. For more information, see the section "Considerations for Using Logical Records" in [Group Changes to Related Rows with Logical Records](merge/group-changes-to-related-rows-with-logical-records.md).  
   
  After you have added or edited a filter, click **OK** to save changes and close the dialog box. The filter you specified is parsed and run against the table in the SELECT clause. If the filter statement contains syntax errors or other problems, you will be notified and will be able to edit the filter statement.  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
- [Filter Published Data](filter-published-data.md)   
- [Join Filters](join-filters.md)   
- [Parameterized Row Filters](parameterized-row-filters.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)  
+ [Create a Publication](publish/create-a-publication.md)   
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
+ [Filter Published Data](publish/filter-published-data.md)   
+ [Join Filters](merge/join-filters.md)   
+ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)  
   
   

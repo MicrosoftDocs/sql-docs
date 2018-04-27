@@ -42,8 +42,8 @@ manager: "mblythe"
  Add or change an expression for the calculated field. This button only appears when you click **Add** and select **Calculated Field**.  
   
 ## See Also  
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)  
+ [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
   

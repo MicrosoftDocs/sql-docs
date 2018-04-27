@@ -54,8 +54,8 @@ manager: "mblythe"
  Choose the appropriate format of the images contained in the database, for example, .bmp, .jpeg, .gif, .png, and .x-png.  
   
 ## See Also  
- [Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-examples-report-builder-and-ssrs.md)   
- [Images &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/images-report-builder-and-ssrs.md)   
+ [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

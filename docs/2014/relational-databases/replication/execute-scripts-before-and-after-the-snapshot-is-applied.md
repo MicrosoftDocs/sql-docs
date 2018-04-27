@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Execute Scripts Before and After a Snapshot is Applied \(SQL Server Management Studio\)](execute-scripts-before-and-after-a-snapshot-is-applied.md)  
   
--   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
 ## See Also  
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   

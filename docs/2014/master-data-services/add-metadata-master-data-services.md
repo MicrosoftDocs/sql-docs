@@ -45,6 +45,6 @@ manager: "jhubbard"
 6.  Enter the new name, code, and description, and then click **OK**.  
   
 ## See Also  
- [Metadata &#40;Master Data Services&#41;](../../2014/master-data-services/metadata-master-data-services.md)  
+ [Metadata &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
   
   

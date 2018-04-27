@@ -26,15 +26,15 @@ manager: "mblythe"
   
 -   [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   
--   [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/text-based-query-designer-user-interface-report-builder.md)  
+-   [Text-based Query Designer User Interface &#40;Report Builder&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
   
--   [Relational Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/relational-query-designer-user-interface-report-builder.md)  
+-   [Relational Query Designer User Interface &#40;Report Builder&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
   
 -   [SAP NetWeaver BI Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
   
 -   [Hyperion Essbase Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
   
 ## See Also  
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)  
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

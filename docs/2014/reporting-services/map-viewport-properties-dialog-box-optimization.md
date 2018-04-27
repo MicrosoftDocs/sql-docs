@@ -36,7 +36,7 @@ manager: "mblythe"
  Specify a map resolution. This value specifies the smallest detail that you want to see in the rendered map in points.  
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md)   
- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
+ [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -26,17 +26,17 @@ manager: "jhubbard"
   
 -   Tables without primary keys cannot be published in transactional publications.  
   
--   Tables cannot be published in both a merge publication and a transactional publication enabled for queued updating subscriptions. For more information about publishing an article in more than one publication, see the "Publishing Tables in More Than One Publication" section in [Publish Data and Database Objects](publish-data-and-database-objects.md).  
+-   Tables cannot be published in both a merge publication and a transactional publication enabled for queued updating subscriptions. For more information about publishing an article in more than one publication, see the "Publishing Tables in More Than One Publication" section in [Publish Data and Database Objects](publish/publish-data-and-database-objects.md).  
   
 ## Oracle Publishers  
  There are additional considerations for Oracle Publishers:  
   
--   For a list of objects that can be published from Oracle, see [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md). Objects that cannot be published are not displayed.  
+-   For a list of objects that can be published from Oracle, see [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md). Objects that cannot be published are not displayed.  
   
--   For a list of data types that can be published, see [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md). Columns with data types that cannot be published are not displayed.  
+-   For a list of data types that can be published, see [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md). Columns with data types that cannot be published are not displayed.  
   
 ## Column Filters  
- Filter columns on this page by expanding a table in the **Objects to publish** pane and then selecting only the columns required (rows can be filtered in the **Filter Table Rows** page of this wizard). Filtering columns is useful for a number of reasons, including security (preventing sensitive data from being replicated) and performance (avoiding replication of large binary large object (BLOB) columns, for example). For more information about column filtering, including a list of column types that cannot be filtered, see [Filter Published Data](filter-published-data.md).  
+ Filter columns on this page by expanding a table in the **Objects to publish** pane and then selecting only the columns required (rows can be filtered in the **Filter Table Rows** page of this wizard). Filtering columns is useful for a number of reasons, including security (preventing sensitive data from being replicated) and performance (avoiding replication of large binary large object (BLOB) columns, for example). For more information about column filtering, including a list of column types that cannot be filtered, see [Filter Published Data](publish/filter-published-data.md).  
   
 ## Options  
  The **Objects to publish** pane allows you to:  
@@ -64,14 +64,14 @@ manager: "jhubbard"
     >  Property changes made in the **Properties for All \<ObjectType> Articles** dialog box override any made previously in the **Article Properties - \<ObjectName>** dialog box. If, for example, you want to set a number of defaults for all articles of an object type, but also want to set some properties for individual objects, set the defaults for all articles first. Then set the properties for the individual objects.  
   
  **Highlighted table is download-only**  
- Merge replication only. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Select to specify that changes are disallowed at the Subscriber if a client subscription is used. Because download-only articles cannot be updated at the Subscriber, tracking metadata is not sent to Subscribers. This can lead to reduced storage on the Subscribers and a performance benefit, especially if the network connection is slow. This option corresponds to a value of **Download-only to Subscriber, prohibit Subscriber changes** for the option **Synchronization direction** in the **Article Properties** dialog box. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md).  
+ Merge replication only. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Select to specify that changes are disallowed at the Subscriber if a client subscription is used. Because download-only articles cannot be updated at the Subscriber, tracking metadata is not sent to Subscribers. This can lead to reduced storage on the Subscribers and a performance benefit, especially if the network connection is slow. This option corresponds to a value of **Download-only to Subscriber, prohibit Subscriber changes** for the option **Synchronization direction** in the **Article Properties** dialog box. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Show only checked objects in the list**  
  Select this check box to show only those articles that are selected in the object pane.  
   
 ## See Also  
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Create a Publication](create-a-publication.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)  
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Create a Publication](publish/create-a-publication.md)   
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)  
   
   

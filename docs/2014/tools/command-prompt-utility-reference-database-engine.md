@@ -61,10 +61,10 @@ manager: "jhubbard"
 |**bold**|Commands, parameters, and other syntax that must be typed exactly as shown.|  
   
 ## See Also  
- [Replication Distribution Agent](../relational-databases/replication/replication-distribution-agent.md)   
- [Replication Log Reader Agent](../relational-databases/replication/replication-log-reader-agent.md)   
- [Replication Merge Agent](../relational-databases/replication/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../relational-databases/replication/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../relational-databases/replication/replication-snapshot-agent.md)  
+ [Replication Distribution Agent](../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Queue Reader Agent](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

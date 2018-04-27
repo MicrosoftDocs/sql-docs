@@ -16,23 +16,23 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Integration Management Functional Area (Master Data Manager)
-  In the Integration Management functional area, administrators can import data from staging tables and create subscription views to be used for subscribing systems. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+  In the Integration Management functional area, administrators can import data from staging tables and create subscription views to be used for subscribing systems. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 ## Import Data  
- [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md)  
+ [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
  [Load or Update Members in Master Data Services by Using the Staging Process](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)  
   
  [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)  
   
- [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](../../2014/master-data-services/view-errors-that-occur-during-the-staging-process-master-data-services.md)  
+ [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
  [Troubleshooting the Staging Process (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
 ## Export Data  
- [Exporting Data &#40;Master Data Services&#41;](../../2014/master-data-services/exporting-data-master-data-services.md)  
+ [Exporting Data &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
- [Create a Subscription View &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-subscription-view-master-data-services.md)  
+ [Create a Subscription View &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
  [Delete a Subscription View &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   

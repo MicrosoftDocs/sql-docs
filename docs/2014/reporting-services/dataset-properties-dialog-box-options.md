@@ -41,10 +41,10 @@ manager: "mblythe"
  Select a value that indicates whether you want subtotal rows to be interpreted as detail rows instead of aggregate rows. The default value, **Auto**, indicates that the subtotal rows should be treated as detail rows if the report does not use the `Aggregate`() function to access any fields in the data set. If you want subtotal rows to be interpreted as aggregate rows, choose **False**. If you want the subtotal rows to be interpreted as detail rows and you know that they do not use the `Aggregate`() function, choose **True**.  
   
 ## See Also  
- [Set the Locale for a Report or Text Box &#40;Reporting Services&#41;](../../2014/reporting-services/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
+ [Set the Locale for a Report or Text Box &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Windows Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/windows-collation-name-transact-sql.md)   
  [SQL Server Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/sql-server-collation-name-transact-sql.md)   
- [Aggregate Function &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/aggregate-function-report-builder-and-ssrs.md)  
+ [Aggregate Function &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
   
   

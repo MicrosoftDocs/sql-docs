@@ -59,6 +59,6 @@ manager: "mblythe"
  To match on a field that has a different data type, you must write an expression that evaluates to that data type. For example, if the match field is a 5 digit postal code that is stored as an integer, then to specify the postal code 98053, you must use the expression =98053.  
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

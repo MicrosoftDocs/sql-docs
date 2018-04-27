@@ -29,6 +29,6 @@ manager: "jhubbard"
 4.  The next time you open the browser window, you will be prompted for a user name and password.  
   
 ## See Also  
- [Security &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [Security &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
   
   

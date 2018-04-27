@@ -33,6 +33,6 @@ manager: "jhubbard"
  [Configure Distribution](configure-distribution.md)   
  [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
- [Create a Publication](create-a-publication.md)  
+ [Create a Publication](publish/create-a-publication.md)  
   
   

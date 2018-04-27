@@ -82,7 +82,7 @@ manager: "mblythe"
   
     -   [Configure Report Manager to Pass Custom Authentication Cookies](../../2014/reporting-services/configure-report-manager-to-pass-custom-authentication-cookies.md)  
   
-    -   [Customize Rendering Extension Parameters in RSReportServer.Config](../../2014/reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [Customize Rendering Extension Parameters in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  Save the file.  
   
@@ -92,10 +92,10 @@ manager: "mblythe"
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
  [ReportingServicesService Configuration File](../../2014/reporting-services/reportingservicesservice-configuration-file.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
- [Deploying a Data Processing Extension](../../2014/reporting-services/dev-guide/deploying-a-data-processing-extension.md)   
- [Deploying a Delivery Extension](../../2014/reporting-services/dev-guide/deploying-a-delivery-extension.md)   
- [Deploying a Rendering Extension](../../2014/reporting-services/dev-guide/deploying-a-rendering-extension.md)   
- [How to: Deploy a Custom Report Item](../../2014/reporting-services/dev-guide/how-to-deploy-a-custom-report-item.md)   
+ [Deploying a Data Processing Extension](extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Deploying a Delivery Extension](extensions/delivery-extension/deploying-a-delivery-extension.md)   
+ [Deploying a Rendering Extension](extensions/rendering-extension/deploying-a-rendering-extension.md)   
+ [How to: Deploy a Custom Report Item](custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Reporting Services Configuration Files](../../2014/reporting-services/reporting-services-configuration-files.md)  
   
   

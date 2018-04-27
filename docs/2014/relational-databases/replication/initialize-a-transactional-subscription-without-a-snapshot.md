@@ -47,7 +47,7 @@ manager: "jhubbard"
 -   Replication Transact-SQL programming: [Initialize a Transactional Subscription from a Backup &#40;Replication Transact-SQL Programming&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
->  If a subscription is initialized without using a snapshot, the account under which the SQL Server service runs at the Publisher must have write permissions on the snapshot folder at the Distributor. For more information about permissions, see [Replication Agent Security Model](replication-agent-security-model.md).  
+>  If a subscription is initialized without using a snapshot, the account under which the SQL Server service runs at the Publisher must have write permissions on the snapshot folder at the Distributor. For more information about permissions, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 ### Ensuring the suitability of a backup  
  A backup is suitable for initializing a Subscriber if all transactions that occur after the backup was taken are stored at the Distributor. Replication will display an error message if the backup is not suitable.  

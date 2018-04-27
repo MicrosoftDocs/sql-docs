@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 -   Enabling the schema option for FILESTREAM after an article is created can cause replication to fail if the data in a FILESTREAM column exceeds 2 GB and there is a conflict during replication. If you expect this situation to arise, it is recommended that you drop and re-create the table article with the appropriate FILESTREAM schema option enabled at creation time.  
   
--   Merge replication can synchronize FILESTREAM data over an HTTPS connection by using [Web Synchronization](../../relational-databases/replication/web-synchronization-for-merge-replication.md). This data cannot exceed the 50 MB limit for Web Synchronization; otherwise, a run-time error is generated.  
+-   Merge replication can synchronize FILESTREAM data over an HTTPS connection by using [Web Synchronization](../replication/merge/merge-replication.md). This data cannot exceed the 50 MB limit for Web Synchronization; otherwise, a run-time error is generated.  
   
 ##  <a name="LogShipping"></a> Log Shipping  
  [Log shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md) supports FILESTREAM. Both the primary and secondary servers must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], or a later version, and have FILESTREAM enabled.  

@@ -26,19 +26,19 @@ manager: "jhubbard"
   
 -   [Types of Replication](types-of-replication.md)  
   
--   [Heterogeneous Database Replication](heterogeneous-database-replication.md)  
+-   [Heterogeneous Database Replication](non-sql/heterogeneous-database-replication.md)  
   
 -   [Replication to Memory-Optimized Table Subscribers](replication-to-memory-optimized-table-subscribers.md)  
   
--   [Replication Agents](replication-agents.md)  
+-   [Replication Agents](agents/replication-agents.md)  
   
 -   [Republish Data](republish-data.md)  
   
 -   [Replication over the Internet](replication-over-the-internet.md)  
   
--   [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+-   [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
   
--   [Monitoring &#40;Replication&#41;](monitoring-replication.md)  
+-   [Monitoring &#40;Replication&#41;](monitor/monitoring-replication.md)  
   
 -   [Scripting Replication](scripting-replication.md)  
   

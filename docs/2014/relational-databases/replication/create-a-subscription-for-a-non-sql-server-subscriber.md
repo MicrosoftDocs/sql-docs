@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
-  This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](non-sql-server-subscribers.md).  
+  This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
  **In This Topic**  
   
@@ -33,9 +33,9 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  To create a subscription for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber:  
   
-1.  Install and configure the appropriate client software and OLE DB provider(s) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. For more information, see [Oracle Subscribers](oracle-subscribers.md) and [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
+1.  Install and configure the appropriate client software and OLE DB provider(s) on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. For more information, see [Oracle Subscribers](non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
-2.  Create a publication using the New Publication Wizard. For more information about creating publications, see [Create a Publication](create-a-publication.md) and [Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md). Specify the following options in the New Publication Wizard:  
+2.  Create a publication using the New Publication Wizard. For more information about creating publications, see [Create a Publication](publish/create-a-publication.md) and [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md). Specify the following options in the New Publication Wizard:  
   
     -   On the **Publication Type** page, select **Snapshot publication** or **Transactional publication**.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
     -   For IBM, this can be any name. It is typical to specify the network address of the Subscriber.  
   
-     The data source name entered in this step and the credentials specified in step 9 are not validated by this wizard. They are not used by replication until the Distribution Agent runs for the subscription. Ensure that all values have been tested by connecting to the Subscriber using a client tool (such as **sqlplus** for Oracle). For more information, see [Oracle Subscribers](oracle-subscribers.md) and [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
+     The data source name entered in this step and the credentials specified in step 9 are not validated by this wizard. They are not used by replication until the Distribution Agent runs for the subscription. Ensure that all values have been tested by connecting to the Subscriber using a client tool (such as **sqlplus** for Oracle). For more information, see [Oracle Subscribers](non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] On the **Subscribers** page of the wizard, the Subscriber is now displayed in the **Subscriber** column with a read-only **(default destination)** in the **Subscription Database** column:  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
     -   In the **Process account**, **Password**, and **Confirm password** fields, enter the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account and password under which the Distribution Agent should run and make local connections to the Distributor.  
   
-         The account requires these minimum permissions: member of the **db_owner** fixed database role in the distribution database; member of the publication access list (PAL); read permissions on the snapshot share; and read permission on the install directory of the OLE DB provider. For more information about the PAL, see [Secure the Publisher](secure-the-publisher.md).  
+         The account requires these minimum permissions: member of the **db_owner** fixed database role in the distribution database; member of the publication access list (PAL); read permissions on the snapshot share; and read permission on the install directory of the OLE DB provider. For more information about the PAL, see [Secure the Publisher](security/secure-the-publisher.md).  
   
     -   Under **Connect to the Subscriber**, in the **Login**, **Password**, and **Confirm password** fields, enter the login and password that should be used to connect to the Subscriber. This login should already be configured and should have sufficient permissions to create objects in the subscription database.  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
   
 #### To create a push subscription for a transactional or snapshot publication to a non-SQL Server Subscriber  
   
-1.  Install the most recent OLE DB provider for the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber at both the Publisher and Distributor. For the replication requirements for an OLE DB provider, see [Non-SQL Server Subscribers](non-sql-server-subscribers.md), [Oracle Subscribers](oracle-subscribers.md), [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
+1.  Install the most recent OLE DB provider for the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber at both the Publisher and Distributor. For the replication requirements for an OLE DB provider, see [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md), [Oracle Subscribers](non-sql/oracle-subscribers.md), [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
 2.  At the Publisher on the publication database, verify that the publication supports non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers by executing [sp_helppublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
   
@@ -156,7 +156,7 @@ manager: "jhubbard"
     -   If the value of `enabled_for_het_sub` is 0, execute [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying `enabled_for_het_sub` for **@property** and `true` for **@value**.  
   
         > [!NOTE]  
-        >  Before changing `enabled_for_het_sub` to `true`, you must drop any existing subscriptions to the publication. You cannot set `enabled_for_het_sub` to `true` when the publication also supports updating subscriptions. Changing `enabled_for_het_sub` will affect other publication properties. For more information, see [Non-SQL Server Subscribers](non-sql-server-subscribers.md).  
+        >  Before changing `enabled_for_het_sub` to `true`, you must drop any existing subscriptions to the publication. You cannot set `enabled_for_het_sub` to `true` when the publication also supports updating subscriptions. Changing `enabled_for_het_sub` will affect other publication properties. For more information, see [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, a value of **(default destination)** for **@destination_db**, a value of **push** for **@subscription_type**, and a value of 3 for **@subscriber_type** (specifies an OLE DB provider).  
   
@@ -181,10 +181,10 @@ manager: "jhubbard"
     >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## See Also  
- [IBM DB2 Subscribers](ibm-db2-subscribers.md)   
- [Oracle Subscribers](oracle-subscribers.md)   
- [Other Non-SQL Server Subscribers](other-non-sql-server-subscribers.md)   
+ [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
+ [Oracle Subscribers](non-sql/oracle-subscribers.md)   
+ [Other Non-SQL Server Subscribers](other-non-sql/non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)  
+ [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

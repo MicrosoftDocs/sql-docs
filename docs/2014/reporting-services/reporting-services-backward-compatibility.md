@@ -27,10 +27,10 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Discontinued Functionality to SQL Server Reporting Services in SQL Server 2014](../../2014/reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2014.md)|Describes features that existed in earlier versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] but that have been removed in later versions.|  
-|[Deprecated Features in SQL Server Reporting Services in SQL Server 2014](../../2014/reporting-services/deprecated-features-in-sql-server-reporting-services-in-sql-server-2014.md)|Describes features that exist this release of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] for backward compatibility, but which will be removed in a future version of SQL Server.|  
-|[Breaking Changes in SQL Server Reporting Services in SQL Server 2014](../../2014/reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2014.md)|Describes issues that you might encounter when you upgrade [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
-|[Behavior Changes to SQL Server Reporting Services  in SQL Server 2014](../../2014/reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2014.md)|Describes features that have changed in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
+|[Discontinued Functionality to SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Describes features that existed in earlier versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] but that have been removed in later versions.|  
+|[Deprecated Features in SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Describes features that exist this release of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] for backward compatibility, but which will be removed in a future version of SQL Server.|  
+|[Breaking Changes in SQL Server Reporting Services in SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Describes issues that you might encounter when you upgrade [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
+|[Behavior Changes to SQL Server Reporting Services  in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Describes features that have changed in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
   
 ## See Also  
  [Backward Compatibility](../../2014/getting-started/backward-compatibility.md)   

@@ -86,7 +86,7 @@ manager: "mblythe"
   
 9. In **Delivery Event**, specify a schedule or event that causes the subscription to run. You can create a custom schedule, select a shared schedule if one is available, or run the subscription whenever the data is refreshed for a report that runs with snapshot data. For more information about schedules and data processing, see [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-10. In **Parameters**, if you are creating a subscription to a parameterized report, specify the values that you want to use with the report when the subscription is processed. The parameters section is not visible on this page if the report you select does not contain parameters. For more information about parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-parameters-published-report-reporting-services-sharepoint-integrated-mode.md).  
+10. In **Parameters**, if you are creating a subscription to a parameterized report, specify the values that you want to use with the report when the subscription is processed. The parameters section is not visible on this page if the report you select does not contain parameters. For more information about parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="bkmk_subscription_for_sharedfolder"></a> To create a subscription for shared folder delivery  
   
@@ -112,7 +112,7 @@ manager: "mblythe"
   
 11. In **Delivery Event**, specify a schedule or event that causes the subscription to run. You can create a custom schedule, select a shared schedule if one is available, or run the subscription whenever the data is refreshed for a report that runs with snapshot data. For more information about schedules and data processing, see [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-12. In **Parameters**, if you are creating a subscription to a parameterized report, specify the values that you want to use with the report when the subscription is processed. For more information about parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-parameters-published-report-reporting-services-sharepoint-integrated-mode.md).  
+12. In **Parameters**, if you are creating a subscription to a parameterized report, specify the values that you want to use with the report when the subscription is processed. For more information about parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="bkmk_subscription_for_email"></a> To create a subscription for report server e-mail delivery  
   
@@ -136,7 +136,7 @@ manager: "mblythe"
   
 9. In **Delivery Event**, specify a schedule or event that causes the subscription to run. You can create a custom schedule, select a shared schedule if one is available, or run the subscription whenever the data is refreshed for a report that runs with snapshot data. For more information about schedules and data processing, see [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-10. In **Parameters**, if you are creating a subscription to a parameterized report, specify the values that you want to use with the report when the subscription is processed. For more information about parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-parameters-published-report-reporting-services-sharepoint-integrated-mode.md).  
+10. In **Parameters**, if you are creating a subscription to a parameterized report, specify the values that you want to use with the report when the subscription is processed. For more information about parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="bkmk_to_modify_subscription"></a> To view or modify a subscription  
   

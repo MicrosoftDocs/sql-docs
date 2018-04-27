@@ -39,28 +39,28 @@ manager: "mblythe"
 ## Query Designers  
  The following topics describe the user interface for each query designer.  
   
--   [Analysis Services MDX Query Designer User Interface](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface.md)  
+-   [Analysis Services MDX Query Designer User Interface](report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
--   [Analysis Services DMX Query Designer User Interface](../../2014/reporting-services/analysis-services-dmx-query-designer-user-interface.md)  
+-   [Analysis Services DMX Query Designer User Interface](report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
--   [Graphical Query Designer User Interface](../../2014/reporting-services/graphical-query-designer-user-interface.md)  
+-   [Graphical Query Designer User Interface](report-data/graphical-query-designer-user-interface.md)  
   
 -   [Relational Query Designer User Interface](../../2014/reporting-services/relational-query-designer-user-interface.md)  
   
--   [Hyperion Essbase Query Designer User Interface](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface.md)  
+-   [Hyperion Essbase Query Designer User Interface](report-data/hyperion-essbase-query-designer-user-interface.md)  
   
--   [Report Model Query Designer User Interface](../../2014/reporting-services/report-model-query-designer-user-interface.md)  
+-   [Report Model Query Designer User Interface](report-data/report-model-query-designer-user-interface.md)  
   
--   [SAP NetWeaver BI Query Designer User Interface](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface.md)  
+-   [SAP NetWeaver BI Query Designer User Interface](report-data/sap-netweaver-bi-query-designer-user-interface.md)  
   
 -   [SharePoint List Query Designer](../../2014/reporting-services/sharepoint-list-query-designer.md)  
   
 -   [Text-based Query Designer User Interface](../../2014/reporting-services/text-based-query-designer-user-interface.md)  
   
 ## See Also  
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md)   
- [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md)   
- [Data Processing Extensions and .NET Framework Data Providers &#40;SSRS&#41;](../../2014/reporting-services/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
- [Extensions &#40;SSRS&#41;](../../2014/reporting-services/extensions-ssrs.md)  
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
+ [Data Processing Extensions and .NET Framework Data Providers &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
+ [Extensions &#40;SSRS&#41;](extensions-ssrs.md)  
   
   

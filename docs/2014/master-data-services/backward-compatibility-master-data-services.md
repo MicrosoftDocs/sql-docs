@@ -20,8 +20,8 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Deprecated Master Data Services Features in SQL Server 2014](../../2014/master-data-services/deprecated-master-data-services-features-in-sql-server-2014.md)  
+-   [Deprecated Master Data Services Features in SQL Server 2014](deprecated-master-data-services-features.md)  
   
--   [Discontinued Master Data Services Features in SQL Server 2014](../../2014/master-data-services/discontinued-master-data-services-features-in-sql-server-2014.md)  
+-   [Discontinued Master Data Services Features in SQL Server 2014](discontinued-master-data-services-features.md)  
   
   

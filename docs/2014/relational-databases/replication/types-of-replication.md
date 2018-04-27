@@ -20,9 +20,9 @@ manager: "jhubbard"
 # Types of Replication
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of replication for use in distributed applications:  
   
--   Transactional replication. For more information, see [Transactional Replication](transactional-replication.md).  
+-   Transactional replication. For more information, see [Transactional Replication](transactional/transactional-replication.md).  
   
--   Merge replication. For more information, see [Merge Replication](merge-replication.md).  
+-   Merge replication. For more information, see [Merge Replication](merge/merge-replication.md).  
   
 -   Snapshot replication. For more information, see [Snapshot Replication](snapshot-replication.md).  
   
@@ -33,6 +33,6 @@ manager: "jhubbard"
  Data changes are not tracked for snapshot replication; each time a snapshot is applied, it completely overwrites the existing data. Transactional replication tracks changes through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log, and merge replication tracks changes through triggers and metadata tables.  
   
 ## See Also  
- [Replication Agents Overview](replication-agents-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   The Snapshot Agent and Log Reader Agent for Oracle publications.  
   
- Select **Impersonate agent process account** to make connections to the Publisher using the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which these agents run, or specify **SQL Server Authentication**, and then enter a value for **Login** and **Password**. It is recommended that you select **Impersonate agent process account**. For more information on agent security, see [Replication Agent Security Model](replication-agent-security-model.md).  
+ Select **Impersonate agent process account** to make connections to the Publisher using the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which these agents run, or specify **SQL Server Authentication**, and then enter a value for **Login** and **Password**. It is recommended that you select **Impersonate agent process account**. For more information on agent security, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
  The Windows accounts under which these agents run are specified in the New Publication Wizard. These accounts can be changed:  
   
@@ -39,10 +39,10 @@ manager: "jhubbard"
 -   In the **Publication Properties** dialog box for the Snapshot Agent and Log Reader Agent.  
   
  **Miscellaneous**  
- The properties **Publisher Type** and **Distribution Database Name** are read-only. The property **Default Snapshot Folder** can be changed. For more information about the snapshot folder, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
+ The properties **Publisher Type** and **Distribution Database Name** are read-only. The property **Default Snapshot Folder** can be changed. For more information about the snapshot folder, see [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md).  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
+ [Create a Publication](publish/create-a-publication.md)   
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
  [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   

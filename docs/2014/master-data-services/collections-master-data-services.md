@@ -31,10 +31,10 @@ manager: "jhubbard"
  When you create a collection you are automatically listed as the owner. If you are an administrator, you can create other attributes for your collection as needed.  
   
 > [!NOTE]  
->  Before you can create a collection, the entity must be enabled for explicit hierarchies. For more information, see [Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
+>  Before you can create a collection, the entity must be enabled for explicit hierarchies. For more information, see [Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 ## Subscription Views for Collections  
- There are two types of subscription views that show collections. The **Collection attributes** format shows a list of collections and any attributes related to the collections (like description or owner). The **Collections** format shows all members in all collections, as well as each members weight and sort order. For more information, see [Exporting Data &#40;Master Data Services&#41;](../../2014/master-data-services/exporting-data-master-data-services.md).  
+ There are two types of subscription views that show collections. The **Collection attributes** format shows a list of collections and any attributes related to the collections (like description or owner). The **Collections** format shows all members in all collections, as well as each members weight and sort order. For more information, see [Exporting Data &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
   
  If you set weight values for specific members in a collection, these values are available in related subscription views.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Enable an entity for explicit hierarchies and collections.|[Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Enable an entity for explicit hierarchies and collections.|[Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)|  
 |Create a new collection.|[Create a Collection &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
 |Add members to an existing collection.|[Add Members to a Collection &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
@@ -50,6 +50,6 @@ manager: "jhubbard"
   
 -   [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Exporting Data &#40;Master Data Services&#41;](../../2014/master-data-services/exporting-data-master-data-services.md)  
+-   [Exporting Data &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

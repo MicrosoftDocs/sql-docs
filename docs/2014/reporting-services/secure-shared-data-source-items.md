@@ -42,6 +42,6 @@ manager: "mblythe"
  [Secure Folders](../../2014/reporting-services/secure-folders.md)   
  [Secure Reports and Resources](../../2014/reporting-services/secure-reports-and-resources.md)   
  [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md)   
- [Store Credentials in a Reporting Services Data Source](../../2014/reporting-services/store-credentials-in-a-reporting-services-data-source.md)  
+ [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

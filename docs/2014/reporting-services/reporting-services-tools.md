@@ -53,7 +53,7 @@ manager: "mblythe"
 |SQL Server Configuration Manager|Use this tool to:<br /><br /> Start and stop the Reporting Services Windows services<br /><br /> Configure Customer Feedback Reporting, the dump directory location, and error reporting<br /><br /> <br /><br /> **\*\* Warning \*\*** Do not use this tool to configure service account. Use the Reporting Services Configuration tool instead.<br /><br /> For more information, see [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md).|Start menu|  
 |Rsconfig Utility|Use this tool to configure and manage a report server connection to the report server database. You can also use it to specify a user account to use for unattended report processing.<br /><br /> For more information, see [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../2014/reporting-services/report-server-command-prompt-utilities-ssrs.md).|Command prompt|  
 |Rskeymgmt Utility|Use this tool to:<br /><br /> Extract, restore, create, and delete the symmetric key used to encrypt report server data<br /><br /> Join report server instances in a scale-out deployment<br /><br /> <br /><br /> For more information, see [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../2014/reporting-services/report-server-command-prompt-utilities-ssrs.md).|Command prompt|  
-|Windows Management Instrumentation (WMI) Classes|Use these classes to automate the configuration tasks in Reporting Services Configuration Manager without the need to use the graphical user interface.<br /><br /> For more information, see [Accessing the WMI Provider Programmatically](../../2014/reporting-services/dev-guide/accessing-the-wmi-provider-programmatically.md).|Visual Basic script|  
+|Windows Management Instrumentation (WMI) Classes|Use these classes to automate the configuration tasks in Reporting Services Configuration Manager without the need to use the graphical user interface.<br /><br /> For more information, see [Accessing the WMI Provider Programmatically](accessing-the-wmi-provider-programmatically.md).|Visual Basic script|  
   
 ### SharePoint Integrated Mode  
  In SharePoint mode, the Reporting Services is a service application in the SharePoint architecture, and is administered directly through SharePoint  
@@ -74,7 +74,7 @@ manager: "mblythe"
   
 ## See Also  
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
- [Reporting Services Concepts &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-concepts-ssrs.md)   
- [Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-ssrs.md)  
+ [Reporting Services Concepts &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
+ [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

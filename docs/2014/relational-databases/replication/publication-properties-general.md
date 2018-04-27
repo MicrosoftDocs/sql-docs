@@ -46,8 +46,8 @@ manager: "jhubbard"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge publications only. Select the minimum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version required for Subscribers that synchronize with this publication. There are a number of rules associated with determining the compatibility level.  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)  
+ [Create a Publication](publish/create-a-publication.md)   
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)  
   
   

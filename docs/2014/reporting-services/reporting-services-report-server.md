@@ -175,13 +175,13 @@ manager: "mblythe"
 |Provides instructions for setting up the RSClientPrint control that provides print functionality from within supported browsers. For more information on browser requirements, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Enable and Disable Client-Side Printing for Reporting Services](../../2014/reporting-services/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## See Also  
- [Reporting Services Extensions](../../2014/reporting-services/dev-guide/reporting-services-extensions.md)   
+ [Reporting Services Extensions](extensions/reporting-services-extensions.md)   
  [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)   
  [Report Server Database &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-database-ssrs-native-mode.md)   
- [Implementing a Security Extension](../../2014/reporting-services/dev-guide/implementing-a-security-extension.md)   
- [Implementing a Data Processing Extension](../../2014/reporting-services/dev-guide/implementing-a-data-processing-extension.md)   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Implementing a Security Extension](extensions/security-extension/implementing-a-security-extension.md)   
+ [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [How to Administer SSRS using PowerShell (Curated Answer)](http://go.microsoft.com/fwlink/?LinkId=321992)  
   
   

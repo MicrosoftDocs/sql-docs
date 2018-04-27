@@ -70,7 +70,7 @@ manager: "jhubbard"
   
  **Additional Resources:**  
   
--   [Manage Report Data Sources](../../../reporting-services/manage-report-data-sources.md)  
+-   [Manage Report Data Sources](../../../reporting-services/report-data/manage-report-data-sources.md)  
   
 -   For more information on the available connection string properties, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   

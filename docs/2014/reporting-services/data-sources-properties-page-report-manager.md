@@ -46,7 +46,7 @@ manager: "mblythe"
  The following options are used to specify a custom data source connection.  
   
  **Data source type**  
- Specify the data processing extension that is used to process data from the data source. For the list of built-in data extensions, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md). Additional data processing extensions may be available from third-party vendors.  
+ Specify the data processing extension that is used to process data from the data source. For the list of built-in data extensions, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md). Additional data processing extensions may be available from third-party vendors.  
   
  **Connection string**  
  Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file. The following example illustrates a connection string used to connect to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that is named MyData:  
@@ -93,7 +93,7 @@ manager: "mblythe"
   
 ## See Also  
  [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

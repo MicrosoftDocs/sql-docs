@@ -36,16 +36,16 @@ manager: "mblythe"
   
 -   ZIP compression provides smaller files sizes.  
   
- For more information, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ For more information, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ##  <a name="WordRenderer"></a> Word Renderer for Microsoft Word 2007-2010 and Microsoft Word 2003  
  The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Word rendering extension, new in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], renders a report as a Word document that is compatible with [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2007-2010 as well as [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2003 with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Compatibility Pack for Word, Excel, and PowerPoint installed. The format is Office Open XML and the file extension of files is docx.  
   
  In addition to making the features that are new in Word 2007-2010 available to exported reports, *.docx files of exported reports tend to be smaller. Reports exported by using the Word renderer are typically significantly smaller than the same reports exported by using the Word 2003 renderer.  
   
- For more information, see [Exporting to Microsoft Word &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
+ For more information, see [Exporting to Microsoft Word &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
   
 ## See Also  
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

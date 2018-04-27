@@ -141,8 +141,8 @@ manager: "jhubbard"
  `</BODY>`  
   
 ## See Also  
- [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](../../../2014/reporting-services/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [Print Reports &#40;Report Builder and SSRS&#41;](../../../2014/reporting-services/print-reports-report-builder-and-ssrs.md)   
- [Image Device Information Settings](../../../2014/reporting-services/image-device-information-settings.md)  
+ [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+ [Print Reports &#40;Report Builder and SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Image Device Information Settings](../image-device-information-settings.md)  
   
   

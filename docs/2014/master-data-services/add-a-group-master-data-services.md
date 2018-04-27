@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 ## Next Steps  
   
--   [Assign Functional Area Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Assign Functional Area Permissions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
   
 ## See Also  
  [Security &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  

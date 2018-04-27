@@ -37,8 +37,8 @@ manager: "mblythe"
 5.  Set the **SnappingInterval** to a value that represents the snapping interval. The pointer will be snapped to the nearest round multiple of the value that you have specified.  
   
 ## See Also  
- [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Gauges &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/gauges-report-builder-and-ssrs.md)  
+ [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   
   

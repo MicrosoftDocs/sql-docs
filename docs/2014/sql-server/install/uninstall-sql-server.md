@@ -28,7 +28,7 @@ manager: "jhubbard"
  [Uninstall Reporting Services](uninstall-reporting-services.md)  
  This topic describes how to uninstall [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers for both SharePoint mode and Native mode servers.  
   
- [Uninstall and Remove Master Data Services](uninstall-and-remove-master-data-services.md)  
+ [Uninstall and Remove Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md)  
  This topic describes the process of uninstalling and removing [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] from the local computer.  
   
  [Remove Data Quality Server Objects](remove-data-quality-server-objects.md)  

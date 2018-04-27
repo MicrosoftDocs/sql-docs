@@ -365,7 +365,7 @@ manager: "mblythe"
   
 ## See Also  
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)   
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Formatting Report Items &#40;Report Builder and SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

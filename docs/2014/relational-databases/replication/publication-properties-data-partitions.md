@@ -40,10 +40,10 @@ manager: "jhubbard"
  Select this option if you want to allow Subscribers to request snapshot generation and application. Subscribers might require this option if they do not have a snapshot available for their partition the first time they synchronize.  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
- [Parameterized Row Filters](parameterized-row-filters.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Create a Publication](publish/create-a-publication.md)   
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
+ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
  [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

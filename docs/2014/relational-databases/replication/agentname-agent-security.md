@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # &lt;AgentName&gt; Agent Security
-  The **\<AgentName> Agent Security** page allows you to specify the accounts under which the Distribution Agent (for transactional and snapshot replication) or Merge Agent (for merge replication) run and make connections to the computers in a replication topology. For information on permissions required by agents and best practices for replication security, see [Replication Agent Security Model](replication-agent-security-model.md) and [Replication Security Best Practices](replication-security-best-practices.md).  
+  The **\<AgentName> Agent Security** page allows you to specify the accounts under which the Distribution Agent (for transactional and snapshot replication) or Merge Agent (for merge replication) run and make connections to the computers in a replication topology. For information on permissions required by agents and best practices for replication security, see [Replication Agent Security Model](security/replication-agent-security-model.md) and [Replication Security Best Practices](security/replication-security-best-practices.md).  
   
 ## Options  
  Click the properties button (**...**) in the row for each Subscriber to access the **Distribution Agent Security** or **Merge Agent Security** dialog box. Click **Help** on the dialog box that is launched for more information on the permissions required for accounts used by the agents.  
@@ -52,8 +52,8 @@ manager: "jhubbard"
 ## See Also  
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
  [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
- [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
- [Replication Agent Security Model](replication-agent-security-model.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+ [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Replication Agent Security Model](security/replication-agent-security-model.md)   
+ [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
   
   

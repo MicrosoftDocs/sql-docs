@@ -32,14 +32,14 @@ manager: "mblythe"
  Most time-out errors occur during query processing. If you are encountering time-out errors, try increasing the query time-out value. Make sure to adjust the report execution time-out value so that it is larger than the query time-out. The time period should be sufficient to complete both query and report processing.  
   
 ## Setting a Query Time-Out for an Embedded Dataset in a Report  
- Query time-out values are specified during report authoring when you define an embedded dataset. The time-out value is stored with the report, in the `Timeout` element of the report definition. By default, this value is set to 30 seconds. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Query time-out values are specified during report authoring when you define an embedded dataset. The time-out value is stored with the report, in the `Timeout` element of the report definition. By default, this value is set to 30 seconds. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Users who have permission to modify the properties of a published report can reset this value by editing the report definition file.  
   
  You can also specify a query time-out value for data-driven subscriptions. The query time-out value is specified in the Data-Driven Subscription pages. The value you specify determines how long the report server waits for query processing to complete when retrieving data from the subscriber data source.  
   
 ## Setting a Query Time-Out for a Shared Dataset  
- Query time-out values are specified in seconds on the report server when you create or manage a shared dataset. By default, this value is set to 0 seconds, which is the equivalent of no time-out value. For more information, see [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md).  
+ Query time-out values are specified in seconds on the report server when you create or manage a shared dataset. By default, this value is set to 0 seconds, which is the equivalent of no time-out value. For more information, see [Manage Shared Datasets](report-data/manage-shared-datasets.md).  
   
 ## Setting a Report Execution Time-Out  
  You can set the report execution time-out value to limit the amount of time that a report server uses to process a report. Report execution time-out values can be specified in Report Manager. You can set a default value for all reports in the Site Settings page, and then override that value in the Execution properties page for a specific report. By default, the value is set to 1800 seconds. For more information, see [Set Report Processing Properties](../../2014/reporting-services/set-report-processing-properties.md).  

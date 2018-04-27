@@ -65,15 +65,15 @@ manager: "jhubbard"
   
 -   For subscriptions to merge publications click **Publisher Connection**, and then click the properties button (**...**).  
   
- For more information about the permissions required for each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
+ For more information about the permissions required for each agent, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 ## Options for transactional subscriptions  
  **Updatable subscription**  
- Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md).  
+ Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](transactional/transactional-replication.md).  
   
 ## Options for merge subscriptions  
  **Partition definition (HOST_NAME)**  
- For a publication that uses parameterized filters, merge replication evaluates one of two system functions (or both if the filter references both functions) during synchronization to determine the data that a Subscriber should receive: **SUSER_SNAME()** or **HOST_NAME()**. By default, **HOST_NAME()** returns the name of the computer on which the Merge Agent is running, but you can override this value in the New Subscription Wizard. For more information on parameterized filters and overriding **HOST_NAME()**, see [Parameterized Row Filters](parameterized-row-filters.md).  
+ For a publication that uses parameterized filters, merge replication evaluates one of two system functions (or both if the filter references both functions) during synchronization to determine the data that a Subscriber should receive: **SUSER_SNAME()** or **HOST_NAME()**. By default, **HOST_NAME()** returns the name of the computer on which the Merge Agent is running, but you can override this value in the New Subscription Wizard. For more information on parameterized filters and overriding **HOST_NAME()**, see [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Subscription type** and **Priority**  
  Displays whether the subscription is a client or server subscription (this cannot be changed after the subscription has been created). Server subscriptions can republish data to other Subscribers and can be assigned a priority for conflict resolution.  
@@ -81,10 +81,10 @@ manager: "jhubbard"
  If you selected a subscription type of server in the New Subscription Wizard, the Subscriber is given a priority that is used during conflict resolution  
   
  **Resolve conflicts interactively**  
- Determines whether to use the Interactive Resolver user interface to resolve conflicts during merge synchronization. This requires a value of **Enable** for **Use Windows Synchronization Manager**. For more information, see [Interactive Conflict Resolution](interactive-conflict-resolution.md).  
+ Determines whether to use the Interactive Resolver user interface to resolve conflicts during merge synchronization. This requires a value of **Enable** for **Use Windows Synchronization Manager**. For more information, see [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Web Synchronization**  
- **Use Web Synchronization** determines whether to connect to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) server to synchronize the subscription. This option is available only if the publication is enabled for Web synchronization. For more information, see [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
+ **Use Web Synchronization** determines whether to connect to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) server to synchronize the subscription. This option is available only if the publication is enabled for Web synchronization. For more information, see [Web Synchronization for Merge Replication](merge/merge-replication.md).  
   
  If you select **True** for **Use Web Synchronization**:  
   

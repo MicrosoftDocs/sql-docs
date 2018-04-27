@@ -31,7 +31,7 @@ manager: "jhubbard"
 ## Deleting Automatically Generated Values  
  After an administrator enables automatically generated values for the Code attribute, users may accidentally delete a member that had a Code value they want to reuse. The error message “The member code is already used by a member that was deleted” will be displayed. There are two possible solutions:  
   
--   In the **Version Management** functional area, an administrator can reverse the transaction that occurred when the member was deleted. However, this means that all of the former member’s attributes and membership in hierarchies and collections is restored. For more information, see [Reverse a Transaction &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md).  
+-   In the **Version Management** functional area, an administrator can reverse the transaction that occurred when the member was deleted. However, this means that all of the former member’s attributes and membership in hierarchies and collections is restored. For more information, see [Reverse a Transaction &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 -   An administrator can use the staging process to permanently delete the member. For more information, see [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md).  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ## Related Content  
   
--   [Master Data Services Overview](../../2014/master-data-services/master-data-services-overview.md)  
+-   [Master Data Services Overview](master-data-services-overview-mds.md)  
   
 -   [Business Rules &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   

@@ -23,11 +23,11 @@ manager: "mblythe"
  The following topics can help you troubleshoot reports, depending on whether you are a report author or report server administrator.  
   
 ## Report Authors  
- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
- [Troubleshoot Report Parts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)  
+ [Troubleshoot Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md)  
   
- [Troubleshoot Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Troubleshoot Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## Administrators  
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
@@ -36,7 +36,7 @@ manager: "mblythe"
   
 -   [Plan for Map Report Support](../../2014/reporting-services/plan-for-map-report-support.md)  
   
--   [Plan for Report Design and Report Deployment &#40;Reporting Services 2014&#41;](../../2014/reporting-services/plan-for-report-design-and-report-deployment-reporting-services-2014.md)  
+-   [Plan for Report Design and Report Deployment &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
   
 ## How Do I Get Community Assistance  
  You can tap the collective wisdom of other Report Builder users by posing questions in discussion groups, reading Report Builder blogs, or using any of the other community resources mentioned in this article.  

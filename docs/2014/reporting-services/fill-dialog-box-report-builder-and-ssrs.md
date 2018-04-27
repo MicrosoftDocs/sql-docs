@@ -57,8 +57,8 @@ manager: "mblythe"
  Choose the appropriate format of the pictures contained in the database (for example, .bmp, .jpeg, .gif, .png, or .x-png).  
   
 ## See Also  
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)   
- [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Images &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/images-report-builder-and-ssrs.md)  
+ [Formatting Report Items &#40;Report Builder and SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
- [Secure the Snapshot Folder](secure-the-snapshot-folder.md)   
+ [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  
   
   

@@ -52,7 +52,7 @@
 #### [Upgrade DQS Databases Schema After Installing SQL Server Update](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)
 ### [Install Integration Services](../../integration-services/install-windows/install-integration-services.md)
 #### [Interoperability and Coexistence](../../integration-services/install-windows/installing-integration-services-versions-side-by-side.md)
-### [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)
+### [Install Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md)
 #### [Web Application Requirements (Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)
 #### [Database Requirements (Master Data Services)](../../master-data-services/install-windows/database-requirements-master-data-services.md)
 #### [Create a Master Data Services Database](../../master-data-services/install-windows/create-a-master-data-services-database.md)

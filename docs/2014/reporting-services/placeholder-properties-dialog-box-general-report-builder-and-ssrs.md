@@ -39,12 +39,12 @@ manager: "mblythe"
 -   **HTML**  Display the placeholder as HTML. If the expression value of the placeholder contains valid HTML tags, these tags are rendered as HTML.  
   
 ## See Also  
- [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Add HTML into a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-html-into-a-report-report-builder-and-ssrs.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-examples-report-builder-and-ssrs.md)   
- [Text Boxes &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/text-boxes-report-builder-and-ssrs.md)   
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)   
- [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [Add HTML into a Report &#40;Report Builder and SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Text Boxes &#40;Report Builder and SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Formatting Report Items &#40;Report Builder and SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

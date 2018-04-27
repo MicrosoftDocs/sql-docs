@@ -62,9 +62,9 @@ manager: "jhubbard"
   
     -   To view and modify Publisher properties associated with the Distributor, click the properties button (**...**) for the Publisher on the **Publishers** page of the dialog box.  
   
-    -   To access profiles for replication agents, click the **Profile Defaults** button on the **General** page of the dialog box. For more information, see [Replication Agent Profiles](replication-agent-profiles.md).  
+    -   To access profiles for replication agents, click the **Profile Defaults** button on the **General** page of the dialog box. For more information, see [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
-    -   To change the password for the account used when administrative stored procedures execute at the Publisher and update information at the Distributor, enter a new password in the **Password** and **Confirm password** boxes on the **Publishers** page of the dialog box. For more information, see [Secure the Distributor](secure-the-distributor.md).  
+    -   To change the password for the account used when administrative stored procedures execute at the Publisher and update information at the Distributor, enter a new password in the **Password** and **Confirm password** boxes on the **Publishers** page of the dialog box. For more information, see [Secure the Distributor](security/secure-the-distributor.md).  
   
 4.  Modify any properties if necessary, and then click **OK**.  
   
@@ -200,8 +200,8 @@ manager: "jhubbard"
  [Disable Publishing and Distribution](disable-publishing-and-distribution.md)   
  [Configure Distribution](configure-distribution.md)   
  [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
- [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md)   
+ [Distributor and Publisher Information Script](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
   
   

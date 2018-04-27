@@ -93,8 +93,8 @@ manager: "jhubbard"
 -   [Sort Columns](sort-columns.md)  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [Monitoring Replication](monitoring-replication.md)   
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [Monitoring Replication](monitor/monitoring-replication.md)   
  [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

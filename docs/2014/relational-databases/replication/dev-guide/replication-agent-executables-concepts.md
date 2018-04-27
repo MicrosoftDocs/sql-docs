@@ -33,17 +33,17 @@ manager: "jhubbard"
   
  Instances of the following replication agents can be run using executable files.  
   
--   [Replication Distribution Agent](../replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../agents/replication-distribution-agent.md)  
   
--   [Replication Log Reader Agent](../replication-log-reader-agent.md)  
+-   [Replication Log Reader Agent](../agents/replication-log-reader-agent.md)  
   
--   [Replication Merge Agent](../replication-merge-agent.md)  
+-   [Replication Merge Agent](../agents/replication-merge-agent.md)  
   
--   [Replication Queue Reader Agent](../replication-queue-reader-agent.md)  
+-   [Replication Queue Reader Agent](../agents/replication-queue-reader-agent.md)  
   
--   [Replication Snapshot Agent](../replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../agents/replication-snapshot-agent.md)  
   
- When invoking replication agents, you can use performance profiles to automatically pass a defined set of parameters to the agent executable. For more information, see [Replication Agent Profiles](../replication-agent-profiles.md).  
+ When invoking replication agents, you can use performance profiles to automatically pass a defined set of parameters to the agent executable. For more information, see [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## Examples  
  The following examples show how to invoke replication agents from the command prompt. Replication agents can also be invoked using Replication Management Objects (RMO). For more information, see [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-subscriptions-replication.md).  

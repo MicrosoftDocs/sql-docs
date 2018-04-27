@@ -81,7 +81,7 @@ manager: "jhubbard"
   
  **Data Quality Processes in Master Data Services**  
   
- Data Quality Services functionality has been integrated into Master Data Services (MDS), so you can perform de-duplication on source data and master data within the Microsoft SQL Server 2014 Master Data Services Add-in for Microsoft Excel. To perform matching, load data managed by MDS into an Excel worksheet, combine it with data not managed by MDS, and then perform matching within Excel. The [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] components must be installed with MDS. For more information, see  [Data Quality Matching in the MDS Add-in for Excel](../../2014/master-data-services/data-quality-matching-in-the-mds-add-in-for-excel.md).  
+ Data Quality Services functionality has been integrated into Master Data Services (MDS), so you can perform de-duplication on source data and master data within the Microsoft SQL Server 2014 Master Data Services Add-in for Microsoft Excel. To perform matching, load data managed by MDS into an Excel worksheet, combine it with data not managed by MDS, and then perform matching within Excel. The [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] components must be installed with MDS. For more information, see  [Data Quality Matching in the MDS Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

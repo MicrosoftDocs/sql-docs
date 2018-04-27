@@ -59,13 +59,13 @@ manager: "mblythe"
   
 -   **Datasets** Each dataset includes a query that specifies which data to retrieve from the data source. Expand the dataset to view the collection of fields specified by the dataset query.  
   
-     In some query designers for multidimensional datasets, you can specify filters in the Filters pane and indicate whether to create report parameters. If you specify the report parameter option, a special dataset is automatically created to populate the parameter’s valid values list.  By default, the dataset does not appear in the Report Data Pane. For more information, see [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+     In some query designers for multidimensional datasets, you can specify filters in the Filters pane and indicate whether to create report parameters. If you specify the report parameter option, a special dataset is automatically created to populate the parameter’s valid values list.  By default, the dataset does not appear in the Report Data Pane. For more information, see [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Report parameters** The list of report parameters. Parameters can be created manually or automatically when a dataset query includes query parameters.  
   
 -   **Images** The list of images that are available to include as an Image report item in a report.  
   
- Data sources and datasets in the Report Data pane represent the elements in the report definition. The Report Data pane is a feature supported by multiple report authoring environments. In Report Builder, it is the only pane available for managing data sources and datasets. In Report Designer, the Report Data pane works with Solution Explorer, which lists shared data sources and shared datasets as files. Shared data sources and shared datasets in the Report Data pane must point to their corresponding Shared Data Sources and Shared Datasets in Solution Explorer. The Report Data pane elements then contain a reference to the data files in Solution Explorer. The project properties determine whether the shared data sources and shared datasets are deployed to the report server or SharePoint site. For more information, see [Convert a Data Source from Embedded to Shared &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs.md).  
+ Data sources and datasets in the Report Data pane represent the elements in the report definition. The Report Data pane is a feature supported by multiple report authoring environments. In Report Builder, it is the only pane available for managing data sources and datasets. In Report Designer, the Report Data pane works with Solution Explorer, which lists shared data sources and shared datasets as files. Shared data sources and shared datasets in the Report Data pane must point to their corresponding Shared Data Sources and Shared Datasets in Solution Explorer. The Report Data pane elements then contain a reference to the data files in Solution Explorer. The project properties determine whether the shared data sources and shared datasets are deployed to the report server or SharePoint site. For more information, see [Convert a Data Source from Embedded to Shared &#40;Report Builder and SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  If you do not see the Report Data pane, on the **View** menu, click **Report Data**. If the Report Data pane is floating, you can anchor it. For more information, see [Dock the Report Data Pane in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/dock-the-report-data-pane-in-report-designer-ssrs.md).  
@@ -73,7 +73,7 @@ manager: "mblythe"
  ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
   
 ###  <a name="bkmk_GroupingPane"></a> Grouping Pane  
- Use the Grouping pane to define groups for a tablix data region. You can define row groups and detail groups for tables and row and column groups for matrices. You cannot use the Grouping pane to define groups for Charts or other data regions. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/understanding-groups-report-builder-and-ssrs.md).  
+ Use the Grouping pane to define groups for a tablix data region. You can define row groups and detail groups for tables and row and column groups for matrices. You cannot use the Grouping pane to define groups for Charts or other data regions. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  The Grouping pane has two modes:  
   
@@ -102,7 +102,7 @@ manager: "mblythe"
   
 -   Use the Properties pane toolbar buttons to change the grid from category view to alphabetical view. In category view, you may need to expand a category to see all the properties under it. To open an item's Properties dialog box, click the **Property Pages** button on the toolbar or by right-click the item and click **Properties**.  
   
--   Set properties for the currently selected group member in the Grouping pane. Group member properties help control how static group header and footer rows repeat for each group instance. For more information, see [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
+-   Set properties for the currently selected group member in the Grouping pane. Group member properties help control how static group header and footer rows repeat for each group instance. For more information, see [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  To display the Properties pane, from the **View** menu, click **Properties Window**. You can undock this pane and move it to another area of the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]window, or display it as a tabbed view on the design surface.  
   

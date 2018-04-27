@@ -142,6 +142,6 @@ manager: "mblythe"
  You have successfully completed the Creating a Basic Table Report tutorial.  
   
 ## See Also  
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

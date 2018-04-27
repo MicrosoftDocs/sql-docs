@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   Is the fact that validation failed an issue for your application? If the validation failure is an issue, manually update the data so that it is synchronized, or reinitialize the subscription:  
   
-    -   Data can be updated using the [tablediff utility](../../tools/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
+    -   Data can be updated using the [tablediff utility](../../tools/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
   
     -   For more information about reinitializaton, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
@@ -83,6 +83,6 @@ manager: "jhubbard"
  When binary checksums are used, 32-bit redundancy check (CRC) occurs on a column-by-column basis rather than a CRC on the physical row on the data page. This allows the columns with the table to be in any order physically on the data page, but still compute to the same CRC for the row. Binary checksum validation can be used when there are row or column filters on the publication.  
   
 ## See Also  
- [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
+ [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)  
   
   

@@ -64,7 +64,7 @@ manager: "jhubbard"
 |For information about|See|  
 |---------------------------|---------|  
 |IIS security with [!INCLUDE[ssEW](../../includes/ssew-md.md)]|"IIS Security" in [!INCLUDE[ssEW](../../includes/ssew-md.md)] Books Online|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Authentication|[Authentication in Reporting Services](../../reporting-services/dev-guide/authentication-in-reporting-services.md)|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Authentication|[Authentication in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] and IIS access|"Internet Information Services Security Flowchart" in [!INCLUDE[ssEW](../../includes/ssew-md.md)] Books Online|  
   
 ### SQL Server Operating System Files Security  

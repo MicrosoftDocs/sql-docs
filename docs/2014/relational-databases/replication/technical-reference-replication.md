@@ -33,11 +33,11 @@ manager: "jhubbard"
  [More…](properties-reference-replication.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Agents**  
- [Replication Snapshot Agent](replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
- [Replication Distribution Agent](replication-distribution-agent.md)  
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
- [More…](replication-agents.md)  
+ [More…](agents/replication-agents.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Stored Procedures**  
  [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
@@ -75,6 +75,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Replication Features and Tasks](replication-features-and-tasks.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+ [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
   
   

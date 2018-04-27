@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 ## Prerequisites  
   
--   For information about the requirements for the computer that hosts the database, see [Database Requirements &#40;Master Data Services&#41;](database-requirements-master-data-services.md).  
+-   For information about the requirements for the computer that hosts the database, see [Database Requirements &#40;Master Data Services&#41;](../master-data-services-installation-and-configuration.md).  
   
 ### To create a Master Data Services database  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Create a [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application to associate with this database. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
   
--   Configure a maintenance plan to back up the database and transaction logs. For more information, see [Database Requirements &#40;Master Data Services&#41;](database-requirements-master-data-services.md).  
+-   Configure a maintenance plan to back up the database and transaction logs. For more information, see [Database Requirements &#40;Master Data Services&#41;](../master-data-services-installation-and-configuration.md).  
   
 ## See Also  
  [Install Master Data Services](install-master-data-services.md)  

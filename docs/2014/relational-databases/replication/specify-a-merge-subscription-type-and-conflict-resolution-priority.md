@@ -36,7 +36,7 @@ manager: "jhubbard"
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

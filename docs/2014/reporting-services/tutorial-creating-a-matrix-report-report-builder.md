@@ -211,7 +211,7 @@ manager: "mblythe"
     =WeekdayName(DatePart("w",Fields!SalesDate.Value))  
     ```  
   
-     This expression extracts the weekday name from the sales date. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md).  
+     This expression extracts the weekday name from the sales date. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
   
 6.  Right-click the cell in the Subcategory column group that contains Total, and then click **Copy**.  
   
@@ -356,7 +356,7 @@ manager: "mblythe"
 ##  <a name="RotateTextBox"></a> 9. (Optional) Rotate Text Box 270 Degrees  
  A report with matrices can expand horizontally and vertically when it runs. By rotating text boxes vertically, or 270 degrees, you can save horizontal space. The rendered report is then narrower and if exported to a format such as Microsoft Word, will be more likely to fit on a printed page.  
   
- A text box can also display text as horizontal, vertical (top to bottom). For more information, see [Text Boxes &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/text-boxes-report-builder-and-ssrs.md).  
+ A text box can also display text as horizontal, vertical (top to bottom). For more information, see [Text Boxes &#40;Report Builder and SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md).  
   
 #### To rotate text box 270 degrees  
   
@@ -377,10 +377,10 @@ manager: "mblythe"
  The territory name is written vertically, bottom to top. The height of the Territory row group varies by the length of the territory name.  
   
 ## Next Steps  
- This concludes the tutorial for how to create a matrix report. For more information about matrices, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md), [Matrices &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/matrices-report-builder-and-ssrs.md), [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-areas-report-builder-and-ssrs.md), and [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../../2014/reporting-services/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+ This concludes the tutorial for how to create a matrix report. For more information about matrices, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), and [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## See Also  
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  You populate the entity with a list of master data that you want to manage.  
   
- Entities can be used to build derived hierarchies, which are level-based hierarchies based on multiple entities. For more information, see [Derived Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md).  
+ Entities can be used to build derived hierarchies, which are level-based hierarchies based on multiple entities. For more information, see [Derived Hierarchies &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
  Entities can also be enabled to contain explicit hierarchies (ragged structures based on a single entity) and collections (one-off combinations of subsets of members). For more information, see [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) and [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
 |----------------------|-----------|  
 |Create a new entity.|[Create an Entity &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |Specify that an entity can contain explicit hierarchies and collections.|[Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Change the name of an existing entity.|[Change an Entity Name &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-entity-name-master-data-services.md)|  
+|Change the name of an existing entity.|[Change an Entity Name &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
 |Delete an existing entity.|[Delete an Entity &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
 |Assign permission to entities.|[Assign Model Object Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   

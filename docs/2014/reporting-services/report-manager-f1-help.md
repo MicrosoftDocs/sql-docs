@@ -102,7 +102,7 @@ manager: "mblythe"
   
 ## See Also  
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   
- [Feature Reference (Reporting Services)](../../2014/reporting-services/feature-reference-reporting-services.md)   
+ [Feature Reference (Reporting Services)](feature-reference-reporting-services.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   
  [Report Manager](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services Component Overview](../../2014/reporting-services/reporting-services-tools.md)  

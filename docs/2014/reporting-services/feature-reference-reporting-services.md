@@ -38,13 +38,13 @@ manager: "mblythe"
  [Report Server in Management Studio F1 Help](../../2014/reporting-services/report-server-in-management-studio-f1-help.md)  
  Provides help for dialog boxes used to manage reports and report servers in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
- [HTML Viewer and the Report Toolbar](../../2014/reporting-services/html-viewer-and-the-report-toolbar.md)  
+ [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)  
  Provides help for the HTML Viewer component used for viewing reports in a Web browser.  
   
 ## See Also  
- [Reporting Services Concepts &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-concepts-ssrs.md)   
+ [Reporting Services Concepts &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Reporting Services Reports &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-reports-ssrs.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Getting Started with Report Builder](http://www.microsoft.com/download/en/details.aspx?id=29072)   
  [Designing and Implementing Reports Using Report Builder 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
   

@@ -76,7 +76,7 @@ manager: "mblythe"
  Shows the current color on the left half of the pane and interactively shows the new color you are choosing on the right half of the pane. If there is no default color, the left half of the pane is white. Most RDL properties have no default color.  
   
 ## See Also  
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)   
- [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formatting Report Items &#40;Report Builder and SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

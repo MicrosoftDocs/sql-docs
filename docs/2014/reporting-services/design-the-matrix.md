@@ -40,7 +40,7 @@ manager: "mblythe"
  View the list of fields that appear in the detail section of the matrix. To change the order of the fields, select a field, and then click the up button or the down button.  
   
 ## See Also  
- [Matrices &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/matrices-report-builder-and-ssrs.md)   
+ [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Report Wizard Help](../../2014/reporting-services/report-wizard-help.md)  
   
   

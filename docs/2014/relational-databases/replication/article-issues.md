@@ -29,7 +29,7 @@ manager: "jhubbard"
 |Objects referenced by stored procedures are required.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that all objects referenced by published stored procedures, such as tables and user-defined functions, be available at the Subscriber. If the referenced objects are not published as articles in this publication, they must be created at the Subscriber manually.|Use the **Back** button to navigate to the **Articles** page. Add any required objects.|  
   
 ## See Also  
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Create a Publication](create-a-publication.md)  
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Create a Publication](publish/create-a-publication.md)  
   
   

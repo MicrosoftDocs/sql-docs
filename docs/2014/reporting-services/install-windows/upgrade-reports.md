@@ -187,7 +187,7 @@ manager: "jhubbard"
  This report contains custom report items (CRIs) with unsupported features. CRIs are extensions to the Report Definition Language (RDL) that support custom objects that display data in a report. CRIs include design-time and run-time components that are supplied by third-party software vendors.  
   
 > [!NOTE]  
->  Choosing to support custom report items on a report server is a decision made by the system administrator. To view CRIs in a report, the CRI components must be installed on the report authoring client to preview a report and on the report server to view a published or uploaded report. For more information, see [Custom Report Items](../dev-guide/custom-report-items.md) and documentation from the third-party software vendor.  
+>  Choosing to support custom report items on a report server is a decision made by the system administrator. To view CRIs in a report, the CRI components must be installed on the report authoring client to preview a report and on the report server to view a published or uploaded report. For more information, see [Custom Report Items](../custom-report-items/custom-report-items.md) and documentation from the third-party software vendor.  
   
  Some CRIs can be converted to report items in the new report definition format. For the list of CRIs that can be converted, see [Upgrading Reports](upgrade-reports.md). Use the following list to decide whether to convert the CRIs in this report:  
   
@@ -203,10 +203,10 @@ manager: "jhubbard"
   
 ## See Also  
  [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Breaking Changes in SQL Server Reporting Services in SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2014.md)   
- [Behavior Changes to SQL Server Reporting Services  in SQL Server 2014](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2014.md)   
- [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2014](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2014.md)   
- [Custom Report Items](../dev-guide/custom-report-items.md)   
+ [Breaking Changes in SQL Server Reporting Services in SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+ [Behavior Changes to SQL Server Reporting Services  in SQL Server 2014](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+ [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2014](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+ [Custom Report Items](../custom-report-items/custom-report-items.md)   
  [Upgrade a Report Server Database](upgrade-a-report-server-database.md)  
   
   

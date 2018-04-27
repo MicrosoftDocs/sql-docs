@@ -46,15 +46,15 @@ manager: "jhubbard"
 -   Replication maintenance jobs.  
   
 ## User Action  
- The Log Reader Agent, Queue Reader Agent, and Distribution Agent typically run continuously, whereas the other agents typically run on demand or on a schedule. If you do not expect an agent to have completed a run, check the status of the agent. For more information, see [Monitor Replication Agents](monitor-replication-agents.md).  
+ The Log Reader Agent, Queue Reader Agent, and Distribution Agent typically run continuously, whereas the other agents typically run on demand or on a schedule. If you do not expect an agent to have completed a run, check the status of the agent. For more information, see [Monitor Replication Agents](agents/replication-agents.md).  
   
 ## See Also  
- [Replication Agent Administration](replication-agent-administration.md)   
+ [Replication Agent Administration](agents/replication-agent-administration.md)   
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
- [Replication Distribution Agent](replication-distribution-agent.md)   
- [Replication Log Reader Agent](replication-log-reader-agent.md)   
- [Replication Merge Agent](replication-merge-agent.md)   
- [Replication Queue Reader Agent](replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](replication-snapshot-agent.md)  
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
+ [Replication Queue Reader Agent](agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

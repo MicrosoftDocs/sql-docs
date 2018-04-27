@@ -34,7 +34,7 @@ manager: "mblythe"
   
 4.  Static and dynamic rows and columns, and how they relate to groups.  
   
- These concepts help you to recognize the structure that Report Builder and Report Designer add for you when you add templates and create groups, and to modify the structure to suit your own needs. Report Builder and Report Designer provide multiple visual indicators to help you recognize tablix data region structure. For more information, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../../2014/reporting-services/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ These concepts help you to recognize the structure that Report Builder and Report Designer add for you when you add templates and create groups, and to modify the structure to suit your own needs. Report Builder and Report Designer provide multiple visual indicators to help you recognize tablix data region structure. For more information, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -42,12 +42,12 @@ manager: "mblythe"
 ## Understanding Detail and Grouped Data  
  Detail data is all the data from a report dataset as it comes back from the data source. Detail data is essentially what you see in the query designer results pane when you run a dataset query. The actual detail data includes calculated fields that you create, and is restricted by filters set on the dataset, data region, and details group. You display detail data on a detail row by using a simple expression such as [Quantity]. When the report runs, the detail row repeats once for each row in the query results at run time.  
   
- Grouped data is detail data that is organized by a value that you specify in the group definition, such as [SalesOrder]. You display grouped data on group rows and columns by using simple expressions that aggregate the grouped data, such as [Sum(Quantity)]. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/understanding-groups-report-builder-and-ssrs.md).  
+ Grouped data is detail data that is organized by a value that you specify in the group definition, such as [SalesOrder]. You display grouped data on group rows and columns by using simple expressions that aggregate the grouped data, such as [Sum(Quantity)]. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 ## Understanding Group Hierarchies  
  Groups are organized as members of group hierarchies. Row group and column group hierarchies are identical structures on different axes. Think of row groups as expanding down the page and column groups as expanding across the page.  
   
- A tree structure represents nested row and column groups that have a parent/child relationship, such as a category with subcategories. The parent group is the root of the tree and child groups are its branches. Groups can also have an independent, adjacent relationship, such as sales by territory and sales by year. Multiple unrelated tree hierarchies are called a forest. In a tablix data region, row groups and columns groups are each represented as an independent forest. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/understanding-groups-report-builder-and-ssrs.md).  
+ A tree structure represents nested row and column groups that have a parent/child relationship, such as a category with subcategories. The parent group is the root of the tree and child groups are its branches. Groups can also have an independent, adjacent relationship, such as sales by territory and sales by year. Multiple unrelated tree hierarchies are called a forest. In a tablix data region, row groups and columns groups are each represented as an independent forest. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 ## Understanding Tablix Data Region Areas  
  A tablix data region has four possible areas for cells: the tablix corner, the tablix row group hierarchy, the tablix column group hierarchy, or the tablix body. The tablix body always exists. The other areas are optional.  
@@ -60,7 +60,7 @@ manager: "mblythe"
   
  Cells in the tablix corner area are created automatically when you have both row groups and column groups defined. Cells in this area can display labels, or you can merge the cells and create a title.  
   
- For more information, see [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ For more information, see [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## Understanding Static and Dynamic Rows and Columns  
  A tablix data region organizes cells in rows and columns that are associated with groups. Group structures for row groups and columns are identical. This example uses row groups, but you can apply the same concepts to column groups.  
@@ -73,12 +73,12 @@ manager: "mblythe"
   
  Dynamic group rows are created when you add a row group or column group to an existing tablix data region. Cells in dynamic group rows display aggregated values for the default scope.  
   
- The Add Total feature automatically creates a row outside the current group on which to display values that are scoped to the group. You can also add static and dynamic rows manually. Visual indicators help you understand which rows are static and which rows are dynamic. For more information, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../../2014/reporting-services/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ The Add Total feature automatically creates a row outside the current group on which to display values that are scoped to the group. You can also add static and dynamic rows manually. Visual indicators help you understand which rows are static and which rows are dynamic. For more information, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 ## See Also  
- [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Exploring the Flexibility of a Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Exploring the Flexibility of a Tablix Data Region &#40;Report Builder and SSRS&#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

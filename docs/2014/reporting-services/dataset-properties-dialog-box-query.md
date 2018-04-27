@@ -23,13 +23,13 @@ manager: "mblythe"
   
  The **Dataset Properties** dialog box includes the following:  
   
--   [Dataset Properties Dialog Box, Parameters](../../2014/reporting-services/dataset-properties-dialog-box-parameters.md)  
+-   [Dataset Properties Dialog Box, Parameters](report-data/dataset-properties-dialog-box-parameters.md)  
   
 -   [Dataset Properties Dialog Box, Fields](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
   
 -   [Dataset Properties Dialog Box, Options](../../2014/reporting-services/dataset-properties-dialog-box-options.md)  
   
--   [Dataset Properties Dialog Box, Filters](../../2014/reporting-services/dataset-properties-dialog-box-filters.md)  
+-   [Dataset Properties Dialog Box, Filters](report-data/dataset-properties-dialog-box-filters.md)  
   
 ## Options  
  **Name**  
@@ -61,7 +61,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md)  
   

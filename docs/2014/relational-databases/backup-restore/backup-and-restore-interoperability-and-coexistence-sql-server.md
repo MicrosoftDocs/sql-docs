@@ -129,7 +129,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md)   
+ [Back Up and Restore Replicated Databases](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Active Secondaries: Backup on Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

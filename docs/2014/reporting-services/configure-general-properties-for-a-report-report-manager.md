@@ -54,7 +54,7 @@ manager: "mblythe"
 ## See Also  
  [Move or Delete an Item &#40;Report Manager&#41;](../../2014/reporting-services/move-or-delete-an-item-report-manager.md)   
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [General Properties Page, Reports &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
   

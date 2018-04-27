@@ -23,7 +23,7 @@ manager: "mblythe"
   
 ## Options  
  **Horizontal**  
- Specify where the value is positioned horizontally within a selected cell or data region. By default, **Default** is selected. The value for Default is **General**. For more information about how general text alignment is calculated, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-text-and-placeholders-report-builder-and-ssrs.md). Click the **Expression** (*fx*) button to edit the expression.  
+ Specify where the value is positioned horizontally within a selected cell or data region. By default, **Default** is selected. The value for Default is **General**. For more information about how general text alignment is calculated, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Click the **Expression** (*fx*) button to edit the expression.  
   
  **Vertical**  
  Specify where the value is positioned vertically within a selected cell or data region. By default, **Default** is selected. The value for Default is **Top**. Click the **Expression** (*fx*) button to edit the expression.  
@@ -41,7 +41,7 @@ manager: "mblythe"
  Specify how much padding, or space, there is between the bottom edge of a cell and the value displayed within the cell. The default is 2 points. Click the **Expression** (*fx*) button to edit the expression.  
   
 ## See Also  
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)  
+ [Formatting Report Items &#40;Report Builder and SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
   

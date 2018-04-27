@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 2: Creating a Subscription to the Transactional Publication
-  In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Transactional Replication](lesson-1-publishing-data-using-transactional-replication.md).  
+  In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Transactional Replication](transactional/transactional-replication.md).  
   
 ### To create the subscription  
   

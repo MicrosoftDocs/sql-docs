@@ -69,8 +69,8 @@ manager: "mblythe"
  You have successfully specified a query that retrieves data for your report. Next, you will create the report layout. See [Lesson 4: Adding a Table to the Report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## See Also  
- [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md)   
- [SQL Server Connection Type &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)   
+ [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [SQL Server Connection Type &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

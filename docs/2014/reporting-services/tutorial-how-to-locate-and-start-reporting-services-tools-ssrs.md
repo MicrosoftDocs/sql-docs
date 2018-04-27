@@ -147,12 +147,12 @@ manager: "mblythe"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] opens with the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] start page. Solution Explorer provides categories for creating reports and data sources. You can use these categories to create new reports and data sources. Tabbed windows appear when you create a report definition. The tabbed windows are Data, Layout, and Preview..  
   
- To get started on your first report, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md). To learn more about query designers you can use within Report Designer, see [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md).  
+ To get started on your first report, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md). To learn more about query designers you can use within Report Designer, see [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> Report Builder  
  Use [Report Builder &#40;SSRS&#41;](../../2014/reporting-services/report-builder-ssrs.md) to create reports in a [!INCLUDE[msCoName](../includes/msconame-md.md)] Office-like authoring environment. You can customize and update all existing reports, regardless of whether they were created in Report Designer or in the previous versions of Report Builder. Contact your administrator for the location of the ReportBuilder3.msi file that you run to install Report Builder on your local computer.  
   
- **Installation:** The click-once version of report builder is installed by either [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode or SharePoint mode. The Stand-alone version of Report Builder is a separate download.  See [Install the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/install-the-stand-alone-version-of-report-builder-report-builder.md)  
+ **Installation:** The click-once version of report builder is installed by either [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode or SharePoint mode. The Stand-alone version of Report Builder is a separate download.  See [Install the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](install-windows/install-report-builder.md)  
   
 #### To start Report Builder ClickOnce from Report Manager (Native Mode)  
   
@@ -200,7 +200,7 @@ manager: "mblythe"
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
  [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-reporting-services-sharepoint-mode.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
- [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md)   
+ [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   
   

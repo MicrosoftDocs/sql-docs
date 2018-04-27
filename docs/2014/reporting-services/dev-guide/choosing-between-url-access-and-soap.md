@@ -38,7 +38,7 @@ Reporting Services programming supports a wide range of scenarios.
 > [!NOTE]  
 >  Report server URL access supports HTML Viewer and the extended functionality of the report toolbar. The SOAP API does not support this type of rendered report. You need to design and develop your own report toolbar, if you render reports using SOAP.  
   
- For more information about the report toolbar, see [HTML Viewer and the Report Toolbar](../../../2014/reporting-services/html-viewer-and-the-report-toolbar.md).  
+ For more information about the report toolbar, see [HTML Viewer and the Report Toolbar](../html-viewer-and-the-report-toolbar.md).  
   
  For more information about URL access, see [URL Access &#40;SSRS&#41;](../../../2014/reporting-services/url-access-ssrs.md).  
   
@@ -52,8 +52,8 @@ Reporting Services programming supports a wide range of scenarios.
   
 ## See Also  
  [Integrating Reporting Services into Applications](../../../2014/reporting-services/dev-guide/integrating-reporting-services-into-applications.md)   
- [Integrating Reporting Services Using SOAP](../../../2014/reporting-services/dev-guide/integrating-reporting-services-using-soap.md)   
- [Integrating Reporting Services Using URL Access](../../../2014/reporting-services/dev-guide/integrating-reporting-services-using-url-access.md)   
+ [Integrating Reporting Services Using SOAP](../application-integration/integrating-reporting-services-using-soap.md)   
+ [Integrating Reporting Services Using URL Access](../application-integration/integrating-reporting-services-using-url-access.md)   
  [Technical Reference &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

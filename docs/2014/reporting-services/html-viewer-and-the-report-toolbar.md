@@ -27,7 +27,7 @@ manager: "mblythe"
 ## Report Toolbar  
  The report toolbar provides page navigation, zoom, refresh, search, export, print, and data feed functionality for reports that are rendered in the HTML rendering extension.  
   
- Print functionality is optional. When it is available, a Printer icon appears on the report toolbar. On first use, clicking the Printer icon downloads an ActiveX control that you must install. Once the control is installed, clicking the Printer icon opens a Print dialog box so that you can select from the printers that are configured for your computer. Print availability is determined by server settings and browser settings. For more information, see [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) and [Enable and Disable Client-Side Printing for Reporting Services](../../2014/reporting-services/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Print functionality is optional. When it is available, a Printer icon appears on the report toolbar. On first use, clicking the Printer icon downloads an ActiveX control that you must install. Once the control is installed, clicking the Printer icon opens a Print dialog box so that you can select from the printers that are configured for your computer. Print availability is determined by server settings and browser settings. For more information, see [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) and [Enable and Disable Client-Side Printing for Reporting Services](../../2014/reporting-services/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  The report toolbar is similar to the one shown in the following illustration. The report toolbar that you see may differ from the illustration based on report features or the rendering options that are available.  
   
@@ -71,7 +71,7 @@ manager: "mblythe"
   
 ## See Also  
  [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md)  
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

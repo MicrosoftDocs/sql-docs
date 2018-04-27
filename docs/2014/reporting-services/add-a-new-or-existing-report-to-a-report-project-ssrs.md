@@ -23,7 +23,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  To preview a report with existing data sources, you must have permissions to the data source from your report authoring client. For more information, see [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md).  
   
- After you add a report, you can define data sources, datasets, and design a report layout. To get started, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md) or [Tables &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/tables-report-builder-and-ssrs.md).  
+ After you add a report, you can define data sources, datasets, and design a report layout. To get started, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md) or [Tables &#40;Report Builder  and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md).  
   
 ### To add a new report using the Report Wizard  
   

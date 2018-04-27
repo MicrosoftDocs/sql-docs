@@ -21,7 +21,7 @@ manager: "jhubbard"
   Information for merge publication subscriptions includes the name of the Publisher. Otherwise, the functionality and the information that is provided in this dialog box is the same as in the Publisher view. For more information about how to use this dialog box, see [Publisher Information, Subscription Watch List &#40;Merge Publication, SQL Server 2005 and Later&#41;](publisher-information-subscription-watch-list-merge-publication.md).  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [Monitoring Replication](monitoring-replication.md)  
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [Monitoring Replication](monitor/monitoring-replication.md)  
   
   

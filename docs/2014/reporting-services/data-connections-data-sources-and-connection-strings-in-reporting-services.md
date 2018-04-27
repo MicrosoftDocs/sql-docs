@@ -25,7 +25,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Data Connections, Data Sources, and Connection Strings in Reporting Services
-  To include data in a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  To include data in a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
@@ -41,7 +41,7 @@ manager: "mblythe"
   
 -   In Report Designer, create embedded or shared data sources as part of a [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] project. You can control whether to use them locally for preview or to deploy them as part of the project to a report server or SharePoint site. You can use custom data extensions that have been installed on your computer and on the report server or SharePoint site where you deploy your reports.  
   
-     System administrators can install and configure additional data processing extensions and .NET Framework data providers. For more information, see [Data Processing Extensions and .NET Framework Data Providers &#40;SSRS&#41;](../../2014/reporting-services/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
+     System administrators can install and configure additional data processing extensions and .NET Framework data providers. For more information, see [Data Processing Extensions and .NET Framework Data Providers &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
   
      Developers can use the <xref:Microsoft.ReportingServices.DataProcessing> API to create data processing extensions to support additional types of data sources.  
   
@@ -76,7 +76,7 @@ manager: "mblythe"
   
 -   Microsoft BI Semantic Model for Power View : On a SharePoint site that has been configured for a PowerPivot gallery and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
- For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
+ For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="bkmk_create_data_source"></a> Create a data source  
  To create a data source, you must have the following information:  
@@ -109,43 +109,43 @@ manager: "mblythe"
   
  To change the data sources that a report uses, you can modify the report properties in in Native mode Report Manager or from document libraries in SharePoint mode. For more information, see the following:  
   
--   [Store Credentials in a Reporting Services Data Source](../../2014/reporting-services/store-credentials-in-a-reporting-services-data-source.md) [Store Credentials in a Reporting Services Data Source](../../2014/reporting-services/store-credentials-in-a-reporting-services-data-source.md)  
+-   [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md) [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 -   [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)  
   
--   [Specify Connections for Custom Data Processing Extensions](../../2014/reporting-services/specify-connections-for-custom-data-processing-extensions.md)  
+-   [Specify Connections for Custom Data Processing Extensions](report-data/specify-connections-for-custom-data-processing-extensions.md)  
   
 -   [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md)  
   
--   [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs.md)  
+-   [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
 ##  <a name="bkmk_connection_examples"></a> Common connection string examples  
  Connection strings are the text representation of connection properties for a data provider. The following table lists examples of connections strings for various data connection types.  
   
 |**Data source**|**Example**|**Description**|  
 |---------------------|-----------------|---------------------|  
-|SQL Server database on the local server|`data source="(local)";initial catalog=AdventureWorks`|Set data source type to `Microsoft SQL Server`. For more information, see [SQL Server Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-server-connection-type-ssrs.md).|  
+|SQL Server database on the local server|`data source="(local)";initial catalog=AdventureWorks`|Set data source type to `Microsoft SQL Server`. For more information, see [SQL Server Connection Type &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md).|  
 |SQL Server database on the local server|`data source="(local)";initial catalog=AdventureWorks`|Set data source type to `Microsoft SQL Server`.|  
 |SQL Server Instance<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Set data source type to `Microsoft SQL Server`.|  
 |SQL Server Express database|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Set data source type to `Microsoft SQL Server`.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)] in the cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to `Windows Azure SQL Database`. For more information, see [SQL Azure Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-azure-connection-type-ssrs.md).|  
-|SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Set data source type to `Microsoft SQL Server Parallel Data Warehouse`. For more information, see [SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
-|Analysis Services database on the local server|`data source=localhost;initial catalog=Adventure Works DW`|Set data source type to `Microsoft SQL Server Analysis Services`. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../2014/reporting-services/analysis-services-connection-type-for-mdx-ssrs.md) or [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../2014/reporting-services/analysis-services-connection-type-for-dmx-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)] in the cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to `Windows Azure SQL Database`. For more information, see [SQL Azure Connection Type &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Set data source type to `Microsoft SQL Server Parallel Data Warehouse`. For more information, see [SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
+|Analysis Services database on the local server|`data source=localhost;initial catalog=Adventure Works DW`|Set data source type to `Microsoft SQL Server Analysis Services`. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) or [Analysis Services Connection Type for DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Analysis Services tabular model database with Sales perspective|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Set data source type to `Microsoft SQL Server Analysis Services`. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
-|Report model data source on a report server configured in native mode|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace. For more information, see [Report Model Connection &#40;SSRS&#41;](../../2014/reporting-services/report-model-connection-ssrs.md).|  
+|Report model data source on a report server configured in native mode|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace. For more information, see [Report Model Connection &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md).|  
 |Report model data source on a report server configured in SharePoint integrated mode|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Set the data source type to `OLE DB Provider for OLAP Services 8.0`.<br /><br /> You can achieve a faster connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data sources if you set the `ConnectTo` property to `8.0`. To set this property, use the **Connection Properties** dialog box, **Advanced Properties** tab.|  
-|Oracle server|`data source=myserver`|Set the data source type to `Oracle`. The Oracle client tools must be installed on the Report Designer computer and on the report server. For more information, see [Oracle Connection Type &#40;SSRS&#41;](../../2014/reporting-services/oracle-connection-type-ssrs.md).|  
-|SAP NetWeaver BI data source|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Set the data source type to `SAP NetWeaver BI`. For more information, see [SAP NetWeaver BI Connection Type &#40;SSRS&#41;](../../2014/reporting-services/sap-netweaver-bi-connection-type-ssrs.md).|  
-|Hyperion Essbase data source|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Set the data source type to `Hyperion Essbase`. For more information, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](../../2014/reporting-services/hyperion-essbase-connection-type-ssrs.md).|  
-|Teradata data source|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Set the data source type to `Teradata`. The connection string is an Internet Protocol (IP) address in the form of four fields, where each field can be from one to three digits. For more information, see [Teradata Connection Type &#40;SSRS&#41;](../../2014/reporting-services/teradata-connection-type-ssrs.md).|  
-|XML data source, Web service|`data source=http://adventure-works.com/results.aspx`|Set the data source type to `XML`. The connection string is a URL for a web service that supports Web Services Definition Language (WSDL). For more information, see [XML Connection Type &#40;SSRS&#41;](../../2014/reporting-services/xml-connection-type-ssrs.md).|  
+|Oracle server|`data source=myserver`|Set the data source type to `Oracle`. The Oracle client tools must be installed on the Report Designer computer and on the report server. For more information, see [Oracle Connection Type &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md).|  
+|SAP NetWeaver BI data source|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Set the data source type to `SAP NetWeaver BI`. For more information, see [SAP NetWeaver BI Connection Type &#40;SSRS&#41;](report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
+|Hyperion Essbase data source|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Set the data source type to `Hyperion Essbase`. For more information, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](report-data/hyperion-essbase-connection-type-ssrs.md).|  
+|Teradata data source|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Set the data source type to `Teradata`. The connection string is an Internet Protocol (IP) address in the form of four fields, where each field can be from one to three digits. For more information, see [Teradata Connection Type &#40;SSRS&#41;](report-data/teradata-connection-type-ssrs.md).|  
+|XML data source, Web service|`data source=http://adventure-works.com/results.aspx`|Set the data source type to `XML`. The connection string is a URL for a web service that supports Web Services Definition Language (WSDL). For more information, see [XML Connection Type &#40;SSRS&#41;](report-data/xml-connection-type-ssrs.md).|  
 |XML data source, XML document|`http://localhost/XML/Customers.xml`|Set the data source type to `XML`. The connection string is a URL to the XML document.|  
 |XML data source, embedded XML document|*Empty*|Set the data source type to `XML`. The XML data is embedded in the report definition.|  
   
  If you fail to connect to a report server using `localhost`, check that the network protocol for TCP/IP protocol is enabled. For more information, see [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
   
- For more information about the configurations needed to connect to these data source types, see the specific data connection topic under [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md) or [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
+ For more information about the configurations needed to connect to these data source types, see the specific data connection topic under [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) or [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="bkmk_special_password_characters"></a> Special characters in a password  
  If you configure your ODBC or SQL data source to prompt for a password or to include the password in the connection string, and a user enters the password with special characters like punctuation marks, some underlying data source drivers cannot validate the special characters. When you process the report, the message "Not a valid password" may indicate this problem. If changing the password is impractical, you can work with your database administrator to store the appropriate credentials on the server as part of a system ODBC data source name (DSN). For more information, see "OdbcConnection.ConnectionString" in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK documentation.  
@@ -175,12 +175,12 @@ manager: "mblythe"
   
 ## See Also  
  [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Manage Report Data Sources](../../2014/reporting-services/manage-report-data-sources.md)   
+ [Manage Report Data Sources](report-data/manage-report-data-sources.md)   
  [Data Source Properties Dialog Box, Credentials](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
  [Shared Data Source Properties Dialog Box, Credentials](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
- [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../2014/reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md)   
  [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
- [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs.md)  
+ [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

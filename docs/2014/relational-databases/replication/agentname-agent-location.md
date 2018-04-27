@@ -26,6 +26,6 @@ manager: "jhubbard"
 ## See Also  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Replication Agents Overview](replication-agents-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

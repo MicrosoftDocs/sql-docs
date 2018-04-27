@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Synchronize a Pull Subscription
-  This topic describes how to synchronize a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](replication-agents-overview.md), or Replication Management Objects (RMO).  
+  This topic describes how to synchronize a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](agents/replication-agents-overview.md), or Replication Management Objects (RMO).  
   
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -41,14 +41,14 @@ manager: "jhubbard"
 5.  Click **Close**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Pull subscriptions can be synchronized programmatically and on-demand by invoking the appropriate replication agent executable file from the command prompt. The replication agent executable file that is invoked will depend on the type of publication to which the pull subscription belongs. For more information, see [Replication Agents](replication-agents.md).  
+ Pull subscriptions can be synchronized programmatically and on-demand by invoking the appropriate replication agent executable file from the command prompt. The replication agent executable file that is invoked will depend on the type of publication to which the pull subscription belongs. For more information, see [Replication Agents](agents/replication-agents.md).  
   
 > [!NOTE]  
 >  Replication agents connect to the local server using the Windows Authentication credentials of the user who started the agent from the command prompt. These Windows credentials are also used when connecting to remote servers using Windows Integrated Authentication.  
   
 #### To start the distribution agent from the command prompt or from a batch file  
   
-1.  From the command prompt or in a batch file, start the [Replication Distribution Agent](replication-distribution-agent.md) by running **distrib.exe**, specifying the following command-line arguments:  
+1.  From the command prompt or in a batch file, start the [Replication Distribution Agent](agents/replication-distribution-agent.md) by running **distrib.exe**, specifying the following command-line arguments:  
   
     -   **-Publisher**  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
 #### To start the merge agent from the command prompt or from a batch file  
   
-1.  From the command prompt or in a batch file, start the [Replication Merge Agent](replication-merge-agent.md) by running **replmerg.exe**, specifying the following command-line arguments:  
+1.  From the command prompt or in a batch file, start the [Replication Merge Agent](agents/replication-merge-agent.md) by running **replmerg.exe**, specifying the following command-line arguments:  
   
     -   **-Publisher**  
   
@@ -233,6 +233,6 @@ manager: "jhubbard"
 ## See Also  
  [Synchronize Data](synchronize-data.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)  
+ [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

@@ -127,7 +127,7 @@ manager: "mblythe"
 10. Click **Credentials type**.  
   
     > [!NOTE]  
-    >  Depending on how permissions are configured on the data source, you might need to change the default authentication options. For more information, see [Security &#40;Report Builder&#41;](../../2014/reporting-services/security-report-builder.md).  
+    >  Depending on how permissions are configured on the data source, you might need to change the default authentication options. For more information, see [Security &#40;Report Builder&#41;](report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -136,6 +136,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Subscribe to Publications](subscribe-to-publications.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)  
+ [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

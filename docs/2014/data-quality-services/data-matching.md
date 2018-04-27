@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   You can re-index data copied from the source to the staging table, or not re-index, depending on the state of the matching policy and the source data. Not re-indexing can improve performance.  
   
- You can perform the matching process in conjunction with other data cleansing processes to improve overall data quality. You can also perform data de-duplication using DQS functionality built into Master Data Services. For more information, see [Master Data Services Overview](../../2014/master-data-services/master-data-services-overview.md).  
+ You can perform the matching process in conjunction with other data cleansing processes to improve overall data quality. You can also perform data de-duplication using DQS functionality built into Master Data Services. For more information, see [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md).  
   
  The following illustration displays how data matching is done in DQS:  
   

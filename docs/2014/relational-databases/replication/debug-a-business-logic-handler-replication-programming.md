@@ -23,13 +23,13 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Debug a Business Logic Handler (Replication Programming)
-  Use a business logic handler to invoke custom business logic when a merge subscription is synchronized. For more information, see [Execute Business Logic During Merge Synchronization](execute-business-logic-during-merge-synchronization.md).  
+  Use a business logic handler to invoke custom business logic when a merge subscription is synchronized. For more information, see [Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md).  
   
  The Merge Replication Reconciler (replrec.dll) calls the managed code assembly containing the business logic. In most cases, replrec.dll and the custom business logic is executed on the computer where the Merge Agent runs (at the Subscriber for a pull subscription or at the Distributor for a push subscription). In the case of Web synchronization, or in the case of a [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscriber, the reconciler and the custom business logic is executed on the Web server.  
   
 ### To debug a business logic handler on a local computer  
   
-1.  Configure publishing and distribution, create a publication, and create a subscription to the publication. For more information, see [Configure Publishing and Distribution](configure-publishing-and-distribution.md) and [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Configure publishing and distribution, create a publication, and create a subscription to the publication. For more information, see [Configure Publishing and Distribution](configure-publishing-and-distribution.md) and [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md).  
   
 2.  Create and register a business logic handler. For more information, see [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
   

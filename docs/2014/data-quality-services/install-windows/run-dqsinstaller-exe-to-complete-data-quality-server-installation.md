@@ -57,7 +57,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  You must retain the password specified for the database master key because you will require it while restoring the DQS databases from a backup in future, if you choose to do so. For more information about restoring DQS databases, see [Backing Up and Restoring DQS Databases](../backing-up-and-restoring-dqs-databases.md).  
   
-5.  If a Master Data Services database is present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], the installer creates a user mapped to the Master Data Services login, and grants it the dqs_administrator role on the DQS_MAIN database. For information about installing Master Data Services and creating a Master Data Services database, see [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md).  
+5.  If a Master Data Services database is present in the same SQL Server instance as [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], the installer creates a user mapped to the Master Data Services login, and grants it the dqs_administrator role on the DQS_MAIN database. For information about installing Master Data Services and creating a Master Data Services database, see [Install Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md).  
   
 6.  A completion message is displayed after the installation has completed successfully. Press any key to close the command prompt window.  
   

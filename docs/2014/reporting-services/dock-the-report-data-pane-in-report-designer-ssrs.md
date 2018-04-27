@@ -41,7 +41,7 @@ manager: "mblythe"
      To toggle between the last two display states, double-click the title bar of the Report Data pane.  
   
 ## See Also  
- [Report Data Pane](../../2014/reporting-services/report-data-pane.md)   
+ [Report Data Pane](report-data/report-data-pane.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

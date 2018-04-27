@@ -30,7 +30,7 @@ manager: "jhubbard"
  Click to display the **Connect to Server** dialog box. This enables you to view and change the connection properties and credentials that Replication Monitor uses to connect to the Distributor.  
   
  **Automatically refresh the status of this Distributor and its publications**  
- Select to let Replication Monitor automatically refresh the status for the Distributor. If this option is selected, Replication Monitor polls the Distributor for status information based on the polling interval set by the **Refresh rate** option. For more information about refresh in Replication Monitor, see [Caching, Refresh, and Replication Monitor Performance](caching-refresh-and-replication-monitor-performance.md).  
+ Select to let Replication Monitor automatically refresh the status for the Distributor. If this option is selected, Replication Monitor polls the Distributor for status information based on the polling interval set by the **Refresh rate** option. For more information about refresh in Replication Monitor, see [Caching, Refresh, and Replication Monitor Performance](monitor/caching-refresh-and-replication-monitor-performance.md).  
   
  **Refresh rate**  
  Enter a value (in seconds) to specify how frequently Replication Monitor should poll the Distributor for status. Lower values result in more frequent polling. This can affect performance at the Distributor if you are monitoring many Publishers. We recommend that you test your system to determine an appropriate value. The **Refresh rate** setting is also used if you select **Auto Refresh** in any of the detail windows in Replication Monitor.  
@@ -42,7 +42,7 @@ manager: "jhubbard"
  Click to create a new Publisher group. A Publisher group provides a way for you to conveniently organize Publishers within Replication Monitor. Groups do not affect the replication of data or the relationship among servers in a replication topology.  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [Monitoring Replication](monitoring-replication.md)  
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [Monitoring Replication](monitor/monitoring-replication.md)  
   
   

@@ -45,7 +45,7 @@ manager: "jhubbard"
  ![Objects in a Master Data Services Model](../../2014/master-data-services/media/mds-conc-model-circles.gif "Objects in a Master Data Services Model")  
   
 > [!NOTE]  
->  Derived hierarchies are also model objects, but they are not shown in the image. Derived hierarchies are derived from the domain-based attribute relationships that exist between entities. See [Derived Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md) for more information.  
+>  Derived hierarchies are also model objects, but they are not shown in the image. Derived hierarchies are derived from the domain-based attribute relationships that exist between entities. See [Derived Hierarchies &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md) for more information.  
   
  Master data is the data that is contained in the model objects. In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], master data is stored as members in an entity.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 ## Related Content  
   
--   [Master Data Services Overview](../../2014/master-data-services/master-data-services-overview.md)  
+-   [Master Data Services Overview](master-data-services-overview-mds.md)  
   
 -   [Entities &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

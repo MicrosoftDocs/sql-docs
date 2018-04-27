@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Version Management Functional Area (Master Data Manager)
-  In the Version Management functional area, administrators can validate data, review and reverse transactions, create versioned copies of data, and flag versions of data for subscribing systems. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+  In the Version Management functional area, administrators can validate data, review and reverse transactions, create versioned copies of data, and flag versions of data for subscribing systems. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 ## Versions  
  [Versions &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  

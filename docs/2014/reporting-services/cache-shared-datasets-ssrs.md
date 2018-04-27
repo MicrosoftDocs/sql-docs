@@ -94,6 +94,6 @@ manager: "mblythe"
  Updates to cache refresh plans for shared datasets do not affect reports that are already being processed. Updating a cache refresh plan affects only future launches of reports that reference the shared dataset.  
   
 ## See Also  
- [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md)  
+ [Manage Shared Datasets](report-data/manage-shared-datasets.md)  
   
   

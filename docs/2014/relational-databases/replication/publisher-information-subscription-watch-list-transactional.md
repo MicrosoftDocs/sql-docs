@@ -62,7 +62,7 @@ manager: "jhubbard"
   
  The status values **Performance critical**, **Expiring soon/Expired**, and **Uninitialized subscription** are warnings. When a warning is displayed, the **Status** column also displays if an agent is running. For example, the status could be **Running, Performance critical**.  
   
- The status values **Performance critical** and **Expiring soon/Expired** are displayed only if thresholds are set. For information about performance measurements and setting thresholds, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md) and [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+ The status values **Performance critical** and **Expiring soon/Expired** are displayed only if thresholds are set. For information about performance measurements and setting thresholds, see [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md) and [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Subscription**  
  The name of each subscription, in the form: *SubscriberName: SubscriptionDatabaseName*.  
@@ -83,17 +83,17 @@ manager: "jhubbard"
   
 -   Critical  
   
- If performance is critical, **Performance Critical** is displayed in the **Status** column. For more information about how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md).  
+ If performance is critical, **Performance Critical** is displayed in the **Status** column. For more information about how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md).  
   
  **Latency**  
- The average amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. The latency displayed is based on the most recent measurements taken by Replication Monitor. For more information about measuring latency, see [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
+ The average amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. The latency displayed is based on the most recent measurements taken by Replication Monitor. For more information about measuring latency, see [Measure Latency and Validate Connections for Transactional Replication](transactional/transactional-replication.md).  
   
  **Last Synchronization**  
  The time when the Distribution Agent last ran. If synchronization is in progress, **In progress** is displayed.  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Monitoring Replication](monitoring-replication.md)  
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Monitoring Replication](monitor/monitoring-replication.md)  
   
   

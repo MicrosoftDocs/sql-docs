@@ -162,6 +162,6 @@ manager: "mblythe"
   
 ## See Also  
  [SharePoint Site and List Permission Reference for Report Server Items](../../2014/reporting-services/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Start Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/start-report-builder-report-builder.md)  
+ [Start Report Builder &#40;Report Builder&#41;](report-builder/start-report-builder.md)  
   
   

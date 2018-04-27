@@ -21,6 +21,6 @@ manager: "mblythe"
  To access these topics from within the **Report Properties** dialog box, click **Help**.  
   
 ## See Also  
- [Report Data &#40;SSRS&#41;](../../2014/reporting-services/report-data-ssrs.md)  
+ [Report Data &#40;SSRS&#41;](report-data/report-data-ssrs.md)  
   
   

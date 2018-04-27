@@ -38,9 +38,9 @@ manager: "jhubbard"
   
 1.  Decrease the value of the -**DownloadGenerationsPerBatch** and **-UploadGenerationsPerBatch** parameters for the Merge Agent to allow processing to continue while you address the underlying issue causing the error. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
-    -   [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)  
+    -   [Work with Replication Agent Profiles](agents/replication-agent-profiles.md)  
   
-    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
   

@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   You must have permission to access the **User and Group Permissions** functional area.  
   
--   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 ### To create a model administrator  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
  There is one exception: if the user has **Update** permission assigned to a hierarchy **Root** on the **Hierarchy Members** tab, the user is still considered a model administrator.  
   
 ## See Also  
- [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
+ [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)   
  [Assign Model Object Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Model Object Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   

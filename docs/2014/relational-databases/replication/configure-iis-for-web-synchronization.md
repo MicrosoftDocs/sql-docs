@@ -169,7 +169,7 @@ manager: "jhubbard"
   
     1.  Click **Add**, and then in the **Select Users or Groups** dialog box, add the accounts under which Subscribers will make connections to IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* parameter.  
   
-9. On the **Snapshot Share Access** page, enter the snapshot share. The appropriate permissions are set on this share so that Subscribers can access the snapshot files. For more information about permissions for the share, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
+9. On the **Snapshot Share Access** page, enter the snapshot share. The appropriate permissions are set on this share so that Subscribers can access the snapshot files. For more information about permissions for the share, see [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md).  
   
 10. On the **Completing the Wizard** page, click **Finish**.  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
   
  To configure the minimum permissions for the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener runs, complete the following procedure. The steps in the procedure apply to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] running IIS 6.0.  
   
- In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](secure-the-publisher.md).  
+ In addition to performing the following steps, make sure that the required logins are in the publication access list (PAL). For more information about the PAL, see [Secure the Publisher](security/secure-the-publisher.md).  
   
 #### To configure the account and permissions  
   

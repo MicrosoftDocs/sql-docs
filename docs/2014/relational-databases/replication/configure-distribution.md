@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  The server you select as the Distributor should have adequate disk space and processor power to support replication and any other activities on that server. When you configure the Distributor, you specify the following:  
   
--   A snapshot folder, which is used, by default, for all Publishers that use this Distributor. Ensure that this folder is already shared and has the appropriate permissions set. For more information, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
+-   A snapshot folder, which is used, by default, for all Publishers that use this Distributor. Ensure that this folder is already shared and has the appropriate permissions set. For more information, see [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md).  
   
 -   A name and file locations for the distribution database. The distribution database cannot be renamed after it is created. To use a different name for the database, you must disable distribution and reconfigure it.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   Size the distribution database appropriately. Test replication with a typical load for your system to determine how much space is required to store commands. Ensure the database is large enough to store commands without having to auto-grow frequently. For more information about changing the size of a database, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
--   Set the **sync with backup** option on the distribution database. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) and [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](enable-coordinated-backups-for-transactional-replication.md).  
+-   Set the **sync with backup** option on the distribution database. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](transactional/transactional-replication.md) and [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](administration/enable-coordinated-backups-for-transactional-replication.md).  
   
 ## Local and Remote Distributors  
  By default, the Distributor is the same server as the Publisher (a local Distributor), but it can also be a separate server from the Publisher (a remote Distributor). Typically, you would choose to use a remote Distributor if you want to:  
@@ -66,7 +66,7 @@ manager: "jhubbard"
  To modify Publisher and Distributor properties, see [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
   
 ## See Also  
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Secure the Distributor](secure-the-distributor.md)  
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Secure the Distributor](security/secure-the-distributor.md)  
   
   

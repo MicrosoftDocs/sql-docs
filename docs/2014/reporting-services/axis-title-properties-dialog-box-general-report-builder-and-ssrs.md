@@ -35,12 +35,12 @@ manager: "mblythe"
 -   **Far** Displays the axis title away from the intersection of the two axes.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Specify an Axis Interval &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Plot Data on a Secondary Axis &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Specify an Axis Interval &#40;Report Builder and SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Plot Data on a Secondary Axis &#40;Report Builder and SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

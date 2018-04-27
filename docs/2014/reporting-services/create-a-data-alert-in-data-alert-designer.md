@@ -16,7 +16,7 @@ ms.author: "maghan"
 manager: "mblythe"
 ---
 # Create a Data Alert in Data Alert Designer
-  You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](../../2014/reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md).  
+  You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md) and [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md).  
   
 ### To create a data alert definition  
   
@@ -46,7 +46,7 @@ manager: "mblythe"
   
 4.  Optionally, select a different data feed in the **Report data name** drop-down list.  
   
-     If no data feed is generated from the report, you cannot create an alert definition for the report. The layout of the report determines the content of each data feed. For more information see, [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+     If no data feed is generated from the report, you cannot create an alert definition for the report. The layout of the report determines the content of each data feed. For more information see, [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 5.  Optionally, in the **Alert name** text box, update the default name to be more meaningful.  
   
@@ -95,7 +95,7 @@ manager: "mblythe"
      By default, an alert message has no stop date.  
   
     > [!NOTE]  
-    >  Stopping an alert message does not delete the alert definition. After you stop an alert message, you can restart it by updating the start and stop dates. For information about deleting alert definitions, see [Manage My Data Alerts in Data Alert Manager](../../2014/reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+    >  Stopping an alert message does not delete the alert definition. After you stop an alert message, you can restart it by updating the start and stop dates. For information about deleting alert definitions, see [Manage My Data Alerts in Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Optionally, clear the **Send message only if results change** checkbox.  
   

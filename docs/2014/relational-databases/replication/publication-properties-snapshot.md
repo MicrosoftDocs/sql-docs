@@ -18,10 +18,10 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Publication Properties, Snapshot
-  The **Snapshot** page of the **Publication Properties** dialog box allows you to set the snapshot format, snapshot folder location, and scripts to run before and after the application of the snapshot. The snapshot folder must be designated as a share and have sufficient permissions for the agents that read and write files to the folder. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
+  The **Snapshot** page of the **Publication Properties** dialog box allows you to set the snapshot format, snapshot folder location, and scripts to run before and after the application of the snapshot. The snapshot folder must be designated as a share and have sufficient permissions for the agents that read and write files to the folder. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md).  
   
 > [!NOTE]  
->  Changes require a new snapshot for the publication. For more information, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
+>  Changes require a new snapshot for the publication. For more information, see [Change Publication and Article Properties](publish/change-publication-and-article-properties.md).  
   
 ## Options  
  **Snapshot format**  
@@ -48,10 +48,10 @@ manager: "jhubbard"
 -   Enter a path in the **After applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [Create a Publication](publish/create-a-publication.md)   
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
  [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)  
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)  
   
   

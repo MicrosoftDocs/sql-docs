@@ -56,7 +56,7 @@ manager: "mblythe"
  Sets the distance between the right edge of the report and the right edge of the report rows.  
   
 ## See Also  
- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Report Design Tips &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-design-tips-report-builder-and-ssrs.md)  
+ [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Report Design Tips &#40;Report Builder and SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

@@ -36,9 +36,9 @@ manager: "mblythe"
   
  [Report Wizard Help](../../2014/reporting-services/report-wizard-help.md)  
   
- [HTML Viewer and the Report Toolbar](../../2014/reporting-services/html-viewer-and-the-report-toolbar.md)  
+ [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)  
   
- [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../../2014/reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
+ [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Report Server Command Prompt Utilities**  
  [RS.exe Utility &#40;SSRS&#41;](../../2014/reporting-services/rs-exe-utility-ssrs.md)  

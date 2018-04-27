@@ -79,7 +79,7 @@ manager: "jhubbard"
   
     -   **Other**  
   
-     It is recommended to use Windows Authentication for all connections. For information about the permissions required by the Distribution Agent and the Merge Agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
+     It is recommended to use Windows Authentication for all connections. For information about the permissions required by the Distribution Agent and the Merge Agent, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 ### To use the Interactive Resolver  
   
-1.  Enable the article and subscription to use interactive resolution. For more information, see [Specify Interactive Conflict Resolution for Merge Articles](specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Enable the article and subscription to use interactive resolution. For more information, see [Specify Interactive Conflict Resolution for Merge Articles](publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
   
 2.  After the subscription begins synchronizing in Synchronization Manager, the Interactive Resolver launches automatically if interactive conflict resolution is enabled and there are conflicts for one or more articles. The Interactive Resolver displays conflicts one at a time, with a suggested resolution for each conflict (based on the resolver specified when the publication and subscription were created).  
   
@@ -115,6 +115,6 @@ manager: "jhubbard"
 >  Edits are only applied if they are part of the row that is chosen for resolution. For example, if you make edits under **Publisher**, and then click **Accept Subscriber**, the edits are discarded.  
   
 ## See Also  
- [Interactive Conflict Resolution](interactive-conflict-resolution.md)  
+ [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

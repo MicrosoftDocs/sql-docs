@@ -70,6 +70,6 @@ manager: "jhubbard"
  [Custom Reports in Management Studio](custom-reports-in-management-studio.md)   
  [Use Custom Reports with Object Explorer Node Properties](use-custom-reports-with-object-explorer-node-properties.md)   
  [Unsuppress Run Custom Report Warnings](unsuppress-run-custom-report-warnings.md)   
- [Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-ssrs.md)  
+ [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

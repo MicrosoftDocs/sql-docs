@@ -33,7 +33,7 @@ manager: "jhubbard"
  Select the appropriate replication type for this publication.  
   
 ## See Also  
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Create a Publication](create-a-publication.md)  
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Create a Publication](publish/create-a-publication.md)  
   
   

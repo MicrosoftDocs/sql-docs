@@ -182,7 +182,7 @@ manager: "mblythe"
  In the subtotal row that displays the sales for a subcategory, the background color of the cell is red, yellow, or green depending on value of the sales sum.  
   
 ##  <a name="Gauge"></a> 4. Display a KPI by Using a Gauge  
- A gauge depicts a single value in a dataset. This tutorial uses a horizontal linear gauge because its shape and simplicity makes it easy to read, even in when it is a small size and used within a table cell. For more information, see [Gauges &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/gauges-report-builder-and-ssrs.md).  
+ A gauge depicts a single value in a dataset. This tutorial uses a horizontal linear gauge because its shape and simplicity makes it easy to read, even in when it is a small size and used within a table cell. For more information, see [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md).  
   
 #### To display the present state of a KPI using a gauge  
   
@@ -243,7 +243,7 @@ manager: "mblythe"
 17. Click **Run** to preview the report.  
   
 ##  <a name="Indicator"></a> 5. Display a KPI by Using an Indicator  
- Indicators are small simple gauges that communicate data values at a glance. Because of their size and simplicity, indicators are often used in tables and matrices. For more information, see [Indicators &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/indicators-report-builder-and-ssrs.md).  
+ Indicators are small simple gauges that communicate data values at a glance. Because of their size and simplicity, indicators are often used in tables and matrices. For more information, see [Indicators &#40;Report Builder and SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
   
 #### To display the present state of a KPI using an indicator  
   
@@ -282,7 +282,7 @@ manager: "mblythe"
 ##  <a name="Title"></a> 6. Add a Report Title  
  A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. You will use the text box that is automatically placed at the top of the report body.  
   
- The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 #### To add a report title  
   
@@ -327,10 +327,10 @@ manager: "mblythe"
 2.  Click **Save**.  
   
 ## Next Steps  
- You have successfully completed the Adding a KPI to Your Report tutorial. For more information, see Gauges (Report Builder) [Indicators &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/indicators-report-builder-and-ssrs.md).  
+ You have successfully completed the Adding a KPI to Your Report tutorial. For more information, see Gauges (Report Builder) [Indicators &#40;Report Builder and SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
   
 ## See Also  
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -61,9 +61,9 @@ manager: "jhubbard"
  Displayed only if the selected session displays a value of **Error** in the **Status** column. This text area displays detailed error information and the command that was attempted at the time of the error. It also includes links to additional content related to the error.  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md)   
- [Monitoring Replication](monitoring-replication.md)   
- [Replication Agents Overview](replication-agents-overview.md)  
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Monitoring Replication](monitor/monitoring-replication.md)   
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

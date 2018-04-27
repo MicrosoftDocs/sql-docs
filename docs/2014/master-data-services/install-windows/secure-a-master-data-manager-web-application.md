@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   You must be an administrator on the web server where [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] is installed.  
   
--   MDS must be installed on the web server, and a web application must exist. For more information, see [Install Master Data Services](install-master-data-services.md) and [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
+-   MDS must be installed on the web server, and a web application must exist. For more information, see [Install Master Data Services](../master-data-services-installation-and-configuration.md) and [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
   
 ### To secure the Master Data Manager web application with HTTPS  
   

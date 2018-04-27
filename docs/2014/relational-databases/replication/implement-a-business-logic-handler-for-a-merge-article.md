@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 4.  Create an article that uses the business logic handler or modify an existing article to use the business logic handler.  
   
- The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can impact performance. For more information about business logic handlers, see [Execute Business Logic During Merge Synchronization](execute-business-logic-during-merge-synchronization.md).  
+ The business logic handler you specify is executed for every row that is synchronized. Complex logic and calls to other applications or network services can impact performance. For more information about business logic handlers, see [Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md).  
   
  **In This Topic**  
   
@@ -104,7 +104,7 @@ manager: "jhubbard"
   
 #### To use a business logic handler with a new table article  
   
-1.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article, specifying the friendly name of the business logic handler for **@article_resolver**. For more information, see [Define an Article](define-an-article.md).  
+1.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article, specifying the friendly name of the business logic handler for **@article_resolver**. For more information, see [Define an Article](publish/define-an-article.md).  
   
 #### To use a business logic handler with an existing table article  
   
@@ -200,7 +200,7 @@ manager: "jhubbard"
   
     -   The friendly name of the business logic handler (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) for <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Call the <xref:Microsoft.SqlServer.Replication.Article.Create%2A> method. For more information, see [Define an Article](define-an-article.md).  
+3.  Call the <xref:Microsoft.SqlServer.Replication.Article.Create%2A> method. For more information, see [Define an Article](publish/define-an-article.md).  
   
 #### To use a business logic handler with an existing table article  
   
@@ -212,7 +212,7 @@ manager: "jhubbard"
   
 4.  Set the connection from step 1 for the <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> property.  
   
-5.  Call the <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> method to get the properties of the object. If this method returns `false`, either the article properties in step 3 were defined incorrectly or the article does not exist. For more information, see [View and Modify Article Properties](view-and-modify-article-properties.md).  
+5.  Call the <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> method to get the properties of the object. If this method returns `false`, either the article properties in step 3 were defined incorrectly or the article does not exist. For more information, see [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
   
 6.  Set the friendly name of the business logic handler for <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. This is the value of the <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> property specified when registering the business logic handler.  
   
@@ -238,7 +238,7 @@ manager: "jhubbard"
 ## See Also  
  [Implement a Custom Conflict Resolver for a Merge Article](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Debug a Business Logic Handler &#40;Replication Programming&#41;](debug-a-business-logic-handler-replication-programming.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)  
   
   

@@ -51,7 +51,7 @@ manager: "mblythe"
  Shows the result set returned from the query.  
   
 ## See Also  
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Report Wizard Help](../../2014/reporting-services/report-wizard-help.md)  
   
   

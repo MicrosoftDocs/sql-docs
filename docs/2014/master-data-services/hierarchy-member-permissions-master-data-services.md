@@ -38,7 +38,7 @@ manager: "jhubbard"
 |**Update**|The members are displayed and the user can change them. The user can also move the members in any explicit hierarchies or collections the members belong to.|  
 |**Deny**|The members are not displayed.|  
   
- On the **Hierarchy Members** tab, the permissions you assign do not take effect immediately. The frequency that the permissions are applied depends on the **Member security processing interval setting** in the System Settings table in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. You can apply member permissions immediately by following the steps in [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
+ On the **Hierarchy Members** tab, the permissions you assign do not take effect immediately. The frequency that the permissions are applied depends on the **Member security processing interval setting** in the System Settings table in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. You can apply member permissions immediately by following the steps in [Immediately Apply Member Permissions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 > [!NOTE]  
 >  You cannot assign hierarchy member permissions to recursive hierarchies, derived hierarchies with explicit caps, and derived hierarchies with hidden levels.  
@@ -58,6 +58,6 @@ manager: "jhubbard"
  [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [Immediately Apply Member Permissions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
   
   

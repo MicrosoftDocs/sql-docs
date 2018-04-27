@@ -18,7 +18,7 @@ manager: "mblythe"
 # Prerequisites for Tutorials (Report Builder)
   The Report Builder tutorials expect that you can view and save reports on a report server or SharePoint site that is integrated with a report server. For data, all tutorials use literal queries that must be processed by an instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- If you do not have access to a report server or site or to a data source, you can learn about Report Builder by building an offline report. See [Tutorial: Create a Quick Chart Report Offline &#40;Report Builder&#41;](tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ If you do not have access to a report server or site or to a data source, you can learn about Report Builder by building an offline report. See [Tutorial: Create a Quick Chart Report Offline &#40;Report Builder&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 ## Requirements  
  You must have the following prerequisites to complete Report Builder tutorials:  

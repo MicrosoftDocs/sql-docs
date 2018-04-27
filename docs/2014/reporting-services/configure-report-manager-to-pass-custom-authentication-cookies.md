@@ -42,7 +42,7 @@ manager: "mblythe"
 ## See Also  
  [Authentication with the Report Server](../../2014/reporting-services/authentication-with-the-report-server.md)   
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
- [Security Extensions Overview](../../2014/reporting-services/dev-guide/security-extensions-overview.md)   
+ [Security Extensions Overview](extensions/security-extension/security-extensions-overview.md)   
  [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../2014/reporting-services/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   
   

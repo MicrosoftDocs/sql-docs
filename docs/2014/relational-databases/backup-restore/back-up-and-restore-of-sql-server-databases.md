@@ -277,7 +277,7 @@ manager: "jhubbard"
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Backup and Restore of Analysis Services Databases](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
  [Back Up and Restore Full-Text Catalogs and Indexes](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
- [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md)   
+ [Back Up and Restore Replicated Databases](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  

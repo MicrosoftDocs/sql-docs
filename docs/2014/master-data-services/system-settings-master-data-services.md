@@ -61,7 +61,7 @@ manager: "jhubbard"
 |-----------------------------------|--------------------|-----------------|  
 |**Copy only committed versions**|**CopyOnlyCommittedVersion**|In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], determines whether users can copy model versions with a status of **Committed**, or versions with any status. The default value is **Yes** or **1**, which indicates that users can copy **Committed** versions only. Change to **No** or **2** to allow users to copy all versions.|  
   
- For more information, see [Versions &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md).  
+ For more information, see [Versions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 ##  <a name="Staging"></a> Staging Settings  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
 |**Log all staging transactions**|**StagingTransactionLogging**|Applies to SQL Server 2008 R2 only. Determines whether or not transactions are logged when staging records are loaded into the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. The default value is **Off** or **2**. Change to **On** or **1** to turn on logging.|  
 |**Staging batch interval**|**StagingBatchInterval**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Integration Management** functional area, the number of seconds after you select **Start Batches** that your batch is processed. The default value is **60** seconds (1 minute).|  
   
- For more information, see [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md).  
+ For more information, see [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 ##  <a name="Explorer"></a> Explorer Settings  
   

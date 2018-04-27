@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add Reference Dialog Box
-  Use the **Add Reference** dialog box to add references to a custom assembly or [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] component to your report. After you add an assembly reference, you can write expressions or embedded custom code that includes fully qualified references to classes or methods in the assembly or component. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) or [Add an Assembly Reference to a Report &#40;SSRS&#41;](../../2014/reporting-services/add-an-assembly-reference-to-a-report-ssrs.md).  
+  Use the **Add Reference** dialog box to add references to a custom assembly or [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] component to your report. After you add an assembly reference, you can write expressions or embedded custom code that includes fully qualified references to classes or methods in the assembly or component. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) or [Add an Assembly Reference to a Report &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
   
 ## Options  
  **.NET**  
@@ -36,7 +36,7 @@ manager: "mblythe"
  Use to select the name of a recently used assembly.  
   
 ## See Also  
- [Using Custom Assemblies with Reports](../../2014/reporting-services/dev-guide/using-custom-assemblies-with-reports.md)   
- [Add Code to a Report &#40;SSRS&#41;](../../2014/reporting-services/add-code-to-a-report-ssrs.md)  
+ [Using Custom Assemblies with Reports](custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Add Code to a Report &#40;SSRS&#41;](report-design/add-code-to-a-report-ssrs.md)  
   
   

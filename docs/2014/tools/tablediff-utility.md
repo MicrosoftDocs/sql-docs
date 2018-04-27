@@ -218,6 +218,6 @@ manager: "jhubbard"
  To use the **-o** or **-f** options, you must have write permissions to the specified file directory location.  
   
 ## See Also  
- [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../relational-databases/replication/compare-replicated-tables-for-differences-replication-programming.md)  
+ [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

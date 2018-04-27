@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 1.  On the **Publishers** page of the Configure Distribution Wizard, click **Add**.  
   
-2.  Click **Add SQL Server Publisher**. For information about enabling an Oracle Publisher to use a Distributor, see [Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md).  
+2.  Click **Add SQL Server Publisher**. For information about enabling an Oracle Publisher to use a Distributor, see [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md).  
   
 3.  In the **Connect to Server** dialog box, specify connection information for the Publisher that will use the remote Distributor, and then click **Connect**.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click **Add**.  
   
-2.  Click **Add SQL Server Publisher**. For information about enabling an Oracle Publisher to use a Distributor, see [Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md).  
+2.  Click **Add SQL Server Publisher**. For information about enabling an Oracle Publisher to use a Distributor, see [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md).  
   
 3.  In the **Connect to Server** dialog box, specify connection information for the Publisher that will use the remote Distributor, and then click **Connect**.  
   
@@ -52,6 +52,6 @@ manager: "jhubbard"
 ## See Also  
  [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
  [Configure Distribution](configure-distribution.md)   
- [Secure the Distributor](secure-the-distributor.md)  
+ [Secure the Distributor](security/secure-the-distributor.md)  
   
   

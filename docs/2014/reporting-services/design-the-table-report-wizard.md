@@ -37,7 +37,7 @@ manager: "mblythe"
  View the list of fields that appear in the detail section of the table. To change the order of the fields, select a field, and then click the up button or the down button.  
   
 ## See Also  
- [Tables &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/tables-report-builder-and-ssrs.md)   
+ [Tables &#40;Report Builder  and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Report Wizard Help](../../2014/reporting-services/report-wizard-help.md)  
   
   

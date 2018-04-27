@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   You must have a minimum of **Update** permission to the collection model object for the entity.  
   
--   The entity must be enabled for explicit hierarchies and collections. For more information, see [Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
+-   The entity must be enabled for explicit hierarchies and collections. For more information, see [Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 ### To create a collection  
   

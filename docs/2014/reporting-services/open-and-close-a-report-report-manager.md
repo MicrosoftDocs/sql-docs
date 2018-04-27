@@ -39,9 +39,9 @@ manager: "mblythe"
      Closing a report does not remove it from the browser cache. You must close the browser to disconnect the report.  
   
 ## See Also  
- [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)  
   
   

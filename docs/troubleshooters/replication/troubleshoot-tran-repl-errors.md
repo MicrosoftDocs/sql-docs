@@ -51,7 +51,7 @@ Errors can occur in any step of this process, and finding those errors can be th
     - If errors are occurring in the *Publisher to Distributor* section, then the issue is with the log reader agent. 
     -  If errors are occurring the *Distributor to Subscriber* section, then the issue is with the distribution agent.  
 2. Look through that agent's **Job History**  in **Job Activity Monitor** to identify details of the error. 
-    -  If job history is not showing sufficient details,  you can [enable verbose logging](#enable-verbose-logging)) on the specific agent.
+    -  If job history is not showing sufficient details,  you can [enable verbose logging](#enable-verbose-logging) on the specific agent.
 3. Attempt to determine a solution for the error.
 
 

@@ -74,8 +74,7 @@ The **Snapshot Agent** is the agent that generates the snapshot, and writes it t
         The replication agent had encountered an exception.
         Exception Message: Access to path '\\node1\repldata.....' is denied.
 
-
- If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions to the folder where your snapshot is stored, and make sure that the account used to run the **Snapshot Agent** has adequate permissions to access to the share.  
+If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions to the folder where your snapshot is stored, and make sure that the account used to run the **Snapshot Agent** has adequate permissions to access to the share.  
 
 ## Troubleshoot Errors with Log Reader Agent
 The **Log Reader Agent** connects to  your publisher database and scans the transaction log for any transactions that are marked 'for replication'. It then adds those transactions to the **Distribution** database. 

@@ -112,7 +112,8 @@ ON DELETE { **NO ACTION** | CASCADE }
  Specifies what action happens to rows in the table if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.  
   
 NO ACTION  
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and the delete action on the row in the parent table is rolled back.  
+ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and the delete action on the row in the parent table is rolled back.
+
 CASCADE  
  Corresponding rows are deleted from the referencing table if that row is deleted from the parent table.  
   

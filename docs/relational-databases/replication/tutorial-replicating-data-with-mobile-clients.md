@@ -31,7 +31,7 @@ Merge replication is a good solution to the problem of moving data between a cen
 This tutorial shows you how to configure a replication topology for mobile clients. For more information about merge replication, see the [overview of merge replication](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
   
 ## What you will learn  
-This tutorial shows you how to use merge replication to publish data from a central database to one or more mobile users so that each user gets a uniquely filtered subset of the data. 
+This tutorial teaches you to use merge replication to publish data from a central database to one or more mobile users so that each user gets a uniquely filtered subset of the data. 
 
 In this tutorial, you will learn how to:
 > [!div class="checklist"]

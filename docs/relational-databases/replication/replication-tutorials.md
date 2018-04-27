@@ -37,7 +37,7 @@ These tutorials use NODE1\SQL2016 as the publisher and distributor. They use NOD
 > Most of the tasks shown in these tutorials can be performed programmatically. For more information, see the [replication developer documentation](../../relational-databases/replication/concepts/replication-developer-documentation.md).  
   
 ## Replication tutorials  
-[Tutorial: Prepare SQL Server for replication - publisher, distributor, subscriber](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
+[Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber)](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
  
 Learn how to prepare servers so that replication can be run with least privileges. You must complete this tutorial before the other replication tutorials.  
   

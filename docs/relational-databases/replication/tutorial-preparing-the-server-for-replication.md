@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Prepare SQL Server for replication - publisher, distributor, subscriber | Microsoft Docs"
+title: "Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
 ms.prod: "sql"
@@ -23,7 +23,7 @@ ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
-# Tutorial: Prepare SQL Server for replication - publisher, distributor, subscriber
+# Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 It's important to plan for security before you configure your replication topology. This tutorial shows you how to better secure a replication topology. It also shows you how to configure distribution, which is the first step in replicating data. You must complete this tutorial before any of the others.  
   
@@ -47,7 +47,7 @@ To complete this tutorial, make sure that your system has these products and com
 - At the publisher server (source), install:  
   
    - Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Server Compact. These editions cannot be replication publishers.   
-   - The [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
+   - An [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 - At the subscriber server (destination), install any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a subscriber in transactional replication.  
   
@@ -189,7 +189,7 @@ Configuring a publisher with a remote distributor is outside the scope of this t
   
    The Distribution Configuration Wizard starts.  
   
-3. On the **Distributor** page, select <*'ServerName'*> **will act as its own Distributor; SQL Server will create a distribution database and log**. Then select **Next**:  
+3. On the **Distributor** page, select <*'ServerName'*> **will act as its own Distributor; SQL Server will create a distribution database and log**. Then select **Next**.  
 
    ![Option to make the server act as its own distributor](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
@@ -229,7 +229,7 @@ If your SQL Server Management Studio instance is running with administrative rig
   
 3. On the **User Mapping** page, in the **Users mapped to this login** list, select both the **distribution** and [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] databases.  
   
-   In the database role membership list, select the **db_owner** role for the login for both databases:  
+   In the database role membership list, select the **db_owner** role for the login for both databases.  
 
    ![Selecting the databases and their role](media/tutorial-preparing-the-server-for-replication/dbowner.png)
   

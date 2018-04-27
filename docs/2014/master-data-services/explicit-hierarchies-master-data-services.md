@@ -28,7 +28,7 @@ manager: "jhubbard"
  An explicit hierarchy can be ragged, which means that the hierarchy can end at different levels simultaneously. Each consolidated member can have an unlimited number of consolidated and leaf members underneath, or can have none. The leaf members can be under a single consolidated member or under multiple levels of consolidated members.  
   
 > [!NOTE]  
->  Before you can create an explicit hierarchy, the entity must be enabled for explicit hierarchies. For more information, see [Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+>  Before you can create an explicit hierarchy, the entity must be enabled for explicit hierarchies. For more information, see [Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## Types of Explicit Hierarchies  
  There are two types of explicit hierarchies: mandatory and non-mandatory.  
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Enable an entity for explicit hierarchies and collections.|[Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)|  
+|Enable an entity for explicit hierarchies and collections.|[Enable an Entity for Explicit Hierarchies and Collections &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Create a new explicit hierarchy.|[Create an Explicit Hierarchy &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Change the name of an existing explicity hierarchy.|[Change an Explicit Hierarchy Name &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
 |Delete an existing explicit hierarchy.|[Delete an Explicit Hierarchy &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  

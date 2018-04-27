@@ -57,7 +57,7 @@ manager: "jhubbard"
 -   To add and delete values in the constrained list, load the entity that the attribute is based on. For more information on loading entities, see [Load Data from MDS into Excel](export-data-to-excel-from-master-data-services.md).  
   
 ## See Also  
- [Domain-Based Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
+ [Domain-Based Attributes &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
  [Create an Entity &#40;MDS Add-in for Excel&#41;](create-an-entity-mds-add-in-for-excel.md)   
  [Building a Model &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   

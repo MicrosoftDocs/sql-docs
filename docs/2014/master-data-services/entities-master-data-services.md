@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  You populate the entity with a list of master data that you want to manage.  
   
- Entities can be used to build derived hierarchies, which are level-based hierarchies based on multiple entities. For more information, see [Derived Hierarchies &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ Entities can be used to build derived hierarchies, which are level-based hierarchies based on multiple entities. For more information, see [Derived Hierarchies &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md).  
   
  Entities can also be enabled to contain explicit hierarchies (ragged structures based on a single entity) and collections (one-off combinations of subsets of members). For more information, see [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) and [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
   

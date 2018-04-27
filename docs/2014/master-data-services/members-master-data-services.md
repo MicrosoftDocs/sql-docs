@@ -48,7 +48,7 @@ manager: "jhubbard"
 -   In explicit hierarchies, consolidated members can be parents of other members within the hierarchy, or they can be children.  
   
 ## Use Hierarchies and Collections to Organize Members  
- Hierarchies and collections can be used to group members for reporting or analysis. For more information, see [Hierarchies &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md) and [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
+ Hierarchies and collections can be used to group members for reporting or analysis. For more information, see [Hierarchies &#40;Master Data Services&#41;](hierarchies-master-data-services.md) and [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
   
 ## Member Example  
  In the following example, each member is made up of a Name, Code, Subcategory, StandardCost, ListPrice, and FilePhoto attribute value.  
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 -   [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [Hierarchies &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+-   [Hierarchies &#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
   
 -   [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   

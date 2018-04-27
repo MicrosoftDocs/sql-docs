@@ -35,12 +35,12 @@ manager: "jhubbard"
 |**ParentCode**<br /><br /> Required|For parent-child relationships, the code of the consolidated member that will be the parent of the child leaf or consolidated member.<br /><br /> For sibling relationships, the code of one of the siblings.|  
 |**ChildCode**<br /><br /> Required|For parent-child relationships, the code of the consolidated or leaf member that will be the child.<br /><br /> For sibling relationships, the code of one of the siblings.|  
 |**Sort Order**<br /><br /> Optional|An integer that indicates the order of the member in relation to the other members under the parent. Each child member should have a unique identifier.|  
-|**ErrorCode**|Displays an error code. For all records with a **ImportStatus_ID** of **2**, see [Staging Process Errors &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).|  
+|**ErrorCode**|Displays an error code. For all records with a **ImportStatus_ID** of **2**, see [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md).|  
   
 ## See Also  
  [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
  [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [Staging Process Errors &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+ [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  
   
   

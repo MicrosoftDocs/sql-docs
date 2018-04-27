@@ -61,7 +61,7 @@ manager: "jhubbard"
 |-----------------------------------|--------------------|-----------------|  
 |**Copy only committed versions**|**CopyOnlyCommittedVersion**|In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], determines whether users can copy model versions with a status of **Committed**, or versions with any status. The default value is **Yes** or **1**, which indicates that users can copy **Committed** versions only. Change to **No** or **2** to allow users to copy all versions.|  
   
- For more information, see [Versions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ For more information, see [Versions &#40;Master Data Services&#41;](versions-master-data-services.md).  
   
 ##  <a name="Staging"></a> Staging Settings  
   

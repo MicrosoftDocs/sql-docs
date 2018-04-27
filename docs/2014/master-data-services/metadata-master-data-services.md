@@ -51,7 +51,8 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Add metadata to a model object.|[Add Metadata &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)|  
+|Add metadata to a model object.|[Add Metadata &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
+)|  
   
 ## Related Content  
   

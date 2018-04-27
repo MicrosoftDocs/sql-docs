@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## System Settings  
  Edit system settings for all the web applications and web services associated with the selected [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
- These settings are available in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] and are stored in the database in the System Settings table (mdm.tblSystemSetting). For a list of all settings, see [System Settings &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ These settings are available in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] and are stored in the database in the System Settings table (mdm.tblSystemSetting). For a list of all settings, see [System Settings &#40;Master Data Services&#41;](system-settings-master-data-services.md).  
   
 ## See Also  
  [Set up the Database and Website for Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   

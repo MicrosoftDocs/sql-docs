@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Add an annotation to a transaction.|[Annotate a Transaction &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)|  
+|Add an annotation to a transaction.|[Annotate a Transaction &#40;Master Data Services&#41;](annotate-a-transaction-master-data-services.md)|  
   
 ## Related Content  
   

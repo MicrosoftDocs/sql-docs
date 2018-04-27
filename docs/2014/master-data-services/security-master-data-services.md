@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  You can also use security to make someone an administrator of a specific model and functional area (for example, to allow someone to create versions of the Customer model or to give someone the ability to set security permissions).  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] security is based on local or Active Directory domain users and groups. MDS security allows you to use a granular level of detail when determining the data a user can access. Because of the granularity, security can easily become complicated and you should use caution when using overlapping users and groups. For more information, see [Overlapping User and Group Permissions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] security is based on local or Active Directory domain users and groups. MDS security allows you to use a granular level of detail when determining the data a user can access. Because of the granularity, security can easily become complicated and you should use caution when using overlapping users and groups. For more information, see [Overlapping User and Group Permissions &#40;Master Data Services&#41;](overlapping-user-and-group-permissions-master-data-services.md).  
   
  You can assign security access in the **User and Group Permissions** functional area of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application or by using the web service.  
   

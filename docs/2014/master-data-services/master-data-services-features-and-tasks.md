@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 ## Create Structures to Contain Data  
   
--   [Models &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+-   [Models &#40;Master Data Services&#41;](models-master-data-services.md)  
   
 -   [Entities &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

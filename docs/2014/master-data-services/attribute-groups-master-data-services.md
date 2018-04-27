@@ -37,7 +37,7 @@ manager: "jhubbard"
  Attribute groups are administered in the **System Administration** functional area of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## Show or Hide Attribute Groups  
- When you create an attribute group, it is automatically hidden from all users except the one who created it. For more information about making the group visible, see [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ When you create an attribute group, it is automatically hidden from all users except the one who created it. For more information about making the group visible, see [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md).  
   
  If you want to hide a specific attribute within a group, you can assign **Deny** permission to the attribute. For more information, see [Leaf Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md) or [Consolidated Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md).  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Create a new attribute group and add attributes to it.|[Create an Attribute Group &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
-|Make an attribute group visible to users.|[Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)|  
+|Make an attribute group visible to users.|[Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)|  
 |Change the name of an existing attribute group.|[Change an Attribute Group Name &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
 |Delete an existing attribute group.|[Delete an Attribute Group &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
   

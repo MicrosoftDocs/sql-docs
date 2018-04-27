@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Leaf Member Staging Table &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+-   [Leaf Member Staging Table &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
   
 -   [Consolidated Member Staging Table &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   

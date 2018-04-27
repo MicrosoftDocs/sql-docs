@@ -54,7 +54,7 @@ manager: "jhubbard"
   
     -   MDS model administrator permission on the data model on order to see the model in the list.  
   
- A model must exist for you to create a package of. For more information, see [Create a Model &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ A model must exist for you to create a package of. For more information, see [Create a Model &#40;Master Data Services&#41;](create-a-model-master-data-services.md).  
   
  For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   

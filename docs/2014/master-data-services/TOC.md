@@ -1,4 +1,4 @@
-# [Master Data Services](master-data-services-installation-and-configuration.md)
+# [Master Data Services](master-data-services.md)
 ## [Backward Compatibility (Master Data Services)](backward-compatibility-master-data-services.md)
 ### [Deprecated Master Data Services Features in SQL Server 2014](deprecated-master-data-services-features.md)
 ### [Discontinued Master Data Services Features in SQL Server 2014](discontinued-master-data-services-features.md)

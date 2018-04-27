@@ -65,13 +65,13 @@ manager: "jhubbard"
   
  Before you delete any deprecated attribute, you must remove any references to the attribute such as fixing the business rules and regenerating subscription views as described earlier. Otherwise, you will get an error in the System Administration web page when you attempt to delete the deprecated attribute stating that the attribute cannot be deleted because it is referenced by an object.  
   
- To delete an attribute, see [Delete an Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)  
+ To delete an attribute, see [Delete an Attribute &#40;Master Data Services&#41;](../delete-an-attribute-master-data-services.md)  
   
 > [!TIP]  
 >  It is cumbersome to change data types for MDS attributes that have existing data and related entities, especially if there is a business rule or subscription view declared which depends on the entity. The best practice is to start with a data type that is flexible enough to hold the necessary values. For example, strings may start small, but may need to be lengthened over time, so consider the worst case scenarios. Extra text string length can be burdensome (for example, wide GUI text boxes are hard to fit on the screen), so avoid too long string length.  
   
 ## See Also  
- [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [Attributes &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
  [Building a Model &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

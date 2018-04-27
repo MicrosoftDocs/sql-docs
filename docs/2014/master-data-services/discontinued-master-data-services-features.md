@@ -44,7 +44,7 @@ manager: "jhubbard"
  You can use the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] staging process to work with collections.  
   
 ### Model Deployment Wizard  
- Packages that contain data can no longer be created and deployed by using the wizard in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application. A new command line utility can be used instead. For more information, see [Deploying Models &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ Packages that contain data can no longer be created and deployed by using the wizard in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application. A new command line utility can be used instead. For more information, see [Deploying Models &#40;Master Data Services&#41;](deploying-models-master-data-services.md).  
   
  The wizard can still be used to create and deploy packages that do not contain data.  
   

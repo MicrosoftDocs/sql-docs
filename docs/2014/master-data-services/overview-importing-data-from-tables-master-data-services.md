@@ -49,7 +49,7 @@ manager: "jhubbard"
  Deleting means purging the member from the system permanently. All transactions for the member, all relationships, and all attributes are permanently deleted.  
   
 > [!NOTE]  
->  You cannot use staging to reactivate members. You must do it manually in the Master Data Manager. For more information, see [Reactivate a Member or Collection &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+>  You cannot use staging to reactivate members. You must do it manually in the Master Data Manager. For more information, see [Reactivate a Member or Collection &#40;Master Data Services&#41;](reactivate-a-member-or-collection-master-data-services.md).  
 >   
 >  You cannot use staging to delete or deactivate collections. For more information on manually deactivating collections, see [Delete a Member or Collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md).  
   

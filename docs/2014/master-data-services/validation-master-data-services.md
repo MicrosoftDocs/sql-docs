@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Create business rules and publish them, so that data is validated against them.|[Create and Publish a Business Rule &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)|  
+|Create business rules and publish them, so that data is validated against them.|[Create and Publish a Business Rule &#40;Master Data Services&#41;](create-and-publish-a-business-rule-master-data-services.md)|  
 |Validate a version of data against business rules. Administrators only.|[Validate a Version against Business Rules &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)|  
 |Validate specific subsets of data against business rules. All users with permission to the **Explorer** functional area.|[Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Validate specific subsets of data against business rules. All users with permission to the **Explorer** functional area and using the [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|[Apply Business Rules &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  

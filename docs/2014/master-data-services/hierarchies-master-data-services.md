@@ -28,7 +28,7 @@ manager: "jhubbard"
 ## What Hierarchies Contain  
  Each hierarchy contains members from one or more entities. When a member is added, changed, or deleted, all hierarchies are updated. This ensures that the data is accurate in all hierarchies. Hierarchies also help ensure that each member is counted once and only once.  
   
- If you want to create a grouping of a subset of members, consider using a collection. For more information, see [Collections &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ If you want to create a grouping of a subset of members, consider using a collection. For more information, see [Collections &#40;Master Data Services&#41;](collections-master-data-services.md).  
   
 ## Kinds of Hierarchies  
  You can create multiple hierarchies to view and organize your members in different ways. You can create:  
@@ -69,6 +69,6 @@ manager: "jhubbard"
   
 -   [Derived Hierarchies with Explicit Caps &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [Collections &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+-   [Collections &#40;Master Data Services&#41;](collections-master-data-services.md)  
   
   

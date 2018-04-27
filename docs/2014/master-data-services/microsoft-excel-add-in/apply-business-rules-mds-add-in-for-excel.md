@@ -19,7 +19,7 @@ manager: "jhubbard"
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] apply business rules when you want to validate data and confirm that it is valid. You can correct validations and re-publish the data.  
   
 > [!NOTE]  
->  Data validation occurs automatically when you publish data. For more information, see [Validation &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+>  Data validation occurs automatically when you publish data. For more information, see [Validation Stored Procedure &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -33,7 +33,7 @@ manager: "jhubbard"
 1.  In the **Publish and Validate** group, click **Apply Rules**.  
   
     > [!NOTE]  
-    >  The number of members (rows) that are validated at one time depends on a setting in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. For more information, see [Business Rule Settings](../../2014/master-data-services/system-settings-master-data-services.md#BusinessRules).  
+    >  The number of members (rows) that are validated at one time depends on a setting in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. For more information, see [Business Rule Settings](../system-settings-master-data-services.md#BusinessRules).  
   
 2.  The data is validated against business rules and two status columns are displayed. If these columns are not displayed automatically, in the **Publish and Validate** group, click **Show Status** to view them.  
   

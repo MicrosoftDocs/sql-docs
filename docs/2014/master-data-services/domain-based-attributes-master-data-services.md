@@ -33,7 +33,7 @@ manager: "jhubbard"
  You can use the same entity as a domain-based attribute of multiple entities. For example, you can create an entity called YesNoIndicator with the members: Yes, No, and Maybe. You can create a domain-based attribute named InStock and use the YesNoIndicator entity as the source. You can also create another domain-based attribute named Approved and use the YesNoIndicator entity as a source. Any time you want users to choose from a list of the YesNoIndicator entity's members, you can use the entity as a domain-based attribute.  
   
 ## Domain-Based Attributes Form Derived Hierarchies  
- Domain-based attribute relationships are the basis for derived hierarchies. For more information, see [Derived Hierarchies &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ Domain-based attribute relationships are the basis for derived hierarchies. For more information, see [Derived Hierarchies &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md).  
   
 ## Related Tasks  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ## Related Content  
   
--   [Derived Hierarchies &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+-   [Derived Hierarchies &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md)  
   
 -   [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   

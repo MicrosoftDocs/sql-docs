@@ -19,7 +19,7 @@ manager: "jhubbard"
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], delete a row of data (a member) from the MDS repository when you no longer want it to be available to users.  
   
 > [!NOTE]  
->  Administrators can reactivate deleted members. For more information, see [Reactivate a Member or Collection &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+>  Administrators can reactivate deleted members. For more information, see [Reactivate a Member or Collection &#40;Master Data Services&#41;](reactivate-a-member-or-collection-master-data-services.md).  
   
 ## Prerequisites  
  To perform this procedure:  

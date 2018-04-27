@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Create a subscription view of your master data.|[Create a Subscription View &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)|  
+|Create a subscription view of your master data.|[Create a Subscription View &#40;Master Data Services&#41;](create-a-subscription-view-master-data-services.md)|  
 |Delete an existing subscription view.|[Delete a Subscription View &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## Related Content  

@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Prerequisites  
  To perform this procedure:  
   
--   You must add the new administrator's user name to the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Users list. For more information, see [Add a User &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+-   You must add the new administrator's user name to the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Users list. For more information, see [Add a User &#40;Master Data Services&#41;](add-a-user-master-data-services.md).  
   
 -   You must have permission to view mdm.tblUser and to execute the mdm.udpSecurityMemberProcessRebuildModel stored procedure in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For more information, see [Database Object Security &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md).  
   

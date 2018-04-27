@@ -32,7 +32,7 @@ manager: "jhubbard"
 |**Derived Levels (Derived Hierarchy View)**|Contains a derived hierarchy structure in level format.|  
   
 ## See Also  
- [Exporting Data &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)   
+ [Exporting Data &#40;Master Data Services&#41;](exporting-data-master-data-services.md)   
  [Create a Subscription View &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

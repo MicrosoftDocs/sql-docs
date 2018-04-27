@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Delete a Member or Collection (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], delete a member or collection when you no longer need it. If you want to delete members in bulk, use the staging process instead. For more information, see [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], delete a member or collection when you no longer need it. If you want to delete members in bulk, use the staging process instead. For more information, see [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](deactivate-or-delete-members-by-using-the-staging-process-master-data-services.md)  
   
 > [!NOTE]  
 >  You cannot delete a member if it is used as a domain-based attribute value for another member.  

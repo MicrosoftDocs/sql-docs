@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   The active worksheet must contain MDS-managed data and you must have made changes or additions to the MDS-managed data.  
   
--   If you are adding members, you do not have to specify a **Code** value if codes for the entity are being automatically generated. For more information, see [Automatic Code Creation &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+-   If you are adding members, you do not have to specify a **Code** value if codes for the entity are being automatically generated. For more information, see [Automatic Code Creation &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
 ### To publish data to the MDS repository  
   

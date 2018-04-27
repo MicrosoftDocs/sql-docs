@@ -25,9 +25,9 @@ manager: "jhubbard"
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|Attribute type|An attribute type describes the type of members you want to work with. In most cases, this is **Leaf**. For more information about member types, see [Members &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).|  
-|Explicit hierarchy|If you chose the **Consolidated** attribute type, choose the hierarchy the consolidated members belong to. For more information, see [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).|  
-|Attribute Groups|Attribute groups are a way of grouping subsets of attributes. Choose an attribute group if you want to show a subset of available attributes. For more information about attribute groups, see [Attribute Groups &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md).|  
+|Attribute type|An attribute type describes the type of members you want to work with. In most cases, this is **Leaf**. For more information about member types, see [Members &#40;Master Data Services&#41;](members-master-data-services.md).|  
+|Explicit hierarchy|If you chose the **Consolidated** attribute type, choose the hierarchy the consolidated members belong to. For more information, see [Explicit Hierarchies &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md).|  
+|Attribute Groups|Attribute groups are a way of grouping subsets of attributes. Choose an attribute group if you want to show a subset of available attributes. For more information about attribute groups, see [Attribute Groups &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md).|  
 |Select All|Click to select all attributes displayed in the list.|  
 |Clear All|Click to clear the selected attributes displayed in the list.<br /><br /> Note: You cannot clear **Name** and **Code**.|  
 |Up Arrow|Click to move the selected attribute up in the list. The top-to-bottom order corresponds to the left-to-right order the columns are displayed in the worksheet.|  
@@ -39,7 +39,7 @@ manager: "jhubbard"
 |Control Name|Description|  
 |------------------|-----------------|  
 |Attribute|Displays an attribute you want to filter by. If no attributes are listed, it’s because they have not been added.<br /><br /> Note: You can filter by attributes that you don’t plan to show in the worksheet.|  
-|Operator|Displays operators that correspond to the type of attribute that was selected. For more information, see [Filter Operators &#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md).|  
+|Operator|Displays operators that correspond to the type of attribute that was selected. For more information, see [Filter Operators &#40;Master Data Services&#41;](../filter-operators-master-data-services.md).|  
 |Criteria|The criteria you want to filter by.|  
 |Update Summary|When working with large datasets, click to update the **Summary** section with details of the amount of data that will be loaded.|  
 |Add|When you click an attribute in the **Columns** section and then click **Add**, an attribute is added to the list of filters.|  

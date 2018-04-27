@@ -32,7 +32,7 @@ manager: "jhubbard"
 |Parameter|Description|  
 |---------------|-----------------|  
 |**VersionName**<br /><br /> Required|The name of the version. This may or may not be case-sensitive, depending on your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] collation setting.|  
-|**LogFlag**<br /><br /> Required|Determines whether transactions are logged during the staging process. Possible values are:<br /><br /> **0**: Do not log transactions.<br />**1**: Log transactions.<br /><br /> <br /><br /> For more information about transactions, see [Transactions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).|  
+|**LogFlag**<br /><br /> Required|Determines whether transactions are logged during the staging process. Possible values are:<br /><br /> **0**: Do not log transactions.<br />**1**: Log transactions.<br /><br /> <br /><br /> For more information about transactions, see [Transactions &#40;Master Data Services&#41;](transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Required, except by web service|The **BatchTag** value as specified in the staging table.|  
 |**Batch_ID**<br /><br /> Required by web service only|The **Batch_ID** value as specified in the staging table.|  
   

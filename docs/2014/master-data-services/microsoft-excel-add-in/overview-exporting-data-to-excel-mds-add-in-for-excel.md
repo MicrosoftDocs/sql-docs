@@ -50,6 +50,6 @@ manager: "jhubbard"
   
 -   [Master Data Services Add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Security &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+-   [Security &#40;Master Data Services&#41;](securitiy-master-data-services.md)  
   
   

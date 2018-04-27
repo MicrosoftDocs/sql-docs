@@ -34,13 +34,13 @@ manager: "jhubbard"
   
 -   *MDS-managed data* is data that is stored in the MDS repository and that you load into Excel, where the data is displayed as highlighted rows. You can add data that is not MDS-managed to your worksheet, and it is not affected when you refresh the MDS-managed data.  
   
--   A *model* is a container of data. Versions of these containers can be created, and usually the latest version is the most recent. For more information, see [Models &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+-   A *model* is a container of data. Versions of these containers can be created, and usually the latest version is the most recent. For more information, see [Models &#40;Master Data Services&#41;](models-master-data-services.md).  
   
--   An *entity* is a list of data. You might think of an entity as a table in a database. For example, the **Color** entity might contain a list of colors. For more information, see [Entities &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md).  
+-   An *entity* is a list of data. You might think of an entity as a table in a database. For example, the **Color** entity might contain a list of colors. For more information, see [Entities &#40;Master Data Services&#41;](../entities-master-data-services.md).  
   
--   A *member* is a row of data. Each entity contains members. An example of a member is **Blue**. For more information, see [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md).  
+-   A *member* is a row of data. Each entity contains members. An example of a member is **Blue**. For more information, see [Members &#40;Master Data Services&#41;](../members-master-data-services.md).  
   
--   An *attribute* is a column of data. Each member has attributes. For example, the **Code** attribute for the **Blue** member is **B**. For more information about attributes, see [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md).  
+-   An *attribute* is a column of data. Each member has attributes. For example, the **Code** attribute for the **Blue** member is **B**. For more information about attributes, see [Attributes &#40;Master Data Services&#41;](../attributes-master-data-services.md).  
   
 ## Related Tasks  
   
@@ -71,6 +71,6 @@ manager: "jhubbard"
   
 -   [Building a Model &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
--   [Security &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+-   [Security &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
   

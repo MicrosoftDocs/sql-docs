@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ODBC Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **ODBC Destination Editor** dialog box to select the ODBC connection manager for the destination. This page also lets you select a table or view from the database  
   
- For more information about the ODBC destination, see [ODBC Destination](../../2014/integration-services/odbc-destination.md).  
+ For more information about the ODBC destination, see [ODBC Destination](data-flow/odbc-destination.md).  
   
  **To open the ODBC Destination Editor Connection Manager Page**  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
  Click **Preview** to view up to 200 rows of data for the table that you selected.  
   
 ## See Also  
- [ODBC Destination Custom Properties](../../2014/integration-services/odbc-destination-custom-properties.md)   
+ [ODBC Destination Custom Properties](data-flow/odbc-destination-custom-properties.md)   
  [ODBC Destination Editor &#40;Mappings Page&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
  [ODBC Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
 # OLE DB Destination Editor (Error Output Page)
   Use the **Error Output** page of the **OLE DB Destination Editor** dialog box to specify error handling options.  
   
- To learn more about the OLE DB destination, see [OLE DB Destination](../../2014/integration-services/ole-db-destination.md).  
+ To learn more about the OLE DB destination, see [OLE DB Destination](data-flow/ole-db-destination.md).  
   
 ## Options  
  **Input/Output**  
@@ -34,7 +34,7 @@ manager: "jhubbard"
  **Error**  
  Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
   
- **Related Topics:** [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ **Related Topics:** [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Not used.  
@@ -52,6 +52,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB Destination Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [OLE DB Destination Editor &#40;Mappings Page&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Load Data by Using the OLE DB Destination](../../2014/integration-services/load-data-by-using-the-ole-db-destination.md)  
+ [Load Data by Using the OLE DB Destination](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

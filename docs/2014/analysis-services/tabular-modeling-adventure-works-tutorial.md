@@ -69,7 +69,7 @@ manager: "jhubbard"
 |[Lesson 2: Add Data](lesson-2-add-data.md)|20 minutes|  
 |[Lesson 3: Rename Columns](rename-columns.md)|20 minutes|  
 |[Lesson 4: Mark as Date Table](lesson-3-mark-as-date-table.md)|3 minutes|  
-|[Lesson 5: Create Relationships](lesson-4-create-relationships.md)|10 minutes|  
+|[Lesson 5: Create Relationships](../integration-services/data-flow/transformations/create-relationships.md)|10 minutes|  
 |[Lesson 6: Create Calculated Columns](lesson-5-create-calculated-columns.md)|15 minutes|  
 |[Lesson 7: Create Measures](lesson-6-create-measures.md)|30 minutes|  
 |[Lesson 8: Create Key Performance Indicators](lesson-7-create-key-performance-indicators.md)|15 minutes|  

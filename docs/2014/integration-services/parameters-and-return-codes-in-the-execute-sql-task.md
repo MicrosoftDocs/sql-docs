@@ -26,7 +26,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  You can use parameters in an Execute SQL task only if the data provider supports them.  
   
- Parameters in SQL commands, including queries and stored procedures, are mapped to user-defined variables that are created within the scope of the Execute SQL task, a parent container, or within the scope of the package. The values of variables can be set at design time or populated dynamically at run time. You can also map parameters to system variables. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md) and [System Variables](../../2014/integration-services/system-variables.md).  
+ Parameters in SQL commands, including queries and stored procedures, are mapped to user-defined variables that are created within the scope of the Execute SQL task, a parent container, or within the scope of the package. The values of variables can be set at design time or populated dynamically at run time. You can also map parameters to system variables. For more information, see [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md) and [System Variables](system-variables.md).  
   
  However, working with parameters and return codes in an Execute SQL task is more than just knowing what parameter types the task supports and how these parameters will be mapped. There are additional usage requirements and guidelines to successfully use parameters and return codes in the Execute SQL task. The remainder of this topic covers these usage requirements and guidelines:  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
  To provide values to parameters, variables are mapped to parameter names and the Execute SQL task uses the ordinal value of the parameter name to load values from variables to parameters.  
   
- Depending on the provider that the connection manager uses, some OLE DB data types may not be supported. For example, the Excel driver recognizes only a limited set of data types. For more information about the behavior of the Jet provider with the Excel driver, see [Excel Source](../../2014/integration-services/excel-source.md).  
+ Depending on the provider that the connection manager uses, some OLE DB data types may not be supported. For example, the Excel driver recognizes only a limited set of data types. For more information about the behavior of the Jet provider with the Excel driver, see [Excel Source](data-flow/excel-source.md).  
   
 #### Using Parameters with OLE DB Connection Managers  
  When the Execute SQL task uses the OLE DB connection manager, the BypassPrepare property of the task is available. You should set this property to `true` if the Execute SQL task uses SQL statements with parameters.  
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 -   An ADO connection manager requires that either `time` or `datetimeoffset` data be stored in a parameter whose parameter type is `Input` or `Output`, and whose data type is `adVarWchar`.  
   
- For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md) and [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md) and [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ### Using Date and Time Parameters with OLE DB Connection Managers  
  When using an OLE DB connection manager, an Execute SQL task has specific storage requirements for data of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types, `date`, `time`, `datetime`, `datetime2`, and `datetimeoffset`. You must store this data in one of the following parameter types:  
@@ -177,7 +177,7 @@ manager: "jhubbard"
 |ADO|If IsQueryStoreProcedure is set to `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> If IsQueryStoreProcedure is set to `True`, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure is set to `True`.<br /><br /> `myStoredProcedure`|  
   
- In the syntax shown in the previous table, the Execute SQL task uses the **Direct Input** source type to run the stored procedure. The Execute SQL task can also use the **File Connection** source type to run a stored procedure. Regardless of whether the Execute SQL task uses the **Direct Input** or **File Connection** source type, use a parameter of the `ReturnValue` type to implement the return code. For more information about how to configure the source type of the SQL statement that the Execute SQL task runs, see [Execute SQL Task Editor &#40;General Page&#41;](../../2014/integration-services/execute-sql-task-editor-general-page.md).  
+ In the syntax shown in the previous table, the Execute SQL task uses the **Direct Input** source type to run the stored procedure. The Execute SQL task can also use the **File Connection** source type to run a stored procedure. Regardless of whether the Execute SQL task uses the **Direct Input** or **File Connection** source type, use a parameter of the `ReturnValue` type to implement the return code. For more information about how to configure the source type of the SQL statement that the Execute SQL task runs, see [Execute SQL Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md).  
   
  For more information about using return codes with Transact-SQL stored procedures, see [RETURN &#40;Transact-SQL&#41;](~/t-sql/language-elements/return-transact-sql.md).  
   
@@ -200,7 +200,7 @@ manager: "jhubbard"
 -   CodePlex sample, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com  
   
 ## See Also  
- [Execute SQL Task](../../2014/integration-services/execute-sql-task.md)   
+ [Execute SQL Task](control-flow/execute-sql-task.md)   
  [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
   

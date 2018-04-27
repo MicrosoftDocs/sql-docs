@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Add, Delete, Change Scope of User-Defined Variable in a Package
   These procedures describe how to add, delete, and change the scope of a user-defined variable in a package by using the **Variables** window.  
   
- For more information about variable scope, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).  
+ For more information about variable scope, see [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] also provides system variables that make system information available at run time and can be used in containers such as packages and event handlers. You cannot delete system variables.  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
 6.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
  [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)   
  [Set the Properties of a User-Defined Variable](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Use the Values of Variables and Parameters in a Child Package](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

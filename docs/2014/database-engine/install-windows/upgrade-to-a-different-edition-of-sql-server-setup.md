@@ -20,9 +20,9 @@ manager: "jhubbard"
   
 -   [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
--   [Editions and Components of SQL Server 2014](../../getting-started/editions-and-components-of-sql-server-2014.md)  
+-   [Editions and Components of SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)  
   
--   [Compute Capacity Limits by Edition of SQL Server](../../getting-started/compute-capacity-limits-by-edition-of-sql-server.md)  
+-   [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
 -   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 4.  The System Configuration Checker runs a discovery operation on your computer. To continue, click **OK**.  
   
-5.  On the Product Key page, select a radio button to indicate whether you are upgrading to a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2014](../../getting-started/editions-and-components-of-sql-server-2014.md) and [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
+5.  On the Product Key page, select a radio button to indicate whether you are upgrading to a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
   
 6.  On the License Terms page, read the license agreement, and then select the check box to accept the licensing terms and conditions. To continue, click **Next**. To end Setup, click **Cancel**.  
   

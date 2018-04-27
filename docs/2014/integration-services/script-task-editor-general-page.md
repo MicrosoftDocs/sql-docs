@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Script Task Editor (General Page)
   Use the **General** page of the **Script Task Editor** dialog box to name and describe the Script task.  
   
- To learn more about the Script task, see [Script Task](../../2014/integration-services/script-task.md) and [Configuring the Script Task in the Script Task Editor](../../2014/integration-services/dev-guide/configuring-the-script-task-in-the-script-task-editor.md). To learn about programming the Script task, see [Extending the Package with the Script Task](../../2014/integration-services/dev-guide/extending-the-package-with-the-script-task.md).  
+ To learn more about the Script task, see [Script Task](control-flow/script-task.md) and [Configuring the Script Task in the Script Task Editor](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). To learn about programming the Script task, see [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ## Options  
  **Name**  
@@ -37,7 +37,7 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Script Task Editor &#40;Script Page&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [Script Task Examples](../../2014/integration-services/dev-guide/script-task-examples.md)  
+ [Expressions Page](expressions/expressions-page.md)   
+ [Script Task Examples](extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

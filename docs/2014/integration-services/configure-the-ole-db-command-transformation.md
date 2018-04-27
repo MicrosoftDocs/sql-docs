@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 5.  Right-click the component and select Edit or Show **Advanced Editor**.  
   
-6.  On the **Connection Managers** tab, select an OLE DB connection manager in the **Connection Manager** list. For more information, see [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md).  
+6.  On the **Connection Managers** tab, select an OLE DB connection manager in the **Connection Manager** list. For more information, see [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
 7.  Click the **Component Properties** tab and click the ellipsis button **(…)** in the **SqlCommand** box.  
   
@@ -70,9 +70,9 @@ manager: "jhubbard"
 15. To save the updated package, click **Save** on the **File** menu.  
   
 ## See Also  
- [OLE DB Command Transformation](../../2014/integration-services/ole-db-command-transformation.md)   
- [Integration Services Transformations](../../2014/integration-services/integration-services-transformations.md)   
- [Integration Services Paths](../../2014/integration-services/integration-services-paths.md)   
- [Data Flow Task](../../2014/integration-services/data-flow-task.md)  
+ [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
+ [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services Paths](data-flow/integration-services-paths.md)   
+ [Data Flow Task](control-flow/data-flow-task.md)  
   
   

@@ -35,11 +35,11 @@ manager: "jhubbard"
   
 4.  In the **Configuration** column, select a connection manager or click **\<New connection>** to create a new connection manager of the appropriate type for the log provider. Depending on the selected provider, use one of the following connection managers:  
   
-    -   For Text files, use a File connection manager. For more information, see [File Connection Manager](../../2014/integration-services/file-connection-manager.md)  
+    -   For Text files, use a File connection manager. For more information, see [File Connection Manager](connection-manager/file-connection-manager.md)  
   
     -   For [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], use a File connection manager.  
   
-    -   For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use an OLE DB connection manager. For more information, see [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md).  
+    -   For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use an OLE DB connection manager. For more information, see [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
     -   For Windows Event Log, do nothing. [!INCLUDE[ssIS](../includes/ssis-md.md)] automatically creates the log.  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
 11. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md)   
- [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
   
   

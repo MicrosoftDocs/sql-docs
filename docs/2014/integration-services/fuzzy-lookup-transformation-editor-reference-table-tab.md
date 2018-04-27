@@ -26,9 +26,9 @@ manager: "jhubbard"
 >  The Fuzzy Lookup transformation creates a working copy of the reference table. The indexes described below are created on this working table by using a special table, not an ordinary [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] index. The transformation does not modify the existing source tables unless you select **Maintain stored index**. In this case, it creates a trigger on the reference table that updates the working table and the lookup index table based on changes to the reference table.  
   
 > [!NOTE]  
->  The `Exhaustive` and the `MaxMemoryUsage` properties of the Fuzzy Lookup transformation are not available in the **Fuzzy Lookup Transformation Editor**, but can be set by using the **Advanced Editor**. In addition, a value greater than 100 for `MaxOutputMatchesPerInput` can be specified only in the **Advanced Editor**. For more information on these properties, see the Fuzzy Lookup Transformation section of [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
+>  The `Exhaustive` and the `MaxMemoryUsage` properties of the Fuzzy Lookup transformation are not available in the **Fuzzy Lookup Transformation Editor**, but can be set by using the **Advanced Editor**. In addition, a value greater than 100 for `MaxOutputMatchesPerInput` can be specified only in the **Advanced Editor**. For more information on these properties, see the Fuzzy Lookup Transformation section of [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
- To learn more about the Fuzzy Lookup transformation, see [Fuzzy Lookup Transformation](../../2014/integration-services/fuzzy-lookup-transformation.md).  
+ To learn more about the Fuzzy Lookup transformation, see [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **OLE DB connection manager**  

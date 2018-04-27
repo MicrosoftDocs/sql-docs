@@ -36,7 +36,7 @@ manager: "jhubbard"
  **Move Variable**  
  Click a variable in the list, and then click **Move Variable** to change the variable scope. In the **Select New Scope** dialog box, select the package or a container, task, or event handler in the package, to change the variable scope.  
   
- For more information about variable scope, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).  
+ For more information about variable scope, see [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
  **Delete Variable**  
  Select a variable from the list, and then click **Delete Variable**.  
@@ -76,9 +76,9 @@ manager: "jhubbard"
  If you assign an expression to a variable, a special icon marker displays next to the variable. This special icon marker also displays next to connection managers and tasks that have expressions set on them.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
  [Use Variables in Packages](../../2014/integration-services/use-variables-in-packages.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md)   
- [Generating Dump Files for Package Execution](../../2014/integration-services/generating-dump-files-for-package-execution.md)  
+ [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)   
+ [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

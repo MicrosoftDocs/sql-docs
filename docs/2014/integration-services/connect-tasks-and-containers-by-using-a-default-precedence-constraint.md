@@ -53,7 +53,7 @@ manager: "jhubbard"
 5.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)   
+ [Precedence Constraints](control-flow/precedence-constraints.md)   
  [Set the Value of a Precedence Constraint by Using the Shortcut Menu](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Set the Properties of a Precedence Constraint](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
  [Use an Expression in a Precedence Constraint](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  

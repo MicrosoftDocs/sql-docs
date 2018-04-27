@@ -49,7 +49,7 @@ manager: "jhubbard"
 ## See Also  
  [Data Flow Path Editor &#40;Metadata Page&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Data Flow Path Editor &#40;Data Viewers Page&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Use Annotations in Packages](../../2014/integration-services/use-annotations-in-packages.md)  
+ [Data Flow](data-flow/data-flow.md)   
+ [Use Annotations in Packages](use-annotations-in-packages.md)  
   
   

@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   Connectivity components  
   
- You can install each component individually or select a combination of the components listed above. To make the best choice among the editions and components available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see [Editions and Components of SQL Server 2014](../../2014/getting-started/editions-and-components-of-sql-server-2014.md).  
+ You can install each component individually or select a combination of the components listed above. To make the best choice among the editions and components available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see [Editions and Components of SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in 32-bit and 64-bit editions. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup supports the following installation options:  
   
@@ -104,7 +104,7 @@ manager: "jhubbard"
 |Review the hardware and software requirements, operating system support, network and Internet considerations, and hard disk space requirements.|[Installation Prerequisites](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |Review the security considerations for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installation.|[Security Considerations](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |Review the details of the features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Features and Editions](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
-|Determine the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Editions and Components of SQL Server 2014](../../2014/getting-started/editions-and-components-of-sql-server-2014.md)|  
+|Determine the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Editions and Components of SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |Review the hardware configuration, and learn to prepare for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] failover cluster installation.|[Before Installing Failover Clustering](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
 ###  <a name="BKMK_Upgrading"></a> Upgrading to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  

@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  [Options &#40;Environment: Fonts and Colors Page&#41;](options-environment-fonts-and-colors-page.md)  
   
- [Options &#40;Environment-General Page&#41;](options-environment-general-page.md)  
+ [Options &#40;Environment-General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
  [Options &#40;Environment-Help-General Page&#41;](options-environment-help-general-page.md)  
   

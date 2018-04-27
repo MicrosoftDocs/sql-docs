@@ -56,7 +56,7 @@ manager: "jhubbard"
  **Designer Surface**  
  Design and maintain maintenance plans. Use the designer surface to add maintenance tasks to a plan, remove tasks from a plan, specify precedence links between the tasks, and indicate task branching and parallelism.  
   
- A precedence link between two tasks establishes a relationship between the tasks. The second task (the *dependent task*) executes only if the execution result of the first task (the *precedent task*) matches specified criteria. Typically the execution result specified is **Success**, **Failure**, or **Completion**. The maintenance plan designer surface is based on the [!INCLUDE[ssIS](../../includes/ssis-md.md)] designer surface. For more information, see [Precedence Constraints](../../integration-services/precedence-constraints.md).  
+ A precedence link between two tasks establishes a relationship between the tasks. The second task (the *dependent task*) executes only if the execution result of the first task (the *precedent task*) matches specified criteria. Typically the execution result specified is **Success**, **Failure**, or **Completion**. The maintenance plan designer surface is based on the [!INCLUDE[ssIS](../../includes/ssis-md.md)] designer surface. For more information, see [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
  As an example, a Defragment Index Task could be specified to execute only if a previous Check Database Integrity task completed successfully. The task precedence linkage feature also allows for error or failure conditions to be handled in a plan. For example, if the Check Database Integrity task failed, a Notify Operator task could notify a user or operator about the failure.  
   

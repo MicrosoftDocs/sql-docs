@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Fuzzy Grouping Transformation Editor (Columns Tab)
   Use the **Columns** tab of the **Fuzzy Grouping Transformation Editor** dialog box to specify the columns used to group rows with duplicate values.  
   
- To learn more about the Fuzzy Grouping transformation, see [Fuzzy Grouping Transformation](../../2014/integration-services/fuzzy-grouping-transformation.md).  
+ To learn more about the Fuzzy Grouping transformation, see [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
 ## Options  
  **Available Input Columns**  
@@ -63,10 +63,10 @@ manager: "jhubbard"
 |**LeadingAndTrailing**|Both leading and trailing numerals are significant.|  
   
  **Comparison Flags**  
- For information about the string comparison options, see [Comparing String Data](../../2014/integration-services/comparing-string-data.md).  
+ For information about the string comparison options, see [Comparing String Data](data-flow/comparing-string-data.md).  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Identify Similar Data Rows by Using the Fuzzy Grouping Transformation](../../2014/integration-services/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [Identify Similar Data Rows by Using the Fuzzy Grouping Transformation](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

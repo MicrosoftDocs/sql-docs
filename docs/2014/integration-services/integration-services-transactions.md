@@ -32,7 +32,7 @@ manager: "jhubbard"
  You configure transactions by setting the TransactionOption property on the container. You can set this property by using the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or you can set the property programmatically.  
   
 > [!NOTE]  
->  The `TransactionOption` property influences whether or not the value of the `IsolationLevel` property requested by a container is applied. For more information, see the description of the `IsolationLevel` property in the topic, [Setting Package Properties](../../2014/integration-services/set-package-properties.md).  
+>  The `TransactionOption` property influences whether or not the value of the `IsolationLevel` property requested by a container is applied. For more information, see the description of the `IsolationLevel` property in the topic, [Setting Package Properties](set-package-properties.md).  
   
 ### To configure a package to use transactions  
   

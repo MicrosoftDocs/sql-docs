@@ -34,7 +34,7 @@ manager: "jhubbard"
  [Configure Data Viewer &#40;Column Chart Tab&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configure Data Viewer &#40;Grid Tab&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Configure Data Viewer &#40;Histogram Tab&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Debugging Data Flow](../../2014/integration-services/debugging-data-flow.md)  
+ [Data Flow](data-flow/data-flow.md)   
+ [Debugging Data Flow](troubleshooting/debugging-data-flow.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   The Windows Event Viewer.  
   
- For descriptions of the events logged by the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service, see [Events Logged by the Integration Services Service](../../2014/integration-services/events-logged-by-the-integration-services-service.md).  
+ For descriptions of the events logged by the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service, see [Events Logged by the Integration Services Service](service/events-logged-by-the-integration-services-service.md).  
   
 ### To view service events for Integration Services in SQL Server Management Studio  
   
@@ -62,6 +62,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Manage the Integration Services Service](../../2014/integration-services/manage-the-integration-services-service.md)   
- [Add a Log for Data Flow Performance Counters](../../2014/integration-services/add-a-log-for-data-flow-performance-counters.md)  
+ [Add a Log for Data Flow Performance Counters](performance/performance-counters.md)  
   
   

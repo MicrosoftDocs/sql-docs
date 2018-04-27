@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Script Transformation Editor (Script Page)
   Use the **Script** tab of the **Script Transformation Editor** dialog box to specify a script and related properties.  
   
- To learn more about the Script component, see [Script Component](../../2014/integration-services/script-component.md) and [Configuring the Script Component in the Script Component Editor](../../2014/integration-services/dev-guide/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](../../2014/integration-services/dev-guide/extending-the-data-flow-with-the-script-component.md).  
+ To learn more about the Script component, see [Script Component](data-flow/transformations/script-component.md) and [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## Options  
  **Properties**  
@@ -36,7 +36,7 @@ manager: "jhubbard"
 |**ValidateExternalMetadata**|Indicate whether the Script transformation validates column metadata against external data sources at design time. A value of `false` delays validation until the time of execution.|  
 |**ReadOnlyVariables**|Type a comma-separated list of variables for read-only access by the Script transformation.<br /><br /> Note: Variable names are case-sensitive.|  
 |**ReadWriteVariables**|Type a comma-separated list of variables for read/write access by the Script transformation.<br /><br /> Note: Variable names are case-sensitive.|  
-|**ScriptLanguage**|Select the script language to be used by the Script component.<br /><br /> To set the default script language for Script components and Script tasks, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../../2014/integration-services/general-page.md).|  
+|**ScriptLanguage**|Select the script language to be used by the Script component.<br /><br /> To set the default script language for Script components and Script tasks, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](general-page-of-integration-services-designers-options.md).|  
 |**UserComponentTypeName**|Specifies the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> class and the `Microsoft.SqlServer.TxScript` assembly that support the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] infrastructure.|  
   
  **Edit Script**  
@@ -48,6 +48,6 @@ manager: "jhubbard"
  [Script Transformation Editor &#40;Input Columns Page&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Script Transformation Editor &#40;Connection Managers Page&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
- [Additional Script Component Examples](../../2014/integration-services/dev-guide/additional-script-component-examples.md)  
+ [Additional Script Component Examples](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

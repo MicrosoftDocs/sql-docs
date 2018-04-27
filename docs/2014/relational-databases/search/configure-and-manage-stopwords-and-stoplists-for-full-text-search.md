@@ -84,7 +84,7 @@ manager: "jhubbard"
   
     -   **Create from an existing full-text stoplist**  
   
-     For more information, see [New Full-Text Stoplist &#40;General Page&#41;](../../database-engine/new-full-text-stoplist-general-page.md).  
+     For more information, see [New Full-Text Stoplist &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

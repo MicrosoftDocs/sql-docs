@@ -23,7 +23,7 @@ manager: "jhubbard"
  Right-click a package element, and then click **Properties** to show the properties of the element in the **Properties** window, or click **Delete** to delete the element.  
   
 ## See Also  
- [View Package Objects](../../2014/integration-services/view-package-objects.md)   
- [SSIS Designer](../../2014/integration-services/ssis-designer.md)  
+ [View Package Objects](view-package-objects.md)   
+ [SSIS Designer](ssis-designer.md)  
   
   

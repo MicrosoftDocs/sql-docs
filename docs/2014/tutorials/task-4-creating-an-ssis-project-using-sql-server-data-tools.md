@@ -39,6 +39,6 @@ manager: "jhubbard"
 7.  Type **CleanseAndCurate.dtsx** and press **ENTER**. Make sure that the **extension** remains **.dtsx**.  
   
 ## Next Step  
- [Task 5: Adding Data Flow Task](../../2014/tutorials/task-5-adding-data-flow-task.md)  
+ [Task 5: Adding Data Flow Task](../integration-services/control-flow/data-flow-task.md)  
   
   

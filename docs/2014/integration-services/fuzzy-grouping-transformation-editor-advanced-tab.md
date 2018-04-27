@@ -23,9 +23,9 @@ manager: "jhubbard"
   Use the **Advanced** tab of the **Fuzzy Grouping Transformation Editor** dialog box to specify input and output columns, set similarity thresholds, and define delimiters.  
   
 > [!NOTE]  
->  The `Exhaustive` and the `MaxMemoryUsage` properties of the Fuzzy Grouping transformation are not available in the **Fuzzy Grouping Transformation Editor**, but can be set by using the **Advanced Editor**. For more information on these properties, see the Fuzzy Grouping Transformation section of [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
+>  The `Exhaustive` and the `MaxMemoryUsage` properties of the Fuzzy Grouping transformation are not available in the **Fuzzy Grouping Transformation Editor**, but can be set by using the **Advanced Editor**. For more information on these properties, see the Fuzzy Grouping Transformation section of [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
- To learn more about the Fuzzy Grouping transformation, see [Fuzzy Grouping Transformation](../../2014/integration-services/fuzzy-grouping-transformation.md).  
+ To learn more about the Fuzzy Grouping transformation, see [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
 ## Options  
  **Input key column name**  
@@ -45,6 +45,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Identify Similar Data Rows by Using the Fuzzy Grouping Transformation](../../2014/integration-services/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [Identify Similar Data Rows by Using the Fuzzy Grouping Transformation](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

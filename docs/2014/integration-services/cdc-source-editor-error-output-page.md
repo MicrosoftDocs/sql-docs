@@ -20,7 +20,7 @@ manager: "jhubbard"
 # CDC Source Editor (Error Output Page)
   Use the **Error Output** page of the **CDC Source Editor** dialog box to select error handling options.  
   
- To learn more about the CDC source, see [CDC Source](../../2014/integration-services/cdc-source.md).  
+ To learn more about the CDC source, see [CDC Source](data-flow/cdc-source.md).  
   
 ## Task List  
  **To open the CDC Source Editor Error Output Page**  
@@ -63,7 +63,7 @@ manager: "jhubbard"
  The error or the truncation is ignored and the data row is directed to the CDC source output.  
   
  **Redirect Flow**  
- The error or the truncation data row is directed to the error output of the CDC source. In this case the CDC source error handling is used. For more information, see [CDC Source](../../2014/integration-services/cdc-source.md).  
+ The error or the truncation data row is directed to the error output of the CDC source. In this case the CDC source error handling is used. For more information, see [CDC Source](data-flow/cdc-source.md).  
   
 ## See Also  
  [CDC Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   

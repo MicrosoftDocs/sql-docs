@@ -26,7 +26,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
   
- You can query views for a list of server environments, environment references, and environment variables. You can also call stored to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../2014/integration-services/ssis-catalog.md).  
+ You can query views for a list of server environments, environment references, and environment variables. You can also call stored to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](catalog/ssis-catalog.md).  
   
 ### To create and use a server environment  
   
@@ -46,13 +46,13 @@ manager: "jhubbard"
   
     3.  Enter the **Value** for the environment variable.  
   
-         For information about the rules for environment variable names, see the **Environment Variable** section in [SSIS Catalog](../../2014/integration-services/ssis-catalog.md).  
+         For information about the rules for environment variable names, see the **Environment Variable** section in [SSIS Catalog](catalog/ssis-catalog.md).  
   
     4.  Indicate whether the variable contains sensitive value, by selecting or clearing the **Sensitive** checkbox.  
   
          If you select **Sensitive**, the variable value does not display in the **Value** field.  
   
-         Sensitive values are encrypted in the SSISDB catalog. For more information about the encryption, see [SSIS Catalog](../../2014/integration-services/ssis-catalog.md).  
+         Sensitive values are encrypted in the SSISDB catalog. For more information about the encryption, see [SSIS Catalog](catalog/ssis-catalog.md).  
   
 6.  On the **Permissions** page, grant or deny permissions for selected users and roles by doing the following.  
   

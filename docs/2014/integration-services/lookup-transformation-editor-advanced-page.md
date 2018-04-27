@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Lookup Transformation Editor (Advanced Page)
   Use the **Advanced** page of the **Lookup Transformation Editor** dialog box to configure partial caching and to modify the SQL statement for the Lookup transformation.  
   
- To learn more about the Lookup transformation, see [Lookup Transformation](../../2014/integration-services/lookup-transformation.md).  
+ To learn more about the Lookup transformation, see [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **Cache size (32-bit)**  
@@ -50,11 +50,11 @@ manager: "jhubbard"
  Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
- [Lookup Transformation Editor &#40;General Page&#41;](../../2014/integration-services/lookup-transformation-editor-general-page.md)   
+ [Lookup Transformation Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Lookup Transformation Editor &#40;Connection Page&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Lookup Transformation Editor &#40;Columns Page&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Lookup Transformation Editor &#40;Error Output Page&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Fuzzy Lookup Transformation](../../2014/integration-services/fuzzy-lookup-transformation.md)  
+ [Fuzzy Lookup Transformation](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

@@ -70,7 +70,7 @@ manager: "mblythe"
  Credentials are user name and password values that grant access to a data source. After you specify your credentials, click **View Report** to get the data. If a report requires you to log on, the data that you are authorized to see might differ from the data that another user sees. Consequently, two users can run the same report and get different results. In addition, some reports contain hidden areas that are revealed based on user logon credentials or selections made in the report itself. Hidden areas in the report are excluded from search operations, producing different search results than when all parts of the report are visible.  
   
 ## See Also  
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md)  
   

@@ -111,7 +111,7 @@ manager: "mblythe"
   
 -   [Store Credentials in a Reporting Services Data Source](../../2014/reporting-services/store-credentials-in-a-reporting-services-data-source.md) [Store Credentials in a Reporting Services Data Source](../../2014/reporting-services/store-credentials-in-a-reporting-services-data-source.md)  
   
--   [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)  
+-   [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)  
   
 -   [Specify Connections for Custom Data Processing Extensions](../../2014/reporting-services/specify-connections-for-custom-data-processing-extensions.md)  
   
@@ -180,7 +180,7 @@ manager: "mblythe"
  [Shared Data Source Properties Dialog Box, Credentials](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../2014/reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs.md)  
   
   

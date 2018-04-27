@@ -123,7 +123,7 @@ manager: "mblythe"
  You successfully configured the report to get data using stored credentials. Next, you specify the subscription using the Data-Driven Subscription pages in Report Manager. See [Lesson 3: Defining a Data-Driven Subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## See Also  
- [Manage Report Data Sources](../../2014/reporting-services/manage-report-data-sources.md)   
+ [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

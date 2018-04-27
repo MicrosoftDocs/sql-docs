@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Certification by SAP
   The Microsoft Connector 1.1 for SAP BW has received certification from SAP for integration with SAP NetWeaver.  
   
- ![SAP certified - Integration with SAP NetWeaver](../../2014/integration-services/media/sapcertifiedforssis11.gif "SAP certified - Integration with SAP NetWeaver")  
+ ![SAP certified - Integration with SAP NetWeaver](media/sapcertifiedforssis11.gif "SAP certified - Integration with SAP NetWeaver")  
   
  The following table describes the details of the certification.  
   

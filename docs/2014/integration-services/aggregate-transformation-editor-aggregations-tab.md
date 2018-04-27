@@ -27,7 +27,7 @@ manager: "jhubbard"
 >   
 >  In the Aggregate transformation, **Keys** and **Keys scale** refer to the number of groups that are expected to result from a **Group by** operation. **Count distinct keys** and **Count distinct scale** refer to the number of distinct values that are expected to result from a **Distinct count** operation.  
   
- To learn more about the Aggregate transformation, see [Aggregate Transformation](../../2014/integration-services/aggregate-transformation.md).  
+ To learn more about the Aggregate transformation, see [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md).  
   
 ## Options  
  **Advanced / Basic**  
@@ -75,7 +75,7 @@ manager: "jhubbard"
 |**Maximum**|Returns the maximum value in a group. Restricted to numeric data types.|  
   
  **Comparison Flags**  
- If you choose **Group By**, use the check boxes to control how the transformation performs the comparison. For information on the string comparison options, see [Comparing String Data](../../2014/integration-services/comparing-string-data.md).  
+ If you choose **Group By**, use the check boxes to control how the transformation performs the comparison. For information on the string comparison options, see [Comparing String Data](data-flow/comparing-string-data.md).  
   
  **Count Distinct Scale**  
  Optionally specify the approximate number of distinct values that the aggregation can write. By default, the value of this option is **Unspecified**. If both `CountDistinctScale` and **CountDistinctKeys** are specified, **CountDistinctKeys** takes precedence.  
@@ -93,6 +93,6 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Aggregate Transformation Editor &#40;Advanced Tab&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
- [Aggregate Values in a Dataset by Using the Aggregate Transformation](../../2014/integration-services/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Aggregate Values in a Dataset by Using the Aggregate Transformation](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

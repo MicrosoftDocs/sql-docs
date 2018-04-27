@@ -50,7 +50,7 @@ manager: "jhubbard"
   
  Fast parse outputs the data as DT_DBDATE. Date values in truncated formats are padded. For example, YYYY becomes YYYY0101.  
   
- For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ## Time Data Type  
  Fast parse supports the following string formats for time data:  
@@ -78,7 +78,7 @@ manager: "jhubbard"
     |-HH|Truncated format that indicates the number of hours that are subtracted from UTC to obtain the local time.|  
     |Z|A value of 0 that indicates the time is represented in UTC.|  
   
-     The formats for all time and date/time data can include a time zone element. However, the system ignores the time zone value except when the data is of type DT_DBTIMESTAMPOFFSET. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+     The formats for all time and date/time data can include a time zone element. However, the system ignores the time zone value except when the data is of type DT_DBTIMESTAMPOFFSET. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
      In formats that include a time zone element, there is no space between the time element and the time zone element, as shown in the following example:  
   
@@ -105,7 +105,7 @@ manager: "jhubbard"
   
  Fast parse outputs the strings as DT_DBTIME and DT_DBTIME2. Time values in truncated formats are padded. For example, HH:MI becomes HH:MM:00.000.  
   
- For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ## Date/Time Data Type  
  Fast parse supports the following string formats for date/time data:  
@@ -126,6 +126,6 @@ manager: "jhubbard"
 |Day|Add 01 for the day of the month.|  
 |Month|Add 01 for the month of the year.|  
   
- For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
   

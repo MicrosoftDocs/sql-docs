@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 3.  Right-click the **Jobs** folder and select **New Job…**.  
   
-4.  In the **New Job** dialog box, on the **General** page, modify the general properties of the job. For more information on the available options on this page, see [Job Properties and New Job &#40;General Page&#41;](job-properties-new-job-general-page.md)  
+4.  In the **New Job** dialog box, on the **General** page, modify the general properties of the job. For more information on the available options on this page, see [Job Properties and New Job &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
 5.  On the **Steps** page, organize the job steps. For more information on the available options on this page, see [Job Properties:New Job &#40;Steps Page&#41;](job-properties-new-job-steps-page.md)  
   

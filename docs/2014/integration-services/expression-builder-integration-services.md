@@ -30,6 +30,6 @@ manager: "jhubbard"
   
 -   Evaluating the expression  
   
- For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md) and [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).  
+ For more information, see [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md) and [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md).  
   
   

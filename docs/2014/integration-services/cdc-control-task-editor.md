@@ -20,7 +20,7 @@ manager: "jhubbard"
 # CDC Control Task Editor
   Use the **CDC Control Task Editor** dialog box to configure the CDC Control task. The CDC Control task configuration includes defining a connection to the CDC database, the CDC task operation and the state management information.  
   
- To learn more about the CDC Control task, see [CDC Control Task](../../2014/integration-services/cdc-control-task.md).  
+ To learn more about the CDC Control task, see [CDC Control Task](control-flow/cdc-control-task.md).  
   
  **To open the CDC Control Task Editor**  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   **Get processing range**: This operation is used in a change processing package before invoking the data flow that uses the CDC Source data flow. It establishes a range of LSNs that the CDC Source data flow reads when invoked. The range is stored in an SSIS package variable that is used by the CDC Source during data-flow processing.  
   
-     For more information about the possible CDC states that are stored, see [Define a State Variable](../../2014/integration-services/define-a-state-variable.md).  
+     For more information about the possible CDC states that are stored, see [Define a State Variable](data-flow/define-a-state-variable.md).  
   
 -   **Mark processed range**: This operation is used in a change processing package at the end of a  CDC run (after the CDC data flow is completed successfully) to record the last LSN that was fully processed in the CDC run. The next time `GetProcessingRange` is executed, this position determines the start of the next processing range.  
   
@@ -62,12 +62,12 @@ manager: "jhubbard"
  **Variable containing the CDC state**  
  Select the SSIS package variable that stores the state information for the task operation. You should define a variable before you begin. If you select **Automatic state persistence**, the state variable is loaded and saved automatically.  
   
- For more information about defining the state variable, see [Define a State Variable](../../2014/integration-services/define-a-state-variable.md).  
+ For more information about defining the state variable, see [Define a State Variable](data-flow/define-a-state-variable.md).  
   
  **SQL Server LSN to start the CDC/Snapshot name:**  
  Type the current source database LSN or the name of the snapshot database from which the initial load is performed to determine where the CDC starts. This is available only if the **CDC Control Operation** is set to **Mark CDC Start**.  
   
- For more information about these operations, see [CDC Control Task](../../2014/integration-services/cdc-control-task.md)  
+ For more information about these operations, see [CDC Control Task](control-flow/cdc-control-task.md)  
   
  **Automatically store state in a database table**  
  Select this check box for the CDC Control task to automatically handle loading and storing the CDC state in a state table contained in the specified database. When not selected, the developer must load the CDC State when the package starts and save it whenever the CDC State changes.  
@@ -88,6 +88,6 @@ manager: "jhubbard"
  Type a name to associate with the persistent CDC state. The full load and CDC packages that work with the same CDC context will specify a common state name. This name is used for looking up the state row in the state table  
   
 ## See Also  
- [CDC Control Task Custom Properties](../../2014/integration-services/cdc-control-task-custom-properties.md)  
+ [CDC Control Task Custom Properties](control-flow/cdc-control-task-custom-properties.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Data Mining Query Task Editor (Query Tab)
   Use the **Query** tab of the **Data Mining Query Task** dialog box to create prediction queries based on a mining model. In this dialog box you can also bind parameters and result sets to variables.  
   
- To learn about implementing data mining in packages, see [Data Mining Query Task](../../2014/integration-services/data-mining-query-task.md) and [Data Mining Solutions](../analysis-services/data-mining/data-mining-solutions.md).  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](control-flow/data-mining-query-task.md) and [Data Mining Solutions](../analysis-services/data-mining/data-mining-solutions.md).  
   
 ## General Options  
  **Name**  
@@ -43,7 +43,7 @@ manager: "jhubbard"
  **Build New Query**  
  Create the data mining query using a graphical tool.  
   
- **Related Topics:** [Data Mining Query](../../2014/integration-services/data-mining-query.md)  
+ **Related Topics:** [Data Mining Query](control-flow/data-mining-query.md)  
   
 ## Parameter Mapping Tab Options  
  **Parameter Name**  

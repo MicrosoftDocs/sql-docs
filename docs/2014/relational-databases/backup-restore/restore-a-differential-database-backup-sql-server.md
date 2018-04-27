@@ -99,7 +99,7 @@ manager: "jhubbard"
   
 6.  In the **Backup sets to restore** grid, select the backups through the differential backup that you wish to restore.  
   
-     For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](restore-database-general-page.md).  
+     For information about the columns in the **Backup sets to restore** grid, see [Restore Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
 7.  On the **Options** page, in the **Restore options** panel, you can select any of the following options, if appropriate for your situation:  
   

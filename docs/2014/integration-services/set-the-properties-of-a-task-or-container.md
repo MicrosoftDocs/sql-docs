@@ -37,7 +37,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Most properties can be set by typing a value directly in the text box, or by selecting a value from a list. However, some properties are more complex and have a custom property editor. To set the property, click in the text box, and then click the build **(…)** button to open the custom editor.  
   
-6.  Optionally, create property expressions to dynamically update the properties of the task or container. For more information, see [Add or Change a Property Expression](../../2014/integration-services/add-or-change-a-property-expression.md).  
+6.  Optionally, create property expressions to dynamically update the properties of the task or container. For more information, see [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md).  
   
 7.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
@@ -51,23 +51,23 @@ manager: "jhubbard"
   
 4.  On the design surface of the **Control Flow** tab, right-click the task or container, and then click **Edit** to open the corresponding task or container editor.  
   
-     For information about how to configure the For Loop container, see [Configure a For Loop Container](../../2014/integration-services/configure-a-for-loop-container.md).  
+     For information about how to configure the For Loop container, see [Configure a For Loop Container](control-flow/for-loop-container.md).  
   
-     For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](../../2014/integration-services/configure-a-foreach-loop-container.md).  
+     For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](control-flow/foreach-loop-container.md).  
   
     > [!NOTE]  
     >  The Sequence container has no custom editor.  
   
 5.  If the task or container editor has multiple nodes, click the node that contains the property that you want to set.  
   
-6.  Optionally, click **Expressions** and, on the **Expressions** page, create property expressions to dynamically update the properties of the task or container. For more information, see [Add or Change a Property Expression](../../2014/integration-services/add-or-change-a-property-expression.md).  
+6.  Optionally, click **Expressions** and, on the **Expressions** page, create property expressions to dynamically update the properties of the task or container. For more information, see [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md).  
   
 7.  Update the property value.  
   
 8.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
- [Integration Services Containers](../../2014/integration-services/integration-services-containers.md)  
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
+ [Integration Services Containers](control-flow/integration-services-containers.md)  
   
   

@@ -75,7 +75,7 @@ manager: "mblythe"
   
  Before you can create a data-driven subscription, ensure that you satisfy the following requirements:  
   
--   **Report requirements**. The report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that uses impersonated or delegated credentials to connect to an external data source; the credentials of the user who creates or owns the subscription will not be available when the subscription is processed. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md).  
+-   **Report requirements**. The report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that uses impersonated or delegated credentials to connect to an external data source; the credentials of the user who creates or owns the subscription will not be available when the subscription is processed. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md).  
   
      You cannot subscribe to a Report Builder report that uses a model as a data source and the model contains model item security settings. Only reports that use model item security are included in this restriction.  
   

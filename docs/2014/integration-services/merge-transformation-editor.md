@@ -23,9 +23,9 @@ manager: "jhubbard"
   Use the **Merge Transformation Editor** to specify columns from two sorted sets of data to be merged.  
   
 > [!IMPORTANT]  
->  The Merge Transformation requires sorted data for its inputs. For more information about this important requirement, see [Sort Data for the Merge and Merge Join Transformations](../../2014/integration-services/sort-data-for-the-merge-and-merge-join-transformations.md).  
+>  The Merge Transformation requires sorted data for its inputs. For more information about this important requirement, see [Sort Data for the Merge and Merge Join Transformations](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
- To learn more about the Merge transformation, see [Merge Transformation](../../2014/integration-services/merge-transformation.md).  
+ To learn more about the Merge transformation, see [Merge Transformation](data-flow/transformations/merge-transformation.md).  
   
 ## Options  
  **Output Column Name**  
@@ -39,8 +39,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Sort Data for the Merge and Merge Join Transformations](../../2014/integration-services/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Merge Join Transformation](../../2014/integration-services/merge-join-transformation.md)   
- [Union All Transformation](../../2014/integration-services/union-all-transformation.md)  
+ [Sort Data for the Merge and Merge Join Transformations](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)   
+ [Union All Transformation](data-flow/transformations/union-all-transformation.md)  
   
   

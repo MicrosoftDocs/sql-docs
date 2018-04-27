@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  [Product Specifications for SQL Server 2014](../../2014/getting-started/sql-server-2014-product-specifications.md)  
   
- [What's New in SQL Server 2014](../../2014/getting-started/what-s-new-in-sql-server-2014.md)  
+ [What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)  
   
  [Introduction to SQL Server 2014 Hybrid Cloud](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md)  
   

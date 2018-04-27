@@ -85,6 +85,6 @@ manager: "mblythe"
 ## See Also  
  [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../2014/reporting-services/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)  
   
   

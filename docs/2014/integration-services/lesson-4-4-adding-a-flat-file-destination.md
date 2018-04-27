@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Step 4: Adding a Flat File Destination
   The error output of the Lookup Currency Key transformation redirects to the Script transformation any data rows that failed the lookup operation. To enhance information about the errors that occurred, the Script transformation runs a script that gets the description of errors.  
   
- In this task, you will save all this information about the failed rows to a delimited file for later processing. To save the failed rows, you must add and configure a Flat File connection manager for the text file that will contain the error data and a Flat File destination. By setting properties on the Flat File connection manager that the Flat File destination uses, you can specify how the Flat File destination formats and writes the text file. For more information, see [Flat File Connection Manager](flat-file-connection-manager.md) and [Flat File Destination](flat-file-destination.md).  
+ In this task, you will save all this information about the failed rows to a delimited file for later processing. To save the failed rows, you must add and configure a Flat File connection manager for the text file that will contain the error data and a Flat File destination. By setting properties on the Flat File connection manager that the Flat File destination uses, you can specify how the Flat File destination formats and writes the text file. For more information, see [Flat File Connection Manager](connection-manager/file-connection-manager.md) and [Flat File Destination](data-flow/flat-file-destination.md).  
   
 ### To add and configure a Flat File destination  
   

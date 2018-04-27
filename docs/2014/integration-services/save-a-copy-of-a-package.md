@@ -63,6 +63,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/configuring-the-integration-services-service-ssis-service.md)  
+ [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md)  
   
   

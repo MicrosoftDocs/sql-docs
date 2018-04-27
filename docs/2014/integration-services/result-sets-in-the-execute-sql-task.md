@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 -   The conversion will not result in data truncation.  
   
- For information about loading a result set into a variable, see [Map Result Sets to Variables in an Execute SQL Task](../../2014/integration-services/map-result-sets-to-variables-in-an-execute-sql-task.md).  
+ For information about loading a result set into a variable, see [Map Result Sets to Variables in an Execute SQL Task](control-flow/execute-sql-task.md).  
   
 ##  <a name="Configure_result_sets"></a> Configuring Result Sets in the Execute SQL Task  
  For more information about the properties of result sets that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
@@ -88,7 +88,7 @@ manager: "jhubbard"
 -   [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## Related Tasks  
- [Map Result Sets to Variables in an Execute SQL Task](../../2014/integration-services/map-result-sets-to-variables-in-an-execute-sql-task.md)  
+ [Map Result Sets to Variables in an Execute SQL Task](control-flow/execute-sql-task.md)  
   
 ## Related Content  
   

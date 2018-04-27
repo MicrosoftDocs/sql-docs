@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Flat File Connection Manager Editor (General Page)
   Use the **General** page of the **Flat File Connection Manager Editor** dialog box to select a file and data format. A flat file connection enables a package to connect to a text file.  
   
- To learn more about the Flat File connection manager, see [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md).  
+ To learn more about the Flat File connection manager, see [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## Options  
  **Connection manager name**  

@@ -227,7 +227,7 @@
 ####### [Use the Schema Generation Wizard](multidimensional-models/use-the-schema-generation-wizard-analysis-services.md)
 ####### [Understanding the Database Schemas](multidimensional-models/understanding-the-database-schemas.md)
 ####### [Understanding Incremental Generation](multidimensional-models/understanding-incremental-generation.md)
-####### [Manage Changes to Data Source Views and Data Sources](multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)
+####### (multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)
 ##### [Dimensions](multidimensional-models/dimensions-in-multidimensional-models.md)
 ###### [Create a Dimension Using the Dimension Wizard](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)
 ###### [Create a Dimension by Using an Existing Table](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)

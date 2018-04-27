@@ -80,7 +80,7 @@ manager: "jhubbard"
 |---------------|-----------------|  
 |`PackageStart`|Indicates that the package began to run.<br /><br /> Note: This log entry is automatically written to the log. You cannot exclude it.|  
 |`PackageEnd`|Indicates that the package completed.<br /><br /> Note: This log entry is automatically written to the log. You cannot exclude it.|  
-|`Diagnostic`|Provides information about the system configuration that affects package execution such as the number executables that can be run concurrently.<br /><br /> The `Diagnostic` log entry also includes before and after entries for calls to external data providers. For more information, see [Troubleshooting Tools Package Connectivity](../../2014/integration-services/troubleshooting-tools-package-connectivity.md).|  
+|`Diagnostic`|Provides information about the system configuration that affects package execution such as the number executables that can be run concurrently.<br /><br /> The `Diagnostic` log entry also includes before and after entries for calls to external data providers. For more information, see [Troubleshooting Tools Package Connectivity](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
 ###  <a name="BulkInsert"></a> Bulk Insert Task  
  The following table lists the custom log entries for the Bulk Insert task.  
@@ -166,7 +166,7 @@ manager: "jhubbard"
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Reports the results of implementing logging in the script. A log entry is written for each call to the `Log` method of the `Dts` object. The entry is written when the code is run. For more information, see [Logging in the Script Task](../../2014/integration-services/dev-guide/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Reports the results of implementing logging in the script. A log entry is written for each call to the `Log` method of the `Dts` object. The entry is written when the code is run. For more information, see [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ###  <a name="SendMail"></a> Send Mail Task  
  The following table lists the custom log entries for the Send Mail task.  
@@ -262,6 +262,6 @@ manager: "jhubbard"
  Blog entry, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=150580), on dougbert.com.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
   
   

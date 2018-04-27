@@ -41,6 +41,6 @@ manager: "jhubbard"
  **Related Topics:** [Add Variable](../../2014/integration-services/add-variable.md)  
   
 ## See Also  
- [Message Queue Task](../../2014/integration-services/message-queue-task.md)  
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

@@ -67,7 +67,7 @@ manager: "jhubbard"
 3.  Click **OK** to confirm the removal.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Projects](../../2014/integration-services/integration-services-ssis-projects.md)   
+ [Integration Services &#40;SSIS&#41; Projects](integration-services-ssis-projects-and-solutions.md)   
  [Create a New Integration Services Project](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
   

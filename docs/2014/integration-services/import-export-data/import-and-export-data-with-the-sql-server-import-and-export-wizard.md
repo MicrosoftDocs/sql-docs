@@ -34,7 +34,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  On a 64-bit computer, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs the 64-bit version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard (DTSWizard.exe). However, some data sources, such as Access or Excel, only have a 32-bit provider available. To work with these data sources, you might have to install and run the 32-bit version of the wizard. To install the 32-bit version of the wizard, select either Client Tools or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] during setup.  
   
- You can start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard from the Start menu, from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], or at the command prompt. For more information, see [Run the SQL Server Import and Export Wizard](../run-the-sql-server-import-and-export-wizard.md).  
+ You can start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard from the Start menu, from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], or at the command prompt. For more information, see [Run the SQL Server Import and Export Wizard](start-the-sql-server-import-and-export-wizard.md).  
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard can copy data to and from any data source for which a managed [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider or a native OLE DB provider is available. The list of available providers includes the following data sources:  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   If you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you run the package immediately by selecting the **Execute immediately** check box. By default, this check box is selected and the package runs immediately.  
   
-     You can also decide whether to save the package to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to the file system. If you select to save the package, you must also specify a package protection level. For more information about package protection levels, see [Access Control for Sensitive Data in Packages](../access-control-for-sensitive-data-in-packages.md).  
+     You can also decide whether to save the package to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to the file system. If you select to save the package, you must also specify a package protection level. For more information about package protection levels, see [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
      After the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard has created the package and copied the data, you can use the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to open and change the saved package by adding tasks, transformations, and event-driven logic.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 -   If you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard from an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the package cannot be run as a step in completing the wizard. Instead, the package is added to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project from which you started the wizard. You can then run the package or extend it by adding tasks, transformations, and event-driven logic by using [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
   
- For more information, see [Run the SQL Server Import and Export Wizard](../run-the-sql-server-import-and-export-wizard.md).  
+ For more information, see [Run the SQL Server Import and Export Wizard](start-the-sql-server-import-and-export-wizard.md).  
   
 ## Permissions Required by the Import and Export Wizard  
  To complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard successfully, you must have at least the following permissions:  

@@ -22,11 +22,11 @@ manager: "jhubbard"
 # Term Lookup Transformation Editor (Term Lookup Tab)
   Use the **Term Lookup** tab of the **Term Lookup Transformation Editor** dialog box to map an input column to a lookup column in a reference table and to provide an alias for each output column.  
   
- To learn more about the Term Lookup transformation, see [Term Lookup Transformation](../../2014/integration-services/term-lookup-transformation.md).  
+ To learn more about the Term Lookup transformation, see [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **Available Input Columns**  
- Using the check boxes, select input columns to pass through to the output unchanged. Drag an input column to the **Available Reference Columns** list to map it to a lookup column in the reference table. The input and lookup columns must have matching, supported data types, either DT_NTEXT or DT_WSTR. Select a mapping line and right-click to edit the mappings in the [Create Relationships](../../2014/integration-services/create-relationships.md) dialog box.  
+ Using the check boxes, select input columns to pass through to the output unchanged. Drag an input column to the **Available Reference Columns** list to map it to a lookup column in the reference table. The input and lookup columns must have matching, supported data types, either DT_NTEXT or DT_WSTR. Select a mapping line and right-click to edit the mappings in the [Create Relationships](data-flow/transformations/create-relationships.md) dialog box.  
   
  **Available Reference Columns**  
  View the available columns in the reference table. Choose the column that contains the list of terms to match.  
@@ -44,6 +44,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Term Lookup Transformation Editor &#40;Reference Table Tab&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
  [Term Lookup Transformation Editor &#40;Advanced Tab&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
- [Term Extraction Transformation](../../2014/integration-services/term-extraction-transformation.md)  
+ [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md)  
   
   

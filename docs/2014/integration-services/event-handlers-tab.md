@@ -38,9 +38,9 @@ manager: "jhubbard"
  Additionally, to add annotations, right-click the design surface, and then on the menu, click **Add Annotation**.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Event Handlers](../../2014/integration-services/integration-services-ssis-event-handlers.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)   
- [SSIS Designer](../../2014/integration-services/ssis-designer.md)   
- [Integration Services &#40;SSIS&#41; Event Handlers](../../2014/integration-services/integration-services-ssis-event-handlers.md)  
+ [Integration Services &#40;SSIS&#41; Event Handlers](integration-services-ssis-event-handlers.md)   
+ [Control Flow](control-flow/control-flow.md)   
+ [SSIS Designer](ssis-designer.md)   
+ [Integration Services &#40;SSIS&#41; Event Handlers](integration-services-ssis-event-handlers.md)  
   
   

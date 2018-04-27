@@ -23,11 +23,12 @@ manager: "jhubbard"
   
  To implement an expression in a transformation, the package must already include at least one Data Flow task and a source. For information about adding items to packages, see the following topics:  
   
--   [Add or Delete a Task or a Container in a Control Flow](../../2014/integration-services/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [Add or Delete a Task or a Container in a Control Flow](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+    
   
--   [Add or Delete a Component in a Data Flow](../../2014/integration-services/add-or-delete-a-component-in-a-data-flow.md)  
+-   [Add or Delete a Component in a Data Flow](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
--   [Connect Components in a Data Flow](../../2014/integration-services/connect-components-in-a-data-flow.md)  
+-   [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md)  
   
 ### To create an expression  
   
@@ -62,10 +63,10 @@ manager: "jhubbard"
     >  If the expression is not valid, an alert appears describing the syntax errors in the expression.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md)   
- [Conditional Split Transformation](../../2014/integration-services/conditional-split-transformation.md)   
- [Derived Column Transformation](../../2014/integration-services/derived-column-transformation.md)   
- [Data Flow Task](../../2014/integration-services/data-flow-task.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)  
+ [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)   
+ [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
+ [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
+ [Data Flow Task](control-flow/data-flow-task.md)   
+ [Data Flow](data-flow/data-flow.md)  
   
   

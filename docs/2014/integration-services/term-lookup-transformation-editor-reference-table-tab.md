@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Term Lookup Transformation Editor (Reference Table Tab)
   Use the **Reference Table** tab of the **Term Lookup Transformation Editor** dialog box to specify the connection to the reference (lookup) table.  
   
- To learn more about the Term Lookup transformation, see [Term Lookup Transformation](../../2014/integration-services/term-lookup-transformation.md).  
+ To learn more about the Term Lookup transformation, see [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **OLE DB connection manager**  
@@ -41,6 +41,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Term Lookup Transformation Editor &#40;Term Lookup Tab&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [Term Lookup Transformation Editor &#40;Advanced Tab&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
- [Term Extraction Transformation](../../2014/integration-services/term-extraction-transformation.md)  
+ [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md)  
   
   

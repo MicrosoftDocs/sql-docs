@@ -26,7 +26,7 @@ manager: "jhubbard"
  Enter the password.  
   
 ## See Also  
- [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md)   
+ [Security Overview &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
   
   

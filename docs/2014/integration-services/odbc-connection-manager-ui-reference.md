@@ -22,7 +22,7 @@ manager: "jhubbard"
 # ODBC Connection Manager UI Reference
   Use the **Configure ODBC Connection Manager** dialog box to add a connection to an ODBC data source.  
   
- To learn more about the ODBC connection manager, see [ODBC Connection Manager](../../2014/integration-services/odbc-connection-manager.md).  
+ To learn more about the ODBC connection manager, see [ODBC Connection Manager](connection-manager/odbc-connection-manager.md).  
   
 ## Options  
  **Data connections**  

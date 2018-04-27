@@ -33,9 +33,9 @@ manager: "jhubbard"
   
 -   Copy an existing package.  
   
-     If existing packages include functionality that you want to reuse, you can build the control flow and data flows in the new package more quickly by copying and pasting objects from other packages. For more information about using copy and paste in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, see [Reuse of Package Objects](../../2014/integration-services/reuse-of-package-objects.md).  
+     If existing packages include functionality that you want to reuse, you can build the control flow and data flows in the new package more quickly by copying and pasting objects from other packages. For more information about using copy and paste in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, see [Reuse of Package Objects](reuse-of-package-objects.md).  
   
-     If you create a new package by copying an existing package or by using a custom package as a template, the name and the GUID of the existing package are copied as well. You should update the name and the GUID of the new package to help differentiate it from the package from which it was copied. For example, if packages have the same GUID, it is more difficult to identify the package to which log data belongs. You can regenerate the GUID in the `ID` property and update the value of the `Name` property by using the Properties window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information, see [Set Package Properties](../../2014/integration-services/set-package-properties.md) and [dtutil Utility](../../2014/integration-services/dtutil-utility.md).  
+     If you create a new package by copying an existing package or by using a custom package as a template, the name and the GUID of the existing package are copied as well. You should update the name and the GUID of the new package to help differentiate it from the package from which it was copied. For example, if packages have the same GUID, it is more difficult to identify the package to which log data belongs. You can regenerate the GUID in the `ID` property and update the value of the `Name` property by using the Properties window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information, see [Set Package Properties](set-package-properties.md) and [dtutil Utility](dtutil-utility.md).  
   
 -   Use a custom package that you have designated as a template.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 2.  In Solution Explorer, right-click the **SSIS Packages** folder, and then click **New SSIS Package**.  
   
-3.  Optionally, add control flow, data flow tasks, and event handlers to the package. For more information, see [Control Flow](../../2014/integration-services/control-flow.md), [Data Flow](../../2014/integration-services/data-flow.md), and [Integration Services &#40;SSIS&#41; Event Handlers](../../2014/integration-services/integration-services-ssis-event-handlers.md).  
+3.  Optionally, add control flow, data flow tasks, and event handlers to the package. For more information, see [Control Flow](control-flow/control-flow.md), [Data Flow](data-flow/data-flow.md), and [Integration Services &#40;SSIS&#41; Event Handlers](integration-services-ssis-event-handlers.md).  
   
 4.  On the **File** menu, click **Save Selected Items** to save the new package.  
   

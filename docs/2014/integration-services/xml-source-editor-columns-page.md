@@ -22,7 +22,7 @@ manager: "jhubbard"
 # XML Source Editor (Columns Page)
   Use the **Columns** node of the **XML Source Editor** dialog box to map an output column to an external (source) column.  
   
- For more information about the XML source, see [XML Source](../../2014/integration-services/xml-source.md).  
+ For more information about the XML source, see [XML Source](data-flow/xml-source.md).  
   
 ## Options  
  **Available External Columns**  
@@ -38,6 +38,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [XML Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
  [XML Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
- [Extract Data by Using the XML Source](../../2014/integration-services/extract-data-by-using-the-xml-source.md)  
+ [Extract Data by Using the XML Source](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Fuzzy Lookup Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Fuzzy Lookup Transformation Editor** dialog box to set parameters for the fuzzy lookup.  
   
- To learn more about the Fuzzy Lookup transformation, see [Fuzzy Lookup Transformation](../../2014/integration-services/fuzzy-lookup-transformation.md).  
+ To learn more about the Fuzzy Lookup transformation, see [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **Maximum number of matches to output per lookup**  

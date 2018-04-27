@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Term Extraction Transformation Editor (Exclusion Tab)
   Use the **Exclusion** tab of the **Term Extraction Transformation Editor** dialog box to set up a connection to an exclusion table and specify the columns that contain exclusion terms.  
   
- To learn more about the Term Extraction transformation, see [Term Extraction Transformation](../../2014/integration-services/term-extraction-transformation.md).  
+ To learn more about the Term Extraction transformation, see [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
 ## Options  
  **Use exclusion terms**  
@@ -47,6 +47,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Term Extraction Transformation Editor &#40;Term Extraction Tab&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Term Extraction Transformation Editor &#40;Advanced Tab&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Term Lookup Transformation](../../2014/integration-services/term-lookup-transformation.md)  
+ [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

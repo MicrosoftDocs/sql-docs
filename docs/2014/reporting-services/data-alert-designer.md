@@ -42,7 +42,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  Because the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts feature is available only when you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, the report on which you want to create an alert must be saved, deployed, or uploaded to a SharePoint document library.  
 >   
->  Data alerts cannot be created on reports that use Windows Integrated authentication or prompts for credentials. The reports must use stored credentials. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Data alerts cannot be created on reports that use Windows Integrated authentication or prompts for credentials. The reports must use stored credentials. For more information, see [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md).  
   
  To open Data Alert Designer, you click the **New Data Alert** option on the **Actions** menu on the report toolbar. If you do not see the **New Data Alert** option, the report is not configured to use stored credentials. You can update the credential type by updating the report data source from the SharePoint library.  
   

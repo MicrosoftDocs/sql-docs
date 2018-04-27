@@ -30,6 +30,6 @@ manager: "jhubbard"
 |**Phantom scans started/sec**|The number of phantom scans started (on average), per second.|  
   
 ## See Also  
- [XTP &#40;In-Memory OLTP&#41; Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)  
+ [XTP &#40;In-Memory OLTP&#41; Performance Counters](../../integration-services/performance/performance-counters.md)  
   
   

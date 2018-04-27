@@ -24,11 +24,11 @@ manager: "jhubbard"
   
  A Flat File source can use one of the following types of connection managers:  
   
--   A Flat File connection manager if the source is a single flat file. For more information, see [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md).  
+-   A Flat File connection manager if the source is a single flat file. For more information, see [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
--   A Multiple Flat Files connection manager if the source is multiple flat files and the Data Flow task is inside a loop container, such as the For Loop container. On each loop of the container, the Flat File source loads data from the next file name that the Multiple Flat Files connection manager provides. For more information, see [Multiple Flat Files Connection Manager](../../2014/integration-services/multiple-flat-files-connection-manager.md).  
+-   A Multiple Flat Files connection manager if the source is multiple flat files and the Data Flow task is inside a loop container, such as the For Loop container. On each loop of the container, the Flat File source loads data from the next file name that the Multiple Flat Files connection manager provides. For more information, see [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
- To learn more about the Flat File source, see [Flat File Source](../../2014/integration-services/flat-file-source.md).  
+ To learn more about the Flat File source, see [Flat File Source](data-flow/flat-file-source.md).  
   
 ## Options  
  **Flat file connection manager**  
@@ -47,6 +47,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Flat File Source Editor &#40;Columns Page&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [Flat File Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md)  
+ [Flat File Connection Manager](connection-manager/file-connection-manager.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Flat File Source Editor (Error Output Page)
   Use the **Error Output** page of the **Flat File Source Editor** dialog box to select error-handling options and to set properties on error output columns.\  
   
- To learn more about the Flat File source, see [Flat File Source](../../2014/integration-services/flat-file-source.md).  
+ To learn more about the Flat File source, see [Flat File Source](data-flow/flat-file-source.md).  
   
 ## Options  
  **Input/Output**  
@@ -34,7 +34,7 @@ manager: "jhubbard"
  **Error**  
  Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
   
- **Related Topics:** [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ **Related Topics:** [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Specify what should happen when a truncation occurs: ignore the failure, redirect the row, or fail the component.  
@@ -52,6 +52,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Flat File Source Editor &#40;Connection Manager Page&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [Flat File Source Editor &#40;Columns Page&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md)  
+ [Flat File Connection Manager](connection-manager/file-connection-manager.md)  
   
   

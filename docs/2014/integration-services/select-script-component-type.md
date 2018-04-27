@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Select Script Component Type
   Use the **Select Script Component Type** dialog box to specify whether to create a Script Transformation that is preconfigured for use as a source, a transformation, or a destination.  
   
- To learn more about the Script component, see [Script Component](../../2014/integration-services/script-component.md) and [Configuring the Script Component in the Script Component Editor](../../2014/integration-services/dev-guide/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](../../2014/integration-services/dev-guide/extending-the-data-flow-with-the-script-component.md).  
+ To learn more about the Script component, see [Script Component](data-flow/transformations/script-component.md) and [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## Options  
  Your selection of **Source**, **Destination**, or **Transformation** affects the configuration of the Script Transformation and the pages of the Script Transformation Editor.  
@@ -31,6 +31,6 @@ manager: "jhubbard"
  [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Script Transformation Editor &#40;Script Page&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Script Transformation Editor &#40;Connection Managers Page&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
- [Additional Script Component Examples](../../2014/integration-services/dev-guide/additional-script-component-examples.md)  
+ [Additional Script Component Examples](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

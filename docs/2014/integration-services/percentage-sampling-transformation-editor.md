@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Percentage Sampling Transformation Editor
   Use the **Percentage Sampling Transformation Editor** dialog box to split part of an input into a sample using a specified percentage of rows. This transformation divides the input into two separate outputs.  
   
- To learn more about the percentage sampling transformation, see [Percentage Sampling Transformation](../../2014/integration-services/percentage-sampling-transformation.md).  
+ To learn more about the percentage sampling transformation, see [Percentage Sampling Transformation](data-flow/transformations/percentage-sampling-transformation.md).  
   
 ## Options  
  **Percentage of rows**  
@@ -41,6 +41,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Row Sampling Transformation](../../2014/integration-services/row-sampling-transformation.md)  
+ [Row Sampling Transformation](data-flow/transformations/row-sampling-transformation.md)  
   
   

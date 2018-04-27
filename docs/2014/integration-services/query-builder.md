@@ -32,11 +32,11 @@ manager: "jhubbard"
   
 -   **Viewing and editing results immediately** You can run your query and work with a recordset in a grid that allows you to scroll through and edit records in the database.  
   
- The graphical tools in the **Query Builder** dialog box let you construct queries using drag-and-drop operations. By default, the Query Builder dialog box constructs SELECT queries, but you can also build INSERT, UPDATE, or DELETE queries. All types of SQL statements can be parsed and run in the **Query Builder** dialog box. For more information about SQL statements in packages, see [Integration Services &#40;SSIS&#41; Queries](../../2014/integration-services/integration-services-ssis-queries.md).  
+ The graphical tools in the **Query Builder** dialog box let you construct queries using drag-and-drop operations. By default, the Query Builder dialog box constructs SELECT queries, but you can also build INSERT, UPDATE, or DELETE queries. All types of SQL statements can be parsed and run in the **Query Builder** dialog box. For more information about SQL statements in packages, see [Integration Services &#40;SSIS&#41; Queries](integration-services-ssis-queries.md).  
   
  To learn more about the Transact-SQL language and its syntax, see [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md).  
   
- You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md), [OLE DB Source](../../2014/integration-services/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](../../2014/integration-services/integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md).  
+ You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](control-flow/execute-sql-task.md), [OLE DB Source](data-flow/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md).  
   
  The Lookup and Fuzzy lookup transformations can also use variables with parameters and return codes. The information about the OLE DB source applies to these two transformations also.  
   
@@ -69,11 +69,11 @@ manager: "jhubbard"
 |**Results** pane|Displays the results of the query when you click **Run** on the toolbar.|  
   
 ## See Also  
- [Execute SQL Task](../../2014/integration-services/execute-sql-task.md)   
- [OLE DB Source](../../2014/integration-services/ole-db-source.md)   
- [OLE DB Destination](../../2014/integration-services/ole-db-destination.md)   
- [Lookup Transformation](../../2014/integration-services/lookup-transformation.md)   
- [Integration Services &#40;SSIS&#41; Queries](../../2014/integration-services/integration-services-ssis-queries.md)   
- [MERGE in Integration Services Packages](../../2014/integration-services/merge-in-integration-services-packages.md)  
+ [Execute SQL Task](control-flow/execute-sql-task.md)   
+ [OLE DB Source](data-flow/ole-db-source.md)   
+ [OLE DB Destination](data-flow/ole-db-destination.md)   
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)   
+ [Integration Services &#40;SSIS&#41; Queries](integration-services-ssis-queries.md)   
+ [MERGE in Integration Services Packages](control-flow/merge-in-integration-services-packages.md)  
   
   

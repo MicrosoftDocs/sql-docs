@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Bulk Insert Task Editor (General Page)
   Use the **General** page of the **Bulk Insert Task Editor** dialog box to name and describe the Bulk Insert task.  
   
- To learn about this task, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md).  
+ To learn about this task, see [Bulk Insert Task](control-flow/bulk-insert-task.md).  
   
 ## Options  
  **Name**  
@@ -38,8 +38,8 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Bulk Insert Task Editor &#40;Connection Page&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Bulk Insert Task Editor &#40;Options Page&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
+ [Expressions Page](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)  
+ [Control Flow](control-flow/control-flow.md)  
   
   

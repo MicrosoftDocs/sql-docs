@@ -41,41 +41,41 @@ manager: "jhubbard"
   
  For information about customer properties, see the following topics  
   
--   [ADO NET Custom Properties](../../2014/integration-services/ado-net-custom-properties.md)  
+-   [ADO NET Custom Properties](data-flow/ado-net-custom-properties.md)  
   
--   [CDC Control Task Custom Properties](../../2014/integration-services/cdc-control-task-custom-properties.md)  
+-   [CDC Control Task Custom Properties](control-flow/cdc-control-task-custom-properties.md)  
   
--   [CDC Source Custom Properties](../../2014/integration-services/cdc-source-custom-properties.md)  
+-   [CDC Source Custom Properties](data-flow/cdc-source-custom-properties.md)  
   
--   [Data Mining Model Training Destination Custom Properties](../../2014/integration-services/data-mining-model-training-destination-custom-properties.md)  
+-   [Data Mining Model Training Destination Custom Properties](data-flow/data-mining-model-training-destination-custom-properties.md)  
   
--   [DataReader Destination Custom Properties](../../2014/integration-services/datareader-destination-custom-properties.md)  
+-   [DataReader Destination Custom Properties](data-flow/datareader-destination-custom-properties.md)  
   
--   [Dimension Processing Destination Custom Properies](../../2014/integration-services/dimension-processing-destination-custom-properies.md)  
+-   [Dimension Processing Destination Custom Properies](data-flow/dimension-processing-destination-custom-properies.md)  
   
--   [Excel Custom Properties](../../2014/integration-services/excel-custom-properties.md)  
+-   [Excel Custom Properties](data-flow/excel-custom-properties.md)  
   
--   [Flat File Custom Properties](../../2014/integration-services/flat-file-custom-properties.md)  
+-   [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)  
   
--   [ODBC Destination Custom Properties](../../2014/integration-services/odbc-destination-custom-properties.md)  
+-   [ODBC Destination Custom Properties](data-flow/odbc-destination-custom-properties.md)  
   
--   [ODBC Source Custom Properties](../../2014/integration-services/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](data-flow/odbc-source-custom-properties.md)  
   
--   [OLE DB Custom Properties](../../2014/integration-services/ole-db-custom-properties.md)OLE DB Custom Properties  
+-   [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)OLE DB Custom Properties  
   
--   [Partition Processing Destination Custom Properties](../../2014/integration-services/partition-processing-destination-custom-properties.md)  
+-   [Partition Processing Destination Custom Properties](data-flow/partition-processing-destination-custom-properties.md)  
   
--   [Raw File Custom Properties](../../2014/integration-services/raw-file-custom-properties.md)  
+-   [Raw File Custom Properties](data-flow/raw-file-custom-properties.md)  
   
--   [Recordset Destination Custom Properties](../../2014/integration-services/recordset-destination-custom-properties.md)  
+-   [Recordset Destination Custom Properties](data-flow/recordset-destination-custom-properties.md)  
   
--   [SQL Server Compact Edition Destination Custom Properties](../../2014/integration-services/sql-server-compact-edition-destination-custom-properties.md)  
+-   [SQL Server Compact Edition Destination Custom Properties](data-flow/sql-server-compact-edition-destination-custom-properties.md)  
   
--   [SQL Server Destination Custom Properties](../../2014/integration-services/sql-server-destination-custom-properties.md)  
+-   [SQL Server Destination Custom Properties](data-flow/sql-server-destination-custom-properties.md)  
   
--   [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md)  
+-   [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)  
   
--   [XML Source Custom Properties](../../2014/integration-services/xml-source-custom-properties.md)  
+-   [XML Source Custom Properties](data-flow/xml-source-custom-properties.md)  
   
 ##  <a name="components"></a> Component Properties  
  In the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model, a component in the data flow implements the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.  
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 |Property|Data Type|Description|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|Integer|A set of flags that specify the comparison of columns that have a character data type. For more information, see [Comparing String Data](../../2014/integration-services/comparing-string-data.md).|  
+|ComparisonFlags|Integer|A set of flags that specify the comparison of columns that have a character data type. For more information, see [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Description|String|Describes the input column.|  
 |ErrorOrTruncationOperation|String|An optional string that specifies the types of errors or truncations that can occur when processing a row.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|A value that specifies the handling of errors. The values are `Fail component`, `Ignore failure`, and `Redirect row`.|  
@@ -133,7 +133,7 @@ manager: "jhubbard"
 |IdentificationString|String|A string that identifies the input column.|  
 |LineageID|Integer|The ID of the upstream column.|  
 |Name|String|The name of the input column.|  
-|SortKeyPosition|Integer|A value that indicates whether a column is sorted, its sort order, and the sequence in which multiple columns are sorted. The value **0** indicates the column is not sorted.  For more information, see [Sort Data for the Merge and Merge Join Transformations](../../2014/integration-services/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|SortKeyPosition|Integer|A value that indicates whether a column is sorted, its sort order, and the sequence in which multiple columns are sorted. The value **0** indicates the column is not sorted.  For more information, see [Sort Data for the Merge and Merge Join Transformations](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|A value that determines how the component handles truncations that occur when processing rows. The values are `Fail component`, `Ignore failure`, and `Redirect row`.|  
 |UpstreamComponentName|String|The name of the upstream component.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|A value that determines how an input column is used by the component.|  
@@ -156,7 +156,7 @@ manager: "jhubbard"
 |ID|Integer|A value that uniquely identifies the output.|  
 |IdentificationString|String|A string that identifies the output.|  
 |IsErrorOut|Boolean|Indicates whether the output is an error output.|  
-|IsSorted|Boolean|Indicates whether the output is sorted. The default value is `False`.<br /><br /> **\*\* Important \*\*** Setting the value of the `IsSorted` property to `True` does not sort the data. This property only provides a hint to downstream components that the data has been previously sorted. For more information, see [Sort Data for the Merge and Merge Join Transformations](../../2014/integration-services/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indicates whether the output is sorted. The default value is `False`.<br /><br /> **\*\* Important \*\*** Setting the value of the `IsSorted` property to `True` does not sort the data. This property only provides a hint to downstream components that the data has been previously sorted. For more information, see [Sort Data for the Merge and Merge Join Transformations](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Name|String|The name of the output.|  
 |SynchronousInputID|Integer|The ID of an input that is synchronous to the output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|A value that determines how the component handles truncations that occur when processing rows. The values are `Fail component`, `Ignore failure`, and `Redirect row`.|  
@@ -168,7 +168,7 @@ manager: "jhubbard"
   
 |Property|Data Type|Description|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|Integer|A set of flags that specify the comparison of columns that have a character data type. For more information, see [Comparing String Data](../../2014/integration-services/comparing-string-data.md).|  
+|ComparisonFlags|Integer|A set of flags that specify the comparison of columns that have a character data type. For more information, see [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Description|String|Describes the output column.|  
 |ErrorOrTruncationOperation|String|An optional string that specifies the types of errors or truncations that can occur when processing a row.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|A value that specifies the handling of errors. The values are `Fail component`, `Ignore failure`, and `Redirect row`. The default value is `Fail component`.|  
@@ -177,7 +177,7 @@ manager: "jhubbard"
 |IdentificationString|String|A string that identifies the output column.|  
 |LineageID|Integer|The ID of the output column. Downstream components refer to the column by using this value.|  
 |Name|String|The name of the output column.|  
-|SortKeyPosition|Integer|A value that indicates whether a column is sorted, its sort order, and the sequence in which multiple columns are sorted. The value **0** indicates the column is not sorted. For more information, see [Sort Data for the Merge and Merge Join Transformations](../../2014/integration-services/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|SortKeyPosition|Integer|A value that indicates whether a column is sorted, its sort order, and the sequence in which multiple columns are sorted. The value **0** indicates the column is not sorted. For more information, see [Sort Data for the Merge and Merge Join Transformations](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Integer|A value that contains the special flags of the output column.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|A value that determines how the component handles truncations that occur when processing rows. The values are `Fail component`, `Ignore failure`, and `Redirect row`. The default value is `Fail component`.|  
   
@@ -205,14 +205,14 @@ manager: "jhubbard"
 |Property|Data Type|Description|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Specifies the code page for string data that is not Unicode.|  
-|DataType|Integer (enumeration)|The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data type of the column. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).|  
+|DataType|Integer (enumeration)|The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data type of the column. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |Length|Integer|The length, measured in characters, of a column.|  
 |Precision|Integer|The precision of a numeric column.|  
 |Scale|Integer|The scale of a numeric column.|  
   
 ## See Also  
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md)   
+ [Data Flow](data-flow/data-flow.md)   
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
  [Path Properties](../../2014/integration-services/path-properties.md)   
  [Data Flow Properties that Can Be Set by Using Expressions](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  
   

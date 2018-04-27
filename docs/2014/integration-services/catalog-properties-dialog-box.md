@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  You can also view catalog properties in the catalog.catalog_property view, and set the properties by using the catalog.configure_catalog stored procedure. For more information, see [catalog.catalog_properties &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
- For information on how to create the SSISDB catalog, see [Create the SSIS Catalog](../../2014/integration-services/create-the-ssis-catalog.md).  
+ For information on how to create the SSISDB catalog, see [Create the SSIS Catalog](catalog/ssis-catalog.md).  
   
  **What do you want to do?**  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
 |Property Name (Catalog Properties dialog box)|Property Name (catalog.catalog_property view)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Encryption Algorithm Name|ENCRYPTION_CLEANUP_ENABLED|Specifies the type of encryption that is used to encrypt the sensitive parameter values in the catalog. The following are the possible values:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (default)|  
-|Validation Timeout (seconds)|VALIDATION_TIMEOUT|Specify the maxium number of seconds a project validation or a package validation can run before it is stopped. The default value is 300 seconds.<br /><br /> Performing the validation is an asynchronous operation. The larger the project or package is, the longer it will take to validate.<br /><br /> For information on validating projects and packages, see [Integration Services Data Types in Expressions](../../2014/integration-services/integration-services-data-types-in-expressions.md).|  
+|Validation Timeout (seconds)|VALIDATION_TIMEOUT|Specify the maxium number of seconds a project validation or a package validation can run before it is stopped. The default value is 300 seconds.<br /><br /> Performing the validation is an asynchronous operation. The larger the project or package is, the longer it will take to validate.<br /><br /> For information on validating projects and packages, see [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md).|  
 |Clean Logs Periodically|OPERATION_CLEANUP_ENABLED|Set the property to True to indicate that the SQL Server Agent job, operations cleanup, runs. Otherwise, set the property to False.|  
 |Retention Period (days)|RETENTION_WINDOW|Specify the maximum age of allowable operations data (in days). Data that is older than the specified number of days will be removed by the SQL Agent job, operations cleanup.|  
 |Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|Specify how many versions of a project will be stored in the catalog. Older versions of projects that exceed the maximum will be removed when the project version cleanup job runs.|  

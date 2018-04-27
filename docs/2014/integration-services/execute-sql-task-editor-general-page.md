@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Execute SQL Task Editor (General Page)
   Use the **General** page of the **Execute SQL Task Editor** dialog box to configure the Execute SQL task and provide the SQL statement that the task runs.  
   
- To learn about this task, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md), [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md), and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). To learn more about the Transact-SQL query language, see [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md).  
+ To learn about this task, see [Execute SQL Task](control-flow/execute-sql-task.md), [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md), and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). To learn more about the Transact-SQL query language, see [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md).  
   
 ## Static Options  
  **Name**  
@@ -52,7 +52,7 @@ manager: "jhubbard"
  **ConnectionType**  
  Choose the type of connection manager to use to connect to the data source. Available connection types include **OLE DB**, **ODBC**, **ADO**, **ADO.NET** and **SQLMOBILE**.  
   
- **Related Topics:** [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md), [ODBC Connection Manager](../../2014/integration-services/odbc-connection-manager.md), [ADO Connection Manager](../../2014/integration-services/ado-connection-manager.md), [ADO.NET Connection Manager](../../2014/integration-services/ado-net-connection-manager.md), [SQL Server Compact Edition Connection Manager](../../2014/integration-services/sql-server-compact-edition-connection-manager.md)  
+ **Related Topics:** [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md), [ODBC Connection Manager](connection-manager/odbc-connection-manager.md), [ADO Connection Manager](connection-manager/ado-connection-manager.md), [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition Connection Manager](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
  Choose the connection from a list of defined connection managers. To create a new connection, select \<**New connection...**>.  
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
  Depending on the connection manager type that Execute SQL task uses, you must use specific parameter markers in parameterized SQL statements.  
   
- **Related Topics:** Running Parameterized SQL Commands section in [Execute SQL Task](../../2014/integration-services/execute-sql-task.md)  
+ **Related Topics:** Running Parameterized SQL Commands section in [Execute SQL Task](control-flow/execute-sql-task.md)  
   
  This property has the options listed in the following table.  
   
@@ -101,13 +101,13 @@ manager: "jhubbard"
  **FileConnection**  
  Select an existing File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### SQLSourceType = Variable  
  **SourceVariable**  
  Select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   

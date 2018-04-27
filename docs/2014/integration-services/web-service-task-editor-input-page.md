@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Web Service Task Editor (Input Page)
   Use the **Input** page of the **Web Service Task Editor** dialog box to specify the Web Service, the Web method, and the values to provide to the Web method as input. The values can be provided either by typing strings directly in the Value column, or by selecting variables in the Value column.  
   
- To learn about this task, see [Web Service Task](../../2014/integration-services/web-service-task.md).  
+ To learn about this task, see [Web Service Task](control-flow/web-service-task.md).  
   
 ## Options  
  **Service**  
@@ -51,8 +51,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web Service Task Editor &#40;General Page&#41;](../../2014/integration-services/web-service-task-editor-general-page.md)   
+ [Web Service Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Web Service Task Editor &#40;Output Page&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

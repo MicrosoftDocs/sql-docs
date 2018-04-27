@@ -22,13 +22,13 @@ manager: "jhubbard"
 # Bulk Insert Task Editor (Connection Page)
   Use the **Connection** page of the **Bulk Insert Task Editor** dialog box to specify the source and destination of the bulk insert operation and the format to use.  
   
- To learn about working with bulk inserts, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md) and [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+ To learn about working with bulk inserts, see [Bulk Insert Task](control-flow/bulk-insert-task.md) and [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ## Options  
  **Connection**  
  Select an OLE DB connection manager in the list, or click \<**New connection...**> to create a new connection.  
   
- **Related Topics:** [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md), [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Related Topics:** [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md), [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  Type the name of the destination table or view or select a table or view in the list.  
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  If you access the source file by using a Flat File connection manager, the Bulk Insert task does not use the format specified in the Flat File connection manager. Instead, the Bulk Insert task uses either the format specified in a format file or the values of the RowDelimiter and ColumnDelimiter properties of the task.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md), [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md), [Flat File Connection Manager Editor &#40;General Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-general-page.md), [Flat File Connection Manager Editor &#40;Columns Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Flat File Connection Manager Editor &#40;Advanced Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md), [Flat File Connection Manager](connection-manager/flat-file-connection-manager.md), [Flat File Connection Manager Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md), [Flat File Connection Manager Editor &#40;Columns Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Flat File Connection Manager Editor &#40;Advanced Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **Refresh Tables**  
  Refresh the list of tables and views.  
@@ -70,8 +70,8 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Bulk Insert Task Editor &#40;General Page&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [Bulk Insert Task Editor &#40;Options Page&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
+ [Expressions Page](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)  
+ [Control Flow](control-flow/control-flow.md)  
   
   

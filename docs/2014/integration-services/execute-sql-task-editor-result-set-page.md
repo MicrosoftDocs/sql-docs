@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Execute SQL Task Editor (Result Set Page)
   Use the **Result Set** page of the **Execute SQL Task Editor** dialog to map the result of the SQL statement to new or existing variables. The options in this dialog box are disabled if **ResultSet** on the General page is set to **None**.  
   
- For more information about this task, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md) and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md).  
+ For more information about this task, see [Execute SQL Task](control-flow/execute-sql-task.md) and [Result Sets in the Execute SQL Task](../../2014/integration-services/result-sets-in-the-execute-sql-task.md).  
   
 ## Options  
  **Result Name**  
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Execute SQL Task Editor &#40;General Page&#41;](../../2014/integration-services/execute-sql-task-editor-general-page.md)   
+ [Execute SQL Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Execute SQL Task Editor &#40;Parameter Mapping Page&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md)  
   

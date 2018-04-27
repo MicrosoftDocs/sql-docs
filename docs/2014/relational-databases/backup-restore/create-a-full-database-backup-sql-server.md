@@ -305,7 +305,7 @@ GO
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Back Up Database &#40;General Page&#41;](back-up-database-general-page.md)   
+ [Back Up Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md)   
  [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Full Database Backups &#40;SQL Server&#41;](full-database-backups-sql-server.md)  

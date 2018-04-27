@@ -48,9 +48,9 @@ manager: "jhubbard"
 |Filter|Shows the current filter applied to the report, such as the Start time range.|  
 |Execution Information|Shows the start time, end time, and duration for each package execution.You can view a list of the parameter values that were used with a package execution, such as values that were passed to a child package using the Execute Package task. To view the parameter list, click Overview.|  
   
- For more information about using the Execute Package task to make values available to a child package, see [Execute Package Task](../../2014/integration-services/execute-package-task.md).  
+ For more information about using the Execute Package task to make values available to a child package, see [Execute Package Task](control-flow/execute-package-task.md).  
   
- For more information about parameters, see [Integration Services &#40;SSIS&#41; Parameters](../../2014/integration-services/integration-services-ssis-parameters.md).  
+ For more information about parameters, see [Integration Services &#40;SSIS&#41; Parameters](integration-services-ssis-package-and-project-parameters.md).  
   
 ## All Connections  
  The **All Connections** report provides the following information for connections that have failed, for executions that have occurred on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
@@ -80,6 +80,6 @@ manager: "jhubbard"
  [View Reports for the Integration Services Server](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
   
 ## Related Content  
- [Monitoring for Package Executions and Other Operations](../../2014/integration-services/monitoring-for-package-executions-and-other-operations.md)  
+ [Monitoring for Package Executions and Other Operations](performance/monitor-running-packages-and-other-operations.md)  
   
   

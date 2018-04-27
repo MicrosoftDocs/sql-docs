@@ -33,9 +33,9 @@ manager: "jhubbard"
  To add these functions in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, right-click the design surface, and then select the option you want.  
   
 ## See Also  
- [Integration Services Paths](../../2014/integration-services/integration-services-paths.md)   
- [Data Flow Task](../../2014/integration-services/data-flow-task.md)   
- [SSIS Designer](../../2014/integration-services/ssis-designer.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)  
+ [Integration Services Paths](data-flow/integration-services-paths.md)   
+ [Data Flow Task](control-flow/data-flow-task.md)   
+ [SSIS Designer](ssis-designer.md)   
+ [Data Flow](data-flow/data-flow.md)  
   
   

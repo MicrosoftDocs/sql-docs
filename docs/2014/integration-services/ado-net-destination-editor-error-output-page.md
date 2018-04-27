@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ADO NET Destination Editor (Error Output Page)
   Use the **Error Output** page of the **ADO NET Destination Editor** dialog box to specify error handling options.  
   
- To learn more about the ADO NET destination, see [ADO NET Destination](../../2014/integration-services/ado-net-destination.md).  
+ To learn more about the ADO NET destination, see [ADO NET Destination](data-flow/ado-net-destination.md).  
   
  **To open the Error Output page**  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
  **Error**  
  Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
   
- **Related Topics:** [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ **Related Topics:** [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Not used.  

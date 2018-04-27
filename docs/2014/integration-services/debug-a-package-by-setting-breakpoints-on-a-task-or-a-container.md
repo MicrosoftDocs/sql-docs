@@ -43,9 +43,9 @@ manager: "jhubbard"
 6.  To save the package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [Troubleshooting Tools for Package Development](../../2014/integration-services/troubleshooting-tools-for-package-development.md)   
- [Debug a Script by Setting Breakpoints in a Script Task and Script Component](../../2014/integration-services/dev-guide/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
- [Coding and Debugging the Script Task](../../2014/integration-services/dev-guide/coding-and-debugging-the-script-task.md)   
- [Coding and Debugging the Script Component](../../2014/integration-services/dev-guide/coding-and-debugging-the-script-component.md)  
+ [Troubleshooting Tools for Package Development](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Debug a Script by Setting Breakpoints in a Script Task and Script Component](data-flow/transformations/script-component.md)   
+ [Coding and Debugging the Script Task](control-flow/script-task.md)   
+ [Coding and Debugging the Script Component](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

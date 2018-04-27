@@ -21,7 +21,7 @@ manager: "jhubbard"
 # DQS Cleansing Transformation Editor Dialog Box
   Use the **DQS Cleansing Transformation Editor** dialog box to correct data using Data Quality Services (DQS). For more information, see [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
   
- To learn more about the transformation, see [DQS Cleansing Transformation](../../2014/integration-services/dqs-cleansing-transformation.md).  
+ To learn more about the transformation, see [DQS Cleansing Transformation](data-flow/transformations/dqs-cleansing-transformation.md).  
   
  **What do you want to do?**  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
  **Available domains**  
  Lists the available domains for the selected knowledge base. There are two types of domains: single domains, and composite domains that contain two or more single domains.  
   
- For information on how to map columns to composite domains, see [Map Columns to Composite Domains](../../2014/integration-services/map-columns-to-composite-domains.md).  
+ For information on how to map columns to composite domains, see [Map Columns to Composite Domains](data-flow/transformations/map-columns-to-composite-domains.md).  
   
  For more information about domains, see [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
 -   **Redirect Row**, which indicates that the input data is not inserted into the Data Quality Services database and is redirected to the error output.  
   
 ##  <a name="mapping"></a> Set options on the Mapping tab  
- For information on how to map columns to composite domains, see [Map Columns to Composite Domains](../../2014/integration-services/map-columns-to-composite-domains.md).  
+ For information on how to map columns to composite domains, see [Map Columns to Composite Domains](data-flow/transformations/map-columns-to-composite-domains.md).  
   
  **Available Input Columns**  
  Lists the columns from the connected data source. Select one or more columns that contain data that you want to correct.  
@@ -127,6 +127,6 @@ manager: "jhubbard"
 3.  Click **Add**.  
   
 ## See Also  
- [Apply Data Quality Rules to Data Source](../../2014/integration-services/apply-data-quality-rules-to-data-source.md)  
+ [Apply Data Quality Rules to Data Source](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

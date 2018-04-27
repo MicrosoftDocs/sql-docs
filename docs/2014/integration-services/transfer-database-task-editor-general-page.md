@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Database Task Editor (General Page)
-  Use the **General** page of the **Transfer Database Task Editor** dialog box to name and describe the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server. For more information about this task, see [Transfer Database Task](../../2014/integration-services/transfer-database-task.md).  
+  Use the **General** page of the **Transfer Database Task Editor** dialog box to name and describe the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server. For more information about this task, see [Transfer Database Task](control-flow/transfer-database-task.md).  
   
 ## Options  
  **Name**  
@@ -34,8 +34,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
  [Transfer Database Task Editor &#40;Databases Page&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

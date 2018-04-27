@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Execute Process Task Editor (Process Page)
   Use the **Process** page of the **Execute Process Task Editor** dialog box to configure the options that execute the process. These options include the executable to run, its location, command prompt arguments, and the variables that provide input and capture output.  
   
- To learn about this task, see [Execute Process Task](../../2014/integration-services/execute-process-task.md).  
+ To learn about this task, see [Execute Process Task](control-flow/execute-process-task.md).  
   
 ## Options  
  **RequireFullFileName**  
@@ -65,6 +65,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

@@ -53,7 +53,7 @@ manager: "jhubbard"
 ## See Also  
  [Data Mining Programming](../analysis-services/dev-guide/data-mining-programming.md)   
  [Developer's Guide &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Developer's Guide &#40;Integration Services&#41;](../integration-services/dev-guide/developer-s-guide-integration-services.md)   
+ [Developer's Guide &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [Developer's Guide &#40;Replication&#41;](replication/dev-guide/developer-s-guide-replication.md)   
  [Developer's Guide &#40;Reporting Services&#41;](../reporting-services/dev-guide/developer-s-guide-reporting-services.md)  
   

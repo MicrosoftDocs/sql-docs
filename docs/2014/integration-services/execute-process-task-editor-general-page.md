@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Execute Process Task Editor (General Page)
   Use the **General** pageof the **Execute Process Task Editor** dialog box to name and describe the Execute Process task.  
   
- To learn about this task, see [Execute Process Task](../../2014/integration-services/execute-process-task.md).  
+ To learn about this task, see [Execute Process Task](control-flow/execute-process-task.md).  
   
 ## Options  
  **Name**  
@@ -37,6 +37,6 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Execute Process Task Editor &#40;Process Page&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

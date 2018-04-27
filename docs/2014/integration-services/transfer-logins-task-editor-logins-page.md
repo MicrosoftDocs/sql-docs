@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Logins Task Editor (Logins Page)
-  Use the **Logins** page of the **Transfer Logins Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Logins Task](../../2014/integration-services/transfer-logins-task.md).  
+  Use the **Logins** page of the **Transfer Logins Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Logins Task](control-flow/transfer-logins-task.md).  
   
 > [!IMPORTANT]  
 >  When the Transfer Logins task is executed, logins are created on the destination server with random passwords and the passwords are disabled. To use these logins, a member of the **sysadmin** fixed server role must change the passwords and then enable them. The **sa** login cannot be transferred.  
@@ -63,10 +63,10 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
- [Transfer Logins Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-logins-task-editor-general-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md)   
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
+ [Transfer Logins Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [Expressions Page](expressions/expressions-page.md)   
+ [SMO Connection Manager](connection-manager/smo-connection-manager.md)   
  [Strong Passwords](../relational-databases/security/strong-passwords.md)   
  [Security Considerations for a SQL Server Installation](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

@@ -55,37 +55,37 @@ manager: "mblythe"
   
  **Control Flow Components**  
   
--   [Analysis Services Execute DDL Task](../../integration-services/analysis-services-execute-ddl-task.md)  
+-   [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Analysis Services Processing Task](../../integration-services/analysis-services-processing-task.md)  
+-   [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
--   [CDC Control Task](../../integration-services/cdc-control-task.md)  
+-   [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
 -   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
   
--   [Data Mining Query Task](../../integration-services/data-mining-query-task.md)  
+-   [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)  
   
--   [Data Profiling Task](../../integration-services/data-profiling-task.md)  
+-   [Data Profiling Task](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Data Flow Components**  
   
--   [CDC Flow Components](../../integration-services/cdc-flow-components.md)  
+-   [CDC Flow Components](../../integration-services/data-flow/cdc-flow-components.md)  
   
--   [Conditional Split Transformation](../../integration-services/conditional-split-transformation.md)  
+-   [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Data Conversion Transformation](../../integration-services/data-conversion-transformation.md)  
+-   [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Data Mining Model Training Destination](../../integration-services/data-mining-model-training-destination.md)  
+-   [Data Mining Model Training Destination](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Data Mining Query Transformation](../../integration-services/data-mining-query-transformation.md)  
+-   [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
--   [Derived Column Transformation](../../integration-services/derived-column-transformation.md)  
+-   [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Percentage Sampling Transformation](../../integration-services/percentage-sampling-transformation.md)  
+-   [Percentage Sampling Transformation](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Term Extraction Transformation](../../integration-services/term-extraction-transformation.md)  
+-   [Term Extraction Transformation](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
--   [Term Lookup Transformation](../../integration-services/term-lookup-transformation.md)  
+-   [Term Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
 ##  <a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Although [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is typically not seen as a critical component of data mining solutions, it provides the following features that are useful for presentation of data mining solutions.  

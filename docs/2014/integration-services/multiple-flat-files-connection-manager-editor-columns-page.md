@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Multiple Flat Files Connection Manager Editor (Columns Page)
   Use the **Columns** node of the **Multiple Flat Files Connection Manager Editor** dialog box to specify the row and column information, and to preview the first selected file.  
   
- To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](../../2014/integration-services/multiple-flat-files-connection-manager.md).  
+ To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
 ## Static Options  
  **Connection manager name**  
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Multiple Flat Files Connection Manager Editor &#40;General Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)   
+ [Multiple Flat Files Connection Manager Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Multiple Flat Files Connection Manager Editor &#40;Advanced Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
  [Multiple Flat Files Connection Manager Editor &#40;Preview Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   

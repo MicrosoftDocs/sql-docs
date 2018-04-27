@@ -27,7 +27,7 @@ manager: "jhubbard"
 # Data Flow Properties that Can Be Set by Using Expressions
   The values of certain properties of data flow objects can be specified by using property expressions available on the Data Flow task container.  
   
- For information about using property expressions, see [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md).  
+ For information about using property expressions, see [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md).  
   
  You can use property expressions to customize configurations for each deployed instance of a package. You can also use property expressions to specify run-time constraints for a package by using the **/set** option with the **dtexec** command prompt utility. For example, you can constrain the `MaximumThreads` used by the Sort transformation, or the `MaxMemoryUsage` of the Fuzzy Grouping and Fuzzy Lookup transformations. If unconstrained, these transformations may cache large amounts of data in memory.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 |XML source|XMLData property<br /><br /> XMLSchemaDefinition property|  
   
 ### Data Flow Transformations  
- For more information about these custom properties, see [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
+ For more information about these custom properties, see [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
 |Data Flow object|Property|  
 |----------------------|--------------|  
@@ -73,15 +73,15 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Add or Change a Property Expression](../../2014/integration-services/add-or-change-a-property-expression.md)  
+-   [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md)  
   
 ## Related Content  
  Technical article, [SSIS Expression Cheat Sheet](http://pragmaticworks.com/cheatsheet/), on pragmaticworks.com  
   
 ## See Also  
- [Use Property Expressions in Packages](../../2014/integration-services/use-property-expressions-in-packages.md)   
+ [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md)   
  [Common Properties](../../2014/integration-services/common-properties.md)   
- [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md)   
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
  [Path Properties](../../2014/integration-services/path-properties.md)  
   
   

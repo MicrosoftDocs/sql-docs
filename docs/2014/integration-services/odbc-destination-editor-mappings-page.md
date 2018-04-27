@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ODBC Destination Editor (Mappings Page)
   Use the **Mappings** page of the **ODBC Destination Editor** dialog box to map input columns to destination columns.  
   
- To learn more about the ODBC destination, see [ODBC Destination](../../2014/integration-services/odbc-destination.md).  
+ To learn more about the ODBC destination, see [ODBC Destination](data-flow/odbc-destination.md).  
   
 ## Options  
   

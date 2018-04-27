@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   [Back Up and Restore of System Databases &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes the **dtutil** command-prompt utility (dtutil.exec), which you can use to manage packages. For more information, see [dtutil Utility](../../2014/integration-services/dtutil-utility.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes the **dtutil** command-prompt utility (dtutil.exec), which you can use to manage packages. For more information, see [dtutil Utility](dtutil-utility.md).  
   
 ## Configuration Files  
  Any configuration files that the packages include are stored in the file system. These files are not backed up when you back up the msdb database; therefore, you should make sure that the configuration files are backed up regularly as part of your plan for securing packages saved to msdb. To include configurations in the backup of the msdb database, you should consider using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configuration type instead of file-based configurations.  

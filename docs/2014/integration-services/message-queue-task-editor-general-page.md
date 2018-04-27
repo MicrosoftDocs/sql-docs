@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Message Queue Task Editor (General Page)
   Use the **General page** of the **Message Queue Task Editor** dialog box to name and describe the Message Queue task, to specify the message format, and to indicate whether the task sends or receives messages.  
   
- To learn about this task, see [Message Queue Task](../../2014/integration-services/message-queue-task.md).  
+ To learn about this task, see [Message Queue Task](control-flow/message-queue-task.md).  
   
 ## Options  
  **Name**  
@@ -40,7 +40,7 @@ manager: "jhubbard"
  **MSMQConnection**  
  Select an existing MSMQ connection manager or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics**: [MSMQ Connection Manager](../../2014/integration-services/msmq-connection-manager.md), [MSMQ Connection Manager Editor](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **Related Topics**: [MSMQ Connection Manager](connection-manager/msmq-connection-manager.md), [MSMQ Connection Manager Editor](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **Message**  
  Specify whether the Message Queue task sends or receive messages. If you select **Send message**, the Send page is listed in the left pane of the dialog box; if you select **Receive message**, the Receive page is listed. By default, this value is set to **Send message**.  
@@ -49,6 +49,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Message Queue Task Editor &#40;Receive Page&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Message Queue Task Editor &#40;Send Page&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

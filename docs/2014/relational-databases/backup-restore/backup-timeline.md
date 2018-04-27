@@ -55,6 +55,6 @@ manager: "jhubbard"
  Can only be positioned along the timeline where the restore is possible. Moving the red line along the timeline adjusts the date and time displayed in the **Date** and **Time** boxes.  
   
 ## See Also  
- [Restore Database &#40;General Page&#41;](restore-database-general-page.md)  
+ [Restore Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

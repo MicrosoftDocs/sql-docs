@@ -27,11 +27,11 @@ manager: "jhubbard"
   
 1.  Open the package in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], and then click the **Parameters** tab in the SSIS Designer.  
   
-     ![Package Parameters Tab](../../2014/integration-services/media/denali-package-parameters.gif "Package Parameters Tab")  
+     ![Package Parameters Tab](media/denali-package-parameters.gif "Package Parameters Tab")  
   
 2.  Click the **Add Parameter** button on the toolbar.  
   
-     ![Add Toolbar Button](../../2014/integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Add Toolbar Button](media/denali-parameter-add.gif "Add Toolbar Button")  
   
 3.  Enter values for the **Name**, **Data Type**, **Value**, **Sensitive**, and **Required** properties in the list itself or in the **Properties** window. The following table describes these properties.  
   
@@ -61,11 +61,11 @@ manager: "jhubbard"
   
 2.  Right-click **Project.params** in Solution Explorer, and then click **Open** (OR) double-click **Project.params** to open it.  
   
-     ![Project Parameters Window](../../2014/integration-services/media/denali-project-parameters.gif "Project Parameters Window")  
+     ![Project Parameters Window](media/denali-project-parameters.gif "Project Parameters Window")  
   
 3.  Click the **Add Parameter** button on the toolbar.  
   
-     ![Add Toolbar Button](../../2014/integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Add Toolbar Button](media/denali-parameter-add.gif "Add Toolbar Button")  
   
 4.  Enter values for the **Name**, **Data Type**, **Value**, **Sensitive**, and **Required** properties.  
   
@@ -84,6 +84,6 @@ manager: "jhubbard"
     >  You can in-place edit in the list or use the **Properties** window to modify the values of parameter properties. You can delete a parameter by using the **Delete (X)** toolbar button. Using the last toolbar button to open the **Manage Parameter Values** dialog box, you can specify a value for a parameter that is used only when you execute the package in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Parameters](../../2014/integration-services/integration-services-ssis-parameters.md)  
+ [Integration Services &#40;SSIS&#41; Parameters](integration-services-ssis-package-and-project-parameters.md)  
   
   

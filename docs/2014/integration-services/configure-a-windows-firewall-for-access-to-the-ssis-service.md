@@ -31,7 +31,7 @@ manager: "jhubbard"
  The windowsfirewall system helps prevent unauthorized access to computer resources over a network connection. To access [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] through this firewall, you have to configure the firewall to enable access.  
   
 > [!IMPORTANT]  
->  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/configuring-the-integration-services-service-ssis-service.md).  
+>  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
  The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service uses the DCOM protocol. For more information about how the DCOM protocol works through firewalls, see the article, "[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)," in the MSDN Library.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
     >  To configure the windowsfirewall, this procedure uses the **Windows Firewall** item in Control Panel. The **Windows Firewall** item only configures the firewall for the current network location profile. However, you can also configure the windowsfirewall by using the **netsh** command line tool or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) snap-in named windowsfirewall with Advanced Security. For more information about these tools, see [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## See Also  
- [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/configuring-the-integration-services-service-ssis-service.md)   
- [Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/integration-services-service-ssis-service.md)  
+ [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md)   
+ [Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md)  
   
   

@@ -366,7 +366,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Manage Job Steps](manage-job-steps.md)   
- [SQL Server Agent Jobs for Packages](../../integration-services/sql-server-agent-jobs-for-packages.md)   
+ [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Replication Agent Administration](../../relational-databases/replication/replication-agent-administration.md)  
   
   

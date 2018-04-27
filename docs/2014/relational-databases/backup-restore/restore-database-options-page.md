@@ -35,7 +35,7 @@ manager: "jhubbard"
  To modify aspects of the behavior of the restore operation, use the options of the **Restore options** panel.  
   
  **Overwrite the existing database [WITH REPLACE]**  
- The restore operation will overwrite the files of any database that is currently using the database name that you are specifying in the **Restore to**field on the [General](restore-database-general-page.md) page of the **Restore Database** dialog box. The files of the existing database will be overwritten even if you are restoring backups from a different database to the existing database name. Selecting this option is equivalent to using the REPLACE option in a [RESTORE](~/t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ The restore operation will overwrite the files of any database that is currently using the database name that you are specifying in the **Restore to**field on the [General](../../integration-services/general-page-of-integration-services-designers-options.md) page of the **Restore Database** dialog box. The files of the existing database will be overwritten even if you are restoring backups from a different database to the existing database name. Selecting this option is equivalent to using the REPLACE option in a [RESTORE](~/t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Use this option only after careful consideration. For more information, see [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -58,7 +58,7 @@ manager: "jhubbard"
  To determine the state of the database after the store operation, you must select one of the options of the **Recovery state** panel.  
   
  **RESTORE WITH RECOVERY**  
- Recovers the database after restoring the final backup checked in the **Backup sets to restore**grid on the [General page](restore-database-general-page.md). This is the default option and is equivalent to specifying WITH RECOVERY in a [RESTORE](~/t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Recovers the database after restoring the final backup checked in the **Backup sets to restore**grid on the [General page](../../integration-services/general-page-of-integration-services-designers-options.md). This is the default option and is equivalent to specifying WITH RECOVERY in a [RESTORE](~/t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Under the full recovery model or bulk-logged recovery model, choose this option only if you are restoring all the log files now.  
@@ -116,6 +116,6 @@ manager: "jhubbard"
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Restore Database &#40;General Page&#41;](restore-database-general-page.md)  
+ [Restore Database &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

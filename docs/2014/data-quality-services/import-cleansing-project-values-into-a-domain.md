@@ -110,6 +110,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)   
- [DQS Cleansing Transformation](../../2014/integration-services/dqs-cleansing-transformation.md)  
+ [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

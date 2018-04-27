@@ -88,7 +88,7 @@ manager: "jhubbard"
  **Connection**  
  Select an OLE DB connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [OLE DB Connection Manager](../../2014/integration-services/ole-db-connection-manager.md), [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Related Topics:** [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md), [Configure OLE DB Connection Manager](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Type the name of the child package, or click the ellipsis (…) and then locate the package.  
@@ -97,7 +97,7 @@ manager: "jhubbard"
  **Connection**  
  Select a File connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Displays the package name.  

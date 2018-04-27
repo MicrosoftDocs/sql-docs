@@ -34,7 +34,7 @@ manager: "jhubbard"
 |Value|Description|  
 |-----------|-----------------|  
 |**File System**|Indicates that the packages to be upgraded are in a folder on the local computer.<br /><br /> To have the wizard back up the original packages before upgrading those packages, the original packages must be stored in the file system. For more information, see How To Topic.|  
-|**SSIS Package Store**|Indicates that the packages to be upgraded are in the package store. The package store consists of the set of file system folders that the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service manages. For more information, see [Package Management &#40;SSIS Service&#41;](../../2014/integration-services/package-management-ssis-service.md).<br /><br /> Selecting this value displays the corresponding **Package source** dynamic options.|  
+|**SSIS Package Store**|Indicates that the packages to be upgraded are in the package store. The package store consists of the set of file system folders that the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service manages. For more information, see [Package Management &#40;SSIS Service&#41;](service/package-management-ssis-service.md).<br /><br /> Selecting this value displays the corresponding **Package source** dynamic options.|  
 |**Microsoft SQL Server**|Indicates the packages to be upgraded are from an existing instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Selecting this value displays the corresponding **Package source** dynamic options.|  
   
  **Folder**  

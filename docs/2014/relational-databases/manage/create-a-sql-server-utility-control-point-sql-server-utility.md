@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 -   FILESTREAM data are not supported for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility monitoring.  
   
- For more information, see [Maximum Capacity Specifications for SQL Server](../../getting-started/maximum-capacity-specifications-for-sql-server.md) and [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ For more information, see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) and [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ### Remove Previous Utility Control Points Before Installing a New One  
  If you are installing a utility control point (UCP) on an instance of SQL Server that was ever configured as a UCP, you must remove all managed instances of SQL Server and remove the UCP before doing so. You do this by running the **sp_sysutility_ucp_remove** stored procedure.  

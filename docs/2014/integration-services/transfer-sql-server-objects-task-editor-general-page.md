@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer SQL Server Objects Task Editor (General Page)
-  Use the **General** page of the **Transfer SQL Server Objects Task Editor** dialog box to name and describe the Transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objects task. For more information about this task, see [Transfer SQL Server Objects Task](../../2014/integration-services/transfer-sql-server-objects-task.md).  
+  Use the **General** page of the **Transfer SQL Server Objects Task Editor** dialog box to name and describe the Transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objects task. For more information about this task, see [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
   
 > [!NOTE]  
 >  The user who creates the Transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objects task must have adequate permissions on the source server objects to select them for copying, and permission to access the destination server database where the objects will be transferred.  
@@ -37,8 +37,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
  [Transfer SQL Server Objects Task Editor &#40;Objects Page&#41;](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

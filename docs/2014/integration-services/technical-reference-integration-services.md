@@ -21,19 +21,19 @@ manager: "jhubbard"
 # Technical Reference (Integration Services)
   Find the tools, languages, and programming reference documentation for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Change Data Capture Service and Designer**  
- [Change Data Capture Service for Oracle by Attunity](../../2014/integration-services/change-data-capture-service-for-oracle-by-attunity.md)  
+ ![Small File Folder Icon](media/filefolder-small.gif "Small File Folder Icon") **Change Data Capture Service and Designer**  
+ [Change Data Capture Service for Oracle by Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
   
- [Change Data Capture Designer for Oracle by Attunity](../../2014/integration-services/change-data-capture-designer-for-oracle-by-attunity.md)  
+ [Change Data Capture Designer for Oracle by Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Errors and Events**  
+ ![Small File Folder Icon](media/filefolder-small.gif "Small File Folder Icon") **Errors and Events**  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Transact-SQL Reference**  
+ ![Small File Folder Icon](media/filefolder-small.gif "Small File Folder Icon") **Transact-SQL Reference**  
  [Views &#40;Integration Services Catalog&#41;](~/integration-services/system-views/views-integration-services-catalog.md)  
   
  [Stored Procedures &#40;Integration Services Catalog&#41;](~/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
- [Functions &#40;Integration Services Catalog&#41;](~/integration-services/functions-dm-execution-performance-counters.md)  
+ [Functions &#40;Integration Services Catalog&#41;](performance/performance-counters.md)  
   
   

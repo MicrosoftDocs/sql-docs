@@ -22,13 +22,13 @@ manager: "jhubbard"
 # WMI Data Reader Task Editor (WMI Options Page)
   Use the **WMI Options** page of the **WMI Data Reader Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and the destination of the query result.  
   
- To learn about this task, see [WMI Data Reader Task](../../2014/integration-services/wmi-data-reader-task.md). For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+ To learn about this task, see [WMI Data Reader Task](control-flow/wmi-data-reader-task.md). For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
   
 ## Static Options  
  **WMIConnectionName**  
  Select a WMI connection manager in the list, or click \<**New WMI Connection…**> to create a new connection manager.  
   
- **Related Topics:** [WMI Connection Manager](../../2014/integration-services/wmi-connection-manager.md), [WMI Connection Manager Editor](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **Related Topics:** [WMI Connection Manager](connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Select the source type of the WQL query that the task runs. This property has the options listed in the following table.  
@@ -63,13 +63,13 @@ manager: "jhubbard"
  **WQLQuerySource**  
  Select a File connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### WQLQuerySourceType = Variable  
  **WQLQuerySource**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   
 ## DestinationType Dynamic Options  
   
@@ -77,18 +77,18 @@ manager: "jhubbard"
  **Destination**  
  Select a File connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### DestinationType = Variable  
  **Destination**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI Data Reader Task Editor &#40;General Page&#41;](../../2014/integration-services/wmi-data-reader-task-editor-general-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [WMI Event Watcher Task](../../2014/integration-services/wmi-event-watcher-task.md)  
+ [WMI Data Reader Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [Expressions Page](expressions/expressions-page.md)   
+ [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md)  
   
   

@@ -84,6 +84,6 @@ manager: "jhubbard"
 |Describes how to create an alert that is raised when a threshold value for a System Monitor counter has been reached.|[Create a SQL Server Database Alert](create-a-sql-server-database-alert.md)|  
 |Describes how to you create charts, alerts, logs, and reports to monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Create Charts, Alerts, Logs, and Reports](create-charts-alerts-logs-and-reports.md)|  
 |Lists objects and counters that System Monitor uses to monitor activity in computers running an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Use SQL Server Objects](use-sql-server-objects.md)|  
-|Lists objects and counters that System Monitor uses to monitor In-Memory OLTP activity.|[XTP &#40;In-Memory OLTP&#41; Performance Counters](sql-server-xtp-in-memory-oltp-performance-counters.md)|  
+|Lists objects and counters that System Monitor uses to monitor In-Memory OLTP activity.|[XTP &#40;In-Memory OLTP&#41; Performance Counters](../../integration-services/performance/performance-counters.md)|  
   
   

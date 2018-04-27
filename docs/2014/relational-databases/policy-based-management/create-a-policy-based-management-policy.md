@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 11. To limit the policy to subset of the target types, in the **Server restriction** box, select from limiting conditions or create a new condition.  
   
-     For more information on the available options in the **Create New Policy** dialog box, see [Create New Policy or Open Policy Dialog Box, General Page](create-new-policy-or-open-policy-dialog-box-general-page.md) or [Create New Policy or Open Policy Dialog Box, Description Page](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+     For more information on the available options in the **Create New Policy** dialog box, see [Create New Policy or Open Policy Dialog Box, General Page](../../integration-services/general-page-of-integration-services-designers-options.md) or [Create New Policy or Open Policy Dialog Box, Description Page](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 12. When finished click **OK**.  
   

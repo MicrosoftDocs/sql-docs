@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   [Allocating a Connection Handle](allocating-a-connection-handle.md)  
   
--   [SQL Server Native Client ODBC Data Sources](sql-server-native-client-odbc-data-sources.md)  
+-   [SQL Server Native Client ODBC Data Sources](../../integration-services/connection-manager/data-sources.md)  
   
 -   [Connecting to a Data Source &#40;ODBC&#41;](connecting-to-a-data-source-odbc.md)  
   

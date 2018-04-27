@@ -167,6 +167,6 @@ manager: "jhubbard"
  Exit the wizard by clicking **Finish**.  
   
 ## See Also  
- [Package Deployment &#40;SSIS&#41;](../../2014/integration-services/package-deployment-ssis.md)  
+ [Package Deployment &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

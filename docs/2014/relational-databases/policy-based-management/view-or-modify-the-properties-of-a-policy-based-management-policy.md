@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 4.  Click the plus sign to expand the **Policies** folder.  
   
-5.  Right-click the policy that you want to view or modify and select **Properties**. For more information on the available options in the **Open Policy –***policy_name* dialog box, see [Create New Policy or Open Policy Dialog Box, General Page](create-new-policy-or-open-policy-dialog-box-general-page.md) and [Create New Policy or Open Policy Dialog Box, Description Page](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Right-click the policy that you want to view or modify and select **Properties**. For more information on the available options in the **Open Policy –***policy_name* dialog box, see [Create New Policy or Open Policy Dialog Box, General Page](../../integration-services/general-page-of-integration-services-designers-options.md) and [Create New Policy or Open Policy Dialog Box, Description Page](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  When finished, click **OK**.  
   

@@ -52,9 +52,9 @@ manager: "jhubbard"
   
 -   [Step 1: Copying the Lesson 1 Package](lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [Step 2: Adding and Configuring the Foreach Loop Container](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [Step 2: Adding and Configuring the Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
--   [Step 3: Modifying the Flat File Connection Manager](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Step 3: Modifying the Flat File Connection Manager](connection-manager/file-connection-manager.md)  
   
 -   [Step 4: Testing the Lesson 2 Tutorial Package](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
@@ -62,6 +62,6 @@ manager: "jhubbard"
  [Step 1: Copying the Lesson 1 Package](lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## See Also  
- [For Loop Container](for-loop-container.md)  
+ [For Loop Container](control-flow/for-loop-container.md)  
   
   

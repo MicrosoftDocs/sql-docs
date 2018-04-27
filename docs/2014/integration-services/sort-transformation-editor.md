@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Sort Transformation Editor
   Use the **Sort Transformation Editor** dialog box to select the columns to sort, set the sort order, and specify whether duplicates are removed.  
   
- To learn more about the Sort transformation, see [Sort Transformation](../../2014/integration-services/sort-transformation.md).  
+ To learn more about the Sort transformation, see [Sort Transformation](data-flow/transformations/sort-transformation.md).  
   
 ## Options  
  **Available Input Columns**  
@@ -47,7 +47,7 @@ manager: "jhubbard"
  Indicate the order in which to sort columns. This must be set manually for each column.  
   
  **Comparison Flags**  
- For information about the string comparison options, see [Comparing String Data](../../2014/integration-services/comparing-string-data.md).  
+ For information about the string comparison options, see [Comparing String Data](data-flow/comparing-string-data.md).  
   
  **Remove rows with duplicate sort values**  
  Indicate whether the transformation copies duplicate rows to the transformation output, or creates a single entry for all duplicates, based on the specified string comparison options.  

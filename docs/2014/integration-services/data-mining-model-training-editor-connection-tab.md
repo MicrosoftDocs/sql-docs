@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Data Mining Model Training Editor (Connection Tab)
   Use the **Connection** page of the **Data Mining Model Training Editor** dialog box to select a mining model to train.  
   
- To learn more about the Data Mining Model Training destination, see [Data Mining Model Training Destination](../../2014/integration-services/data-mining-model-training-destination.md).  
+ To learn more about the Data Mining Model Training destination, see [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## Options  
  **Connection manager**  

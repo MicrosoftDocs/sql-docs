@@ -44,6 +44,6 @@ manager: "jhubbard"
 7.  In **Solution Explorer** toolbar, right-click **Package.dtsx**, click **Rename**, and rename the default package to **Lesson 1.dtsx**.  
   
 ## Next Task in Lesson  
- [Step 2: Adding and Configuring a Flat File Connection Manager](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [Step 2: Adding and Configuring a Flat File Connection Manager](connection-manager/file-connection-manager.md)  
   
   

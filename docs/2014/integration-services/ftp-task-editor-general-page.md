@@ -22,7 +22,7 @@ manager: "jhubbard"
 # FTP Task Editor (General Page)
   Use the **General** page of the **FTP Task Editor** dialog box to specify the FTP connection manager that connects to the FTP server that the task communicates with. You can also name and describe the FTP task.  
   
- To learn about this task, see [FTP Task](../../2014/integration-services/ftp-task.md).  
+ To learn about this task, see [FTP Task](control-flow/ftp-task.md).  
   
 ## Options  
  **FtpConnection**  
@@ -31,7 +31,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The FTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
   
- **Related Topics**: [FTP Connection Manager](../../2014/integration-services/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Related Topics**: [FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Indicate whether the FTP task terminates if an FTP operation fails.  
@@ -48,6 +48,6 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [FTP Task Editor &#40;File Transfer Page&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

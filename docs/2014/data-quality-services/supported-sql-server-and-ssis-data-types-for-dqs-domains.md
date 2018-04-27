@@ -43,7 +43,7 @@ manager: "jhubbard"
 |Integer|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |String|DT_STR<br /><br /> DT_WSTR|  
   
- Rest of the SSIS data types are not supported in DQS. For information about all the SSIS data types, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ Rest of the SSIS data types are not supported in DQS. For information about all the SSIS data types, see [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md).  
   
 ## See Also  
  [Managing a Domain](../../2014/data-quality-services/managing-a-domain.md)  

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Error Messages Task Editor (Messages Page)
-  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Error Messages Task](../../2014/integration-services/transfer-error-messages-task.md).  
+  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
   
 ## Options  
  **SourceConnection**  
@@ -56,10 +56,10 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
- [Transfer Error Messages Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-error-messages-task-editor-general-page.md)   
- [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md)   
- [Transfer Error Messages Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-error-messages-task-editor-general-page.md)   
- [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md)  
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
+ [Transfer Error Messages Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [SMO Connection Manager](connection-manager/smo-connection-manager.md)   
+ [Transfer Error Messages Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [SMO Connection Manager](connection-manager/smo-connection-manager.md)  
   
   

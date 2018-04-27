@@ -26,6 +26,6 @@ manager: "jhubbard"
  For information about how to enable logging in a package, see [Enable Package Logging in SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md).  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
   
   

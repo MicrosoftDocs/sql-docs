@@ -25,7 +25,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The Conditional Split transformation directs each input row to one output only. If you enter multiple conditions, the transformation sends each row to the first output for which the condition is true and disregards subsequent conditions for that row. If you need to evaluate several conditions successively, you may need to concatenate multiple Conditional Split transformations in the data flow.  
   
- To learn more about the Conditional Split transformation, see [Conditional Split Transformation](../../2014/integration-services/conditional-split-transformation.md).  
+ To learn more about the Conditional Split transformation, see [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md).  
   
 ## Options  
  **Order**  
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  The value of this property can be specified by using a property expression.  
   
- **Related topics:**  [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md), [Operators &#40;SSIS Expression&#41;](../../2014/integration-services/operators-ssis-expression.md), and [Functions &#40;SSIS Expression&#41;](../../2014/integration-services/functions-ssis-expression.md)  
+ **Related topics:**  [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [Operators &#40;SSIS Expression&#41;](expressions/operators-ssis-expression.md), and [Functions &#40;SSIS Expression&#41;](expressions/functions-ssis-expression.md)  
   
  **Default output name**  
  Type a name for the default output, or use the default.  
@@ -49,6 +49,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Split a Dataset by Using the Conditional Split Transformation](../../2014/integration-services/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Split a Dataset by Using the Conditional Split Transformation](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

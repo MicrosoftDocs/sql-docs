@@ -37,7 +37,7 @@ manager: "jhubbard"
  Describes how to provide suggestions and bug reports about the product features and user interface, submit documentation feedback, and opt to send error reports and usage data automatically to [!INCLUDE[msCoName](../includes/msconame-md.md)] for analysis.  
   
 ## See Also  
- [What's New in SQL Server 2014](../../2014/getting-started/what-s-new-in-sql-server-2014.md)   
+ [What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Installation for SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

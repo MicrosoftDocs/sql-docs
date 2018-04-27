@@ -81,7 +81,7 @@ manager: "mblythe"
  [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
  [Create and Manage Role Assignments](../../2014/reporting-services/create-and-manage-role-assignments.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../2014/reporting-services/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Implementing a Security Extension](../../2014/reporting-services/dev-guide/implementing-a-security-extension.md)   
  [Configure SSL Connections on a Native Mode Report Server](../../2014/reporting-services/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configure Report Builder Access](../../2014/reporting-services/configure-report-builder-access.md)   

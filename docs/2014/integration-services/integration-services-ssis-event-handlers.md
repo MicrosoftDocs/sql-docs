@@ -41,11 +41,11 @@ manager: "jhubbard"
   
  The following diagram shows a simple package that has a For Loop container that contains one Execute SQL task.  
   
- ![Package, For Loop, task host, and Execute SQL task](../../2014/integration-services/media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
+ ![Package, For Loop, task host, and Execute SQL task](media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
   
  Only the package has an event handler, for its `OnError` event. If an error occurs when the Execute SQL task runs, the `OnError` event handler for the package runs. The following diagram shows the sequence of calls that causes the `OnError` event handler for the package to execute.  
   
- ![Event handler flow](../../2014/integration-services/media/mw-dts-eventhandlers.gif "Event handler flow")  
+ ![Event handler flow](media/mw-dts-eventhandlers.gif "Event handler flow")  
   
  Event handlers are members of an event handler collection, and all containers include this collection. If you create the package using [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, you can see the members of the event handler collections in the **Event Handlers** folders on the **Package Explorer** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
@@ -62,9 +62,9 @@ manager: "jhubbard"
 -   Specify the logging mode that the event handler uses.  
   
 ## Event Handler Content  
- Creating an event handler is similar to building a package; an event handler has tasks and containers, which are sequenced into a control flow, and an event handler can also include data flows. The [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer includes the **Event Handlers** tab for creating custom event handlers. For more information, see [SSIS Package Event Handlers](../../2014/integration-services/integration-services-ssis-event-handlers.md).  
+ Creating an event handler is similar to building a package; an event handler has tasks and containers, which are sequenced into a control flow, and an event handler can also include data flows. The [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer includes the **Event Handlers** tab for creating custom event handlers. For more information, see [SSIS Package Event Handlers](integration-services-ssis-event-handlers.md).  
   
- You can also create event handlers programmatically. For more information, see [Handling Events Programmatically](../../2014/integration-services/dev-guide/handling-events-programmatically.md).  
+ You can also create event handlers programmatically. For more information, see [Handling Events Programmatically](building-packages-programmatically/handling-events-programmatically.md).  
   
 ## Run-Time Events  
  The following table lists the event handlers that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, and describes the run-time events that cause the event handler to run.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
 |**OnProgress**|The event handler for the **OnProgress** event. This event is raised by an executable when measurable progress is made by the executable.|  
 |**OnQueryCancel**|The event handler for the **OnQueryCancel** event. This event is raised by an executable to determine whether it should stop running.|  
 |**OnTaskFailed**|The event handler for the **OnTaskFailed** event. This event is raised by a task when it fails.|  
-|**OnVariableValueChanged**|The event handler for the **OnVariableValueChanged** event. This event is raised by an executable when the value of a variable changes. The event is raised by the executable on which the variable is defined. This event is not raised if you set the **RaiseChangeEvent** property for the variable to `False`. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|The event handler for the **OnVariableValueChanged** event. This event is raised by an executable when the value of a variable changes. The event is raised by the executable on which the variable is defined. This event is not raised if you set the **RaiseChangeEvent** property for the variable to `False`. For more information, see [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
 |**OnWarning**|The event handler for the **OnWarning** event. This event is raised by an executable when a warning occurs.|  
   
 ## Configuration of an Event Handler  

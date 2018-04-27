@@ -66,7 +66,7 @@ manager: "jhubbard"
   
      For more information on the available options contained in the *operator_name***Properties** dialog box, see:  
   
-    -   [Operator Properties and New Operator &#40;General Page&#41;](operator-properties-new-operator-general-page.md)  
+    -   [Operator Properties and New Operator &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
     -   [Operator Properties: New Operator &#40;Notifications Page&#41;](operator-properties-new-operator-notifications-page.md)  
   

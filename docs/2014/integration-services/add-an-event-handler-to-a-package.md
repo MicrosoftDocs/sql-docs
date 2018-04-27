@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  You create event handlers by using the design surface of the **Event Handlers** tab in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer.  
   
- When the **Event Handlers** tab is active, the **Control Flow Items** and **Maintenance Plan Tasks** nodes of the Toolbox in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer contain the task and containers for building the control flow in the event handler. The **Data Flow Sources**, **Transformations**, **and Data Flow Destinations** nodes contain the data sources, transformations, and destinations for building the data flows in the event handler. For more information, see [Control Flow](../../2014/integration-services/control-flow.md) and [Data Flow](../../2014/integration-services/data-flow.md).  
+ When the **Event Handlers** tab is active, the **Control Flow Items** and **Maintenance Plan Tasks** nodes of the Toolbox in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer contain the task and containers for building the control flow in the event handler. The **Data Flow Sources**, **Transformations**, **and Data Flow Destinations** nodes contain the data sources, transformations, and destinations for building the data flows in the event handler. For more information, see [Control Flow](control-flow/control-flow.md) and [Data Flow](data-flow/data-flow.md).  
   
  The **Event Handlers** tab also includes the **Connections** Managers area where you can create and modify the connection managers that event handlers use to connect to servers and data sources. For more information, see [Create Connection Managers](../../2014/integration-services/create-connection-managers.md).  
   
@@ -36,9 +36,9 @@ manager: "jhubbard"
   
 3.  Click the **Event Handlers** tab.  
   
-     ![Screenshot of design surface with event handler](../../2014/integration-services/media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![Screenshot of design surface with event handler](media/eventhandlers.gif "Screenshot of design surface with event handler")  
   
-     Creating the control flow and data flows in an event handler is similar to creating the control flow and data flows in a package. For more information, see [Control Flow](../../2014/integration-services/control-flow.md) and [Data Flow](../../2014/integration-services/data-flow.md).  
+     Creating the control flow and data flows in an event handler is similar to creating the control flow and data flows in a package. For more information, see [Control Flow](control-flow/control-flow.md) and [Data Flow](data-flow/data-flow.md).  
   
 4.  In the **Executable** list, select the executable for which you want to create an event handler.  
   
@@ -46,14 +46,14 @@ manager: "jhubbard"
   
 6.  Click the link on the design surface of the **Event Handler** tab.  
   
-7.  Add control flow items to the event handler, and connect items using a precedence constraint by dragging the constraint from one control flow item to another. For more information, see [Control Flow](../../2014/integration-services/control-flow.md).  
+7.  Add control flow items to the event handler, and connect items using a precedence constraint by dragging the constraint from one control flow item to another. For more information, see [Control Flow](control-flow/control-flow.md).  
   
-8.  Optionally, add a Data Flow task, and on the design surface of the **Data Flow** tab, create a data flow for the event handler. For more information, see [Data Flow](../../2014/integration-services/data-flow.md).  
+8.  Optionally, add a Data Flow task, and on the design surface of the **Data Flow** tab, create a data flow for the event handler. For more information, see [Data Flow](data-flow/data-flow.md).  
   
 9. On the **File** menu, click **Save Selected Items** to save the package.  
   
 ## See Also  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
- [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
   
   

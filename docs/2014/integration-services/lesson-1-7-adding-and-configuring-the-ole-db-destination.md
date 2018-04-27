@@ -54,6 +54,6 @@ manager: "jhubbard"
  [Step 8: Making the Lesson 1 Package Easier to Understand](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## See Also  
- [OLE DB Destination](ole-db-destination.md)  
+ [OLE DB Destination](data-flow/ole-db-destination.md)  
   
   

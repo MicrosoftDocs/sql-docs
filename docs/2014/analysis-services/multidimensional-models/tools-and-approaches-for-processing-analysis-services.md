@@ -152,7 +152,7 @@ manager: "mblythe"
   
 2.  In the **SSIS Toolbox**, double-click **Analysis Services Processing** to add it to the package.  
   
-3.  Edit the task to specify a connection to the database, which objects to process, and the process option. For more information about how to implement this task, see [Analysis Services Processing Task](../../integration-services/analysis-services-processing-task.md).  
+3.  Edit the task to specify a connection to the database, which objects to process, and the process option. For more information about how to implement this task, see [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
 ## See Also  
  [Multidimensional Model Object Processing](processing-a-multidimensional-model-analysis-services.md)  

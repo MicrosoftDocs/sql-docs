@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  After the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service has been installed, you can set the properties of the service by using either SQL Server Configuration Manager or the Services MMC snap-in.  
   
- To configure other important features of the service, including the locations where it stores and manages packages, you must modify the configuration file of the service. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../2014/integration-services/configuring-the-integration-services-service-ssis-service.md).  
+ To configure other important features of the service, including the locations where it stores and manages packages, you must modify the configuration file of the service. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
   
 ### To set properties of the Integration Services service by using SQL Server Configuration Manager  
   

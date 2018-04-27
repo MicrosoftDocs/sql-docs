@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # View Path Metadata in the Data Flow Path Editor
-  Paths connect two data flow components. Before you can view path metadata, the data flow must contain at least two connected data flow components. For more information, see [Add or Delete a Component in a Data Flow](../../2014/integration-services/add-or-delete-a-component-in-a-data-flow.md) and [Connect Components in a Data Flow](../../2014/integration-services/connect-components-in-a-data-flow.md).  
+  Paths connect two data flow components. Before you can view path metadata, the data flow must contain at least two connected data flow components. For more information, see [Add or Delete a Component in a Data Flow](data-flow/add-or-delete-a-component-in-a-data-flow.md) and [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md).  
   
 ### To view path metadata  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
 7.  Click **OK**.  
   
 ## See Also  
- [Integration Services Paths](../../2014/integration-services/integration-services-paths.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)  
+ [Integration Services Paths](data-flow/integration-services-paths.md)   
+ [Data Flow](data-flow/data-flow.md)  
   
   

@@ -47,14 +47,14 @@ manager: "jhubbard"
 9. In the Columns to display area, select the columns you want to display in the data viewer. By default, all the available columns are selected and listed in the **Displayed Columns** list. Move columns that you do not want to use to the **Unused Column** list by selecting them and then clicking the left arrow.  
   
     > [!NOTE]  
-    >  In the grid, values that represent the DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types appear as ISO 8601 formatted strings and a space separator replaces the `T` separator. Values that represent the DT_DATE and DT_FILETIME data types include seven digits for fractional seconds. Because the DT_FILETIME data type stores only three digits of fractional seconds, the grid displays zeros for the remaining four digits. Values that represent the DT_DBTIMESTAMP data type include three digits for fractional seconds. For values that represent the DT_DBTIME2, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types, the number of digits for fractional seconds corresponds to the scale specified for the column's data type. For more information about ISO 8601 formats, see [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md). For more information about data types, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+    >  In the grid, values that represent the DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types appear as ISO 8601 formatted strings and a space separator replaces the `T` separator. Values that represent the DT_DATE and DT_FILETIME data types include seven digits for fractional seconds. Because the DT_FILETIME data type stores only three digits of fractional seconds, the grid displays zeros for the remaining four digits. Values that represent the DT_DBTIMESTAMP data type include three digits for fractional seconds. For values that represent the DT_DBTIME2, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types, the number of digits for fractional seconds corresponds to the scale specified for the column's data type. For more information about ISO 8601 formats, see [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md). For more information about data types, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 10. Click **OK**.  
   
 ## See Also  
- [Integration Services Transformations](../../2014/integration-services/integration-services-transformations.md)   
- [Integration Services Paths](../../2014/integration-services/integration-services-paths.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Debugging Data Flow](../../2014/integration-services/debugging-data-flow.md)  
+ [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services Paths](data-flow/integration-services-paths.md)   
+ [Data Flow](data-flow/data-flow.md)   
+ [Debugging Data Flow](troubleshooting/debugging-data-flow.md)  
   
   

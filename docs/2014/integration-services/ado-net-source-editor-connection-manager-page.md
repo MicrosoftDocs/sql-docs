@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ADO NET Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **ADO NET Source Editor** dialog box to select the [!INCLUDE[vstecado](../includes/vstecado-md.md)] connection manager for the source. This page also lets you select a table or view from the database.  
   
- To learn more about the ADO NET source, see [ADO NET Source](../../2014/integration-services/ado-net-source.md).  
+ To learn more about the ADO NET source, see [ADO NET Source](data-flow/ado-net-source.md).  
   
  **To open the Connection Manager page**  
   
@@ -70,6 +70,6 @@ manager: "jhubbard"
 ## See Also  
  [ADO NET Source Editor &#40;Columns Page&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO NET Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
- [ADO.NET Connection Manager](../../2014/integration-services/ado-net-connection-manager.md)  
+ [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)  
   
   

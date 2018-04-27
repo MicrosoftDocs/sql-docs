@@ -60,9 +60,9 @@ manager: "jhubbard"
  Copy the column metadata to the clipboard. By default, all metadata rows are copied as sorted in the order currently displayed.  
   
 ## See Also  
- [Data Flow Path Editor &#40;General Page&#41;](../../2014/integration-services/data-flow-path-editor-general-page.md)   
+ [Data Flow Path Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Data Flow Path Editor &#40;Data Viewers Page&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Use Annotations in Packages](../../2014/integration-services/use-annotations-in-packages.md)  
+ [Data Flow](data-flow/data-flow.md)   
+ [Use Annotations in Packages](use-annotations-in-packages.md)  
   
   

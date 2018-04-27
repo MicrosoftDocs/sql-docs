@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Send Mail Task Editor (General Page)
   Use the **General page** of the **Send Mail Task Editor** dialog box to name and describe the Send Mail task.  
   
- To learn about this task, see [Send Mail Task](../../2014/integration-services/send-mail-task.md).  
+ To learn about this task, see [Send Mail Task](control-flow/send-mail-task.md).  
   
 ## Options  
  **Name**  
@@ -36,6 +36,6 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Send Mail Task Editor &#40;Mail Page&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

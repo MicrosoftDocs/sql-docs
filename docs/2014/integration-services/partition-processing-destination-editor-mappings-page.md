@@ -22,10 +22,10 @@ manager: "jhubbard"
 # Partition Processing Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Partition Processing Destination Editor** dialog box to map input columns to partition columns.  
   
- To learn more abou the Partition Processing destination, see [Partition Processing Destination](../../2014/integration-services/partition-processing-destination.md).  
+ To learn more abou the Partition Processing destination, see [Partition Processing Destination](data-flow/partition-processing-destination.md).  
   
 > [!NOTE]  
->  Tasks described here do not apply to Analysis Services tabular models.  You cannot map input columns to partition columns for tabular models. You can instead use the Analysis Services Execute DDL task [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md) to process the partition.  
+>  Tasks described here do not apply to Analysis Services tabular models.  You cannot map input columns to partition columns for tabular models. You can instead use the Analysis Services Execute DDL task [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) to process the partition.  
   
 ## Options  
  **Available Input Columns**  

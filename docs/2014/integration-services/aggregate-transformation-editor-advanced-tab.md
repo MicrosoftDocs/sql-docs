@@ -27,7 +27,7 @@ manager: "jhubbard"
 >   
 >  In the Aggregate transformation, **Keys** and **Keys scale** refer to the number of groups that are expected to result from a **Group by** operation. **Count distinct keys** and **Count distinct scale** refer to the number of distinct values that are expected to result from a **Distinct count** operation.  
   
- To learn more about the Aggregate transformation, see [Aggregate Transformation](../../2014/integration-services/aggregate-transformation.md).  
+ To learn more about the Aggregate transformation, see [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md).  
   
 ## Options  
  **Keys scale**  
@@ -62,6 +62,6 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Aggregate Transformation Editor &#40;Aggregations Tab&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
- [Aggregate Values in a Dataset by Using the Aggregate Transformation](../../2014/integration-services/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Aggregate Values in a Dataset by Using the Aggregate Transformation](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

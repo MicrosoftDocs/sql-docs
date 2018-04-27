@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Add SSIS Connection Manager
   Use the **Add SSIS Connection Manager** dialog box to select the type of connection to add to a package.  
   
- To learn more about connection managers, see [Integration Services &#40;SSIS&#41; Connections](../../2014/integration-services/integration-services-ssis-connections.md).  
+ To learn more about connection managers, see [Integration Services &#40;SSIS&#41; Connections](connection-manager/integration-services-ssis-connections.md).  
   
 ## Options  
  **Connection manager type**  

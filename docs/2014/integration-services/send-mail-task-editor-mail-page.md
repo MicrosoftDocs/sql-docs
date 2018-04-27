@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Send Mail Task Editor (Mail Page)
   Use the **Mail** page of the **Send Mail Task Editor** dialog box to specify recipients, message type, and priority for a message. You can also attach files to the message. The message text can be a string you provide, a file connection to a file that contains the text, or the name of a variable that contains the text.  
   
- To learn about this task, see [Send Mail Task](../../2014/integration-services/send-mail-task.md).  
+ To learn about this task, see [Send Mail Task](control-flow/send-mail-task.md).  
   
 ## Options  
  **SMTPConnection**  
@@ -31,7 +31,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The SMTP connection manager supports only anonymous authentication and Windows Authentication. It does not support basic authentication.  
   
- **Related Topics:** [SMTP Connection Manager](../../2014/integration-services/smtp-connection-manager.md)  
+ **Related Topics:** [SMTP Connection Manager](connection-manager/smtp-connection-manager.md)  
   
  **From**  
  Specify the e-mail address of the sender.  
@@ -76,17 +76,17 @@ manager: "jhubbard"
  **MessageSource**  
  Select a File connection manager in the list or click \<**New connection…**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### MessageSourceType = Variable  
  **MessageSource**  
  Select a variable in the list or click \<**New variable…**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Send Mail Task Editor &#40;General Page&#41;](../../2014/integration-services/send-mail-task-editor-general-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Send Mail Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [Expressions Page](expressions/expressions-page.md)  
   
   

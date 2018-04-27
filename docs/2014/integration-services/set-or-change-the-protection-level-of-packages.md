@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Set or Change the Protection Level of Packages
   To control access to the contents of packages and to the sensitive values that they contain, such as passwords, set the value of the `ProtectionLevel` property. The packages contained in a project need to have the same protection level as the project, to build the project. If you change the `ProtectionLevel` property setting on the project, you need to manually update the property setting for the packages.  
   
- For information about how to determine the `ProtectionLevel` settings that are appropriate for your packages at different stages in the package life cycle, see [Access Control for Sensitive Data in Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md). For an overview of security features in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], see [Security Overview &#40;Integration Services&#41;](../../2014/integration-services/security-overview-integration-services.md).  
+ For information about how to determine the `ProtectionLevel` settings that are appropriate for your packages at different stages in the package life cycle, see [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md). For an overview of security features in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], see [Security Overview &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
  The procedures in this topic describe how to use either [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or the dtutil command prompt utility to change the `ProtectionLevel` property.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ### To set or change the protection level of a package in SQL Server Data Tools  
   
-1.  Review the available values for the `ProtectionLevel` property in the topic, [Setting the Protection Level of Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
+1.  Review the available values for the `ProtectionLevel` property in the topic, [Setting the Protection Level of Packages](security/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
   
 2.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package.  
   
@@ -48,9 +48,9 @@ manager: "jhubbard"
   
 ### To set or change the protection level of packages at the command prompt  
   
-1.  Review the available values for the `ProtectionLevel` property in the topic, [Setting the Protection Level of Packages](../../2014/integration-services/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
+1.  Review the available values for the `ProtectionLevel` property in the topic, [Setting the Protection Level of Packages](security/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
   
-2.  Review the mappings for the `Encrypt` option in the topic, [dtutil Utility](../../2014/integration-services/dtutil-utility.md), and determine the appropriate integer to use as the value of the selected `ProtectionLevel` property.  
+2.  Review the mappings for the `Encrypt` option in the topic, [dtutil Utility](dtutil-utility.md), and determine the appropriate integer to use as the value of the selected `ProtectionLevel` property.  
   
 3.  Open a Command Prompt window.  
   
@@ -71,6 +71,6 @@ manager: "jhubbard"
          If you use a similar command in a batch file, enter the file placeholder, "%f", as "%%f" in the batch file.  
   
 ## See Also  
- [dtutil Utility](../../2014/integration-services/dtutil-utility.md)  
+ [dtutil Utility](dtutil-utility.md)  
   
   

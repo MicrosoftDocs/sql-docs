@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Web Service Task Editor (Output Page)
   Use the **Output** page of the **Web Service Task Editor** dialog box to specify where to store the result returned by the Web method.  
   
- To learn about this task, see [Web Service Task](../../2014/integration-services/web-service-task.md).  
+ To learn about this task, see [Web Service Task](control-flow/web-service-task.md).  
   
 ## Static Options  
  **OutputType**  
@@ -39,18 +39,18 @@ manager: "jhubbard"
  **File**  
  Select a File connection manager in the list or click \<**New Connection…**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../2014/integration-services/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### OutputType = Variable  
  **Variable**  
  Select a variable in the list or click \<**New Variable…**> to create a new variable.  
   
- **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](../../2014/integration-services/integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
+ **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Add Variable](../../2014/integration-services/add-variable.md)  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web Service Task Editor &#40;General Page&#41;](../../2014/integration-services/web-service-task-editor-general-page.md)   
+ [Web Service Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Web Service Task Editor &#40;Input Page&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)  
+ [Expressions Page](expressions/expressions-page.md)  
   
   

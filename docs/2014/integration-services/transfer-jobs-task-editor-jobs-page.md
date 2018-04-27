@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transfer Jobs Task Editor (Jobs Page)
-  Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about the Transfer Jobs task, see [Transfer Jobs Task](../../2014/integration-services/transfer-jobs-task.md).  
+  Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about the Transfer Jobs task, see [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
   
 > [!NOTE]  
 >  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent fixed database roles. For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](../ssms/agent/sql-server-agent-fixed-database-roles.md).  
@@ -73,9 +73,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
- [Transfer Jobs Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-jobs-task-editor-general-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [SMO Connection Manager](../../2014/integration-services/smo-connection-manager.md)  
+ [Integration Services Tasks](control-flow/integration-services-tasks.md)   
+ [Transfer Jobs Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [Expressions Page](expressions/expressions-page.md)   
+ [SMO Connection Manager](connection-manager/smo-connection-manager.md)  
   
   

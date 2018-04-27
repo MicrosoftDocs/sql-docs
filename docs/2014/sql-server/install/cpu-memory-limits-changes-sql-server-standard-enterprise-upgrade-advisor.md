@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
--   [Compute Capacity Limits by Edition of SQL Server](../../../2014/getting-started/compute-capacity-limits-by-edition-of-sql-server.md)  
+-   [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
 ## See Also  
  [Reporting Services Upgrade Issues &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

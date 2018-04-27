@@ -97,10 +97,10 @@ manager: "jhubbard"
 4.  Click **OK**.  
   
 ## Next Task in Lesson  
- [Step 3: Adding and Configuring an OLE DB Connection Manager](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [Step 3: Adding and Configuring an OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)  
   
 ## See Also  
- [Flat File Connection Manager](flat-file-connection-manager.md)   
- [Integration Services Data Types](integration-services-data-types.md)  
+ [Flat File Connection Manager](connection-manager/file-connection-manager.md)   
+ [Integration Services Data Types](data-flow/integration-services-data-types.md)  
   
   

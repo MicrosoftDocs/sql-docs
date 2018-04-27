@@ -24,15 +24,15 @@ manager: "jhubbard"
   
  The following diagram shows a simple data flow with a source component, two transformations, a destination component, and the paths that connect them.  
   
- ![Data flow](../../2014/integration-services/media/mw-dts-08.gif "Data flow")  
+ ![Data flow](media/mw-dts-08.gif "Data flow")  
   
- After two components are connected, you can view the metadata of the data that moves through the path and the properties of the path in **Data Flow Path Editor**. For more information, see [Integration Services Paths](../../2014/integration-services/integration-services-paths.md).  
+ After two components are connected, you can view the metadata of the data that moves through the path and the properties of the path in **Data Flow Path Editor**. For more information, see [Integration Services Paths](data-flow/integration-services-paths.md).  
   
  You can also add data viewers to paths. A data viewer makes it possible to view data moving between data flow components when the package is run.  
   
 ### To connect components in a data flow  
   
--   [Connect Components in a Data Flow](../../2014/integration-services/connect-components-in-a-data-flow.md)  
+-   [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md)  
   
 ### To set path properties  
   
@@ -47,9 +47,9 @@ manager: "jhubbard"
 -   [Add a Data Viewer to a Data Flow](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
 ## See Also  
- [Data Flow Task](../../2014/integration-services/data-flow-task.md)   
- [Data Flow](../../2014/integration-services/data-flow.md)   
- [Transform Data with Transformations](../../2014/integration-services/transform-data-with-transformations.md)   
- [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ [Data Flow Task](control-flow/data-flow-task.md)   
+ [Data Flow](data-flow/data-flow.md)   
+ [Transform Data with Transformations](data-flow/transformations/transform-data-with-transformations.md)   
+ [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
   

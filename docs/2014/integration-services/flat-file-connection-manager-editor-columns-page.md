@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Flat File Connection Manager Editor (Columns Page)
   Use the **Columns** page of the **Flat File Connection Manager Editor** dialog box to specify the row and column information, and to preview the file.  
   
- To learn more about the Flat File connection manager, see [Flat File Connection Manager](../../2014/integration-services/flat-file-connection-manager.md).  
+ To learn more about the Flat File connection manager, see [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## Static Options  
  **Connection manager name**  
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Flat File Connection Manager Editor &#40;General Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-general-page.md)   
+ [Flat File Connection Manager Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
  [Flat File Connection Manager Editor &#40;Advanced Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
  [Flat File Connection Manager Editor &#40;Preview Page&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   

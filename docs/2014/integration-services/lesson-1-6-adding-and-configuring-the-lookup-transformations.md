@@ -19,7 +19,7 @@ manager: "jhubbard"
   After you have configured the Flat File source to extract data from the source file, the next task is to define the Lookup transformations needed to obtain the values for the **CurrencyKey** and **DateKey**. A Lookup transformation performs a lookup by joining data in the specified input column to a column in a reference dataset. The reference dataset can be an existing table or view, a new table, or the result of an SQL statement. In this tutorial, the Lookup transformation uses an OLE DB connection manager to connect to the database that contains the data that is the source of the reference dataset.  
   
 > [!NOTE]  
->  You can also configure the Lookup transformation to connect to a cache that contains the reference dataset. For more information, see [Lookup Transformation](lookup-transformation.md).  
+>  You can also configure the Lookup transformation to connect to a cache that contains the reference dataset. For more information, see [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
  For this tutorial, you will add and configure the following two Lookup transformation components to the package:  
   
@@ -129,9 +129,9 @@ manager: "jhubbard"
 12. In the Properties window, verify that the `LocaleID` property is set to **English (United States)** and the **DefaultCodePage** property is set to **1252**.  
   
 ## Next Task in Lesson  
- [Step 7: Adding and Configuring the OLE DB Destination](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [Step 7: Adding and Configuring the OLE DB Destination](data-flow/ole-db-destination.md)  
   
 ## See Also  
- [Lookup Transformation](lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

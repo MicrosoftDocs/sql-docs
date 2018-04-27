@@ -25,7 +25,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The HTTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
   
- To learn more about the HTTP connection manager, see [HTTP Connection Manager](../../2014/integration-services/http-connection-manager.md). To learn more about a common usage scenario for the HTTP Connection Manager, see [Web Service Task](../../2014/integration-services/web-service-task.md).  
+ To learn more about the HTTP connection manager, see [HTTP Connection Manager](connection-manager/http-connection-manager.md). To learn more about a common usage scenario for the HTTP Connection Manager, see [Web Service Task](control-flow/web-service-task.md).  
   
 ## Options  
  **Server URL**  

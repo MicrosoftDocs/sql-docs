@@ -24,7 +24,7 @@ manager: "jhubbard"
 
   
 ##  <a name="bkmk_sqleditions"></a> SQL Server Edition Requirements  
- Business intelligence features are not all available in all editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For details, see [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md) and [Editions and Components of SQL Server 2014](../../../2014/getting-started/editions-and-components-of-sql-server-2014.md).  
+ Business intelligence features are not all available in all editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For details, see [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md) and [Editions and Components of SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
  The current release notes can be found at [Microsoft SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
   

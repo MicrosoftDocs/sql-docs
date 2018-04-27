@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Analysis Services Execute DDL Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Execute DDL task.  
   
- To learn about this task, see [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md).  
+ To learn about this task, see [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md).  
   
 ## Options  
  **Name**  
@@ -37,8 +37,8 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services Execute DDL Task Editor &#40;DDL Page&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [Control Flow](../../2014/integration-services/control-flow.md)   
+ [Expressions Page](expressions/expressions-page.md)   
+ [Control Flow](control-flow/control-flow.md)   
  [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [XML for Analysis  &#40;XMLA&#41; Reference](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   

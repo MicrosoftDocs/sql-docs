@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Character Map Transformation Editor
   Use the **Character Map Transformation Editor** dialog box to select the string functions to apply to column data and to specify whether mapping is an in-place change or added as a new column.  
   
- To learn more about the Character Map transformation, see [Character Map Transformation](../../2014/integration-services/character-map-transformation.md).  
+ To learn more about the Character Map transformation, see [Character Map Transformation](data-flow/transformations/character-map-transformation.md).  
   
 ## Options  
  **Available Input Columns**  

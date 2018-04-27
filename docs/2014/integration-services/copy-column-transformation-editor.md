@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Copy Column Transformation Editor
   Use the **Copy Column Transformation Editor** dialog box to select columns to copy and to assign names for the new output columns.  
   
- To learn more about the Copy Column transformation, see [Copy Column Transformation](../../2014/integration-services/copy-column-transformation.md).  
+ To learn more about the Copy Column transformation, see [Copy Column Transformation](data-flow/transformations/copy-column-transformation.md).  
   
 > [!NOTE]  
 >  When you are simply copying all of your source data to a destination, it may not be necessary to use the Copy Column transformation. In some scenarios, you can connect a source directly to a destination, when no data transformation is required. In these circumstances it is often preferable to use the SQL Server Import and Export Wizard to create your package for you. Later you can enhance and reconfigure the package as needed. For more information, see [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  

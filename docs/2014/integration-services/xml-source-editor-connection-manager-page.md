@@ -22,7 +22,7 @@ manager: "jhubbard"
 # XML Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **XML Source Editor** to specify an XML file and the XSD that transforms the XML data.  
   
- For more information about the XML source, see [XML Source](../../2014/integration-services/xml-source.md).  
+ For more information about the XML source, see [XML Source](data-flow/xml-source.md).  
   
 ## Static Options  
  **Data access mode**  
@@ -67,6 +67,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [XML Source Editor &#40;Columns Page&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [XML Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
- [Extract Data by Using the XML Source](../../2014/integration-services/extract-data-by-using-the-xml-source.md)  
+ [Extract Data by Using the XML Source](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

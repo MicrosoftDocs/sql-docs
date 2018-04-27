@@ -33,7 +33,7 @@ manager: "jhubbard"
 ## See Also  
  [OData Source Editor &#40;Connection Page&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
  [OData Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData Source](../../2014/integration-services/odata-source.md)   
- [OData Connection Manager](../../2014/integration-services/odata-connection-manager.md)  
+ [OData Source](data-flow/odata-source.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

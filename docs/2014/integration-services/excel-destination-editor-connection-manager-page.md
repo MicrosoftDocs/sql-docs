@@ -23,9 +23,9 @@ manager: "jhubbard"
   Use the **Connection Manager** page of the **Excel Destination Editor** dialog box to specify data source information, and to preview the results. The Excel destination loads data into a worksheet or a named range in a [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] workbook.  
   
 > [!NOTE]  
->  The `CommandTimeout` property of the Excel destination is not available in the **Excel Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain Fast Load options are available only in the **Advanced Editor**. For more information on these properties, see the Excel Destination section of [Excel Custom Properties](../../2014/integration-services/excel-custom-properties.md).  
+>  The `CommandTimeout` property of the Excel destination is not available in the **Excel Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain Fast Load options are available only in the **Advanced Editor**. For more information on these properties, see the Excel Destination section of [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
- To learn more about the Excel destination, see [Excel Destination](../../2014/integration-services/excel-destination.md).  
+ To learn more about the Excel destination, see [Excel Destination](data-flow/excel-destination.md).  
   
 ## Static Options  
  **Excel connection manager**  
@@ -82,6 +82,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Excel Destination Editor &#40;Mappings Page&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Excel Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
- [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../2014/integration-services/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Loop through Excel Files and Tables by Using a Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

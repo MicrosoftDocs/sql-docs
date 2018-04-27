@@ -25,6 +25,6 @@ manager: "jhubbard"
  After the package stops running, the **Progress** tab becomes the **Execution Results** tab.  
   
 ## See Also  
- [SSIS Designer](../../2014/integration-services/ssis-designer.md)  
+ [SSIS Designer](ssis-designer.md)  
   
   

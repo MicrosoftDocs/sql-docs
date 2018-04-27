@@ -90,6 +90,6 @@ manager: "jhubbard"
  Additional information about samples is available after [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] has been installed. From the **Start** menu, click **All Programs**, click **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, click **Documentation and Tutorials**, and then click **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Samples Overview**.  
   
 ## See Also  
- [Editions and Components of SQL Server 2014](../../../2014/getting-started/editions-and-components-of-sql-server-2014.md)  
+ [Editions and Components of SQL Server 2014](../editions-and-components-of-sql-server-2016.md)  
   
   

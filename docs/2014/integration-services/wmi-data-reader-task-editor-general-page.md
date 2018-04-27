@@ -22,7 +22,7 @@ manager: "jhubbard"
 # WMI Data Reader Task Editor (General Page)
   Use the **General** page of the **WMI Data Reader Task Editor** dialog box to name and describe the WMI Data Reader task.  
   
- To learn about this task, see [WMI Data Reader Task](../../2014/integration-services/wmi-data-reader-task.md). For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+ To learn about this task, see [WMI Data Reader Task](control-flow/wmi-data-reader-task.md). For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
   
 ## Options  
  **Name**  
@@ -37,7 +37,7 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [WMI Data Reader Task Editor &#40;WMI Options Page&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
- [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [WMI Event Watcher Task](../../2014/integration-services/wmi-event-watcher-task.md)  
+ [Expressions Page](expressions/expressions-page.md)   
+ [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md)  
   
   

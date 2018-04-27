@@ -48,7 +48,7 @@ manager: "jhubbard"
 |Verbose|All events are logged, including custom and diagnostic events.<br /><br /> An example of a diagnostic event, is the DiagnosticEx event. Whenever an Execute Package task executes a child package, it logs this event. The event message consists of the parameter values passed to child packages<br /><br /> The value of the message column for DiagnosticEx is XML text. . To view the message text for a package execution, query the [catalog.operation_messages &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-operation-messages-ssisdb-database.md) view.<br /><br /> Note: Custom events include those events that are logged by [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tasks. For more information, see [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> The [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) view displays a row each time a data flow component sends data to a downstream component, for a package execution. The logging level must be set to **Verbose** to capture this information in the view.|  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Logging](../../2014/integration-services/integration-services-ssis-logging.md)   
+ [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)   
  [Enable Package Logging in SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)  
   
   

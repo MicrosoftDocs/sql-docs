@@ -41,6 +41,6 @@ manager: "jhubbard"
 -   Right-click an object and then click **Delete**.  
   
 ## See Also  
- [View Package Objects](../../2014/integration-services/view-package-objects.md)  
+ [View Package Objects](view-package-objects.md)  
   
   

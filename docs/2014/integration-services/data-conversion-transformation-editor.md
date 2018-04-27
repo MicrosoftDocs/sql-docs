@@ -23,9 +23,9 @@ manager: "jhubbard"
   Use the **Data Conversion Transformation Editor** dialog box to select the columns to convert, select the data type to which the column is converted, and set conversion attributes.  
   
 > [!NOTE]  
->  The `FastParse` property of the output columns of the Data Conversion transformation is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Data Conversion Transformation section of [Transformation Custom Properties](../../2014/integration-services/transformation-custom-properties.md).  
+>  The `FastParse` property of the output columns of the Data Conversion transformation is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Data Conversion Transformation section of [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
- To learn more about the Data Conversion transformation, see [Data Conversion Transformation](../../2014/integration-services/data-conversion-transformation.md).  
+ To learn more about the Data Conversion transformation, see [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   
 ## Options  
  **Available Input Columns**  
@@ -38,7 +38,7 @@ manager: "jhubbard"
  Type an alias for each new column. The default is `Copy of` followed by the input column name; however, you can choose any unique, descriptive name.  
   
  **Data Type**  
- Select an available data type from the list. For more information, see [Integration Services Data Types](../../2014/integration-services/integration-services-data-types.md).  
+ Select an available data type from the list. For more information, see [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  **Length**  
  Set the column length for string data.  
@@ -57,6 +57,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Convert Data to a Different Data Type by Using the Data Conversion Transformation](../../2014/integration-services/convert-data-type-by-using-data-conversion-transformation.md)  
+ [Convert Data to a Different Data Type by Using the Data Conversion Transformation](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

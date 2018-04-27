@@ -37,6 +37,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Foreach Loop Editor &#40;Collection Page&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Foreach Loop Container](../../2014/integration-services/foreach-loop-container.md)  
+ [Foreach Loop Container](control-flow/foreach-loop-container.md)  
   
   

@@ -20,7 +20,7 @@ manager: "jhubbard"
 # ODBC Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **ODBC Source Editor** dialog box to select the ODBC connection manager for the source. This page also lets you select a table or view from the database.  
   
- For more information about the ODBC source, see [ODBC Source](../../2014/integration-services/odbc-source.md).  
+ For more information about the ODBC source, see [ODBC Source](data-flow/odbc-source.md).  
   
 ## Task List  
  **To open the ODBC Source Editor Connection Manager Page**  
@@ -54,7 +54,7 @@ manager: "jhubbard"
  Click **Preview** to view up to the first 200 rows of the data extracted from the table or view you selected.  
   
 ## See Also  
- [ODBC Source Custom Properties](../../2014/integration-services/odbc-source-custom-properties.md)   
+ [ODBC Source Custom Properties](data-flow/odbc-source-custom-properties.md)   
  [ODBC Source Editor &#40;Columns Page&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [ODBC Source Editor &#40;Error Output Page&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   

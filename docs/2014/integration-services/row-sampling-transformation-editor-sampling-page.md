@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Row Sampling Transformation Editor (Sampling Page)
   Use the **Row Sampling Transformation Editor** dialog box to split a portion of an input into a sample using a specified number of rows. This transformation divides the input into two separate outputs.  
   
- To learn more about the Row Sampling transformation, see [Row Sampling Transformation](../../2014/integration-services/row-sampling-transformation.md).  
+ To learn more about the Row Sampling transformation, see [Row Sampling Transformation](data-flow/transformations/row-sampling-transformation.md).  
   
 ## Options  
  **Number of rows**  
@@ -42,6 +42,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Percentage Sampling Transformation](../../2014/integration-services/percentage-sampling-transformation.md)  
+ [Percentage Sampling Transformation](data-flow/transformations/percentage-sampling-transformation.md)  
   
   

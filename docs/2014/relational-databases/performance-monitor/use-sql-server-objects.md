@@ -119,7 +119,7 @@ manager: "jhubbard"
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> For more information, see [Monitoring Replication with System Monitor](../replication/monitoring-replication-with-system-monitor.md).|Provides information about replication agent activity.|  
   
 ##  <a name="SsisPipelineCounters"></a> SSIS Pipeline Counters  
- For the **SSIS Pipeline** counter, see [Performance Counters](../../integration-services/performance-counters.md).  
+ For the **SSIS Pipeline** counter, see [Performance Counters](../../integration-services/performance/performance-counters.md).  
   
 ##  <a name="RequiredPermissions"></a> Required Permissions  
  Use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects depends on Windows permissions, except **SQLAgent:Alerts**. Users must be a member of the **sysadmin** fixed server role to use **SQLAgent:Alerts**.  

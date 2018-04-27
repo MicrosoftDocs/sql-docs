@@ -23,9 +23,9 @@ manager: "jhubbard"
   Use the **Merge Join Transformation Editor** dialog box to specify the join type, the join columns, and the output columns for merging two inputs combined by a join.  
   
 > [!IMPORTANT]  
->  The Merge Join Transformation requires sorted data for its inputs. For more information about this important requirement, see [Sort Data for the Merge and Merge Join Transformations](../../2014/integration-services/sort-data-for-the-merge-and-merge-join-transformations.md).  
+>  The Merge Join Transformation requires sorted data for its inputs. For more information about this important requirement, see [Sort Data for the Merge and Merge Join Transformations](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
- To learn more about the Merge Join transformation, see [Merge Join Transformation](../../2014/integration-services/merge-join-transformation.md).  
+ To learn more about the Merge Join transformation, see [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md).  
   
 ## Options  
  **Join type**  
@@ -47,9 +47,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Sort Data for the Merge and Merge Join Transformations](../../2014/integration-services/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Extend a Dataset by Using the Merge Join Transformation](../../2014/integration-services/extend-a-dataset-by-using-the-merge-join-transformation.md)   
- [Merge Transformation](../../2014/integration-services/merge-transformation.md)   
- [Union All Transformation](../../2014/integration-services/union-all-transformation.md)  
+ [Sort Data for the Merge and Merge Join Transformations](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Extend a Dataset by Using the Merge Join Transformation](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Merge Transformation](data-flow/transformations/merge-transformation.md)   
+ [Union All Transformation](data-flow/transformations/union-all-transformation.md)  
   
   

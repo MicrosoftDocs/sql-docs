@@ -40,10 +40,10 @@ manager: "jhubbard"
 8.  To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [Precedence Constraints](../../2014/integration-services/precedence-constraints.md)   
+ [Precedence Constraints](control-flow/precedence-constraints.md)   
  [Connect Tasks and Containers by Using a Default Precedence Constraint](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Set the Value of a Precedence Constraint by Using the Shortcut Menu](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Set the Properties of a Precedence Constraint](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
- [Integration Services &#40;SSIS&#41; Expressions](../../2014/integration-services/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)  
   
   

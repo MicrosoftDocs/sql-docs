@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 4.  Batch settings are ignored for tabular models.  
   
- To learn about this task, see [Analysis Services Processing Task](../../2014/integration-services/analysis-services-processing-task.md).  
+ To learn about this task, see [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md).  
   
 ## Options  
  **Analysis Services connection manager**  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  **New**  
  Create a new Analysis Services connection manager.  
   
- **Related Topics:** [Analysis Services Connection Manager](../../2014/integration-services/analysis-services-connection-manager.md), [Add Analysis Services Connection Manager Dialog Box UI Reference](../../2014/integration-services/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Related Topics:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Add Analysis Services Connection Manager Dialog Box UI Reference](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Object list**  
  |Property|Description|  
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services Processing Task Editor &#40;General Page&#41;](../../2014/integration-services/analysis-services-processing-task-editor-general-page.md)   
- [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md)  
+ [Analysis Services Processing Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md)  
   
   

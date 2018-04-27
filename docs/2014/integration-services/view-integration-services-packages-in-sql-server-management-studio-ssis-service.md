@@ -43,7 +43,7 @@ manager: "jhubbard"
 2.  Expand the Stored Packages subfolders to show packages.  
   
 ## See Also  
- [Package Management &#40;SSIS Service&#41;](../../2014/integration-services/package-management-ssis-service.md)   
+ [Package Management &#40;SSIS Service&#41;](service/package-management-ssis-service.md)   
  [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
   
   

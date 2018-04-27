@@ -107,7 +107,7 @@ manager: "jhubbard"
   
 1.  For each shared data source, you must retype the connection string.  
   
-2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../specify-credential-and-connection-information-for-report-data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+2.  For each report and shared data source that uses stored credentials, you must retype the user name and password, and then save. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../integration-services/connection-manager/data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 3.  For each data-driven subscription, open each subscription and retype the credentials to the subscription database.  
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
  **Error**  
  Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
   
- **Related Topics:** [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md)  
+ **Related Topics:** [Error Handling in Data](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Specify what should happen when a truncation occurs: ignore the failure, redirect the row, or fail the component.  
@@ -47,7 +47,7 @@ manager: "jhubbard"
 ## See Also  
  [OData Source Editor &#40;Connection Page&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
  [OData Source Editor &#40;Columns Page&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData Source](../../2014/integration-services/odata-source.md)   
- [OData Connection Manager](../../2014/integration-services/odata-connection-manager.md)  
+ [OData Source](data-flow/odata-source.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

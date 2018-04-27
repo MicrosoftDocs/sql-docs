@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Lookup Transformation Editor (General Page)
   Use the **General** page of the Lookup Transformation Editor dialog box to select the cache mode, select the connection type, and specify how to handle rows with no matching entries.  
   
- To learn more about the Lookup transformation, see [Lookup Transformation](../../2014/integration-services/lookup-transformation.md).  
+ To learn more about the Lookup transformation, see [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## Options  
  **Full cache**  
@@ -49,7 +49,7 @@ manager: "jhubbard"
  Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
- [Cache Connection Manager](../../2014/integration-services/cache-connection-manager.md)   
+ [Cache Connection Manager](connection-manager/cache-connection-manager.md)   
  [Lookup Transformation Editor &#40;Connection Page&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Lookup Transformation Editor &#40;Columns Page&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Lookup Transformation Editor &#40;Advanced Page&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   

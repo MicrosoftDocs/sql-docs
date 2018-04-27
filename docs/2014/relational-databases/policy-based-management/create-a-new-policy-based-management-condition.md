@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 7.  Confirm the correct facet in the **Facet** list, or select a different facet.  
   
-8.  Under **Expression**, construct condition expressions by selecting a facet property in the **Field** box, together with its associated operator and value. When you add multiple expressions, the expressions can be joined by using **And** or **Or**. For more information on the available options in this dialog box, see [Create New Condition or Open Condition Dialog Box, General Page](create-new-condition-or-open-condition-dialog-box-general-page.md), [Create New Condition or Open Condition Dialog Box, Description Page](create-new-condition-or-open-condition-dialog-box-description-page.md), and [Advanced Edit &#40;Condition&#41; Dialog Box](advanced-edit-condition-dialog-box.md).  
+8.  Under **Expression**, construct condition expressions by selecting a facet property in the **Field** box, together with its associated operator and value. When you add multiple expressions, the expressions can be joined by using **And** or **Or**. For more information on the available options in this dialog box, see [Create New Condition or Open Condition Dialog Box, General Page](../../integration-services/general-page-of-integration-services-designers-options.md), [Create New Condition or Open Condition Dialog Box, Description Page](create-new-condition-or-open-condition-dialog-box-description-page.md), and [Advanced Edit &#40;Condition&#41; Dialog Box](advanced-edit-condition-dialog-box.md).  
   
 9. When finished, click **OK**.  
   

@@ -34,6 +34,6 @@ manager: "mblythe"
  [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
  [Using My Reports &#40;Report Builder and SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Open and Close a Report &#40;Report Manager&#41;](../../2014/reporting-services/open-and-close-a-report-report-manager.md)  
+ [Open and Close a Report &#40;Report Manager&#41;](../open-and-close-a-report-report-manager.md)  
   
   

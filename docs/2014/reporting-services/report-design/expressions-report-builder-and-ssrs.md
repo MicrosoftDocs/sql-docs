@@ -136,7 +136,7 @@ manager: "mblythe"
 
   
 ## See Also  
- [Expression Dialog Box](../../2014/reporting-services/expression-dialog-box.md)   
- [Expression Dialog Box &#40;Report Builder&#41;](../../2014/reporting-services/expression-dialog-box-report-builder.md)  
+ [Expression Dialog Box](../expression-dialog-box.md)   
+ [Expression Dialog Box &#40;Report Builder&#41;](../expression-dialog-box-report-builder.md)  
   
   

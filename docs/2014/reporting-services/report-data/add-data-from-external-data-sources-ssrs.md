@@ -111,6 +111,6 @@ manager: "mblythe"
   
 ## See Also  
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
- [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
+ [Query Designers &#40;Report Builder&#41;](../query-designers-report-builder.md)  
   
   

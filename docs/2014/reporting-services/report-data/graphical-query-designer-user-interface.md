@@ -25,12 +25,12 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Graphical Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](../../2014/reporting-services/text-based-query-designer-user-interface.md). For more information about working with specific data source types, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](../text-based-query-designer-user-interface.md). For more information about working with specific data source types, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md).  
   
  .  
   
 ## Graphical Query Designer  
- This graphical query designer supports three types of query commands: **Text**, **StoredProcedure**, or **TableDirect**. Before you create a query for your dataset, you must select a command type option on the Query page of the [Dataset Properties](../../2014/reporting-services/dataset-properties-dialog-box-query.md) dialog box.  
+ This graphical query designer supports three types of query commands: **Text**, **StoredProcedure**, or **TableDirect**. Before you create a query for your dataset, you must select a command type option on the Query page of the [Dataset Properties](../dataset-properties-dialog-box-query.md) dialog box.  
   
  The following options are available for query type:  
   
@@ -148,7 +148,7 @@ EXEC uspGetEmployeeManagers '1';
  [OLE DB Connection Type &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
  [Oracle Connection Type &#40;SSRS&#41;](oracle-connection-type-ssrs.md)   
- [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
+ [RSReportDesigner Configuration File](../rsreportdesigner-configuration-file.md)   
  [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

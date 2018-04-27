@@ -22,9 +22,9 @@ manager: "mblythe"
   
  The HTML rendering extension is the default rendering extension for reports that are viewed in a browser, including when run in Report Manager. The HTML rendering extension can render HTML as a fragment or as a full HTML document. If the HTML is a fragment, the `HEAD`, `HTML`, and `BODY` tags of the HTML document are removed. Only the contents of the `BODY` tag are rendered. This is useful for embedding the HTML in the HTML produced by another application.  
   
- In some scenarios, report parameters can be used to launch script injection attacks when rendering reports to HTML. For more information about securing reports, see [Secure Reports and Resources](../../2014/reporting-services/secure-reports-and-resources.md).  
+ In some scenarios, report parameters can be used to launch script injection attacks when rendering reports to HTML. For more information about securing reports, see [Secure Reports and Resources](../secure-reports-and-resources.md).  
   
- For more information about browsers, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+ For more information about browsers, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

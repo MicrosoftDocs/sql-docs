@@ -41,6 +41,6 @@ manager: "mblythe"
   
 ## See Also  
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Grouping Pane](../../2014/reporting-services/grouping-pane.md)  
+ [Grouping Pane](../grouping-pane.md)  
   
   

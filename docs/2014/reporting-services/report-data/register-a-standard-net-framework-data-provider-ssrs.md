@@ -199,9 +199,9 @@ manager: "mblythe"
  The data processing extensions that are installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] must be compiled natively for each platform and installed in the correct locations. If you register a custom data provider or a standard [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider, it needs to be compiled natively for the appropriate platform and installed the appropriate locations. If you are running on a 32-bit platform, the data provider must be compiled for a 32-bit platform. If you are running on a 64-bit platform, the data provider must be compiled for the 64-bit platform. You cannot use a 32-bit data provider wrapped with 64-bit interfaces on a 64 bit platform. Check your third-party software for information about whether the data provider will work on the installed platform. For more information about data providers and platform support, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ## See Also  
- [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../2014/reporting-services/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+ [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services Configuration Files](../../2014/reporting-services/reporting-services-configuration-files.md)   
+ [Reporting Services Configuration Files](../reporting-services-configuration-files.md)   
  [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md)  
   
   

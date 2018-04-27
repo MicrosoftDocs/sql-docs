@@ -195,6 +195,6 @@ manager: "mblythe"
  For the most control over your query, use the text-based query designer. To switch to the text-based query designer, in the toolbar, click **Edit As Text**. After you edit a query in the text-based query designer, you can no longer use the relational query designer. The query will then always open in the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
- [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
+ [Query Designers &#40;Report Builder&#41;](../query-designers-report-builder.md)  
   
   

@@ -37,6 +37,6 @@ manager: "mblythe"
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Add a Moving Average to a Chart &#40;Report Builder and SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
- [Legend Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/legend-properties-dialog-box-general-report-builder-and-ssrs.md)  
+ [Legend Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

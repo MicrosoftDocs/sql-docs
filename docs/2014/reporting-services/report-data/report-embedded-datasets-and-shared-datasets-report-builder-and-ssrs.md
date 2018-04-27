@@ -149,7 +149,7 @@ manager: "mblythe"
 |Fields|Fields from the query command<br /><br /> Calculated fields are not part of the dataset definition|View fields, but cannot change them<br /><br /> The field collection is static based on the query at the time you added the shared dataset to the report. To update, click **Refresh Fields** in the **Dataset Properties** dialog box. The actual field collection is whatever the current query in the definition returns.<br /><br /> Add calculated fields|  
 |Dataset|Data options such as case sensitivity|Override data options in the instance|  
   
- For more information about creating datasets, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) and [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+ For more information about creating datasets, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) and [Reporting Services Tools](../reporting-services-tools.md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
 ##  <a name="SortGroupFilter"></a> Filtering, Sorting, and Grouping Data in a Dataset  
  Data in a dataset comes from running a query command on an external data source. The query command syntax for a data extension determines whether data can be sorted or grouped. Sorting and grouping takes place in the query before the data is retrieved for a report. Filtering takes place after the data is retrieved for a report.  
@@ -174,7 +174,7 @@ manager: "mblythe"
  You cannot group data in a dataset. To aggregate data in a dataset, you can edit the query command to calculate aggregates before the data is retrieved for a report. These are known as *server aggregates*. In expressions, to identify these values as precalculated aggregates, use the Aggregate function. For more information, see [Aggregate Function &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-function.md).  
   
 ##  <a name="Parameters"></a> Using Parameters and Datasets  
- For an embedded dataset query that contains query variables, query parameters and corresponding report parameters are automatically created. When the report runs, the value of the report parameter is linked to the dataset query parameter. In this way, the query command that runs on the external data source includes the values that are specified for report parameters. Report parameters enable a user to help choose the data that they want to see in the report. You can view how query parameters and report parameters are linked in the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md) page.  
+ For an embedded dataset query that contains query variables, query parameters and corresponding report parameters are automatically created. When the report runs, the value of the report parameter is linked to the dataset query parameter. In this way, the query command that runs on the external data source includes the values that are specified for report parameters. Report parameters enable a user to help choose the data that they want to see in the report. You can view how query parameters and report parameters are linked in the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../dataset-properties-dialog-box-parameters-report-builder.md) page.  
   
  For a shared dataset, query parameters are part of the shared dataset definition that can be managed on the report server independently from a report. The following list describes support for query parameter values:  
   
@@ -186,7 +186,7 @@ manager: "mblythe"
   
 -   Cannot include references to the built-in collection Parameters, which represents report parameters.  
   
- To configure query parameter values for a shared dataset, in dataset design mode, browse to and open a shared dataset from the report server, and set options on the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md) page. For more information, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+ To configure query parameter values for a shared dataset, in dataset design mode, browse to and open a shared dataset from the report server, and set options on the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../dataset-properties-dialog-box-parameters-report-builder.md) page. For more information, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  For some multidimensional data sources, such as [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the graphical query designer enables you to specify query filters and select an option to create a corresponding query parameter. When you select the parameter option, the data extension automatically creates a separate report dataset to provide available values for a drop-down list for that parameter. By default, these hidden datasets do not appear in the Report Data pane.  
   
@@ -219,7 +219,7 @@ manager: "mblythe"
   
 ## See Also  
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)  
   
   

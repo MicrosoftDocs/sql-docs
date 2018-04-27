@@ -46,30 +46,30 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Create a connection to a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] repository.|[Connect to an MDS Repository &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|Load MDS-managed data into Excel.|[Load Data from MDS into Excel](microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|Create a connection to a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] repository.|[Connect to an MDS Repository &#40;MDS Add-in for Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Load MDS-managed data into Excel.|[Load Data from MDS into Excel](export-data-to-excel-from-master-data-services.md)|  
 |Save a shortcut query that you can use open the currently displayed MDS-managed data in the future.|[Save a Shortcut Query File &#40;MDS Add-in for Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Share shortcuts with others.|[Email a Shortcut Query File &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Share shortcuts with others.|[Email a Shortcut Query File &#40;MDS Add-in for Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |View all changes that have been made to a member.|[View All Annotations or Transactions for a Member &#40;MDS Add-in for Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
 |Before publishing new data, find out whether duplication exists.|[Match Similar Data &#40;MDS Add-in for Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
-|Publish data from a worksheet into the MDS repository.|[Publish Data from Excel to MDS &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Create a new entity with data in the worksheet. (Administrators only)|[Create an Entity &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)|  
-|Create a domain-based attribute, also known as a constrained list. (Administrators only)|[Create a Domain-based Attribute &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
+|Publish data from a worksheet into the MDS repository.|[Publish Data from Excel to MDS &#40;MDS Add-in for Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Create a new entity with data in the worksheet. (Administrators only)|[Create an Entity &#40;MDS Add-in for Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
+|Create a domain-based attribute, also known as a constrained list. (Administrators only)|[Create a Domain-based Attribute &#40;MDS Add-in for Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Set properties for loading and publishing data in the Master Data Services Add-in for Excel. (Administrators only)|[Setting Properties for Master Data Services Add-in for Excel](setting-properties-for-master-data-services-add-in-for-excel.md)|  
   
 ## Related Content  
   
--   [Connections &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
+-   [Connections &#40;MDS Add-in for Excel&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [Loading Data &#40;MDS Add-in for Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Shortcut Query Files &#40;MDS Add-in for Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Data Quality Matching in the MDS Add-in for Excel](microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
+-   [Data Quality Matching in the MDS Add-in for Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
 -   [Publishing Data &#40;MDS Add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
--   [Building a Model &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
+-   [Building a Model &#40;MDS Add-in for Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
 -   [Security &#40;Master Data Services&#41;](../security-master-data-services.md)  
   

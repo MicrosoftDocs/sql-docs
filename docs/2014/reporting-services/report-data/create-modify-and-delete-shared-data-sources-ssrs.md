@@ -35,7 +35,7 @@ manager: "mblythe"
 |Name|A name that identifies the item within the report server folder hierarchy.|  
 |Description|A description that appears with the item in Report Manager when you view the contents of the folder.|  
 |Connection type|The data processing extension used with the data source. You can only use data processing extensions that are deployed on the report server. For more information about data processing extensions included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).|  
-|Connection string|The connection string for the database. For more information and to view examples of connection strings to frequently used data sources, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
+|Connection string|The connection string for the database. For more information and to view examples of connection strings to frequently used data sources, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
 |Credential type|Specifies how credentials are obtained for the connection and whether they are to be used after the connection is made. For more information, see [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md).|  
   
  A shared data source does not contain query information used to retrieve data. The query is always kept within a report definition.  
@@ -45,13 +45,13 @@ manager: "mblythe"
   
  For more information about creating a shared data source, see:  
   
--   [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
--   [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
+-   [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
  After you create a shared data source on the report server, you can create role assignments to control access to it, move it to a different location, rename it, or take it offline to prevent report processing while maintenance operations are performed on the external data source. If you rename or move a shared data source item to another location in the report server folder hierarchy, the path information in all reports or subscriptions that reference the shared data source are updated accordingly. If you take the shared data source offline, all reports, models, and subscriptions will not run until you re-enable the data source.  
   
- For more information about controlling access to shared data sources in the report server folder hierarchy, see [Secure Shared Data Source Items](../../2014/reporting-services/secure-shared-data-source-items.md).  
+ For more information about controlling access to shared data sources in the report server folder hierarchy, see [Secure Shared Data Source Items](../secure-shared-data-source-items.md).  
   
 ## Deleting a Shared Data Source  
  You can delete a shared data source the same way that you delete any item from the report server. In Report Manager, you open the folder in Details View, select the item, and click **Delete**. In an application page on a SharePoint site, you open the SharePoint library, select the item, and click **Delete**.  
@@ -67,13 +67,13 @@ manager: "mblythe"
  There is no Undo operation for deleting a shared data source. However, if you accidentally delete a shared data source, you can create a new one using the same property values as the one you deleted. You will have to open each report, model, and data-driven subscription to rebind the shared data source to the item that uses it, but as long as the data source properties are the same as before, the reports, models, and subscriptions will continue to function as before.  
   
 ## See Also  
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Manage Report Data Sources](manage-report-data-sources.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Data Sources Properties Page &#40;Report Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)   
+ [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Data Sources Properties Page &#40;Report Manager&#41;](../data-sources-properties-page-report-manager.md)   
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

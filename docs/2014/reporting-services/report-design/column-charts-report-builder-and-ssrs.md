@@ -48,7 +48,7 @@ manager: "mblythe"
 -   Unique to column charts is the ability to show your chart as a histogram or Pareto chart. To do so, set the ShowColumnAs property to `Histogram` or `Pareto` in the Properties window to `true`.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
  [Chart Types &#40;Report Builder and SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Bar Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
  [Range Charts &#40;Report Builder and SSRS&#41;](range-charts-report-builder-and-ssrs.md)   

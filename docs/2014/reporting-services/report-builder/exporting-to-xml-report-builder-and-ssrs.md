@@ -190,7 +190,7 @@ manager: "mblythe"
   
 -   The file extension of the XML document.  
   
- For more information, see [XML Device Information Settings](../../2014/reporting-services/xml-device-information-settings.md).  
+ For more information, see [XML Device Information Settings](../xml-device-information-settings.md).  
   
  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   

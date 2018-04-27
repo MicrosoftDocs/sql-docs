@@ -58,7 +58,7 @@ manager: "jhubbard"
 |Columns|The number of columns that will be loaded into Excel, based on the attributes selected in the **Columns** section.|  
   
 ## See Also  
- [Filter Data before Loading &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
+ [Filter Data before Loading &#40;MDS Add-in for Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
  [Loading Data &#40;MDS Add-in for Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

@@ -30,9 +30,9 @@ manager: "mblythe"
 ## Ways to Use My Reports  
  My Reports is empty until you add reports, folders, and other items. Here are some ways to add content to My Reports.  
   
--   Create a personal linked report and store it in My Reports. Not all reports are available for linking. For more information, see [Create a Linked Report](../../2014/reporting-services/create-a-linked-report.md).  
+-   Create a personal linked report and store it in My Reports. Not all reports are available for linking. For more information, see [Create a Linked Report](../create-a-linked-report.md).  
   
--   Upload a report definition (.rdl) file, report model (.smdl) file, or other files from the file system. You can upload any file, but the report server only processes report files that have an .rdl or .smdl file extension. For more information, see Report Definitions" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online and [Upload a File or Report &#40;Report Manager&#41;](../../2014/reporting-services/upload-a-file-or-report-report-manager.md).  
+-   Upload a report definition (.rdl) file, report model (.smdl) file, or other files from the file system. You can upload any file, but the report server only processes report files that have an .rdl or .smdl file extension. For more information, see Report Definitions" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online and [Upload a File or Report &#40;Report Manager&#41;](../upload-a-file-or-report-report-manager.md).  
   
 -   Create and publish your own reports to My Reports. For more information, see [Report Design View &#40;Report Builder&#41;](report-design-view-report-builder.md).  
   

@@ -157,7 +157,7 @@ manager: "mblythe"
 ##  <a name="InThisSection"></a> In This Section  
  The following topics provide additional information about working with the tablix data region.  
   
- [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix Data Region &#40;Report Builder and SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  Explains key concepts related to the tablix data region such as areas of the tablix, detail and grouped data, column and row groups, and static and dynamic rows and columns.  
   
  [Adding Data to a Tablix Data Region &#40;Report Builder and SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  

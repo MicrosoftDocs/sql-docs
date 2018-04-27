@@ -72,6 +72,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Attributes &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
- [Building a Model &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
+ [Building a Model &#40;MDS Add-in for Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

@@ -159,8 +159,8 @@ manager: "mblythe"
 ## See Also  
  [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Data Sources Properties Page &#40;Report Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [New Data Source Page &#40;Report Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Data Sources Properties Page &#40;Report Manager&#41;](../data-sources-properties-page-report-manager.md)   
+ [New Data Source Page &#40;Report Manager&#41;](../new-data-source-page-report-manager.md)  
   
   

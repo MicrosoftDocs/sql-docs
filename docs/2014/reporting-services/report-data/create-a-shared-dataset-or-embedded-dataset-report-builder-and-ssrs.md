@@ -74,7 +74,7 @@ manager: "mblythe"
   
 6.  On the Ribbon, click **Dataset Properties**.  
   
-7.  Click **Parameters**. On this page, set a default value to a constant or an expression, mark the parameter as read-only, nullable, or **Omit From Query**. For more information, see [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md).  
+7.  Click **Parameters**. On this page, set a default value to a constant or an expression, mark the parameter as read-only, nullable, or **Omit From Query**. For more information, see [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../dataset-properties-dialog-box-parameters-report-builder.md).  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -112,10 +112,10 @@ manager: "mblythe"
 ## See Also  
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [Report Builder Help for Dialog Boxes, Panes, and Wizards](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Query Designers &#40;Report Builder&#41;](../query-designers-report-builder.md)   
+ [Report Builder Help for Dialog Boxes, Panes, and Wizards](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

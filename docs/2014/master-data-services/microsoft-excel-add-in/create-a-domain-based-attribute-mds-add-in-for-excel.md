@@ -59,6 +59,6 @@ manager: "jhubbard"
 ## See Also  
  [Domain-Based Attributes &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
  [Create an Entity &#40;MDS Add-in for Excel&#41;](create-an-entity-mds-add-in-for-excel.md)   
- [Building a Model &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
+ [Building a Model &#40;MDS Add-in for Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

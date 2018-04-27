@@ -104,6 +104,6 @@ uspGetWhereUsedProductID
   
 ## See Also  
  [Relational Query Designer User Interface &#40;Report Builder&#41;](relational-query-designer-user-interface-report-builder.md)   
- [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
+ [Query Designers &#40;Report Builder&#41;](../query-designers-report-builder.md)  
   
   

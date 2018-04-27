@@ -47,6 +47,6 @@ manager: "mblythe"
 ## See Also  
  [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

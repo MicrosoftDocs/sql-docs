@@ -32,7 +32,7 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  When you define a parameter of type `String`, the user is presented with a text box that can take any value. If a report parameter is not tied to a query parameter and the parameter values are included in the report, it is possible for a report user to type expression syntax, script, or a URL into the parameter value, and render the report to Excel. If another user then views the report and clicks the rendered parameter contents, the user may inadvertently execute the malicious script or link.  
 >   
->  To mitigate the risk of inadvertently running malicious scripts, open rendered reports only from trusted sources. For more information about securing reports, see [Secure Reports and Resources](../../2014/reporting-services/secure-reports-and-resources.md).  
+>  To mitigate the risk of inadvertently running malicious scripts, open rendered reports only from trusted sources. For more information about securing reports, see [Secure Reports and Resources](../secure-reports-and-resources.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -145,7 +145,7 @@ manager: "mblythe"
   
      This occurs in both the [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] and stand-alone versions of Report Builder.  
   
--   Report Viewer Web Part in local mode and the SharePoint farm is not integrated with a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server. For more information, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   Report Viewer Web Part in local mode and the SharePoint farm is not integrated with a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server. For more information, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
  If the **Excel 2003** menu option renderer is configured to be visible, both the Excel and Excel 2003 options are available in the following scenarios:  
   
@@ -165,7 +165,7 @@ manager: "mblythe"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- The EXCELOPENXML extension defines the Excel renderer for Excel 2007-2010. The EXCEL extension defines the Excel 2003 version. `Visible = “false”` indicates the Excel 2003 renderer is hidden. For more information, see [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md) and [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md).  
+ The EXCELOPENXML extension defines the Excel renderer for Excel 2007-2010. The EXCEL extension defines the Excel 2003 version. `Visible = “false”` indicates the Excel 2003 renderer is hidden. For more information, see [RSReportServer Configuration File](../rsreportserver-configuration-file.md) and [RSReportDesigner Configuration File](../rsreportdesigner-configuration-file.md).  
   
 ### Differences Between the Excel 2007-2010 and Excel 2003 Renderers  
  Reports, rendered by using the Excel or Excel 2003 renderers are typically identical and only under rare circumstances will you notice differences between the two formats. The following table compares the Excel and the Excel 2003 renderers.  

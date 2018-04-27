@@ -55,11 +55,11 @@ manager: "mblythe"
   
 -   Understand the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] client/server architectures and tools. For example, in Report Designer, you author reports on a client machine that uses built-in data source types. When you publish a report, the data source types must be supported on the report server or SharePoint site.  For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
--   Data sources and datasets are authored in a report and published to a report server or SharePoint site from a client authoring tool. Data sources can be created directly on the report server. After they are published, you can configure credentials and other properties on the report server. For more information, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) and [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md).  
+-   Data sources and datasets are authored in a report and published to a report server or SharePoint site from a client authoring tool. Data sources can be created directly on the report server. After they are published, you can configure credentials and other properties on the report server. For more information, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) and [Reporting Services Tools](../reporting-services-tools.md).  
   
 -   The data sources you can use depend on which [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data extensions are installed. Support for data sources can differ by client authoring tool, report server version, and report server platform. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
--   Data source credentials vary based on data source type and on whether you are viewing reports on your client or report server or SharePoint site. For more information, see [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md), and credential information specific to each tool in [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md).  
+-   Data source credentials vary based on data source type and on whether you are viewing reports on your client or report server or SharePoint site. For more information, see [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md), and credential information specific to each tool in [Reporting Services Tools](../reporting-services-tools.md).  
   
 ## Related Tasks  
  Tasks related to creating data connections, adding data from external sources, datasets, and queries.  
@@ -72,8 +72,8 @@ manager: "mblythe"
 |Manage data sources after they are published|[Manage Report Data Sources](manage-report-data-sources.md)|  
 |Manage shared datasets after they are published|[Manage Shared Datasets](manage-shared-datasets.md)|  
 |Create and manage data alerts|[Reporting Services Data Alerts](../ssms/agent/alerts.md)|  
-|Cache a shared dataset|[Cache Shared Datasets &#40;SSRS&#41;](../../2014/reporting-services/cache-shared-datasets-ssrs.md)|  
-|Schedule a shared dataset to preload the cache|[Schedules](../../2014/reporting-services/schedules.md)|  
+|Cache a shared dataset|[Cache Shared Datasets &#40;SSRS&#41;](../cache-shared-datasets-ssrs.md)|  
+|Schedule a shared dataset to preload the cache|[Schedules](../schedules.md)|  
 |Add a data extension|[Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)|  
   
 ## Related Content  

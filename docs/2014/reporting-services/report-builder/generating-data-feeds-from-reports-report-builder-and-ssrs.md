@@ -186,7 +186,7 @@ manager: "mblythe"
 
   
 ##  <a name="DeviceInfo"></a> Device Information Settings  
- You can change some default settings for this renderer, including the encoding schema to use. For more information, see [ATOM Device Information Settings](../../2014/reporting-services/atom-device-information-settings.md).  
+ You can change some default settings for this renderer, including the encoding schema to use. For more information, see [ATOM Device Information Settings](../atom-device-information-settings.md).  
   
 
   

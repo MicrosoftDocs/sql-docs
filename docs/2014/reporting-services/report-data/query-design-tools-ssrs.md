@@ -42,14 +42,14 @@ manager: "mblythe"
   
 -   [Hyperion Essbase Query Designer](#Hyperion)  
   
- All of the query design tools run in the data design environment of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] when you work with a Report Server project template or Report Server Wizard project template. For more information about working with the query designers, see [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md).  
+ All of the query design tools run in the data design environment of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] when you work with a Report Server project template or Report Server Wizard project template. For more information about working with the query designers, see [Reporting Services Query Designers](../reporting-services-query-designers.md).  
   
 ##  <a name="Textbased"></a> Text-based Query Designer  
  The text-based query designer is the default query building tool for most supported relational data sources, including [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML, and ODBC. In contrast with the graphical query designer, this query design tool does not validate query syntax during query design. The following image provides an illustration of the text-based query designer.  
   
  ![Generic query designer, for relational data query](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
   
- The text-based query designer is recommended for creating complex queries, using stored procedures, querying XML data, and for writing dynamic queries. Depending on the data source, you may be able to toggle the **Edit As Text** button on the toolbar to switch between the graphical query designer and the text-based query designer. For more information, see [Text-based Query Designer User Interface](../../2014/reporting-services/text-based-query-designer-user-interface.md).  
+ The text-based query designer is recommended for creating complex queries, using stored procedures, querying XML data, and for writing dynamic queries. Depending on the data source, you may be able to toggle the **Edit As Text** button on the toolbar to switch between the graphical query designer and the text-based query designer. For more information, see [Text-based Query Designer User Interface](../text-based-query-designer-user-interface.md).  
   
 ##  <a name="Graphical"></a> Graphical Query Designer  
  The graphical query designer is used to create or modify [!INCLUDE[tsql](../../includes/tsql-md.md)] queries that run against a relational database. This query design tool is used in several [!INCLUDE[msCoName](../../../includes/msconame-md.md)] products and in other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] components. Depending on the data source type, it supports Text, StoredProcedure, and TableDirect modes. The following image provides an illustration of the graphical query designer.  
@@ -92,11 +92,11 @@ manager: "mblythe"
  To use this query designer, you must have a [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] data source that has at least one database. For more information, see [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
   
 ## See Also  
- [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)   
+ [Reporting Services Tools](../reporting-services-tools.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)  
+ [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
   

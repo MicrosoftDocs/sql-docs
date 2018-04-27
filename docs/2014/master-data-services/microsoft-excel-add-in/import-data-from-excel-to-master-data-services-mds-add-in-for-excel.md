@@ -45,7 +45,7 @@ manager: "jhubbard"
 >  If you are adding new members (rows) to your worksheet and you cannot successfully publish them to the MDS repository, you may not have **Update** permission to all of the attributes in the worksheet. On the **Review** tab, in the **Changes** group, click **Unprotect Sheet** and try to publish again.  
   
 ## Next Steps  
- [Apply Business Rules &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)  
+ [Apply Business Rules &#40;MDS Add-in for Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## See Also  
  [Publishing Data &#40;MDS Add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   

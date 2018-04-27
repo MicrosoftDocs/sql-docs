@@ -104,7 +104,7 @@ manager: "mblythe"
   
 -   [Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
--   [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
+-   [Data Connections, Data Sources, and Connection Strings in Report Builder](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
 -   [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

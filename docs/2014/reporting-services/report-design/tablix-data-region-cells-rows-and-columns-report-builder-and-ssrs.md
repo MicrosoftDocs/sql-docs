@@ -118,6 +118,6 @@ manager: "mblythe"
  You can split a cell that was previously merged. You can split cells horizontally across columns or vertically down rows. To split a cell into a block of cells, split the cell horizontally first, and then split vertically as many times as necessary.  
   
 ## See Also  
- [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix Data Region &#40;Report Builder and SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -105,7 +105,7 @@ manager: "mblythe"
   
  There are two ways to set a scalar axis:  
   
--   Select the **Scalar axis** option in the **Axis Properties** dialog box. This will add numeric or date/time values to the axis where no data grouping values exist. For more information, see [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md).  
+-   Select the **Scalar axis** option in the **Axis Properties** dialog box. This will add numeric or date/time values to the axis where no data grouping values exist. For more information, see [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md).  
   
 -   Select a field or type an expression for the **Category field** option in the **Series Properties** dialog box. The chart will add axis intervals for all values in the category field you specified.  
   
@@ -125,7 +125,7 @@ manager: "mblythe"
   
 ## See Also  
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

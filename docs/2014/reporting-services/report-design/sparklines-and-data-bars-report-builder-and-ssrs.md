@@ -108,7 +108,7 @@ manager: "mblythe"
  [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
  [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [Sparklines, Bar Charts, and Indicators in Report Builder (video)](http://technet.microsoft.com/bi/video/ff877165)   
  [How to: Create a Sparkline in a Table (video)](http://go.microsoft.com/fwlink/?LinkId=197092)  

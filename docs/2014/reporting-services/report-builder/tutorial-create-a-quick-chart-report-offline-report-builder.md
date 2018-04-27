@@ -25,7 +25,7 @@ manager: "mblythe"
  !["My First Pie Chart" in Run view](../media/rs-my1stpierunview.gif ""My First Pie Chart" in Run view")  
   
 ## Prerequisites  
- Whether you use XML data or a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query, you need to have access to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Report Builder. You can run the stand-alone version or the ClickOnce version available from Report Manager or a SharePoint site. Only the first step, how to open Report Builder, is different for ClickOnce versions. For more information, see [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
+ Whether you use XML data or a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query, you need to have access to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Report Builder. You can run the stand-alone version or the ClickOnce version available from Report Manager or a SharePoint site. Only the first step, how to open Report Builder, is different for ClickOnce versions. For more information, see [Install, Uninstall, and Report Builder Support](../install-uninstall-and-report-builder-support.md).  
   
 ##  <a name="TwoWays"></a> Two Ways To Do This Tutorial  
   

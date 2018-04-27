@@ -29,9 +29,9 @@ manager: "mblythe"
  Use the **Select** button in the Connection group to select a shared data source in your report, or browse to a shared data source on the report server.  
   
 > [!NOTE]  
->  A shared dataset must be based on a shared data source. If the data source that you need is not available, you must create one on the report server. For more information, see [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) in the Reporting Services documentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+>  A shared dataset must be based on a shared data source. If the data source that you need is not available, you must create one on the report server. For more information, see [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) in the Reporting Services documentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ### Dataset  
  Use the **Set Options** button to set shared dataset properties. These include the following:  
@@ -50,12 +50,12 @@ manager: "mblythe"
   
  For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- For more information about cache refresh plans, see [Cache Shared Datasets &#40;SSRS&#41;](../../2014/reporting-services/cache-shared-datasets-ssrs.md) in the Reporting Services documentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ For more information about cache refresh plans, see [Cache Shared Datasets &#40;SSRS&#41;](../cache-shared-datasets-ssrs.md) in the Reporting Services documentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ### Query Designer  
  Use the query designer toolbar to help build a query that specifies which data to retrieve from the data connection. The toolbar that you see depends on the query designer that is associated with the data source type from the data connection.  
   
- For more information, see the topic that corresponds to the data source type in [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) and [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md).  
+ For more information, see the topic that corresponds to the data source type in [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) and [Query Designers &#40;Report Builder&#41;](../query-designers-report-builder.md).  
   
 
   
@@ -77,7 +77,7 @@ manager: "mblythe"
   
  When a report author adds this shared dataset to a report, a pointer to the dataset definition on the report server is added. In the report, the dataset field collection appears in the Report Data pane. The query text is not available.  
   
- The credentials that you use to run a query are separate from the credentials that are used to preview a report or to run a report from the report server. For more information, see [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
+ The credentials that you use to run a query are separate from the credentials that are used to preview a report or to run a report from the report server. For more information, see [Specify Credentials in Report Builder](../specify-credentials-in-report-builder.md).  
   
 ### Running a Report with Parameters  
  When your query includes query variables, dataset parameters are created automatically for you. In turn, when you finish building the dataset query, report parameters that are set to dataset parameters are created automatically.  

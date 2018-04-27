@@ -288,9 +288,9 @@ manager: "mblythe"
   
 -   [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Set a Snapping Interval on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Set a Snapping Interval on a Gauge &#40;Report Builder and SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Specify an Image as a Pointer on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Specify an Image as a Pointer on a Gauge &#40;Report Builder and SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
 ##  <a name="InThisSection"></a> In This Section  

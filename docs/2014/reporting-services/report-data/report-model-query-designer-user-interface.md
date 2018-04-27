@@ -88,6 +88,6 @@ manager: "mblythe"
  [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Add Data from External Data Sources &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Report Model Connection &#40;SSRS&#41;](report-model-connection-ssrs.md)   
- [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)  
+ [RSReportDesigner Configuration File](../rsreportdesigner-configuration-file.md)  
   
   

@@ -73,7 +73,7 @@ manager: "mblythe"
 
   
 ##  <a name="InThisSection"></a> In This Section  
- [What's New in Report Builder for SQL Server 2014](../../2014/reporting-services/what-s-new-in-report-builder-for-sql-server-2014.md)  
+ [What's New in Report Builder for SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Describes the new features in this version of Report Builder, including maps.  
   
  [Tutorial: Creating a Quick Chart Report Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  

@@ -74,6 +74,6 @@ manager: "jhubbard"
 -   Confirm that the attributes were created as the data type you expected.  
   
 ## See Also  
- [Create a Domain-based Attribute &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+ [Create a Domain-based Attribute &#40;MDS Add-in for Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

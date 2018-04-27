@@ -294,5 +294,5 @@
 ## [Configure Merge Replication](tutorial-replicating-data-with-mobile-clients.md)  
 
 # Troubleshooters
-## [Transactional Repl Sync Errors](../../troubleshooting/replication/troubleshoot-tran-repl-errors.md)
+## [Transactional Repl Sync Errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
 

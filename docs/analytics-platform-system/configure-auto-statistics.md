@@ -21,9 +21,9 @@ Learn how to configure Parallel Data Warehouse to use auto statistics for creati
 Statistics for query optimization are objects that contain statistical information about the distribution of values in one or more columns of a table. The query optimizer uses these statistics to estimate the cardinality, or number of rows, in the query result. These cardinality estimates enable the query optimizer to create a high-quality query plan. As an example, in APS, the MPP query optimizer uses cardinality estimates to choose to shuffle or replicate the smaller of two tables used in a join clause and in doing so improve query performance.  For more information, see [Statistics](../relational-databases/statistics/statistics.md) and [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
 ## What are auto statistics?
-auto statistics are statistics that the query optimizer creates and updates automatically to improve the query plan. Statistics can become out-of-date after loads, inserts, updates and deletes operations. Without auto statistics, you need to do your own analysis to understand which columns need statistics and when the statistics need to be updated.
+Auto statistics are statistics that the query optimizer creates and updates automatically to improve the query plan. Statistics can become out-of-date after loads, inserts, updates and deletes operations. Without auto statistics, you need to do your own analysis to understand which columns need statistics and when the statistics need to be updated.
 
-auto statistics includes the following three settings: 
+Auto statistics includes the following three settings: 
 
 ### AUTO_CREATE_STATISTICS
 When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a histogram in an existing statistics object.

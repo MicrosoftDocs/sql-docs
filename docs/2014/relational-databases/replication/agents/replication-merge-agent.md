@@ -384,7 +384,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If you have installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to run under a local system account rather than under a domain user account (the default), the service can access only the local computer. If the Merge Agent that runs under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the Merge Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication.  
   
- To start the Merge Agent, execute **replmerg.exe** from the command prompt. For information, see [Replication Agent Executables](dev-guide/replication-agent-executables-concepts.md).  
+ To start the Merge Agent, execute **replmerg.exe** from the command prompt. For information, see [Replication Agent Executables](../concepts/replication-agent-executables-concepts.md).  
   
  The merge agent history for the current session is not removed while running in continuous mode. A long running agent can result in a large number of entries in the merge history tables which could impact performance. To resolve this problem switch to scheduled mode, or continue to use continuous mode but create a dedicated job to periodically restart the merge agent, or reduce the verbosity of the history level to reduce the number of rows and therefor reduce the performance impact.  
   

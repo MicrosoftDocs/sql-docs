@@ -243,7 +243,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Reinitialize Subscriptions](reinitialize-subscriptions.md)   
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

@@ -269,7 +269,7 @@ REM -- The following command must be supplied without line breaks.
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
 ## See Also  
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Synchronize Data](synchronize-data.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   

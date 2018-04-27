@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Replication Agent Administration](replication-agent-administration.md)   
- [Replication Agent Executables Concepts](../dev-guide/replication-agent-executables-concepts.md)   
+ [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](replication-agents-overview.md)  
   
   

@@ -105,7 +105,7 @@ manager: "jhubbard"
      This defines a new article for the publication. For more information, see [Define an Article](define-an-article.md).  
   
 ## See Also  
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

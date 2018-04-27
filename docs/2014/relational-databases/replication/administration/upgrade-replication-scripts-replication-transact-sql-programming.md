@@ -25,7 +25,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Upgrade Replication Scripts (Replication Transact-SQL Programming)
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] script files can be used to programmatically configure a replication topology. For more information, see [Replication System Stored Procedures Concepts](../dev-guide/replication-system-stored-procedures-concepts.md).  
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)] script files can be used to programmatically configure a replication topology. For more information, see [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md).  
   
 > [!IMPORTANT]  
 >  Although you are not required to upgrade scripts that are executed by members of the `sysadmin` role, we recommend that you modify existing scripts as described in this topic. Specify an account that has minimum permissions for each replication agent as described in the "Permissions Required By Agents" section of the topic [Replication Agent Security Model](../security/replication-agent-security-model.md).  
@@ -192,7 +192,7 @@ manager: "jhubbard"
  [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md)   
  [MSSQL_ENG021797](../mssql-eng021797.md)   
  [MSSQL_ENG021798](../mssql-eng021798.md)   
- [Replication System Stored Procedures Concepts](../dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Upgrade Replicated Databases](../../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

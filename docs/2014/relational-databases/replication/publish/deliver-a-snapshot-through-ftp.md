@@ -181,7 +181,7 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_createmergepullsubagent_ftp](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsubftp.sql#sp_createmergepullsubagent_ftp)]  
   
 ## See Also  
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)  

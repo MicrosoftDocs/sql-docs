@@ -33,7 +33,7 @@ manager: "jhubbard"
   
     -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../dev-guide/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
 -   Run each replication agent under a different Windows account, and use Windows Authentication for all replication agent connections. For more information about specifying accounts, see [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md).  
   

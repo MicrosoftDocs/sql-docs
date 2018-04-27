@@ -322,7 +322,7 @@ manager: "jhubbard"
   
      This marks the articles for validation.  
   
-5.  If not already running, start the Distribution Agent to synchronize each subscription. For more information, see [Synchronize a Push Subscription](synchronize-a-push-subscription.md) or [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). The result of the validation operation is written to the agent history. For more information, see [Monitoring Replication](monitor/monitoring-replication.md).  
+5.  If not already running, start the Distribution Agent to synchronize each subscription. For more information, see [Synchronize a Push Subscription](synchronize-a-push-subscription.md) or [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). The result of the validation operation is written to the agent history. For more information, see [Monitoring Replication](monitoring-replication.md).  
   
 #### To validate data in all subscriptions to a merge publication  
   
@@ -334,7 +334,7 @@ manager: "jhubbard"
   
 4.  Call the <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> method. Pass the desired <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
-5.  Run the Merge Agent for each subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](monitor/monitoring-replication.md).  
+5.  Run the Merge Agent for each subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](monitoring-replication.md).  
   
 #### To validate data in a single subscription to a merge publication  
   
@@ -346,7 +346,7 @@ manager: "jhubbard"
   
 4.  Call the <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> method. Pass the name of the Subscriber and subscription database being validated and the desired <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
-5.  Run the Merge Agent for the subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](monitor/monitoring-replication.md).  
+5.  Run the Merge Agent for the subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](monitoring-replication.md).  
   
 ###  <a name="RMOExample"></a> Example (RMO)  
  This example marks all subscriptions to a transactional publication for rowcount validation.  

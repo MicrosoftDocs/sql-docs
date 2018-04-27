@@ -187,7 +187,7 @@ manager: "jhubbard"
  [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md)   
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

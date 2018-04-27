@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   If the Distribution Agent or Merge Agent is configured to run continuously, the agent applies the snapshot automatically after the Snapshot Agent completes.  
   
--   If the Distribution Agent or Merge Agent is configured to run on a schedule or on-demand, and there is no snapshot available when the agent runs, the agent will shut down with a message stating that a snapshot is not yet available. You must run the agent again to apply the snapshot after the Snapshot Agent has completed. For more information on running agents, see [Synchronize a Push Subscription](../synchronize-a-push-subscription.md), [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md), and [Replication Agent Executables Concepts](../dev-guide/replication-agent-executables-concepts.md).  
+-   If the Distribution Agent or Merge Agent is configured to run on a schedule or on-demand, and there is no snapshot available when the agent runs, the agent will shut down with a message stating that a snapshot is not yet available. You must run the agent again to apply the snapshot after the Snapshot Agent has completed. For more information on running agents, see [Synchronize a Push Subscription](../synchronize-a-push-subscription.md), [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md), and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
 ### Should I script my replication configuration?  
  Yes. Scripting the replication configuration is a key part of any disaster recovery plan for a replication topology. For more information on scripting, see [Scripting Replication](../scripting-replication.md).  

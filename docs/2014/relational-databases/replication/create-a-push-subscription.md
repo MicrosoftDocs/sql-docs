@@ -259,7 +259,7 @@ manager: "jhubbard"
  [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Create a Publication](publish/create-a-publication.md)   
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Synchronize a Push Subscription](synchronize-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)  

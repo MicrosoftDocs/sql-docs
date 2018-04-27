@@ -50,7 +50,7 @@ manager: "jhubbard"
   
     -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
   
 -   Use the precomputed partitions optimization if possible. This optimization is used by default if a number of publication requirements are met. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](merge/parameterized-filters-optimize-for-precomputed-partitions.md). If the publication does not meet these requirements, consider redesigning the publication.  
   

@@ -154,7 +154,7 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## See Also  
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

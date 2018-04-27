@@ -83,6 +83,6 @@ manager: "jhubbard"
 ## See Also  
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
  [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Monitoring Replication](monitor/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

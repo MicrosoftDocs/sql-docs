@@ -264,7 +264,7 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_CreateMergePullSub_WebSync](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepullsub_websync)]  
   
 ## See Also  
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
  [Configure Web Synchronization](configure-web-synchronization.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   

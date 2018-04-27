@@ -87,6 +87,6 @@ deallocate hc
 ## See Also  
  [Replication Agent Administration](replication-agent-administration.md)   
  [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
- [Monitoring &#40;Replication&#41;](../monitor/monitoring-replication.md)  
+ [Monitoring &#40;Replication&#41;](../monitoring-replication.md)  
   
   

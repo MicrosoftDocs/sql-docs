@@ -59,6 +59,6 @@ manager: "jhubbard"
  [Start the Tutorial](transactional/transactional-replication.md)  
   
 ## See Also  
- [Replication Programming Concepts](dev-guide/replication-programming-concepts.md)  
+ [Replication Programming Concepts](concepts/replication-programming-concepts.md)  
   
   

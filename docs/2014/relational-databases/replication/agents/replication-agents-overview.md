@@ -59,7 +59,7 @@ manager: "jhubbard"
 ## See Also  
  [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)   
  [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Replication Agent Executables Concepts](../dev-guide/replication-agent-executables-concepts.md)   
+ [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agent Administration](replication-agent-administration.md)  
   
   

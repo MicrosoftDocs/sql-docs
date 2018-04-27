@@ -44,6 +44,6 @@ manager: "jhubbard"
  Provides information on validating data at Subscribers to determine whether the data matches the data at the Publisher.  
   
 ## See Also  
- [Monitoring &#40;Replication&#41;](../monitor/monitoring-replication.md)  
+ [Monitoring &#40;Replication&#41;](../monitoring-replication.md)  
   
   

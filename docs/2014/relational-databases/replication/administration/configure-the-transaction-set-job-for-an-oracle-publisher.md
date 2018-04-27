@@ -56,6 +56,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Performance Tuning for Oracle Publishers](../non-sql/performance-tuning-for-oracle-publishers.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

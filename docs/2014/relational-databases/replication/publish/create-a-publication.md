@@ -249,7 +249,7 @@ manager: "jhubbard"
 ## See Also  
  [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)   
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [Define an Article](define-an-article.md)   
  [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
  [Configure Distribution](../configure-distribution.md)   

@@ -110,9 +110,9 @@ manager: "jhubbard"
 ## Monitor the replication topology  
  After the replication topology is in place and thresholds and alerts have been configured, it is recommended to regularly monitor replication. Monitoring a replication topology is an important aspect of deploying replication. Because replication activity is distributed, it is essential to track activity and status across all computers involved in replication. The following tools can be used to monitor replication:  
   
--   Replication Monitor is the most important tool for monitoring replication, allowing you to monitor the overall health of a replication topology. For more information, see [Monitoring Replication](../monitor/monitoring-replication.md).  
+-   Replication Monitor is the most important tool for monitoring replication, allowing you to monitor the overall health of a replication topology. For more information, see [Monitoring Replication](../monitoring-replication.md).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] and Replication Management Objects (RMO) provide interfaces for monitoring replication. For more information, see [Monitoring Replication](../monitor/monitoring-replication.md).  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] and Replication Management Objects (RMO) provide interfaces for monitoring replication. For more information, see [Monitoring Replication](../monitoring-replication.md).  
   
 -   System Monitor can also be useful for monitoring replication performance. For more information, see [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md).  
   

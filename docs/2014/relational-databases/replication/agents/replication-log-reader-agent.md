@@ -187,7 +187,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If you installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to run under a local system account instead of under a domain user account (the default), the service can access only the local computer. If the Log Reader Agent that runs under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the Log Reader Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. For information about changing security accounts, see [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md).  
   
- To start the Log Reader Agent, execute **logread.exe** from the command prompt. For information, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+ To start the Log Reader Agent, execute **logread.exe** from the command prompt. For information, see [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
 ## Change History  
   

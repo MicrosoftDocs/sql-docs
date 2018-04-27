@@ -42,7 +42,7 @@ manager: "jhubbard"
   
     -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
   
 2.  Specify the lowest setting possible for the publication retention period. For more information, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   

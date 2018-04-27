@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Replication Monitor, Main Page
   Replication Monitor allows you to track the status and performance of publications and subscriptions across a replication topology. The following topics provide more information:  
   
--   For an overview of Replication Monitor, see [Monitoring Replication](monitor/monitoring-replication.md).  
+-   For an overview of Replication Monitor, see [Monitoring Replication](monitoring-replication.md).  
   
 -   The left pane of Replication Monitor is focused on Publishers and groups of Publishers. Add one or more Publishers to Replication Monitor to display publication and subscription information. For more information, see [Add and Remove Publishers from Replication Monitor](monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
@@ -46,6 +46,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](monitor/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

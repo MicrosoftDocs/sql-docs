@@ -235,9 +235,9 @@ manager: "jhubbard"
  [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
  [Create and Apply the Snapshot](create-and-apply-the-snapshot.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

@@ -203,7 +203,7 @@ This registers the pull subscription at the Publisher.
 This example creates an immediate updating pull subscription to a publication that supports immediate updating subscriptions. Login and password values are supplied at runtime using sqlcmd scripting variables.
 
 > [!NOTE]  
->  This script uses sqlcmd scripting variables. They are in the form `$(MyVariable)`. For information about how to use scripting variables on the command line and in SQL Server Management Studio, see the **Executing Replication Scripts** section in the topic [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md).
+>  This script uses sqlcmd scripting variables. They are in the form `$(MyVariable)`. For information about how to use scripting variables on the command line and in SQL Server Management Studio, see the **Executing Replication Scripts** section in the topic [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md).
 
 ```
 -- Execute this batch at the Subscriber.

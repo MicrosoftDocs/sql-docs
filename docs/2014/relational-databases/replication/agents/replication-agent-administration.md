@@ -49,12 +49,12 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and Replication Monitor: [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
   
--   Replication programming: [Replication Agent Executables Concepts](../dev-guide/replication-agent-executables-concepts.md)  
+-   Replication programming: [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
 ## Agent Profiles  
  When replication is configured, a set of agent profiles is installed on the Distributor. An agent profile contains a set of parameters that are used each time an agent runs: each agent logs in to the Distributor during its startup process and queries for the parameters in its profile. Replication provides a default profile for each agent and additional predefined profiles for the Log Reader Agent, Distribution Agent, and Merge Agent. In addition to the profiles provided, you can create profiles suited to your application requirements. For more information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
- For information about specifying command line parameters directly, see [Replication Agent Executables Concepts](../dev-guide/replication-agent-executables-concepts.md).  
+ For information about specifying command line parameters directly, see [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
 ## Monitoring Replication Agents  
  Replication Monitor allows you to view information and perform tasks associated with each replication agent. The following list includes each agent, the tabs in the Replication Monitor on which it can be found, and a link to a topic that explains how to access these tabs:  
@@ -93,6 +93,6 @@ manager: "jhubbard"
 |Replication monitoring refresher for distribution|Refreshes cached queries used by Replication Monitor..|Runs continuously.|  
   
 ## See Also  
- [Monitoring Replication](../monitor/monitoring-replication.md)  
+ [Monitoring Replication](../monitoring-replication.md)  
   
   

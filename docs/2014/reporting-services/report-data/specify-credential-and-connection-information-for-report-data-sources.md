@@ -138,7 +138,7 @@ manager: "mblythe"
  You can set credentials in your code to control access to reports and to the report server. For more information, see [Data Sources and Connection Methods](../../2014/reporting-services/dev-guide/data-sources-and-connection-methods.md).  
   
 ## See Also  
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

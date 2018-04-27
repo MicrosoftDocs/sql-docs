@@ -69,7 +69,7 @@ manager: "jhubbard"
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Measure Latency and Validate Connections for Transactional Replication](transactional/transactional-replication.md)   
  [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)   
- [Monitoring Replication](monitor/monitoring-replication.md)   
+ [Monitoring Replication](monitoring-replication.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

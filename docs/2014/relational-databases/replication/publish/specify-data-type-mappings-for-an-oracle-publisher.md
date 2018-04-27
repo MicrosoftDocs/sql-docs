@@ -94,7 +94,7 @@ manager: "jhubbard"
 ## See Also  
  [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Heterogeneous Database Replication](non-sql/heterogeneous-database-replication.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Configure an Oracle Publisher](non-sql/configure-an-oracle-publisher.md)  
   
   

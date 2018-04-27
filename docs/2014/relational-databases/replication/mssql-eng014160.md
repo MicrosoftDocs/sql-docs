@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   If the threshold has been exceeded, but the subscription has not yet expired, synchronize the subscription. For more information, see [Synchronize Data](synchronize-data.md).  
   
--   If the agent has been running, but has not been replicating changes properly, this can cause the subscription to expire. For transactional replication, make sure that the Distribution Agent and Log Reader Agent are running. For merge replication, make sure the Merge Agent is running. For information about how to start these agents, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+-   If the agent has been running, but has not been replicating changes properly, this can cause the subscription to expire. For transactional replication, make sure that the Distribution Agent and Log Reader Agent are running. For merge replication, make sure the Merge Agent is running. For information about how to start these agents, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
   
 -   If the subscription has expired, it must either be reinitialized or dropped and re-created, depending on the type of subscription and how long it has been expired. For more information, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   

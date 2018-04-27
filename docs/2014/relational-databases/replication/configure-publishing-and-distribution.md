@@ -164,9 +164,9 @@ manager: "jhubbard"
   
 ## See Also  
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Configure Distribution](configure-distribution.md)   
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Configure Replication for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

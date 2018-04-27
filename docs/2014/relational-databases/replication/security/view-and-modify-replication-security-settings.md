@@ -568,12 +568,12 @@ manager: "jhubbard"
  After changing an agent login or password, you must stop and restart the agent before the change takes effect.  
   
 ## See Also  
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
  [Replication Agent Security Model](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

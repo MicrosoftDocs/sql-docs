@@ -136,7 +136,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Peer-to-Peer Transactional Replication](../transactional/transactional-replication.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Replicate Identity Columns](replicate-identity-columns.md)  
   
   

@@ -64,8 +64,8 @@ manager: "jhubbard"
 3.  Right-click an agent, and then click **Start Agent** or **Stop Agent**.  
   
 ## See Also  
- [Monitoring Replication](../monitor/monitoring-replication.md)   
- [Replication Agent Executables Concepts](../dev-guide/replication-agent-executables-concepts.md)   
+ [Monitoring Replication](../monitoring-replication.md)   
+ [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](replication-agents-overview.md)  
   
   

@@ -239,6 +239,6 @@ manager: "jhubbard"
  [Implement a Custom Conflict Resolver for a Merge Article](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Debug a Business Logic Handler &#40;Replication Programming&#41;](debug-a-business-logic-handler-replication-programming.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)  
   
   

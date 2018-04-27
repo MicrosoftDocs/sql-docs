@@ -121,7 +121,7 @@ manager: "jhubbard"
  Specifies how queued updating conflicts are resolved. A value of **1** indicates the Publisher wins the conflict, and the current conflicting queued transaction will be rolled back on the Publisher and the originating updating Subscriber; the processing of subsequent queued transactions will continue. A value of **2** indicates the Subscriber wins the conflict, and the queued transaction will override the values on the Publisher. A value of **3** indicates that any conflict will result in Subscriber re-initialization; the Publisher wins the conflict, processing of subsequent queued transactions will be terminated, and the subscription will be reinitialized. The default setting is **1** for transactional publications and **3** for snapshot publications.  
   
 ## Remarks  
- To start the Queue Reader Agent, execute **qrdrsvc.exe** from the command prompt. For information, see [Replication Agent Executables](../dev-guide/replication-agent-executables-concepts.md).  
+ To start the Queue Reader Agent, execute **qrdrsvc.exe** from the command prompt. For information, see [Replication Agent Executables](../concepts/replication-agent-executables-concepts.md).  
   
 ## See Also  
  [Replication Agent Administration](replication-agent-administration.md)  

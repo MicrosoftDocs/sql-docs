@@ -96,7 +96,7 @@ manager: "jhubbard"
 3.  (Optional) At the Publisher, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify **retention_period_unit** for **@property** and a new unit for the subscription expiration period for **@value**.  
   
 ## See Also  
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   
   

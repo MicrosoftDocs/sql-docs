@@ -46,7 +46,7 @@ manager: "jhubbard"
  [Synchronize Subscriptions &#40;Replication&#41;](../synchronize-subscriptions-replication.md)  
  Topics in this section show how to synchronize subscriptions.  
   
- [Monitoring Replication](../monitor/monitoring-replication.md)  
+ [Monitoring Replication](../monitoring-replication.md)  
  Topics in this section show how to programmatically monitor a replication topology.  
   
 ## Introduction to RMO Programming  

@@ -171,7 +171,7 @@ manager: "jhubbard"
     -   **-DynamicSnapshotLocation** - the location of the dynamic snapshot for this partition.  
   
 > [!NOTE]  
->  For more information about programming replication agents, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+>  For more information about programming replication agents, see [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example creates a merge publication with parameterized filters where Subscribers initiate the snapshot generation process. Values for **@job_login** and **@job_password** are passed in using scripting variables.  
@@ -391,7 +391,7 @@ PAUSE
   
 ## See Also  
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   

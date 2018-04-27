@@ -284,7 +284,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If you have installed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent to run under a local system account rather than under a domain user account (the default), the service can only access the local computer. If the Distribution Agent that runs under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the Distribution Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. For information on changing security accounts, see [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md).  
   
- To start the Distribution Agent, execute **distrib.exe** from the command prompt. For information, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+ To start the Distribution Agent, execute **distrib.exe** from the command prompt. For information, see [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
 ## Change History  
   

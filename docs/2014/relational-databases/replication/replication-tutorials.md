@@ -25,7 +25,7 @@ manager: "jhubbard"
  In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
->  Most of the tasks shown in these tutorials can be performed programmatically. For more information, see [Developer's Guide &#40;Replication&#41;](dev-guide/developer-s-guide-replication.md).  
+>  Most of the tasks shown in these tutorials can be performed programmatically. For more information, see [Developer's Guide &#40;Replication&#41;](concepts/replication-developer-documentation.md).  
   
 ## Replication Tutorials  
  [Preparing the Server for Replication](tutorial-preparing-the-server-for-replication.md)  

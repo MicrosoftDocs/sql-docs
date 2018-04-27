@@ -41,7 +41,7 @@ manager: "mblythe"
 |----------|--------------|  
 |Explorer pane|Displays graphic representations of the entities and entity fields in the model. Use this pane to explore entities, their related entities, and fields.|  
 |Design Area|Displays a list of fields from the model. Use this pane to arrange the layout of the fields you've chosen.|  
-|Results pane|Displays the results of the query. To run the query, right-click in any pane, and then click **Run**, or click the **Run** (![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")) button on the toolbar.|  
+|Results pane|Displays the results of the query. To run the query, right-click in any pane, and then click **Run**, or click the **Run** (![Run the query](../../../analysis-services/media/rsqdicon-run.gif "Run the query")) button on the toolbar.|  
   
  Changing information in the Explorer or Design Area panes will affect the contents of the Result pane when you click **Run**.  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 |**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Undo action](../media/rsqdicon-undo.gif "Undo action")|Undo the last action.|  
 |![Redo action](../media/rsqdicon-redo.gif "Redo action")|Redo the last action.|  
-|![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the resulting rows in the Result pane.|  
+|![Run the query](../../../analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the resulting rows in the Result pane.|  
 |![Filter graphic next to selected filter column](../media/rsqdicon-filter.gif "Filter graphic next to selected filter column")|Open the **Filter Data** dialog box, which allows you to specify which data you would like to filter on. You can specify filters independently of data currently in the Design Area.|  
   
 ## Text-based Query Designer  
@@ -82,7 +82,7 @@ manager: "mblythe"
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
 |**Import**|Import a query from an existing report.|  
-|![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query text and display the resulting row set in the Result pane.|  
+|![Run the query](../../../analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query text and display the resulting row set in the Result pane.|  
   
 ## See Also  
  [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   

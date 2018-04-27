@@ -137,7 +137,7 @@ manager: "jhubbard"
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Filter Published Data for Merge Replication](merge/merge-replication.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   

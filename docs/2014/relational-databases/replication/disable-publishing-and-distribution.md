@@ -130,7 +130,7 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## See Also  
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

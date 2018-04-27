@@ -78,7 +78,7 @@ manager: "mblythe"
  [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Store Credentials in a Reporting Services Data Source](store-credentials-in-a-reporting-services-data-source.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)  
   
   

@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
   
--   [Monitoring &#40;Replication&#41;](monitor/monitoring-replication.md)  
+-   [Monitoring &#40;Replication&#41;](monitoring-replication.md)  
   
 -   [Scripting Replication](scripting-replication.md)  
   

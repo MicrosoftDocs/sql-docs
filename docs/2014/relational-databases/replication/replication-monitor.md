@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](monitor/monitoring-replication.md)   
+ [Monitoring Replication](monitoring-replication.md)   
  [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

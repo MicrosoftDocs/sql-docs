@@ -51,7 +51,7 @@ manager: "mblythe"
   
 2.  Go to **Site settings**.  
   
-    -   In SharePoint 2013, click the **Settings** icon. ![SharePoint Settings](../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
+    -   In SharePoint 2013, click the **Settings** icon. ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
   
     -   In SharePoint 2010, click **Site Actions**, then click **Site Settings**.  
   

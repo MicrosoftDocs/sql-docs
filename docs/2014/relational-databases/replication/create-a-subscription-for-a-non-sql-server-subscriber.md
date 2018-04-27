@@ -184,7 +184,7 @@ manager: "jhubbard"
  [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
  [Oracle Subscribers](non-sql/oracle-subscribers.md)   
  [Other Non-SQL Server Subscribers](other-non-sql/non-sql-server-subscribers.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

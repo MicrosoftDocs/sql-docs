@@ -47,13 +47,13 @@ To use this tutorial, make sure that your system has the following products and 
 - At the publisher server (source), install:  
   
    - Any edition of SQL Server, except for SQL Server Express or SQL Server Compact. These editions cannot be a replication publisher.   
-   - An [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
+   - The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 - At the subscriber server (destination), install any edition of SQL Server, except for [!INCLUDE[ssEW](../../includes/ssew-md.md)]. The publication that's created in this tutorial does not support [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
 
 - Install [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
   
 >[!NOTE]
@@ -64,7 +64,6 @@ To use this tutorial, make sure that your system has the following products and 
 **Estimated time to complete this tutorial: 60 minutes**  
   
 ## Configure a publisher for merge replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In this section, you create a merge publication by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to publish a subset of the **Employee**, **SalesOrderHeader**, and **SalesOrderDetail** tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. These tables are filtered with parameterized row filters so that each subscription contains a unique partition of the data. You also add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login used by the Merge Agent to the publication access list (PAL).  
   
 ### Create merge publication and define articles  
@@ -112,7 +111,7 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
 
     
   
-10. On the **Filter Table Rows** page, select **Employee (Human Resources)**, select **Add,** and then select **Add Join to Extend the Selected Filter**.  
+10. On the **Filter Table Rows** page, select **Employee (Human Resources)**, select **Add**, and then select **Add Join to Extend the Selected Filter**.  
   
     a. In the **Add Join** dialog box, select **Sales.SalesOrderHeader** under **Joined table**. Select **Write the join statement manually**, and complete the join statement as follows:  
   

@@ -50,13 +50,13 @@ To use this tutorial, make sure that your system has these products and componen
 - At the publisher server (source), install:  
   
    - Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Server Compact. These editions cannot be replication publishers.   
-   - An [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
+   - The [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 - At the subscriber server (destination), install any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a subscriber in transactional replication.  
   
 - Install [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
  
 >[!NOTE]
 > - Replication is not supported on SQL Server instances that are more than two versions apart. For more information, see [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
@@ -106,7 +106,7 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
   
 10. On the **Agent Security** page, clear the **Use the security settings from the Snapshot Agent** check box.   
   
-    Select **Security Settings** for the Snapshot Agent, enter <*Publisher_Machine_Name*>**\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**:  
+    Select **Security Settings** for the Snapshot Agent. Enter <*Publisher_Machine_Name*>**\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**.  
 
     !["Agent Security" page and "Snapshot Agent Security" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
@@ -121,7 +121,7 @@ In this section, you create a transactional publication by using [!INCLUDE[ssMan
   
 14. After the publication is created, select **Close** to complete the wizard. 
 
-You might encounter the following error if your SQL Server Agent is not running when  you attempt to create the publication. This error indicates that your publication was created successfully but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. The next section gives instructions. 
+You might encounter the following error if your SQL Server Agent is not running when you try to create the publication. This error indicates that your publication was created successfully but your Snapshot Agent was unable to start. If this happens, you'll need to start the SQL Server Agent, and then manually start the Snapshot Agent. The next section gives instructions. 
 
 ![Warning that the Snapshot Agent has failed to start](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenterror.png)
     
@@ -186,7 +186,7 @@ In this section, you add a subscriber to the publication that you previously cre
   
    ![Entering a name for the subscription database](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. On the **Distribution Agent Security** page, select the ellipsis (**…**) button. Enter <*Publisher_Machine_Name*>**\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**:
+8. On the **Distribution Agent Security** page, select the ellipsis (**…**) button. Enter <*Publisher_Machine_Name*>**\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**.
 
    ![Distribution account information in the "Distribution Agent Security" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -253,7 +253,7 @@ The Snapshot Agent generates the snapshot and writes it to the specified snapsho
 
    ![Selections for viewing the Snapshot Agent history](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenthistory.png)
     
-1. In the Snapshot Agent history, select the relevant log entry. The relevant entry is usually a line or two *before* the entry that's reporting the error. (The red X indicates the errors.) Review the message text in the box below the logs: 
+1. In the Snapshot Agent history, select the relevant log entry. The relevant entry is usually a line or two *before* the entry that's reporting the error. (The red X indicates the errors.) Review the message text in the box below the logs. 
 
    ![Selected log entry with message text](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotaccessdenied.png)
 
@@ -287,7 +287,7 @@ The Log Reader Agent connects to  your publisher database and scans the transact
 
 5. This view shows you two agents, the Snapshot Agent and the Log Reader Agent. The one that's encountering an error will have the red X. In this case, the Log Reader Agent has the red X. 
 
-   Double-click the line that's reporting the error--in this case, **Log Reader Agent**. The agent history appears for the agent that you've selected. In this case, it's the Log Reader Agent history. It provides more information about the error: 
+   Double-click the line that's reporting the error--in this case, **Log Reader Agent**. The agent history appears for the agent that you've selected. In this case, it's the Log Reader Agent history. It provides more information about the error. 
     
    ![Dialog box with error messages](media/tutorial-replicating-data-between-continuously-connected-servers/logreadererror.png)
 
@@ -296,7 +296,7 @@ The Log Reader Agent connects to  your publisher database and scans the transact
        Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
        Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
 
-6. The publication error typically happens when the owner of the publisher database is not set correctly after a database is restored. Expand **Databases** in **Object Explorer** > right-click **AdventureWorks2012** > **Properties**. Verify that an owner exists under the **Files** page. If this box is blank, then this is the likely cause of your problem. 
+6. The publication error typically happens when the owner of the publisher database is not set correctly after a database is restored. Expand **Databases** in Object Explorer > right-click **AdventureWorks2012** > **Properties**. Verify that an owner exists under the **Files** page. If this box is blank, then this is the likely cause of your problem. 
 
    !["Database Properties" dialog box with missing owner information](media/tutorial-replicating-data-between-continuously-connected-servers/dbproperties.png)
 
@@ -309,7 +309,7 @@ The Log Reader Agent connects to  your publisher database and scans the transact
    -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
    ```
 
-8. Restart the Log Reader Agent. To do this, expand the **SQL Server Agent** node in **Object Explorer** and open **Job Activity Monitor**. Sort by **Category** and identify the Log Reader Agent by the **REPL-LogReader** category. Right-click the **Log Reader Agent** job and select **Start Job at Step**. 
+8. Restart the Log Reader Agent. To do this, expand the **SQL Server Agent** node in Object Explorer and open **Job Activity Monitor**. Sort by **Category** and identify the Log Reader Agent by the **REPL-LogReader** category. Right-click the **Log Reader Agent** job and select **Start Job at Step**. 
 
    ![Selections for restarting the Log Reader Agent](media/tutorial-replicating-data-between-continuously-connected-servers/startjobatstep.png)
 

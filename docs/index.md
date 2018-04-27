@@ -4,10 +4,10 @@ hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
 author: "craigg-msft" 
-ms.author: "craiggs"
+ms.author: "craigg"
 ms.topic: "hub-page"
-ms.technology: 
-  - "database-engine"
+ms.prod: sql
+ms.technology: install
 ---
 
 <div id="main" class="v2">

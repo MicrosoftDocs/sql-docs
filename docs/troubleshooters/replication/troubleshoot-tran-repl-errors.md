@@ -226,5 +226,5 @@ For more information, please see [Enabling verbose logging for replication agent
 <br>[Replication Tutorials](/../../relational-databases/replication/replication-tutorials.md)
 <br>[ReplTalk Blog](https://blogs.msdn.microsoft.com/repltalk)
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 

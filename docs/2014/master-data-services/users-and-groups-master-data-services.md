@@ -32,7 +32,7 @@ manager: "jhubbard"
   
  To take action within the **Explorer** functional area of the UI, the group or user must be assigned access to the **Explorer** functional area and assigned permission to model objects.  
   
- If a user or group needs access to other functional areas, the user or group must be an administrator. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ If a user or group needs access to other functional areas, the user or group must be an administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## Best Practice  
  To simplify administration, create groups and assign each group permission to functional areas and model objects. You can then add and remove users from the groups without accessing the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI.  

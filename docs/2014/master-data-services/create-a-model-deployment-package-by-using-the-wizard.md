@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, you must have permission to access the **System Administration** functional area.  
   
--   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+-   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   A model must exist for you to create a package of. For more information, see [Create a Model &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md).  
   

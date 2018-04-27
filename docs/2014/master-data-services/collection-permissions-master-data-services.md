@@ -31,7 +31,7 @@ manager: "jhubbard"
 |**Deny**|All collections for the entity are not displayed.|  
   
 ## See Also  
- [Assign Model Object Permissions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)   
+ [Assign Model Object Permissions &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
  [Model Object Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   

@@ -40,7 +40,7 @@ manager: "jhubbard"
 -   [Configuring System Settings](#SysSettings)  
   
 ##  <a name="Staging"></a> Staging Data  
- In the following table, each securable has “name” as part of the name. This indicates the name of the staging table that is specified when an entity is created. For more information, see [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+ In the following table, each securable has “name” as part of the name. This indicates the name of the staging table that is specified when an entity is created. For more information, see [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md)  
   
 |Action|Securables|Permissions|  
 |------------|----------------|-----------------|  
@@ -52,7 +52,7 @@ manager: "jhubbard"
 |Load the data from the Relationship staging table into the appropriate MDS tables.|stg.udp_name_Relationship|EXECUTE|  
 |View errors that occurred when data from the staging tables was being inserted into the MDS database tables.|stg.udp_name_Relationship|SELECT|  
   
- For more information, see [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ For more information, see [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md).  
   
 ##  <a name="rules"></a> Validating Data Against Business Rules  
   

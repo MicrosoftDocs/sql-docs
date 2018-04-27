@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  **To add, update, and delete data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database**  
   
-1.  Prepare the members for import into the appropriate staging table in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, including providing values for the required fields. For an overview of staging tables, see [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+1.  Prepare the members for import into the appropriate staging table in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, including providing values for the required fields. For an overview of staging tables, see [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md)  
   
     -   For leaf members the table is stg.\<name>_Leaf, where \<name> refers to the corresponding entity. For information about the required fields, see [Leaf Member Staging Table &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -38,11 +38,11 @@ manager: "jhubbard"
   
     -   For moving the location of members in explicit hierarchies, the table is stg.\<name>_Relationship. For information about the required fields, see [Relationship Staging Table &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
   
-         For an overview on moving members in explicit hierarchies, see [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+         For an overview on moving members in explicit hierarchies, see [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md).  
   
     -   Use the **ImportType** field value to specify that you're creating new members, deactivating members, or deleting members. For more information about the values, see [Leaf Member Staging Table &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md) and [Consolidated Member Staging Table &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-         For an overview of deactivating and deleting members, see [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+         For an overview of deactivating and deleting members, see [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md).  
   
 2.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and connect to the Database Engine instance for your [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
     -   Run the staging stored procedure that corresponds to the staging table that you want to move data to.  
   
-         For an overview of staging stored procedures and staging tables, see [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md). For more information about parameters for staging stored procedures, and a code example, see [Staging Stored Procedure &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+         For an overview of staging stored procedures and staging tables, see [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md). For more information about parameters for staging stored procedures, and a code example, see [Staging Stored Procedure &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
     -   Use the **Integration Management** functional area of Master Data Management.  
   
@@ -75,6 +75,6 @@ manager: "jhubbard"
      When you load data by from the staging tables, the data is not automatically validated against business rules. For more information on what validation is and when it occurs, see [Validation &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md).  
   
 ## See Also  
- [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+ [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md)  
   
   

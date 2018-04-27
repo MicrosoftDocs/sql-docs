@@ -674,6 +674,6 @@ manager: "jhubbard"
   
  [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)  
   
- [Install Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md)  
+ [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

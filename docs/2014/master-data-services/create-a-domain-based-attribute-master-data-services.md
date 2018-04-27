@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   You must have permission to access the **System Administration** functional area.  
   
--   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+-   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   An entity must exist to use as the source of the attribute values. For example, to create a domain-based attribute based on the Color entity, you must first create the Color entity. For more information, see [Create an Entity &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   

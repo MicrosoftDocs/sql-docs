@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  Once you've defined  a basic structure for your data, you can start adding data records (members) by using the import feature. You load data into staging tables,  validate the data using business rules, and load the data into  MDS tables.  You can also use business rules to set attribute values.  
   
- The following table outlines the key [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tasks. Unless otherwise noted, all of the following procedures require you to be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ The following table outlines the key [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tasks. Unless otherwise noted, all of the following procedures require you to be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 > [!NOTE]  
 >  You might want to complete the following tasks in a test environment and use the sample data provided when you install [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. For more information, see [Deploying Models &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md).  

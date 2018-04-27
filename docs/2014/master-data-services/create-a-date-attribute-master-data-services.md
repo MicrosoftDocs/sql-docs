@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   You must have permission to access the **System Administration** functional area.  
   
--   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+-   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   You must have an entity to create the attribute for. For more information, see [Create an Entity &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   

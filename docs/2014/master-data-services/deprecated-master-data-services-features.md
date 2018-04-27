@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  The staging interval set in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] applies to the staging process in both [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] and [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- A new, higher performance staging process has been implemented in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For more information, see [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ A new, higher performance staging process has been implemented in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For more information, see [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md).  
   
 ## Metadata  
  Though the Metadata model is still displayed in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, it should not be used. It will be removed in a future release. Users can also no longer view metadata in the **Explorer** functional area, and you can no longer create versions of the Metadata model.  

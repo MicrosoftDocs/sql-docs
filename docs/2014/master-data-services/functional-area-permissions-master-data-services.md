@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  When you assign permission to a functional area, you are making an area of the UI visible to the user or group.  
   
- Within the **Explorer** functional area, additional permissions assigned to model objects and hierarchy members determine which data a user can access. Within all other functional areas, a user must be a model administrator to view a model and act on it. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ Within the **Explorer** functional area, additional permissions assigned to model objects and hierarchy members determine which data a user can access. Within all other functional areas, a user must be a model administrator to view a model and act on it. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
  A user or group must have permission to at least one functional area and one model on the **Models** tab in order to access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

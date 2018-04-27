@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  ![Master Data Services Entity Represented as Table](../../2014/master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
   
- When you create an entity that contains many attributes, you can organize the attributes into attribute groups. For more information, see [Attribute Groups &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).  
+ When you create an entity that contains many attributes, you can organize the attributes into attribute groups. For more information, see [Attribute Groups &#40;Master Data Services&#41;](attribute-groups-master-data-services.md).  
   
 ## Required Attributes  
  When you create an entity, the Name and Code attributes are automatically created. Code requires a value and must be unique within the entity. You cannot remove the Name and Code attributes.  
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 -   [Domain-Based Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Attribute Groups &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+-   [Attribute Groups &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
   
 -   [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

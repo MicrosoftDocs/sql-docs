@@ -24,15 +24,15 @@ manager: "jhubbard"
 > [!NOTE]  
 >  You should also limit your use of special characters (symbols, hyphenation, etc.).  
   
--   [Models](master-data-services-installation-and-configuration.md#models)  
+-   [Models](#models)  
   
--   [Entities](master-data-services-installation-and-configuration.md#entities)  
+-   [Entities](#entities)  
   
--   [Explicit Hierarchies](master-data-services-installation-and-configuration.md#exhierarchies)  
+-   [Explicit Hierarchies](#exhierarchies)  
   
--   [Attributes](master-data-services-installation-and-configuration.md#attributes)  
+-   [Attributes](#attributes)  
   
--   [Members](master-data-services-installation-and-configuration.md#members)  
+-   [Members](#members)  
   
 ##  <a name="models"></a> Models  
  If you create a model with the name set to **Name**, do not select **Create entity with same name as model** because **Name** cannot be used for the name of an entity.  

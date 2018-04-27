@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 ## Next Steps  
   
--   [Assign Model Object Permissions &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+-   [Assign Model Object Permissions &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
   
 ## See Also  
  [Create a Model Administrator &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   

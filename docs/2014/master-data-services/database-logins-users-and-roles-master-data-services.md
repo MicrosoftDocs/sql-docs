@@ -59,7 +59,7 @@ manager: "jhubbard"
 |----------|-----------------|  
 |`mdm`|Contains all [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database and Service Broker objects other than the functions contained in the mdq schema.|  
 |`mdq`|Contains [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database functions related to filtering member results based on regular expressions or similarity, and for formatting notification emails.|  
-|**stg**|Contains [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database tables, stored procedures, and views related to the staging process. Do not delete any of these objects. For more information about the staging process, see [Data Import &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).|  
+|**stg**|Contains [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database tables, stored procedures, and views related to the staging process. Do not delete any of these objects. For more information about the staging process, see [Data Import &#40;Master Data Services&#41;](data-import-master-data-services.md).|  
   
 ## See Also  
  [Database Object Security &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  

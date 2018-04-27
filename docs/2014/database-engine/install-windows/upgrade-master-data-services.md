@@ -18,13 +18,13 @@ manager: "jhubbard"
 # Upgrade Master Data Services
   There are four scenarios for upgrading to Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Choose the scenario that fits your situation.  
   
--   [Upgrade without Database Engine Upgrade](../../master-data-services/master-data-services-installation-and-configuration.md#noengine)  
+-   [Upgrade without Database Engine Upgrade](#noengine)  
   
--   [Upgrade with Database Engine Upgrade](../../master-data-services/master-data-services-installation-and-configuration.md#engine)  
+-   [Upgrade with Database Engine Upgrade](#engine)  
   
--   [Upgrade in Two-Computer Scenario](../../master-data-services/master-data-services-installation-and-configuration.md#twocomputer)  
+-   [Upgrade in Two-Computer Scenario](#twocomputer)  
   
--   [Upgrade with Restoring a Database from Backup](../../master-data-services/master-data-services-installation-and-configuration.md#restore)  
+-   [Upgrade with Restoring a Database from Backup](#restore)  
   
 > [!IMPORTANT]  
 >  -   Upgrading from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 release to the CTP2 release is not supported.  

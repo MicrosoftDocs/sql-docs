@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|**User name**|Specify a domain user account to be the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system administrator. For all [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web applications associated with this database, this user can update all models and all data in all functional areas. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md).|  
+|**User name**|Specify a domain user account to be the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system administrator. For all [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web applications associated with this database, this user can update all models and all data in all functional areas. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
   
 ## Summary  
  Displays a summary of the selected options. Review your selections, and then click **Next** to begin creating the database with the specified settings.  

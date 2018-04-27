@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 1.  An initial version is created automatically when you create a model and populate the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database with your company's master data. Based on permissions, users can make changes to this version as needed.  
   
-2.  When you want to commit a version of a model, lock the version so that only model administrators can update the data. For more information, see [Administrators &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md). If notifications are configured, an email notification is sent to model administrators each time the version's status changes. For more information, see [Configure Email Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
+2.  When you want to commit a version of a model, lock the version so that only model administrators can update the data. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md). If notifications are configured, an email notification is sent to model administrators each time the version's status changes. For more information, see [Configure Email Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Apply business rules to the locked version's data and review any validation issues. If necessary, you can fill in missing information or revert the transaction that caused the issue. You can also unlock the version for users to make changes.  
   

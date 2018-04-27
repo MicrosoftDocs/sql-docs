@@ -27,7 +27,7 @@ manager: "jhubbard"
 >  Apart from the above two DQS components, you can also:  
 >   
 >  -   Use the DQS Cleansing Transformation in Integration Services that performs data cleansing within the Integration Services packaging process, and is automatically installed when you install Integration Services. For information about installing Integration Services, see [Install Integration Services](../../integration-services/install-windows/install-integration-services.md).  
-> -   Enable DQS integration in Master Data Services to use the DQS matching functionality in the Master Data Services Add-in for Excel. For more information, see [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md).  
+> -   Enable DQS integration in Master Data Services to use the DQS matching functionality in the Master Data Services Add-in for Excel. For more information, see [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
   
  DQS installation is a three-part process:  
   

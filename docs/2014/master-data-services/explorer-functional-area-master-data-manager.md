@@ -19,7 +19,7 @@ manager: "jhubbard"
   In the Explorer functional area, you can update data and work with hierarchies and collections.  
   
 ## Data Management  
- [Attributes &#40;Master Data Services&#41;](master-data-services-installation-and-configuration.md)  
+ [Attributes &#40;Master Data Services&#41;](attributes-master-data-services.md)  
   
  [Change the Attribute Type &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
   

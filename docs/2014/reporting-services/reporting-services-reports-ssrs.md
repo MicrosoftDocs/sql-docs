@@ -43,7 +43,7 @@ manager: "mblythe"
   
 -   Define expressions that provide you with the ability to customize how report data is filtered, grouped, and sorted.  
   
- ![rs_GettingStartedReport](../../2014/reporting-services/media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
+ ![rs_GettingStartedReport](media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
   
 ##  <a name="bkmk_StagesSummary"></a> Stages of Report Processing  
  When you create a report, you define a report definition file (.rdl) in XML format. This file contains all the information that is needed to combine report data and report layout by the report processor. When you view a report, the report progresses through the following stages:  

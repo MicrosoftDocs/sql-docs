@@ -105,6 +105,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases](administration/back-up-and-restore-replicated-databases.md)  
+ [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md)  
   
   

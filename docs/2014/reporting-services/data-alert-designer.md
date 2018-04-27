@@ -49,7 +49,7 @@ manager: "mblythe"
 ##  <a name="AlertDesigner"></a> Data Alert Designer User Interface  
  The Data Alert Designer is divided into areas. The area where you select the report data feed, the area where you create simple or complex conditions by adding rules to conditions, and so on. The following picture shows the areas in Data Alert Designer.  
   
- ![Areas within the Alert Designer user interface](../../2014/reporting-services/media/rs-alertdesigner.gif "Areas within the Alert Designer user interface")  
+ ![Areas within the Alert Designer user interface](media/rs-alertdesigner.gif "Areas within the Alert Designer user interface")  
    
   
 ### Alert Data  
@@ -171,7 +171,7 @@ manager: "mblythe"
 ##  <a name="CreateAlert"></a> Create a Data Alert Definition  
  If you are granted the SharePoint View Items and Create Alerts permissions you can create a data alert definition for any report that you have permission to view as long as the report uses stored credentials or no credentials. You run the report from a SharePoint library. The data that is available for you to use in Data Alert Designer comes from the report. If the report is parameterized, you might need to run the report using different parameter values to ensure the data that that you are interested in appears in the report. After the report is open, you click the **New Data Alert** option on the **Actions** menu on the report toolbar to open Data Alert Designer. The following picture shows you how to open Data Alert Designer.  
   
- ![Open Alert Designer from SharePoint library](../../2014/reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+ ![Open Alert Designer from SharePoint library](media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
  For more information, see [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md).  
   
@@ -190,7 +190,7 @@ manager: "mblythe"
   
  To edit a data alert definition, you right click it in Data Alert Manager and click **Edit**. The following picture shows you the context menu on a data alert in Data Alert Manager.  
   
- ![Open Data Alert Designer by clicking Edit](../../2014/reporting-services/media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
+ ![Open Data Alert Designer by clicking Edit](media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
   
  For more information, see [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md).  
   

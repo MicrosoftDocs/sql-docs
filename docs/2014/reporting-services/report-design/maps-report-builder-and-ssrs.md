@@ -27,7 +27,7 @@ manager: "mblythe"
   
  A map contains a title, a viewport that specifies the center point and scale, an optional Bing map tile background for the viewport, one or more layers that display spatial data, and a variety of legends that help users interpret the data visualizations. The following illustration shows the basic parts of a map.  
   
- ![rs_MapElements](../../2014/reporting-services/media/rs-mapelements.gif "rs_MapElements")  
+ ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
  To start to use a map immediately, see [Tutorial: Map Report &#40;Report Builder&#41;](tutorial-map-report-report-builder.md) or [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
@@ -46,11 +46,11 @@ manager: "mblythe"
   
 -   Collect the information that you must have to specify spatial data sources, spatial data, analytical data sources, and analytical data. This includes connection strings to spatial data sources, specifying the type of spatial data that you need, and making sure that your report data includes match fields that associate the spatial data and analytical data.  
   
--   Run the Map wizard to add a map to your report. This adds the first map layer to the map. Run the Map Layer wizard to create additional layers or modify existing layers. The wizards provide an easy way to get started. For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
+-   Run the Map wizard to add a map to your report. This adds the first map layer to the map. Run the Map Layer wizard to create additional layers or modify existing layers. The wizards provide an easy way to get started. For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
 -   After you preview the map in your report, you will probably want to adjust the map view, change the way your data varies the display of each layer, provide legends to help your users interpret the data, and adjust the resolution to provide a good viewing experience for your users.  
   
- For more information, see [Plan a Map Report &#40;Report Builder and SSRS&#41;](report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ For more information, see [Plan a Map Report &#40;Report Builder and SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md).  
   
 
   
@@ -86,7 +86,7 @@ manager: "mblythe"
   
      In the result set that you see in the query designer, each row of spatial data is treated as a unit and stored in a single map element. For example, if there are multiple points that are defined in one row in the result set, display properties apply to all points in that map element.  
   
--   **Custom locations that you create.** You can manually add locations as embedded points to an embedded point layer. For more information, see [Add Custom Locations to a Map &#40;Report Builder and SSRS&#41;](report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Custom locations that you create.** You can manually add locations as embedded points to an embedded point layer. For more information, see [Add Custom Locations to a Map &#40;Report Builder and SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### Spatial Data in Design View  
  In Design view, the report processor displays sample spatial data to help you design the map layer. The data that you see depends on the availability of the spatial data:  
@@ -118,7 +118,7 @@ manager: "mblythe"
   
 -   **Embedded data for a map element.** After you embed polygons, lines, or points in a report, you can override the data fields for individual map elements and set custom values.  
   
- When you specify rules for a layer and select the analytical data field, if the data type is numeric, the report processor automatically uses the default function Sum to calculate aggregate values for the map element. If the field is not numeric, no aggregate function is specified, and the implicit aggregate function First is used. To change the default expression, change the options for the rules for the layer. For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+ When you specify rules for a layer and select the analytical data field, if the data type is numeric, the report processor automatically uses the default function Sum to calculate aggregate values for the map element. If the field is not numeric, no aggregate function is specified, and the implicit aggregate function First is used. To change the default expression, change the options for the rules for the layer. For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### Match Fields  
  To relate analytical data to map elements on a layer, you must specify *match fields*. Match fields are used to build a relationship between map elements and analytical data. You can use one or more fields to match on as long as they specify a unique analytical value for each spatial location.  
@@ -148,7 +148,7 @@ manager: "mblythe"
 ##  <a name="Viewport"></a> Understanding the Map Viewport  
  After you specify map data for a report, you can limit the display area of the map by specifying a map *viewport*. By default, the viewport is the same area as the whole map. To crop the map, you can specify the center, zoom level, and maximum and minimum coordinates that define the area that you want to include in your report. To improve the display of the map in the report, you can move the legends, distance scale, and color scale outside the viewport. The following figure shows a viewport:  
   
- ![rs_MapViewport](../../2014/reporting-services/media/rs-mapviewport.gif "rs_MapViewport")  
+ ![rs_MapViewport](../media/rs-mapviewport.gif "rs_MapViewport")  
   
   
   
@@ -169,7 +169,7 @@ manager: "mblythe"
   
 -   Whether to use a secure connection to retrieve the tiles from the Bing Maps Web service.  
   
- For step-by-step instructions, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ For step-by-step instructions, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  For more information about tiles, see [Bing Maps Tile System](http://go.microsoft.com/fwlink/?linkid=147315). For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371) and [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
@@ -192,9 +192,9 @@ manager: "mblythe"
   
  To work with layers, select a map on the report design surface to display the Map pane. The Map pane displays the list of layers that are defined for the map. Use this pane to select a layer to change the options, to change the drawing order of layers, to add a layer or run the Map Layer wizard, to hide or show a layer, and to change the view center and zoom level for the map viewport. The following figure shows a viewport:  
   
- ![rsMapLayerZone](../../2014/reporting-services/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- For more information about map layers, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ For more information about map layers, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ### Varying Display Properties for Points, Lines, and Polygons  
  Display options for a map elements can be set at the layer level, by using rules for the layer, or on individual elements. For example, you can set display properties for all points on a layer, or you can set rules that control the display properties for all points on a layer whether or not they are embedded, or you can override display property settings for specific embedded points.  
@@ -209,7 +209,7 @@ manager: "mblythe"
   
 4.  **Override for Embedded Polygon, Line, or Point properties**. For embedded map elements, you can select the override option and change any property or data value. Any changes that you make to override rules for individual elements are irreversible. For example, you can highlight a specific store by using a pushpin marker.  
   
- For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+ For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
  In addition to varying the appearance of map elements, you can add interactivity to points, lines, and polygons, or to layers, in the following ways:  
   
@@ -219,7 +219,7 @@ manager: "mblythe"
   
 -   Add parameters in expressions that define layer visibility to enable a user to show or hide specific map layers.  
   
- For more information, see [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
+ For more information, see [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
 
   
@@ -232,7 +232,7 @@ manager: "mblythe"
   
 -   **Distance scale.** You can display one distance scale. The distance scale displays a scale for the current map view in both kilometers and miles.  
   
- You can position the legends, color scale, and distance scale in discrete locations inside or outside the viewport. For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ You can position the legends, color scale, and distance scale in discrete locations inside or outside the viewport. For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
   
   
@@ -241,36 +241,36 @@ manager: "mblythe"
   
  If you do not see the result that you want when you view a map report, the root causes can come from a variety of issues. To help you isolate and understand each issue, it helps to work with one layer at a time. Use the Map pane to select a layer and easily toggle its visibility.  
   
- For more information about map report issues, see [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ For more information about map report issues, see [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="HowTo"></a> How-To Topics  
  This section lists procedures that show you, step by step, how to work with maps and map layers in your reports.  
   
--   [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Add Custom Locations to a Map &#40;Report Builder and SSRS&#41;](report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Add Custom Locations to a Map &#40;Report Builder and SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> In This Section  
- [Plan a Map Report &#40;Report Builder and SSRS&#41;](report-design/plan-a-map-report-report-builder-and-ssrs.md)  
+ [Plan a Map Report &#40;Report Builder and SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
+ [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Add Custom Locations to a Map &#40;Report Builder and SSRS&#41;](report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Add Custom Locations to a Map &#40;Report Builder and SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

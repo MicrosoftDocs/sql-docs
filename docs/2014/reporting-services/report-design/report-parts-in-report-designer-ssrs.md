@@ -20,12 +20,12 @@ manager: "mblythe"
 # Report Parts in Report Designer (SSRS)
   In Report Designer, after you create tables, charts, and other report items in a project, you can publish them as *report parts* to a report server or SharePoint site integrated with a report server so that you and others can reuse them in other reports.  
   
- In general, report parts function the same way in Report Designer and in Report Builder. To read about basic functionality, see [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ In general, report parts function the same way in Report Designer and in Report Builder. To read about basic functionality, see [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
  There are fundamental differences in the way report parts work in Report Designer. A main difference is the work flow. Report Builder enables collaborative authoring: I create a report part and publish it. You can reuse, modify, and republish it. In Report Designer, publishing is one-way: I can publish a report part from Report Designer, and you can reuse it. But I cannot reuse an existing report part in a report in Report Designer. This topic elaborates on these differences, after a quick overview of report parts.  
   
 ##  <a name="ComponentWorkflow"></a> Life Cycle of Report Part Publishing  
- ![rs_ComponentCreation](../../2014/reporting-services/media/rs-componentcreation.gif "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  In Report Designer, Person A creates a project that contains a report with a chart that depends on an embedded dataset.  
   
@@ -33,7 +33,7 @@ manager: "mblythe"
   
 3.  Person B creates a blank report in Report Builder and adds the chart to it. The chart is now part of Person B's report, along with the embedded dataset. Person B can modify the instances of the chart and dataset that are in the report. This will have no effect on the instances of the chart and dataset on the report server, nor will it break the relationship between the instances in the report and on the report server.  
   
-     ![rs_BIDScomponentupdate](../../2014/reporting-services/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  In Report Designer, Person A modifies the chart in the original report.  
   
@@ -89,6 +89,6 @@ manager: "mblythe"
   
   
 ## See Also  
- [Managing Report Parts](report-design/managing-report-parts.md)  
+ [Managing Report Parts](managing-report-parts.md)  
   
   

@@ -102,11 +102,11 @@ manager: "mblythe"
   
     -   [What are rules?](#Rules)  
   
- After you add a map or map layer and preview the report, you can change map and map layer options that you set in the wizards. For more information, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ After you add a map or map layer and preview the report, you can change map and map layer options that you set in the wizards. For more information, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- For more information about maps, see [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md). For step-by-step instructions to add a map to a report, see [Tutorial: Map Report &#40;Report Builder&#41;](tutorial-map-report-report-builder.md).  
+ For more information about maps, see [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md). For step-by-step instructions to add a map to a report, see [Tutorial: Map Report &#40;Report Builder&#41;](tutorial-map-report-report-builder.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SpatialDataSource"></a> Choose a source of spatial data  
  On this page, specify the spatial data source and which spatial data to include. Spatial data can come from the map gallery, an ESRI Shapefile, or a dataset query that specifies [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spatial data from a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later version database.  
@@ -124,7 +124,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  This [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mapping feature uses data from TIGER/Line Shapefiles provided courtesy of the U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. TIGER/Line Shapefiles are available without charge from the U.S. Census Bureau. To obtain more information about the TIGER/Line Shapefiles go to [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). The boundary information in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Census TIGER and TIGER/Line are registered trademarks of the U.S. Bureau of the Census.  
   
- To extend the map gallery, you can add or remove reports from the map gallery directory, and add folders to organize the maps. For more information, see [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ To extend the map gallery, you can add or remove reports from the map gallery directory, and add folders to organize the maps. For more information, see [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
  An ESRI Shapefile is a set of files with data that conforms to the Environmental Systems Research Institute, Inc. (ESRI) shapefile spatial data format. The set of files typically includes the *\<filename>*.shp file that contains the spatial data and a support file, *\<filename>*.dbf.  
@@ -148,7 +148,7 @@ manager: "mblythe"
   
  For more information, see "Types of Spatial Data" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="MapView"></a> Choose spatial data and map view options  
  On this page you can set the following options:  
@@ -195,11 +195,11 @@ manager: "mblythe"
   
  For more information about tiles, see [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315). For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371) and [Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- To see a tile background in Design view, you must have Internet access. To see the tile background in preview from a report on a report server, the report server must be configured to support Bing map tiles. For more information, see [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) and "Planning for Maps" in in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+ To see a tile background in Design view, you must have Internet access. To see the tile background in preview from a report on a report server, the report server must be configured to support Bing map tiles. For more information, see [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) and "Planning for Maps" in in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
- For more information on other ways to customize a tile layer, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ For more information on other ways to customize a tile layer, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Visualization"></a> Choose map visualization  
  On this page, choose the type of map or map layer to add to your report. The first time you run the wizard, you are adding the map and the first map layer to the report. A map can contain multiple map layers. Each map layer displays a specific type of spatial data: polygons, lines, or points.  
@@ -213,9 +213,9 @@ manager: "mblythe"
   
  An **Analytical Map** conveys the relative value of one or more analytical data aggregates for each map element. For example, store sales as marker size, profit range for product categories as marker color, and top selling product as marker type.  
   
- For more information, see [Plan a Map Report &#40;Report Builder and SSRS&#41;](report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ For more information, see [Plan a Map Report &#40;Report Builder and SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="AnalyticalData"></a> Choose the analytical dataset  
  On this page, specify where to get the analytical data to display on this map layer.  
@@ -227,7 +227,7 @@ manager: "mblythe"
   
  Analytical data is numeric or categorical data that you want use to vary the appearance of the map. Analytical can come from a report dataset or might be included with spatial data from a map from the map gallery or from an ESRI shape file.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SpecifyMatchFields"></a> Specify the match fields  
  On this page, build a relationship between the spatial data and analytical data.  
@@ -235,7 +235,7 @@ manager: "mblythe"
 ###  <a name="MatchFields"></a> What are match fields?  
  Match fields enable the report processor to build a relationship between the analytical data and the spatial data. Match fields specify unique values within the analytical data. For example, the store name might not be unique within the data, so you could specify both a city and the store name.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="ThemeandVisualization"></a> Choose color theme and data visualization  
  On this page, specify how to visualize your data against the map background, the map theme, the fields to visualize, and what to vary: color, size, and/or marker type.  
@@ -263,13 +263,13 @@ manager: "mblythe"
   
 -   **Points.** You can specify color, size, and marker type rules.  
   
- The report processor applies the rules that you set and automatically determines the list of items to display in a legend. By default, the results of all rules for all layers display in the first legend. You can adjust this after you complete the wizard. For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+ The report processor applies the rules that you set and automatically determines the list of items to display in a legend. By default, the results of all rules for all layers display in the first legend. You can adjust this after you complete the wizard. For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ## See Also  
- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Plan a Map Report &#40;Report Builder and SSRS&#41;](report-design/plan-a-map-report-report-builder-and-ssrs.md)   
- [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
+ [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Plan a Map Report &#40;Report Builder and SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
+ [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)  
   
   

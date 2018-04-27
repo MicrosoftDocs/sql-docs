@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 -   To include an existing column in an existing publication, use [sp_articlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box.  
   
-     For more information, see [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md). This will require subscriptions to be reinitialized.  
+     For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). This will require subscriptions to be reinitialized.  
   
 -   Adding an identity column to a published table is not supported, because it can result in non-convergence when the column is replicated to the Subscriber. The values in the identity column at the Publisher depend on the order in which the rows for the affected table are physically stored. The rows might be stored differently at the Subscriber; therefore the value for the identity column can be different for the same rows.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
 -   To drop a column from an existing publication but retain the column in the table at the Publisher, use [sp_articlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box.  
   
-     For more information, see [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md). This will require a new snapshot to be generated.  
+     For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). This will require a new snapshot to be generated.  
   
 -   The column to be dropped cannot be used in the filter clauses of any article of any publication in the database.  
   

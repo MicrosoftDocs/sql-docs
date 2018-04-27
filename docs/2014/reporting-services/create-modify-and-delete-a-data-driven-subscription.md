@@ -62,7 +62,7 @@ manager: "mblythe"
   
 2.  Click the **Subscriptions** tab. Alternatively click the **My Subscriptions** link on at the tope of report manager  
   
-3.  Select the subscription you want to modify. The following icon indicates a data-driven subscription: ![Data-driven subscription icon](../../2014/reporting-services/media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
+3.  Select the subscription you want to modify. The following icon indicates a data-driven subscription: ![Data-driven subscription icon](media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
   
 #### To modify an existing data-driven subscription (SharePoint Mode)  
   
@@ -95,7 +95,7 @@ manager: "mblythe"
 ##  <a name="bkmk_run_subscription"></a> Run a subscription  
  You configure the conditions for subscription processing. You can configure a schedule, or you can trigger the subscription to coincide with updates to a report execution snapshot.  
   
- ![note](../../2014/reporting-services/media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the “Script: Run (fire) a single subscription” section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../2014/reporting-services/manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![note](media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the “Script: Run (fire) a single subscription” section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../2014/reporting-services/manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Schedule and conditions for running a data-driven subscriptions is the same as processing for standard subscriptions.  
   

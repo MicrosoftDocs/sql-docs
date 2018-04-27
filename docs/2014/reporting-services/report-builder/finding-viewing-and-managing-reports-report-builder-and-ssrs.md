@@ -25,7 +25,7 @@ manager: "mblythe"
   
  To locate a report on a report server or SharePoint site from Report Builder, you must provide URL to the report server or SharePoint site. When you first install Report Builder you can specify the URL to use. This is the server or site that Report Builder connects to by default when you save or open reports.  
   
- Reports can be previewed in Report Builder and Report Designer when you create or update reports and viewed and managed on a report server by using Report Manager or on a SharePoint site that is integrated with Reporting Services by using the built-in SharePoint tools and features after you publish the reports. For more information, see [Previewing Reports in Report Builder](report-builder/previewing-reports-in-report-builder.md) and [Previewing Reports](../../2014/reporting-services/previewing-reports.md).  
+ Reports can be previewed in Report Builder and Report Designer when you create or update reports and viewed and managed on a report server by using Report Manager or on a SharePoint site that is integrated with Reporting Services by using the built-in SharePoint tools and features after you publish the reports. For more information, see [Previewing Reports in Report Builder](previewing-reports-in-report-builder.md) and [Previewing Reports](../../2014/reporting-services/previewing-reports.md).  
   
  When you preview reports in Report Builder and Report Designer, or view reports in Report Manager or a SharePoint site, the data is refreshed and the reports display the current data from the data source that the report uses. If you want to view a report without refreshing its data, you can use report history and cached data with published reports. You cannot use these features when previewing reports in Report Builder and Report Designer.  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
   
  To find reports on a report server, you must specify a URL for the report server and have the appropriate permissions on the folders that enable you to read and save report items. Ask the system administrator for the report server for the appropriate URL and permissions.  
   
- After you find and open the report in Report Builder, you can preview it and make changes. When you preview it, you see the current data. For more information, see [Previewing Reports in Report Builder](report-builder/previewing-reports-in-report-builder.md).  
+ After you find and open the report in Report Builder, you can preview it and make changes. When you preview it, you see the current data. For more information, see [Previewing Reports in Report Builder](previewing-reports-in-report-builder.md).  
   
  Report Builder can help you with the following tasks:  
   
@@ -68,17 +68,17 @@ manager: "mblythe"
   
  Some of these tasks might be done for you by the administrator of the report server. To learn more about tasks performed on a report server, see [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md).  
   
- Report Manager typically contains folders, reports, data sources, and report models as well as the My Reports folder. My Reports is a personal workspace that you can use to store and work with reports that you own. Other report server folders are public and typically require users to have advanced permissions to add to or modify folder contents. You can create folders within My Reports to further organize your reports. For more information, see [Using My Reports &#40;Report Builder and SSRS&#41;](report-builder/using-my-reports-report-builder-and-ssrs.md).  
+ Report Manager typically contains folders, reports, data sources, and report models as well as the My Reports folder. My Reports is a personal workspace that you can use to store and work with reports that you own. Other report server folders are public and typically require users to have advanced permissions to add to or modify folder contents. You can create folders within My Reports to further organize your reports. For more information, see [Using My Reports &#40;Report Builder and SSRS&#41;](using-my-reports-report-builder-and-ssrs.md).  
   
  Report Manager displays reports in the Reporting Services HTML Viewer. The HTML Viewer provides a framework for viewing reports in HTML and includes a report toolbar, a parameter section, a credentials section, and a document map. The report toolbar provides page navigation, zoom, refresh, search, export, print, and data feed functionality. The report toolbar also appears in a browser window at the top of a report when you access reports through a URL. Print functionality is optional and must be turned on by your administrator. When it is available, a Printer icon appears on the report toolbar. The following illustrations show the report toolbar in a Report Manager window and the report toolbar features close up.  
   
- ![Report toolbar in Report Manager](../../2014/reporting-services/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
+ ![Report toolbar in Report Manager](../media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
 Report Manager window  
   
- ![Report toolbar](../../2014/reporting-services/media/htmlviewer-toolbar.gif "Report toolbar")  
+ ![Report toolbar](../media/htmlviewer-toolbar.gif "Report toolbar")  
 Report toolbar  
   
- After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md) and [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Exporting Reports &#40;Report Builder and SSRS&#41;](export-reports-report-builder-and-ssrs.md) and [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  The easiest way to select and run a report is to open Report Manager and then search for or browse to the report that you want to view. For step-by-step instruction on how to open reports, see [Open and Close a Report &#40;Report Manager&#41;](../../2014/reporting-services/open-and-close-a-report-report-manager.md).  
   
@@ -90,7 +90,7 @@ Report toolbar
 |Option|Result|  
 |------------|------------|  
 |**Refresh** button on the browser window|Displays the report stored in the session cache. A session cache is created when a user opens a report. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses browser sessions to maintain a consistent viewing experience while a report is open.|  
-|![Browser refresh button on report toolbar](../../2014/reporting-services/media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|When you click the **Refresh** button on the report toolbar, the report server re-runs the query and updates report data if the report runs on-demand. If the report is cached or is a snapshot, **Refresh** displays the report that is stored in the report server database.|  
+|![Browser refresh button on report toolbar](../media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|When you click the **Refresh** button on the report toolbar, the report server re-runs the query and updates report data if the report runs on-demand. If the report is cached or is a snapshot, **Refresh** displays the report that is stored in the report server database.|  
 |CTRL+F5 keyboard combination|Produces the same result as clicking the **Refresh** button on the report toolbar.|  
   
 
@@ -111,17 +111,17 @@ Report toolbar
   
  To distinguish report server items from other items on a SharePoint site, you can use the icon to visually identify an item, or pause the mouse cursor over the type and read the file extension. The following image shows folders, a report model, and a report definition in the **Reports** library:  
   
- ![Sharepoint library with report server items](../../2014/reporting-services/media/rs-sharepointlibrary.gif "Sharepoint library with report server items")  
+ ![Sharepoint library with report server items](../media/rs-sharepointlibrary.gif "Sharepoint library with report server items")  
   
 ### Viewing Reports  
  Report definitions (.rdl files) that you upload to a SharePoint library are viewed through a Report Viewer Web Part that is installed by the Reporting Services Add-in. An .rdl file association is defined automatically when you install the add-in. When you select a report, it opens automatically in the Web Part. After the report is open, you can use the report toolbar that is included in the Web Part to navigate pages, search, zoom, and print the report. The toolbar includes the Export Data Feed option to export the report as an Atom data feed and an **Actions** menu with options to print, subscribe, and export the report to different formats such as PDF, Word, and Excel. From the **Actions** menu you can also open the report in Report Builder. The following image shows a report and the options of the Export options in the **Action** menu.  
   
- ![rs_SharePointRunReport](../../2014/reporting-services/media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
+ ![rs_SharePointRunReport](../media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### Managing Items Through Actions  
  Management tasks are supported through actions on a drop-down menu for each item. Depending on your permissions, each item has common actions that are standard for items that are stored in a SharePoint library. **View Properties** and **Edit Properties** are examples of common actions. Custom actions provide item-specific management functionality. The following image shows the actions for a report definition. Examples of custom actions for a report definition include **Manage Subscriptions** and **Manage Processing Options**:  
   
- ![Menu commands for report server items](../../2014/reporting-services/media/rs-ecbforrsitems.gif "Menu commands for report server items")  
+ ![Menu commands for report server items](../media/rs-ecbforrsitems.gif "Menu commands for report server items")  
   
 
   
@@ -142,26 +142,26 @@ Report toolbar
 ##  <a name="InThisSection"></a> In This Section  
  The following topics provide additional information about viewing and managing reports.  
   
- [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  Describes how you use Report Manager to find, view, and manage your reports,  
   
- [Finding and Viewing Reports with a Browser &#40;Report Builder and SSRS&#41;](report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
+ [Finding and Viewing Reports with a Browser &#40;Report Builder and SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Describes how to use a URL to find and view a report.  
   
- [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
+ [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
  Describes how to use the search functionality in Report Manager to locate items on the report server.  
   
- [Using My Reports &#40;Report Builder and SSRS&#41;](report-builder/using-my-reports-report-builder-and-ssrs.md)  
+ [Using My Reports &#40;Report Builder and SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
  Describes how to use the My Reports folder as the personal workspace to store and work with reports that you own.  
   
- [Previewing Reports in Report Builder](report-builder/previewing-reports-in-report-builder.md)  
+ [Previewing Reports in Report Builder](previewing-reports-in-report-builder.md)  
  Describes how to preview reports while you create or update them.  
   
 
   
 ## See Also  
- [Saving Reports &#40;Report Builder&#41;](report-builder/saving-reports-report-builder.md)   
- [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
+ [Saving Reports &#40;Report Builder&#41;](saving-reports-report-builder.md)   
+ [Report Builder in SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
   

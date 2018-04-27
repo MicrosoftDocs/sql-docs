@@ -20,7 +20,7 @@ manager: "mblythe"
 # Formatting Report Items (Report Builder and SSRS)
   Formatting the items in your report makes the report look more attractive and enhances its readability. You can format the text boxes and individual items within text boxes, the images, the expressions, and the data while in report design mode.  
   
- ![rs_FormattingReporttItems](../../2014/reporting-services/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
+ ![rs_FormattingReporttItems](../media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
  A. Text box with a double-line border and a variety of formatting styles, including a link.  
   
@@ -36,22 +36,22 @@ manager: "mblythe"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## In This Section  
- [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Describes how to format text and customize format options for different blocks of text within a text box.  
   
- [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importing HTML into a Report &#40;Report Builder and SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  Describes how to insert and use HTML in a report.  
   
- [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  Describes how to use standard and custom formatting strings that are supported by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Formatting Lines, Colors, and Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [Formatting Lines, Colors, and Images &#40;Report Builder and SSRS&#41;](images-report-builder-and-ssrs.md)  
  Describes how to format lines, gridlines, colors, and images within report items and data regions.  
   
- [Set the Locale for a Report or Text Box &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Set the Locale for a Report or Text Box &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Describes how to change the setting for data display formats that differ by language and region, such as date, currency, and number values.  
   
 ## See Also  
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

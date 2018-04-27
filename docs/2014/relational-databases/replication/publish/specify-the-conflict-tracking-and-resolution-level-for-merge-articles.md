@@ -40,12 +40,12 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If you modify the tracking level after subscriptions have been initialized, those subscriptions must be reinitialized. For more information about the effects of property changes, see [Change Publication and Article Properties](publish/change-publication-and-article-properties.md).  
+-   If you modify the tracking level after subscriptions have been initialized, those subscriptions must be reinitialized. For more information about the effects of property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
--   With row- and column-level tracking, conflict resolution is always performed at the row-level: the winning row overwrites the losing row. Merge replication also allows you to specify that conflicts be tracked and resolved at the logical record level, but these options are not available from [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For information about setting these options from replication stored procedures, see [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+-   With row- and column-level tracking, conflict resolution is always performed at the row-level: the winning row overwrites the losing row. Merge replication also allows you to specify that conflicts be tracked and resolved at the logical record level, but these options are not available from [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For information about setting these options from replication stored procedures, see [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Specify row- or column-level tracking for merge articles on the **Properties** tab of the **Article Properties** dialog box, which is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](publish/create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Specify row- or column-level tracking for merge articles on the **Properties** tab of the **Article Properties** dialog box, which is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To specify row- or column-level tracking  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
 ## See Also  
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Detecting and Resolving Conflicts in Logical Records](merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Detect and Resolve Merge Replication Conflicts](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

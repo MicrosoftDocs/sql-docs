@@ -33,10 +33,10 @@ manager: "mblythe"
     >  You cannot hide a series for one group and not for the others. If you have added a field to the **Series Groups** area, all series belonging to this group will be hidden.  
   
 ## See Also  
- [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](report-design/chart-legend-change-item-text-report-builder.md)   
- [Add a Moving Average to a Chart &#40;Report Builder and SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
+ [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
+ [Add a Moving Average to a Chart &#40;Report Builder and SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
  [Legend Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/legend-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

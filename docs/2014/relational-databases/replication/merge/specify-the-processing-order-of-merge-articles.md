@@ -35,8 +35,8 @@ manager: "jhubbard"
  When referential integrity is maintained through triggers or at the application level, you should specify the order in which the articles should be processed. In the example with triggers, you would specify that the **SalesOrderHeader** table should be processed before **SalesOrderDetail**, because article ordering is based on insert order. Merge replication will automatically reverse the order for deletes. Merge replication will not fail without article ordering, because the Merge Agent continues to process articles if a constraint violation occurs; it then retries any operations that failed after other articles have been processed. Specifying article order simply avoids retries and the additional processing associated with them. If you specify an incorrect order (for example, one that results in detail records being processed before header records), merge replication will retry processing until it succeeds.  
   
 ## See Also  
- [Article Options for Merge Replication](merge/merge-replication.md)   
- [Group Changes to Related Rows with Logical Records](merge/group-changes-to-related-rows-with-logical-records.md)   
- [Join Filters](merge/join-filters.md)  
+ [Article Options for Merge Replication](merge-replication.md)   
+ [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md)   
+ [Join Filters](join-filters.md)  
   
   

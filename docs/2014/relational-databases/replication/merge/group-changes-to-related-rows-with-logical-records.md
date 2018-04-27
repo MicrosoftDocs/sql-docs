@@ -27,17 +27,17 @@ manager: "jhubbard"
  By default, merge replication processes data changes on a row-by-row basis. In many circumstances this is appropriate, but for some applications, it is essential that related rows be processed as a unit. The logical records feature of merge replication allows you to define a relationship between related rows in different tables so that the rows are processed as a unit.  
   
 > [!NOTE]  
->  The logical records feature can be used alone or in conjunction with join filters. For more information about join filters, see [Join Filters](merge/join-filters.md). To use logical records, the compatibility level of the publication must be at least 90RTM.  
+>  The logical records feature can be used alone or in conjunction with join filters. For more information about join filters, see [Join Filters](join-filters.md). To use logical records, the compatibility level of the publication must be at least 90RTM.  
   
  Consider these three related tables:  
   
- ![Three table logical record, with column names only](media/logical-records-01.gif "Three table logical record, with column names only")  
+ ![Three table logical record, with column names only](../media/logical-records-01.gif "Three table logical record, with column names only")  
   
  The **Customers** table is the parent table in this relationship and has a primary key column **CustID**. The **Orders** table has a primary key column **OrderID**, with a foreign key constraint on the **CustID** column that references the **CustID** column in the **Customers** table. Similarly, the **OrderItems** table has a primary key column **OrderItemID**, with a foreign key constraint on the **OrderID** column that references the **OrderID** column in the **Orders** table.  
   
  In this example, a logical record consists of all the rows in the **Orders** table that are related to a single **CustID** value and all of the rows in the **OrderItems** table that are related to those rows in the **Orders** table. This diagram shows all the rows in the three tables that are in the logical record for Customer2:  
   
- ![Three table logical record with values](media/logical-records-02.gif "Three table logical record with values")  
+ ![Three table logical record with values](../media/logical-records-02.gif "Three table logical record with values")  
   
  To define a logical record relationship between articles, see [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
 ### The Application of Changes As a Unit  
  If merge processing is interrupted, such as in the case of a dropped connection, the partially completed set of related replicated changes is rolled back if logical records are used. For example, consider the case where a Subscriber adds a new order with **OrderID** = 6 and two new rows in the **OrderItems** table with **OrderItemID** = 10 and **OrderItemID** = 11 for **OrderID** = 6.  
   
- ![Three table logical record with values](media/logical-records-04.gif "Three table logical record with values")  
+ ![Three table logical record with values](../media/logical-records-04.gif "Three table logical record with values")  
   
  If the replication process is interrupted after the **Orders** row for **OrderID** = 6 is complete, but before the **OrderItems** 10 and 11 are completed, and logical records are not used, the **OrderTotal** value for **OrderID** = 6 will not be consistent with the sum of the **OrderAmount** values for the **OrderItems** rows. If logical records are used, the **Orders** row for **OrderID** = 6 is not committed until the related **OrderItems** changes are replicated.  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
  If these changes are replicated without using logical records, the different **OrderTotal** values would result in a conflict and only one of them would be replicated. But the non-conflicting changes in the **OrderItems** table would be replicated without conflict, leaving the final **OrderTotal** values in an inconsistent state with respect to the **OrderItems** rows. If logical records are used in this scenario, the **OrderItems** change associated with the losing **Orders** table change would also be rolled back, and the final **OrderTotal** value would be an accurate summary of the **OrderItems** rows.  
   
- For more information about options related to conflict detection and resolution with logical records, see [Detecting and Resolving Conflicts in Logical Records](merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+ For more information about options related to conflict detection and resolution with logical records, see [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 ## Considerations for Using Logical Records  
  Keep the following considerations in mind when using logical records.  
@@ -105,15 +105,15 @@ manager: "jhubbard"
   
 -   The publication must use native snapshot mode. This is the default unless you are replicating to [!INCLUDE[ssEW](../../../includes/ssew-md.md)], which does not support logical records.  
   
--   The publication cannot allow Web synchronization. For more information about Web synchronization, see [Web Synchronization for Merge Replication](merge/merge-replication.md).  
+-   The publication cannot allow Web synchronization. For more information about Web synchronization, see [Web Synchronization for Merge Replication](merge-replication.md).  
   
 -   In order to use logical records on a filtered publication:  
   
-    -   Precomputed partitions must also be used. The requirements of precomputed partitions also apply to logical records. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+    -   Precomputed partitions must also be used. The requirements of precomputed partitions also apply to logical records. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-    -   You cannot use nonoverlapping parameterized filters. For more information, see the "Setting 'partition options'" section of [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+    -   You cannot use nonoverlapping parameterized filters. For more information, see the "Setting 'partition options'" section of [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
   
--   If the publication uses join filters, the **join unique key** property must be set to **true** for all join filters that are involved in logical record relationships. For more information, see [Join Filters](merge/join-filters.md).  
+-   If the publication uses join filters, the **join unique key** property must be set to **true** for all join filters that are involved in logical record relationships. For more information, see [Join Filters](join-filters.md).  
   
 ### Relationships Between Tables  
   
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
      For example, a database tracking classes and students might have a design similar to:  
   
-     ![Child table with more than one parent table](media/logical-records-03.gif "Child table with more than one parent table")  
+     ![Child table with more than one parent table](../media/logical-records-03.gif "Child table with more than one parent table")  
   
      You cannot use a logical record to represent the three tables in this relationship, because the rows in **ClassMembers** are not associated with a single primary key row. The tables **Classes** and **ClassMembers** could still form a logical record, as could the tables **ClassMembers** and **Students**, but not all three.  
   
@@ -139,6 +139,6 @@ manager: "jhubbard"
  If logical records are used, the Merge Agent must process the changes for each entire logical record together. This has an effect on the amount of time it takes the Merge Agent to replicate the rows. Additionally, because the agent opens a separate transaction for each logical record, locking requirements can increase.  
   
 ## See Also  
- [Article Options for Merge Replication](merge/article-options-for-merge-replication.md)  
+ [Article Options for Merge Replication](article-options-for-merge-replication.md)  
   
   

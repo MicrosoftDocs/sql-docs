@@ -99,7 +99,7 @@ manager: "jhubbard"
   
     -   (Optional) **@ftp_password** - the password for the FTP login.  
   
-     This creates a publication that uses FTP. For more information, see [Create a Publication](publish/create-a-publication.md).  
+     This creates a publication that uses FTP. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To enable FTP snapshot delivery for a merge publication  
   
@@ -115,7 +115,7 @@ manager: "jhubbard"
   
     -   (Optional) **@ftp_password** - the password for the FTP login.  
   
-     This creates a publication that uses FTP. For more information, see [Create a Publication](publish/create-a-publication.md).  
+     This creates a publication that uses FTP. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To create a pull subscription to a snapshot or transactional publication that uses FTP snapshot delivery  
   
@@ -172,18 +172,18 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example creates a merge publication that allows Subscribers to access the snapshot data using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md).  
   
- [!code-sql[HowTo#sp_createmergepub_ftp](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubftp.sql#sp_createmergepub_ftp)]  
+ [!code-sql[HowTo#sp_createmergepub_ftp](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubftp.sql#sp_createmergepub_ftp)]  
   
  The following example creates a subscription to a merge publication, where the Subscriber obtains the snapshot using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md).  
   
- [!code-sql[HowTo#sp_createmergepullsub_ftp](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsubftp.sql#sp_createmergepullsub_ftp)]  
+ [!code-sql[HowTo#sp_createmergepullsub_ftp](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsubftp.sql#sp_createmergepullsub_ftp)]  
   
- [!code-sql[HowTo#sp_createmergepullsubagent_ftp](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsubftp.sql#sp_createmergepullsubagent_ftp)]  
+ [!code-sql[HowTo#sp_createmergepullsubagent_ftp](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsubftp.sql#sp_createmergepullsubagent_ftp)]  
   
 ## See Also  
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
  [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md)   
- [Change Publication and Article Properties](publish/change-publication-and-article-properties.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)  
   
   

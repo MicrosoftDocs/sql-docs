@@ -73,12 +73,12 @@ manager: "mblythe"
   
 ## See Also  
  [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Add Empty Points to the Chart &#40;Report Builder and SSRS&#41;](report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
- [Shape Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Nested Data Regions &#40;Report Builder and SSRS&#41;](report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [Define Colors on a Chart Using a Palette &#40;Report Builder and SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [Add Empty Points to the Chart &#40;Report Builder and SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
+ [Shape Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Nested Data Regions &#40;Report Builder and SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

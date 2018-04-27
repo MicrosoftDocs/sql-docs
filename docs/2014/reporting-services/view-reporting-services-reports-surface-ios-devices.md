@@ -27,7 +27,7 @@ manager: "mblythe"
 ## View and Interact With Reports  
  Starting with [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports viewing and basic interactivity with reports on Microsoft Surface devices, and devices with Apple iOS 6 and Apple Safari browser such as the iPad. You can also publish reports using Microsoft Surface devices.  
   
- ![IPad Desktop](../../2014/reporting-services/media/videothumbnail.jpg "IPad Desktop")  
+ ![IPad Desktop](media/videothumbnail.jpg "IPad Desktop")  
 Watch a demonstration of viewing reports on an iPad.  
   
  You can also view [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports on a Windows Phone 8 device.  

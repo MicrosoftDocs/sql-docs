@@ -53,11 +53,11 @@ manager: "jhubbard"
 ## Example  
  The following example demonstrates how to add a new table article to an existing peer-to-peer replication topology that has two nodes.  
   
- [!code-sql[HowTo#sp_addp2particle_createtables](../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createtables)]  
+ [!code-sql[HowTo#sp_addp2particle_createtables](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createtables)]  
   
- [!code-sql[HowTo#sp_addp2particle_cmdline](../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_cmdline)]  
+ [!code-sql[HowTo#sp_addp2particle_cmdline](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_cmdline)]  
   
- [!code-sql[HowTo#sp_addp2particle_createarticle](../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
+ [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
 ## See Also  
  [Administration &#40;Replication&#41;](administration-replication.md)   

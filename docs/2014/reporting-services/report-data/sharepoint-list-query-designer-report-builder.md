@@ -38,7 +38,7 @@ manager: "mblythe"
   
  The following figure shows the graphical query designer when it is used with SharePoint lists.  
   
- ![rsQD_Relational_Graphical_SharePoint](../../2014/reporting-services/media/rsqd-relational-graphical-sharepoint.gif "rsQD_Relational_Graphical_SharePoint")  
+ ![rsQD_Relational_Graphical_SharePoint](../media/rsqd-relational-graphical-sharepoint.gif "rsQD_Relational_Graphical_SharePoint")  
   
  The following table describes the function of each pane.  
   

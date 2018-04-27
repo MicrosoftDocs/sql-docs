@@ -117,7 +117,7 @@ manager: "mblythe"
   
 ###  <a name="Expressions"></a> Working with Expressions  
   
--   Understand simple and complex expression formats. You can type simple expression format directly into text boxes, properties in the Property pane, or in locations in dialog boxes that accept an expression. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md).  
+-   Understand simple and complex expression formats. You can type simple expression format directly into text boxes, properties in the Property pane, or in locations in dialog boxes that accept an expression. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 -   When you create an expression, it helps to create each part independently and verify its value. You can then combine all the parts into a final expression. A useful technique is to add a text box in a matrix cell, display each part of the expression, and set conditional visibility on the text box. To control the border style and color when the text box is hidden, first place the text box in a rectangle, and then set the border style and color of the rectangle to match the matrix.  
   

@@ -30,7 +30,7 @@ manager: "mblythe"
   
 3.  To view a report, click a report name or an icon. The following icon indicates a report:  
   
-     ![Report icon](../../2014/reporting-services/media/hlp-16doc.gif "Report icon")  
+     ![Report icon](media/hlp-16doc.gif "Report icon")  
   
      Some reports require you to provide either a user name and password or a parameter value  
   

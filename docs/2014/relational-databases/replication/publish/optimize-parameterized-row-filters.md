@@ -140,7 +140,7 @@ manager: "jhubbard"
   
 4.  Repeat step 3 for each article in the publication.  
   
-5.  (Optional) At the Publisher on the publication database, execute [sp_addmergefilter](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define a join filter between two articles. For more information, see [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+5.  (Optional) At the Publisher on the publication database, execute [sp_addmergefilter](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define a join filter between two articles. For more information, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 #### To view and modify merge filter behaviors for an existing publication  
   
@@ -155,10 +155,10 @@ manager: "jhubbard"
   
 4.  (Optional) At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **partition_options** for **@property** and the appropriate value for **@value**. See [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) for definitions of these filtering options.  
   
-5.  (Optional) Start the Snapshot Agent to regenerate the snapshot if necessary. For information about which changes require a new snapshot to be generated, see [Change Publication and Article Properties](publish/change-publication-and-article-properties.md).  
+5.  (Optional) Start the Snapshot Agent to regenerate the snapshot if necessary. For information about which changes require a new snapshot to be generated, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 ## See Also  
- [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](publish/automatically-generate-join-filters-between-merge-articles.md)   
+ [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md)   
  [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)  
   

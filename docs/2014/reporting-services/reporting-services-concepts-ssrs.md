@@ -194,7 +194,7 @@ manager: "mblythe"
 ##  <a name="bkmk_StagesofReports"></a> Stages of report development  
  A report definition can be created, published or saved, compiled, processed, cached, rendered, viewed, exported, and saved as history. When you run a report, the report server processes a report in three steps: report processing, data processing, and rendering. Data and report processing are performed on a report definition; the results are in an internal intermediate format. Reports that are in intermediate format are subsequently rendered to a specific viewing format. The following diagram shows the stages and elements of report processing.  
   
- ![report processing diagram](../../2014/reporting-services/media/report-execution.gif "report processing diagram")  
+ ![report processing diagram](media/report-execution.gif "report processing diagram")  
 Report processing diagram  
   
  **Report definition**  

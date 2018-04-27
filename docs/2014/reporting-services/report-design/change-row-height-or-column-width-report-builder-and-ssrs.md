@@ -20,7 +20,7 @@ manager: "mblythe"
   
  When you set a column width, you are specifying the maximum width for the column in the rendered report. Columns do not automatically adjust horizontally to accommodate text.  
   
- If a cell in a row or column contains a rectangle or data region, the minimum height and width of the cell is determined by the height and width of the contained item. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ If a cell in a row or column contains a rectangle or data region, the minimum height and width of the cell is determined by the height and width of the contained item. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,11 +37,11 @@ manager: "mblythe"
   
 1.  In Design view, click a cell in the table row.  
   
-     ![Selected Cell in a Table](../../2014/reporting-services/media/table-selectcell.png "Selected Cell in a Table")  
+     ![Selected Cell in a Table](../media/table-selectcell.png "Selected Cell in a Table")  
   
 2.  In the **Properties** pane that displays, modify the **Height** property, and then click anywhere outside the **Properties** pane.  
   
-     ![Properties Pane for selected table cell](../../2014/reporting-services/media/cell-propertiespane.png "Properties Pane for selected table cell")  
+     ![Properties Pane for selected table cell](../media/cell-propertiespane.png "Properties Pane for selected table cell")  
   
 ### To prevent a row from automatically expanding vertically  
   
@@ -64,10 +64,10 @@ manager: "mblythe"
   
 ## See Also  
  [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
- [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Tables &#40;Report Builder  and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
+ [Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

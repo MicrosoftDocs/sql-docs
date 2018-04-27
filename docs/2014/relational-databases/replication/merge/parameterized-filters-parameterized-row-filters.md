@@ -114,10 +114,10 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   How the data is shared among Subscribers, which must be reflected by the article setting **partition options**.  
   
- To set filtering options, see [Optimize Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ To set filtering options, see [Optimize Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
   
 ### Setting 'use partition groups' and 'keep partition changes'  
- Both the **use partition groups** and **keep partition changes** options improve the synchronization performance for publications with filtered articles by storing additional metadata in the publication database. The **use partition groups** option provides greater performance improvement through the use of the precomputed partitions feature. This option is set to `true` by default if the articles in your publication adhere to a set of requirements. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](merge/parameterized-filters-optimize-for-precomputed-partitions.md). If your articles do not meet the requirements for using precomputed partitions, the **keep partition changes** option to is set to `true`.  
+ Both the **use partition groups** and **keep partition changes** options improve the synchronization performance for publications with filtered articles by storing additional metadata in the publication database. The **use partition groups** option provides greater performance improvement through the use of the precomputed partitions feature. This option is set to `true` by default if the articles in your publication adhere to a set of requirements. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](parameterized-filters-optimize-for-precomputed-partitions.md). If your articles do not meet the requirements for using precomputed partitions, the **keep partition changes** option to is set to `true`.  
   
 ### Setting 'partition options'  
  You specify a value for the **partition options** property when creating an article, according to the way in which data in the filtered table will be shared by Subscribers. The property can be set to one of four values using [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), and the **Article Properties** dialog box. The property can be set to one of two values using the **Add Filter** or **Edit Filter** dialog boxes, which are available from the New Publication Wizard and the **Publication Properties** dialog box. The following table summarizes the available values:  
@@ -183,8 +183,8 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   If two tables at the Publisher have a join filter relationship and the child table has rows that have no corresponding row in the parent table, an insert of the missing parent row will not result in the related rows being downloaded to the Subscriber (the rows would be downloaded with overlapping partitions). For example, if the **SalesOrderDetail** table has rows with no corresponding row in the **SalesOrderHeader** table, and you insert the missing row in **SalesOrderHeader**, the row is downloaded to the Subscriber, but the corresponding rows in **SalesOrderDetail** are not.  
   
 ## See Also  
- [Best Practices for Time-Based Row Filters](merge/best-practices-for-time-based-row-filters.md)   
+ [Best Practices for Time-Based Row Filters](best-practices-for-time-based-row-filters.md)   
  [Filter Published Data](../publish/filter-published-data.md)   
- [Filter Published Data for Merge Replication](merge/merge-replication.md)  
+ [Filter Published Data for Merge Replication](merge-replication.md)  
   
   

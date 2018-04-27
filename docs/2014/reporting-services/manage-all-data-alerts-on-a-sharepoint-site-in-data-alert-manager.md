@@ -21,7 +21,7 @@ manager: "mblythe"
 # Manage All Data Alerts on a SharePoint Site in Data Alert Manager
   SharePoint alerting administrators can view a list of the data alerts that were created by any site user and information about the alerts. Alerting administrators can also delete alerts. The following picture shows the features available to alerting administrators in Data Alert Manager.  
   
- ![Alert Manager for SharePoin tsite administrators](../../2014/reporting-services/media/rs-alertmanagersite.gif "Alert Manager for SharePoin tsite administrators")  
+ ![Alert Manager for SharePoin tsite administrators](media/rs-alertmanagersite.gif "Alert Manager for SharePoin tsite administrators")  
   
 ### To view a list of alerts created by a site user  
   

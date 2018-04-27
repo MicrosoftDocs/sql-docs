@@ -22,21 +22,21 @@ manager: "mblythe"
   
  As you design a report, many expressions for report items are set for you. For example, when you drag a field from the data pane to a table cell on the report design surface, the text box value is set to a simple expression for the field. In the following figure, the Report Data pane displays the dataset fields ID, Name, SalesTerritory, Code, and Sales. Three fields have been added to the table: [Name], [Code], and [Sales]. The notation [Name] on the design surface represents the underlying expression `=Fields!Name.Value`.  
   
- ![rs_DataDesignandPreview](../../2014/reporting-services/media/rs-datadesignandpreview.gif "rs_DataDesignandPreview")  
+ ![rs_DataDesignandPreview](../media/rs-datadesignandpreview.gif "rs_DataDesignandPreview")  
   
  When you preview the report, the report processor combines the table data region with the actual data from the data connection and displays a row in the table for every row in the result set.  
   
- To enter expressions manually, select an item on the design surface, and use shortcut menus and dialog boxes to set the properties of the item. When you see the ***(fx)*** button or the value `<Expression>` in a drop-down list, you know that you can set the property to an expression. For more information, see [Add an Expression &#40;Report Builder and SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md).  
+ To enter expressions manually, select an item on the design surface, and use shortcut menus and dialog boxes to set the properties of the item. When you see the ***(fx)*** button or the value `<Expression>` in a drop-down list, you know that you can set the property to an expression. For more information, see [Add an Expression &#40;Report Builder and SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
   
  For more information and examples, see the following topics:  
   
--   [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
--   [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
+-   [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Filter Equation Examples &#40;Report Builder and SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Filter Equation Examples &#40;Report Builder and SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Group Expression Examples &#40;Report Builder and SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)  
+-   [Group Expression Examples &#40;Report Builder and SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
 -   [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
   
 -   [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
- To develop complex expressions or expressions that use custom code or custom assemblies, we recommend that you use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ To develop complex expressions or expressions that use custom code or custom assemblies, we recommend that you use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,20 +62,20 @@ manager: "mblythe"
   
  The following figure shows typical simple and complex expressions for both text boxes and placeholder text.  
   
- ![rs_ExpressionDefaultFormat](../../2014/reporting-services/media/rs-expressiondefaultformat.gif "rs_ExpressionDefaultFormat")  
+ ![rs_ExpressionDefaultFormat](../media/rs-expressiondefaultformat.gif "rs_ExpressionDefaultFormat")  
   
  To display sample values instead of text for expressions, apply formatting to the text box or placeholder text. The following figure shows the report design surface toggled to show sample values:  
   
- ![rs_ExpressionSampleValuesFormat](../../2014/reporting-services/media/rs-expressionsamplevaluesformat.gif "rs_ExpressionSampleValuesFormat")  
+ ![rs_ExpressionSampleValuesFormat](../media/rs-expressionsamplevaluesformat.gif "rs_ExpressionSampleValuesFormat")  
   
- For more information, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+ For more information, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 
   
 ### Report Model Formulas  
  When you are designing a query for a dataset that uses a report model as a data source, you can create *formulas*. Formulas are calculations performed on values in a report that are based on data from a report model.  
   
- For more information, see [Formulas in Report Model Queries &#40;Report Builder and SSRS&#41;](report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
+ For more information, see [Formulas in Report Model Queries &#40;Report Builder and SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md).  
   
 
   
@@ -97,41 +97,41 @@ manager: "mblythe"
  Expressions can include references to functions, operators, constants, fields, parameters, items from built-in collections, and to embedded custom code or custom assemblies.  
   
 > [!NOTE]  
->  To develop complex expressions or expressions that use custom code or custom assemblies, we recommend that you use Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+>  To develop complex expressions or expressions that use custom code or custom assemblies, we recommend that you use Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  The following table lists the kinds of references you can include in an expression:  
   
 |References|Description|Example|  
 |----------------|-----------------|-------------|  
-|[Constants](report-design/expressions-report-builder-and-ssrs.md)|Describes the constants you can access interactively for properties that require constant values, such as font colors.|`="Blue"`|  
-|[Operators](report-design/operators-in-expressions-report-builder-and-ssrs.md)|Describes the operators you can use to combine references in an expression. For example, the `&` operator is used for concatenating strings.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
-|[Built-in Collections](report-design/built-in-collections-in-expressions-report-builder.md)|Describes the built-in collections that you can include in an expression, such as `Fields`, `Parameters`, and `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
-|[Built-in Report and Aggregate Functions](report-design/report-builder-functions-aggregate-functions-reference.md)|Describes the built-in functions, such as `Sum` or `Previous`, that you can access from an expression.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Describes how you can access the built-in CLR classes <xref:System.Math> and <xref:System.Convert>, other CLR classes, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] run-time library functions, or methods from an external assembly.<br /><br /> Describes how you can access custom code that is embedded in your report, or that you compile and install as a custom assembly on both the report client and the report server.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Constants](expressions-report-builder-and-ssrs.md)|Describes the constants you can access interactively for properties that require constant values, such as font colors.|`="Blue"`|  
+|[Operators](operators-in-expressions-report-builder-and-ssrs.md)|Describes the operators you can use to combine references in an expression. For example, the `&` operator is used for concatenating strings.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
+|[Built-in Collections](built-in-collections-in-expressions-report-builder.md)|Describes the built-in collections that you can include in an expression, such as `Fields`, `Parameters`, and `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
+|[Built-in Report and Aggregate Functions](report-builder-functions-aggregate-functions-reference.md)|Describes the built-in functions, such as `Sum` or `Previous`, that you can access from an expression.|`=Previous(Sum(Fields!Sales.Value))`|  
+|[Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Describes how you can access the built-in CLR classes <xref:System.Math> and <xref:System.Convert>, other CLR classes, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] run-time library functions, or methods from an external assembly.<br /><br /> Describes how you can access custom code that is embedded in your report, or that you compile and install as a custom assembly on both the report client and the report server.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
   
 
   
 ##  <a name="Valid"></a> Validating Expressions  
  When you create an expression for a specific report item property, the references that you can include in an expression depend on the values that the report item property can accept and the scope in which the property is evaluated. For example:  
   
--   By default, the expression [Sum] calculates the sum of data that is in scope at the time the expression is evaluated. For a table cell, the scope depends on row and column group memberships. For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+-   By default, the expression [Sum] calculates the sum of data that is in scope at the time the expression is evaluated. For a table cell, the scope depends on row and column group memberships. For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 -   For the value for a Font property, the value must evaluate to the name of a font.  
   
 -   Expression syntax is validated at design time. Expression scope validation occurs when you publish the report. For validation that depends on the actual data, errors can only be detected at run-time. Some of these expressions produce #Error as an error message in the rendered report. To help determine the issues for this kind of error, you must use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Report Designer provides an Output window that provides more information about these errors.  
   
- For more information, see [Expression Reference &#40;Report Builder and SSRS&#41;](report-design/expression-reference-report-builder-and-ssrs.md).  
+ For more information, see [Expression Reference &#40;Report Builder and SSRS&#41;](expression-reference-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="Section"></a> In This Section  
- [Add an Expression &#40;Report Builder and SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
+ [Add an Expression &#40;Report Builder and SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
   
- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Expression Reference &#40;Report Builder and SSRS&#41;](report-design/expression-reference-report-builder-and-ssrs.md)  
+ [Expression Reference &#40;Report Builder and SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
   
 
   

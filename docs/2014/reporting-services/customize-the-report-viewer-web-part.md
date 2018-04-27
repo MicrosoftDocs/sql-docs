@@ -71,7 +71,7 @@ manager: "mblythe"
 |Show back button|Shows or hides the back button on the toolbar.|  
 |Show find controls|Shows or hides the find controls on the toolbar. The find controls allow a user to search for text in the rendered report. This option changes the visibility of all the find controls.|  
 |Show zoom control|Shows or hides the zoom control on the toolbar.|  
-|Show ATOM feed button|Shows or hides the ATOM feed button on the toolbar.<br /><br /> ![htmlviewer_datafeed](../../2014/reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
+|Show ATOM feed button|Shows or hides the ATOM feed button on the toolbar.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |ToolBar location|Determines the location of the toolbar within the report viewer. Valid values include `Top` and `Bottom`.|  
 |Prompt area|Valid values include `Displayed`, `Collapsed`, and `Hidden`. `Displayed` displays the Parameters area for reports that include parameterized values and that require user input before the report will run. Use `Hidden` if all of the report parameters are specified and you do not want the parameters area to be visible to users.|  
 |Parameters Area Width|You can choose the measurement and value. The default is 200 pixels. The only requirement for this property is that it is greater than zero.|  

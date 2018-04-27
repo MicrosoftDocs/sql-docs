@@ -35,7 +35,7 @@ manager: "mblythe"
   
  To get the most from the Atom rendering extension, you should understand how the report is rendered into data feeds. If you are using existing reports, being able to predict what the data feeds the reports will generate is useful; if you are writing report specifically for use as data feeds, being able to include the data and fine tune the report layout to maximize the usefulness of the data feeds is valuable.  
   
- For more information, see [Generate Data Feeds from a Report &#40;Report Builder and SSRS&#41;](report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ For more information, see [Generate Data Feeds from a Report &#40;Report Builder and SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
 
   
@@ -46,17 +46,17 @@ manager: "mblythe"
   
  The following diagram shows a report that uses two tables and a chart.  
   
- ![RS_Atom_TableAndChartDataFeeds](../../2014/reporting-services/media/rs-atom-tableandchartdatafeeds.gif "RS_Atom_TableAndChartDataFeeds")  
+ ![RS_Atom_TableAndChartDataFeeds](../media/rs-atom-tableandchartdatafeeds.gif "RS_Atom_TableAndChartDataFeeds")  
   
  The Atom service document generated from this report includes three data feeds, one for each table and one for the chart.  
   
  The matrix data regions might have more than one data feed, depending on the structure of the matrix. The following diagram shows a report that uses a matrix that generates two data feeds.  
   
- ![RS_Atom_PeerDynamicColumns](../../2014/reporting-services/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
+ ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
  The Atom service document generated from this report includes two data feeds, one for each of the dynamic peer columns: Territory and Year. The following diagram shows the content of each data feed.  
   
- ![RS_Atom_PeerDynamicDataFeeds](../../2014/reporting-services/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
+ ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
@@ -81,7 +81,7 @@ manager: "mblythe"
   
  The following diagram shows a report that uses groups and totals.  
   
- ![RS_Atom_ProductSalesSummaryCircledValues](../../2014/reporting-services/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
+ ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
  The following XML shows an <`entry`> element from that report in a data feed. Notice that the <`entry`> element includes the totals of the sales and orders for the group and the totals of sales and orders for all the groups. The <`entry`> element includes all values on the report.  
   
@@ -191,7 +191,7 @@ manager: "mblythe"
 
   
 ## See Also  
- [Exporting to a CSV File &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Exporting to a CSV File &#40;Report Builder and SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [Exporting Reports &#40;Report Builder and SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

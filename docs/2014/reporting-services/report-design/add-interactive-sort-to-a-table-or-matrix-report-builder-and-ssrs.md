@@ -60,7 +60,7 @@ manager: "mblythe"
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> Sorting a Top-Level Parent Row Group for a Table or Matrix  
  Add an interactive sort button to a column header to enable a user to click the column header and sort the parent group rows in a table or matrix by the value displayed in that column. The order of child groups remains unchanged.  
@@ -84,7 +84,7 @@ manager: "mblythe"
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> Sorting Child Groups or Detail Rows for a Group  
  Add an interactive sort button to a group header row to enable the user to sort the values of a child group from a parent group or to sort the detail rows for the innermost child group.  
@@ -107,12 +107,12 @@ manager: "mblythe"
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort buttons.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Sorting Rows Based on a Complex Group Expression  
- Add an interactive sort button to a column header to enable a user to click the column header and sort the combined parent and child groups. To achieve this affect, you must change the group expression to be a composite of both groups. For example, suppose a matrix displays inventory totals for a store for items grouped by both color and size. To sort the rows based on the combination of color and size, instead of having a separate group for color and a separate group for size, you can define a group based on the combination of color and size. For more information about defining group expressions, see [Group Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md).  
+ Add an interactive sort button to a column header to enable a user to click the column header and sort the combined parent and child groups. To achieve this affect, you must change the group expression to be a composite of both groups. For example, suppose a matrix displays inventory totals for a store for items grouped by both color and size. To sort the rows based on the combination of color and size, instead of having a separate group for color and a separate group for size, you can define a group based on the combination of color and size. For more information about defining group expressions, see [Group Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
- In the following procedure, terms specify tablix data region areas. For more information, see [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ In the following procedure, terms specify tablix data region areas. For more information, see [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Typically, when you sort rows based on multiple groups, you want to see totals for the sorted rows, regardless of column groups. In this procedure, no column groups are used. You start by adding a matrix and removing the default column group. Alternatively, you could start by adding a table and removing the details group.  
   
@@ -164,7 +164,7 @@ manager: "mblythe"
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort button. The matrix sorts by the combined values of the group expression, although each individual value displays in its own column.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> Synchronizing Sort Order for Multiple Data Regions  
  Add an interactive sort button that enables a user to click one sort button and sort multiple data regions. When you create an interactive sort button, you can specify whether to synchronize the sort for multiple data regions based on the same report dataset. For example, a report might include a matrix and a chart that graphically displays the data. When a user changes the sort order of the rows in the matrix, the chart automatically displays the same sort order.  
@@ -213,12 +213,12 @@ manager: "mblythe"
   
  To verify the sort action, click **Run** to preview the report, and then click the interactive sort button. The matrix sorts by the combined values of the group expression, although each individual value displays in its own column.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ## See Also  
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Interactive Sort &#40;Report Builder and SSRS&#41;](report-design/interactive-sort-report-builder-and-ssrs.md)   
- [Sort Data in a Data Region &#40;Report Builder and SSRS&#41;](report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Exploring the Flexibility of a Tablix Data Region &#40;Report Builder and SSRS&#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Interactive Sort &#40;Report Builder and SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)   
+ [Sort Data in a Data Region &#40;Report Builder and SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Exploring the Flexibility of a Tablix Data Region &#40;Report Builder and SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   
   

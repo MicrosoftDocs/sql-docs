@@ -64,7 +64,7 @@ manager: "mblythe"
   
 -   Bing map tiles, which provide a background for the map view. To display tiles in a map, the report server must be configured to support Bing Maps Web Services.  
   
- For more information, see "Where can I get ESRI shapefiles?" in [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
+ For more information, see "Where can I get ESRI shapefiles?" in [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
  Spatial data can be politically sensitive and possibly copyrighted. Check the terms of use and privacy statements for spatial data sources to understand how you can use spatial data in your report.  
   
@@ -109,18 +109,18 @@ manager: "mblythe"
   
 |Wizard Icon|Layer style|Layer Type|Description and options|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../2014/reporting-services/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Basic Map|Polygon|A map that displays areas only, for example, sales territories.<br /><br /> Options: Vary color by palette or use a single color. A palette is a predefined set of colors. When all colors in a palette have been assigned, shades of colors are assigned.|  
-|![rs_MapType_Polygon_ColorAnalytical](../../2014/reporting-services/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Color Analytical Map|Polygon|A map that displays analytical data by varying color, for example, sales data by area.|  
-|![rs_MapType_Polygon_Bubble](../../2014/reporting-services/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Bubble Map|Polygon|A map that displays analytical data by varying bubble size centered on areas, for example, sales data by area.<br /><br /> Options: Vary area colors based on a second analytical field and specify color rules.|  
-|![rs_MapType_Line_Basic](../../2014/reporting-services/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Basic Line Map|Line|A map that displays lines only, for example, delivery routes.<br /><br /> Options: Vary color by palette or use a single color.|  
-|![rs_MapType_Line_Analytical](../../2014/reporting-services/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Analytical Line Map|Line|A map that varies line color and width, for example, number of packages delivered and on-time metrics by route.<br /><br /> Options: Vary line width by one analytical field, vary line color by a second analytical field, and specify color rules.|  
-|![rs_MapType_Marker_Basic](../../2014/reporting-services/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Basic Marker Map|Point|A map that displays a marker at each location, for example, cities.<br /><br /> Options: Vary color by palette or use a single color, and change marker style.|  
-|![rs_MapType_Marker_Bubble](../../2014/reporting-services/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Bubble Marker Map|Point|A map that displays a bubble for each location and varies bubble size by one analytical data field, for example, sales data by city.<br /><br /> Options: Vary bubble color by a second analytical field, and specify color rules.|  
-|![rs_MapType_Marker_Analytical](../../2014/reporting-services/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Analytical Marker Map|Point|A map that displays a marker at each location and varies marker color, size, and type based on analytical data, for example, top selling products, profit range, and discount strategy.<br /><br /> Options: Vary marker type by one analytical field, vary marker size by a second analytical field, vary marker color by a third analytical field, and specify color rules.|  
+|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Basic Map|Polygon|A map that displays areas only, for example, sales territories.<br /><br /> Options: Vary color by palette or use a single color. A palette is a predefined set of colors. When all colors in a palette have been assigned, shades of colors are assigned.|  
+|![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Color Analytical Map|Polygon|A map that displays analytical data by varying color, for example, sales data by area.|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Bubble Map|Polygon|A map that displays analytical data by varying bubble size centered on areas, for example, sales data by area.<br /><br /> Options: Vary area colors based on a second analytical field and specify color rules.|  
+|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Basic Line Map|Line|A map that displays lines only, for example, delivery routes.<br /><br /> Options: Vary color by palette or use a single color.|  
+|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Analytical Line Map|Line|A map that varies line color and width, for example, number of packages delivered and on-time metrics by route.<br /><br /> Options: Vary line width by one analytical field, vary line color by a second analytical field, and specify color rules.|  
+|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Basic Marker Map|Point|A map that displays a marker at each location, for example, cities.<br /><br /> Options: Vary color by palette or use a single color, and change marker style.|  
+|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Bubble Marker Map|Point|A map that displays a bubble for each location and varies bubble size by one analytical data field, for example, sales data by city.<br /><br /> Options: Vary bubble color by a second analytical field, and specify color rules.|  
+|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Analytical Marker Map|Point|A map that displays a marker at each location and varies marker color, size, and type based on analytical data, for example, top selling products, profit range, and discount strategy.<br /><br /> Options: Vary marker type by one analytical field, vary marker size by a second analytical field, vary marker color by a third analytical field, and specify color rules.|  
   
- After you add a map with the Map wizard, you can create additional layers or change options for a layer by using the Layer wizard. For more information about the wizards, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
+ After you add a map with the Map wizard, you can create additional layers or change options for a layer by using the Layer wizard. For more information about the wizards, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- You can customize the display or data options for each layer independently. For more information about customizing a map after you run a wizard, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ You can customize the display or data options for each layer independently. For more information about customizing a map after you run a wizard, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  
   
@@ -139,7 +139,7 @@ manager: "mblythe"
   
  By default, all layers display the results of rules in the first map legend. You can create multiple legends and then, for each rule, assign which legend to use to display the results.  
   
- For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) and [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) and [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 
   
@@ -159,9 +159,9 @@ manager: "mblythe"
 
   
 ## See Also  
- [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Tutorial: Map Report &#40;Report Builder&#41;](tutorial-map-report-report-builder.md)   
- [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)   
+ [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

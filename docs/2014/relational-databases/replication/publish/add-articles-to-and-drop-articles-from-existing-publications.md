@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 1.  Add one or more articles through one of the following methods:  
   
-    -   [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](publish/add-articles-to-and-drop-articles-from-a-publication.md)  
+    -   [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
     -   [Define an Article](define-an-article.md)  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 1.  Dropping an article from a publication involves dropping the article and creating a new snapshot for the publication. Dropping an article invalidates the current snapshot; therefore a new snapshot must be created.  
   
-    -   To drop an article from a publication, see [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](publish/add-articles-to-and-drop-articles-from-a-publication.md) or [Delete an Article](delete-an-article.md).  
+    -   To drop an article from a publication, see [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md) or [Delete an Article](delete-an-article.md).  
   
 2.  After dropping an article from a publication, you must create a new snapshot for the publication (and all partitions if it is a merge publication with parameterized filters).  
   

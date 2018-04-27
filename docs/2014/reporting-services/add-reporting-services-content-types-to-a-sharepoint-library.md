@@ -59,11 +59,11 @@ manager: "mblythe"
   
 4.  Find the **Report Server Integration Feature** and click **Deactivate**.  
   
-     ![rs_reportserver_integration_active](../../2014/reporting-services/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
+     ![rs_reportserver_integration_active](media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
   
 5.  Refresh the browser then click **Activate** for the **Report Server Integration Feature**.  
   
-     ![rs_reportserver_integration_deactive](../../2014/reporting-services/media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+     ![rs_reportserver_integration_deactive](media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> To enable content type management for a single document library (SharePoint 2013)  
   
@@ -71,15 +71,15 @@ manager: "mblythe"
   
 2.  Click **Library** in the ribbon.  
   
-     ![rs_SharePoint2013_LibraryRibbon](../../2014/reporting-services/media/rs-sharepoint2013-libraryribbon.gif "rs_SharePoint2013_LibraryRibbon")  
+     ![rs_SharePoint2013_LibraryRibbon](media/rs-sharepoint2013-libraryribbon.gif "rs_SharePoint2013_LibraryRibbon")  
   
 3.  On the **Library** ribbon, click **Library Settings**. If you do not see **Library Settings** or the button is disabled, you do not have permission to configure library settings, including content types.  
   
-     ![rs_SharePoint2013_LibrarySettings](../../2014/reporting-services/media/rs-sharepoint2013-librarysettings.gif "rs_SharePoint2013_LibrarySettings")  
+     ![rs_SharePoint2013_LibrarySettings](media/rs-sharepoint2013-librarysettings.gif "rs_SharePoint2013_LibrarySettings")  
   
 4.  In the **General Settings** section, click **Advanced settings**.  
   
-     ![rs_SharePoint2013_LibrarySettings_AdvancedSettings](../../2014/reporting-services/media/rs-sharepoint2013-librarysettings-advancedsettings.gif "rs_SharePoint2013_LibrarySettings_AdvancedSettings")  
+     ![rs_SharePoint2013_LibrarySettings_AdvancedSettings](media/rs-sharepoint2013-librarysettings-advancedsettings.gif "rs_SharePoint2013_LibrarySettings_AdvancedSettings")  
   
 5.  In the **Content Types** section, select **Yes** to allow management of content types.  
   
@@ -118,7 +118,7 @@ manager: "mblythe"
   
 2.  On the **Library Tools** ribbon, click **Library**.  
   
-     ![rs_SharePoint2010_LibraryRibbon](../../2014/reporting-services/media/rs-sharepoint2010-libraryribbon.gif "rs_SharePoint2010_LibraryRibbon")  
+     ![rs_SharePoint2010_LibraryRibbon](media/rs-sharepoint2010-libraryribbon.gif "rs_SharePoint2010_LibraryRibbon")  
   
 3.  On the **Settings** ribbon group, click **Library Settings**.  
   
@@ -152,11 +152,11 @@ manager: "mblythe"
   
 2.  In SharePoint Central Administration, click **General Applications settings**. In the **SQL Server Reporting Services (2008 and 2008 R2)** section, click **Reporting Services Integration**.  
   
-     ![rs_general_app_settings](../../2014/reporting-services/media/rs-general-app-settings.gif "rs_general_app_settings")  
+     ![rs_general_app_settings](media/rs-general-app-settings.gif "rs_general_app_settings")  
   
 3.  Click **Activate feature in all exciting site collections**.  
   
-     ![rs_general_app_settings_old_integrations](../../2014/reporting-services/media/rs-general-app-settings-old-integrations.gif "rs_general_app_settings_old_integrations")  
+     ![rs_general_app_settings_old_integrations](media/rs-general-app-settings-old-integrations.gif "rs_general_app_settings_old_integrations")  
   
 4.  Click **Ok**.  
   

@@ -62,7 +62,7 @@ manager: "mblythe"
   
 1.  On the Windows start screen, type `reporting` and in the **Apps** search results, click **Reporting Services Configuration Manager**.  
   
-     ![reporting services configuration manager on start](../../2014/reporting-services/media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services configuration manager on start")  
+     ![reporting services configuration manager on start](media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services configuration manager on start")  
   
      **Or**  
   
@@ -80,7 +80,7 @@ manager: "mblythe"
   
 5.  To verify that you launched the tool, compare your results to the following image:  
   
-     ![Reporting Services Configuration tool](../../2014/reporting-services/media/rs-ui-reportserverconfigkatmai.gif "Reporting Services Configuration tool")  
+     ![Reporting Services Configuration tool](media/rs-ui-reportserverconfigkatmai.gif "Reporting Services Configuration tool")  
   
  **Next Steps:** [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../2014/reporting-services/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -110,7 +110,7 @@ manager: "mblythe"
   
 1.  From the Windows Start Screen type `sql server` and in the **Apps** search results, click **SQL Server Management Studio**.  
   
-     ![managment studio from windows start screen](../../2014/reporting-services/media/bi-ssms-win8-startscreen.gif "managment studio from windows start screen")  
+     ![managment studio from windows start screen](media/bi-ssms-win8-startscreen.gif "managment studio from windows start screen")  
   
      **Or**  
   
@@ -141,7 +141,7 @@ manager: "mblythe"
   
 4.  In the **Templates** list, click **Report Server Project**. The following diagram shows how the project templates appear in the dialog box:  
   
-     ![New Project template dialog box](../../2014/reporting-services/media/rs-ui-newrsproject.gif "New Project template dialog box")  
+     ![New Project template dialog box](media/rs-ui-newrsproject.gif "New Project template dialog box")  
   
 5.  Type a name and location for the project, or click **Browse** and select a location.  
   

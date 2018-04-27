@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)   
  [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

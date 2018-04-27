@@ -26,36 +26,36 @@ manager: "jhubbard"
   Help protect the replication scenarios that you deploy in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] from malicious attacks and improve the security of your data.  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Security Overview**  
- [Threat and Vulnerability Mitigation &#40;Replication&#41;](security/threat-and-vulnerability-mitigation-replication.md)  
+ [Threat and Vulnerability Mitigation &#40;Replication&#41;](threat-and-vulnerability-mitigation-replication.md)  
   
- [Identity and Access Control &#40;Replication&#41;](security/identity-and-access-control-replication.md)  
+ [Identity and Access Control &#40;Replication&#41;](identity-and-access-control-replication.md)  
   
- [More…](security/security-overview-replication.md)  
+ [More…](security-overview-replication.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Development**  
- [Replication Agent Security Model](security/replication-agent-security-model.md)  
+ [Replication Agent Security Model](replication-agent-security-model.md)  
   
- [Security Role Requirements for Replication](security/security-role-requirements-for-replication.md)  
+ [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](replication-security-best-practices.md)  
   
- [More…](security/secure-development-replication.md)  
+ [More…](secure-development-replication.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Deployment**  
- [Secure the Distributor](security/secure-the-distributor.md)  
+ [Secure the Distributor](secure-the-distributor.md)  
   
- [Secure the Publisher](security/secure-the-publisher.md)  
+ [Secure the Publisher](secure-the-publisher.md)  
   
- [Secure the Subscriber](security/secure-the-subscriber.md)  
+ [Secure the Subscriber](secure-the-subscriber.md)  
   
- [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md)  
+ [Secure the Snapshot Folder](secure-the-snapshot-folder.md)  
   
- [Securing Replication Over the Internet](security/securing-replication-over-the-internet.md)  
+ [Securing Replication Over the Internet](securing-replication-over-the-internet.md)  
   
- [More…](security/secure-deployment-replication.md)  
+ [More…](secure-deployment-replication.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Operation**  
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)  
+ [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)  
   
 ## See Also  
  [Technical Reference &#40;Replication&#41;](technical-reference-replication.md)  

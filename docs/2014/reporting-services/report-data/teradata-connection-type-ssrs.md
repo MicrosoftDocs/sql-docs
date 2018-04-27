@@ -18,7 +18,7 @@ manager: "mblythe"
 # Teradata Connection Type (SSRS)
   To include data from a Teradata relational database in your report, you must have a dataset that is based on a report data source of type Teradata. This built-in data source type is based on the .NET Managed Provider for Teradata data processing extension.  
   
- Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Connection String  
  Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies a Teradata database on the server specified with an IP address:  
@@ -36,33 +36,33 @@ data source=<IP Address>
   
  For more information, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md) or [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Remarks"></a> Remarks  
  Before you can connect a Teradata data source, the system administrator must have installed the version of the .NET Data Provider for Teradata that supports retrieving data from the Teradata database. This data provider must be installed on the same computer as Report Builder and also on the report server.  
   
  Not all report delivery modes are supported by this data provider. Delivering reports through data-driven subscriptions is not supported for this data processing extension. For more information, see [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../2014/reporting-services/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Models"></a> Report Models  
  To create a dataset from a report model that is based on a Teradata data source, the model must be designed in Model Designer in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and published on a report server.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Related"></a> Related Sections  
  These sections of the documentation provide in-depth conceptual information about report data, as well as procedural information about how to define, customize, and use parts of a report that are related to data.  
   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)  
  Provides an overview of accessing data for your report.  
   
  [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  Provides information about data connections and data sources.  
   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Provides information about embedded and shared datasets.  
   
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Provides information about the field collection that is generated by the dataset query.  
   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md) in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
@@ -71,7 +71,7 @@ data source=<IP Address>
  [Using SQL Server 2008 Reporting Services with the .NET Framework Data Provider for Teradata](http://go.microsoft.com/fwlink/?LinkID=130848)  
  Provides detailed information about working with this data extension.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ## See Also  
  [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   

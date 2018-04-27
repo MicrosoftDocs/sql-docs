@@ -43,13 +43,13 @@ manager: "mblythe"
   
 -   In a column chart, you have less space for category axis labels to display horizontally. If you have longer category labels, consider using a bar chart or changing the rotation angle of the label.  
   
--   You can add special drawing styles to the individual bars on a column chart to increase its visual impact. Drawing styles include wedge, emboss, cylinder and light-to-dark. These effects are designed to improve the appearance of your 2D chart. If you are using a 3D chart, the drawing styles will still be applied, but may not have the same effect. For more information about how to add a drawing style to a bar chart, see [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+-   You can add special drawing styles to the individual bars on a column chart to increase its visual impact. Drawing styles include wedge, emboss, cylinder and light-to-dark. These effects are designed to improve the appearance of your 2D chart. If you are using a 3D chart, the drawing styles will still be applied, but may not have the same effect. For more information about how to add a drawing style to a bar chart, see [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 -   Unique to column charts is the ability to show your chart as a histogram or Pareto chart. To do so, set the ShowColumnAs property to `Histogram` or `Pareto` in the Properties window to `true`.  
   
 ## See Also  
  [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
- [Chart Types &#40;Report Builder and SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md)   
+ [Chart Types &#40;Report Builder and SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Bar Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
  [Range Charts &#40;Report Builder and SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)   

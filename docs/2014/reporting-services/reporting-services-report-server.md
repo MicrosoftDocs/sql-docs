@@ -106,7 +106,7 @@ manager: "mblythe"
   
  The following diagram shows the three-tier architecture of a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode deployment. It shows the report server database and data sources in the data tier, the report server components in the middle tier, and the client applications and built-in or custom tools in the presentation tier. It shows the flow of requests and data among the server components and which components send and retrieve content from a data store.  
   
- ![Reporting Services architecture](../../2014/reporting-services/media/reporting-serv-arch.gif "Reporting Services architecture")  
+ ![Reporting Services architecture](media/reporting-serv-arch.gif "Reporting Services architecture")  
   
  The report server is implemented as a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows service, called the "Report Server service", that hosts a Web service, background processing, and other operations. In the Services console application, the service is listed as SQL Server Reporting Services (MSSQLSERVER).  
   
@@ -128,7 +128,7 @@ manager: "mblythe"
   
  The following illustration shows a SharePoint mode [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] environment:  
   
- ![SSRS SharePoint Functional Architecture](../../2014/reporting-services/media/rs-sharepoint-architecture.gif "SSRS SharePoint Functional Architecture")  
+ ![SSRS SharePoint Functional Architecture](media/rs-sharepoint-architecture.gif "SSRS SharePoint Functional Architecture")  
   
 ||Description|  
 |-|-----------------|  

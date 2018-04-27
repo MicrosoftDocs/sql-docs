@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To set the expiration period for a subscription to a snapshot or transactional publication  
   
-1.  At the Publisher, execute [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify the desired subscription expiration period, in hours, for **@retention**. The default expiration period is 336 hours. For more information, see [Create a Publication](publish/create-a-publication.md).  
+1.  At the Publisher, execute [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify the desired subscription expiration period, in hours, for **@retention**. The default expiration period is 336 hours. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To set the expiration period for a subscription to a merge publication  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
     -   **3** = year  
   
-     The default expiration period is 14 days. For more information, see [Create a Publication](publish/create-a-publication.md).  
+     The default expiration period is 14 days. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To change the expiration period for a subscription to a snapshot or transactional publication  
   

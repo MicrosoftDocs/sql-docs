@@ -127,19 +127,19 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This transactional replication example returns the properties of the published article.  
   
- [!code-sql[HowTo#sp_helptranarticle](../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_helptranarticle)]  
+ [!code-sql[HowTo#sp_helptranarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_helptranarticle)]  
   
  This transactional replication example changes the schema options for the published article.  
   
- [!code-sql[HowTo#sp_changetranarticle](../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_changetranarticle)]  
+ [!code-sql[HowTo#sp_changetranarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_changetranarticle)]  
   
  This merge replication example returns the properties of the published article.  
   
- [!code-sql[HowTo#sp_helpmergearticle](../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_helpmergearticle)]  
+ [!code-sql[HowTo#sp_helpmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_helpmergearticle)]  
   
  This merge replication example changes the conflict detection settings for a published article.  
   
- [!code-sql[HowTo#sp_changemergearticle](../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_changemergearticle)]  
+ [!code-sql[HowTo#sp_changemergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_changemergearticle)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can modify articles and access their properties programmatically by using Replication Management Objects (RMO). The RMO classes you use to view or modify article properties depend on the type of publication to which the article belongs.  
@@ -179,13 +179,13 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Example (RMO)  
  This example changes a merge article to specify the business logic handler used by the article.  
   
- [!code-csharp[HowTo#rmo_ChangeMergeArticle_BLH](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergearticle_blh)]  
+ [!code-csharp[HowTo#rmo_ChangeMergeArticle_BLH](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergearticle_blh)]  
   
- [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
+ [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
 ## See Also  
  [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md)   
- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  

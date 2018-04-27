@@ -291,7 +291,7 @@ manager: "jhubbard"
  Is how often, in seconds, the Publisher or Subscriber is queried for data changes. The default is 60 seconds.  
   
  **-ProfileName** *profile_name*  
- Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](agents/replication-agent-profiles.md).  
+ Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
  Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
@@ -389,6 +389,6 @@ manager: "jhubbard"
  The merge agent history for the current session is not removed while running in continuous mode. A long running agent can result in a large number of entries in the merge history tables which could impact performance. To resolve this problem switch to scheduled mode, or continue to use continuous mode but create a dedicated job to periodically restart the merge agent, or reduce the verbosity of the history level to reduce the number of rows and therefor reduce the performance impact.  
   
 ## See Also  
- [Replication Agent Administration](agents/replication-agent-administration.md)  
+ [Replication Agent Administration](replication-agent-administration.md)  
   
   

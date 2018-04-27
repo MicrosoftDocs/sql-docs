@@ -293,6 +293,6 @@ manager: "jhubbard"
 |Added the **-ExtendedEventConfigFile** parameter.|  
   
 ## See Also  
- [Replication Agent Administration](agents/replication-agent-administration.md)  
+ [Replication Agent Administration](replication-agent-administration.md)  
   
   

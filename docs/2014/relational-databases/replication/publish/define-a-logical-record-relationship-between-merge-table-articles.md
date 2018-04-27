@@ -133,7 +133,7 @@ manager: "jhubbard"
   
 1.  At the Publisher on the publication database, execute the following query to return information about all logical record relationships defined for the specified publication:  
   
-     [!code-sql[HowTo#sp_ReturnMergeLogicalRecords](../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_returnmergelogicalrecords)]  
+     [!code-sql[HowTo#sp_ReturnMergeLogicalRecords](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_returnmergelogicalrecords)]  
   
      Note the name of the logical record relationship being removed in the `filtername` column in the result set.  
   
@@ -145,7 +145,7 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example enables precomputed partitions on an existing publication, and creates a logical record comprising the two new articles for the `SalesOrderHeader` and `SalesOrderDetail` tables.  
   
- [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
+ [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
@@ -195,9 +195,9 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Example (RMO)  
  This example creates a logical record comprising the two new articles for the `SalesOrderHeader` and `SalesOrderDetail` tables.  
   
- [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
+ [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
   
- [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
+ [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
 ## See Also  
  [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)   

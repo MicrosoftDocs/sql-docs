@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ### To specify the processing order for a new merge article  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify an integer value that represents the processing order for the article for **@processing_order**. For more information, see [Define an Article](publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify an integer value that represents the processing order for the article for **@processing_order**. For more information, see [Define an Article](define-an-article.md).  
   
     > [!NOTE]  
     >  When creating ordered articles, you should leave gaps between the article order values. This makes it easier to set new values in the future. For example, if you have three articles for which you need to specify a fixed processing order, set the value of **@processing_order** to 10, 20, and 30 rather than 1, 2, and 3, respectively.  

@@ -93,7 +93,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  When specifying a value of **SQL** for any of the above parameters, commands of that type will be replicated to the Subscriber as the appropriate [!INCLUDE[tsql](../../../includes/tsql-md.md)] command.  
   
-     For more information, see [Define an Article](publish/define-an-article.md).  
+     For more information, see [Define an Article](define-an-article.md).  
   
 #### To create an article that does not propagate data changes  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  When specifying a value of **NONE** for any of the above parameters, commands of that type will not be replicated to the Subscriber.  
   
-     For more information, see [Define an Article](publish/define-an-article.md).  
+     For more information, see [Define an Article](define-an-article.md).  
   
 #### To create an article with user-modified custom stored procedures  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  For more information on CALL, SCALL, XCALL, and MCALL syntax, see [Specify How Changes Are Propagated for Transactional Articles](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     For more information, see [Define an Article](publish/define-an-article.md).  
+     For more information, see [Define an Article](define-an-article.md).  
   
 2.  After the snapshot has been generated, navigate to the snapshot folder for the publication to which this article belongs and locate the **.sch** file with the same name as the article. Open this file using Notepad.exe, locate the CREATE PROCEDURE command for the insert, update, or delete stored procedures, and edit the procedure definition to supply any custom logic for propagating data changes. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -146,7 +146,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  For more information on CALL, SCALL, XCALL, and MCALL syntax, see [Specify How Changes Are Propagated for Transactional Articles](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     For more information, see [Define an Article](publish/define-an-article.md).  
+     For more information, see [Define an Article](define-an-article.md).  
   
 2.  At the Publisher on the publication database, use the [ALTER PROCEDURE](~/t-sql/statements/alter-procedure-transact-sql.md) statement to edit [sp_scriptpublicationcustomprocs](~/relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md) so that it returns a [CREATE PROCEDURE](~/t-sql/statements/create-procedure-transact-sql.md) script for the insert, update, and delete custom stored procedures. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -158,6 +158,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Specify How Changes Are Propagated for Transactional Articles](../transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](create-modify-and-delete-publications-and-articles-replication.md)  
   
   

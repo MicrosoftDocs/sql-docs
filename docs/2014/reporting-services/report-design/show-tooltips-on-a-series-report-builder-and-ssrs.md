@@ -31,8 +31,8 @@ manager: "mblythe"
   
 ## See Also  
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](report-design/chart-legend-change-item-text-report-builder.md)   
- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Add a Drillthrough Action on a Report &#40;Report Builder and SSRS&#41;](report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
+ [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
+ [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Add a Drillthrough Action on a Report &#40;Report Builder and SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

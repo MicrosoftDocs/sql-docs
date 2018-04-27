@@ -30,7 +30,7 @@ manager: "mblythe"
   
  Data-bound images can also be displayed from binary data stored in a database. For example, the pictures that appear alongside product names in a product list are database images. In the following picture, the images of bicycles are stored in a database and retrieved in the report to illustrate each product.  
   
- ![rs_DataboundBikes](../../2014/reporting-services/media/rs-databoundbikes.gif "rs_DataboundBikes")  
+ ![rs_DataboundBikes](../media/rs-databoundbikes.gif "rs_DataboundBikes")  
   
 
   
@@ -42,18 +42,18 @@ manager: "mblythe"
 ##  <a name="EmbedImages"></a> Embedding Images  
  You can embed images in a report so that all image data is stored within the report definition. When you embed an image, the image is MIME-encoded and stored as text in the report definition. Using an embedded image ensures that the image is always available to the report, but it also increases the size of the report definition.  
   
- For more information about embedding an image, see [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+ For more information about embedding an image, see [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="ExternalImages"></a> External Images  
  You can include stored images in a report by specifying a URL to the image. When you use an external image in a report, the image source is set to `External` and the value for the image is the URL address or path to the image.  
   
- For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+ For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
  When the report is run in Report Builder or Report Designer, preview uses the credentials of the user to display the image. When the report is run on the report server, the image in the report may not be displayed if the server credentials are not sufficient to access the image. In that case, contact your system administrator.  
   
- For more information about adding an external image to a report, see [Add an External Image &#40;Report Builder and SSRS&#41;](report-design/add-an-external-image-report-builder-and-ssrs.md).  
+ For more information about adding an external image to a report, see [Add an External Image &#40;Report Builder and SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
   
  
   
@@ -63,28 +63,28 @@ manager: "mblythe"
 > [!NOTE]  
 >  Some rendering extensions, like the HTML rendering extension, render the background image for the report body in the body, the page header, and the page footer. You can define a separate background image for the page header and footer, but if no image is defined, the report uses the background image of the body. Other rendering extensions, like the Image rendering extension, do not render the body background image in the page header and footer.  
   
- For more information about adding a background image, see [Add a Background Image &#40;Report Builder and SSRS&#41;](report-design/add-a-background-image-report-builder-and-ssrs.md).  
+ For more information about adding a background image, see [Add a Background Image &#40;Report Builder and SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
   
  
   
 ##  <a name="DataboundImages"></a> Data-bound Images  
- You can add images that are stored in a database to your report. You use the same image report item as the one used for static images, but with a set of properties that indicate that the image is stored in a database. To view instructions about working with data-bound images, see [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
+ You can add images that are stored in a database to your report. You use the same image report item as the one used for static images, but with a set of properties that indicate that the image is stored in a database. To view instructions about working with data-bound images, see [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="HowTo"></a> How-to Topics  
- [Add an External Image &#40;Report Builder and SSRS&#41;](report-design/add-an-external-image-report-builder-and-ssrs.md)  
+ [Add an External Image &#40;Report Builder and SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
- [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [Add a Background Image &#40;Report Builder and SSRS&#41;](report-design/add-a-background-image-report-builder-and-ssrs.md)  
+ [Add a Background Image &#40;Report Builder and SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
- [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## See Also  
  [Exporting to an Image File &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

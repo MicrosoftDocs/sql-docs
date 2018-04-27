@@ -18,7 +18,7 @@ manager: "mblythe"
 # Drillthrough, Drilldown, Subreports, and Nested Data Regions (Report Builder and SSRS)
   You can organize data in a variety of ways to show the relationship of the general to the detailed.  You can put all the data in the report, but set it to be hidden until a user clicks to reveal details; this is a *drilldown* action. You can display the data in a data region, such as a table or chart, which is *nested* inside another data region, such as a table or matrix. You can display the data in a *subreport* that is completely contained within a main report. Or, you can put the detail data in *drillthrough* reports, separate reports that are displayed when a user clicks a link.  
   
- ![rs_DrillThruDrilldownEtc](../../2014/reporting-services/media/rs-drillthrudrilldownetc.gif "rs_DrillThruDrilldownEtc")  
+ ![rs_DrillThruDrilldownEtc](../media/rs-drillthrudrilldownetc.gif "rs_DrillThruDrilldownEtc")  
   
  A. Drillthrough report  
   
@@ -80,22 +80,22 @@ manager: "mblythe"
 
   
 ##  <a name="InThisSection"></a> In This Section  
- [Drillthrough Reports &#40;Report Builder and SSRS&#41;](report-design/drillthrough-reports-report-builder-and-ssrs.md)  
+ [Drillthrough Reports &#40;Report Builder and SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  Explains reports that open when a user clicks a link in a main report.  
   
- [Subreports &#40;Report Builder and SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md)  
+ [Subreports &#40;Report Builder and SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  Explains these reports that are displayed inside the body of a main report.  
   
- [Nested Data Regions &#40;Report Builder and SSRS&#41;](report-design/nested-data-regions-report-builder-and-ssrs.md)  
+ [Nested Data Regions &#40;Report Builder and SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  Explains nesting one data region inside another, such as a chart nested inside a matrix.  
   
- [Drilldown Action &#40;Report Builder and SSRS&#41;](report-design/drilldown-action-report-builder-and-ssrs.md)  
+ [Drilldown Action &#40;Report Builder and SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
  Explains using the drilldown action to hide and show report items.  
   
- [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explains how to refer to items that are external to the report definition file.  
   
 ## See Also  
- [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

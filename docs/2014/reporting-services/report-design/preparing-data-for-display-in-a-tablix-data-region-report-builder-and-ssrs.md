@@ -54,7 +54,7 @@ FROM Production.Product p
   
 ## See Also  
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -37,13 +37,13 @@ manager: "mblythe"
   
  Visually, files that you upload to a report server database are represented in the folder hierarchy with the following icons.  
   
- ![Report icon](../../2014/reporting-services/media/hlp-16doc.gif "Report icon")  
+ ![Report icon](media/hlp-16doc.gif "Report icon")  
 report icon  
   
- ![Model icon](../../2014/reporting-services/media/model-icon.gif "Model icon")  
+ ![Model icon](media/model-icon.gif "Model icon")  
 report model icon  
   
- ![generic resource icon](../../2014/reporting-services/media/hlp-16file.gif "generic resource icon")  
+ ![generic resource icon](media/hlp-16file.gif "generic resource icon")  
 generic resource icon  
   
  When you upload a file, it is always placed in the folder that is currently selected. You can navigate to the folder that you want to contain the item first, or you can upload a file and then move it to a final location later.  

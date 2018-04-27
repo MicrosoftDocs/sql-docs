@@ -34,7 +34,7 @@ manager: "mblythe"
   
 3.  Optionally deploy the shared datasets and shared data source with the report. For each type of item, use Project Properties to specify paths to folders on the report server or SharePoint site.  
   
- For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,7 +43,7 @@ manager: "mblythe"
   
 1.  Open Report Builder. The **New report or dataset pane** opens, as shown in the following figure:  
   
-     ![rs_NewSharedDataset](../../2014/reporting-services/media/rs-newshareddataset.gif "rs_NewSharedDataset")  
+     ![rs_NewSharedDataset](../media/rs-newshareddataset.gif "rs_NewSharedDataset")  
   
     > [!NOTE]  
     >  If the **New report or dataset pane** does not appear, from the Report Builder button, click **New**.  
@@ -110,12 +110,12 @@ manager: "mblythe"
      The dataset and its field collection appear in the Report Data pane under the data source node.  
   
 ## See Also  
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -27,11 +27,11 @@ manager: "mblythe"
   
 -   **What structure do you want to use to present the data in the report?**  
   
-     You have a choice among tabular, matrix (similar to a cross-tab or PivotTable report), chart, free-form structures, or any combination of these to present data. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) and [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md).  
+     You have a choice among tabular, matrix (similar to a cross-tab or PivotTable report), chart, free-form structures, or any combination of these to present data. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) and [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 -   **What do you want your report to look like?**  
   
-     Report Builder provides a lot of report items that you can add to your report to make it easier to read, highlight key information, help your audience navigate the report, and so on. Knowing how you want the report to appear can determine whether you need report items such as text boxes, rectangles, images, and lines. You might also want to show or hide items, add a document map, include drillthrough reports or subreports, or link to other reports. For more information, see [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) and [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
+     Report Builder provides a lot of report items that you can add to your report to make it easier to read, highlight key information, help your audience navigate the report, and so on. Knowing how you want the report to appear can determine whether you need report items such as text boxes, rectangles, images, and lines. You might also want to show or hide items, add a document map, include drillthrough reports or subreports, or link to other reports. For more information, see [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) and [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
 -   **What data do you want your readers to see? Should the data or format be filtered for different audiences?**  
   
@@ -39,11 +39,11 @@ manager: "mblythe"
   
 -   **Do you need to create your own calculations?**  
   
-     Sometimes, your data source and datasets do not contain the exact fields that you need for your report. In that situation, you might have to create your own calculated fields. For example, you might want to multiply the price per unit times the quantity to get a line item sales amount. Expressions are also used to provide conditional formatting and other advanced features. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+     Sometimes, your data source and datasets do not contain the exact fields that you need for your report. In that situation, you might have to create your own calculated fields. For example, you might want to multiply the price per unit times the quantity to get a line item sales amount. Expressions are also used to provide conditional formatting and other advanced features. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 -   **Do you want to hide report items initially?**  
   
-     Consider whether you want to hide report items, including data regions, groups and columns, when the report is first run. For example, you can initially present a summary table, and then drill down into the detailed data. For more information, see [Drilldown Action &#40;Report Builder and SSRS&#41;](report-design/drilldown-action-report-builder-and-ssrs.md).  
+     Consider whether you want to hide report items, including data regions, groups and columns, when the report is first run. For example, you can initially present a summary table, and then drill down into the detailed data. For more information, see [Drilldown Action &#40;Report Builder and SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
   
 -   **How are you going to deliver your report?**  
   

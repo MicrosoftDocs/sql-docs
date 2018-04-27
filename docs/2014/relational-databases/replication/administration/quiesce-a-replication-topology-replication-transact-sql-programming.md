@@ -78,7 +78,7 @@ manager: "jhubbard"
     >  If conflicts occur during synchronization, it is possible that changes required by conflict resolution will not be propagated to all nodes after running the Merge Agent two times.  
   
 ## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Measure Latency and Validate Connections for Transactional Replication](../transactional/transactional-replication.md)  
   
   

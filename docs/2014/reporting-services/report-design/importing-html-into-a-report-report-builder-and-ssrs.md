@@ -18,7 +18,7 @@ manager: "mblythe"
 # Importing HTML into a Report (Report Builder and SSRS)
   You can use a text box to insert HTML-formatted text that you have retrieved from a field in your dataset into a report. The text can come from any simple or complex expression that evaluates to correctly formatted HTML. Formatted text can be rendered to all supported output formats, including PDF.  
   
- ![rs_HTMLFormatting](../../2014/reporting-services/media/rs-htmlformatting.gif "rs_HTMLFormatting")  
+ ![rs_HTMLFormatting](../media/rs-htmlformatting.gif "rs_HTMLFormatting")  
   
  This illustration shows text with HTML formatting in report design view, and the same text as it is rendered when the report is run.  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
   
  When using the list handling tags, the font and style of all bullets and number prefixes will be fixed to Arial black.  
   
- For more information, see [Add HTML into a Report &#40;Report Builder and SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
+ For more information, see [Add HTML into a Report &#40;Report Builder and SSRS&#41;](add-html-into-a-report-report-builder-and-ssrs.md).  
   
 ## Limitations of Cascading Style Sheet Attributes  
  When using cascading style sheet (CSS) attributes, only a basic set of tags are defined. The following is a list of attributes that are supported:  

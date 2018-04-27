@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 #### To define an article that supports the Interactive Resolver  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **true** for **@allow_interactive_resolver**. For more information, see [Define an Article](publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **true** for **@allow_interactive_resolver**. For more information, see [Define an Article](define-an-article.md).  
   
 ## See Also  
  [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   

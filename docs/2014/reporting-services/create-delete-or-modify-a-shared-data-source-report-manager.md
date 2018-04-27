@@ -26,7 +26,7 @@ manager: "mblythe"
   
  The following icon indicates a shared data source in the Report Manager folder hierarchy:  
   
- ![Shared data source icon](../../2014/reporting-services/media/hlp-16datasource.png "Shared data source icon")  
+ ![Shared data source icon](media/hlp-16datasource.png "Shared data source icon")  
 shared data source icon  
   
 ### To create a shared data source  

@@ -59,7 +59,7 @@ manager: "jhubbard"
 ## Static Row Filters  
  The following illustration shows a published table that is filtered so that only rows 2, 3, and 6 are included in the publication.  
   
- ![Row filtering](media/repl-16.gif "Row filtering")  
+ ![Row filtering](../media/repl-16.gif "Row filtering")  
   
  A static row filter uses a WHERE clause to select the appropriate data to be published; you specify the final part of the WHERE clause. Consider the **Product Table** in the Adventure Works sample database, which contains the column **ProductLine**. To publish only the rows with data on products related to mountain bikes, specify `ProductLine = 'M'`.  
   
@@ -72,25 +72,25 @@ manager: "jhubbard"
   
 -   With merge replication, use parameterized row filters rather than creating multiple publications with static row filters. For more information, see [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- To define or modify a static row filter, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md).  
+ To define or modify a static row filter, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
 ## Column Filters  
  The following illustration shows a publication that filters out column C.  
   
- ![Column filtering](media/repl-17.gif "Column filtering")  
+ ![Column filtering](../media/repl-17.gif "Column filtering")  
   
  You can also use row and column filtering together, as illustrated here.  
   
- ![Row and column filtering](media/repl-18.gif "Row and column filtering")  
+ ![Row and column filtering](../media/repl-18.gif "Row and column filtering")  
   
- After a publication is created, you can use column filtering to drop a column from an existing publication, but retain the column in the table at the Publisher, and also to include an existing column in the publication. For other changes, such as adding a new column to a table and then adding it to the published article, use schema change replication. For more information, see the "Adding Columns" and "Dropping Columns" sections in the topic [Make Schema Changes on Publication Databases](publish/make-schema-changes-on-publication-databases.md).  
+ After a publication is created, you can use column filtering to drop a column from an existing publication, but retain the column in the table at the Publisher, and also to include an existing column in the publication. For other changes, such as adding a new column to a table and then adding it to the published article, use schema change replication. For more information, see the "Adding Columns" and "Dropping Columns" sections in the topic [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md).  
   
  The types of columns listed in the following table cannot be filtered out of certain types of publications.  
   
 |Column type|Type of publication and options|  
 |-----------------|-------------------------------------|  
 |Primary key column|Primary key columns are required for all tables in transactional publications. Primary keys are not required for tables in merge publications, but if a primary key column is present, it cannot be filtered.|  
-|Foreign key column|All publications created using the New Publication wizard. You can filter foreign key columns using Transact-SQL stored procedures. For more information, [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md).|  
+|Foreign key column|All publications created using the New Publication wizard. You can filter foreign key columns using Transact-SQL stored procedures. For more information, [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).|  
 |The **rowguid** column|Merge publications<sup>1</sup>|  
 |The **msrepl_tran_version** column|Snapshot or transactional publications that allow updatable subscriptions|  
 |Columns that do not allow NULL and do not have default values or the IDENTITY property set.|Snapshot or transactional publications that allow updatable subscriptions|  
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
  <sup>1</sup> If you are publishing a table in a merge publication and that table already contains a column of data type `uniqueidentifier` with the `ROWGUIDCOL` property set, replication can use this column instead of creating an additional column named **rowguid**. In this case, the existing column must be published.  
   
- To define or modify a column filter, see [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md).  
+ To define or modify a column filter, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ## Filtering Considerations  
  Keep the following considerations in mind when filtering data:  
@@ -130,6 +130,6 @@ manager: "jhubbard"
  Row filters are not designed to work across databases. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentionally restricts the execution of `sp_replcmds` (which filters execute under) to the database owner (`dbo`). The `dbo` does not have cross database privileges. With the addition of CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the `sp_replcmds` logic populates the change tracking tables with information that the user can return to and query. For security reasons, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restricts the execution of this logic so that a malicious `dbo` can’t highjack this execution path. For example, a malicious `dbo` could add triggers on CDC tables which would then get executed under the context of the user calling `sp_replcmds`, in this case the logreader agent.  If the account the agent is running under has higher privilege the malicious `dbo` could escalate his privileges.  
   
 ## See Also  
- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)  
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

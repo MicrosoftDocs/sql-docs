@@ -49,7 +49,7 @@ manager: "mblythe"
   
 -   Use parameters to relate main reports to drillthrough reports, to subreports, and to linked reports. When you design a set of reports, you can design each report to answer certain questions. Each report can provide a different view or a different level of detail for related information. To provide a set of interrelated reports, create parameters for the related data on target reports.  
   
-     For more information, see [Drillthrough Reports &#40;Report Builder and SSRS&#41;](report-design/drillthrough-reports-report-builder-and-ssrs.md), [Subreports &#40;Report Builder and SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md), and [Create a Linked Report](../../2014/reporting-services/create-a-linked-report.md).  
+     For more information, see [Drillthrough Reports &#40;Report Builder and SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md), [Subreports &#40;Report Builder and SSRS&#41;](subreports-report-builder-and-ssrs.md), and [Create a Linked Report](../../2014/reporting-services/create-a-linked-report.md).  
   
 -   Customize sets of parameters for multiple users. Create two linked reports based on a sales report on the report server. One linked report uses predefined parameter values for sales persons and the second linked report uses predefined parameter values for sales managers. Both reports use the same report definition.  
   
@@ -61,12 +61,12 @@ manager: "mblythe"
   
 -   Enable users to customize report data and appearance by including parameters in an expression.  
   
-     For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md).  
+     For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
   
 ##  <a name="UserInterface"></a> Parameter Pane  
  When you view a report, the report viewer toolbar displays each parameter so that a user can interactively specify values. The following illustration shows the parameter area for a report that has parameters @StartDate, @EndDate, @Subcategory, and @ShowAllRows.  
   
- ![rs_ParameterStory](../../2014/reporting-services/media/rs-parameterstory.gif "rs_ParameterStory")  
+ ![rs_ParameterStory](../media/rs-parameterstory.gif "rs_ParameterStory")  
   
 1.  **Parameters pane** The report viewer toolbar displays a prompt and default value for each parameter. Parameter layout on the toolbar is formatted automatically. The order is determined by the order that parameters appear in the Report Data pane.  
   
@@ -91,7 +91,7 @@ manager: "mblythe"
   
      The following image from Report Builder shows a dataset query with a variable (1), and the corresponding dataset parameter (2) and report parameter (3).  
   
-     ![Dataset Properties Dialog Box and Report Pane](../../2014/reporting-services/media/datasetquery-parameters.png "Dataset Properties Dialog Box and Report Pane")  
+     ![Dataset Properties Dialog Box and Report Pane](../media/datasetquery-parameters.png "Dataset Properties Dialog Box and Report Pane")  
   
     > **NOTE!** Not all data sources support parameters.  
   
@@ -108,9 +108,9 @@ manager: "mblythe"
   
 -   Add a report part that contains references to a parameter or to a shared dataset that contains variables.  
   
-     Report parts are stored on the report server and available for others to use in their reports. Report parts that are parameters cannot be managed from the report server. You can search for parameters in the Report Part Gallery and after you add them, configure them in your report. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md).  
+     Report parts are stored on the report server and available for others to use in their reports. Report parts that are parameters cannot be managed from the report server. You can search for parameters in the Report Part Gallery and after you add them, configure them in your report. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
      
-   > **NOTE!** Parameters can be published as a separate report part for data regions that have dependent datasets with parameters. Although parameters are listed as a report part, you cannot add a report part parameter directly to a report. Instead, add the report part, and any necessary report parameters are automatically generated from dataset queries that are contained or referenced by the report part. For more information about report parts, see [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md) and [Report Parts in Report Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
+   > **NOTE!** Parameters can be published as a separate report part for data regions that have dependent datasets with parameters. Although parameters are listed as a report part, you cannot add a report part parameter directly to a report. Instead, add the report part, and any necessary report parameters are automatically generated from dataset queries that are contained or referenced by the report part. For more information about report parts, see [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md) and [Report Parts in Report Designer &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md).  
   
 ### Parameter Values  
  The following are options for selecting parameter values in the report.  
@@ -121,7 +121,7 @@ manager: "mblythe"
   
 -   Select a value from a drop-down list for one parameter, which determines the values that are available in the drop-down list for another parameter. These are cascading parameters. Cascading parameters enables you to successively filter parameter values from thousands of values to a manageable number.  
   
-     For more information, see [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+     For more information, see [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
 -   Run the report without having to first select a parameter value because a default value has been created for the parameter.  
   
@@ -206,19 +206,19 @@ manager: "mblythe"
 ##  <a name="bkmk_How_To_Topics"></a> How-To Topics  
  This section lists procedures that show you, step by step, how to work with parameters and filters.  
   
--   [Add, Change, or Delete a Report Parameter &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+-   [Add, Change, or Delete a Report Parameter &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [Add, Change, or Delete Available Values for a Report Parameter &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
+-   [Add, Change, or Delete Available Values for a Report Parameter &#40;Report Builder and SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
--   [Add, Change, or Delete Default Values for a Report Parameter &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
+-   [Add, Change, or Delete Default Values for a Report Parameter &#40;Report Builder and SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
--   [Change the Order of a Report Parameter &#40;Report Builder and SSRS&#41;](report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+-   [Change the Order of a Report Parameter &#40;Report Builder and SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
+-   [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
 -   [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
--   [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
+-   [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
 -   [How to use SSRS parameters with stored procedures](http://go.microsoft.com/fwlink/p/?LinkId=396970)  
   
@@ -234,16 +234,16 @@ manager: "mblythe"
   
  [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  [Security &#40;Report Builder&#41;](report-builder/security-report-builder.md)  
   
- [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
- [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

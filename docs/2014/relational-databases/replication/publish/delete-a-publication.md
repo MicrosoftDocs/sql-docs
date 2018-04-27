@@ -83,11 +83,11 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example shows how to remove a transactional publication and disable transactional publishing for a database. This example assumes that all subscriptions were previously removed. For more information, see [Delete a Pull Subscription](delete-a-pull-subscription.md) or [Delete a Push Subscription](delete-a-push-subscription.md).  
   
- [!code-sql[HowTo#sp_droppublication](../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
+ [!code-sql[HowTo#sp_droppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
   
  This example shows how to remove a merge publication and disable merge publishing for a database. This example assumes that all subscriptions were previously removed. For more information, see [Delete a Pull Subscription](delete-a-pull-subscription.md) or [Delete a Push Subscription](delete-a-push-subscription.md).  
   
- [!code-sql[HowTo#sp_dropmergepublication](../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
+ [!code-sql[HowTo#sp_dropmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can delete publications programmatically by using Replication Management Objects (RMO). The RMO classes that you use to remove a publication depend on the type of publication you remove.  
@@ -143,15 +143,15 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  The following example deletes a transactional publication. If no other transactional publications exist for this database, transactional publishing is also disabled.  
   
- [!code-csharp[HowTo#rmo_DropTranPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  
+ [!code-csharp[HowTo#rmo_DropTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  
   
- [!code-vb[HowTo#rmo_vb_DropTranPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_droptranpub)]  
+ [!code-vb[HowTo#rmo_vb_DropTranPub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_droptranpub)]  
   
  The following example deletes a merge publication. If no other merge publications exist for this database, merge publishing is also disabled.  
   
- [!code-csharp[HowTo#rmo_DropMergePub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_dropmergepub)]  
+ [!code-csharp[HowTo#rmo_DropMergePub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_dropmergepub)]  
   
- [!code-vb[HowTo#rmo_vb_DropMergePub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
+ [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## See Also  
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   

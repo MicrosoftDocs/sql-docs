@@ -18,7 +18,7 @@ manager: "mblythe"
 # Formatting Scales on a Gauge (Report Builder and SSRS)
   A gauge scale is the range of numbers, bound by a minimum and a maximum, shown on a gauge. Typically, a gauge scale contains gauge labels and tick marks to give an accurate reading of what the gauge pointer shows. A gauge scale is generally associated with one or more gauge pointers. You can have more than one scale on the same gauge.  
   
- ![Overview of elements on a gauge scale](../../2014/reporting-services/media/scaleoverviewdiagram.gif "Overview of elements on a gauge scale")  
+ ![Overview of elements on a gauge scale](../media/scaleoverviewdiagram.gif "Overview of elements on a gauge scale")  
   
  Unlike the chart, where multiple groups are defined, the gauge only shows one value. You must define the minimum and maximum values of the scale. The interval numbers are calculated automatically based on the values specified for the minimum and maximum.  
   
@@ -30,7 +30,7 @@ manager: "mblythe"
   
 -   On a linear gauge, you can specify the width of the start and end margins relative to the endpoints on a linear gauge.  
   
- To quickly get started with formatting scales, see [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
+ To quickly get started with formatting scales, see [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,7 +68,7 @@ manager: "mblythe"
   
  The scale radius is the distance from the center of the gauge to the middle of the scale bar. The value of the scale radius is measured as a percentage of the gauge diameter. It is a good practice to keep the scale radius below a value of 35. If you specify a value higher than 35, the scale will likely be drawn outside the boundaries of the gauge. The following illustration shows how the scale radius is measured, relative to the diameter of the gauge, on the scale bar.  
   
- ![Scale radius relative to gauge diameter](../../2014/reporting-services/media/scaleradiusdiagram.gif "Scale radius relative to gauge diameter")  
+ ![Scale radius relative to gauge diameter](../media/scaleradiusdiagram.gif "Scale radius relative to gauge diameter")  
   
  The start angle is the angle of rotation, between 0 and 360, at which the scale will begin. The zero (0) position is located at the bottom of the gauge, and the start angle rotates clockwise. For example, a start angle of 90 degrees starts the scale at the 9 o'clock position.  
   
@@ -83,10 +83,10 @@ manager: "mblythe"
 -   1% of the smallest value of the gauge height or width on a linear gauge.  
   
 ## See Also  
- [Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
+ [Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

@@ -103,7 +103,7 @@ uspGetWhereUsedProductID
  When you enter the table name Person.ContactType, it is the equivalent of creating the [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement `SELECT * FROM Person.ContactType`.  
   
 ## See Also  
- [Relational Query Designer User Interface &#40;Report Builder&#41;](report-data/relational-query-designer-user-interface-report-builder.md)   
+ [Relational Query Designer User Interface &#40;Report Builder&#41;](relational-query-designer-user-interface-report-builder.md)   
  [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

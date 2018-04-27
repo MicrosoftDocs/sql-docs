@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   If you add, modify, or delete a parameterized row filter after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](publish/change-publication-and-article-properties.md).  
+-   If you add, modify, or delete a parameterized row filter after subscriptions to the publication have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Define, modify, and delete parameterized row filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](publish/create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Define, modify, and delete parameterized row filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To define a parameterized row filter  
   
@@ -124,12 +124,12 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the **LoginID** column. During synchronization, the value returned by the [HOST_NAME](~/t-sql/functions/host-name-transact-sql.md) function is overridden. For more information, see Overriding the HOST_NAME() Value in the topic [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- [!code-sql[HowTo#sp_MergeDynamicPub1](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
+ [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
   
 ## See Also  
- [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Change Publication and Article Properties](publish/change-publication-and-article-properties.md)   
+ [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Join Filters](merge/join-filters.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)  
   

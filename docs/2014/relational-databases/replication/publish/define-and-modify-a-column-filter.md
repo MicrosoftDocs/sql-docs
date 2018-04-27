@@ -127,11 +127,11 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  In this transactional replication example, the `DaysToManufacture` column is removed from an article based on the `Product` table.  
   
- [!code-sql[HowTo#sp_AddTranArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
+ [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
  In this merge replication example, the `CreditCardApprovalCode` column is removed from an article based on the `SalesOrderHeader` table.  
   
- [!code-sql[HowTo#sp_AddMergeArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
+ [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ## See Also  
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   

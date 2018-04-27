@@ -20,7 +20,7 @@ manager: "mblythe"
 # Formulas in Report Model Queries (Report Builder and SSRS)
   Formulas are calculations performed on values in a report that use a report model as a data source. A formula can contain functions, operators, constants, and references to fields or entities. Formulas allow you to combine, aggregate, filter, and evaluate both numeric and text data. You can create formulas and save them as new fields or you can modify the formulas of existing fields.  
   
- Formulas are not RDL expressions and do not begin with an equals sign (=). For more information about RDL expressions, see [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+ Formulas are not RDL expressions and do not begin with an equals sign (=). For more information about RDL expressions, see [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
  Formulas can look similar to any of the following:  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
  Functions can be used to perform simple or complex calculations. The structure of a function begins with the function name, followed by an opening parenthesis, the arguments for the function separated by commas, and a closing parenthesis.  
   
- ![An example of a function.](../../2014/reporting-services/media/functionexample.gif "An example of a function.")  
+ ![An example of a function.](../media/functionexample.gif "An example of a function.")  
   
  Arguments can be field references, numbers, text, and logical values such as `TRUE` or `FALSE`. Arguments can also be constants, formulas, or other functions. The arguments that you enter must produce a valid value for that argument. For example, if the formula is multiplying two integers, the result cannot be a text string.  
   

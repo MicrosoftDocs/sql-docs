@@ -25,7 +25,7 @@ manager: "mblythe"
   
  The report in this illustration features a matrix with row and column groups, sparklines, indicators, and a summary pie chart in the corner cell, accompanied by a map with two sets of geographic data represented by color and by circle size.  
   
- ![rs_GettingStartedReport](../../2014/reporting-services/media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
+ ![rs_GettingStartedReport](../media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
   
 ##  <a name="JumpStartReptCreation"></a> Jump-Start Report Creation  
   
@@ -76,7 +76,7 @@ manager: "mblythe"
  [What's New in Report Builder for SQL Server 2014](../../2014/reporting-services/what-s-new-in-report-builder-for-sql-server-2014.md)  
  Describes the new features in this version of Report Builder, including maps.  
   
- [Tutorial: Creating a Quick Chart Report Offline](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Creating a Quick Chart Report Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Introduces Report Builder and the wizards available to help you create reports. The tutorial provides a set of data for you to work with so you do not need to connect to a data source to get started.  
   
  [Planning a Report &#40;Report Builder&#41;](report-design/planning-a-report-report-builder.md)  
@@ -85,16 +85,16 @@ manager: "mblythe"
  [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Defines key concepts used in throughout Report Builder documentation.  
   
- [Report Design View &#40;Report Builder&#41;](report-builder/report-design-view-report-builder.md)  
+ [Report Design View &#40;Report Builder&#41;](report-design-view-report-builder.md)  
  Explains the different panes and regions of report design view.  
   
- [Shared Dataset Design View &#40;Report Builder&#41;](report-builder/shared-dataset-design-view-report-builder.md)  
+ [Shared Dataset Design View &#40;Report Builder&#41;](shared-dataset-design-view-report-builder.md)  
  Explains the different panes and regions of shared dataset design view.  
   
- [Keyboard Shortcuts &#40;Report Builder&#41;](report-builder/keyboard-shortcuts-report-builder.md)  
+ [Keyboard Shortcuts &#40;Report Builder&#41;](keyboard-shortcuts-report-builder.md)  
  Outlines the shortcut keys available for navigating and designing reports in Report Builder.  
   
- [Start Report Builder &#40;Report Builder&#41;](report-builder/start-report-builder.md)  
+ [Start Report Builder &#40;Report Builder&#41;](start-report-builder.md)  
  Explains how to start the two different versions of Report Builder: stand-alone and [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)].  
   
   

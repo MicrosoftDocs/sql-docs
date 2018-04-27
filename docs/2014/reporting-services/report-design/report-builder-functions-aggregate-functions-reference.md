@@ -42,7 +42,7 @@ manager: "mblythe"
   
 -   [Testing for Scope](#TestingforScope)  
   
- To determine the valid scopes for a function, see the individual function reference topic. For more information and for examples, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ To determine the valid scopes for a function, see the individual function reference topic. For more information and for examples, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -171,6 +171,6 @@ manager: "mblythe"
 ## See Also  
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

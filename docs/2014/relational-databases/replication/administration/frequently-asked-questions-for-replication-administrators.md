@@ -89,7 +89,7 @@ manager: "jhubbard"
  If you have multiple publications, you can configure multiple distribution databases at the Distributor to ensure that the data flowing through each distribution database is from a single publication. Use the **Distributor Properties** dialog box or [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) to add a distribution database. For more information about accessing the dialog box, see [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### How do I find information on the Distributor and Publisher, such as which objects in a database are published?  
- This information is available through [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and a number of replication stored procedures. For more information, see [Distributor and Publisher Information Script](administration/distributor-and-publisher-information-script.md).  
+ This information is available through [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and a number of replication stored procedures. For more information, see [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
   
 ### Does replication encrypt data?  
  No. Replication does not encrypt data that is stored in the database or transferred over the network. For more information, see the "Encryption" section of the topic [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
@@ -162,7 +162,7 @@ manager: "jhubbard"
  For transactional replication, bulk inserts are tracked and replicated like other inserts. For merge replication, you must ensure that change tracking metadata is updated properly.  
   
 ### Are there any replication considerations for backup and restore?  
- Yes. There are a number of special considerations for databases that are involved in replication. For more information, see [Back Up and Restore Replicated Databases](administration/back-up-and-restore-replicated-databases.md).  
+ Yes. There are a number of special considerations for databases that are involved in replication. For more information, see [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md).  
   
 ### Does replication affect the size of the transaction log?  
  Merge replication and snapshot replication do not affect transaction log size, but transactional replication can. If a database includes one or more transactional publications, the log is not truncated until all transactions relevant to the publications have been delivered to the distribution database. If the transaction log is growing too large, and the Log Reader Agent is running on a scheduled basis, consider shortening the interval between runs. Or, set it to run in continuous mode. If it is set to run in continuous mode (the default), ensure that it is running. For more information on checking Log Reader Agent status, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md).  
@@ -227,7 +227,7 @@ manager: "jhubbard"
  Yes. No special considerations are required because all data is stored on one set of disks on the cluster.  
   
 ## See Also  
- [Administration &#40;Replication&#41;](administration/administration-replication.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)  
+ [Administration &#40;Replication&#41;](administration-replication.md)   
+ [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

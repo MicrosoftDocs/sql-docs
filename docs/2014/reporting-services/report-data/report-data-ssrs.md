@@ -69,8 +69,8 @@ manager: "mblythe"
 |**Common Tasks**|**Links**|  
 |Create data connections|[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Create datasets and queries|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
-|Manage data sources after they are published|[Manage Report Data Sources](report-data/manage-report-data-sources.md)|  
-|Manage shared datasets after they are published|[Manage Shared Datasets](report-data/manage-shared-datasets.md)|  
+|Manage data sources after they are published|[Manage Report Data Sources](manage-report-data-sources.md)|  
+|Manage shared datasets after they are published|[Manage Shared Datasets](manage-shared-datasets.md)|  
 |Create and manage data alerts|[Reporting Services Data Alerts](../ssms/agent/alerts.md)|  
 |Cache a shared dataset|[Cache Shared Datasets &#40;SSRS&#41;](../../2014/reporting-services/cache-shared-datasets-ssrs.md)|  
 |Schedule a shared dataset to preload the cache|[Schedules](../../2014/reporting-services/schedules.md)|  

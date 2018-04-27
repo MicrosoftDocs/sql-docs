@@ -196,7 +196,7 @@ manager: "jhubbard"
 >  Do not change the packet size unless you are certain that it will improve performance. For most applications, the default packet size is best.  
   
  **-ProfileName** *profile_name*  
- Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](agents/replication-agent-profiles.md).  
+ Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
  **-PublisherDB** *publisher_database*  
  Is the name of the publication database. *This parameter is not supported for Oracle Publishers*.  
@@ -245,6 +245,6 @@ manager: "jhubbard"
  To start the Snapshot Agent, execute **snapshot.exe** from the command prompt. For information, see [Replication Agent Executables](dev-guide/replication-agent-executables-concepts.md).  
   
 ## See Also  
- [Replication Agent Administration](agents/replication-agent-administration.md)  
+ [Replication Agent Administration](replication-agent-administration.md)  
   
   

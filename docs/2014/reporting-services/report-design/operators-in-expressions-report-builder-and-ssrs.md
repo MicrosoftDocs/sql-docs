@@ -78,7 +78,7 @@ manager: "mblythe"
   
 ## See Also  
  [Expression Dialog Box](../expression-dialog-box.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](data-types-in-expressions-report-builder-and-ssrs.md)   
  [Expression Dialog Box &#40;Report Builder&#41;](../expression-dialog-box-report-builder.md)  

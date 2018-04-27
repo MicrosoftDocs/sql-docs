@@ -87,9 +87,9 @@ manager: "jhubbard"
   
 1.  After executing the stored procedure that creates the subscription, ensure that you execute the stored procedure that creates a Distribution Agent job to synchronize the subscription. The stored procedure that you use will depend on the type of subscription.  
   
-    -   For a pull subscription, update the execution of [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) to supply the Windows credentials under which the Distribution Agent runs at the Subscriber for **@job_name** and **@job_password**. This is done after the execution of [sp_addpullsubscription](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
+    -   For a pull subscription, update the execution of [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) to supply the Windows credentials under which the Distribution Agent runs at the Subscriber for **@job_name** and **@job_password**. This is done after the execution of [sp_addpullsubscription](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
-    -   For a push subscription, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) at the Publisher. Specify **@subscriber**, **@subscriber_db**, **@publication**, Windows credentials under which the Distribution Agent runs at the Distributor for **@job_name** and **@job_password**, and a schedule for this agent job. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md). This is done after the execution of [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
+    -   For a push subscription, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) at the Publisher. Specify **@subscriber**, **@subscriber_db**, **@publication**, Windows credentials under which the Distribution Agent runs at the Distributor for **@job_name** and **@job_password**, and a schedule for this agent job. For more information, see [Specify Synchronization Schedules](../specify-synchronization-schedules.md). This is done after the execution of [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). For more information, see [Create a Push Subscription](../create-a-push-subscription.md).  
   
 ### To upgrade scripts that configure a merge publication  
   
@@ -103,14 +103,14 @@ manager: "jhubbard"
   
 1.  After executing the stored procedure that creates the subscription, ensure that you execute the stored procedure that creates a Merge Agent job to synchronize the subscription. The stored procedure that you use will depend on the type of subscription.  
   
-    -   For a pull subscription, update the execution of [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) to supply the Windows credentials under which the Merge Agent runs at the Subscriber for **@job_name** and **@job_password**. This is done after the execution of [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
+    -   For a pull subscription, update the execution of [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) to supply the Windows credentials under which the Merge Agent runs at the Subscriber for **@job_name** and **@job_password**. This is done after the execution of [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
-    -   For a push subscription, execute [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) at the Publisher. Specify **@subscriber**, **@subscriber_db**, **@publication**, the Windows credentials under which the Merge Agent at the Distributor runs for **@job_name** and **@job_password**, and a schedule for this agent job. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md). This is done after the execution of [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
+    -   For a push subscription, execute [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) at the Publisher. Specify **@subscriber**, **@subscriber_db**, **@publication**, the Windows credentials under which the Merge Agent at the Distributor runs for **@job_name** and **@job_password**, and a schedule for this agent job. For more information, see [Specify Synchronization Schedules](../specify-synchronization-schedules.md). This is done after the execution of [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). For more information, see [Create a Push Subscription](../create-a-push-subscription.md).  
   
 ## Example  
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a transactional publication for the Product table. This publication supports immediate updating with queued updating as failover. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwtranpub80.sql#sp_createtranpub_nwpreupgrade)]  
+ [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwtranpub80.sql#sp_createtranpub_nwpreupgrade)]  
   
 ## Example  
  The following is an example of upgrading the previous script, which creates a transactional publication, to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. This publication supports immediate updating with queued updating as failover. Defaults for new parameters have been explicitly declared.  
@@ -118,12 +118,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwtranpublication.sql#sp_createtranpub_nwpostupgrade)]  
+ [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwtranpublication.sql#sp_createtranpub_nwpostupgrade)]  
   
 ## Example  
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a merge publication for the Customers table. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepub80.sql#sp_createmergepub_nwpreupgrade)]  
+ [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepub80.sql#sp_createmergepub_nwpreupgrade)]  
   
 ## Example  
  The following is an example of the previous script, which creates a merge publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -131,12 +131,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepublication.sql#sp_createmergepub_nwpostupgrade)]  
+ [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepublication.sql#sp_createmergepub_nwpostupgrade)]  
   
 ## Example  
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a push subscription to a transactional publication. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwtranpushsub80.sql#sp_createtranpushsub_nwpreupgrade)]  
+ [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwtranpushsub80.sql#sp_createtranpushsub_nwpreupgrade)]  
   
 ## Example  
  The following is an example of the previous script, which creates a push subscription to a transactional publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -144,12 +144,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwpushsub.sql#sp_createtranpushsub_nwpostupgrade)]  
+ [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpushsub.sql#sp_createtranpushsub_nwpostupgrade)]  
   
 ## Example  
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a push subscription to a merge publication. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepushsub80.sql#sp_createmergepushsub_nwpreupgrade)]  
+ [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepushsub80.sql#sp_createmergepushsub_nwpreupgrade)]  
   
 ## Example  
  The following is an example of the previous script, which creates a push subscription to a merge publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -157,12 +157,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwpushsub.sql#sp_createmergepushsub_nwpostupgrade)]  
+ [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpushsub.sql#sp_createmergepushsub_nwpostupgrade)]  
   
 ## Example  
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a pull subscription to a transactional publication. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepushsub80.sql#sp_createmergepushsub_nwpreupgrade)]  
+ [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepushsub80.sql#sp_createmergepushsub_nwpreupgrade)]  
   
 ## Example  
  The following is an example of the previous script, which creates a pull subscription to a transactional publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -170,12 +170,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createtranpullsub_nwpostupgrade)]  
+ [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createtranpullsub_nwpostupgrade)]  
   
 ## Example  
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a pull subscription to a merge publication. Default parameters have been removed for readability.  
   
- [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepullsub80.sql#sp_createmergepullsub_nwpreupgrade)]  
+ [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepullsub80.sql#sp_createmergepullsub_nwpreupgrade)]  
   
 ## Example  
  The following is an example of the previous script, which creates a pull subscription to a merge publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
@@ -183,16 +183,16 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Windows credentials are supplied at runtime using **sqlcmd** scripting variables.  
   
- [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createmergepullsub_nwpostupgrade)]  
+ [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createmergepullsub_nwpostupgrade)]  
   
 ## See Also  
  [Create a Publication](../publish/create-a-publication.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](../create-a-push-subscription.md)   
+ [Create a Pull Subscription](../create-a-pull-subscription.md)   
  [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md)   
- [MSSQL_ENG021797](mssql-eng021797.md)   
- [MSSQL_ENG021798](mssql-eng021798.md)   
+ [MSSQL_ENG021797](../mssql-eng021797.md)   
+ [MSSQL_ENG021798](../mssql-eng021798.md)   
  [Replication System Stored Procedures Concepts](../dev-guide/replication-system-stored-procedures-concepts.md)   
- [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
+ [Upgrade Replicated Databases](../../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

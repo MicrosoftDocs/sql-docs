@@ -21,7 +21,7 @@ manager: "mblythe"
 # Data Alert Manager for SharePoint Users
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint information workers to manage the data alerts. They can view information about the alerts they created, delete alerts, open alert definitions for editing, and run alerts on demand. They can choose to view alerts for a single report only or alerts for all reports. The following picture shows the features available to information workers in Data Alert Manager.  
   
- ![Alert Manager features for SharePoint users](../../2014/reporting-services/media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
+ ![Alert Manager features for SharePoint users](media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
   
  When a SharePoint site is enabled for data alerts, two SharePoint pages, MyDataAlerts.aspx and SiteDataAlerts.aspx are created and added to the SharePoint site. MyDataAlerts.aspx is Data Alert Manager for SharePoint information workers. Information workers open Data Alert Manager from the right-click menu of reports on which they created alerts.  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
 ##  <a name="ViewingAlerts"></a> View Data Alert Information  
  You can view a list of data alerts that you created in Data Alert Designer. To open Data Alert Manager, you right-click a report published to a SharePoint library. The following picture shows the **Manage Data Alerts** option on the report right-click menu.  
   
- ![Open Alert Manager from report context menu](../../2014/reporting-services/media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
+ ![Open Alert Manager from report context menu](media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
   
  Data Alert Manager includes a table that lists the alert name, report name, your name as the creator of the alert definition, the number the alert message was sent, the last time the alert was run, the last time the alert definition was modified, and the status of the latest alert message. If the alert message cannot be generated or sent, the status column contains information about the error and helps you troubleshoot the alert. For more information, see [Manage My Data Alerts in Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   

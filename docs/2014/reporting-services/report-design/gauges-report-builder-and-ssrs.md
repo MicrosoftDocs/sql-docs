@@ -176,7 +176,7 @@ manager: "mblythe"
   
  There are two types of gauges: radial and linear. The following illustration shows the basic elements of a single radial gauge in the gauge panel.  
   
- ![Gauge elements diagram](../../2014/reporting-services/media/gauge-elements-diagram.gif "Gauge elements diagram")  
+ ![Gauge elements diagram](../media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
  For more information about using gauges as KPIs, see [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
@@ -193,19 +193,19 @@ manager: "mblythe"
   
  Linear gauges are rectangular, oriented horizontally or vertically, and resemble rulers. The gauge pointers are often thermometers, but can be markers or bars. Because of its shape, this gauge type is useful for integrating into the table or matrix data regions to show progress data.  
   
- Other than these differences, the two gauge types are interchangeable. However, if you have to use a simple gauge in your report, you should consider using an indicator instead of a gauge. For more information, see [Indicators &#40;Report Builder and SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
+ Other than these differences, the two gauge types are interchangeable. However, if you have to use a simple gauge in your report, you should consider using an indicator instead of a gauge. For more information, see [Indicators &#40;Report Builder and SSRS&#41;](indicators-report-builder-and-ssrs.md).  
   
  The following illustrations show radial and linear gauges. The radial gauge is round and uses the needle pointer. The linear gauge is horizontal and uses the thermometer pointer.  
   
  **Radial Gauge**  
   
- ![rs_RadialGauge](../../2014/reporting-services/media/rs-radialgauge.gif "rs_RadialGauge")  
+ ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
  Radial gauge options: Radial, Radial with Mini Gauge, Two Scales, 90 Degrees Northeast, 90 Degrees Northwest, 90 Degrees Southwest, 90 Degrees Southeast,180 Degrees North, 180 Degrees South, 180 Degrees West180 Degrees East, and Meter.  
   
  **Linear Gauge**  
   
- ![rs_LinearGauge](../../2014/reporting-services/media/rs-lineargauge.gif "rs_LinearGauge")  
+ ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
  Linear gauge options: Horizontal, Vertical, Multiple Bar Pointers, Two Scales, Three Color Range, Logarithmic, Thermometer, Thermometer Fahrenheit/Celcius, and Bullet Graph.  
   
@@ -245,12 +245,12 @@ manager: "mblythe"
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
- For more information about aggregate expressions, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md).  
+ For more information about aggregate expressions, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### Defining a Group on a Gauge  
- After you have added a field to the gauge, you can add one data group. The Gauge differs from all other data regions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], which can display multiple groups in one data region. When you add a group by defining a group expression on the gauge, it is the same as when you add a row group on the Tablix data region. However, when the group is added, only the value of the last group is displayed as the pointer value on the gauge. For example, if you add a grouping expression on Year, the pointer will point to the value that represents the aggregate sales value for the last year in the dataset. For more information about groups, see [Understanding Groups &#40;Report Builder and SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md).  
+ After you have added a field to the gauge, you can add one data group. The Gauge differs from all other data regions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], which can display multiple groups in one data region. When you add a group by defining a group expression on the gauge, it is the same as when you add a row group on the Tablix data region. However, when the group is added, only the value of the last group is displayed as the pointer value on the gauge. For example, if you add a grouping expression on Year, the pointer will point to the value that represents the aggregate sales value for the last year in the dataset. For more information about groups, see [Understanding Groups &#40;Report Builder and SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
   
- You might want to add a group on the gauge if, for example, you are displaying multiple gauges in a table or list and you want to display data aggregated by group. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ You might want to add a group on the gauge if, for example, you are displaying multiple gauges in a table or list and you want to display data aggregated by group. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
   
 ##  <a name="PositioningData"></a> Positioning Elements in a Gauge  
@@ -284,9 +284,9 @@ manager: "mblythe"
 ##  <a name="HowTo"></a> How-To Topics  
  This section lists procedures that show you, step by step, how to work with gauges in your reports; how to get data to display effectively in gauges and how to add and configure gauges and their elements.  
   
--   [Add a Gauge to a Report &#40;Report Builder and SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [Add a Gauge to a Report &#40;Report Builder and SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [Set a Snapping Interval on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
@@ -299,16 +299,16 @@ manager: "mblythe"
 |||  
 |-|-|  
 |Term|Definition|  
-|[Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Provides general information about formatting scales on gauges and detailed information about the formatting options for scales on radial and linear gauges.|  
-|[Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Provides general information about formatting pointers on gauges and detailed information about the formatting options for pointer styles available for radial and linear gauges.|  
-|[Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Provides information about formatting ranges on gauges to indicate an important subsection of values on the gauge or visually indicate when the pointer value has gone into a certain span of values.|  
+|[Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Provides general information about formatting scales on gauges and detailed information about the formatting options for scales on radial and linear gauges.|  
+|[Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Provides general information about formatting pointers on gauges and detailed information about the formatting options for pointer styles available for radial and linear gauges.|  
+|[Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Provides information about formatting ranges on gauges to indicate an important subsection of values on the gauge or visually indicate when the pointer value has gone into a certain span of values.|  
   
   
 ## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

@@ -135,7 +135,7 @@ manager: "jhubbard"
         > [!NOTE]  
         >  The **@job_login** parameter must match the login supplied in step 3. Do not supply publisher security information. The Log Reader agent connects to the Publisher using the security information provided in step 3.  
   
-5.  At the Distributor on the distribution database, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) to create the publication. For more information, see [Create a Publication](publish/create-a-publication.md).  
+5.  At the Distributor on the distribution database, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) to create the publication. For more information, see [Create a Publication](create-a-publication.md).  
   
 6.  At the Distributor on the distribution database, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 4 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_name** and **@password**. To use Oracle Standard Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the Oracle login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   

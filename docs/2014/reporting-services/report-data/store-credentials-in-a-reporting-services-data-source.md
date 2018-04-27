@@ -48,7 +48,7 @@ manager: "mblythe"
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Configure stored credentials for a report-specific data source (Native mode)  
   
-1.  In Native mode Report Manager, browse to the folder that contains the report. Click the item context menu ![context menu in report manager for ssrs items](../../2014/reporting-services/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items").  
+1.  In Native mode Report Manager, browse to the folder that contains the report. Click the item context menu ![context menu in report manager for ssrs items](../media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items").  
   
 2.  Click **Manage** and then click **Data Sources**.  
   
@@ -72,13 +72,13 @@ manager: "mblythe"
   
 8.  Click **Apply**.  
   
-     ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Configure stored credentials for a report-specific data source (SharePoint mode)  
   
-1.  Browse to the document library that contains the report and then click the open menu ![document library context menu for ssrs items](../../2014/reporting-services/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items").  
+1.  Browse to the document library that contains the report and then click the open menu ![document library context menu for ssrs items](../media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items").  
   
-2.  Click second open menu ![document library context menu for ssrs items](../../2014/reporting-services/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items") and then click **Manage Data Sources**.  
+2.  Click second open menu ![document library context menu for ssrs items](../media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items") and then click **Manage Data Sources**.  
   
 3.  Click the name of the **Custom** data source you want to configure with stored credentials.  
   
@@ -100,13 +100,13 @@ manager: "mblythe"
   
 8.  Click **ok**.  
   
-     ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configure stored credentials for a shared data source (Native mode)  
   
-1.  In Native mode Report Manager, browse to the shared data source item. ![Shared data source icon](../../2014/reporting-services/media/hlp-16datasource.png "Shared data source icon")  
+1.  In Native mode Report Manager, browse to the shared data source item. ![Shared data source icon](../media/hlp-16datasource.png "Shared data source icon")  
   
-2.  Click the context menu ![context menu in report manager for ssrs items](../../2014/reporting-services/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items") and then click **Manage**.  
+2.  Click the context menu ![context menu in report manager for ssrs items](../media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items") and then click **Manage**.  
   
 3.  In the **Data Source Type** list, specify the data processing extension that is used to process data from the data source.  
   
@@ -126,13 +126,13 @@ manager: "mblythe"
   
 6.  Click **Apply**.  
   
-     ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Configure stored credentials for a shared data source (SharePoint mode)  
   
-1.  In the document library, browse to the shared data source item.![Shared data source icon](../../2014/reporting-services/media/hlp-16datasource.png "Shared data source icon")  
+1.  In the document library, browse to the shared data source item.![Shared data source icon](../media/hlp-16datasource.png "Shared data source icon")  
   
-2.  Click the context menu ![document library context menu for ssrs items](../../2014/reporting-services/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items") and then click the second context menu ![document library context menu for ssrs items](../../2014/reporting-services/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items").  
+2.  Click the context menu ![document library context menu for ssrs items](../media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items") and then click the second context menu ![document library context menu for ssrs items](../media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items").  
   
 3.  Click **Edit Data Source Definition**.  
   
@@ -154,11 +154,11 @@ manager: "mblythe"
   
 7.  Click **Ok**.  
   
-     ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ## See Also  
  [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
- [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
  [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Data Sources Properties Page &#40;Report Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [New Data Source Page &#40;Report Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  

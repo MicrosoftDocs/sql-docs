@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Optimize Merge Replication Performance with Download-Only Articles](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
- [Define an Article](publish/define-an-article.md)   
+ [Define an Article](define-an-article.md)   
  [View and Modify Article Properties](view-and-modify-article-properties.md)  
   
   

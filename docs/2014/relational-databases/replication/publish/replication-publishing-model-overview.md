@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  A *replication topology* defines the relationship between servers and copies of data and clarifies the logic that determines how data flows between servers. There are several replication processes (referred to as *agents*) that are responsible for copying and moving data between the Publisher and Subscribers. The following illustration is an overview of the components and processes involved in replication.  
   
- ![Replication components and data flow](media/replintro1.gif "Replication components and data flow")  
+ ![Replication components and data flow](../media/replintro1.gif "Replication components and data flow")  
   
 ## Publisher  
  The Publisher is a database instance that makes data available to other locations through replication. The Publisher can have one or more publications, each defining a logically related set of objects and data to replicate.  

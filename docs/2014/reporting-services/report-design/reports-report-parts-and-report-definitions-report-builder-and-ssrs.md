@@ -61,7 +61,7 @@ manager: "mblythe"
  Subscribe to a report, which is delivered to an e-mail inbox or a file share in an output format that you specify.The default rendering format for a report is HTML 4.0. In addition to HTML, reports can be rendered in a variety of output formats, including Excel, Word, XML, PDF, TIFF, and CSV. As with published reports, rendered reports cannot be edited or saved back to a report server. For more information, see [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## See Also  
- [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

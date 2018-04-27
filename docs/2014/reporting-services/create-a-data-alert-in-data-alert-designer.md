@@ -33,7 +33,7 @@ manager: "mblythe"
   
      The following picture shows the **Actions** menu.  
   
-     ![Open Alert Designer from SharePoint library](../../2014/reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![Open Alert Designer from SharePoint library](media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
      The Data Alert Designer opens, showing the first 100 rows of the first data feed that the report generates in a table.  
   

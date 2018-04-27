@@ -62,7 +62,7 @@ manager: "mblythe"
 |Fields collection for items on the page|Indirectly. For example,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Yes. For example,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Data-bound image|Indirectly. For example, `=ReportItems!TXT_Photo.Value`|Yes. For example,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
- The following sections in this topic show ready-to-use expressions that get variable data commonly used in headers and footers. There is also a section on how the Excel rendering extension processes headers and footers. For more information about expressions, see [Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md).  
+ The following sections in this topic show ready-to-use expressions that get variable data commonly used in headers and footers. There is also a section on how the Excel rendering extension processes headers and footers. For more information about expressions, see [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### Adding Calculated Page Totals to a Header or Footer  
  For some reports, it is useful to include a calculated value in the header or footer of each report; for example, a per-page sum total if the page includes numeric values. Because you cannot reference the fields directly, the expression that you put in the header or footer must reference the name of the report item (for example, a text box) rather than the data field:  

@@ -37,11 +37,11 @@ manager: "mblythe"
 ## Default Mode  
  In default mode, the Row Groups pane and the Column Groups pane display a hierarchical view for all parent groups, child groups, and adjacent groups. A child group appears indented under its parent group. An adjacent group appears at the same indent level as its sibling groups. The following figure shows a Tablix data region with nested row groups and nested and adjacent column groups.  
   
- ![Tablix, nested and adjacent row and column groups](../../2014/reporting-services/media/rs-basictablixdesigngroupingpane.gif "Tablix, nested and adjacent row and column groups")  
+ ![Tablix, nested and adjacent row and column groups](media/rs-basictablixdesigngroupingpane.gif "Tablix, nested and adjacent row and column groups")  
   
  The Grouping pane displays the corresponding row and column groups. In the following figure, the group based on subcategory has been selected in the Row Groups pane, and the [Subcat] grouping cell is selected in the Tablix data region:  
   
- ![Grouping pane for nested row and column groups](../../2014/reporting-services/media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
+ ![Grouping pane for nested row and column groups](media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
   
  In the Row Groups pane, the group based on subcategory is a child of the group based on category. In the Column Groups pane, the country/region group is a child of the geography group. The year group and the country/region groups are adjacent groups.  
   

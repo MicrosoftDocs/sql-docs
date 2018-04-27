@@ -54,7 +54,7 @@ Previous(expression, scope)
   
  The functions `Level`, `InScope`, `Aggregate` and `Previous` cannot be used in the *expression*parameter. Specifying the *recursive* parameter for any aggregate function is not supported.  
   
- For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## Examples  
   
@@ -81,7 +81,7 @@ Previous(expression, scope)
 ## See Also  
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Data Types in Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

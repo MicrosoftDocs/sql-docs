@@ -18,7 +18,7 @@ manager: "mblythe"
 # Create a Stepped Report (Report Builder and SSRS)
   A stepped report shows detail rows or child groups indented under a parent group in the same column, as shown in the example below:  
   
- ![Rendered stepped report](../../2014/reporting-services/media/steppedreportrendered.gif "Rendered stepped report")  
+ ![Rendered stepped report](../media/steppedreportrendered.gif "Rendered stepped report")  
   
  Traditional table reports place the parent group in an adjacent column on the report. The new tablix data region enables you to add a group and detail rows or child groups to the same column. To differentiate the group rows from the detail or child group rows, you can apply formatting such as font color, or you can indent the detail rows.  
   
@@ -46,15 +46,15 @@ manager: "mblythe"
   
      You now have a basic tabular report. When it is rendered, you see one column with the group instance value, and one or more columns with grouped detail data. The following figure shows what the data region might look like on the design surface.  
   
-     ![Table data region with group](../../2014/reporting-services/media/tabledataregionwithgroup.gif "Table data region with group")  
+     ![Table data region with group](../media/tabledataregionwithgroup.gif "Table data region with group")  
   
      The following figure shows how the rendered data region might look when you view the report.  
   
-     ![Rendered grouped report](../../2014/reporting-services/media/tablereportrendered.gif "Rendered grouped report")  
+     ![Rendered grouped report](../media/tablereportrendered.gif "Rendered grouped report")  
   
 3.  For a stepped report, you do not need the first column that shows the group instance. Instead, copy the value in the group header cell, delete the group column, and paste in the first text box in the group header row. To remove the group column, right-click the group column or cell, and click **Delete Columns**. The following figure shows what the data region might look like on the design surface.  
   
-     ![Data region with group header row](../../2014/reporting-services/media/tabledataregiongroupheader.gif "Data region with group header row")  
+     ![Data region with group header row](../media/tabledataregiongroupheader.gif "Data region with group header row")  
   
 4.  To indent the detail rows under the group header row in the same column, change the padding of the detail data cell.  
   
@@ -76,7 +76,7 @@ manager: "mblythe"
   
      Your data region will look similar to the following example.  
   
-     ![Data region for stepped report](../../2014/reporting-services/media/steppedreportdataregion.gif "Data region for stepped report")  
+     ![Data region for stepped report](../media/steppedreportdataregion.gif "Data region for stepped report")  
   
      **Data Region for Stepped Report Layout**  
   
@@ -91,7 +91,7 @@ manager: "mblythe"
     1.  In the Row Groups pane, right-click the group, click **Add Group**, and then choose the type of group you want to add.  
   
         > [!NOTE]  
-        >  There are several ways to add groups to a data region. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+        >  There are several ways to add groups to a data region. For more information, see [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  In the **Tablix Group** dialog box, type a name.  
   
@@ -102,12 +102,12 @@ manager: "mblythe"
 3.  Change the padding for the cell that displays the group data.  
   
 ## See Also  
- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatting Report Items &#40;Report Builder and SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Page Headers and Footers &#40;Report Builder and SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatting Report Items &#40;Report Builder and SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
- [Tables &#40;Report Builder  and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
+ [Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

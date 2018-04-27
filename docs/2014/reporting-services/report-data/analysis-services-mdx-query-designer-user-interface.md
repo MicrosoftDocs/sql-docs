@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Analysis Services MDX Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Multidimensional Expression (MDX) queries and Data Mining Expression (DMX) queries for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. This topic describes the MDX query designer. For more information about the DMX query designer, see [Analysis Services Connection Type for DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Multidimensional Expression (MDX) queries and Data Mining Expression (DMX) queries for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. This topic describes the MDX query designer. For more information about the DMX query designer, see [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).  
   
  The MDX graphical query designer has two modes: design mode and query mode. Each mode provides a metadata pane from which you can drag members from the selected cubes to build an MDX query that retrieves data when the report is processed.  
   
@@ -62,9 +62,9 @@ manager: "mblythe"
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Not enabled for this data source type.|  
-|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Change to MDX query view](../../2014/analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Switch to Command Type MDX.|  
-|![Change to DMX query language view](../../2014/reporting-services/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Switch to Command Type DMX.|  
+|![Change to DMX query language view](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Switch to Command Type DMX.|  
 |![Refresh result data](../../2014/analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Refresh metadata from the data source.|  
 |![Add calculated member](../../2014/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box.|  
 |![Toggle for show empty cells](../../2014/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Toggle between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
@@ -113,10 +113,10 @@ manager: "mblythe"
 -   **Show Aggregations** (![Show Aggregations button](../../2014/analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button"))  
   
 ## See Also  
- [Define Parameters in the MDX Query Designer for Analysis Services &#40;Report Builder and SSRS&#41;](report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Analysis Services Connection Type for DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Define Parameters in the MDX Query Designer for Analysis Services &#40;Report Builder and SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
- [Analysis Services Connection Type for MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Analysis Services Connection Type for MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

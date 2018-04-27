@@ -31,7 +31,7 @@ manager: "mblythe"
   
  You can create multiple subscriptions for a single report to vary the subscription options; for example, you can specify different parameter values to produce three versions of a report, such as a Western region sales report, Eastern region sales, and all sales.  
   
- ![example ssrs subscription flow](../../2014/reporting-services/media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
+ ![example ssrs subscription flow](media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
   
  Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   

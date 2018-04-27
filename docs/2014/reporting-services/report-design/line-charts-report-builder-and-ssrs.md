@@ -16,11 +16,11 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Line Charts (Report Builder and SSRS)
-  A line chart displays a series as a set of points connected by a single line. Line charts are used to representing large amounts of data that occur over a continuous period of time. For more information about how to add data to a line chart, see [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md).  
+  A line chart displays a series as a set of points connected by a single line. Line charts are used to representing large amounts of data that occur over a continuous period of time. For more information about how to add data to a line chart, see [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  The following illustration shows a line chart that contains three series.  
   
- ![Line chart](../../2014/reporting-services/media/rs-linechart.gif "Line chart")  
+ ![Line chart](../media/rs-linechart.gif "Line chart")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -31,7 +31,7 @@ manager: "mblythe"
   
 -   **Stepped line**. A line chart that uses a stepped line instead of a regular line. The stepped line connects points by using a line that makes it look like steps on a ladder or staircase.  
   
--   **Sparkline charts**. Variations of the line chart that show only the line series in the cell of a table or matrix. For more information, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+-   **Sparkline charts**. Variations of the line chart that show only the line series in the cell of a table or matrix. For more information, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## Data Considerations for Line Charts  
   
@@ -44,12 +44,12 @@ manager: "mblythe"
 -   A series that is drawn as a line will not take up much space within a chart area.  For this reason, line charts are frequently combined with other chart types such as column charts. However, you cannot combine a line chart with bar, polar, pie or shape chart types.  
   
 ## See Also  
- [Bar Charts &#40;Report Builder and SSRS&#41;](report-design/bar-charts-report-builder-and-ssrs.md)   
- [Column Charts &#40;Report Builder and SSRS&#41;](report-design/column-charts-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Chart Types &#40;Report Builder and SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md)   
- [Area Charts &#40;Report Builder and SSRS&#41;](report-design/area-charts-report-builder-and-ssrs.md)   
- [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Bar Charts &#40;Report Builder and SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [Column Charts &#40;Report Builder and SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Chart Types &#40;Report Builder and SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
+ [Area Charts &#40;Report Builder and SSRS&#41;](area-charts-report-builder-and-ssrs.md)   
+ [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

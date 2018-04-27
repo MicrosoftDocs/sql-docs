@@ -19,7 +19,7 @@ manager: "mblythe"
   You can merge cells in a data region to combine cells, improve data region appearance, or provide spanning labels for column groups and row groups.  
   
 > [!NOTE]  
->  Cells can only be merged within each area of a data region: corner, column headers, group definition (or row headers), and body. You cannot merge cells that cross area boundaries. For example, you cannot merge a cell in the data region corner area with a cell in the row group area. For more information about tablix areas, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+>  Cells can only be merged within each area of a data region: corner, column headers, group definition (or row headers), and body. You cannot merge cells that cross area boundaries. For example, you cannot merge a cell in the data region corner area with a cell in the row group area. For more information about tablix areas, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,8 +35,8 @@ manager: "mblythe"
 ## See Also  
  [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
  [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md)   
- [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/lists-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

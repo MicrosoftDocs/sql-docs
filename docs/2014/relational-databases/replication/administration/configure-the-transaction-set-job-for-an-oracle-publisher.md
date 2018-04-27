@@ -52,7 +52,7 @@ manager: "jhubbard"
 ## Example  
  The following example enables the `Xactset` job and sets an interval of three minutes between runs.  
   
- [!code-sql[HowTo#sp_enable_xactsetjob](../../snippets/tsql/SQL15/replication/howto/tsql/enablexactsetjob.sql#sp_enable_xactsetjob)]  
+ [!code-sql[HowTo#sp_enable_xactsetjob](../../../snippets/tsql/SQL15/replication/howto/tsql/enablexactsetjob.sql#sp_enable_xactsetjob)]  
   
 ## See Also  
  [Performance Tuning for Oracle Publishers](../non-sql/performance-tuning-for-oracle-publishers.md)   

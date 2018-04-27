@@ -23,9 +23,9 @@ manager: "mblythe"
 # Retrieve Data from a Data Mining Model (DMX) (SSRS)
   To use data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data mining model in your report, you must define a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source and one or more report datasets. When you create the data source definition, you must specify a connection string and credentials so that you can access the data source from your client computer.  
   
- You can create an embedded data source definition for use by a single report or a shared data source definition that can be used by multiple reports. The procedures in this topic describe how to create an embedded data source. For more information about shared data sources, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ You can create an embedded data source definition for use by a single report or a shared data source definition that can be used by multiple reports. The procedures in this topic describe how to create an embedded data source. For more information about shared data sources, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- After you create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source, you can create one or more datasets. For each dataset, you use a Data Mining Prediction Expression (DMX) query designer to create a DMX query that specifies the field collection. For more information, see [Analysis Services DMX Query Designer User Interface](report-data/analysis-services-dmx-query-designer-user-interface.md).  
+ After you create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source, you can create one or more datasets. For each dataset, you use a Data Mining Prediction Expression (DMX) query designer to create a DMX query that specifies the field collection. For more information, see [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
  After you create a dataset, the name of the dataset appears in the Report Data pane as a node under its data source.  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
   
 3.  In the **Data source box**, verify that the name is the name of a data source that connects to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source.  
   
-4.  Click **Query Designer** to open the graphical query designer to build a query interactively. If the query designer opens in MDX mode, click **Command Type DMX** (![Change to DMX query language view](../../2014/reporting-services/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")) on the toolbar to switch to the data mining query designer. For more information, see [Analysis Services DMX Query Designer User Interface](report-data/analysis-services-dmx-query-designer-user-interface.md).  
+4.  Click **Query Designer** to open the graphical query designer to build a query interactively. If the query designer opens in MDX mode, click **Command Type DMX** (![Change to DMX query language view](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")) on the toolbar to switch to the data mining query designer. For more information, see [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
      Alternatively, to import an existing DMX query from another report, click **Import**, and then navigate to the .rdl file with the DMX query. Importing a query from an .dmx file is not supported.  
   
@@ -79,9 +79,9 @@ manager: "mblythe"
      The dataset and its field collection appear in the Report Data pane under the data source node.  
   
 ## See Also  
- [Analysis Services Connection Type for DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

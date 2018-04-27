@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 3.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 2 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
-4.  Add articles to the publication. For more information, see [Define an Article](publish/define-an-article.md).  
+4.  Add articles to the publication. For more information, see [Define an Article](define-an-article.md).  
   
 5.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 4.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 3 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
-5.  Add articles to the publication. For more information, see [Define an Article](publish/define-an-article.md).  
+5.  Add articles to the publication. For more information, see [Define an Article](define-an-article.md).  
   
 6.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a publication that supported both immediate and queued updating pull subscriptions.  
   
- [!code-sql[HowTo#sp_createtranupdatingpub](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
+ [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## See Also  
  [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   

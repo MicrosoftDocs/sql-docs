@@ -43,7 +43,7 @@ manager: "mblythe"
   
  The following diagram shows the workflow of creating and saving a data alert definition, creating a SQL Agent job to begin processing an instance of the data alert, and sending data alert messages that contain the report data that triggered the alert to one or more recipients by email.  
   
- ![Workflow in Reporting Services alerting](../../2014/reporting-services/media/rs-alertingworkflow.gif "Workflow in Reporting Services alerting")  
+ ![Workflow in Reporting Services alerting](media/rs-alertingworkflow.gif "Workflow in Reporting Services alerting")  
   
 ### Reports Supported by Data Alerts  
  You can create data alerts on all types of professional reports that are written in the report definition language (RDL) and created in Report Designer or Report Builder. Reports that include data regions such as tables and charts, reports with subreports, and complex reports with multiple parallel column groups and nested data regions. The only requirements are the report includes at least one data region of any type and the report data source is configured to use stored credentials or no credentials. If the report has no data regions, you cannot create an alert on it.  

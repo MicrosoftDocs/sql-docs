@@ -53,7 +53,7 @@ InScope(scope)
     =Not(InScope("Product"))  
     ```  
   
- For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## Example  
  The following code example indicates whether the current instance of the item is in the `Product` dataset, data region, or group scope.  
@@ -65,7 +65,7 @@ InScope(scope)
 ## See Also  
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Data Types in Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

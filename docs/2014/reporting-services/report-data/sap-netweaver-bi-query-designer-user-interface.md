@@ -28,14 +28,14 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  Users access data sources when they create and run queries. You should grant minimal permissions on the data sources, such as read-only permissions.  
   
- For more information about working with a SAP multidimensional data source, see [SAP NetWeaver BI Connection Type &#40;SSRS&#41;](report-data/sap-netweaver-bi-connection-type-ssrs.md).  
+ For more information about working with a SAP multidimensional data source, see [SAP NetWeaver BI Connection Type &#40;SSRS&#41;](sap-netweaver-bi-connection-type-ssrs.md).  
   
  This section describes the toolbar buttons and query designer panes for each mode of the graphical query designer.  
   
 ## Graphical Query Designer in Design Mode  
  When you edit a dataset query that uses a [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] data source, the graphical query designer opens in the Design mode. The following figure labels the panes for Design mode.  
   
- ![Query Designer using MDX in Design Mode](../../2014/reporting-services/media/rsqd-dssapbw-mdx-designmode.gif "Query Designer using MDX in Design Mode")  
+ ![Query Designer using MDX in Design Mode](../media/rsqd-dssapbw-mdx-designmode.gif "Query Designer using MDX in Design Mode")  
   
  The following table lists the panes in this mode.  
   
@@ -54,8 +54,8 @@ manager: "mblythe"
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. Not available for this data source type.|  
-|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Refresh dataset fields](../../2014/reporting-services/media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
+|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Refresh dataset fields](../media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
 |![Add calculated member](../../2014/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box.|  
 |![Toggle for show empty cells](../../2014/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Switch between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
 |![AutoExecute the query](../../2014/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made, for example, deleting a column in the Data pane. Results are shown in the Data pane.|  
@@ -70,7 +70,7 @@ manager: "mblythe"
   
  The following figure indicates the parts of the query designer in Query mode.  
   
- ![SAP BW MDX query designer in query view](../../2014/reporting-services/media/rsqd-dssapbw-mdx-querymode.gif "SAP BW MDX query designer in query view")  
+ ![SAP BW MDX query designer in query view](../media/rsqd-dssapbw-mdx-querymode.gif "SAP BW MDX query designer in query view")  
   
  The following table describes the function of each pane.  
   
@@ -102,7 +102,7 @@ manager: "mblythe"
 -   **Delete** (![Delete](../../2014/analysis-services/media/rsqdicon-delete.gif "Delete"))  
   
 ## See Also  
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)  
   
   

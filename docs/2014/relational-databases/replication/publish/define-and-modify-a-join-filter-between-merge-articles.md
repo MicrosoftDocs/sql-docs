@@ -110,7 +110,7 @@ manager: "jhubbard"
   
     -   For an article filtered using a static row filter, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define one or more related articles, which are also known as child articles, for the publication. For more information, see [Define an Article](publish/define-an-article.md).  
+2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define one or more related articles, which are also known as child articles, for the publication. For more information, see [Define an Article](define-an-article.md).  
   
 3.  At the Publisher on the publication database, execute [sp_addmergefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Specify **@publication**, a unique name for this filter for **@filtername**, the name of the child article created in step 2 for **@article**, the name of the parent article being joined to for **@join_articlename**, and one of the following values for **@join_unique_key**:  
   
@@ -126,11 +126,11 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example defines an article for a merge publication, where the `SalesOrderDetail` table article is filtered against the `SalesOrderHeader` table that is itself filtered using a static row filter. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
- [!code-sql[HowTo#sp_AddMergeArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
+ [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
  This example defines a group of articles in a merge publication where the articles are filtered with a series of join filters against the `Employee` table that is itself filtered using a parameterized row filter on the value of [HOST_NAME](~/t-sql/functions/host-name-transact-sql.md) in the **LoginID** column. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
- [!code-sql[HowTo#sp_MergeDynamicPub1](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
+ [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
 ## See Also  
  [Join Filters](merge/join-filters.md)   
@@ -138,7 +138,7 @@ manager: "jhubbard"
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Filter Published Data for Merge Replication](merge/merge-replication.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
- [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
   

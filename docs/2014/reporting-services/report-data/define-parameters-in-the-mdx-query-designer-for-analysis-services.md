@@ -80,7 +80,7 @@ manager: "mblythe"
      To view the dataset that provides available values for the report parameter, right-click any blank area in the Report Data pane, and then click **Show Hidden Datasets**. The Report Data pane displays all datasets in the report.  
   
 ## See Also  
- [Analysis Services Connection Type for MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services MDX Query Designer User Interface](report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Analysis Services Connection Type for MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md)  
   
   

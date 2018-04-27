@@ -30,7 +30,7 @@ manager: "mblythe"
   
      Or, if the **Contents** page is in Details view, click the property page icon:  
   
-     ![Property page icon](../../2014/reporting-services/media/prop.gif "Property page icon")  
+     ![Property page icon](media/prop.gif "Property page icon")  
   
 4.  The **General** properties page is displayed, and you can configure properties as follows:  
   

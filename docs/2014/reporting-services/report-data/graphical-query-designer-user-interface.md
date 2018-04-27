@@ -25,7 +25,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Graphical Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](../../2014/reporting-services/text-based-query-designer-user-interface.md). For more information about working with specific data source types, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides both a graphical query designer and a text-based query designer for creating queries to retrieve data from a relational database for a report dataset in Report Designer. Use the graphical query designer to interactively build a query and view the results for data source types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB, and ODBC. Use the text-based query designer to specify multiple [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements, complex query or command syntax, and expression-based queries. For more information, see [Text-based Query Designer User Interface](../../2014/reporting-services/text-based-query-designer-user-interface.md). For more information about working with specific data source types, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md).  
   
  .  
   
@@ -48,7 +48,7 @@ manager: "mblythe"
 ### Command Type Text  
  In **Text** type, the graphical query designer presents four areas, or panes. You can specify columns, aliases, sort values, and filter values for a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query. You can view the query text generated from your selections, run the query, and view the result set. The following figure shows the four panes.  
   
- ![Graphical query designer for sql query](../../2014/reporting-services/media/rsqd-dsaw-sql.gif "Graphical query designer for sql query")  
+ ![Graphical query designer for sql query](../media/rsqd-dsaw-sql.gif "Graphical query designer for sql query")  
   
  The following table describes the function of each pane.  
   
@@ -69,18 +69,18 @@ manager: "mblythe"
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
-|**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Show/Hide diagram pane toggle button](../../2014/reporting-services/media/rsqdicon-showhidediagram.gif "Show/Hide diagram pane toggle button")|Show or hide the Diagram pane.|  
-|![Show or Hide Grid pane toggle](../../2014/reporting-services/media/rsqdicon-showhidegrid.gif "Show or Hide Grid pane toggle")|Show or hide the Grid pane.|  
-|![Show or hide sql pane toggle](../../2014/reporting-services/media/rsqdicon-showhidesql.gif "Show or hide sql pane toggle")|Show or hide the SQL pane.|  
-|![Show or Hide Result pane toggle](../../2014/reporting-services/media/rsqdicon-showhideresult.gif "Show or Hide Result pane toggle")|Show or hide the Result pane.|  
+|**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Show/Hide diagram pane toggle button](../media/rsqdicon-showhidediagram.gif "Show/Hide diagram pane toggle button")|Show or hide the Diagram pane.|  
+|![Show or Hide Grid pane toggle](../media/rsqdicon-showhidegrid.gif "Show or Hide Grid pane toggle")|Show or hide the Grid pane.|  
+|![Show or hide sql pane toggle](../media/rsqdicon-showhidesql.gif "Show or hide sql pane toggle")|Show or hide the SQL pane.|  
+|![Show or Hide Result pane toggle](../media/rsqdicon-showhideresult.gif "Show or Hide Result pane toggle")|Show or hide the Result pane.|  
 |![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query.|  
-|![Verify SQL in SQL pane button](../../2014/reporting-services/media/rsqdicon-verifysql.gif "Verify SQL in SQL pane button")|Check that the syntax of the query text is correct.|  
-|![Set Sort Ascending on selected field](../../2014/reporting-services/media/rsqdicon-sortascending.gif "Set Sort Ascending on selected field")|Set the sort order to **Sort Ascending** for the selected column in the Diagram pane,|  
-|![Set Sort Descending on selected field](../../2014/reporting-services/media/rsqdicon-sortdescending.gif "Set Sort Descending on selected field")|Set the sort order to **Sort Descending** for the selected column in the Diagram pane,|  
-|![Remove filter on selected field](../../2014/reporting-services/media/rsqdicon-removefilter.gif "Remove filter on selected field")|Remove the filter for the selected column in the Diagram pane that is marked as having a filter (![Filter graphic next to selected filter column](../../2014/reporting-services/media/rsqdicon-filter.gif "Filter graphic next to selected filter column")).|  
-|![Use Group By for the selected field](../../2014/reporting-services/media/rsqdicon-usegroupby.gif "Use Group By for the selected field")|Show or hide the **Group By** column in the Grid pane. When the **Group By** toggle is on, an extra column named **Group By** appears in the Grid pane, and each value for the selected columns in the query defaults to **Group By**, which causes the selected column to be included in a Group By clause in the SQL text. Use the Group By button to automatically add a GROUP BY clause that includes all columns in the SELECT clause. When your SELECT clause includes aggregate function calls (for example, SUM(ColumnName)), include each non-aggregate column in the GROUP BY clause if you want it to appear in the result set.<br /><br /> To appear in the Result pane, each column in the query must have an aggregate function defined for use in calculating the value to display in the Result pane, or the column in the query has to be specified in the GROUP BY clause of the SQL query.|  
-|![Add a new table to the diagram pane](../../2014/reporting-services/media/rsqdicon-addtable.gif "Add a new table to the diagram pane")|Add a new table from the data source to the Diagram pane.<br /><br /> **Note** When you add a new table, the query designer tries to match up foreign key relationships from the data source. After you add a table, confirm that the foreign key relationships represented by linkages between the tables are correct.|  
+|![Verify SQL in SQL pane button](../media/rsqdicon-verifysql.gif "Verify SQL in SQL pane button")|Check that the syntax of the query text is correct.|  
+|![Set Sort Ascending on selected field](../media/rsqdicon-sortascending.gif "Set Sort Ascending on selected field")|Set the sort order to **Sort Ascending** for the selected column in the Diagram pane,|  
+|![Set Sort Descending on selected field](../media/rsqdicon-sortdescending.gif "Set Sort Descending on selected field")|Set the sort order to **Sort Descending** for the selected column in the Diagram pane,|  
+|![Remove filter on selected field](../media/rsqdicon-removefilter.gif "Remove filter on selected field")|Remove the filter for the selected column in the Diagram pane that is marked as having a filter (![Filter graphic next to selected filter column](../media/rsqdicon-filter.gif "Filter graphic next to selected filter column")).|  
+|![Use Group By for the selected field](../media/rsqdicon-usegroupby.gif "Use Group By for the selected field")|Show or hide the **Group By** column in the Grid pane. When the **Group By** toggle is on, an extra column named **Group By** appears in the Grid pane, and each value for the selected columns in the query defaults to **Group By**, which causes the selected column to be included in a Group By clause in the SQL text. Use the Group By button to automatically add a GROUP BY clause that includes all columns in the SELECT clause. When your SELECT clause includes aggregate function calls (for example, SUM(ColumnName)), include each non-aggregate column in the GROUP BY clause if you want it to appear in the result set.<br /><br /> To appear in the Result pane, each column in the query must have an aggregate function defined for use in calculating the value to display in the Result pane, or the column in the query has to be specified in the GROUP BY clause of the SQL query.|  
+|![Add a new table to the diagram pane](../media/rsqdicon-addtable.gif "Add a new table to the diagram pane")|Add a new table from the data source to the Diagram pane.<br /><br /> **Note** When you add a new table, the query designer tries to match up foreign key relationships from the data source. After you add a table, confirm that the foreign key relationships represented by linkages between the tables are correct.|  
   
 #### Example  
  The following query returns the list of last names from the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database **Person** table:  
@@ -114,8 +114,8 @@ EXEC uspGetEmployeeManagers '1';
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
-|**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Icon of the Generic Query Designer button](../../2014/reporting-services/media/icongenericquerydesigner.gif "Icon of the Generic Query Designer button")|Toggle between generic query designer and graphical query designer, preserving the query text or stored procedure view.|  
+|**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Icon of the Generic Query Designer button](../media/icongenericquerydesigner.gif "Icon of the Generic Query Designer button")|Toggle between generic query designer and graphical query designer, preserving the query text or stored procedure view.|  
 |![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Select all columns from the selected table.|  
   
 ### Command Type StoredProcedure  
@@ -132,7 +132,7 @@ EXEC uspGetEmployeeManagers '1';
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer.|  
-|**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Import**|Import an existing query from a file or report. Only file types .sql and .rdl are supported. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the selected stored procedure.|  
 |Stored procedure drop-down list|Click the down arrow to display a list of available stored procedures from the data source. Click any stored procedure from the list to select it.|  
   
@@ -142,12 +142,12 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`  
   
 ## See Also  
- [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [SQL Server Connection Type &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [OLE DB Connection Type &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Oracle Connection Type &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md)   
+ [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
+ [SQL Server Connection Type &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)   
+ [OLE DB Connection Type &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
+ [Oracle Connection Type &#40;SSRS&#41;](oracle-connection-type-ssrs.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
  [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

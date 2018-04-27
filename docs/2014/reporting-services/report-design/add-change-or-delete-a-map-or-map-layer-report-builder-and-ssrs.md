@@ -37,7 +37,7 @@ manager: "mblythe"
   
  The easiest way to add, remove, or change options for a layer is to use the map layer wizard. You can also change options manually from the Map pane. To display the **Map** pane, click in the map on the report design surface. The following figure displays the parts of the pane:  
   
- ![rsMapLayerZone](../../2014/reporting-services/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Map layers are drawn from bottom to top in the order that they appear in the Map pane. In the previous figure, the tile layer is drawn first and the polygon layer is drawn last. Layers that are drawn later might hide map elements on layers that are drawn earlier. You can change the order of layers by using the arrow keys on the Map pane toolbar. To show or hide layers, toggle the visibility icon. You can change the transparency of a layer on the `Visibility` page of the **Layer Data** properties dialog box.  
   
@@ -47,14 +47,14 @@ manager: "mblythe"
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Map Layer Wizard|To add a layer by using a wizard, click **New layer wizard**.|  
 |![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Add Layer|To manually add a layer, click **Add Layer**, and then click the type of map layer to add.|  
-|![rs_IconMapPolygonLayer](../../2014/reporting-services/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Polygon Layer|Add a map layer that displays areas or shapes that are based sets of polygon coordinates.|  
-|![rs_IconMapLineLayer](../../2014/reporting-services/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Line Layer|Add a map layer that displays paths or routes that are based on sets of line coordinates.|  
-|![rs_IconMapPointLayer](../../2014/reporting-services/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Point Layer|Add a map layer that displays locations that are based on sets of point coordinates.|  
-|![rs_IconMapTileLayer](../../2014/reporting-services/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Tile Layer|Add a map layer that displays Bing Map tiles that correspond to the current map view area that is defined by the viewport.|  
+|![rs_IconMapPolygonLayer](../media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Polygon Layer|Add a map layer that displays areas or shapes that are based sets of polygon coordinates.|  
+|![rs_IconMapLineLayer](../media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Line Layer|Add a map layer that displays paths or routes that are based on sets of line coordinates.|  
+|![rs_IconMapPointLayer](../media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Point Layer|Add a map layer that displays locations that are based on sets of point coordinates.|  
+|![rs_IconMapTileLayer](../media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Tile Layer|Add a map layer that displays Bing Map tiles that correspond to the current map view area that is defined by the viewport.|  
   
  At the bottom of the Map pane is the Map view area. To change the center or zoom options for the map, use the arrow keys to adjust the view center and the slider to adjust the zoom level.  
   
- For more information about layers, see [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ For more information about layers, see [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,17 +63,17 @@ manager: "mblythe"
   
 -   From the Ribbon, on the **Insert** menu, click **Map**, and then click **Map Wizard.** The wizard enables you to add a layer to the existing map. Most wizard pages are identical between the map wizard and the map layer wizard.  
   
-     For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
+     For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="ChangeLayer"></a> To change options for a layer by using the map layer wizard  
   
 -   Run the map layer wizard. This wizard enables you to change options for a layer that you created by using the map layer wizard. In the Map pane, right-click the layer, and on the toolbar, click the layer wizard button (![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
-     For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
+     For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="AddVectorLayer"></a> To add a point, line, or polygon layer from the Map pane toolbar  
   
@@ -100,11 +100,11 @@ manager: "mblythe"
   
     5.  Type the name of the match field from the analytical dataset.  
   
-     For more information about linking spatial and analytical data, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+     For more information about linking spatial and analytical data, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="FilterAnalyticalData"></a> To filter analytical data for the layer  
   
@@ -114,9 +114,9 @@ manager: "mblythe"
   
 3.  Click **Filters**.  
   
-4.  Define a filter equation to limit the analytical data that is used in the map display. For more information, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md).  
+4.  Define a filter equation to limit the analytical data that is used in the map display. For more information, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="PointProperties"></a> To control point properties for a point layer or for polygon center points  
   
@@ -126,7 +126,7 @@ manager: "mblythe"
   
     -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](../../2014/reporting-services/map-embedded-point-properties-dialog-box-marker.md) page.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Embedded"></a> To specify embedded data as a source of spatial data  
   
@@ -145,7 +145,7 @@ manager: "mblythe"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="ESRI"></a> To specify an ESRI Shapefile as a source of spatial data  
   
@@ -162,7 +162,7 @@ manager: "mblythe"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="DatasetField"></a> To specify a report dataset field as a source of spatial data  
   
@@ -178,7 +178,7 @@ manager: "mblythe"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="TileLayer"></a> To add a tile layer  
   
@@ -196,7 +196,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  A tile layer can also be added when you add a polygon, line, or point layer in the Map or Map Layer wizard. On the **Choose spatial data and map view options** page, select the option **Add a Bing Maps background for this map view**.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="DrawingOrder"></a> To change the drawing order of a layer  
   
@@ -206,7 +206,7 @@ manager: "mblythe"
   
 3.  On the Map pane toolbar, click the up or down arrow to change the drawing order of each layer.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Transparency"></a> To change the transparency of a polygon, line, or point layer  
   
@@ -220,7 +220,7 @@ manager: "mblythe"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="TileTransparency"></a> To change the transparency of a tile layer  
   
@@ -234,7 +234,7 @@ manager: "mblythe"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Secure"></a> To specify a secure connection for a tile layer  
   
@@ -246,7 +246,7 @@ manager: "mblythe"
   
  The connection for the Bing Maps Web service will use the HTTP SSL (Secure Sockets Layer) service to retrieve Bing map tiles for this layer.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Language"></a> To specify the language for tile labels  
   
@@ -258,7 +258,7 @@ manager: "mblythe"
   
      The order of precedence for setting the tile label language is: report property Language, default locale for Report Builder, and map property TileLanguage.  
   
-2.  ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+2.  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="ConditionalHide"></a> To conditionally hide a layer based on viewport zoom level  
   
@@ -276,10 +276,10 @@ manager: "mblythe"
   
      You can also conditionally hide the layer. For more information, see [Hide an Item &#40;Report Builder and SSRS&#41;](report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
-2.  ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+2.  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)   
+ [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -22,7 +22,7 @@ manager: "mblythe"
   
  When you are using any variant of a bar or column chart, you can apply texture styles, such as cylinder, wedge, and light-to-dark, to the individual bars or columns.  
   
- In addition to these drawing styles, you can add borders and shadows to many chart elements to give the illusion of depth. For more information on other ways to format the chart, see [Formatting a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-a-chart-report-builder-and-ssrs.md).  
+ In addition to these drawing styles, you can add borders and shadows to many chart elements to give the illusion of depth. For more information on other ways to format the chart, see [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -40,7 +40,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  You can't have 3D and bevel or emboss styles on the same chart. If you have enabled 3D for the chart, you will not see the PieDrawingStyle property.  
   
- ![Pie chart with concave drawing style](../../2014/reporting-services/media/rs-piedrawingeffects-concave.gif "Pie chart with concave drawing style")  
+ ![Pie chart with concave drawing style](../media/rs-piedrawingeffects-concave.gif "Pie chart with concave drawing style")  
   
 ### To add texture styles to a bar or column chart  
   
@@ -55,12 +55,12 @@ manager: "mblythe"
 > [!NOTE]  
 >  You can't have 3D and bevel or emboss styles on the same chart. If you have enabled 3D for the chart, you will not see the PieDrawingStyle property.  
   
- ![Bar chart with LightToDark drawing effect](../../2014/reporting-services/media/rs-bardrawingeffects-lighttodark.gif "Bar chart with LightToDark drawing effect")  
+ ![Bar chart with LightToDark drawing effect](../media/rs-bardrawingeffects-lighttodark.gif "Bar chart with LightToDark drawing effect")  
   
 ## See Also  
- [Bar Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Column Charts &#40;Report Builder and SSRS&#41;](report-design/column-charts-report-builder-and-ssrs.md)   
- [Pie Charts &#40;Report Builder and SSRS&#41;](report-design/pie-charts-report-builder-and-ssrs.md)   
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Bar Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Column Charts &#40;Report Builder and SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
+ [Pie Charts &#40;Report Builder and SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
+ [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

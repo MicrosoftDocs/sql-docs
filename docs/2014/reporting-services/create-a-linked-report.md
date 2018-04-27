@@ -38,7 +38,7 @@ manager: "mblythe"
   
      A linked report's icon differs from other items managed by a report server. The following icon indicates a linked report:  
   
-     ![Linked report icon](../../2014/reporting-services/media/hlp-16linked.gif "Linked report icon")  
+     ![Linked report icon](media/hlp-16linked.gif "Linked report icon")  
   
 ## See Also  
  [Open and Close a Report &#40;Report Manager&#41;](../../2014/reporting-services/open-and-close-a-report-report-manager.md)   

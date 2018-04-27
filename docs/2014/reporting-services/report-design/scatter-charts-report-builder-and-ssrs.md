@@ -16,11 +16,11 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Scatter Charts (Report Builder and SSRS)
-  A scatter chart displays a series as a set of points. Values are represented by the position of the points on the chart. Categories are represented by different markers on the chart. Scatter charts are typically used to compare aggregated data across categories. For more information on how to add data to a scatter chart, see [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+  A scatter chart displays a series as a set of points. Values are represented by the position of the points on the chart. Categories are represented by different markers on the chart. Scatter charts are typically used to compare aggregated data across categories. For more information on how to add data to a scatter chart, see [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  The following illustration shows an example of a scatter chart.  
   
- ![Scatter chart](../../2014/reporting-services/media/rs-scatterchart.gif "Scatter chart")  
+ ![Scatter chart](../media/rs-scatterchart.gif "Scatter chart")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -44,9 +44,9 @@ manager: "mblythe"
 -   By default, scatter charts display data points as circles. If you have multiple series on a scatter chart, consider changing the marker shape of each point to be square, triangle, diamond, or another shape.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Chart Types &#40;Report Builder and SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md)   
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Line Charts &#40;Report Builder and SSRS&#41;](report-design/line-charts-report-builder-and-ssrs.md)  
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Chart Types &#40;Report Builder and SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
+ [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [Line Charts &#40;Report Builder and SSRS&#41;](line-charts-report-builder-and-ssrs.md)  
   
   

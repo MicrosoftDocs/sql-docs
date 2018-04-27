@@ -54,46 +54,46 @@ manager: "mblythe"
 ##  <a name="Graphical"></a> Graphical Query Designer  
  The graphical query designer is used to create or modify [!INCLUDE[tsql](../../includes/tsql-md.md)] queries that run against a relational database. This query design tool is used in several [!INCLUDE[msCoName](../../../includes/msconame-md.md)] products and in other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] components. Depending on the data source type, it supports Text, StoredProcedure, and TableDirect modes. The following image provides an illustration of the graphical query designer.  
   
- ![Graphical query designer for sql query](../../2014/reporting-services/media/rsqd-dsaw-sql.gif "Graphical query designer for sql query")  
+ ![Graphical query designer for sql query](../media/rsqd-dsaw-sql.gif "Graphical query designer for sql query")  
   
- You can toggle the **Edit As Text** button on the toolbar to switch between the graphical query designer and the text-based query designer. For more information, see [Graphical Query Designer User Interface](report-data/graphical-query-designer-user-interface.md).  
+ You can toggle the **Edit As Text** button on the toolbar to switch between the graphical query designer and the text-based query designer. For more information, see [Graphical Query Designer User Interface](graphical-query-designer-user-interface.md).  
   
 ##  <a name="Model"></a> Report Model Query Designer  
  The Report Model query designer is used to create or modify queries that run against a SMDL report model that has been published to a report server. Reports that run against models support clickthrough data exploration. The query determines the path of data exploration at run time. The following image provides an illustration of the Report Model query designer.  
   
- ![Semantic Model Query Designer UI](../../2014/reporting-services/media/rsqd-dsawmodel-smql.gif "Semantic Model Query Designer UI")  
+ ![Semantic Model Query Designer UI](../media/rsqd-dsawmodel-smql.gif "Semantic Model Query Designer UI")  
   
- To use the Report Model query designer, you must define a data source that points to a published model. When you define a dataset for the data source, you can open the dataset query in the Report Model query designer. The Report Model query designer can be used in graphical or text-based modes. You can toggle the **Edit As Text** button on the toolbar to switch between the graphical query designer and the text-based query designer. For more information, see [Report Model Query Designer User Interface](report-data/report-model-query-designer-user-interface.md).  
+ To use the Report Model query designer, you must define a data source that points to a published model. When you define a dataset for the data source, you can open the dataset query in the Report Model query designer. The Report Model query designer can be used in graphical or text-based modes. You can toggle the **Edit As Text** button on the toolbar to switch between the graphical query designer and the text-based query designer. For more information, see [Report Model Query Designer User Interface](report-model-query-designer-user-interface.md).  
   
 ##  <a name="MDX"></a> MDX Query Designer  
  The Multidimensional Expression (MDX) query designer is used to create or modify queries that run against an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source with multidimensional cubes. The following image provides an illustration of the MDX query designer after the query and filter are defined.  
   
  ![Analysis Services MDX query designer, design view](../../2014/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
   
- To use the MDX query designer, you must define a data source that has an Analysis Services cube available that is valid and has been processed. When you define a dataset for the data source, you can open the query in the MDX query designer. If necessary, use the MDX and DMX buttons on the toolbar to switch between MDX and DMX modes. For more information, see [Analysis Services MDX Query Designer User Interface](report-data/analysis-services-mdx-query-designer-user-interface.md).  
+ To use the MDX query designer, you must define a data source that has an Analysis Services cube available that is valid and has been processed. When you define a dataset for the data source, you can open the query in the MDX query designer. If necessary, use the MDX and DMX buttons on the toolbar to switch between MDX and DMX modes. For more information, see [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
   
 ##  <a name="DMX"></a> DMX Query Designer  
  The Data Mining Prediction Expression (DMX) query designer is used to create or modify queries that run against an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source with mining models. The following image provides an illustration of the DMX query designer after the model and input tables are selected.  
   
- ![Analysis Services DMX query designer, design view](../../2014/reporting-services/media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX query designer, design view")  
+ ![Analysis Services DMX query designer, design view](../media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX query designer, design view")  
   
- To use the DMX query designer, you must define a data source that has a valid, data mining model available. When you define a dataset for the data source, you can open the query in the DMX query designer. If necessary, use the MDX and DMX buttons on the toolbar to switch between MDX and DMX modes. After you select the model, you can create data mining prediction queries that provide data to a report. For more information, see [Analysis Services DMX Query Designer User Interface](report-data/analysis-services-dmx-query-designer-user-interface.md).  
+ To use the DMX query designer, you must define a data source that has a valid, data mining model available. When you define a dataset for the data source, you can open the query in the DMX query designer. If necessary, use the MDX and DMX buttons on the toolbar to switch between MDX and DMX modes. After you select the model, you can create data mining prediction queries that provide data to a report. For more information, see [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
 ##  <a name="SAPBW"></a> Sap NetWeaver BI Query Designer  
  The [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] query designer is used to retrieve data from a [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] database. To use this query designer, you must have an [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] data source that has at least one InfoCube, MultiProvider, or Web-enabled query defined. The following image provides an illustration of the [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] query designer.  
   
- ![Query Designer using MDX in Design Mode](../../2014/reporting-services/media/rsqd-dssapbw-mdx-designmode.gif "Query Designer using MDX in Design Mode")  
+ ![Query Designer using MDX in Design Mode](../media/rsqd-dssapbw-mdx-designmode.gif "Query Designer using MDX in Design Mode")  
   
 ##  <a name="Hyperion"></a> Hyperion Essbase Query Designer  
  The [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] query designer is used to retrieve data from [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] databases and applications. The following image provides an illustration of the [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] query designer.  
   
- ![Query Designer for Hyperion Essbase data source](../../2014/reporting-services/media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
+ ![Query Designer for Hyperion Essbase data source](../media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
   
- To use this query designer, you must have a [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] data source that has at least one database. For more information, see [SAP NetWeaver BI Query Designer User Interface](report-data/sap-netweaver-bi-query-designer-user-interface.md).  
+ To use this query designer, you must have a [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] data source that has at least one database. For more information, see [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
   
 ## See Also  
  [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   

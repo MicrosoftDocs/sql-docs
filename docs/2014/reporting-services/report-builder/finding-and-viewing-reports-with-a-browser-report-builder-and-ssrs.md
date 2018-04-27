@@ -22,7 +22,7 @@ manager: "mblythe"
   
  If you do not know the Web address of a report, you can open the Web address of the report server and then browse the report server folder hierarchy to select the report you want to view. The following diagram illustrates a folder hierarchy as it appears in a browser window.  
   
- ![Folders in a browser](../../2014/reporting-services/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Folders in a browser](../media/rs-browserfolder.GIF "Folders in a browser")  
 Folders in a browser  
   
 > [!NOTE]  
@@ -56,6 +56,6 @@ Folders in a browser
  For more information about how to access a report through a URL, including information on how a URL is constructed, see "URL Access" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
 ## See Also  
- [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

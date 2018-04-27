@@ -33,35 +33,35 @@ manager: "mblythe"
  For information about other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../2014/books-online-for-sql-server-2014.md).  
   
  **Browse Content by Area**  
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Reporting Services Reports &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-reports-ssrs.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Reports &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-reports-ssrs.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Report Data &#40;SSRS&#41;](report-data/report-data-ssrs.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Report Data &#40;SSRS&#41;](report-data/report-data-ssrs.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Report Parts in Report Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Report Parts in Report Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Schedules](../../2014/reporting-services/schedules.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Schedules](../../2014/reporting-services/schedules.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Reporting Services Security and Protection](../../2014/reporting-services/reporting-services-security-and-protection.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Security and Protection](../../2014/reporting-services/reporting-services-security-and-protection.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [URL Access &#40;SSRS&#41;](../../2014/reporting-services/url-access-ssrs.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [URL Access &#40;SSRS&#41;](../../2014/reporting-services/url-access-ssrs.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Extensions &#40;SSRS&#41;](extensions-ssrs.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Extensions &#40;SSRS&#41;](extensions-ssrs.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Errors and Events Reference &#40;Reporting Services&#41;](../../2014/reporting-services/errors-and-events-reference-reporting-services.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Errors and Events Reference &#40;Reporting Services&#41;](../../2014/reporting-services/errors-and-events-reference-reporting-services.md)  
   
- ![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon") [Feature Reference &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Feature Reference &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## See Also  
  [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)  

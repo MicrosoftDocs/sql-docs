@@ -25,11 +25,11 @@ manager: "mblythe"
   
  **Results message**  
   
- ![Data alert e-mail message with results](../../2014/reporting-services/media/rs-alertmessageresults.gif "Data alert e-mail message with results")  
+ ![Data alert e-mail message with results](media/rs-alertmessageresults.gif "Data alert e-mail message with results")  
   
  **Error message**  
   
- ![Data alert message with error message](../../2014/reporting-services/media/rs-alertmessageerrror.gif "Data alert message with error message")  
+ ![Data alert message with error message](media/rs-alertmessageerrror.gif "Data alert message with error message")  
   
  The messages include the same types of information.  
   

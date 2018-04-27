@@ -41,7 +41,7 @@ manager: "mblythe"
 ## See Also  
  [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)   
+ [Data Types in Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../expression-examples-report-builder-and-ssrs.md)  
   

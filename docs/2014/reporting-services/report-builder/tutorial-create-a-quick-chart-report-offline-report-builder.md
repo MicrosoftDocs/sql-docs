@@ -22,7 +22,7 @@ manager: "mblythe"
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
   In this tutorial, you'll create a pie chart by using a wizard, and then you'll modify it a little, just to get an idea of what's possible. You can do this tutorial two different ways. Both methods have the same outcome—a pie chart like the one in the following illustration:  
   
- !["My First Pie Chart" in Run view](../../2014/reporting-services/media/rs-my1stpierunview.gif ""My First Pie Chart" in Run view")  
+ !["My First Pie Chart" in Run view](../media/rs-my1stpierunview.gif ""My First Pie Chart" in Run view")  
   
 ## Prerequisites  
  Whether you use XML data or a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query, you need to have access to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Report Builder. You can run the stand-alone version or the ClickOnce version available from Report Manager or a SharePoint site. Only the first step, how to open Report Builder, is different for ClickOnce versions. For more information, see [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
@@ -128,7 +128,7 @@ manager: "mblythe"
   
 18. To see your actual pie chart, click **Run** on the **Home** tab of the Ribbon.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
   
 ##  <a name="CreatePieQueryData"></a> Creating the pie chart with a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query  
   
@@ -179,7 +179,7 @@ manager: "mblythe"
   
 15. To see your actual pie chart, click **Run** on the **Home** tab of the Ribbon.  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
   
 ##  <a name="AfterWizard"></a> After You Run the Wizard  
  Now that you have your pie chart report, you can play with it. On the **Run** tab of the Ribbon, click **Design**, so you can continue modifying it.  
@@ -204,7 +204,7 @@ manager: "mblythe"
   
  For more information about customizing chart labels and legends, see [Display Percentage Values on a Pie Chart &#40;Report Builder and SSRS&#41;](report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) and [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](report-design/chart-legend-change-item-text-report-builder.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
   
 ##  <a name="WhatsNext"></a> What's Next?  
  Now that you have created your first report in Report Builder, you are ready to try the other tutorials and to start creating reports from your own data. To run Report Builder, you need permission to access your data sources, such as databases, with a *connection string*, which actually connects you to the data source. Your system administrator will have this information and can set you up.  
@@ -215,10 +215,10 @@ manager: "mblythe"
   
  It may help to read about some of the concepts and terms before you get started. For more information, see [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md). Also, spend some time planning, before you create your first report. It will be time well spent. For more information, see [Planning a Report &#40;Report Builder&#41;](report-design/planning-a-report-report-builder.md).  
   
- ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
+ ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#TwoWays)  
   
 ## See Also  
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
- [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
+ [Report Builder in SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

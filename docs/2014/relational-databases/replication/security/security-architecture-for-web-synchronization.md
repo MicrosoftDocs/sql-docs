@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  The following illustration shows all the possible connections, but some connections might not be required in a particular topology. For example, a connection to an FTP server is required only if the snapshot is delivered by using FTP.  
   
- ![Components and connections in Web synchronization](media/websyncarchitecture.gif "Components and connections in Web synchronization")  
+ ![Components and connections in Web synchronization](../media/websyncarchitecture.gif "Components and connections in Web synchronization")  
   
  The following tables describe the components and connections that are shown in the illustration.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
  The Merge Replication Reconciler connects to the Publisher by using either Windows Authentication or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. The Windows user or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login that you specify must comply with the following:  
   
--   Be in the publication access list (PAL). For more information, see [Secure the Publisher](security/secure-the-publisher.md).  
+-   Be in the publication access list (PAL). For more information, see [Secure the Publisher](secure-the-publisher.md).  
   
 -   Be associated with a user in the publication database.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
 ## F. Connection to the Distributor  
  The Merge Replication Reconciler that is hosted on the computer that is running IIS also makes connections to the Distributor. The Merge Replication Reconciler connects to the Distributor by using either Windows Authentication or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication. The Windows user or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login that you specify must comply with the following:  
   
--   Be in the publication access (PAL). For more information, see [Secure the Publisher](security/secure-the-publisher.md).  
+-   Be in the publication access (PAL). For more information, see [Secure the Publisher](secure-the-publisher.md).  
   
 -   Be associated with a database user in the distribution database. The user can be the `Guest` user.  
   

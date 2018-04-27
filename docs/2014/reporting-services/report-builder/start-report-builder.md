@@ -79,6 +79,6 @@ manager: "mblythe"
      If you don’t see the report server in the list of existing servers, close the **Open Report** dialog box and then click **Connect** at the bottom of Report Builder to connect to the server.  
   
 ## See Also  
- [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
+ [Report Builder in SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

@@ -127,11 +127,11 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example defines an article based on the `Product` table for a transactional publication, where the article is filtered both horizontally and vertically.  
   
- [!code-sql[HowTo#sp_AddTranArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
+ [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
  This example defines articles for a merge publication, where the `SalesOrderHeader` article is statically filtered based on **SalesPersonID**, and the `SalesOrderDetail` article is join filtered based on `SalesOrderHeader`.  
   
- [!code-sql[HowTo#sp_AddMergeArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
+ [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can define articles programmatically by using Replication Management Objects (RMO). The RMO classes that you use to define an article depend on the type of publication for which the article is defined.  
@@ -139,20 +139,20 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  The following example adds an article with row and column filters to a transactional publication.  
   
- [!code-csharp[HowTo#rmo_CreateTranArticles](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranarticles)]  
+ [!code-csharp[HowTo#rmo_CreateTranArticles](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranarticles)]  
   
- [!code-vb[HowTo#rmo_vb_CreateTranArticles](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createtranarticles)]  
+ [!code-vb[HowTo#rmo_vb_CreateTranArticles](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createtranarticles)]  
   
  The following example adds three articles to a merge publication. The articles have column filters, and two join filters are used to propagate a parameterized row filter to the other articles.  
   
- [!code-csharp[HowTo#rmo_CreateMergeArticles](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergearticles)]  
+ [!code-csharp[HowTo#rmo_CreateMergeArticles](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergearticles)]  
   
- [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergearticles)]  
+ [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
 ## See Also  
  [Create a Publication](create-a-publication.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
- [Add Articles to and Drop Articles from Existing Publications](publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Filter Published Data](filter-published-data.md)   
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)  

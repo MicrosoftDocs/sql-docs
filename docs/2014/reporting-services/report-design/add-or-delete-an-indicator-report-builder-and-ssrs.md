@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Add or Delete an Indicator (Report Builder and SSRS)
-  Indicators are minimal gauges that convey the state of a single data value at a glance. For more information about them, see [Indicators &#40;Report Builder and SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
+  Indicators are minimal gauges that convey the state of a single data value at a glance. For more information about them, see [Indicators &#40;Report Builder and SSRS&#41;](indicators-report-builder-and-ssrs.md).  
   
  Indicators are commonly placed in cells in a table or matrix, but you can also use indicators by themselves, side-by-side with gauges, or embedded in gauges.  
   
@@ -24,15 +24,15 @@ manager: "mblythe"
   
  You can update the values and states of indicators. For more information, see the following topics:  
   
--   [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Set and Configure Measurement Units &#40;Report Builder and SSRS&#41;](report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Set and Configure Measurement Units &#40;Report Builder and SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Set Synchronization Scope &#40;Report Builder and SSRS&#41;](report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Set Synchronization Scope &#40;Report Builder and SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Because an indicator is positioned inside the gauge panel, you need to select the indicator instead of the panel when you want to configure the indicator by using the **Indicators Properties** dialog box or the **Properties** pane. The following picture shows a selected indicator in its gauge panel.  
   
- ![rs_GaugePanelWithIndicator](../../2014/reporting-services/media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
+ ![rs_GaugePanelWithIndicator](../media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
 > [!NOTE]  
 >  Depending on column width and the length of data values, the text in table or matrix cells might wrap and display text on multiple lines. When this occurs, the indicator icon might be stretched and change shape. This can make the indicator icon less readable. Place the indicator inside a rectangle to ensure that the icon is never stretched.  
@@ -42,9 +42,9 @@ manager: "mblythe"
   
 ### To add an indicator to a table or matrix  
   
-1.  Open an existing report or create a new report that contains a table and matrix with the data you want to display. For more information, see [Tables &#40;Report Builder  and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md) or [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md).  
+1.  Open an existing report or create a new report that contains a table and matrix with the data you want to display. For more information, see [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md) or [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md).  
   
-2.  Insert a column in your table or matrix. For more information, see [Insert or Delete a Column &#40;Report Builder and SSRS&#41;](report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+2.  Insert a column in your table or matrix. For more information, see [Insert or Delete a Column &#40;Report Builder and SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 3.  Optionally, on the **Insert** tab, click **Rectangle**, and then click a cell in the new column.  
   
@@ -72,6 +72,6 @@ manager: "mblythe"
 2.  Click **Delete**.  
   
 ## See Also  
- [Indicators &#40;Report Builder and SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)  
+ [Indicators &#40;Report Builder and SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

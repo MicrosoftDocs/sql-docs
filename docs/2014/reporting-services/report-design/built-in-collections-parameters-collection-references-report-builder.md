@@ -54,7 +54,7 @@ manager: "mblythe"
  For more information about using parameters in a filter, see [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md).  
   
 ## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Commonly Used Filters &#40;Report Builder and SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)   
  [Add, Change, or Delete a Report Parameter &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   

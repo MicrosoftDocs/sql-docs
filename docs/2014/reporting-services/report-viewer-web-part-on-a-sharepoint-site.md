@@ -33,7 +33,7 @@ manager: "mblythe"
   
  The Web Part includes a view area, a toolbar, a collapsible area for setting credentials and parameters, and properties. The following image shows the Web Part with the sample Company Sales report and the export options that you can select from the toolbar.  
   
- ![Report Viewer Web Part](../../2014/reporting-services/media/rs-sharepointrvwebpart.gif "Report Viewer Web Part")  
+ ![Report Viewer Web Part](media/rs-sharepointrvwebpart.gif "Report Viewer Web Part")  
   
 ## Web Part components  
  The view area displays a report in HTML. Depending on how the Web Part is configured, the view area might be maximized to show the report in full-page mode, or it might share the available space with adjacent panes and a toolbar.  

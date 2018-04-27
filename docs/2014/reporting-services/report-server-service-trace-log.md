@@ -45,7 +45,7 @@ manager: "mblythe"
   
  View a short video that demonstrates the use of Microsoft Power Query to view [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] log files.  
   
- ![view a video about Power Query and SSRS logs](../../2014/reporting-services/media/generic-video-thumbnail.png "view a video about Power Query and SSRS logs")  
+ ![view a video about Power Query and SSRS logs](media/generic-video-thumbnail.png "view a video about Power Query and SSRS logs")  
   
 ##  <a name="bkmk_trace_configuration_settings"></a> Trace configuration settings  
  Trace log behavior is managed in the configuration file **ReportingServicesrService.exe.config**. The configuration file is found in the following folder path:  

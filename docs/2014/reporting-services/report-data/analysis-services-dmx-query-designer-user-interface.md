@@ -23,7 +23,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Analysis Services DMX Query Designer User Interface
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Data Mining Expressions (DMX) queries and Multidimensional Expression (MDX) queries for an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source. This topic describes the DMX query designer. For more information about the MDX query designer, see [Analysis Services MDX Query Designer User Interface](report-data/analysis-services-mdx-query-designer-user-interface.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Data Mining Expressions (DMX) queries and Multidimensional Expression (MDX) queries for an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source. This topic describes the DMX query designer. For more information about the MDX query designer, see [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
   
  The DMX graphical query designer has three modes: Design, Query, and Result. To switch modes, right-click on the Query Design pane, and select the mode. Each mode provides a Metadata pane from which you can drag members from the selected cubes to build a DMX query that retrieves data for a dataset when the report is processed.  
   
@@ -33,9 +33,9 @@ manager: "mblythe"
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Disabled for this data source type.|  
-|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Change to MDX query view](../../2014/analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Switch to the MDX query designer mode.|  
-|![Change to DMX query language view](../../2014/reporting-services/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Switch to the DMX query designer mode.|  
+|![Change to DMX query language view](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Switch to the DMX query designer mode.|  
 |![Refresh result data](../../2014/analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Refresh metadata from the data source.|  
 |![Delete](../../2014/analysis-services/media/rsqdicon-delete.gif "Delete")|Delete the selected column in the Data pane from the query.|  
 |![Icon for the Query Parameters dialog box](../../2014/analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Display the **Query Parameters** dialog box. When you assign a default value to a variable, a corresponding report parameter is created when you switch to the Layout view in Report Designer.|  
@@ -45,7 +45,7 @@ manager: "mblythe"
 ## Graphical DMX Query Designer in Design Mode  
  When you edit a dataset that uses an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source that has no valid cubes but that does have valid mining models, the graphical query designer opens in Design mode. The following figure labels the panes for Design mode.  
   
- ![Analysis Services DMX query designer, design view](../../2014/reporting-services/media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX query designer, design view")  
+ ![Analysis Services DMX query designer, design view](../media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX query designer, design view")  
   
  The following table describes the function of each pane.  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
   
  The following figure labels the panes for Query mode.  
   
- ![Analysis Services DMX query designer, query view](../../2014/reporting-services/media/rsqd-dsawas-dmx-querymode.gif "Analysis Services DMX query designer, query view")  
+ ![Analysis Services DMX query designer, query view](../media/rsqd-dsawas-dmx-querymode.gif "Analysis Services DMX query designer, query view")  
   
  The following table describes the function of each pane.  
   
@@ -77,17 +77,17 @@ manager: "mblythe"
   
  The following figure shows the query designer in Result mode.  
   
- ![Analysis Services DMX query designer, result view](../../2014/reporting-services/media/rsqd-dsawas-dmx-resultmode.gif "Analysis Services DMX query designer, result view")  
+ ![Analysis Services DMX query designer, result view](../media/rsqd-dsawas-dmx-resultmode.gif "Analysis Services DMX query designer, result view")  
   
  To switch back to Design mode or Query mode, right-click on the Result pane and select **Design** or **Query**.  
   
 ## See Also  
- [Define Parameters in the MDX Query Designer for Analysis Services &#40;Report Builder and SSRS&#41;](report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Analysis Services Connection Type for DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
- [Retrieve Data from a Data Mining Model &#40;DMX&#41; &#40;SSRS&#41;](report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
+ [Define Parameters in the MDX Query Designer for Analysis Services &#40;Report Builder and SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Retrieve Data from a Data Mining Model &#40;DMX&#41; &#40;SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
- [Analysis Services Connection Type for MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services Connection Type for DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services Connection Type for MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

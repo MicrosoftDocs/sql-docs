@@ -87,7 +87,7 @@ manager: "mblythe"
  In some cases, reports that include the *User!UserID* variable will fail to show report data that is specific to the current user who is viewing the report.  
   
 ## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Expression Dialog Box &#40;Report Builder&#41;](../expression-dialog-box-report-builder.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   

@@ -46,12 +46,12 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example deletes an article from a transactional publication. Because this change invalidates the existing snapshot, a value of **1** is specified for the **@force_invalidate_snapshot** parameter.  
   
- [!code-sql[HowTo#sp_droparticle](../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
+ [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
  The following example deletes two articles from a merge publication. Because these changes invalidate the existing snapshot, a value of **1** is specified for the **@force_invalidate_snapshot** parameter.  
   
- [!code-sql[HowTo#sp_dropmergearticle](../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
- [!code-sql[HowTo#sp_dropmergearticle](../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
+ [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
+ [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can delete articles programmatically by using Replication Management Objects (RMO). The RMO classes you use to delete an article depend on the type of publication to which the article belongs.  

@@ -94,7 +94,7 @@ manager: "jhubbard"
 ## Example  
  This example creates a publication that uses an alternate snapshot folder and a compressed snapshot.  
   
- [!code-sql[HowTo#sp_mergealtsnapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubaltsnapshot.sql#sp_mergealtsnapshot)]  
+ [!code-sql[HowTo#sp_mergealtsnapshot](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubaltsnapshot.sql#sp_mergealtsnapshot)]  
   
 ## See Also  
  [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)   
@@ -102,6 +102,6 @@ manager: "jhubbard"
  [Execute Scripts Before and After the Snapshot Is Applied](execute-scripts-before-and-after-the-snapshot-is-applied.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
  [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md)   
- [Change Publication and Article Properties](publish/change-publication-and-article-properties.md)  
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)  
   
   

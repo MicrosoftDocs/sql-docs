@@ -37,7 +37,7 @@ manager: "mblythe"
   
  Although indicators can be used by themselves in dashboards or free-form reports, they are most commonly used in tables or matrices to visualize data in rows or columns. The following diagram shows a table with a traffic light indicator that conveys year to date sales by sales person and territory.  
   
- ![rs_IndicatorTableTrafficLight](../../2014/reporting-services/media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")  
+ ![rs_IndicatorTableTrafficLight](../media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides built-in indicator sets and indicator icons to use as is, but you can also customize individual indicator icons and indicators sets to suit your needs.  
   
@@ -54,9 +54,9 @@ manager: "mblythe"
   
  Like gauges, indicators are positioned inside a gauge panel. When you want to configure an indicator by using the **Indicators Properties** dialog box or the Properties pane, you need to select the indicator instead of the panel. Otherwise, the available options apply to the gauge panel options and you cannot configure the indicator. The following picture shows a selected indicator in its gauge panel.  
   
- ![rs_GaugePanelWithIndicator](../../2014/reporting-services/media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
+ ![rs_GaugePanelWithIndicator](../media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
- Depending on how you want to depict the data value, gauges might be more effective than indicators. For more information, see [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md).  
+ Depending on how you want to depict the data value, gauges might be more effective than indicators. For more information, see [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
   
 ##  <a name="ChoosingIndicatorTypes"></a> Choosing the Indicator Type to Use  
@@ -66,10 +66,10 @@ manager: "mblythe"
   
 |Indicator set|Indicator type|  
 |-------------------|--------------------|  
-|![Rs_DirectionalIcons](../../2014/reporting-services/media/rs-directionalicons.gif "Rs_DirectionalIcons")|Directional: indicates trends using up, down, flat (no change), up-trending, or down-trending arrows.|  
-|![Rs_SymbolIcons](../../2014/reporting-services/media/rs-symbolicons.gif "Rs_SymbolIcons")|Symbols: indicates states using commonly recognized symbols such as checkmarks and exclamation marks.|  
-|![Rs_ShapeIcons](../../2014/reporting-services/media/rs-shapeicons.gif "Rs_ShapeIcons")|Shape: indicates conditions using commonly shapes such as traffic signs and diamond shapes.|  
-|![rs_RatingIcons](../../2014/reporting-services/media/rs-ratingicons.gif "rs_RatingIcons")|Ratings: indicates ratings by using common recognized shapes and symbols that show progressive values such as number of quadrants in a square.|  
+|![Rs_DirectionalIcons](../media/rs-directionalicons.gif "Rs_DirectionalIcons")|Directional: indicates trends using up, down, flat (no change), up-trending, or down-trending arrows.|  
+|![Rs_SymbolIcons](../media/rs-symbolicons.gif "Rs_SymbolIcons")|Symbols: indicates states using commonly recognized symbols such as checkmarks and exclamation marks.|  
+|![Rs_ShapeIcons](../media/rs-shapeicons.gif "Rs_ShapeIcons")|Shape: indicates conditions using commonly shapes such as traffic signs and diamond shapes.|  
+|![rs_RatingIcons](../media/rs-ratingicons.gif "rs_RatingIcons")|Ratings: indicates ratings by using common recognized shapes and symbols that show progressive values such as number of quadrants in a square.|  
   
  After you choose a indicator set, you can customize the appearance of each indicator icon in the set by setting its properties in the dialog boxes for indicators or the Properties pane. You can use the built-in colors, icons, and sizes or expressions to configure indicators.  
   
@@ -87,7 +87,7 @@ manager: "mblythe"
   
 -   Delete icons from the indicator set to make the data display simpler by using only a few icons.  
   
- For more information, see [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ For more information, see [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Using Indicators in Tables and Matrices  
@@ -95,27 +95,27 @@ manager: "mblythe"
   
  The following diagram shows a report with a table that uses the directional indicator set, **Four Arrows (Colored)**, to indicate sales. The indicator icons in the report are configured to use shades of blue instead of the default colors: red, yellow, and green.  
   
- ![rs_IndicatorReportBlueArrows](../../2014/reporting-services/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
+ ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
- For more information about adding, changing, and deleting indicators, see [Add or Delete an Indicator &#40;Report Builder and SSRS&#41;](report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md).  
+ For more information about adding, changing, and deleting indicators, see [Add or Delete an Indicator &#40;Report Builder and SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md).  
   
- When you first add an indicator to a report, it is configured to use default values. You can then change the values so the indicator depicts data the way you want. You can change the appearance of the indicator icons, the way the indicator chooses which icon to use, and change the icons used by an indicator set. For more information, see [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ When you first add an indicator to a report, it is configured to use default values. You can then change the values so the indicator depicts data the way you want. You can change the appearance of the indicator icons, the way the indicator chooses which icon to use, and change the icons used by an indicator set. For more information, see [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
- By default, indicators are configured to use percentages as the measurement unit and automatically detect the minimum and maximum values in the data. Each icon in the indicator set has a percentage range. The number of percentage ranges depends on the number of icons in the icon set, but the ranges are the same size and sequential. For example, if the icon set has five icons, there are five percentage ranges, each 20 percent in size. The first one starts at 0 and ends at 20, the second starts at 20 and ends at 40, and so forth. The indicator on the report uses the icon from the indicator set that has a percentage range within which the indicator data value falls. You can change the percentage range for each icon in the set. The minimum and maximum values can be set explicitly by providing a value or an expression. You can change the measurement unit to be a numeric value instead. In this situation, you do not specify minimum or maximum for the data. Instead, you provide only the start and end values for each icon that the indicator uses. For more information, see [Set and Configure Measurement Units &#40;Report Builder and SSRS&#41;](report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md).  
+ By default, indicators are configured to use percentages as the measurement unit and automatically detect the minimum and maximum values in the data. Each icon in the indicator set has a percentage range. The number of percentage ranges depends on the number of icons in the icon set, but the ranges are the same size and sequential. For example, if the icon set has five icons, there are five percentage ranges, each 20 percent in size. The first one starts at 0 and ends at 20, the second starts at 20 and ends at 40, and so forth. The indicator on the report uses the icon from the indicator set that has a percentage range within which the indicator data value falls. You can change the percentage range for each icon in the set. The minimum and maximum values can be set explicitly by providing a value or an expression. You can change the measurement unit to be a numeric value instead. In this situation, you do not specify minimum or maximum for the data. Instead, you provide only the start and end values for each icon that the indicator uses. For more information, see [Set and Configure Measurement Units &#40;Report Builder and SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
   
- Indicators convey data values by synchronizing across indicator data values within a specified scope. By default, the scope is the parent container of the indicator such as the table or matrix that contains the indicator. You can change the synchronization of the indicator by choosing a different scope, depending on the layout of your report. The indicator can omit synchronization. For more information, see [Set Synchronization Scope &#40;Report Builder and SSRS&#41;](report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
+ Indicators convey data values by synchronizing across indicator data values within a specified scope. By default, the scope is the parent container of the indicator such as the table or matrix that contains the indicator. You can change the synchronization of the indicator by choosing a different scope, depending on the layout of your report. The indicator can omit synchronization. For more information, see [Set Synchronization Scope &#40;Report Builder and SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md).  
   
- For general information about understanding and setting scope within reports, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ For general information about understanding and setting scope within reports, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Indicators use only a single value. If you have to show multiple data values, use a sparkline or data bar instead of an indicator. They can represent multiple data values but are also simple, easy to understand at small sizes, and work well in tables and matrices. For more information, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+ Indicators use only a single value. If you have to show multiple data values, use a sparkline or data bar instead of an indicator. They can represent multiple data values but are also simple, easy to understand at small sizes, and work well in tables and matrices. For more information, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SizingIndicatators"></a> Sizing Indicators to Maximize Visual Impact  
  In addition to color, direction, and shape you can use size to maximize the visual impact of indicators. Imagine a report that uses indicators to show customer satisfaction with different types of bicycles. The icon that the indicator uses can be configured to be different sizes depending on customer satisfaction. The greater the satisfaction, the larger the icon that appears in the report. The following picture shows a report of bicycle sales, and the sizes of the icon reflect the sales amount.  
   
- You use expressions to dynamically set the size of the stars based on values of field used by the indicator. For more information, see [Specify the Size of an Indicator Using an Expression &#40;Report Builder and SSRS&#41;](report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
+ You use expressions to dynamically set the size of the stars based on values of field used by the indicator. For more information, see [Specify the Size of an Indicator Using an Expression &#40;Report Builder and SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
   
- To learn more about writing and using expressions, see [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+ To learn more about writing and using expressions, see [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
   
 ##  <a name="IncludingIndicatorsInGauges"></a> Including Indicators and Gauges in Gauge Panels  
@@ -123,11 +123,11 @@ manager: "mblythe"
   
  The following diagram shows an indicator side by side and within a gauge.  
   
- ![rs_GaugePanelWithIndicatorAndGauge](../../2014/reporting-services/media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
+ ![rs_GaugePanelWithIndicatorAndGauge](../media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- For more information, see [Include Indicators and Gauges in a Gauge Panel &#40;Report Builder and SSRS&#41;](report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
+ For more information, see [Include Indicators and Gauges in a Gauge Panel &#40;Report Builder and SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
- For more information about using gauges, see [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md).  
+ For more information about using gauges, see [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SequenceIndicatorStates"></a> Sequence of Indicator States  
@@ -185,22 +185,22 @@ manager: "mblythe"
 ##  <a name="HowTo"></a> How-to Topics  
  This section lists procedures that show you how to add, change, and delete indicators; how to configure and customize indicators; and how to use indicators in gauges.  
   
--   [Add or Delete an Indicator &#40;Report Builder and SSRS&#41;](report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [Add or Delete an Indicator &#40;Report Builder and SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Set and Configure Measurement Units &#40;Report Builder and SSRS&#41;](report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Set and Configure Measurement Units &#40;Report Builder and SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Set Synchronization Scope &#40;Report Builder and SSRS&#41;](report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Set Synchronization Scope &#40;Report Builder and SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [Specify the Size of an Indicator Using an Expression &#40;Report Builder and SSRS&#41;](report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [Specify the Size of an Indicator Using an Expression &#40;Report Builder and SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [Include Indicators and Gauges in a Gauge Panel &#40;Report Builder and SSRS&#41;](report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [Include Indicators and Gauges in a Gauge Panel &#40;Report Builder and SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## See Also  
- [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)   
- [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -20,7 +20,7 @@ manager: "mblythe"
   
  How you control the rows and columns depends on whether the tablix data region has group headers. When you click in a tablix data region that has group headers, a dotted line shows the tablix areas, as shown in the following figure:  
   
- ![Tablix data region areas](../../2014/reporting-services/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  Row and column group headers are created automatically when you add groups by using the New Table or Matrix wizard or the the New Chart wizard, by adding fields to the Grouping pane, or by using context menus. If the tablix data region has only a tablix body area and no group headers, the rows and columns are tablix members.  
   
@@ -68,8 +68,8 @@ manager: "mblythe"
 ## See Also  
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [Controlling Page Breaks, Headings, Columns, and Rows &#40;Report Builder and SSRS&#41;](report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Keep Headers Visible When Scrolling Through a Report &#40;Report Builder and SSRS&#41;](report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Controlling Page Breaks, Headings, Columns, and Rows &#40;Report Builder and SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Keep Headers Visible When Scrolling Through a Report &#40;Report Builder and SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   

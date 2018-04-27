@@ -27,11 +27,11 @@ manager: "mblythe"
   
  The following image shows a table.  
   
- ![Table](../../2014/reporting-services/media/table.png "Table")  
+ ![Table](../media/table.png "Table")  
   
  The following image shows a matrix.  
   
- ![Matrix](../../2014/reporting-services/media/matrix.png "Matrix")  
+ ![Matrix](../media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,7 +48,7 @@ manager: "mblythe"
   
 1.  On the design surface, click anywhere in the table to display static members, as well as groups, in the grouping pane.  
   
-     ![Grouping pane](../../2014/reporting-services/media/grouppane-updated.png "Grouping pane")  
+     ![Grouping pane](../media/grouppane-updated.png "Grouping pane")  
   
      The Row Groups pane displays the hierarchical static and dynamic members for the row groups hierarchy, and the Column groups pane shows a similar display for the column groups hierarchy.  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
   
 3.  Click the static member (row or column) that you want to remain visible while scrolling. The Properties pane displays the **Tablix Member** properties.  
   
-     ![Tablix Member properties](../../2014/reporting-services/media/grouppane-tablixmember-updated.png "Tablix Member properties")  
+     ![Tablix Member properties](../media/grouppane-tablixmember-updated.png "Tablix Member properties")  
   
 4.  In the Properties pane, set **FixedData** to `True`.  
   
@@ -70,8 +70,8 @@ manager: "mblythe"
  [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Display Row and Column Headers on Multiple Pages &#40;Report Builder and SSRS&#41;](report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [Grouping Pane &#40;Report Builder&#41;](report-design/grouping-pane-report-builder.md)  
+ [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Display Row and Column Headers on Multiple Pages &#40;Report Builder and SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [Grouping Pane &#40;Report Builder&#41;](grouping-pane-report-builder.md)  
   
   

@@ -154,7 +154,7 @@ manager: "jhubbard"
   
 -   ALTER TRIGGER  
   
- For more information, see [Make Schema Changes on Publication Databases](publish/make-schema-changes-on-publication-databases.md).  
+ For more information, see [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md).  
   
 ## Considerations for Publishing  
  Keep the following issues in mind when publishing database objects:  
@@ -248,7 +248,7 @@ manager: "jhubbard"
 -   Transactional replication and unfiltered merge replication support publishing a table in multiple publications and then subscribing within a single table in the subscription database (commonly referred to as a roll up scenario). Roll up is often used for aggregating subsets of data from multiple locations in one table at a central Subscriber. Filtered merge publications do not support the central Subscriber scenario. For merge replication, roll up is typically implemented through a single publication with parameterized row filters. For more information, see [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## See Also  
- [Add Articles to and Drop Articles from Existing Publications](publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Configure Distribution](configure-distribution.md)   
  [Initialize a Subscription](initialize-a-subscription.md)   
  [Scripting Replication](scripting-replication.md)   

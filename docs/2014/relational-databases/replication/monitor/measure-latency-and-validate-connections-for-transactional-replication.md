@@ -128,7 +128,7 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example posts a tracer token record and uses the returned ID of the posted tracer token to view latency information.  
   
- [!code-sql[HowTo#sp_tracertokens](../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
+ [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   

@@ -18,7 +18,7 @@ manager: "mblythe"
 # Shared Dataset Design View (Report Builder)
   The Shared Dataset Design window helps you create a dataset query that you can share with others. The window lets you select a shared data source, specify properties for the shared dataset, and create a query in the query designer.  
   
- ![rs_SharedDatasetDesignMode](../../2014/reporting-services/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
+ ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
  For more information about working with data in a report, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md).  
   

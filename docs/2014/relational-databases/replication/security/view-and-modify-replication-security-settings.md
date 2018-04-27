@@ -560,9 +560,9 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Example (RMO)  
  This example checks the supplied login value and changes all passwords for the supplied Windows login or SQL Server login stored by replication on the server.  
   
- [!code-csharp[HowTo#rmo_ChangeServerPasswords](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changeserverpasswords)]  
+ [!code-csharp[HowTo#rmo_ChangeServerPasswords](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
- [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
+ [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
 ##  <a name="FollowUp"></a> Follow Up: After you modify replication security settings  
  After changing an agent login or password, you must stop and restart the agent before the change takes effect.  
@@ -570,10 +570,10 @@ manager: "jhubbard"
 ## See Also  
  [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
  [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
  [Replication Agent Security Model](replication-agent-security-model.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)  
   
   

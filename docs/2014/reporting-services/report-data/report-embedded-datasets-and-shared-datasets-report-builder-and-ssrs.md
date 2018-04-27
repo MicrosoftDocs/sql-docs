@@ -28,7 +28,7 @@ manager: "mblythe"
   
  A dataset also includes parameters, filters, and data options that specify character sensitivities, such as case, kana type, width, accent, and collation information.  
   
- ![rs_DatasetStory](../../2014/reporting-services/media/rs-datasetstory.gif "rs_DatasetStory")  
+ ![rs_DatasetStory](../media/rs-datasetstory.gif "rs_DatasetStory")  
   
 1.  **Datasets in the Report Data pane** A dataset appears in the Report Data pane after you create an embedded dataset or add a shared dataset. A dataset is based on a data source.  
   
@@ -44,9 +44,9 @@ manager: "mblythe"
   
 7.  **Metadata from schema** The data provider runs a schema query command separate from the query to retrieve metadata for the dataset field collection. For example, a [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` statement returns the column names for a database table. Use the Report Data pane to expand the dataset to view the dataset field collection.  
   
- Data can also be included in a report by using predefined shared datasets and report parts. These items already have the data connection information that you need. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md) and [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md).  
+ Data can also be included in a report by using predefined shared datasets and report parts. These items already have the data connection information that you need. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md) and [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md).  
   
- For more information about built-in data source types and data extensions, see [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md).  
+ For more information about built-in data source types and data extensions, see [Add Data from External Data Sources &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,7 +54,7 @@ manager: "mblythe"
 ##  <a name="Overview"></a> Understanding Report Datasets and Queries  
  A report dataset contains a query command that runs on the external data source and specifies what data to retrieve. To build the query command, you use the query designer that is associated with the data extension for the external data source. In the query designer, you can run the query command and view a result set. The result set is a rectangular row set that has column names and rows with the same number of values in each row. Hierarchical data, also known as *ragged hierarchies*, is not supported. The column names are saved in the report definition as a list of dataset fields.  
   
- After you add datasets to your report, you drag fields from their field collections in the Report Data pane to tables, charts, and other report items that you use to design the report layout. For more information about working with fields, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
+ After you add datasets to your report, you drag fields from their field collections in the Report Data pane to tables, charts, and other report items that you use to design the report layout. For more information about working with fields, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### Understanding Data from a Report Dataset  
  Depending on the data extension, a report dataset can consist of the following types of data:  
@@ -77,7 +77,7 @@ manager: "mblythe"
   
  When the report is processed at run time, the actual result set returned for a query may have zero or more rows. It is also possible that the columns defined in the query may be missing from the data source. Null values from the data source are mapped to the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] value `System.DBNull.Value`.  
   
- For more information about dataset fields, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
+ For more information about dataset fields, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### Dataset Query  
  When you run a dataset query in a query designer at design time, you see a row set from the data source that shows you example data. At run time, when a user views the report, the dataset query may produce different values because the data on the data source has changed. Each time the report is processed, new data may appear.  
@@ -104,7 +104,7 @@ manager: "mblythe"
   
 -   Create a new custom field based on a database field and provide a custom format.  
   
- For more information, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
+ For more information, see [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### Importing Existing Queries for a Dataset  
  When you create a dataset, you can create a new query or you can import an existing query from a file or from another report. When you import a query from another report, you can choose which query to import from the list of datasets in the report.  
@@ -116,19 +116,19 @@ manager: "mblythe"
   
  A shared dataset is defined on a report server or SharePoint site, is based on a shared data source, and can be used by multiple reports and report parts. Changes made to a shared dataset definition affect all reports and all report parts that use it.  
   
- When you add a shared dataset to a report, the dataset field collection is updated to the current definition on the report server. You do not receive update notifications when changes are made on the report server. To synchronize a local copy of the field collection with changes made to the shared dataset definition on the report server, you must refresh the local field collection. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
+ When you add a shared dataset to a report, the dataset field collection is updated to the current definition on the report server. You do not receive update notifications when changes are made on the report server. To synchronize a local copy of the field collection with changes made to the shared dataset definition on the report server, you must refresh the local field collection. For more information, see [Add, Edit, Refresh Fields in the Report Data Pane &#40;Report Builder and SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
- Published report items contain the embedded and shared datasets that they depend on. For more information, see [Report Parts and Datasets in Report Builder](report-data/report-parts-and-datasets-in-report-builder.md).  
+ Published report items contain the embedded and shared datasets that they depend on. For more information, see [Report Parts and Datasets in Report Builder](report-parts-and-datasets-in-report-builder.md).  
   
  The difference between the embedded and shared data sources is in how they are created, stored, and managed. The following table summarizes the differences between embedded and shared data sources:  
   
 |Description|Embedded<br /><br /> Data Source|Shared<br /><br /> Data Source|  
 |-----------------|------------------------------|----------------------------|  
-|Data connection is embedded in the report definition.|![Available](../../2014/reporting-services/media/greencheck.gif "Available")||  
-|Pointer to the data connection on the report server is embedded in the report definition.||![Available](../../2014/reporting-services/media/greencheck.gif "Available")|  
-|Managed on the report server|![Available](../../2014/reporting-services/media/greencheck.gif "Available")|![Available](../../2014/reporting-services/media/greencheck.gif "Available")|  
-|Required for shared datasets||![Available](../../2014/reporting-services/media/greencheck.gif "Available")|  
-|Required for components||![Available](../../2014/reporting-services/media/greencheck.gif "Available")|  
+|Data connection is embedded in the report definition.|![Available](../media/greencheck.gif "Available")||  
+|Pointer to the data connection on the report server is embedded in the report definition.||![Available](../media/greencheck.gif "Available")|  
+|Managed on the report server|![Available](../media/greencheck.gif "Available")|![Available](../media/greencheck.gif "Available")|  
+|Required for shared datasets||![Available](../media/greencheck.gif "Available")|  
+|Required for components||![Available](../media/greencheck.gif "Available")|  
   
  In Report Designer, you can create shared datasets as part of a report project, and control whether to deploy them to a report server. You cannot browse to a report server and select a shared dataset to add to your report.  
   
@@ -149,7 +149,7 @@ manager: "mblythe"
 |Fields|Fields from the query command<br /><br /> Calculated fields are not part of the dataset definition|View fields, but cannot change them<br /><br /> The field collection is static based on the query at the time you added the shared dataset to the report. To update, click **Refresh Fields** in the **Dataset Properties** dialog box. The actual field collection is whatever the current query in the definition returns.<br /><br /> Add calculated fields|  
 |Dataset|Data options such as case sensitivity|Override data options in the instance|  
   
- For more information about creating datasets, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) and [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+ For more information about creating datasets, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) and [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
 ##  <a name="SortGroupFilter"></a> Filtering, Sorting, and Grouping Data in a Dataset  
  Data in a dataset comes from running a query command on an external data source. The query command syntax for a data extension determines whether data can be sorted or grouped. Sorting and grouping takes place in the query before the data is retrieved for a report. Filtering takes place after the data is retrieved for a report.  
@@ -186,14 +186,14 @@ manager: "mblythe"
   
 -   Cannot include references to the built-in collection Parameters, which represents report parameters.  
   
- To configure query parameter values for a shared dataset, in dataset design mode, browse to and open a shared dataset from the report server, and set options on the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md) page. For more information, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+ To configure query parameter values for a shared dataset, in dataset design mode, browse to and open a shared dataset from the report server, and set options on the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md) page. For more information, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  For some multidimensional data sources, such as [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the graphical query designer enables you to specify query filters and select an option to create a corresponding query parameter. When you select the parameter option, the data extension automatically creates a separate report dataset to provide available values for a drop-down list for that parameter. By default, these hidden datasets do not appear in the Report Data pane.  
   
  Report parameters that are linked to query parameters help filter data before the data is returned from the external data source. You can also filter data in the report by creating filters that are part of the report definition. For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### Displaying Hidden Datasets  
- When you create a parameterized query for some multidimensional data sources, datasets that provide valid values for the parameter are automatically created. On some query designers, you do this by specifying filters and then selecting the option to create parameters. By default, these datasets do not appear in the Report Data pane, but they can be displayed. For more information, see [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+ When you create a parameterized query for some multidimensional data sources, datasets that provide valid values for the parameter are automatically created. On some query designers, you do this by specifying filters and then selecting the option to create parameters. By default, these datasets do not appear in the Report Data pane, but they can be displayed. For more information, see [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 ##  <a name="Maps"></a> Using Maps and Datasets  
  If you include a map in your report, you must provide spatial data. Spatial data can come from a report dataset, from a map in the map gallery, or from ESRI Shapefiles. Spatial data from a report or from an ESRI Shapefile does not appear as a dataset in the Report Data pane. For more information, see [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
@@ -212,14 +212,14 @@ manager: "mblythe"
 -   You cannot display detail data from multiple datasets in a single data region. However, you can display aggregate or built-in function values for multiple datasets within a data region. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md). If you need to combine detail data from multiple datasets into one data region, you must rewrite your query to retrieve the data as a single dataset.  
   
 ##  <a name="NoRows"></a> Displaying a Message When No Rows of Data Are Available  
- During report processing, when the query for a dataset runs, the result set may contain no rows. In the rendered report, a data region linked to an empty dataset displays as an empty data region. You can specify text to display in the rendered report in place of the empty data region. You can also specify a message for subreports when the queries for all datasets produce no data at run time. For more information, see [Set a No Data Message for a Data Region &#40;Report Builder and SSRS&#41;](report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
+ During report processing, when the query for a dataset runs, the result set may contain no rows. In the rendered report, a data region linked to an empty dataset displays as an empty data region. You can specify text to display in the rendered report in place of the empty data region. You can also specify a message for subreports when the queries for all datasets produce no data at run time. For more information, see [Set a No Data Message for a Data Region &#40;Report Builder and SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Setting Dataset Options  
- For data sources that support international data, you might need to adjust properties for a dataset that affect the sort order, international character properties, and case sensitivity. These properties include case, kanatype, width, accent, and collation. For more information, see "International Considerations for Databases and Database Engine Applications" and "Working with Collations" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335). For more information about how to set these properties, see [Dataset Properties Dialog Box, Options &#40;Report Builder&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md).  
+ For data sources that support international data, you might need to adjust properties for a dataset that affect the sort order, international character properties, and case sensitivity. These properties include case, kanatype, width, accent, and collation. For more information, see "International Considerations for Databases and Database Engine Applications" and "Working with Collations" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335). For more information about how to set these properties, see [Dataset Properties Dialog Box, Options &#40;Report Builder&#41;](dataset-properties-dialog-box-options-report-builder.md).  
   
 ## See Also  
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)  
   
   

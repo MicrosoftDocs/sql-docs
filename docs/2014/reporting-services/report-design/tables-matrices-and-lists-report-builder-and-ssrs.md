@@ -51,7 +51,7 @@ manager: "mblythe"
   
  The following pictures show simple reports with a table, matrix, or list.  
   
- ![RS_TableMatrixList](../../2014/reporting-services/media/rs-tablematrixlist.gif "RS_TableMatrixList")  
+ ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
  To quickly get started with tables, matrices, and lists, see [Tutorial: Creating a Basic Table Report &#40;Report Builder&#41;](tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Creating a Matrix Report &#40;Report Builder&#41;](tutorial-creating-a-matrix-report-report-builder.md), and [Tutorial: Creating a Free Form Report &#40;Report Builder&#41;](tutorial-creating-a-free-form-report-report-builder.md).  
   
@@ -64,20 +64,20 @@ manager: "mblythe"
 ##  <a name="Table"></a> Table  
  Use a table to display detail data, organize the data in row groups, or both. The Table template contains three columns with a table header row and a details row for data. The following figure shows the initial table template, selected on the design surface:  
   
- ![Table template on design surface, selected](../../2014/reporting-services/media/rs-tabletemplatenewselected.gif "Table template on design surface, selected")  
+ ![Table template on design surface, selected](../media/rs-tabletemplatenewselected.gif "Table template on design surface, selected")  
   
  You can group data by a single field, by multiple fields, or by writing your own expression. You can create nested groups or independent, adjacent groups and display aggregated values for grouped data, or add totals to groups. For example, if your table has a row group called [Category], you can add a subtotal for each group as well as a grand total for the report. To improve the appearance of the table and highlight data you want to emphasize, you can merge cells and apply formatting to data and table headings.  
   
  You can initially hide detail or grouped data, and include drilldown toggles to enable a user to interactively choose how much data to show.  
   
- For more information, see [Tables &#40;Report Builder  and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md).  
+ For more information, see [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="Matrix"></a> Matrix  
  Use a matrix to display aggregated data summaries, grouped in rows and columns, similar to a PivotTable or crosstab. The number of rows and columns for groups is determined by the number of unique values for each row and column groups. The following figure shows the initial matrix template, selected on the design surface:  
   
- ![New Matrix added from Toolbox, selected](../../2014/reporting-services/media/rs-matrixtemplatenewselected.gif "New Matrix added from Toolbox, selected")  
+ ![New Matrix added from Toolbox, selected](../media/rs-matrixtemplatenewselected.gif "New Matrix added from Toolbox, selected")  
   
  You can group data by multiple fields or expressions in row and column groups. At run time, when the report data and data regions are combined, a matrix grows horizontally and vertically on the page as columns for column groups and rows for row groups are added. The matrix cells display aggregate values that are scoped to the intersection of the row and column groups to which the cell belongs. For example, if your matrix has a row group (Category) and two column groups (Territory and Year) that display the sum of sales, the report displays two cells with sums of sales for each value in the Category group. The scope of the cells are the two intersections are: Category and Territory and Category and Year. The matrix can include nested and adjacent groups. Nested groups have a parent-child relationship and adjacent groups a peer relationship. You can add subtotals for any and all levels of nested row and column groups within the matrix.  
   
@@ -85,16 +85,16 @@ manager: "mblythe"
   
  You can also include drilldown toggles that initially hide detail data; the user can then click the toggles to display more or less detail as needed.  
   
- For more information, see [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md).  
+ For more information, see [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="List"></a> List  
  Use a list to create a free-form layout. You are not limited to a grid layout, but can place fields freely inside the list. You can use a list to design a form for displaying many dataset fields or as a container to display multiple data regions side by side for grouped data. For example, you can define a group for a list; add a table, chart, and image; and display values in table and graphic form for each group value, as you might for an employee or patient record.  
   
- ![New List added from Toolbox, selected](../../2014/reporting-services/media/rs-listtemplatenewselected.gif "New List added from Toolbox, selected")  
+ ![New List added from Toolbox, selected](../media/rs-listtemplatenewselected.gif "New List added from Toolbox, selected")  
   
- For more information, see [Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ For more information, see [Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 
   
@@ -105,7 +105,7 @@ manager: "mblythe"
   
  If you choose to prepare the data in the table, matrix, or list data region of a report, you set properties on the data region or cells within the data region. If you want to filter or sort the data, set the properties on the data region. For example, to sort the data you specify the columns to sort on and the sort direction. If you want to provide an alternative value for a field, you set the values of the cell text that displays the field. For example, to display Blank when a field is empty or null, you use an expression to set the value.  
   
- For more information, see [Preparing Data for Display in a Tablix Data Region &#40;Report Builder and SSRS&#41;](report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md).  
+ For more information, see [Preparing Data for Display in a Tablix Data Region &#40;Report Builder and SSRS&#41;](preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md).  
   
 
   
@@ -117,40 +117,40 @@ manager: "mblythe"
 
   
 ##  <a name="ChangingBetweenTablixTemplates"></a> Changing Between Tablix Templates  
- You are not limited by your initial tablix template choice. As you add groups, totals, and labels, you might want to modify your tablix design. For example, you might start with a table and then delete the details row and add column groups. For more information, see [Exploring the Flexibility of a Tablix Data Region &#40;Report Builder and SSRS&#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
+ You are not limited by your initial tablix template choice. As you add groups, totals, and labels, you might want to modify your tablix design. For example, you might start with a table and then delete the details row and add column groups. For more information, see [Exploring the Flexibility of a Tablix Data Region &#40;Report Builder and SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
  You can continue to develop a table, matrix, or list by adding any tablix feature. Tablix features include displaying detail data or aggregates for grouped data on rows and columns. You can create nested groups, independent adjacent groups, or recursive groups. You can filter and sort grouped data, and easily combine groups by including multiple group expressions in a group definition  
   
- You can also add totals for a group or grand totals for the data region. You can hide rows or columns to simplify a report and enable the user to toggle the display of the hidden data, as in a drilldown report. For more information, see [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+ You can also add totals for a group or grand totals for the data region. You can hide rows or columns to simplify a report and enable the user to toggle the display of the hidden data, as in a drilldown report. For more information, see [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 
   
 ##  <a name="HowTo"></a> How-To Topics  
  This section lists procedures that show you, step by step, how to work with work with tables, matrices and lists in your reports; how to display data in rows and columns, add and delete columns, merge cells, and include subtotals for row and column groups.  
   
--   [Add a Details Group &#40;Report Builder and SSRS&#41;](report-design/add-a-details-group-report-builder-and-ssrs.md)  
+-   [Add a Details Group &#40;Report Builder and SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [Add a Total to a Group or Tablix Data Region &#40;Report Builder and SSRS&#41;](report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [Add a Total to a Group or Tablix Data Region &#40;Report Builder and SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [Change an Item Within a Cell &#40;Report Builder and SSRS&#41;](report-design/change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [Change an Item Within a Cell &#40;Report Builder and SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [Change Row Height or Column Width &#40;Report Builder and SSRS&#41;](report-design/change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [Change Row Height or Column Width &#40;Report Builder and SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [Insert or Delete a Column &#40;Report Builder and SSRS&#41;](report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [Insert or Delete a Column &#40;Report Builder and SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [Insert or Delete a Row &#40;Report Builder and SSRS&#41;](report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [Insert or Delete a Row &#40;Report Builder and SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [Merge Cells in a Data Region &#40;Report Builder and SSRS&#41;](report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Merge Cells in a Data Region &#40;Report Builder and SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Create a Recursive Hierarchy Group &#40;Report Builder and SSRS&#41;](report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [Create a Recursive Hierarchy Group &#40;Report Builder and SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Add or Delete a Group in a Data Region &#40;Report Builder and SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [Create a Stepped Report &#40;Report Builder and SSRS&#41;](report-design/create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [Create a Stepped Report &#40;Report Builder and SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Add, Move, or Delete a Table, Matrix, or List &#40;Report Builder and SSRS&#41;](report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Add, Move, or Delete a Table, Matrix, or List &#40;Report Builder and SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
@@ -160,31 +160,31 @@ manager: "mblythe"
  [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)  
  Explains key concepts related to the tablix data region such as areas of the tablix, detail and grouped data, column and row groups, and static and dynamic rows and columns.  
   
- [Adding Data to a Tablix Data Region &#40;Report Builder and SSRS&#41;](report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Adding Data to a Tablix Data Region &#40;Report Builder and SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Provides detailed information about adding detail and grouped data, subtotals and totals, and labels to a tablix data region.  
   
- [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Describes properties for a tablix data region that you can modify to change the way a tablix data region appears when you view it in a report.  
   
- [Controlling Row and Column Headings &#40;Report Builder and SSRS&#41;](report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [Controlling Row and Column Headings &#40;Report Builder and SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  Describes how to control row and column headings when a table, matrix, or list data region cans span multiple pages horizontally or vertically.  
   
- [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  Describes how to display recursive data where the relationship between parent and child is represented by fields in the dataset.  
   
- [Understanding Groups &#40;Report Builder and SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)  
+ [Understanding Groups &#40;Report Builder and SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
  Explains what groups are and when you use them and describes the groups available for the different tablix data regions.  
   
 
   
 ## See Also  
- [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Nested Data Regions &#40;Report Builder and SSRS&#41;](report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
+ [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Nested Data Regions &#40;Report Builder and SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

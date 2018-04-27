@@ -76,12 +76,12 @@ manager: "mblythe"
   
  To format the keyword, enclose a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format string in parentheses. For example, to specify the value of the data point in a ToolTip as a number with two decimal places, include the format string "N2" in braces, such as "#VALY{N2}" for the **ToolTip** property on the series. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings, see [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) on MSDN. For more information about formatting numbers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- For more information about adding keywords to a chart, see [Show ToolTips on a Series &#40;Report Builder and SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md), [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](report-design/chart-legend-change-item-text-report-builder.md).  
+ For more information about adding keywords to a chart, see [Show ToolTips on a Series &#40;Report Builder and SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md), [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](chart-legend-change-item-text-report-builder.md).  
   
 ## Increasing Readability in a Chart with Multiple Data Points  
  If you have multiple series on your chart, it may reduce the readability of the chart data points. When adding multiple series to the chart, consider using a technique that distinguishes how to read and understand each series in the chart effectively. For more information, see [Multiple Series on a Chart &#40;Report Builder and SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- For simplicity, when you are using a Shape chart, consider adding only one data field and one category field. For more information, see [Shape Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md). If your chart needs more than one data field and category field, consider changing the chart type. You can right-click the series and select **Change Chart Type**.  
+ For simplicity, when you are using a Shape chart, consider adding only one data field and one category field. For more information, see [Shape Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md). If your chart needs more than one data field and category field, consider changing the chart type. You can right-click the series and select **Change Chart Type**.  
   
 ## Inserting Data Point Markers  
  A data point marker is a visual indicator used to draw attention to each data point in a series. On a scatter chart, the marker is used to determine the shape and size of the individual data points. The size of the marker is specified based on the chart type. You can change the size, color, or style of the marker. Markers are not available for range and shape chart types, or any stacked subtypes.  
@@ -91,15 +91,15 @@ manager: "mblythe"
   
  [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)  
   
- [Display Percentage Values on a Pie Chart &#40;Report Builder and SSRS&#41;](report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Display Percentage Values on a Pie Chart &#40;Report Builder and SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
 ## See Also  
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
- [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
+ [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

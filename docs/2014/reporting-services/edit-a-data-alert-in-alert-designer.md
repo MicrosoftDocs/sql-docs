@@ -25,7 +25,7 @@ manager: "mblythe"
   
  The following picture shows you the context menu on a data alert in Data Alert Manager.  
   
- ![Open Data Alert Designer by clicking Edit](../../2014/reporting-services/media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
+ ![Open Data Alert Designer by clicking Edit](media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
   
  The following procedure includes the steps to open the alert definition for editing in Data Alert Designer from Data Alert Manager.  
   

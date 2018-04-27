@@ -83,7 +83,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
     -   The Report.Language property.  
   
- For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## Example  
  In the following example, assume the table is bound to a dataset that includes a sales territory identifier TerritoryGroupID. A separate dataset called "Stores" contains the list of all stores in a territory and includes the territory identifier ID and the name of the store StoreName.  
@@ -147,7 +147,7 @@ End Function
 ## See Also  
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Data Types in Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

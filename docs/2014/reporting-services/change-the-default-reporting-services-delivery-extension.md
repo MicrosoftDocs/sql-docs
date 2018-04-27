@@ -27,7 +27,7 @@ manager: "mblythe"
 ## Default Native mode report server configuration  
  The order of a delivery extension appears in Report Manager in the **Delivered by** list is based on the order of the delivery extension entries in the **RSReportServer.config** file. For example the following image shows e-mail first in the list and it is selected by default.  
   
- ![default list of delivery extensions](../../2014/reporting-services/media/ssrs-default-delivery.png "default list of delivery extensions")  
+ ![default list of delivery extensions](media/ssrs-default-delivery.png "default list of delivery extensions")  
   
  The following is the default section of **RSReportServer.config** that controls the default delivery extension and the order they are displayed in Report Manager. Note that email appears first in the file and it is set as the default.  
   
@@ -51,7 +51,7 @@ manager: "mblythe"
   
      Open the RSReportServer.config file in a text editor. For more information on the configuration file, see [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md). After the configuration changes, the UI will look like the following image:  
   
-     ![modified list of delivery extensions](../../2014/reporting-services/media/ssrs-modified-delivery.png "modified list of delivery extensions")  
+     ![modified list of delivery extensions](media/ssrs-modified-delivery.png "modified list of delivery extensions")  
   
 2.  Modify the DeliveryUI section to look like the following sample and note the key changes of:  
   

@@ -30,7 +30,7 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  Users access data sources when they create and run queries. You should grant minimal permissions on the data sources, such as read-only permissions.  
   
- For more information about working with a [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] multidimensional data source, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](report-data/hyperion-essbase-connection-type-ssrs.md).  
+ For more information about working with a [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] multidimensional data source, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](hyperion-essbase-connection-type-ssrs.md).  
   
  This section describes the toolbar buttons and query designer panes for each mode of the graphical query designer.  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
   
  The following figure labels the panes for Design mode.  
   
- ![Query Designer for Hyperion Essbase data source](../../2014/reporting-services/media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
+ ![Query Designer for Hyperion Essbase data source](../media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
   
  The following table lists the panes in this mode.  
   
@@ -61,8 +61,8 @@ manager: "mblythe"
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. Not available for this data source type.|  
-|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Refresh dataset fields](../../2014/reporting-services/media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
+|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Refresh dataset fields](../media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
 |![Add calculated member](../../2014/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box. Use this to create or edit expressions for a calculated member, including setting the **Solve Order** property.|  
 |![Toggle for show empty cells](../../2014/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Switch between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
 |![AutoExecute the query](../../2014/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made, for example, deleting a column in the Data pane. Results are shown in the Data pane.|  
@@ -74,7 +74,7 @@ manager: "mblythe"
 ## Graphical Query Designer in Query Mode  
  To change the graphical query designer to Query mode, click the **Design Mode** toggle button on the toolbar. The following figure indicates the parts of the query designer in Query mode.  
   
- ![Query Designer in Query Mode for Hyperion](../../2014/reporting-services/media/rsqd-hyperionessbase-mdx-querymode.gif "Query Designer in Query Mode for Hyperion")  
+ ![Query Designer in Query Mode for Hyperion](../media/rsqd-hyperionessbase-mdx-querymode.gif "Query Designer in Query Mode for Hyperion")  
   
  The following table describes the function of each pane.  
   
@@ -99,7 +99,7 @@ manager: "mblythe"
 -   **AutoExecute** (![AutoExecute the query](../../2014/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
   
 ## See Also  
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)  
   
   

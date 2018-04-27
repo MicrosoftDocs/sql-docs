@@ -21,7 +21,7 @@ manager: "mblythe"
 # Data Alert Manager for Alerting Administrators
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint alerting administrators to manage data alerts. Alerting administrators can view information about all alerts saved to the site and delete alerts. The following picture shows the features available to SharePoint alerting managers in Data Alert Manager.  
   
- ![Alert Manager for SharePoin tsite administrators](../../2014/reporting-services/media/rs-alertmanagersite.gif "Alert Manager for SharePoin tsite administrators")  
+ ![Alert Manager for SharePoin tsite administrators](media/rs-alertmanagersite.gif "Alert Manager for SharePoin tsite administrators")  
   
  When the site is enabled for data alerts, two SharePoint pages, MyDataAlerts.aspx and SiteDataAlerts.aspx are created and added to the SharePoint site. SiteDataAlerts.aspx is Data Alert Manager for alerting administrators. Alerting administrators can open Data Alert Manager from the Site Settings SharePoint page. Alerting administrators must have SharePoint Manage Alerts permission to open Data Alert Manager.  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
 ##  <a name="ViewingAlerts"></a> Viewing Data Alert Information  
  When Reporting Services is installed and configured in SharePoint, the Site Settings SharePoint page includes the **Reporting Services** options. Alerting administrators click the **Manage Data Alerts** option within Reporting Service to open Data Alert Manager. The following picture shows from where on the Site Settings page you open Data Alert Manager.  
   
- ![Reporting Services section of Site Settings page](../../2014/reporting-services/media/rs-sitesettings.gif "Reporting Services section of Site Settings page")  
+ ![Reporting Services section of Site Settings page](media/rs-sitesettings.gif "Reporting Services section of Site Settings page")  
   
  Data Alert Manager includes a table that lists the alert name, report name, the name of the alert owner, the number the alert message was sent, the last time the alert was run, the last time the alert definition was modified, and the status of the alert message. If the alert cannot be generated or generated or sent, the status column contains information about the error and helps you troubleshoot the alert. For more information, see [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   

@@ -29,7 +29,7 @@ manager: "mblythe"
 # Report Design View (Report Builder)
   The Report Builder window is designed to help you easily organize your report resources and quickly build the reports you need. The design surface is at the center of the window, with the Ribbon above and the Report Data, Grouping, and Properties panes and Report Part Gallery to the left, below, and right. The design surface is where you add and organize your report items. The Ribbon organizes traditional menu items into categories that you can easily find and use. The panes help you to add, select, and organize your report resources, and change report item properties.  
   
- ![ReportDesignView](../../2014/reporting-services/media/reportdesignview.gif "ReportDesignView")  
+ ![ReportDesignView](../media/reportdesignview.gif "ReportDesignView")  
   
 ##  <a name="Ribbon"></a> The Ribbon  
  The Ribbon is designed to help you quickly find the commands that you need to complete a task. Commands are organized in logical groups, which are collected together under tabs. Each tab relates to a type of activity, such as inserting report items or formatting text.  
@@ -75,7 +75,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  If you drag a field from the Report Data pane directly to the report design surface instead of placing it in a data region such as a table or chart, when you run the report, you will see only the first value from the data in that field.  
   
- For information about using the keyboard to manipulate items on the design surface, see [Keyboard Shortcuts &#40;Report Builder&#41;](report-builder/keyboard-shortcuts-report-builder.md)  
+ For information about using the keyboard to manipulate items on the design surface, see [Keyboard Shortcuts &#40;Report Builder&#41;](keyboard-shortcuts-report-builder.md)  
   
 ### Design Surface Size and Print Area  
  The design surface size might be different from the page size print area you specify to print the report. Changing the size of the design surface will not change the print area of your report. No matter what size you set for the print area of your report, the full design area size does not change. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md).  
@@ -149,7 +149,7 @@ manager: "mblythe"
 ##  <a name="GroupPane"></a> The Grouping Pane (Report Builder)  
  Groups are used to organize your report data into a visual hierarchy and to calculate totals. You can view the row and column groups within a data region on the design surface and also in the Grouping pane. The Grouping pane has two panes: Row Groups and Column Groups. When you select a data region, the Grouping pane displays all the groups within that data region as a hierarchical list: Child groups appear indented under their parent groups.  
   
- ![Grouping pane for nested row and column groups](../../2014/reporting-services/media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
+ ![Grouping pane for nested row and column groups](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
   
  You can create groups by dragging fields from the Report Data pane and dropping them on the design surface or in the Grouping pane. In the Grouping pane, you can add parent, adjacent, and child groups, change group properties, and delete groups.  
   
@@ -171,7 +171,7 @@ manager: "mblythe"
   
   
 ## See Also  
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Report Builder in SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

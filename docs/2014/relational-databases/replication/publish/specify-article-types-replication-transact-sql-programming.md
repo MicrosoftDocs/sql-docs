@@ -34,17 +34,17 @@ manager: "jhubbard"
   
     -   **logbased** - a log-based table article, which is the default for transactional and snapshot replication. Replication automatically generates the stored procedure used for horizontal filtering and the view that defines a vertically filtered article.  
   
-    -   **logbased manualfilter** - a log-based, horizontally filtered article where the stored procedure used for horizontal filtering is manually created and defined by the user and specified for **@filter**. For more information, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** - a log-based, horizontally filtered article where the stored procedure used for horizontal filtering is manually created and defined by the user and specified for **@filter**. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-    -   **logbased manualview** - a log-based, vertically filtered article where the view that defines the vertically filtered article is created and defined by the user and specified for **@sync_object**. For more information, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md) and [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md).  
+    -   **logbased manualview** - a log-based, vertically filtered article where the view that defines the vertically filtered article is created and defined by the user and specified for **@sync_object**. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) and [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **logbased manualboth** - a log-based, horizontally and vertically filtered article where both the stored procedure used for horizontal filtering and the view that defines the vertically filtered article are created and defined by the user and specified for **@filter** and **@sync_object**, respectively. For more information, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md) and [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md).  
+    -   **logbased manualboth** - a log-based, horizontally and vertically filtered article where both the stored procedure used for horizontal filtering and the view that defines the vertically filtered article are created and defined by the user and specified for **@filter** and **@sync_object**, respectively. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) and [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-     This defines a new article for the publication. For more information, see [Define an Article](publish/define-an-article.md).  
+     This defines a new article for the publication. For more information, see [Define an Article](define-an-article.md).  
   
-2.  For **logbased manualboth** and **logbased manualfilter** articles, execute [sp_articlefilter](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) to generate the filtering stored procedure for a horizontally filtered article. For more information, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md).  
+2.  For **logbased manualboth** and **logbased manualfilter** articles, execute [sp_articlefilter](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) to generate the filtering stored procedure for a horizontally filtered article. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-3.  For **logbased manualboth**, **logbased manualview**, and **logbased manualfilter** articles, execute [sp_articleview](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) to generate the view that defines the vertically filtered article. For more information, see [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md).  
+3.  For **logbased manualboth**, **logbased manualview**, and **logbased manualfilter** articles, execute [sp_articleview](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) to generate the view that defines the vertically filtered article. For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ### To publish a view or indexed view article in a transactional or snapshot publication  
   
@@ -56,17 +56,17 @@ manager: "jhubbard"
   
     -   **indexed view schema only** - a schema-only indexed view article. The base table must also be replicated.  
   
-    -   **indexed view logbased manualfilter** - a log-based, horizontally filtered indexed view article where the stored procedure used for horizontal filtering is manually created and defined by the user and specified for **@filter**. For more information, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter** - a log-based, horizontally filtered indexed view article where the stored procedure used for horizontal filtering is manually created and defined by the user and specified for **@filter**. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-    -   **indexed view logbased manualview** - a log-based, filtered indexed view article where the view that defines a vertically filtered article is created and defined by the user and specified for **@sync_object**. For more information, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md) and [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualview** - a log-based, filtered indexed view article where the view that defines a vertically filtered article is created and defined by the user and specified for **@sync_object**. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) and [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **indexed view logbased manualboth** - a log-based, filtered indexed view article where both the stored procedure used for horizontal filtering and the view that defines a vertically filtered article are created and defined by the user and specified for **@filter** and **@sync_object**, respectively. For more information, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md) and [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualboth** - a log-based, filtered indexed view article where both the stored procedure used for horizontal filtering and the view that defines a vertically filtered article are created and defined by the user and specified for **@filter** and **@sync_object**, respectively. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) and [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-     This defines a new article for the publication. For more information, see [Define an Article](publish/define-an-article.md).  
+     This defines a new article for the publication. For more information, see [Define an Article](define-an-article.md).  
   
-2.  For **logbased manualboth** and **logbased manualfilter** articles, execute [sp_articlefilter](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) to generate the filtering stored procedure for a horizontally filtered article. For more information, see [Define and Modify a Static Row Filter](publish/define-and-modify-a-static-row-filter.md).  
+2.  For **logbased manualboth** and **logbased manualfilter** articles, execute [sp_articlefilter](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) to generate the filtering stored procedure for a horizontally filtered article. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-3.  For **logbased manualboth**, **logbased manualview**, and **logbased manualfilter** articles, execute [sp_articleview](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) to generate the view that defines the vertically filtered article. For more information, see [Define and Modify a Column Filter](publish/define-and-modify-a-column-filter.md).  
+3.  For **logbased manualboth**, **logbased manualview**, and **logbased manualfilter** articles, execute [sp_articleview](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) to generate the view that defines the vertically filtered article. For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ### To publish a stored procedure, stored procedure execution, or user-defined function article in a transactional or snapshot publication  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
   
     -   **func schema only** - a schema-only user-defined function article.  
   
-     This defines a new article for the publication. For more information, see [Define an Article](publish/define-an-article.md).  
+     This defines a new article for the publication. For more information, see [Define an Article](define-an-article.md).  
   
 ### To publish a table or view article in a merge publication  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
     -   **view schema only** - a schema-only view article.  
   
-     This defines a new article for the publication. For more information, see [Define an Article](publish/define-an-article.md).  
+     This defines a new article for the publication. For more information, see [Define an Article](define-an-article.md).  
   
 ### To publish a stored procedure or user-defined function article in a merge publication  
   
@@ -102,10 +102,10 @@ manager: "jhubbard"
   
     -   **proc schema only** - a schema-only stored procedure article.  
   
-     This defines a new article for the publication. For more information, see [Define an Article](publish/define-an-article.md).  
+     This defines a new article for the publication. For more information, see [Define an Article](define-an-article.md).  
   
 ## See Also  
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)  
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

@@ -39,7 +39,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
- ![rs_DataSourcesStory](../../2014/reporting-services/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
+ ![rs_DataSourcesStory](media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
 ##  <a name="ConnectionString"></a> Connection String Examples  
  A data connection includes a connection string that is typically provided by the owner of the external data source. The following table lists examples of connections strings for different types of external data sources.  

@@ -100,7 +100,7 @@ manager: "mblythe"
  URL membership is only one of many membership conditions you might select for the data provider.  
   
 ### Verifying the Deployment and Registration  
- You can verify whether the data provider was deployed successfully to the report server by opening Report Manager and verifying that the data provider is included in the list of available data sources. For more information about Report Manager and data sources, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ You can verify whether the data provider was deployed successfully to the report server by opening Report Manager and verifying that the data provider is included in the list of available data sources. For more information about Report Manager and data sources, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## Registering a .NET Framework Data Provider on the Report Designer Client  
  In order to author reports that use this [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider for a data source, you must install the assembly on your client computer that runs Report Designer. You must modify two configuration files. Modify RSReportDesigner.config to register the data provider as a data source and to use the generic query designer. Modify RSPreviewPolicy.config to grant code access security permissions for the data provider assembly.  

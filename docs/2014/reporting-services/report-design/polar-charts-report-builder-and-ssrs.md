@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Polar Charts (Report Builder and SSRS)
-  A polar chart displays a series as a set of points that are grouped by category on a 360-degree circle. Values are represented by the length of the point as measured from the center of the circle. The farther the point is from the center, the greater its value. Category labels are displayed on the perimeter of the chart. For more information on how to add data to a polar chart, see [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md).  
+  A polar chart displays a series as a set of points that are grouped by category on a 360-degree circle. Values are represented by the length of the point as measured from the center of the circle. The farther the point is from the center, the greater its value. Category labels are displayed on the perimeter of the chart. For more information on how to add data to a polar chart, see [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,13 +48,13 @@ manager: "mblythe"
   
  The following illustration shows an example of a radar chart based on the data presented.  
   
- ![Radar chart](../../2014/reporting-services/media/rs-radarchart.gif "Radar chart")  
+ ![Radar chart](../media/rs-radarchart.gif "Radar chart")  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Chart Types &#40;Report Builder and SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md)   
- [Line Charts &#40;Report Builder and SSRS&#41;](report-design/line-charts-report-builder-and-ssrs.md)   
- [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [Chart Types &#40;Report Builder and SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
+ [Line Charts &#40;Report Builder and SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
+ [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

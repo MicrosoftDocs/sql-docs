@@ -131,19 +131,19 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This transactional replication example returns the properties of the publication.  
   
- [!code-sql[HowTo#sp_helppublication](../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_helppublication)]  
+ [!code-sql[HowTo#sp_helppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_helppublication)]  
   
  This transactional replication example disables schema replication for the publication.  
   
- [!code-sql[HowTo#sp_changepublication](../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_changepublication)]  
+ [!code-sql[HowTo#sp_changepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_changepublication)]  
   
  This merge replication example returns the properties of the publication.  
   
- [!code-sql[HowTo#sp_helpmergepublication](../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_helpmergepublication)]  
+ [!code-sql[HowTo#sp_helpmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_helpmergepublication)]  
   
  This merge replication example disables schema replication for the publication.  
   
- [!code-sql[HowTo#sp_changemergepublication](../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_changemergepublication)]  
+ [!code-sql[HowTo#sp_changemergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_changemergepublication)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can modify publications and access their properties programmatically by using Replication Management Objects (RMO). The RMO classes that you use to view or modify publication properties depend on the type of publication.  
@@ -175,23 +175,23 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example sets publication attributes for a transactional publication. The changes are cached until explicitly sent to the server.  
   
- [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changetranpub_cached)]  
+ [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
- [!code-vb[HowTo#rmo_vb_ChangeTranPub_cached](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changetranpub_cached)]  
+ [!code-vb[HowTo#rmo_vb_ChangeTranPub_cached](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changetranpub_cached)]  
   
  This example disables DDL replication for a merge publication.  
   
- [!code-csharp[HowTo#rmo_ChangeMergePub_ddl](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergepub_ddl)]  
+ [!code-csharp[HowTo#rmo_ChangeMergePub_ddl](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergepub_ddl)]  
   
- [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
+ [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
   
 ## See Also  
- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
- [Make Schema Changes on Publication Databases](publish/make-schema-changes-on-publication-databases.md)   
+ [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
- [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](publish/add-articles-to-and-drop-articles-from-a-publication.md)   
+ [Add Articles to and Drop Articles from a Publication &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)   
  [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [View and Modify Article Properties](publish/view-and-modify-article-properties.md)  
+ [View and Modify Article Properties](view-and-modify-article-properties.md)  
   
   

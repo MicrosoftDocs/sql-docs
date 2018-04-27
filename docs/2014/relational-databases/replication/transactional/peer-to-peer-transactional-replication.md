@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   There is always some latency involved when changes are replicated. For applications that require the latest change to be seen immediately, dynamically load balancing the application across multiple nodes can be problematic.  
   
- Peer-to-peer replication includes the option to enable conflict detection across a peer-to-peer topology. This option helps prevent the issues that are caused from undetected conflicts, including inconsistent application behavior and lost updates. By enabling this option, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved manually and the data is made consistent across the topology. For more information, see [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ Peer-to-peer replication includes the option to enable conflict detection across a peer-to-peer topology. This option helps prevent the issues that are caused from undetected conflicts, including inconsistent application behavior and lost updates. By enabling this option, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved manually and the data is made consistent across the topology. For more information, see [Conflict Detection in Peer-to-Peer Replication](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
 >  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](merge/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
@@ -47,7 +47,7 @@ manager: "jhubbard"
  The following scenarios illustrate typical uses for peer-to-peer replication.  
   
 ### Topology That Has Two Participating Databases  
- ![Peer-to-peer replication, two nodes](media/repl-multinode-01.gif "Peer-to-peer replication, two nodes")  
+ ![Peer-to-peer replication, two nodes](../media/repl-multinode-01.gif "Peer-to-peer replication, two nodes")  
   
  Both of the preceding illustrations show two participating databases, with user traffic directed to the databases through an application server. This configuration can be used for a variety of applications, from Web sites to workgroup applications, and provides the following benefits:  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
  Peer-to-peer replication can support either approach, but the central update example on the right is also often used with standard transactional replication.  
   
 ### Topologies That Have Three or More Participating Databases  
- ![Peer-to-peer replication to dispersed locations](media/repl-multinode-02.gif "Peer-to-peer replication to dispersed locations")  
+ ![Peer-to-peer replication to dispersed locations](../media/repl-multinode-02.gif "Peer-to-peer replication to dispersed locations")  
   
  The preceding illustration shows three participating databases that provide data for a worldwide software support organization, with offices in Los Angeles, London, and Taipei. The support engineers at each office take customer calls and enter and update information about each customer call. The time zones for the three offices are eight hours apart, so there is no overlap in the workday. As the Taipei office closes, the London office is opening for the day. If a call is still in progress as one office is closing, the call is transferred to a representative at the next office to open.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 -   Higher availability in case of failure or to allow maintenance at one or more of the participating databases.  
   
-     ![Peer-to-peer replication, three and four nodes](media/repl-multinode-04.gif "Peer-to-peer replication, three and four nodes")  
+     ![Peer-to-peer replication, three and four nodes](../media/repl-multinode-04.gif "Peer-to-peer replication, three and four nodes")  
   
  The preceding illustration shows the addition of a node to the three-node topology. A node could be added in this scenario for the following reasons:  
   
@@ -168,7 +168,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](transactional/transactional-replication.md)   
- [Publication Types for Transactional Replication](transactional/publication-types-for-transactional-replication.md)  
+ [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](transactional-replication.md)   
+ [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)  
   
   

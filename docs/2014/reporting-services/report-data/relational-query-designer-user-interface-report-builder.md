@@ -25,7 +25,7 @@ manager: "mblythe"
   Report Builder provides both a graphical query designer and a text-based query designer to help you create a query that specifies the data to retrieve from [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] for a report dataset. Use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query. Use the text-based query designer to view the query that was built by the graphical query designer or to modify a query. You can also import an existing query from a file or report.  
   
 > [!NOTE]  
->  In Report Builder, to specify a query for data source types Oracle, OLE DB, ODBC, and Teradata, you must use the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](report-data/text-based-query-designer-user-interface-report-builder.md).  
+>  In Report Builder, to specify a query for data source types Oracle, OLE DB, ODBC, and Teradata, you must use the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](text-based-query-designer-user-interface-report-builder.md).  
   
 > [!IMPORTANT]  
 >  Users access data sources when they create and run queries. You should grant minimal permissions on the data sources, such as read-only permissions.  
@@ -192,7 +192,7 @@ manager: "mblythe"
  When you select tables and columns or stored procedures and views in the Database View pane, the query designer retrieves the underlying primary key and foreign key relationships from the database schema. By analyzing these relationships, the query designer detects relationships between two tables and adds joins to the query. You can then modify the query by adding groups and aggregates, adding or changing relationships, and adding filters. To view the query text that shows the columns from which to retrieve data, the joins between tables, and any groups or aggregates, click **Edit As Text**.  
   
 ## Text-Based Query Designer  
- For the most control over your query, use the text-based query designer. To switch to the text-based query designer, in the toolbar, click **Edit As Text**. After you edit a query in the text-based query designer, you can no longer use the relational query designer. The query will then always open in the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](report-data/text-based-query-designer-user-interface-report-builder.md).  
+ For the most control over your query, use the text-based query designer. To switch to the text-based query designer, in the toolbar, click **Edit As Text**. After you edit a query in the text-based query designer, you can no longer use the relational query designer. The query will then always open in the text-based query designer. For more information, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
  [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

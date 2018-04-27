@@ -136,7 +136,7 @@ manager: "jhubbard"
   
     2.  Use the [tablediff utility](../../tools/tablediff-utility.md) or another tool to manually synchronize the Publisher with the Subscriber. This enables you to recover data from the subscription database that was not contained in the publication database backup. Go to step c.  
   
-         For more information about the **tablediff** utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
+         For more information about the **tablediff** utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
     3.  Is the restored backup complete and up-to-date? Does it contain the latest configuration for all publications and subscriptions? If yes, execute the [sp_replrestart](~/relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) stored procedure to resynchronize the Publisher metadata with the Distributor metadata. The restore is completed. If no, go to step d.  
   
@@ -170,7 +170,7 @@ manager: "jhubbard"
   
     2.  Use the [tablediff Utility](../../tools/tablediff-utility.md) or another tool to manually synchronize the Publisher with the Subscriber. This enables you to recover data from the subscription database that was not contained in the publication database backup. Go to step c.  
   
-         For more information about the **tablediff** utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
+         For more information about the **tablediff** utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
     3.  Is the restored backup complete and up-to-date? Does it contain the latest configuration for all publications and subscriptions? If yes, execute the [sp_replrestart](~/relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) stored procedure to resynchronize the Publisher metadata with the Distributor metadata. The restore is completed. If no, go to step d.  
   
@@ -345,7 +345,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases](administration/back-up-and-restore-replicated-databases.md)   
+ [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md)   
  [Configure Distribution](configure-distribution.md)   
  [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   

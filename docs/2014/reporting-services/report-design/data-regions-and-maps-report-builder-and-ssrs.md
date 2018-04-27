@@ -29,13 +29,13 @@ manager: "mblythe"
  A table is a data region that presents data row by row. Table columns are static: you determine the number of columns when you design your report. Table rows are dynamic: they expand downwards to accommodate the data. You can add groups to tables, which organize data by selected fields or expressions. For information about adding a table to a report, see [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md).  
   
 ## Matrix  
- A matrix is also known as a crosstab. A matrix data region contains both dynamic columns and rows: they expand to accommodate the data. A matrix can have dynamic columns and rows and static columns and rows. Columns or rows can contain other columns or rows, and can be used to group data. For information about adding a matrix to a report, see [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)  
+ A matrix is also known as a crosstab. A matrix data region contains both dynamic columns and rows: they expand to accommodate the data. A matrix can have dynamic columns and rows and static columns and rows. Columns or rows can contain other columns or rows, and can be used to group data. For information about adding a matrix to a report, see [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)  
   
 ## List  
- A list is a data region that presents data arranged in a freeform fashion. You can arrange report items to create a form with text boxes, images, and other data regions placed anywhere within the list. For information about adding a list to a report, see [Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ A list is a data region that presents data arranged in a freeform fashion. You can arrange report items to create a form with text boxes, images, and other data regions placed anywhere within the list. For information about adding a list to a report, see [Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ## Chart  
- A chart presents data graphically. Examples of charts include bar, pie, and line charts, but many more styles are supported. For information about adding a chart to a report, see [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md).  
+ A chart presents data graphically. Examples of charts include bar, pie, and line charts, but many more styles are supported. For information about adding a chart to a report, see [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 ## Gauge  
  A gauge presents data as a range with an indicator pointing to a specific value within the range. Gauges are used to display key performance indicators (KPIs) and other metrics. Examples of gauges include linear and circular. For more information about adding a gauge to a report, see [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  

@@ -33,7 +33,7 @@ manager: "mblythe"
   
  The following figure labels each pane.  
   
- ![Semantic Model Query Designer UI](../../2014/reporting-services/media/rsqd-dsawmodel-smql.gif "Semantic Model Query Designer UI")  
+ ![Semantic Model Query Designer UI](../media/rsqd-dsawmodel-smql.gif "Semantic Model Query Designer UI")  
   
  The following table describes the function of each pane.  
   
@@ -53,11 +53,11 @@ manager: "mblythe"
 |Button|Description|  
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. The query for a Report Server model data source is a Semantic Model Query Language (SMQL) specification in XML.|  
-|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Undo action](../../2014/reporting-services/media/rsqdicon-undo.gif "Undo action")|Undo the last action.|  
-|![Redo action](../../2014/reporting-services/media/rsqdicon-redo.gif "Redo action")|Redo the last action.|  
+|**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Undo action](../media/rsqdicon-undo.gif "Undo action")|Undo the last action.|  
+|![Redo action](../media/rsqdicon-redo.gif "Redo action")|Redo the last action.|  
 |![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the resulting rows in the Result pane.|  
-|![Filter graphic next to selected filter column](../../2014/reporting-services/media/rsqdicon-filter.gif "Filter graphic next to selected filter column")|Open the **Filter Data** dialog box, which allows you to specify which data you would like to filter on. You can specify filters independently of data currently in the Design Area.|  
+|![Filter graphic next to selected filter column](../media/rsqdicon-filter.gif "Filter graphic next to selected filter column")|Open the **Filter Data** dialog box, which allows you to specify which data you would like to filter on. You can specify filters independently of data currently in the Design Area.|  
   
 ## Text-based Query Designer  
  When you create a Report Server Model dataset query, the graphical query designer is the default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar.  
@@ -66,7 +66,7 @@ manager: "mblythe"
   
  The following figure labels each pane.  
   
- ![Generic Semantic Model Language Query Designer](../../2014/reporting-services/media/rsqd-dsawmodel-smql-generic.gif "Generic Semantic Model Language Query Designer")  
+ ![Generic Semantic Model Language Query Designer](../media/rsqd-dsawmodel-smql-generic.gif "Generic Semantic Model Language Query Designer")  
   
  The following table describes the function of each pane.  
   
@@ -85,9 +85,9 @@ manager: "mblythe"
 |![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query text and display the resulting row set in the Result pane.|  
   
 ## See Also  
- [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
- [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
- [Report Model Connection &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md)   
+ [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Add Data from External Data Sources &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
+ [Report Model Connection &#40;SSRS&#41;](report-model-connection-ssrs.md)   
  [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)  
   
   

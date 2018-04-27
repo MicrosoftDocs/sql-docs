@@ -47,6 +47,6 @@ manager: "mblythe"
  [ReportItems Collection References &#40;Report Builder and SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](../expressions-report-builder-and-ssrs.md)  
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

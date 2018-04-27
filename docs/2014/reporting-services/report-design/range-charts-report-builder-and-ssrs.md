@@ -20,7 +20,7 @@ manager: "mblythe"
   
  The following illustration shows a plain range chart with three series.  
   
- ![Range chart](../../2014/reporting-services/media/rs-rangechart.gif "Range chart")  
+ ![Range chart](../media/rs-rangechart.gif "Range chart")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -50,8 +50,8 @@ manager: "mblythe"
 -   Gantt charts can be created using a range bar chart.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Chart Types &#40;Report Builder and SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md)   
- [Formatting a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Chart Types &#40;Report Builder and SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
+ [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

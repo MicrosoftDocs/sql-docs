@@ -49,7 +49,7 @@ manager: "mblythe"
   
 -   **Distance scale** Displays a guide to help interpret the scale of the map. A map has one distance scale. The current map viewport zoom value determines the distance scale.  
   
- ![rs_MapElements](../../2014/reporting-services/media/rs-mapelements.gif "rs_MapElements")  
+ ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -224,7 +224,7 @@ manager: "mblythe"
   
     -   **Custom**. Specify your own number of ranges to control the distribution of values.  
   
-     For more information about distribution options, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+     For more information about distribution options, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 6.  In **Number of subranges**, type the number of subranges to use. When the distribution type is **Optimal**, the number of subranges is automatically calculated.  
   
@@ -307,17 +307,17 @@ manager: "mblythe"
   
 3.  Click **Legend**.  
   
-4.  **Legend text** displays keywords that specify which data appears in the legend. Use map keywords and custom formats to help control the format of legend text. For example, #FROMVALUE {C2} specifies a currency format with two decimal places. For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+4.  **Legend text** displays keywords that specify which data appears in the legend. Use map keywords and custom formats to help control the format of legend text. For example, #FROMVALUE {C2} specifies a currency format with two decimal places. For more information, see [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)   
+ [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

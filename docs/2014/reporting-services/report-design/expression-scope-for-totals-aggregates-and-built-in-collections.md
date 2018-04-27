@@ -65,7 +65,7 @@ manager: "mblythe"
   
 -   **Named scope** The name of a dataset, a data region, or a data region group that is in scope for the expression. For aggregate calculations, you can specify a containing scope. You cannot specify a named scope for both a row group and a column group in a single expression. You cannot specify a contained scope unless the expression is for an aggregate of an aggregate.  
   
-     The following expression generates the interval years between SellStartDate and LastReceiptDate. These fields are in two different datasets, DataSet1 and DataSet2. The [First Function &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-first-function.md), which is an aggregate function, returns the first value of SellStartDate in DataSet1 and the first value of LastReceiptDate in DataSet2.  
+     The following expression generates the interval years between SellStartDate and LastReceiptDate. These fields are in two different datasets, DataSet1 and DataSet2. The [First Function &#40;Report Builder and SSRS&#41;](report-builder-functions-first-function.md), which is an aggregate function, returns the first value of SellStartDate in DataSet1 and the first value of LastReceiptDate in DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -75,7 +75,7 @@ manager: "mblythe"
   
  In some locations of a report, you must specify a scope. For example, for a text box on the design surface, you must specify the name of the dataset to use: `=Max(Fields!Sales.Value,"Dataset1")`. In other locations, there is an implicit default scope. For example, if you do not specify an aggregate for a text box in a group scope, the default aggregate First is used.  
   
- Each aggregate function topic lists the scopes that are valid for its use. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Each aggregate function topic lists the scopes that are valid for its use. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ##  <a name="Examples"></a> Example Aggregate Expressions for a Table Data Region  
  To write expressions that specify non-default scopes takes some practice. To help you understand different scopes, use the following figure and table. The figure labels each cell in a sales information table that displays quantity of items sold by year and quarter and also by sales territory. Note the visual cues on the row handles and column handles that display row and column group structure, indicating nested groups. The table has the following structure:  
@@ -92,7 +92,7 @@ manager: "mblythe"
   
  The column header for the territory group has been split into two cells for display purposes. The first cell displays the territory name and totals, and the second cell has placeholder text that calculated the percentage contribution for each territory to all sales.  
   
- ![rs_BasicTableSumCellScope](../../2014/reporting-services/media/rs-basictablesumcellscope.gif "rs_BasicTableSumCellScope")  
+ ![rs_BasicTableSumCellScope](../media/rs-basictablesumcellscope.gif "rs_BasicTableSumCellScope")  
   
  Assume the dataset is named DataSet1 and the table is named Tablix1. The following table lists the cell label, the default scope, and examples. The values for placeholder text are shown by in expression syntax.  
   
@@ -114,7 +114,7 @@ manager: "mblythe"
 |C14|Inner row group "Subcat"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
 |C15|Inner row group "Subcat" and column group "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
   
- For more information about interpreting visual cues on tablix data regions, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). For more information about the tablix data region, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). For more information about expressions and aggregates, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md) and [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md).  
+ For more information about interpreting visual cues on tablix data regions, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). For more information about the tablix data region, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). For more information about expressions and aggregates, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) and [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
   
   
@@ -123,14 +123,14 @@ manager: "mblythe"
   
  For example, in a sparkline that shows weekly trends, suppose that one city had sales data for 3 months and another city had sales data for 12 months. Without synchronized scales, the sparkline for first city would only have 3 bars and they would be much wider and occupy the same space as the 12 month set of bars for the second city.  
   
- For more information, see [Align the Data in a Chart in a Table or Matrix &#40;Report Builder and SSRS&#41;](report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
+ For more information, see [Align the Data in a Chart in a Table or Matrix &#40;Report Builder and SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
   
   
 ##  <a name="Indicators"></a> Synchronizing Ranges for Indicators  
  To specify the data values to use for a set of indicators, you must specify a scope. Depending on the layout of the data region that contains the indicator, you specify a scope or a containing scope. For example, in a group header row associated with category sales, a set of arrows (up, down, sideways) can indicate sales values relative to a threshold. The containing scope is the name of the table or matrix that contains the indicators.  
   
- For more information, see [Set Synchronization Scope &#40;Report Builder and SSRS&#41;](report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
+ For more information, see [Set Synchronization Scope &#40;Report Builder and SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md).  
   
   
   
@@ -139,7 +139,7 @@ manager: "mblythe"
   
  For this purpose, there is a global collection called ReportItems. This is the set of text boxes on the current page.  
   
- For more information, see [Page Headers and Footers &#40;Report Builder and SSRS&#41;](report-design/page-headers-and-footers-report-builder-and-ssrs.md) and [ReportItems Collection References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-reportitems-collection-references-report-builder.md).  
+ For more information, see [Page Headers and Footers &#40;Report Builder and SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md) and [ReportItems Collection References &#40;Report Builder and SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md).  
   
   
   
@@ -148,27 +148,27 @@ manager: "mblythe"
   
  In a tablix data region, to create a drilldown effect where you click a text box to expand the table to show more data, you must set the **Visibility** property on the group, and select as the toggle a text box in a group header that is associated with a containing group.  
   
- For more information, see [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
+ For more information, see [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
   
   
 ##  <a name="Sort"></a> Specifying a Sort Expression to Synchronize Sort Order  
  When you add an interactive sort button to a table column, you can synchronize sorting for multiple items that have a common containing scope. For example, you can add a sort button to a column header in a matrix, and specify the containing scope as the name of the dataset that is bound to the matrix. When a user clicks the sort button, not only are the matrix rows sorted, but also the chart series groups of charts that are bound to the same datset are sorted. In this way, all data regions that depend on that dataset can be synchronized to show the same sort order.  
   
- For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
   
 ##  <a name="Nulls"></a> Suppressing Null or Zero Values in a Cell  
- For many reports, calculations that are scoped to groups can create many cells that have zero (0) or null values. To reduce clutter in your report, add an expression to return blanks if the aggregate value is 0. For more information, see "Examples that Suppress Null or Zero Values" in [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md).  
+ For many reports, calculations that are scoped to groups can create many cells that have zero (0) or null values. To reduce clutter in your report, add an expression to return blanks if the aggregate value is 0. For more information, see "Examples that Suppress Null or Zero Values" in [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
   
   
 ## See Also  
- [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Group Expression Examples &#40;Report Builder and SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
+ [Group Expression Examples &#40;Report Builder and SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
+ [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

@@ -147,11 +147,11 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a transactional publication. Scripting variables are used to pass Windows credentials that are needed to create jobs for the Snapshot Agent and Log Reader Agent.  
   
- [!code-sql[HowTo#sp_AddTranPub](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranpub)]  
+ [!code-sql[HowTo#sp_AddTranPub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranpub)]  
   
  This example creates a merge publication. Scripting variables are used to pass Windows credentials that are needed to create the job for the Snapshot Agent.  
   
- [!code-sql[HowTo#sp_AddMergePub](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergepub)]  
+ [!code-sql[HowTo#sp_AddMergePub](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergepub)]  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  You can create publications programmatically by using Replication Management Objects (RMO). The RMO classes that you use to create a publication depend on the type of publication you create.  
@@ -236,15 +236,15 @@ manager: "jhubbard"
 ###  <a name="PShellExample"></a> Examples (RMO)  
  This example enables the AdventureWorks database for transactional publishing, defines a Log Reader Agent job, and creates the AdvWorksProductTran publication. An article must be defined for this publication. The Windows account credentials that are needed to create the Log Reader Agent job and the Snapshot Agent job are passed at runtime. To learn how to use RMO to define snapshot and transactional articles, see [Define an Article](define-an-article.md).  
   
- [!code-csharp[HowTo#rmo_CreateTranPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpub)]  
+ [!code-csharp[HowTo#rmo_CreateTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpub)]  
   
- [!code-vb[HowTo#rmo_vb_CreateTranPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createtranpub)]  
+ [!code-vb[HowTo#rmo_vb_CreateTranPub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createtranpub)]  
   
  This example enables the AdventureWorks database for merge publishing and creates the AdvWorksSalesOrdersMerge publication. Articles must still be defined for this publication. The Windows account credentials that are needed to create the Snapshot Agent job are passed at runtime. To learn how to use RMO to define merge articles, see [Define an Article](define-an-article.md).  
   
- [!code-csharp[HowTo#rmo_CreateMergePub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepub)]  
+ [!code-csharp[HowTo#rmo_CreateMergePub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepub)]  
   
- [!code-vb[HowTo#rmo_vb_CreateMergePub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
+ [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
 ## See Also  
  [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)   

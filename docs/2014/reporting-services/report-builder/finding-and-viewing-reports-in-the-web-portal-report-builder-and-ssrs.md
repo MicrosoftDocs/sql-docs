@@ -18,7 +18,7 @@ manager: "mblythe"
 # Finding and Viewing Reports in Report Manager (Report Builder and SSRS)
   Report Manager is a Web-based tool that includes features for viewing and managing reports. It is part of a report server installation. To open Report Manager, type the Report Manager URL in a browser window. For information on browser requirements, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md). For more information about how a Report Manager URL might be configured on your report server, contact your system administrator. For more information, see [Configure Report Manager &#40;Native Mode&#41;](../../2014/reporting-services/configure-report-manager-native-mode.md).  
   
- The permissions that the system administrator set on the report server determine what you can see when you use Report Manager. Permissions are granted via a role assignment. To find and view reports, your role assignment must include the View Reports task. To find a report on a report server, search for it by name or description, or browse report server folders. You can only search or browse for reports that have been published or uploaded to the report server. For more information about how to search for a report, see [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
+ The permissions that the system administrator set on the report server determine what you can see when you use Report Manager. Permissions are granted via a role assignment. To find and view reports, your role assignment must include the View Reports task. To find a report on a report server, search for it by name or description, or browse report server folders. You can only search or browse for reports that have been published or uploaded to the report server. For more information about how to search for a report, see [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -26,7 +26,7 @@ manager: "mblythe"
 ## Navigating the Folder Hierarchy in Report Manager  
  To browse for the reports that you want to run, you can use the Home page, which appears automatically when you start Report Manager and when you open any folder in the folder hierarchy. The Home page shows only the items that you have permission to view. The folder path is displayed as a row of links at the top of the Home page. Folder names are listed in sequence, starting with the root folder (Home). As you open each additional folder, the folder name is added to the folder path at the top of the page. **(1)** in the image below. When you open a report, the name of the report is also added to the folder path.  
   
- ![Report Manager Ribbon and Navigation](../../2014/reporting-services/media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
+ ![Report Manager Ribbon and Navigation](../media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
 Report Manager Ribbon  
   
  Use the following techniques to navigate through a folder hierarchy:  
@@ -42,7 +42,7 @@ Report Manager Ribbon
   
  Not all reports that are visible in the folder hierarchy are immediately accessible. Some reports may prompt you for your user name and password to determine whether you can access the data source for the report. For more information about opening reports in Report Manager, see [Open and Close a Report &#40;Report Manager&#41;](../../2014/reporting-services/open-and-close-a-report-report-manager.md).  
   
- You can also browse to and open a report from the report server directly from Report Builder. For more information, see [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
+ You can also browse to and open a report from the report server directly from Report Builder. For more information, see [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
 ## To Search for a Items  
   
@@ -53,7 +53,7 @@ Report Manager Ribbon
 -   To search for specific text within a report, use the toolbar at the top of the report.  
   
 ## See Also  
- [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Searching for Reports and Other Items &#40;Report Builder  and SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

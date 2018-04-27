@@ -27,7 +27,7 @@ manager: "mblythe"
   
  Font, size, color, and effects all contribute to the readability of a report. Font, font style, font size, and underline effects can be applied to text within a text box or data region. By default, the report font that is used is Arial, 10 points, and black. By using the **Text Box** and **Text Properties** dialog boxes, you can specify how the text appears when the report is rendered.  
   
- ![rs_MixedFormatText](../../2014/reporting-services/media/rs-mixedformattext.gif "rs_MixedFormatText")  
+ ![rs_MixedFormatText](../media/rs-mixedformattext.gif "rs_MixedFormatText")  
   
  In this illustration, the text box itself has a border, and all the text is in the same text box, but the text has a variety of formatting.  
   
@@ -47,12 +47,12 @@ manager: "mblythe"
   
 -   Type any simple or complex expression into the text box. For example, if you type **Name: [Name]** into the text box, the **[Name]** text will be displayed as a placeholder that represents the expression `=Fields!Name.Value`.  
   
--   Type an expression in an empty text box by starting with an equal sign (=). When you change the focus off the text box, the resulting expression is converted into a placeholder that you can edit. If the text box is not empty, or the equal sign is inserted anywhere but as the first character in the text box, the equal sign is treated as a string literal and a placeholder is not created. For more information about defining simple and complex expressions, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+-   Type an expression in an empty text box by starting with an equal sign (=). When you change the focus off the text box, the resulting expression is converted into a placeholder that you can edit. If the text box is not empty, or the equal sign is inserted anywhere but as the first character in the text box, the equal sign is treated as a string literal and a placeholder is not created. For more information about defining simple and complex expressions, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md).  
   
 ## Formatting Placeholders and Static Text in a Text Box  
  You can format placeholders using the **Placeholder Properties** dialog box. You can format only the entire placeholder, not sections of the placeholder. If you want to see the underlying expression, you can pause your pointer on the placeholder. You can change the underlying expression by double-clicking the placeholder or right-clicking the placeholder and selecting **Placeholder Properties**. You can also specify a UI label using the **Label** property in **General** of the **Placeholder Properties** dialog box. This will be the text that is shown at design-time for the placeholder.  
   
- ![rs_MixedTextnPlaceholder](../../2014/reporting-services/media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
+ ![rs_MixedTextnPlaceholder](../media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
   
  In this illustration, a text box in a list contains both a label with bold formatting and a placeholder with no formatting.  
   
@@ -63,18 +63,18 @@ manager: "mblythe"
 > [!NOTE]  
 >  Actions defined on the text box have a higher priority than actions defined for individual text in a text box.  
   
- For more information about mixed formatting, see [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ For more information about mixed formatting, see [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ## Aligning Horizontal Text using General  
  In **Alignment** on the **Text Box Properties** dialog box, you can specify how the text should be aligned horizontally. If you do not specify a value for alignment, the default value of the alignment is **Default**. This means that the text is aligned based on the field type of your placeholder value. If you specify an expression that evaluates to a non-string value, i.e., not a number, the text is aligned to the right. If your expression evaluates to a string value, such as a number, the text is aligned to the left.  
   
 ## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Text Boxes &#40;Report Builder and SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Text Boxes &#40;Report Builder and SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

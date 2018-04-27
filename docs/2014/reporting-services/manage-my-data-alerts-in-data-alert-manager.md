@@ -21,7 +21,7 @@ manager: "mblythe"
 # Manage My Data Alerts in Data Alert Manager
   SharePoint users can view a list of the data alerts that they created and information about the alerts. Users can also delete their alerts, open alert definitions for edit in Data Alert Designer, and run their alerts. The following picture shows the features available to users in Data Alert Manager.  
   
- ![Alert Manager features for SharePoint users](../../2014/reporting-services/media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
+ ![Alert Manager features for SharePoint users](media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
   
 ### To view a list of your alerts  
   
@@ -29,7 +29,7 @@ manager: "mblythe"
   
 2.  Click the icon for the expand drop-down menu on a report and click **Manage Data Alerts**. The following picture shows the drop-down menu.  
   
-     ![Open Alert Manager from report context menu](../../2014/reporting-services/media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
+     ![Open Alert Manager from report context menu](media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
   
      Data Alert Manager opens. By default, it lists the alerts for the report that you selected in the library.  
   

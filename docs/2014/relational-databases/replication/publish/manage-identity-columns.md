@@ -82,20 +82,20 @@ manager: "jhubbard"
   
 #### To enable automatic identity range management when defining articles for a transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). If the source table being published has an identity column, specify a value of **auto** for **@identityrangemanagementoption**, the range of identity values assigned to the Publisher for **@pub_identity_range**, the range of identity values assigned to each Subscribers for **@identity_range**, and the percent of total identity values used before a new identity range is assigned for **@threshold**. For more information about defining articles, see [Define an Article](publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). If the source table being published has an identity column, specify a value of **auto** for **@identityrangemanagementoption**, the range of identity values assigned to the Publisher for **@pub_identity_range**, the range of identity values assigned to each Subscribers for **@identity_range**, and the percent of total identity values used before a new identity range is assigned for **@threshold**. For more information about defining articles, see [Define an Article](define-an-article.md).  
   
     > [!NOTE]  
     >  Ensure that the data type of the identity column is large enough to support the total range of identities being assigned to all Subscribers.  
   
 #### To disable automatic identity range management when defining articles for a transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **manual** for **@identityrangemanagementoption**. For more information about defining articles, see [Define an Article](publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **manual** for **@identityrangemanagementoption**. For more information about defining articles, see [Define an Article](define-an-article.md).  
   
 2.  Assign ranges to identity article columns at the Subscriber to avoid generating conflicts for updating Subscribers. For more information, see the section on assigning ranges for manual identity range management in the topic [Replicate Identity Columns](replicate-identity-columns.md).  
   
 #### To enable automatic identity range management when defining articles for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). If the source table being published has an identity column, specify a value of **auto** for **@identityrangemanagementoption**, the range of identity values assigned to a server subscription for **@pub_identity_range**, the range of identity values assigned to the Publisher and each client subscription for **@identity_range**, and the percent of total identity values used before a new identity range is assigned for **@threshold**. For more information on when new identity ranges are assigned, see Assigning Identity Ranges in the topic [Replicate Identity Columns](replicate-identity-columns.md). For more information about defining articles, see [Define an Article](publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). If the source table being published has an identity column, specify a value of **auto** for **@identityrangemanagementoption**, the range of identity values assigned to a server subscription for **@pub_identity_range**, the range of identity values assigned to the Publisher and each client subscription for **@identity_range**, and the percent of total identity values used before a new identity range is assigned for **@threshold**. For more information on when new identity ranges are assigned, see Assigning Identity Ranges in the topic [Replicate Identity Columns](replicate-identity-columns.md). For more information about defining articles, see [Define an Article](define-an-article.md).  
   
     > [!NOTE]  
     >  Ensure that the data type of the identity column is large enough to support the total range of identities being assigned to all Subscribers, particularly for Subscribers with server subscriptions.  
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
     -   **none** - Identity columns at the Publisher will not be defined as identity columns at the Subscriber.  
   
-     For more information about defining articles, see [Define an Article](publish/define-an-article.md).  
+     For more information about defining articles, see [Define an Article](define-an-article.md).  
   
 2.  Assign ranges to identity article columns at the Subscriber to avoid generating conflicts for updating Subscribers.  
   

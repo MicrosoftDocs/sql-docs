@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 1.  If one does not already exist, create an Oracle publication.  
   
-2.  At the Distributor, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **0** for **@use_default_datatypes**. For more information, see [Define an Article](publish/define-an-article.md).  
+2.  At the Distributor, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **0** for **@use_default_datatypes**. For more information, see [Define an Article](define-an-article.md).  
   
 3.  At the Distributor, execute [sp_helparticlecolumns](~/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) to view the existing mapping for a column in a published article.  
   
@@ -81,15 +81,15 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example changes a column with an Oracle data type of NUMBER so it is mapped to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type `numeric`(38,38), instead of the default data type `float`.  
   
- [!code-sql[HowTo#sp_changecolumndatatype](../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_changecolumndatatype)]  
+ [!code-sql[HowTo#sp_changecolumndatatype](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_changecolumndatatype)]  
   
  This example query returns the default and alternative mappings for the Oracle 9 data type `CHAR`.  
   
- [!code-sql[HowTo#sp_helpcolumndatatype_char](../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_char)]  
+ [!code-sql[HowTo#sp_helpcolumndatatype_char](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_char)]  
   
  This example query returns the default mappings for the Oracle 9 data type `NUMBER` when it is specified without a scale or precision.  
   
- [!code-sql[HowTo#sp_helpcolumndatatype_number](../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_number)]  
+ [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_number)]  
   
 ## See Also  
  [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)   

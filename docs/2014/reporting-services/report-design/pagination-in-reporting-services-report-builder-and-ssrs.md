@@ -43,14 +43,14 @@ manager: "mblythe"
   
  The area of the physical page that remains after space is allocated for margins, column spacing, and the page header and footer, is called the *usable page area*. Margins are only applied when you render and print reports in hard page break renderer formats. The following image indicates the margin and usable page area of a physical page.  
   
- ![Physical page with margins and usable area.](../../2014/reporting-services/media/rspagemargins.gif "Physical page with margins and usable area.")  
+ ![Physical page with margins and usable area.](../media/rspagemargins.gif "Physical page with margins and usable area.")  
   
 ### Newsletter-Style Columns  
  Your report can be divided into columns, such as columns in a newspaper, that are treated as logical pages rendered on the same physical page. They are arranged from left to right, top to bottom, and are separated by white space between each column. If the report is divided into more than one column, each physical page is divided vertically into columns, each of which is considered a logical page. For example, suppose you have two columns on a physical page. The content of your report fills the first column and then the second column. If the report does not fit entirely within the first two columns, the report fills the first column and then the second column on the next page. Columns continue to be filled, from left to right, top to bottom until all report items are rendered. If you specify column sizes that cause the horizontal width or vertical width to equal zero, the column spacing defaults to zero.  
   
  Columns are specified using the **Report Properties** pane, **Page Setup** dialog box or by changing the TopMargin, BottomMargin, LeftMargin and RightMargin properties in the **Properties** pane. If you want to use a margin size that is not defined, you can specify the margin size using the Device Information settings for the specific renderer that you are using to export the report. Columns are only applied when you render and print reports in PDF or Image formats. The following image indicates the usable page area of a page containing columns.  
   
- ![Physical page with columns depicted.](../../2014/reporting-services/media/rspagecolumns.gif "Physical page with columns depicted.")  
+ ![Physical page with columns depicted.](../media/rspagecolumns.gif "Physical page with columns depicted.")  
   
 ## Page Breaks and Page Names  
  A report might be more readable and its data easier to audit and export when the report has page names. Reporting Services provides properties for reports and tablix data regions (table, matrix, and list), groups, and rectangles in the report to control pagination, reset page numbers, and provide new report page names on page breaks. These features can enhance reports regardless of the format in which reports are rendered, but are especially useful when exporting reports to Excel workbooks.  
@@ -71,9 +71,9 @@ manager: "mblythe"
   
  You can set the BreakLocation property in the **Tablix Properties**, **Rectangle Properties**, or **Group Properties** dialog boxes, but you must set the Disabled, ResetPageNumber, and PageName properties in the Report Builder Properties pane. If the properties in the Properties pane are organized by category, you will find the properties in the **PageBreak** category. For groups, the **PageBreak** category is inside the **Group** category.  
   
- You can use constants and simple or complex expressions to set the value of the Disabled and ResetPageNumber properties. However, you cannot use expression with the BreakLocation property. For more information about writing and using expressions, see [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+ You can use constants and simple or complex expressions to set the value of the Disabled and ResetPageNumber properties. However, you cannot use expression with the BreakLocation property. For more information about writing and using expressions, see [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
- In your report you can write expressions that reference the current page names or page numbers by using the `Globals` collection. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ In your report you can write expressions that reference the current page names or page numbers by using the `Globals` collection. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### Naming Excel Worksheet Tabs  
  These properties are useful when you export reports to Excel workbooks. Use the InitialPage property to specify a default name for the worksheet tab name when you export the report, and use page breaks and the PageName property to provide different names for each worksheet. Each new report page, defined by a page break, is exported to a different worksheet named by the value of the PageName property. If PageName is blank, but the report has an initial page name, then all worksheets in the Excel workbook use the same name, the initial page name.  
@@ -81,6 +81,6 @@ manager: "mblythe"
  For more information about how these properties work when reports are exported to Excel, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## See Also  
- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

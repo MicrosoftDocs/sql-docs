@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   None. This option is recommended only for backwards compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is available only from the stored procedure interface for transactional publications.  
   
- To specify an identity range management option, see [Manage Identity Columns](publish/manage-identity-columns.md).  
+ To specify an identity range management option, see [Manage Identity Columns](manage-identity-columns.md).  
   
 ## Assigning Identity Ranges  
  Merge replication and transactional replication use different methods for assigning ranges; these methods are described in this section.  

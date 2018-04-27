@@ -111,15 +111,15 @@ manager: "mblythe"
 ### Report Row Groups and Column Groups  
  Reports that include row groups or column groups contain empty cells when exported to Excel. Imagine a report that groups rows on sales channel and ZIP code. Each channel includes many ZIP codes and each ZIP code lists many store names. The following picture shows the report.  
   
- ![rs_ExportExcelRpt](../../2014/reporting-services/media/rs-exportexcelrpt.gif "rs_ExportExcelRpt")  
+ ![rs_ExportExcelRpt](../media/rs-exportexcelrpt.gif "rs_ExportExcelRpt")  
   
  When the report is exported to Excel, the ZIP code appears only in one cell of the ZIP code column. Depending on the alignment of the text in the report (top, middle, or bottom) the value is in the first, middle, or last cell. The other cells are empty. The column that contains store names has no empty cells. The following picture shows the report after it is exported to Excel. The red cell borders were added for emphasis. They are not part of the exported report.  
   
- ![rs_ExportExcelBefore](../../2014/reporting-services/media/rs-exportexcelbefore.gif "rs_ExportExcelBefore")  
+ ![rs_ExportExcelBefore](../media/rs-exportexcelbefore.gif "rs_ExportExcelBefore")  
   
  This means that reports with row groups or column groups require modification after exporting to Excel and before you can display the exported data in pivot table. You must add the group value to cells in which they are missing to make the worksheet a flat table with values in all cells. The following picture shows the update worksheet.  
   
- ![rs_ExportExcelAfter](../../2014/reporting-services/media/rs-exportexcelafter.gif "rs_ExportExcelAfter")  
+ ![rs_ExportExcelAfter](../media/rs-exportexcelafter.gif "rs_ExportExcelAfter")  
   
  If you create a report for the specific purpose of exporting it to Excel for further analysis of the report data, you should consider not including row or column groups in your report.  
   
@@ -189,7 +189,7 @@ manager: "mblythe"
   
  Charts, sparklines, data bars, maps, gauges, and indicators are exported as pictures. The data they depict, such as the value and member labels for a chart, is not exported with them and is not available in the Excel workbook unless it is included in a column or row in a data region within a report.  
   
- If you want to work with chart, sparkline, data bar, maps, gauge, and indicator data, export the report to a .csv file or generate Atom-compliant data feeds from the report. For more information, see [Exporting to a CSV File &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) and [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ If you want to work with chart, sparkline, data bar, maps, gauge, and indicator data, export the report to a .csv file or generate Atom-compliant data feeds from the report. For more information, see [Exporting to a CSV File &#40;Report Builder and SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md) and [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## Page Sizing  
  The Excel rendering extension uses the page height and width settings to determine what paper setting to define in the Excel worksheet. Excel tries to match the PageHeight and PageWidth property settings to one of the most common paper sizes.  
@@ -277,7 +277,7 @@ manager: "mblythe"
 ## See Also  
  [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering Report Items &#40;Report Builder and SSRS&#41;](report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

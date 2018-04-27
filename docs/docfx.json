@@ -56,8 +56,6 @@
 
       "monikerRange": {
 
-        "2014/**/*.md": "= sql-server-2014",
-
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "data-quality-services/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",

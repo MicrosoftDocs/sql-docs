@@ -54,6 +54,9 @@ AUTO_UPDATE STATISTICS_ASYNC option only works if AUTO_UPDATE_STATISTICS is ON. 
 ### Error messages
 You could receive the error message “This option is not supported in PDW”.  This error occurs when the system administrator has not enabled auto-stats, and you try to set any of the auto-stats options in ALTER DATABASE. 
 
+### Limitations and Restrictions
+Auto-stats does not work on external tables. 
+
 ### Check the current values
 The following query returns the current values of the auto-stats settings for all databases.
 

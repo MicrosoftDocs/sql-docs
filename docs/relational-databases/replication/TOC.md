@@ -293,6 +293,6 @@
 ## [Configure Transactional Replication](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [Configure Merge Replication](tutorial-replicating-data-with-mobile-clients.md)  
 
-# Troubleshooting
-## [Transactional Repl Sync Errors](../../troubleshooting/replication/troubleshooting-tran-repl-errors.md)
+# Troubleshooters
+## [Transactional Repl Sync Errors](../../troubleshooting/replication/troubleshoot-tran-repl-errors.md)
 

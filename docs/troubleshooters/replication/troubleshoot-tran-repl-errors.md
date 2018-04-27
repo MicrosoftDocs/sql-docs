@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting: Transactional Replication Sync Errors | Microsoft Docs"
+title: "Troubleshooter: Finding Errors with SQL Server Transactional Replication  | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/26/2018"
 ms.prod: "sql"
@@ -23,7 +23,7 @@ ms.workload: "On Demand"
 ---
 
 
-# Troubleshoot Transactional Replication Sync Errors
+# Troubleshooter: Finding Errors with SQL Server Transactional Replication 
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step to creating a publication is having the **Snapshot Agent** create the snapshot and save it to the snapshot folder. Next, the **Distribution Agent** will take the snapshot, and apply it to the subscriber. 
 
 This creates the publication, and puts it into the *synchronizing* state. Synchronization works in three phases:
@@ -37,10 +37,7 @@ Errors can occur in any step of this process, and finding those errors can be th
   > - The purpose of this troubleshooting guide is to teach troubleshooting methodology. It is not designed to solve your specific error,  but provide general guidance in finding errors. Some specific examples are provided but the resolution to them may vary depending on environment. 
  > - The errors that are provided as examples are based on the tutorial [Configuring Transacational Replication](/../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md).
 
-**See Also**:
-<br>[Transactional Replication Overview](../../relational-databases/replication/transactional/transactional-replication.md)
-<br>[Replication Tutorials](/../../relational-databases/replication/replication-tutorials.md)
-<br>[ReplTalk Blog](https://blogs.msdn.microsoft.com/repltalk)
+
 
 ## Troubleshooting Methodology 
 
@@ -222,4 +219,12 @@ Sometimes the errors we find in the agent history prove to be insufficient in he
 1. To disable verbose logging, follow the same steps as before but this time remove the entire line you just added, starting with -Output. 
 
 For more information, please see [Enabling verbose logging for replication agents](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se) 
+
+
+## See Also:
+<br>[Transactional Replication Overview](../../relational-databases/replication/transactional/transactional-replication.md)
+<br>[Replication Tutorials](/../../relational-databases/replication/replication-tutorials.md)
+<br>[ReplTalk Blog](https://blogs.msdn.microsoft.com/repltalk)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

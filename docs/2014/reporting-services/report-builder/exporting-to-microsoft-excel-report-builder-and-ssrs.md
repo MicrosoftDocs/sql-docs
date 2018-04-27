@@ -203,7 +203,7 @@ manager: "mblythe"
   
  If the report provides neither an initial page name, nor page names related to page breaks, the worksheet tabs will have the default names **Sheet1**, **Sheet2**, and so forth.  
   
- Reporting Services provides properties to set on reports, data regions, groups, and rectangles to help you create reports that can be exported to Excel in a way that you want. For more information, see [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Reporting Services provides properties to set on reports, data regions, groups, and rectangles to help you create reports that can be exported to Excel in a way that you want. For more information, see [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ##  <a name="DocumentProperties"></a> Document Properties  
  The Excel renderer writes the following metadata to the Excel file.  
@@ -272,13 +272,13 @@ manager: "mblythe"
  Bookmark links in text boxes are rendered as Excel hyperlinks in the cell in which the text is rendered. Bookmark links for images and charts are rendered as Excel hyperlinks on the image when rendered. When clicked, the bookmark goes to the Excel cell in which the bookmarked report item is rendered.  
   
 ##  <a name="ConditionalFormat"></a> Changing Reports at Run-Time  
- If a report must render to multiple formats and it is not possible to create a report layout that renders the way you want in all required formats, then you might consider using the value in the RenderFormat built-in global to conditionally change the report appearance at run time. This way you can hide or show report items depending the renderer used to get the best results in each format. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ If a report must render to multiple formats and it is not possible to create a report layout that renders the way you want in all required formats, then you might consider using the value in the RenderFormat built-in global to conditionally change the report appearance at run time. This way you can hide or show report items depending the renderer used to get the best results in each format. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## See Also  
- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [Rendering Report Items &#40;Report Builder and SSRS&#41;](report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Rendering Report Items &#40;Report Builder and SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

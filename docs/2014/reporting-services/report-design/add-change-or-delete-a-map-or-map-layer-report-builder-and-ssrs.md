@@ -274,7 +274,7 @@ manager: "mblythe"
   
     -   Optional. Enter a value for transparency.  
   
-     You can also conditionally hide the layer. For more information, see [Hide an Item &#40;Report Builder and SSRS&#41;](report-builder/hide-an-item-report-builder-and-ssrs.md).  
+     You can also conditionally hide the layer. For more information, see [Hide an Item &#40;Report Builder and SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 2.  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   

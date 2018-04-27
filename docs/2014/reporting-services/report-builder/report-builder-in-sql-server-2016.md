@@ -79,10 +79,10 @@ manager: "mblythe"
  [Tutorial: Creating a Quick Chart Report Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Introduces Report Builder and the wizards available to help you create reports. The tutorial provides a set of data for you to work with so you do not need to connect to a data source to get started.  
   
- [Planning a Report &#40;Report Builder&#41;](report-design/planning-a-report-report-builder.md)  
+ [Planning a Report &#40;Report Builder&#41;](../report-design/planning-a-report-report-builder.md)  
  Provides information on what you should consider before you start to build your report.  
   
- [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Defines key concepts used in throughout Report Builder documentation.  
   
  [Report Design View &#40;Report Builder&#41;](report-design-view-report-builder.md)  

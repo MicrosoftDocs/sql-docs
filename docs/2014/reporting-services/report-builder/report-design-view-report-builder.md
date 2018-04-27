@@ -44,7 +44,7 @@ manager: "mblythe"
 ### Insert tab  
  The Insert tab is a collection of commands commonly used for adding report items to the report. From the Insert tab, you can use wizards to add a table, matrix, chart, or map. You can also add these items without using a wizard, and add other report items such as sparklines, indicators, text boxes, images, rectangles, subreports, and report headers and footers.  
   
- Clicking **Report Parts** on the Insert tab opens the Report Part Gallery. You can search for report parts saved to a report server. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md).  
+ Clicking **Report Parts** on the Insert tab opens the Report Part Gallery. You can search for report parts saved to a report server. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  After you insert an item, Report Builder automatically switches back to the Home tab.  
   
@@ -78,7 +78,7 @@ manager: "mblythe"
  For information about using the keyboard to manipulate items on the design surface, see [Keyboard Shortcuts &#40;Report Builder&#41;](keyboard-shortcuts-report-builder.md)  
   
 ### Design Surface Size and Print Area  
- The design surface size might be different from the page size print area you specify to print the report. Changing the size of the design surface will not change the print area of your report. No matter what size you set for the print area of your report, the full design area size does not change. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ The design surface size might be different from the page size print area you specify to print the report. Changing the size of the design surface will not change the print area of your report. No matter what size you set for the print area of your report, the full design area size does not change. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  To display the ruler, on the **View** tab, select the **Ruler** check box.  
@@ -91,24 +91,24 @@ manager: "mblythe"
   
  You can also drag built-in fields from the Report Data pane to the report design surface. When rendered, these fields provide information about the report, such as the report name, the total number of pages in the report, and the current page number.  
   
- Some things are automatically added to the Report Data pane when you add something to the report design surface. For example, if you add a report part from the Report Part Gallery, and the report part is a data region, the dataset is automatically added to the Report Data pane. For more information, see [Report Parts and Datasets in Report Builder](report-data/report-parts-and-datasets-in-report-builder.md). Also, if you embed an image in your report, it will be added to the Images folder in the Report Data pane.  
+ Some things are automatically added to the Report Data pane when you add something to the report design surface. For example, if you add a report part from the Report Part Gallery, and the report part is a data region, the dataset is automatically added to the Report Data pane. For more information, see [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md). Also, if you embed an image in your report, it will be added to the Images folder in the Report Data pane.  
   
 > [!NOTE]  
 >  You can use the **New** button to add a new item to the Report Data pane. You can add multiple datasets from the same data source or from other data sources to the report. You can add shared datasets from the report server. To add a new dataset from the same data source, right-click a data source, and then click **Add Dataset**.  
   
  For more information about items in the Report Data pane, see the following topics:  
   
--   [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
--   [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
+-   [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+-   [Images &#40;Report Builder and SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Data Connections, Data Sources, and Connection Strings in Report Builder](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
--   [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+-   [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
--   [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+-   [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
 ##  <a name="ReptPartGallery"></a> The Report Part Gallery  
@@ -117,7 +117,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  You must be connected to a server to view the Report Part Gallery.  
   
- You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md).  
+ You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
   
 ##  <a name="PropertiesPane"></a> The Properties Pane (Report Builder)  
@@ -155,7 +155,7 @@ manager: "mblythe"
   
  The Grouping pane is displayed by default but you can close the pane by clearing the Grouping pane check box on the View tab. The Grouping pane is not available for the Chart or Gauge data regions.  
   
- For more information, see [Grouping Pane &#40;Report Builder&#41;](report-design/grouping-pane-report-builder.md) and [Understanding Groups &#40;Report Builder and SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md).  
+ For more information, see [Grouping Pane &#40;Report Builder&#41;](../report-design/grouping-pane-report-builder.md) and [Understanding Groups &#40;Report Builder and SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
   
 ##  <a name="RunMode"></a> Previewing Your Report in Run Mode  
@@ -164,7 +164,7 @@ manager: "mblythe"
  When you click **Run**, Report Builder connects to the report data sources, caches the data on your computer, combines the data and the layout and then renders the report in the HTML Viewer. You can run your report as often as you like while you continue to design it. When you are satisfied with your report, you can save the report to the report server where other individuals with the appropriate permissions can view your report.  
   
 ### Running a Report with Parameters  
- When you run your report, it is processed automatically. If the report contains parameters, all the parameters must have default values before the report can run automatically. If a parameter does not have a default value, when you run the report you need to choose a value for the parameter, and then click **View Report** on the Run tab. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
+ When you run your report, it is processed automatically. If the report contains parameters, all the parameters must have default values before the report can run automatically. If a parameter does not have a default value, when you run the report you need to choose a value for the parameter, and then click **View Report** on the Run tab. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### Print Preview  
  When you preview a report in run mode, it resembles a report produced in HTML. The preview is not HTML, but the layout and pagination of the report is similar to HTML output. You can change the view to represent a printed report by switching to print preview mode. Click the **Print Preview** button on the **Run** tab. The report will display as though it were on a physical page. This view resembles the output produced by the Image and PDF rendering extensions. Print Preview is not an image or PDF file, but the layout and pagination of the report are similar to the output of those formats.  

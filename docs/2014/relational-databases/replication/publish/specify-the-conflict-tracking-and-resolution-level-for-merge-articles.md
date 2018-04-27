@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Specify the Conflict Tracking and Resolution Level for Merge Articles
   This topic describes how to specify the conflict tracking and resolution level for merge articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- When a subscription to a merge publication is synchronized, replication checks for conflicts caused by changes to the same data made at both the Publisher and the Subscriber. You can specify whether conflicts are detected at the row-level, where any change to the row is considered a conflict, or column-level, where only changes to the same row and column are considered a conflict. Conflict resolution for articles is performed at the row-level. For more information about conflict detection and resolution when logical records are used, see [Detecting and Resolving Conflicts in Logical Records](merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+ When a subscription to a merge publication is synchronized, replication checks for conflicts caused by changes to the same data made at both the Publisher and the Subscriber. You can specify whether conflicts are detected at the row-level, where any change to the row is considered a conflict, or column-level, where only changes to the same row and column are considered a conflict. Conflict resolution for articles is performed at the row-level. For more information about conflict detection and resolution when logical records are used, see [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
  **In This Topic**  
   
@@ -80,9 +80,9 @@ manager: "jhubbard"
      Specify a value of **1** for both **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Detecting and Resolving Conflicts in Logical Records](merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
- [Detect and Resolve Merge Replication Conflicts](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [Detect and Resolve Merge Replication Conflicts](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

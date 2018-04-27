@@ -136,6 +136,6 @@ manager: "jhubbard"
 ## See Also  
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Filter Published Data](filter-published-data.md)   
- [Filter Published Data for Merge Replication](merge/merge-replication.md)  
+ [Filter Published Data for Merge Replication](../merge/merge-replication.md)  
   
   

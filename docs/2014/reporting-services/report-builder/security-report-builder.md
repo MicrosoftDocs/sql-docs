@@ -79,7 +79,7 @@ manager: "mblythe"
   
  If report parts are moved from the original location, the update notice includes both the current location and the previous location of the report part. Accept updates only from trusted locations.  
   
- For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-design/report-parts-report-builder-and-ssrs.md).  
+ For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
 =  
   

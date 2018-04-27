@@ -84,7 +84,7 @@ manager: "mblythe"
   
   
 ## See Also  
- [Exporting to an Image File &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [Exporting to an Image File &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

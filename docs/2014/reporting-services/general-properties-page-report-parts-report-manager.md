@@ -78,7 +78,7 @@ manager: "mblythe"
  [Managing Report Parts](report-design/managing-report-parts.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md)   
+ [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
  [Report Parts and Datasets in Report Builder](report-data/report-parts-and-datasets-in-report-builder.md)  
   

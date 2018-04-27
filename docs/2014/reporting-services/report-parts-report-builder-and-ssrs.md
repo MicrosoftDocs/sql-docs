@@ -72,7 +72,7 @@ manager: "mblythe"
   
  Some report parts can contain other report items. For example, a table can contain a chart, and a rectangle can contain a matrix and a chart. When you publish a report item that contains other report items, they are saved as a unit. The other report items are saved embedded in the container report part. You cannot update them separately, and you cannot save the items in the container as separate report parts.  
   
- For more information on publishing report parts, see [Publish and Republish Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md).  
+ For more information on publishing report parts, see [Publish and Republish Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
   
 ### Modifying Report Part Metadata  
  You can publish report parts with default settings to a default location, or you can save each report part to a different location, and modify the metadata, such as the title and description.  
@@ -139,7 +139,7 @@ manager: "mblythe"
  Report parts work a little differently in Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In Report Designer, publishing is one-way: you can publish a report part from Report Designer, but you cannot reuse an existing report part in Report Designer. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> How-to Topics  
- [Publish and Republish Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md)  
+ [Publish and Republish Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
  [Browse for Report Parts and Set a Default Folder &#40;Report Builder and SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   

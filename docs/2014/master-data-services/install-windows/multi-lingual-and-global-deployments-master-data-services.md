@@ -29,6 +29,6 @@ manager: "jhubbard"
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database|Information in the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database is not specific to any locale. This enables [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] to determine how to display information, such as dates and numbers, in the format determined by the language preferences of the client web browser.|  
   
 ## See Also  
- [Install Master Data Services](../master-data-services-installation-and-configuration.md)  
+ [Install Master Data Services](../install-master-data-services.md)  
   
   

@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 2.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) and note the name of the desired custom resolver in the **value** field of result set.  
   
-3.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the resolver from step 2 for **@article_resolver** and any required input to the custom resolver using the **@resolver_info** parameter. For stored procedure-based custom resolvers, **@resolver_info** is the name of the stored procedure. For more information about required input for resolvers supplied by [!INCLUDE[msCoName](../../../includes/msconame-md.md)], see [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+3.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the resolver from step 2 for **@article_resolver** and any required input to the custom resolver using the **@resolver_info** parameter. For stored procedure-based custom resolvers, **@resolver_info** is the name of the stored procedure. For more information about required input for resolvers supplied by [!INCLUDE[msCoName](../../../includes/msconame-md.md)], see [Microsoft COM-Based Resolvers](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
 #### To specify or change a custom resolver for an existing merge article  
   
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 3.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **article_resolver**, including the full path for business logic handlers, for **@property**, and the name of the desired custom resolver from step 2 for **@value**.  
   
-4.  To change any required input for the custom resolver, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) again. Specify a value of **resolver_info** for **@property** and any required input to the custom resolver for **@value**. For stored procedure-based custom resolvers, **@resolver_info** is the name of the stored procedure. For more information about required input, see [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+4.  To change any required input for the custom resolver, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) again. Specify a value of **resolver_info** for **@property** and any required input to the custom resolver for **@value**. For stored procedure-based custom resolvers, **@resolver_info** is the name of the stored procedure. For more information about required input, see [Microsoft COM-Based Resolvers](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
 #### To unregister a custom conflict resolver  
   

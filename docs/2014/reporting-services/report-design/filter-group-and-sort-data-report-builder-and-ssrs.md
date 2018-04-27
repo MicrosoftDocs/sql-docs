@@ -55,7 +55,7 @@ manager: "mblythe"
 ##  <a name="Filtering"></a> Filtering Data in the Report  
  Filters are parts of a report that help control report data after it is retrieved from the data connection. Use filters when you cannot change a dataset query to filter data before it is retrieved from an external data source.  
   
- When it is possible, build dataset queries that return only the data that you need to display in the report. When you reduce the amount of the data that must be retrieved and processed, you are helping to improve report performance. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ When it is possible, build dataset queries that return only the data that you need to display in the report. When you reduce the amount of the data that must be retrieved and processed, you are helping to improve report performance. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  After the data is retrieved from the external data source, you can add filters to datasets, data regions, and data region groups, including detail groups. Filters are applied at run time first on the dataset, and then on the data region, and then on the group, in top-down order for group hierarchies. In a table, matrix, or list, filters for row groups, column groups, and adjacent groups are applied independently. In a chart, filters for category groups and series groups are applied independently. For more information, see [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
@@ -175,7 +175,7 @@ FROM Production.Product
   
  [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Set a No Data Message for a Data Region &#40;Report Builder and SSRS&#41;](report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Set a No Data Message for a Data Region &#40;Report Builder and SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
  [Create a Recursive Hierarchy Group &#40;Report Builder and SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   

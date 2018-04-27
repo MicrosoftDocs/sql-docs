@@ -63,7 +63,7 @@ manager: "mblythe"
 >   
 >  For information on setting visibility information on the group, column or row, see [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)  
   
- For more information about hiding report items, see [Hide an Item &#40;Report Builder and SSRS&#41;](report-builder/hide-an-item-report-builder-and-ssrs.md).  
+ For more information about hiding report items, see [Hide an Item &#40;Report Builder and SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

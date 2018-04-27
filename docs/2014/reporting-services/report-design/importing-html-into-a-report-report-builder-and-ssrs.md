@@ -75,6 +75,6 @@ manager: "mblythe"
 -   For attributes and CSS styles, if a property is specified more than once, only the last instance of the property is applied. For example, if your text is **\<p align="left" align="right">**, the text will be right-aligned.  
   
 ## See Also  
- [Rendering to HTML &#40;Report Builder and SSRS&#41;](report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Rendering to HTML &#40;Report Builder and SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

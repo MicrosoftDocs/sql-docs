@@ -44,7 +44,7 @@ manager: "mblythe"
   
 7.  **Metadata from schema** The data provider runs a schema query command separate from the query to retrieve metadata for the dataset field collection. For example, a [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` statement returns the column names for a database table. Use the Report Data pane to expand the dataset to view the dataset field collection.  
   
- Data can also be included in a report by using predefined shared datasets and report parts. These items already have the data connection information that you need. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md) and [Report Parts &#40;Report Builder and SSRS&#41;](report-design/report-parts-report-builder-and-ssrs.md).  
+ Data can also be included in a report by using predefined shared datasets and report parts. These items already have the data connection information that you need. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md) and [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  For more information about built-in data source types and data extensions, see [Add Data from External Data Sources &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md).  
   
@@ -134,7 +134,7 @@ manager: "mblythe"
   
  In Report Builder, you can do the following:  
   
--   To create a shared dataset, use Shared Dataset Design View. You can save it to a report server or SharePoint site to share with other reports. You can also browse to the report server and edit and existing shared dataset. In this view, you can build a query and set all dataset options. For more information, see [Shared Dataset Design View &#40;Report Builder&#41;](report-builder/shared-dataset-design-view-report-builder.md).  
+-   To create a shared dataset, use Shared Dataset Design View. You can save it to a report server or SharePoint site to share with other reports. You can also browse to the report server and edit and existing shared dataset. In this view, you can build a query and set all dataset options. For more information, see [Shared Dataset Design View &#40;Report Builder&#41;](../report-builder/shared-dataset-design-view-report-builder.md).  
   
 -   To add a shared dataset to your report, open Report Builder in Report Design View. From a wizard or from the Report Data pane, browse to the report server and select the shared dataset to add to your report. In this view, you cannot change the query except to add fields. You can override other data options and add filters. You cannot remove filters.  
   
@@ -154,24 +154,24 @@ manager: "mblythe"
 ##  <a name="SortGroupFilter"></a> Filtering, Sorting, and Grouping Data in a Dataset  
  Data in a dataset comes from running a query command on an external data source. The query command syntax for a data extension determines whether data can be sorted or grouped. Sorting and grouping takes place in the query before the data is retrieved for a report. Filtering takes place after the data is retrieved for a report.  
   
- For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### Filtering Data in a Dataset  
  Filters are part of the dataset definition in a report. Use dataset filters to specify what data from a dataset to include in a report. When you specify filters on a dataset, all data regions that are based on the dataset display only data that passes through the dataset filters.  
   
  Filters are part of a shared dataset definition. Shared dataset filters affect all reports that include the shared dataset. After you add a shared dataset to your report, or after you add a component with a dependent shared dataset, you can create additional dataset filters. Filters that you create are used only in your report, they are not part of the shared dataset definition on the report server.  
   
- You can set additional filters on a data region or a data region group. You can also use a combination of parameters and filters enable users to choose the data that they want to see in a report. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
+ You can set additional filters on a data region or a data region group. You can also use a combination of parameters and filters enable users to choose the data that they want to see in a report. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### Sorting Data in a Dataset  
  In a dataset, the order of the data is the order that it is retrieved from the external data source. This is the same order that you see when you run the query in the query designer. If the query-command syntax supports sorting, you can edit the query to sort the data at the source, before it is returned as report data. For example, for a [!INCLUDE[tsql](../../../includes/tsql-md.md)] query, the ORDER BY statement controls the sort order.  
   
- To sort data after it is returned to the report, define sort expressions on data regions and data region groups. For more information, see the topic for the specific type of data region, for example, [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ To sort data after it is returned to the report, define sort expressions on data regions and data region groups. For more information, see the topic for the specific type of data region, for example, [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- You can also use a combination of parameters and sort expressions to enable users to choose the sort order for data in a report. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
+ You can also use a combination of parameters and sort expressions to enable users to choose the sort order for data in a report. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### Grouping Data in a Dataset  
- You cannot group data in a dataset. To aggregate data in a dataset, you can edit the query command to calculate aggregates before the data is retrieved for a report. These are known as *server aggregates*. In expressions, to identify these values as precalculated aggregates, use the Aggregate function. For more information, see [Aggregate Function &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-function.md).  
+ You cannot group data in a dataset. To aggregate data in a dataset, you can edit the query command to calculate aggregates before the data is retrieved for a report. These are known as *server aggregates*. In expressions, to identify these values as precalculated aggregates, use the Aggregate function. For more information, see [Aggregate Function &#40;Report Builder and SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md).  
   
 ##  <a name="Parameters"></a> Using Parameters and Datasets  
  For an embedded dataset query that contains query variables, query parameters and corresponding report parameters are automatically created. When the report runs, the value of the report parameter is linked to the dataset query parameter. In this way, the query command that runs on the external data source includes the values that are specified for report parameters. Report parameters enable a user to help choose the data that they want to see in the report. You can view how query parameters and report parameters are linked in the [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](../dataset-properties-dialog-box-parameters-report-builder.md) page.  
@@ -190,26 +190,26 @@ manager: "mblythe"
   
  For some multidimensional data sources, such as [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the graphical query designer enables you to specify query filters and select an option to create a corresponding query parameter. When you select the parameter option, the data extension automatically creates a separate report dataset to provide available values for a drop-down list for that parameter. By default, these hidden datasets do not appear in the Report Data pane.  
   
- Report parameters that are linked to query parameters help filter data before the data is returned from the external data source. You can also filter data in the report by creating filters that are part of the report definition. For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Report parameters that are linked to query parameters help filter data before the data is returned from the external data source. You can also filter data in the report by creating filters that are part of the report definition. For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### Displaying Hidden Datasets  
  When you create a parameterized query for some multidimensional data sources, datasets that provide valid values for the parameter are automatically created. On some query designers, you do this by specifying filters and then selecting the option to create parameters. By default, these datasets do not appear in the Report Data pane, but they can be displayed. For more information, see [Show Hidden Datasets for Parameter Values for Multidimensional Data &#40;Report Builder and SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 ##  <a name="Maps"></a> Using Maps and Datasets  
- If you include a map in your report, you must provide spatial data. Spatial data can come from a report dataset, from a map in the map gallery, or from ESRI Shapefiles. Spatial data from a report or from an ESRI Shapefile does not appear as a dataset in the Report Data pane. For more information, see [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ If you include a map in your report, you must provide spatial data. Spatial data can come from a report dataset, from a map in the map gallery, or from ESRI Shapefiles. Spatial data from a report or from an ESRI Shapefile does not appear as a dataset in the Report Data pane. For more information, see [Maps &#40;Report Builder and SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
 ##  <a name="Multiple"></a> Displaying Data from Multiple Datasets  
  A report typically has more than one dataset. The following list describes how you can use datasets in a report:  
   
--   You display the data from each dataset using a separate data region. For more information, see [Data Regions and Maps &#40;Report Builder and SSRS&#41;](report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
+-   You display the data from each dataset using a separate data region. For more information, see [Data Regions and Maps &#40;Report Builder and SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
--   You can link more than one data region to a dataset and provide multiple views of the same data. For more information, see [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+-   You can link more than one data region to a dataset and provide multiple views of the same data. For more information, see [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
--   You can use datasets to provide a drop-down list of available values or default values for a report parameter. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
+-   You can use datasets to provide a drop-down list of available values or default values for a report parameter. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
--   You can link related data from multiple datasets by using parameters with drillthrough reports or subreports. For example, a sales report can show summary data for all stores, and a drillthrough link can specify the store identifier as a parameter to a report with a dataset query that retrieves the individual sales for the specified store. For more information, see [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) and [Subreports &#40;Report Builder and SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md).  
+-   You can link related data from multiple datasets by using parameters with drillthrough reports or subreports. For example, a sales report can show summary data for all stores, and a drillthrough link can specify the store identifier as a parameter to a report with a dataset query that retrieves the individual sales for the specified store. For more information, see [Drillthrough, Drilldown, Subreports, and Nested Data Regions &#40;Report Builder and SSRS&#41;](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) and [Subreports &#40;Report Builder and SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md).  
   
--   You cannot display detail data from multiple datasets in a single data region. However, you can display aggregate or built-in function values for multiple datasets within a data region. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md). If you need to combine detail data from multiple datasets into one data region, you must rewrite your query to retrieve the data as a single dataset.  
+-   You cannot display detail data from multiple datasets in a single data region. However, you can display aggregate or built-in function values for multiple datasets within a data region. For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md). If you need to combine detail data from multiple datasets into one data region, you must rewrite your query to retrieve the data as a single dataset.  
   
 ##  <a name="NoRows"></a> Displaying a Message When No Rows of Data Are Available  
  During report processing, when the query for a dataset runs, the result set may contain no rows. In the rendered report, a data region linked to an empty dataset displays as an empty data region. You can specify text to display in the rendered report in place of the empty data region. You can also specify a message for subreports when the queries for all datasets produce no data at run time. For more information, see [Set a No Data Message for a Data Region &#40;Report Builder and SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  

@@ -188,6 +188,6 @@ manager: "jhubbard"
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

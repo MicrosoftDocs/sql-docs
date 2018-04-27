@@ -117,6 +117,6 @@ manager: "mblythe"
  
   
 ## See Also  
- [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

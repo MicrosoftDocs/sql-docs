@@ -21,7 +21,7 @@ manager: "mblythe"
 # Hide an Item (Report Builder and SSRS)
   Set the visibility of a report item when you want to conditionally hide an item based on a report parameter or some other expression that you specify.  
   
- You can also design a report to allow the user to toggle the visibility of report items based on clicking text boxes in the report, for example, for a drilldown report. For more information, see [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
+ You can also design a report to allow the user to toggle the visibility of report items based on clicking text boxes in the report, for example, for a drilldown report. For more information, see [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
  The following procedures describe how to show or hide a report item in a rendered report based on a constant or an expression.  
   
@@ -68,8 +68,8 @@ manager: "mblythe"
 3.  In the **Column Visibility** dialog box, follow steps 3 and 4 in the first procedure.  
   
 ## See Also  
- [Drilldown Action &#40;Report Builder and SSRS&#41;](report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Drilldown Action &#40;Report Builder and SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Expression Examples &#40;Report Builder and SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

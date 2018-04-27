@@ -41,6 +41,6 @@ manager: "mblythe"
  Describes the ways to define and use report parameters, and how they are independently managed from the report definition on the report server.  
   
 ## See Also  
- [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
+ [Report Builder in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -95,6 +95,6 @@ manager: "mblythe"
   
 ## See Also  
  [Drilldown Action &#40;Report Builder and SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
- [Hide an Item &#40;Report Builder and SSRS&#41;](report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Hide an Item &#40;Report Builder and SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

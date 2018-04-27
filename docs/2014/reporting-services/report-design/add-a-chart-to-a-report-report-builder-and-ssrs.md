@@ -40,7 +40,7 @@ manager: "mblythe"
   
 ### To add a chart to a report  
   
-1.  Create a report and define a dataset. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md).  
+1.  Create a report and define a dataset. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 2.  On the **Insert** tab, click **Chart**, and then click **Insert Chart**.  
   

@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   You must have permission to access the **System Administration** and **Explorer** functional areas.  
   
--   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   There must be an existing model, entity, and attribute.  
   

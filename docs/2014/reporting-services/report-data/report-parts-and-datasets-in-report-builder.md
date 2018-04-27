@@ -60,7 +60,7 @@ manager: "mblythe"
 ## See Also  
  [Report Design View &#40;Report Builder&#41;](../report-design-view-report-builder.md)   
  [Security &#40;Report Builder&#41;](../report-builder/security-report-builder.md)   
- [Report Parts &#40;Report Builder and SSRS&#41;](../report-design/report-parts-report-builder-and-ssrs.md)   
+ [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

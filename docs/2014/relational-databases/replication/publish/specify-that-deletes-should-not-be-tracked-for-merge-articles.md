@@ -47,6 +47,6 @@ manager: "jhubbard"
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
   
 ## See Also  
- [Optimize Merge Replication Performance with Conditional Delete Tracking](merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
+ [Optimize Merge Replication Performance with Conditional Delete Tracking](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

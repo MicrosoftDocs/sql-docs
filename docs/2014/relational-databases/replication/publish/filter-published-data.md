@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   Avoid or reduce conflicts if Subscribers are updating data, because different data partitions can be sent to different Subscribers (no two Subscribers will be updating the same data values).  
   
--   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+-   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Replication offers four types of filters:  
   
@@ -50,11 +50,11 @@ manager: "jhubbard"
   
 -   Parameterized row filters, which are available only with merge replication.  
   
-     Using parameterized row filters, you can choose a subset of rows to be published. Unlike static filters that send the same subset of rows to every Subscriber, parameterized row filters use a data value supplied by the Subscriber to send Subscribers different subsets of rows. For more information, see [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+     Using parameterized row filters, you can choose a subset of rows to be published. Unlike static filters that send the same subset of rows to every Subscriber, parameterized row filters use a data value supplied by the Subscriber to send Subscribers different subsets of rows. For more information, see [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Join filters, which are available only with merge replication.  
   
-     Using join filters, you can extend a row filter from one published table to another. For more information, see [Join Filters](merge/join-filters.md).  
+     Using join filters, you can extend a row filter from one published table to another. For more information, see [Join Filters](../merge/join-filters.md).  
   
 ## Static Row Filters  
  The following illustration shows a published table that is filtered so that only rows 2, 3, and 6 are included in the publication.  
@@ -70,7 +70,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Row filters in transactional publications can add significant overhead because the article filter clause is evaluated for each log row written for a published table, to determine whether the row should be replicated. Row filters in transactional publications should be avoided if each replication node can support the full data load, and the overall data set is reasonably small.  
   
--   With merge replication, use parameterized row filters rather than creating multiple publications with static row filters. For more information, see [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+-   With merge replication, use parameterized row filters rather than creating multiple publications with static row filters. For more information, see [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  To define or modify a static row filter, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   

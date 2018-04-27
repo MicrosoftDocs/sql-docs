@@ -71,7 +71,8 @@ column_name AS computed_column_expression
     >  Because each row in a table can have different values for columns involved in a computed column, the computed column may not have the same result for each row.  
   
 PERSISTED  
- Specifies that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will physically store the computed values in the table, and update the values when any other columns on which the computed column depends are updated. Marking a computed column as PERSISTED allows an index to be created on a computed column that is deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Any computed columns used as partitioning columns of a partitioned table must be explicitly marked PERSISTED. *computed_column_expression* must be deterministic when PERSISTED is specified.  
+ Specifies that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will physically store the computed values in the table, and update the values when any other columns on which the computed column depends are updated. Marking a computed column as PERSISTED allows an index to be created on a computed column that is deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Any computed columns used as partitioning columns of a partitioned table must be explicitly marked PERSISTED. *computed_column_expression* must be deterministic when PERSISTED is specified. 
+
 NULL | NOT NULL  
  Specifies whether null values are allowed in the column. NULL is not strictly a constraint but can be specified like NOT NULL. NOT NULL can be specified for computed columns only if PERSISTED is also specified.  
   
@@ -150,5 +151,3 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  

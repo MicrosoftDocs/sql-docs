@@ -3,7 +3,7 @@ title: "SQL Server Integration Services (SSIS) Scale Out Support for High Availa
 ms.description: "This article describes how to configure SSIS Scale Out for high availability with SQL Server failover cluster instance"
 ms.custom: ""
 ms.date: "04/10/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "scale-out"

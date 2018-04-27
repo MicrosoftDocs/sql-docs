@@ -2,7 +2,7 @@
 title: "Disable Stretch Database and bring back remote data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "stretch-database"

@@ -2,7 +2,7 @@
 title: "Integration Services (SSIS) Catalog Transact-SQL Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "service"

@@ -2,7 +2,7 @@
 title: "Select rows to migrate by using a filter function (Stretch Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "stretch-database"

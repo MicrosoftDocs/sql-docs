@@ -2,7 +2,7 @@
 title: "Register a Connected Server (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-registration"

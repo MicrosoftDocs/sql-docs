@@ -90,11 +90,6 @@ This page indicates whether the import was successful. If a green check mark app
 
 ![Wizard Results](media/import-flat-file-wizard/importffresults.png)
 
-## Reporting import flat file failures
-If you run into any failures, send an email to sqltoolsprosesupport@microsoft.com
-
-For more information, [see these instructions.](reporting-import-flat-file-failures.md)
-
 ## Learn More
 
 Learn more about the wizard.

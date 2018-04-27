@@ -2,7 +2,7 @@
 title: "Web Application Requirements (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "install-windows"

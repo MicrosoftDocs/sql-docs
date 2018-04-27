@@ -1,6 +1,6 @@
 ---
 title: "Work with Sample Console Script FilesExecuting the SSMA Console | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-access"

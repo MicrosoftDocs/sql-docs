@@ -2,8 +2,8 @@
 title: "What's New in SQL Server 2016"
 ms.custom: ""
 ms.date: "07/21/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""

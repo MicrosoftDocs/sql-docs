@@ -1,23 +1,17 @@
 ﻿---
 title: "Dynamic Data Masking | Microsoft Docs"
-ms.custom: ""
 ms.date: "04/23/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: "securitye"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Dynamic Data Masking
@@ -93,7 +87,7 @@ WHERE is_masked = 1;
   
  For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements do not function properly on a column configured for Dynamic Data Masking. 
  
- Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefor cannot be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
+ Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore cannot be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
  
 
 ## Security Note: Bypassing masking using inference or brute-force techniques
@@ -103,7 +97,7 @@ Dynamic Data Masking is designed to simplify application development by limiting
 As an example, consider a database principal that has sufficient privileges to run ad-hoc queries on the database, and tries to 'guess' the underlying data and ultimately infer the actual values. Assume that we have a mask defined on the `[Employee].[Salary]` column, and this user connects directly to the database and starts guessing values, eventually inferring the `[Salary]` value of a set of Employees:
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -123,7 +117,7 @@ It is important to properly manage the permissions on the database, and to alway
 ### Creating a Dynamic Data Mask  
  The following example creates a table with three different types of dynamic data masks. The example populates the table, and selects to show the result.  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
@@ -140,7 +134,7 @@ SELECT * FROM Membership;
   
  A new user is created and granted **SELECT** permission on the table. Queries executed as the `TestUser` view masked data.  
   
-```  
+```sql
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -161,14 +155,14 @@ REVERT;
  Use the **ALTER TABLE** statement to add a mask to an existing column in the table, or to edit the mask on that column.  
 The following example adds a masking function to th `LastName` column:  
   
-```  
+```sql
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  The following example changes a masking function on the `LastName` column:  
   
-```  
+```sql
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -176,7 +170,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### Granting Permissions to View Unmasked Data  
  Granting the **UNMASK** permission allows `TestUser` to see the data unmasked.  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -189,16 +183,14 @@ REVOKE UNMASK TO TestUser;
 ### Dropping a Dynamic Data Mask  
  The following statement drops the mask on the `LastName` column created in the previous example:  
   
-```  
+```sql
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
-  
-## See Also  
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
- [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [Get started with SQL Database Dynamic Data Masking (Azure Preview portal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  
+
+## See Also
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
+ [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)
+ [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)
+ [Get started with SQL Database Dynamic Data Masking (Azure Preview portal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)

@@ -134,7 +134,7 @@ manager: "jhubbard"
   
          For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-    2.  Use the [tablediff utility](../../tools/tablediff-utility.md) or another tool to manually synchronize the Publisher with the Subscriber. This enables you to recover data from the subscription database that was not contained in the publication database backup. Go to step c.  
+    2.  Use the [tablediff utility](../../../tools/tablediff-utility.md) or another tool to manually synchronize the Publisher with the Subscriber. This enables you to recover data from the subscription database that was not contained in the publication database backup. Go to step c.  
   
          For more information about the **tablediff** utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
@@ -168,7 +168,7 @@ manager: "jhubbard"
   
     1.  Run the Distribution Agent until all Subscribers are synchronized with the outstanding commands in the distribution database. Verify that all commands are delivered to Subscribers by using Replication Monitor or by querying the [MSdistribution_status](~/relational-databases/system-views/msdistribution-status-transact-sql.md) view in the distribution database. Go to step b.  
   
-    2.  Use the [tablediff Utility](../../tools/tablediff-utility.md) or another tool to manually synchronize the Publisher with the Subscriber. This enables you to recover data from the subscription database that was not contained in the publication database backup. Go to step c.  
+    2.  Use the [tablediff Utility](../../../tools/tablediff-utility.md) or another tool to manually synchronize the Publisher with the Subscriber. This enables you to recover data from the subscription database that was not contained in the publication database backup. Go to step c.  
   
          For more information about the **tablediff** utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
@@ -348,8 +348,8 @@ manager: "jhubbard"
  [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md)   
  [Configure Distribution](configure-distribution.md)   
  [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
- [Initialize a Subscription](initialize-a-subscription.md)   
- [Synchronize Data](synchronize-data.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)   
+ [Initialize a Subscription](../initialize-a-subscription.md)   
+ [Synchronize Data](../synchronize-data.md)  
   
   

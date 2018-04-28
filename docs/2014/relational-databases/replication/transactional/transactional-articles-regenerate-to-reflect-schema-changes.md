@@ -42,6 +42,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Specify How Changes Are Propagated for Transactional Articles](transactional-articles-specify-how-changes-are-propagated.md)   
- [Make Schema Changes on Publication Databases](publish/make-schema-changes-on-publication-databases.md)  
+ [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md)  
   
   

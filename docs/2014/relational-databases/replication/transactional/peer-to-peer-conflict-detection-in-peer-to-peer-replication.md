@@ -76,7 +76,7 @@ manager: "jhubbard"
      If you configure conflict detection by using stored procedures, you can specify whether the Distribution Agent should stop applying changes when a conflict is detected. The default is for the agent to stop. We recommend that you use the default setting.  
   
 ## Handling Conflicts  
- When a conflict occurs in peer-to-peer replication, the Peer-to-peer conflict detection alert is raised. We recommend that you configure this alert so that you are notified when a conflict occurs. For more information about alerts, see [Use Alerts for Replication Agent Events](agents/use-alerts-for-replication-agent-events.md).  
+ When a conflict occurs in peer-to-peer replication, the Peer-to-peer conflict detection alert is raised. We recommend that you configure this alert so that you are notified when a conflict occurs. For more information about alerts, see [Use Alerts for Replication Agent Events](../agents/use-alerts-for-replication-agent-events.md).  
   
  After the Distribution Agent stops and the alert is raised, use one of the following approaches to handle the conflicts that occurred:  
   

@@ -41,7 +41,7 @@ manager: "jhubbard"
  Peer-to-peer replication includes the option to enable conflict detection across a peer-to-peer topology. This option helps prevent the issues that are caused from undetected conflicts, including inconsistent application behavior and lost updates. By enabling this option, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved manually and the data is made consistent across the topology. For more information, see [Conflict Detection in Peer-to-Peer Replication](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](merge/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](../merge/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
 ## Peer-to-Peer Topologies  
  The following scenarios illustrate typical uses for peer-to-peer replication.  
@@ -98,7 +98,7 @@ manager: "jhubbard"
   
     -   Object names, object schema, and publication names should be identical.  
   
-    -   Publications must allow schema changes to be replicated. (This is a setting of **1** for the publication property **replicate_ddl**, which is the default setting.) For more information, see [Make Schema Changes on Publication Databases](publish/make-schema-changes-on-publication-databases.md).  
+    -   Publications must allow schema changes to be replicated. (This is a setting of **1** for the publication property **replicate_ddl**, which is the default setting.) For more information, see [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md).  
   
     -   Row and column filtering are not supported.  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
   
 -   Subscriptions must be initialized by using a backup or with the **'replication support only'** option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   We do not recommend the use of identity columns. When using identities, you must manually manage the ranges assigned to the tables at each participating database. For more information, see the section "Assigning Ranges for Manual Identity Range Management" in [Replicate Identity Columns](publish/replicate-identity-columns.md).  
+-   We do not recommend the use of identity columns. When using identities, you must manually manage the ranges assigned to the tables at each participating database. For more information, see the section "Assigning Ranges for Manual Identity Range Management" in [Replicate Identity Columns](../publish/replicate-identity-columns.md).  
   
 ### Feature Restrictions  
  Peer-to-peer replication supports the core features of transactional replication, but does not support the following options:  
@@ -160,14 +160,14 @@ manager: "jhubbard"
   
 -   Restoring a node from a backup  
   
- For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) and [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
+ For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) and [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
 -   If you add a new node to a peer-to-peer topology, you should restore only from backups that were created after the new node was added.  
   
 -   You cannot reinitialize subscriptions in a peer-to-peer topology. If you have to ensure that a node has a new copy of the data, restore a backup at the node.  
   
 ## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](transactional-replication.md)   
  [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)  
   

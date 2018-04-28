@@ -112,7 +112,7 @@ manager: "jhubbard"
   
 -   When you synchronize data rows with a large amount of data, such as rows with LOB columns, Web synchronization can require additional memory allocation and hurt performance. This occurs when the Merge Agent generates an XML message that contains too many data rows with large amounts of data. If the Merge Agent is consuming too many resources during Web synchronization, reduce the number of rows sent in a single message in one of the following ways:  
   
-    -   Use the slow link agent profile for the Merge Agent. For more information, see [Replication Agent Profiles](../replication-agent-profiles.md).  
+    -   Use the slow link agent profile for the Merge Agent. For more information, see [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
     -   Decrease the **-DownloadGenerationsPerBatch** and **-UploadGenerationsPerBatch** parameters for the Merge Agent to a value of 10 or less. The default value of these parameters is 50.  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
   
 -   Occasionally re-index merge replication system tables.  
   
-     As part of maintenance for merge replication, occasionally check the growth of the system tables associated with merge replication: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, and **MSmerge_past_partition_mappings**. Periodically re-index these tables. For more information, see [Reorganize and Rebuild Indexes](../../../database-engine/indexes.md).  
+     As part of maintenance for merge replication, occasionally check the growth of the system tables associated with merge replication: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, and **MSmerge_past_partition_mappings**. Periodically re-index these tables. For more information, see [Reorganize and Rebuild Indexes](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Monitor synchronization performance using the **Synchronization History** tab in Replication Monitor.  
   

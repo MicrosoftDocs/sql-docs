@@ -39,6 +39,6 @@ manager: "jhubbard"
 ## See Also  
  [Data Quality Matching in the MDS Add-in for Excel](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [Master Data Services Add-in for Microsoft Excel](../microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
- [Install Master Data Services](../install-master-data-services.md)  
+ [Install Master Data Services](install-master-data-services.md)  
   
   

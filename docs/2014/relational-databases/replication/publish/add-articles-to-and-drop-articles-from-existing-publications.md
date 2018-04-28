@@ -41,20 +41,20 @@ manager: "jhubbard"
   
 2.  After adding an article to a publication, you must create a new snapshot for the publication (and all partitions if it is a merge publication with parameterized filters). The Distribution Agent or Merge Agent then copies the schema and data for the new article to the Subscriber (it does not reinitialize the entire publication).  
   
-    -   To create a new snapshot, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+    -   To create a new snapshot, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-    -   To create a new snapshot for a merge publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+    -   To create a new snapshot for a merge publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 3.  After the snapshot is created, synchronize the subscription to copy the schema and data for the new article.  
   
-    -   To synchronize a push subscription, see [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
+    -   To synchronize a push subscription, see [Synchronize a Push Subscription](../synchronize-a-push-subscription.md).  
   
-    -   To synchronize a pull subscription, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
+    -   To synchronize a pull subscription, see [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ## Dropping Articles  
  Articles can be dropped from a publication at any time, but you must take into account the following behaviors:  
   
--   Dropping an article from a publication does not remove the object from the publication database or the corresponding object from the subscription database. Use DROP \<Object> to remove these objects if necessary. When you drop an article that is related to other published articles through foreign key constraints, we recommend that you drop the table at the Subscriber manually or by using on-demand script execution: specify a script that includes the appropriate DROP \<Object> statements. For more information, see [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   Dropping an article from a publication does not remove the object from the publication database or the corresponding object from the subscription database. Use DROP \<Object> to remove these objects if necessary. When you drop an article that is related to other published articles through foreign key constraints, we recommend that you drop the table at the Subscriber manually or by using on-demand script execution: specify a script that includes the appropriate DROP \<Object> statements. For more information, see [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
 -   For merge publications with a compatibility level of 90RTM or higher, articles can be dropped at any time, but a new snapshot is required. Additionally:  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   For merge publications with a compatibility level lower than 90RTM, articles can be dropped with no special considerations prior to the initial synchronization of subscriptions. If an article is dropped after one or more subscriptions is synchronized, the subscriptions must be dropped, re-created, and synchronized.  
   
--   For snapshot or transactional publications, articles can be dropped with no special considerations prior to subscriptions being created. If an article is dropped after one or more subscriptions is created, the subscriptions must be dropped, recreated, and synchronized. For more information about dropping subscriptions, see [Subscribe to Publications](subscribe-to-publications.md) and [sp_dropsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). **sp_dropsubscription** allows you to drop a single article from the subscription rather than the entire subscription.  
+-   For snapshot or transactional publications, articles can be dropped with no special considerations prior to subscriptions being created. If an article is dropped after one or more subscriptions is created, the subscriptions must be dropped, recreated, and synchronized. For more information about dropping subscriptions, see [Subscribe to Publications](../subscribe-to-publications.md) and [sp_dropsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). **sp_dropsubscription** allows you to drop a single article from the subscription rather than the entire subscription.  
   
 1.  Dropping an article from a publication involves dropping the article and creating a new snapshot for the publication. Dropping an article invalidates the current snapshot; therefore a new snapshot must be created.  
   
@@ -72,15 +72,15 @@ manager: "jhubbard"
   
 2.  After dropping an article from a publication, you must create a new snapshot for the publication (and all partitions if it is a merge publication with parameterized filters).  
   
-    -   To create a new snapshot, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+    -   To create a new snapshot, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-    -   To create a new snapshot for a merge publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+    -   To create a new snapshot for a merge publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
- As noted above, in some cases dropping an article requires subscriptions to be dropped, recreated, and then synchronized. For more information, see [Subscribe to Publications](subscribe-to-publications.md) and [Synchronize Data](synchronize-data.md).  
+ As noted above, in some cases dropping an article requires subscriptions to be dropped, recreated, and then synchronized. For more information, see [Subscribe to Publications](../subscribe-to-publications.md) and [Synchronize Data](../synchronize-data.md).  
   
 ## See Also  
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Reinitialize Subscriptions](reinitialize-subscriptions.md)   
+ [Reinitialize Subscriptions](../reinitialize-subscriptions.md)   
  [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)  
   
   

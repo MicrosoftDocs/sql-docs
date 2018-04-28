@@ -54,7 +54,7 @@ manager: "jhubbard"
  **To switch between update modes**  
   
  To switch between updating modes, you must enable the publication and subscription for both update modes, and then switch between them if necessary. For more information, see  
-[Switch Between Update Modes for an Updatable Transactional Subscription](administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Switch Between Update Modes for an Updatable Transactional Subscription](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### Considerations for Using Updatable Subscriptions  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   Replication adds the **msrepl_tran_version** column to published tables for tracking purposes. Because of this additional column, all `INSERT` statements should include a column list.  
   
--   To make schema changes on a table in a publication that supports updating subscriptions, all activity on the table must be stopped at the Publisher and Subscribers, and pending data changes must be propagated to all nodes before making any schema changes. This ensures that outstanding transactions do not conflict with the pending schema change. After the schema changes have propagated to all nodes, activity can resume on the published tables. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+-   To make schema changes on a table in a publication that supports updating subscriptions, all activity on the table must be stopped at the Publisher and Subscribers, and pending data changes must be propagated to all nodes before making any schema changes. This ensures that outstanding transactions do not conflict with the pending schema change. After the schema changes have propagated to all nodes, activity can resume on the published tables. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 -   If you plan to switch between update modes, the Queue Reader Agent must run at least once after the subscription has been initialized (by default, the Queue Reader Agent runs continuously).  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
 ## See Also  
  [Peer-to-Peer Transactional Replication](transactional-replication.md)   
  [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)   
- [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

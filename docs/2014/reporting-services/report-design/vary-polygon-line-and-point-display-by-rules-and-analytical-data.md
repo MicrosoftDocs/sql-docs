@@ -32,7 +32,7 @@ manager: "mblythe"
   
 1.  Options set on a polygon layer, a line layer, and a point layer apply to all map elements on that layer, whether or not the map elements are embedded in the report definition.  
   
-2.  Options set for rules apply to all map elements on a layer. All data visualization options apply only to map elements that are associated with spatial data. A data visualization option requires you to specify a data field to base display variations on. You must have set the match fields for the analytical and spatial data before you can apply data visualization rules. For more information, see [Maps &#40;Report Builder and SSRS&#41;](../maps-report-builder-and-ssrs.md).  
+2.  Options set for rules apply to all map elements on a layer. All data visualization options apply only to map elements that are associated with spatial data. A data visualization option requires you to specify a data field to base display variations on. You must have set the match fields for the analytical and spatial data before you can apply data visualization rules. For more information, see [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 3.  Options that you set for selected embedded map elements. Note that, when you override the layer options, the changes that you make to the report definition are permanent. You can change the data field values as well as override display options to customize the way specific polygons, lines, and points appear on a layer.  
   
@@ -113,9 +113,9 @@ manager: "mblythe"
 ##  <a name="Legends"></a> Understanding Legends and Legend Items  
  Legend items are created automatically from the rules that you specify for each layer. Rule options control how many items are created and which legend they appear in. By default, all items for all rules are added to the first legend. To move items out of the first legend, create as many additional legends as you need, and for each rule, specify the legend to use to display the items that result from the rule. To hide items based on a rule, specify a blank legend name.  
   
- To control where a legend appears, use the Legend Properties dialog box to specify a position relative to the map viewport. For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ To control where a legend appears, use the Legend Properties dialog box to specify a position relative to the map viewport. For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
- Legends automatically expand to display the legend title or legend text. To format the text of legend items, use map legend keywords and custom formats. For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Legends automatically expand to display the legend title or legend text. To format the text of legend items, use map legend keywords and custom formats. For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
  The following tables shows examples of different formats that you can use.  
   
@@ -127,8 +127,8 @@ manager: "mblythe"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Displays the actual numeric values of the beginning of the range and end of the range.|10 - 790|  
   
 ## See Also  
- [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
- [Maps &#40;Report Builder and SSRS&#41;](../maps-report-builder-and-ssrs.md)   
- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)   
+ [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

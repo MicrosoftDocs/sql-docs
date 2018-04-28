@@ -20,11 +20,11 @@ manager: "jhubbard"
   
 ## Prerequisites  
   
--   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] must be installed on the local computer. For more information, see [Install Master Data Services](../install-master-data-services.md).  
+-   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] must be installed on the local computer. For more information, see [Install Master Data Services](install-master-data-services.md).  
   
--   A local [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application must exist. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
+-   A local [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application must exist. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../create-a-master-data-manager-web-application-master-data-services.md).  
   
--   Either a local or remote [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database must exist. For more information, see [Create a Master Data Services Database](create-a-master-data-services-database.md).  
+-   Either a local or remote [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database must exist. For more information, see [Create a Master Data Services Database](../create-a-master-data-services-database.md).  
   
 ### To associate a Master Data Services database and web application  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
 -   Add users and groups to [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. If no users or groups have been granted access to [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], you must open [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] using the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] system administrator credentials. For more information, see [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md) and [Users and Groups &#40;Master Data Services&#41;](../users-and-groups-master-data-services.md).  
   
 ## See Also  
- [Install Master Data Services](../install-master-data-services.md)   
+ [Install Master Data Services](install-master-data-services.md)   
  [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
   
   

@@ -86,10 +86,10 @@ manager: "jhubbard"
 ### Can multiple publications use the same distribution database?  
  Yes. There are no restrictions on the number or types of publications that can use the same distribution database. All publications from a given Publisher must use the same Distributor and distribution database.  
   
- If you have multiple publications, you can configure multiple distribution databases at the Distributor to ensure that the data flowing through each distribution database is from a single publication. Use the **Distributor Properties** dialog box or [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) to add a distribution database. For more information about accessing the dialog box, see [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
+ If you have multiple publications, you can configure multiple distribution databases at the Distributor to ensure that the data flowing through each distribution database is from a single publication. Use the **Distributor Properties** dialog box or [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) to add a distribution database. For more information about accessing the dialog box, see [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md).  
   
 ### How do I find information on the Distributor and Publisher, such as which objects in a database are published?  
- This information is available through [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and a number of replication stored procedures. For more information, see [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
+ This information is available through [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and a number of replication stored procedures. For more information, see [Distributor and Publisher Information Script](../distributor-and-publisher-information-script.md).  
   
 ### Does replication encrypt data?  
  No. Replication does not encrypt data that is stored in the database or transferred over the network. For more information, see the "Encryption" section of the topic [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
@@ -97,7 +97,7 @@ manager: "jhubbard"
 ### How do I replicate data over the Internet?  
  Replicate data over the Internet using:  
   
--   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](publish-data-over-the-internet-using-vpn.md).  
+-   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](../publish/publish-data-over-the-internet-using-vpn.md).  
   
 -   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](../merge/merge-replication.md).  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
   
 -   Execute GRANT statements at the subscription database directly.  
   
--   Use a post-snapshot script to execute the statements. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+-   Use a post-snapshot script to execute the statements. For more information, see [Execute Scripts Before and After the Snapshot Is Applied](../execute-scripts-before-and-after-the-snapshot-is-applied.md).  
   
 -   Use the stored procedure [sp_addscriptexec](~/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) to execute the statements.  
   
@@ -187,7 +187,7 @@ manager: "jhubbard"
 ## Replication Maintenance  
   
 ### How do I determine if the data at Subscribers is synchronized with data at the Publisher?  
- Use validation. Validation reports on whether a given Subscriber is synchronized with the Publisher. For more information, see [Validate Replicated Data](validate-replicated-data.md). Validation does not provide information on which rows if any are not synchronized correctly, but the [tablediff utility](../../tools/tablediff-utility.md) does.  
+ Use validation. Validation reports on whether a given Subscriber is synchronized with the Publisher. For more information, see [Validate Replicated Data](validate-replicated-data.md). Validation does not provide information on which rows if any are not synchronized correctly, but the [tablediff utility](../../../tools/tablediff-utility.md) does.  
   
 ### How do I add a table to an existing publication?  
  It is not necessary to stop activity on the publication or subscription databases in order to add a table (or another object). Add a table to a publication through the **Publication Properties - \<Publication>** dialog box or the stored procedures [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). For more information, see [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -214,14 +214,14 @@ manager: "jhubbard"
   
 -   The number of commands in the distribution database that have not been delivered to the selected Subscriber. A command consists of one Transact-SQL data manipulation language (DML) statement or one data definition language (DDL) statement.  
   
--   The estimated amount of time to deliver commands to the Subscriber. If this value is greater than the amount of time required to generate and apply a snapshot to the Subscriber, consider reinitializing the Subscriber. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+-   The estimated amount of time to deliver commands to the Subscriber. If this value is greater than the amount of time required to generate and apply a snapshot to the Subscriber, consider reinitializing the Subscriber. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
  For more information, see [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## Replication and Other Database Features  
   
 ### Does replication work in conjunction with log shipping and database mirroring?  
- Yes. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) and [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ Yes. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) and [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
 ### Does replication work in conjunction with clustering?  
  Yes. No special considerations are required because all data is stored on one set of disks on the cluster.  

@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|Attribute type|An attribute type describes the type of members you want to work with. In most cases, this is **Leaf**. For more information about member types, see [Members &#40;Master Data Services&#41;](members-master-data-services.md).|  
+|Attribute type|An attribute type describes the type of members you want to work with. In most cases, this is **Leaf**. For more information about member types, see [Members &#40;Master Data Services&#41;](../members-master-data-services.md).|  
 |Explicit hierarchy|If you chose the **Consolidated** attribute type, choose the hierarchy the consolidated members belong to. For more information, see [Explicit Hierarchies &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md).|  
 |Attribute Groups|Attribute groups are a way of grouping subsets of attributes. Choose an attribute group if you want to show a subset of available attributes. For more information about attribute groups, see [Attribute Groups &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md).|  
 |Select All|Click to select all attributes displayed in the list.|  

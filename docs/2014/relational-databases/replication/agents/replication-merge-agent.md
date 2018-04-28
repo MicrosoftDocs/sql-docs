@@ -294,7 +294,7 @@ manager: "jhubbard"
  Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
  Is the Publisher login name. If **PublisherSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
@@ -374,7 +374,7 @@ manager: "jhubbard"
 |**3**|Rowcount and binary checksum validation.|  
   
 > [!NOTE]  
->  Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. For more information, see the section "Considerations for Data Validation" in [Validate Replicated Data](validate-replicated-data.md).  
+>  Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. For more information, see the section "Considerations for Data Validation" in [Validate Replicated Data](../validate-replicated-data.md).  
   
  **-ValidateInterval** *validate_interval*  
  Is how often, in minutes, the subscription is validated in continuous mode. The default is **60** minutes.  

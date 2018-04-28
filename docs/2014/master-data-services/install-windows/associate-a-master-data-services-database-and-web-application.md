@@ -22,9 +22,9 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] must be installed on the local computer. For more information, see [Install Master Data Services](install-master-data-services.md).  
   
--   A local [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application must exist. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../create-a-master-data-manager-web-application-master-data-services.md).  
+-   A local [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application must exist. For more information, see [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
   
--   Either a local or remote [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database must exist. For more information, see [Create a Master Data Services Database](../create-a-master-data-services-database.md).  
+-   Either a local or remote [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database must exist. For more information, see [Create a Master Data Services Database](create-a-master-data-services-database.md).  
   
 ### To associate a Master Data Services database and web application  
   

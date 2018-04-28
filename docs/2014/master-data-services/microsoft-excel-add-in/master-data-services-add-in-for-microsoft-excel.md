@@ -71,6 +71,6 @@ manager: "jhubbard"
   
 -   [Building a Model &#40;MDS Add-in for Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
--   [Security &#40;Master Data Services&#41;](../../security-master-data-services.md)  
+-   [Security &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
   

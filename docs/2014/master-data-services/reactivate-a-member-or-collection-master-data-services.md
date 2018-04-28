@@ -61,7 +61,7 @@ manager: "jhubbard"
 7.  On the confirmation dialog box, click **OK**. A new transaction is added, showing **Active** in the **New Value** column.  
   
 ## See Also  
- [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
+ [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Delete a Member or Collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  

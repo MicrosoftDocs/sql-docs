@@ -100,7 +100,7 @@ manager: "jhubbard"
   
 4.  At the Publisher on the publication database, execute [sp_changearticle](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, the name of the article for **@article**, a value of **schema_option** for **@property**, and the hexadecimal result from step 3 for **@value**.  
   
-5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 #### To change schema options for an existing article in a merge publication  
   
@@ -116,7 +116,7 @@ manager: "jhubbard"
   
 4.  At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, the name of the article for **@article**, a value of **schema_option** for **@property**, and the hexadecimal result from step 3 for **@value**.  
   
-5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 ## See Also  
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   

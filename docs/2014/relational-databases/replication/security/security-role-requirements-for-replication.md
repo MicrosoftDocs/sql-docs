@@ -49,6 +49,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../security-and-protection-replication.md)  
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

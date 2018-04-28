@@ -121,7 +121,7 @@ manager: "jhubbard"
   
          For more information about how to remove replication, see [sp_removedbreplication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-         For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
+         For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
 5.  The **sync with backup** option was not set on the publication database. Therefore, transactions that were not included in the restored backup might have been delivered to the Distributor and Subscribers. You must now make sure that Subscribers have all outstanding commands in the distribution database, and then manually apply to the publication database any transactions that are not included in the restored backup.  
   
@@ -144,7 +144,7 @@ manager: "jhubbard"
   
          For more information about how to remove replication, see [sp_removedbreplication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-         For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
+         For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
 #### Publication Database: Transactional Replication with Updating Subscriptions  
   
@@ -178,7 +178,7 @@ manager: "jhubbard"
   
          For more information about how to remove replication, see and [sp_removedbreplication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-         For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
+         For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
 #### Publication Database: Peer-to-Peer Transactional Replication  
  In the following steps, publication databases **A**, **B**, and **C** are in a peer-to-peer transactional replication topology. Databases **A** and **C** are online and functioning properly; database **B** is the database to be restored. The process described here, especially steps 7, 10, and 11, is very similar to the process required to add a node to a peer-to-peer topology. The most straightforward way to perform these steps is to use the Configure Peer-to-Peer Topology Wizard, but you can also use stored procedures.  
@@ -193,7 +193,7 @@ manager: "jhubbard"
   
 4.  At databases **A** and **C**, drop the subscriptions to the publication at database **B**. Go to step 5.  
   
-     For more information about how to drop subscriptions, see [Subscribe to Publications](subscribe-to-publications.md).  
+     For more information about how to drop subscriptions, see [Subscribe to Publications](../subscribe-to-publications.md).  
   
 5.  Perform a log backup or full backup of database **A**. Go to step 6.  
   
@@ -279,11 +279,11 @@ manager: "jhubbard"
   
          For more information about how to remove replication, see [sp_removedbreplication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-         For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
+         For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
     2.  Mark all publications for validation. Reinitialize any subscriptions that fail validation. Recovery is completed.  
   
-         For more information about validation, see [Validate Replicated Data](validate-replicated-data.md). For more information about reinitialization, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+         For more information about validation, see [Validate Replicated Data](../validate-replicated-data.md). For more information about reinitialization, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 #### msdb Database (Distributor)  
   
@@ -295,11 +295,11 @@ manager: "jhubbard"
   
      For more information about how to remove replication, see [sp_removedbreplication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-     For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
+     For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
 4.  Mark all publications for validation. Reinitialize any subscriptions that fail validation. Recovery is completed.  
   
-     For more information about validation, see [Validate Replicated Data](validate-replicated-data.md). For more information about reinitialization, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+     For more information about validation, see [Validate Replicated Data](../validate-replicated-data.md). For more information about reinitialization, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 #### master Database (Distributor)  
   
@@ -315,7 +315,7 @@ manager: "jhubbard"
   
      To determine the maximum distribution retention setting, execute [sp_helpdistributiondb](~/relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) and retrieve the value from the **max_distretention** column (this value is in hours).  
   
-     For more information about how to reinitialize a subscription, see [Reinitialize a Subscription](reinitialize-a-subscription.md).  
+     For more information about how to reinitialize a subscription, see [Reinitialize a Subscription](../reinitialize-a-subscription.md).  
   
 2.  Restore the latest subscription database backup. Go to step 3.  
   
@@ -333,9 +333,9 @@ manager: "jhubbard"
   
 3.  Drop and re-create the pull subscriptions. When you re-create the subscriptions, specify that the Subscriber already has the data. The restore is completed.  
   
-     For more information about how to drop subscriptions, see [Subscribe to Publications](subscribe-to-publications.md).  
+     For more information about how to drop subscriptions, see [Subscribe to Publications](../subscribe-to-publications.md).  
   
-     For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
+     For more information about how to specify that the Subscriber already has the data, see [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
 #### master Database (Subscriber)  
   
@@ -344,9 +344,9 @@ manager: "jhubbard"
 2.  Make sure that the database is consistent with the publication database with regard to replication configuration and settings.  
   
 ## See Also  
- [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Back Up and Restore of SQL Server Databases](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md)   
- [Configure Distribution](configure-distribution.md)   
+ [Configure Distribution](../configure-distribution.md)   
  [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)   
  [Initialize a Subscription](../initialize-a-subscription.md)   

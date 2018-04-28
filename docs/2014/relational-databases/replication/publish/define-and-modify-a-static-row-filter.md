@@ -117,17 +117,17 @@ manager: "jhubbard"
   
 2.  At the Publisher on the publication database, execute [sp_articleview &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Specify the publication name for **@publication**, the name of the filtered article for **@article**, and the filter clause specified in step 1 for **@filter_clause**. This re-creates the view that defines the filtered article.  
   
-3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 #### To delete a static row filter for a snapshot or transactional publication  
   
 1.  At the Publisher on the publication database, execute [sp_articlefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Specify the name of the article for **@article**, the name of the publication for **@publication**, a value of NULL for **@filter_name**, and a value of NULL for **@filter_clause**. Because this change will invalidate data in existing subscriptions, specify a value of **1** for **@force_reinit_subscription**.  
   
-2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 #### To define a static row filter for a merge publication  
   
@@ -139,9 +139,9 @@ manager: "jhubbard"
   
 1.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify the publication name for **@publication**, the name of the filtered article for **@article**, a value of **subset_filterclause** for **@property**, and the new filtering clause for **@value** (not including `WHERE`). Because this change will invalidate data in existing subscriptions, specify a value of 1 for **@force_reinit_subscription**.  
   
-2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  In this transactional replication example, the article is filtered horizontally to remove all discontinued products.  

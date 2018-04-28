@@ -105,11 +105,11 @@ manager: "jhubbard"
 ## Publishing Tables  
  The most commonly published object is a table. The following links provide additional information about areas related to publishing tables:  
   
--   [Filter Published Data](../filter-published-data.md)  
+-   [Filter Published Data](filter-published-data.md)  
   
 -   [Article Options for Transactional Replication](../transactional/transactional-replication.md)  
   
--   [Article Options for Merge Replication](../administration/merge-replication.md)  
+-   [Article Options for Merge Replication](../merge/article-options-for-merge-replication.md)  
   
 -   [Replicate Identity Columns](replicate-identity-columns.md)  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
  To specify schema options, see [Specify Schema Options](specify-schema-options.md) or <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
 ### Partitioned Tables and Indexes  
- Replication supports the publishing of partitioned tables and indexes. The level of support depends on the type of replication that is used, and the options that you specify for the publication and the articles associated with partitioned tables. For more information, see [Replicate Partitioned Tables and Indexes](../../../database-engine/indexes.md).  
+ Replication supports the publishing of partitioned tables and indexes. The level of support depends on the type of replication that is used, and the options that you specify for the publication and the articles associated with partitioned tables. For more information, see [Replicate Partitioned Tables and Indexes](replicate-partitioned-tables-and-indexes.md).  
   
 ## Publishing Stored Procedures  
  All types of replication allow you to replicate stored procedure definitions: the CREATE PROCEDURE is copied to each Subscriber. In the case of common language runtime (CLR) stored procedures, the associated assembly is also copied. Changes to procedures are replicated to Subscribers; changes to associated assemblies are not.  
@@ -172,7 +172,7 @@ manager: "jhubbard"
   
 ### Limitations on Publishing Objects  
   
--   The maximum number of articles and columns that can be published differs by publication type. For more information, see the "Replication Objects" section of [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+-   The maximum number of articles and columns that can be published differs by publication type. For more information, see the "Replication Objects" section of [Maximum Capacity Specifications for SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 -   Stored procedures, views, triggers, and user-defined functions that are defined as WITH ENCRYPTION cannot be published as part of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication.  
   
@@ -249,10 +249,10 @@ manager: "jhubbard"
   
 ## See Also  
  [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Configure Distribution](configure-distribution.md)   
- [Initialize a Subscription](initialize-a-subscription.md)   
- [Scripting Replication](scripting-replication.md)   
+ [Configure Distribution](../configure-distribution.md)   
+ [Initialize a Subscription](../initialize-a-subscription.md)   
+ [Scripting Replication](../scripting-replication.md)   
  [Secure the Publisher](../security/secure-the-publisher.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

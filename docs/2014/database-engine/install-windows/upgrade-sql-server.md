@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)  
   
--   [Upgrade Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md)  
+-   [Upgrade Master Data Services](../../master-data-services/upgrade-master-data-services.md)  
   
 -   [Upgrade PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
  [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)   
- [Upgrade Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md)   
+ [Upgrade Master Data Services](../../master-data-services/upgrade-master-data-services.md)   
  [SQL Server 2005 Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=197134)   
  [SQL Server 2008 R2 Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=197135)   
  [Backward Compatibility](../../../2014/getting-started/backward-compatibility.md)  

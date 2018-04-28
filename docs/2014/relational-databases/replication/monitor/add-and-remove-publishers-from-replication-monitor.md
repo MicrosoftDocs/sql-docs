@@ -104,6 +104,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure Distribution](../configure-distribution.md)   
- [Monitoring Replication](monitoring-replication.md)  
+ [Monitoring Replication](../monitoring-replication.md)  
   
   

@@ -127,7 +127,7 @@ manager: "jhubbard"
  To configure an Oracle Publisher and create a publication, see [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md).  
   
 ## See Also  
- [Administrative Considerations for Oracle Publishers](non-sql/administrative-considerations-for-oracle-publishers.md)   
+ [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)   
  [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
  [Glossary of Terms for Oracle Publishing](glossary-of-terms-for-oracle-publishing.md)   
  [Oracle Publishing Overview](oracle-publishing-overview.md)  

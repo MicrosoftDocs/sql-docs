@@ -73,7 +73,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
-3.  Run the [Replication Snapshot Agent](agents/replication-snapshot-agent.md) from the command prompt or start the Snapshot Agent job to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+3.  Run the [Replication Snapshot Agent](../agents/replication-snapshot-agent.md) from the command prompt or start the Snapshot Agent job to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 ### To modify snapshot properties of an existing merge publication  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
     -   **snapshot_in_defaultfolder** - also specify a value of either **true** or **false** to indicate whether the snapshot is available only in a non-default location.  
   
-2.  Run the [Replication Snapshot Agent](agents/replication-snapshot-agent.md) from the command prompt or start the Snapshot Agent job to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+2.  Run the [Replication Snapshot Agent](../agents/replication-snapshot-agent.md) from the command prompt or start the Snapshot Agent job to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 ## Example  
  This example creates a publication that uses an alternate snapshot folder and a compressed snapshot.  

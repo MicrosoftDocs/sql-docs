@@ -123,7 +123,7 @@ manager: "jhubbard"
   
     -   At the Subscriber on the subscription database, execute [sp_addpullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_login** and **@job_password**, and a value of `true` for **@use_ftp**.  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 #### To create a pull subscription to a merge publication that uses FTP snapshot delivery  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
   
 2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, the Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_login** and **@job_password**, and a value of `true` for **@use_ftp**.  
   
-3.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
+3.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 #### To change one or more FTP snapshot delivery settings for a snapshot or transactional publication  
   
@@ -170,11 +170,11 @@ manager: "jhubbard"
 3.  (Optional) To disable FTP snapshot delivery, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `enabled_for_internet` for **@property** and a value of `false` for **@value**.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
- The following example creates a merge publication that allows Subscribers to access the snapshot data using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md).  
+ The following example creates a merge publication that allows Subscribers to access the snapshot data using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md).  
   
  [!code-sql[HowTo#sp_createmergepub_ftp](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubftp.sql#sp_createmergepub_ftp)]  
   
- The following example creates a subscription to a merge publication, where the Subscriber obtains the snapshot using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md).  
+ The following example creates a subscription to a merge publication, where the Subscriber obtains the snapshot using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md).  
   
  [!code-sql[HowTo#sp_createmergepullsub_ftp](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsubftp.sql#sp_createmergepullsub_ftp)]  
   
@@ -182,8 +182,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md)   
+ [Transfer Snapshots Through FTP](../transfer-snapshots-through-ftp.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
- [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)  
+ [Initialize a Subscription with a Snapshot]../initialize-a-subscription-with-a-snapshot.md)  
   
   

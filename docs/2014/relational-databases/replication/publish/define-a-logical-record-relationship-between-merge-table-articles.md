@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Define a Logical Record Relationship Between Merge Table Articles
   This topic describes how to define a logical record relationship between merge table articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
- Merge replication allows you to define a relationship between related rows in different tables. These rows can then be processed as a transactional unit during synchronization. A logical record can be defined between two articles whether or not they have a join filter relationship. For more information, see [Group Changes to Related Rows with Logical Records](../group-changes-to-related-rows-with-logical-records.md).  
+ Merge replication allows you to define a relationship between related rows in different tables. These rows can then be processed as a transactional unit during synchronization. A logical record can be defined between two articles whether or not they have a join filter relationship. For more information, see [Group Changes to Related Rows with Logical Records](../merge/group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -186,7 +186,7 @@ manager: "jhubbard"
   
     -   The expression that defines the relationship for the <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> property.  
   
-    -   A value of <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> for the <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> property. If the logical record relationship is also a join filter, specify a value of <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> for this property. For more information, see [Group Changes to Related Rows with Logical Records](../group-changes-to-related-rows-with-logical-records.md).  
+    -   A value of <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> for the <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> property. If the logical record relationship is also a join filter, specify a value of <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> for this property. For more information, see [Group Changes to Related Rows with Logical Records](../merge/group-changes-to-related-rows-with-logical-records.md).  
   
 9. Call the <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> method on the object that represents the child article in the relationship. Pass the <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> object from step 8 to define the relationship.  
   

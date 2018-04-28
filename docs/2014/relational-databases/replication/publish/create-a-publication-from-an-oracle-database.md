@@ -142,8 +142,8 @@ manager: "jhubbard"
 ## See Also  
  [Configure an Oracle Publisher](../non-sql/configure-an-oracle-publisher.md)   
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Configure the Transaction Set Job for an Oracle Publisher &#40;Replication Transact-SQL Programming&#41;](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [Oracle Publishing Overview](non-sql/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](non-sql/script-to-grant-oracle-permissions.md)  
+ [Configure the Transaction Set Job for an Oracle Publisher &#40;Replication Transact-SQL Programming&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Oracle Publishing Overview](../non-sql/oracle-publishing-overview.md)   
+ [Script to Grant Oracle Permissions](../non-sql/script-to-grant-oracle-permissions.md)  
   
   

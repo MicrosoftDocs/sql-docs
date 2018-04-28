@@ -38,6 +38,6 @@ manager: "jhubbard"
  Describes how to better secure all components of a replication topology  
   
 ## See Also  
- [Security and Protection &#40;Replication&#41;](../security-and-protection-replication.md)  
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

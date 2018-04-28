@@ -109,6 +109,6 @@ manager: "jhubbard"
 |Not Synchronizing|![UI icon: replication agent stopped](../media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
 ## See Also  
- [Monitoring Replication](monitoring-replication.md)  
+ [Monitoring Replication](../monitoring-replication.md)  
   
   

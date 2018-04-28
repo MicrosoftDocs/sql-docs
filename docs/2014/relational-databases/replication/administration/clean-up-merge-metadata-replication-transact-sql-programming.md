@@ -32,6 +32,6 @@ manager: "jhubbard"
 3.  Repeat steps 1 and 2 at the Subscriber to clean up metadata on the subscription database.  
   
 ## See Also  
- [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)  
+ [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   
   

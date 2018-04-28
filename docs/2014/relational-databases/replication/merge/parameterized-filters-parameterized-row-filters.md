@@ -98,14 +98,14 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Use one of the following methods to override the HOST_NAME() value:  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](subscribe-to-publications.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](../subscribe-to-publications.md).  
   
 -   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: specify a value for the **@hostname** parameter of [sp_addmergesubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (for push subscriptions) or [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (for pull subscriptions).  
   
--   Merge Agent: specify a value for the **-Hostname** parameter at the command line or through an agent profile. For more information about the Merge Agent, see [Replication Merge Agent](agents/replication-merge-agent.md). For more information about agent profiles, see [Replication Agent Profiles](agents/replication-agent-profiles.md).  
+-   Merge Agent: specify a value for the **-Hostname** parameter at the command line or through an agent profile. For more information about the Merge Agent, see [Replication Merge Agent](../agents/replication-merge-agent.md). For more information about agent profiles, see [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## Initializing a Subscription to a Publication with Parameterized Filters  
- When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
+ When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ## Using the Appropriate Filtering Options  
  There are two key areas over which you have control when using parameterized filters:  
@@ -114,7 +114,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   How the data is shared among Subscribers, which must be reflected by the article setting **partition options**.  
   
- To set filtering options, see [Optimize Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+ To set filtering options, see [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
 ### Setting 'use partition groups' and 'keep partition changes'  
  Both the **use partition groups** and **keep partition changes** options improve the synchronization performance for publications with filtered articles by storing additional metadata in the publication database. The **use partition groups** option provides greater performance improvement through the use of the precomputed partitions feature. This option is set to `true` by default if the articles in your publication adhere to a set of requirements. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](parameterized-filters-optimize-for-precomputed-partitions.md). If your articles do not meet the requirements for using precomputed partitions, the **keep partition changes** option to is set to `true`.  
@@ -170,7 +170,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Articles can exist in only one publication; articles cannot be republished.  
   
--   The publication must allow Subscribers to initiate the snapshot process. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   The publication must allow Subscribers to initiate the snapshot process. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ##### Additional Considerations for Join Filters  
   
@@ -185,6 +185,6 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ## See Also  
  [Best Practices for Time-Based Row Filters](best-practices-for-time-based-row-filters.md)   
  [Filter Published Data](../publish/filter-published-data.md)   
- [Filter Published Data for Merge Replication](merge-replication.md)  
+ [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md)  
   
   

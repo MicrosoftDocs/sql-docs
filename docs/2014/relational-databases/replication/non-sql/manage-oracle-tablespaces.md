@@ -40,7 +40,7 @@ manager: "jhubbard"
     -   The name of the tablespace for the parameter **@value**.  
   
 ## See Also  
- [Configure an Oracle Publisher](non-sql/configure-an-oracle-publisher.md)   
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
  [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)  
   
   

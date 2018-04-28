@@ -134,7 +134,7 @@ manager: "jhubbard"
   
      The Snapshot Agent performs a sequential write of data to the snapshot folder. Placing the snapshot folder on a separate drive from any database or log files reduces contention among the disks and helps the snapshot process complete faster.  
   
--   When you create the subscription database at the Subscriber, consider specifying a recovery model of simple or bulk-logged. This allows minimal logging of the bulk inserts performed during the application of the snapshot at the Subscriber. After the snapshot has been applied to the subscription database, you can change to a different recovery model if necessary (replicated databases can use any of the recovery models). For more information about selecting a recovery model, see [Restore and Recovery Overview &#40;SQL Server&#41;](../backup-restore/restore-and-recovery-overview-sql-server.md).  
+-   When you create the subscription database at the Subscriber, consider specifying a recovery model of simple or bulk-logged. This allows minimal logging of the bulk inserts performed during the application of the snapshot at the Subscriber. After the snapshot has been applied to the subscription database, you can change to a different recovery model if necessary (replicated databases can use any of the recovery models). For more information about selecting a recovery model, see [Restore and Recovery Overview &#40;SQL Server&#41;](../../backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 -   Consider using the alternate snapshot folder and compressed snapshots on removable media for low-bandwidth networks.  
   

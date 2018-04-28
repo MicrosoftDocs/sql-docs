@@ -124,6 +124,6 @@ manager: "jhubbard"
  [Peer-to-Peer Transactional Replication](transactional-replication.md)   
  [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)   
  [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

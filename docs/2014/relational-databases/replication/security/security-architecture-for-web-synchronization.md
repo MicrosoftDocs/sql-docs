@@ -101,7 +101,7 @@ manager: "jhubbard"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication is used if one of the following is specified:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: a value of **0** for the **@distributor_security_mode** parameter of [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: a value of <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> for <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br /><br /> Merge Agent command line: a value of **0** for **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: the **@distributor_login** and **@distributor_password** parameters of [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> and <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Merge Agent command line: **-DistributorLogin** and **-DistributorPassword**.|  
   
 ## G. Connection to an FTP Server  
- Specify a Windows user for this connection only if you will download snapshot files from an FTP server, instead of from a UNC location, to the computer that is running IIS before you apply the snapshot to the Subscriber. For more information, see [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md).  
+ Specify a Windows user for this connection only if you will download snapshot files from an FTP server, instead of from a UNC location, to the computer that is running IIS before you apply the snapshot to the Subscriber. For more information, see [Transfer Snapshots Through FTP](../transfer-snapshots-through-ftp.md).  
   
 |Type of authentication|Where the authentication is specified|  
 |----------------------------|-------------------------------------------|  
@@ -127,14 +127,14 @@ manager: "jhubbard"
   
 -   Xmlsub  
   
- The account should also be part of IIS_WPG group. For more information, see the section "Setting Permissions for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener" in [Configure IIS for Web Synchronization](configure-iis-for-web-synchronization.md).  
+ The account should also be part of IIS_WPG group. For more information, see the section "Setting Permissions for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener" in [Configure IIS for Web Synchronization](../configure-iis-for-web-synchronization.md).  
   
 |Type of account|Where the account is specified|  
 |---------------------|------------------------------------|  
 |Any Windows user that has the required permissions.|Internet Information Services (IIS) Manager.|  
   
 ## See Also  
- [Configure Web Synchronization](configure-web-synchronization.md)   
- [Replication Merge Agent](agents/replication-merge-agent.md)  
+ [Configure Web Synchronization](../configure-web-synchronization.md)   
+ [Replication Merge Agent](../agents/replication-merge-agent.md)  
   
   

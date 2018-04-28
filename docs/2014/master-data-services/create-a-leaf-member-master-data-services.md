@@ -48,7 +48,7 @@ manager: "jhubbard"
 8.  Click **OK**.  
   
 ## See Also  
- [Load or Update Members in Master Data Services by Using the Staging Process](load-or-update-members-in-master-data-services-by-using-the-staging-process.md)   
+ [Load or Update Members in Master Data Services by Using the Staging Process](add-update-and-delete-data-master-data-services.md)   
  [Create a Consolidated Member &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

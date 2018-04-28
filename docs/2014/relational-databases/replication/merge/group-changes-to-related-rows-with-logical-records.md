@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  ![Three table logical record with values](../media/logical-records-02.gif "Three table logical record with values")  
   
- To define a logical record relationship between articles, see [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+ To define a logical record relationship between articles, see [Define a Logical Record Relationship Between Merge Table Articles](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ## Benefits of Logical Records  
  The logical records feature has two primary benefits:  
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
  If these changes are replicated without using logical records, the different **OrderTotal** values would result in a conflict and only one of them would be replicated. But the non-conflicting changes in the **OrderItems** table would be replicated without conflict, leaving the final **OrderTotal** values in an inconsistent state with respect to the **OrderItems** rows. If logical records are used in this scenario, the **OrderItems** change associated with the losing **Orders** table change would also be rolled back, and the final **OrderTotal** value would be an accurate summary of the **OrderItems** rows.  
   
- For more information about options related to conflict detection and resolution with logical records, see [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+ For more information about options related to conflict detection and resolution with logical records, see [Detecting and Resolving Conflicts in Logical Records](../advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 ## Considerations for Using Logical Records  
  Keep the following considerations in mind when using logical records.  
@@ -95,13 +95,13 @@ manager: "jhubbard"
   
 -   Custom conflict resolution with business logic handlers or custom resolvers is not supported for articles that are included in a logical record.  
   
--   If logical records are used in a publication that includes parameterized filters, you must initialize each Subscriber with a snapshot for its partition. If you initialize a Subscriber with another method, the Merge Agent will fail. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   If logical records are used in a publication that includes parameterized filters, you must initialize each Subscriber with a snapshot for its partition. If you initialize a Subscriber with another method, the Merge Agent will fail. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
--   Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](view-conflict-information-for-merge-publications.md).  
+-   Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../view-conflict-information-for-merge-publications.md).  
   
 ### Publication Settings  
   
--   The publication must have a compatibility level of 90RTM or greater. For more information, see the "Publication Compatibility Level" section of [Replication Backward Compatibility](replication-backward-compatibility.md).  
+-   The publication must have a compatibility level of 90RTM or greater. For more information, see the "Publication Compatibility Level" section of [Replication Backward Compatibility](../replication-backward-compatibility.md).  
   
 -   The publication must use native snapshot mode. This is the default unless you are replicating to [!INCLUDE[ssEW](../../../includes/ssew-md.md)], which does not support logical records.  
   

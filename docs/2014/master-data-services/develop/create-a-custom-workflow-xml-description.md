@@ -74,7 +74,7 @@ manager: "jhubbard"
 |\<Code>|The next attribute of the member that was changed. If this example member contained more attributes, they would follow this one.|  
   
 ## See Also  
- [Create a Custom Workflow &#40;Master Data Services&#41;](../create-a-custom-workflow-master-data-services.md)   
+ [Create a Custom Workflow &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)   
  [Custom Workflow Example &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)  
   
   

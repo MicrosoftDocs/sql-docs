@@ -133,14 +133,14 @@ manager: "jhubbard"
   
 -   Subscribers to Oracle publications cannot be automatically initialized from a backup.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](../validate-replicated-data.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offers two snapshot formats: native bcp-mode and character-mode. Oracle Publishers support character mode snapshots.  
   
 -   Schema changes to published Oracle tables are not supported. To make schema changes, first drop the publication, make the changes, and then re-create the publication and any subscriptions.  
   
     > [!NOTE]  
-    >  If the schema changes and the subsequent drop and re-creation of the publication and subscriptions are performed at a time when no activity is occurring on the published tables, you can specify the option 'replication support only' for the subscriptions. This allows them to be synchronized without having to copy a snapshot to each Subscriber. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
+    >  If the schema changes and the subsequent drop and re-creation of the publication and subscriptions are performed at a time when no activity is occurring on the published tables, you can specify the option 'replication support only' for the subscriptions. This allows them to be synchronized without having to copy a snapshot to each Subscriber. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### Replication Security Model  
  The security model for Oracle publishing is the same as the security model for standard transactional replication, with the following exceptions:  
@@ -164,8 +164,8 @@ manager: "jhubbard"
  For more information about replication security, see [Security and Protection &#40;Replication&#41;](../security/security-and-protection-replication.md).  
   
 ## See Also  
- [Administrative Considerations for Oracle Publishers](non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Configure an Oracle Publisher](non-sql/configure-an-oracle-publisher.md)   
+ [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)   
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
  [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

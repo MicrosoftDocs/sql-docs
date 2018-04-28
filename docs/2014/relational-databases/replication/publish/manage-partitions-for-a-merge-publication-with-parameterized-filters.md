@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 -   The last time that a partitioned snapshot job ran.  
   
- While the second part of the two-part snapshot can be generated on-demand when a new subscription is initialized, the procedures below enable you to control how this snapshot is generated and to pre-generate this snapshot when it is most convenient. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
+ While the second part of the two-part snapshot can be generated on-demand when a new subscription is initialized, the procedures below enable you to control how this snapshot is generated and to pre-generate this snapshot when it is most convenient. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 #### To view information on existing partitions  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
     -   **@host_name** - when the parameterized filter is defined by the value returned by [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md).  
   
-2.  Create and initialize the parameterized snapshot for this new partition. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+2.  Create and initialize the parameterized snapshot for this new partition. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### To delete a partition  
   
@@ -121,7 +121,7 @@ manager: "jhubbard"
      This also removes the snapshot job and any snapshot files for the partition.  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
- To better manage a publication with parameterized filters, you can programmatically create new Subscriber partitions, enumerate the existing Subscriber partitions, and delete Subscriber partitions by using Replication Management Objects (RMO). For information about how to create Subscriber partitions, see [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). The following information about existing partitions can be obtained:  
+ To better manage a publication with parameterized filters, you can programmatically create new Subscriber partitions, enumerate the existing Subscriber partitions, and delete Subscriber partitions by using Replication Management Objects (RMO). For information about how to create Subscriber partitions, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). The following information about existing partitions can be obtained:  
   
 -   The value and filtering function upon which the partition is based.  
   
@@ -159,6 +159,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

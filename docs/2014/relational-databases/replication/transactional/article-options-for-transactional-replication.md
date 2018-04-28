@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Specify schema options, such as whether constraints and triggers are copied to the Subscriber. For more information, see [Specify Schema Options](../publish/specify-schema-options.md).  
   
--   Use row filters and column filters. Filtering table articles enables you to create partitions of data to be published. For more information, see [Filter Published Data](../filter-published-data.md).  
+-   Use row filters and column filters. Filtering table articles enables you to create partitions of data to be published. For more information, see [Filter Published Data](../publish/filter-published-data.md).  
   
 ## See Also  
  [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)  

@@ -99,7 +99,7 @@ GO
  This example changes the publication compatibility level for the merge publication.  
   
 > [!NOTE]  
->  Changing the publication compatibility level might not be allowed if the publication uses any features that require a particular compatibility level. For more information, see [Replication Backward Compatibility](replication-backward-compatibility.md).  
+>  Changing the publication compatibility level might not be allowed if the publication uses any features that require a particular compatibility level. For more information, see [Replication Backward Compatibility](../replication-backward-compatibility.md).  
   
 ```  
 DECLARE @publication AS sysname;  

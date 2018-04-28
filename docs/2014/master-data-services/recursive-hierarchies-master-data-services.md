@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Create a derived hierarchy.|[Create a Derived Hierarchy &#40;Master Data Services&#41;](create-a-deriver-hierarchy-master-data-services.md)|  
+|Create a derived hierarchy.|[Create a Derived Hierarchy &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
 |Change the name of an existing derived hierarchy.|[Change a Derived Hierarchy Name &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Delete an existing derived hierarchy.|[Delete a Derived Hierarchy &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   

@@ -100,6 +100,6 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
 [Create a Publication](create-a-publication.md)
 
-[Create an Updatable Subscription to a Transactional Publication Using Transact-SQL](create-updatable-subscription-transactional-publication-transact-sql.md) 
+[Create an Updatable Subscription to a Transactional Publication Using Transact-SQL](../create-updatable-subscription-transactional-publication-transact-sql.md) 
  
   

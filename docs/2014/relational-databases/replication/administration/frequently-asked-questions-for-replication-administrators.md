@@ -89,7 +89,7 @@ manager: "jhubbard"
  If you have multiple publications, you can configure multiple distribution databases at the Distributor to ensure that the data flowing through each distribution database is from a single publication. Use the **Distributor Properties** dialog box or [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) to add a distribution database. For more information about accessing the dialog box, see [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md).  
   
 ### How do I find information on the Distributor and Publisher, such as which objects in a database are published?  
- This information is available through [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and a number of replication stored procedures. For more information, see [Distributor and Publisher Information Script](../distributor-and-publisher-information-script.md).  
+ This information is available through [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and a number of replication stored procedures. For more information, see [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
   
 ### Does replication encrypt data?  
  No. Replication does not encrypt data that is stored in the database or transferred over the network. For more information, see the "Encryption" section of the topic [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
@@ -97,7 +97,7 @@ manager: "jhubbard"
 ### How do I replicate data over the Internet?  
  Replicate data over the Internet using:  
   
--   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](../publish/publish-data-over-the-internet-using-vpn.md).  
+-   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](../publish-data-over-the-internet-using-vpn.md).  
   
 -   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](../merge/merge-replication.md).  
   
@@ -187,7 +187,7 @@ manager: "jhubbard"
 ## Replication Maintenance  
   
 ### How do I determine if the data at Subscribers is synchronized with data at the Publisher?  
- Use validation. Validation reports on whether a given Subscriber is synchronized with the Publisher. For more information, see [Validate Replicated Data](validate-replicated-data.md). Validation does not provide information on which rows if any are not synchronized correctly, but the [tablediff utility](../../../tools/tablediff-utility.md) does.  
+ Use validation. Validation reports on whether a given Subscriber is synchronized with the Publisher. For more information, see [Validate Replicated Data](../validate-replicated-data.md). Validation does not provide information on which rows if any are not synchronized correctly, but the [tablediff utility](../../../tools/tablediff-utility.md) does.  
   
 ### How do I add a table to an existing publication?  
  It is not necessary to stop activity on the publication or subscription databases in order to add a table (or another object). Add a table to a publication through the **Publication Properties - \<Publication>** dialog box or the stored procedures [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). For more information, see [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  

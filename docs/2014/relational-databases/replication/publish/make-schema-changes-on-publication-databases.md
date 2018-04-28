@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 -   If the publication supports immediate updating or queued updating subscriptions, the system must be quiesced before making schema changes: all activity on the published table must be stopped at the Publisher and Subscribers, and pending data changes must be propagated to all nodes. After the schema changes have propagated to all nodes, activity can resume on the published tables.  
   
--   If the publication is in a peer-to-peer topology, the system must be quiesced before making schema changes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+-   If the publication is in a peer-to-peer topology, the system must be quiesced before making schema changes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 -   Adding a timestamp column to a table and mapping the timestamp to binary(8) causes the article to be reinitialized for all active subscriptions.  
   

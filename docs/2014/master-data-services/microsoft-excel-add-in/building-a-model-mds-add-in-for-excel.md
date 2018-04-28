@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   [Versions &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
--   [Security &#40;Master Data Services&#41;](../../security-master-data-services.md)  
+-   [Security &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
 -   [Deploying Models &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
   

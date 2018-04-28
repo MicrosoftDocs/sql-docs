@@ -142,6 +142,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

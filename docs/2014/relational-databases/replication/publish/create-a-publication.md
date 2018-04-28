@@ -247,7 +247,7 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
 ## See Also  
- [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)   
+ [Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md)   
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
  [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [Define an Article](define-an-article.md)   

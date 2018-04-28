@@ -52,8 +52,8 @@ manager: "jhubbard"
  Clear to show all valid parameters for a given agent.  
   
 ## See Also  
- [Work with Replication Agent Profiles](agents/replication-agent-profiles.md)   
+ [Work with Replication Agent Profiles](agents/work-with-replication-agent-profiles.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)   
- [Replication Agent Profiles](replication-agent-profiles.md)  
+ [Replication Agent Profiles](agents/replication-agent-profiles.md)  
   
   

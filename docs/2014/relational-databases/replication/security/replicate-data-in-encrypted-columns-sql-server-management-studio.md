@@ -54,11 +54,11 @@ manager: "jhubbard"
   
 4.  Execute [CLOSE SYMMETRIC KEY](~/t-sql/statements/close-symmetric-key-transact-sql.md) to close the key.  
   
-5.  Publish the table that contains the encrypted column. For more information, see [Create a Publication](publish/create-a-publication.md).  
+5.  Publish the table that contains the encrypted column. For more information, see [Create a Publication](../publish/create-a-publication.md).  
   
-6.  Subscribe to the publication. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md) or [Create a Push Subscription](create-a-push-subscription.md).  
+6.  Subscribe to the publication. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md) or [Create a Push Subscription](../create-a-push-subscription.md).  
   
-7.  Initialize the subscription. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+7.  Initialize the subscription. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 8.  At the Subscriber, execute [CREATE SYMMETRIC KEY](~/t-sql/statements/create-symmetric-key-transact-sql.md) using the same values for ALGORITHM, KEY_SOURCE, and IDENTITY_VALUE as in step 1. You can specify a different value for ENCRYPTION BY.  
   
@@ -85,6 +85,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Security Overview &#40;Replication&#41;](security-overview-replication.md)   
- [Create Identical Symmetric Keys on Two Servers](../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
+ [Create Identical Symmetric Keys on Two Servers](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

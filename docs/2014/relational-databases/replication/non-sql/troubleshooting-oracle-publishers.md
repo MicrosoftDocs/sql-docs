@@ -245,6 +245,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

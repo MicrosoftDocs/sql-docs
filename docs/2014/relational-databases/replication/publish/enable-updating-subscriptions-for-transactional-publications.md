@@ -103,12 +103,12 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## See Also  
- [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
+ [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)   
  [Publication Types for Transactional Replication](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
  [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)  
+ [Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

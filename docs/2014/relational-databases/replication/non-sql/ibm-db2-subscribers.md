@@ -85,7 +85,7 @@ manager: "jhubbard"
   
 -   Do not publish tables to DB2 Subscribers using transactional replication if one or more primary key columns in the table is of data type DECIMAL(32-38, 0-38) or NUMERIC(32-38, 0-38). Transactional replication identifies rows using the primary key; this can result in failures because these data types are mapped to VARCHAR(41) at the Subscriber. Tables with primary keys that use these data types can be published using snapshot replication.  
   
--   If you want to pre-create tables at the Subscriber, rather than having replication create them, use the replication support only option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   If you want to pre-create tables at the Subscriber, rather than having replication create them, use the replication support only option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows longer table names and column names than DB2:  
   
@@ -165,6 +165,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

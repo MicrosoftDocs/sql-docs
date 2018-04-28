@@ -108,7 +108,7 @@ manager: "jhubbard"
   
 -   A publication must be enabled for peer-to-peer replication before any subscriptions are created.  
   
--   Subscriptions must be initialized by using a backup or with the **'replication support only'** option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   Subscriptions must be initialized by using a backup or with the **'replication support only'** option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 -   We do not recommend the use of identity columns. When using identities, you must manually manage the ranges assigned to the tables at each participating database. For more information, see the section "Assigning Ranges for Manual Identity Range Management" in [Replicate Identity Columns](../publish/replicate-identity-columns.md).  
   

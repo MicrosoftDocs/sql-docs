@@ -25,14 +25,14 @@ manager: "jhubbard"
 # Security and Protection (Replication)
   Help protect the replication scenarios that you deploy in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] from malicious attacks and improve the security of your data.  
   
- ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Security Overview**  
+ ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Security Overview**  
  [Threat and Vulnerability Mitigation &#40;Replication&#41;](threat-and-vulnerability-mitigation-replication.md)  
   
  [Identity and Access Control &#40;Replication&#41;](identity-and-access-control-replication.md)  
   
  [More…](security-overview-replication.md)  
   
- ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Development**  
+ ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Development**  
  [Replication Agent Security Model](replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  [More…](secure-development-replication.md)  
   
- ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Deployment**  
+ ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Deployment**  
  [Secure the Distributor](secure-the-distributor.md)  
   
  [Secure the Publisher](secure-the-publisher.md)  
@@ -54,10 +54,10 @@ manager: "jhubbard"
   
  [More…](secure-deployment-replication.md)  
   
- ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Operation**  
+ ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Secure Operation**  
  [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)  
   
 ## See Also  
- [Technical Reference &#40;Replication&#41;](technical-reference-replication.md)  
+ [Technical Reference &#40;Replication&#41;](../technical-reference-replication.md)  
   
   

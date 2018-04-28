@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
-4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 #### To change a column filter to remove columns for an article published in a snapshot or transactional publication  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
-4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 #### To define a column filter for an article published in a merge publication  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
-3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 #### To change a column filter to remove columns for an article published in a merge publication  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
 2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
-3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
+3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  In this transactional replication example, the `DaysToManufacture` column is removed from an article based on the `Product` table.  

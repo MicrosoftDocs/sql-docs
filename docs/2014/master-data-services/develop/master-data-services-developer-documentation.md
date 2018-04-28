@@ -34,7 +34,7 @@ manager: "jhubbard"
  [Create Master Data Manager Web Service Proxy Classes](create-master-data-manager-web-service-proxy-classes.md)  
  Describes how to enable metadata publishing from the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web site and how to create proxy classes that can be used to programmatically access the web service operations.  
   
- [Categorized Web Service Operations &#40;Master Data Services&#41;](../categorized-web-service-operations-master-data-services.md)  
+ [Categorized Web Service Operations &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
  A categorized list of the web service operations of the <xref:Microsoft.MasterDataServices.ServiceClient> class.  
   
 ## Custom Workflows  

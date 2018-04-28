@@ -91,6 +91,6 @@ manager: "jhubbard"
  [Merge Replication](merge-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)   
  [Synchronize Data](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
   
   

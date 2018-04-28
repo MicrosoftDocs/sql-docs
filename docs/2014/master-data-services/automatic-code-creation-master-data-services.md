@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   In the **Version Management** functional area, an administrator can reverse the transaction that occurred when the member was deleted. However, this means that all of the former member’s attributes and membership in hierarchies and collections is restored. For more information, see [Reverse a Transaction &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
--   An administrator can use the staging process to permanently delete the member. For more information, see [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md).  
+-   An administrator can use the staging process to permanently delete the member. For more information, see [Deactivate or Delete Members by Using the Staging Process &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
 ## Related Tasks  
   

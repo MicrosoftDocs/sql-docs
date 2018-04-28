@@ -76,7 +76,7 @@ manager: "jhubbard"
   
     -   If this value is **0**, you must first enable the Interactive Resolver for each article. To do this, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **@publication**, **@article**, a value of **allow_interactive_resolver** for **@property**, and a value of **true** for **@value**.  
   
-2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
+2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 3.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md), specifying the following parameters:  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
     -   A value of **true** for **@use_interactive_resolver**.  
   
-    -   The security account information required by the Merge Agent. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
+    -   The security account information required by the Merge Agent. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 4.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md).  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
 1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and a value of **true** for **@allow_interactive_resolver**. For more information, see [Define an Article](define-an-article.md).  
   
 ## See Also  
- [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Interactive Conflict Resolution](../merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

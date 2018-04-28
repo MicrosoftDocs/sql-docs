@@ -52,6 +52,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)   
- [Monitoring Replication](monitoring-replication.md)  
+ [Monitoring Replication](../monitoring-replication.md)  
   
   

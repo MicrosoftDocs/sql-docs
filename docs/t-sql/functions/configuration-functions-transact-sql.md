@@ -29,7 +29,7 @@ ms.workload: "On Demand"
 # Configuration Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-The following scalar functions return information about current configuration option settings:
+These scalar functions return information about current configuration option settings:
   
 |||  
 |-|-|  
@@ -42,7 +42,7 @@ The following scalar functions return information about current configuration op
 |[@@MAX_PRECISION](../../t-sql/functions/max-precision-transact-sql.md)|[@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md)|  
 |[@@NESTLEVEL](../../t-sql/functions/nestlevel-transact-sql.md)||  
   
-All configuration functions are nondeterministic. This means these functions do not always return the same results every time they are called, even with the same set of input values. For more information about function determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+All configuration functions operate in a nondeterministic way. In other words, these functions do not always return the same results every time they are called, even with the same set of input values. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information about function determinism.
   
 ## See also
 [Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)

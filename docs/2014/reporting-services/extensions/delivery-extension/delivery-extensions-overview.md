@@ -29,7 +29,7 @@ manager: "jhubbard"
 |Report Server E-Mail|Uses an SMTP server to e-mail reports to individual users or groups.|  
 |Report Server File Share|Used to distribute reports within your organization to network file shares. Provides the ability to automatically copy a report to a file share on a designated schedule.|  
   
- ![Reporting Services delivery extension architecture](../../../2014/reporting-services/dev-guide/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Reporting Services delivery extension architecture](../../media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
 Reporting Services delivery extension architecture  
   
  Delivery extensions are paired with subscriptions. When creating a subscription, a user can choose one of the available delivery extensions to determine how the report is delivered. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], subscriptions are located in the report server database. When an event occurs, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] matches the event against subscriptions contained in the report server database. For each subscription tied to the event, the report server creates a notification. For data-driven subscriptions, a notification is created for each recipient. Once a notification is created, the report server invokes a particular delivery extension and passes in values for the extensions settings specified in the notification. The delivery extension sends the notification to the user as specified by the selected delivery extension.  
@@ -55,7 +55,7 @@ Reporting Services delivery extension architecture
 -   Development experience in a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] language such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## See Also  
- [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services Extension Library](../extensions/reporting-services-extension-library.md)  
+ [Implementing a Delivery Extension](../delivery-extension/implementing-a-delivery-extension.md)   
+ [Reporting Services Extension Library](../reporting-services-extension-library.md)  
   
   

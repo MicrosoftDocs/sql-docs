@@ -55,7 +55,7 @@ manager: "mblythe"
   
  **Vary Report Presentation**  
   
--   Send commands to a report server through a URL request, to customize the rendering of a report. For more information, see [URL Access &#40;SSRS&#41;](../url-access-ssrs.md) and [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
+-   Send commands to a report server through a URL request, to customize the rendering of a report. For more information, see [URL Access &#40;SSRS&#41;](../url-access-ssrs.md) and [Pass a Report Parameter Within a URL](../pass-a-report-parameter-within-a-url.md).  
   
 -   Enable users to specify values to help customize the appearance of a report. For example, provide a Boolean parameter to indicate whether to expand or collapse all nested row groups in a table.  
   
@@ -108,9 +108,9 @@ manager: "mblythe"
   
 -   Add a report part that contains references to a parameter or to a shared dataset that contains variables.  
   
-     Report parts are stored on the report server and available for others to use in their reports. Report parts that are parameters cannot be managed from the report server. You can search for parameters in the Report Part Gallery and after you add them, configure them in your report. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+     Report parts are stored on the report server and available for others to use in their reports. Report parts that are parameters cannot be managed from the report server. You can search for parameters in the Report Part Gallery and after you add them, configure them in your report. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
      
-   > **NOTE!** Parameters can be published as a separate report part for data regions that have dependent datasets with parameters. Although parameters are listed as a report part, you cannot add a report part parameter directly to a report. Instead, add the report part, and any necessary report parameters are automatically generated from dataset queries that are contained or referenced by the report part. For more information about report parts, see [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md) and [Report Parts in Report Designer &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md).  
+   > **NOTE!** Parameters can be published as a separate report part for data regions that have dependent datasets with parameters. Although parameters are listed as a report part, you cannot add a report part parameter directly to a report. Instead, add the report part, and any necessary report parameters are automatically generated from dataset queries that are contained or referenced by the report part. For more information about report parts, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md) and [Report Parts in Report Designer &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md).  
   
 ### Parameter Values  
  The following are options for selecting parameter values in the report.  
@@ -228,7 +228,7 @@ manager: "mblythe"
 ##  <a name="bkmk_Related_Topics"></a> Related Content  
  [Configuring SSRS Report Parameters (quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [Bursting the mysteries of InvalidReportParameterException in Reporting service](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

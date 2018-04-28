@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Column Charts (Report Builder and SSRS)
-  A column chart displays a series as a set of vertical bars that are grouped by category. Column charts are useful for showing data changes over a period of time or for illustrating comparisons among items. The plain column chart is closely related to the bar chart, which displays series as sets of horizontal bars, and the range column chart, which displays series as sets of vertical bars with varying beginning and end points. For more information, see [Bar Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md) and [Range Charts &#40;Report Builder and SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
+  A column chart displays a series as a set of vertical bars that are grouped by category. Column charts are useful for showing data changes over a period of time or for illustrating comparisons among items. The plain column chart is closely related to the bar chart, which displays series as sets of horizontal bars, and the range column chart, which displays series as sets of vertical bars with varying beginning and end points. For more information, see [Bar Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md) and [Range Charts &#40;Report Builder and SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
   
  The column chart is well suited for this data because all three series share a common time period, allowing for valid comparisons to be made.  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
   
 ## Data Considerations for a Column Chart  
   
--   Bar and column charts are most commonly used to show comparisons between groups. If more than three series are present on the chart, consider using a stacked bar or column chart. You can also collect stacked bar or column charts into multiple groups if you have several series on your chart. For more information, see [Bar Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md) and *Column Charts*.  
+-   Bar and column charts are most commonly used to show comparisons between groups. If more than three series are present on the chart, consider using a stacked bar or column chart. You can also collect stacked bar or column charts into multiple groups if you have several series on your chart. For more information, see [Bar Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md) and *Column Charts*.  
   
 -   In a column chart, you have less space for category axis labels to display horizontally. If you have longer category labels, consider using a bar chart or changing the rotation angle of the label.  
   
@@ -48,11 +48,11 @@ manager: "mblythe"
 -   Unique to column charts is the ability to show your chart as a histogram or Pareto chart. To do so, set the ShowColumnAs property to `Histogram` or `Pareto` in the Properties window to `true`.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Chart Types &#40;Report Builder and SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [Bar Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
+ [Bar Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Range Charts &#40;Report Builder and SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
- [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

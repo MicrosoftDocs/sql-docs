@@ -59,7 +59,7 @@ manager: "mblythe"
   
 -   The data sources you can use depend on which [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data extensions are installed. Support for data sources can differ by client authoring tool, report server version, and report server platform. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
--   Data source credentials vary based on data source type and on whether you are viewing reports on your client or report server or SharePoint site. For more information, see [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md), and credential information specific to each tool in [Reporting Services Tools](../reporting-services-tools.md).  
+-   Data source credentials vary based on data source type and on whether you are viewing reports on your client or report server or SharePoint site. For more information, see [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Specify Credential and Connection Information for Report Data Sources](../../integration-services/connection-manager/data-sources.md), and credential information specific to each tool in [Reporting Services Tools](../reporting-services-tools.md).  
   
 ## Related Tasks  
  Tasks related to creating data connections, adding data from external sources, datasets, and queries.  
@@ -71,7 +71,7 @@ manager: "mblythe"
 |Create datasets and queries|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Manage data sources after they are published|[Manage Report Data Sources](manage-report-data-sources.md)|  
 |Manage shared datasets after they are published|[Manage Shared Datasets](manage-shared-datasets.md)|  
-|Create and manage data alerts|[Reporting Services Data Alerts](../ssms/agent/alerts.md)|  
+|Create and manage data alerts|[Reporting Services Data Alerts](../tutorial-creating-a-basic-table-report-report-builder.md)|  
 |Cache a shared dataset|[Cache Shared Datasets &#40;SSRS&#41;](../cache-shared-datasets-ssrs.md)|  
 |Schedule a shared dataset to preload the cache|[Schedules](../schedules.md)|  
 |Add a data extension|[Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)|  

@@ -20,7 +20,7 @@ manager: "mblythe"
   
  After your initial design, you can continue to develop a matrix to improve the viewing experience for the user. For more information, see [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- To quickly get started with matrices, see [Tutorial: Creating a Matrix Report &#40;Report Builder&#41;](tutorial-creating-a-matrix-report-report-builder.md).  
+ To quickly get started with matrices, see [Tutorial: Creating a Matrix Report &#40;Report Builder&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
   
  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports include a number of reports that use matrices. You can learn about matrices by exploring the report definition of a sample report in Report Builder or Report Designer or by previewing the rendered report in Report Builder or Report Designer. For more information about downloading the sample reports, see [(SSRS) Reporting Services Samples](http://go.microsoft.com/fwlink/?LinkID=198283).  
   

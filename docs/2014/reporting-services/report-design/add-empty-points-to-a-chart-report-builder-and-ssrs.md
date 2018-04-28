@@ -52,6 +52,6 @@ manager: "mblythe"
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Chart Types &#40;Report Builder and SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Add Scale Breaks to a Chart &#40;Report Builder and SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)  
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

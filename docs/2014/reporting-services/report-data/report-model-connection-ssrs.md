@@ -60,7 +60,7 @@ manager: "mblythe"
   
  [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   

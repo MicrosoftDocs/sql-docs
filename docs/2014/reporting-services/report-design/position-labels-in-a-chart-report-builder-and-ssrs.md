@@ -93,9 +93,9 @@ manager: "mblythe"
 6.  Select a value for the Position property.  
   
 ## See Also  
- [Pie Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
- [Bar Charts &#40;Report Builder and SSRS&#41;](../bar-charts-report-builder-and-ssrs.md)   
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Pie Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Bar Charts &#40;Report Builder and SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

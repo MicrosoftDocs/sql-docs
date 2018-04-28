@@ -45,10 +45,10 @@ manager: "mblythe"
   
 ## See Also  
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
+ [Tutorials &#40;Report Builder&#41;](../report-builder-tutorials.md)   
  [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Lists &#40;Report Builder and SSRS&#41;](../lists-report-builder-and-ssrs.md)   
+ [Lists &#40;Report Builder and SSRS&#41;](lists-report-builder-and-ssrs.md)   
  [Tablix Data Region &#40;Report Builder and SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

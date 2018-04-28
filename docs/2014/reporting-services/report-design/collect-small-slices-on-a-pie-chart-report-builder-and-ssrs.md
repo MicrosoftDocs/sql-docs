@@ -74,7 +74,7 @@ manager: "mblythe"
 >  You cannot format the secondary pie chart. For this reason, it is strongly recommended to use the first approach when collecting pie slices.  
   
 ## See Also  
- [Pie Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
+ [Pie Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Display Percentage Values on a Pie Chart &#40;Report Builder and SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   

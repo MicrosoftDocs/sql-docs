@@ -56,7 +56,7 @@ manager: "mblythe"
   
 ## See Also  
  [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   
   

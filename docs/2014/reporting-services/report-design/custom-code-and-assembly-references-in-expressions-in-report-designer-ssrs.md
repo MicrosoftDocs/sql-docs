@@ -161,7 +161,7 @@ End Function
  [Add Code to a Report &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
  [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Add an Assembly Reference to a Report &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services-tutorials-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   

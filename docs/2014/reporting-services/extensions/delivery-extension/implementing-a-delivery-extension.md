@@ -27,7 +27,7 @@ manager: "jhubbard"
  For a sample implementation of a delivery extension, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## In This Section  
- [Delivery Extensions Overview](../../dev-guide/delivery-extensions-overview.md)  
+ [Delivery Extensions Overview]delivery-extensions-overview.md)  
  Introduces how to write a custom delivery extension for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  [Preparing to Implement a Delivery Extension](preparing-to-implement-a-delivery-extension.md)  

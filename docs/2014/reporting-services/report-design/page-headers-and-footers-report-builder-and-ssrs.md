@@ -122,7 +122,7 @@ manager: "mblythe"
   
  A more accurate page count is based on logical pages that correlate to the dimensions of a printed page. In Excel, the page footer uses logical page numbers automatically. To put the logical page count in the page header, you must configure the device information settings to use simple headers. Be aware that when you use simple headers, you remove the capability of handling complex report layout in the header region.  
   
- For more information, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ For more information, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## See Also  
  [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   

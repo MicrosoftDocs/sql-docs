@@ -38,9 +38,9 @@ manager: "mblythe"
   
 -   [Group Expression Examples &#40;Report Builder and SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
--   [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)  
+-   [Tutorials &#40;Report Builder&#41;](../report-builder-tutorials.md)  
   
--   [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
+-   [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
 -   [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   

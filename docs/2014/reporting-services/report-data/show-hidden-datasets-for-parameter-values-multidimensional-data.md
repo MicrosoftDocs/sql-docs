@@ -36,7 +36,7 @@ manager: "mblythe"
 ## See Also  
  [Query Designers &#40;Report Builder&#41;](../query-designers-report-builder.md)   
  [Reporting Services Query Designers](../reporting-services-query-designers.md)   
- [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)  
   
   

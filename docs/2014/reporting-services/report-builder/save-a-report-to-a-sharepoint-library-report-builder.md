@@ -35,6 +35,6 @@ manager: "mblythe"
     >  If you leave a changed report for more than 10 hours without saving it, it is disconnected from the server without being saved. If that happens, in the lower-right status bar, click **Disconnect**, and then click **Connect**. The most recent server will be in the list of available servers. Select it and the report will reconnect.  
   
 ## See Also  
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

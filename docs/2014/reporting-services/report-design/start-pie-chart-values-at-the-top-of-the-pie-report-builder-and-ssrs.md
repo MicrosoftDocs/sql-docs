@@ -35,6 +35,6 @@ manager: "mblythe"
   
 ## See Also  
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Pie Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)  
+ [Pie Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

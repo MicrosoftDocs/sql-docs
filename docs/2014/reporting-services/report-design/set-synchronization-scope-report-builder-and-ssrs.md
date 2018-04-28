@@ -40,6 +40,6 @@ manager: "mblythe"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Indicators &#40;Report Builder and SSRS&#41;](../indicators-report-builder-and-ssrs.md)  
+ [Indicators &#40;Report Builder and SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

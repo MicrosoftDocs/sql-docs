@@ -52,7 +52,7 @@ manager: "mblythe"
 |-------------------|-------------------------|  
 |Preview/Report Viewer, HTML|Users click expand and collapse icons to view sections of a report.|  
 |PDF|The report server exports the current show or hide state of the report to PDF. Interactive toggling is not supported|  
-|Excel|Drilldown links and items that can be toggled are rendered as collapsible outlines in Excel. You can expand and collapse sections of the report in Excel. For more information about Excel-imposed limitations, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Drilldown links and items that can be toggled are rendered as collapsible outlines in Excel. You can expand and collapse sections of the report in Excel. For more information about Excel-imposed limitations, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|The report server exports the current show or hide state of the report to PDF. Interactive toggling is not supported|  
 |Other|Not available in MHTML, XML, or CSV. When exporting to an Image format, the report server exports the current show or hide stated of the report to PDF. Interactive toggling is not supported.|  
   

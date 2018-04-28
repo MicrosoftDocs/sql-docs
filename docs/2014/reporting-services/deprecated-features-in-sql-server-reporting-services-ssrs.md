@@ -169,7 +169,7 @@ manager: "mblythe"
   
 ## See Also  
  [What's New &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
- [Backward Compatibility](../analysis-services/backward-compatibility.md)   
+ [Backward Compatibility](../getting-started/backward-compatibility.md)   
  [Behavior Changes to SQL Server Reporting Services  in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
  [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
   

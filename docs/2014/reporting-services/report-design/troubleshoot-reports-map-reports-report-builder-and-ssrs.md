@@ -158,7 +158,7 @@ manager: "mblythe"
   
  To control the title and content for each legend, use the Legend properties for the rule. You can specify how many divisions to create, change the calculations that assign values to each division, set minimum and maximum range values, and change the format of the legend text.  
   
- For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ### The rules that I set do not give the results that I expect.  
  Rules apply to the analytical data that is associated with map elements on a layer. Use the following list to help identify issues with all color rules, size rules, width rules, and marker type rules:  
@@ -175,7 +175,7 @@ manager: "mblythe"
 ### My color scale does not appear when I run the report.  
  The color scale displays information to the user when a map layer specifies color rules for polygons, lines, or points for the whole layer or for embedded map elements. If no map element specifies a color rule, or if the color rules specify by using a legend instead of the color map, then the color map does not appear in the rendered report.  
   
- To display the color scale, specify color rules for a layer or an embedded map element. For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ To display the color scale, specify color rules for a layer or an embedded map element. For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
   
   
@@ -193,7 +193,7 @@ manager: "mblythe"
   
 -   For local preview, you must have internet access. For a report that runs from the report server, the report server must be configure to support tile background. For more information, see "Planning for Map Support" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
- For more information about adding a tile layer, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](../add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ For more information about adding a tile layer, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ### How do I control the text on a tile layer?  
  Both **Road** and **Hybrid** views include text. The text is part of the tiles that come from Bing Maps Web Services.  
@@ -213,7 +213,7 @@ manager: "mblythe"
   
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](../maps-report-builder-and-ssrs.md)   
+ [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Troubleshoot Report Builder](../troubleshoot-report-builder.md)  
   
   

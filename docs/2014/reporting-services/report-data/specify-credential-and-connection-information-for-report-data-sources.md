@@ -122,7 +122,7 @@ manager: "mblythe"
   
 -   The report is a subreport that uses the credentials of the parent report.  
   
- Under these conditions, the report server connects to a remote data source using the unattended execution account that you must define in advance. Because the report server does not connect to a remote server using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Under these conditions, the report server connects to a remote data source using the unattended execution account that you must define in advance. Because the report server does not connect to a remote server using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ##  <a name="DataSourceConfigurationConnections"></a> Data Source Configuration and Network Connections  
  The following table shows how connections are made for specific combinations of credential types and data processing extensions. If you are using a custom data processing extension, see [Specify Connections for Custom Data Processing Extensions](specify-connections-for-custom-data-processing-extensions.md).  
@@ -140,7 +140,7 @@ manager: "mblythe"
 ## See Also  
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md)   
+ [Manage Report Data Sources](../../integration-services/connection-manager/data-sources.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)   
  [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)  

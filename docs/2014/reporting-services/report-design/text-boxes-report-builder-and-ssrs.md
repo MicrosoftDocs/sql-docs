@@ -51,7 +51,7 @@ manager: "mblythe"
   
  Orientation is set on the text box and applies to all the text in the box. You cannot specify a different orientation for parts of the text box.  
   
- To quickly get started with changing text orientation, see the section on rotating text in the [Tutorial: Format Text &#40;Report Builder&#41;](tutorial-format-text-report-builder.md). For more information, see [Set Text Box Orientation &#40;Report Builder and SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ To quickly get started with changing text orientation, see the section on rotating text in the [Tutorial: Format Text &#40;Report Builder&#41;](../tutorial-format-text-report-builder.md). For more information, see [Set Text Box Orientation &#40;Report Builder and SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> How-To Topics  
  [Add, Move, or Delete a Text Box &#40;Report Builder and SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

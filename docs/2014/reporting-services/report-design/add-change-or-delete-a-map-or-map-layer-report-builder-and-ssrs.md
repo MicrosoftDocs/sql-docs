@@ -45,8 +45,8 @@ manager: "mblythe"
   
 |Symbol|Description|When to use|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Map Layer Wizard|To add a layer by using a wizard, click **New layer wizard**.|  
-|![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Add Layer|To manually add a layer, click **Add Layer**, and then click the type of map layer to add.|  
+|![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Map Layer Wizard|To add a layer by using a wizard, click **New layer wizard**.|  
+|![rs_IconMapAddLayer](../../tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Add Layer|To manually add a layer, click **Add Layer**, and then click the type of map layer to add.|  
 |![rs_IconMapPolygonLayer](../media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Polygon Layer|Add a map layer that displays areas or shapes that are based sets of polygon coordinates.|  
 |![rs_IconMapLineLayer](../media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Line Layer|Add a map layer that displays paths or routes that are based on sets of line coordinates.|  
 |![rs_IconMapPointLayer](../media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Point Layer|Add a map layer that displays locations that are based on sets of point coordinates.|  
@@ -69,7 +69,7 @@ manager: "mblythe"
   
 ##  <a name="ChangeLayer"></a> To change options for a layer by using the map layer wizard  
   
--   Run the map layer wizard. This wizard enables you to change options for a layer that you created by using the map layer wizard. In the Map pane, right-click the layer, and on the toolbar, click the layer wizard button (![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+-   Run the map layer wizard. This wizard enables you to change options for a layer that you created by using the map layer wizard. In the Map pane, right-click the layer, and on the toolbar, click the layer wizard button (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
 2.  On the toolbar, click the **Add Layer** button, and from the drop-down list, click the type of layer that you want to add: **Point**, **Line**, or **Polygon**.  
   
     > [!NOTE]  
-    >  Although you can add a map layer and configure it manually, we recommend that you use the map layer wizard to add new layers. To launch the wizard from the Map pane toolbar, click the layer wizard button (![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+    >  Although you can add a map layer and configure it manually, we recommend that you use the map layer wizard to add new layers. To launch the wizard from the Map pane toolbar, click the layer wizard button (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Right-click the layer, and then click **Layer Data**.  
   

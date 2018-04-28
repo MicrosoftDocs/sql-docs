@@ -101,7 +101,7 @@ manager: "mblythe"
   
 -   To change the contents or the format of contents for a legend, change the legend options for the corresponding rules for a layer.  
   
- For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 
   
@@ -120,7 +120,7 @@ manager: "mblythe"
   
 -   Add a Bing map tile layer for the current viewport center and zoom level. You do not need to specify the geographic coordinates for a tile layer. Tiles are automatically loaded to match the viewport area when the coordinate system is Geographic, the projection is Mercator, the Bing Maps servers are available, and when the report server has been configured to support this feature. For each report, you can specify whether to use a secure connection to retrieve tiles.  
   
- For more information about layers, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](../add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ For more information about layers, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ##  <a name="DataGrouping"></a> Change Data Grouping for the Layer  
  You can customize the way to aggregate spatial data for your own shapes. To set the group properties for a layer, select the layer in the Map pane, and in the Properties pane for the layer, click **Group**, and then click the ellipsis (…) to open the Group properties. In this dialog box, you can specify group expressions, create group variables, and filter data that is used for grouping.  

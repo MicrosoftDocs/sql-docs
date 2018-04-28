@@ -88,7 +88,7 @@ manager: "mblythe"
  The following rules apply to page headers and footers when rendered in the HTML or MHTML rendering format:  
   
 > [!NOTE]  
->  For information about how Excel renders headers and footers, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../exporting-to-microsoft-excel-report-builder-and-ssrs.md). For information about how Word renders headers and footers, see [Exporting to Microsoft Word &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
+>  For information about how Excel renders headers and footers, see [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). For information about how Word renders headers and footers, see [Exporting to Microsoft Word &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
   
 -   When present, the header and footer is rendered at the top and bottom of every page within the usable page area.  
   
@@ -127,7 +127,7 @@ manager: "mblythe"
   
 ## See Also  
  [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendering to HTML &#40;Report Builder and SSRS&#41;](../rendering-to-html-report-builder-and-ssrs.md)   
+ [Rendering to HTML &#40;Report Builder and SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

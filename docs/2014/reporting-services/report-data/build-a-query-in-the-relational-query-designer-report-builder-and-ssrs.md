@@ -93,8 +93,8 @@ manager: "mblythe"
  [Add Data from External Data Sources &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Query Designers &#40;Report Builder&#41;](../query-designers-report-builder.md)   
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Report Design View &#40;Report Builder&#41;](../report-design-view-report-builder.md)   
- [Shared Dataset Design View &#40;Report Builder&#41;](../shared-dataset-design-view-report-builder.md)   
+ [Report Design View &#40;Report Builder&#41;](../report-builder/report-design-view-report-builder.md)   
+ [Shared Dataset Design View &#40;Report Builder&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Reporting Services Query Designers](../reporting-services-query-designers.md)  
   
   

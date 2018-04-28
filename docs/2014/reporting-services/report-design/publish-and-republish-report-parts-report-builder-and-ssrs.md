@@ -55,7 +55,7 @@ manager: "mblythe"
 >  If you publish it as a new report part, it will have a new unique ID. It will no longer receive updates if the original report part changes.  
   
 ## See Also  
- [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Troubleshoot Report Parts &#40;Report Builder and SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Check for Updates or Turn Updates Off &#40;Report Builder and SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   

@@ -29,7 +29,7 @@ manager: "mblythe"
   
  To specify format strings within a text box report item, you need to select the item that you want to format, right-click, select **Text Box Properties**, and then click **Number**. You can format individual cells in a table or matrix data region in the same manner, because cells in a table or matrix are individual text boxes.  
   
- A chart data region commonly shows dates along the category (x) axis, and values along the value (y) axis. To specify formatting in a chart, right-click an axis and select **Axis Properties**. On the value axis, you can specify formats only for numbers. For more information, see [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+ A chart data region commonly shows dates along the category (x) axis, and values along the value (y) axis. To specify formatting in a chart, right-click an axis and select **Axis Properties**. On the value axis, you can specify formats only for numbers. For more information, see [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
  To specify formatting in a Gauge data region, right-click the scale of the gauge and select **Radial Scale Properties** or **Linear Scale Properties**.  
   

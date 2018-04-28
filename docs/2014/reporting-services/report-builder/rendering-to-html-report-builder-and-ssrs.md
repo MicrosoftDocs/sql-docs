@@ -92,7 +92,7 @@ manager: "mblythe"
  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> Device Information Settings  
- You can change some default settings for this renderer, including which mode to render in, by changing the device information settings. For more information, see [HTML Device Information Settings](html-device-information-settings.md).  
+ You can change some default settings for this renderer, including which mode to render in, by changing the device information settings. For more information, see [HTML Device Information Settings](../html-device-information-settings.md).  
   
  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   

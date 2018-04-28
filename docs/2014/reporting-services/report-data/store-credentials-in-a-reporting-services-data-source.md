@@ -157,7 +157,7 @@ manager: "mblythe"
      ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ## See Also  
- [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](../../integration-services/connection-manager/data-sources.md)   
  [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
  [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Data Sources Properties Page &#40;Report Manager&#41;](../data-sources-properties-page-report-manager.md)   

@@ -21,7 +21,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  You can publish tables separately from a report as report parts.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- To quickly get started with tables, see [Tutorial: Creating a Basic Table Report &#40;Report Builder&#41;](tutorial-creating-a-basic-table-report-report-builder.md) or [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+ To quickly get started with tables, see [Tutorial: Creating a Basic Table Report &#40;Report Builder&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) or [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports include a number of reports that use tables. You can learn about tables by exploring the report definition of a sample report in Report Builder or Report Designer or by previewing the rendered report in Report Builder or Report Designer. For more information about downloading the sample reports, see [(SSRS) Reporting Services Samples](http://go.microsoft.com/fwlink/?LinkID=198283).  
   
@@ -50,7 +50,7 @@ manager: "mblythe"
   
  Check your design by viewing the report in Preview. The table expands down the page as needed. The label row and the details row each display once for every row in the dataset query result set. Each product sold in the order is listed on a separate row, along with the quantity and the line total for the item, as shown in the following figure:  
   
- ![Preview of table with bold column headers](../../2014/tutorials/media/rs-basictabledetailsformattedpreview.gif "Preview of table with bold column headers")  
+ ![Preview of table with bold column headers](../../tutorials/media/rs-basictabledetailsformattedpreview.gif "Preview of table with bold column headers")  
   
  The table that you start with is a template based on the tablix data region. You can enhance the design of your table by adding features that are supported by the underlying tablix data region. For more information, see [Controlling the Tablix Data Region Display on a Report Page &#40;Report Builder and SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md). You can also continue to develop your table by adding row groups, column groups, and by adding or removing detail groups. For more information, see [Exploring the Flexibility of a Tablix Data Region &#40;Report Builder and SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
@@ -74,7 +74,7 @@ manager: "mblythe"
   
  In Preview, the report displays the order data grouped first by date, and then by order, as shown in the follow figure.  
   
- ![Table grouped by date and then order](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Table grouped by date and then order")  
+ ![Table grouped by date and then order](../../tutorials/media/rs-basictablegroupspreview.gif "Table grouped by date and then order")  
   
  An alternative way of displaying grouped data is to indent the group hierarchy to display the nested relationship of groups instead of presenting each value in its own column. This style of formatting is called a stepped report. For more information about how to format group information as a stepped report, see [Create a Stepped Report &#40;Report Builder and SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md).  
   

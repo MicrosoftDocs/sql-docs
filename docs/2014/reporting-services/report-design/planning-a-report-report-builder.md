@@ -52,6 +52,6 @@ manager: "mblythe"
 ## See Also  
  [Report Builder in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)  
+ [Tutorials &#40;Report Builder&#41;](../report-builder-tutorials.md)  
   
   

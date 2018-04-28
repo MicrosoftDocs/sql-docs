@@ -25,7 +25,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  When you import text that contains HTML markup, the data must always be parsed by the text box first. Because only a subset of HTML tags is supported, the HTML that is shown in the rendered report may differ from your original HTML.  
   
- To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](tutorial-format-text-report-builder.md).  
+ To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

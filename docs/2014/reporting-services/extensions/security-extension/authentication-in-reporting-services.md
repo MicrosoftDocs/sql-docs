@@ -101,7 +101,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  The following illustration depicts the method of authenticating users to the Web service when your application is deployed with a report server configured to use a custom authentication extension.  
   
- ![Reporting Services security authentication flow](../../../2014/reporting-services/dev-guide/media/rosettasecurityextensionauthenticationflow.gif "Reporting Services security authentication flow")  
+ ![Reporting Services security authentication flow](../../media/rosettasecurityextensionauthenticationflow.gif "Reporting Services security authentication flow")  
   
  As shown in Figure 2, the authentication process is as follows:  
   
@@ -146,6 +146,6 @@ internal static bool VerifyPassword(string suppliedUserName,
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can authenticate and authorize users with either Windows Authentication or custom authentication, but not both. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not support simultaneous use of multiple security extensions.  
   
 ## See Also  
- [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)  
+ [Implementing a Security Extension](../security-extension/implementing-a-security-extension.md)  
   
   

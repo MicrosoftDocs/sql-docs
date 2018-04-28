@@ -21,7 +21,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  In column and scatter charts, the horizontal, or x-axis, is the category axis. In bar charts, the vertical, or y-axis, is the category axis.  
   
- In order to format time intervals correctly, the values displayed on the x-axis must evaluate to a <xref:System.DateTime> data type. If your field has a data type of <xref:System.String>, the chart will not calculate intervals as dates or times. For more information, see [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md).  
+ In order to format time intervals correctly, the values displayed on the x-axis must evaluate to a <xref:System.DateTime> data type. If your field has a data type of <xref:System.String>, the chart will not calculate intervals as dates or times. For more information, see [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  When a numeric value is added to the y-axis, by default, the chart does not format the number before displaying it. If your numeric field is a sales figure, consider formatting the numbers as currencies to increase the readability of the chart.  
   

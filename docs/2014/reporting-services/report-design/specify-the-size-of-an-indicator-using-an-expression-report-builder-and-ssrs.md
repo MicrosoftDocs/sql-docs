@@ -27,7 +27,7 @@ manager: "mblythe"
   
  The **Properties** pane provides access to the properties of the IndicatorStates collection of an indicator. You configure the icons to be different sizes by setting the ScaleFactor property of the IndicatorStates collection members using an expression. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
- The expression used in this procedure was also used to generate the report with different sizes of indicators, shown in [Indicators &#40;Report Builder and SSRS&#41;](../indicators-report-builder-and-ssrs.md).  
+ The expression used in this procedure was also used to generate the report with different sizes of indicators, shown in [Indicators &#40;Report Builder and SSRS&#41;](indicators-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,6 +59,6 @@ manager: "mblythe"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Indicators &#40;Report Builder and SSRS&#41;](../indicators-report-builder-and-ssrs.md)  
+ [Indicators &#40;Report Builder and SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

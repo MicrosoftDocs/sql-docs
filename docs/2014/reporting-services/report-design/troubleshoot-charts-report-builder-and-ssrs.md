@@ -25,6 +25,6 @@ manager: "mblythe"
  Most chart types require numeric values along the value axis, which is typically the y-axis, in order to draw correctly. If the data type of your value field is `String`, the chart cannot display a numeric value, even if there are numerals in the fields. Instead, the chart displays a count of the total number of rows that contain a value in that field. To avoid this behavior, make sure that the fields that you use for value series have numeric data types, as opposed to strings that contain formatted numbers.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)  
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

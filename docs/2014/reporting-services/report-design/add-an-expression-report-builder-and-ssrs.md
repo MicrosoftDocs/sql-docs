@@ -40,7 +40,7 @@ manager: "mblythe"
  [Filter Equation Examples &#40;Report Builder and SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Group Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Expression Dialog Box &#40;Report Builder&#41;](../expression-dialog-box-report-builder.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](../expression-examples-report-builder-and-ssrs.md)   
+ [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Add Code to a Report &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)  
   
   

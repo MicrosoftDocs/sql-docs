@@ -41,10 +41,10 @@ manager: "mblythe"
   
  The CSV export option saves report data as comma-delimited plain text files, without any formatting. By default, the file uses a comma (,) to delimit fields and rows but this setting is configurable using the Device Information Settings. The resulting file can be opened in a spreadsheet program like Office SharePoint Server or used as an import format for other programs. The .csv file opens in a text editor such as Notepad. If accessed as a URL, the .csv file returns a MIME type of **text/csv**. The files are MIME version 1.0. For more information about rendering your report in the CSV file type, see [Exporting to a CSV File &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
- The XML file with report data export option saves a report as an XML file. The XML schema for the report is specific to the report. The report layout information is not saved by the XML export option. The XML generated using this option can be imported into a database, used as an XML data message, or sent to a custom application. For more information about rendering your report in the XML file type, see [Exporting to XML &#40;Report Builder and SSRS&#41;](../exporting-to-xml-report-builder-and-ssrs.md).  
+ The XML file with report data export option saves a report as an XML file. The XML schema for the report is specific to the report. The report layout information is not saved by the XML export option. The XML generated using this option can be imported into a database, used as an XML data message, or sent to a custom application. For more information about rendering your report in the XML file type, see [Exporting to XML &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
 ## See Also  
- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering Report Items &#40;Report Builder and SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   

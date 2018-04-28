@@ -52,7 +52,7 @@ manager: "mblythe"
   
  For expression examples for specific uses, see the following topics:  
   
--   [Group Expression Examples &#40;Report Builder and SSRS&#41;](../expression-examples-report-builder-and-ssrs.md)  
+-   [Group Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
 -   [Filter Equation Examples &#40;Report Builder and SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
@@ -433,7 +433,7 @@ manager: "mblythe"
 >  Available colors come from the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] KnownColor enumeration.  
   
 ### Chart Colors  
- To specify colors for a Shape chart, you can use custom code to control the order that colors are mapped to data point values. This helps you use consistent colors for multiple charts that have the same category groups. For more information, see [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md).  
+ To specify colors for a Shape chart, you can use custom code to control the order that colors are mapped to data point values. This helps you use consistent colors for multiple charts that have the same category groups. For more information, see [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 ###  <a name="Visibility"></a> Visibility  
  You can show and hide items in a report using the visibility properties for the report item. In a data region such as a table, you can initially hide detail rows based on the value in an expression.  
@@ -540,7 +540,7 @@ manager: "mblythe"
   
 ## See Also  
  [Filter Equation Examples &#40;Report Builder and SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
- [Group Expression Examples &#40;Report Builder and SSRS&#41;](../expression-examples-report-builder-and-ssrs.md)   
+ [Group Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Commonly Used Filters &#40;Report Builder and SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  

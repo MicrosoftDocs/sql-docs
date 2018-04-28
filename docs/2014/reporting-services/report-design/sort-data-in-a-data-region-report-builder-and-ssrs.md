@@ -24,7 +24,7 @@ manager: "mblythe"
   
 -   In a gauge data region, you do not typically need to sort data because the gauge displays a single value relative to a range. If you do need sort data in a gauge, you must first define a group, and then set the sort expression for the group.  
   
- For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
  For a tablix data region, you can also add an interactive sort button to the top of a column header to provide the user with the ability to change the sort order of groups or detail rows. For more information, see [Interactive Sort &#40;Report Builder and SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
   
@@ -121,12 +121,12 @@ manager: "mblythe"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- For more information about how data is grouped in a gauge, see [Gauges &#40;Report Builder and SSRS&#41;](../gauges-report-builder-and-ssrs.md).  
+ For more information about how data is grouped in a gauge, see [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
 ## See Also  
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Charts &#40;Report Builder and SSRS&#41;](../charts-report-builder-and-ssrs.md)   
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../shape-charts-report-builder-and-ssrs.md)  
   
   

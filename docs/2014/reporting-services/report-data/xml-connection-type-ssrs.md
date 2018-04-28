@@ -55,7 +55,7 @@ manager: "mblythe"
   
  You must use the text-based query designer to create the query. The query must return XML data.  
   
- For more information about the text-based query designer, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](../text-based-query-designer-user-interface-report-builder.md).  
+ For more information about the text-based query designer, see [Text-based Query Designer User Interface &#40;Report Builder&#41;](text-based-query-designer-user-interface-report-builder.md).  
   
  The possible values for a dataset query for a data source that is type XML are shown below.  
   
@@ -138,7 +138,7 @@ manager: "mblythe"
   
  [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   

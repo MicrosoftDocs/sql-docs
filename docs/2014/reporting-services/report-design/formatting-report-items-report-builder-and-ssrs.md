@@ -30,7 +30,7 @@ manager: "mblythe"
   
  You can change formatting options by selecting the item that you want to format and then opening the item's Properties dialog box. For example, if you want to format the contents of an entire text box or a selected word within the text box, right-click the item and select **Text Box Properties**. Then, you can apply the formatting styles that you want.  
   
- To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](tutorial-format-text-report-builder.md).  
+ To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

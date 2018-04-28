@@ -61,7 +61,7 @@ manager: "mblythe"
 -   The report contains only PowerPivot data from a PowerPivot data source.  
   
 ## See Also  
- [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](../../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

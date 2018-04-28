@@ -43,7 +43,7 @@ manager: "jhubbard"
   
     -   To create a new snapshot, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-    -   To create a new snapshot for a merge publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+    -   To create a new snapshot for a merge publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 3.  After the snapshot is created, synchronize the subscription to copy the schema and data for the new article.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
     -   To create a new snapshot, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-    -   To create a new snapshot for a merge publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+    -   To create a new snapshot for a merge publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  As noted above, in some cases dropping an article requires subscriptions to be dropped, recreated, and then synchronized. For more information, see [Subscribe to Publications](../subscribe-to-publications.md) and [Synchronize Data](../synchronize-data.md).  
   

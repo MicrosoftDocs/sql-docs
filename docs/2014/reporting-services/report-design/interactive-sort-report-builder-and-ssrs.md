@@ -35,7 +35,7 @@ manager: "mblythe"
   
 -   **Whether to synchronize the sort for multiple data regions:** You can design a report so that when the user toggles the sort order, other data regions with the same ancestor also sort.  
   
- For step-by-step instructions, see [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](../add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ For step-by-step instructions, see [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  The following table summarizes the effects you can achieve by using interactive sort buttons.  
   
@@ -47,16 +47,16 @@ manager: "mblythe"
 |Sort rows for multiple row groups and detail rows in a table|Groups, but you must redefine the group expression|Column header|Aggregate of dataset field to sort by|Data region|  
 |Synchronize the sort order for multiple data regions|Groups|Typically, column header|Group expression|Dataset|  
   
- The report processor applies interactive sort after all data region and group sort expressions are applied. For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ The report processor applies interactive sort after all data region and group sort expressions are applied. For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ## Adding Interactive Sort for Multiple Groups  
  In a table with nested row groups each based on a single dataset field, you can add an interactive sort button that sorts parent group values, child group values, or detail rows. However, you might want to provide the user with the ability to sort the table by both the parent and child group values without having to click multiple times.  
   
- To do this, you must redesign the table to group on an expression that combines multiple fields. For example, for a dataset with inventory counts, if the original table grouped by size and then by color, you can specify a single group with a group expression that is a combination of size and color. For more information, see [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](../add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ To do this, you must redesign the table to group on an expression that combines multiple fields. For example, for a dataset with inventory counts, if the original table grouped by size and then by color, you can specify a single group with a group expression that is a combination of size and color. For more information, see [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
 ## See Also  
  [Sort Data in a Data Region &#40;Report Builder and SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](../add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Add Interactive Sort to a Table or Matrix &#40;Report Builder and SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

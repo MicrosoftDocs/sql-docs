@@ -31,7 +31,7 @@ manager: "jhubbard"
  In addition to providing functionality that isn’t natively supported, some developers may want to extend existing functionality with alternative versions of controls that are already included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In this scenario, a developer could provide three components: a run-time component, a design-time component, and a design-time report item conversion component that converts an existing report item into a custom report item on demand.  
   
 ## In This Section  
- [Custom Report Item Architecture](../dev-guide/custom-report-item-architecture.md)  
+ [Custom Report Item Architecture](custom-report-item-architecture.md)  
  Describes the components that make up a custom report item.  
   
  [Custom Report Item Implementation Requirements](custom-report-item-implementation-requirements.md)  

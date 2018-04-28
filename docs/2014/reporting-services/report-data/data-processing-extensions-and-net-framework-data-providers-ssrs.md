@@ -45,7 +45,7 @@ manager: "mblythe"
 >  A [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider or custom data processing extension must be installed and registered before it can be used to access data from a data source. The data processing extension must be installed and registered both on the reporting client to author the report and on the report server to view the published report. Not all data providers are designed to work in a server environment. For more information, see [Register a Standard .NET Framework Data Provider &#40;SSRS&#41;](register-a-standard-net-framework-data-provider-ssrs.md).and [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md).  
   
 ## See Also  
- [Data Processing Extensions Overview](../dev-guide/data-processing-extensions-overview.md)   
+ [Data Processing Extensions Overview](../extensions/data-processing/data-processing-extensions-overview.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -178,7 +178,7 @@ manager: "mblythe"
   
  ![Gauge elements diagram](../media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
- For more information about using gauges as KPIs, see [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ For more information about using gauges as KPIs, see [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  You can publish gauges separately from a report as report parts. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

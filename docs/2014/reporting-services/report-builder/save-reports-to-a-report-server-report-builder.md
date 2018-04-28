@@ -47,7 +47,7 @@ manager: "mblythe"
 4.  In **Items of type**, select the type of report item you are saving. The type for reports is Reports(*.rdl).  
   
 ## See Also  
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporting Reports &#40;Report Builder and SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Saving Reports &#40;Report Builder&#41;](saving-reports-report-builder.md)   
  [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  

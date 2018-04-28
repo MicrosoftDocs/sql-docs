@@ -94,11 +94,11 @@ manager: "mblythe"
   
 -   [Add a Page Break &#40;Report Builder and SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Display Row and Column Headers on Multiple Pages &#40;Report Builder and SSRS&#41;](../display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Display Row and Column Headers on Multiple Pages &#40;Report Builder and SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
 -   [Add or Remove a Page Header or Footer &#40;Report Builder and SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Keep Headers Visible When Scrolling Through a Report &#40;Report Builder and SSRS&#41;](../keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Keep Headers Visible When Scrolling Through a Report &#40;Report Builder and SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
 -   [Display Page Numbers or Other Report Properties &#40;Report Builder and SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   

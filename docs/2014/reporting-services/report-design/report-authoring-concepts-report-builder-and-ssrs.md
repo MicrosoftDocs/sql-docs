@@ -34,7 +34,7 @@ manager: "mblythe"
  [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explains the differences in creating, storing, and managing embedded and shared datasets.  
   
- [Data Regions and Maps &#40;Report Builder and SSRS&#41;](../maps-report-builder-and-ssrs.md)  
+ [Data Regions and Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)  
  Describes the types of data regions that can be added to a report layout. Data regions determine the appearance of a report: tabular, matrix, list, or chart.  
   
  [Report Parameters Concept &#40;Report Builder and SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  

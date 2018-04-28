@@ -25,7 +25,7 @@ manager: "mblythe"
 # Register a Standard .NET Framework Data Provider (SSRS)
   To use a third-party [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider to retrieve data for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report dataset, you need to deploy and register the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider assembly in two locations: on the report authoring client and on the report server. On the report authoring client, you must register the data provider as a data source type and associate it with a query designer. You can then select this data provider as a type of data source when you create a report dataset. The associated query designer opens to help you create queries for this data source type. On the report server, you must register the data provider as a data source type. You can then process published reports that retrieve data from a data source using this data provider.  
   
- Third-party data providers do not necessarily provide all the functionality available with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extensions. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). To learn about extending the functionality of a .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider, see [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Third-party data providers do not necessarily provide all the functionality available with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extensions. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). To learn about extending the functionality of a .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider, see [Implementing a Data Processing Extension](../extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  You need administrator credentials to install and register data providers.  
   
@@ -200,8 +200,8 @@ manager: "mblythe"
   
 ## See Also  
  [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementing a Data Processing Extension](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services Configuration Files](../reporting-services-configuration-files.md)   
- [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md)  
+ [Code Access Security in Reporting Services](../extensions/secure-development/code-access-security-in-reporting-services.md)  
   
   

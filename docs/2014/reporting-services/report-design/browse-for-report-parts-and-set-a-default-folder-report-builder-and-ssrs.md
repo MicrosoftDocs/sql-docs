@@ -20,7 +20,7 @@ manager: "mblythe"
   
  You can set a default folder to publish report parts to the report server or SharePoint site integrated with a report server.  
   
- For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+ For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
 ### To browse for report parts  
   
@@ -62,7 +62,7 @@ manager: "mblythe"
   
 ## See Also  
  [Check for Updates or Turn Updates Off &#40;Report Builder and SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Troubleshoot Report Parts &#40;Report Builder and SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Publish and Republish Report Parts &#40;Report Builder and SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  

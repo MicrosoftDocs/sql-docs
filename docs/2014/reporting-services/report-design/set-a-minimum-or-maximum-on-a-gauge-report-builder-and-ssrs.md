@@ -36,8 +36,8 @@ manager: "mblythe"
 4.  (Optional) If the values for your minimum and maximum are large, specify a value for the **Multiply scale labels by** option. To specify a multiplier that reduces your scale, use a decimal number. For example, if you have a scale from 0 to 1000, you can specify a multiplier value of 0.01 to reduce the scale to read 0 to 10.  
   
 ## See Also  
- [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Gauges &#40;Report Builder and SSRS&#41;](../gauges-report-builder-and-ssrs.md)  
+ [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

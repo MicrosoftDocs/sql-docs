@@ -39,7 +39,6 @@ In this tutorial, you will learn how to:
 > * Create a publisher via transactional replication.
 > * Create a subscriber for the transactional publisher.
 > * Validate the subscription and measure latency.
-> * Troubleshoot errors.
   
   
 ## Prerequisites  
@@ -139,7 +138,7 @@ If your SQL Server Agent was not running when you created the publication, you'l
 
 !["Start" button and change in status message to show that the Snapshot Agent has run](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-If you see an error here, see [Troubleshoot errors with the Snapshot Agent](#troubleshoot-errors-with-the-snapshot-agent). 
+If you see an error here, see [Troubleshooting Snapshot Agent errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent). 
 
   
 ### Add the Distribution Agent login to the PAL  
@@ -235,141 +234,10 @@ In this section, you use tracer tokens to verify that changes are being replicat
    ![Information for the tracer token](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
-For more information, see [Measure latency and validate connections for transactional replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).
+For more information, see: 
+[Measure latency and validate connections for transactional replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+[Troubleshooting transactional replication sync errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
 
-## Error troubleshooting methodology
-This section teaches you how to troubleshoot basic replication synchronization failures by using the replication components. The actual errors that you encounter might be different from what's discussed here--and might need a different resolution. If that's the case, further troubleshooting is necessary and is outside the scope of this tutorial. 
-
-
-### Troubleshoot errors with the Snapshot Agent
-The Snapshot Agent generates the snapshot and writes it to the specified snapshot folder. 
-
-1. To view the status of your snapshot agent, expand the **Local Publication** node under replication, right-click your publication **AdvWorksProductTrans** > **View Snapshot Agent Status**. 
-2. If an error is reported in the Snapshot Agent status, you can find more details in the Snapshot Agent job history. To access the job history, expand **SQL Server Agent** in Object Explorer and open **Job Activity Monitor**. 
-
-   a. Sort by **Category** and identify the Snapshot Agent by the category **REPL-Snapshot**. 
-
-   b. Right-click the Snapshot Agent and select **View history**. 
-
-   ![Selections for viewing the Snapshot Agent history](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenthistory.png)
-    
-1. In the Snapshot Agent history, select the relevant log entry. The relevant entry is usually a line or two *before* the entry that's reporting the error. (The red X indicates the errors.) Review the message text in the box below the logs. 
-
-   ![Selected log entry with message text](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotaccessdenied.png)
-
-       The replication agent had encountered an exception. 
-       Exception Message: Access to path '\\node1\repldata.....' is denied.
-
-
-   If your windows permissions are not configured correctly for your snapshot folder, you'll see an "access is denied" error for the Snapshot Agent. You'll need to verify permissions for the <*Publisher_Machine_Name*>**\repl_snapshot** account on your repldata folder. For more information, see [Create a share for the snapshot folder and assign permissions](tutorial-preparing-the-server-for-replication.md#create-a-share-for-the-snapshot-folder-and-assign-permissions).
-
-### Troubleshoot errors with the Log Reader Agent
-The Log Reader Agent connects to  your publisher database and scans the transaction log for any transactions that are marked for replication. It then adds those transactions to the Distribution database. 
-
-1. Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**:  
-
-   !["Launch Repl Monitor" command on the shortcut menu](media/tutorial-replicating-data-between-continuously-connected-servers/launchreplmonitor.png)
-  
-   Replication Monitor opens: 
-   
-   ![Replication Monitor with error status](media/tutorial-replicating-data-between-continuously-connected-servers/replmonitor.png) 
-   
-2. The red X indicates that the publication is not synchronizing. Expand **My Publishers** on the left side, and then expand the relevant publisher server.  
-  
-3. Select the **AdvWorksProductTrans** publication on the left, and then look for the red X on one of the tabs to identify where the problem is. In this case, the red X is on the **Agents** tab, indicating that one of the agents is encountering an error: 
-
-   ![Red X on the "Agents" tab](media/tutorial-replicating-data-between-continuously-connected-servers/agenterror.png)
-
-4. Select the **Agents** tab to identify which agent is encountering the error: 
-
-   !["Agents" tab with failing Log Reader Agent](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentfailure.png)
-
-
-5. This view shows you two agents, the Snapshot Agent and the Log Reader Agent. The one that's encountering an error will have the red X. In this case, the Log Reader Agent has the red X. 
-
-   Double-click the line that's reporting the error--in this case, **Log Reader Agent**. The agent history appears for the agent that you've selected. In this case, it's the Log Reader Agent history. It provides more information about the error. 
-    
-   ![Dialog box with error messages](media/tutorial-replicating-data-between-continuously-connected-servers/logreadererror.png)
-
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
-
-6. The publication error typically happens when the owner of the publisher database is not set correctly after a database is restored. Expand **Databases** in Object Explorer > right-click **AdventureWorks2012** > **Properties**. Verify that an owner exists under the **Files** page. If this box is blank, then this is the likely cause of your problem. 
-
-   !["Database Properties" dialog box with missing owner information](media/tutorial-replicating-data-between-continuously-connected-servers/dbproperties.png)
-
-7. If the owner is blank on the **Files** page, open a **New Query** window within the context of the **AdventureWorks2012** database. Run the following T-SQL code snippet:
-
-   ```sql
-   -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-   EXEC sp_changedbowner '<useraccount>'
-   -- example for sa: exec sp_changedbowner 'sa'
-   -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
-   ```
-
-8. Restart the Log Reader Agent. To do this, expand the **SQL Server Agent** node in Object Explorer and open **Job Activity Monitor**. Sort by **Category** and identify the Log Reader Agent by the **REPL-LogReader** category. Right-click the **Log Reader Agent** job and select **Start Job at Step**. 
-
-   ![Selections for restarting the Log Reader Agent](media/tutorial-replicating-data-between-continuously-connected-servers/startjobatstep.png)
-
-9. Use Replication Monitor to validate that your publication is now synchronizing. If Replication Monitor is not already open, you can find it by right-clicking **Replication** in Object Explorer. 
-10. Select the **AdvWorksProductTrans** publication, select the **Agents** tab, and double-click **Log Reader Agent** to open the agent history. You should now see that the Log Reader Agent is running and replicating commands, or that it has "no replicated transactions":
-
-    !["Running" status for the Log Reader Agent](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderrunning.png)
-
-### Troubleshoot errors with the Distribution Agent
-The Distribution Agent finds data in the Distribution database and then applies it to the subscriber. 
-
-1. Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**.  
-2. In Replication Monitor, select the **AdvWorksProductTrans** publication, and select the **All Subscriptions** tab. Right-click the subscription and select **View Details**.
-
-   !["View Details" command on the shortcut menu](media/tutorial-replicating-data-between-continuously-connected-servers/viewdetails.png)
-
-2. The **Distributor To Subscriber History** tab clarifies what error the agent is encountering: 
-
-    !["Distributor To Subscriber History" tab with error](media/tutorial-replicating-data-between-continuously-connected-servers/disthistoryerror.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
-
-3. The error indicates that the Distribution Agent is retrying. To get more information, expand **SQL Server Agent** in Object Explorer > **Job Activity Monitor**. Sort the jobs by **Category**. 
-
-   Identify the Distribution Agent by the category **REPL-Distribution**. Right-click the agent and select **View history**.
-
-   ![Selections for viewing the Distribution Agent's history](media/tutorial-replicating-data-between-continuously-connected-servers/viewdistagenthistory.png)
-
-5. Select one of the error entries and view the error text at the bottom of the window:  
-
-   ![Error message about wrong username or password](media/tutorial-replicating-data-between-continuously-connected-servers/distpwwrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
-
-6. This error indicates that the password that the Distribution Agent used is incorrect. To resolve this, expand the **Replication** node in Object Explorer, right-click the subscription > **Properties**. Select the ellipsis (**...**) next to **Agent Process Account** and modify the password.
-
-   ![Selections for modifying the password for the Distribution Agent](media/tutorial-replicating-data-between-continuously-connected-servers/distagentpwchange.png)
-
-7. Check Replication Monitor again. You can find it by right-clicking **Replication** in Object Explorer. A red X under **All Subscriptions** indicates that the Distribution Agent is still encountering an error. Open the **Distribution To Subscriber History** tab by right-clicking the subscription in **Replication Monitor** > **View Details**. Here, the error is now different: 
-
-   ![Error that shows the Distribution Agent can't connect](media/tutorial-replicating-data-between-continuously-connected-servers/distagentcantconnect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
-
-8. This error indicates that the **Distribution Agent** could not connect to the subscriber, because the login failed for the user **NODE2\repl_distribution**. To investigate further, connect to the subscriber and open the *current* SQL Server error log under the **Management** node in Object Explorer: 
-
-   ![SQL Server error log that shows a failed login](media/tutorial-replicating-data-between-continuously-connected-servers/loginfailed.png)
-    
-   If you're seeing this error, the login is missing on the subscriber. To resolve this problem, see [Set database permissions at the subscriber](#set-database-permissions-at-the-subscriber).
-
-9. After you resolve the login error, check Replication Monitor again. If all problems have been fixed, you should see a green arrow next to the publication name and a status of **Running** under **All Subscriptions**. 
-
-   Right-click the subscription to open the **Distributor To Subscriber History** tab and verify success. If this is your first time running the Distribution Agent, you can see that the snapshot has been bulk copied to the subscriber: 
-
-   ![Replication Monitor with success indicators](media/tutorial-replicating-data-between-continuously-connected-servers/distagentsuccess.png)   
 
 ## Next steps
 You have successfully configured both your publisher and your subscriber for transactional replication. You can now insert, update, or delete data in the **Product**  table at the publisher. Then you can query the **Product** table at the subscriber to view the replicated changes. 

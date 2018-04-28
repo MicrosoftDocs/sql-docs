@@ -1,6 +1,6 @@
 ﻿---
 title: "SQL Server 2017 Analysis Services backward compatibility  | Microsoft Docs"
-ms.date: "07/11/2017"
+ms.date: "04/27/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -44,6 +44,9 @@ The following features are deprecated in this release:
 |Multidimensional|Remote linked measure groups|
 |Tabular|Models at the 1100 and 1103 compatibility level|
 |Tabular|Tabular Object Model properties: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|Tools|SQL Server Profiler for Trace Capture<br /><br /> The replacement is to use Extended Events Profiler embedded in SQL Server Management Studio.  <br /> See [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Tools|Server Profiler for Trace Replay <br />Replacement. There is no replacement.|  
+|Trace Management Objects and Trace APIs|Microsoft.AnalysisServices.Trace objects (contains the APIs for Analysis Services Trace and Replay objects). The replacement is multi-part:<br /><br /> -   Trace Configuration: Microsoft.SqlServer.Management.XEvent<br />-   Trace Reading: Microsoft.SqlServer.XEvent.Linq<br />-   Trace Replay: None|  
 
 
 ## Discontinued features
@@ -59,9 +62,7 @@ The following features were deprecated in an earlier release and are no longer s
 |Multidimensional|Remote linked measure groups|  
 |Multidimensional|Dimensional writeback|  
 |Multidimensional|Linked dimensions|
-|Tools|SQL Server Profiler for Trace Capture<br /><br /> The replacement is to use Extended Events Profiler embedded in SQL Server Management Studio.  <br /> See [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
-|Tools|Server Profiler for Trace Replay <br />Replacement. There is no replacement.|  
-|Trace Management Objects and Trace APIs|Microsoft.AnalysisServices.Trace objects (contains the APIs for Analysis Services Trace and Replay objects). The replacement is multi-part:<br /><br /> -   Trace Configuration: Microsoft.SqlServer.Management.XEvent<br />-   Trace Reading: Microsoft.SqlServer.XEvent.Linq<br />-   Trace Replay: None|  
+
 
 ## Breaking changes
 A *breaking change* causes a feature, data model, application code, or script to no longer function after upgrading to the current release.

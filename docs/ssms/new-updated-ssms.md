@@ -93,7 +93,7 @@ This compact list provides links to all the updated articles that are listed in 
 
 
 
-**[SSMS 17.6](docs/ssms/download-sql-server-management-studio-ssms.md)**
+**[SSMS 17.6]**
 
 
 Release number: 17.6<br>
@@ -152,24 +152,24 @@ Data Classification:
 
 
 
-- [Tutorial: Connect & Query SQL Server using SSMS](docs/ssms/tutorials/connect-query-sql-server.md)
+- [Tutorial: Connect & Query SQL Server using SSMS]
 
     In this Tutorial, you learn how to connect to your SQL Server instance. You will also learn some basic Transact-SQL (T-SQL) commands to create and then query a new database.
 
-- [Tutorial: Scripting Objects in SSMS](docs/ssms/tutorials/scripting-ssms.md)
+- [Tutorial: Scripting Objects in SSMS]
 
     In this Tutorial, you learn how to script out various objects in SSMS, including databases and queries.
 
-- [Tutorial: Using Templates in SSMS](docs/ssms/tutorials/templates-ssms.md)
+- [Tutorial: Using Templates in SSMS]
 
     In this Tutorial, you learn how to work with the pre-built Templates within SSMS. The templates are a little-known feature that store a number of Transact-SQL code snippets for various database administration tasks.
 
-- [Tutorial: SSMS Configuration](docs/ssms/tutorials/ssms-configuration.md)
+- [Tutorial: SSMS Configuration]
 
     In this Tutorial, you learn the basics of configuring your SSMS environment, such as the changing the environmental layout. This Tutorial also explains what the different SSMS components are.
 
 
-- [Tutorial: Additional Tips and Tricks for using SSMS](docs/ssms/tutorials/ssms-tricks.md)
+- [Tutorial: Additional Tips and Tricks for using SSMS]
 
     In this Tutorial, you will learn additional tips and tricks for using SSMS. The Tutorial includes the following:
     - Commenting and uncommenting text
@@ -219,7 +219,7 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-samples.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

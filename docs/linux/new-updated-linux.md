@@ -98,7 +98,7 @@ This compact list provides links to all the updated articles that are listed in 
    sudo cat /etc/yum.repos.d/mssql-server.repo
 ```
 
-4. The **name** property is the configured repository. You can identify it with the table in the [Repositories](docs/linux/#repositories) section of this article.
+4. The **name** property is the configured repository. You can identify it with the table in the [Repositories] section of this article.
 
 **Remove old repository (RHEL)**
 
@@ -133,7 +133,7 @@ First verify whether you have already registered a SQL Server repository.
    sudo zypper info mssql-server
 ```
 
-2. The **Repository** property is the configured repository. You can identify it with the table in the [Repositories](docs/linux/#repositories) section of this article.
+2. The **Repository** property is the configured repository. You can identify it with the table in the [Repositories] section of this article.
 
 **Remove old repository (SLES)**
 
@@ -239,7 +239,7 @@ To change these settings, use the following steps:
 
 
 
-- [Enable SQL Server Agent](docs/linux/sql-server-linux-setup-sql-agent.md)
+- [Enable SQL Server Agent]
 
 **<a id="CU6"></a> CU6 (April 2018)**
 
@@ -297,7 +297,7 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-samples.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

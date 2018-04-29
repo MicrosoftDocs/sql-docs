@@ -409,7 +409,7 @@ Support for Java Development Kit (JDK) version 9.0 in addition to JDK 8.0 and 7.
 
 **JDBC 4.3 compliance**
 
-Support for Java Database Connectivity API 4.3 specification, in addition to 4.1 and 4.2. The JDBC 4.3 API methods are added but not implemented yet. For details see [JDBC 4.3 Compliance for the JDBC Driver](docs/connect/jdbc/../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+Support for Java Database Connectivity API 4.3 specification, in addition to 4.1 and 4.2. The JDBC 4.3 API methods are added but not implemented yet. For details see [JDBC 4.3 Compliance for the JDBC Driver].
 
 **Added new connection property: sslProtocol**
 
@@ -609,7 +609,7 @@ CREATE TABLE [dbo].[Patients](docs/connect/jdbc/[PatientId] [int] IDENTITY(1,1),
 
 - [OS X 10.11 and macOS 10.12, 10.13 Homebrew formulae](docs/connect/odbc/https://github.com/Microsoft/homebrew-mssql-release)
 
-See also [Installing the Driver](docs/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+See also [Installing the Driver].
 
 
 
@@ -719,15 +719,15 @@ curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/m
 
 **Features Added**:
 
-Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes (For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server](docs/connect/odbc/linux-mac/../using-always-encrypted-with-the-odbc-driver.md))
+Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes (For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server])
 - `SQL_COPT_SS_CEKCACHETTL` Allows controlling the time that the local cache of Column Encryption Keys exists, as well as flushing it
 - `SQL_COPT_SS_TRUSTEDCMKPATHS` Allows the application to restrict AE operations to only use the specified list of Column Master Keys
 
 
 
-Support for loading the `.rll` from default location (For more information, see ['Resource File Loading' section in the Installation document](docs/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading))
+Support for loading the `.rll` from default location (For more information, see ['Resource File Loading' section in the Installation document])
 
-[Bug fixes](docs/connect/odbc/linux-mac/../bug-fixes.md)
+[Bug fixes]
 
 
 
@@ -780,14 +780,14 @@ Support for Azure SQL Managed Instance (Extended Private Preview).
 
 **Features Added**:
 
-Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes (For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server](docs/connect/odbc/windows/../using-always-encrypted-with-the-odbc-driver.md))
+Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes (For more information, see [Using Always Encrypted with the ODBC Driver for SQL Server])
 - `SQL_COPT_SS_CEKCACHETTL` Allows controlling the time that the local cache of Column Encryption Keys exists, as well as flushing it
 - `SQL_COPT_SS_TRUSTEDCMKPATHS` Allows the application to restrict AE operations to only use the specified list of Column Master Keys
 
 
 Azure Active Directory Interactive Authentication Support
 
-[Bug fixes](docs/connect/odbc/windows/../bug-fixes.md)
+[Bug fixes]
 
 
 **What's New in the  *{Included-Content-Goes-Here}*  ODBC Driver 17 for SQL Server on Windows**
@@ -837,7 +837,7 @@ Support for Azure SQL Managed Instance (Extended Private Preview).
 
 
 > [!NOTE]
-> When binding an input/output parameter to a bigint type, if the value may end up outside the range of an [integer](docs/connect/php/../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
+> When binding an input/output parameter to a bigint type, if the value may end up outside the range of an [integer], you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
 
 **Example**
 
@@ -892,7 +892,7 @@ sqlsrv_close($conn);
 
 
 > [!NOTE]
-> When binding an output parameter to a bigint value, if the value may end up outside the range of an [integer](docs/connect/php/../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
+> When binding an output parameter to a bigint value, if the value may end up outside the range of an [integer], you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
 
 **Example**
 
@@ -1016,7 +1016,7 @@ This page discusses what was added in each version of the  *{Included-Content-Go
   - Version 17 is now the default on all platforms
 - Support for Ubuntu 17.10, Debian 9, and Suse Enterprise Linux 12
 - Dropped support for Ubuntu 15.10
-- Support for Always Encrypted with CRUD functionalities on Windows. For more information, see [Using Always Encrypted with the PHP Drivers for SQL Server](docs/connect/php/../../connect/php/using-always-encrypted-php-drivers.md)
+- Support for Always Encrypted with CRUD functionalities on Windows. For more information, see [Using Always Encrypted with the PHP Drivers for SQL Server]
   - Support for Windows Certificate Store
   - Always Encrypted is only supported with Microsoft ODBC Driver 17 and above
 - Support for non-UTF8 locales on Linux and macOS
@@ -1111,7 +1111,7 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-samples.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

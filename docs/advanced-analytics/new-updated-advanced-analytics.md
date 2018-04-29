@@ -274,8 +274,8 @@ Traditionally data scientists using R have had problems with both performance an
 
 **Resources**
 
-+ [Performance Case Study](docs/advanced-analytics/r/../../advanced-analytics/r/performance-case-study-r-services.md)
-+ [R and Data Optimization](docs/advanced-analytics/r/../../advanced-analytics/r/r-and-data-optimization-r-services.md)
++ [Performance Case Study]
++ [R and Data Optimization]
 
 **Step 5: Deploy and Consume**
 
@@ -440,7 +440,7 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-samples.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

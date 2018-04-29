@@ -213,7 +213,7 @@ The result of this query is shown in the following table:
 **Logical Operator Precedence**
 
 
-When more than one logical operator is used in a statement, `NOT` is evaluated first, then `AND`, and finally `OR`. Arithmetic, and bitwise, operators are handled before logical operators. For more information, see [Operator Precedence](docs/relational-databases/../t-sql/language-elements/operator-precedence-transact-sql.md).
+When more than one logical operator is used in a statement, `NOT` is evaluated first, then `AND`, and finally `OR`. Arithmetic, and bitwise, operators are handled before logical operators. For more information, see [Operator Precedence].
 
 In the following example, the color condition pertains to product model 21, and not to product model 20, because `AND` has precedence over `OR`.
 
@@ -322,15 +322,15 @@ In this section, you will add a subscriber to the Publication that was previousl
 
 2.  In the **Local Publications** folder, right-click the **AdvWorksProductTrans** publication, and then select **New Subscriptions**.  The New Subscription Wizard launches:
 
-    ![New Subscription](docs/relational-databases/replication/media/tutorial-replicating-data-between-continuously-connected-servers/newsub.png)
+    ![New Subscription]
 
 3.  On the Publication page, select **AdvWorksProductTrans**, and then select **Next**:
 
-    ![Select Tran Publisher](docs/relational-databases/replication/media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
+    ![Select Tran Publisher]
 
 4.  On the Distribution Agent Location page, select **Run all agents at the Distributor**, and then select **Next**.  For more information on pull and push subscriptions, please see [Subscribe to Publications](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/relational-databases/replication/subscribe-to-publications):
 
-    ![Run Agents at Dist](docs/relational-databases/replication/media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
+    ![Run Agents at Dist]
 
 5.  On the Subscribers page, if the name of the Subscriber instance is not displayed, select **Add Subscriber** and then select **Add SQL Server Subscriber** from the drop-down. This will launch the **Connect to Server** dialog box. Enter the Subscriber instance name and then select **Connect**.
 
@@ -408,16 +408,16 @@ The *inflectional forms* are the different tenses and conjugations of a verb or 
 
 For example, search for the inflectional form of the word "drive." If various rows in the table include the words "drive," "drives," "drove," "driving," and "driven," all would be in the result set because each of these can be inflectionally generated from the word drive.
 
-[FREETEXT](docs/relational-databases/search/../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) look for inflectional terms of all specified words by default. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) support an optional `INFLECTIONAL` argument.
+[FREETEXT] and [FREETEXTTABLE] look for inflectional terms of all specified words by default. [CONTAINS] and [CONTAINSTABLE] support an optional `INFLECTIONAL` argument.
 
 **Search for synonyms of a specific word**
 
 
-A *thesaurus* defines user-specified synonyms for terms. For more info about thesaurus files, see [Configure and Manage Thesaurus Files for Full-Text Search](docs/relational-databases/search/../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).
+A *thesaurus* defines user-specified synonyms for terms. For more info about thesaurus files, see [Configure and Manage Thesaurus Files for Full-Text Search].
 
 For example, if an entry, "{car, automobile, truck, van}," is added to a thesaurus, you can search for the thesaurus form of the word "car." All rows in the table queried that include the words "automobile," "truck," "van," or "car," appear in the result set because each of these words belongs to the synonym expansion set containing the word "car."
 
-[FREETEXT](docs/relational-databases/search/../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) use the thesaurus by default. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) support an optional `THESAURUS` argument.
+[FREETEXT] and [FREETEXTTABLE] use the thesaurus by default. [CONTAINS] and [CONTAINSTABLE] support an optional `THESAURUS` argument.
 
 
 
@@ -596,7 +596,7 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-samples.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

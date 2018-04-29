@@ -93,19 +93,19 @@ XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
 **Applies to**:  *{Included-Content-Goes-Here}*
 
-Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_procedure_stats](docs/t-sql/statements/../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
+Enables or disables collection of execution statistics at the module-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_procedure_stats].
 
-Module-level execution statistics for natively compiled T-SQL modules are collected if either this option is ON, or if statistics collection is enabled through [sp_xtp_control_proc_exec_stats](docs/t-sql/statements/../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).
+Module-level execution statistics for natively compiled T-SQL modules are collected if either this option is ON, or if statistics collection is enabled through [sp_xtp_control_proc_exec_stats].
 
 XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
 **Applies to**:  *{Included-Content-Goes-Here}*
 
-Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_query_stats](docs/t-sql/statements/../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) and in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+Enables or disables collection of execution statistics at the statement-level for natively compiled T-SQL modules in the current database. The default is OFF. The execution statistics are reflected in [sys.dm_exec_query_stats] and in [Query Store].
 
-Statement-level execution statistics for natively compiled T-SQL modules are collected if either this option is ON, or if statistics collection is enabled through [sp_xtp_control_query_exec_stats](docs/t-sql/statements/../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
+Statement-level execution statistics for natively compiled T-SQL modules are collected if either this option is ON, or if statistics collection is enabled through [sp_xtp_control_query_exec_stats].
 
-For more details about performance monitoring of natively-compiled T-SQL modules see [Monitoring Performance of Natively Compiled Stored Procedures](docs/t-sql/statements/../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
+For more details about performance monitoring of natively-compiled T-SQL modules see [Monitoring Performance of Natively Compiled Stored Procedures].
 
 
 
@@ -155,7 +155,7 @@ These limitations apply:
 - Backups containing databases where at some point In-Memory objects existed cannot currently be restored.
 - Backups containing databases in read-only mode cannot currently be restored. This limitation will be removed soon.
 
-For more information, see [Managed Instance](docs/t-sql/statements//azure/sql-database/sql-database-managed-instance)
+For more information, see [Managed Instance]
 
 
 
@@ -197,7 +197,7 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-samples.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

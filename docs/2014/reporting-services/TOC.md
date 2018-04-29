@@ -130,7 +130,7 @@
 ##### [Manage Shared Datasets](report-data/manage-shared-datasets.md)
 ##### [Add and Verify a Data Connection or Data Source](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)
 ##### [Convert a Data Source from Embedded to Shared](report-data/convert-data-sources-report-builder-and-ssrs.md)
-#### [Tables, Matrices, and Lists](report-design/tables-matrices-and-lists.md)
+#### [Tables, Matrices, and Lists](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 ##### [Tables](report-design/tables-report-builder-and-ssrs.md)
 ##### [Matrices](report-design/create-a-matrix-report-builder-and-ssrs.md)
 ##### [Lists](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)

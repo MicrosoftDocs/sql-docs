@@ -62,7 +62,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Import an existing query from a file or report. Use the **Import** query button from either query designer to browse to a .sql file or .rdl file and import a query.  
   
- For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../relational-query-designer-user-interface-report-builder.md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](text-based-query-designer-user-interface-report-builder.md).  
+ For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](relational-query-designer-user-interface-report-builder.md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](text-based-query-designer-user-interface-report-builder.md).  
   
  The following query modes are supported:  
   

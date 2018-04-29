@@ -39,7 +39,7 @@ manager: "mblythe"
   
  After you open a query designer, you build a query in the same way for either an embedded dataset or a shared dataset. The following procedures use an embedded dataset query.  
   
- For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../relational-query-designer-user-interface-report-builder.md).  
+ For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](relational-query-designer-user-interface-report-builder.md).  
   
 ### To build a query for an embedded dataset in Report Design View  
   

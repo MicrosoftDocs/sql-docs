@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  Because security extensions are based on an open and extensible API, you can create new authentication and authorization extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The following is an example of a typical security extension implementation that uses Forms-based authentication and authorization:  
   
- ![Reporting Services security extension process](../../media/rosettasecurityextensionflow.gif "Reporting Services security extension process")  
+ ![Reporting Services security extension process](../../dev-guide/media/rosettasecurityextensionflow.gif "Reporting Services security extension process")  
   
  As shown in the illustration, authentication and authorization occur as follows:  
   

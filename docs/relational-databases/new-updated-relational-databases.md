@@ -8,10 +8,10 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.prod_service: sql-non-specified
 
 ms.component: relational-databases
-ms.date: 02/03/2018
+ms.date: 04/28/2018
 ---
 # New and Recently Updated: Relational Databases docs
 
@@ -25,7 +25,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
+- *Date range of updates:* &nbsp; **2018-02-03** &nbsp; -to- &nbsp; **2018-04-28**
 - *Subject area:* &nbsp; **Relational Databases**.
 
 
@@ -38,8 +38,13 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Store JSON documents in SQL Server or SQL Database](json/store-json-documents-in-sql-tables.md)
-2. [SQL Vulnerability Assessment](security/sql-vulnerability-assessment.md)
+1. [Joins (SQL Server)](performance/joins.md)
+2. [Subqueries (SQL Server)](performance/subqueries.md)
+3. [Set up replication distribution database in Always On availability group](replication/configure-distribution-availability-group.md)
+4. [SQL Data Discovery and Classification](security/sql-data-discovery-and-classification.md)
+5. [Transaction Locking and Row Versioning Guide](sql-server-transaction-locking-and-row-versioning-guide.md)
+6. [sys.dm_os_job_object (Azure SQL Database)](system-dynamic-management-views/sys-dm-os-job-object-transact-sql.md)
+7. [Filestream and FileTable system stored procedures (Transact-SQL)](system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
 
 
 
@@ -65,15 +70,16 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Database File Initialization](#TitleNum_1)
-2. [tempdb Database](#TitleNum_2)
-3. [JSON data in SQL Server](#TitleNum_3)
-4. [Lesson 1: Connecting to the Database Engine](#TitleNum_4)
-5. [Manage the size of the transaction log file](#TitleNum_5)
-6. [bcp_bind](#TitleNum_6)
-7. [SQL Server Index Design Guide](#TitleNum_7)
-8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
-9. [Create Primary Keys](#TitleNum_9)
+1. [Use a Format File to Skip a Table Column (SQL Server)](#TitleNum_1)
+2. [JSON data in SQL Server](#TitleNum_2)
+3. [Query Processing Architecture Guide](#TitleNum_3)
+4. [Tutorial: Prepare SQL Server For Replication - Publisher, Distributor, Subscriber](#TitleNum_4)
+5. [Tutorial: Configure Replication between Two Fully Connected Servers (Transactional)](#TitleNum_5)
+6. [Tutorial: Configure Replication between a Server and Mobile Clients (Merge)](#TitleNum_6)
+7. [Query with Full-Text Search](#TitleNum_7)
+8. [Transparent Data Encryption with Bring Your Own Key support for Azure SQL Database and Data Warehouse](#TitleNum_8)
+9. [PowerShell and CLI: Enable Transparent Data Encryption using your own key from Azure Key Vault](#TitleNum_9)
+10. [About Change Data Capture (SQL Server)](#TitleNum_10)
 
 
 
@@ -84,32 +90,43 @@ This compact list provides links to all the updated articles that are listed in 
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Database File Initialization](databases/database-instant-file-initialization.md)
+### 1. &nbsp; [Use a Format File to Skip a Table Column (SQL Server)](import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 
-*Updated: 2018-01-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 81.  ms.author= "sstein".  -->
+<!-- Source markdown line 221.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
+<!-- git diff --ignore-all-space --unified=0 167916d79c5de1e7f13990cb7acc41ceb541b9a7 cb92eb201292294e3397879c98f353fba45f1c1c  (PR=0  ,  Filename=use-a-format-file-to-skip-a-table-column-sql-server.md  ,  Dirpath=docs\relational-databases\import-export\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
+
+**Using OPENROWSET(BULK...)**
+
+
+To use an XML format file to skip a table column by using `OPENROWSET(BULK...)`, you have to provide an explicit list of columns in the select list and also in the target table, as follows:
 
 ```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)
 ```
 
-**Applies to:** SQL Server (Starting with SQL Server 2012 SP4, SQL Server 2014 SP2 and SQL Server 2016 through SQL Server 2017)
+The following example uses the `OPENROWSET` bulk rowset provider and the `myTestSkipCol2.xml` format file. The example bulk imports the `myTestSkipCol2.dat` data file into the `myTestSkipCol` table. The statement contains an explicit list of columns in the select list and also in the target table, as required.
 
-**Security Considerations**
+In SSMS, run the following code. Update the file system paths for the location of the sample files on your computer.
 
-When using Instant File Initialization (IFI), because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file. While the database file is attached to the instance of SQL Server, this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the SQL Server service account and the local administrator. However, when the file is detached, it may be accessed by a user or service that does not have SE\_MANAGE\_VOLUME_NAME. A similar consideration exists when the database is backed up: if the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.
-
-Another consideration is that when a file is grown using IFI, a SQL Server administrator could potentially access the raw page contents and see the previously deleted content.
-
-If the database files are hosted on a storage area network, it is also possible that the storage area network always presents new pages as pre-initialized, and having the operating system re-initialize the pages might be unnecessary overhead.
+```
+USE WideWorldImporters;
+GO
+INSERT INTO myTestSkipCol
+  (Col1,Col3)
+    SELECT Col1,Col3
+      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',
+      FORMATFILE='C:\myTestSkipCol2.Xml'
+       ) as t1 ;
+GO
+```
 
 
 
@@ -121,46 +138,53 @@ If the database files are hosted on a storage area network, it is also possible 
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [tempdb Database](databases/tempdb-database.md)
+### 2. &nbsp; [JSON data in SQL Server](json/json-data-sql-server.md)
 
-*Updated: 2018-01-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+*Updated: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
 
-<!-- Source markdown line 100.  ms.author= "sstein".  -->
+<!-- Source markdown line 145.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5 e2f2e8b4732779b3f24561cc0c4da3a958f4edbb  (PR=0  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- For a description of these database options, see [ALTER DATABASE SET Options (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md).
+JSON documents may have sub-elements and hierarchical data that cannot be directly mapped into the standard relational columns. In this case, you can flatten JSON hierarchy by joining parent entity with sub-arrays.
 
-**Tempdb database in SQL Database**
+In the following example, the second object in the array has sub-array representing person skills. Every sub-object can be parsed using additional `OPENJSON` function call:
 
+```
+DECLARE @json NVARCHAR(MAX)
+SET @json =
+N'[
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }
+ ]'
 
-|SLO|Max Tempdb Data File Size (MBs)|# of tempdb data files|Max tempdb data size (MB)|
-|---|---:|---:|---:|
-|Basic|14,225|1|14,225|
-|S0|14,225|1|14,225|
-|S1|14,225|1|14,225|
-|S2|14,225|	1|14,225|
-|S3|32,768|1|32,768|
-|S4|32,768|2|65,536|
-|S6|32,768|3|98,304|
-|S7|32,768|6|196,608|
-|S9|32,768|12|393,216|
-|S12|32,768|12|393,216|
-|P1|32,768|12|393,216|
-|P2|32,768|12|393,216|
-|P4|32,768|12|393,216|
-|P6|32,768|12|393,216|
-|P11|32,768|12|393,216|
-|P15|32,768|12|393,216|
-|Premium Elastic Pools (all DTU configurations)|14,225|12|170,700|
-|Standard Elastic Pools (all DTU configurations)|14,225|12|170,700|
-|Basic Elastic Pools (all DTU configurations)|14,225|12|170,700|
-||||
+SELECT *
+FROM OPENJSON(@json)
+  WITH (id int 'strict $.id',
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',
+        age int, dateOfBirth datetime2 '$.dob',
+	skills nvarchar(max) '$.skills' as json)
+	outer apply openjson( a.skills )
+                     with ( skill nvarchar(8) '$' ) as b
+```
+**skills** array is returned in the first `OPENJSON` as original JSON text fragment and passed to another `OPENJSON` function using `APPLY` operator. The second `OPENJSON` function will parse JSON array and return string values as single column rowset that will be joined with the result of the first `OPENJSON`.
+The result of this query is shown in the following table:
+
+**Results**
+
+|id|firstName|lastName|age|dateOfBirth|skill|
+|--------|---------------|--------------|---------|-----------------|----------|
+|2|John|Smith|25|||
+|5|Jane|Smith||2005-11-04T12:00:00|SQL|
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` will join first level entity with sub-array and return flatten resultset. Due to JOIN, the second row will be repeated for every skill.
 
 
 
@@ -173,40 +197,54 @@ If the database files are hosted on a storage area network, it is also possible 
 
 <a name="TitleNum_3"/>
 
-### 3. &nbsp; [JSON data in SQL Server](json/json-data-sql-server.md)
+### 3. &nbsp; [Query Processing Architecture Guide](query-processing-architecture-guide.md)
 
-*Updated: 2018-02-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+*Updated: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
 
-<!-- Source markdown line 233.  ms.author= "douglasl".  -->
+<!-- Source markdown line 34.  ms.author= "jroth".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
+<!-- git diff --ignore-all-space --unified=0 96d91b39acdb2f32aaff323e374e92d6f229d241 2c1d2f8585632ada174388399782dc3ed2721dba  (PR=0  ,  Filename=query-processing-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   [Load GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)
+**Logical Operator Precedence**
 
-**Analyze JSON data with SQL queries**
 
-If you must filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. You can then use standard Transact-SQL and built-in functions to prepare the reports.
+When more than one logical operator is used in a statement, `NOT` is evaluated first, then `AND`, and finally `OR`. Arithmetic, and bitwise, operators are handled before logical operators. For more information, see [Operator Precedence](docs/relational-databases/../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+In the following example, the color condition pertains to product model 21, and not to product model 20, because `AND` has precedence over `OR`.
 
 ```
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
-FROM   SalesOrderRecord AS Tab
-          CROSS APPLY
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
-           WITH (
-              Number   varchar(200) N'$.Order.Number',
-              Date     datetime     N'$.Order.Date',
-              Customer varchar(200) N'$.AccountNumber',
-              Quantity int          N'$.Item.Quantity'
-           )
-  AS SalesOrderJsonData
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
 ```
+
+You can change the meaning of the query by adding parentheses to force evaluation of the `OR` first. The following query finds only products under models 20 and 21 that are red.
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+Using parentheses, even when they are not required, can improve the readability of queries, and reduce the chance of making a subtle mistake because of operator precedence. There is no significant performance penalty in using parentheses. The following example is more readable than the original example, although they are syntactically the same.
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 
 
 
@@ -218,35 +256,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_4"/>
 
-### 4. &nbsp; [Lesson 1: Connecting to the Database Engine](lesson-1-connecting-to-the-database-engine.md)
+### 4. &nbsp; [Tutorial: Prepare SQL Server For Replication - Publisher, Distributor, Subscriber](replication/tutorial-preparing-the-server-for-replication.md)
 
-*Updated: 2017-12-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
+*Updated: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
 
-<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 56.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
+<!-- git diff --ignore-all-space --unified=0 6e5caedacff193ce79bdd98708ae1b9dc91f0a8f 9f7af4d3f8b1cffd048db2a5b29fc9e6013f5ed2  (PR=0  ,  Filename=tutorial-preparing-the-server-for-replication.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-2.  Select **Database Engine**.
+- Install [SQL Server Management Studio](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server 2017 Developer Edition](docs/relational-databases/replication/https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Download an [AdventureWorks Sample Databases](docs/relational-databases/replication/https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, please see [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
-    ![object-explorer](../relational-databases/media/object-explorer.png)
+>[!NOTE]
+> - Replication is not supported on SQL Servers that are more than two versions apart. For more information, please see [Supported SQL Versions in Repl Topology](docs/relational-databases/replication/https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - In  *{Included-Content-Goes-Here}* , you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role. For more information on the sysadmin role, please see [Server Level Roles](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).
 
-3.  In the **Server name** box, type the name of the instance of the Database Engine. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of SQL Server on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name.
 
-    ![connect-to-server](../relational-databases/media/connect-to-server.png)
+**Estimated time to complete this tutorial:  30 minutes**
 
-4.  Click **Connect**.
+**Create Windows Accounts for Replication**
 
-> [!NOTE]
-> This tutorial assumes you are new to SQL Server and have no special problems connecting. This should be sufficient for most people and this keeps this tutorial simple. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+In this section, you will create Windows accounts to run replication agents. You will create a separate Windows account on the local server for the following agents:
 
-**<a name="additional"></a>Authorizing Additional Connections**
-
-Now that you have connected to SQL Server as an administrator, one of your first tasks is to authorize other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in SQL Server and are independent of your Windows credentials. Use Windows Authentication whenever possible.
+|Agent|Location|Account name|
+|---------|------------|----------------|
+|Snapshot Agent|Publisher|<*machine_name*>\repl_snapshot|
 
 
 
@@ -258,28 +298,41 @@ Now that you have connected to SQL Server as an administrator, one of your first
 
 <a name="TitleNum_5"/>
 
-### 5. &nbsp; [Manage the size of the transaction log file](logs/manage-the-size-of-the-transaction-log-file.md)
+### 5. &nbsp; [Tutorial: Configure Replication between Two Fully Connected Servers (Transactional)](replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
-*Updated: 2018-01-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4) | [Next](#TitleNum_6))
+*Updated: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4) | [Next](#TitleNum_6))
 
-<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
+<!-- Source markdown line 162.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 0d74f984d0ffc01cce0376837e6d94df3c5654d7 4ecf4d724286130927dd43687d6845059af6f9b7  (PR=0  ,  Filename=tutorial-replicating-data-between-continuously-connected-servers.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   A small growth increment can generate too many small [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+**Create a subscription to the Transactional publication**
 
--   A large growth increment can generate too few and large [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+In this section, you will add a subscriber to the Publication that was previously created. This tutorial uses a remote subscriber (NODE2\SQL2016) but a subscription can also be added locally to the publisher.
 
--   Even with autogrow enabled, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+**To create the subscription**
 
--   Having multiple log files in a database does not enhance performance in any way, because the transaction log files do not use [proportional fill](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) like data files in a same filegroup.
 
--   Log files can be set to shrink automatically. However this is **not recommended**, and the **auto_shrink** database property is set to FALSE by default. If **auto_shrink** is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused.
+1.  Connect to the Publisher in  *{Included-Content-Goes-Here}* , expand the server node, and then expand the **Replication** folder.
+
+2.  In the **Local Publications** folder, right-click the **AdvWorksProductTrans** publication, and then select **New Subscriptions**.  The New Subscription Wizard launches:
+
+    ![New Subscription](docs/relational-databases/replication/media/tutorial-replicating-data-between-continuously-connected-servers/newsub.png)
+
+3.  On the Publication page, select **AdvWorksProductTrans**, and then select **Next**:
+
+    ![Select Tran Publisher](docs/relational-databases/replication/media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
+
+4.  On the Distribution Agent Location page, select **Run all agents at the Distributor**, and then select **Next**.  For more information on pull and push subscriptions, please see [Subscribe to Publications](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/relational-databases/replication/subscribe-to-publications):
+
+    ![Run Agents at Dist](docs/relational-databases/replication/media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
+
+5.  On the Subscribers page, if the name of the Subscriber instance is not displayed, select **Add Subscriber** and then select **Add SQL Server Subscriber** from the drop-down. This will launch the **Connect to Server** dialog box. Enter the Subscriber instance name and then select **Connect**.
 
 
 
@@ -291,62 +344,39 @@ Now that you have connected to SQL Server as an administrator, one of your first
 
 <a name="TitleNum_6"/>
 
-### 6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
+### 6. &nbsp; [Tutorial: Configure Replication between a Server and Mobile Clients (Merge)](replication/tutorial-replicating-data-with-mobile-clients.md)
 
-*Updated: 2018-01-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
+*Updated: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
 
-<!-- Source markdown line 127.  ms.author= "genemi".  -->
+<!-- Source markdown line 93.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
+<!-- git diff --ignore-all-space --unified=0 0eed78dfe83c88358c030539a2b25d11ef5ec2d3 79b2a3f32c940fede94b11ad2a3ef8a00b911a39  (PR=0  ,  Filename=tutorial-replicating-data-with-mobile-clients.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- The following table lists valid enumerated data types and the corresponding ODBC C data types.
+    > The Employee table contains a column (OrganizationNode) that has the hierarchyid data type, which is only supported for replication in SQL 2017. If you're using a build lower than SQL 2017, you'll see a message  at the bottom of the screen notifying you of potential data loss for using this column in bi-directional replication. For the purpose of this tutorial, this message can be ignored. However, this datatype should not be replicated in a production environment unless you're using the supported build. For more inforamtion about replicating the hierarchyid datatype, please see [Using Hierarchyid Columns in Replication](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)
 
-|eDataType|C type|
-|-----------------------|------------|
-|SQLTEXT|char *|
-|SQLNTEXT|wchar_t *|
-|SQLCHARACTER|char *|
-|SQLBIGCHAR|char *|
-|SQLVARCHAR|char *|
-|SQLBIGVARCHAR|char *|
-|SQLNCHAR|wchar_t *|
-|SQLNVARCHAR|wchar_t *|
-|SQLBINARY|unsigned char *|
-|SQLBIGBINARY|unsigned char *|
-|SQLVARBINARY|unsigned char *|
-|SQLBIGVARBINARY|unsigned char *|
-|SQLBIT|char|
-|SQLBITN|char|
-|SQLINT1|char|
-|SQLINT2|short int|
-|SQLINT4|int|
-|SQLINT8|_int64|
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
-|SQLFLT4|float|
-|SQLFLT8|float|
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
-|SQLDECIMALN|SQL_NUMERIC_STRUCT|
-|SQLNUMERICN|SQL_NUMERIC_STRUCT|
-|SQLMONEY|DBMONEY|
-|SQLMONEY4|DBMONEY4|
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
-|SQLTIMEN|SQL_SS_TIME2_STRUCT|
-|SQLDATEN|SQL_DATE_STRUCT|
-|SQLDATETIM4|DBDATETIM4|
-|SQLDATETIME|DBDATETIME|
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
-|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
-|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
-|SQLIMAGE|unsigned char *|
-|SQLUDT|unsigned char *|
-|SQLUNIQUEID|SQLGUID|
-|SQLVARIANT|*Any data type except:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|
-|SQLXML|*Supported C data types:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|
+
+7.  On the Filter Table Rows page, select **Add** and then select **Add Filter**.
+
+8.  In the **Add Filter** dialog box, select **Employee (HumanResources)** in **Select the table to filter**. Select the **LoginID** column, select the right arrow to add the column to the WHERE clause of the filter query, and modify the WHERE clause as follows:
+
+```
+    WHERE [LoginID] = HOST_NAME()
+```
+
+    a. Select **A row from this table will go to only one subscription**, and select **OK**:
+
+    ![Add Filter](docs/relational-databases/replication/media/tutorial-replicating-data-with-mobile-clients/mergeaddfilter.png)
+
+
+
+10. On the **Filter Table Rows** page, select **Employee (Human Resources)**, select **Add,** and then select **Add Join to Extend the Selected Filter**.
+
+    a. In the **Add Join** dialog box, select **Sales.SalesOrderHeader** under **Joined table**. Select **Write the join statement manually**, and complete the join statement as follows:
 
 
 
@@ -358,36 +388,36 @@ Now that you have connected to SQL Server as an administrator, one of your first
 
 <a name="TitleNum_7"/>
 
-### 7. &nbsp; [SQL Server Index Design Guide](sql-server-index-design-guide.md)
+### 7. &nbsp; [Query with Full-Text Search](search/query-with-full-text-search.md)
 
-*Updated: 2018-01-02* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
+*Updated: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
 
-<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 247.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+<!-- git diff --ignore-all-space --unified=0 5ec67b56aa0a6eadadbcfa8b73b6726e75eca2bb 4eb108b202d3dd035a312bac7872cf02bcf31cfa  (PR=0  ,  Filename=query-with-full-text-search.md  ,  Dirpath=docs\relational-databases\search\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-Starting with SQL Server 2016, you can create an updatable **nonclustered columnstore index on a rowstore table**. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.
-
-Starting with SQL Server 2016, you can have **one or more nonclustered rowstore indexes on a columnstore index**. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.
-
-**Performance considerations**
+**More info about generation term searches**
 
 
--   The nonclustered columnstore index definition supports using a filtered condition. To minimize the performance impact of adding a columnstore index on an OLTP table, use a filtered condition to create a nonclustered columnstore index on only the cold data of your operational workload.
+The *inflectional forms* are the different tenses and conjugations of a verb or the singular and plural forms of a noun.
 
--   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Before SQL Server 2016, only a disk-based table could have a columnstore index.
+For example, search for the inflectional form of the word "drive." If various rows in the table include the words "drive," "drives," "drove," "driving," and "driven," all would be in the result set because each of these can be inflectionally generated from the word drive.
 
-For more information, refer to [Columnstore indexes - Query performance](../relational-databases/indexes/columnstore-indexes-query-performance.md).
+[FREETEXT](docs/relational-databases/search/../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) look for inflectional terms of all specified words by default. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) support an optional `INFLECTIONAL` argument.
 
-**Design Guidance**
+**Search for synonyms of a specific word**
 
 
--   A rowstore table can have one updateable nonclustered columnstore index. Before SQL Server 2014, the nonclustered columnstore index was read-only.
+A *thesaurus* defines user-specified synonyms for terms. For more info about thesaurus files, see [Configure and Manage Thesaurus Files for Full-Text Search](docs/relational-databases/search/../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).
+
+For example, if an entry, "{car, automobile, truck, van}," is added to a thesaurus, you can search for the thesaurus form of the word "car." All rows in the table queried that include the words "automobile," "truck," "van," or "car," appear in the result set because each of these words belongs to the synonym expansion set containing the word "car."
+
+[FREETEXT](docs/relational-databases/search/../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) use the thesaurus by default. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) support an optional `THESAURUS` argument.
 
 
 
@@ -399,63 +429,37 @@ For more information, refer to [Columnstore indexes - Query performance](../rela
 
 <a name="TitleNum_8"/>
 
-### 8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+### 8. &nbsp; [Transparent Data Encryption with Bring Your Own Key support for Azure SQL Database and Data Warehouse](security/encryption/transparent-data-encryption-byok-azure-sql.md)
 
-*Updated: 2018-01-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7) | [Next](#TitleNum_9))
+*Updated: 2018-04-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7) | [Next](#TitleNum_9))
 
-<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+<!-- Source markdown line 110.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+<!-- git diff --ignore-all-space --unified=0 9527658848d430bf0148be84474a75b232cbd112 70ed2a129c580962384f808e8526673957f00d2c  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-To generate a similar model using Python, you would change the language identifier from `@language=N'R'` to `@language = N'Python'`, and make necessary modifications to the `@script` argument. Otherwise, all parameters function the same way as for R.
-
-**C. Create a Python model and generate scores from it**
+**How to configure Geo-DR with Azure Key Vault**
 
 
-This example illustrates how to use sp\_execute\_external\_script to generate scores on a simple Python model.
+To maintain high availability of TDE Protectors for encrypted databases, it is required to configure redundant Azure Key Vaults based on the existing or desired SQL Database failover groups or active geo-replication instances.  Each geo-replicated server requires a separate key vault, that must be co-located with the server in the same Azure region. Should a primary database become inaccessible due to an outage in one region and a failover is triggered, the secondary database is able to take over using the secondary key vault.
 
-```
-CREATE PROCEDURE [dbo].[py_generate_customer_scores]
-AS
-BEGIN
+For Geo-Replicated Azure SQL databases, the following Azure Key Vault configuration is required:
+- One primary database with a key vault in region and one secondary database with a key vault in region.
+- At least one secondary is required, up to four secondaries are supported.
+- Secondaries of secondaries (chaining) are not supported.
 
-**Input query to generate the customer data**
+The following section will go over the setup and configuration steps in more detail.
 
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+**Azure Key Vault Configuration Steps**
 
-EXEC sp_execute_external_script @language = N'Python', @script = N'
-import pandas as pd
-from sklearn.cluster import KMeans
 
-**Get data from input query**
-
-customer_data = my_input_data
-
-**Define the model**
-
-n_clusters = 4
-est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
-clusters = est.labels_
-customer_data["cluster"] = clusters
-
-OutputDataSet = customer_data
-'
-, @input_data_1 = @input_query
-, @input_data_1_name = N'my_input_data'
-WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
-END;
-GO
-```
-
-Column headings used in Python code are not output to SQL Server; therefore, use the WITH RESULTS statement to specify the column names and data types for SQL to use.
-
-For scoring, you can also use the native [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md) function, which is typically faster because it avoids calling the Python or R runtime.
-
+- Install [PowerShell](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0)
+- Create two Azure Key Vaults in two different regions using [PowerShell to enable the "soft-delete" property](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL).
+- Both Azure Key Vaults must be located in the two regions available in the same Azure Geo in order for backup and restore of keys to work.  If you need the two key vaults to be located in different geos to meet SQL Geo-DR requirements, follow the [BYOK Process](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys) that allows keys to be imported from an on-prem HSM.
 
 
 
@@ -467,42 +471,89 @@ For scoring, you can also use the native [PREDICT](system-stored-procedures/../.
 
 <a name="TitleNum_9"/>
 
-### 9. &nbsp; [Create Primary Keys](tables/create-primary-keys.md)
+### 9. &nbsp; [PowerShell and CLI: Enable Transparent Data Encryption using your own key from Azure Key Vault](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
 
-*Updated: 2018-01-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_8))
+*Updated: 2018-04-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_8) | [Next](#TitleNum_10))
 
-<!-- Source markdown line 102.  ms.author= "sstein".  -->
+<!-- Source markdown line 196.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 a0e00f5701d9a493f503a477c69097ce65aba174 721e8fb856a55ee1e8e9e7fc06036a03adab647b  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql-configure.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-**To create a primary key with nonclustered index in a new table**
+**Prerequisites for CLI**
 
 
-1.  In **Object Explorer**, connect to an instance of Database Engine.
+- You must have an Azure subscription and be an administrator on that subscription.
+- [Recommended but Optional] Have a hardware security module (HSM) or local key store for creating a local copy of the TDE Protector key material.
+- Command-Line Interface version 2.0 or later. To install the latest version and connect to your Azure subscription, see [Install and Configure the Azure Cross-Platform Command-Line Interface 2.0](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Create an Azure Key Vault and Key to use for TDE.
+   - [Manage Key Vault using CLI 2.0](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [Instructions for using a hardware security module (HSM) and Key Vault](docs/relational-databases/security/encryption/https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - The key vault must have the following property to be used for TDE:
+   - [soft-delete](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
+   - [How to use Key Vault soft-delete with CLI](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli)
+- The key must have the following attributes to be used for TDE:
+   - No expiration date
+   - Not disabled
+   - Able to perform *get*, *wrap key*, *unwrap key* operations
 
-2.  On the Standard bar, click **New Query**.
+**Step 1. Create a server and assign an Azure AD identity to your server**
 
-3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table and defines a primary key on the column `CustomerID` and a clustered index on `TransactionID`.
+      cli
+      # create server (with identity) and database
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### 10. &nbsp; [About Change Data Capture (SQL Server)](track-changes/about-change-data-capture-sql-server.md)
+
+*Updated: 2018-04-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_9))
+
+<!-- Source markdown line 112.  ms.author= "jroth".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 588bff652adefd719e799e9777a416b70184c5f8 77ebdbb1b98b24054d5c5afbb3f1d40e94d1e6bc  (PR=5574  ,  Filename=about-change-data-capture-sql-server.md  ,  Dirpath=docs\relational-databases\track-changes\  ,  MergeCommitSha40=bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68) -->
+
+
+
+**Working with database and table collation differences**
+
+
+It is important to be aware of a situation where you have different collations between the database and the columns of a table configured for change data capture. CDC uses interim storage to populate side tables. If a table has CHAR or VARCHAR columns with collations that are different from the database collation and if those columns store non-ASCII characters (such as double byte DBCS characters), CDC might not be able to persist the changed data consistent with the data in the base tables. This is due to the fact that the interim storage variables cannot have collations associated with them.
+
+Please consider one of the following approaches to ensure change captured data is consistent with base tables:
+
+- Use NCHAR or NVARCHAR data type for columns containing non-ASCII data.
+
+- Or, Use the same collation for columns and for the database.
+
+For example, if you have one database that uses a collation of  SQL_Latin1_General_CP1_CI_AS, consider the following table:
 
 ```
-    USE AdventureWorks2012;
-    GO
-    CREATE TABLE Production.TransactionHistoryArchive1
-    (
-       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
-       TransactionID int IDENTITY (1,1) NOT NULL,
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
-    );
-    GO
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
 
-    -- Now add the clustered index
-    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
-    GO
+CDC might fail to capture the binary data for column C2, because its collation is different (Chinese_PRC_CI_AI). Use NVARCHAR to avoid this problem:
+
+```
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
 
@@ -516,40 +567,36 @@ For scoring, you can also use the native [PREDICT](system-stored-procedures/../.
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### Subject areas that *do* have new or recently updated articles
 
-
-- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (11+6): &nbsp; &nbsp;**Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (18+0): &nbsp; &nbsp;**Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (218+14): **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (14+0): &nbsp; &nbsp;**Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (3+2): &nbsp; &nbsp; **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+3): &nbsp; &nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (7+10): &nbsp; &nbsp;**Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (2+3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (5+2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 
 #### Subject areas that do *not* have any new or recently updated articles
 
-
-- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
+- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
-
 

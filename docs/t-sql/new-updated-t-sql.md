@@ -133,7 +133,7 @@ For more details about performance monitoring of natively-compiled T-SQL modules
 **General Remarks - SQL Database Managed Instance**
 
 
-For an asynchronous restore, the restore continues even if client connection breaks. If your connection is dropped, you can check [sys.dm_operation_status](docs/t-sql/statements/../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) view for the status of a restore operation (as well as for CREATE and DROP database).
+For an asynchronous restore, the restore continues even if client connection breaks. If your connection is dropped, you can check [sys.dm_operation_status] view for the status of a restore operation (as well as for CREATE and DROP database).
 
 The following database options are set/overridden and cannot be changed later:
 

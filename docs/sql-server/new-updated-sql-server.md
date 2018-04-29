@@ -180,7 +180,7 @@ Use the table below to identify the location and name of the file to download ba
 - [![Download from Evaluation Center]](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download from Evaluation Center]](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [![Download from Evaluation Center]](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- [![Create Virtual Machine](docs/sql-server/../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Create Virtual Machine]](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"

@@ -18,7 +18,7 @@ manager: "mblythe"
 # Add or Delete a Group in a Data Region (Report Builder and SSRS)
   Add a group to a data region when you want to organize data by a specific value or set of expressions, for display and calculations. A group has a name and an expression that identifies which data from a dataset belongs to the group. For more information about groups, see [Understanding Groups &#40;Report Builder and SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
   
- In a tablix data region, click in the table, matrix, or list to display the Grouping pane. Drag dataset fields to the Row Group and Column Group pane to create parent or child groups. Right-click an existing group to add an adjacent group. By definition, the details group is the innermost group and can only be added as a child group. Right-click an existing group to delete it. Rows and columns on which to display group values are automatically added for you. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ In a tablix data region, click in the table, matrix, or list to display the Grouping pane. Drag dataset fields to the Row Group and Column Group pane to create parent or child groups. Right-click an existing group to add an adjacent group. By definition, the details group is the innermost group and can only be added as a child group. Right-click an existing group to delete it. Rows and columns on which to display group values are automatically added for you. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
  In a Chart data region, click in the chart to display the drop-zones. Create groups by dragging dataset fields to the category and series drop zones. To add nested groups, add multiple fields to the drop-zone.  
   
@@ -119,10 +119,10 @@ manager: "mblythe"
  [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Group Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Tablix Data Region &#40;Report Builder and SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix Data Region &#40;Report Builder and SSRS&#41;](tablix-data-region-report-builder-and-ssrs.md)   
  [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Lists &#40;Report Builder and SSRS&#41;](lists-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

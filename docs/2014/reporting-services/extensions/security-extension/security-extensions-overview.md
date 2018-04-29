@@ -62,6 +62,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Implementing a Security Extension](../security-extension/implementing-a-security-extension.md)   
- [Configure Report Manager to Pass Custom Authentication Cookies](../../../2014/reporting-services/configure-report-manager-to-pass-custom-authentication-cookies.md)  
+ [Configure Report Manager to Pass Custom Authentication Cookies](../../configure-report-manager-to-pass-custom-authentication-cookies.md)  
   
   

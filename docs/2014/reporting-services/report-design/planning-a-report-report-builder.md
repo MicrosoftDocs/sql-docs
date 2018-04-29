@@ -27,7 +27,7 @@ manager: "mblythe"
   
 -   **What structure do you want to use to present the data in the report?**  
   
-     You have a choice among tabular, matrix (similar to a cross-tab or PivotTable report), chart, free-form structures, or any combination of these to present data. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) and [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
+     You have a choice among tabular, matrix (similar to a cross-tab or PivotTable report), chart, free-form structures, or any combination of these to present data. For more information, see [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md) and [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 -   **What do you want your report to look like?**  
   

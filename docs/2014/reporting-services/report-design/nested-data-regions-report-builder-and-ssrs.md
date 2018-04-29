@@ -82,7 +82,7 @@ manager: "mblythe"
   
 ## See Also  
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   

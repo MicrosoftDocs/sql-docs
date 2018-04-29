@@ -60,7 +60,7 @@ manager: "mblythe"
 |Task|Tool|Link|  
 |----------|----------|----------|  
 |View examples of connection strings.||[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|Choose an approach for getting credentials to connect to a data source.||[Specify Credential and Connection Information for Report Data Sources](../../analysis-services/data-mining/data-sources.md)|  
+|Choose an approach for getting credentials to connect to a data source.||[Specify Credential and Connection Information for Report Data Sources](specify-credential-and-connection-information-for-report-data-sources.md)|  
 |Add data source connection properties to a report definition (.rdl) file.|Report Designer|[Create an Embedded or Shared Data Source &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Add and link to a shared data source (.rds) file in report project.|Report Designer|[Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Create a predefined list of data sources that users can select at run time. When a user requests a report, the report provides a list of data sources. The user must select which data source to use prior to running the report. To add a data source selection list to a report, you use an expression.<br /><br /> This is known as a dynamic data source connection.|Report Designer|[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  

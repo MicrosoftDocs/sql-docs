@@ -30,10 +30,10 @@ manager: "jhubbard"
  [Security Extensions Overview](security-extensions-overview.md)  
  Provides an overview of Reporting Services Security Extensions.  
   
- [Authentication in Reporting Services](../../dev-guide/authentication-in-reporting-services.md)  
+ [Authentication in Reporting Services](authentication-in-reporting-services.md)  
  Discusses authentication in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- [Authorization in Reporting Services](../../dev-guide/authorization-in-reporting-services.md)  
+ [Authorization in Reporting Services](authorization-in-reporting-services.md)  
  Covers authorization in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 ## See Also  

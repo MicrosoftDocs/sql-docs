@@ -127,6 +127,6 @@ manager: "mblythe"
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](../shape-charts-report-builder-and-ssrs.md)  
+ [Specify Consistent Colors across Multiple Shape Charts &#40;Report Builder and SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   
   

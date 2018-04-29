@@ -22,7 +22,7 @@ manager: "mblythe"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## Tablix Data Regions  
- The tablix data region, which enables you to create tables, matrices, and lists, is rendered as a grid comprised of columns and rows. The intersection of a row and a column is a cell. When rendered, this cell can contain data or other report items, such as images, rectangles, text boxes, or subreports. A tablix data region can grow vertically and/or horizontally. In addition, the corner cell, the data region header cells, and the data region body cells may grow based on their contents. If the data region spans multiple pages, report items that are set to repeat with the data region are rendered on every page on which the data region is displayed. For more information, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ The tablix data region, which enables you to create tables, matrices, and lists, is rendered as a grid comprised of columns and rows. The intersection of a row and a column is a cell. When rendered, this cell can contain data or other report items, such as images, rectangles, text boxes, or subreports. A tablix data region can grow vertically and/or horizontally. In addition, the corner cell, the data region header cells, and the data region body cells may grow based on their contents. If the data region spans multiple pages, report items that are set to repeat with the data region are rendered on every page on which the data region is displayed. For more information, see [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### Right to Left  
  A tablix data region set to display from right to left is rendered with its structure as a mirror image of the data region if it were rendered left to right. The corner of the data region appears in the upper right corner. If dynamic columns exist in the report, they expand to the left. Right-to-left settings do not affect the order of the data in the data region; your columns are simply ordered differently.  
@@ -49,7 +49,7 @@ manager: "mblythe"
  [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering Report Items &#40;Report Builder and SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   

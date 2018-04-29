@@ -128,7 +128,7 @@
 ##### [Refresh Data in Replication Monitor](monitor/refresh-data-in-replication-monitor.md)
 ##### [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)
 ##### [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-##### [Monitor Replication Agents](agents/monitor-replication-agents.md)
+##### [Monitor Replication Agents](monitor/monitor-replication-agents.md)
 ##### [Programmatically Monitor Replication](monitor/programmatically-monitor-replication.md)
 ##### [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)
 ##### [Caching, Refresh, and Replication Monitor Performance](monitor/caching-refresh-and-replication-monitor-performance.md)

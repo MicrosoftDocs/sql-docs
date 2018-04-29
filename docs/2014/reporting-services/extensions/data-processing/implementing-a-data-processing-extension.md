@@ -25,7 +25,7 @@ manager: "jhubbard"
   Data processing extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces.  
   
 ## In This Section  
- [Data Processing Extensions Overview](../../dev-guide/data-processing-extensions-overview.md)  
+ [Data Processing Extensions Overview](data-processing-extensions-overview.md)  
  Introduces how to write a custom data processing extension for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  [Preparing to Implement a Data Processing Extension](preparing-to-implement-a-data-processing-extension.md)  

@@ -27,7 +27,7 @@ manager: "mblythe"
   
 -   In Design view, click the upper left corner of the tablix data region so that column and row handles appear above and next to it.  
   
-     For more information about data region areas, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+     For more information about data region areas, see [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### To insert a row in a selected data region  
   
@@ -60,7 +60,7 @@ manager: "mblythe"
  [Understanding Groups &#40;Report Builder and SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
  [Tables &#40;Report Builder  and SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Report Builder and SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Lists &#40;Report Builder and SSRS&#41;](lists-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

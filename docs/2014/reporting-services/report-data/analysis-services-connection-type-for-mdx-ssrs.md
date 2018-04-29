@@ -63,7 +63,7 @@ data source=<server name>;initial catalog=<database name>
   
     -   **Query View** Drag dimensions, members, member properties, measures, and KPIs from the metadata browser to the Query pane to build an MDX query. You can edit MDX text directly in the Query pane. Drag calculated members from the CalculatedMembers pane to the Query pane to define additional dataset fields.  
   
-     For more information, see [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](../../analysis-services-mdx-query-designer-user-interface-report-builder.md).  
+     For more information, see [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md).  
   
 -   Import an existing MDX query from a report. Use the **Import** query button to browse to an .rdl file and import a query. You can import a query from a report that contains an embedded dataset that is based on a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. Importing an MDX query directly from an .mdx file is not supported.  
   

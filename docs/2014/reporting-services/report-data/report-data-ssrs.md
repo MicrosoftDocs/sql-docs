@@ -74,7 +74,7 @@ manager: "mblythe"
 |Create and manage data alerts|[Reporting Services Data Alerts](../tutorial-creating-a-basic-table-report-report-builder.md)|  
 |Cache a shared dataset|[Cache Shared Datasets &#40;SSRS&#41;](../cache-shared-datasets-ssrs.md)|  
 |Schedule a shared dataset to preload the cache|[Schedules](../schedules.md)|  
-|Add a data extension|[Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)|  
+|Add a data extension|[Implementing a Data Processing Extension](../extensions/data-processing/implementing-a-data-processing-extension.md)|  
   
 ## Related Content  
   

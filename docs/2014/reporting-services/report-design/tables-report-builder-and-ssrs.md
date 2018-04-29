@@ -21,7 +21,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  You can publish tables separately from a report as report parts.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- To quickly get started with tables, see [Tutorial: Creating a Basic Table Report &#40;Report Builder&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) or [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+ To quickly get started with tables, see [Tutorial: Creating a Basic Table Report &#40;Report Builder&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) or [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports include a number of reports that use tables. You can learn about tables by exploring the report definition of a sample report in Report Builder or Report Designer or by previewing the rendered report in Report Builder or Report Designer. For more information about downloading the sample reports, see [(SSRS) Reporting Services Samples](http://go.microsoft.com/fwlink/?LinkID=198283).  
   
@@ -117,6 +117,6 @@ manager: "mblythe"
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

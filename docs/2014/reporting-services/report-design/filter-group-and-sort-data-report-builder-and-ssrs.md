@@ -209,7 +209,7 @@ FROM Production.Product
   
 ## See Also  
  [Expressions &#40;Report Builder and SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Lists &#40;Report Builder and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   

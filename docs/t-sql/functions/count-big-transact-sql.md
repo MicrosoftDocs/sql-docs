@@ -65,7 +65,7 @@ DISTINCT
 Specifies that `COUNT_BIG` returns the number of unique nonnull values.
   
 *expression*  
-An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type. Note that `COUNT_BIG` does not support aggregate functions or subqueries.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type. Note that `COUNT_BIG` does not support aggregate functions or subqueries in an expression.
   
 *\**  
 Specifies that `COUNT_BIG` should count all rows to determine the total table row count to return. `COUNT_BIG(*)` takes no parameters and does not support the use of DISTINCT. `COUNT_BIG(*)` does not require an *expression* parameter because by definition, it does not use information about any particular column. `COUNT_BIG(*)` returns the number of rows in a specified table, and it preserves duplicate rows. It counts each row separately. This includes rows that contain null values.

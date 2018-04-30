@@ -24,7 +24,7 @@ monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure Replication for Always On Availability Groups (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication and Always On availability groups involves seven steps. Each step is described in more detail in the following sections.  
   

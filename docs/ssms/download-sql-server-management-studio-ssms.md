@@ -8,8 +8,7 @@ ms.service: ""
 ms.component: "ssms"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 keywords: 

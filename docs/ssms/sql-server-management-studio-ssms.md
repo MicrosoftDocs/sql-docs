@@ -8,8 +8,7 @@ ms.component: "ssms"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b

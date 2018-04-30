@@ -336,7 +336,7 @@ Let's see how conversion to a data.frame works with our two series containing th
     WITH RESULT SETS (( ResultValue float ))
 ```
 
-    Remember that the auto-generated index starts at 0. Try using an out of range index value and see what happens.
+Remember that the auto-generated index starts at 0. Try using an out of range index value and see what happens.
 
 2. Now let's get a single value from the other data frame that has a string index.
 
@@ -356,13 +356,13 @@ Let's see how conversion to a data.frame works with our two series containing th
     WITH RESULT SETS (( ResultValue float ))
 ```
 
-    **Results**
+**Results**
 
-    |ResultValue|
-    |------|
-    |0.5|
+|ResultValue|
+|------|
+|0.5|
 
-    If you try to use a numeric index to get a value from this series, you get an error.
+If you try to use a numeric index to get a value from this series, you get an error.
 
 
 
@@ -387,7 +387,7 @@ Let's see how conversion to a data.frame works with our two series containing th
 
 
 
-    If you installed a pre-release version of SQL Server 2017, you should update to at least the RTM version. Later service releases have continued to expand and improve Python functionality. Some features of this tutorial might not work in early pre-release versions.
+If you installed a pre-release version of SQL Server 2017, you should update to at least the RTM version. Later service releases have continued to expand and improve Python functionality. Some features of this tutorial might not work in early pre-release versions.
 
 + This example uses a predefined Python environment, named `PYTEST_SQL_SERVER`. The environment has been configured to contain **revoscalepy** and other required libraries.
 

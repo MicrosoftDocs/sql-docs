@@ -176,7 +176,7 @@ Use the table below to identify the location and name of the file to download ba
 
 
 
-<-- : : : m-r -->
+<!-- : : : m-r -->
 **Try SQL Server!**
 - [![Download from Evaluation Center]](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download from Evaluation Center]] [Download SQL Server Management Studio (SSMS)]
@@ -184,7 +184,7 @@ Use the table below to identify the location and name of the file to download ba
 - [![Create Virtual Machine]](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 
-<-- : : : m-r -->
+<!-- : : : m-r -->
 **Try SQL Server!**
 - [![Download from Evaluation Center]](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Install SQL Server on Linux]] [Install SQL Server on Linux](../linux/sql-server-linux-setup.md)

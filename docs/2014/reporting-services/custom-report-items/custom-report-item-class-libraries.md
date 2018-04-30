@@ -130,7 +130,7 @@ manager: "jhubbard"
 |`Fields`|The collection of fields (`Microsoft.ReportDesigner.Field`) to be dropped.|  
   
 ## See Also  
- [Report Definition Language &#40;SSRS&#41;](../report-definition-language-ssrs.md)   
+ [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Creating a Custom Report Item Run-Time Component](creating-a-custom-report-item-run-time-component.md)   
  [Creating a Custom Report Item Design-Time Component](creating-a-custom-report-item-design-time-component.md)  
   

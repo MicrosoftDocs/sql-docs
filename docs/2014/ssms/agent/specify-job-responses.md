@@ -41,7 +41,7 @@ manager: "jhubbard"
 |-|-|  
 |**Description**|**Topic**|  
 |Describes how to notify an operator of job status.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Describes how to write job status to the Windows application log.|[Write the Job Status to the Windows Application Log](write-the-job-status-to-the-windows-application-log.md)|  
+|Describes how to write job status to the Windows application log.|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## See Also  
  [Monitor and Respond to Events](monitor-and-respond-to-events.md)  

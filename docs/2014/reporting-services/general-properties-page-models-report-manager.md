@@ -69,6 +69,6 @@ manager: "mblythe"
   
 ## See Also  
  [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Report Server in Management Studio F1 Help](../../2014/reporting-services/report-server-in-management-studio-f1-help.md)  
+ [Report Server in Management Studio F1 Help](tools/report-server-in-management-studio-f1-help.md)  
   
   

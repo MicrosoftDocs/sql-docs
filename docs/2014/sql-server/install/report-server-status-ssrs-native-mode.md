@@ -66,7 +66,7 @@ manager: "jhubbard"
  Starts the Report Server service. Restarting the service is necessary after some configuration changes (for example, when reconfiguring a report server after a computer name change). If you reconfigure the URL reservations, the service will restart automatically. The restart is required to pick up the changes.  
   
  **Stop**  
- Stops the Report Server service. Stopping the service causes the report server to stop working. For more information, see [Start and Stop the Report Server Service](../../../2014/reporting-services/start-and-stop-the-report-server-service.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ Stops the Report Server service. Stopping the service causes the report server to stop working. For more information, see [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Reporting Services Configuration Manager F1 Help Topics &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

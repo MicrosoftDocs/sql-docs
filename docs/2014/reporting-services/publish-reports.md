@@ -19,9 +19,9 @@ ms.author: "maghan"
 manager: "mblythe"
 ---
 # Publish Reports
-  From[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can publish either all the reports and shared data sources in a Report Server project to a report server by deploying the project, or you can publish a single report. Before you can publish a report you must specify the URL of the target report server. For more information, see [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md).  
+  From[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can publish either all the reports and shared data sources in a Report Server project to a report server by deploying the project, or you can publish a single report. Before you can publish a report you must specify the URL of the target report server. For more information, see [Set Deployment Properties &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  
   
- You can use the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] version of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to open, modify, preview, save, and publish both [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] and [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] reports. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ You can use the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] version of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to open, modify, preview, save, and publish both [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] and [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] reports. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ### To publish all reports in a project  
   
@@ -38,9 +38,9 @@ manager: "mblythe"
     >  When you publish a report, you must also deploy the shared data sources that the report uses.  
   
 ## See Also  
- [Publishing Data Sources and Reports](../../2014/reporting-services/publishing-data-sources-and-reports.md)   
- [Previewing Reports](../../2014/reporting-services/previewing-reports.md)   
- [Publishing Reports to a Report Server](../../2014/reporting-services/publishing-reports-to-a-report-server.md)   
+ [Publishing Data Sources and Reports](reports/publishing-data-sources-and-reports.md)   
+ [Previewing Reports](reports/previewing-reports.md)   
+ [Publishing Reports to a Report Server](reports/publishing-reports-to-a-report-server.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   

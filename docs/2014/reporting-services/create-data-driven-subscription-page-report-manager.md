@@ -48,11 +48,11 @@ manager: "mblythe"
  **Specify how recipients are notified**  
  Select the delivery extension to use to distribute the report. Only one delivery extension can be used for each subscription. The following options are available:  
   
--   Select **Report Server File Share** to deliver reports to a file share. The report will be delivered as a static file, disconnected from the report server. For more information, see [File Share Delivery in Reporting Services](../../2014/reporting-services/file-share-delivery-in-reporting-services.md).  
+-   Select **Report Server File Share** to deliver reports to a file share. The report will be delivered as a static file, disconnected from the report server. For more information, see [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Select **Report Server E-Mail** to deliver reports to an e-mail inbox. For more information, see [E-Mail Delivery in Reporting Services](../../2014/reporting-services/e-mail-delivery-in-reporting-services.md).  
+-   Select **Report Server E-Mail** to deliver reports to an e-mail inbox. For more information, see [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   Select **Null Delivery Provider** to deliver reports to the report server database. This option creates report snapshots. Choose this option when you want to preload the report server with user-specific or parameterized report snapshots on a specific schedule. For more information, see [Caching Reports &#40;SSRS&#41;](../../2014/reporting-services/caching-reports-ssrs.md).  
+-   Select **Null Delivery Provider** to deliver reports to the report server database. This option creates report snapshots. Choose this option when you want to preload the report server with user-specific or parameterized report snapshots on a specific schedule. For more information, see [Caching Reports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
  **Specify a data source that contains recipient information**  
  Specify how the data source connection is defined. You can choose a shared data source if you have one that contains the connection information you need. You can also specify connection information directly in this subscription.  
@@ -168,10 +168,10 @@ manager: "mblythe"
   
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Data-Driven Subscriptions](../../2014/reporting-services/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
- [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)   
+ [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

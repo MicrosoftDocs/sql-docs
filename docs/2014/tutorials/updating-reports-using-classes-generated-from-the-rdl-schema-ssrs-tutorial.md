@@ -72,6 +72,6 @@ manager: "mblythe"
  [Lesson 6: Run the RDL Schema Application &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## See Also  
- [Report Definition Language &#40;SSRS&#41;](../../2014/reporting-services/report-definition-language-ssrs.md)  
+ [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

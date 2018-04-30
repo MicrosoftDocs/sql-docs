@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 -   Stagger subscription synchronization schedules.  
   
-     If a large number of Subscribers synchronize with a Publisher, consider staggering the schedules so that Merge Agents run at different times. For more information, see [Specify Synchronization Schedules](../specify-synchronization-schedules.md).  
+     If a large number of Subscribers synchronize with a Publisher, consider staggering the schedules so that Merge Agents run at different times. For more information, see [Specify Synchronization Schedules](../../../reporting-services/subscriptions/schedules.md).  
   
 ## Merge Agent Parameters  
  For information about the Merge Agent and its parameters, see [Replication Merge Agent](../agents/replication-merge-agent.md).  

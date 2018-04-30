@@ -137,9 +137,9 @@ manager: "mblythe"
   
 ## See Also  
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)   
- [Data-Driven Subscriptions](../../2014/reporting-services/data-driven-subscriptions.md)   
- [Create, Modify, and Delete a Data-Driven Subscription](../../2014/reporting-services/create-modify-and-delete-a-data-driven-subscription.md)   
- [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../2014/reporting-services/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
+ [Create, Modify, and Delete a Data-Driven Subscription](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
+ [Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

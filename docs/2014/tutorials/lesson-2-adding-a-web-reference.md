@@ -46,10 +46,10 @@ manager: "mblythe"
   
 8.  In the **Add Reference** dialog box, in the **.NET** tab, select **System.Web.Services**, then click **OK**.  
   
- For more information, see [Accessing the SOAP API](../../2014/reporting-services/dev-guide/accessing-the-soap-api.md).  
+ For more information, see [Accessing the SOAP API](../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
 ## See Also  
- [Report Server Web Service](../../2014/reporting-services/dev-guide/report-server-web-service.md)   
+ [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Lesson 3: Accessing the Web Service](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
  [Accessing the Report Server Web Service Using Visual Basic or Visual C&#35; &#40;SSRS Tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   

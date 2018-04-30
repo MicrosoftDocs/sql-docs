@@ -118,7 +118,7 @@ manager: "jhubbard"
 ## See Also  
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Database &#40;SSRS Native Mode&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Manage a Reporting Services Native Mode Report Server](../manage-a-reporting-services-native-mode-report-server.md)   
+ [Manage a Reporting Services Native Mode Report Server](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

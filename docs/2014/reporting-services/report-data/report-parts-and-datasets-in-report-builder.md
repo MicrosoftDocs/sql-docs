@@ -54,7 +54,7 @@ manager: "mblythe"
 2.  When you exit Report Builder or start a new report, you are prompted to save your report. If you do not save your report, the next time you open this report and publish report items, you might publish new copies of the same datasets. To prevent saving multiple copies of shared datasets to the report server, we recommend that you save the report.  
   
 > [!IMPORTANT]  
->  To ensure that you and others can continue to successfully use data from a shared dataset, you must understand the principles behind securing report items. For more information, see [Secure Shared Dataset Items](../secure-shared-dataset-items.md).  
+>  To ensure that you and others can continue to successfully use data from a shared dataset, you must understand the principles behind securing report items. For more information, see [Secure Shared Dataset Items](../security/secure-shared-dataset-items.md).  
   
   
 ## See Also  

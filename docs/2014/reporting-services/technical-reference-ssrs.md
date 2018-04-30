@@ -28,7 +28,7 @@ manager: "mblythe"
  [Cause and Resolution of Reporting Services Errors](../relational-databases/native-client-ole-db-errors/errors.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Feature Reference**  
- [Report Designer F1 Help](../../2014/reporting-services/report-designer-f1-help.md)  
+ [Report Designer F1 Help](tools/report-designer-f1-help.md)  
   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
@@ -41,14 +41,14 @@ manager: "mblythe"
  [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Report Server Command Prompt Utilities**  
- [RS.exe Utility &#40;SSRS&#41;](../../2014/reporting-services/rs-exe-utility-ssrs.md)  
+ [RS.exe Utility &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
   
- [rsconfig Utility &#40;SSRS&#41;](../../2014/reporting-services/rsconfig-utility-ssrs.md)  
+ [rsconfig Utility &#40;SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
   
- [rskeymgmt Utility &#40;SSRS&#41;](../../2014/reporting-services/rskeymgmt-utility-ssrs.md)  
+ [rskeymgmt Utility &#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Reporting Services WMI Provider Class Library**  
- [Reporting Services WMI Provider Library Reference &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-wmi-provider-library-reference-ssrs.md)  
+ [Reporting Services WMI Provider Library Reference &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## See Also  
  [TechNet wiki articles about Toubleshooting Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   

@@ -91,7 +91,7 @@ manager: "mblythe"
   
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Create, Modify, and Delete Schedules](../../2014/reporting-services/create-modify-and-delete-schedules.md)   
+ [Create, Modify, and Delete Schedules](subscriptions/schedules.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

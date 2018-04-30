@@ -82,7 +82,7 @@ private void Page_Load(object sender, System.EventArgs e)
 ```  
   
 ## See Also  
- [Building Applications Using the Web Service and the .NET Framework](../dev-guide/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Building Applications Using the Web Service and the .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Integrating Reporting Services into Applications](../dev-guide/integrating-reporting-services-into-applications.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)   
  [Using the SOAP API in a Windows Application](integrating-reporting-services-using-soap-windows-application.md)  

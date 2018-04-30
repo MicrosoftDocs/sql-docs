@@ -33,7 +33,7 @@ manager: "mblythe"
   
  Changing the rendering extension parameters only affects rendering operations on the report server. You cannot override rendering extension settings in report preview in Report Designer.  
   
- Specifying rendering extension parameters in the configuration files affects rendering extensions globally. The settings in the configuration files are used in place of default values whenever a particular rendering extension is used. If you want to set rendering extension parameters for a specific report or render operation, you must specify device information programmatically using the <xref:ReportExecution2005.ReportExecutionService.Render%2A> method or by specifying device information settings on a report URL. For more information about specifying device information settings for a render operation, and to view the complete list of device information settings, see [Passing Device Information Settings to Rendering Extensions](../../2014/reporting-services/dev-guide/passing-device-information-settings-to-rendering-extensions.md).  
+ Specifying rendering extension parameters in the configuration files affects rendering extensions globally. The settings in the configuration files are used in place of default values whenever a particular rendering extension is used. If you want to set rendering extension parameters for a specific report or render operation, you must specify device information programmatically using the <xref:ReportExecution2005.ReportExecutionService.Render%2A> method or by specifying device information settings on a report URL. For more information about specifying device information settings for a render operation, and to view the complete list of device information settings, see [Passing Device Information Settings to Rendering Extensions](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
 ## Finding and Modifying RSReportServer.config  
  Configuration settings for report output formats are specified as rendering extension parameters in the RSReportServer.config file. To specify rendering extension parameters in the configuration files, you must know how to define the XML structures that set rendering parameters. There are two XML structures that you can modify:  
@@ -42,7 +42,7 @@ manager: "mblythe"
   
 -   The `DeviceInfo` XML structure defines the device information settings that are used by a rendering extension. Most rendering extension parameters are specified as device information settings.  
   
- You can use a text editor to modify the file. The RSReportServer.config file can be found in the \Reporting Services\Report Server\Bin folder. For more information about modifying configuration files, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ You can use a text editor to modify the file. The RSReportServer.config file can be found in the \Reporting Services\Report Server\Bin folder. For more information about modifying configuration files, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## Changing the Display Name  
  The display name for a rendering extension appears in the Export list of the report toolbar. Examples of default display names include Web archive, TIFF file, and Acrobat (PDF) file. You can replace the default display name with a custom value by specifying the `OverrideNames` element in the configuration files. In addition, if you are defining two instances of a single rendering extension, you can use the `OverrideNames` element to distinguish each instance in the Export list.  
@@ -60,7 +60,7 @@ manager: "mblythe"
 ```  
   
 ## Changing Device Information Settings  
- To modify default device information settings that are used by a rendering extension that is already deployed on your report server, you must type the `DeviceInfo` XML structure into the configuration files. Every rendering extension supports device information settings that are unique to that extension. To view the complete list of device information settings, see [Passing Device Information Settings to Rendering Extensions](../../2014/reporting-services/dev-guide/passing-device-information-settings-to-rendering-extensions.md).  
+ To modify default device information settings that are used by a rendering extension that is already deployed on your report server, you must type the `DeviceInfo` XML structure into the configuration files. Every rendering extension supports device information settings that are unique to that extension. To view the complete list of device information settings, see [Passing Device Information Settings to Rendering Extensions](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  The following example provides an illustration of the XML structure and syntax that modifies the default settings of the Image rendering extension:  
   
@@ -127,14 +127,14 @@ manager: "mblythe"
 ```  
   
 ## See Also  
- [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
- [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
+ [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)   
  [CSV Device Information Settings](csv-device-information-settings.md)   
  [Excel Device Information Settings](excel-device-information-settings.md)   
  [HTML Device Information Settings](html-device-information-settings.md)   
  [Image Device Information Settings](image-device-information-settings.md)   
  [MHTML Device Information Settings](mhtml-device-information-settings.md)   
  [PDF Device Information Settings](pdf-device-information-settings.md)   
- [XML Device Information Settings](../../2014/reporting-services/xml-device-information-settings.md)  
+ [XML Device Information Settings](xml-device-information-settings.md)  
   
   

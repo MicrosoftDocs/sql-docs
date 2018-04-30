@@ -35,7 +35,7 @@ manager: "mblythe"
  **Browse Content by Area**  
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)  
   
- ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Reports &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-reports-ssrs.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Reports &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Report Data &#40;SSRS&#41;](report-data/report-data-ssrs.md)  
   
@@ -43,23 +43,23 @@ manager: "mblythe"
   
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Report Parts in Report Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
   
- ![Folder icon](media/hlp-16folder.gif "Folder icon") [Schedules](../../2014/reporting-services/schedules.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Schedules](subscriptions/schedules.md)  
   
- ![Folder icon](media/hlp-16folder.gif "Folder icon") [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)  
   
- ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Security and Protection](../../2014/reporting-services/reporting-services-security-and-protection.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Security and Protection](security/reporting-services-security-and-protection.md)  
   
- ![Folder icon](media/hlp-16folder.gif "Folder icon") [URL Access &#40;SSRS&#41;](../../2014/reporting-services/url-access-ssrs.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [URL Access &#40;SSRS&#41;](url-access-ssrs.md)  
   
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Extensions &#40;SSRS&#41;](extensions-ssrs.md)  
   
- ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Reporting Services Tools](tools/reporting-services-tools.md)  
   
- ![Folder icon](media/hlp-16folder.gif "Folder icon") [Errors and Events Reference &#40;Reporting Services&#41;](../../2014/reporting-services/errors-and-events-reference-reporting-services.md)  
+ ![Folder icon](media/hlp-16folder.gif "Folder icon") [Errors and Events Reference &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)  
   
  ![Folder icon](media/hlp-16folder.gif "Folder icon") [Feature Reference &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   

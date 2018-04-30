@@ -56,7 +56,7 @@ manager: "mblythe"
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
- [Cache Shared Datasets &#40;SSRS&#41;](../../2014/reporting-services/cache-shared-datasets-ssrs.md)   
- [Schedules](../../2014/reporting-services/schedules.md)  
+ [Cache Shared Datasets &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)   
+ [Schedules](subscriptions/schedules.md)  
   
   

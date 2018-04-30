@@ -19,6 +19,6 @@ manager: "mblythe"
   Topics in this section provide information about the options that you can set on a Map report item.  
   
 ## See Also  
- [Reporting Services Reports &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-reports-ssrs.md)  
+ [Reporting Services Reports &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
   

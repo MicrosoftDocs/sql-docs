@@ -30,7 +30,7 @@ manager: "mblythe"
   
 2.  At the top of the page, click **Site Settings**. This opens the General Properties page of the site.  
   
-     **Note:** If you do not see the **Site Settings** option in the menu, you do not have the required permissions, For more information see the “site settings” section of [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../2014/reporting-services/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Note:** If you do not see the **Site Settings** option in the menu, you do not have the required permissions, For more information see the “site settings” section of [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## Options  
  **Name**  
@@ -66,8 +66,8 @@ manager: "mblythe"
   
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md)   
- [Predefined Roles](../../2014/reporting-services/predefined-roles.md)   
+ [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Predefined Roles](security/role-definitions-predefined-roles.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

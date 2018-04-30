@@ -101,10 +101,10 @@ manager: "mblythe"
  For more information about Report Manager and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online on MSDN.  
   
 ## See Also  
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Feature Reference (Reporting Services)](feature-reference-reporting-services.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Report Manager](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Reporting Services Component Overview](../../2014/reporting-services/reporting-services-tools.md)  
+ [Reporting Services Component Overview](tools/reporting-services-tools.md)  
   
   

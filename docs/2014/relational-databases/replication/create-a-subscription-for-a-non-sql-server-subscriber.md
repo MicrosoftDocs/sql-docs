@@ -175,7 +175,7 @@ manager: "jhubbard"
   
     -   A value of **0** for **@subscriber_security_mode** and the OLE DB provider login information for **@subscriber_login** and **@subscriber_password**.  
   
-    -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md).  
   
     > [!IMPORTANT]  
     >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

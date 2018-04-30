@@ -209,7 +209,7 @@
 #### [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)
 #### [Create a Subscription for a Non-SQL Server Subscriber](create-a-subscription-for-a-non-sql-server-subscriber.md)
 #### [Specify a Merge Subscription Type and Conflict Resolution Priority (SQL Server Management Studio)](specify-a-merge-subscription-type-and-conflict-resolution-priority.md)
-#### [Specify Synchronization Schedules](specify-synchronization-schedules.md)
+#### [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md)
 ### [Initialize a Subscription](initialize-a-subscription.md)
 #### [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)
 ##### [Create and Apply the Snapshot](create-and-apply-the-snapshot.md)

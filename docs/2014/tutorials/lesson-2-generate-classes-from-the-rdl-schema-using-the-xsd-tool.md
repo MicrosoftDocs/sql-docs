@@ -54,6 +54,6 @@ manager: "mblythe"
   
 ## See Also  
  [Updating Reports Using Classes Generated from the RDL Schema &#40;SSRS Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Report Definition Language &#40;SSRS&#41;](../../2014/reporting-services/report-definition-language-ssrs.md)  
+ [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

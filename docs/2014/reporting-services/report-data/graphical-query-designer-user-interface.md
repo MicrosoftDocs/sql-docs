@@ -148,7 +148,7 @@ EXEC uspGetEmployeeManagers '1';
  [OLE DB Connection Type &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
  [Oracle Connection Type &#40;SSRS&#41;](oracle-connection-type-ssrs.md)   
- [RSReportDesigner Configuration File](../rsreportdesigner-configuration-file.md)   
+ [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)   
  [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

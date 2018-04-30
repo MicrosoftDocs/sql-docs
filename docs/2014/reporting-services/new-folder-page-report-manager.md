@@ -39,7 +39,7 @@ manager: "mblythe"
  Type a description of folder contents. This description appears in the Contents page to users who have permission to access the folder.  
   
 ## See Also  
- [Create, Delete, or Modify a Folder &#40;Report Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-folder-report-manager.md)   
+ [Create, Delete, or Modify a Folder &#40;Report Manager&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [General Properties Page, Folders &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   

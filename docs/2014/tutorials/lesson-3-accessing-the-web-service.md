@@ -118,7 +118,7 @@ manager: "mblythe"
   
  In the previous sample, the code uses the <xref:ReportService2010.ReportingService2010.GetProperties%2A> method to return the name and description of the sample report, Company Sales 2012. The code then uses a `foreach` loop to write the properties and values to the console.  
   
- For more information about creating and using a proxy class for the Report Server Web service, see [Creating the Web Service Proxy](../../2014/reporting-services/dev-guide/creating-the-web-service-proxy.md).  
+ For more information about creating and using a proxy class for the Report Server Web service, see [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## See Also  
  [Lesson 4: Running the Application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   

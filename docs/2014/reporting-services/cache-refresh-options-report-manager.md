@@ -68,7 +68,7 @@ manager: "mblythe"
  **Shared schedule**  
  Select this option to select an existing schedule.  
   
- For more information, see [Create, Modify, and Delete Schedules](../../2014/reporting-services/create-modify-and-delete-schedules.md).  
+ For more information, see [Create, Modify, and Delete Schedules](subscriptions/schedules.md).  
   
  **@\<** *Parameter* **>**  
  Specify one combination of parameter values. This section appears only if the current dataset or report has parameters.  
@@ -126,10 +126,10 @@ manager: "mblythe"
 -   Clear or select the read-only option for a dataset query parameter associated with the refresh plan, and then save the new definition to the report server.  
   
 ## See Also  
- [Item-Level Tasks](../../2014/reporting-services/item-level-tasks.md)   
+ [Item-Level Tasks](security/tasks-and-permissions-item-level-tasks.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
- [Caching Reports &#40;SSRS&#41;](../../2014/reporting-services/caching-reports-ssrs.md)   
+ [Caching Reports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Manage Shared Datasets](report-data/manage-shared-datasets.md)  
   
   

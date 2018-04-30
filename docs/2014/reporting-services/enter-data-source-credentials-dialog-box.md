@@ -30,6 +30,6 @@ manager: "mblythe"
   
 ## See Also  
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Report Designer F1 Help](../../2014/reporting-services/report-designer-f1-help.md)  
+ [Report Designer F1 Help](tools/report-designer-f1-help.md)  
   
   

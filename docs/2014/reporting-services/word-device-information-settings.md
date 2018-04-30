@@ -30,7 +30,7 @@ manager: "mblythe"
 |`OmitDrillthroughs`|Indicates whether to omit the Drillthrough action on all items where it is set. The default value is `false`|  
   
 ## See Also  
- [Passing Device Information Settings to Rendering Extensions](../../2014/reporting-services/dev-guide/passing-device-information-settings-to-rendering-extensions.md)   
+ [Passing Device Information Settings to Rendering Extensions](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Customize Rendering Extension Parameters in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Technical Reference &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

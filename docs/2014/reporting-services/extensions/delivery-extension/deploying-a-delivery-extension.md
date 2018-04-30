@@ -38,7 +38,7 @@ manager: "jhubbard"
 |`Type`|A comma-separated list that includes the fully qualified namespace along with the name of the assembly.|  
 |`Visible`|A value of `false` indicates that the delivery extension should not be visible in user interfaces. If the attribute is not included, the default value is `true`.|  
   
- For more information about the RSReportServer.config file, see [Reporting Services Configuration Files](../../reporting-services-configuration-files.md).  
+ For more information about the RSReportServer.config file, see [Reporting Services Configuration Files](../../report-server/reporting-services-configuration-files.md).  
   
 ## Deploying the Extension to the Report Server  
  The report server uses delivery extensions for processing and delivering notifications or reports. You should deploy your delivery extension assembly to the report server as a private assembly. You also need to make an entry in the report server configuration file, RSReportServer.config.  
@@ -135,7 +135,7 @@ manager: "jhubbard"
      URL membership is only one of many membership conditions you might choose for your delivery extension. For more information about code access security in [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], see [Secure Development &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## Verifying the Deployment  
- You can verify whether your delivery extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open Report Manager and verify that your extension is included in the list of available delivery extensions for a subscription. For more information about Report Manager and subscriptions, see [Subscriptions and Delivery &#40;Reporting Services&#41;](../../subscriptions-and-delivery-reporting-services.md).  
+ You can verify whether your delivery extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open Report Manager and verify that your extension is included in the list of available delivery extensions for a subscription. For more information about Report Manager and subscriptions, see [Subscriptions and Delivery &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## See Also  
  [Implementing a Delivery Extension](implementing-a-delivery-extension.md)   

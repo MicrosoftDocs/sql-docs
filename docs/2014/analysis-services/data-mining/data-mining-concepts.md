@@ -166,7 +166,7 @@ manager: "mblythe"
   
 -   Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to create a package in which a mining model is used to intelligently separate incoming data into multiple tables. For example, if a database is continually updated with potential customers, you could use a mining model together with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to split the incoming data into customers who are likely to purchase a product and customers who are likely to not purchase a product.  
   
--   Create a report that lets users directly query against an existing mining model. For more information, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md).  
+-   Create a report that lets users directly query against an existing mining model. For more information, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 -   Update the models after review and analysis. Any update requires that you reprocess the models. For more information, see [Processing Data Mining Objects](processing-data-mining-objects.md).  
   

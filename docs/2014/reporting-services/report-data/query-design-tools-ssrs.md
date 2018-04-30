@@ -92,7 +92,7 @@ manager: "mblythe"
  To use this query designer, you must have a [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] data source that has at least one database. For more information, see [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
   
 ## See Also  
- [Reporting Services Tools](../reporting-services-tools.md)   
+ [Reporting Services Tools](../tools/reporting-services-tools.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-datasets-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   

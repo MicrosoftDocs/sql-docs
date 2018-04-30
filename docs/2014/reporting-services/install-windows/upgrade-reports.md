@@ -73,14 +73,14 @@ manager: "jhubbard"
   
  When you open an .rdl file in Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], if the report was created for a previous namespace, Report Designer automatically creates a backup file and upgrades the report to the current namespace. This is the only way you can upgrade a report definition file.  
   
- Deployment properties that you set can affect which schema the report definition file is saved in. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Deployment properties that you set can affect which schema the report definition file is saved in. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
  You can upload an .rdl file created in an earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server and it is automatically upgraded on first use. The report server stores the report definition file in the original format. The report is automatically upgraded the first time it is viewed, but the stored report definition file remains unchanged.  
   
 > [!NOTE]  
 >  You cannot publish or upload a report that has the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report definition namespace to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 report server.  
   
- To identify the current RDL schema for a report, for a report server, or for Report Designer, see [Find the Report Definition Schema Version &#40;SSRS&#41;](../find-the-report-definition-schema-version-ssrs.md).  
+ To identify the current RDL schema for a report, for a report server, or for Report Designer, see [Find the Report Definition Schema Version &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ##  <a name="bkmk_publishedreports_and_snapshots"></a> Published Reports and Report Snapshots  
  On first use, the report server tries to upgrade existing published reports and report snapshots to the new report definition schema, requiring no specific action on your part. When a user views a report or a report snapshot, or when the report server processes a subscription, the upgrading attempt occurs. The report definition is not replaced but continues to be stored on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server in its original schema. If a report cannot be upgraded, the report runs in backward-compatibility mode.  
@@ -120,7 +120,7 @@ manager: "jhubbard"
   
      For more information, see [Opening a Report in Report Designer](#OpeningaReport) later in this topic.  
   
- For information about identifying the current RDL namespace for a report server, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], or a report, see [Find the Report Definition Schema Version &#40;SSRS&#41;](../find-the-report-definition-schema-version-ssrs.md).  
+ For information about identifying the current RDL namespace for a report server, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], or a report, see [Find the Report Definition Schema Version &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### Upgrading Reports on a Report Server  
  The first time a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report runs on a report server that has been upgraded to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server, the report is automatically upgraded to the current report definition namespace supported by the report server. The report could have existed on the report server before the upgrade, or the report could have been uploaded via Report Manager or published to the report server from Report Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -197,7 +197,7 @@ manager: "jhubbard"
   
  In either case, the report is upgraded to the new report definition format and a backup copy of the original report is saved as *\<Report Name>* `-` Backup.rdl. If you save the report in your report authoring tool, you are saving the upgraded report in the new report definition format. If you publish the report, the report is first saved on your computer, and then published to the report server. You are publishing the upgraded version of the report to the report server.  
   
- If you do not save the report, the original report remains unchanged. However, you cannot edit this report in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] or a report authoring environment that uses a newer report definition format. You can continue to run the original version of the report by uploading it to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server by using Report Manager. For more information, see [Upload a File or Report &#40;Report Manager&#41;](../upload-a-file-or-report-report-manager.md).  
+ If you do not save the report, the original report remains unchanged. However, you cannot edit this report in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] or a report authoring environment that uses a newer report definition format. You can continue to run the original version of the report by uploading it to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server by using Report Manager. For more information, see [Upload a File or Report &#40;Report Manager&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
  For reports that you upload instead of publish to a report server, the report processor determines whether the report can be upgraded on first use. Reports that cannot be upgraded are processed in backward-compatibility mode, and continue to display as they did in the earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   

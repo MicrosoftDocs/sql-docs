@@ -25,7 +25,7 @@ manager: "mblythe"
   
     -   [Data Alert Manager for SharePoint Users](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../2014/reporting-services/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Update Credentials in Report Data Sources from a SharePoint Site](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   

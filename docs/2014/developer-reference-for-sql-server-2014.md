@@ -55,7 +55,7 @@ manager: "jhubbard"
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Replication Developer's Guide](../2014/relational-databases/replication/concepts/replication-developer-documentation.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Reporting Services Developer's Guide](../2014/reporting-services/reporting-services-features-and-tasks-ssrs.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Reporting Services Developer's Guide](reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## Other Programming Resources  
  Developing a data-access application may require you to use one or more of the following technologies:  

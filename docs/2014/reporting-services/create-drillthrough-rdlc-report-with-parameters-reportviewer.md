@@ -38,6 +38,6 @@ manager: "mblythe"
   
 ## See Also  
  [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Design Reports with Report Designer &#40;SSRS&#41;](../../2014/reporting-services/design-reports-with-report-designer-ssrs.md)  
+ [Design Reports with Report Designer &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

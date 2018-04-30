@@ -66,17 +66,17 @@ manager: "mblythe"
   
  Some Report Manager features are only available in specified editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../2014/reporting-services/grant-user-access-to-a-report-server-report-manager.md).  
+ On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](security/grant-user-access-to-a-report-server.md).  
   
- If you are using [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] or Windows Server 2008, you must configure Report Manager for local administration. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../2014/reporting-services/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ If you are using [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] or Windows Server 2008, you must configure Report Manager for local administration. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="bkmk_start_report_manager"></a> Start and Use Report Manager  
  Report Manager is a Web application that you open by typing the Report Manager URL in the address bar of a browser window. When you start Report Manager, the pages, links, and options that you see will vary based on the permissions you have on the report server. To perform a task, you must be assigned to a role that includes the task. A user who is assigned to a role that has full permissions has access to the complete set of application menus and pages available for managing a report server. A user assigned to a role that has permissions to view and run reports sees only the menus and pages that support those activities. Each user can have different role assignments for different report servers, or even for the various reports and folders that are stored on a single report server.  
   
- For more information about roles, see [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md).  
+ For more information about roles, see [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md).  
   
 > [!NOTE]  
->  If you are using Windows Vista or Windows Server 2008, you must configure the report server for local administration before you can use Report Manager to manage a local report server instance. For instructions on how to configure the server, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../2014/reporting-services/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+>  If you are using Windows Vista or Windows Server 2008, you must configure the report server for local administration before you can use Report Manager to manage a local report server instance. For instructions on how to configure the server, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## Start Report Manager  
   
@@ -93,7 +93,7 @@ manager: "mblythe"
 ## Configuring Report Manager  
  Report Manager configuration consists of defining a URL for the application. Additional configuration is required if your deployment includes running Report Manager on a separate computer.  
   
- You can customize Report Manager in very limited ways. For example, you can modify the application title on the Site Settings page. If you are a Web developer, you can modify the style sheets that contain the style information used by Report Manager. Because Report Manager is not specifically designed to support customization, you must thoroughly test any modification that you make. If you find that Report Manager does not meet your needs, you can develop a custom report viewer or configure SharePoint Web parts to find and view reports in a SharePoint site. For more information, see [Configure Report Manager &#40;Native Mode&#41;](../../2014/reporting-services/configure-report-manager-native-mode.md).  
+ You can customize Report Manager in very limited ways. For example, you can modify the application title on the Site Settings page. If you are a Web developer, you can modify the style sheets that contain the style information used by Report Manager. Because Report Manager is not specifically designed to support customization, you must thoroughly test any modification that you make. If you find that Report Manager does not meet your needs, you can develop a custom report viewer or configure SharePoint Web parts to find and view reports in a SharePoint site. For more information, see [Configure Report Manager &#40;Native Mode&#41;](report-server/configure-web-portal.md).  
   
 ##  <a name="bkmk_icon_descriptions"></a> Icon Descriptions  
  The following table describes the icons that are used in Report Manager. For more information about the icons that appear in the report toolbar, see [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md).  
@@ -113,10 +113,10 @@ manager: "mblythe"
 ## See Also  
  [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Report Builder &#40;SSRS&#41;](../../2014/reporting-services/report-builder-ssrs.md)   
- [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   
- [View and Explore Native Mode Reports Using SharePoint Web Parts &#40;SSRS&#41;](../../2014/reporting-services/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
+ [Report Builder &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
+ [Reporting Services Tools](tools/reporting-services-tools.md)   
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [View and Explore Native Mode Reports Using SharePoint Web Parts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -88,10 +88,10 @@ manager: "mblythe"
   
 |Setting|Comments|  
 |-------------|--------------|  
-|Enable Execution Logging|Default is TRUE.<br /><br /> specify whether the report server generates trace logs and the number of days the log is kept. . The logs are stored on the report server computer in the \Microsoft SQL Server\MSSQL.n\ReportServer\Log folder. A new log file is started each time the service is restarted. For more information about log files, see [Report Server Service Trace Log](../../2014/reporting-services/report-server-service-trace-log.md)|  
+|Enable Execution Logging|Default is TRUE.<br /><br /> specify whether the report server generates trace logs and the number of days the log is kept. . The logs are stored on the report server computer in the \Microsoft SQL Server\MSSQL.n\ReportServer\Log folder. A new log file is started each time the service is restarted. For more information about log files, see [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
 |Execution Log Days Kept|Default is 60 days.|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] all supports SharePoint ULS logging.  For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../2014/reporting-services/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] all supports SharePoint ULS logging.  For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> Security Settings  
   

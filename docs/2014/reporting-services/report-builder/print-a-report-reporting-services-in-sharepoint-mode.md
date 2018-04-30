@@ -47,6 +47,6 @@ manager: "mblythe"
      To view the report before you print it, click the **Preview** button. This opens the first page of the report in a separate preview window. Additional pages are made available as the report is rendered on the report server. A previewed report is rendered in EMF format. You can navigate to the previous or next page until the last page is reached, and the **Next** button is disabled. To modify the print margins in the preview page, click the **Margins** button. The **Margins** dialog box is displayed. Configure the top, bottom, right, and left margins and click **OK**. The dialog box closes and the settings are stored for rendering preview and printing.  
   
 ## See Also  
- [Enable and Disable Client-Side Printing for Reporting Services](../enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [Enable and Disable Client-Side Printing for Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

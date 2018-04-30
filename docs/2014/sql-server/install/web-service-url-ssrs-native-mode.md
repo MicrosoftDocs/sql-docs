@@ -55,7 +55,7 @@ manager: "jhubbard"
  **SSL Certificate**  
  Binds a certificate to the IP address you specified. The certificate must be installed and configured on the computer. Reporting a Services does not provide features for managing certificates. The certificate must be issued to a host name or a computer name that resolves to the IP address. For example, to use a certificate that was issued to http://salesreports, the IP address you specified must resolve to a server named "salesreports".  
   
- If you use a certificate, you must modify the `UrlRoot` configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../../2014/reporting-services/configure-ssl-connections-on-a-native-mode-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ If you use a certificate, you must modify the `UrlRoot` configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
  **SSL Port**  
  Specifies the port for SSL connections.  

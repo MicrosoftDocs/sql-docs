@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  Backup and restore operations are often used to move all or part of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation:  
   
--   If you are moving just the report server databases, you can use backup and restore or attach and detach to relocate the databases on a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   If you are moving just the report server databases, you can use backup and restore or attach and detach to relocate the databases on a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Moving a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to a new computer is called a migration. When you migrate an installation, you run Setup to install a new report server instance and then copy instance data to the new computer. For more information about migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, see the following topics:  
   
@@ -81,11 +81,11 @@ manager: "jhubbard"
  Verify that you have a backup copy of any custom extensions and custom assemblies you are using.  
   
 ## See Also  
- [Report Server Database &#40;SSRS Native Mode&#41;](../report-server-database-ssrs-native-mode.md)   
- [Reporting Services Configuration Files](../reporting-services-configuration-files.md)   
- [rskeymgmt Utility &#40;SSRS&#41;](../rskeymgmt-utility-ssrs.md)   
+ [Report Server Database &#40;SSRS Native Mode&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md)   
+ [rskeymgmt Utility &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
  [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../administer-a-report-server-database-ssrs-native-mode.md)   
+ [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

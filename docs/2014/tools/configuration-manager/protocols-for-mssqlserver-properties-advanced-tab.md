@@ -39,6 +39,6 @@ manager: "jhubbard"
  When the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is identified by more than one NTLM service principal name (SPN), list the SPNs here as a series of strings separated by semicolons. For example, the value **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**, indicates that clients attempting to connect to SPNs named **MSSQLSvc/HOST1.Contoso.com** and **MSSQLSvc/HOST2.Contoso.com** are allowed. The variable has a maximum length of 2048 characters.  
   
 ## See Also  
- [Extended Protection for Authentication with Reporting Services](../../../2014/reporting-services/extended-protection-for-authentication-with-reporting-services.md)  
+ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

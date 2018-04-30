@@ -37,6 +37,6 @@ manager: "mblythe"
 4.  Check the **Task List** window for build errors. To view the **Task List** window, open the **View** menu, point to **Other Windows**, and then click **Task List**.  
   
 ## See Also  
- [Design Reports with Report Designer &#40;SSRS&#41;](../../2014/reporting-services/design-reports-with-report-designer-ssrs.md)  
+ [Design Reports with Report Designer &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

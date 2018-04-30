@@ -27,7 +27,7 @@ manager: "mblythe"
   
  To set parameter properties on a published report, you must have Edit Items permission for the report. You can modify some or all of the parameter properties on a report that you run from a SharePoint site. You cannot personalize a report by saving a combination of parameter values that you want to use repeatedly. Any default values that you specify are used by all users who open the report.  
   
- If the report is embedded in a Report Viewer Web part that is configured to always show that report, set the properties on the Report Viewer Web Part. For more information, see [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../add-report-viewer-web-part-to-web-page-reporting-services-sharepoint-integrated-mode.md).  
+ If the report is embedded in a Report Viewer Web part that is configured to always show that report, set the properties on the Report Viewer Web Part. For more information, see [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### To run a parameterized report  
   
@@ -80,6 +80,6 @@ manager: "mblythe"
 7.  Click **Apply**.  
   
 ## See Also  
- [SharePoint Site and List Permission Reference for Report Server Items](../sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [SharePoint Site and List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   

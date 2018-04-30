@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integrating Reporting Services into Applications](../dev-guide/integrating-reporting-services-into-applications.md)   
- [Report Server Web Service](../dev-guide/report-server-web-service.md)   
- [Building Applications Using the Web Service and the .NET Framework](../dev-guide/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Report Server Web Service](../report-server-web-service/report-server-web-service.md)   
+ [Building Applications Using the Web Service and the .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

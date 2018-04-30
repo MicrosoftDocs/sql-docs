@@ -57,7 +57,7 @@ manager: "mblythe"
 -   Add embedded datasets based on embedded data sources.  
   
 > [!NOTE]  
->  On a report server, shared items are secured individually or by inheriting permissions from the folder where they are published. To enable other users to have access to shared datasets that you save, you must understand how permissions are granted. For more information, see [Security &#40;Report Builder&#41;](../report-builder/security-report-builder.md) or [Secure Shared Dataset Items](../secure-shared-dataset-items.md).  
+>  On a report server, shared items are secured individually or by inheriting permissions from the folder where they are published. To enable other users to have access to shared datasets that you save, you must understand how permissions are granted. For more information, see [Security &#40;Report Builder&#41;](../report-builder/security-report-builder.md) or [Secure Shared Dataset Items](../security/secure-shared-dataset-items.md).  
   
  After you add data to a report, you can organize the data on the report page with data regions, modify report parts and share those changes with others, and enable users to limit or sort the data they see in the report. For more information, see the following related topics:  
   

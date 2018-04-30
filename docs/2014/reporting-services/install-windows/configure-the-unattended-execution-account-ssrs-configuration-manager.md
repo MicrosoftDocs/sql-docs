@@ -57,7 +57,7 @@ manager: "jhubbard"
   
      **rsconfig -e -u\<domain/username> -p\<password>**  
   
- **rsconfig -e** supports additional arguments. For more information about syntax and to view command examples, see [rsconfig Utility &#40;SSRS&#41;](../rsconfig-utility-ssrs.md) in SQL Server Books Online.  
+ **rsconfig -e** supports additional arguments. For more information about syntax and to view command examples, see [rsconfig Utility &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) in SQL Server Books Online.  
   
 ### How Account Information is Stored  
  When you set the account, the following settings are specified as encrypted values in the RSreportserver.config file on a local or remote report server instance:  

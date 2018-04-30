@@ -113,7 +113,7 @@ manager: "jhubbard"
   
 -   [Delete a Push Subscription](delete-a-push-subscription.md)  
   
--   [Specify Synchronization Schedules](specify-synchronization-schedules.md)  
+-   [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md)  
   
 -   [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)  
   

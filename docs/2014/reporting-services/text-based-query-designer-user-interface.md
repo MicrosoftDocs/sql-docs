@@ -94,6 +94,6 @@ uspGetEmployeeManagers;
  [OLE DB Connection Type &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
  [ODBC Connection Type &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)  
+ [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)  
   
   

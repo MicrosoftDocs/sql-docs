@@ -68,6 +68,6 @@ manager: "mblythe"
  [Cache Refresh Options &#40;Report Manager&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Caching Page, Shared Datasets &#40;Report Manager&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [Manage Shared Datasets](report-data/manage-shared-datasets.md)   
- [Cache Shared Datasets &#40;SSRS&#41;](../../2014/reporting-services/cache-shared-datasets-ssrs.md)  
+ [Cache Shared Datasets &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

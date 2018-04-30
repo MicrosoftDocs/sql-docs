@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  For a report server that runs in native mode, specify the report server instance to connect to. If you are using the default instance, the server name is typically the name of the computer. If you installed a named instance, append the instance name to the server name in this format: \<servername>\\<InstanceName\>. Reporting Services uses the backslash character to delimit the instance name.  
   
- For a report server that runs in SharePoint integrated mode, you must specify a SharePoint site. You can specify any site in a site collection that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. The URL that you provide must include the HTTP or HTTPS prefix. You must have permission to access the SharePoint site in order to connect to it in Management Studio. The permission level you are assigned to will determine which items you can view and manage. For more information, see [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md).  
+ For a report server that runs in SharePoint integrated mode, you must specify a SharePoint site. You can specify any site in a site collection that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. The URL that you provide must include the HTTP or HTTPS prefix. You must have permission to access the SharePoint site in order to connect to it in Management Studio. The permission level you are assigned to will determine which items you can view and manage. For more information, see [Connect to a Report Server in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
  **Authentication**  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] can be configured to accept Windows Authentication requests or Forms authentication requests that are handled by a custom authentication extension that you provide. Select from one of the following authentication modes when connecting to Reporting Services:  
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md)   
- [Authentication with the Report Server](../../2014/reporting-services/authentication-with-the-report-server.md)  
+ [Connect to a Report Server in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Authentication with the Report Server](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

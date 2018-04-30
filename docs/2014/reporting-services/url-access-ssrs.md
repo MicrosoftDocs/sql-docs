@@ -37,7 +37,7 @@ manager: "mblythe"
   
 -   Manage report sessions  
   
- For the complete list of commands and settings available through URL access, see [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md).  
+ For the complete list of commands and settings available through URL access, see [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## URL Access Concepts  
  URL requests to the report server contain parameters that are processed by the report server. The way in which the report server handles URL requests depends on the parameters, parameter prefixes, and types of items that are included in the URL. Report server URLs adhere to the URL formatting guidelines as proposed by the joint World Wide Web Consortium W3C/IETF draft standard. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL functionality is compatible with most Internet browsers or applications that support standard URL addressing.  
@@ -102,7 +102,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  URL text corresponding to the value of the parameter being used.  
   
- **Note:** For a list of the available URL access parameters, see [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md). For examples passing report parameters on the URL, see [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
+ **Note:** For a list of the available URL access parameters, see [URL Access Parameter Reference](url-access-parameter-reference.md). For examples passing report parameters on the URL, see [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
   
 ## Related Tasks  
   
@@ -110,15 +110,15 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |-----------------------|-----------|  
 |Access report server items, such as reports, shared data sources, and resources.|[Access Report Server Items Using URL Access](access-report-server-items-using-url-access.md)|  
 |Pass report parameters to a report.|[Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)|  
-|Set the locale of the report parameters in the URL access string, which defines the locale-specific interpretations of dates, currencies, and so on.|[Set the Language for Report Parameters in a URL](../../2014/reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|Send rendering extension specific settings that customize how the report is rendered.|[Specify Device Information Settings in a URL](../../2014/reporting-services/specify-device-information-settings-in-a-url.md)|  
+|Set the locale of the report parameters in the URL access string, which defines the locale-specific interpretations of dates, currencies, and so on.|[Set the Language for Report Parameters in a URL](set-the-language-for-report-parameters-in-a-url.md)|  
+|Send rendering extension specific settings that customize how the report is rendered.|[Specify Device Information Settings in a URL](specify-device-information-settings-in-a-url.md)|  
 |Export a report directly to a file format without viewing it in the browser.|[Export a Report Using URL Access](export-a-report-using-url-access.md)|  
-|Open a report and navigate directly to the location of a string.|[Search a Report Using URL Access](../../2014/reporting-services/search-a-report-using-url-access.md)|  
+|Open a report and navigate directly to the location of a string.|[Search a Report Using URL Access](search-a-report-using-url-access.md)|  
 |Render a specific report history snapshot.|[Render a Report History Snapshot Using URL Access](render-a-report-history-snapshot-using-url-access.md)|  
   
 ## See Also  
  [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)   
- [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md)   
+ [URL Access Parameter Reference](url-access-parameter-reference.md)   
  [Integrating Reporting Services Using URL Access](application-integration/integrating-reporting-services-using-url-access.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

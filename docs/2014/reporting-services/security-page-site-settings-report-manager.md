@@ -47,10 +47,10 @@ manager: "mblythe"
  Lists the groups and users that are part of an existing role assignment. Existing role assignments for the current folder are defined for the groups and users that appear in this column. Click **Edit** next to a group or user name to view or edit role assignment details.  
   
  **Roles**  
- Lists one or more role definitions that are part of an existing role assignment. If multiple roles are assigned to a group or user account, that group or user can perform all tasks that belong to all roles. To view the set of tasks that each role supports, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. You cannot view, create, modify, or delete roles in Report Manager. For instructions, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../2014/reporting-services/create-delete-or-modify-a-role-management-studio.md).  
+ Lists one or more role definitions that are part of an existing role assignment. If multiple roles are assigned to a group or user account, that group or user can perform all tasks that belong to all roles. To view the set of tasks that each role supports, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. You cannot view, create, modify, or delete roles in Report Manager. For instructions, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
 ## See Also  
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
- [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md)  
+ [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

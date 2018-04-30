@@ -57,7 +57,7 @@ manager: "mblythe"
  Click **OK** to save your changes and return to the General properties page of the base report.  
   
 ## See Also  
- [Create a Linked Report](../../2014/reporting-services/create-a-linked-report.md)   
+ [Create a Linked Report](reports/create-a-linked-report.md)   
  [General Properties Page, Reports &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   

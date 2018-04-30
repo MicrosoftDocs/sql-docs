@@ -95,14 +95,14 @@ manager: "jhubbard"
   
  The service account has no default value. However, specifying a service account is required during Setup and is specified in `URLReservation` in RSReportServer.config even if you install the server in files-only mode. Valid values for the service account include a domain user account, `LocalSystem`, or `NetworkService`.  
   
- Anonymous access is disabled because the default security is `RSWindowsNegotiate`. For intranet access, report server URLs use network computer names. If you want to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for Internet connections, you must use different settings. For more information about authentication, see [Authentication with the Report Server](../authentication-with-the-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ Anonymous access is disabled because the default security is `RSWindowsNegotiate`. For intranet access, report server URLs use network computer names. If you want to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for Internet connections, you must use different settings. For more information about authentication, see [Authentication with the Report Server](../security/authentication-with-the-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ##  <a name="URLlocalAdmin"></a> URLs for Local Administration  
  You can use http://localhost/reportserver or http://localhost/reports if you specified a strong or weak wildcard for the URL reservation.  
   
  The http://localhost URL is interpreted as http://127.0.0.1. If you pegged the URL reservation to a computer name or single IP address, you cannot use localhost unless you create an additional reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you cannot use that URL.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] and [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] and [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="URLSharePoint"></a> URLs for Report Server in SharePoint Integrated Mode  
  If a stand-alone report server is configured to run within a larger deployment of a SharePoint product or technology, URL and virtual directory construction will be affected in the following ways:  

@@ -64,7 +64,7 @@ manager: "mblythe"
 |**Content Manager**<br /><br /> Full permissions to all items and item-level operations, including permissions to set security.|Use the **Owners** group to grant full control over managing report server items on a SharePoint site. The **Owners** group has Full Control permissions, which enable group members to make changes to the site content, pages, or functionality. Full Control access should be limited to site administrators only.|  
 |**My Reports**|There is no equivalent group. **My Reports** is not supported for a report server that runs in SharePoint mode. You can use the My Site features in [!INCLUDE[winSPServ](../includes/winspserv-md.md)] if you want to use equivalent functionality.|  
 |**Publisher**<br /><br /> Add, update, view, and delete reports, report models, shared data sources, and resources.|Use the **Members** group to grant permissions to add items, edit items, and update references to dependent items on a SharePoint site. The **Members** group has Contribute level permissions, which allow group members to view pages, add and update items, and submit changes for approval.|  
-|**Report Builder**<br /><br /> View reports, self-manage individual subscription, and open reports in Report Builder.|There is no predefined out of the box permission level or SharePoint group that is equivalent to the Report Builder report definition. By default, users who belong to the **Members** group or **Owners** group have permission to use Report Builder. If you want to make Report Builder available to more users, you should create custom security settings to provide a level of permission that is similar to what the Report Builder role provides. For more information, see [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
+|**Report Builder**<br /><br /> View reports, self-manage individual subscription, and open reports in Report Builder.|There is no predefined out of the box permission level or SharePoint group that is equivalent to the Report Builder report definition. By default, users who belong to the **Members** group or **Owners** group have permission to use Report Builder. If you want to make Report Builder available to more users, you should create custom security settings to provide a level of permission that is similar to what the Report Builder role provides. For more information, see [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
 |-|Use the **Viewers** group to grant permissions to view rendered reports. The **Viewers** group cannot download or view the contents of report items.<br /><br /> **Note:** Starting in SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the **Viewers** group does not have permissions to create subscriptions.|  
 |**System User** and **System Administrator**|These roles are not necessary for a report server that runs in SharePoint mode. **System User** and **System Administrator** correspond to SharePoint farm or Web application level permissions. The report server does not provide any functionality that requires authorization at that level.|  
   
@@ -101,10 +101,10 @@ manager: "mblythe"
 |View shared schedules|System|Open Items.|  
   
 ## See Also  
- [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Set Permissions for Report Server Operations in a SharePoint Web Application](../../2014/reporting-services/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Granting Permissions on Report Server Items on a SharePoint Site](../../2014/reporting-services/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Role Definitions](../../2014/reporting-services/role-definitions.md)   
- [Predefined Roles](../../2014/reporting-services/predefined-roles.md)  
+ [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Set Permissions for Report Server Operations in a SharePoint Web Application](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [Granting Permissions on Report Server Items on a SharePoint Site](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Role Definitions](security/role-definitions.md)   
+ [Predefined Roles](security/role-definitions-predefined-roles.md)  
   
   

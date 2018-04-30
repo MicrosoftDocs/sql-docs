@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  To synchronize a pull subscription, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
- To set synchronization schedules, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+ To set synchronization schedules, see [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md).  
   
  **To view and resolve synchronization conflicts**  
   

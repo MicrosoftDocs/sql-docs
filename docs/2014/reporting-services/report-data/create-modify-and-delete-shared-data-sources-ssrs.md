@@ -51,7 +51,7 @@ manager: "mblythe"
   
  After you create a shared data source on the report server, you can create role assignments to control access to it, move it to a different location, rename it, or take it offline to prevent report processing while maintenance operations are performed on the external data source. If you rename or move a shared data source item to another location in the report server folder hierarchy, the path information in all reports or subscriptions that reference the shared data source are updated accordingly. If you take the shared data source offline, all reports, models, and subscriptions will not run until you re-enable the data source.  
   
- For more information about controlling access to shared data sources in the report server folder hierarchy, see [Secure Shared Data Source Items](../secure-shared-data-source-items.md).  
+ For more information about controlling access to shared data sources in the report server folder hierarchy, see [Secure Shared Data Source Items](../security/secure-shared-data-source-items.md).  
   
 ## Deleting a Shared Data Source  
  You can delete a shared data source the same way that you delete any item from the report server. In Report Manager, you open the folder in Details View, select the item, and click **Delete**. In an application page on a SharePoint site, you open the SharePoint library, select the item, and click **Delete**.  

@@ -65,7 +65,7 @@ manager: "jhubbard"
 5.  Copy the custom report item design-time component DLL to the %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies directory.  
   
 ## See Also  
- [Reporting Services Configuration Files](../reporting-services-configuration-files.md)   
+ [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md)   
  [Custom Report Item Class Libraries](custom-report-item-class-libraries.md)  
   
   

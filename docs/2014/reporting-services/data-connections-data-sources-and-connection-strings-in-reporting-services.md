@@ -179,7 +179,7 @@ manager: "mblythe"
  [Data Source Properties Dialog Box, Credentials](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
  [Shared Data Source Properties Dialog Box, Credentials](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md)   
+ [Set Deployment Properties &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
  [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   

@@ -92,7 +92,7 @@ manager: "mblythe"
  [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [General Properties Page, Report Parts &#40;Report Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Move Items Page &#40;Report Manager&#41;](../move-items-page-report-manager.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server-content-management-ssrs-native-mode.md)   
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Troubleshoot Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Report Parts in Report Designer &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

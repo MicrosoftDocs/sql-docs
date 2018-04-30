@@ -102,7 +102,7 @@ manager: "jhubbard"
   
     -   (Optional) A value of **0** for **@distributor_security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@distributor_login** and **@distributor_password**, if you need to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Distributor.  
   
-    -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md).  
   
 4.  At the Publisher, execute [sp_addsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to register the pull subscription. Specify **@publication**, **@subscriber**, and **@destination_db**. Specify a value of **pull** for **@subscription_type**.  
   

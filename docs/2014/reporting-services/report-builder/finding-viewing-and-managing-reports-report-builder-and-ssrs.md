@@ -25,7 +25,7 @@ manager: "mblythe"
   
  To locate a report on a report server or SharePoint site from Report Builder, you must provide URL to the report server or SharePoint site. When you first install Report Builder you can specify the URL to use. This is the server or site that Report Builder connects to by default when you save or open reports.  
   
- Reports can be previewed in Report Builder and Report Designer when you create or update reports and viewed and managed on a report server by using Report Manager or on a SharePoint site that is integrated with Reporting Services by using the built-in SharePoint tools and features after you publish the reports. For more information, see [Previewing Reports in Report Builder](previewing-reports-in-report-builder.md) and [Previewing Reports](../previewing-reports.md).  
+ Reports can be previewed in Report Builder and Report Designer when you create or update reports and viewed and managed on a report server by using Report Manager or on a SharePoint site that is integrated with Reporting Services by using the built-in SharePoint tools and features after you publish the reports. For more information, see [Previewing Reports in Report Builder](previewing-reports-in-report-builder.md) and [Previewing Reports](../reports/previewing-reports.md).  
   
  When you preview reports in Report Builder and Report Designer, or view reports in Report Manager or a SharePoint site, the data is refreshed and the reports display the current data from the data source that the report uses. If you want to view a report without refreshing its data, you can use report history and cached data with published reports. You cannot use these features when previewing reports in Report Builder and Report Designer.  
   
@@ -66,7 +66,7 @@ manager: "mblythe"
   
 -   Create new folders on the server to organize your reports the way you want.  
   
- Some of these tasks might be done for you by the administrator of the report server. To learn more about tasks performed on a report server, see [Reporting Services Report Server &#40;Native Mode&#41;](../reporting-services-report-server-native-mode.md).  
+ Some of these tasks might be done for you by the administrator of the report server. To learn more about tasks performed on a report server, see [Reporting Services Report Server &#40;Native Mode&#41;](../report-server/reporting-services-report-server-native-mode.md).  
   
  Report Manager typically contains folders, reports, data sources, and report models as well as the My Reports folder. My Reports is a personal workspace that you can use to store and work with reports that you own. Other report server folders are public and typically require users to have advanced permissions to add to or modify folder contents. You can create folders within My Reports to further organize your reports. For more information, see [Using My Reports &#40;Report Builder and SSRS&#41;](using-my-reports-report-builder-and-ssrs.md).  
   
@@ -80,7 +80,7 @@ Report toolbar
   
  After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Exporting Reports &#40;Report Builder and SSRS&#41;](export-reports-report-builder-and-ssrs.md) and [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
- The easiest way to select and run a report is to open Report Manager and then search for or browse to the report that you want to view. For step-by-step instruction on how to open reports, see [Open and Close a Report &#40;Report Manager&#41;](../open-and-close-a-report-report-manager.md).  
+ The easiest way to select and run a report is to open Report Manager and then search for or browse to the report that you want to view. For step-by-step instruction on how to open reports, see [Open and Close a Report &#40;Report Manager&#41;](../reports/open-and-close-a-report-report-manager.md).  
   
  After you run a report, you can refresh it to see new data.  
   
@@ -135,7 +135,7 @@ Report toolbar
   
  If you refresh a report within the same session using the browser's **Refresh** button, the original session version of the report is displayed. If you refresh an on-demand report using the **Refresh** button on the report toolbar, the report is re-run and new data, if any, is displayed.  
   
- Session information is stored in the report server temporary database. The report server does not use [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] session management. If you restart the server or perform a database recovery operation, session state is not restored. For more information about session management, see [Identifying Execution State](../dev-guide/identifying-execution-state.md).  
+ Session information is stored in the report server temporary database. The report server does not use [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] session management. If you restart the server or perform a database recovery operation, session state is not restored. For more information about session management, see [Identifying Execution State](../report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
 
   

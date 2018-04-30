@@ -20,7 +20,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQRT (SSIS Expression)
   Returns the square root of a numeric expression.  

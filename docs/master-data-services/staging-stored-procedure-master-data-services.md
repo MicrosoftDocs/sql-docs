@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Staging Stored Procedure (Master Data Services)
 

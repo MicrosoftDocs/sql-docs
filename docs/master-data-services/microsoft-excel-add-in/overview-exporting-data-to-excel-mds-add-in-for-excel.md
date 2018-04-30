@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Overview: Exporting Data to Excel (MDS Add-in for Excel)
 

@@ -16,7 +16,6 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # catalog.update_master_address (SSISDB Database)

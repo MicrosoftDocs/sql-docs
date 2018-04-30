@@ -13,7 +13,6 @@ ms.topic: "tutorial"
 author: "erickangMSFT"
 ms.author: "erickang"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Tutorial: Add the *five slowest queries* sample widget to the database dashboard

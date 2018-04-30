@@ -19,7 +19,6 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Lesson 4-5 - Sorting Attribute Members Based on a Secondary Attribute
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SET COLLATE Command
 Specifies a collation sequence for character fields in subsequent indexing and sorting operations.  

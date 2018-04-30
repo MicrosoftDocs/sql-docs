@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Show Hidden Datasets for Parameter Values - Multidimensional Data
   Your report might include automatically-generated datasets (also known as hidden datasets) that do not appear by default in the Report Data pane. These datasets are created in the following ways:  

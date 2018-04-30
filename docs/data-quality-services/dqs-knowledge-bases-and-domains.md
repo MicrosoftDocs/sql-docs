@@ -17,7 +17,6 @@ caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DQS Knowledge Bases and Domains
 

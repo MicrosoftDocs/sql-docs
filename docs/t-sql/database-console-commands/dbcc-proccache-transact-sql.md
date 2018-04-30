@@ -28,7 +28,6 @@ caps.latest.revision: 31
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ author: "ronortloff"
 ms.author: "rortloff"
 manager: "craigg"
 ms.reviewer: "barbkess"
-ms.workload: "Inactive"
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)

@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Direct the CDC Stream According to the Type of Change
   To add and configure a CDC splitter Transformation, the package must contain at least one Data Flow task and a CDC source.  

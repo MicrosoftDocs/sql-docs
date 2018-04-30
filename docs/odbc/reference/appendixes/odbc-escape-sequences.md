@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Escape Sequences
 The following escape sequences are used in ODBC. The grammar in this section uses some elements defined in [Elements Used in SQL Statements](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  

@@ -23,7 +23,6 @@ caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
-ms.workload: "Inactive"
 ---
 # User Interface Reference (AccessToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access.  

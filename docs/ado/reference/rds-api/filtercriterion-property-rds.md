@@ -20,7 +20,6 @@ caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # FilterCriterion Property (RDS)
 Indicates the evaluation operator to use in the filter value.  

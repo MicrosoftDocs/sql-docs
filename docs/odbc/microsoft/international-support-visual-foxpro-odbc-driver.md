@@ -25,7 +25,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # International Support (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports:  

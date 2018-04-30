@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Print a Report (Reporting Services in SharePoint Mode)
   For a report server that runs in SharePoint mode, there are three ways to print a report from a SharePoint Web application:  

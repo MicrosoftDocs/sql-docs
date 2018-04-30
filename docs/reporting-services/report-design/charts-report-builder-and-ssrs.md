@@ -28,7 +28,6 @@ caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Charts (Report Builder and SSRS)
 Read about using chart data regions to help readers of your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports understand large volumes of aggregated data at a glance.  

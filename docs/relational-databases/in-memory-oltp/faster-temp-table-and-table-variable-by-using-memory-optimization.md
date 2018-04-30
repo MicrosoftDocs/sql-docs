@@ -17,7 +17,6 @@ caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Faster temp table and table variable by using memory optimization

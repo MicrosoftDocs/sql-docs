@@ -30,7 +30,6 @@ caps.latest.revision: 51
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE CREDENTIAL (Transact-SQL)

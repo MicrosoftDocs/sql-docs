@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Appendixes
 Technical details relating to the Microsoft ODBC interface are contained in the following appendixes:  

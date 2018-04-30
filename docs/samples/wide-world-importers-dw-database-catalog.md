@@ -16,7 +16,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WideWorldImportersDW database catalog

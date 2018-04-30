@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Supported SQL Server and SSIS Data Types for DQS Domains
 

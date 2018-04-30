@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: "Inactive"
 ---
 # Configure RHEL Cluster for SQL Server Availability Group
 

@@ -26,7 +26,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLInstallTranslatorEx Function
 **Conformance**  

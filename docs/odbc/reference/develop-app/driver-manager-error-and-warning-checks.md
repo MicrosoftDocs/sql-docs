@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Driver Manager Error and Warning Checks
 The Driver Manager completely or partially implements a number of functions and therefore checks for all or some of the errors and warnings in those functions.  

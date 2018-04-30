@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Developing Applications
 This section contains information about developing applications that use the ODBC interface and drivers that implement it.  

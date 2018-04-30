@@ -25,7 +25,6 @@ caps.latest.revision: 50
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Performance Counters MSRS 2011 Web Service, Performance Objects
   This topic describes performance counters for the **MSRS 2011 Web Service** and **MSRS 2011 Windows Service** performance objects. These objects are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Native Mode deployment.  

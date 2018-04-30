@@ -13,7 +13,6 @@ ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

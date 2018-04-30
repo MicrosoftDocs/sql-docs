@@ -41,7 +41,6 @@ caps.latest.revision: 144
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

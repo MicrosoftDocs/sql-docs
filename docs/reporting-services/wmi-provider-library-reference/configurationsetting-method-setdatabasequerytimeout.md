@@ -25,7 +25,6 @@ caps.latest.revision: 19
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetDatabaseQueryTimeout
   Specifies the default time-out value for report server database queries.  

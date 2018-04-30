@@ -21,7 +21,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 
 # SSIS Catalog

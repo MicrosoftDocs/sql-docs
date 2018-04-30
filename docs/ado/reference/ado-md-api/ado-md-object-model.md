@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO MD Object Model
 This topic describes how objects are represented and related in ADO MD.  

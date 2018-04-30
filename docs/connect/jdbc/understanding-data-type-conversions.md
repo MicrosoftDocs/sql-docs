@@ -17,7 +17,6 @@ caps.latest.revision: 34
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Understanding Data Type Conversions
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

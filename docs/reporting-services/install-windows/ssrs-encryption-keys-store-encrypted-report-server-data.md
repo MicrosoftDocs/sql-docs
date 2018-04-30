@@ -24,7 +24,6 @@ caps.latest.revision: 9
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # SSRS Encryption Keys - Store Encrypted Report Server Data
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores encrypted values in the report server database and in configuration files. Most encrypted values are credentials that are used for accessing external data sources that provide data to reports. This topic describes which values are encrypted, the encryption functionality used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and other kinds of stored confidential data that you should know about.  

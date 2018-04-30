@@ -25,7 +25,6 @@ caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Adding Tasks Programmatically
   Tasks can be added to the following types of objects in the run-time engine:  

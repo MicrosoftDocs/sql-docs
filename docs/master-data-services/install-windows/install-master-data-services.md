@@ -17,7 +17,6 @@ caps.latest.revision: 32
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Installation Tasks for Master Data Services
 

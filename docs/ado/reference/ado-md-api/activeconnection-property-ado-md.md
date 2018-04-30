@@ -24,7 +24,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ActiveConnection Property (ADO MD)
 Indicates to which ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object the current cellset or catalog currently belongs.  

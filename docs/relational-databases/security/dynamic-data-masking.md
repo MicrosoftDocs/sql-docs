@@ -161,7 +161,7 @@ ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');
 ```  
   
  The following example changes a masking function on the `LastName` column:  
-  
+
 ```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  

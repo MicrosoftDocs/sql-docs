@@ -19,7 +19,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Value Inclusion Profile Request Options (Data Profiling Task)
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Value Inclusion Profile Request** selected in the requests pane. A Value Inclusion profile computes the overlap in the values between two columns or sets of columns. Thus, it can also determine whether a column or set of columns is appropriate to serve as a foreign key between the selected tables. This profile can also help you identify problems in your data such as invalid values. For example, you use a value inclusion profile to profile the ProductID column of a Sales table. The profile discovers that the column contains values that are not found in the ProductID column of the Products table.  

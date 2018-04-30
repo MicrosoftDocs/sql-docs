@@ -24,7 +24,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # NativeError Property (ADO)
 Indicates the provider-specific error code for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  

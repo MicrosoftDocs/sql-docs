@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
-ms.workload: "On Demand"
 ---
 # Configure SQL Server settings with environment variables on Linux
 

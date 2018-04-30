@@ -18,7 +18,6 @@ caps.latest.revision: 14
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Reporting Services
   The topics in this section help identify and troubleshoot issues with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

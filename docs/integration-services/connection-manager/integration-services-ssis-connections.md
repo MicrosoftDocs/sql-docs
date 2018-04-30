@@ -30,7 +30,6 @@ caps.latest.revision: 92
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Integration Services (SSIS) Connections
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages use connections to perform different tasks and to implement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] features:  

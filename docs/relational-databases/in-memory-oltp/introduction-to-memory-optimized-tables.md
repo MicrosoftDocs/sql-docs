@@ -17,7 +17,6 @@ caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Introduction to Memory-Optimized Tables

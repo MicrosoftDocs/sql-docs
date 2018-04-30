@@ -20,7 +20,6 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # DISCOVER_TRACE_EVENT_CATEGORIES Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

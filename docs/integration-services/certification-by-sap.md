@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Certification by SAP
   The Microsoft Connector 1.1 for SAP BW has received certification from SAP for integration with SAP NetWeaver.  

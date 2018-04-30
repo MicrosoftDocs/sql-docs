@@ -27,7 +27,6 @@ caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Cube Storage (Analysis Services - Multidimensional Data)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

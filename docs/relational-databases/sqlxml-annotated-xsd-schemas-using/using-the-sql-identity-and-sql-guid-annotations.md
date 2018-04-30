@@ -30,7 +30,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using the sql:identity and sql:guid Annotations

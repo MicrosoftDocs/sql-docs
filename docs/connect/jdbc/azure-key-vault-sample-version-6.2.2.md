@@ -17,7 +17,6 @@ caps.latest.revision: 1
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Active"
 ---
 # Azure Key Vault Sample Version 6.2.2
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

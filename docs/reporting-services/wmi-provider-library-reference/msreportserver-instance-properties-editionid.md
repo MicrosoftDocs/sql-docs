@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - EditionID
   Returns the edition of the report server. Read-only.  

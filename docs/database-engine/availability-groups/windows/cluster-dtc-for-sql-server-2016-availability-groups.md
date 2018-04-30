@@ -17,10 +17,12 @@ caps.latest.revision: 3
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Cluster DTC for SQL Server 2016 Availability Groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 This topic describes the requirements and steps for clustering the Microsoft Distributed Transaction Coordinator (DTC) service for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For additional information regarding distributed transactions and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
  ## Checklist: Preliminary Requirements

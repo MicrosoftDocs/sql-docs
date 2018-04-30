@@ -30,7 +30,6 @@ caps.latest.revision: 35
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Failover Cluster Instance Administration and Maintenance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

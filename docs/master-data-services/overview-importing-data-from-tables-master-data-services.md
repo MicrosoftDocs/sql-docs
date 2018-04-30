@@ -21,7 +21,6 @@ caps.latest.revision: 21
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Overview: Importing Data from Tables (Master Data Services)
 

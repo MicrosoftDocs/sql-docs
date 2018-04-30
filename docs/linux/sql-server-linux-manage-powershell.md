@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.workload: "Inactive"
 ---
 # Use PowerShell on Windows to Manage SQL Server on Linux
 

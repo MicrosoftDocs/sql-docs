@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Menu commands and other shortcut keys(Oracle To SQL)
 The following sections describe the keyboard shortcuts to access menu commands and other shortcut keys used in various dialog boxes of SSMA for Oracle application.  

@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Administrators (Master Data Services)
 

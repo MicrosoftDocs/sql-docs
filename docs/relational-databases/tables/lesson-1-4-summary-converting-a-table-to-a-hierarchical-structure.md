@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Lesson 1-4 - Summary - Converting a Table to a Hierarchical Structure
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

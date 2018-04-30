@@ -26,7 +26,6 @@ caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Browse a Model Using the Microsoft Time Series Viewer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

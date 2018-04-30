@@ -13,7 +13,6 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "Active"
 ---
 
 # SQL Server on Linux Frequently Asked Questions (FAQ)

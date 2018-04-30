@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Setup DLL Function Summary
 The following table describes setup DLL functions. For more information about the syntax and semantics for each function, see [Setup DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md).  

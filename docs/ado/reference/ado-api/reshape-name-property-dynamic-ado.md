@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Reshape Name Property-Dynamic (ADO)
 Specifies a name for the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

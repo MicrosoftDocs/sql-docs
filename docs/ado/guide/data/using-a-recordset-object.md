@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Using a Recordset Object
 Alternatively, you can use **Recordset.Open** to implicitly establish a connection and issue a command over that connection in a single operation. For example, in Visual Basic:  

@@ -25,7 +25,6 @@ caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.geo_replication_links (Azure SQL Database)

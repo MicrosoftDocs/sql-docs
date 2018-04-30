@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Step 3: Proof of concept connecting to SQL using pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

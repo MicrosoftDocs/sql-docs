@@ -20,7 +20,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Assign Hierarchy Member Permissions (Master Data Services)
 

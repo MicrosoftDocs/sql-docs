@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Work with CDC Services
   You can use the CDC Service Configuration Console to create a new CDC service and to prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for CDC.  

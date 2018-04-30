@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Limitations
 This section describes limitations of the ODBC Desktop Database Drivers with regard to the following topics:  

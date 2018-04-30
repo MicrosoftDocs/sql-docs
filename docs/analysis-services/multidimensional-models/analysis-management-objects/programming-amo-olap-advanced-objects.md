@@ -25,7 +25,6 @@ caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Programming AMO OLAP Advanced Objects
   This topic explains the Analysis Management Objects (AMO) programming details of OLAP advanced objects. This topic contains the following sections:  

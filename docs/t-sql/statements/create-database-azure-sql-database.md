@@ -34,7 +34,6 @@ caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # CREATE DATABASE (Azure SQL Database)

@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Add a Border to a Report (Report Builder and SSRS)
   You can add a border to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report by adding borders to the headers, footers, and report body themselves, without adding lines or rectangles.    

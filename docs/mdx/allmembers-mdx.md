@@ -23,7 +23,6 @@ caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # AllMembers (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

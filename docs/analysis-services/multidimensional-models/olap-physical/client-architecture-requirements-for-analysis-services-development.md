@@ -27,7 +27,6 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Client Architecture Requirements for Analysis Services Development
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

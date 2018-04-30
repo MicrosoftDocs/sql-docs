@@ -23,7 +23,6 @@ caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Execute Scripts During Synchronization (Replication Transact-SQL Programming)

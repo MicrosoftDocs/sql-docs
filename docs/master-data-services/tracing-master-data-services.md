@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Tracing (Master Data Services)
 

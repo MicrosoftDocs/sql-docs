@@ -30,7 +30,6 @@ caps.latest.revision: 44
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

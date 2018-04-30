@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Load Data by Using the ODBC Destination
   This procedure shows how to load data by using the ODBC destination. To add and configure an ODBC destination, the package must already include at least one Data Flow task and source.  

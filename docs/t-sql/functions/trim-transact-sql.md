@@ -24,7 +24,6 @@ caps.latest.revision: 4
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # TRIM (Transact-SQL)

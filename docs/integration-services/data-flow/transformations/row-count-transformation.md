@@ -25,7 +25,6 @@ caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Row Count Transformation
   The Row Count transformation counts rows as they pass through a data flow and stores the final count in a variable.  

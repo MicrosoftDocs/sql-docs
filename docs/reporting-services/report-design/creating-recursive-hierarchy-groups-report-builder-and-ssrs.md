@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Creating Recursive Hierarchy Groups (Report Builder and SSRS)
 To display recursive data in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports (where the relationship between parent and child is represented by fields in the dataset), set the data region group expression based on the child field and set the Parent property based on the parent field.  

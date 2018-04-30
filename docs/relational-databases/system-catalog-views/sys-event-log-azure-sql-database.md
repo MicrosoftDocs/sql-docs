@@ -27,7 +27,6 @@ caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.event_log (Azure SQL Database)

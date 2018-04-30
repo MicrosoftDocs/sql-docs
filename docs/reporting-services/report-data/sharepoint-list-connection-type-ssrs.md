@@ -18,7 +18,6 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # SharePoint List Connection Type (SSRS)
 

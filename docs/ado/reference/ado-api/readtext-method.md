@@ -23,7 +23,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ReadText Method
 Reads specified number of characters from a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Built-in Collections - Dataset Fields Collection References (Report Builder)
   Each dataset in a report contains one Fields collection. The Fields collection is the set of fields specified by the dataset query plus any additional calculated fields that you create. After you create a dataset, the field collection appears in the **Report Data** pane.  

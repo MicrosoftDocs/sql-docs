@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Read-Only Status (Excel Driver)
 When the Microsoft Excel driver is used, data source tables are opened as read-only by default, and can be opened by only one user at a time. Even though tables have read-only status, however, applications can perform insertions and updates for Microsoft Excel tables.  

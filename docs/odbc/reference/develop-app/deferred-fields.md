@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Deferred Fields
 The values of *deferred fields* are not used when they are set, but the driver saves the addresses of the variables for a deferred effect. For an application parameter descriptor, the driver uses the contents of the variables at the time of the call to **SQLExecDirect** or **SQLExecute**. For an application row descriptor, the driver uses the contents of the variables at the time of the fetch.  

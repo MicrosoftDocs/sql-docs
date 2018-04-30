@@ -27,7 +27,6 @@ caps.latest.revision: 43
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Backup and Restore Operations for Reporting Services

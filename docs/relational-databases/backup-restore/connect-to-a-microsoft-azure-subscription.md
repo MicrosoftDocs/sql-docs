@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to a Microsoft Azure Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

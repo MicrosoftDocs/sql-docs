@@ -27,7 +27,6 @@ caps.latest.revision: 55
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # MDX Data Definition - CREATE MEMBER
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

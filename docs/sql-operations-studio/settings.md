@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # User and Workspace Settings
 

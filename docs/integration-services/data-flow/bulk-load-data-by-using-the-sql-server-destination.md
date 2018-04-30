@@ -23,7 +23,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Bulk Load Data by Using the SQL Server Destination
   To add and configure a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, the package must already include at least one Data Flow task and a data source.  

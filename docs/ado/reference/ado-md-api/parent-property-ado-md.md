@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Parent Property (ADO MD)
 Indicates the member that is the parent of the current [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) in a hierarchy.  

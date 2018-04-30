@@ -21,7 +21,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Step 1: Connect to the Data Source
 The first step in any application is to connect to the data source. This phase, including the functions it requires, is shown in the following illustration.  

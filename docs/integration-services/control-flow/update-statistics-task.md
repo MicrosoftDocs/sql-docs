@@ -22,7 +22,6 @@ caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Update Statistics Task
   The Update Statistics task updates information about the distribution of key values for one or more statistics groups (collections) in the specified table or indexed view. For more information, see [Statistics](../../relational-databases/statistics/statistics.md).  

@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLParamOptions Mapping
 When an application calls **SQLParamOptions** through an ODBC 3*.x* driver, the call  

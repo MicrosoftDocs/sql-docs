@@ -22,7 +22,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Functions Not Executed by the Cursor Library
 > [!IMPORTANT]  

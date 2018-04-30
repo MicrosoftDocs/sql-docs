@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Connect Power Pivot Service App to SharePoint Web App in CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

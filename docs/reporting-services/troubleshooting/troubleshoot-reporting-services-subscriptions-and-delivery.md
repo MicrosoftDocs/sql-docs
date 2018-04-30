@@ -18,7 +18,6 @@ caps.latest.revision: 16
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Reporting Services Subscriptions and Delivery
   

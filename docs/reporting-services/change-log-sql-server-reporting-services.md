@@ -15,7 +15,6 @@ ms.topic: "article"
 author: "casualoak"
 ms.author: "edugonz"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # Change log for SQL Server Reporting Services

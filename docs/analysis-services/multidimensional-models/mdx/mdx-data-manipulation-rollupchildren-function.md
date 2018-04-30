@@ -24,7 +24,6 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - RollupChildren Function
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

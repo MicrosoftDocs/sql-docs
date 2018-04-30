@@ -20,7 +20,6 @@ caps.latest.revision: 1
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Breaking Changes to Database Engine Features in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]

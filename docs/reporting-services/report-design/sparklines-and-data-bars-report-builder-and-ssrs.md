@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Sparklines and Data Bars (Report Builder and SSRS)
   Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often inline with text.   

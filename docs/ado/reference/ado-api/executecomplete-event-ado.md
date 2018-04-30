@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ExecuteComplete Event (ADO)
 The **ExecuteComplete** event is called after a command has finished executing.  

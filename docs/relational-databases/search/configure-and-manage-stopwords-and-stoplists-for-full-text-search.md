@@ -24,7 +24,6 @@ caps.latest.revision: 81
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure and Manage Stopwords and Stoplists for Full-Text Search

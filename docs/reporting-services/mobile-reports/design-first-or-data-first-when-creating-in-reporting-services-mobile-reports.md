@@ -17,7 +17,6 @@ caps.latest.revision: 17
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Design first or data first when creating in Reporting Services mobile reports
   

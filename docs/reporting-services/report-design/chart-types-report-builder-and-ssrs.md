@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Chart Types (Report Builder and SSRS)

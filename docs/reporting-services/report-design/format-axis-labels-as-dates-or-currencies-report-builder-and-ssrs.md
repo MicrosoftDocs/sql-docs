@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Format Axis Labels as Dates or Currencies (Report Builder and SSRS)
 When you show properly formatted DateTime values on an axis in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, a chart will automatically display these values as days. To specify a date/time interval for the x-axis, such as an interval of months or an interval of hours, you must format the axis labels and set the type of axis interval to a valid date or time interval.  

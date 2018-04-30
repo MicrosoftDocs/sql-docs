@@ -25,7 +25,7 @@ monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WSFC cluster service is offline
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
     
 ## Introduction  
   

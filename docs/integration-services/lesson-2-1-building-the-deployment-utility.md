@@ -19,7 +19,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Lesson 2-1 - Building the Deployment Utility
 In this task, you will configure and build a deployment utility for the Deployment Tutorial project.  

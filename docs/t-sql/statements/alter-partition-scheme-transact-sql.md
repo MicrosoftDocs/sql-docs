@@ -28,7 +28,6 @@ caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
 

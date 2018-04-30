@@ -17,7 +17,6 @@ caps.latest.revision: 85
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # What&#39;s New in Master Data Services (MDS)
 

@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Clone Method (ADO)
 Creates a duplicate [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object from an existing **Recordset** object. Optionally, specifies that the clone be read-only.  

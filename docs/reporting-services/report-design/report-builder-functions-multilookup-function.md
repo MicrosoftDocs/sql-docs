@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Builder Functions - Multilookup Function
   Returns the set of first-match values for the specified set of names from a dataset that contains name/value pairs.  

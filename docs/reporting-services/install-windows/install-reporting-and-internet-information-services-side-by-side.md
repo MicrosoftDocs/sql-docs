@@ -19,7 +19,6 @@ caps.latest.revision: 40
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Install Reporting and Internet Information Services Side-by-Side

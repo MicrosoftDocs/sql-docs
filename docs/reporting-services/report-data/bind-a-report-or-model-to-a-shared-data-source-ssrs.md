@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Bind a Report or Model to a Shared Data Source (SSRS)
   In some situations, such as when you move a report or model from a test server to a production server, you might want to save the file to your local computer and then upload it to a different report server. When you upload the report or model to the new server, you need to rebind it to a shared data source that is stored on the new report server. If you don't rebind the report or model, it will not work correctly when accessed from the new report server.  

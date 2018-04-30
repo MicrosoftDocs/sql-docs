@@ -20,7 +20,6 @@ caps.latest.revision: 24
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Deploying Models (Master Data Services)
 

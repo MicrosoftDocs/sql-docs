@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Mining Model Training Destination Custom Properties
   The Data Mining Model Training destination has both custom properties and the properties common to all data flow components.  

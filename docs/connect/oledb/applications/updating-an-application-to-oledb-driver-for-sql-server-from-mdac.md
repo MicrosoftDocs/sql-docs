@@ -22,7 +22,6 @@ helpviewer_keywords:
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Updating an Application to OLE DB Driver for SQL Server from MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,8 +53,6 @@ ms.workload: "Inactive"
 -   OLE DB Driver for SQL Server does not contain XML integration. OLE DB Driver for SQL Server supports SELECT … FOR XML queries, but does not support any other XML functionality. However, OLE DB Driver for SQL Server does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   OLE DB Driver for SQL Server supports configuring client-side network libraries using only connection string attributes. If you need more complete network library configuration, you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
-
--   OLE DB Driver for SQL Server is not compatible with odbcbcp.dll. Applications must be rebuilt to link with msoledbsql.lib in order to use OLE DB Driver for SQL Server.    
 
 -   MDAC connection strings allow a Boolean value (**true**) for the **Trusted_Connection** keyword. A OLE DB Driver for SQL Server connection string must use **yes** or **no**.  
 

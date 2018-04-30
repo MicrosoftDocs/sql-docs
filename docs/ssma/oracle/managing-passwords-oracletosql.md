@@ -20,7 +20,6 @@ caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Managing Passwords (OracleToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # How to Manage a CDC Instance
   This procedure describes how to use the CDC Designer Console to manage CDC instance operations at runtime.  

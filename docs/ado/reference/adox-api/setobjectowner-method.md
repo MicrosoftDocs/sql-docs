@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SetObjectOwner Method
 Specifies the owner of an object in a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md).  

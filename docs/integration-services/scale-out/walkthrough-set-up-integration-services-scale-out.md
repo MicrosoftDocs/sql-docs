@@ -18,7 +18,6 @@ author: "haoqian"
 ms.author: "haoqian"
 ms.reviewer: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Walkthrough: Set up Integration Services (SSIS) Scale Out
 Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out by completing the following tasks. 

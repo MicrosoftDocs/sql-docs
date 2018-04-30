@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Driver for Oracle Programmer&#39;s Reference
 > [!IMPORTANT]  

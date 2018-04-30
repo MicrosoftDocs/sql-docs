@@ -20,7 +20,6 @@ caps.latest.revision: 16
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Deploy a Model Deployment Package by Using the Wizard
 

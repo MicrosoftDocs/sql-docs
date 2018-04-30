@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # PositionEnum
 Specifies the current position of the record pointer within a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

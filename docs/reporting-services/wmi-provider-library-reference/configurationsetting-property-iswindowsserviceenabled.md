@@ -25,7 +25,6 @@ caps.latest.revision: 18
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - IsWindowsServiceEnabled
   Indicates whether the Report Server Windows service is enabled. Read-only.  

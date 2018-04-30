@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # How to View the CDC Instance Properties
   This procedure describes how to use the CDC Designer Console to view information about the instances that you create to help manage the operation of the instances.  

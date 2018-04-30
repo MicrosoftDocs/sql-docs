@@ -19,7 +19,6 @@ helpviewer_keywords:
 author: "yitam"
 ms.author: "v-yitam"
 manager: "mbarwin"
-ms.workload: "On Demand"
 ---
 # How to: Send and Retrieve ASCII Data in Linux and macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

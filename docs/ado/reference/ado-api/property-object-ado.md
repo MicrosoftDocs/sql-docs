@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Property Object (ADO)
 Represents a dynamic characteristic of an ADO object that is defined by the provider.  

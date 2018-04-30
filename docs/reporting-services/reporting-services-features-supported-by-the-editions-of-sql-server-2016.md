@@ -18,7 +18,6 @@ caps.latest.revision: 3
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Reporting Services Features Supported by the Editions of SQL Server 2016

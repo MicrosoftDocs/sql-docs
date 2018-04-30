@@ -30,7 +30,6 @@ caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Selecting Input Columns Programmatically
   After you have programmatically connected components, select the columns from upstream components that you will transform or pass through to downstream components. If you do not select input columns for your component, the component does not receive any rows from the data flow task.  

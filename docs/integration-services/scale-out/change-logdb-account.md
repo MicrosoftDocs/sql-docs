@@ -18,7 +18,6 @@ author: "haoqian"
 ms.author: "haoqian"
 ms.reviewer: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change the account for Scale Out logging
 When you run SSIS packages in Scale Out, the event messages are logged in the SSISDB database with an auto-created user account named **##MS_SSISLogDBWorkerAgentLogin##**. The login for this user uses SQL Server authentication.

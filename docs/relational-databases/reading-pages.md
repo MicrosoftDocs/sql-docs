@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "pmasl"
 ms.author: "pelopes"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Reading Pages
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Generate Mirror Tables and CDC Capture Instances
   Use the Generate Mirror Tables page to generate the mirror tables for the tables you included in the CDC instance  

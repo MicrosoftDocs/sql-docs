@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Read-Only Status (Text File Driver)
 When the Text driver is used, data source tables are read-only. However, applications can perform insertions for Text tables.

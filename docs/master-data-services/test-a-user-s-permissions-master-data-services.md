@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Test a User&#39;s Permissions (Master Data Services)
 

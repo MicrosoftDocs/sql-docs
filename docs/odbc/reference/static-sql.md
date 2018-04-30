@@ -24,7 +24,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Static SQL
 The embedded SQL shown in [Embedded SQL Example](../../odbc/reference/embedded-sql-example.md) is known as static SQL. It is called static SQL because the SQL statements in the program are static; that is, they do not change each time the program is run. As described in the previous section, these statements are compiled when the rest of the program is compiled.  

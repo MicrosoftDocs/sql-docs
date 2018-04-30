@@ -17,7 +17,6 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Integration Services (SSIS) Scale Out Master
 The Scale Out Master manages the Scale Out system through the SSISDB Catalog and the Scale Out Master service. 

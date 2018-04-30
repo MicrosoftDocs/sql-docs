@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # ODBC Programmer&#39;s Reference
 The *ODBC Programmer's Reference* contains the following sections.  

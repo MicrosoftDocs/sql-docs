@@ -17,7 +17,6 @@ caps.latest.revision: 18
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Database Requirements (Master Data Services)
 

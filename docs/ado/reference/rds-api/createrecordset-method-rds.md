@@ -26,7 +26,6 @@ caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CreateRecordset Method (RDS)
 Creates an empty, disconnected [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

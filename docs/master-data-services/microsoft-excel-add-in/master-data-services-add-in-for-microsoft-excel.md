@@ -17,7 +17,6 @@ caps.latest.revision: 30
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Master Data Services Add-in for Microsoft Excel
 

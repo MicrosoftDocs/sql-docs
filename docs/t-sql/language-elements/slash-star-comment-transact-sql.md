@@ -28,7 +28,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 
 # Slash Star (Block Comment) (Transact-SQL)

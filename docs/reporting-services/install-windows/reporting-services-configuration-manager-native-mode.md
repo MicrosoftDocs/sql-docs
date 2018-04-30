@@ -20,7 +20,6 @@ helpviewer_keywords:
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # Reporting Services Configuration Manager (Native Mode)

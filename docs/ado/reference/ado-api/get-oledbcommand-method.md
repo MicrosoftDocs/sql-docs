@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # get_OLEDBCommand Method
 Returns the underlying OLE DB Command, first propagating any parameter information set on the ADO Command to the OLE DB Command.  

@@ -18,7 +18,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # ADO Programmer&#39;s Guide for using ADO Objects
 This documentation provides an overview of how to use ADO objects to work with data from various data sources. First, the introduction summarizes the new features and the requirement for installing, using, and redistributing the ADO component. The next sections discuss the use of the various types of ADO objects. Finally, the appendixes discuss various Microsoft-supplied data and service providers, error messages, and tips about how to use ADO in several programming languages, in addition to samples and a glossary.

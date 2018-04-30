@@ -38,7 +38,6 @@ caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # &#x40;&#x40;DATEFIRST (Transact-SQL)

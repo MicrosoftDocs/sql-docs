@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Position Property (ADO)
 Indicates the current position within a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

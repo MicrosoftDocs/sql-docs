@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # CREATE DIAGNOSTICS SESSION (Transact-SQL)

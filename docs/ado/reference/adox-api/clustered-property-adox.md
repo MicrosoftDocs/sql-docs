@@ -26,7 +26,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Clustered Property (ADOX)
 Indicates whether the index is clustered.  

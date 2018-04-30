@@ -18,7 +18,6 @@ caps.latest.revision: 28
 author: "CarlRabeler"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Management Objects Support for In-Memory OLTP

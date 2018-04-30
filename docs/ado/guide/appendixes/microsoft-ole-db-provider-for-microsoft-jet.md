@@ -21,7 +21,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Microsoft OLE DB Provider for Microsoft Jet Overview
 The OLE DB Provider for Microsoft Jet allows ADO to access Microsoft Jet databases.

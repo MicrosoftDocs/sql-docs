@@ -18,7 +18,6 @@ caps.latest.revision: 6
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server
   

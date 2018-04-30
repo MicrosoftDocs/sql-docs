@@ -26,7 +26,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Cancel Method (ADO)
 Cancels execution of a pending asynchronous method call.  

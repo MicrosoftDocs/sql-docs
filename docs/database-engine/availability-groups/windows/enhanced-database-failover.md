@@ -21,7 +21,6 @@ author: "allanhirt"
 ms.reviewer: "mikeray"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Add enhanced database failover to an availability group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

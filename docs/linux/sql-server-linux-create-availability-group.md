@@ -13,7 +13,6 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "On Demand"
 ---
 
 # Create and configure an availability group for SQL Server on Linux

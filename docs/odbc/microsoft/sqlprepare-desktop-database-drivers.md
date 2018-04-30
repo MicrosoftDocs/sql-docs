@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLPrepare (Desktop Database Drivers)
 A statement prepared with an incorrect number of columns returns an error at execution time, not upon statement preparation.

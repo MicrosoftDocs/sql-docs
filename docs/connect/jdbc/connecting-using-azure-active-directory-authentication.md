@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Connecting using Azure Active Directory Authentication
 

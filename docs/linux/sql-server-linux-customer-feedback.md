@@ -13,7 +13,6 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "Inactive"
 ---
 # Customer Feedback for SQL Server on Linux
 

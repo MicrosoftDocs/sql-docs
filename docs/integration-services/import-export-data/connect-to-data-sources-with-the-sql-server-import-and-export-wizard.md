@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Connect to Data Sources with the SQL Server Import and Export Wizard
 The topics in this section show you how to connect to many commonly used data sources when you run the SQL Server Import and Export Wizard. You have to provide connection info for your data sources on the **Choose a Data Source** and **Choose a Destination** pages of the wizard.

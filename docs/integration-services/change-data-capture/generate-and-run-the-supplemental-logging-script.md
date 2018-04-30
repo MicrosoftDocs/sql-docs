@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Generate and Run the Supplemental Logging Script
   Use the Set up Tables for Capturing Changes page to run a script on the Oracle source database that will set up supplemental logging.  

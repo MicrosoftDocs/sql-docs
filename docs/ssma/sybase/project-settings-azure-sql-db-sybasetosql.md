@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (Azure SQL DB ) (SybaseToSQL)
 The Azure SQL DB project settings let you configure the Azure SQL DB database suffix to be added in the connection dialog and also allow implementing heartbeat mechanism in Azure SQL DB connection.  

@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # About Drivers and Data Sources
 *Drivers* are the components that process ODBC requests and return data to the application. If necessary, drivers modify an application's request into a form that is understood by the data source. You must use the driver's setup program to add or delete a driver from your computer.  

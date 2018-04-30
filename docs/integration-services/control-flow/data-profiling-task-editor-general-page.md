@@ -21,7 +21,6 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Profiling Task Editor (General Page)
   Use the **General** page of the **Data Profiling Task Editor** to configure the following options:  

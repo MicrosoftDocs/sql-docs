@@ -26,7 +26,6 @@ caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLTablePrivileges Function
 **Conformance**  

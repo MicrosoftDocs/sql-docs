@@ -20,7 +20,6 @@ caps.latest.revision:
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Automatic tuning

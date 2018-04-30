@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Custom maps in Reporting Services mobile reports
 Geographic maps in SQL Server Mobile Report Publisher are defined in a format known as *ESRI shapefiles*.  

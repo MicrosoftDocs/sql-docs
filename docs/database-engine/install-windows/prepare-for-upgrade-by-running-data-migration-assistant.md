@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Prepare for upgrade by running Data Migration Assistant
 

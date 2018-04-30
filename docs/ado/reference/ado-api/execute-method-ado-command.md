@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Execute Method (ADO Command)
 Executes the query, SQL statement, or stored procedure specified in the [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) or [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) property of the [Command object](../../../ado/reference/ado-api/command-object-ado.md).  

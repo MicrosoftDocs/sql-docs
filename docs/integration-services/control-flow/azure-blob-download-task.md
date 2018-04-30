@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure Blob Download Task
 The Azure Blob Download Task enables an SSIS package to download files from an Azure blob storage.

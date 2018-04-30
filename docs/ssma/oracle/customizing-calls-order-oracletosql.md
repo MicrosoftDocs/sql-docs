@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Customizing Calls Order (OracleToSQL)
 At this step you select the order in which the objects to test will be invoked.  

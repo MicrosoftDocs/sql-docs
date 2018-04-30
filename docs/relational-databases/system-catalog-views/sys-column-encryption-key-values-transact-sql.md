@@ -29,7 +29,6 @@ caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.column_encryption_key_values (Transact-SQL)

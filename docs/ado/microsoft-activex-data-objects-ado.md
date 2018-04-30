@@ -18,7 +18,6 @@ caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Microsoft ActiveX Data Objects (ADO)
 

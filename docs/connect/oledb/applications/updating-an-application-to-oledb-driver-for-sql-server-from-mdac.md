@@ -54,8 +54,6 @@ manager: craigg
 
 -   OLE DB Driver for SQL Server supports configuring client-side network libraries using only connection string attributes. If you need more complete network library configuration, you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
 
--   OLE DB Driver for SQL Server is not compatible with odbcbcp.dll. Applications must be rebuilt to link with msoledbsql.lib in order to use OLE DB Driver for SQL Server.    
-
 -   MDAC connection strings allow a Boolean value (**true**) for the **Trusted_Connection** keyword. A OLE DB Driver for SQL Server connection string must use **yes** or **no**.  
 
 -   Minor changes have occurred to warnings and errors. Warnings and errors returned by the server now retain the same severity when passed to OLE DB Driver for SQL Server. You should ensure you have thoroughly tested your application if you depend on trapping particular warnings and errors.  

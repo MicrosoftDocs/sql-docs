@@ -22,7 +22,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Field (ADO for Visual C++ Syntax)
 ## Methods  

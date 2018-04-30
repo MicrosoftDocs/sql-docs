@@ -20,7 +20,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Attribute Groups (Master Data Services)
 

@@ -18,7 +18,6 @@ caps.latest.revision: 5
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # RGDI Device Information Settings
   The following table lists the device information settings for rendering in RGDI format.  

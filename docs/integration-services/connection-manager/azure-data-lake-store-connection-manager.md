@@ -21,7 +21,6 @@ author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure Data Lake Store Connection Manager
 A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Store connection manager to connect to an Azure Data Lake Store service with one of the two following authentication types:

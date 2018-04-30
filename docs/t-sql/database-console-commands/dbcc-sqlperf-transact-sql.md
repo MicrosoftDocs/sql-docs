@@ -29,7 +29,6 @@ caps.latest.revision: 43
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -27,7 +27,6 @@ caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_os_job_object (Azure SQL Database)

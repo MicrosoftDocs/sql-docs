@@ -23,7 +23,6 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specifying Boolean Functions in XPath Queries (SQLXML 4.0)

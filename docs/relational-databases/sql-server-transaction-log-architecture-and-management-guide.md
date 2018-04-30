@@ -27,7 +27,6 @@ caps.latest.revision: 3
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Transaction Log Architecture and Management Guide

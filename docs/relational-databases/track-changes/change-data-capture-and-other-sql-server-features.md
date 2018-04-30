@@ -19,7 +19,6 @@ caps.latest.revision: 14
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Change Data Capture and Other SQL Server Features
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

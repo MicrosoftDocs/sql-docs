@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Shortcut Keys (DB2ToSQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

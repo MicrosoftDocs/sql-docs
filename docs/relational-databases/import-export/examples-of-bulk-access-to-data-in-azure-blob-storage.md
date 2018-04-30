@@ -22,7 +22,6 @@ caps.latest.revision: 2
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Examples of Bulk Access to Data in Azure Blob Storage

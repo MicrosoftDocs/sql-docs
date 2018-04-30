@@ -21,7 +21,6 @@ caps.latest.revision: 39
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MHTML Device Information Settings
   The following table lists the device information settings for rendering reports in Web archive (MHTML) format.  

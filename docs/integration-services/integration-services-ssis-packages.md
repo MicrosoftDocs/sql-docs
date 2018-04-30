@@ -27,7 +27,6 @@ caps.latest.revision: 72
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Integration Services (SSIS) Packages
   A package is an organized collection of connections, control flow elements, data flow elements, event handlers, variables, parameters, and configurations, that you assemble using either the graphical design tools that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, or build programmatically.  You then save the completed package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, or the file system, or you can deploy the ssISnoversion project to the [!INCLUDE[ssIS](../includes/ssis-md.md)] server. The package is the unit of work that is retrieved, executed, and saved.  

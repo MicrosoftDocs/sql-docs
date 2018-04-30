@@ -17,7 +17,6 @@ caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Understanding the JDBC Driver Data Types
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

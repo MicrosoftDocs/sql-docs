@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # VBA functions in MDX and DAX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

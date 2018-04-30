@@ -29,7 +29,6 @@ caps.latest.revision: 91
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Back Up and Restore of SQL Server Databases

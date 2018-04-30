@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Service Providers and Components
 Service providers are components that extend the functionality of data providers by implementing extended interfaces that are not natively supported by the data store.  

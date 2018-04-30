@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Supports Method
 Determines whether a specified [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object supports a particular type of functionality.  

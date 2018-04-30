@@ -19,7 +19,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SubmitChanges Method (RDS)
 Submits pending changes of the locally cached and updatable [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to the data source specified in the [Connect](../../../ado/reference/rds-api/connect-property-rds.md) property or the [URL](../../../ado/reference/rds-api/url-property-rds.md) property.  

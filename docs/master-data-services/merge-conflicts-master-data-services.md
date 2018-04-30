@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Merge Conflicts (Master Data Services)
 

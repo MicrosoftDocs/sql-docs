@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # STRING_AGG (Transact-SQL)

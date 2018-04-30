@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Data Profiling Task and Viewer
   The Data Profiling task provides data profiling functionality inside the process of extracting, transforming, and loading data. By using the Data Profiling task, you can achieve the following benefits:  

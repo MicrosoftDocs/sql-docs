@@ -22,7 +22,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # MemberTypeEnum
 Specifies the setting for the [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) property of a [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  

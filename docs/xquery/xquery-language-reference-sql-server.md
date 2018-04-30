@@ -25,7 +25,6 @@ caps.latest.revision: 51
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # XQuery Language Reference (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

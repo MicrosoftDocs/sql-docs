@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # XactAttributeEnum
 Specifies the transaction attributes of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

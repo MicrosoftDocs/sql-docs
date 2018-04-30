@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # INSERT Statement Limitations
 Inserted data is truncated on the right without warning if it is too long to fit into the column.  

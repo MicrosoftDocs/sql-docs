@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Setting the Date Format on Connection
 > [!IMPORTANT]  

@@ -18,7 +18,6 @@ caps.latest.revision: 19
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Deployment and Version Support in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supports the following scenarios:  

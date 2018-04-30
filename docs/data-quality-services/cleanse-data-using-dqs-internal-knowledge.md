@@ -22,7 +22,6 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Cleanse Data Using DQS (Internal) Knowledge
 

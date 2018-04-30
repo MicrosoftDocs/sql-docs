@@ -19,7 +19,6 @@ caps.latest.revision: 24
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Lesson 2-2 - Subscribe to and Check the Finance Name Policy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

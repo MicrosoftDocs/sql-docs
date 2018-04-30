@@ -19,7 +19,6 @@ caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Lesson 3-3 - Testing the Deployed Packages
 In this task, you will test the packages that you deployed to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

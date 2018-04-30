@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Connection Transitions
 ODBC connections have the following states.  

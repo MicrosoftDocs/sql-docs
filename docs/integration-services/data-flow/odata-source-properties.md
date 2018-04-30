@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # OData Source Properties
 When you right-click **OData Source** in the data flow and click **Properties**, you see properties for the **OData Source** component in the **Properties** window.  

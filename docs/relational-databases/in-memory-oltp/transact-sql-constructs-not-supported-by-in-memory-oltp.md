@@ -17,7 +17,6 @@ caps.latest.revision: 51
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP

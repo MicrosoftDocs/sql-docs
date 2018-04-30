@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # GetRows Method (ADO)
 Retrieves multiple records of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object into an array.  

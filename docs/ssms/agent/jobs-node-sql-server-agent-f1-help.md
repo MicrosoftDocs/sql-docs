@@ -8,8 +8,7 @@ ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 32c3bd1a-9f7c-4a01-a271-5868871b8bd5
@@ -17,7 +16,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Jobs Node (SQL Server Agent F1 Help)

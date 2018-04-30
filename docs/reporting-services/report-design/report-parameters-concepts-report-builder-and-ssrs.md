@@ -18,7 +18,6 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Parameters Concepts (Report Builder and SSRS)
   You can add parameters to a report to link related reports, to control the report appearance, to filter report data, or to narrow the scope of a report to specific users or locations.  

@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Data Buffer Address
 The application passes the address of the data buffer to the driver in an argument, often named *ValuePtr* or a similar name. For example, in the following call to **SQLBindCol**, the application specifies the address of the *Date* variable:  

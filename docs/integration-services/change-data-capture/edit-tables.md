@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Edit Tables
   Use the **Tables** tab to make changes to the tables and columns that you selected from the Oracle source database. This tab has the following elements:  

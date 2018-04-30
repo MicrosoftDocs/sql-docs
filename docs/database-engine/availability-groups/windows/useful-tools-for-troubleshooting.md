@@ -2,7 +2,7 @@
 title: "Useful tools for troubleshooting (Always On Availability Groups-SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

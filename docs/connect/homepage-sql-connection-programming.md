@@ -14,7 +14,6 @@ ms.technology:
 ms.topic: "article"
 ms.reviewer: "meetb"
 ms.author: "genemi"
-ms.workload: "Inactive"
 ---
 # Homepage for client programming to Microsoft SQL Server
 

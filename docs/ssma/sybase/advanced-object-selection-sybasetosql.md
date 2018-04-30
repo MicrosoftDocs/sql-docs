@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Advanced Object Selection (SybaseToSQL)
 The **Advanced Object Section** dialog box lets you filter database objects by using strings and substrings in the object name, and then select or deselect those objects. SSMA performs conversion and migration operations on selected objects.  

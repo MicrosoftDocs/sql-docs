@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Operation of Non-Parameterized Commands
 For non-parameterized commands, all the provider commands are executed and the **Recordsets** are created during command execution. If the command is executed synchronously, all the **Recordsets** will be fully populated. If an asynchronous population mode was selected, the populated state of the **Recordsets** will depend on the population mode and the size of the **Recordsets**.  

@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Add File Connection Manager Dialog Box UI Reference
   Use the **Add File Connection Manager** dialog box to define a connection to a group of files or folders.  

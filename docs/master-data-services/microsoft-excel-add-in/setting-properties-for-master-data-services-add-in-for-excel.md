@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Setting Properties for Master Data Services Add-in for Excel
 

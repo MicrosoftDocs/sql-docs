@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.workload: "On Demand"
 ---
 # Configure Red Hat Enterprise Linux shared disk cluster for SQL Server
 

@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Hard-Coded SQL Statements
 Applications that perform a fixed task usually contain hard-coded SQL statements. For example, an order entry system might use the following call to list open sales orders:  

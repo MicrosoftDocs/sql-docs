@@ -7,6 +7,8 @@ ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
 ms.suite: "sql"
+ms.prod: sql
+ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
@@ -17,8 +19,6 @@ helpviewer_keywords:
   - "Transact-SQL tutorials"
   - "SQL Server Management Studio [SQL Server], tutorials"
 ---
-
-
 
 # Tutorial: Additional Tips and Tricks for using SSMS
 This tutorial will provide you with some additional tricks for using SQL Server Management Studio. This article will teach you how to: 

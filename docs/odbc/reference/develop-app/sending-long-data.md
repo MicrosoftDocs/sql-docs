@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Sending Long Data
 DBMSs define *long data* as any character or binary data over a certain size, such as 254 characters. It might not be possible to store an entire item of long data in memory, such as when the item represents a long text document or a bitmap. Because such data cannot be stored in a single buffer, the data source sends it to the driver in parts with **SQLPutData** when the statement is executed. Parameters for which data is sent at execution time are known as *data-at-execution parameters*.  

@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Install or Uninstall the Reporting Services Add-in for SharePoint

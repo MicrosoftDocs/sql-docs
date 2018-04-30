@@ -23,7 +23,6 @@ caps.latest.revision: 21
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Tutorial: Configure Replication between Two Fully Connected Servers (Transactional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

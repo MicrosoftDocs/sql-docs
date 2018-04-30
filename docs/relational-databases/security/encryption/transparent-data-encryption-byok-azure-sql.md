@@ -13,7 +13,6 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.custom: 
 ms.component: "security"
-ms.workload: "On Demand"
 ms.tgt_pltfrm: ""
 
 ms.topic: "article"

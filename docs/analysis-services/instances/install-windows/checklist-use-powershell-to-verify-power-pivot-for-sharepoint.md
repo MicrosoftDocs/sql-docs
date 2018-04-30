@@ -17,7 +17,6 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # CheckList: Use PowerShell to Verify Power Pivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

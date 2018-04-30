@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Upgrade Database Wizard (Master Data Services Configuration Manager)
 

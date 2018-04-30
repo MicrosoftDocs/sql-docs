@@ -6,14 +6,12 @@ ms.date: "12/08/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Install non-English language versions of SQL Server Management Studio (SSMS) 
 

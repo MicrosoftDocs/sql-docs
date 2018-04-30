@@ -20,7 +20,6 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5515
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

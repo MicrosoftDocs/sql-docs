@@ -23,7 +23,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Delete a Member or Collection (Master Data Services)
 

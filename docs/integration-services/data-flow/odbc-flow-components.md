@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ODBC Flow Components
   This topic describes the concepts necessary for creating an ODBC data flow using [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

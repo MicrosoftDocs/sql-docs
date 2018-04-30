@@ -19,7 +19,6 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RDS Objects
 > [!IMPORTANT]

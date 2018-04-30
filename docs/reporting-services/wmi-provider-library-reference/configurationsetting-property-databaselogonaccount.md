@@ -25,7 +25,6 @@ caps.latest.revision: 24
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - DatabaseLogonAccount
   Specifies the logon account that the report server uses when connecting to the report server database. Read only.  

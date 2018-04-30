@@ -17,7 +17,6 @@ caps.latest.revision: 40
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Get started with Columnstore for real time operational analytics

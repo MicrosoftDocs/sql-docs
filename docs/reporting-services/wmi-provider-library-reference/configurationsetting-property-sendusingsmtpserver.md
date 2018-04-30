@@ -25,7 +25,6 @@ caps.latest.revision: 18
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - SendUsingSMTPServer
   Specifies whether the **SendUsing** element in the in the e-mail configuration for the report server is set to **true**.  

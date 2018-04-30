@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Developing Connection-Pool Awareness in an ODBC Driver
 This topic discusses the details of developing an ODBC driver that contains information about how the driver should provide connection pooling services.  

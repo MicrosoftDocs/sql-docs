@@ -20,7 +20,6 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Connect to an Access Database
   To connect an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to a Microsoft Office Access data source requires an OLE DB connection manager and a data provider. The data provider that you use depends on the version of Access that created the data source:  

@@ -19,7 +19,6 @@ caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Performing Operation (SQL Server Import and Export Wizard)
 After you review the choices that you made in the wizard and click **Finish** on the **Complete the Wizard** page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Performing Operation**. On this page, you see the progress and the result of the operation that you configured on the preceding pages. You don't have to take any action on this page.

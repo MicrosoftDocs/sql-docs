@@ -22,7 +22,6 @@ caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Managing Services and Network Settings by Using WMI Provider

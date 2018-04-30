@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Report Builder Tutorials
 

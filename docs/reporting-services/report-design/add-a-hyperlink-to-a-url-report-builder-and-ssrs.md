@@ -18,7 +18,6 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Add a Hyperlink to a URL (Report Builder and SSRS)
 Learn how to add hyperlink actions to text boxes, images, charts, and gauges in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  paginated reports. Links can go to other reports, to bookmarks in a report, or to  static or dynamic URLs. 

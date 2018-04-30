@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Parallel Data Warehouse)

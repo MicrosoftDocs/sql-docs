@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: "sql-linux"
-ms.workload: "Active"
 ---
 # Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server
 

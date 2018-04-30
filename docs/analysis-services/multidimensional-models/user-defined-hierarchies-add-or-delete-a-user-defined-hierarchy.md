@@ -25,7 +25,6 @@ caps.latest.revision: 51
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # User-Defined Hierarchies - Add or Delete a User-Defined Hierarchy
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

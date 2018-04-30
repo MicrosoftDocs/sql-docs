@@ -24,7 +24,6 @@ caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Mining Query Transformation
   The Data Mining Query transformation performs prediction queries against data mining models. This transformation contains a query builder for creating Data Mining Extensions (DMX) queries. The query builder lets you create custom statements for evaluating the transformation input data against an existing mining model using the DMX language. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](../../../dmx/data-mining-extensions-dmx-reference.md).  

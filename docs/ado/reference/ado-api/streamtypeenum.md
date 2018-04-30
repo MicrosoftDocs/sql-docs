@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # StreamTypeEnum
 Specifies the type of data stored in a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

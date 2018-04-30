@@ -13,7 +13,6 @@ ms.topic: "tutorial"
 author: "erickangMSFT"
 ms.author: "erickang"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Backup and Restore using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

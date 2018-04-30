@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Resync Method Example (VC++)
 This example demonstrates using the [Resync](../../../ado/reference/ado-api/resync-method.md) method to refresh data in a static recordset.  

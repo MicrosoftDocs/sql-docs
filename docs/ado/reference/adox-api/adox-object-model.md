@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADOX Object Model
 The following diagram illustrates how objects are represented and related in ADOX. For more information about a specific object or collection, see the specific reference topic, or [ADOX Objects](../../../ado/reference/adox-api/adox-objects.md) and [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md).  

@@ -28,7 +28,6 @@ caps.latest.revision: 68
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Message Queue Task
   The Message Queue task allows you to use Message Queuing (also known as MSMQ) to send and receive messages between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, or to send messages to an application queue that is processed by a custom application. These messages can take the form of simple text, files, or variables and their values.  

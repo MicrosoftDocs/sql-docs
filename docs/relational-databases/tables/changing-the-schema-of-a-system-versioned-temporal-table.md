@@ -17,7 +17,6 @@ caps.latest.revision: 13
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Changing the Schema of a System-Versioned Temporal Table

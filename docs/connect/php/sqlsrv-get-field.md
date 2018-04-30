@@ -24,7 +24,6 @@ caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

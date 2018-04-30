@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # SQLSTATE Mappings
 This topic discusses SQLSTATE values for ODBC 2.*x* and ODBC 3.*x*. For more information on ODBC 3.*x* SQLSTATE values, see [Appendix A: ODBC Error Codes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  

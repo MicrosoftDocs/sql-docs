@@ -22,7 +22,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Command Object (ADO)
 Defines a specific command that you intend to execute against a data source.  

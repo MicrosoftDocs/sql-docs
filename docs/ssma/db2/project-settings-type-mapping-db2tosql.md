@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (Type Mapping) (DB2ToSQL)
 The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts DB2 data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types.  

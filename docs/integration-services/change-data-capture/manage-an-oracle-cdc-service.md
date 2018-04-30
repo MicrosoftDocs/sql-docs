@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Manage an Oracle CDC Service
   You can use the CDC Service Configuration Console to manage a specific CDC Service.  

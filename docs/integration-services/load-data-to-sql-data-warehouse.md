@@ -10,7 +10,6 @@ ms.service: sql-data-warehouse
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
-ms.workload: data-services
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl

@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SELECT Statement Limitations
 An aggregate-function column cannot be mixed with a non-aggregate column in a SELECT statement.  

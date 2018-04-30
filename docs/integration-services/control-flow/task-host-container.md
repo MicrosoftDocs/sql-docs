@@ -22,7 +22,6 @@ caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Task Host Container
   The task host container encapsulates a single task. In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the task host is not configured separately; instead, it is configured when you set the properties of the task it encapsulates. For more information about the tasks that the task host containers encapsulate, see [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  

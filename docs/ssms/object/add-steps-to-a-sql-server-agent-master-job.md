@@ -8,8 +8,7 @@ ms.service: ""
 ms.component: "ssms-objects"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
@@ -17,7 +16,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Add Steps to a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

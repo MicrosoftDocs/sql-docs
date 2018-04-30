@@ -22,7 +22,6 @@ caps.latest.revision: 22
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Reporting Services with Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

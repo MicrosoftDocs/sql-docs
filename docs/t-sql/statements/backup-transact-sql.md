@@ -52,7 +52,6 @@ caps.latest.revision: 275
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # BACKUP (Transact-SQL)

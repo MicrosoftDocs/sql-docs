@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ORDER BY with GROUP BY
 ORDER BY can be performed on any expression in the GROUP BY *expression-list* or any column in the result set.

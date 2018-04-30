@@ -18,7 +18,6 @@ caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)

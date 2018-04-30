@@ -17,7 +17,6 @@ caps.latest.revision: 18
 author: "leolimsft"
 ms.author: "lle"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Discontinued Master Data Services Features
 

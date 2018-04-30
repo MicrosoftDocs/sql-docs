@@ -18,7 +18,6 @@ helpviewer_keywords:
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Updating an Application from SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

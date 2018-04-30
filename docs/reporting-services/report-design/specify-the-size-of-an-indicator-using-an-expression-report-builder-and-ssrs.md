@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Specify the Size of an Indicator Using an Expression (Report Builder and SSRS)
   In addition to color, direction, and shape, you can use size to maximize the visual impact of indicators.  

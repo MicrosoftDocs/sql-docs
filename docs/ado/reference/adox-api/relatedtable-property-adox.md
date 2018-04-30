@@ -26,7 +26,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RelatedTable Property (ADOX)
 Indicates the name of the related table.  

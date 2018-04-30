@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ParentSameAsPrev Property (ADO MD)
 Indicates whether the parent of this position [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) is the same as the parent of the immediately preceding member.  

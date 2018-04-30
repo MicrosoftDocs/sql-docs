@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Tables Collection (ADOX)
 Contains all [Table](../../../ado/reference/adox-api/table-object-adox.md) objects of a catalog.  

@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Sample ODBC Program
 The [ODBC code sample](http://go.microsoft.com/fwlink/?LinkId=244831) prompts you for an ODBC data source name.  You will then be prompted to enter a query and the sample will display the results of the query.

@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Step 5: Commit the Transaction
 The next step is to commit the transaction, as shown in the following illustration.  

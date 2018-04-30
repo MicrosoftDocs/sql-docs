@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Backward Compatibility (Master Data Services)
 

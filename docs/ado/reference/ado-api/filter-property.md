@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Filter Property
 Indicates a filter for data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

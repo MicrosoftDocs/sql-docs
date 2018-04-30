@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADOX Property Object Properties, Methods, and Events
 ## Properties  

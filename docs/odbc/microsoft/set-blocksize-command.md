@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SET BLOCKSIZE Command
 Specifies how disk space is allocated for the storage of memo fields.  

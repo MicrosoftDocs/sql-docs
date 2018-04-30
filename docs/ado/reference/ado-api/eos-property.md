@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # EOS Property
 Indicates whether the current position is at the end of the [stream](../../../ado/reference/ado-api/stream-object-ado.md).  

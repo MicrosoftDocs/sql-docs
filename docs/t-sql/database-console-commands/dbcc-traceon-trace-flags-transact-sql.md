@@ -27,7 +27,6 @@ caps.latest.revision: 171
 author: "pmasl"
 ms.author: "pelopes"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

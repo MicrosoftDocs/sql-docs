@@ -20,7 +20,6 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 
 # Run Data Migration Assistant from the command line

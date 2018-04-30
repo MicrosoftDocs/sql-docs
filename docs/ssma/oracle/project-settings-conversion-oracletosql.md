@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Project Settings (Conversion) (OracleToSQL)
 The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts Oracle syntax to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax.  

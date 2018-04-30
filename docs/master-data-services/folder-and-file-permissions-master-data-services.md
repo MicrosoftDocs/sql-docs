@@ -21,7 +21,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Folder and File Permissions (Master Data Services)
 

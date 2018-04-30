@@ -22,7 +22,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Developing a User Interface for a Custom ForEach Enumerator
   After you have overridden the implementation of the properties and methods of the base class to provide your custom functionality, you may want to create a custom user interface for your Foreach enumerator. If you do not create a custom user interface, users can only configure the new custom Foreach enumerator by using the Properties window.  

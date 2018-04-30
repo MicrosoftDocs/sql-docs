@@ -20,7 +20,6 @@ caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RTRIM (SSIS Expression)
   Returns a character expression after removing trailing spaces.  

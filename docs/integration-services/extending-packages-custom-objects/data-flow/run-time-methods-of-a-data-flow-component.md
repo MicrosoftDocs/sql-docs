@@ -25,7 +25,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Run-time Methods of a Data Flow Component
   At run time, the data flow task examines the sequence of components, prepares an execution plan, and manages a pool of worker threads that execute the work plan. The task loads rows of data from sources, processes them through transformations, then saves them to destinations.  

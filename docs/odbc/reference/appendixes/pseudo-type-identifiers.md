@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Pseudo-Type Identifiers
 For application programming convenience, ODBC defines a number of pseudo-type identifiers. These identifiers do not actually correspond to actual data types, but instead, depending on the situation, resolve to existing data types.  

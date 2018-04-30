@@ -23,7 +23,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)

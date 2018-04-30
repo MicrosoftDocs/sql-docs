@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Lesson 5: Formatting a Report (Reporting Services)
 Now that you've added a data region and some fields to the Sales Orders report, you can format the date and currency fields and the column headers.  

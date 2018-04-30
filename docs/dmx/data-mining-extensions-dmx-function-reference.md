@@ -24,7 +24,6 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Data Mining Extensions (DMX) Function Reference
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

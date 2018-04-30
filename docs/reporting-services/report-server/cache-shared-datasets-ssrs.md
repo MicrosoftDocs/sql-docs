@@ -18,7 +18,6 @@ caps.latest.revision: 6
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Cache Shared Datasets (SSRS)
   Query results for a shared dataset can be copied to a cache to provide consistent data for multiple reports and to improve response time for the dataset query. Like reports, you can configure a shared dataset to be cached on first use or by specifying a schedule.  

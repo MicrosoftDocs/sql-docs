@@ -21,7 +21,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Executing an Updategram by Using ADO (SQLXML 4.0)

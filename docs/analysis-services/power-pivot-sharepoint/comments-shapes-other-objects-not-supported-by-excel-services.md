@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Comments, Shapes, other objects not supported by Excel Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

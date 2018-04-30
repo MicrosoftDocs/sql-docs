@@ -15,7 +15,6 @@ ms.topic: "article"
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Azure Active Directory support in SQL Server Data Tools (SSDT)

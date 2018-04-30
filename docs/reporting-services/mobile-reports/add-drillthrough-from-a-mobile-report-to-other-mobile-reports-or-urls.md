@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Add drillthrough from a mobile report to other mobile reports or URLs
 You can add drillthrough from any gauge, chart, or data grid in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report to another mobile report or custom URL. 

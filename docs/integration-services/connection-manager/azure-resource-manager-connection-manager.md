@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Lingxi-Li"
 ms.author: "lingxl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure Resource Manager Connection Manager
 The **Azure Resource Manager Connection Manager** enables an SSIS package to manage Azure resources using a [service principal](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).

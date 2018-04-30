@@ -21,7 +21,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # JScript Code Example to Return a Recordset
 ## JScript Code (rs.js)  

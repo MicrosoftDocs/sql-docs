@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Add, Move, or Delete a Table, Matrix, or List (Report Builder and SSRS)
   In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, a data region displays data from a report dataset. Data regions include table, matrix, list, chart, and gauge. To nest one data region inside another, add each data region separately, and then drag the child data region onto the parent data region.  

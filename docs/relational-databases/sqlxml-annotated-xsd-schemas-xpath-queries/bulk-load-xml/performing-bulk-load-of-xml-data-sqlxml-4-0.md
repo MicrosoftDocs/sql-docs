@@ -25,7 +25,6 @@ caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Performing Bulk Load of XML Data (SQLXML 4.0)

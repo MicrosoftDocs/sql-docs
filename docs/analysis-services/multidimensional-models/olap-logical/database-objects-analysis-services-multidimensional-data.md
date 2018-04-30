@@ -27,7 +27,6 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Database Objects (Analysis Services - Multidimensional Data)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

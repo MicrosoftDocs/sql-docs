@@ -20,7 +20,6 @@ caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DAY (SSIS Expression)
   Returns an integer that represents the day datepart of a date.  

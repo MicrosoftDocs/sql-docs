@@ -17,7 +17,6 @@ caps.latest.revision: 71
 author: "craigg-msft"
 ms.author: "craigg"
 manager: craigg
-ms.workload: "Active"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017

@@ -20,7 +20,6 @@ helpviewer_keywords:
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # OLE DB Driver for SQL Server Features
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

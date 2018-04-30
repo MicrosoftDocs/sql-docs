@@ -28,7 +28,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Default Data Source
 The driver may select a data source, called the default data source, in certain cases where the application does not explicitly specify one:  

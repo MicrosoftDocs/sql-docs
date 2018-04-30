@@ -30,7 +30,6 @@ caps.latest.revision: 12
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Accessing User-Defined Types - Updating UDT Columns with DataAdapters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

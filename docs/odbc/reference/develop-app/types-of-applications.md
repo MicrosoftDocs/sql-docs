@@ -23,7 +23,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Types of Applications
 ODBC applications can be classified as follows:  

@@ -25,7 +25,6 @@ caps.latest.revision: 106
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Install Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a single Setup program to install any or all of its components, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Through Setup, you can install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] with or without other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components on a single computer.    

@@ -18,7 +18,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO Overview and Benefits
 ActiveX Data Objects (ADO) is a high-level, easy-to-use interface to OLE DB. OLE DB is a low-level, high-performance interface to a variety of data stores. Both ADO and OLE DB can work with relational (tabular) and nonrelational (hierarchical or stream) data.

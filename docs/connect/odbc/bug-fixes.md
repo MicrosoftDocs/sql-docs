@@ -19,7 +19,6 @@ caps.latest.revision: 69
 author: "v-makouz"
 ms.author: "genemi"
 manager: "kenvh"
-ms.workload: "Active"
 ---
 # List of bugs fixed
 

@@ -20,7 +20,6 @@ caps.latest.revision: 23
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # Export Reports (Report Builder and SSRS)

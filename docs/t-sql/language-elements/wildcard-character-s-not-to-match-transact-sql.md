@@ -30,7 +30,6 @@ caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 
 # \[^\] (Wildcard - Character(s) Not to Match) (Transact-SQL)

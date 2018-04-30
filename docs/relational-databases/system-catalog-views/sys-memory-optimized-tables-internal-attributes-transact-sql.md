@@ -26,7 +26,6 @@ caps.latest.revision: 13
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)

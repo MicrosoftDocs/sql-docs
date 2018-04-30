@@ -17,7 +17,6 @@ caps.latest.revision: 40
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # JDBC Driver Support for High Availability, Disaster Recovery
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

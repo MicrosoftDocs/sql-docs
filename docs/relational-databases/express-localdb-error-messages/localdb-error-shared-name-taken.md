@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LOCALDB_ERROR_SHARED_NAME_TAKEN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ caps.latest.revision: 19
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Learn SQL Server Master Data Services
 

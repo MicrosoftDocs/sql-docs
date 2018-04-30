@@ -16,7 +16,6 @@ ms.topic: "get-started-article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Reporting Services report server

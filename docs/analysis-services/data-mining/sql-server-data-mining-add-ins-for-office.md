@@ -18,7 +18,6 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # SQL Server Data Mining Add-Ins for Office
 

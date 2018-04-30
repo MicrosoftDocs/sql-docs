@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Filter Data before Exporting (MDS Add-in for Excel)
 

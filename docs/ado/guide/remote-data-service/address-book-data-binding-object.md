@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Address Book Data-Binding Object
 The Address Book application uses the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object to bind data from the SQL Server database to a visual object (in this case, a DHTML table) in the application's client HTML page. The event-driven VBScript program logic uses the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) to:  

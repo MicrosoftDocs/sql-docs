@@ -25,7 +25,6 @@ caps.latest.revision: 63
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Creating Multidimensional Models Using SQL Server Data Tools (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

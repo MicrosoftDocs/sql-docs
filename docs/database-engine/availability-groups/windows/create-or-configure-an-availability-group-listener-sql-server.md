@@ -22,7 +22,6 @@ caps.latest.revision: 52
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
-ms.workload: "Active"
 ---
 # Create or Configure an Availability Group Listener (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

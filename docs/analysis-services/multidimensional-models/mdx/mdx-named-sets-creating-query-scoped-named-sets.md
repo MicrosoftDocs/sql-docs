@@ -22,7 +22,6 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # MDX Named Sets - Creating Query-Scoped Named Sets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

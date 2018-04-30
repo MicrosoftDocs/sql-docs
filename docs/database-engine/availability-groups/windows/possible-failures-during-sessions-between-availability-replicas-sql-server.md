@@ -22,7 +22,6 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 
-ms.workload: "Inactive"
 ---
 # Possible Failures During Sessions Between Availability Replicas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

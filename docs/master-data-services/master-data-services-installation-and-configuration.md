@@ -17,7 +17,6 @@ caps.latest.revision: 44
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Master Data Services Installation and Configuration
 

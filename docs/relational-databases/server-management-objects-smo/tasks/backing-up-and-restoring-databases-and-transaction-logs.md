@@ -26,7 +26,6 @@ caps.latest.revision: 49
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Backing Up and Restoring Databases and Transaction Logs

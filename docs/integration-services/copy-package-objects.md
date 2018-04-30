@@ -22,7 +22,6 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Copy Package Objects
   This topic describes how to copy control flow items, data flow items, and connection managers within a package or between packages.  

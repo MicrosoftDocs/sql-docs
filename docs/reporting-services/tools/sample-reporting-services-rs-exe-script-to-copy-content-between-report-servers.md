@@ -18,7 +18,6 @@ caps.latest.revision: 15
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Sample Reporting Services rs.exe Script to Copy Content between Report Servers
 

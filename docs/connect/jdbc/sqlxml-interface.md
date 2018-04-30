@@ -17,7 +17,6 @@ caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLXML Interface
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

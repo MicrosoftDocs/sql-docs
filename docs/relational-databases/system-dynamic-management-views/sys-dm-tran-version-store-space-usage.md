@@ -26,7 +26,6 @@ caps.latest.revision: 10
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
-ms.workload: "Inactive"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)

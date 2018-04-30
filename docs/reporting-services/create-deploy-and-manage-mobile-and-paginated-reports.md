@@ -25,7 +25,6 @@ caps.latest.revision: 70
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # What is SQL Server Reporting Services (SSRS)?

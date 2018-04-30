@@ -21,7 +21,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # API Conformance Level (ODBC Driver for Oracle)
 > [!IMPORTANT]  

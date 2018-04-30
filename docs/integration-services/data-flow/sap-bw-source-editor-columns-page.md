@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SAP BW Source Editor (Columns Page)
   Use the **Columns** page of the **SAP BW Source Editor** to map an output column to each external (source) column.  

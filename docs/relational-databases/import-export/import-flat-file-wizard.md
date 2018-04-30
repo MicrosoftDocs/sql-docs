@@ -17,7 +17,6 @@ f1_keywords:
 author: "yualan"
 ms.author: "alayu"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Import Flat File to SQL Wizard

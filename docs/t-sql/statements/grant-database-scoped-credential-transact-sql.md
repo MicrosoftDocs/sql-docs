@@ -27,7 +27,6 @@ caps.latest.revision: 3
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # GRANT Database Scoped Credential Permissions (Transact-SQL)

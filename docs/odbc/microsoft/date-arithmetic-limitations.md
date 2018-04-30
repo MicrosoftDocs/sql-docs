@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Date Arithmetic Limitations
 Date arithmetic is not supported for subtracting a DATE data type from a DATE data type.

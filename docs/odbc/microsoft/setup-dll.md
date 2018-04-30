@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Setup DLL
 The ODBC Administrator calls the function **ConfigDSN** when users configure data sources.

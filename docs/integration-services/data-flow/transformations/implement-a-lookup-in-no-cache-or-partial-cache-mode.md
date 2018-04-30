@@ -22,7 +22,6 @@ caps.latest.revision: 67
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode
   You can configure the Lookup transformation to use the partial cache or no cache mode:  

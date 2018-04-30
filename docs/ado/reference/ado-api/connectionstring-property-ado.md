@@ -22,7 +22,6 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # ConnectionString Property (ADO)
 Indicates the information used to establish a connection to a data source.  

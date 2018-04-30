@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Developing an ODBC Driver
 This section contains topics that discuss how to develop an ODBC driver.  

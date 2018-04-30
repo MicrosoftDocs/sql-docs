@@ -15,7 +15,6 @@ ms.topic: "article"
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Programming Guidelines
 

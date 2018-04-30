@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: tbd
-ms.workload: "Inactive"
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux
 

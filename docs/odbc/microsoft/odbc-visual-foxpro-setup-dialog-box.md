@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Visual FoxPro Setup Dialog Box
 The **ODBC Visual FoxPro Setup** dialog box enables you to add or change a Visual FoxPro data source.  

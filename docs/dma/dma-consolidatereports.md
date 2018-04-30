@@ -20,7 +20,6 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 
 # Consolidate assessment reports (Data Migration Assistant)

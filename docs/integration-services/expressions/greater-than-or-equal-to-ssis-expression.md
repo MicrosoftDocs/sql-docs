@@ -20,7 +20,6 @@ caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # &gt;= (Greater Than or Equal To) (SSIS Expression)
   Performs a comparison to determine if the first expression is greater than or equal to the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

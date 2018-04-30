@@ -17,7 +17,6 @@ caps.latest.revision: 13
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Overview: Importing Data from Excel (MDS Add-in for Excel)
 

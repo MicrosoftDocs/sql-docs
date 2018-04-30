@@ -25,7 +25,6 @@ caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg" 
-ms.workload: "On Demand"
 ---
 # Get started with PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

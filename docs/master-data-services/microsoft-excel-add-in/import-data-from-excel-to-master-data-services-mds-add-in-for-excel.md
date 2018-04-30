@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Import Data from Excel to Master Data Services (MDS Add-in for Excel)
 

@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

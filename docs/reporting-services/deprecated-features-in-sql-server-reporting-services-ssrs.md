@@ -23,7 +23,6 @@ caps.latest.revision: 56
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Deprecated features in SQL Server Reporting Services in SQL Server 2016

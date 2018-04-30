@@ -22,7 +22,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component
   This procedure describes how to set breakpoints in the scripts that are used in the Script task and Script component.  

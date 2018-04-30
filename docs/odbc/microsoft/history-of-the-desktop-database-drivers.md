@@ -21,7 +21,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # History of the Desktop Database Drivers
 The following table shows the Desktop Database Drivers version history.  

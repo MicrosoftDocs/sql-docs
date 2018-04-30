@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Append Method (ADOX Procedures)
 Adds a new [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) object to the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

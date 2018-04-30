@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Overlapping Model and Member Permissions (Master Data Services)
 

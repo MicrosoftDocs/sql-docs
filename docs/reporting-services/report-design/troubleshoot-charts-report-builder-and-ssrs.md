@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Charts (Report Builder and SSRS)
   These issues can be helpful when working with charts.  

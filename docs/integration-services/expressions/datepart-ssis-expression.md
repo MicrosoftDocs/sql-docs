@@ -20,7 +20,6 @@ caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # DATEPART (SSIS Expression)
   Returns an integer representing a datepart of a date.  

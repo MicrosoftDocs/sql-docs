@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Expression Task
   The Expression Task creates and evaluates expressions that set variable values at runtime, using the Expression Builder. When you edit the task, the [Expression Builder](../../integration-services/expressions/expression-builder.md) is launched.  

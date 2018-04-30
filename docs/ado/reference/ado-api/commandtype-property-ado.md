@@ -22,7 +22,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CommandType Property (ADO)
 Indicates the type of a [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  

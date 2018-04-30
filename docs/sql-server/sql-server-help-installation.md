@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQL Server offline help and Help Viewer
 

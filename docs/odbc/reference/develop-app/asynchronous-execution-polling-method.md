@@ -19,7 +19,6 @@ caps.latest.revision: 40
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Asynchronous Execution (Polling Method)
 Prior to ODBC 3.8 and the Windows 7 SDK, asynchronous operations were permitted only on statement functions. For more information, see the **Executing Statement Operations Asynchronously**, later in this topic.  

@@ -22,7 +22,6 @@ caps.latest.revision: 38
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Dataset Properties Dialog Box, Filters
   Select **Filters** on the **Dataset Properties** dialog box to create filters for the dataset.  

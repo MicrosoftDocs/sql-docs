@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Data Retrieval issues with Reporting Services Reports
 The first step during report processing is to retrieve the report data for each dataset by running the dataset query. When you preview a report locally, your data source connections and credentials must use sufficient permissions to retrieve the data to your computer. When you run a report on the report server, the data source connections and credentials must use sufficient permissions to retrieve the data on the report server. Use this topic to help troubleshoot issues about report data retrieval.   

@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # DROP EXTERNAL FILE FORMAT (Transact-SQL)

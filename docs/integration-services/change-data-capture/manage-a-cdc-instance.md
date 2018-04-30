@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Manage a CDC Instance
   You can use the CDC Designer Console to view information about the instances that you create and to manage the operation of the instances.  

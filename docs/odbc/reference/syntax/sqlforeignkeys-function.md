@@ -26,7 +26,6 @@ caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLForeignKeys Function
 **Conformance**  

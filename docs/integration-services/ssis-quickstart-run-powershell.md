@@ -13,7 +13,6 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Run an SSIS package with PowerShell
 This quick start tutorial demonstrates how to use a PowerShell script to connect to a database server and run an SSIS package.

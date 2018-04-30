@@ -25,7 +25,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # ODBC Test
 Microsoft® ODBC Test is an ODBC-enabled application that you can use to test ODBC drivers and the ODBC Driver Manager. ODBC 3.51 includes both ANSI and Unicode-enabled versions of ODBC Test. The corresponding files are as follows:  

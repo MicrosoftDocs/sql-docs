@@ -21,7 +21,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Views Delete Method Example (VB)
 The following code shows how to use the [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) method to delete a view from the catalog.  

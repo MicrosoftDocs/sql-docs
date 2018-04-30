@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Edit the Advanced Properties
   Use the **Advanced** tab to add special properties to the CDC instance.  

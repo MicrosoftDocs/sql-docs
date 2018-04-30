@@ -25,7 +25,6 @@ caps.latest.revision: 49
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Using an External Dataset with Reporting Services
   The **DataSet** object is central to supporting disconnected, distributed data scenarios with [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. The **DataSet** object is a memory-resident representation of data that provides a consistent relational programming model regardless of the data source. It can be used with multiple different data sources, with XML data, or to manage data local to the application. The **DataSet** object represents a complete set of data, including related tables, constraints, and relationships among the tables. Because of the **DataSet** object's versatility in storing and exposing data, your data may often be processed and transformed into a **DataSet** object before any reporting on that data occurs.  

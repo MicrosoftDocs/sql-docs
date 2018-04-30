@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Appendix - 1 (OracleToSQL)
 Quick view of the SSMA Console command line options:  

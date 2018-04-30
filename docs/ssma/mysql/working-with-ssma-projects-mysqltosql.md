@@ -25,7 +25,6 @@ caps.latest.revision: 20
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Working with SSMA Projects (MySQLToSQL)
 To migrate MySQL databases to SQL Server or SQL Azure, you must first create an SSMA project. The project is a file that contains the following information:  

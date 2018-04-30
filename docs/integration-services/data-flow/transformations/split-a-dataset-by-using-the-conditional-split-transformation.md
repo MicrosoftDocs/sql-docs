@@ -21,7 +21,6 @@ caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Split a Dataset by Using the Conditional Split Transformation
   To add and configure a Conditional Split transformation, the package must already include at least one Data Flow task and a source.  

@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Visual FoxPro ODBC Driver Programmer&#39;s Reference
 This section of the Visual FoxPro ODBC Driver documentation contains the following topics:  

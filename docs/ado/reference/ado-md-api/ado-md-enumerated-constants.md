@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO MD Enumerated Constants
 To assist debugging, the ADO MD enumerated constants list a value for each constant. However, this value is purely advisory, and may change from one release of ADO MD to another. Your code should only depend on the name, not the actual value, of enumerated constants.  

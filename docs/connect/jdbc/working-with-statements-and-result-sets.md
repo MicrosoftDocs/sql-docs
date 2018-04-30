@@ -17,7 +17,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Working with Statements and Result Sets
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LoadFromFile Method (ADO)
 Loads the contents of an existing file into a [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  

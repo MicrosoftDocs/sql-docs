@@ -19,7 +19,6 @@ caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Complete the Wizard (SQL Server Import and Export Wizard)
 After you specify whether you want to run the copy operation immediately, and after you optionally save the package that the wizard created, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Complete the Wizard**. On this page, you review the choices that you made in the wizard, and then click **Finish** to start the copy operation.

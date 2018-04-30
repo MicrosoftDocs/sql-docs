@@ -19,7 +19,6 @@ caps.latest.revision: 56
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Lesson 6: Adding Grouping and Totals (Reporting Services)
 In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  

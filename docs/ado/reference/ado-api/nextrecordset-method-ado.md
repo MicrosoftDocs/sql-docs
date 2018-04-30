@@ -24,7 +24,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # NextRecordset Method (ADO)
 Clears the current [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object and returns the next **Recordset** by advancing through a series of commands.  

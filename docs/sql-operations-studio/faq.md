@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # [!INCLUDE[name-sos](../includes/name-sos.md)] FAQ
 

@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Supported Data Types (Visual FoxPro ODBC Driver)
 The list of data types supported by the driver are presented through the ODBC API and in Microsoft Query.  

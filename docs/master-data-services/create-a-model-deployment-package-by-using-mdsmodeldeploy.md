@@ -17,7 +17,6 @@ caps.latest.revision: 13
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create a Model Deployment Package by Using MDSModelDeploy
 

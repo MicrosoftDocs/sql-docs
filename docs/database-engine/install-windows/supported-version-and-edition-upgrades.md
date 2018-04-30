@@ -22,7 +22,6 @@ caps.latest.revision: 148
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Supported Version and Edition Upgrades
 

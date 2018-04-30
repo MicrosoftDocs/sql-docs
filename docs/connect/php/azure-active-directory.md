@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "david-puglielli"
 ms.author: "v-dapugl"
 manager: "v-hakaka"
-ms.workload: "Inactive"
 ---
 # Connect Using Azure Active Directory Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -13,7 +13,6 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Deploy an SSIS project with PowerShell
 This quick start tutorial demonstrates how to use a PowerShell script to connect to a database server and deploy an SSIS project to the SSIS Catalog.

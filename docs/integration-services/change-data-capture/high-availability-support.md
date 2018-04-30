@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # High Availability Support
   The CDC Service for Oracle is designed for high availability. The following features provide part of the high availability support:  

@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Advanced Connection Properties
   Use the **Advanced Connection Properties** dialog box to add more connection parameters to the connection string.  

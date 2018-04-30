@@ -18,7 +18,6 @@ caps.latest.revision: 10
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Moving the Report Server Databases to Another Computer (SSRS Native Mode)

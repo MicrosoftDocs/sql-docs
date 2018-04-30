@@ -25,7 +25,6 @@ caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Delete a Data Source in Solution Explorer (SSAS Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

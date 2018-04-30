@@ -4,7 +4,7 @@ description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
 author: annashres 
 ms.author: anshrest 
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -153,6 +153,41 @@ If you have accidentally started SQL Server with another user, you must change o
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
+   ```
+
+## Rebuild system databases
+As a last resort, you can choose to rebuild the master and model databases back to default versions.
+
+> [!WARNING]
+> These steps will **DELETE all SQL Server system data** that you have configured! This includes information about your user databases (but not the user databases themselves). It will also delete other information stored in the system databases, including the following: master key information, any certs loaded in master, the SA Login password, job-related information from msdb, DB Mail information from msdb, and sp_configure options. Only use if you understand the implications!
+
+1. Stop SQL Server.
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Run **sqlservr** with the **force-setup** parameter. 
+
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
+   ```
+   
+   > [!WARNING]
+   > See the previous warning! Also, you must run this as the **mssql** user as shown here.
+
+1. After you see the message "Recovery is complete", press CTRL+C. This will shut down SQL Server
+
+1. Reconfigure the SA password.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-sa-password
+   ```
+   
+1. Start SQL Server and reconfigure the server. This includes restoring or re-attaching any user databases.
+
+   ```bash
+   sudo systemctl start mssql-server
    ```
 
 ## Common issues

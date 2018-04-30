@@ -22,7 +22,6 @@ caps.latest.revision: 35
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Secure Shared Data Source Items
   You can set security on a shared data source item to enable or disable access to it.  

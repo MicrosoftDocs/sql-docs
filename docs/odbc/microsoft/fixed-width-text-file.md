@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Fixed-Width Text File
 When the Text driver is used, the last column of a fixed-width text file can be variable length.

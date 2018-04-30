@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
-ms.workload: "On Demand"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Configure SQL Server Always On Availability Group on Windows and Linux (cross-platform)

@@ -26,7 +26,6 @@ caps.latest.revision: 46
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MSReportServer_ConfigurationSetting Members
   The MSReportServer_ConfigurationSetting class contains the following properties and methods.  

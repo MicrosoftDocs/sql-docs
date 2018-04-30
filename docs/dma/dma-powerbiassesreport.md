@@ -21,7 +21,6 @@ author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
 
-ms.workload: "Inactive"
 ---
 
 # Report on your consolidated assessments by using Power BI (Data Migration Assistant)

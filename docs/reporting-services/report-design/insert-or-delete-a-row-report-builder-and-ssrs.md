@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Insert or Delete a Row (Report Builder and SSRS)
 You can add or delete rows in a tablix data region in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report. The tablix data region can be a table, a matrix, or a list. The following procedures do not apply to the chart and gauge data regions.  

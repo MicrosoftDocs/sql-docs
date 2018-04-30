@@ -21,7 +21,6 @@ caps.latest.revision: 21
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # About Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

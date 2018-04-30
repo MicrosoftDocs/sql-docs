@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Append Method (ADOX Keys)
 Adds a new [Key](../../../ado/reference/adox-api/key-object-adox.md) object to the [Keys](../../../ado/reference/adox-api/keys-collection-adox.md) collection.  

@@ -22,7 +22,6 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Copy a Package in SQL Server Data Tools
   This topic describes how to create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package by copying an existing package, and how to update the **Name** and **GUID** properties of the new package.  

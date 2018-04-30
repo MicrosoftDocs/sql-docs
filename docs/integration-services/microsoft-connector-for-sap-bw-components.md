@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Microsoft Connector for SAP BW Components
   This section contains topics that describe the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW:  

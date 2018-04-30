@@ -16,7 +16,6 @@ ms.topic: "article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Add the Report Viewer web part to a web page
 

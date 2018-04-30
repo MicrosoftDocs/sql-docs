@@ -37,7 +37,6 @@ caps.latest.revision: 70
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Reorganize and Rebuild Indexes

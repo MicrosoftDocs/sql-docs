@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Add a Page Break (Report Builder and SSRS)
   You can add a page break to rectangles, data regions, or groups within data regions to control the amount of information on each page. Adding page breaks can improve the performance of published reports because only the items on each page have to be processed as you view the report. When the whole report is a single page, all items must be processed before you can view the report.  

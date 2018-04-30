@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_dms_external_work (Transact-SQL)

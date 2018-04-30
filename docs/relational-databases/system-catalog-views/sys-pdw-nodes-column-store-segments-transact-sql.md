@@ -18,7 +18,6 @@ author: "hirokib"
 ms.author: elbutter
 manager: jrj
 
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)

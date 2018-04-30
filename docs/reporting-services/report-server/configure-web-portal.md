@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Configure the web portal
 

@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Work with simulated data in Reporting Services mobile reports
 When you place a gallery element on the design surface, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] immediately generates simulated data for that element. This data serves a number of useful purposes when creating mobile reports.   

@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Step 2: Initialize the Application
 The second step is to initialize the application, as shown in the following illustration. Exactly what is done here varies with the application.  

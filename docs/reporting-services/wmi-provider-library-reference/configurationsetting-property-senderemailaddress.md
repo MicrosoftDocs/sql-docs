@@ -25,7 +25,6 @@ caps.latest.revision: 17
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - SenderEmailAddress
   Gets the address used to send e-mail from the report server. Read-only.  

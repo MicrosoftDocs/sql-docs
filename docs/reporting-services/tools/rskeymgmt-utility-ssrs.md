@@ -29,7 +29,6 @@ caps.latest.revision: 56
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # rskeymgmt Utility (SSRS)
   Extracts, restores, creates, and deletes the symmetric key used to protect sensitive report server data against unauthorized access. This utility is also used to join report server instances in a scale-out deployment. A *report server scale-out deployment* refers to multiple report server instances that share a single report server database.  

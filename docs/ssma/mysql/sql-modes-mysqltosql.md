@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Modes (MySQLToSQL)
 The SSMA for MySQL can operate in different SQL Modes, and can apply these modes differently for different clients.  

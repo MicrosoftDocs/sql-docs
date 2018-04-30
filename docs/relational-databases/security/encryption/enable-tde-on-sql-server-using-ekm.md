@@ -22,7 +22,6 @@ caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Enable TDE on SQL Server Using EKM

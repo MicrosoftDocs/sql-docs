@@ -31,7 +31,6 @@ caps.latest.revision: 13
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS)
   After you add a map or map layer to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report by using a wizard, you might want to change the way the map looks in the report. You can make improvements by considering the following ideas:  

@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Categorized Web Service Operations (Master Data Services)
 

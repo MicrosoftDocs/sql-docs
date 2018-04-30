@@ -18,7 +18,6 @@ caps.latest.revision: 19
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Turn on Reporting Services events for the SharePoint trace log (ULS)

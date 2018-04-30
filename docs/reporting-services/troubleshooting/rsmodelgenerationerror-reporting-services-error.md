@@ -20,7 +20,6 @@ caps.latest.revision: 17
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # rsModelGenerationError - Reporting Services Error
     

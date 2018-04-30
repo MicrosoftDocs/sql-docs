@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLAllocStmt (Visual FoxPro ODBC Driver)
 > [!NOTE]  

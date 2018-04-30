@@ -15,7 +15,6 @@ ms.topic: "article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Install the first Report Server in SharePoint mode
 

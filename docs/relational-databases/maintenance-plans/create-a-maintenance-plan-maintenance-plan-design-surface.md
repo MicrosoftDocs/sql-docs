@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Create a Maintenance Plan (Maintenance Plan Design Surface)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

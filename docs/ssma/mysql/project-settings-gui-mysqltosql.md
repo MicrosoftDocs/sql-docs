@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (GUI)  (MySQLToSQL)
 The GUI project settings let you configure how data appears on the **Data** tab and if to include data reports with assessment reports.  

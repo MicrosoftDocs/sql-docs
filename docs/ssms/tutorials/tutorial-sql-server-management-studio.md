@@ -27,7 +27,6 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
 ms.reviewer: "sstein"
-ms.workload: "Active"
 ---
 # Tutorials for SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

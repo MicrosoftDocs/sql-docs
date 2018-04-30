@@ -27,7 +27,6 @@ caps.latest.revision: 49
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

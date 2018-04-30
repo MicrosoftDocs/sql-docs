@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Viewing Test Case Reports (SybaseToSQL)
 The Test Case Report shows the test verification results and general test information. In case of a test failure, information about any mismatched data in verified objects is also displayed.  

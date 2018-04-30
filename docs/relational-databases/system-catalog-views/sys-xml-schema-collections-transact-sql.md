@@ -26,7 +26,6 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.xml_schema_collections (Transact-SQL)

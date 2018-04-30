@@ -24,7 +24,6 @@ caps.latest.revision: 81
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using Connection String Keywords with SQL Server Native Client

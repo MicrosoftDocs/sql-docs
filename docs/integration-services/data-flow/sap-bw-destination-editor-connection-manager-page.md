@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SAP BW Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **SAP BW Destination Editor** to select the SAP BW connection manager that the SAP BW destination will use. On this page, you also select the parameters for loading the data into the SAP Netweaver BW system.  

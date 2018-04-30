@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # NamedParameters Property (ADO)
 Indicates whether parameter names should be passed to the provider.  

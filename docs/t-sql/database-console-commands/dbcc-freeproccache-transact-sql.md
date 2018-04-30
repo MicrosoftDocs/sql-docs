@@ -31,7 +31,6 @@ caps.latest.revision: 61
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # DBCC FREEPROCCACHE (Transact-SQL)

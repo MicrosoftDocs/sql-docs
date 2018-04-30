@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

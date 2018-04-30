@@ -23,7 +23,6 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Redistributing ADOMD.NET
   When you write applications that use ADOMD.NET, you must redistribute the appropriate version of ADOMD.NET along with your application. To redistribute ADOMD.NET, include the ADOMD.NET setup program in your application's setup program.  

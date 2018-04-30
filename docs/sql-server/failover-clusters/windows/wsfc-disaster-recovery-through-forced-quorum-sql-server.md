@@ -21,7 +21,6 @@ caps.latest.revision: 21
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # WSFC Disaster Recovery through Forced Quorum (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Active"
 ---
 # Connecting to SQL Server with the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

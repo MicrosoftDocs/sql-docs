@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Receiving Results
 In ADO most commands result in some information returned to the caller. For commands returning rowset, the results are received in a **Recordset** object, which is probably the most used of the ADO objects.  

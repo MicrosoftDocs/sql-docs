@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.workload: "On Demand"
 ---
 # What's new for SQL Server 2017 on Linux
 

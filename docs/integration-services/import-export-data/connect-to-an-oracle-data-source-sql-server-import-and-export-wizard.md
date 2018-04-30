@@ -17,7 +17,6 @@ caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Connect to an Oracle Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to an **Oracle** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. There are several data providers that you can use to connect to Oracle.

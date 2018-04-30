@@ -17,7 +17,6 @@ caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Connecting to an Azure SQL database
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

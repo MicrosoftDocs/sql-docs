@@ -26,7 +26,6 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Database Dimensions - Create a Date type Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

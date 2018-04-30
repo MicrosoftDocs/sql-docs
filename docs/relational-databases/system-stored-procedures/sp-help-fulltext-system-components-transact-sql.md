@@ -24,7 +24,6 @@ caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_help_fulltext_system_components (Transact-SQL)

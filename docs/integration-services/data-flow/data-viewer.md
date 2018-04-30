@@ -21,7 +21,6 @@ caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Viewer
   If a path is configured to use a data viewer, the Data Viewer displays the data buffer by buffer as data moves between two data flow components.  

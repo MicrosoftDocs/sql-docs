@@ -26,7 +26,6 @@ caps.latest.revision: 70
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # backupset (Transact-SQL)

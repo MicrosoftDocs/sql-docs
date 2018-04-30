@@ -20,7 +20,6 @@ caps.latest.revision: 17
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # System Settings (Master Data Services)
 

@@ -19,7 +19,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SortDirection Property (RDS)
 Indicates whether a sort order is ascending or descending.  

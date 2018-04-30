@@ -22,7 +22,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ErrorValueEnum
 Specifies the type of ADO run-time error.  

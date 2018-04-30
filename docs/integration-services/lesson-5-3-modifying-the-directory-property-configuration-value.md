@@ -19,7 +19,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Lesson 5-3 - Modifying the Directory Property Configuration Value
 In this task, you will modify the configuration setting, stored in the SSISTutorial.dtsConfig file, for the Value property of the package-level variable `User::varFolderName`. The variable updates the Directory property of the Foreach Loop container. The modified value will point to the **New Sample Data** folder that you created in the previous task. After you modify the configuration setting and run the package, the Directory property will be updated by the variable, using the value populated from the configuration file instead of the directory value originally configured in the package.  

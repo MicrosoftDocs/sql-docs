@@ -15,7 +15,6 @@ ms.custom: "sql-linux"
 ms.technology: database-engine
 helpviewer_keywords: 
   - "Linux, AAD authentication"
-ms.workload: "On Demand"
 ---
 # Active Directory authentication for SQL Server on Linux
 

@@ -41,7 +41,6 @@ caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # GETUTCDATE (Transact-SQL)

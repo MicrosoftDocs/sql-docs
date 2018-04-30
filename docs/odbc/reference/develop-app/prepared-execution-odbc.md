@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Prepared Execution ODBC
 Prepared execution is an efficient way to execute a statement more than once. The statement is first compiled, or *prepared,* into an access plan. The access plan is then executed one or more times at a later time. For more information about access plans, see [Processing an SQL Statement](../../../odbc/reference/processing-a-sql-statement.md).  

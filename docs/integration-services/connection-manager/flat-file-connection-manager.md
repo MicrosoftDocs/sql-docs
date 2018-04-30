@@ -29,7 +29,6 @@ caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Flat File Connection Manager
   A Flat File connection manager enables a package to access data in a flat file. For example, the Flat File source and destination can use Flat File connection managers to extract and load data.  

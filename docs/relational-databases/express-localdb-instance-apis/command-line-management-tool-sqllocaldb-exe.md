@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Command-Line Management Tool: SqlLocalDB.exe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

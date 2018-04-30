@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RecordCreateOptionsEnum
 Specifies whether an existing **Record** should be opened or a new **Record** created for the [Record](../../../ado/reference/ado-api/record-object-ado.md) object [Open](../../../ado/reference/ado-api/open-method-ado-record.md) method. The values can be combined with an AND operator.  

@@ -13,7 +13,6 @@ ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
 

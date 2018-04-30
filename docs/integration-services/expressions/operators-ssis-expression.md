@@ -22,7 +22,6 @@ caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Operators (SSIS Expression)
   This section describes the operators the expression language provides and the operator precedence and associativity that the expression evaluator uses.  

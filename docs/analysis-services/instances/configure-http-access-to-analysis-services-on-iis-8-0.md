@@ -19,7 +19,6 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Configure HTTP Access to Analysis Services on IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

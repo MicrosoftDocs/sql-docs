@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Ordinal Property (ADO MD Cell)
 Uniquely identifies a [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) by its position within a cellset.  

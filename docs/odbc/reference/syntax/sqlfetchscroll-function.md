@@ -26,7 +26,6 @@ caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLFetchScroll Function
 **Conformance**  

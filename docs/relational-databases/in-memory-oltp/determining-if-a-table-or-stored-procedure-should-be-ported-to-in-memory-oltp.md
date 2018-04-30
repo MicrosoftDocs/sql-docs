@@ -20,7 +20,6 @@ caps.latest.revision: 39
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP

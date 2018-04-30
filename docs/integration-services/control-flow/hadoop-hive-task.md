@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Hadoop Hive Task
   Use the Hadoop Hive Task to run Hive script on a Hadoop cluster.  

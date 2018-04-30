@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Power Pivot Data Refresh with SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

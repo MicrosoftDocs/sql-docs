@@ -24,7 +24,6 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Comment MDX double slash
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

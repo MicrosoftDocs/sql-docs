@@ -39,7 +39,6 @@ caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CONTAINSTABLE (Transact-SQL)

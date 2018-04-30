@@ -16,7 +16,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Active"
 ---
 # Download the Microsoft Drivers for PHP for SQL Server
 

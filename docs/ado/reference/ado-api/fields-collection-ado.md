@@ -24,7 +24,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Fields Collection (ADO)
 Contains all the [Field](../../../ado/reference/ado-api/field-object.md) objects of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) or [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  

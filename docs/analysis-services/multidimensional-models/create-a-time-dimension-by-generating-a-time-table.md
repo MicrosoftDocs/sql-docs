@@ -27,7 +27,6 @@ caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Create a Time Dimension by Generating a Time Table
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

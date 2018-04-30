@@ -21,7 +21,6 @@ caps.latest.revision: 23
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Configure a Multi-Homed Computer for SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

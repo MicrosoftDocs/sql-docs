@@ -20,7 +20,6 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # CSDL Annotations for Business Intelligence (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

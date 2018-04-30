@@ -20,7 +20,6 @@ caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # DATEDIFF (SSIS Expression)
   Returns the number of date and time boundaries crossed between two specified dates. The *datepart* parameter identifies which date and time boundaries to compare.  

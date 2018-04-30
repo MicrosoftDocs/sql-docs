@@ -25,7 +25,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Columns Collection (ADOX)
 Contains all [Column](../../../ado/reference/adox-api/column-object-adox.md) objects of a table, index, or key.  

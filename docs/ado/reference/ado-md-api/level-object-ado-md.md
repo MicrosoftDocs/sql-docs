@@ -22,7 +22,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Level Object (ADO MD)
 Contains a set of members, each of which has the same rank within a hierarchy.  

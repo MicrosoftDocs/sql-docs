@@ -17,7 +17,6 @@ caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Quality Services Concepts
 

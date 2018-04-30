@@ -25,7 +25,6 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Database Dimensions - Modify or Delete a Database Dimension in Solution Explorer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

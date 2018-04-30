@@ -25,7 +25,6 @@ caps.latest.revision: 22
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Data Alert Designer
 

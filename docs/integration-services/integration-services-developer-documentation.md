@@ -27,7 +27,6 @@ caps.latest.revision: 76
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Integration Services Developer Documentation
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a completely rewritten object model, which has been enhanced with many features that make extending and programming packages easier, more flexible, and more powerful. Developers can extend and program almost every aspect of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  

@@ -142,7 +142,6 @@ caps.latest.revision: 51
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Showplan Logical and Physical Operators Reference

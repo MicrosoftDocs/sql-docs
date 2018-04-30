@@ -23,7 +23,6 @@ caps.latest.revision: 23
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Pin Reporting Services items to Power BI Dashboards
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] enables users to pin [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report items from the report viewer toolbar to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard as a new tile.   To pin, your administrator needs to first integrate your report server with Azure Active Directory and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  

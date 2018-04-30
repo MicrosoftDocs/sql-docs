@@ -16,7 +16,6 @@ ms.topic: "article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Configure Reporting Services to use a subject alternative name
 

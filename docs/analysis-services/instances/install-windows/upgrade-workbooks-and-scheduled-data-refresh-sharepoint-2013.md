@@ -17,7 +17,6 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

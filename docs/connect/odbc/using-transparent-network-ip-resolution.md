@@ -17,7 +17,6 @@ caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Using Transparent Network IP Resolution
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

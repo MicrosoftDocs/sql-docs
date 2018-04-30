@@ -29,7 +29,6 @@ caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

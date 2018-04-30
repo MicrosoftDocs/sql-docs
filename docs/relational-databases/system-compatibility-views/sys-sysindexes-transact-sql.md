@@ -27,7 +27,6 @@ caps.latest.revision: 57
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

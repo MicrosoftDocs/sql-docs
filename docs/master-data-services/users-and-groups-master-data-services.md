@@ -22,7 +22,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Users and Groups (Master Data Services)
 

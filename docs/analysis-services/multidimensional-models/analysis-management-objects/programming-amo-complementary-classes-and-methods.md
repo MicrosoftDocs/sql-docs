@@ -29,7 +29,6 @@ caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Programming AMO Complementary Classes and Methods
   This topic contains the following sections:  

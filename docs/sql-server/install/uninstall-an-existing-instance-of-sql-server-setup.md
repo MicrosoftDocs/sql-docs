@@ -22,7 +22,6 @@ caps.latest.revision: 74
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -27,7 +27,6 @@ caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

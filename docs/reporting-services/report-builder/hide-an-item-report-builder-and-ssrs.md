@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Hide an Item (Report Builder and SSRS)
   Set the visibility of a report item when you want to conditionally hide an item based on a report parameter or some other expression that you specify.  

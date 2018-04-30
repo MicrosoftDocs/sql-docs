@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # GetSchemaObject Method (ADO MD)
 Retrieves an ADO MD schema object ([Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md), or [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)) by its [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  

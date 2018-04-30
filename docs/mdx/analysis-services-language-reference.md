@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Analysis Services Language Reference
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

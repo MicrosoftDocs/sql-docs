@@ -22,7 +22,6 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Edit or Delete Partitions (Analyisis Services - Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

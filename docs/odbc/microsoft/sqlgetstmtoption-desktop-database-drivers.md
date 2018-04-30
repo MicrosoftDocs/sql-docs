@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLGetStmtOption (Desktop Database Drivers)
 The bookmarks returned by an *fOption* of SQL_GETBOOKMARK are only valid while the query is open and are invalidated when the query is reissued. Persistent bookmarks are not supported.

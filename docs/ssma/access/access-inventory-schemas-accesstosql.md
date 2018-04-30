@@ -47,7 +47,6 @@ caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Access Inventory Schemas (AccessToSQL)
 The following sections describe the tables that are created by SSMA when you export Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

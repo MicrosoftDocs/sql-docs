@@ -48,7 +48,6 @@ caps.latest.revision: 72
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Transformation Custom Properties
   In addition to the properties that are common to most data flow objects in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model, many data flow objects have custom properties that are specific to the object. These custom properties are available only at run time, and are not documented in the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Reference Documentation.  

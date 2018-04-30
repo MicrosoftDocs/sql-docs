@@ -22,7 +22,6 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MDX Named Sets - Creating Session-Scoped Named Sets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

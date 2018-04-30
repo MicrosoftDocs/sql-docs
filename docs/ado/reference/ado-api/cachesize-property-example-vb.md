@@ -21,7 +21,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CacheSize Property Example (VB)
 This example uses the [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache.  

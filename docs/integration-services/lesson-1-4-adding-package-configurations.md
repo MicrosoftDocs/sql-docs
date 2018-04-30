@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Lesson 1-4 - Adding Package Configurations
 In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  

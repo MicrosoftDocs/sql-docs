@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ReadyState Property (RDS)
 Indicates the progress of a [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object as it retrieves data into its [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

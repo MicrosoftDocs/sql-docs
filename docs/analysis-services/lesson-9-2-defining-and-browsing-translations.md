@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Lesson 9-2 - Defining and Browsing Translations
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

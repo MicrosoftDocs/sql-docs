@@ -27,7 +27,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Connection Strings
 A connection string contains information used for establishing a connection. A complete connection string contains all the information needed to establish a connection. The connection string is a series of keyword/value pairs separated by semicolons. (For the complete syntax of a connection string, see the [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) function description.) The connection string is used by:  

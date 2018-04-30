@@ -20,7 +20,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO Collections
 The relationships between these collections and the ADO objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  

@@ -21,7 +21,6 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Convert Data Type by Using Data Conversion Transformation
   To add and configure a Data Conversion transformation, the package must already include at least one Data Flow task and one source.  

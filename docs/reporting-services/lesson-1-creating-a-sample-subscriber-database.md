@@ -19,7 +19,6 @@ caps.latest.revision: 45
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Lesson 1: Creating a Sample Subscriber Database

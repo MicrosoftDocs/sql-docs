@@ -21,7 +21,6 @@ caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Add Analysis Services Connection Manager Dialog Box UI Reference
   Use the **Add Analysis Services Connection Manager** dialog box to create a connection to a server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], or to edit connection properties.  

@@ -21,7 +21,6 @@ caps.latest.revision: 43
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # XML Device Information Settings
   The following table lists the device information settings for rendering in XML format.  

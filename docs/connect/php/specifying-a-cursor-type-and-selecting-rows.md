@@ -20,7 +20,6 @@ caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Specifying a Cursor Type and Selecting Rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

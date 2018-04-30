@@ -25,7 +25,6 @@ caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Multicast Transformation
   The Multicast transformation distributes its input to one or more outputs. This transformation is similar to the Conditional Split transformation. Both transformations direct an input to multiple outputs. The difference between the two is that the Multicast transformation directs every row to every output, and the Conditional Split directs a row to a single output. For more information, see [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  

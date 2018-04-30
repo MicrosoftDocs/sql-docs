@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Calling Natively Compiled Stored Procedures from Data Access Applications

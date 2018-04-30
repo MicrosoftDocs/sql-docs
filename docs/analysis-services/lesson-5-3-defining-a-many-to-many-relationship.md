@@ -19,7 +19,6 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Lesson 5-3 - Defining a Many-to-Many Relationship
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

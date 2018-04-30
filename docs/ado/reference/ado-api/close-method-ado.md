@@ -24,7 +24,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Close Method (ADO)
 Closes an open object and any dependent objects.  

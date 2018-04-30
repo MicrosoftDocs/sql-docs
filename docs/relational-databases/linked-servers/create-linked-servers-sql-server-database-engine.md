@@ -24,7 +24,6 @@ caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Create Linked Servers (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

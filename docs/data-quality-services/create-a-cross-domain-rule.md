@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create a Cross-Domain Rule
 

@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # KeyTypeEnum
 Specifies the type of [Key](../../../ado/reference/adox-api/key-object-adox.md): primary, foreign, or unique.  

@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Recordset Dynamic Properties in XML
 The following Recordset provider-specific properties (from the Client Cursor Engine) are currently persisted into the XML format:  

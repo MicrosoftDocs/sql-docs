@@ -16,7 +16,6 @@ caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # High availability and data protection for availability group configurations
 

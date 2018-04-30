@@ -20,7 +20,6 @@ caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Accessing the WMI Provider Programmatically
 

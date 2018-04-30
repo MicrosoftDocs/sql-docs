@@ -18,7 +18,6 @@ author: "MightyPen"
 ms.author: "genemi"
 ms.reviewer: "mathoma" 
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Generate Scripts (SQL Server Management Studio)

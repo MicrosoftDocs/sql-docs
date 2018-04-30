@@ -24,7 +24,6 @@ caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Logical Functions - IIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

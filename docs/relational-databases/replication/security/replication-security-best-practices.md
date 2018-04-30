@@ -22,7 +22,6 @@ caps.latest.revision: 42
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Replication Security Best Practices
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

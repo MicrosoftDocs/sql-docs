@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Native to SharePoint Migration (SSRS)
 

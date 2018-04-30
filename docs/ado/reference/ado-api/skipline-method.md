@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SkipLine Method
 Skips one entire line when reading a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  

@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Jumping to a Record
 The [Move](../../../ado/reference/ado-api/move-method-ado.md) method allows you to move forward or backward in the **Recordset** a specified number of records by using the following syntax:  

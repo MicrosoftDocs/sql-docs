@@ -21,7 +21,6 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Create a Dimension Using the Dimension Wizard
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

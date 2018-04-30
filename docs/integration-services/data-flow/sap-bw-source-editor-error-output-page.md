@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SAP BW Source Editor (Error Output Page)
   Use the **Error Output** page of the **SAP BW Source Editor** to select error handling options and to set properties on error output columns.  

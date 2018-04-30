@@ -20,7 +20,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Formal Shape Grammar
 This is the formal grammar for creating any shape command:  

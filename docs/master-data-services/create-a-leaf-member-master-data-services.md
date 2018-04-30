@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create a Leaf Member (Master Data Services)
 

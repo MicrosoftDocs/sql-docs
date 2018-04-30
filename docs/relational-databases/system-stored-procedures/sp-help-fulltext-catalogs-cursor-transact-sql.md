@@ -24,7 +24,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_help_fulltext_catalogs_cursor (Transact-SQL)

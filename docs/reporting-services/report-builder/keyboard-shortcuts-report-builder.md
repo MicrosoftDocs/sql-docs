@@ -21,7 +21,6 @@ caps.latest.revision: 20
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Keyboard Shortcuts (Report Builder)
   When you create and edit paginated [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports in Report Builder, you have access to all the shortcut keys for navigation that are provided by the Windows environment. You can select from several standard keyboard mapping schemes.  

@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Command Line Options in SSMA Console (DB2ToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

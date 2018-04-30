@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Troubleshooting (DB2ToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

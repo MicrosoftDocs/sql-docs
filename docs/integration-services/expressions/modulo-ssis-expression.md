@@ -21,7 +21,6 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # (Modulo) (SSIS Expression)
   Provides the integer remainder after dividing the first numeric expression by the second one.  

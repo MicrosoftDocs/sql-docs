@@ -25,7 +25,6 @@ caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Choose a Language When Creating a Full-Text Index

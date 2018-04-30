@@ -17,7 +17,6 @@ caps.latest.revision: 13
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)
 

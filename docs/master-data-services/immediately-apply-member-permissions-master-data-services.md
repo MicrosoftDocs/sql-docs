@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Immediately Apply Member Permissions (Master Data Services)
 

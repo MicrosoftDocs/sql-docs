@@ -22,7 +22,6 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SELECT (Transact-SQL)

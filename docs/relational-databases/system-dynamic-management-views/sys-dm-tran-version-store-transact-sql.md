@@ -26,7 +26,6 @@ caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_tran_version_store (Transact-SQL)

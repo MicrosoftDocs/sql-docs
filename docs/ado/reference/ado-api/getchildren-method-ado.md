@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # GetChildren Method (ADO)
 Returns a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) whose rows represent the children of a collection [Record](../../../ado/reference/ado-api/record-object-ado.md).  

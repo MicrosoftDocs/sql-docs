@@ -21,7 +21,6 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Server Property (RDS)
 Indicates the Internet Information Services (IIS) name and communication protocol.  

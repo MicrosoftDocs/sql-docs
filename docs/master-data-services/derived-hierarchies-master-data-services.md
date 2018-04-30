@@ -21,7 +21,6 @@ caps.latest.revision: 13
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Derived Hierarchies (Master Data Services)
 

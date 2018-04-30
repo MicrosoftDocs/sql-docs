@@ -27,7 +27,6 @@ caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Flat File Source
   The Flat File source reads data from a text file. The text file can be in delimited, fixed width, or mixed format.  

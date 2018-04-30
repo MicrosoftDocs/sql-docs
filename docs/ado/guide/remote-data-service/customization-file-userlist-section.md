@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Customization File UserList Section
 The **userlist** section pertains to the **connect** section with the same section *identifier* parameter.  

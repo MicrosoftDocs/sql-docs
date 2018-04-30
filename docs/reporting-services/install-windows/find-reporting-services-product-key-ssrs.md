@@ -15,7 +15,6 @@ ms.topic: "get-started-article"
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # How to find the product key for SQL Server 2017 Reporting Services
 

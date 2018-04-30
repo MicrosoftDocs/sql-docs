@@ -40,7 +40,6 @@ caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "Active"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of SQL Server 2017

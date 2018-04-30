@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Step 4: Populate the Details Text Box
 To populate the Details text box, create a new subroutine named **recFields** and insert the following code:  

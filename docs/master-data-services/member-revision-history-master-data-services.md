@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Member Revision History (Master Data Services)
 

@@ -22,7 +22,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Procedure Object (ADOX)
 Represents a stored procedure. When used in conjunction with the ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object, the **Procedure** object can be used for adding, deleting, or modifying stored procedures.  

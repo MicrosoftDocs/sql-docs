@@ -21,7 +21,6 @@ caps.latest.revision: 183
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # What&#39;s New in Integration Services in SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]

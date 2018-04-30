@@ -28,7 +28,6 @@ caps.latest.revision: 101
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO NET Source
   The ADO NET source consumes data from a .NET provider and makes the data available to the data flow.  

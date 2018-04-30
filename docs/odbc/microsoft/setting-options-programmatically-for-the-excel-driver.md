@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Setting Options Programmatically for the Excel Driver
 |Option|Description|Method|  

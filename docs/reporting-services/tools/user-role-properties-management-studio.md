@@ -20,7 +20,6 @@ caps.latest.revision: 27
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # User Role Properties (Management Studio)
   Use this page to view which tasks are included in an item-level role definition. You can also use this page to change the task list or modify a role description.  

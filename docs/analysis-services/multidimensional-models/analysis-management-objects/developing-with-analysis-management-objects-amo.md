@@ -23,7 +23,6 @@ caps.latest.revision: 47
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Developing with Analysis Management Objects (AMO)
 Analysis Management Objects (AMO) is the complete library of programmatically accessed objects that enables an application to manage a running instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].

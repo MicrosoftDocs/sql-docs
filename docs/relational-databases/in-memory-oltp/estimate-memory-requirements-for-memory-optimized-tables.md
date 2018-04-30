@@ -17,7 +17,6 @@ caps.latest.revision: 32
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables

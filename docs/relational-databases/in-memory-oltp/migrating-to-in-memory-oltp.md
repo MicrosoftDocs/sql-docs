@@ -17,7 +17,6 @@ caps.latest.revision: 34
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Migrating to In-Memory OLTP

@@ -23,7 +23,6 @@ caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Troubleshooting Tools for Package Execution
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  

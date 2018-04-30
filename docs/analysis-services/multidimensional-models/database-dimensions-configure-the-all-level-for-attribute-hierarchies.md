@@ -28,7 +28,6 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Database Dimensions - Configure the (All) Level for Attribute Hierarchies
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

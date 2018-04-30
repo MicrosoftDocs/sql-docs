@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Aggregate Functions, the CALC Function, and the NEW Keyword
 Data shaping supports the following functions. The name assigned to the chapter containing the column to be operated on is the *chapter-alias*.  

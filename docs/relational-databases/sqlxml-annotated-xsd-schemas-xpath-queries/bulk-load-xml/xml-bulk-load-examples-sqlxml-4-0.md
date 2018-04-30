@@ -38,7 +38,6 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # XML Bulk Load Examples (SQLXML 4.0)

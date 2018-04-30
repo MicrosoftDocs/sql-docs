@@ -29,7 +29,7 @@ manager: "mblythe"
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supports [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET script as the script language that can be processed by the RS.exe utility, a script host that runs on the report server.  
   
 ## Reporting Services SharePoint mode PowerShell cmdlets and samples  
- ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode includes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cmdlets for report server administration.  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
     -   List Data Extensions  
   
 ## Reporting Services Object model and Powershell samples  
- ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")  
   
  PowerShell calling the core object model and for the most part valid for SharePoint and native mode, for example the migration work, subscription work, and more related samples for subscriptions work in SQL15.  
   
@@ -52,19 +52,19 @@ manager: "mblythe"
   
 -   [Use PowerShell to Create an Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
--   See the section “Access the WMI classes using PowerShell” in [Access the Reporting Services WMI Provider](tools/access-the-reporting-services-wmi-provider.md).  
+-   See the section “Access the WMI classes using PowerShell” in [Access the Reporting Services WMI Provider](access-the-reporting-services-wmi-provider.md).  
   
 -   [How to Administer SSRS using PowerShell](http://curah.microsoft.com/13107/how-to-administer-ssrs-using-powershell).scriptin  
   
 ## RS.exe scripting samples  
   
--   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 -   For additional script, application, and extension examples, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
- [RS.exe Utility &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)   
- [Script Deployment and Administrative Tasks](tools/script-deployment-and-administrative-tasks.md)   
- [Script with the rs.exe Utility and the Web Service](tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
+ [RS.exe Utility &#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
+ [Script Deployment and Administrative Tasks](script-deployment-and-administrative-tasks.md)   
+ [Script with the rs.exe Utility and the Web Service](script-with-the-rs-exe-utility-and-the-web-service.md)  
   
   

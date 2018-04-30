@@ -30,7 +30,7 @@ manager: "mblythe"
   
  Tasks can be performed only if they are part of a role and that role is included in a role assignment. Thus, if the View Models task is not included in a role, or that role is not included in a role assignment, users cannot view report models. The following diagram shows how permissions are combined into tasks, and how tasks are combined into roles that can be used for specific role assignments.  
   
- ![Permissions and task diagram](media/report-securityobjects.gif "Permissions and task diagram")  
+ ![Permissions and task diagram](../media/report-securityobjects.gif "Permissions and task diagram")  
 Permissions and task diagram  
   
 ## System and Item Level Tasks  
@@ -38,12 +38,12 @@ Permissions and task diagram
   
 |Category|Description|  
 |--------------|-----------------|  
-|[Item-Level Tasks](security/tasks-and-permissions-item-level-tasks.md)|Actions that are performed on items managed by a report server, such as folders, reports, report models, and resources.<br /><br /> Item-level tasks are scoped to the report server folder namespace. All items that you access through the folders on a report server or through URL access are secured by role assignments that include item-level tasks.|  
-|[System-Level Tasks](security/tasks-and-permissions-system-level-tasks.md)|Actions that are performed at the system level, such as managing jobs or shared schedules that can be used with many items. System-level tasks are scoped outside of the report server folder namespace.|  
+|[Item-Level Tasks](tasks-and-permissions-item-level-tasks.md)|Actions that are performed on items managed by a report server, such as folders, reports, report models, and resources.<br /><br /> Item-level tasks are scoped to the report server folder namespace. All items that you access through the folders on a report server or through URL access are secured by role assignments that include item-level tasks.|  
+|[System-Level Tasks](tasks-and-permissions-system-level-tasks.md)|Actions that are performed at the system level, such as managing jobs or shared schedules that can be used with many items. System-level tasks are scoped outside of the report server folder namespace.|  
   
 ## See Also  
- [Role Definitions](security/role-definitions.md)   
- [Predefined Roles](security/role-definitions-predefined-roles.md)   
- [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Role Definitions](role-definitions.md)   
+ [Predefined Roles](role-definitions-predefined-roles.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -112,8 +112,8 @@ manager: "mblythe"
 ## See Also  
  [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
  [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
- [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md)   
- [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [E-Mail Delivery in Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

@@ -34,7 +34,7 @@ manager: "mblythe"
   
  The following diagram illustrates a role assignment that maps a group and a specific user to the **Publisher** role for Folder B.  
   
- ![Role assignments diagram](media/report-securityarch.gif "Role assignments diagram")  
+ ![Role assignments diagram](../media/report-securityarch.gif "Role assignments diagram")  
 Role assignments diagram  
   
 ## System-Level and Item-Level Role Assignments  
@@ -56,13 +56,13 @@ Role assignments diagram
 ## Predefined Role Assignments  
  By default, predefined role assignments are implemented that allow local administrators to manage the report server. You must add additional role assignments to grant access to other users.  
   
- For more information about the predefined role assignments that provide default security, see [Predefined Roles](security/role-definitions-predefined-roles.md).  
+ For more information about the predefined role assignments that provide default security, see [Predefined Roles](role-definitions-predefined-roles.md).  
   
 ## See Also  
- [Create, Delete, or Modify a Role &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)   
- [Grant User Access to a Report Server &#40;Report Manager&#41;](security/grant-user-access-to-a-report-server.md)   
- [Modify or Delete a Role Assignment &#40;Report Manager&#41;](security/role-assignments-modify-or-delete.md)   
- [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Create, Delete, or Modify a Role &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
+ [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md)   
+ [Modify or Delete a Role Assignment &#40;Report Manager&#41;](role-assignments-modify-or-delete.md)   
+ [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)  
   
   

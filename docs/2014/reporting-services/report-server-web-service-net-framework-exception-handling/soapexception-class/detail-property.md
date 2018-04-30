@@ -71,6 +71,6 @@ manager: "jhubbard"
 ## See Also  
  [Introducing Exception Handling in Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException Class](reporting-services-soapexception-class.md)   
- [Using the Detail Property to Handle Specific Errors](../../../database-engine/errors.md)  
+ [Using the Detail Property to Handle Specific Errors](best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

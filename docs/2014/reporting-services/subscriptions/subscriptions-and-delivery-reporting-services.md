@@ -36,7 +36,7 @@ manager: "mblythe"
  Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]  
->  Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] you can transfer the ownership of a subscription programmatically. There is no user interface you can use to transfer ownership of subscriptions. For more information, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>and [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+>  Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] you can transfer the ownership of a subscription programmatically. There is no user interface you can use to transfer ownership of subscriptions. For more information, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>and [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **In this topic:**  
   
@@ -56,21 +56,21 @@ manager: "mblythe"
   
  **Topics In this section:**  
   
--   [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md) Describes report server e-mail delivery operation and configuration.  
+-   [E-Mail Delivery in Reporting Services](e-mail-delivery-in-reporting-services.md) Describes report server e-mail delivery operation and configuration.  
   
--   [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md) Describes report server file share delivery operation and configuration.  
+-   [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) Describes report server file share delivery operation and configuration.  
   
--   [SharePoint Library Delivery in Reporting Services](subscriptions/sharepoint-library-delivery-in-reporting-services.md) Describes subscription delivery to a SharePoint library.  
+-   [SharePoint Library Delivery in Reporting Services](sharepoint-library-delivery-in-reporting-services.md) Describes subscription delivery to a SharePoint library.  
   
--   [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md) Provides information about using data-driven subscriptions to customize report output at run time.  
+-   [Data-Driven Subscriptions](data-driven-subscriptions.md) Provides information about using data-driven subscriptions to customize report output at run time.  
   
 -   [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
--   [Create and Manage Subscriptions for SharePoint Mode Report Servers](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+-   [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
--   [Monitor Reporting Services Subscriptions](subscriptions/monitor-reporting-services-subscriptions.md)  
+-   [Monitor Reporting Services Subscriptions](monitor-reporting-services-subscriptions.md)  
   
--   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+-   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)  
   
 ##  <a name="bkmk_subscription_scenarios"></a> Subscription and Delivery Scenarios  
  For each subscription, you configure delivery options and the available options are determined by the delivery extension you choose. A delivery extension is a module that supports some manner of distribution. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes several delivery extensions and delivery extension may be available through third-party vendors.  
@@ -91,7 +91,7 @@ manager: "mblythe"
   
  Data-driven subscriptions get subscription information at run time by querying an external data source that provides values used to specify a recipient, report parameters, or application format. You might use data-driven subscriptions if you have a very large recipient list or if you want to vary report output for each recipient. To use data-driven subscriptions, you must have expertise in building queries and an understanding of how parameters are used. Report server administrators typically create and manage these subscriptions. For more information, see the following:  
   
--   [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)  
+-   [Data-Driven Subscriptions](data-driven-subscriptions.md)  
   
 -   [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
   
@@ -170,9 +170,9 @@ manager: "mblythe"
   
 ## See Also  
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Schedules](subscriptions/schedules.md)   
+ [Schedules](schedules.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](report-server/reporting-services-report-server-native-mode.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)   
- [Monitor Reporting Services Subscriptions](subscriptions/monitor-reporting-services-subscriptions.md)  
+ [Monitor Reporting Services Subscriptions](monitor-reporting-services-subscriptions.md)  
   
   

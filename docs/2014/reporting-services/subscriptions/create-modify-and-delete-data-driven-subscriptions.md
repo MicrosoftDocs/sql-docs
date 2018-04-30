@@ -95,7 +95,7 @@ manager: "mblythe"
 ##  <a name="bkmk_run_subscription"></a> Run a subscription  
  You configure the conditions for subscription processing. You can configure a schedule, or you can trigger the subscription to coincide with updates to a report execution snapshot.  
   
- ![note](media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the “Script: Run (fire) a single subscription” section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![note](media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the “Script: Run (fire) a single subscription” section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Schedule and conditions for running a data-driven subscriptions is the same as processing for standard subscriptions.  
   
@@ -104,11 +104,11 @@ manager: "mblythe"
   
  To delete a data-driven subscription, select it from the My Subscriptions page or the Subscriptions page of a report and then click **Delete**.  
   
- For instructions on how to cancel a data-driven subscription, see [Manage a Running Process](subscriptions/manage-a-running-process.md).  
+ For instructions on how to cancel a data-driven subscription, see [Manage a Running Process](manage-a-running-process.md).  
   
 ## See Also  
- [Create, Modify, and Delete Standard Subscriptions &#40;Reporting Services in Native Mode&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Create, Modify, and Delete Standard Subscriptions &#40;Reporting Services in Native Mode&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
+ [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)   
  [Subscriptions Page &#40;Report Manager&#41;](../../2014/reporting-services/subscriptions-page-report-manager.md)   

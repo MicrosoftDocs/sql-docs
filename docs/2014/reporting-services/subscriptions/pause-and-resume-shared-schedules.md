@@ -37,7 +37,7 @@ manager: "mblythe"
 -   [Pause and Resume Shared Schedules (SharePoint mode)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> Pause and Resume Shared Schedules (Native Mode)  
- To pause and resume a shared schedule, use the Schedules page in Report Manager. You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; it does not provide options for pausing and resuming schedules. For more information, see [Create, Modify, and Delete Schedules](schedules.md).  
+ To pause and resume a shared schedule, use the Schedules page in Report Manager. You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; it does not provide options for pausing and resuming schedules. For more information, see [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 #### To pause or resume a shared schedule  
   
@@ -62,7 +62,7 @@ manager: "mblythe"
   
 ## See Also  
  [Schedules](../../relational-databases/replication/schedules.md)   
- [Create, Modify, and Delete Schedules](schedules.md)   
+ [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)   
  [Change Time Zones and Clock Settings on a Report Server](change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Manage a Running Process](manage-a-running-process.md)  
   

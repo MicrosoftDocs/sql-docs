@@ -68,7 +68,7 @@ manager: "mblythe"
  **Shared schedule**  
  Select this option to select an existing schedule.  
   
- For more information, see [Create, Modify, and Delete Schedules](subscriptions/schedules.md).  
+ For more information, see [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md).  
   
  **@\<** *Parameter* **>**  
  Specify one combination of parameter values. This section appears only if the current dataset or report has parameters.  

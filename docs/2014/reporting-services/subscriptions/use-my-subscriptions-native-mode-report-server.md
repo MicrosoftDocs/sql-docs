@@ -29,7 +29,7 @@ manager: "mblythe"
   
  My Subscriptions shows only the subscriptions that you create. It does not list subscriptions that are owned by other users, even if you are added as a subscriber to those subscriptions, nor does it show data-driven subscriptions.  
   
- You cannot search for subscriptions by name, nor can you search for subscriptions based on trigger information, status information, and so forth. For more information, see [Create, Modify, and Delete Standard Subscriptions &#40;Reporting Services in Native Mode&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ You cannot search for subscriptions by name, nor can you search for subscriptions based on trigger information, status information, and so forth. For more information, see [Create, Modify, and Delete Standard Subscriptions &#40;Reporting Services in Native Mode&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ## How to Use My Subscriptions  
  My Subscriptions is available through Report Manager. To access My Subscriptions, click **My Subscriptions** on the Report Manager global toolbar.  
@@ -52,8 +52,8 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 ## See Also  
- [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

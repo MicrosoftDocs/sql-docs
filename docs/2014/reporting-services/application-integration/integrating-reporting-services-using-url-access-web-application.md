@@ -78,7 +78,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
 ```  
   
 ## See Also  
- [Integrating Reporting Services into Applications](../dev-guide/integrating-reporting-services-into-applications.md)   
+ [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)   
  [Integrating Reporting Services Using URL Access](integrating-reporting-services-using-url-access.md)   
  [Using URL Access in a Windows Application](integrating-reporting-services-using-url-access-windows-application.md)   
  [URL Access &#40;SSRS&#41;](../url-access-ssrs.md)  

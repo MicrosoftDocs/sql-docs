@@ -63,7 +63,7 @@ manager: "jhubbard"
   
      Setting the agents to run continuously rather than creating frequent schedules (such as every minute) improves replication performance, because the agent does not have to start and stop. When you set the Distribution Agent to run continuously, changes are propagated with low latency to the other servers that are connected in the topology. For more information, see:  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../reporting-services/subscriptions/schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../specify-synchronization-schedules.md)  
   
 ## Distribution Agent and Log Reader Agent Parameters  
   

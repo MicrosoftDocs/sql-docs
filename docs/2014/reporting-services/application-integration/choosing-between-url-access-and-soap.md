@@ -51,7 +51,7 @@ Reporting Services programming supports a wide range of scenarios.
  For an example of combining URL access and the Web service to provide integrated reporting, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
- [Integrating Reporting Services into Applications](../../../2014/reporting-services/dev-guide/integrating-reporting-services-into-applications.md)   
+ [Integrating Reporting Services into Applications](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Integrating Reporting Services Using SOAP](../application-integration/integrating-reporting-services-using-soap.md)   
  [Integrating Reporting Services Using URL Access](../application-integration/integrating-reporting-services-using-url-access.md)   
  [Technical Reference &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  

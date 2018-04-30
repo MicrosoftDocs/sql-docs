@@ -84,7 +84,7 @@ manager: "jhubbard"
   
     -   (Optional) A value of **0** for **@publisher_security_mode** if the agent will use SQL Server Authentication when connecting to the Publisher. In this case, you must also specify the SQL Server Authentication login information for **@publisher_login** and **@publisher_password**.  
   
-    -   (Optional) A synchronization schedule for the Snapshot Agent job. For more information, see [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md).  
+    -   (Optional) A synchronization schedule for the Snapshot Agent job. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -232,7 +232,7 @@ manager: "jhubbard"
  [Create a Publication](publish/create-a-publication.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md)   
+ [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
  [Create and Apply the Snapshot](create-and-apply-the-snapshot.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   

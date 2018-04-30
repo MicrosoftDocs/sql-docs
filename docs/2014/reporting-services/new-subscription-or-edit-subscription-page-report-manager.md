@@ -66,7 +66,7 @@ manager: "mblythe"
 ## See Also  
  [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Create, Modify, and Delete Schedules](subscriptions/schedules.md)   
+ [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

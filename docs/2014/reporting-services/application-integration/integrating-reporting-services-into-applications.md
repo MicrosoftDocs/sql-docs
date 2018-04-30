@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Choosing Between URL Access and SOAP](../../../2014/reporting-services/dev-guide/choosing-between-url-access-and-soap.md)   
+ [Choosing Between URL Access and SOAP](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [Technical Reference &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Report Server Web Service](../report-server-web-service/report-server-web-service.md)  
   

@@ -24,7 +24,7 @@ manager: "mblythe"
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs.  
   
 > [!NOTE]  
->  Content management is different from report server administration. For more information about how to manage the environment in which a report server runs, see [Reporting Services Report Server &#40;Native Mode&#41;](report-server/reporting-services-report-server-native-mode.md).  
+>  Content management is different from report server administration. For more information about how to manage the environment in which a report server runs, see [Reporting Services Report Server &#40;Native Mode&#41;](reporting-services-report-server-native-mode.md).  
   
  Content management includes the following tasks:  
   
@@ -55,11 +55,11 @@ manager: "mblythe"
   
 |Icon|Moveable item|  
 |----------|-------------------|  
-|![Report icon](media/hlp-16doc.gif "Report icon")|Report|  
-|![Linked report icon](media/hlp-16linked.gif "Linked report icon")|Linked report|  
-|![Folder icon](media/hlp-16folder.gif "Folder icon")|Folder|  
-|![generic resource icon](media/hlp-16file.gif "generic resource icon")|Generic resource|  
-|![Shared data source icon](media/hlp-16datasource.png "Shared data source icon")|Shared data source|  
+|![Report icon](../media/hlp-16doc.gif "Report icon")|Report|  
+|![Linked report icon](../media/hlp-16linked.gif "Linked report icon")|Linked report|  
+|![Folder icon](../media/hlp-16folder.gif "Folder icon")|Folder|  
+|![generic resource icon](../media/hlp-16file.gif "generic resource icon")|Generic resource|  
+|![Shared data source icon](../media/hlp-16datasource.png "Shared data source icon")|Shared data source|  
 ||Shared dataset|  
   
  Not all items that you work with can be moved. You cannot move items that are associated with a report, such as subscriptions or report history. Those items move with their associated reports. Similarly, you cannot move items, such as shared schedules, that exist outside of the folder hierarchy. You cannot move items if you lack permission to do so. Permission to move an item is conveyed when the following tasks are selected in your role assignment for the item in question: "Manage reports," "Manage models", "Manage folders," and "Manage data sources."  
@@ -71,7 +71,7 @@ manager: "mblythe"
   
  Folders are virtual containers for published items that you access through Report Manager or a browser connection to the report server. Neither the folders nor their contents actually exist in a file system. Instead, they are stored in the report server database and accessed through the Report Server Web service endpoint. The report server folder namespace is a hierarchy that includes a root node, predefined folders, and user-defined folders. The namespace uniquely identifies items that are stored on a report server. It provides an addressing scheme for specifying items in a URL. When you select or locate a report, the folder path becomes part of the URL for that report.  
   
- How you work with folders depends on tasks that are part of your role assignment. If you are using default security, Content Managers and Publishers can create and manage folders. If you use custom role assignments, the role assignment must include tasks that support folder management. For more information about role assignments and tasks, see [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md) and [Tasks and Permissions](security/tasks-and-permissions.md).  
+ How you work with folders depends on tasks that are part of your role assignment. If you are using default security, Content Managers and Publishers can create and manage folders. If you use custom role assignments, the role assignment must include tasks that support folder management. For more information about role assignments and tasks, see [Granting Permissions on a Native Mode Report Server](../security/granting-permissions-on-a-native-mode-report-server.md) and [Tasks and Permissions](../security/tasks-and-permissions.md).  
   
  Report server folders can contain the following items:  
   
@@ -104,7 +104,7 @@ manager: "mblythe"
  If you are creating folders for the purpose of restricting access to specific reports and models, you should specify role assignments that allow users to browse, but not view the contents of, parent folders that are in the folder path.  
   
 ### Modifying Folder Properties  
- After a folder is created, you can modify properties to rename the folder, add or modify the description, or move the folder to another location. These properties are available on the General properties page for the folder. For more information about setting properties that grant access to a folder, see [Secure Folders](security/secure-folders.md).  
+ After a folder is created, you can modify properties to rename the folder, add or modify the description, or move the folder to another location. These properties are available on the General properties page for the folder. For more information about setting properties that grant access to a folder, see [Secure Folders](../security/secure-folders.md).  
   
 ### Deleting Folders and Folder Contents  
  When you delete a folder, you delete all the items that it contains. Before you delete a folder, you should inspect its contents to determine whether it contains items that may be referenced or used by other items in another part of the folder hierarchy. Referenced items include report definitions that support linked reports, shared data sources, and resources.  
@@ -142,7 +142,7 @@ manager: "mblythe"
   
  To use an image resource in a report, add the image file to the project and publish it along with the report. Once the image is published, you can update the image reference in the report so that it points to the resource on the report server, and then republish just the report to save your changes. You can now subsequently update the image independently of the report by republishing the resource. The report uses the most current version of the image available on the report server.  
   
- For more information, see [Update a Resource &#40;Report Manager&#41;](report-server/update-a-resource-report-manager.md).  
+ For more information, see [Update a Resource &#40;Report Manager&#41;](update-a-resource-report-manager.md).  
   
 ##  <a name="bkmk_MyReports"></a> My Reports  
  The My Reports folder is a personal workspace for each user who logs in to a report server with a valid domain account. This special-purpose folder provides storage for work-in-progress reports, reports that are not intended for wide distribution, or reports that have been modified to fit a need. You cannot restrict the number or size of items that are stored in a My Reports folder, or configure a My Reports folder to be shared among users.  
@@ -165,20 +165,20 @@ manager: "mblythe"
 |& (ampersand)|[amp]|*username*@*company*&*company.com* becomes *username*[at]*company*[amp]*company.com*|  
 |$ (dollar sign)|[dollar]|*User* $*Name* becomes *User*[ ][dollar]*Name*|  
   
- The My Reports feature is optional. When you install a report server, My Reports is disabled by default. For more information about enabling this feature, see [Enable and Disable My Reports](report-server/enable-and-disable-my-reports.md). For more information, see [Secure My Reports](security/secure-my-reports.md).  
+ The My Reports feature is optional. When you install a report server, My Reports is disabled by default. For more information about enabling this feature, see [Enable and Disable My Reports](enable-and-disable-my-reports.md). For more information, see [Secure My Reports](../security/secure-my-reports.md).  
   
 ## Tasks  
- [Upload Files to a Folder](report-server/upload-files-to-a-folder.md)  
+ [Upload Files to a Folder](upload-files-to-a-folder.md)  
   
- [Create, Delete, or Modify a Folder &#40;Report Manager&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)  
+ [Create, Delete, or Modify a Folder &#40;Report Manager&#41;](create-delete-or-modify-a-folder-report-manager.md)  
   
- [Update a Resource &#40;Report Manager&#41;](report-server/update-a-resource-report-manager.md)  
+ [Update a Resource &#40;Report Manager&#41;](update-a-resource-report-manager.md)  
   
- [Upload Files to a Folder](report-server/upload-files-to-a-folder.md)  
+ [Upload Files to a Folder](upload-files-to-a-folder.md)  
   
 ## See Also  
  [Reporting Services Tools](tools/reporting-services-tools.md)   
- [Roles and Permissions &#40;Reporting Services&#41;](security/roles-and-permissions-reporting-services.md)   
+ [Roles and Permissions &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)   
  [Reporting Services Reports &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
   

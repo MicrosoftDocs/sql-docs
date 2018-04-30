@@ -32,7 +32,7 @@ manager: "mblythe"
   
  The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation, [Runtime Profiling](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- For information related to the SharePoint mode performance counters, see [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ For information related to the SharePoint mode performance counters, see [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](performance-counters-msrs-2011-web-service-performance-objects.md).  
   
  **In this topic:**  
   
@@ -112,7 +112,7 @@ manager: "mblythe"
 |`Total Snapshot Updates`|Total number of updates for report execution snapshots|  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script returns the counter sets where the CounterSetName starts with “msr”:  
+ ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script returns the counter sets where the CounterSetName starts with “msr”:  
   
 ```  
 get-counter -listset msr*  
@@ -125,8 +125,8 @@ get-counter -listset msr*
 ```  
   
 ## See Also  
- [Monitoring Report Server Performance](report-server/monitoring-report-server-performance.md)   
- [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [Monitoring Report Server Performance](monitoring-report-server-performance.md)   
+ [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](performance-counters-reportserver-service-performance-objects.md)  
   
   

@@ -31,12 +31,12 @@ manager: "mblythe"
 #### Single Instance Templates  
  A single instance template displays all the attributes of the target entity and all the default aggregate attributes that are specified for the related entities that have a one-to-many relationship from the target entity. A single instance template looks similar to the following image.  
   
- ![A many to 1 clickthrough report.](media/manytooneclickthrough.gif "A many to 1 clickthrough report.")  
+ ![A many to 1 clickthrough report.](../media/manytooneclickthrough.gif "A many to 1 clickthrough report.")  
   
 #### Multiple Instance Templates  
  A multiple instance template displays only the default detail attributes of the target entity and all of the default aggregate attributes that are specified for the related entities that have a one-to-many relationship from the target entity. A multiple instance template looks similar to the following image.  
   
- ![A many to 1 clickthrough report.](media/onetomanyclickthrough.gif "A many to 1 clickthrough report.")  
+ ![A many to 1 clickthrough report.](../media/onetomanyclickthrough.gif "A many to 1 clickthrough report.")  
   
 ## Customizing Clickthrough Reports  
  Instead of using the default templates that the report server generates, you can create a report in Report Builder and use it as a customized clickthrough report. Then, you can link your report to the model as a drillthrough report in Report Manager.  
@@ -47,6 +47,6 @@ manager: "mblythe"
 >  The primary, or base, entity used in the report must be the same entity that you link the report to.  
   
 ## See Also  
- [Link a Report to a Model as a Clickthrough Report](../../2014/reporting-services/link-a-report-to-a-model-as-a-clickthrough-report.md)  
+ [Link a Report to a Model as a Clickthrough Report](../link-a-report-to-a-model-as-a-clickthrough-report.md)  
   
   

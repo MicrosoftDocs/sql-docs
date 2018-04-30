@@ -104,7 +104,7 @@ manager: "jhubbard"
   
     -   (Optional) A value of **0** for **@subscriber_security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@subscriber_login** and **@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
   
-    -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md).  
+    -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -140,7 +140,7 @@ manager: "jhubbard"
   
     -   (Optional) A value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. Specify these values if you need to use SQL Server Authentication when connecting to the Publisher.  
   
-    -   A schedule for the Merge Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md).  
+    -   A schedule for the Merge Agent job for this subscription. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

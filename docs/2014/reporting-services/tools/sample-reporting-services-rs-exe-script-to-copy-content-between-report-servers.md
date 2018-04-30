@@ -82,7 +82,7 @@ manager: "mblythe"
 |Server B|SharePoint|  
 |Server C|SharePoint|  
   
- For more information on the RS.exe utility, see [RS.exe Utility &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md).  
+ For more information on the RS.exe utility, see [RS.exe Utility &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
 ###  <a name="bkmk_what_is_migrated"></a> Items and resources the script migrates  
  The script will not write over existing content items of the same name.  If the script detects items with the same name on the destination server that are on the source server, the individual items will result in a “failure” message and the script will continue. The following table lists the types of content and resources the script can migrate to target report server modes.  
@@ -270,7 +270,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Native Mode to SharePoint Mode – root site  
  The following example migrates content from a native mode **SourceServer** to the “root site ” on a SharePoint mode server **TargetServer**. The “Reports” and “Data Sources” folders on the native mode server as migrated as new libraries on the SharePoint deployment.  
   
- ![ssrs_rss_migrate_root_site](media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
+ ![ssrs_rss_migrate_root_site](../media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
@@ -358,7 +358,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 -   System.Exception: Could not connect to server: http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **The request failed with HTTP status 401: Unauthorized**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
   
 ## See Also  
- [RS.exe Utility &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)   
+ [RS.exe Utility &#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../2014/reporting-services/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   

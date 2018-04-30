@@ -113,7 +113,7 @@ webBrowser1.Navigate(url);
 ```  
   
 ## See Also  
- [Integrating Reporting Services into Applications](../dev-guide/integrating-reporting-services-into-applications.md)   
+ [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)   
  [Integrating Reporting Services Using URL Access](integrating-reporting-services-using-url-access.md)   
  [Integrating Reporting Services Using SOAP](integrating-reporting-services-using-soap.md)   
  [Integrating Reporting Services Using the ReportViewer Controls](integrating-reporting-services-using-reportviewer-controls.md)   

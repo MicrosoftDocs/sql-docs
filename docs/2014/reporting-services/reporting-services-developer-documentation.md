@@ -26,7 +26,7 @@ manager: "jhubbard"
  Extending the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] platform includes creating new components and resources that can be used for data access, report delivery and more. You can market these components and resources to companies that are using [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in their organization.  
   
 ## In This Section  
- [Integrating Reporting Services into Applications](dev-guide/integrating-reporting-services-into-applications.md)  
+ [Integrating Reporting Services into Applications](application-integration/integrating-reporting-services-into-applications.md)  
  Provides an overview of how to use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] to integrate reporting into custom applications. Describes when to use direct URL access and when to use the Web service to access the report server.  
   
  [Report Server Web Service](report-server-web-service/report-server-web-service.md)  

@@ -62,7 +62,7 @@ manager: "mblythe"
   
  When you create a schedule, the report saves the schedule information in the report server database or for SharePoint mode, the service application database. The report server also creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job that is used to trigger the schedule. Schedule processing is based on the local time of the report server that contains the schedule. The time format follows the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system standard.  
   
- For details on how to create and manage schedules, see [Create, Modify, and Delete Schedules](../../relational-databases/replication/schedules.md).  
+ For details on how to create and manage schedules, see [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
 >  Schedule operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  

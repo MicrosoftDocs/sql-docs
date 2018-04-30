@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   Limit the number of tables in the join filter hierarchy. If you are generating join filters of five or more tables, consider other solutions: do not filter tables that are small, not subject to change, or are primarily lookup tables. Use join filters only between tables that must be partitioned among subscriptions.  
   
--   Make a smaller number of changes on filtered tables between synchronizations, or run the Merge Agent more frequently. For more information about setting synchronization schedules, see [Specify Synchronization Schedules](../../reporting-services/subscriptions/schedules.md).  
+-   Make a smaller number of changes on filtered tables between synchronizations, or run the Merge Agent more frequently. For more information about setting synchronization schedules, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  

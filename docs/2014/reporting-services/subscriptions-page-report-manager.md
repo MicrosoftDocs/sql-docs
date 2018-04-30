@@ -79,7 +79,7 @@ manager: "mblythe"
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Standard Subscriptions &#40;Reporting Services in Native Mode&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Create, Modify, and Delete Schedules](subscriptions/schedules.md)   
+ [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

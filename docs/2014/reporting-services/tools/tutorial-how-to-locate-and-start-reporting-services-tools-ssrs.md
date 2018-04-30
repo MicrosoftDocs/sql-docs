@@ -62,7 +62,7 @@ manager: "mblythe"
   
 1.  On the Windows start screen, type `reporting` and in the **Apps** search results, click **Reporting Services Configuration Manager**.  
   
-     ![reporting services configuration manager on start](media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services configuration manager on start")  
+     ![reporting services configuration manager on start](../media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services configuration manager on start")  
   
      **Or**  
   
@@ -72,7 +72,7 @@ manager: "mblythe"
   
 2.  In **Server Name**, specify the name of the computer on which the report server instance is installed. The name of the local computer is specified by default, but you can also type the name of a remote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   
-     If you specify a remote computer, click **Find** to establish a connection. The report server must be configured for remote administration in advance. For more information, see [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md).  
+     If you specify a remote computer, click **Find** to establish a connection. The report server must be configured for remote administration in advance. For more information, see [Configure a Report Server for Remote Administration](../report-server/configure-a-report-server-for-remote-administration.md).  
   
 3.  In **Instance Name**, choose the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] instance that you want to configure. Only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server instances appear in the list. You cannot configure earlier versions of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -80,9 +80,9 @@ manager: "mblythe"
   
 5.  To verify that you launched the tool, compare your results to the following image:  
   
-     ![Reporting Services Configuration tool](media/rs-ui-reportserverconfigkatmai.gif "Reporting Services Configuration tool")  
+     ![Reporting Services Configuration tool](../media/rs-ui-reportserverconfigkatmai.gif "Reporting Services Configuration tool")  
   
- **Next Steps:** [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ **Next Steps:** [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="bkmk_report_manager"></a> Report Manager (Native Mode)  
  Use [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) to set permissions, manage subscriptions and schedules, and work with reports. You can also use Report Manager to view reports.  
@@ -99,9 +99,9 @@ manager: "mblythe"
   
 3.  Report Manager opens in the browser window. The startup page is the Home folder. Depending on permissions, you might see additional folders, hyperlinks to reports, and resource files within the startup page. You might also see additional buttons and commands on the toolbar.  
   
-4.  If you run Report Manager on the local report server, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+4.  If you run Report Manager on the local report server, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
- **Next Steps:** [Configure Report Manager &#40;Native Mode&#41;](report-server/configure-web-portal.md).  
+ **Next Steps:** [Configure Report Manager &#40;Native Mode&#41;](../report-server/configure-web-portal.md).  
   
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
  Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] component servers. For more information, see [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
@@ -110,7 +110,7 @@ manager: "mblythe"
   
 1.  From the Windows Start Screen type `sql server` and in the **Apps** search results, click **SQL Server Management Studio**.  
   
-     ![managment studio from windows start screen](media/bi-ssms-win8-startscreen.gif "managment studio from windows start screen")  
+     ![managment studio from windows start screen](../media/bi-ssms-win8-startscreen.gif "managment studio from windows start screen")  
   
      **Or**  
   
@@ -125,7 +125,7 @@ manager: "mblythe"
 5.  Click **Connect**. You can expand the root node to set server properties, modify role definitions, or turn off report server features.  
   
 ##  <a name="bkmk_ssdt"></a> SQL Server Data Tools with Report Designer and Report Wizard  
- Report Designer is available within [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] - Business Intelligence for Visual Studio 2012. The design surface in the tool includes tabbed windows, wizards, and menus used to access report authoring features. The report designer tool becomes available when you choose a Report Server Project or a Report Server Wizard template. To learn more, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
+ Report Designer is available within [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] - Business Intelligence for Visual Studio 2012. The design surface in the tool includes tabbed windows, wizards, and menus used to access report authoring features. The report designer tool becomes available when you choose a Report Server Project or a Report Server Wizard template. To learn more, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 #### To start Report Designer  
   
@@ -141,16 +141,16 @@ manager: "mblythe"
   
 4.  In the **Templates** list, click **Report Server Project**. The following diagram shows how the project templates appear in the dialog box:  
   
-     ![New Project template dialog box](media/rs-ui-newrsproject.gif "New Project template dialog box")  
+     ![New Project template dialog box](../media/rs-ui-newrsproject.gif "New Project template dialog box")  
   
 5.  Type a name and location for the project, or click **Browse** and select a location.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] opens with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] start page. Solution Explorer provides categories for creating reports and data sources. You can use these categories to create new reports and data sources. Tabbed windows appear when you create a report definition. The tabbed windows are Data, Layout, and Preview..  
   
- To get started on your first report, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md). To learn more about query designers you can use within Report Designer, see [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md).  
+ To get started on your first report, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md). To learn more about query designers you can use within Report Designer, see [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> Report Builder  
- Use [Report Builder &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md) to create reports in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-like authoring environment. You can customize and update all existing reports, regardless of whether they were created in Report Designer or in the previous versions of Report Builder. Contact your administrator for the location of the ReportBuilder3.msi file that you run to install Report Builder on your local computer.  
+ Use [Report Builder &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md) to create reports in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-like authoring environment. You can customize and update all existing reports, regardless of whether they were created in Report Designer or in the previous versions of Report Builder. Contact your administrator for the location of the ReportBuilder3.msi file that you run to install Report Builder on your local computer.  
   
  **Installation:** The click-once version of report builder is installed by either [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode or SharePoint mode. The Stand-alone version of Report Builder is a separate download.  See [Install the Stand-Alone Version of Report Builder &#40;Report Builder&#41;](install-windows/install-report-builder.md)  
   
@@ -200,7 +200,7 @@ manager: "mblythe"
  [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
  [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-reporting-services-sharepoint-mode.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
- [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   
   

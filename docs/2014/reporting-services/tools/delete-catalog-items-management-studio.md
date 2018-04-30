@@ -45,6 +45,6 @@ manager: "mblythe"
 ## See Also  
  [Delete an Item &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Report Server in Management Studio F1 Help](report-server-in-management-studio-f1-help.md)   
- [Create, Modify, and Delete Schedules](../../relational-databases/replication/schedules.md)  
+ [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

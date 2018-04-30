@@ -5,7 +5,7 @@ ms.date: "10/20/2016"
 ms.prod: "sql"
 ms.prod_service: "sql-tools"
 ms.service: ""
-ms.component: "ssms-scripting"
+ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "COUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"

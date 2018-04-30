@@ -142,16 +142,16 @@ Use the table below to identify the location and name of the file to download ba
 
   This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
-- [![Download from Evaluation Center]](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
-- [![Azure Virtual Machine small]](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
-- [![Download SSMS]] To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)]**.
+- Download SQL Server 2016 from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+- Azure Virtual Machine small: Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
+- Download SSMS: To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)]**.
 
 **<a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)**
 
 
-![info_tip] SQL Server 2016 SP2 includes all cumulative updates released after 2016 SP1, up to and including CU8.
+SQL Server 2016 SP2 includes all cumulative updates released after 2016 SP1, up to and including CU8.
 
-- [![Microsoft Download Center]](https://go.microsoft.com/fwlink/?linkid=869608) [Download SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- [Microsoft Download SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
 - For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 

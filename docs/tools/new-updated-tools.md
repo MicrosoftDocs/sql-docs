@@ -8,6 +8,8 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: tools
@@ -38,7 +40,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [mssql-cli command-line query tool for SQL Server](mssql-cli.md)
+- [mssql-cli command-line query tool for SQL Server](mssql-cli.md)
 
 
 
@@ -64,7 +66,7 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [bcp Utility](#TitleNum_1)
+- [bcp Utility](#TitleNum_1)
 
 
 

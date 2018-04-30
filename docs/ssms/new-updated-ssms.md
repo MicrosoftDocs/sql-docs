@@ -8,6 +8,8 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: ssms
@@ -152,24 +154,24 @@ Data Classification:
 
 
 
-- [Tutorial: Connect & Query SQL Server using SSMS]
+- Tutorial: Connect & Query SQL Server using SSMS
 
     In this Tutorial, you learn how to connect to your SQL Server instance. You will also learn some basic Transact-SQL (T-SQL) commands to create and then query a new database.
 
-- [Tutorial: Scripting Objects in SSMS]
+- Tutorial: Scripting Objects in SSMS
 
     In this Tutorial, you learn how to script out various objects in SSMS, including databases and queries.
 
-- [Tutorial: Using Templates in SSMS]
+- Tutorial: Using Templates in SSMS
 
     In this Tutorial, you learn how to work with the pre-built Templates within SSMS. The templates are a little-known feature that store a number of Transact-SQL code snippets for various database administration tasks.
 
-- [Tutorial: SSMS Configuration]
+- Tutorial: SSMS Configuration
 
     In this Tutorial, you learn the basics of configuring your SSMS environment, such as the changing the environmental layout. This Tutorial also explains what the different SSMS components are.
 
 
-- [Tutorial: Additional Tips and Tricks for using SSMS]
+- Tutorial: Additional Tips and Tricks for using SSMS
 
     In this Tutorial, you will learn additional tips and tricks for using SSMS. The Tutorial includes the following:
     - Commenting and uncommenting text

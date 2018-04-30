@@ -8,6 +8,8 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: ssops
@@ -38,7 +40,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Extend the functionality of SQL Operations Studio (preview)](extensions.md)
+- [Extend the functionality of SQL Operations Studio (preview)](extensions.md)
 
 <!-- GeneMi:  I MANUALLY replace the ugly !INCLUDE with the name from inside the includes file. -->
 

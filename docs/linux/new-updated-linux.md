@@ -8,6 +8,8 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: linux
@@ -92,13 +94,13 @@ This compact list provides links to all the updated articles that are listed in 
 
 
 
-3. Print out the contents of the file.
+- Print out the contents of the file.
 
 ```
    sudo cat /etc/yum.repos.d/mssql-server.repo
 ```
 
-4. The **name** property is the configured repository. You can identify it with the table in the [Repositories] section of this article.
+- The **name** property is the configured repository. You can identify it with the table in the [Repositories] section of this article.
 
 **Remove old repository (RHEL)**
 
@@ -127,13 +129,13 @@ Use the following steps to configure repositories on SLES.
 
 First verify whether you have already registered a SQL Server repository.
 
-1. Use **zypper info** to get information about any previously configured repository.
+- Use **zypper info** to get information about any previously configured repository.
 
 ```
    sudo zypper info mssql-server
 ```
 
-2. The **Repository** property is the configured repository. You can identify it with the table in the [Repositories] section of this article.
+- The **Repository** property is the configured repository. You can identify it with the table in the [Repositories] section of this article.
 
 **Remove old repository (SLES)**
 
@@ -174,40 +176,40 @@ The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting c
 
 To change these settings, use the following steps:
 
-1. Create the target directory for new error log files. The following example creates a new **/tmp/masterdatabasedir** directory:
+- Create the target directory for new error log files. The following example creates a new **/tmp/masterdatabasedir** directory:
 
 ```
    sudo mkdir /tmp/masterdatabasedir
 ```
 
-1. Change the owner and group of the directory to the **mssql** user:
+- Change the owner and group of the directory to the **mssql** user:
 
 ```
    sudo chown mssql /tmp/masterdatabasedir
    sudo chgrp mssql /tmp/masterdatabasedir
 ```
 
-1. Use mssql-conf to change the default master database directory for the master data and log files with the **set** command:
+- Use mssql-conf to change the default master database directory for the master data and log files with the **set** command:
 
 ```
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
 ```
 
-1. Stop the SQL Server service:
+- Stop the SQL Server service:
 
 ```
    sudo systemctl stop mssql-server
 ```
 
-1. Move the master.mdf and masterlog.ldf:
+- Move the master.mdf and masterlog.ldf:
 
 ```
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf
    sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
 ```
 
-1. Start the SQL Server service:
+- Start the SQL Server service:
 
 ```
    sudo systemctl start mssql-server

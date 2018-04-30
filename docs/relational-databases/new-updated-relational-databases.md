@@ -8,6 +8,8 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: relational-databases
@@ -322,15 +324,15 @@ In this section, you will add a subscriber to the Publication that was previousl
 
 2.  In the **Local Publications** folder, right-click the **AdvWorksProductTrans** publication, and then select **New Subscriptions**.  The New Subscription Wizard launches:
 
-    ![New Subscription]
+    New Subscription
 
 3.  On the Publication page, select **AdvWorksProductTrans**, and then select **Next**:
 
-    ![Select Tran Publisher]
+    Select Tran Publisher
 
 4.  On the Distribution Agent Location page, select **Run all agents at the Distributor**, and then select **Next**.  For more information on pull and push subscriptions, please see [Subscribe to Publications](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications):
 
-    ![Run Agents at Dist]
+    Run Agents at Dist
 
 5.  On the Subscribers page, if the name of the Subscriber instance is not displayed, select **Add Subscriber** and then select **Add SQL Server Subscriber** from the drop-down. This will launch the **Connect to Server** dialog box. Enter the Subscriber instance name and then select **Connect**.
 
@@ -360,21 +362,21 @@ In this section, you will add a subscriber to the Publication that was previousl
 The Employee table contains a column (OrganizationNode) that has the hierarchyid data type, which is only supported for replication in SQL 2017. If you're using a build lower than SQL 2017, you'll see a message  at the bottom of the screen notifying you of potential data loss for using this column in bi-directional replication. For the purpose of this tutorial, this message can be ignored. However, this datatype should not be replicated in a production environment unless you're using the supported build. For more inforamtion about replicating the hierarchyid datatype, please see [Using Hierarchyid Columns in Replication](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)
 
 
-7.  On the Filter Table Rows page, select **Add** and then select **Add Filter**.
+-  On the Filter Table Rows page, select **Add** and then select **Add Filter**.
 
-8.  In the **Add Filter** dialog box, select **Employee (HumanResources)** in **Select the table to filter**. Select the **LoginID** column, select the right arrow to add the column to the WHERE clause of the filter query, and modify the WHERE clause as follows:
+-  In the **Add Filter** dialog box, select **Employee (HumanResources)** in **Select the table to filter**. Select the **LoginID** column, select the right arrow to add the column to the WHERE clause of the filter query, and modify the WHERE clause as follows:
 
-```
+    ```
     WHERE [LoginID] = HOST_NAME()
-```
+    ```
 
     a. Select **A row from this table will go to only one subscription**, and select **OK**:
 
-    ![Add Filter]
+    Add Filter
 
 
 
-10. On the **Filter Table Rows** page, select **Employee (Human Resources)**, select **Add,** and then select **Add Join to Extend the Selected Filter**.
+- On the **Filter Table Rows** page, select **Employee (Human Resources)**, select **Add,** and then select **Add Join to Extend the Selected Filter**.
 
     a. In the **Add Join** dialog box, select **Sales.SalesOrderHeader** under **Joined table**. Select **Write the join statement manually**, and complete the join statement as follows:
 
@@ -501,7 +503,7 @@ The following section will go over the setup and configuration steps in more det
    - Not disabled
    - Able to perform *get*, *wrap key*, *unwrap key* operations
 
-**Step 1. Create a server and assign an Azure AD identity to your server**
+**Step: Create a server and assign an Azure AD identity to your server**
 
       cli
       # create server (with identity) and database

@@ -8,6 +8,8 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: sql-server
@@ -178,20 +180,10 @@ Use the table below to identify the location and name of the file to download ba
 
 <!-- : : : m-r -->
 **Try SQL Server!**
-- [![Download from Evaluation Center]](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Download from Evaluation Center]] [Download SQL Server Management Studio (SSMS)]
-- [![Download from Evaluation Center]] [Download SQL Server Data Tools (SSDT)]
-- [![Create Virtual Machine]](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-
-
-<!-- : : : m-r -->
-**Try SQL Server!**
-- [![Download from Evaluation Center]](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Install SQL Server on Linux]] [Install SQL Server on Linux](../linux/sql-server-linux-setup.md)
-- [![Download from Evaluation Center]] [Download SQL Server Management Studio (SSMS)]
-- [![Download from Evaluation Center]] [Download SQL Server Data Tools (SSDT)]
-
-
+- Download from Evaluation Center: [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- Download from Evaluation Center: Download SQL Server Management Studio (SSMS)
+- Download from Evaluation Center: Download SQL Server Data Tools (SSDT)
+- Create Virtual Machine: [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 
 

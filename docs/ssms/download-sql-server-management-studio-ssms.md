@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/17/2018"
+ms.date: "05/03/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -40,18 +40,16 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.7](https://go.microsoft.com/fwlink/?linkid=870039)**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.6 Upgrade Package (upgrades 17.x to 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.7 Upgrade Package (upgrades 17.x to 17.7)](https://go.microsoft.com/fwlink/?linkid=870041)**
 
-> [!WARNING]
-> There is a known issue where SSMS 17.6 becomes unstable and crashes when using [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md). If you use Maintenance Plans, do not install SSMS 17.6. Downgrade to SSMS 17.5 if you already installed 17.6 and this issue is affecting you. 
 
 **Version Information**
 
-Release number: 17.6<br>
-Build number: 14.0.17230.0<br>
-Release date: March 20, 2018
+Release number: 17.7<br>
+Build number: 14.0.xxxxxx.0<br>
+Release date: May 03, 2018
 
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
@@ -80,36 +78,23 @@ SQL Server Management Studio 17.6 Upgrade Package (upgrades 17.x to 17.6):<br>
 
 ## New in this Release
 
-SSMS 17.6 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
+SSMS 17.7 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
 
-Version 17.6 includes:
+Version 17.7 includes:
 
 **General SSMS**
 
-SQL Database Managed Instance:
-
-- Added a support for [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance). Azure SQL Database Managed Instance (preview) is a new flavor of Azure SQL Database, providing near 100% compatibility with SQL Server on-premises, a native [virtual network (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) implementation that addresses common security concerns, and a [business model](https://azure.microsoft.com/pricing/details/sql-database/) favorable for on-premises SQL Server customers.
-- Support for common management scenarios like:
-   - Create and alter databases.
-   - Backup and restore databases.
-   - Importing, exporting, extracting and publishing Data-tier Applications.
-   - Viewing and altering Server properties.
-   - Full Object Explorer support.
-   - Scripting database objects.
-   - Support for SQL Agent jobs.
-   - Support for Linked Servers.
-- Learn more about Managed Instances [here](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
-
-
-Object Explorer:
-- Added settings to not force brackets around names when dragging & dropping from Object Explorer to Query Window. (User suggestions [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933), and [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051).)
-
-Data Classification:
-- General improvements and bug fixes.
+Replication Monitor:   
+- Replication monitor now supports registering a listener for scenarios where publisher database and/or distributor database is part of Availability Group. You can now monitor replication environments where publisher database and/or distribution database is part of Always On. 
+ 
+Azure SQL Data Warehouse: 
+- Add Rejected Row Location support for External Tables in Azure SQL Data Warehouse. 
 
 **Integration Services (IS)**
 
-- Added support to deploy packages to a [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+- Support package scheduling in Azure-SSIS integration runtime.
+- Support for SSIS package scheduling in SQL Agent on SQL Managed instance. It is now possible to create SQL Agent jobs to execute SSIS packages on the managed instance. 
+
 
 ## Supported SQL offerings
 
@@ -146,9 +131,9 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 ## Release Notes
 
-The following are issues and limitations with this 17.6 release:
+The following are issues and limitations with this 17.7 release:
 
-There is currently a known issue where SSMS 17.6 crashes when configuring the schedule in a maintenance plan.
+Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
 
 
 ## Previous releases

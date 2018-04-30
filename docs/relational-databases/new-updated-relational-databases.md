@@ -269,13 +269,13 @@ GO
 
 
 
-- Install [SQL Server Management Studio](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer Edition](docs/relational-databases/replication/https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Download an [AdventureWorks Sample Databases](docs/relational-databases/replication/https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, please see [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
+- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, please see [Restoring a Database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
 >[!NOTE]
-> - Replication is not supported on SQL Servers that are more than two versions apart. For more information, please see [Supported SQL Versions in Repl Topology](docs/relational-databases/replication/https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - In  *{Included-Content-Goes-Here}* , you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role. For more information on the sysadmin role, please see [Server Level Roles](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).
+> - Replication is not supported on SQL Servers that are more than two versions apart. For more information, please see [Supported SQL Versions in Repl Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - In  *{Included-Content-Goes-Here}* , you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role. For more information on the sysadmin role, please see [Server Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).
 
 
 **Estimated time to complete this tutorial:  30 minutes**
@@ -328,7 +328,7 @@ In this section, you will add a subscriber to the Publication that was previousl
 
     ![Select Tran Publisher]
 
-4.  On the Distribution Agent Location page, select **Run all agents at the Distributor**, and then select **Next**.  For more information on pull and push subscriptions, please see [Subscribe to Publications](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/relational-databases/replication/subscribe-to-publications):
+4.  On the Distribution Agent Location page, select **Run all agents at the Distributor**, and then select **Next**.  For more information on pull and push subscriptions, please see [Subscribe to Publications](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications):
 
     ![Run Agents at Dist]
 
@@ -357,7 +357,7 @@ In this section, you will add a subscriber to the Publication that was previousl
 
 
 
-    > The Employee table contains a column (OrganizationNode) that has the hierarchyid data type, which is only supported for replication in SQL 2017. If you're using a build lower than SQL 2017, you'll see a message  at the bottom of the screen notifying you of potential data loss for using this column in bi-directional replication. For the purpose of this tutorial, this message can be ignored. However, this datatype should not be replicated in a production environment unless you're using the supported build. For more inforamtion about replicating the hierarchyid datatype, please see [Using Hierarchyid Columns in Replication](docs/relational-databases/replication/https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)
+    > The Employee table contains a column (OrganizationNode) that has the hierarchyid data type, which is only supported for replication in SQL 2017. If you're using a build lower than SQL 2017, you'll see a message  at the bottom of the screen notifying you of potential data loss for using this column in bi-directional replication. For the purpose of this tutorial, this message can be ignored. However, this datatype should not be replicated in a production environment unless you're using the supported build. For more inforamtion about replicating the hierarchyid datatype, please see [Using Hierarchyid Columns in Replication](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)
 
 
 7.  On the Filter Table Rows page, select **Add** and then select **Add Filter**.
@@ -370,7 +370,7 @@ In this section, you will add a subscriber to the Publication that was previousl
 
     a. Select **A row from this table will go to only one subscription**, and select **OK**:
 
-    ![Add Filter](docs/relational-databases/replication/media/tutorial-replicating-data-with-mobile-clients/mergeaddfilter.png)
+    ![Add Filter]
 
 
 
@@ -457,9 +457,9 @@ The following section will go over the setup and configuration steps in more det
 **Azure Key Vault Configuration Steps**
 
 
-- Install [PowerShell](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0)
-- Create two Azure Key Vaults in two different regions using [PowerShell to enable the "soft-delete" property](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL).
-- Both Azure Key Vaults must be located in the two regions available in the same Azure Geo in order for backup and restore of keys to work.  If you need the two key vaults to be located in different geos to meet SQL Geo-DR requirements, follow the [BYOK Process](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys) that allows keys to be imported from an on-prem HSM.
+- Install [PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0)
+- Create two Azure Key Vaults in two different regions using [PowerShell to enable the "soft-delete" property](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL).
+- Both Azure Key Vaults must be located in the two regions available in the same Azure Geo in order for backup and restore of keys to work.  If you need the two key vaults to be located in different geos to meet SQL Geo-DR requirements, follow the [BYOK Process](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys) that allows keys to be imported from an on-prem HSM.
 
 
 
@@ -489,13 +489,13 @@ The following section will go over the setup and configuration steps in more det
 
 - You must have an Azure subscription and be an administrator on that subscription.
 - [Recommended but Optional] Have a hardware security module (HSM) or local key store for creating a local copy of the TDE Protector key material.
-- Command-Line Interface version 2.0 or later. To install the latest version and connect to your Azure subscription, see [Install and Configure the Azure Cross-Platform Command-Line Interface 2.0](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Command-Line Interface version 2.0 or later. To install the latest version and connect to your Azure subscription, see [Install and Configure the Azure Cross-Platform Command-Line Interface 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Create an Azure Key Vault and Key to use for TDE.
-   - [Manage Key Vault using CLI 2.0](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
-   - [Instructions for using a hardware security module (HSM) and Key Vault](docs/relational-databases/security/encryption/https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+   - [Manage Key Vault using CLI 2.0](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
+   - [Instructions for using a hardware security module (HSM) and Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - The key vault must have the following property to be used for TDE:
-   - [soft-delete](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [How to use Key Vault soft-delete with CLI](docs/relational-databases/security/encryption/https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli)
+   - [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [How to use Key Vault soft-delete with CLI](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli)
 - The key must have the following attributes to be used for TDE:
    - No expiration date
    - Not disabled

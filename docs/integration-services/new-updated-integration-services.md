@@ -109,7 +109,7 @@ For a complete installation of  *{Included-Content-Goes-Here}* , select the comp
     -   Visual Studio Tools for Applications (VSTA), the script editor used by the SSIS Script Task and Script Component.
     -   SSIS wizards including the Deployment Wizard and the Package Upgrade Wizard.
     -   SQL Server Import and Export Wizard.
--   **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](docs/integration-services/install-windows/https://www.microsoft.com/download/details.aspx?id=54798). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
+-   **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
 
 
 

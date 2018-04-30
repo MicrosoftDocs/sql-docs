@@ -130,7 +130,7 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-For more information about the variable `sys.path` and how it is used to set the interpreter's search path for modules, see the [Python documentation](docs/advanced-analytics/r/https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+For more information about the variable `sys.path` and how it is used to set the interpreter's search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
 
 
@@ -155,7 +155,7 @@ For more information about the variable `sys.path` and how it is used to set the
 
 
 
-1. Launch the separate Windows-based installer for either [R Server](docs/advanced-analytics/r/https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server) or [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
+1. Launch the separate Windows-based installer for either [R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server) or [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 2. Select the languages that you wish to update, and select the **Pre-trained Models** option.
 
@@ -391,14 +391,14 @@ Let's see how conversion to a data.frame works with our two series containing th
 
 + This example uses a predefined Python environment, named `PYTEST_SQL_SERVER`. The environment has been configured to contain **revoscalepy** and other required libraries.
 
-    If you do not have an environment configured to run Python, you must do so separately. A discussion of how to create or modify Python environments is out of scope for this tutorial. For more information about how to set up a Python client that contains the correct libraries, see [Install Python client](docs/advanced-analytics/tutorials/https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) and [Link Python to tools](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools).
+    If you do not have an environment configured to run Python, you must do so separately. A discussion of how to create or modify Python environments is out of scope for this tutorial. For more information about how to set up a Python client that contains the correct libraries, see [Install Python client](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) and [Link Python to tools](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools).
 
 **Remote compute contexts and revoscalepy**
 
 
 This sample demonstrates the process of creating a Python model in a remote _compute context_, which lets you work from a client, but choose a remote environment, such as SQL Server, Spark, or Machine Learning Server, where the operations are actually performed. Using compute contexts makes it easier to write code once and deploy it to any supported environment.
 
-To execute Python code in SQL Server requires the **revoscalepy** package. This is a special Python package provided by Microsoft, similar to the **RevoScaleR** package for the R language. The **revoscalepy** package supports the creation of compute contexts, and provides the infrastructure for passing data and models between a local workstation and a remote server. The **revoscalepy** function that supports in-database code execution is [RxInSqlServer](docs/advanced-analytics/tutorials/https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
+To execute Python code in SQL Server requires the **revoscalepy** package. This is a special Python package provided by Microsoft, similar to the **RevoScaleR** package for the R language. The **revoscalepy** package supports the creation of compute contexts, and provides the infrastructure for passing data and models between a local workstation and a remote server. The **revoscalepy** function that supports in-database code execution is [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
 
 
 

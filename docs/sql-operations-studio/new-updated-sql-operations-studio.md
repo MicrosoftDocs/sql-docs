@@ -148,14 +148,14 @@ The *April Public Preview* contains bug fixes and improvements.
 - Integrated Terminal splitting to work with multiple open terminals at once.
 - Reduced installation on-disk file count foot print for faster installs and startup times.
 - Continue to fix GitHub issues:
-   - Fix [issue 37](docs/sql-operations-studio/https://github.com/Microsoft/sqlopsstudio/issues/37): When the chart viewer throws an error, unexpected behavior occurs.
-   - Fix [issue 462](docs/sql-operations-studio/https://github.com/Microsoft/sqlopsstudio/issues/462): Feature Request: Option for Server Groups to be expanded by default.
-   - Fix [issue 606](docs/sql-operations-studio/https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense - Bad suggestion for 'update' command.
-   - Fix [issue 967](docs/sql-operations-studio/https://github.com/Microsoft/sqlopsstudio/issues/967): Expect query plan when select XML showplan in the result grid.
-   - Fix [issue 1023](docs/sql-operations-studio/https://github.com/Microsoft/sqlopsstudio/issues/1023): Add square brackets for ms_foreachdb call from flyfishingdba.
-   - Fix [issue 1048](docs/sql-operations-studio/https://github.com/Microsoft/sqlopsstudio/issues/1048): Pre-login SSL/TLS handshake error.
-   - Fix [issue 1050](docs/sql-operations-studio/https://github.com/Microsoft/sqlopsstudio/issues/1050): Clear insights view before showing error.
-   - Fix [issue 1057](docs/sql-operations-studio/https://github.com/Microsoft/sqlopsstudio/issues/1057): Restore and new query actions in explorer-widget are broken.
+   - Fix [issue 37](https://github.com/Microsoft/sqlopsstudio/issues/37): When the chart viewer throws an error, unexpected behavior occurs.
+   - Fix [issue 462](https://github.com/Microsoft/sqlopsstudio/issues/462): Feature Request: Option for Server Groups to be expanded by default.
+   - Fix [issue 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense - Bad suggestion for 'update' command.
+   - Fix [issue 967](https://github.com/Microsoft/sqlopsstudio/issues/967): Expect query plan when select XML showplan in the result grid.
+   - Fix [issue 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): Add square brackets for ms_foreachdb call from flyfishingdba.
+   - Fix [issue 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): Pre-login SSL/TLS handshake error.
+   - Fix [issue 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050): Clear insights view before showing error.
+   - Fix [issue 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057): Restore and new query actions in explorer-widget are broken.
 
 
 

@@ -413,11 +413,11 @@ Support for Java Database Connectivity API 4.3 specification, in addition to 4.1
 
 **Added new connection property: sslProtocol**
 
-Added a new connection property that lets users specify the TLS protocol keyword. Possible values are: "TLS", "TLSv1", "TLSv1.1", "TLSv1.2". See [SSLProtocol](docs/connect/jdbc/https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) for details.
+Added a new connection property that lets users specify the TLS protocol keyword. Possible values are: "TLS", "TLSv1", "TLSv1.1", "TLSv1.2". See [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) for details.
 
 **Deprecated connection property: fipsProvider**
 
-Connection property "fipsProvider" is removed from the list of accepted connection properties. See the details [Here](docs/connect/jdbc/https://github.com/Microsoft/mssql-jdbc/pull/460).
+Connection property "fipsProvider" is removed from the list of accepted connection properties. See the details [Here](https://github.com/Microsoft/mssql-jdbc/pull/460).
 
 **Added connection properties for specifying custom TrustManager**
 
@@ -579,35 +579,35 @@ CREATE TABLE [dbo].[Patients](docs/connect/jdbc/[PatientId] [int] IDENTITY(1,1),
 **Windows**
 
 
-- [Download the Microsoft ODBC Driver 17 for SQL Server on Windows](docs/connect/odbc/https://www.microsoft.com/download/details.aspx?id=56567)
+- [Download the Microsoft ODBC Driver 17 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=56567)
 
 **Linux and macOS**
 
 
 **Debian**
 
-- [Debian 9 .deb packages](docs/connect/odbc/https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
-- [Debian 8 .deb packages](docs/connect/odbc/https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
+- [Debian 9 .deb packages](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
+- [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 **RedHat**
 
-- [RedHat 7 .rpm packages (msodbcsql17-*)](docs/connect/odbc/https://packages.microsoft.com/rhel/7/prod/)
-- [RedHat 6 .rpm packages (msodbcsql17-*)](docs/connect/odbc/https://packages.microsoft.com/rhel/6.8/prod/)
+- [RedHat 7 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
+- [RedHat 6 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 **Suse**
 
-- [SuSE 12 .rpm packages (msodbcsql17-*)](docs/connect/odbc/https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11 .rpm packages (msodbcsql17-*)](docs/connect/odbc/https://packages.microsoft.com/sles/11/prod/)
+- [SuSE 12 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
+- [SuSE 11 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 **Ubuntu**
 
-- [Ubuntu 17.10 .deb packages](docs/connect/odbc/https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 16.04 .deb packages](docs/connect/odbc/https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 14.04 .deb packages](docs/connect/odbc/https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 17.10 .deb packages](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/)
 
 **macOS**
 
-- [OS X 10.11 and macOS 10.12, 10.13 Homebrew formulae](docs/connect/odbc/https://github.com/Microsoft/homebrew-mssql-release)
+- [OS X 10.11 and macOS 10.12, 10.13 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
 
 See also [Installing the Driver].
 

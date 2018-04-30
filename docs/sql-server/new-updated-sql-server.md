@@ -91,25 +91,25 @@ This compact list provides links to all the updated articles that are listed in 
 
 
 
-- **Automatic Soft-NUMA partitioning** – With SQL 2014 SP2, Automatic [Soft-NUMA](docs/sql-server/https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
+- **Automatic Soft-NUMA partitioning** – With SQL 2014 SP2, Automatic [Soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
 
 **Service Pack 3 release notes**
 
 
 **Download pages**
 
-- [SQL Server 2012 SP3 Feature Pack](docs/sql-server/http://go.microsoft.com/fwlink/?linkid=615935)
-- [SQL Server 2012 SP3 Express](docs/sql-server/http://go.microsoft.com/fwlink/?linkid=692144)
+- [SQL Server 2012 SP3 Feature Pack](http://go.microsoft.com/fwlink/?linkid=615935)
+- [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
 
-For more detailed information to identify the location and name of the file to download based on your currently installed version, see the "Select the correct file to download" section in [SQL Server 2012 Service Pack 3 release information](docs/sql-server/https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).
+For more detailed information to identify the location and name of the file to download based on your currently installed version, see the "Select the correct file to download" section in [SQL Server 2012 Service Pack 3 release information](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).
 
 **Service Pack 2 release notes**
 
 
 **Download pages**
 
-- [SQL Server 2012 SP2 Feature Pack](docs/sql-server/http://go.microsoft.com/fwlink/?LinkID=401008)
-- [SQL Server 2012 SP2 Express](docs/sql-server/http://go.microsoft.com/fwlink/?LinkID=401007)
+- [SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)
 
 Use the table below to identify the location and name of the file to download based on your currently installed version. Download pages have system requirements and basic installation instructions.
 
@@ -138,11 +138,11 @@ Use the table below to identify the location and name of the file to download ba
 
 
 
-  This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](docs/sql-server/https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
+  This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
 - [![Download from Evaluation Center]](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Azure Virtual Machine small]](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
-- [![Download SSMS]](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- [![Download SSMS]] To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)]**.
 
 **<a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)**
 
@@ -150,7 +150,7 @@ Use the table below to identify the location and name of the file to download ba
 ![info_tip] SQL Server 2016 SP2 includes all cumulative updates released after 2016 SP1, up to and including CU8.
 
 - [![Microsoft Download Center]](https://go.microsoft.com/fwlink/?linkid=869608) [Download SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
-- For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](docs/sql-server/https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)
+- For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 
 
@@ -175,20 +175,21 @@ Use the table below to identify the location and name of the file to download ba
 
 
 
-::: moniker range="= sql-server-2016"
-**Try SQL Server!**
-- [![Download from Evaluation Center]](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Download from Evaluation Center]](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Download from Evaluation Center]](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- [![Create Virtual Machine]](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-::: moniker-end
 
-::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+<-- : : : m-r -->
 **Try SQL Server!**
 - [![Download from Evaluation Center]](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Install SQL Server on Linux]](../linux/sql-server-linux-setup.md) [Install SQL Server on Linux](../linux/sql-server-linux-setup.md)
-- [![Download from Evaluation Center]](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Download from Evaluation Center]](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [![Download from Evaluation Center]] [Download SQL Server Management Studio (SSMS)]
+- [![Download from Evaluation Center]] [Download SQL Server Data Tools (SSDT)]
+- [![Create Virtual Machine]](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+
+<-- : : : m-r -->
+**Try SQL Server!**
+- [![Download from Evaluation Center]](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Install SQL Server on Linux]] [Install SQL Server on Linux](../linux/sql-server-linux-setup.md)
+- [![Download from Evaluation Center]] [Download SQL Server Management Studio (SSMS)]
+- [![Download from Evaluation Center]] [Download SQL Server Data Tools (SSDT)]
 
 
 

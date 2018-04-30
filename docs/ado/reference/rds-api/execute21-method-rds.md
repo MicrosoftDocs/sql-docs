@@ -20,7 +20,6 @@ caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Execute21 Method (RDS)
 Executes the request and creates an ADO recordset for use in ADO 2.1.  

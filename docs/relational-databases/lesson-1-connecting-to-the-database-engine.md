@@ -17,7 +17,6 @@ caps.latest.revision: 26
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Lesson 1: Connecting to the Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # How to Manage a CDC Service from the CDC Designer Console
   This procedure describes how to use the CDC Designer Console to manage a CDC service.  

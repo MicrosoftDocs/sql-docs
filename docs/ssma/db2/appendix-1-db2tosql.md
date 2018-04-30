@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Appendix - 1 (DB2ToSQL)
 Quick view of the SSMA Console command line options:  

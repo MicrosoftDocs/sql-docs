@@ -28,7 +28,6 @@ caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...) (SQL Server)

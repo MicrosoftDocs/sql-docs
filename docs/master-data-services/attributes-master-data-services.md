@@ -24,7 +24,6 @@ caps.latest.revision: 13
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Attributes (Master Data Services)
 

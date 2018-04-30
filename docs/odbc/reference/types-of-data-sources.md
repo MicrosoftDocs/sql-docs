@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Types of Data Sources
 There are two types of data sources: machine data sources and file data sources. Although both contain similar information about the source of the data, they differ in the way this information is stored. Because of these differences, they are used in somewhat different manners.  

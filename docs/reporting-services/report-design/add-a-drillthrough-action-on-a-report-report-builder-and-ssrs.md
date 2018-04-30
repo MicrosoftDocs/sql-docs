@@ -18,7 +18,6 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Add a Drillthrough Action on a Report (Report Builder and SSRS)
   The report that opens when you click the link in the main report is known as a *drillthrough report*. This drillthrough link enables a drillthrough action.  

@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create Web Application Dialog Box (Master Data Services Configuration Manager)
 

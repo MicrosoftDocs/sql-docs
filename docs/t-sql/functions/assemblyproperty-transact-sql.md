@@ -25,7 +25,6 @@ caps.latest.revision: 40
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

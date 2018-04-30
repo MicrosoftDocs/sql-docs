@@ -26,7 +26,6 @@ caps.latest.revision: 16
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)

@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListIPAddresses
   Lists the IP addresses for the report server computer.  

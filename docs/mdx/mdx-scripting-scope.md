@@ -24,7 +24,6 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # MDX Scripting - SCOPE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

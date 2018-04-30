@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # EndOfRecordset Event (ADO)
 The **EndOfRecordset** event is called when there is an attempt to move to a row past the end of the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

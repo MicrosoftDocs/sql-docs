@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Integration Management Functional Area (Master Data Manager)
 

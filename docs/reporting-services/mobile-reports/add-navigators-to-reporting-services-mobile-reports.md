@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Add navigators to Reporting Services mobile reports
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], you add *navigators* to filter the data in visualizations by time or by selection. 

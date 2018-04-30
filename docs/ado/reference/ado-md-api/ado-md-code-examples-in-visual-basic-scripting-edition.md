@@ -21,7 +21,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO MD Code Examples in Visual Basic, Scripting Edition
 The following examples require Microsoft Active Server Pages (ASP) for Microsoft Internet Information Server 4.0.  

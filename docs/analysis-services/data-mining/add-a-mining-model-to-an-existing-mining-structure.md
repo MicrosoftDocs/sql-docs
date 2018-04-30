@@ -22,7 +22,6 @@ caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Add a Mining Model to an Existing Mining Structure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

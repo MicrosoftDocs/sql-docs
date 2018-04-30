@@ -16,7 +16,6 @@ ms.topic: "article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Add SQL Server Reporting Services Report Viewer web part to a SharePoint page

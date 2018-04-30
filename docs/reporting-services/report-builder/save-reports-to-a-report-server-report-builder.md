@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Save Reports to a Report Server (Report Builder)
   In Report Builder, you can save a report definition to a report server (also known as publishing a report). When the report is saved to a report server, other users can view the report. Each time you run the published report, you will retrieve the most current data. To save a static copy of a rendered report, export the report to a different file format and save it or use the report history feature to save versions of rendered reports.  

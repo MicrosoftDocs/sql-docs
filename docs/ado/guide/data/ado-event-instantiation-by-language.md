@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO Event Instantiation by Language
 Each programming language creates instances of ADO events differently. All of the following examples create a **ConnectComplete** event handler.  

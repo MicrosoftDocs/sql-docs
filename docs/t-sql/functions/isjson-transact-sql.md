@@ -24,7 +24,6 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # ISJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

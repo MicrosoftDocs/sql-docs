@@ -19,7 +19,6 @@ caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Introduction to Data Quality Services
 

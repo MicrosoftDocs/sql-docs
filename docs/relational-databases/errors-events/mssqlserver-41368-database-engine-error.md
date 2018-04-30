@@ -20,7 +20,6 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # MSSQLSERVER_41368
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

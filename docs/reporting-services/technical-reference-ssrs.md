@@ -23,7 +23,6 @@ caps.latest.revision: 23
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Technical Reference (SSRS)

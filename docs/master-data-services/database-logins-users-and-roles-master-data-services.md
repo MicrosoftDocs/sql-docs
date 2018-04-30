@@ -24,7 +24,6 @@ caps.latest.revision: 9
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Database Logins, Users, and Roles (Master Data Services)
 

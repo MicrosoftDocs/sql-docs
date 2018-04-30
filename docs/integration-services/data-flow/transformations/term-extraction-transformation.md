@@ -35,7 +35,6 @@ caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Term Extraction Transformation
   The Term Extraction transformation extracts terms from text in a transformation input column, and then writes the terms to a transformation output column. The transformation works only with English text and it uses its own English dictionary and linguistic information about English.  

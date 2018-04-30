@@ -17,7 +17,6 @@ caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "v-jizho2"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Data Source Wizard Screen 2
 

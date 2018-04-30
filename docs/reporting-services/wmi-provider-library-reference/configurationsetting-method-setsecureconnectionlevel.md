@@ -25,7 +25,6 @@ caps.latest.revision: 21
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetSecureConnectionLevel
   Sets the secure connection level of the report server.  

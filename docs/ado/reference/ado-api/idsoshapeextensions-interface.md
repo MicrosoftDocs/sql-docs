@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # IDSOShapeExtensions Interface
 Gets the underlying OLE DB Data Source object for the SHAPE provider.  

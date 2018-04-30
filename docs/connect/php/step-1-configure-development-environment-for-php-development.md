@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Step 1: Configure environment for PHP development
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

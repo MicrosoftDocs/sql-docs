@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MDX Query and Slicer Axes - Using Axes in a Simple Example
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

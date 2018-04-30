@@ -23,7 +23,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)

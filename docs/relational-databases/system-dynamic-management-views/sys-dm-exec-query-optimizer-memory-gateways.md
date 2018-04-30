@@ -25,7 +25,6 @@ helpviewer_keywords:
 author: "josack"
 ms.author: "josack"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)

@@ -20,7 +20,6 @@ caps.latest.revision: 32
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Server Properties (Execution Page)
   Use this page to set a timeout value for report execution. This value applies to all reports that are processed by the current report server instance. You can override this value for individual reports. The value you specify must accommodate all report processing that occurs on the report server, plus query processing performed on the database server when the report server retrieves data that is used in the report.  

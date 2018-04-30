@@ -21,7 +21,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Members Example (VBScript)
 This sample uses an MDX query string to retrieve OLAP data and writes the resulting cellset to an HTML table structure using column spanning features for multiple-dimension cellsets.  

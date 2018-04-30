@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Precision Property (ADO)
 Indicates the degree of precision for numeric values in a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object or for numeric [Field](../../../ado/reference/ado-api/field-object.md) objects.  

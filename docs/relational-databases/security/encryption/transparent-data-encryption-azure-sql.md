@@ -18,7 +18,6 @@ ms.tgt_pltfrm:
 ms.topic: "article"
 ms.date: "04/10/2018"
 ms.author: "rebeccaz"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Transparent data encryption for SQL Database and Data Warehouse

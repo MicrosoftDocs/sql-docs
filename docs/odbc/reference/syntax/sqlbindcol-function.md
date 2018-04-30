@@ -26,7 +26,6 @@ caps.latest.revision: 37
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # SQLBindCol Function
 **Conformance**  

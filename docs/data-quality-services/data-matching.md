@@ -17,7 +17,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Matching
 

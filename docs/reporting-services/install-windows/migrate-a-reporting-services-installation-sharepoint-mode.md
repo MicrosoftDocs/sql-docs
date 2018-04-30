@@ -18,7 +18,6 @@ caps.latest.revision: 23
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)

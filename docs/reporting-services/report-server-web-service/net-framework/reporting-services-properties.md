@@ -29,7 +29,6 @@ caps.latest.revision: 34
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Reporting Services Properties
   The report server defines a set of system properties that are global to the report server and a set of item properties that are associated with an individual item stored in the report server database. Properties defined by the report server cannot be deleted, and in some cases they are read-only. An application can extend system properties and item properties by adding additional user-defined properties to the system and item properties.  

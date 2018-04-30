@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change a User&#39;s Email Address (Master Data Services)
 

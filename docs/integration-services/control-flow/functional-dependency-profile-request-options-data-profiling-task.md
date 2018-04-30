@@ -19,7 +19,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Functional Dependency Profile Request Options (Data Profiling Task)
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Functional Dependency Profile Request** selected in the requests pane. A Functional Dependency profile reports the extent to which the values in one column (the dependent column) depend on the values in another column or set of columns (the determinant column). This profile can also help you identify problems in your data such as invalid values. For example, you profile the dependency between a Zip Code/Postal Code column and a United States state column. In this profile, the same Zip Code should always have the same state, but the profile discovers violations of the dependency.  

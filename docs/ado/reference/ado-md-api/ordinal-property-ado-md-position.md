@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Ordinal Property (ADO MD Position)
 Uniquely identifies a [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) along an axis.  

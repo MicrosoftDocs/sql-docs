@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Server groups in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

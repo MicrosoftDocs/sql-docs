@@ -28,7 +28,6 @@ caps.latest.revision: 58
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

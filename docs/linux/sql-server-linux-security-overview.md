@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.workload: "Inactive"
 ---
 # Security limitations for SQL Server on Linux
 

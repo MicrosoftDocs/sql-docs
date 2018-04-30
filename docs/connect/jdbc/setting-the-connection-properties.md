@@ -17,7 +17,6 @@ caps.latest.revision: 154
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Setting the Connection Properties
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

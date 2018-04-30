@@ -26,7 +26,6 @@ caps.latest.revision: 4
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
-ms.workload: "Inactive"
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_log_info (Transact-SQL)

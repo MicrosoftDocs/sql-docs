@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Combine Data (MDS Add-in for Excel)
 

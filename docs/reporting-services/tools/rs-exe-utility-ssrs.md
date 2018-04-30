@@ -26,7 +26,6 @@ caps.latest.revision: 56
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  

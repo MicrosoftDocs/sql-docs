@@ -22,7 +22,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Open and Close Methods Example (VBScript)
 This example uses the [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) and [Close](../../../ado/reference/ado-api/close-method-ado.md) methods on both [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects that have been opened.  

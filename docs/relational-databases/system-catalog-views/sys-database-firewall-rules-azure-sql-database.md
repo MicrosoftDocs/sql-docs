@@ -27,7 +27,6 @@ caps.latest.revision: 10
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_firewall_rules (Azure SQL Database)

@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.workload: "On Demand"
 ---
 # Troubleshoot SQL Server on Linux
 

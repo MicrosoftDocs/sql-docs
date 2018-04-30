@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Position Labels in a Chart (Report Builder and SSRS)
   Because each chart type in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report has a different shape, data point labels are placed in an optimal location so as not to interfere on the chart. The default position of the labels depends varies with the chart type:  

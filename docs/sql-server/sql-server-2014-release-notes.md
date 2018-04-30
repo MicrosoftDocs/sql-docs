@@ -15,7 +15,6 @@ caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: "Inactive"
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2014 Release Notes

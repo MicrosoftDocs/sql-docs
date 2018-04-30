@@ -26,7 +26,6 @@ caps.latest.revision: 37
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Verifying a Report Run
   To view information about the status of report processing, you can use log files or refer to status information that is displayed with the report in Report Manager.  

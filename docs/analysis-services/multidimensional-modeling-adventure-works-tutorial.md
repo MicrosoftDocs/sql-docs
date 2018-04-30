@@ -22,7 +22,6 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Multidimensional Modeling (Adventure Works Tutorial)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

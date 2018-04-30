@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create InfoPackage
   Use the **Create InfoPackage** dialog box to create a new InfoPackage in the SAP Netweaver BW system.  

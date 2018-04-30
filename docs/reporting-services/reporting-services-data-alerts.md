@@ -18,7 +18,6 @@ caps.latest.revision: 33
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Reporting Services Data Alerts
 

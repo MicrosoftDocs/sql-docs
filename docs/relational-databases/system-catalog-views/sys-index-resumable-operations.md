@@ -26,7 +26,6 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # index_resumable_operations (Transact-SQL)

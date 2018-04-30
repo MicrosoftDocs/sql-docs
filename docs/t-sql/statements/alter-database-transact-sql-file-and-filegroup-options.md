@@ -48,7 +48,6 @@ caps.latest.revision: 61
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options 

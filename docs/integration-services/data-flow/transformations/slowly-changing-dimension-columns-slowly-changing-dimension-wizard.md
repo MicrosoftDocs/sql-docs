@@ -19,7 +19,6 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)
   Use the **Slowly Changing Dimensions Columns** dialog box to select a change type for each slowly changing dimension column.  

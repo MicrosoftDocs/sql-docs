@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 #  Using source control in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

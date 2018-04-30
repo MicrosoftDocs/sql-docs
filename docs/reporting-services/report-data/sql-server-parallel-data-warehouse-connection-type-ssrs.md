@@ -18,7 +18,6 @@ caps.latest.revision: 10
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # SQL Server Parallel Data Warehouse Connection Type (SSRS)

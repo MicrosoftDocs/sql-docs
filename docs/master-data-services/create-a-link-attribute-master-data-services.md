@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create a Link Attribute (Master Data Services)
 

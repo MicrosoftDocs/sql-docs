@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Master Data Services Features and Tasks
 

@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Boundaries of a Recordset
 **Recordset** supports the **BOF** and **EOF** properties to delineate the beginning and end, respectively, of the dataset. You can think of **BOF** and **EOF** as "phantom" records that are positioned at the beginning and end of the **Recordset**. Counting **BOF** and **EOF**, our sample **Recordset** would now look like this:  

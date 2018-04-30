@@ -18,7 +18,6 @@ caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Update Credentials in Report Data Sources from a SharePoint Site
   This topic describes how to update data sources embedded in reports and shared data sources that are saved in a SharePoint document library.  

@@ -17,7 +17,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Run DQSInstaller.exe to Complete Data Quality Server Installation
 

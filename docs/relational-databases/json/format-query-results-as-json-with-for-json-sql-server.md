@@ -21,7 +21,6 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)

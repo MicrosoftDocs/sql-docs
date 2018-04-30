@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLColAttributes Mapping
 When an application calls **SQLColAttributes** through an ODBC 3*.x* driver, the call to **SQLColAttributes** is mapped to **SQLColAttribute** as follows:  

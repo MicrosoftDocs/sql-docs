@@ -23,7 +23,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Merge Data by Using the Union All Transformation
   To add and configure a Union All transformation, the package must already include at least one Data Flow task and two data sources.  

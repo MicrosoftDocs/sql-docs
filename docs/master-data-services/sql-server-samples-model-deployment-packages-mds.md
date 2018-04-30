@@ -20,7 +20,6 @@ caps.latest.revision: 21
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)
 

@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Getting Started with System-Versioned Temporal Tables

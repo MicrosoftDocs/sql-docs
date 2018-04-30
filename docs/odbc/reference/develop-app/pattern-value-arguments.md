@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Pattern Value Arguments
 Some arguments in the catalog functions, such as the *TableName* argument in **SQLTables**, accept search patterns. These arguments accept search patterns if the SQL_ATTR_METADATA_ID statement attribute is set to SQL_FALSE; they are identifier arguments that do not accept a search pattern if this attribute is set to SQL_TRUE.  

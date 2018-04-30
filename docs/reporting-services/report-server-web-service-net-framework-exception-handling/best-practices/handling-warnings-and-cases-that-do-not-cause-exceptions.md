@@ -23,7 +23,6 @@ caps.latest.revision: 30
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Handling Warnings and Cases That Do Not Cause Exceptions
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not throw exceptions for warnings and certain errors. For example, when you use the <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> method to publish a new report to a report server, any warnings that occur are returned as an array of <xref:ReportService2010.Warning> objects. These warnings should be handled and displayed so that appropriate action can be taken.  

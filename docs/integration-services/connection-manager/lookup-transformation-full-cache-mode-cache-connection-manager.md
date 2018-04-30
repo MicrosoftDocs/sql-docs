@@ -19,7 +19,6 @@ caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Lookup Transformation Full Cache Mode - Cache Connection Manager
   You can configure the Lookup transformation to use full cache mode and a Cache connection manager. In full cache mode, the reference dataset is loaded into cache before the Lookup transformation runs.  

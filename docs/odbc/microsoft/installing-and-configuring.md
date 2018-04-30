@@ -24,7 +24,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Installing and Configuring
 To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver download site](http://go.microsoft.com/fwlink/?LinkId=121318).  

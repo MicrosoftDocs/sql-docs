@@ -13,7 +13,6 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "Inactive"
 ---
 
 # Performance best practices and configuration guidelines for SQL Server 2017 on Linux

@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LEFT (SSIS Expression)
   Returns the specified number of characters from the leftmost portion of the given character expression.  

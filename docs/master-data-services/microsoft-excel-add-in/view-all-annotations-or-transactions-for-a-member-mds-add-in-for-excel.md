@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # View All Annotations or Transactions for a Member (MDS Add-in for Excel)
 

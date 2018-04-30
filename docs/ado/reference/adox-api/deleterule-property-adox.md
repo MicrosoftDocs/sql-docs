@@ -26,7 +26,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DeleteRule Property (ADOX)
 Indicates the action performed when a primary key is deleted.  

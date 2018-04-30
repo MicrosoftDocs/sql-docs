@@ -20,7 +20,6 @@ caps.latest.revision: 26
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # rrRenderingError - Reporting Services Error
     

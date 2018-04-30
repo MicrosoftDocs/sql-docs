@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # &amp;&amp; (Logical AND) (SSIS Expression)
   Performs a logical AND operation. The expression evaluates to TRUE if all conditions are TRUE.  

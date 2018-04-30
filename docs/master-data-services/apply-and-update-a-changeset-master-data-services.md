@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Apply and Update a Changeset (Master Data Services)
 

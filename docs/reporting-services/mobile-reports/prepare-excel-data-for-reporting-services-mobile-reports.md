@@ -17,7 +17,6 @@ caps.latest.revision: 14
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Prepare Excel data for Reporting Services mobile reports
   

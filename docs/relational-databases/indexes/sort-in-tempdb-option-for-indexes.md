@@ -24,7 +24,6 @@ caps.latest.revision: 26
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SORT_IN_TEMPDB Option For Indexes

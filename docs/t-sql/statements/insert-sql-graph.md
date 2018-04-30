@@ -23,7 +23,6 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # INSERT (SQL Graph)

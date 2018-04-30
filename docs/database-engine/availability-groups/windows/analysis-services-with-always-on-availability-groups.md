@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Analysis Services with Always On Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

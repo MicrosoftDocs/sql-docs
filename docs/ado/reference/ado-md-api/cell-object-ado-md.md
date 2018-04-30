@@ -22,7 +22,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Cell Object (ADO MD)
 Represents the data at the intersection of axis coordinates contained in a cellset.  

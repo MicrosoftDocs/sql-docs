@@ -17,7 +17,6 @@ caps.latest.revision: 20
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Creating a System-Versioned Temporal Table

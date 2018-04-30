@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Browse All Principals Dialog Box
   Use the **Browse All Principals** dialog box to select a database principal to change the principal’s permissions on the selected project or on all projects contained in a selected folder.  

@@ -20,7 +20,6 @@ caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # What's New in SSMA for MySQL (MySQLToSql)
 This topic lists SSMA for MySQL changes in each release. 

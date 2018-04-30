@@ -17,7 +17,6 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DQS Cleansing Connection Manager
   A DQS Cleansing connection manager enables a package to connect to a [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] server. The DQS Cleansing transformation uses the DQS Cleansing connection manager.  

@@ -14,7 +14,6 @@ caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Accessing Memory-Optimized Tables Using Interpreted Transact-SQL

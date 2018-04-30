@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (Type Mapping) (MySQLToSQL)
 The Type Mapping project settings let you set default type mappings for the SSMA project.  

@@ -31,7 +31,6 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Partitions - Partition Storage Modes and Processing
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

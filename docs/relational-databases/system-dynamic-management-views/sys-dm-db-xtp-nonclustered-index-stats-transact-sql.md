@@ -26,7 +26,6 @@ caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)

@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Make an Attribute Group Visible to Users (Master Data Services)
 

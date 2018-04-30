@@ -21,7 +21,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Automated Administration Tasks (SQL Server Agent)

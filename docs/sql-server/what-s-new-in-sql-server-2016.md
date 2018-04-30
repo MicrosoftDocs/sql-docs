@@ -24,7 +24,6 @@ caps.latest.revision: 224
 author: "craigg-msft"
 ms.author: "craigg"
 manager: craigg
-ms.workload: "Active"
 ---
 # What's new in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  

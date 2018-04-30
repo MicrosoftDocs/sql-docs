@@ -17,7 +17,6 @@ caps.latest.revision: 37
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Azure SQL Database)

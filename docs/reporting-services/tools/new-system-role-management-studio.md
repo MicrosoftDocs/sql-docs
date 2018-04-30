@@ -20,7 +20,6 @@ caps.latest.revision: 28
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # New System Role (Management Studio)
   Use this page to create a system-level role definition. A system role definition specifies a set of system-level tasks that apply to a report server as whole.  

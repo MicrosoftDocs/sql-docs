@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Item Property (ADO MD Cellset)
 Retrieves a cell from a [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) using its coordinates.  

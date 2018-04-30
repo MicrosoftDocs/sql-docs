@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Aggregate Function Limitations
 An aggregate function and a non-aggregate column reference cannot both be used as arguments to a single SQL statement.

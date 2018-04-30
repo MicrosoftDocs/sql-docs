@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLSetPos (Desktop Database Drivers)
 The bulk-model semantics for **SQLSetPos** calls with the *irow* argument equal to 0 are supported.  

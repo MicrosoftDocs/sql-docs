@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connections (MDS Add-in for Excel)
 

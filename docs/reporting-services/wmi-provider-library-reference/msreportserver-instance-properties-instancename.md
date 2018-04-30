@@ -25,7 +25,6 @@ caps.latest.revision: 18
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - InstanceName
   Returns the name of a report server instance on a specific computer. Read-only.  

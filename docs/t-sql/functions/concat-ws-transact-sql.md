@@ -24,7 +24,6 @@ caps.latest.revision: 5
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # CONCAT_WS (Transact-SQL)

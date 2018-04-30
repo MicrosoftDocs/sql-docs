@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # FetchProgress Event (ADO)
 The **FetchProgress**event is called periodically during a lengthy asynchronous operation to report how many more rows have currently been retrieved into the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

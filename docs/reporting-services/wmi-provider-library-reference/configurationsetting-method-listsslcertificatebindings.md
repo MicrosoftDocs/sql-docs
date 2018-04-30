@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListSSLCertificateBindings
   Returns a list of installed SSL certificates on the computer.  

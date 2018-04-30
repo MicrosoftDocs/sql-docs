@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connection Close Method, Table Type Property Example (VB)
 Setting the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property to **Nothing** should close the connection to the catalog. Associated collections will be empty. Any objects that were created from schema objects in the catalog will be orphaned. Any properties on those objects that have been cached will still be available, but an attempt to read properties that requires a call to the provider will fail.  

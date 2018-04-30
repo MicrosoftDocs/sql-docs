@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC in Windows
 The following items apply only to ODBC running in Microsoft® Windows NT®/Windows 2000 and Microsoft Windows® 95/98 operating systems.  

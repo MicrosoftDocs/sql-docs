@@ -21,7 +21,6 @@ caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Aggregate Values in a Dataset by Using the Aggregate Transformation
   To add and configure an Aggregate transformation, the package must already include at least one Data Flow task and one source.  

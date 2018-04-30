@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Builder Functions - Aggregate Function
   Returns a custom aggregate of the specified expression, as defined by the data provider.  

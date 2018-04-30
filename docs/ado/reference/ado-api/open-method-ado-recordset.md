@@ -23,7 +23,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Open Method (ADO Recordset)
 Opens a cursor on a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

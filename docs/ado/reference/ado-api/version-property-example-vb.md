@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Version Property Example (VB)
 This example uses the [Version](../../../ado/reference/ado-api/version-property-ado.md) property of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object to display the current ADO version. It also uses several dynamic properties to show:  

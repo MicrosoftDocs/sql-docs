@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Export and Import DQS Knowledge Bases Using DQSInstaller.exe
 

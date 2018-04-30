@@ -24,7 +24,6 @@ caps.latest.revision: 22
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

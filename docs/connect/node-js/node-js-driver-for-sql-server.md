@@ -16,7 +16,6 @@ caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Node.js Driver for SQL Server
 

@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Closing the Cursor
 When an application has finished using a cursor, it calls **SQLCloseCursor** to close the cursor. For example:  

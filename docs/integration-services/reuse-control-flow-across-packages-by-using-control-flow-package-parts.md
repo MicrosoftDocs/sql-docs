@@ -22,7 +22,6 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts
   Save a commonly used control flow task or container to a standalone part file - a “.dtsxp” file - and reuse it multiple times in one or more packages by using control flow package parts. This reusability makes SSIS packages easier to design and maintain.  

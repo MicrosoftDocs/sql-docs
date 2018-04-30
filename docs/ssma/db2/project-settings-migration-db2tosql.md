@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (Migration) (DB2ToSQL)
 The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

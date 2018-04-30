@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Application and Driver Compatibility
 ODBC applications and driver fall into a number of categories in addition to their version. Some of these applications are incompatible with some drivers; in other cases, the type of the application or driver may have a bearing on the backward compatibility issues between them.  

@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.workload: "Inactive"
 ---
 # Operate Red Hat Enterprise Linux shared disk cluster for SQL Server
 

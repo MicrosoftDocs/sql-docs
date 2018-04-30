@@ -20,7 +20,6 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LN (SSIS Expression)
   Returns the natural logarithm of a numeric expression.  

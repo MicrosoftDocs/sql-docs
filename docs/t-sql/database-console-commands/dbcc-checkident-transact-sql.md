@@ -35,7 +35,6 @@ caps.latest.revision: 63
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

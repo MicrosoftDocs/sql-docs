@@ -22,7 +22,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CursorType Property (ADO)
 Indicates the type of cursor used in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

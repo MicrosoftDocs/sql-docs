@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # User Interface Reference (SybaseToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Sybase.  

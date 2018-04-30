@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Removing SSMA  for Oracle Components (OracleToSQL)
 When you have finished migrating databases from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time. However, you should not uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] unless your migrated databases no longer use functions in the **ssma_oracle** schema of the **sysdb** database.  

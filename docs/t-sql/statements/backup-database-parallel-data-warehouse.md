@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # BACKUP DATABASE (Parallel Data Warehouse)

@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Source Assistant
   The Source Assistant component helps create a source component and connection manager. The component is located in the **Favorites** section of the SSIS Toolbox.  

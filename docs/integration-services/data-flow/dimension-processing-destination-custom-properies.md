@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Dimension Processing Destination Custom Properies
   The Dimension Processing destination has both custom properties and the properties common to all data flow components.  

@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # JDBC Specification Compliance
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

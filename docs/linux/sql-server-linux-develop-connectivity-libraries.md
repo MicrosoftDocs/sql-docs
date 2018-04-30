@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.workload: "Inactive"
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server
 

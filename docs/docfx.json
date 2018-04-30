@@ -58,27 +58,28 @@
 
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
-        "data-quality-services/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "dma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
-        "master-data-services/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
-        "reporting-services/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "sql-operations-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
 
         "advanced-analytics/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "analysis-services/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
+        "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "dmx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
         "integration-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "mdx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
         "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "relational-databases/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017 || = sqlallproducts-allversions",
         "samples/**/*.md": "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "ssdt/**/*.md": ">= ssdt-15vs2017 || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "ssdt/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "tools/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "t-sql/**/*.md": "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
@@ -92,7 +93,7 @@
     "groups": {
 
       "gr-sql-2016-a": {
-        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-analysis-services-2017 || >= sql-server-2014 || >= sql-server-2016 || >= sql-server-2017 || >= sql-server-linux-2017 || >= ssdt-15vs2017 || = sqlallproducts-allversions"
+        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
       }
     },
 

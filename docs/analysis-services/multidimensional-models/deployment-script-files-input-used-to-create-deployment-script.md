@@ -27,7 +27,6 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Deployment Script Files - Input Used to Create Deployment Script
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "meet-bhagdev"
 ms.author: "meetb"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 

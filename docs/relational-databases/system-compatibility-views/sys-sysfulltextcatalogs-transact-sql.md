@@ -27,7 +27,6 @@ caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.sysfulltextcatalogs (Transact-SQL)

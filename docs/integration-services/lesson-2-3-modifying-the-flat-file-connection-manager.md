@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Lesson 2-3 - Modifying the Flat File Connection Manager
 In this task, you will modify the Flat File connection manager that you created and configured in Lesson 1. When originally created, the Flat File connection manager was configured to statically load a single file. To enable the Flat File connection manager to iteratively load files, you must modify the ConnectionString property of the connection manager to accept the user-defined variable `User:varFileName`, which contains the path of the file to be loaded at run time.  

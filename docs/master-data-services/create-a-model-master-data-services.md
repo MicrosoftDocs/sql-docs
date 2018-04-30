@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create a Model (Master Data Services)
 

@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Seek Method
 Searches the index of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to quickly locate the row that matches the specified values, and changes the current row position to that row.  

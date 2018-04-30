@@ -25,7 +25,6 @@ caps.latest.revision: 2
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # REVOKE Database Scoped Credential (Transact-SQL)

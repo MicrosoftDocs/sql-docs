@@ -19,7 +19,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Step 6: Changes are Sent to the Server (RDS Tutorial)
 If the **Recordset** object is edited, any changes (that is, rows that are added, changed, or deleted) can be sent back to the server.  

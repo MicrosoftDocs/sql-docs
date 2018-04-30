@@ -31,7 +31,6 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Data Type Hierarchy (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -17,7 +17,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # Wide World Importers sample databases for Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

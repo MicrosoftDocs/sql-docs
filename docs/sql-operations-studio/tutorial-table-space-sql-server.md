@@ -13,7 +13,6 @@ ms.topic: "tutorial"
 author: "erickangMSFT"
 ms.author: "erickang"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Tutorial: Enable the table space usage sample insight widget using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

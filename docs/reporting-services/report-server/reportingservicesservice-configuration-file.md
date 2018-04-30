@@ -22,7 +22,6 @@ caps.latest.revision: 41
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ReportingServicesService Configuration File
  ||  

@@ -24,7 +24,6 @@ caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_describe_first_result_set (Transact-SQL)

@@ -29,7 +29,6 @@ caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Execution Plan and Buffer Allocation
   Before execution, the data flow task examines its components and generates an execution plan for each sequence of components. This section provides details about the execution plan, how to view the plan, and how input and output buffers are allocated based on the execution plan.  

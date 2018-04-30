@@ -26,7 +26,6 @@ caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # SSIS How to Create an ETL Package
 
@@ -35,9 +34,6 @@ ms.workload: "Active"
 In this tutorial, you learn how to use [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create a simple [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package. The package that you create takes data from a flat file, reformats the data, and then inserts the reformatted data into a fact table. In following lessons, the package is expanded to demonstrate looping, package configurations, logging, and error flow.  
   
 When you install the sample data that the tutorial uses, you also install the completed versions of the packages that you create in each lesson of the tutorial. By using the completed packages, you can skip ahead and begin the tutorial at a later lesson if you like. If this tutorial is your first time working with packages or the new development environment, we recommend that you begin with Lesson1.  
-
-> [!IMPORTANT]
-> Recently the sample files required to run this tutorial were no longer available online at their previous location. We sincerely apologize for the inconvenience. We have made the files available at a new location, and updated the links in this article.
 
 ## What is SQL Server Integration Services (SSIS)?
 
@@ -48,12 +44,15 @@ The best way to become acquainted with the new tools, controls, and features ava
   
 ## Requirements  
 This tutorial is intended for users familiar with fundamental database operations, but who have limited exposure to the new features available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
+
+> [!IMPORTANT]
+> Recently the sample files required to run this tutorial were no longer available online at their previous location. We apologize for the inconvenience. We have made the files available at a new location, and we have updated the download links in this article.
+
 To use this tutorial, your system must have the following components installed:  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with the **AdventureWorksDW2012** database. To download the **AdventureWorksDW2012** database, download `AdventureWorksDW2012.bak` from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
 
--   Sample data. The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages as a Zip file, [click here](http://download.microsoft.com/download/3/1/4/314A4169-D540-4E9E-9776-585BFBFC2CC5/Creating a Simple ETL Package.zip).  
+-   Sample data. The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial - Create a Simple ETL Package](https://www.microsoft.com/download/details.aspx?id=56827).  
 
 ## Lessons in This Tutorial  
 [Lesson 1: Create a Project and Basic Package with SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

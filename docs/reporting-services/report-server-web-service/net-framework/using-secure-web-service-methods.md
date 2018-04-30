@@ -25,7 +25,6 @@ caps.latest.revision: 36
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Using Secure Web Service Methods
   Certain Report Server Web service methods may require a secure connection when you invoke them. The methods that require a secure connection are determined by the **SecureConnectionLevel** setting in the RSReportServer.config file. The value of the setting is an integer value with a valid range of 0 and higher. The following table describes these values.  

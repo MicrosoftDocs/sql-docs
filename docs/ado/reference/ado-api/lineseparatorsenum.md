@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LineSeparatorsEnum
 Specifies the character used as a line separator in text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects.  

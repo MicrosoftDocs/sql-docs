@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Setup Program
 > **NOTE:** Starting with Windows XP and Windows Server 2003, **ODBC is included in the Windows operation system**. You should only explicitly install ODBC on earlier versions of Windows.  

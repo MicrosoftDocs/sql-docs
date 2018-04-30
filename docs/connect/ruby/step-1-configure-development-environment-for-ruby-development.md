@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Step 1: Configure development environment for Ruby development
 You will need to configure your development environment with the prerequisites in order to develop an application using the Ruby Driver for SQL Server.    

@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)

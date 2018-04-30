@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Find Databases Wizard (Select Files) (AccessToSQL)
 The Select Files page of the Find Databases Wizard lists the files that were found during the search. To select a file to add to SSMA, select the row that contains the file name. When you are finished selecting files, click **Next** to view the Verify Selection page.  

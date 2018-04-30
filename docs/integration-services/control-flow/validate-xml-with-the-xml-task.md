@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Validate XML with the XML Task
   Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task.  

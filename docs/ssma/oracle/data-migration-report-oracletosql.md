@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-pelars"
-ms.workload: "Inactive"
 ---
 # Data Migration Report  (OracleToSQL)
 The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

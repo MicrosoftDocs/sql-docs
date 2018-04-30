@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # StreamReadEnum
 Specifies whether the whole stream or the next line should be read from a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

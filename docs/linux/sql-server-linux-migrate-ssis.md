@@ -14,7 +14,6 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "On Demand"
 ---
 # Extract, transform, and load data on Linux with SSIS
 

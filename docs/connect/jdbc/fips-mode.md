@@ -17,7 +17,6 @@ caps.latest.revision: 01
 author: "v-nisidh"
 ms.author: "v-nisidh"
 manager: "andrela"
-ms.workload: "Inactive"
 ---
 # FIPS Mode
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

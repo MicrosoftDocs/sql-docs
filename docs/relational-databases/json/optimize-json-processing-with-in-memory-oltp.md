@@ -17,7 +17,6 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Optimize JSON processing with in-memory OLTP

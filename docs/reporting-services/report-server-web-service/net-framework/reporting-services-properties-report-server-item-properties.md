@@ -25,7 +25,6 @@ caps.latest.revision: 43
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Reporting Services Properties - Report Server Item Properties
   Item properties are properties that are specific to items in the report server database. Such items include reports, linked reports, folders, resources, models, and data sources.  

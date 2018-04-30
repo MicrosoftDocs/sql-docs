@@ -17,7 +17,6 @@ caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # About Code Examples in the Documentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

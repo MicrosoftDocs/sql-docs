@@ -24,7 +24,6 @@ caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_addextendedproperty (Transact-SQL)

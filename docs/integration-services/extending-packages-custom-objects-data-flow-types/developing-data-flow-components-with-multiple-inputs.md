@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Developing Data Flow Components with Multiple Inputs
   A data flow component with multiple inputs may consume excessive memory if its multiple inputs produce data at uneven rates. When you develop a custom data flow component that supports two or more inputs, you can manage this memory pressure by using the following members in the Microsoft.SqlServer.Dts.Pipeline namespace:  

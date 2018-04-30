@@ -27,7 +27,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Description Property (ADO MD)
 Returns a text explanation of the current object.  

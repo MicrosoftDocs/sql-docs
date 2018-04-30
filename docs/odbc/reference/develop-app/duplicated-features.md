@@ -23,7 +23,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Duplicated Features
 The following ODBC 2.*x* functions have been duplicated by ODBC 3.*x* functions. As a result, the ODBC 2.*x* functions are deprecated in ODBC 3.*x*. The ODBC 3.*x* functions are referred to as replacement functions.  

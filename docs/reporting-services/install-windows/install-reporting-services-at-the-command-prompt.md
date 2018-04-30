@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Install Reporting Services 2016 at the Command Prompt
 

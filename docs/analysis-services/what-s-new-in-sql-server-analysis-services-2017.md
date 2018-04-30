@@ -15,7 +15,6 @@ ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017 Analysis Services

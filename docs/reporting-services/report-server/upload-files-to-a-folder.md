@@ -26,7 +26,6 @@ caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Upload Files to a Folder
   You can upload files from the file system and store them as managed items in a report server database. What happens when you upload a file depends on the file type.  

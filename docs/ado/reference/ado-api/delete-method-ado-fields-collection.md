@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Delete Method (ADO Fields Collection)
 Deletes an object from the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  

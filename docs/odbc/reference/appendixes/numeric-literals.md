@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Numeric Literals
 Numeric literals are used when numeric data values are stored in character strings. For conversion of numeric SQL data to an SQL_C_CHAR string, or conversion of numeric C data to an SQL_CHAR or SQL_VARCHAR string, numeric literal syntax is used to specify what is stored in the target. For conversion of a numeric stored as a SQL_C_CHAR string to numeric SQL data, or a numeric stored as a SQL_CHAR string to numeric C data, this syntax is used to validate what is stored in the source.  

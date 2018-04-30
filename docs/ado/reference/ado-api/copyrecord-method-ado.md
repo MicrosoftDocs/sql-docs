@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CopyRecord Method (ADO)
 Copies an entity represented by a [record](../../../ado/reference/ado-api/record-object-ado.md) to another location.  

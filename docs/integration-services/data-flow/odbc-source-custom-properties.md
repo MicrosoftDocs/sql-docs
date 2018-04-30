@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ODBC Source Custom Properties
   The following table describes the custom properties of the ODBC source. All properties can be set from SSIS property expressions.  

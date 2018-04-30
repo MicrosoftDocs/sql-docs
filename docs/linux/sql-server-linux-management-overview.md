@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: "sql-linux"
-ms.workload: "On Demand"
 ---
 # Choose the right tool to manage SQL Server on Linux
 

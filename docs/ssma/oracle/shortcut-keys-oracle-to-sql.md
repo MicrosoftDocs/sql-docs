@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Shortcut Keys(Oracle To SQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

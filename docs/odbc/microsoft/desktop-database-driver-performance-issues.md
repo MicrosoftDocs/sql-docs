@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Desktop Database Driver Performance Issues
 To ensure compatibility with existing ANSI applications, the SQL_WCHAR, SQL_WVARCHAR, and SQL_WLONGVARCHAR data types are exposed as SQL_CHAR, SQL_VARCHAR, and SQL_LONGVARCHAR for Microsoft Access 4.0 or higher data sources. The data sources do not return WIDE CHAR data types but the data still must be sent to Jet in Wide Char form. It is important to understand that conversion will take place if a SQL_C_CHAR parameter or result column is bound to a SQL_CHAR data type in an ANSI application.  

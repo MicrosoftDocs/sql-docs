@@ -20,7 +20,6 @@ caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (Conversion) (MySQLToSQL)
 The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts MySQL syntax to SQL Server or SQL Azure syntax.  

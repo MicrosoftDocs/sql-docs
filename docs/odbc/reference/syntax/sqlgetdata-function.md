@@ -26,7 +26,6 @@ caps.latest.revision: 46
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # SQLGetData Function
 **Conformance**  

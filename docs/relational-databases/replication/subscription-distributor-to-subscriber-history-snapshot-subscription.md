@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Subscription, Distributor to Subscriber History (Snapshot Subscription)

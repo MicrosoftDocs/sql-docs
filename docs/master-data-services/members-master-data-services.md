@@ -24,7 +24,6 @@ caps.latest.revision: 16
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Members (Master Data Services)
 

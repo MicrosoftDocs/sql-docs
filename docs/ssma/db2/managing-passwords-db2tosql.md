@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Managing Passwords (DB2ToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

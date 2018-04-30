@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - GetDatabaseVersionDisplayName
   Gets the display name for a given report server database version string.  

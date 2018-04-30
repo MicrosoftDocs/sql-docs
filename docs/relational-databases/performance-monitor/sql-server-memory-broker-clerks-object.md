@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server, Memory Broker Clerks Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # User and Group Permissions Functional Area (Master Data Manager)
 

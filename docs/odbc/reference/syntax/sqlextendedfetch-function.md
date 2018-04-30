@@ -26,7 +26,6 @@ caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLExtendedFetch Function
 **Conformance**  

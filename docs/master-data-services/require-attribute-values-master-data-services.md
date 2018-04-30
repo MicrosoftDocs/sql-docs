@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Require Attribute Values (Master Data Services)
 

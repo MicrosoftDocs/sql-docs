@@ -57,7 +57,6 @@ caps.latest.revision: 207
 author: "MikeRayMSFT"
 ms.author: "MikeRay"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Configure Windows Service Accounts and Permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

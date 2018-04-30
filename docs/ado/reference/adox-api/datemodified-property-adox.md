@@ -24,7 +24,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DateModified Property (ADOX)
 Indicates the date the object was last modified.  

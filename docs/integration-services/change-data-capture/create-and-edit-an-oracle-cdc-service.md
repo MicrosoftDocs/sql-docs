@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create and Edit an Oracle CDC Service
   You create and edit a new Oracle CDC Windows Service from the CDC Service Configuration Console.  

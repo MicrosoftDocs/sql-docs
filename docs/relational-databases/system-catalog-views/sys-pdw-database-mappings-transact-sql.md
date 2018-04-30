@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_database_mappings (Transact-SQL)

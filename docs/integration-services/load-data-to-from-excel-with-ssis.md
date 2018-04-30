@@ -15,7 +15,6 @@ ms.topic: "article"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Load data from or to Excel with SQL Server Integration Services (SSIS)
 

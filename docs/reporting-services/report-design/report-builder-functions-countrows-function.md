@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Builder Functions - CountRows Function
   Returns the number of rows in the specified scope, including rows with null values.  

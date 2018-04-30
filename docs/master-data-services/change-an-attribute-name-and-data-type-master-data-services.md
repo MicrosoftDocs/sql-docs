@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "leolimsft"
 ms.author: "lle"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Change an Attribute Name and Data Type (Master Data Services)
 

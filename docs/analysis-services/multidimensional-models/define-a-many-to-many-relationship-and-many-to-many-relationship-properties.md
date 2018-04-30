@@ -21,7 +21,6 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Define a Many-to-Many Relationship and Many-to-Many Relationship Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

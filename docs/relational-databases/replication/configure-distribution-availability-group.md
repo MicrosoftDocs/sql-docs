@@ -27,7 +27,6 @@ caps.latest.revision: 44
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Set up replication distribution database in Always On availability group
 

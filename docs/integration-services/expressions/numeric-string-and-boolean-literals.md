@@ -24,7 +24,6 @@ caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Numeric, string, and Boolean literals
  Expressions can include numeric, string, and Boolean literals. The expression evaluator supports a variety of numeric literals such as integers, decimals, and floating-point constants. The expression evaluator also supports the long and float suffixes, which specify how the expression evaluator handles values, and scientific notation in numeric literals.  

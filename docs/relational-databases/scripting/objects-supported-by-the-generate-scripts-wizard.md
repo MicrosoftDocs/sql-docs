@@ -5,7 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: "sql"
 ms.prod_service: "sql-tools"
 ms.service: ""
-ms.component: "ssms-scripting"
+ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Objects Supported by the Generate Scripts Wizard

@@ -19,7 +19,6 @@ caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Lesson 3-5 - Browsing the Deployed Cube
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

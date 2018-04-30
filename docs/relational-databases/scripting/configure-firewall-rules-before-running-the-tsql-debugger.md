@@ -5,7 +5,7 @@ ms.date: "10/20/2016"
 ms.prod: "sql"
 ms.prod_service: "sql-tools"
 ms.service: ""
-ms.component: "ssms-scripting"
+ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -28,7 +28,6 @@ caps.latest.revision: 43
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure firewall rules before running the TSQL Debugger

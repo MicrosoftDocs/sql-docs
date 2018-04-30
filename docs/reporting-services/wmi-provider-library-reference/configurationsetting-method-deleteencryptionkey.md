@@ -25,7 +25,6 @@ caps.latest.revision: 20
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - DeleteEncryptionKey
   Deletes the encryption keys from the report server database.  

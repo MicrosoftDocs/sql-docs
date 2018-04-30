@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
-ms.workload: "Inactive"
 ---
 # Get started with Log Shipping on Linux
 

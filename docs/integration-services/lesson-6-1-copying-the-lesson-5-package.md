@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Lesson 6-1 - Copying the Lesson 5 Package
 In this task, you will create a copy of the Lesson 5.dtsx package that you created in Lesson 5. Alternatively, you can add the completed lesson 5 package that is included with the tutorial to the project, and then copy it instead. You will use this new copy throughout the rest of Lesson 6.  

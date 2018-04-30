@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LevelName Property (ADO MD)
 Indicates the name of the level of a [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

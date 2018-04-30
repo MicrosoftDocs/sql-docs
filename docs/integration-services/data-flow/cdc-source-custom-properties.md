@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CDC Source Custom Properties
   The following table describes the custom properties of the CDC source. All properties are read/write.  

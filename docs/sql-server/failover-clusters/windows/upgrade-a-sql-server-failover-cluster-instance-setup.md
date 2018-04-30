@@ -23,7 +23,6 @@ caps.latest.revision: 63
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Upgrade a SQL Server Failover Cluster Instance (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

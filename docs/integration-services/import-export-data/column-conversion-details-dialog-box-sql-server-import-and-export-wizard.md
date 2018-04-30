@@ -19,7 +19,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
   If you double-click the row for an individual column on the **Review Data Type Mapping** page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Column Conversion Details** dialog box. On this page you can review detailed conversion information for an individual column. This information includes the following items.

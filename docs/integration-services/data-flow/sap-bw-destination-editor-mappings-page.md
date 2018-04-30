@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SAP BW Destination Editor (Mappings Page)
   Use the **Mappings** page of the **SAP BW Destination Editor** to map input columns to destination columns.  

@@ -24,7 +24,6 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Retrieving Data Using the AdomdDataReader
   When retrieving analytical data, the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> object provides a good balance between overhead and interactivity. The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> object retrieves a read-only, forward-only, flattened stream of data from an analytical data source. This unbuffered stream of data enables procedural logic to efficiently process results from an analytical data source sequentially. This makes the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> a good choice when retrieving large amounts of data for display purposes because the data is not cached in memory.  

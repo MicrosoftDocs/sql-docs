@@ -17,7 +17,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Configure E-mail for a Reporting Services Service Application
 

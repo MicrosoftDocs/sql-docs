@@ -21,7 +21,6 @@ caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLCancelHandle Function
 **Conformance**  

@@ -27,7 +27,6 @@ caps.latest.revision: 95
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)

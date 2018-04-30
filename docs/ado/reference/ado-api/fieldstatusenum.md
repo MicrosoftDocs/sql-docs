@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # FieldStatusEnum
 Specifies the [status](../../../ado/reference/ado-api/status-property-ado-field.md) of a [Field Object](../../../ado/reference/ado-api/field-object.md).  

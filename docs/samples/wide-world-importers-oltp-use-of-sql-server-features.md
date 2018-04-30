@@ -18,7 +18,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # Use of SQL Server features and capabilities
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

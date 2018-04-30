@@ -24,7 +24,6 @@ caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Web Service Task
   The Web Service task executes a Web service method. You can use the Web Service task for the following purposes:  

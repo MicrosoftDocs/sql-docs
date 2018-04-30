@@ -33,7 +33,6 @@ caps.latest.revision: 42
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_builtin_permissions (Transact-SQL)

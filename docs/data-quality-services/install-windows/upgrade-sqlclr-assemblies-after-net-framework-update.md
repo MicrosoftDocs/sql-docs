@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Upgrade SQLCLR Assemblies After .NET Framework Update
 

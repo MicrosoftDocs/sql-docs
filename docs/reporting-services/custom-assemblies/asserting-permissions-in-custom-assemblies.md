@@ -28,7 +28,6 @@ caps.latest.revision: 34
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Asserting Permissions in Custom Assemblies
   By default, custom assembly code runs with the limited **Execution** permission set. In some cases, you may wish to implement a custom assembly that makes secured calls to protected resources within your security system (such as a file or the registry). In order to accomplish this, you must do the following:  

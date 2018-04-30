@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # View Errors that Occur During Staging (Master Data Services)
 

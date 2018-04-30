@@ -28,7 +28,6 @@ caps.latest.revision: 15
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)

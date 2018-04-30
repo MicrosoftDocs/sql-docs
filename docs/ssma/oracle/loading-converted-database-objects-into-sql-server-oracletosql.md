@@ -20,7 +20,6 @@ caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Loading Converted Database Objects into SQL Server (OracleToSQL)
 After you have converted Oracle schemas to SQL Server, you can load the resulting database objects into SQL Server. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of SQL Server database.  

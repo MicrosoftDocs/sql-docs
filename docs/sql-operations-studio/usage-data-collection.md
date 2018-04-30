@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Enable or disable usage data collection for [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

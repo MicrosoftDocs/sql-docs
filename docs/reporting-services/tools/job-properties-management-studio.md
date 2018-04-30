@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Job Properties (Management Studio)
   Use the **Job Properties** page to view information about an in-progress report or subscription before you cancel it.  

@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Lesson 1-9 - Testing the Lesson 1 Tutorial Package
 In this lesson, you have done the following tasks:  

@@ -23,7 +23,6 @@ caps.latest.revision: 35
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Linked Reports Methods
   You can use these methods to create and manage linked items.  

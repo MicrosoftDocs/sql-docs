@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Change the Time-out Value for Data Mining Queries
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

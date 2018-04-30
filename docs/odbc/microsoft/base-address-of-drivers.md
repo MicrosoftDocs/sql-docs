@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Base Address of Drivers
 Each of the ODBC Desktop Database Drivers has been linked with a base address of 0x04c0000.

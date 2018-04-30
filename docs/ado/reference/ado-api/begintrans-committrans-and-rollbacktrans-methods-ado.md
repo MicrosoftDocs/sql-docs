@@ -29,7 +29,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)
 These transaction methods manage transaction processing within a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object as follows:  

@@ -19,7 +19,6 @@ caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change Domain Values
 

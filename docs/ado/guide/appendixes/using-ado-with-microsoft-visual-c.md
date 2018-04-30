@@ -21,7 +21,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Using ADO with Microsoft Visual C++
 For information about using ADO with Visual C++, see the following sections:  

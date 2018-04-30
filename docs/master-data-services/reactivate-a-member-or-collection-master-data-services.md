@@ -24,7 +24,6 @@ caps.latest.revision: 11
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Reactivate a Member or Collection (Master Data Services)
 

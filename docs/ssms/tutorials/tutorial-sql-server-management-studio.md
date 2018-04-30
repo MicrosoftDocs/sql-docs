@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -30,7 +27,6 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
 ms.reviewer: "sstein"
-ms.workload: "Active"
 ---
 # Tutorials for SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

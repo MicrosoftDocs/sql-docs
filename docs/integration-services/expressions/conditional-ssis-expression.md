@@ -20,7 +20,6 @@ caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # ? : (Conditional) (SSIS Expression)
   Returns one of two expressions based on the evaluation of a Boolean expression. If the Boolean expression evaluates to TRUE, then the first expression is evaluated and the result is the expression result. If the Boolean expression evaluates to FALSE then the second expression is evaluated and its result is the expression result.  

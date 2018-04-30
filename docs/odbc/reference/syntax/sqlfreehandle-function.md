@@ -26,7 +26,6 @@ caps.latest.revision: 35
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLFreeHandle Function
 **Conformance**  

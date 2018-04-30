@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # SaveToFile Method
 Saves the binary contents of a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) to a file.  

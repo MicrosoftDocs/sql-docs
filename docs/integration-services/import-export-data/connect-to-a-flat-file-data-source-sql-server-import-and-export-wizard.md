@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Connect to a Flat File Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to a **flat file** (text file) data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. For flat files, these two pages of the wizard present different sets of options, so this topic describes the flat file source and the flat file destination separately.

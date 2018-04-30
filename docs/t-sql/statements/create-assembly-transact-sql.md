@@ -29,7 +29,6 @@ caps.latest.revision: 94
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE ASSEMBLY (Transact-SQL)

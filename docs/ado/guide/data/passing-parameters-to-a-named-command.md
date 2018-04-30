@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Passing Parameters to a Named Command
 Just as the result of the command is passed out as an *out* variable of the named command, parameters for a parameterized command can been passed in as *in* variables to the named command.  

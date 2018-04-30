@@ -40,7 +40,6 @@ caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Converting Access Database Objects (AccessToSQL)
 After you have added Access databases and connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, SSMA displays metadata for Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects. You can now select Access database objects, and then convert the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure schemas.  

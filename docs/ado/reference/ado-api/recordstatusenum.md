@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RecordStatusEnum
 Specifies the [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) of a record with regard to batch updates and other bulk operations.  

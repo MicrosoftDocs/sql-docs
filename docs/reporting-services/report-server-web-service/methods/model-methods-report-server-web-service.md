@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Model Methods - Report Server Web Service
   You can use these methods to manage models.  

@@ -26,7 +26,6 @@ caps.latest.revision: 44
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Creating the Web Service Proxy
   A client and a Web service can communicate using SOAP messages, which encapsulate the input and output parameters as XML. A proxy class maps parameters to XML elements and then sends the SOAP messages over a network. In this way, the proxy class frees you from having to communicate with the Web service at the SOAP level and allows you to invoke Web service methods in any development environment that supports SOAP and Web service proxies.  

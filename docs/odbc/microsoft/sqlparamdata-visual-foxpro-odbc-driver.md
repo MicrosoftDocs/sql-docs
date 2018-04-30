@@ -2,7 +2,7 @@
 title: "SQLParamData (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,8 +18,7 @@ ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLParamData (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -1,6 +1,6 @@
 ---
 title: "Convert, Load, and Migrate (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-access"
@@ -24,7 +24,6 @@ caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Convert, Load, and Migrate (AccessToSQL)
 The **Convert, Load, and Migrate** dialog box reports migration status when you use the Convert, Load, and Migrate button or the Migration Wizard.  

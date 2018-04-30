@@ -3,7 +3,7 @@ title: "Rowsets and SQL Server Cursors | Microsoft Docs"
 description: "Rowsets and SQL Server cursors"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-rowsets"
@@ -21,8 +21,7 @@ helpviewer_keywords:
   - "cursors [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Rowsets and SQL Server Cursors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

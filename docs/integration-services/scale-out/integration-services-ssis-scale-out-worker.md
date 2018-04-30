@@ -3,7 +3,7 @@ title: "SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs
 ms.description: "This article describes the Scale Out Master component of SSIS Scale Out"
 ms.custom: ""
 ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "scale-out"
@@ -17,7 +17,6 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Integration Services (SSIS) Scale Out Worker
 

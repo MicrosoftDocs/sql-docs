@@ -2,7 +2,7 @@
 title: "Cursor Library Cache | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Cursor Library Cache
 > [!IMPORTANT]  

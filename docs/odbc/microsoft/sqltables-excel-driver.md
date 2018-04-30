@@ -2,7 +2,7 @@
 title: "SQLTables (Excel Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLTables (Excel Driver)
 > [!NOTE]  

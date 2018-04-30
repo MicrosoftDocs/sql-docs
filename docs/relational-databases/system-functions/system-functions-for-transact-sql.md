@@ -2,7 +2,7 @@
 title: "System Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-functions"
@@ -21,7 +21,6 @@ caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # System Functions for Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

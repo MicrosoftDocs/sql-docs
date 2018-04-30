@@ -2,7 +2,7 @@
 title: "Using 16-Bit Applications with 32-Bit Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Using 16-Bit Applications with 32-Bit Drivers
 > [!IMPORTANT]  

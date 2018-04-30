@@ -2,7 +2,7 @@
 title: "Using Scrollable Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Using Scrollable Cursors
 Using a scrollable cursor requires these three steps:  

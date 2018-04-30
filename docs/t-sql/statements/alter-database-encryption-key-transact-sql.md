@@ -1,8 +1,8 @@
 ---
 title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/16/2018"
+ms.prod: "sql"
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -27,10 +27,9 @@ caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Alters an encryption key and certificate that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -53,7 +52,7 @@ ALTER DATABASE ENCRYPTION KEY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  
     {  
@@ -80,7 +79,7 @@ ALTER DATABASE ENCRYPTION KEY
 ## Remarks  
  The certificate or asymmetric key that is used to encrypt the database encryption key must be located in the master system database.  
   
- The database encryption key does not have to be regenerated when a database owner (dbo) is changed.  
+ When the database owner (dbo) is changed, the database encryption key does not have to be regenerated.
   
  After a database encryption key has been modified twice, a log backup must be performed before the database encryption key can be modified again.  
   

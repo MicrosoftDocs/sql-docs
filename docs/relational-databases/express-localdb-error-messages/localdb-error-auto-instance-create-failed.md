@@ -2,7 +2,7 @@
 title: "LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "localdb"
@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "Create and Deploy a Cache for the Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -21,7 +21,6 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create and Deploy a Cache for the Lookup Transformation
   You can create and deploy a cache file (.caw) for the Lookup transformation. The reference dataset is stored in the cache file.  

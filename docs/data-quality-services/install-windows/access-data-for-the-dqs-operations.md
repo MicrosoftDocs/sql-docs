@@ -2,7 +2,7 @@
 title: "Access Data for the DQS Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "install-windows"
@@ -17,9 +17,11 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Access Data for the DQS Operations
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   To use your source data for [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) operations, and export your processed data, you can do either of the following:  
   
 -   Copy your source data to a table/view in the DQS_STAGING_DATA database, and then use it for DQS operations. You can also export the processed data to a new table in the DQS_STAGING_DATA database. To do so, your Windows user account must be granted read/write access to the DQS_STAGING_DATA database.  

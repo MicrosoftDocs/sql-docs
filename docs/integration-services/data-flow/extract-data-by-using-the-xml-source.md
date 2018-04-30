@@ -2,7 +2,7 @@
 title: "Extract Data by Using the XML Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -21,7 +21,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Extract Data by Using the XML Source
   To add and configure an XML source, the package must already include at least one Data Flow task.  

@@ -24,7 +24,6 @@ caps.latest.revision: 8
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # SSRS Encryption Keys - Manage Encryption Keys
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses encryption keys to secure credentials and connection information that is stored in a report server database. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], encryption is supported through a combination of public, private, and symmetric keys that are used to protect sensitive data. The symmetric key is created during report server initialization when you install or configure the report server, and it is used by the report server to encrypt sensitive data that is stored in the report server. Public and private keys are created by the operating system, and they are used to protect the symmetric key. A public and private key pair is created for each report server instance that stores sensitive data in a report server database.  

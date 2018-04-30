@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Builder Functions - InScope Function
   Indicates whether the current instance of an item is in the specified scope.  

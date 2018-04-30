@@ -2,7 +2,7 @@
 title: "Deprecated Master Data Services Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -17,9 +17,11 @@ caps.latest.revision: 18
 author: "leolimsft"
 ms.author: "lle"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Deprecated Master Data Services Features
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes the deprecated [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   
 ## Explicit Hierarchies, Collections, and Related Components  

@@ -2,7 +2,7 @@
 title: "Revoking and Granting Rights When Using Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 24070039-03ab-4623-a681-6308802eb399
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Revoking and Granting Rights When Using Stored Procedures
 > [!IMPORTANT]  

@@ -1,9 +1,9 @@
----
+﻿---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
@@ -16,8 +16,8 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 caps.latest.revision: 71
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

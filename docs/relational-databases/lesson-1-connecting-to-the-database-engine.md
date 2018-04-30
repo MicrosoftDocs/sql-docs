@@ -2,7 +2,7 @@
 title: "Lesson 1: Connecting to the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/05/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "tutorial"
@@ -17,7 +17,6 @@ caps.latest.revision: 26
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Lesson 1: Connecting to the Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "Microsoft Drivers for PHP for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,6 @@ caps.latest.revision: 1
 author: "David-Engel"
 ms.author: "v-daveng"
 manager: ""
-ms.workload: "On Demand"
 ---
 
 # Microsoft PHP Drivers for SQL Server Support Matrix

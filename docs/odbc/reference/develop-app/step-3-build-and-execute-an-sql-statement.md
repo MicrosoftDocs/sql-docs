@@ -2,7 +2,7 @@
 title: "Step 3: Build and Execute an SQL Statement | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Step 3: Build and Execute an SQL Statement
 The third step is to build and execute an SQL statement, as shown in the following illustration. The methods used to perform this step are likely to vary tremendously. The application might prompt the user to enter an SQL statement, build an SQL statement based on user input, or use a hard-coded SQL statement. For more information, see [Constructing SQL Statements](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

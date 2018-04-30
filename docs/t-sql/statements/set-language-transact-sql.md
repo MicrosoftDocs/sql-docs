@@ -1,8 +1,8 @@
----
+﻿---
 title: "SET LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -28,7 +28,7 @@ caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

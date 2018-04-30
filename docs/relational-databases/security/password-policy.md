@@ -2,7 +2,7 @@
 title: "Password Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2015"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "security"
@@ -39,7 +39,6 @@ caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Password Policy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

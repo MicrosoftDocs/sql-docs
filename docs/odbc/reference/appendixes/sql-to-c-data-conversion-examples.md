@@ -2,7 +2,7 @@
 title: "SQL to C Data Conversion Examples | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQL to C Data Conversion Examples
 The examples shown in the following table illustrate how the driver converts SQL data to C data :  

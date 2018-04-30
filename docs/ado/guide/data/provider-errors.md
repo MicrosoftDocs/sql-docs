@@ -1,6 +1,6 @@
 ---
 title: "Provider Errors | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors collection [ADO]"
   - "provider errors [ADO]"
@@ -23,7 +23,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Provider Errors
 When a provider error occurs, a run-time error of -2147467259 is returned. When you receive this error, check the **Errors** collection of the active **Connection** object, which will contain one or more errors describing what occurred.  

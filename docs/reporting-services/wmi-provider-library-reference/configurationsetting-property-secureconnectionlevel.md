@@ -25,7 +25,6 @@ caps.latest.revision: 19
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - SecureConnectionLevel
   Returns the secure connection level specified in the RSReportServer.config file. Read-only.  

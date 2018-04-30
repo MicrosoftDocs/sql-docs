@@ -2,7 +2,7 @@
 title: "SQLGetConnectOption Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -25,8 +25,7 @@ ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLGetConnectOption Function
 **Conformance**  

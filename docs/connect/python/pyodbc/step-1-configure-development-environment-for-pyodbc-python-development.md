@@ -2,7 +2,7 @@
 title: "Step 1: Configure pyodbc Python development environment | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "python"
@@ -16,8 +16,7 @@ ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Step 1: Configure development environment for pyodbc Python development
 

@@ -1,6 +1,6 @@
 ---
 title: "AbsolutePosition and CursorLocation Properties Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # AbsolutePosition and CursorLocation Properties Example (VB)
 This example demonstrates how the [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) property can track the progress of a loop that enumerates all the records of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). It uses the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property to enable the **AbsolutePosition** property by setting the cursor to a client cursor.  

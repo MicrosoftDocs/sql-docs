@@ -2,7 +2,7 @@
 title: "DELETE - SQL Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,8 +18,7 @@ ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # DELETE - SQL Command
 Marks records for deletion.  

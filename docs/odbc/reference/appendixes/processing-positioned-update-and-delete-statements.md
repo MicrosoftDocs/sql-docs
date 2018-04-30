@@ -2,7 +2,7 @@
 title: "Processing Positioned Update and Delete Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -24,8 +24,7 @@ ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Processing Positioned Update and Delete Statements
 > [!IMPORTANT]  

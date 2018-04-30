@@ -4,7 +4,7 @@ description: Learn how to create and use SQL code snippets in SQL Operations Stu
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
 ms.reviewer: "alayu; erickang; sstein"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Create and use code snippets to quickly create Transact-SQL (T-SQL) scripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

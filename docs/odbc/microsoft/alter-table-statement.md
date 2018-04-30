@@ -2,7 +2,7 @@
 title: "ALTER TABLE Statement | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 9cfa6ea3-7e33-46c7-99fd-3c717fbcc4e6
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ALTER TABLE Statement
 When the Microsoft Access, dBASE, or Paradoxdriver is used, the ALTER TABLE statement is supported with add and drop table constraint definition clauses. (ALTER TABLE statements are not supported for the Microsoft Excel or Text drivers.)  

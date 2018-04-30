@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the JDBC driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "3/14/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 caps.latest.revision: 64
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Using Always Encrypted with the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

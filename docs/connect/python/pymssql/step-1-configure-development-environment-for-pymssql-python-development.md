@@ -2,7 +2,7 @@
 title: "Step 1: Configure pymssql Python development environment | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "python"
@@ -16,8 +16,7 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Step 1: Configure development environment for pymssql Python development
 You will need to configure your development environment with the prerequisites in order to develop an application using the Python Driver for SQL Server.    

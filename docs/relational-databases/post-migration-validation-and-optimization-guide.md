@@ -2,7 +2,7 @@
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "5/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "relational-databases-misc"
@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "pelopes"
 ms.author: "harinid"
 manager: ""
-ms.workload: "Inactive"
 ---
 # Post-migration Validation and Optimization Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

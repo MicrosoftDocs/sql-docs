@@ -2,7 +2,7 @@
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/09/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"
@@ -57,7 +57,6 @@ caps.latest.revision: 207
 author: "MikeRayMSFT"
 ms.author: "MikeRay"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Configure Windows Service Accounts and Permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -3,7 +3,7 @@ title: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStre
 description: "Fetch columns using IRow::GetColumns (or IRow::Open) and ISequentialStream"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-how-to"
@@ -19,8 +19,7 @@ helpviewer_keywords:
   - "GetColumns method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

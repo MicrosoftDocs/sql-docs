@@ -2,7 +2,7 @@
 title: "C to SQL: Numeric | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # C to SQL: Numeric
 The identifiers for the numeric ODBC C data types are:  

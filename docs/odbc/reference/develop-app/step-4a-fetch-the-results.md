@@ -2,7 +2,7 @@
 title: "Step 4a: Fetch the Results | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Step 4a: Fetch the Results
 The next step is to fetch the results, as shown in the following illustration.  

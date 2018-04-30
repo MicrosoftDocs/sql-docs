@@ -2,7 +2,7 @@
 title: "Diagnostic Handling Rules | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,8 +21,7 @@ ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Diagnostic Handling Rules
 The following rules govern diagnostic handling in **SQLGetDiagRec** and **SQLGetDiagField**.  

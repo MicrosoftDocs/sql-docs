@@ -1,10 +1,8 @@
 ---
 title: "SQL Server 2012 Service Pack release notes | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
-ms.technology: "server-general"
+ms.prod: "sql"
+ms.prod_service: sql
+ms.technology: "supportability"
 ms.custom: ""
 ms.date: "2/26/2018"
 ms.reviewer: ""
@@ -12,11 +10,10 @@ ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 0
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Service Pack release notes
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

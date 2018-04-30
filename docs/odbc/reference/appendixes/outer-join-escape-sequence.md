@@ -2,7 +2,7 @@
 title: "Outer Join Escape Sequence | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Outer Join Escape Sequence
 ODBC uses escape sequences for outer joins. The syntax of this escape sequence is as follows:  

@@ -1,15 +1,14 @@
----
+﻿---
 title: "SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,7 +19,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ You can define an operator as the alias for a group of individuals. In this way,
 Members of the **SQLAgentUserRole**, **SQLAgentReaderRole**, and **SQLAgentOperatorRole** fixed database roles in **msdb**, and members of the **sysadmin** fixed server role have access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. A user that does not belong to any of these roles cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. For more information on the roles used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### Subsystems  
-A subsystem is a predefined object that represents functionality that is available to a job step. Each proxy has access to one or more subsystems. Subsystems provide security because they delimit access to the functionality that is available to a proxy. Each job step runs in the context of a proxy, except for [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps. [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps use the EXECUTE AS command to set the security context.  
+A subsystem is a predefined object that represents functionality that is available to a job step. Each proxy has access to one or more subsystems. Subsystems provide security because they delimit access to the functionality that is available to a proxy. Each job step runs in the context of a proxy, except for [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps. [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps use the EXECUTE AS command to set the security context to the owner of the Job.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] defines the subsystems listed in the following table:  
   

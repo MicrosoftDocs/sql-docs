@@ -2,7 +2,7 @@
 title: "Microsoft ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.component: "odbc"
 ms.reviewer: ""
@@ -16,7 +16,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Microsoft ODBC Driver for SQL Server
 

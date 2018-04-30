@@ -3,7 +3,7 @@ title: "Stored Procedures | Microsoft Docs"
 description: "Stored Procedures"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db"
@@ -20,8 +20,7 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], about OLE DB stored procedures"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Stored Procedures
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,6 +42,6 @@ ms.workload: "Inactive"
 -   [Calling a Stored Procedure &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

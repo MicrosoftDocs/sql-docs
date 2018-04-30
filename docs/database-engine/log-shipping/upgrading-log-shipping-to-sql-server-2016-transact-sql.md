@@ -2,7 +2,7 @@
 title: "Upgrading Log Shipping to SQL Server 2016 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "log-shipping"
@@ -19,7 +19,6 @@ caps.latest.revision: 59
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

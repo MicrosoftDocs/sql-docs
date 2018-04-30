@@ -2,7 +2,7 @@
 title: "Using a Stored Procedure with an Update Count | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Using a Stored Procedure with an Update Count
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

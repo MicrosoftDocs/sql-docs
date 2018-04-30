@@ -2,7 +2,7 @@
 title: "Determining Cursor Capabilities | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Determining Cursor Capabilities
 The following four options in **SQLGetInfo** describe what types of cursors are supported and what their capabilities are:  

@@ -2,7 +2,7 @@
 title: "Appendix A: ODBC Error Codes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Appendix A: ODBC Error Codes
 This topic discusses SQLSTATE values for ODBC 3.*x*. For more information on ODBC 3.*x* SQLSTATE values, see [SQLSTATE Mappings](../../../odbc/reference/develop-app/sqlstate-mappings.md).  

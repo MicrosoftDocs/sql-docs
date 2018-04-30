@@ -2,7 +2,7 @@
 title: "ODBC Translators Subkey | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ODBC Translators Subkey
 The values under the ODBC Translators subkey list the installed translators. The format of these values is shown in the following table.  

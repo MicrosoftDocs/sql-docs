@@ -1,6 +1,6 @@
 ---
 title: "ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ADCPROP_UPDATECRITERIA_ENUM"
@@ -22,7 +22,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADCPROP_UPDATECRITERIA_ENUM
 Specifies which fields can be used to detect conflicts during an optimistic update of a row of the data source with a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

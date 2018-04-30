@@ -2,7 +2,7 @@
 title: "Descriptor Field Conformance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,8 +21,7 @@ ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Descriptor Field Conformance
 The following table indicates the conformance level of each ODBC descriptor header field, where this is well defined.  

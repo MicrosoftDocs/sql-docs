@@ -2,7 +2,7 @@
 title: "Column Pattern Profile Request Options (Data Profiling Task) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Column Pattern Profile Request Options (Data Profiling Task)
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Pattern Profile Request** selected in the requests pane. A Column Pattern profile reports a set of regular expressions that cover the specified percentage of values in a string column. This profile can help you identify problems in your data, such as invalid strings, and can suggest regular expressions that can be used in the future to validate new values. For example, a pattern profile of a column of United States Zip Codes might produce the regular expressions \d{5}-\d{4}, \d{5}, and \d{9}. If you see other regular expressions, your data likely contains values that are invalid or in an incorrect format.  

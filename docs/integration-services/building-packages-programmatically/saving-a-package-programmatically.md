@@ -2,7 +2,7 @@
 title: "Saving a Package Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "building-packages-programmatically"
@@ -22,7 +22,6 @@ caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Saving a Package Programmatically
   After building a new package programmatically, or modifying an existing one, you usually want to save your changes.  

@@ -2,7 +2,7 @@
 title: "Supported SET Commands (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -24,8 +24,7 @@ ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Supported SET Commands (Visual FoxPro ODBC Driver)
 Your application can send the following Visual FoxPro **SET** commands to a data source:  

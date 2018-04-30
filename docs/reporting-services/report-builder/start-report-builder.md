@@ -23,7 +23,6 @@ caps.latest.revision: 56
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Start Report Builder

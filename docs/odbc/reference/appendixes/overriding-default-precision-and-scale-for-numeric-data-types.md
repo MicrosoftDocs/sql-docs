@@ -2,7 +2,7 @@
 title: "Overriding Default Precision and Scale for Numeric Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -22,8 +22,7 @@ ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Overriding Default Precision and Scale for Numeric Data Types
 When the SQL_DESC_TYPE field in an ARD is set to SQL_C_NUMERIC, by calling either **SQLBindCol** or **SQLSetDescField**, the SQL_DESC_SCALE field in the ARD is set to 0 and the SQL_DESC_PRECISION field is set to a driver-defined default precision. This is also true when the SQL_DESC_TYPE field in an APD is set to SQL_C_NUMERIC, by calling either **SQLBindParameter** or **SQLSetDescField**. This is true for input, input/output, or output parameters.  

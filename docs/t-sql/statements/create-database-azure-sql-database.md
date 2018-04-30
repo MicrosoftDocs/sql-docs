@@ -1,4 +1,4 @@
----
+﻿---
 title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 
@@ -34,7 +34,7 @@ caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

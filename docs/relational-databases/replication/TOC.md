@@ -29,8 +29,10 @@
 #### [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
 ### [Configure IIS for Web Synchronization](configure-iis-for-web-synchronization.md)  
 ### [Configure IIS 7 for Web Synchronization](configure-iis-7-for-web-synchronization.md)  
+
 ## [Configure Distribution](configure-distribution.md)  
 ### [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
+### [Configure Distribution in AG](configure-distribution-availability-group.md)
 ### [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
 ### [Disable Publishing and Distribution](disable-publishing-and-distribution.md)  
 ### [Enable a Database for Replication (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [Specify the Default Snapshot Location (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [Set the Distribution Retention Period for Transactional Publications (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [Set the History Retention Period (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [Subscribe to Publications](subscribe-to-publications.md)  
 ### [Create a Pull Subscription](create-a-pull-subscription.md)  
 ### [Create a Push Subscription](create-a-push-subscription.md)  
@@ -286,15 +289,10 @@
 ### [MSSQL_REPL-2147201021](mssql-repl-2147201021.md)  
 # [Replication Language Reference](replication-language-reference.md)  
 # [Replication Tutorials](replication-tutorials.md)  
-# [Preparing the Server for Replication](tutorial-preparing-the-server-for-replication.md)  
-## [Lesson 1: Creating Windows Accounts for Replication](lesson-1-creating-windows-accounts-for-replication.md)  
-## [Lesson 2: Preparing the Snapshot Folder](lesson-2-preparing-the-snapshot-folder.md)  
-## [Lesson 3: Configuring Distribution](lesson-3-configuring-distribution.md)  
-# [Replicating Data Between Fully Connected Servers](tutorial-replicating-data-between-continuously-connected-servers.md)  
-## [Lesson 1: Publishing Data Using Transactional Replication](lesson-1-publishing-data-using-transactional-replication.md)  
-## [Lesson 2: Creating a Subscription to the Transactional Publication](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
-## [Lesson 3: Validating the Subscription and Measuring Latency](lesson-3-validating-the-subscription-and-measuring-latency.md)  
-# [Replicating Data with Mobile Clients](tutorial-replicating-data-with-mobile-clients.md)  
-## [Lesson 1: Publishing Data Using Merge Replication](lesson-1-publishing-data-using-merge-replication.md)  
-## [Lesson 2: Creating a Subscription to the Merge Publication](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
-## [Lesson 3: Synchronizing the Subscription to the Merge Publication](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)  
+## [Prepare Server for Replication](tutorial-preparing-the-server-for-replication.md)  
+## [Configure Transactional Replication](tutorial-replicating-data-between-continuously-connected-servers.md)  
+## [Configure Merge Replication](tutorial-replicating-data-with-mobile-clients.md)  
+
+# Troubleshooters
+## [Errors with Transactional Replication](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+

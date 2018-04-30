@@ -24,7 +24,6 @@ caps.latest.revision: 38
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Data Sources and Connection Methods
   You can use these methods to set and manage data source connections and credentials.  

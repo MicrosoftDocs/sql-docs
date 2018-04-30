@@ -2,7 +2,7 @@
 title: "Azure Key Vault Sample Version 6.2.2 | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid:
 caps.latest.revision: 1
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Azure Key Vault Sample Version 6.2.2
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

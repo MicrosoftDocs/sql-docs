@@ -2,7 +2,7 @@
 title: "SQL Server In-Memory OLTP Internals for SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/14/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "in-memory-oltp"
@@ -17,7 +17,6 @@ caps.latest.revision: 2
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server In-Memory OLTP Internals for SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "C to SQL: Timestamp | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # C to SQL: Timestamp
 The identifier for the timestamp ODBC C data type is:  

@@ -2,7 +2,7 @@
 title: "SQLBrowseConnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -25,8 +25,7 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 caps.latest.revision: 36
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLBrowseConnect Function
 **Conformance**  

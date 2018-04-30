@@ -2,7 +2,7 @@
 title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "dma"
 ms.service: ""
 ms.component:
@@ -20,7 +20,6 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 
 # Overview of Data Migration Assistant

@@ -2,8 +2,8 @@
 title: SQL Server help content and Help Viewer | Microsoft Docs
 ms.custom: ""
 ms.date: "12/15/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.technology: "server-general"
@@ -19,8 +19,7 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQL Server offline help and Help Viewer
 

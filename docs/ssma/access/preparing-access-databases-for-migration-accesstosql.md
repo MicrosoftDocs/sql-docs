@@ -1,6 +1,6 @@
 ---
 title: "Preparing Access Databases for Migration (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-access"
@@ -31,7 +31,6 @@ caps.latest.revision: 20
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
-ms.workload: "On Demand"
 ---
 # Preparing Access databases for migration (AccessToSQL)
 Before you migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must determine which databases to migrate and ensure that those databases are ready for migration.  

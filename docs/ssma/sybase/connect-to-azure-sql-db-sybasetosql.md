@@ -2,7 +2,7 @@
 title: "Connect to Azure SQL DB  (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-sybase"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to Azure SQL DB  (SybaseToSQL)
 Use the Connect to Azure SQL DB dialog box to connect to the Azure SQL DB database that you want to migrate.  

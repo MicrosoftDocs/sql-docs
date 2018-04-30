@@ -3,7 +3,7 @@ title: "Service Principal Name (SPN) Support in Client Connections | Microsoft D
 description: "Service Principal Name (SPN) support in client connections"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "oledb|features"
@@ -19,8 +19,7 @@ helpviewer_keywords:
   - "SPNs [SQL Server]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Service Principal Name (SPN) Support in Client Connections
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

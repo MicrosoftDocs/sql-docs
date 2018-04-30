@@ -2,7 +2,7 @@
 title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "dma"
 ms.service: ""
 ms.component:
@@ -20,7 +20,6 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 
 # Perform a SQL Server migration assessment

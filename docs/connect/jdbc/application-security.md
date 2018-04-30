@@ -2,7 +2,7 @@
 title: "Application Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Application Security
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

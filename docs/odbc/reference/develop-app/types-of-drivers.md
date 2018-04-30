@@ -2,7 +2,7 @@
 title: "Types of Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,8 +21,7 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Types of Drivers
 ODBC drivers can be classified as follows:  

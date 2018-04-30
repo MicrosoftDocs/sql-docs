@@ -2,7 +2,7 @@
 title: "Write SQL Server Audit Events to the Security Log | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "security"
@@ -22,7 +22,6 @@ caps.latest.revision: 19
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 ---  
 # Write SQL Server Audit Events to the Security Log  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

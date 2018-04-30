@@ -2,7 +2,7 @@
 title: "Fetching Rows with SQLBulkOperations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -23,8 +23,7 @@ ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Fetching Rows with SQLBulkOperations
 Data can be refetched into a rowset using bookmarks by a call to **SQLBulkOperations.** The rows to be fetched are identified by the bookmarks in a bound bookmark column. Columns with a value of SQL_COLUMN_IGNORE are not fetched.  

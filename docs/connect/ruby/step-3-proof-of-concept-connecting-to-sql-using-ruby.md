@@ -2,7 +2,7 @@
 title: "Step 3: Proof of concept connecting to SQL using Ruby | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ruby"
@@ -16,8 +16,7 @@ ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using Ruby
 

@@ -2,7 +2,7 @@
 title: "Cursor Type and Concurrency Combinations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,8 +21,7 @@ ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Cursor Type and Concurrency Combinations
 > [!IMPORTANT]  

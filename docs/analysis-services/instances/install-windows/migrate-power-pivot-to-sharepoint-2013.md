@@ -17,7 +17,6 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Migrate Power Pivot to SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -34,32 +33,20 @@ ms.workload: "Inactive"
 |Prepare the SharePoint 2013 farm|Backup, copy, restore databases.|Mount content databases|Migrate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Schedules|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|-SharePoint Central Administration<br /><br /> -Windows PowerShell|-SharePoint application Pages<br /><br /> -Windows PowerShell|  
   
- **In this topic:**  
+##  <a name="bkmk_prepare_sharepoint2013"></a>Prepare the SharePoint 2013 Farm  
   
--   [1) Prepare the SharePoint 2013 Farm](#bkmk_prepare_sharepoint2013)  
-  
--   [2) Backup, Copy, Restore the Databases](#bkmk_backup_restore)  
-  
--   [3) Prepare Web Applications and Mount Content Databases](#bkmk_prepare_mount_databases)  
-  
--   [4) Upgrade Power Pivot Schedules](#bkmk_upgrade_powerpivot_schedules)  
-  
--   [Additional Resources](#bkmk_additional_resources)  
-  
-##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Prepare the SharePoint 2013 Farm  
-  
-1.  > [!TIP]  
+  > [!TIP]  
     >  Review the authentication method your existing web applications are configured for. SharePoint 2013 web applications default to claims-based authentication. SharePoint 2010 web applications configured for classic-mode authentication require additional steps to migrate databases from SharePoint 2010 to SharePoint 2013. If your web applications are configured for classic-mode authentication, review the SharePoint 2013 documentation.  
   
-2.  Install a new SharePoint Server 2013 farm.  
+1.  Install a new SharePoint Server 2013 farm.  
   
-3.  Install an instance of a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint mode. For more information, see [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+2.  Install an instance of a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint mode. For more information, see [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Run the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 installation package **spPowerPivot.msi** on each server in the SharePoint farm. For more information, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Run the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 installation package **spPowerPivot.msi** on each server in the SharePoint farm. For more information, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  In SharePoint 2013 Central Administration, configure the Excel Services service application to use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint mode server created in the previous step. For more information, see the “Configure Basic Analysis Services SharePoint Integration” section of [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+4.  In SharePoint 2013 Central Administration, configure the Excel Services service application to use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint mode server created in the previous step. For more information, see the “Configure Basic Analysis Services SharePoint Integration” section of [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-##  <a name="bkmk_backup_restore"></a> 2) Backup, Copy, Restore the Databases  
+##  <a name="bkmk_backup_restore"></a>Backup, Copy, Restore the Databases  
  The “SharePoint database-attach upgrade” process is a sequence of steps to back up, copy, and restore [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] related content and service application databases to the SharePoint 2013 farm.  
   
 1.  **Set Database to read-only:** In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], right-click the database name and click **Properties**. On the **Options** page, set the **Database read-Only** property to **True**.  
@@ -72,7 +59,7 @@ ms.workload: "Inactive"
   
 5.  **Set Database to read-write:** Set the **Database read-Only** to **False**.  
   
-##  <a name="bkmk_prepare_mount_databases"></a> 3) Prepare Web Applications and Mount Content Databases  
+##  <a name="bkmk_prepare_mount_databases"></a>Prepare Web Applications and Mount Content Databases  
  For a more detailed explanation of the following procedures, see [Upgrade databases from SharePoint 2010 to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 1.  **Take Databases Offline:**  
@@ -111,7 +98,7 @@ ms.workload: "Inactive"
   
 2.  **Missing PowerPivot.Files:** If you see errors related to missing [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .dlls, the **spPowerPivot.msi** has not been installed or the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Configuration Tool has not been used to configure [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
-##  <a name="bkmk_upgrade_powerpivot_schedules"></a> 4) Upgrade Power Pivot Schedules  
+##  <a name="bkmk_upgrade_powerpivot_schedules"></a>Upgrade Power Pivot Schedules  
  This section describes the details and options for migrating [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] schedules. Schedule migration is a two-step process. First configure the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] service application to use the migrated service application database. Second, choose one of two options for schedule migration.  
   
  **Configure the service application to use the migrated service application database.**  

@@ -2,7 +2,7 @@
 title: "Stored Procedure Parameter Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Stored Procedure Parameter Limitations
 > [!IMPORTANT]  

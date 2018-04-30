@@ -2,7 +2,7 @@
 title: "PolyBase Queries | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "polybase"
@@ -25,12 +25,11 @@ caps.latest.revision: 18
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  This article provides examples of queries using the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server 2016. Before using these examples, you must also understand the T-SQL statements required to set up PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)
+  This article provides examples of queries using the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server (starting with 2016). Before using these examples, you must also understand the T-SQL statements required to set up PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)
   
 ## Queries  
  Run Transact-SQL statements against external tables or use BI tools to query external tables.
@@ -151,9 +150,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 Export data from SQL Server to Hadoop or Azure Storage. 
 
-First, enable export functionality by setting the `sp_configure` value of 'allow polybase export' to 1. Next, create an external table that points to the destination directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. 
+First, enable export functionality by setting the `sp_configure` value of 'allow polybase export' to 1. Next, create an external table that points to the destination directory. The CREATE EXTERNAL TABLE statement creates the destination directory, if it doesn't already exist. Then, use INSERT INTO to export data from a local SQL Server table to the external data source. 
 
-The INSERT INTO statement creates the destination directory, if it does not exist, and the results of the SELECT statement are exported to the specified location in the specified file format. The external files are named *QueryID_date_time_ID.format*, where *ID* is an incremental identifier and *format* is the exported data format. For example, one file name might be QID776_20160130_182739_0.orc.
+The results of the SELECT statement are exported to the specified location in the specified file format. The external files are named *QueryID_date_time_ID.format*, where *ID* is an incremental identifier and *format* is the exported data format. For example, one file name might be QID776_20160130_182739_0.orc.
+
 
 > [!NOTE]
 > When exporting data to Hadoop or Azure Blob Storage via PolyBase, only the data is exported, not the column names (metadata) as defined in the CREATE EXTERNAL TABLE command.

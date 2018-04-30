@@ -2,7 +2,7 @@
 title: "Using Statements with Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Using Statements with Stored Procedures
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

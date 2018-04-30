@@ -1,8 +1,8 @@
----
+﻿---
 title: "Validate, Query, and Change JSON Data with Built-in Functions (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""
@@ -16,10 +16,11 @@ helpviewer_keywords:
   - "functions (JSON)"
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Validate, Query, and Change JSON Data with Built-in Functions (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "SQL Server Always On availability group deployment patterns | Microsoft Docs"
 ms.custom: "sql-linux"
 ms.date: "10/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: ""
@@ -16,7 +16,6 @@ caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # High availability and data protection for availability group configurations
 

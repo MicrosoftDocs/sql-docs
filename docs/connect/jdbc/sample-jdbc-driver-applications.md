@@ -2,7 +2,7 @@
 title: "Sample JDBC Driver Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Sample JDBC Driver Applications
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

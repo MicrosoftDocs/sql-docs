@@ -2,7 +2,7 @@
 title: "WHERE Clause Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 46b54f74-e4a3-4318-87cf-8a97c38a2718
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # WHERE Clause Limitations
 The maximum number of clauses in a WHERE clause is 40.  

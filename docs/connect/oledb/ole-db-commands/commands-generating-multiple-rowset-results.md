@@ -3,7 +3,7 @@ title: "Commands Generating Multiple-Rowset Results | Microsoft Docs"
 description: "Commands generating multiple-rowset results"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-commands"
@@ -22,8 +22,7 @@ helpviewer_keywords:
   - "multiple-rowset results"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Commands Generating Multiple-Rowset Results
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

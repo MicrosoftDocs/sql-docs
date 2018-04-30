@@ -18,7 +18,6 @@ caps.latest.revision: 9
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)

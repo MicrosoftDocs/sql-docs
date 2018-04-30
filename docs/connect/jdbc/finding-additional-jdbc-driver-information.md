@@ -2,7 +2,7 @@
 title: "Finding Additional JDBC Driver Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 caps.latest.revision: 48
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Finding Additional JDBC Driver Information
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

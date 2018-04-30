@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Get Started
 

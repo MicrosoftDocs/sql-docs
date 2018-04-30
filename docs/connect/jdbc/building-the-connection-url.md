@@ -2,7 +2,7 @@
 title: "Building the Connection URL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 caps.latest.revision: 53
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Building the Connection URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -27,7 +27,6 @@ caps.latest.revision: 70
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Upgrade Reports

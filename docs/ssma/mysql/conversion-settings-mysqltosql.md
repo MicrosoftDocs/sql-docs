@@ -1,6 +1,6 @@
 ---
 title: "Conversion Settings (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -20,7 +20,6 @@ caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Conversion Settings (MySQLToSQL)
 The **‘Settings’** tab allows the user to set node level settings. The tab will be available at the following Metabase nodes:  

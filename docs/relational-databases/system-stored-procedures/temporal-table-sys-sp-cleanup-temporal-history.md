@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.sp_cleanup_temporal_history | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,9 +17,9 @@ caps.latest.revision: 4
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
-# Temporal Table - sys.sp_cleanup_temporal_history
+# sys.sp_cleanup_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

@@ -1,6 +1,6 @@
 ---
 title: "Clear Method (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Errors::raw_Clear"
@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Clear Method (ADO)
 Removes all the [Error](../../../ado/reference/ado-api/error-object.md) objects from the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection.  

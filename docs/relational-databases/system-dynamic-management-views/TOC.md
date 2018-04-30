@@ -255,6 +255,7 @@
 ## [sys.dm_os_dispatcher_pools](sys-dm-os-dispatcher-pools-transact-sql.md)  
 ## [sys.dm_os_host_info](sys-dm-os-host-info-transact-sql.md)  
 ## [sys.dm_os_hosts](sys-dm-os-hosts-transact-sql.md)  
+## [sys.dm_os_job_object](sys-dm-os-job-object-transact-sql.md)
 ## [sys.dm_os_latch_stats](sys-dm-os-latch-stats-transact-sql.md)  
 ## [sys.dm_os_loaded_modules](sys-dm-os-loaded-modules-transact-sql.md)  
 ## [sys.dm_os_memory_brokers](sys-dm-os-memory-brokers-transact-sql.md)  

@@ -1,6 +1,6 @@
 ---
 title: "Recordset Dynamic Properties in XML | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset dynamic properties in XML [ADO]"
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Recordset Dynamic Properties in XML
 The following Recordset provider-specific properties (from the Client Cursor Engine) are currently persisted into the XML format:  

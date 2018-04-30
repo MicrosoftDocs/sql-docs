@@ -2,7 +2,7 @@
 title: "LIKE Escape Sequence | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # LIKE Escape Sequence
 ODBC uses escape sequences for the LIKE clause. The syntax of this escape sequence is as follows:  

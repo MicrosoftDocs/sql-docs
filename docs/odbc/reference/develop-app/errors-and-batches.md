@@ -2,7 +2,7 @@
 title: "Errors and Batches | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -22,8 +22,7 @@ ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Errors and Batches
 When an error occurs while executing a batch of SQL statements, one of the following four outcomes are possible. (Each possible outcome is data source–specific and might even depend on the statements included in the batch.)  

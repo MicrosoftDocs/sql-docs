@@ -2,7 +2,7 @@
 title: "Compatibility Matrix | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -24,8 +24,7 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Compatibility Matrix
 The following table describes the compatibility of the types of applications and drivers defined previously in this section.  

@@ -2,7 +2,7 @@
 title: "How to: Perform Transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -18,8 +18,7 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # How to: Perform Transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

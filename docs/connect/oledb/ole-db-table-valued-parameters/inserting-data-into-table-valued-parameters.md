@@ -3,7 +3,7 @@ title: "Inserting Data into Table-Valued Parameters | Microsoft Docs"
 description: "Using OLE DB Driver for SQL Server to insert Data into Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-table-valued-parameters"
@@ -17,8 +17,7 @@ helpviewer_keywords:
   - "table-valued parameters, inserting data into"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Inserting Data into Table-Valued Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

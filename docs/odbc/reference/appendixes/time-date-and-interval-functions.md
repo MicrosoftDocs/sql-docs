@@ -2,7 +2,7 @@
 title: "Time, Date, and Interval Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -23,8 +23,7 @@ ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Time, Date, and Interval Functions
 The following table lists time and date functions that are included in the ODBC scalar function set. An application can determine which time and date functions are supported by a driver by calling **SQLGetInfo** with an *information type* of SQL_TIMEDATE_FUNCTIONS.  

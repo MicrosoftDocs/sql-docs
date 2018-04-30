@@ -1,7 +1,7 @@
 ---
 title: "Azure Active Directory | Microsoft Docs"
 ms.date: "07/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "david-puglielli"
 ms.author: "v-dapugl"
 manager: "v-hakaka"
-ms.workload: "Inactive"
 ---
 # Connect Using Azure Active Directory Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

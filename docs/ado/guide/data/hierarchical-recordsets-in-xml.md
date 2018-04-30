@@ -1,6 +1,6 @@
 ---
 title: "Hierarchical Recordsets in XML | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchical Recordsets [ADO], in XML"
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Hierarchical Recordsets in XML
 ADO allows persistence of hierarchical Recordset objects into XML. With hierarchical Recordset objects, the value of a field in the parent Recordset is another Recordset. Such fields are represented as child elements in the XML stream rather than an attribute.  

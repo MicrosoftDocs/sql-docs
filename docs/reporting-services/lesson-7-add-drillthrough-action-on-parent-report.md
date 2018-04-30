@@ -19,7 +19,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Lesson 7: Add Drillthrough Action on Parent Report
 After you add a ReportViewer control to the website application, your next step is to add a drillthrough action on the parent report.  

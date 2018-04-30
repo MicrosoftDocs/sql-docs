@@ -2,7 +2,7 @@
 title: "Executing a Statement | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,8 +18,7 @@ ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Executing a Statement
 There are four ways to execute a statement, depending on when they are compiled (prepared) by the database engine and who defines them:  

@@ -2,7 +2,7 @@
 title: "Database Access Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -22,8 +22,7 @@ ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Database Access Architecture
 One of the questions in the development of ODBC was which part of the database access architecture to standardize. The SQL programming interfaces described in the previous section — embedded SQL, SQL modules, and CLIs — are only one part of this architecture. In fact, because ODBC was primarily intended to connect personal computer–based applications to minicomputer and mainframe DBMSs, there were also a number of network components, some of which could be standardized.  

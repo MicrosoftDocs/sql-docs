@@ -2,7 +2,7 @@
 title: "Troubleshooting (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -25,8 +25,7 @@ ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Troubleshooting (Visual FoxPro ODBC Driver)
 The following sections discuss how to improve performance and solve problems you might encounter while using the Visual FoxPro ODBC Driver.  

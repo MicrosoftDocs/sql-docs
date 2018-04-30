@@ -3,7 +3,7 @@ title: "Conversions Performed from Client to Server | Microsoft Docs"
 description: "Conversions performed from client to server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-date-time"
@@ -17,8 +17,7 @@ helpviewer_keywords:
   - "conversions [OLE DB], client to server"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Conversions Performed from Client to Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -2,7 +2,7 @@
 title: "Breaking Changes to Database Engine Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/15/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "database-engine"
@@ -20,7 +20,6 @@ caps.latest.revision: 144
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Breaking Changes to Database Engine Features in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

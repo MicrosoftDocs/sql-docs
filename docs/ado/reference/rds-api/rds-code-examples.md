@@ -7,11 +7,11 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS samples [ADO]"
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
@@ -19,7 +19,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RDS Code Examples
 > [!IMPORTANT]

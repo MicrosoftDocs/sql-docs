@@ -2,7 +2,7 @@
 title: "SQLFreeConnect Mapping | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLFreeConnect Mapping
 When an application calls **SQLFreeConnect** through an ODBC 3*.x* driver, the call to  

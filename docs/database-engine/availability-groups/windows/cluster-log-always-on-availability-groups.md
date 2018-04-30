@@ -2,7 +2,7 @@
 title: "CLUSTER.LOG (Always On Availability Groups) (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +13,7 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 caps.latest.revision: 7
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # CLUSTER.LOG (Always On Availability Groups)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

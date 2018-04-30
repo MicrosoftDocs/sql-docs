@@ -2,7 +2,7 @@
 title: "Using Connection Pooling | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Using Connection Pooling
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

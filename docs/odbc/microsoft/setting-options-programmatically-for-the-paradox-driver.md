@@ -2,7 +2,7 @@
 title: "Setting Options Programmatically for the Paradox Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,8 +21,7 @@ ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Setting Options Programmatically for the Paradox Driver
 |Option|Description|Method|  

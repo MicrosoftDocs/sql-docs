@@ -3,7 +3,7 @@ title: "Isolation Levels (OLE DB) | Microsoft Docs"
 description: "Isolation Levels (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-transactions"
@@ -20,8 +20,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, transactions"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Isolation Levels (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

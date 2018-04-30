@@ -25,7 +25,6 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Monitor Analysis Services with SQL Server Extended Events
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -38,11 +37,6 @@ ms.workload: "On Demand"
 > [!NOTE]  
 >  Watch this [quick video introduction](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) or read the [supporting blog post](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) to learn more about xEvents for Analysis Services in SQL Server 2016.  
   
-##  <a name="bkmk_top"></a> In this topic  
-  
--   [Use Management Studio to Configure Analysis Services](#bkmk_ssas_extended_events_ssms)  
-  
--   [XMLA Script to Start Extended Events in Analysis Services](#bkmk_script_start)  
   
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Use Management Studio to Configure Analysis Services  
  For both tabular and multidimensional instances, Management Studio provides a new Management folder that contains user-initiated xEvent sessions. You can run multiple sessions at once. However, in the current implementation, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Extended Events user interface does not support updating or replaying an existing session.  
@@ -137,9 +131,6 @@ ms.workload: "On Demand"
  *metadata_filename*  
  The name of the file that contains the events metadata. This name is suffixed with a time stamp to avoid data overwriting if the trace is sent over and over.  
   
-||  
-|-|  
-|![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> XMLA Script to Stop Extended Events in Analysis Services  
  To stop the Extended Events tracing object you need to delete that object using a similar XMLA delete object script command as shown below:  
@@ -165,9 +156,6 @@ ms.workload: "On Demand"
  *trace_id*  
  Defines the unique identifier for the trace to be deleted.  
   
-||  
-|-|  
-|![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic](#bkmk_top)|  
   
 ## See Also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)  

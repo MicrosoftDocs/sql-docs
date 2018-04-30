@@ -3,7 +3,7 @@ title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Do
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "non-specific"
@@ -21,7 +21,6 @@ caps.latest.revision: 183
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # What&#39;s New in Integration Services in SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]

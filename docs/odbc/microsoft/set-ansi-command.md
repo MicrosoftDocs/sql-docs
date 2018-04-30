@@ -2,7 +2,7 @@
 title: "SET ANSI Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,8 +18,7 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SET ANSI Command
 Determines how comparisons between strings of different lengths are made with the = operator in Visual FoxPro SQL commands.  

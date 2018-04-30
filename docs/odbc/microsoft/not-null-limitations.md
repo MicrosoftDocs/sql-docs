@@ -2,7 +2,7 @@
 title: "NOT NULL Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,8 +19,7 @@ ms.assetid: bb1a04f0-111b-412e-b2fb-090b62e74d59
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # NOT NULL Limitations
 The NOT NULL constraint in the CREATE TABLE statement is not supported.

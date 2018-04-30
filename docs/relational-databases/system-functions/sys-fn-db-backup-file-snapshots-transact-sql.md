@@ -2,7 +2,7 @@
 title: "sys.fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2015"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-functions"
@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

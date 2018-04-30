@@ -1,6 +1,6 @@
 ---
 title: "BOF, EOF Properties (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset15::BOF"
@@ -24,7 +24,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # BOF, EOF Properties (ADO)
 -   **BOF** Indicates that the current record position is before the first record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

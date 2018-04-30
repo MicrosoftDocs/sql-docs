@@ -2,7 +2,7 @@
 title: "Always Encrypted API Reference for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "1/19/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Always Encrypted API Reference for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

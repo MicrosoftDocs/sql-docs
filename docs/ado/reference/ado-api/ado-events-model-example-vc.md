@@ -1,6 +1,6 @@
 ---
 title: "ADO Events Model Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO Events Model Example (VC++)
 The Visual C++ section of [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md) gives a general description of how to instantiate the ADO event model. The following is a specific example of instantiating the event model within the environment created by the **#import** directive.  

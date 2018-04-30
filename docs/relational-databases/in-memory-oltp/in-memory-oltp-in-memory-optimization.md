@@ -1,8 +1,8 @@
----
+﻿---
 title: "In-Memory OLTP (In-Memory Optimization) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "in-memory-oltp"
@@ -20,7 +20,7 @@ caps.latest.revision: 106
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # In-Memory OLTP (In-Memory Optimization)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

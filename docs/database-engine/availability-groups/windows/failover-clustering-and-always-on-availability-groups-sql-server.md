@@ -2,7 +2,7 @@
 title: "Failover Clustering and Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "availability-groups"
@@ -24,10 +24,11 @@ caps.latest.revision: 48
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the high availability and disaster recovery solution introduced in [!INCLUDE[sssql11](../../../includes/sssql11_md.md)], requires Windows Server Failover Clustering (WSFC). Also, though [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is not dependent upon [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Clustering, you can use a failover clustering instance (FCI) to host an availability replica for an availability group. It is important to know the role of each clustering technology, and to know what considerations are necessary as you design your [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] environment.  
   
@@ -55,11 +56,6 @@ ms.workload: "Active"
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster. If you delete and re-create a WSFC cluster, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosted an availability replica on the original WSFC cluster.  
   
  For information about running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows Server Failover Clustering (WSFC) nodes and about WSFC quorum, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
-  
-### Cross-Cluster Migration of Always On Availability Groups for OS Upgrade  
- Beginning with [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports cross-cluster migration of availability groups for deployments to a new Windows Server Failover Clustering (WSFC) cluster. A cross-cluster migration moves one availability group or a batch of availability groups to the new, destination WSFC cluster with minimal downtime. The cross-cluster migration process enables you to maintain your service level agreements (SLAs) when upgrading to a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] cluster. [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (or a later version) must be installed and enabled for Always On on the destination WSFC cluster. The success of a cross-cluster migration depends on thorough planning and preparation of the destination WSFC cluster.  
-  
- For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](http://msdn.microsoft.com/library/jj873730.aspx).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances (FCIs) and Availability Groups  
  You can set up a second layer of failover at the server-instance level by implementing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering together with the WSFC cluster. An availability replica can be hosted by either a standalone instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an FCI instance. Only one FCI partner can host a replica for a given availability group. When an availability replica is running on an FCI, the possible owners list for the availability group will contain only the active FCI node.  

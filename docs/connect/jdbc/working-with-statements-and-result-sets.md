@@ -2,7 +2,7 @@
 title: "Working with Statements and Result Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Working with Statements and Result Sets
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

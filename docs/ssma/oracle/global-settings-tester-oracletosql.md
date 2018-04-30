@@ -1,6 +1,6 @@
 ---
 title: "Global Settings (Tester) (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Global Settings (Tester) (OracleToSQL)
 Use the Tester page of the **Global Settings** dialog box to specify settings for SSMA Tester.  

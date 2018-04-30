@@ -2,7 +2,7 @@
 title: "sp_help_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-stored-procedures"
@@ -24,7 +24,6 @@ caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
->  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
+>  To view a specific job, either *job_id* or *job_name* must be specified.  Omit both *job_id* and *job_name* to return information about all jobs.
   
  [ **@job_aspect =**] **'***job_aspect***'**  
  The job attribute to display. *job_aspect* is **varchar(9)**, with a default of NULL, and can be one of these values.  

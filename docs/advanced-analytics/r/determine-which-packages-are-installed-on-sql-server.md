@@ -1,20 +1,14 @@
 ---
-title: "Viewing R or Python packages installed on SQL Server| Microsoft Docs"
+title: Viewing R or Python packages installed on SQL Server| Microsoft Docs
 ms.custom: ""
-ms.date: "02/19/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Viewing R or Python packages installed on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -116,7 +110,7 @@ import pkg_resources
 pckg_name = "revoscalepy"
 pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
 installed_pckg = pckgs.query(''key == @pckg_name'')
-print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
+print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
 ```
 
 ## View installed packages using a utility or IDE

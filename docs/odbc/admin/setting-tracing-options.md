@@ -2,7 +2,7 @@
 title: "Setting Tracing Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Setting Tracing Options
 The **Tracing** tab of the **ODBC Data Source Administrator** dialog box enables you to configure the way ODBC function calls are traced.  

@@ -2,7 +2,7 @@
 title: "Start, Stop, Pause, Resume, Restart SQL Server Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/26/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"
@@ -47,7 +47,6 @@ caps.latest.revision: 20
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Start, Stop, Pause, Resume, Restart SQL Server Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

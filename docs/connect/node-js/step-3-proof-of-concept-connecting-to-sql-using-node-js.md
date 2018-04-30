@@ -2,7 +2,7 @@
 title: "Step 3: Proof of concept connecting to SQL using Node.js | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "node-js"
@@ -16,8 +16,7 @@ ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
 

@@ -2,7 +2,7 @@
 title: "Descriptor Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Descriptor Fields
 Descriptors contain *header* and *record* fields that completely describe columns or parameters.  

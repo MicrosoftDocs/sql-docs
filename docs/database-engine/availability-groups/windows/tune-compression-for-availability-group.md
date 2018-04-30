@@ -2,7 +2,7 @@
 title: "Tune compression for availability group | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "availability-groups"
@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "v-saume"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Tune compression for availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

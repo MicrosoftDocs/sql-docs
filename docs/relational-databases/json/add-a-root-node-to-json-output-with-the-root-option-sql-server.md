@@ -1,8 +1,8 @@
----
+﻿---
 title: "Add a Root Node to JSON Output with the ROOT Option (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""
@@ -15,10 +15,11 @@ helpviewer_keywords:
   - "ROOT (FOR JSON)"
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Add a Root Node to JSON Output with the ROOT Option (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -25,7 +25,6 @@ caps.latest.revision: 60
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # About SQL Server Analysis Services
 

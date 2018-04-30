@@ -2,7 +2,7 @@
 title: "Column Value Distribution Profile Request Options (Data Profiling Task) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Column Value Distribution Profile Request Options (Data Profiling Task)
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Value Distribution Profile Request** selected in the requests pane. A Column Value Distribution profile reports all the distinct values in the selected column and the percentage of rows in the table that each value represents. The profile can also report values that represent more than a specified percentage of rows in the table. This profile can help you identify problems in your data such as an incorrect number of distinct values in a column. For example, you profile a United States state column and discover more than 50 distinct values.  

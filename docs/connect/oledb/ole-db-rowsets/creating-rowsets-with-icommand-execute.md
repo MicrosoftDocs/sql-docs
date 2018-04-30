@@ -3,7 +3,7 @@ title: "Creating Rowsets with ICommand::Execute | Microsoft Docs"
 description: "Creating rowsets with ICommand::Execute"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-rowsets"
@@ -20,8 +20,7 @@ helpviewer_keywords:
   - "Execute method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Creating Rowsets with ICommand::Execute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

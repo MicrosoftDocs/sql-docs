@@ -2,7 +2,7 @@
 title: "Uninstall SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install"
@@ -16,8 +16,7 @@ ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Uninstall SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

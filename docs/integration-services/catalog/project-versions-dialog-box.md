@@ -2,7 +2,7 @@
 title: "Project Versions Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "service"
@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Versions Dialog Box
   Use the **Project Versions** dialog box to view versions of a project and to restore a previous version.  

@@ -2,7 +2,7 @@
 title: "Tracing Driver Operation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,8 +16,7 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Tracing Driver Operation
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

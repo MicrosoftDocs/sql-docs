@@ -2,7 +2,7 @@
 title: "Procedure Call Escape Sequence | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,8 +20,7 @@ ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Procedure Call Escape Sequence
 ODBC uses escape sequences for procedure calls. The syntax of this escape sequence is as follows:  

@@ -67,7 +67,7 @@ manager: "mblythe"
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
  [Cache Refresh Options &#40;Report Manager&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Caching Page, Shared Datasets &#40;Report Manager&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md)   
+ [Manage Shared Datasets](report-data/manage-shared-datasets.md)   
  [Cache Shared Datasets &#40;SSRS&#41;](../../2014/reporting-services/cache-shared-datasets-ssrs.md)  
   
   

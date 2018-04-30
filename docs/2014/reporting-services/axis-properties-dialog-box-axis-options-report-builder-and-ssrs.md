@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Axis Properties Dialog Box, Axis Options (Report Builder and SSRS)
-  Select **Axis Options** on the **Horizontal** or **VerticalAxis Properties** dialog box to define the appearance of the specified axis of the chart. In previous versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the chart displayed all labels on the x-axis by default. However, in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, the chart skips labels in order to produce a cleaner image on the chart and avoid labeling collisions. For more information, see [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Select **Axis Options** on the **Horizontal** or **VerticalAxis Properties** dialog box to define the appearance of the specified axis of the chart. In previous versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the chart displayed all labels on the x-axis by default. However, in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, the chart skips labels in order to produce a cleaner image on the chart and avoid labeling collisions. For more information, see [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## Options  
  **Enable scale breaks**  
@@ -58,13 +58,13 @@ manager: "mblythe"
  Type an expression or select a value to add or remove a margin between the chart elements and the sides of the chart. If this option is set to **Auto**, a side margins are added.  
   
 ## See Also  
- [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
- [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Specify an Axis Interval &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Plot Data on a Secondary Axis &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Add or Remove Margins from a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [Formatting Series Colors on a Chart &#40;Report Builder and SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Specify an Axis Interval &#40;Report Builder and SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Plot Data on a Secondary Axis &#40;Report Builder and SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Add or Remove Margins from a Chart &#40;Report Builder and SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

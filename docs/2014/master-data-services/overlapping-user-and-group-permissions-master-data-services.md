@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   **Update** overrides **Read-only**.  
   
- These rules apply to both the **Models** and **Hierarchy Members** tabs. Permissions are resolved for each tab and then combined. For more information, see [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
+ These rules apply to both the **Models** and **Hierarchy Members** tabs. Permissions are resolved for each tab and then combined. For more information, see [How Permissions Are Determined &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  You can view the resolution of user and group overlapping permissions in the user interface. Both the **Models** and **Hierarchy Members** tab have a drop-down list from which you can choose **Effective** to view effective permissions.  
@@ -77,7 +77,7 @@ manager: "jhubbard"
  Result: The user's effective permission is **Update** to the members.  
   
 ## See Also  
- [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [How Permissions Are Determined &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [Overlapping Model and Member Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

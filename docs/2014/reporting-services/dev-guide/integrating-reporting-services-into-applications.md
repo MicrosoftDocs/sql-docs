@@ -37,13 +37,13 @@ manager: "jhubbard"
  URL access is another option for integrating report viewing into your applications if the ReportViewer controls are not an option. In addition, URL access is useful for sending links to reports to users via e-mail.  
   
 ## In This Section  
- [Integrating Reporting Services Using SOAP](../../../2014/reporting-services/dev-guide/integrating-reporting-services-using-soap.md)  
+ [Integrating Reporting Services Using SOAP](../application-integration/integrating-reporting-services-using-soap.md)  
  Describes how to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation and management into your existing business applications using the Report Server Web service.  
   
- [Integrating Reporting Services Using the ReportViewer Controls](../../../2014/reporting-services/dev-guide/integrating-reporting-services-using-the-reportviewer-controls.md)  
+ [Integrating Reporting Services Using the ReportViewer Controls](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Describes how to integrate report viewing into your existing applications using the ReportViewer controls.  
   
- [Integrating Reporting Services Using URL Access](../../../2014/reporting-services/dev-guide/integrating-reporting-services-using-url-access.md)  
+ [Integrating Reporting Services Using URL Access](../application-integration/integrating-reporting-services-using-url-access.md)  
  Describes how to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation into your existing business applications using URL access.  
   
 ## See Also  

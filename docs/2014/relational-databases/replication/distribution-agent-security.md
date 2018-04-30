@@ -89,13 +89,13 @@ Default Schema=MY_SCHEMA;Process Binary as Character=False;Units of Work=RUW;DBM
 Persist Security Info=False;Connection Pooling=True;  
 ```  
   
- Most of the options in the string are specific to the DB2 server you are configuring, but the **Process Binary as Character** option should always be set to **False**. A value is required for the **Initial Catalog** option to identify the subscription database. For more information, see [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
+ Most of the options in the string are specific to the DB2 server you are configuring, but the **Process Binary as Character** option should always be set to **False**. A value is required for the **Initial Catalog** option to identify the subscription database. For more information, see [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
 ## See Also  
- [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
- [Replication Agent Security Model](replication-agent-security-model.md)   
- [Replication Agents Overview](replication-agents-overview.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Replication Agent Security Model](security/replication-agent-security-model.md)   
+ [Replication Agents Overview](agents/replication-agents-overview.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

@@ -63,6 +63,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   
- [Replication Agent Security Model](replication-agent-security-model.md)  
+ [Replication Agent Security Model](security/replication-agent-security-model.md)  
   
   

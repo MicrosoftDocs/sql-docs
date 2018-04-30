@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   You must have permission to access the **Users and Group Permissions** functional area.  
   
--   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### To assign hierarchy member permissions  
   

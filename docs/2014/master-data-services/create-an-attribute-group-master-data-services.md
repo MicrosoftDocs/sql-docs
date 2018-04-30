@@ -22,7 +22,7 @@ manager: "jhubbard"
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create attribute groups when you want to display attributes on individual tabs in the **Explorer** grid.  
   
 > [!NOTE]  
->  When you create an attribute group, it is automatically hidden from all users except the one who created it. For more information about making the group visible, see [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](../../2014/master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md).  
+>  When you create an attribute group, it is automatically hidden from all users except the one who created it. For more information about making the group visible, see [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md).  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 ## Next Steps  
   
--   [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](../../2014/master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## See Also  
  [Attribute Groups &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   

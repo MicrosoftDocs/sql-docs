@@ -33,7 +33,7 @@ manager: "mblythe"
   
  Drag items from the Report Data pane to data regions and text boxes on the design surface to add data and images to a report.  
   
- For more information, see [Report Data Pane](../../2014/reporting-services/report-data-pane.md).  
+ For more information, see [Report Data Pane](report-data/report-data-pane.md).  
   
 ## Grouping Pane  
  Groups are used to organize your report data into a visual hierarchy and to calculate totals. Use the Grouping pane to view the groups defined for a table, matrix, or list data region. By default, the Grouping pane displays all the groups for the selected data region as a flattened list. The Grouping pane is disabled for Chart and Gauge data regions.  
@@ -49,7 +49,7 @@ manager: "mblythe"
  Use the Properties pane to view properties for the currently selected report item on the design surface or the currently selected group in the Grouping pane. Alternatively, you can right-click on a selected report item or group and then click **Properties** to open the corresponding **Properties** dialog box for the report item or group.  
   
 ## See Also  
- [Page Headers and Footers &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Report Design Tips &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-design-tips-report-builder-and-ssrs.md)  
+ [Page Headers and Footers &#40;Report Builder and SSRS&#41;](report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Report Design Tips &#40;Report Builder and SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

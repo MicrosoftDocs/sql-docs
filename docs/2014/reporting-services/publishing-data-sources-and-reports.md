@@ -38,11 +38,11 @@ manager: "mblythe"
   
 ## See Also  
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
- [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/page-layout-and-rendering-report-builder-and-ssrs.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md)   
- [Print Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/print-reports-report-builder-and-ssrs.md)  
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Print Reports &#40;Report Builder and SSRS&#41;](report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

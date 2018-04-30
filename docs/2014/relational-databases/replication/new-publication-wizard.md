@@ -78,8 +78,8 @@ manager: "jhubbard"
 -   [Snapshot Agent &#40;New Publication Wizard&#41;](snapshot-agent-new-publication-wizard.md)  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Create a Publication](publish/create-a-publication.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
  [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

@@ -21,7 +21,7 @@ manager: "mblythe"
 # Map Color Rules Dialog Box, General
   Select **General** on the **Color Rules Properties** dialog box to define color options for map elements on this layer. Map elements include polygons, lines, and points. Color rules can be applied when you have created a relationship between map elements based on spatial data and analytical data from a dataset field or from a spatial data source field.  
   
- To display all map elements on a layer by specifying a decorative gradient with different primary and secondary colors, use the **Fill** page of the Map Polygon Properties Dialog Box. Color rules take precedence over display properties for a layer. For more information, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ To display all map elements on a layer by specifying a decorative gradient with different primary and secondary colors, use the **Fill** page of the Map Polygon Properties Dialog Box. Color rules take precedence over display properties for a layer. For more information, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ## Options  
  **Apply template style**  
@@ -57,7 +57,7 @@ manager: "mblythe"
  Click **Add** to specify your own colors for the color rule.  
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md)   
- [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
+ [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

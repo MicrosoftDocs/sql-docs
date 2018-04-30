@@ -163,7 +163,7 @@ manager: "mblythe"
 ## See Also  
  [Authentication with the Report Server](../../2014/reporting-services/authentication-with-the-report-server.md)   
  [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Start Report Builder &#40;Report Builder&#41;](../../2014/reporting-services/start-report-builder-report-builder.md)   
+ [Start Report Builder &#40;Report Builder&#41;](report-builder/start-report-builder.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md)   
  [Report Server System Properties](../../2014/reporting-services/dev-guide/report-server-system-properties.md)  

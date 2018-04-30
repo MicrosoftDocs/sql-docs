@@ -67,7 +67,7 @@ manager: "jhubbard"
 |**start workflow**|Initiates an external workflow. The data that caused this action to occur is passed to the workflow. For more information, see [SharePoint Workflow Integration with Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> This action is valid for text, number, date, and link values.|  
   
 ## See Also  
- [Business Rule Conditions &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-conditions-master-data-services.md)   
+ [Business Rule Conditions &#40;Master Data Services&#41;](business-rule-conditions-master-data-services.md)   
  [Business Rules &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Create and Publish a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   

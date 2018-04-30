@@ -419,7 +419,7 @@ manager: "jhubbard"
 |Alerting<sup>2</sup>|Yes|Yes||||||  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Yes|Yes||||||  
   
- <sup>1</sup>For more information on the supported datasources in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup>For more information on the supported datasources in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  <sup>2</sup>Requires [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode. For more information, see [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   

@@ -73,13 +73,13 @@ manager: "mblythe"
 -   If you are running as local administrator on the report server, search the log file for `ReportProcessingException`. Log entries contain more information. The report server log file is typically located at \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. For more information, see [Reporting Services Log Files and Sources](../../2014/reporting-services/reporting-services-log-files-and-sources.md).  
   
 ### Failed to Load Expression Host Assembly  
- Custom assemblies must have strong name signing and the attribute AllowPartiallyTrustedCallers set. For more information, see [Using Custom Assemblies with Reports](../../2014/reporting-services/dev-guide/using-custom-assemblies-with-reports.md) and [Understanding Security Policies](../../2014/reporting-services/dev-guide/understanding-security-policies.md).  
+ Custom assemblies must have strong name signing and the attribute AllowPartiallyTrustedCallers set. For more information, see [Using Custom Assemblies with Reports](custom-assemblies/using-custom-assemblies-with-reports.md) and [Understanding Security Policies](extensions/secure-development/understanding-security-policies.md).  
   
 ### A Built-in Global Name Does Not Exist  
- Check the spelling in expressions. Built-in globals, parameters, and field names are case-sensitive. In the expression causing the error, check that the name actually exists in the report and that it is spelled correctly. For more information, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/built-in-collections-in-expressions-report-builder-and-ssrs.md).  
+ Check the spelling in expressions. Built-in globals, parameters, and field names are case-sensitive. In the expression causing the error, check that the name actually exists in the report and that it is spelled correctly. For more information, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### Parameter Properties and Null  
- A multivalue parameter cannot be Null. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md).  
+ A multivalue parameter cannot be Null. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### Main Report with Subreport Could Not Be Processed  
  A report with subreports must be processed by the same version of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report processor. When upgrading reports to the current version of the report definition schema, the main report and the subreports may or may not be updated at the same time. If the version is not compatible between a report and its subreports, the following message is displayed: "Subreport could not be processed."  
@@ -102,7 +102,7 @@ manager: "mblythe"
   
 -   Failed to evaluate the *\<property name>*. It references a dataset field which has an error: *\<error string>*.  
   
- For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### Invalid or Conflicting Scope Specification in an Aggregate Function Call  
  When you include aggregate function calls to an expression in a Tablix cell, the report processor evaluates the expression in the scope of the innermost groups to which the cell belongs.  
@@ -117,19 +117,19 @@ manager: "mblythe"
   
 -   `Previous`, `RunningValue` or `RowNumber` aggregate functions used in the data cells of the *\<report item type>* '*\<report item name>*' refer to grouping scopes in both the columns and rows of the *\<report item type>*. The scope parameters of all `Previous`, `RunningValue` and `RowNumber` aggregate functions within a *\<report item type>* can refer to row groupings or data column groupings, but not both.  
   
- For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-scope-for-totals-aggregates-and-built-in-collections.md) and [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/built-in-collections-in-expressions-report-builder-and-ssrs.md).  
+ For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) and [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### Default Dataset Scope for a Top Level Text Box  
  Do not use a default scope for a text box added to the report design surface when the report has more than one dataset. Use an expression that includes the name of the dataset as the scope, and an aggregate function. For example, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)   
- [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/aggregate-functions-reference-report-builder-and-ssrs.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-examples-report-builder-and-ssrs.md)   
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
- [Commonly Used Filters &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/commonly-used-filters-report-builder-and-ssrs.md)   
- [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/parameters-collection-references-report-builder-and-ssrs.md)  
+ [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
+ [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Commonly Used Filters &#40;Report Builder and SSRS&#41;](report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Parameters Collection References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

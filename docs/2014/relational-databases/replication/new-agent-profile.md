@@ -32,15 +32,15 @@ manager: "jhubbard"
  **Parameter**  
  The agent parameters included in the profile. The profile on which the new profile is based does not necessarily specify a value for each parameter. To see all parameters that are valid for a given agent, clear the **Show only parameters used in this profile** check box. For descriptions of each parameter, see:  
   
--   [Replication Snapshot Agent](replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
--   [Replication Log Reader Agent](replication-log-reader-agent.md)  
+-   [Replication Log Reader Agent](agents/replication-log-reader-agent.md)  
   
--   [Replication Distribution Agent](replication-distribution-agent.md)  
+-   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Replication Merge Agent](replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
--   [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
+-   [Replication Queue Reader Agent](agents/replication-queue-reader-agent.md)  
   
  **Default Value**  
  The default value for each agent parameter.  
@@ -52,8 +52,8 @@ manager: "jhubbard"
  Clear to show all valid parameters for a given agent.  
   
 ## See Also  
- [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)   
- [Replication Agents Overview](replication-agents-overview.md)   
- [Replication Agent Profiles](replication-agent-profiles.md)  
+ [Work with Replication Agent Profiles](agents/work-with-replication-agent-profiles.md)   
+ [Replication Agents Overview](agents/replication-agents-overview.md)   
+ [Replication Agent Profiles](agents/replication-agent-profiles.md)  
   
   

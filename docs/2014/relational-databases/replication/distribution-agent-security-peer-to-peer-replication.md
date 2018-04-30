@@ -18,10 +18,10 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Distribution Agent Security (Peer-to-Peer Replication)
-  The **Distribution Agent Security** page allows you to specify the accounts under which the Distribution Agent runs and makes connections to the computers in a peer-to-peer topology. For information on permissions required by agents and best practices for replication security, see [Replication Agent Security Model](replication-agent-security-model.md) and [Replication Security Best Practices](replication-security-best-practices.md).  
+  The **Distribution Agent Security** page allows you to specify the accounts under which the Distribution Agent runs and makes connections to the computers in a peer-to-peer topology. For information on permissions required by agents and best practices for replication security, see [Replication Agent Security Model](security/replication-agent-security-model.md) and [Replication Security Best Practices](security/replication-security-best-practices.md).  
   
 > [!NOTE]  
->  If the Distribution Agent for a subscription has already been configured in a previous run of this wizard, you cannot change the credentials it uses in this wizard. If you specify new credentials, they are ignored. To change credentials, use the **Subscription Properties** dialog box. For more information, see [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md).  
+>  If the Distribution Agent for a subscription has already been configured in a previous run of this wizard, you cannot change the credentials it uses in this wizard. If you specify new credentials, they are ignored. To change credentials, use the **Subscription Properties** dialog box. For more information, see [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md).  
   
 ## Options  
  Click the properties button (**...**) in the row for each Subscriber to access the **Distribution Agent Security** dialog box. Click **Help** on the **Distribution Agent Security** dialog box that is launched for more information on the permissions required for accounts used by the agents.  
@@ -41,7 +41,7 @@ manager: "jhubbard"
  The context under which the connection to the Subscriber is made. The connection can be made using the context of the Windows account under which the agent runs or under the context of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The field displays one of the following: **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** or **Impersonate '\<Computer>\\<Login\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that all connections be made using the context of the Windows account.  
   
 ## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
+ [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Peer-to-Peer Transactional Replication](transactional/transactional-replication.md)  
   
   

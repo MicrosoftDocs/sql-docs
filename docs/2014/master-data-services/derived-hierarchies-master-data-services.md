@@ -62,7 +62,7 @@ manager: "jhubbard"
 ## Notes  
  All members in a derived hierarchy tree are sorted by code. You cannot change the sort order.  
   
- If a member's domain-based attribute is blank and the attribute is used for a derived hierarchy, the member is not displayed in the hierarchy. Create business rules to require attributes to be populated. For more information, see [Require Attribute Values &#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md).  
+ If a member's domain-based attribute is blank and the attribute is used for a derived hierarchy, the member is not displayed in the hierarchy. Create business rules to require attributes to be populated. For more information, see [Require Attribute Values &#40;Master Data Services&#41;](require-attribute-values-master-data-services.md).  
   
 ## Related Tasks  
   

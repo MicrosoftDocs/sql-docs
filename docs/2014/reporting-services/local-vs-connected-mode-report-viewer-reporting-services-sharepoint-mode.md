@@ -41,9 +41,9 @@ manager: "mblythe"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 2010 reporting extension. For more information on Access Services, see [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
   
--   The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint list data extension. For more information on the SharePoint List Data Extension, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md)  
+-   The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint list data extension. For more information on the SharePoint List Data Extension, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
- Custom data processing extensions can also be developed to support local mode. For more information, see [Implementing a Data Processing Extension](../../2014/reporting-services/dev-guide/implementing-a-data-processing-extension.md).  
+ Custom data processing extensions can also be developed to support local mode. For more information, see [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Local mode supports rendering reports that have an embedded data source or a shared data source from an .rsds file. However, you cannot manage the report or its associated data source. If you try to do this, you will receive an error that this is not supported in local mode. Managing data sources in the SharePoint site is supported in only connected mode.  
   
@@ -82,6 +82,6 @@ manager: "mblythe"
  For the latest information on using ADS extension with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] connected mode, see [Access Services Report in SharePoint Site shows error in data extension ‘ADS’](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## See Also  
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

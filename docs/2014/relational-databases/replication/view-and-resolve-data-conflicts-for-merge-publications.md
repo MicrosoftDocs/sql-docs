@@ -74,7 +74,7 @@ manager: "jhubbard"
 6.  Close the Replication Conflict Viewer.  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Specify a Merge Article Resolver](specify-a-merge-article-resolver.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Specify a Merge Article Resolver](publish/specify-a-merge-article-resolver.md)  
   
   

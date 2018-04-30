@@ -21,6 +21,6 @@ manager: "mblythe"
  To access these topics from within the **Report Properties** dialog box, click **Help**.  
   
 ## See Also  
- [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

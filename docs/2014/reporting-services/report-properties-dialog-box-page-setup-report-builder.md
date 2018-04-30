@@ -56,7 +56,7 @@ manager: "mblythe"
   
 ## See Also  
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Report Properties Dialog Box, Code &#40;Report Builder&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
  [Report Properties Dialog Box, References &#40;Report Builder&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   

@@ -1,6 +1,0 @@
-# [Developer's Guide (Replication)](developer-s-guide-replication.md)
-## [Replication Programming Concepts](replication-programming-concepts.md)
-## [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)
-## [Replication Management Objects Concepts](replication-management-objects-concepts.md)
-## [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)
-## [Developer's Guide: How-to Topics](developer-s-guide-how-to-topics-replication.md)

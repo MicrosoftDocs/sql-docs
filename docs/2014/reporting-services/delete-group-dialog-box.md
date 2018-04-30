@@ -32,7 +32,7 @@ manager: "mblythe"
   
 ## See Also  
  [Report Designer F1 Help](../../2014/reporting-services/report-designer-f1-help.md)   
- [Understanding Groups &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/understanding-groups-report-builder-and-ssrs.md)   
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Understanding Groups &#40;Report Builder and SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

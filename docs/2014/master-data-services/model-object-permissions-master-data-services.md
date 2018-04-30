@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  To determine security assigned on each individual attribute value, model object permissions are combined with hierarchy member permissions, which determine the members a user can access.  
   
- To give a user access to a functional area other than **Explorer**, the user must be a model administrator, which also involves assigning model object permissions. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+ To give a user access to a functional area other than **Explorer**, the user must be a model administrator, which also involves assigning model object permissions. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
  Model object permissions are assigned in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface (UI), in the **User and Group Permissions** functional area on the **Models** tab. On this tab, the model is represented as a tree structure. When you assign permission to an object in the tree, all objects below inherit that permission. You can override that inheritance by assigning permission to individual objects.  
   

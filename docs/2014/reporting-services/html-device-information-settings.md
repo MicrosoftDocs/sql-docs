@@ -22,7 +22,7 @@ manager: "mblythe"
   The following table lists the device information settings for rendering in HTML format.  
   
 > [!IMPORTANT]  
->  The device information settings listed in the table below with a **(\*)** have been deprecated and they should not be used in new applications. For more information, see [Deprecated Features in SQL Server Reporting Services in SQL Server 2014](../../2014/reporting-services/deprecated-features-in-sql-server-reporting-services-in-sql-server-2014.md).  
+>  The device information settings listed in the table below with a **(\*)** have been deprecated and they should not be used in new applications. For more information, see [Deprecated Features in SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
 |Setting|Value|  
 |-------------|-----------|  
@@ -53,7 +53,7 @@ manager: "mblythe"
   
 ## See Also  
  [Passing Device Information Settings to Rendering Extensions](../../2014/reporting-services/dev-guide/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../../2014/reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Customize Rendering Extension Parameters in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Technical Reference &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

@@ -21,7 +21,7 @@ manager: "mblythe"
 # Manage My Data Alerts in Data Alert Manager
   SharePoint users can view a list of the data alerts that they created and information about the alerts. Users can also delete their alerts, open alert definitions for edit in Data Alert Designer, and run their alerts. The following picture shows the features available to users in Data Alert Manager.  
   
- ![Alert Manager features for SharePoint users](../../2014/reporting-services/media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
+ ![Alert Manager features for SharePoint users](media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
   
 ### To view a list of your alerts  
   
@@ -29,7 +29,7 @@ manager: "mblythe"
   
 2.  Click the icon for the expand drop-down menu on a report and click **Manage Data Alerts**. The following picture shows the drop-down menu.  
   
-     ![Open Alert Manager from report context menu](../../2014/reporting-services/media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
+     ![Open Alert Manager from report context menu](media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
   
      Data Alert Manager opens. By default, it lists the alerts for the report that you selected in the library.  
   
@@ -44,13 +44,13 @@ manager: "mblythe"
   
 -   Right-click the data alert for which you want to edit the alert definition and click **Edit**.  
   
-     The alert definition opens in Data Alert Designer. For more information, see [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md) and [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md).  
+     The alert definition opens in Data Alert Designer. For more information, see [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md) and [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md).  
   
     > [!NOTE]  
     >  Only the user that created the data alert definition can edit it.  
   
     > [!NOTE]  
-    >  If the report has changed and the data feeds generated from the report have changed the alert definition might no longer be valid. This occurs when a column that the alert references in its rules is deleted from the report, changes data type, or is included in a different data feed or the report is deleted or moved. You can open an alert definition that is not valid, but you cannot resave it until it is valid based on the current version of the report data feed that it is built upon. To learn more about how data feeds are generated from reports, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+    >  If the report has changed and the data feeds generated from the report have changed the alert definition might no longer be valid. This occurs when a column that the alert references in its rules is deleted from the report, changes data type, or is included in a different data feed or the report is deleted or moved. You can open an alert definition that is not valid, but you cannot resave it until it is valid based on the current version of the report data feed that it is built upon. To learn more about how data feeds are generated from reports, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ### To delete an alert definition  
   

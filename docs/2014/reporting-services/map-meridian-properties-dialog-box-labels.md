@@ -48,6 +48,6 @@ manager: "mblythe"
 -   **Far** Display labels at the right edge.  
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

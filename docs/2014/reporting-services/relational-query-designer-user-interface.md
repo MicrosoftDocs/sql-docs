@@ -19,7 +19,7 @@ manager: "mblythe"
   Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides both a graphical query designer and a text-based query designer to help you create a query that specifies the data to retrieve from [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] for a report dataset. Use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query. Use the text-based query designer to view the query that was built by the graphical query designer or to modify a query. You can also import an existing query from a file or report.  
   
 > [!NOTE]  
->  The graphical query designer that you write queries to retrieve data from [!INCLUDE[ssSDS](../includes/sssds-md.md)] and [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] is different than the query designer that you use with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. To write queries to retrieve data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you use the [!INCLUDE[vspnvdt](../includes/vspnvdt-md.md)] that Visual Studio provides. For more information, see [Graphical Query Designer User Interface](../../2014/reporting-services/graphical-query-designer-user-interface.md).  
+>  The graphical query designer that you write queries to retrieve data from [!INCLUDE[ssSDS](../includes/sssds-md.md)] and [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] is different than the query designer that you use with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. To write queries to retrieve data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you use the [!INCLUDE[vspnvdt](../includes/vspnvdt-md.md)] that Visual Studio provides. For more information, see [Graphical Query Designer User Interface](report-data/graphical-query-designer-user-interface.md).  
   
 > [!IMPORTANT]  
 >  Users access data sources when they create and run queries. You should grant minimal permissions on the data sources, such as read-only permissions.  
@@ -34,11 +34,11 @@ manager: "mblythe"
   
  The following figure shows the graphical query designer when it is used with tables or views.  
   
- ![Graphical designer for queries](../../2014/analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
+ ![Graphical designer for queries](../analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
   
  The following figure shows the graphical query designer when it is used with stored procedures or table-valued functions.  
   
- ![Stored procedure in graphical query designer](../../2014/analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
+ ![Stored procedure in graphical query designer](../analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
   
  The following table describes the function of each pane.  
   

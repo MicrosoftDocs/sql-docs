@@ -304,7 +304,7 @@ manager: "mblythe"
 ##  <a name="Title"></a> 5. Add a Report Title  
  A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. In this tutorial, you will use the text box that is automatically placed at the top of the report body.  
   
- The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format Text in a Text Box &#40;Report Builder and SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 #### To add a report title  
   
@@ -354,7 +354,7 @@ manager: "mblythe"
 4.  Click **Save**.  
   
 ##  <a name="Export"></a> 7. Export the Report  
- Reports can be exported to different formats such Microsoft Excel and comma separated value (CSV). For more information, see [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md).  
+ Reports can be exported to different formats such Microsoft Excel and comma separated value (CSV). For more information, see [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
  In this tutorial, you will export the report to Excel and set a property on the report to provide a custom name for the workbook tab.  
   
@@ -392,10 +392,10 @@ manager: "mblythe"
 2.  Verify that the name of the workbook tab is **Product Sales Excel**.  
   
 ## Next Steps  
- This concludes the walkthrough for how to create a basic table report. For more information about tables, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ This concludes the walkthrough for how to create a basic table report. For more information about tables, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ## See Also  
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

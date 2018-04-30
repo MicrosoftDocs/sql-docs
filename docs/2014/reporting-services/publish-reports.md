@@ -41,7 +41,7 @@ manager: "mblythe"
  [Publishing Data Sources and Reports](../../2014/reporting-services/publishing-data-sources-and-reports.md)   
  [Previewing Reports](../../2014/reporting-services/previewing-reports.md)   
  [Publishing Reports to a Report Server](../../2014/reporting-services/publishing-reports-to-a-report-server.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md)  
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

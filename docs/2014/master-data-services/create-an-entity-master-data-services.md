@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   You must have permission to access the **System Administration** functional area.  
   
--   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   A model must exist. For more information, see [Create a Model &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md).  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
 6.  In the **Name for staging tables** box, type a name for the staging table.  
   
     > [!TIP]  
-    >  Use the model name as part of the staging table name, for example *Modelname_Entityname*. This makes the tables easier to find in the database. For more information about the staging tables, see [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md).  
+    >  Use the model name as part of the staging table name, for example *Modelname_Entityname*. This makes the tables easier to find in the database. For more information about the staging tables, see [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 7.  Optional. Select the **Create Code values automatically** check box. For more information, see [Automatic Code Creation &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
 ## See Also  
  [Entities &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
- [Change an Entity Name &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-entity-name-master-data-services.md)   
+ [Change an Entity Name &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   
  [Delete an Entity &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
   
   

@@ -26,7 +26,7 @@ manager: "mblythe"
 >   
 >  If you don’t include the proxy syntax, then you need to prefix the parameter with *rp:*.  
   
- All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a Query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+ All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a Query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Report parameters are case-sensitive.  

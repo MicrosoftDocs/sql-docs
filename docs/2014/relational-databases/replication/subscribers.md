@@ -68,7 +68,7 @@ manager: "jhubbard"
 ## See Also  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

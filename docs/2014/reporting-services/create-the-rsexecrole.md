@@ -92,7 +92,7 @@ manager: "mblythe"
   
 20. Repeat for each of the remaining stored procedures. `RSExecRole` must be granted Execute permissions for all three stored procedures.  
   
- ![Database Role Properties page](../../2014/reporting-services/media/rsexecroledbproperties.gif "Database Role Properties page")  
+ ![Database Role Properties page](media/rsexecroledbproperties.gif "Database Role Properties page")  
   
 ## Create RSExecRole in MSDB  
  Reporting Services uses stored procedures for SQL Server Agent service and retrieves job information from system tables to support scheduled operations. The following steps explain how to grant Execute permissions for the procedures and Select permissions on the tables to the RSExecRole.  

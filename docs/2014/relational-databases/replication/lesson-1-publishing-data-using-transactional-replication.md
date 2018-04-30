@@ -80,8 +80,8 @@ manager: "jhubbard"
  You have successfully created the transactional publication. Next, you will subscribe to this publication. See [Lesson 2: Creating a Subscription to the Transactional Publication](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## See Also  
- [Filter Published Data](filter-published-data.md)   
- [Define an Article](define-an-article.md)   
+ [Filter Published Data](publish/filter-published-data.md)   
+ [Define an Article](publish/define-an-article.md)   
  [Create and Apply the Snapshot](create-and-apply-the-snapshot.md)  
   
   

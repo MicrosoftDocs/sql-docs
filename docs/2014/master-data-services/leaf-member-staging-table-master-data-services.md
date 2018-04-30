@@ -33,7 +33,7 @@ manager: "jhubbard"
 |**ImportStatus_ID**<br /><br /> Required|The status of the import process. Possible values are:<br /><br /> **0**, which you specify to indicate that the record is ready for staging.<br /><br /> **1**, which is automatically assigned and indicates that the staging process for the record has succeeded.<br /><br /> **2**, which is automatically assigned and indicates that the staging process for the record has failed.|  
 |**Batch_ID**<br /><br /> Required by web service only|An automatically assigned identifier that groups records for staging. All members in the batch are assigned this identifier, which is displayed in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface in the **ID** column.<br /><br /> If the batch has not been processed, this field is blank.|  
 |**BatchTag**<br /><br /> Required, except by web service|A unique name for the batch, up to 50 characters.|  
-|**ErrorCode**|Displays an error code. For all records with a **ImportStatus_ID** of **2**, see [Staging Process Errors &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).|  
+|**ErrorCode**|Displays an error code. For all records with a **ImportStatus_ID** of **2**, see [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md).|  
 |**Code**<br /><br /> Required, except when codes are generated automatically for **ImportType1** or **2**; see [Automatic Code Creation &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md) for more information|A unique code for the member.|  
 |**Name**<br /><br /> Optional|A name for the member.|  
 |**NewCode**|Use only if you are changing the member code.|  
@@ -44,8 +44,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Load or Update Members in Master Data Services by Using the Staging Process](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
- [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md)   
- [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](../../2014/master-data-services/view-errors-that-occur-during-the-staging-process-master-data-services.md)   
- [Staging Process Errors &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
+ [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
+ [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  
   
   

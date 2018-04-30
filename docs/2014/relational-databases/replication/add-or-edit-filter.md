@@ -21,9 +21,9 @@ manager: "jhubbard"
   The **Add Filter** and **Edit Filter** dialog boxes allow you to add and edit static row filters and parameterized row filters.  
   
 > [!NOTE]  
->  Editing a filter in an existing publication requires a new snapshot for the publication. If a publication has subscriptions, the subscriptions must be reinitialized. For more information about property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
+>  Editing a filter in an existing publication requires a new snapshot for the publication. If a publication has subscriptions, the subscriptions must be reinitialized. For more information about property changes, see [Change Publication and Article Properties](publish/change-publication-and-article-properties.md).  
   
- All publication types can include static filters; merge publications can also include parameterized filters. A static filter is evaluated when the publication is created: all Subscribers to the publication receive the same data. A parameterized filter is evaluated during replication synchronization: different Subscribers can receive different partitions of data based on the login or computer name of each Subscriber. Click the **Example statements** link in the dialog box to see examples of each type of filter. For more information about filtering options, see [Filter Published Data](filter-published-data.md).  
+ All publication types can include static filters; merge publications can also include parameterized filters. A static filter is evaluated when the publication is created: all Subscribers to the publication receive the same data. A parameterized filter is evaluated during replication synchronization: different Subscribers can receive different partitions of data based on the login or computer name of each Subscriber. Click the **Example statements** link in the dialog box to see examples of each type of filter. For more information about filtering options, see [Filter Published Data](publish/filter-published-data.md).  
   
  Using row filters, you can specify a subset of rows to be published from a table. Row filters can be used to eliminate rows that users do not need to see (such as rows that contain sensitive or confidential information), or to create different partitions of data that are sent to different Subscribers. Publishing different partitions of data to different Subscribers can also help avoid conflicts that would otherwise be caused by multiple Subscribers updating the same data.  
   
@@ -49,20 +49,20 @@ manager: "jhubbard"
      This text cannot be changed; type the filter clause after the WHERE keyword using standard [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax. If the Publisher is an Oracle Publisher, the WHERE clause must be compliant with Oracle query syntax. Avoid using complex filters when possible. Both static and parameterized filters increase processing time for publications; therefore you should keep filter statements as simple as possible.  
   
     > [!IMPORTANT]  
-    >  For performance reasons, we recommended that you not apply functions to column names in parameterized row filter clauses for merge publications, such as `LEFT([MyColumn]) = SUSER_SNAME()`. If you use HOST_NAME in a filter clause and override the HOST_NAME value, it might be necessary to convert data types using CONVERT. For more information about best practices for this case, see the section "Overriding the HOST_NAME() Value" in the topic [Parameterized Row Filters](parameterized-row-filters.md).  
+    >  For performance reasons, we recommended that you not apply functions to column names in parameterized row filter clauses for merge publications, such as `LEFT([MyColumn]) = SUSER_SNAME()`. If you use HOST_NAME in a filter clause and override the HOST_NAME value, it might be necessary to convert data types using CONVERT. For more information about best practices for this case, see the section "Overriding the HOST_NAME() Value" in the topic [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  **Specify how many subscriptions will receive data from this table**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge replication only. Merge replication allows you to specify the type of partitions that are best suited to your data and application. If you select **A row from this table will go to only one subscription**, merge replication sets the nonoverlapping partitions option. Nonoverlapping partitions work in conjunction with precomputed partitions to improve performance, with nonoverlapping partitions minimizing the upload cost associated with precomputed partitions. The performance benefit of nonoverlapping partitions is more noticeable when the parameterized filters and join filters used are more complex. If you select this option, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](parameterized-row-filters.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge replication only. Merge replication allows you to specify the type of partitions that are best suited to your data and application. If you select **A row from this table will go to only one subscription**, merge replication sets the nonoverlapping partitions option. Nonoverlapping partitions work in conjunction with precomputed partitions to improve performance, with nonoverlapping partitions minimizing the upload cost associated with precomputed partitions. The performance benefit of nonoverlapping partitions is more noticeable when the parameterized filters and join filters used are more complex. If you select this option, you must ensure that the data is partitioned in such a way that a row cannot be replicated to more than one Subscriber. For more information, see the section "Setting 'partition options'" in the topic [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  After you have added or edited a filter, click **OK** to save changes and close the dialog box. The filter you specified is parsed and run against the table in the SELECT clause. If the filter statement contains syntax errors or other problems, you are notified and are able to edit the filter statement.  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
- [Filter Published Data](filter-published-data.md)   
- [Join Filters](join-filters.md)   
- [Parameterized Row Filters](parameterized-row-filters.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)  
+ [Create a Publication](publish/create-a-publication.md)   
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
+ [Filter Published Data](publish/filter-published-data.md)   
+ [Join Filters](merge/join-filters.md)   
+ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)  
   
   

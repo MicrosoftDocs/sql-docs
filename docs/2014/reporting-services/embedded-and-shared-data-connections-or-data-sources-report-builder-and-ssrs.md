@@ -46,7 +46,7 @@ manager: "mblythe"
   
  In Report Designer, you cannot browse to a shared data source on the report server. You can create shared data sources as part of a project in Solution Explorer and choose whether to deploy them to a report server. You might choose to use them locally only because of differences in credentials required from your computer or from the report server. For more information, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- The following icon indicates a shared data source item in the report server folder hierarchy: ![Shared data source icon](../../2014/reporting-services/media/hlp-16datasource.png "Shared data source icon")  
+ The following icon indicates a shared data source item in the report server folder hierarchy: ![Shared data source icon](media/hlp-16datasource.png "Shared data source icon")  
   
 ## Embedded Data Sources  
  An embedded data source is a data connection that is saved in the report definition. Embedded data source connection information can be used only by the report in which it is embedded. To define and manage embedded data sources, use the **Data Source Properties** dialog box.  
@@ -56,20 +56,20 @@ manager: "mblythe"
   
 |Description|Embedded<br /><br /> Data Source|Shared<br /><br /> Data Source|  
 |-----------------|------------------------------|----------------------------|  
-|Data connection is embedded in the report definition.|![Available](../../2014/reporting-services/media/greencheck.gif "Available")||  
-|Pointer to the data connection on the report server is embedded in the report definition.||![Available](../../2014/reporting-services/media/greencheck.gif "Available")|  
-|Managed on the report server|![Available](../../2014/reporting-services/media/greencheck.gif "Available")|![Available](../../2014/reporting-services/media/greencheck.gif "Available")|  
-|Required for shared datasets||![Available](../../2014/reporting-services/media/greencheck.gif "Available")|  
-|Required for components||![Available](../../2014/reporting-services/media/greencheck.gif "Available")|  
+|Data connection is embedded in the report definition.|![Available](media/greencheck.gif "Available")||  
+|Pointer to the data connection on the report server is embedded in the report definition.||![Available](media/greencheck.gif "Available")|  
+|Managed on the report server|![Available](media/greencheck.gif "Available")|![Available](media/greencheck.gif "Available")|  
+|Required for shared datasets||![Available](media/greencheck.gif "Available")|  
+|Required for components||![Available](media/greencheck.gif "Available")|  
   
 ## Data Source Credentials  
  Credentials are used to create an embedded data source, to run a query, or to retrieve data during report processing. The owner of the data source determines the type of credentials that you must use to access the data. Credentials are managed independently from the data connection on a report server, a SharePoint site, or on a local computer in a report authoring environment. Depending on the type of data source, credentials can be saved to avoid prompting or set to prompt each user. The credentials that you need might differ depending on whether you are connecting to the data source from your computer or from the report server. For more information, see [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md) and [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## See Also  
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
- [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md)   
- [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs.md)   
- [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -34,12 +34,12 @@ manager: "mblythe"
   
  For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- Data can also be included in a report by using predefined shared data sources, shared datasets, and report parts. These items already have the data connection information that you need. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md).  
+ Data can also be included in a report by using predefined shared data sources, shared datasets, and report parts. These items already have the data connection information that you need. For more information, see [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
- ![rs_DataSourcesStory](../../2014/reporting-services/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
+ ![rs_DataSourcesStory](media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
 ##  <a name="ConnectionString"></a> Connection String Examples  
  A data connection includes a connection string that is typically provided by the owner of the external data source. The following table lists examples of connections strings for different types of external data sources.  
@@ -62,12 +62,12 @@ manager: "mblythe"
 |XML data source, XML document|`http://localhost/XML/Customers.xml`|Set the data source type to `XML`. The connection string is a URL to the XML document.|  
 |XML data source, embedded XML document|*Empty*|Set the data source type to `XML`. The XML data is embedded in the report definition.|  
   
- For more information about each connection type, see [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md) and [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
+ For more information about each connection type, see [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) and [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 
   
 ##  <a name="Creating"></a> Creating Data Sources  
- To create an embedded data source, you must have a connection string and the credentials that you need to access the data. This information usually comes from the owner of the data source. The data connection is saved in the report definition as part of the data source. Credentials are managed independently from the connection. For step-by-step instructions, see [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs.md).  
+ To create an embedded data source, you must have a connection string and the credentials that you need to access the data. This information usually comes from the owner of the data source. The data connection is saved in the report definition as part of the data source. Credentials are managed independently from the connection. For step-by-step instructions, see [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Some types of credentials might not support all the scenarios that Report Builder uses: to run a query in the query designer, preview a report from your computer when you are not connected to a report server, and run the report from the report server. We recommend that you use shared data sources whenever possible. You can store credentials for a shared data source on the report server. For more information, see [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
@@ -77,7 +77,7 @@ manager: "mblythe"
 
   
 ## See Also  
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
- [Report Parts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-parts-report-builder-and-ssrs.md)  
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Report Parts &#40;Report Builder and SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

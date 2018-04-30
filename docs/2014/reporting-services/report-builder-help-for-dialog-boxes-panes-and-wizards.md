@@ -26,8 +26,8 @@ manager: "mblythe"
   This section contains Help for many of the Report Builder wizards, views, panes, and dialog boxes. Alternatively, you can open Help by pressing F1 or by clicking the Help button displayed in the dialog box.  
   
 ## See Also  
- [Report Design View &#40;Report Builder&#41;](../../2014/reporting-services/report-design-view-report-builder.md)   
- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [Report Design View &#40;Report Builder&#41;](report-builder/report-design-view-report-builder.md)   
+ [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Troubleshoot Report Builder](../../2014/reporting-services/troubleshoot-report-builder.md)  
   
   

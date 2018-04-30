@@ -39,9 +39,9 @@ manager: "jhubbard"
 -   [Publication Properties, Data Partitions](publication-properties-data-partitions.md)  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Create a Publication](publish/create-a-publication.md)   
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
  [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

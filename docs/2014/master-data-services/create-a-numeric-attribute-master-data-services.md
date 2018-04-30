@@ -22,7 +22,7 @@ manager: "jhubbard"
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a numeric attribute when you want users to enter a number as an attribute value.  
   
 > [!NOTE]  
->  Numeric attributes have limitations. For more information, see [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md).  
+>  Numeric attributes have limitations. For more information, see [Attributes &#40;Master Data Services&#41;](attributes-master-data-services.md).  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -72,8 +72,8 @@ manager: "jhubbard"
 15. On the **Entity Maintenance** page, click **Save entity**.  
   
 ## See Also  
- [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [Change an Attribute Name &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-name-master-data-services.md)   
+ [Attributes &#40;Master Data Services&#41;](attributes-master-data-services.md)   
+ [Change an Attribute Name &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [Create a Domain-Based Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Create a File Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   

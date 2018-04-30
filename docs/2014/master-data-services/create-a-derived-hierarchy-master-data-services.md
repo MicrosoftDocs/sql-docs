@@ -22,7 +22,7 @@ manager: "jhubbard"
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a derived hierarchy when you want a level-based hierarchy that ensures that members exist at the correct level. Derived hierarchies are based on the domain-based attribute relationships that exist in a model.  
   
 > [!NOTE]  
->  If a domain-based attribute value doesn't exist for a member, the member is not included in the derived hierarchy. See [Require Attribute Values &#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md) to require a domain-based attribute value for all members.  
+>  If a domain-based attribute value doesn't exist for a member, the member is not included in the derived hierarchy. See [Require Attribute Values &#40;Master Data Services&#41;](require-attribute-values-master-data-services.md) to require a domain-based attribute value for all members.  
   
 ## Prerequisites  
  To perform this procedure:  

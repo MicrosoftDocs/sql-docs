@@ -38,7 +38,7 @@ manager: "mblythe"
   
 2.  On the **Web Service URL** page, select an SSL port and SSL Certificate.  
   
-     ![Reporting Services Configuration Manager](../../2014/reporting-services/media/reportingservices-configurationmanager.png "Reporting Services Configuration Manager")  
+     ![Reporting Services Configuration Manager](media/reportingservices-configurationmanager.png "Reporting Services Configuration Manager")  
   
      The configuration manager registers the SSL certificate for the port.  
   

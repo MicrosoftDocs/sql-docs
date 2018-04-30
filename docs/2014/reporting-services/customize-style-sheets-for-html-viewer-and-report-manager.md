@@ -71,7 +71,7 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
   
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [HTML Viewer and the Report Toolbar](../../2014/reporting-services/html-viewer-and-the-report-toolbar.md)   
+ [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)   
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)  
   
   

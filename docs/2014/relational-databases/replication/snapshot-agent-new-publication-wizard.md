@@ -33,11 +33,11 @@ manager: "jhubbard"
  Accept the default schedule for running the Snapshot Agent, or click **Change** to specify a schedule.  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
+ [Create a Publication](publish/create-a-publication.md)   
  [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Replication Agents Overview](replication-agents-overview.md)  
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

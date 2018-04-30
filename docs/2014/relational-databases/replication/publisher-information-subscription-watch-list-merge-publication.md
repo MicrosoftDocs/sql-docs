@@ -64,7 +64,7 @@ manager: "jhubbard"
   
  The status values **Performance critical**, **Long-running merge**, **Expiring soon/Expired**, and **Uninitialized subscription** are warnings. When a warning is displayed, the **Status** column also displays if an agent is synchronizing. For example, the status could be **Synchronizing, Performance critical**.  
   
- The status values **Expiring soon/Expired** and **Long-running merge** can be displayed only if thresholds are set. The status value **Performance critical** can be displayed only after five synchronizations of subscriptions with the same connection type (dial-up or LAN). For information on performance measurements and setting thresholds, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md) and [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+ The status values **Expiring soon/Expired** and **Long-running merge** can be displayed only if thresholds are set. The status value **Performance critical** can be displayed only after five synchronizations of subscriptions with the same connection type (dial-up or LAN). For information on performance measurements and setting thresholds, see [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md) and [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Subscription**  
  The name of each subscription, in the form:*SubscriberName: SubscriptionDatabaseName*.  
@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 -   Poor  
   
- For more information about how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md).  
+ For more information about how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md).  
   
  **Delivery Rate**  
  The number of rows per second processed by the Merge Agent.  
@@ -106,9 +106,9 @@ manager: "jhubbard"
  The type of connection between the Subscriber and the Publisher. The possible values are **LAN**, **Dialup**, and **Internet**. The **Internet** value is displayed if the subscription uses Web synchronization.  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)   
- [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](merge/merge-replication.md)  
   
   

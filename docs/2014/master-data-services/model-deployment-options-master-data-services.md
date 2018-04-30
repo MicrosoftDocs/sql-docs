@@ -39,6 +39,6 @@ manager: "jhubbard"
 ## See Also  
  [Deploy a Model Deployment Package by Using MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [Deploy a Model Deployment Package by Using the Wizard](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [Deploying Models &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [Deploying Models &#40;Master Data Services&#41;](deploying-models-master-data-services.md)  
   
   

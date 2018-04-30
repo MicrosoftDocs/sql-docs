@@ -42,9 +42,9 @@ manager: "mblythe"
  Type or select the name of a text box in the report in which to display a toggle image; for example, Textbox1. The text box that you choose must be in the current or containing scope for this report item. For example, to toggle visibility of rows associated with a child group, select a text box in a row associated with the parent group. To toggle visibility of a chart, select a text box that is in the same containing scope as the chart; for example, the report body or a rectangle.  
   
 ## See Also  
- [Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-examples-report-builder-and-ssrs.md)   
- [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Images &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/images-report-builder-and-ssrs.md)   
+ [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Report Designer F1 Help](../../2014/reporting-services/report-designer-f1-help.md)  
   
   

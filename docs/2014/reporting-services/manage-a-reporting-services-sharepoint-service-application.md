@@ -115,7 +115,7 @@ manager: "mblythe"
 ##  <a name="bkmk_managejobs"></a> Manage Jobs  
  You can view and delete the running jobs, for example jobs that are created by report subscriptions and data-driven subscriptions. The page is not used to manage subscriptions, but rather jobs that are triggered by a subscription. For example a subscription that is scheduled to run once an hour will generate a job once an hour that appears on the **Manage Jobs** page.  
   
- ![manage running jobs](../../2014/reporting-services/media/ssrs-manage-jobs.gif "manage running jobs")  
+ ![manage running jobs](media/ssrs-manage-jobs.gif "manage running jobs")  
   
 ##  <a name="bkmk_keymgt"></a> Key Management  
  The following table summarizes the Kay Management pages  
@@ -143,7 +143,7 @@ manager: "mblythe"
   
  You can use any Windows user account. For best results, choose an account that has read permissions and network logon permissions to support connections to other computers. It must have read permissions on any external image or data file that you want to use in a report. Do not specify a local account unless all report data sources and external images are stored on the report server computer. Use the account only for unattended report processing.  
   
- ![PowerShell related content](../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")  
   
  The following is an example PowerShell command to return the list of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications with the UEAccount property:  
   

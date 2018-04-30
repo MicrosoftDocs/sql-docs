@@ -100,11 +100,11 @@ manager: "mblythe"
   
  For more information about how to use Reporting Services with DMX queries as a data source, see these links:  
   
- [Retrieve Data from a Data Mining Model &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Retrieve Data from a Data Mining Model &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Analysis Services DMX Query Designer User Interface](../../reporting-services/analysis-services-dmx-query-designer-user-interface.md)  
+ [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  However, it is not necessary to use DMX as the data source. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components for data mining also support saving the results of a prediction query to a relational database. If you have an established workflow for updating models using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], persisting predictions and other data mining query results to SQL Server enable you to use [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] for reporting, as well as other tools that do not interface with DMX.  
   

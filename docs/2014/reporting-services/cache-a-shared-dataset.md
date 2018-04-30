@@ -42,6 +42,6 @@ manager: "mblythe"
 7.  Click **Apply**.  
   
 ## See Also  
- [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md)  
+ [Manage Shared Datasets](report-data/manage-shared-datasets.md)  
   
   

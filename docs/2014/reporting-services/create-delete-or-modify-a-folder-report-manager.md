@@ -74,6 +74,6 @@ manager: "mblythe"
 ## See Also  
  [New Folder Page &#40;Report Manager&#41;](../../2014/reporting-services/new-folder-page-report-manager.md)   
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -48,7 +48,7 @@ manager: "mblythe"
   
  In Report Designer, you work in both the Report Data pane and in Solution Explorer to define shared datasets used in a report. For more information, see [Report Data Pane](../../2014/reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). You cannot use [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] to open published datasets directly from a report server or SharePoint site. For that feature, use [Report Builder &#40;SSRS&#41;](../../2014/reporting-services/report-builder-ssrs.md) in Shared Dataset mode.  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] is a client tool. You can use query designers to help create and test your query results locally in Preview. After deployment, you can manage shared datasets independently from the shared data sources and reports that they depend on. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md), and [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md).  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] is a client tool. You can use query designers to help create and test your query results locally in Preview. After deployment, you can manage shared datasets independently from the shared data sources and reports that they depend on. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md), and [Manage Shared Datasets](report-data/manage-shared-datasets.md).  
   
   
 ##  <a name="bkmk_Reports"></a> Reports  
@@ -84,7 +84,7 @@ manager: "mblythe"
   
   
 ##  <a name="bkmk_ReportParts"></a> Report Parts  
- In Report Designer, after you create tables, charts, and other report items in a project, you can publish them as *report parts* to a report server or SharePoint site integrated with a report server so that you and others can reuse them in other reports. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/report-parts-in-report-designer-ssrs.md).  
+ In Report Designer, after you create tables, charts, and other report items in a project, you can publish them as *report parts* to a report server or SharePoint site integrated with a report server so that you and others can reuse them in other reports. For more information, see [Report Parts in Report Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
  Report parts can be deployed independently from other items in a project by using **TargetReportPartFolder** and other properties. For more information, see [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md).  
   
@@ -160,7 +160,7 @@ manager: "mblythe"
  From [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], you can deploy reports or other project items to multiple versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report servers. Use project configurations to control the upgrade of report definitions to schema versions compatible with target report servers. The properties controlled by project configurations include the target report server, the folder where the build process temporarily stores report definitions for preview and deployment, and error levels. For more information, see [Configuration and Deployment Properties](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties) and [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md).  
   
 ### Export a Report to a Different File Format  
- Reports can be exported to a variety of formats and these formats affect how some report layout and interactivity features function. For more information about design considerations for various output formats, see [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md).  
+ Reports can be exported to a variety of formats and these formats affect how some report layout and interactivity features function. For more information about design considerations for various output formats, see [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> Report Validation and Error Levels  
@@ -185,7 +185,7 @@ manager: "mblythe"
   
 ## See Also  
  [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../2014/reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md)   
- [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md)   
+ [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

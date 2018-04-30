@@ -83,8 +83,8 @@ manager: "mblythe"
      **Note** If the program cannot open the report in the format that you chose because you do not have a program associated with this file type, you will be prompted to save the exported report or to find a program online to open the report.  
   
 ## See Also  
- [Exporting Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/exporting-reports-report-builder-and-ssrs.md)   
- [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/interactive-functionality-different-report-rendering-extensions.md)  
+ [Exporting Reports &#40;Report Builder and SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

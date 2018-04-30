@@ -51,10 +51,11 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Add metadata to a model object.|[Add Metadata &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)|  
+|Add metadata to a model object.|[Add Metadata &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
+)|  
   
 ## Related Content  
   
--   [Exporting Data &#40;Master Data Services&#41;](../../2014/master-data-services/exporting-data-master-data-services.md)  
+-   [Exporting Data &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

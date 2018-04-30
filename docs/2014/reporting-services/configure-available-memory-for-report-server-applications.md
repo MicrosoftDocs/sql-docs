@@ -60,7 +60,7 @@ manager: "mblythe"
   
  The following illustration shows how the settings are used together to distinguish between low, medium, and high levels of memory pressure:  
   
- ![Configuration settings for memory state](../../2014/reporting-services/media/rs-memoryconfigurationzones.gif "Configuration settings for memory state")  
+ ![Configuration settings for memory state](media/rs-memoryconfigurationzones.gif "Configuration settings for memory state")  
   
  The following table describes `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin`, and `MemoryThreshold` settings. Configuration settings are specified in the [RSReportServer.config file](../../2014/reporting-services/rsreportserver-configuration-file.md).  
   

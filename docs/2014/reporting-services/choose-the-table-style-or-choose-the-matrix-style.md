@@ -23,7 +23,7 @@ manager: "mblythe"
  You can also add additional style templates.  
   
 ## See Also  
- [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Report Wizard Help](../../2014/reporting-services/report-wizard-help.md)  
   
   

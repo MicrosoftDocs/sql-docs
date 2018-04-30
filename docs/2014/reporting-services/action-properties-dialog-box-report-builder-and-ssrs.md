@@ -58,7 +58,7 @@ manager: "mblythe"
   
  For a report published to a report server configured in SharePoint integrated mode, use a fully qualified URL including the file name extension (.rdl). For example, http://*\<SharePointservername>/\<site>*/Documents/Report1.rdl. Relative paths are not supported.  
   
- For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/specifying-paths-to-external-items-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
  **Use these parameters to run the report**  
  Add a list of parameters to pass to the drillthrough report. The parameter names must match the parameters defined for the target report. Use the **Add** and **Delete** buttons to add and remove parameters and use the up and down arrows to order the list of parameters.  
@@ -99,10 +99,10 @@ manager: "mblythe"
  Type or enter the URL of the item. For an item published to a report server configured for native mode, use a full or relative path. For example, http://*\<servername>*/images/image1.jpg. For an item published to a report server configured in SharePoint integrated mode, use a fully qualified URL (for example, http://*\<SharePointservername>/\<site>*/Documents/images/image1.jpg).  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md)   
- [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

@@ -93,7 +93,7 @@ manager: "mblythe"
  You have successfully formatted column headers and date and currency values. Next, you will add grouping and totals to your report. See [Lesson 6: Adding Grouping and Totals &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## See Also  
- [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -57,6 +57,6 @@ manager: "mblythe"
  Specify parameters for the selected formula.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)  
+ [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

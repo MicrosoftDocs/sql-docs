@@ -1,6 +1,0 @@
-# [Developer's Guide (Master Data Services)](developer-s-guide-master-data-services.md)
-## [Create Master Data Manager Web Service Proxy Classes](create-master-data-manager-web-service-proxy-classes.md)
-## [Categorized Web Service Operations](categorized-web-service-operations-master-data-services.md)
-## [Create a Custom Workflow](create-a-custom-workflow-master-data-services.md)
-### [Custom Workflow Example](custom-workflow-example-master-data-services.md)
-### [Custom Workflow XML Description](custom-workflow-xml-description-master-data-services.md)

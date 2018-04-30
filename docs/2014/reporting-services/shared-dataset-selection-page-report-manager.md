@@ -49,9 +49,9 @@ manager: "mblythe"
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md)   
+ [Manage Shared Datasets](report-data/manage-shared-datasets.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
- [Report Parts and Datasets in Report Builder](../../2014/reporting-services/report-parts-and-datasets-in-report-builder.md)   
- [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Report Parts and Datasets in Report Builder](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

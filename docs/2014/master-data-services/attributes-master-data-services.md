@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  ![Master Data Services Entity Represented as Table](../../2014/master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
   
- When you create an entity that contains many attributes, you can organize the attributes into attribute groups. For more information, see [Attribute Groups &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md).  
+ When you create an entity that contains many attributes, you can organize the attributes into attribute groups. For more information, see [Attribute Groups &#40;Master Data Services&#41;](attribute-groups-master-data-services.md).  
   
 ## Required Attributes  
  When you create an entity, the Name and Code attributes are automatically created. Code requires a value and must be unique within the entity. You cannot remove the Name and Code attributes.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
 |Create a new free-form link attribute.|[Create a Link Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
 |Create a new file attribute.|[Create a File Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Create a new domain-based attribute.|[Create a Domain-Based Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|Change the name of an existing attribute.|[Change an Attribute Name &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-name-master-data-services.md)|  
+|Change the name of an existing attribute.|[Change an Attribute Name &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
 |Add existing attributes to a change tracking group.|[Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Delete an existing attribute.|[Delete an Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |Change the order of attributes.|[Change the Order of Attributes](../../2014/master-data-services/change-the-order-of-attributes.md)|  
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 -   [Domain-Based Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Attribute Groups &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)  
+-   [Attribute Groups &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
   
 -   [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

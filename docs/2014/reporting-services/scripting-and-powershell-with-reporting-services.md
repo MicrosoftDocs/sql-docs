@@ -29,7 +29,7 @@ manager: "mblythe"
 -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET script as the script language that can be processed by the RS.exe utility, a script host that runs on the report server.  
   
 ## Reporting Services SharePoint mode PowerShell cmdlets and samples  
- ![PowerShell related content](../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode includes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] cmdlets for report server administration.  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
     -   List Data Extensions  
   
 ## Reporting Services Object model and Powershell samples  
- ![PowerShell related content](../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")  
   
  PowerShell calling the core object model and for the most part valid for SharePoint and native mode, for example the migration work, subscription work, and more related samples for subscriptions work in SQL15.  
   

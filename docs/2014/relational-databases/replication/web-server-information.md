@@ -30,8 +30,8 @@ manager: "jhubbard"
 ## See Also  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
- [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](merge/merge-replication.md)  
   
   

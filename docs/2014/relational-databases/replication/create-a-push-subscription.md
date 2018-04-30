@@ -41,7 +41,7 @@ manager: "jhubbard"
   
     -   For subscriptions to merge publications, specify credentials on the **Merge Agent Security** page.  
   
-     For information about the permissions required by each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
+     For information about the permissions required by each agent, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 -   Specify a synchronization schedule and when the Subscriber should be initialized.  
   
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
     -   **@subscription_priority**. For a server subscription, specify a priority for the subscription (**0.00** to **99.99**).  
   
-         For more information, see [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
+         For more information, see [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specify the following:  
   
@@ -189,7 +189,7 @@ manager: "jhubbard"
     -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Distribution Agent runs at the Distributor. This account is used to make local connections to the Distributor and to make remote connections using Windows Authentication.  
   
         > [!NOTE]  
-        >  Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the `sysadmin` fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](replication-agent-security-model.md).  
+        >  Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the `sysadmin` fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
     -   (Optional) A value of `true` (the default) for <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> to create an agent job that is used to synchronize the subscription. If you specify `false`, the subscription can only be synchronized programmatically.  
   
@@ -229,7 +229,7 @@ manager: "jhubbard"
     -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Merge Agent runs at the Distributor. This account is used to make local connections to the Distributor and to make remote connections using Windows Authentication.  
   
         > [!NOTE]  
-        >  Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the `sysadmin` fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](replication-agent-security-model.md).  
+        >  Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the `sysadmin` fixed server role, however it is recommended. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
     -   (Optional) A value of `true` (the default) for <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> to create an agent job that is used to synchronize the subscription. If you specify `false`, the subscription can only be synchronized programmatically.  
   
@@ -257,9 +257,9 @@ manager: "jhubbard"
   
 ## See Also  
  [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
- [Create a Publication](create-a-publication.md)   
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Create a Publication](publish/create-a-publication.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Synchronize a Push Subscription](synchronize-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)  

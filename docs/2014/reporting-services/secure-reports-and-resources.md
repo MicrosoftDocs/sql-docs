@@ -76,6 +76,6 @@ manager: "mblythe"
  [Configure Report Builder Access](../../2014/reporting-services/configure-report-builder-access.md)   
  [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md)   
  [Secure Shared Data Source Items](../../2014/reporting-services/secure-shared-data-source-items.md)   
- [Store Credentials in a Reporting Services Data Source](../../2014/reporting-services/store-credentials-in-a-reporting-services-data-source.md)  
+ [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

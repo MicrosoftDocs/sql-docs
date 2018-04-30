@@ -70,7 +70,7 @@ manager: "mblythe"
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
- [Add Data to a Report &#40;Report Builder and SSRS&#41;](add-data-to-a-report-report-builder-and-ssrs.md)   
+ [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)  
   
   

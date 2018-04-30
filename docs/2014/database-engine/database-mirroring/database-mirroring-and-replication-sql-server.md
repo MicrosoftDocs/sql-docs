@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Database Mirroring and Replication (SQL Server)
   Database mirroring can be used in conjunction with replication to improve availability for the publication database. Database mirroring involves two copies of a single database that typically reside on different computers. At any given time, only one copy of the database is currently available to clients. This copy is known as the principal database. Updates made by clients to the principal database are applied on the other copy of the database, known as the mirror database. Mirroring involves applying the transaction log from every insertion, update, or deletion made on the principal database onto the mirror database.  
   
- Replication failover to a mirror is fully supported for publication databases, with limited support for subscription databases. Database mirroring is not supported for the distribution database. For information about recovering a distribution database or subscription database without any need to reconfigure replication, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md). For information about mirroring the subscriber database, see the  
+ Replication failover to a mirror is fully supported for publication databases, with limited support for subscription databases. Database mirroring is not supported for the distribution database. For information about recovering a distribution database or subscription database without any need to reconfigure replication, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md). For information about mirroring the subscriber database, see the  
   
 > [!NOTE]  
 >  After a failover, the mirror becomes the principal. In this topic, "principal" and "mirror" always refer to the original principal and mirror.  
@@ -63,7 +63,7 @@ manager: "jhubbard"
         exec sp_replicationdboption @dbname='<PublicationDatabase>', @optname='mergepublish', @value=true;  
         ```  
   
-         For more information about creating publications, see [Publish Data and Database Objects](../../relational-databases/replication/publish-data-and-database-objects.md).  
+         For more information about creating publications, see [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 2.  Configure database mirroring. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md) and [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
@@ -91,9 +91,9 @@ manager: "jhubbard"
   
      Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent. Parameters can be specified in agent profiles and from the command prompt. For more information, see:  
   
-    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
      We recommend adding the **–PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
     exec sp_add_agent_parameter @profile_id = 6, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'<Failover Partner Name>';  
     ```  
   
-5.  Add the principal and mirror to Replication Monitor. For more information, see [Add and Remove Publishers from Replication Monitor](../../relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md).  
+5.  Add the principal and mirror to Replication Monitor. For more information, see [Add and Remove Publishers from Replication Monitor](../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
 ## Maintaining a Mirrored Publication Database  
  Maintaining a mirrored publication database is essentially the same as maintaining a non-mirrored database, with the following considerations:  

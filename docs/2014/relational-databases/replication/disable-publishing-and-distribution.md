@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 #### To disable publishing and distribution  
   
-1.  Stop all replication-related jobs. For a list of job names, see the "Agent Security Under SQL Server Agent" section of [Replication Agent Security Model](replication-agent-security-model.md).  
+1.  Stop all replication-related jobs. For a list of job names, see the "Agent Security Under SQL Server Agent" section of [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 2.  At each Subscriber on the subscription database, execute [sp_removedbreplication](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove replication objects from the database. This stored procedure will not remove replication jobs at the Distributor.  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
 1.  Remove all subscriptions to publications that use the Distributor. For more information, see [Delete a Pull Subscription](delete-a-pull-subscription.md) and [Delete a Push Subscription](delete-a-push-subscription.md).  
   
-2.  Remove all publications that use the Distributor, and disable publishing for all databases if the Publisher and Distributor are on the same server. For more information, see [Delete a Publication](delete-a-publication.md).  
+2.  Remove all publications that use the Distributor, and disable publishing for all databases if the Publisher and Distributor are on the same server. For more information, see [Delete a Publication](publish/delete-a-publication.md).  
   
 3.  Create a connection to the Distributor by using the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class.  
   
@@ -130,7 +130,7 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## See Also  
- [Replication Management Objects Concepts](dev-guide/replication-management-objects-concepts.md)   
- [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

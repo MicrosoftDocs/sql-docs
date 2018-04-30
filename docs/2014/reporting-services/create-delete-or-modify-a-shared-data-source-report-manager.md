@@ -26,7 +26,7 @@ manager: "mblythe"
   
  The following icon indicates a shared data source in the Report Manager folder hierarchy:  
   
- ![Shared data source icon](../../2014/reporting-services/media/hlp-16datasource.png "Shared data source icon")  
+ ![Shared data source icon](media/hlp-16datasource.png "Shared data source icon")  
 shared data source icon  
   
 ### To create a shared data source  
@@ -97,8 +97,8 @@ shared data source icon
 ## See Also  
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../2014/reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Manage Report Data Sources](../../2014/reporting-services/manage-report-data-sources.md)   
- [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../2014/reporting-services/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [Manage Report Data Sources](report-data/manage-report-data-sources.md)   
+ [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

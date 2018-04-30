@@ -24,7 +24,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View Conflict Information for Merge Publications (Replication Transact-SQL Programming)
-  When a conflict is resolved in merge replication, the data from the losing row is written to a conflict table. This conflict data can be viewed programmatically by using replication stored procedures. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
+  When a conflict is resolved in merge replication, the data from the losing row is written to a conflict table. This conflict data can be viewed programmatically by using replication stored procedures. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### To view conflict information and losing row data for all types of conflicts  
   
@@ -73,6 +73,6 @@ manager: "jhubbard"
     -   At the Subscriber on the subscription database, execute [sp_helpmergedeleteconflictrows](~/relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specify the name of the source table (from step 1) on which the conflict occurred for **@source_object**. (Optional) Specify a value of **@publication** to restrict returned conflict information to a specific publication. This returns delete conflict information stored at the Subscriber.  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

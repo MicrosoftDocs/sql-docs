@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   The agent connects to the Subscriber using the credentials specified for the Distribution Agent in the New Subscription Wizard.  
   
- For more information, see  \\[Replication Agent Security Model](replication-agent-security-model.md).  
+ For more information, see  \\[Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   

@@ -25,10 +25,10 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  We recommend that you use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication and a UNC share rather than an FTP share because FTP passwords must be stored, and the password is sent from the Subscriber or the computer that is running IIS when it uses Web synchronization to the FTP server in plain text. Additionally, because a single account controls access to the snapshot share, it is not possible to ensure that a Subscriber to a filtered merge publication only has access to the snapshot files from their data partition.  
   
- To deliver a snapshot through FTP, see [Deliver a Snapshot Through FTP](deliver-a-snapshot-through-ftp.md).  
+ To deliver a snapshot through FTP, see [Deliver a Snapshot Through FTP](publish/deliver-a-snapshot-through-ftp.md).  
   
 ## See Also  
- [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)   
+ [Web Synchronization for Merge Replication](merge/merge-replication.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
  [Snapshot Options](snapshot-options.md)  
   

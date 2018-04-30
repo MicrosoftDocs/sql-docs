@@ -24,15 +24,15 @@ manager: "jhubbard"
 > [!NOTE]  
 >  You should also limit your use of special characters (symbols, hyphenation, etc.).  
   
--   [Models](../../2014/master-data-services/reserved-words-master-data-services.md#models)  
+-   [Models](#models)  
   
--   [Entities](../../2014/master-data-services/reserved-words-master-data-services.md#entities)  
+-   [Entities](#entities)  
   
--   [Explicit Hierarchies](../../2014/master-data-services/reserved-words-master-data-services.md#exhierarchies)  
+-   [Explicit Hierarchies](#exhierarchies)  
   
--   [Attributes](../../2014/master-data-services/reserved-words-master-data-services.md#attributes)  
+-   [Attributes](#attributes)  
   
--   [Members](../../2014/master-data-services/reserved-words-master-data-services.md#members)  
+-   [Members](#members)  
   
 ##  <a name="models"></a> Models  
  If you create a model with the name set to **Name**, do not select **Create entity with same name as model** because **Name** cannot be used for the name of an entity.  
@@ -71,6 +71,6 @@ manager: "jhubbard"
  For members, you cannot use **MDMMemberStatus** or **ROOT** for the **Code** attribute value.  
   
 ## See Also  
- [Master Data Services Overview](../../2014/master-data-services/master-data-services-overview.md)  
+ [Master Data Services Overview](master-data-services-overview-mds.md)  
   
   

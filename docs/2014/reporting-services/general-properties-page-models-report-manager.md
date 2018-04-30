@@ -68,7 +68,7 @@ manager: "mblythe"
  Click to regenerate a default model that replaces the current version. This option appears after the model is generated. The generated model is based on the shared data source. It cannot be customized before it is generated. However, after you generate it, you can click **Edit** to open the model definition, save it to the file system, and then add it to a project in Model Designer. After you refine the model, you can upload it to the report server as a new item, or click **Update** on this page to replace the generated model with the version you revised in Model Designer.  
   
 ## See Also  
- [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Report Server in Management Studio F1 Help](../../2014/reporting-services/report-server-in-management-studio-f1-help.md)  
   
   

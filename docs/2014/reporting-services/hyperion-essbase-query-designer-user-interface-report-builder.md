@@ -31,7 +31,7 @@ manager: "mblythe"
 ## Graphical Query Designer in Design Mode  
  When you edit an MDX query for a dataset that uses a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data source, the graphical query designer opens in Design mode. The following figure labels the panes for Design mode.  
   
- ![Query Designer for Hyperion Essbase data source](../../2014/reporting-services/media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
+ ![Query Designer for Hyperion Essbase data source](media/rsqd-dshyperionessbase-mdx-designmode.gif "Query Designer for Hyperion Essbase data source")  
   
  The following table lists the panes in this mode.  
   
@@ -54,19 +54,19 @@ manager: "mblythe"
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. Not available for this data source type.|  
 |**Import**|Import an existing query from a report definition (.rdl) file on the file system.|  
-|![Refresh dataset fields](../../2014/reporting-services/media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
-|![Add calculated member](../../2014/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box. Use this to create or edit expressions for a calculated member, including setting the **Solve Order** property.|  
-|![Toggle for show empty cells](../../2014/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Switch between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
-|![AutoExecute the query](../../2014/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made, for example, deleting a column in the Data pane. Results are shown in the Data pane.|  
-|![Delete](../../2014/analysis-services/media/rsqdicon-delete.gif "Delete")|Delete the selected item from the query. Use this button to delete selected rows in the Filter pane.|  
-|![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the results in the Data pane.|  
-|![Cancel the query](../../2014/analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Cancel the query.|  
-|![Switch to Design mode](../../2014/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Switch between Design mode and Query mode.|  
+|![Refresh dataset fields](media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box. Use this to create or edit expressions for a calculated member, including setting the **Solve Order** property.|  
+|![Toggle for show empty cells](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Switch between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
+|![AutoExecute the query](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made, for example, deleting a column in the Data pane. Results are shown in the Data pane.|  
+|![Delete](../analysis-services/media/rsqdicon-delete.gif "Delete")|Delete the selected item from the query. Use this button to delete selected rows in the Filter pane.|  
+|![Run the query](../analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the results in the Data pane.|  
+|![Cancel the query](../analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Cancel the query.|  
+|![Switch to Design mode](../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Switch between Design mode and Query mode.|  
   
 ## Graphical Query Designer in Query Mode  
  To change the graphical query designer to Query mode, click the **Design Mode** toggle button on the toolbar.  
   
- ![Query Designer in Query Mode for Hyperion](../../2014/reporting-services/media/rsqd-hyperionessbase-mdx-querymode.gif "Query Designer in Query Mode for Hyperion")  
+ ![Query Designer in Query Mode for Hyperion](media/rsqd-hyperionessbase-mdx-querymode.gif "Query Designer in Query Mode for Hyperion")  
   
  The following table describes the function of each pane.  
   
@@ -84,11 +84,11 @@ manager: "mblythe"
   
 -   **Edit As Text**  
   
--   **Add Calculated Member** (![Add calculated member](../../2014/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Add Calculated Member** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Show Empty Cells** (![Toggle for show empty cells](../../2014/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
+-   **Show Empty Cells** (![Toggle for show empty cells](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
   
--   **AutoExecute** (![AutoExecute the query](../../2014/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
+-   **AutoExecute** (![AutoExecute the query](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
   
 ## See Also  
  [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

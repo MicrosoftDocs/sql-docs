@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Master Data Manager Web Application
-  The [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application is used primarily by administrators to perform administrative tasks. For example, only administrators can create models, business rules, or versions of data. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+  The [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application is used primarily by administrators to perform administrative tasks. For example, only administrators can create models, business rules, or versions of data. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
  The Explorer functional area of the web application is the only area not used by administrators. Explorer is for those who update master data on a frequent basis. These users have permission to the data required to do their jobs.  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  Validating data is a three-part process:  
   
-1.  A single subscription or all subscriptions to a publication are *marked* for validation. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also mark subscriptions from the **All Subscriptions** tab, the **Subscription Watch List** tab, and the publications node in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
+1.  A single subscription or all subscriptions to a publication are *marked* for validation. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also mark subscriptions from the **All Subscriptions** tab, the **Subscription Watch List** tab, and the publications node in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](monitor/start-the-replication-monitor.md).  
   
 2.  A subscription is validated the next time it is synchronized by the Distribution Agent (for transactional replication) or the Merge Agent (for merge replication). The Distribution Agent typically runs continuously, in which case validation occurs immediately; the Merge Agent typically runs on demand, in which case validation occurs after you run the agent.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   The procedures for Replication Monitor are for push subscriptions only because pull subscriptions cannot be synchronized in Replication Monitor. However, you can mark a subscription for validation and view validation results for pull subscriptions in Replication Monitor.  
   
--   The validation results indicate whether validation succeeded or failed, but do not specify which rows failed validation if a failure occurred. To compare data at the Publisher and Subscriber, use the [tablediff Utility](../../tools/tablediff-utility.md). For more information about using this utility with replicated data, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
+-   The validation results indicate whether validation succeeded or failed, but do not specify which rows failed validation if a failure occurred. To compare data at the Publisher and Subscriber, use the [tablediff Utility](../../tools/tablediff-utility.md). For more information about using this utility with replicated data, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -286,7 +286,7 @@ manager: "jhubbard"
 4.  Repeat steps 1 through 3 for each subscription being validated.  
   
 > [!NOTE]  
->  A subscription to a merge publication can also be validated at the end of a synchronization by specifying the **-Validate** parameter when running the [Replication Merge Agent](replication-merge-agent.md).  
+>  A subscription to a merge publication can also be validated at the end of a synchronization by specifying the **-Validate** parameter when running the [Replication Merge Agent](agents/replication-merge-agent.md).  
   
 #### To validate data in a subscription using Merge Agent parameters  
   

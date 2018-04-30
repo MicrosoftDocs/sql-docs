@@ -50,33 +50,33 @@ manager: "jhubbard"
   
      Check the error details in Replication Monitor, and then restart the agent if it has stopped. The error details might provide additional information on why the agent was not running properly. If the agent is running, do not stop and restart the agent, because that can exacerbate the problem. For information about viewing agent status and error details in Replication Monitor, see the following topics:  
   
-    -   For the Snapshot Agent, Log Reader Agent, and Queue Reader Agent, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
+    -   For the Snapshot Agent, Log Reader Agent, and Queue Reader Agent, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
-    -   For the Distribution Agent and Merge Agent, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+    -   For the Distribution Agent and Merge Agent, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 -   If this error is raised frequently because the agent is busy:  
   
      You might need to redesign your application so that the agent spends less time processing.  
   
-     You can increase the interval at which agent status is checked using the **Job Properties** dialog box. For information about accessing this dialog box for replication jobs, see [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+     You can increase the interval at which agent status is checked using the **Job Properties** dialog box. For information about accessing this dialog box for replication jobs, see [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
   
 -   If an agent cannot log in to one of the computers in the topology:  
   
      We recommend that the **-LoginTimeOut** value be set lower than the interval at which the replication agent checkup job runs. In some cases, the value for **-LoginTimeOut** is set higher because of network issues that cause logins to time out. If the **-LoginTimeOut** is set lower, replication can report more specific errors, allowing you to troubleshoot login problems that could be caused by permissions, network problems, or other issues. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
-    -   [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)  
+    -   [Work with Replication Agent Profiles](agents/replication-agent-profiles.md)  
   
-    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
   
 ## See Also  
- [Replication Agent Administration](replication-agent-administration.md)   
+ [Replication Agent Administration](agents/replication-agent-administration.md)   
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
- [Replication Distribution Agent](replication-distribution-agent.md)   
- [Replication Log Reader Agent](replication-log-reader-agent.md)   
- [Replication Merge Agent](replication-merge-agent.md)   
- [Replication Queue Reader Agent](replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](replication-snapshot-agent.md)  
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
+ [Replication Queue Reader Agent](agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

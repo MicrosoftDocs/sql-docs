@@ -52,6 +52,6 @@ manager: "jhubbard"
  You have successfully configured the share for the snapshot folder. Next, you will configure distribution. See [Lesson 3: Configuring Distribution](lesson-3-configuring-distribution.md).  
   
 ## See Also  
- [Secure the Snapshot Folder](secure-the-snapshot-folder.md)  
+ [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md)  
   
   

@@ -43,7 +43,7 @@ manager: "mblythe"
   
  The following diagram shows the workflow of creating and saving a data alert definition, creating a SQL Agent job to begin processing an instance of the data alert, and sending data alert messages that contain the report data that triggered the alert to one or more recipients by email.  
   
- ![Workflow in Reporting Services alerting](../../2014/reporting-services/media/rs-alertingworkflow.gif "Workflow in Reporting Services alerting")  
+ ![Workflow in Reporting Services alerting](media/rs-alertingworkflow.gif "Workflow in Reporting Services alerting")  
   
 ### Reports Supported by Data Alerts  
  You can create data alerts on all types of professional reports that are written in the report definition language (RDL) and created in Report Designer or Report Builder. Reports that include data regions such as tables and charts, reports with subreports, and complex reports with multiple parallel column groups and nested data regions. The only requirements are the report includes at least one data region of any type and the report data source is configured to use stored credentials or no credentials. If the report has no data regions, you cannot create an alert on it.  
@@ -193,7 +193,7 @@ manager: "mblythe"
 ##  <a name="Permissions"></a> Permissions for Data Alerts  
  Before you can create data alerts on reports, you must have permission to run the report and create alerts on the SharePoint site. To learn more about report permissions, see the following.  
   
--   [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
 -   [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
@@ -274,13 +274,13 @@ manager: "mblythe"
 ##  <a name="UserInterface"></a> Data Alert User Interface  
  Data alerts provide SharePoint pages for managing alerts and a designer for creating and editing data alert definitions.  
   
--   **Data Alert Designer** in which you create or edit data alert definitions. For more information, see [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md), [Create a Data Alert in Data Alert Designer](../../2014/reporting-services/create-a-data-alert-in-data-alert-designer.md) and [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md).  
+-   **Data Alert Designer** in which you create or edit data alert definitions. For more information, see [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md), [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md) and [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md).  
   
 -   **Data Alert Manager** in which you view lists of data alerts, delete alerts, and open alerts for editing. Data Alert Manager comes in two versions: one for users to manage the alerts they created, and one for administrators to manage alerts that belong to site users.  
   
-     For more information about managing data alerts that you created, see [Data Alert Manager for SharePoint Users](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) and [Manage My Data Alerts in Data Alert Manager](../../2014/reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+     For more information about managing data alerts that you created, see [Data Alert Manager for SharePoint Users](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) and [Manage My Data Alerts in Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   
-     For more information about managing all data alerts on a site, see [Data Alert Manager for Alerting Administrators](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) and [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../../2014/reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+     For more information about managing all data alerts on a site, see [Data Alert Manager for Alerting Administrators](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) and [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
 -   **Provision Subscriptions and Data Alerts** in which you find out whether Reporting Services can use SQL Server Agent for data alerts and download scripts that allow access to SQL Server Agent. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -297,17 +297,17 @@ manager: "mblythe"
   
 ##  <a name="HowTo"></a> Related Tasks  
   
--   [Save a Report to a SharePoint Library &#40;Report Builder&#41;](../../2014/reporting-services/save-a-report-to-a-sharepoint-library-report-builder.md)  
+-   [Save a Report to a SharePoint Library &#40;Report Builder&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Create a Data Alert in Data Alert Designer](../../2014/reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md)  
   
--   [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md)  
   
--   [Manage My Data Alerts in Data Alert Manager](../../2014/reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [Manage My Data Alerts in Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../../2014/reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   [Grant Permissions to Users and Alerting Administrators](../../2014/reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
+-   [Grant Permissions to Users and Alerting Administrators](grant-permissions-to-users-and-alerting-administrators.md)  
   
 ## See Also  
  [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md)   

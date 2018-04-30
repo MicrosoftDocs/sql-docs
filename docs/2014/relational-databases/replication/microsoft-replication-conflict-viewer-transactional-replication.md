@@ -65,7 +65,7 @@ manager: "jhubbard"
  Check this box to log the details of the conflict to a file. To specify a location for the file, point to the **View** menu and click **Options**. Enter a value, or click the browse (**...**) and navigate to the appropriate file. Click **OK** to exit the **Options** dialog box.  
   
 ## See Also  
- [Conflict Detection in Peer-to-Peer Replication](conflict-detection-in-peer-to-peer-replication.md)   
+ [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

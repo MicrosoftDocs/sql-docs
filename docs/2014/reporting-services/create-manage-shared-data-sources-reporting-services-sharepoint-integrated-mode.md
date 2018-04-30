@@ -38,7 +38,7 @@ manager: "mblythe"
   
 3.  In **Name**, enter a descriptive name for the .rsds file.  
   
-4.  In **Data Source Type**, select the type of data source from the list. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
+4.  In **Data Source Type**, select the type of data source from the list. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 5.  In **Connection String**, specify a pointer to the data source and any other settings that are necessary for establishing a connection to the external data source. The type of data source you are using determines the syntax of the connection string. For more information and examples, see [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   

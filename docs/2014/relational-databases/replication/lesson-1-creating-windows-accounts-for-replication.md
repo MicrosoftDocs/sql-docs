@@ -63,6 +63,6 @@ manager: "jhubbard"
  You have successfully created Windows accounts for replication agents. Next, you will configure the snapshot folder. See [Lesson 2: Preparing the Snapshot Folder](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## See Also  
- [Replication Agents Overview](replication-agents-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

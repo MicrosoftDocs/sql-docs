@@ -21,9 +21,9 @@ manager: "jhubbard"
 # Microsoft Replication Conflict Viewer and Interactive Resolver
   This section includes information on the Replication Conflict Viewer for merge replication and transactional replication, and the Interactive Resolver for merge replication:  
   
--   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](microsoft-replication-conflict-viewer-merge-replication.md)  
+-   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](merge/merge-replication.md)  
   
--   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
+-   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](transactional/transactional-replication.md)  
   
 -   [Microsoft Replication Interactive Conflict Resolver](microsoft-replication-interactive-conflict-resolver.md)  
   
@@ -32,9 +32,9 @@ manager: "jhubbard"
 ## See Also  
  [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Conflict Detection in Peer-to-Peer Replication](conflict-detection-in-peer-to-peer-replication.md)   
- [Queued Updating Conflict Detection and Resolution](queued-updating-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
+ [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

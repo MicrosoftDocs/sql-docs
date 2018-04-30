@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   Inserts and updates to a row are occurring at more than one node.  
   
-     Regardless of the type of replication used, we recommend that you partition inserts and updates whenever possible, because this reduces the processing required for conflict detection and resolution. For peer-to-peer transactional replication, partitioning inserts and updates is required. For more information, see [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md).  
+     Regardless of the type of replication used, we recommend that you partition inserts and updates whenever possible, because this reduces the processing required for conflict detection and resolution. For peer-to-peer transactional replication, partitioning inserts and updates is required. For more information, see [Peer-to-Peer Transactional Replication](transactional/transactional-replication.md).  
   
 -   A row was inserted at a Subscriber that should be read-only.  
   
@@ -54,11 +54,11 @@ manager: "jhubbard"
   
 -   A table with an identity column is being used, but the column is not managed appropriately.  
   
-     For merge replication and transactional replication with updatable subscriptions, identity columns should be managed automatically by replication. For peer-to-peer transactional replication, they must be managed manually. For more information, see [Replicate Identity Columns](replicate-identity-columns.md).  
+     For merge replication and transactional replication with updatable subscriptions, identity columns should be managed automatically by replication. For peer-to-peer transactional replication, they must be managed manually. For more information, see [Replicate Identity Columns](publish/replicate-identity-columns.md).  
   
 -   The error occurs during an insert into the system table **MSmerge_contents**.  
   
-     This error can occur because of an incorrect value for the join filter property **join_unique_key**. This property should be set to TRUE only if the joined column in the parent table is unique. If the property is set to TRUE, but the column is not unique, this error is raised. For more information on setting this property, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+     This error can occur because of an incorrect value for the join filter property **join_unique_key**. This property should be set to TRUE only if the joined column in the parent table is unique. If the property is set to TRUE, but the column is not unique, this error is raised. For more information on setting this property, see [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  

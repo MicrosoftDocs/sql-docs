@@ -22,7 +22,7 @@ manager: "jhubbard"
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a business rule when it is no longer needed.  
   
 > [!NOTE]  
->  You can prevent data from being validated against a business rule by excluding it, rather than deleting it. For more information, see [Exclude a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md).  
+>  You can prevent data from being validated against a business rule by excluding it, rather than deleting it. For more information, see [Exclude a Business Rule &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md).  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -56,7 +56,7 @@ manager: "jhubbard"
 11. In the confirmation dialog box, click **OK**.  
   
 ## See Also  
- [Exclude a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)   
+ [Exclude a Business Rule &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
  [Create and Publish a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Business Rules &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   

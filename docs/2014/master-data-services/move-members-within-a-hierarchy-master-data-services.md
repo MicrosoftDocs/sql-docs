@@ -54,7 +54,7 @@ manager: "jhubbard"
     >  In derived hierarchies, you can move members to the same level only. Also, you cannot change the sort order of members.  
   
 ## See Also  
- [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
+ [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Derived Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

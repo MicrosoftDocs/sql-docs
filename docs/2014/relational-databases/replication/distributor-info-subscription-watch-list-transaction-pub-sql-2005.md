@@ -21,7 +21,7 @@ manager: "jhubbard"
   Information for transactional subscriptions includes the name of the Publisher. Otherwise, the functionality and the information that is provided in this dialog box is the same as in the Publisher view. For more information about how to use this dialog box, see [Publisher Information, Subscription Watch List &#40;Transactional Publication, SQL Server 2005 and Later&#41;](publisher-information-subscription-watch-list-transactional.md).  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)  
   
   

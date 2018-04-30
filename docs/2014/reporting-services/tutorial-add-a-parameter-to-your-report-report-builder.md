@@ -506,10 +506,10 @@ manager: "mblythe"
  The report is saved to the report server. The report server that you are connected to appears in the status bar at the bottom of the window.  
   
 ## Next Steps  
- This concludes the walkthrough for how to add a parameter to your report. To learn more about parameters, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md).  
+ This concludes the walkthrough for how to add a parameter to your report. To learn more about parameters, see [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## See Also  
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

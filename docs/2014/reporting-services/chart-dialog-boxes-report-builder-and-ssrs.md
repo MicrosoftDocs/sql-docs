@@ -19,7 +19,7 @@ manager: "mblythe"
   This section contains Help for some of the dialog boxes for charts. Alternatively, you can open Help by pressing F1 or by clicking the Help button displayed in the dialog box.  
   
 ## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
+ [Charts &#40;Report Builder and SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Report Builder Help for Dialog Boxes, Panes, and Wizards](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

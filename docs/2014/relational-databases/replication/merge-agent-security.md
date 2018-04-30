@@ -80,10 +80,10 @@ manager: "jhubbard"
  The Windows account or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account used for the connection to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database.  
   
 ## See Also  
- [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
- [Replication Agent Security Model](replication-agent-security-model.md)   
- [Replication Agents Overview](replication-agents-overview.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Manage Logins and Passwords in Replication](security/manage-logins-and-passwords-in-replication.md)   
+ [Replication Agent Security Model](security/replication-agent-security-model.md)   
+ [Replication Agents Overview](agents/replication-agents-overview.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

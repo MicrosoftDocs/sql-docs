@@ -118,7 +118,7 @@ manager: "mblythe"
 |`Total Snapshot Updates`|Total number of report execution snapshot updates.|  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with “msr”  
+ ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with “msr”  
   
 ```  
 get-counter -listset msr*  

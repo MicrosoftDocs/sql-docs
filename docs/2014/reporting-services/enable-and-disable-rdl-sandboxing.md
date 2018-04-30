@@ -130,7 +130,7 @@ manager: "mblythe"
   
 -   Add the proxy type to the allow list.  
   
- Adding a type from a custom assembly to the allow list does not implicitly grant execute permission on the assembly. You must specifically modify the code access security file and provide execute permission to your assembly. For more information, see [Code Access Security in Reporting Services](../../2014/reporting-services/dev-guide/code-access-security-in-reporting-services.md).  
+ Adding a type from a custom assembly to the allow list does not implicitly grant execute permission on the assembly. You must specifically modify the code access security file and provide execute permission to your assembly. For more information, see [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md).  
   
 #### Maintaining the \<Deny> List of Members  
  When you add a new type to the allow list, use the following list to determine when you might have to update the block list of members:  

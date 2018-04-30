@@ -34,7 +34,7 @@ manager: "mblythe"
   
  The following diagram illustrates a role assignment that maps a group and a specific user to the **Publisher** role for Folder B.  
   
- ![Role assignments diagram](../../2014/reporting-services/media/report-securityarch.gif "Role assignments diagram")  
+ ![Role assignments diagram](media/report-securityarch.gif "Role assignments diagram")  
 Role assignments diagram  
   
 ## System-Level and Item-Level Role Assignments  

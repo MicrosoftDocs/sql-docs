@@ -96,19 +96,19 @@ manager: "mblythe"
  You can customize Report Manager in very limited ways. For example, you can modify the application title on the Site Settings page. If you are a Web developer, you can modify the style sheets that contain the style information used by Report Manager. Because Report Manager is not specifically designed to support customization, you must thoroughly test any modification that you make. If you find that Report Manager does not meet your needs, you can develop a custom report viewer or configure SharePoint Web parts to find and view reports in a SharePoint site. For more information, see [Configure Report Manager &#40;Native Mode&#41;](../../2014/reporting-services/configure-report-manager-native-mode.md).  
   
 ##  <a name="bkmk_icon_descriptions"></a> Icon Descriptions  
- The following table describes the icons that are used in Report Manager. For more information about the icons that appear in the report toolbar, see [HTML Viewer and the Report Toolbar](../../2014/reporting-services/html-viewer-and-the-report-toolbar.md).  
+ The following table describes the icons that are used in Report Manager. For more information about the icons that appear in the report toolbar, see [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md).  
   
 |Icon|Description|Action|  
 |----------|-----------------|------------|  
-|![Report icon](../../2014/reporting-services/media/hlp-16doc.gif "Report icon")|Report|Click the report icon or name to open the report. The report opens in a separate window.|  
-|![Model icon](../../2014/reporting-services/media/model-icon.gif "Model icon")|Report model|Click the report model icon to open model property pages.|  
-|![Linked report icon](../../2014/reporting-services/media/hlp-16linked.gif "Linked report icon")|Linked report|Click the report icon or name to open the linked report. The report opens in a separate window.|  
-|![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon")|Folder|Click the folder icon or name to open the folder.|  
-|![Subscription icon](../../2014/reporting-services/media/hlp-16subscription.gif "Subscription icon")|Subscription|Click a subscription icon or description to edit a subscription.|  
-|![Data-driven subscription icon](../../2014/reporting-services/media/hlp-16subscriptiondd.gif "Data-driven subscription icon")|Data-driven subscription|Click a data-driven subscription icon or description to edit a subscription.|  
-|![generic resource icon](../../2014/reporting-services/media/hlp-16file.gif "generic resource icon")|Resource|Click the resource icon or name to open the resource. The resource opens in a separate window.|  
-|![Shared data source icon](../../2014/reporting-services/media/hlp-16datasource.png "Shared data source icon")|Shared data source item|Click a shared data source icon to open the property pages, report list, and subscription list of the data source.|  
-|![Property Page icon](../../2014/reporting-services/media/hlp-16prop.gif "Property Page icon")|Property page|Click the property icon to access additional pages to set properties and security.|  
+|![Report icon](media/hlp-16doc.gif "Report icon")|Report|Click the report icon or name to open the report. The report opens in a separate window.|  
+|![Model icon](media/model-icon.gif "Model icon")|Report model|Click the report model icon to open model property pages.|  
+|![Linked report icon](media/hlp-16linked.gif "Linked report icon")|Linked report|Click the report icon or name to open the linked report. The report opens in a separate window.|  
+|![Folder icon](media/hlp-16folder.gif "Folder icon")|Folder|Click the folder icon or name to open the folder.|  
+|![Subscription icon](media/hlp-16subscription.gif "Subscription icon")|Subscription|Click a subscription icon or description to edit a subscription.|  
+|![Data-driven subscription icon](media/hlp-16subscriptiondd.gif "Data-driven subscription icon")|Data-driven subscription|Click a data-driven subscription icon or description to edit a subscription.|  
+|![generic resource icon](media/hlp-16file.gif "generic resource icon")|Resource|Click the resource icon or name to open the resource. The resource opens in a separate window.|  
+|![Shared data source icon](media/hlp-16datasource.png "Shared data source icon")|Shared data source item|Click a shared data source icon to open the property pages, report list, and subscription list of the data source.|  
+|![Property Page icon](media/hlp-16prop.gif "Property Page icon")|Property page|Click the property icon to access additional pages to set properties and security.|  
   
 ## See Also  
  [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   

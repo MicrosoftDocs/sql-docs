@@ -91,7 +91,7 @@ manager: "mblythe"
   
  The following links explain how to connect to Analysis Services from a Report Server project or an Integration Services project:  
   
--   [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/analysis-services-connection-type-for-mdx-ssrs.md)  
+-   [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
 -   [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   

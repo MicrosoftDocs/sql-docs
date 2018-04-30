@@ -35,22 +35,22 @@ manager: "jhubbard"
  [URL Access &#40;SSRS&#41;](../../../2014/reporting-services/url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a complete set of URL-based requests that you can use as a quick and easy access point for report navigation and viewing. You can use this technology in conjunction with the Report Server Web service to integrate a complete reporting solution into your custom business applications. URL access is particularly useful when integrating reports as part of a Web portal or when viewing reports from a Web browser.  
   
- [Reporting Services Extensions](../../../2014/reporting-services/dev-guide/reporting-services-extensions.md)  
+ [Reporting Services Extensions](../extensions/reporting-services-extensions.md)  
  The modular architecture of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is designed for extensibility. A managed code API is available so that you can easily develop, install, and manage extensions consumed by many [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components. You can create assemblies using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] and add new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendering, security, delivery, and data processing functionality to meet your evolving business needs.  
   
- [Custom Report Items](../../../2014/reporting-services/dev-guide/custom-report-items.md)  
+ [Custom Report Items](../custom-report-items/custom-report-items.md)  
  Describes how to create Custom Report Items to add functionality to RDL or extend functionality of existing controls.  
   
- [Using Custom Assemblies with Reports](../../../2014/reporting-services/dev-guide/using-custom-assemblies-with-reports.md)  
+ [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)  
  Describes how to use custom assemblies with Reports by including code references within the report definition.  
   
  [Access the Reporting Services WMI Provider](../../../2014/reporting-services/access-the-reporting-services-wmi-provider.md)  
  Describes how to use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI Provider to manage report server deployments.  
   
 ## See Also  
- [Reporting Services &#40;SSRS&#41;](../../../2014/reporting-services/reporting-services-ssrs.md)   
+ [Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Report Definition Language &#40;SSRS&#41;](../../../2014/reporting-services/report-definition-language-ssrs.md)   
  [Technical Reference &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
- [Secure Development &#40;Reporting Services&#41;](../../../2014/reporting-services/dev-guide/secure-development-reporting-services.md)  
+ [Secure Development &#40;Reporting Services&#41;](../extensions/secure-development/secure-development-reporting-services.md)  
   
   

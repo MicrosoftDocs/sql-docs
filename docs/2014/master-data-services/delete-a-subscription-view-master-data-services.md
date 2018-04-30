@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   You must have permission to access the **Integration Management** functional area.  
   
--   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   You must be a model administrator. For more information, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### To delete a subscription view  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 5.  In the confirmation dialog box, click **OK**.  
   
 ## See Also  
- [Create a Subscription View &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-subscription-view-master-data-services.md)   
- [Exporting Data &#40;Master Data Services&#41;](../../2014/master-data-services/exporting-data-master-data-services.md)  
+ [Create a Subscription View &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   
+ [Exporting Data &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

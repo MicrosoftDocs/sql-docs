@@ -39,7 +39,7 @@ manager: "jhubbard"
 |**Deny**|The entity is not displayed.|  
   
 ## See Also  
- [Assign Model Object Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Assign Model Object Permissions &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [Model Object Permissions &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Entities &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

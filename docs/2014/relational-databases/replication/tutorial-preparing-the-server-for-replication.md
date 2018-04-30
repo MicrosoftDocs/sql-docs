@@ -21,7 +21,7 @@ manager: "jhubbard"
   It is important to plan for security before you configure your replication topology. This tutorial shows you how to better secure a replication topology as well as how to configure distribution, which is the first step in replicating data. You must complete this tutorial before any of the others.  
   
 > [!NOTE]  
->  To replicate data securely between servers, you should implement all of the recommendations in [Replication Security Best Practices](replication-security-best-practices.md).  
+>  To replicate data securely between servers, you should implement all of the recommendations in [Replication Security Best Practices](security/replication-security-best-practices.md).  
   
 ## What You Will Learn  
  In this tutorial you will learn how to prepare a server so that replication can run securely with least privileges. The first lesson shows how to create the Windows service accounts used to run replication agents. The second lesson shows how to configure the folder used to generate and store publication snapshots. The third lesson shows how to configure distribution and set permissions.  
@@ -47,6 +47,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
+ [Security and Protection &#40;Replication&#41;](security/security-and-protection-replication.md)  
   
   

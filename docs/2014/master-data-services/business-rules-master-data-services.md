@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## Create and Publish Business Rules  
  Business rules are `If/Then` statements that you create in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. If an attribute value meets a specified condition, then an action is taken. Possible actions include setting a default value or changing a value. These actions can be combined with sending an email notification.  
   
- Business rules can be based on specific attribute values (for example, take action if Color=Blue), or when attribute values change (for example, take action if the value of the Color attribute changes). For more information about tracking non-specific changes, see [Change Tracking &#40;Master Data Services&#41;](../../2014/master-data-services/change-tracking-master-data-services.md).  
+ Business rules can be based on specific attribute values (for example, take action if Color=Blue), or when attribute values change (for example, take action if the value of the Color attribute changes). For more information about tracking non-specific changes, see [Change Tracking &#40;Master Data Services&#41;](change-tracking-master-data-services.md).  
   
  To use business rules you must first create and publish your rules, then apply the published rules to data. You can apply rules to subsets of data or to all data for a version by validating the version. A version cannot be committed until all attributes pass business rule validation.  
   
@@ -78,12 +78,12 @@ manager: "jhubbard"
   
 ## Related Content  
   
--   [Master Data Services Overview](../../2014/master-data-services/master-data-services-overview.md)  
+-   [Master Data Services Overview](master-data-services-overview-mds.md)  
   
 -   [Versions &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
 -   [Validation &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Change Tracking &#40;Master Data Services&#41;](../../2014/master-data-services/change-tracking-master-data-services.md)  
+-   [Change Tracking &#40;Master Data Services&#41;](change-tracking-master-data-services.md)  
   
   

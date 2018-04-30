@@ -31,7 +31,7 @@ manager: "mblythe"
   
  You can create multiple subscriptions for a single report to vary the subscription options; for example, you can specify different parameter values to produce three versions of a report, such as a Western region sales report, Eastern region sales, and all sales.  
   
- ![example ssrs subscription flow](../../2014/reporting-services/media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
+ ![example ssrs subscription flow](media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
   
  Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
 ##  <a name="bkmk_subscription_scenarios"></a> Subscription and Delivery Scenarios  
  For each subscription, you configure delivery options and the available options are determined by the delivery extension you choose. A delivery extension is a module that supports some manner of distribution. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes several delivery extensions and delivery extension may be available through third-party vendors.  
   
- If you are a developer, you can create custom delivery extensions to support additional scenarios. For more information, see [Implementing a Delivery Extension](../../2014/reporting-services/dev-guide/implementing-a-delivery-extension.md).  
+ If you are a developer, you can create custom delivery extensions to support additional scenarios. For more information, see [Implementing a Delivery Extension](extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
  The following table describes the common [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription scenarios.  
   
@@ -119,7 +119,7 @@ manager: "mblythe"
 |Null|The null delivery provider is a highly specialized delivery extension that is used to preload a cache with ready-to-view parameterized reports This method is not available to users in individual subscriptions. Null delivery is used by administrators in data-driven subscriptions to improve report server performance by preloading the cache.|  
   
 > [!NOTE]  
->  Report delivery is an extensible part of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] architecture. Third-party vendors can create custom delivery extensions to route reports to different locations or devices. For more information about custom delivery extensions, see [Implementing a Delivery Extension](../../2014/reporting-services/dev-guide/implementing-a-delivery-extension.md).  
+>  Report delivery is an extensible part of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] architecture. Third-party vendors can create custom delivery extensions to route reports to different locations or devices. For more information about custom delivery extensions, see [Implementing a Delivery Extension](extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
 ##  <a name="bkmk_parts_of_subscription"></a> Parts of a Subscription  
  A subscription definition consists of the following parts:  

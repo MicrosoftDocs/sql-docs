@@ -48,7 +48,7 @@ manager: "mblythe"
 -   **Far** Display labels at the bottom.  
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md)   
- [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
+ [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

@@ -34,7 +34,7 @@ manager: "jhubbard"
   
     -   If the value is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of **allow_initialize_from_backup** for **@property** and a value of `true` for **@value**.  
   
-2.  For a new publication, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `true` for **allow_initialize_from_backup**. For more information, see [Create a Publication](create-a-publication.md).  
+2.  For a new publication, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `true` for **allow_initialize_from_backup**. For more information, see [Create a Publication](publish/create-a-publication.md).  
   
     > [!WARNING]  
     >  To avoid missing subscriber data, when using **sp_addpublication** with `@allow_initialize_from_backup = N'true'`, always use `@immediate_sync = N'true'`.  

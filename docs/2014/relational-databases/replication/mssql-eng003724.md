@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## User Action  
  Ensure the database object is not replicated before attempting to drop it. For example:  
   
--   If the error occurs in the publication database, drop the article from the publication before dropping the object. For more information, see [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).  
+-   If the error occurs in the publication database, drop the article from the publication before dropping the object. For more information, see [Add Articles to and Drop Articles from Existing Publications](publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 -   If the error occurs in the subscription database, drop the subscription before dropping the object. For more information, see [Subscribe to Publications](subscribe-to-publications.md). For subscriptions to transactional publications, it is possible to drop the subscription to an individual article rather than the entire publication. For more information, see [sp_dropsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md).  
   

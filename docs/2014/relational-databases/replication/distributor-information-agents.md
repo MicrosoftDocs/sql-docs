@@ -140,9 +140,9 @@ manager: "jhubbard"
  The number of conflicts occurring at the Subscriber during the merge process.  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md)   
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Monitoring Replication](monitoring-replication.md)  
   
   

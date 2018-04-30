@@ -18,7 +18,7 @@ manager: "mblythe"
 # View Page, Reports (Report Manager)
   Use the View page for reports to view a report. When you first open a report in Report Manager, it is formatted in HTML. HTML reports include a report toolbar that appears at the top of the report so that you can navigate through report pages, search within a report, or export the report to a different format. The following diagram shows the report toolbar.  
   
- ![Report toolbar](../../2014/reporting-services/media/htmlviewer-toolbar.gif "Report toolbar")  
+ ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
 Report toolbar  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], reports can be configured to run on demand or from a report execution snapshot. If a report is run on demand, all data processing and report processing occur each time you open the report. If you view a report that is configured to run as a report execution snapshot, data processing occurred when the snapshot was created.  

@@ -55,6 +55,6 @@ manager: "mblythe"
  [Project Property Pages Dialog Box](../../2014/reporting-services/project-property-pages-dialog-box.md)   
  [Set Deployment Properties &#40;Reporting Services&#41;](../../2014/reporting-services/set-deployment-properties-reporting-services.md)   
  [Publishing Reports to a Report Server](../../2014/reporting-services/publishing-reports-to-a-report-server.md)   
- [Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/use-an-office-data-connection-odc-with-reports.md)  
+ [Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

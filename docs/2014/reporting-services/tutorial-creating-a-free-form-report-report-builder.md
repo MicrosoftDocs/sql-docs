@@ -138,7 +138,7 @@ manager: "mblythe"
 ##  <a name="List"></a> 2. Add and Configure a List  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides three data region templates: table, matrix, and list. These templates are all based on a tablix data region.  
   
- In this tutorial, you will use a list to display the sales information for sales territories in a report that resembles a newsletter. The information is grouped by territory. You will add a new row group that groups data by territory, and then delete the built-in Details row group. The list template is ideal for creating free form reports. For more information, see [Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/lists-report-builder-and-ssrs.md).  
+ In this tutorial, you will use a list to display the sales information for sales territories in a report that resembles a newsletter. The information is grouped by territory. You will add a new row group that groups data by territory, and then delete the built-in Details row group. The list template is ideal for creating free form reports. For more information, see [Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  This report uses the paper size Letter (8.5 X11) and 1 inch margins. A report page taller than 9 inches or wider than 6 1/2 inches might generate blank pages.  
@@ -549,12 +549,12 @@ manager: "mblythe"
  ![SSRS tutorial, free form report](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS tutorial, free form report")  
   
 ## More Information  
- For more information about lists, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md), [Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/lists-report-builder-and-ssrs.md), [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tablix-data-region-areas-report-builder-and-ssrs.md), and [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../../2014/reporting-services/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ For more information about lists, see [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), and [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
- For more information about query designers, see [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/text-based-query-designer-user-interface-report-builder.md).  
+ For more information about query designers, see [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
  [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
- [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
+ [Report Builder in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

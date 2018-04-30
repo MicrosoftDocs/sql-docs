@@ -55,7 +55,7 @@ manager: "mblythe"
 -   [User Role Properties](../../2014/reporting-services/user-role-properties-management-studio.md)  
   
 ## See Also  
- [Feature Reference (Reporting Services)](../../2014/reporting-services/feature-reference-reporting-services.md)   
+ [Feature Reference (Reporting Services)](feature-reference-reporting-services.md)   
  [Introducing SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
   
   

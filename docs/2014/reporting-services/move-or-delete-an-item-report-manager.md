@@ -28,11 +28,11 @@ manager: "mblythe"
   
 |Icon|Moveable item|  
 |----------|-------------------|  
-|![Report icon](../../2014/reporting-services/media/hlp-16doc.gif "Report icon")|Report|  
-|![Linked report icon](../../2014/reporting-services/media/hlp-16linked.gif "Linked report icon")|Linked report|  
-|![Folder icon](../../2014/reporting-services/media/hlp-16folder.gif "Folder icon")|Folder|  
-|![generic resource icon](../../2014/reporting-services/media/hlp-16file.gif "generic resource icon")|Generic resource|  
-|![Shared data source icon](../../2014/reporting-services/media/hlp-16datasource.png "Shared data source icon")|Shared data source|  
+|![Report icon](media/hlp-16doc.gif "Report icon")|Report|  
+|![Linked report icon](media/hlp-16linked.gif "Linked report icon")|Linked report|  
+|![Folder icon](media/hlp-16folder.gif "Folder icon")|Folder|  
+|![generic resource icon](media/hlp-16file.gif "generic resource icon")|Generic resource|  
+|![Shared data source icon](media/hlp-16datasource.png "Shared data source icon")|Shared data source|  
 ||Shared dataset|  
   
  Not all items that you work with can be moved. You cannot move items that are associated with a report, such as subscriptions or report history. Those items move with their associated reports. Similarly, you cannot move items, such as shared schedules, that exist outside of the folder hierarchy. You cannot move items if you lack permission to do so. Permission to move an item is conveyed when the following tasks are selected in your role assignment for the item in question: "Manage reports," "Manage models", "Manage folders," and "Manage data sources."  
@@ -72,6 +72,6 @@ manager: "mblythe"
   
 ## See Also  
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../2014/reporting-services/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

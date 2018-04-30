@@ -26,8 +26,8 @@ manager: "jhubbard"
 |210003|The attribute values references a member that does not exist or is inactive.|When you stage domain-based attributes, you must use the code, rather than the name. Applies to **ImportType0**, **1**, and **2**.|Leaf<br /><br /> Consolidated|  
 |210006|The member code is inactive.|**ImportType** = **1** and you specified a member code that doesn’t exist.|Leaf<br /><br /> Consolidated<br /><br /> Relationship|  
 |210032|The hierarchy name is missing or is not valid.|The explicit hierarchy was not found or the **HierarchyName** value was blank.|Consolidated<br /><br /> Relationship|  
-|210035|Because a code generation business rule does not exist, the **MemberCode** is required.|When creating or updating members, a **MemberCode** is always required, unless you are using automatic code generation. For more information, see [Automatic Code Creation &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).|Leaf<br /><br /> Consolidated|  
-|210036|Because a code generation business rule exists, the **MemberCode** is not required.|When creating or updating members, a **MemberCode** is not required when you are using automatic code generation. However, you can specify a code if you choose. For more information, see [Automatic Code Creation &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).|Leaf<br /><br /> Consolidated|  
+|210035|Because a code generation business rule does not exist, the **MemberCode** is required.|When creating or updating members, a **MemberCode** is always required, unless you are using automatic code generation. For more information, see [Automatic Code Creation &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Leaf<br /><br /> Consolidated|  
+|210036|Because a code generation business rule exists, the **MemberCode** is not required.|When creating or updating members, a **MemberCode** is not required when you are using automatic code generation. However, you can specify a code if you choose. For more information, see [Automatic Code Creation &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Leaf<br /><br /> Consolidated|  
 |210041|“ROOT” is not a valid member code.|The **MemberCode** value contains the word “ROOT.”|Leaf<br /><br /> Consolidated<br /><br /> Relationship|  
 |210042|“MDMUNUSED” is not a valid member code.|The **MemberCode** value contains the word “MDMUNUSED.”|Leaf<br /><br /> Consolidated<br /><br /> Relationship|  
 |210052|The MemberCode cannot be deactivated because it is used as a domain-based attribute value.|When **ImportType** = **3** or **4**, staging fails if the member is used as an attribute value for other members. Either use **ImportType5** or **6** to set the value to NULL, or change the values before running the staging process.|Leaf<br /><br /> Consolidated|  
@@ -41,7 +41,7 @@ manager: "jhubbard"
 |210048|**ParentCode** and **ChildCode** cannot be the same.|The **ParentCode** value is the same as the **ChildCode** value. These values must be different.|Relationship|  
   
 ## See Also  
- [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](../../2014/master-data-services/view-errors-that-occur-during-the-staging-process-master-data-services.md)   
- [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md)  
+ [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

@@ -37,7 +37,7 @@ manager: "mblythe"
   
 3.  Click the **Insert** tab on the ribbon and double-click the image icon. The **Image Properties** dialog box opens.  
   
-4.  Add an image to your report. For more information, see [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+4.  Add an image to your report. For more information, see [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 5.  Open the Properties pane.  
   
@@ -55,9 +55,9 @@ manager: "mblythe"
 10. In **TransparentColor**, pick a color value that you want to remove from the image. This will create a seamless appearance for the pointer in the gauge.  
   
 ## See Also  
- [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Add a Gauge to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
- [Formatting Lines, Colors, and Images &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Gauges &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/gauges-report-builder-and-ssrs.md)  
+ [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Add a Gauge to a Report &#40;Report Builder and SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
+ [Formatting Lines, Colors, and Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   
   

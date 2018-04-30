@@ -86,7 +86,7 @@ manager: "mblythe"
   
 ## See Also  
  [Find the Report Definition Schema Version &#40;SSRS&#41;](../../2014/reporting-services/find-the-report-definition-schema-version-ssrs.md)   
- [Using Custom Assemblies with Reports](../../2014/reporting-services/dev-guide/using-custom-assemblies-with-reports.md)   
- [Custom Report Items](../../2014/reporting-services/dev-guide/custom-report-items.md)  
+ [Using Custom Assemblies with Reports](custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Custom Report Items](custom-report-items/custom-report-items.md)  
   
   

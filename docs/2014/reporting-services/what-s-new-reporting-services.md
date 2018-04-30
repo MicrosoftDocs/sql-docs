@@ -32,9 +32,9 @@ manager: "mblythe"
  For more information on changes related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
   
 ## See Also  
- [Reporting Services Backward Compatibility](../../2014/reporting-services/reporting-services-backward-compatibility.md)   
+ [Reporting Services Backward Compatibility](reporting-services-backward-compatibility.md)   
  [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)   
- [Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-ssrs.md)  
+ [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

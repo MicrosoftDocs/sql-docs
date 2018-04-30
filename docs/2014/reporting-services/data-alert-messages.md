@@ -25,11 +25,11 @@ manager: "mblythe"
   
  **Results message**  
   
- ![Data alert e-mail message with results](../../2014/reporting-services/media/rs-alertmessageresults.gif "Data alert e-mail message with results")  
+ ![Data alert e-mail message with results](media/rs-alertmessageresults.gif "Data alert e-mail message with results")  
   
  **Error message**  
   
- ![Data alert message with error message](../../2014/reporting-services/media/rs-alertmessageerrror.gif "Data alert message with error message")  
+ ![Data alert message with error message](media/rs-alertmessageerrror.gif "Data alert message with error message")  
   
  The messages include the same types of information.  
   
@@ -54,9 +54,9 @@ manager: "mblythe"
 ##  <a name="HowTo"></a> Related Tasks  
  This section lists procedures that show you how to create and edit the data alert definitions that provide much of the information that you see in data alert messages.  
   
--   [Create a Data Alert in Data Alert Designer](../../2014/reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md)  
   
--   [Edit a Data Alert in Alert Designer](../../2014/reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Edit a Data Alert in Alert Designer](edit-a-data-alert-in-alert-designer.md)  
   
 
   

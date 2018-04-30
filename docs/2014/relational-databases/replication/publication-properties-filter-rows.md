@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Use join filters to extend filters on merge table articles to related table articles.  
   
- For more information about filtering options, see [Filter Published Data](filter-published-data.md).  
+ For more information about filtering options, see [Filter Published Data](publish/filter-published-data.md).  
   
 > [!NOTE]  
 >  Adding, editing, or deleting a filter requires a new snapshot for the publication and requires that all subscriptions be reinitialized.  
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   Avoid or reduce conflicts if Subscribers are updating data, because different data partitions can be sent to different Subscribers (no two Subscribers will be updating the same data values).  
   
--   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](parameterized-row-filters.md).  
+-   Avoid transmitting sensitive data. Row filters and column filters can be used to restrict a Subscriber's access to data. For merge replication, there are security considerations if you use a parameterized filter that includes HOST_NAME(). For more information, see the section "Filtering with HOST_NAME()" in [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## Options  
  **Filtered Tables**  
@@ -79,13 +79,13 @@ manager: "jhubbard"
  Contains the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition for the filter selected in the filter pane.  
   
 ## See Also  
- [Create a Publication](create-a-publication.md)   
+ [Create a Publication](publish/create-a-publication.md)   
  [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)   
  [Reinitialize a Subscription](reinitialize-a-subscription.md)   
- [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
- [Filter Published Data](filter-published-data.md)   
- [Join Filters](join-filters.md)   
- [Parameterized Row Filters](parameterized-row-filters.md)   
- [Publish Data and Database Objects](publish-data-and-database-objects.md)  
+ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)   
+ [Filter Published Data](publish/filter-published-data.md)   
+ [Join Filters](merge/join-filters.md)   
+ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)  
   
   

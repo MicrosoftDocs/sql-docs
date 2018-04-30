@@ -121,7 +121,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  We recommend that you secure your scripts to prevent their being altered by unauthorized by individuals.  
   
--   If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured as a replication Distributor, you must restore the distribution database. For more information, see [Back Up and Restore Replicated Databases](../replication/back-up-and-restore-replicated-databases.md).  
+-   If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured as a replication Distributor, you must restore the distribution database. For more information, see [Back Up and Restore Replicated Databases](../replication/administration/back-up-and-restore-replicated-databases.md).  
   
 -   Move the system databases to the locations you recorded previously. For more information, see [Move System Databases](system-databases.md).  
   

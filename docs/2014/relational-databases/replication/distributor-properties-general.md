@@ -37,7 +37,7 @@ manager: "jhubbard"
  Select an existing distribution database in the **Databases** property grid, and click **Delete** to delete the database. You cannot delete the distribution database if there is only one such database; each Distributor must have at least one distribution database. To delete all distribution databases, you must disable distribution on the computer. For more information, see [Disable Publishing and Distribution](disable-publishing-and-distribution.md).  
   
  **Profile Defaults**  
- Click to access replication agent profiles in the **Agent Profiles** dialog box. For more information about profiles, see [Replication Agent Profiles](replication-agent-profiles.md).  
+ Click to access replication agent profiles in the **Agent Profiles** dialog box. For more information about profiles, see [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   

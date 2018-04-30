@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 ## Next Steps  
   
--   [Create an Entity &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)  
+-   [Create an Entity &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
   
 ## See Also  
  [Models &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   

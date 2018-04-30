@@ -48,7 +48,7 @@ manager: "jhubbard"
 -   In explicit hierarchies, consolidated members can be parents of other members within the hierarchy, or they can be children.  
   
 ## Use Hierarchies and Collections to Organize Members  
- Hierarchies and collections can be used to group members for reporting or analysis. For more information, see [Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md) and [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
+ Hierarchies and collections can be used to group members for reporting or analysis. For more information, see [Hierarchies &#40;Master Data Services&#41;](hierarchies-master-data-services.md) and [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
   
 ## Member Example  
  In the following example, each member is made up of a Name, Code, Subcategory, StandardCost, ListPrice, and FilePhoto attribute value.  
@@ -63,18 +63,18 @@ manager: "jhubbard"
 |Create a new consolidated member.|[Create a Consolidated Member &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Delete an existing member or collection.|[Delete a Member or Collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Reactivate a deleted member or collection.|[Reactivate a Member or Collection &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Update the attribute values of a member.|[Change the Attribute Type &#40;MDS Add-in for Excel&#41;](../../2014/master-data-services/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Update the attribute values of a member.|[Change the Attribute Type &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 |Move members within a hierarchy.|[Move Members within a Hierarchy &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## Related Content  
   
--   [Master Data Services Overview](../../2014/master-data-services/master-data-services-overview.md)  
+-   [Master Data Services Overview](master-data-services-overview-mds.md)  
   
 -   [Entities &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
 -   [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
+-   [Hierarchies &#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
   
 -   [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   

@@ -46,13 +46,13 @@ manager: "jhubbard"
   
 -   Increase the value of the **-QueryTimeOut** parameter for the Merge Agent to allow processing to continue while you address the underlying issues causing the error. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
-    -   [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)  
+    -   [Work with Replication Agent Profiles](agents/replication-agent-profiles.md)  
   
-    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md).  
+    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
   
--   Use the precomputed partitions optimization if possible. This optimization is used by default if a number of publication requirements are met. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](optimize-parameterized-filter-performance-with-precomputed-partitions.md). If the publication does not meet these requirements, consider redesigning the publication.  
+-   Use the precomputed partitions optimization if possible. This optimization is used by default if a number of publication requirements are met. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](merge/parameterized-filters-optimize-for-precomputed-partitions.md). If the publication does not meet these requirements, consider redesigning the publication.  
   
 -   Specify the lowest setting possible for the publication retention period, because replication cannot clean up metadata in the publication and subscription databases until the retention period is reached. For more information, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 -   Ensure that columns used for filtering are properly indexed and rebuild such indexes if necessary. For more information, see [Reorganize and Rebuild Indexes](../indexes/indexes.md).  
   
--   Set the **join_unique_key** property for join filters that are based on unique columns. For more information, see [Join Filters](join-filters.md).  
+-   Set the **join_unique_key** property for join filters that are based on unique columns. For more information, see [Join Filters](merge/join-filters.md).  
   
 -   Limit the number of tables in the join filter hierarchy. If you are generating join filters of five or more tables, consider other solutions: do not filter tables that are small, not subject to change, or are primarily lookup tables. Use join filters only between tables that must be partitioned among subscriptions.  
   

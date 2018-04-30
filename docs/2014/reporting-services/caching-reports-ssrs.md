@@ -70,7 +70,7 @@ manager: "mblythe"
 ## See Also  
  [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Set Report Processing Properties](../../2014/reporting-services/set-report-processing-properties.md)   
- [Reporting Services Concepts &#40;SSRS&#41;](../../2014/reporting-services/reporting-services-concepts-ssrs.md)   
+ [Reporting Services Concepts &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Preload the Cache &#40;Report Manager&#41;](../../2014/reporting-services/preload-the-cache-report-manager.md)   
  [Schedules](../../2014/reporting-services/schedules.md)   
  [Cache Shared Datasets &#40;SSRS&#41;](../../2014/reporting-services/cache-shared-datasets-ssrs.md)   

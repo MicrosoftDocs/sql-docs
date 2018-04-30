@@ -292,7 +292,7 @@ manager: "mblythe"
  In a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report definition, rectangles can contain other report items. Any rectangle larger than the report item and which overlaps more than 90 percent of its area becomes a container for the report item.  
   
 ## Bitmaps  
- All bitmaps that are embedded within a report are converted to .bmp format when the report is imported, regardless of their initial format. For example, if your report includes .jpg and .gif files, the resulting resources imported with the report are .bmp files. The bitmaps are stored as embedded images in the report. For information about Embedded Images, see [Images &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/images-report-builder-and-ssrs.md).  
+ All bitmaps that are embedded within a report are converted to .bmp format when the report is imported, regardless of their initial format. For example, if your report includes .jpg and .gif files, the resulting resources imported with the report are .bmp files. The bitmaps are stored as embedded images in the report. For information about Embedded Images, see [Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## Other Considerations  
  In addition to the previous items, the following information applies to reports imported from Access:  

@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 |Instance|Description|  
 |--------------|-----------------|  
-|Data fails business rule validation|Individual business rules must be configured to send email when an attribute value fails business rule validation. For more information, see [Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
+|Data fails business rule validation|Individual business rules must be configured to send email when an attribute value fails business rule validation. For more information, see [Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](configure-business-rules-to-send-notifications-master-data-services.md).|  
 |Model version status changes|Each time a model version's status changes, users that are model administrators receive notifications automatically. For more information, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).|  
   
 ## System Settings  
@@ -42,7 +42,7 @@ manager: "jhubbard"
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Configure [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to send email notifications.|[Configure Email Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)|  
-|Configure [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to send notifications when attribute values change.|[Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Configure [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to send notifications when attribute values change.|[Configure Business Rules to Send Notifications &#40;Master Data Services&#41;](configure-business-rules-to-send-notifications-master-data-services.md)|  
   
 ## Related Content  
   

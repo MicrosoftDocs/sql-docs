@@ -27,7 +27,7 @@ manager: "jhubbard"
 |Cleared|The batch has been cleared.|5|  
   
 ## See Also  
- [Load or Update Members in Master Data Services by Using the Staging Process](~/2014/master-data-services/add-update-and-delete-data-master-data-services.md)   
- [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md)  
+ [Load or Update Members in Master Data Services by Using the Staging Process](add-update-and-delete-data-master-data-services.md)   
+ [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

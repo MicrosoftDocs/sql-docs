@@ -47,7 +47,7 @@ manager: "mblythe"
  For more information, see [Item-Level Tasks](../../2014/reporting-services/item-level-tasks.md) and [Predefined Roles](../../2014/reporting-services/predefined-roles.md).  
   
 ## See Also  
- [Manage Shared Datasets](../../2014/reporting-services/manage-shared-datasets.md)   
+ [Manage Shared Datasets](report-data/manage-shared-datasets.md)   
  [Secure Folders](../../2014/reporting-services/secure-folders.md)   
  [Secure Reports and Resources](../../2014/reporting-services/secure-reports-and-resources.md)   
  [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md)   

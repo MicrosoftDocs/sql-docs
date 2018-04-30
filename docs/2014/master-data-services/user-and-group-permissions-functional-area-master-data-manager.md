@@ -18,7 +18,7 @@ manager: "jhubbard"
 # User and Group Permissions Functional Area (Master Data Manager)
   In the User and Group Permissions functional area, administrators can grant permission to functional areas, to attributes (on the Models tab), and to members (on the Hierarchy Members tab). Overlapping permissions are resolved to determine a user’s permission to each individual attribute value.  
   
- [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+ [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md)  
   
  [Create a Model Administrator &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
   

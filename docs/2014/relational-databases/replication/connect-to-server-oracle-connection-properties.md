@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Connect to Server (Oracle), Connection Properties
-  Use the **Connection Properties** tab of the **Connect to Server** dialog box to specify a publishing option of **Gateway** or **Complete**. After a Publisher is identified, this option cannot be changed without dropping and reconfiguring the Publisher. For more information, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
+  Use the **Connection Properties** tab of the **Connect to Server** dialog box to specify a publishing option of **Gateway** or **Complete**. After a Publisher is identified, this option cannot be changed without dropping and reconfiguring the Publisher. For more information, see [Configure an Oracle Publisher](non-sql/configure-an-oracle-publisher.md).  
   
 ## Options  
  **Publisher type**  
@@ -30,7 +30,7 @@ manager: "jhubbard"
  Specify how long the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor should attempt to connect to the Oracle Publisher before a timeout error occurs.  
   
 ## See Also  
- [Glossary of Terms for Oracle Publishing](glossary-of-terms-for-oracle-publishing.md)   
- [Performance Tuning for Oracle Publishers](performance-tuning-for-oracle-publishers.md)  
+ [Glossary of Terms for Oracle Publishing](non-sql/glossary-of-terms-for-oracle-publishing.md)   
+ [Performance Tuning for Oracle Publishers](non-sql/performance-tuning-for-oracle-publishers.md)  
   
   

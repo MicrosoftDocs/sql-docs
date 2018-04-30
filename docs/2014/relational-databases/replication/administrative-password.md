@@ -28,9 +28,9 @@ manager: "jhubbard"
  Re-enter the password to confirm it was entered correctly.  
   
 ## See Also  
- [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
  [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
- [Create a Publication](create-a-publication.md)   
+ [Create a Publication](publish/create-a-publication.md)   
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
   

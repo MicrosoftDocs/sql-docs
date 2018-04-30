@@ -25,7 +25,7 @@ manager: "mblythe"
   
 -   The center point for the currently selected polygon. This page appears only when you select the override option on the Map Embedded Polygon Center Point Properties Dialog Box, General page. These options apply only to the center point of the selected polygon and override options set on the Center Point properties dialog box for the polygon layer.  
   
- For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ For more information, see [Change Map Legends, Color Scale, and Associated Rules &#40;Report Builder and SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ## Options  
  **Marker type**  
@@ -35,6 +35,6 @@ manager: "mblythe"
  Specify the marker size. The default value is 10pt.  
   
 ## See Also  
- [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md)  
+ [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

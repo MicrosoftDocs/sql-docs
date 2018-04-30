@@ -23,9 +23,9 @@ manager: "mblythe"
 # Expression Dialog Box
   Use the **Expression** dialog box to write [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] expressions for report item properties. You can use expressions to set many properties, including color, font, and borders. At run time, the report processor evaluates expressions and substitutes the result for the value of the property.  
   
- An expression can be simple or complex. You can type simple expressions directly in a text box on the design surface or in a dialog box. To create complex expressions, use the **Expression** dialog box. You can create one expression at a time. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md).  
+ An expression can be simple or complex. You can type simple expressions directly in a text box on the design surface or in a dialog box. To create complex expressions, use the **Expression** dialog box. You can create one expression at a time. For more information, see [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
   
- To open the **Expression** dialog box, click the Expression (**fx**) button in dialog boxes, or select **Expression** from the shortcut menu or drop-down lists in the Properties pane. For more information, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-uses-in-reports-report-builder-and-ssrs.md).  
+ To open the **Expression** dialog box, click the Expression (**fx**) button in dialog boxes, or select **Expression** from the shortcut menu or drop-down lists in the Properties pane. For more information, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
  The **Expression** dialog box includes a code window, category tree, category items, description pane, and example pane.  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
  Not all items that support expressions can be set to a constant. If a property cannot be set to constant value, the description pane provides this information.  
   
  **Built-in Fields**  
- Provides a list of the items in the global collection that you can use in an expression. Some collections are only supported after the report is published to the server. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/built-in-globals-and-users-references-report-builder-and-ssrs.md).  
+ Provides a list of the items in the global collection that you can use in an expression. Some collections are only supported after the report is published to the server. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
  **Parameters**  
  Provides a list of report parameters.  
@@ -55,15 +55,15 @@ manager: "mblythe"
  Provides a list of available datasets and shows the fields that are members of the dataset.  
   
  **Variables**  
- Displays a list of report variables. For more information, see [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-and-group-variables-collections-references-report-builder-and-ssrs.md).  
+ Displays a list of report variables. For more information, see [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
  **Operators**  
- Displays the operators you can include in a calculation or string manipulation. For more information, see [Operators in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/operators-in-expressions-report-builder-and-ssrs.md).  
+ Displays the operators you can include in a calculation or string manipulation. For more information, see [Operators in Expressions &#40;Report Builder and SSRS&#41;](report-design/operators-in-expressions-report-builder-and-ssrs.md).  
   
  **Common Functions**  
  Displays common functions, grouped by type. When you select a function in the Item pane, a description and example appear.  
   
- Common functions include built-in report and aggregate functions, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] run-time library functions, and [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common language runtime classes (CLR) in the <xref:System.Math> and <xref:System.Convert> namespace. You can also add references to CLR classes and external assemblies that do not appear in the category list. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](../../2014/reporting-services/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Common functions include built-in report and aggregate functions, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] run-time library functions, and [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common language runtime classes (CLR) in the <xref:System.Math> and <xref:System.Convert> namespace. You can also add references to CLR classes and external assemblies that do not appear in the category list. For more information, see [Custom Code and Assembly References in Expressions in Report Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ## Options  
  Code window  
@@ -85,15 +85,15 @@ manager: "mblythe"
  Depending on the category and item you select, the third pane contains a description, a sample expression, or a list of valid values. Drag the edge of the dialog box to widen the sample area.  
   
 ## See Also  
- [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)   
- [Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-examples-report-builder-and-ssrs.md)   
- [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/parameters-collection-references-report-builder-and-ssrs.md)   
- [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/group-expression-examples-report-builder-and-ssrs.md)   
- [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-equation-examples-report-builder-and-ssrs.md)   
- [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/built-in-collections-in-expressions-report-builder-and-ssrs.md)   
- [Add an Expression &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-an-expression-report-builder-and-ssrs.md)  
+ [Expressions &#40;Report Builder and SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
+ [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Parameters Collection References &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Group Expression Examples &#40;Report Builder and SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Filter Equation Examples &#40;Report Builder and SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Data Types in Expressions &#40;Report Builder and SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Add an Expression &#40;Report Builder and SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

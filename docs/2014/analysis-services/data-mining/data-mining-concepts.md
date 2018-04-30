@@ -102,7 +102,7 @@ manager: "mblythe"
   
  Therefore, before you start to build mining models, you should identify these problems and determine how you will fix them. For data mining typically you are working with a very large dataset and cannot examine every transaction for data quality; therefore, you might need to use some form of data profiling and automated data cleansing and filtering tools, such as those supplied in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSlong](../../includes/ssmdslong-md.md)], or [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] to explore the data and find the inconsistencies. For more information, see these resources:  
   
--   [Master Data Services Overview](../../master-data-services/master-data-services-overview.md)  
+-   [Master Data Services Overview](../../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   

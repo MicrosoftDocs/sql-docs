@@ -74,6 +74,6 @@ manager: "jhubbard"
   
 ## Related Content  
   
--   [Model Deployment Options &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)  
+-   [Model Deployment Options &#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
   
   

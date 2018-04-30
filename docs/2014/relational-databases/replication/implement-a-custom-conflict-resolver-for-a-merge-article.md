@@ -22,7 +22,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Implement a Custom Conflict Resolver for a Merge Article
-  This topic describes how to implement custom conflict resolver for a merge article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or a [COM-based custom resolver](com-based-custom-resolvers.md).  
+  This topic describes how to implement custom conflict resolver for a merge article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or a [COM-based custom resolver](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
  **In This Topic**  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 #### To use a custom conflict resolver with a new table article  
   
-1.  Execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article, specifying a value of **MicrosoftSQL** **Server Stored Procedure Resolver** for the **@article_resolver** parameter and the name of the stored procedure that implements the conflict resolver logic for the **@resolver_info** parameter. For more information, see [Define an Article](define-an-article.md).  
+1.  Execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article, specifying a value of **MicrosoftSQL** **Server Stored Procedure Resolver** for the **@article_resolver** parameter and the name of the stored procedure that implements the conflict resolver logic for the **@resolver_info** parameter. For more information, see [Define an Article](publish/define-an-article.md).  
   
 #### To use a custom conflict resolver with an existing table article  
   
@@ -106,7 +106,7 @@ manager: "jhubbard"
   
 1.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) and note the friendly name of the desired resolver.  
   
-2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article. Specify the friendly name of the article resolver from step 1 for **@article_resolver**. For more information, see [Define an Article](define-an-article.md).  
+2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article. Specify the friendly name of the article resolver from step 1 for **@article_resolver**. For more information, see [Define an Article](publish/define-an-article.md).  
   
 #### To use a custom conflict resolver with an existing table article  
   
@@ -135,8 +135,8 @@ manager: "jhubbard"
 6.  In the **subspres** folder, find all occurrences of **#include sqlres.h** in all of the source files and replace them with **#import "replrec.dll" no_namespace, raw_interfaces_only**  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
- [COM-Based Custom Resolvers](com-based-custom-resolvers.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [COM-Based Custom Resolvers](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

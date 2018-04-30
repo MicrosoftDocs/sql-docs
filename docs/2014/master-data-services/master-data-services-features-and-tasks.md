@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 ## Create Structures to Contain Data  
   
--   [Models &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
+-   [Models &#40;Master Data Services&#41;](models-master-data-services.md)  
   
 -   [Entities &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ## Maintain Master Data  
   
--   [Master Data Services Add-in for Microsoft Excel](../../2014/master-data-services/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services Add-in for Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
@@ -58,15 +58,15 @@ manager: "jhubbard"
   
 ## Move Data  
   
--   [Data Import &#40;Master Data Services&#41;](../../2014/master-data-services/data-import-master-data-services.md)  
+-   [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
--   [Exporting Data &#40;Master Data Services&#41;](../../2014/master-data-services/exporting-data-master-data-services.md)  
+-   [Exporting Data &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
 -   [Deploying Models &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
 ## Develop a Custom Application  
   
--   [Developer's Guide &#40;Master Data Services&#41;](../../2014/master-data-services/dev-guide/developer-s-guide-master-data-services.md)  
+-   [Developer's Guide &#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
   
 -   <xref:Microsoft.MasterDataServices>  
   

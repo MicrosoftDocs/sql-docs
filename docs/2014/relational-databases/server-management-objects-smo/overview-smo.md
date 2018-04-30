@@ -180,6 +180,6 @@ manager: "jhubbard"
  During the transition to [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] technology it is possible to have applications written partly in managed code and partly in unmanaged code. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] lets you interface with COM components, which requires a Primary Interop Assembly. A runtime wrapper is required for SQL-DMO so that it can be called from a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-based application.  
   
 ## See Also  
- [Replication Management Objects Concepts](../replication/dev-guide/replication-management-objects-concepts.md)  
+ [Replication Management Objects Concepts](../replication/concepts/replication-management-objects-concepts.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # System Administration Functional Area (Master Data Manager)
-  In the System Administration functional area, administrators can create a model and all its objects. They can also create business rules and create and deploy model packages. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+  In the System Administration functional area, administrators can create a model and all its objects. They can also create business rules and create and deploy model packages. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## Model  
  [Models &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  

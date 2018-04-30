@@ -28,8 +28,8 @@ manager: "jhubbard"
  The estimated amount of time to deliver commands to the Subscriber. If this value is greater than the amount of time required to generate and apply a snapshot to the Subscriber, consider reinitializing the Subscriber. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 ## See Also  
- [Start the Replication Monitor](start-the-replication-monitor.md)   
- [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md)   
+ [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
+ [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)  
   
   

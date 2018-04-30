@@ -32,8 +32,8 @@ manager: "mblythe"
  Subsequent pages in the wizard provide options for defining the matrix.  
   
 ## See Also  
- [Tables &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/tables-report-builder-and-ssrs.md)   
- [Matrices &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/matrices-report-builder-and-ssrs.md)   
+ [Tables &#40;Report Builder  and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
+ [Matrices &#40;Report Builder and SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Report Wizard Help](../../2014/reporting-services/report-wizard-help.md)  
   
   

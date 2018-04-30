@@ -141,7 +141,7 @@ BCPSetColFmt();
   
 ```  
   
-// compile with: msoledbsql.lib oleaut32.lib ole32.lib  
+// compile with: oleaut32.lib ole32.lib  
   
 #include <stdio.h>  
 #include "msoledbsql.h"  

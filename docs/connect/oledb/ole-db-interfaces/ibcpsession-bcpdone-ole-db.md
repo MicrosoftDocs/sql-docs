@@ -65,8 +65,6 @@ insert into fltest values (4, 4, 0xFAD)
   
  **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
- You will need to specify msoledbsql.lib when compiling this sample.  
-  
 ```  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
 #define INITGUID  

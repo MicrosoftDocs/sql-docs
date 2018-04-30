@@ -29,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 HRESULT BCPDone(void);  
 ```  
@@ -49,7 +49,7 @@ HRESULT BCPDone(void);
   
  The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] must be executed before running this sample:  
   
-```  
+```sql  
 create table fltest(col1 int, col2 int, col3 image)  
 insert into fltest values (1, 1, 0x0FF)  
 insert into fltest values (2, 2, 0xF00)  
@@ -65,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
-```  
+```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
 #define INITGUID  
 #define MAX_ROWS  100  

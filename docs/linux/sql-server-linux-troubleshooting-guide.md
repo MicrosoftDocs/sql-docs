@@ -176,6 +176,8 @@ As a last resort, you can choose to rebuild the master and model databases back 
    > [!WARNING]
    > See the previous warning! Also, you must run this as the **mssql** user as shown here.
 
+1. After you see the message "Recovery is complete", press CTRL+C. This will shut down SQL Server
+
 1. Reconfigure the SA password.
 
    ```bash

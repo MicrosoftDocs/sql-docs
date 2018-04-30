@@ -68,16 +68,16 @@ ms.workload: "Inactive"
 
 |Data type|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components, MDAC, and<br /><br /> OLE DB Driver for SQL Server OLE DB applications with DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8Kb)|udt|Udt|Udt|Varbinary|  
+|CLR UDT (\<= 8Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|Image|  
 |varchar(max)|varchar|varchar|varchar|Text|  
 |nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|varbinary|Image|  
-|date|date|varchar|varchar|Varchar|  
-|datetime2|datetime2|varchar|varchar|Varchar|  
-|datetimeoffset|datetimeoffset|varchar|varchar|Varchar|  
-|time|time|varchar|varchar|Varchar|  
+|CLR UDT (> 8Kb)|varbinary|udt|udt|Image|  
+|date|varchar|date|date|Varchar|  
+|datetime2|varchar|datetime2|datetime2|Varchar|  
+|datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
+|time|varchar|time|time|Varchar|  
 
 ## See Also  
  [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)   

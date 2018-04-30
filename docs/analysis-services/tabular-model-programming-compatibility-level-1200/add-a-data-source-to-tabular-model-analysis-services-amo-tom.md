@@ -18,7 +18,6 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Add a data source to Tabular model (Analysis Services AMO-TOM)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

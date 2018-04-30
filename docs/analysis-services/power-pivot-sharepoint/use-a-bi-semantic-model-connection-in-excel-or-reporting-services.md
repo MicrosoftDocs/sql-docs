@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Use a BI Semantic Model Connection in Excel or Reporting Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

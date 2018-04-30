@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Introduction to SQL and ODBC
 ODBC was created to provide a uniform method of access to different, or heterogeneous, database management systems (DBMSs). This introduction discusses concepts related to the development of ODBC.  

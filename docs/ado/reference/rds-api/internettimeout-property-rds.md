@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # InternetTimeout Property (RDS)
 Indicates the number of milliseconds to wait before a request times out.  

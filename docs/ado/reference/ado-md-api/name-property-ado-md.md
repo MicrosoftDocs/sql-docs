@@ -29,7 +29,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Name Property (ADO MD)
 Indicates the name of an object.  

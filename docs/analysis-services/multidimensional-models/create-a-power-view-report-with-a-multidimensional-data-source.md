@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Create a Power View Report with a Multidimensional Data Source
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

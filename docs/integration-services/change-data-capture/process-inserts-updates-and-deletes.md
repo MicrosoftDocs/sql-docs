@@ -19,7 +19,6 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Process Inserts, Updates, and Deletes
   In the data flow of an Integration Services package that performs an incremental load of change data, the second task is to separate inserts, updates, and deletes. Then, you can use appropriate commands to apply them to the destination.  

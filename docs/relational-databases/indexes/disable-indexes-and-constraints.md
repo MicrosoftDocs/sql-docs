@@ -30,7 +30,6 @@ caps.latest.revision: 28
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Disable Indexes and Constraints

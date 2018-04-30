@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SET EXACT Command
 Specifies the rules for comparing two strings of different lengths.  

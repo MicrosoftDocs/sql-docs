@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)

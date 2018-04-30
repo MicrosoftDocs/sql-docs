@@ -27,7 +27,6 @@ caps.latest.revision: 59
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

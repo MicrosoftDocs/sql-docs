@@ -23,7 +23,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CubeDefs Collection (ADO MD)
 Contains the [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objects that represent a cube from a multidimensional catalog.  

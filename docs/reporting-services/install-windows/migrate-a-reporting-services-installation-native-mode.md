@@ -26,7 +26,6 @@ caps.latest.revision: 54
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

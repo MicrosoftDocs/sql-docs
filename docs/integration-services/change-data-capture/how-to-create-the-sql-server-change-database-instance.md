@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # How to Create the SQL Server Change Database Instance
   This procedure describes how to use the CDC Designer Console to create CDC instances.  

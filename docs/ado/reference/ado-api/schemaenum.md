@@ -22,7 +22,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SchemaEnum
 Specifies the type of schema **Recordset** that the [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) method retrieves.  

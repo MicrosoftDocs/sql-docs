@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Configuring Data Sources
 Information about data sources is stored in the system registry. Users modify data source information through an administration program. This can be the ODBC Administrator, the ODBC Control Panel device, or an administration program written by an application or driver developer.  

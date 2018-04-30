@@ -22,7 +22,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Save and Open Methods Example (VC++)
 These three examples demonstrate how the [Save](../../../ado/reference/ado-api/save-method.md) and **Open** methods can be used together.  

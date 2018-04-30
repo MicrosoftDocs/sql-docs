@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Data Quality Client Application
 

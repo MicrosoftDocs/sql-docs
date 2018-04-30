@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Add an Additional Report Server to a Farm (SSRS Scale-out)

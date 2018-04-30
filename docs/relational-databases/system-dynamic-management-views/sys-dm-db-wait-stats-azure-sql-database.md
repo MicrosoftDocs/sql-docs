@@ -27,7 +27,6 @@ caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)

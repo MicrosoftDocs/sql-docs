@@ -20,7 +20,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Cancel Method (RDS)
 Cancels execution of a pending, asynchronous method call.  

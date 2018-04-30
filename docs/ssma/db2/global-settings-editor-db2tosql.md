@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Global Settings (Editor) (DB2ToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

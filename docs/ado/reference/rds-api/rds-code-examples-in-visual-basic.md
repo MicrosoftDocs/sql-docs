@@ -21,7 +21,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RDS Code Examples in Visual Basic
 > [!IMPORTANT]

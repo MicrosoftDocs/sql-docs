@@ -17,7 +17,6 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

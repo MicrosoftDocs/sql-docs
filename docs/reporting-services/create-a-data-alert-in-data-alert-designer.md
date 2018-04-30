@@ -18,7 +18,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Create a Data Alert in Data Alert Designer
 

@@ -25,7 +25,6 @@ caps.latest.revision: 18
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListReportServersInDatabase
   Returns the list of report server installations that are present in the report server database, regardless of whether they have access to secure information.  

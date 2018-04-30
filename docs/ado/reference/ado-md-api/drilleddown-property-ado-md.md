@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DrilledDown Property (ADO MD)
 Indicates whether children immediately follow the [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) on the axis.  

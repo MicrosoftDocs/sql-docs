@@ -26,7 +26,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Type Property (Key) (ADOX)
 Indicates the type of the key.  

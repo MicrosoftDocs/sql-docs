@@ -20,7 +20,6 @@ caps.latest.revision: 37
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # What's New in SSMA for Access (AccessToSQL)
 This topic lists SSMA for Access changes in each release.  

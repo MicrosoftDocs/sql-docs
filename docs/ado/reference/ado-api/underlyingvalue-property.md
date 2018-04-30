@@ -24,7 +24,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # UnderlyingValue Property
 Indicates the current value of a [Field](../../../ado/reference/ado-api/field-object.md) object in the database.  

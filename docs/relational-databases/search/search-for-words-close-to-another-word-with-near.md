@@ -27,7 +27,6 @@ caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Search for Words Close to Another Word with NEAR

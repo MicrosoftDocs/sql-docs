@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Retain date formatting for Analysis Services in mobile reports
 Add a measure to a shared dataset in Report Builder so dates in [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] data sources retain their data type in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)].

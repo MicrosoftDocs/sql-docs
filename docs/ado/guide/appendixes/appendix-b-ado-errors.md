@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Appendix B: ADO Error Codes
 See the following topics for more information about particular error messages:

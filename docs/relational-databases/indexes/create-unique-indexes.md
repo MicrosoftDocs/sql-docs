@@ -24,7 +24,6 @@ caps.latest.revision: 29
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Unique Indexes

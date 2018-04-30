@@ -26,7 +26,6 @@ caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Backing Up, Restoring, and Synchronizing Databases (XMLA)
   In XML for Analysis, there are three commands that back up, restore, and synchronize databases:  

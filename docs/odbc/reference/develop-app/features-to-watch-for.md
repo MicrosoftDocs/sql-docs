@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Features to Watch For
 This section describes a number of features that application developers often take for granted. In fact, these features vary widely in support and manner of support among DBMSs; failure to code for them is likely to cause problems in interoperable applications.  

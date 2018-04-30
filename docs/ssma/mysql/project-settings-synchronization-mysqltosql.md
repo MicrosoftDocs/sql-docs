@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (Synchronization) (MySQLToSQL)
 The Synchronization **project settings** let you configure how MySQL database objects are synchronized with SQL Server database objects.  

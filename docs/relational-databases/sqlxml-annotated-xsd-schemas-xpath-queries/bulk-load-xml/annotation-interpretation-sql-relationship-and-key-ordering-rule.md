@@ -21,7 +21,6 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Annotation Interpretation - sql:relationship and Key Ordering Rule

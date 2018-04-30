@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Step 3: Build and Execute an SQL Statement
 The third step is to build and execute an SQL statement, as shown in the following illustration. The methods used to perform this step are likely to vary tremendously. The application might prompt the user to enter an SQL statement, build an SQL statement based on user input, or use a hard-coded SQL statement. For more information, see [Constructing SQL Statements](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

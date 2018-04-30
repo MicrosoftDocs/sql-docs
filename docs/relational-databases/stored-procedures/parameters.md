@@ -20,7 +20,6 @@ caps.latest.revision: 2
 author: "pmasl"
 ms.author: "pelopes"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Parameters

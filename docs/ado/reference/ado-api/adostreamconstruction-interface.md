@@ -22,7 +22,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADOStreamConstruction Interface
 The **ADOStreamConstruction** interface is used to construct an ADO **Stream** object from an OLE DB **IStream** object in a C/C++ application.  

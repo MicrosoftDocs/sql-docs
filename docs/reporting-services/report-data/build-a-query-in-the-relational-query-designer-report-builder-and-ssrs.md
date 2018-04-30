@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Build a Query in the Relational Query Designer (Report Builder and SSRS)
   A query designer helps you specify which data to retrieve from an external data source for a report dataset. You use a query designer when you build a query in a wizard or create a dataset query.  

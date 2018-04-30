@@ -24,7 +24,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Fetching Rows with SQLBulkOperations
 Data can be refetched into a rowset using bookmarks by a call to **SQLBulkOperations.** The rows to be fetched are identified by the bookmarks in a bound bookmark column. Columns with a value of SQL_COLUMN_IGNORE are not fetched.  

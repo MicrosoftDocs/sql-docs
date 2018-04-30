@@ -13,7 +13,6 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Deploy an SSIS project with SQL Server Management Studio (SSMS)
 This quick start demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then run the Integration Services Deployment Wizard to deploy an SSIS project to the SSIS Catalog. 

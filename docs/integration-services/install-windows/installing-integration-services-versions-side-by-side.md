@@ -20,7 +20,6 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Installing Integration Services Versions Side by Side
   You can install   

@@ -17,7 +17,6 @@ caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Native Compilation of Tables and Stored Procedures

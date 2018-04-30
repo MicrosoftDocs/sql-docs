@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)
   You can control whether to repeat row and column headers on every page of a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report for a tablix data region (a table, matrix, or list) that spans multiple pages.

@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create an Entity Administrator (Master Data Services)
 

@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
-ms.workload: "On Demand"
 ---
 # SQL Server Migration Assistant for Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Sybase Adaptive Server Enterprise (ASE) is a tool for migrating ASE databases to [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 or [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 or [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 or [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 or [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 or [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 on Windows and Linux (Preview) or [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL DB. SSMA for Sybase converts ASE database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects, creates those objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL, and then migrates data from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL.  

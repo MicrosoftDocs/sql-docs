@@ -19,7 +19,6 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Lesson 3-1 - Copying the Deployment Bundle
 In this task, you will copy the deployment bundle to the destination computer.  

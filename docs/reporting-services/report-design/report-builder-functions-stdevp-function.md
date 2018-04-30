@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Builder Functions - StDevP Function
   Returns the population standard deviation of all non-null numeric values specified by the expression, evaluated in the context of the given scope.  

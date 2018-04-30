@@ -19,7 +19,6 @@ caps.latest.revision: 40
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Web Application Requirements (Master Data Services)
 

@@ -19,7 +19,6 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Lesson 2-2 - Verifying the Deployment Bundle
 In lesson 1, you created the Deployment Tutorial project and added packages and ancillary files to the project; in the previous task you built a deployment utility for the project.  

@@ -32,7 +32,6 @@ caps.latest.revision: 45
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Choose an Authentication Mode
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

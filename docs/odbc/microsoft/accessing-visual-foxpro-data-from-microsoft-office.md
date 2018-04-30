@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Accessing Visual FoxPro Data from Microsoft Office
 You can use the Microsoft Visual FoxPro ODBC Driver to access Visual FoxPro data from your Microsoft Office for Windows 95 or Windows 98 applications.  

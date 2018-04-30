@@ -20,7 +20,6 @@ ms.reviewer: "douglasl"
 manager: "craigg"
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
-ms.workload: "Inactive"
 ---
 # Run packages in Integration Services (SSIS) Scale Out
 After you deploy packages to the Integration Services server, you can run them in Scale Out by using one of the following methods:

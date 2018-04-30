@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Status Property (ADO Recordset)
 Indicates the status of the current record with respect to batch updates or other bulk operations.  

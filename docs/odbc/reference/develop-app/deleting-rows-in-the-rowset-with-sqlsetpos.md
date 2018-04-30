@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Deleting Rows in the Rowset with SQLSetPos
 The delete operation of **SQLSetPos** makes the data source delete one or more selected rows of a table. To delete rows with **SQLSetPos**, the application calls **SQLSetPos** with *Operation* set to SQL_DELETE and *RowNumber* set to the number of the row to delete. If *RowNumber* is 0, all rows in the rowset are deleted.  

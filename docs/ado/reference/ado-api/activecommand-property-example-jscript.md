@@ -21,7 +21,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ActiveCommand Property Example (JScript)
 This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property. Cut and paste the following code to Notepad or another text editor, and save it as **ActiveCommandJS.asp**.  

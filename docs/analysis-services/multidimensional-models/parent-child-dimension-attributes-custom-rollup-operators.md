@@ -25,7 +25,6 @@ caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Parent-Child Dimension Attributes - Custom Rollup Operators
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

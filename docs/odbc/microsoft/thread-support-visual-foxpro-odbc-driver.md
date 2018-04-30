@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Thread Support (Visual FoxPro ODBC Driver)
 The Visual FoxPro ODBC Driver is thread-safe. Access to environment handles (*hen*), connection handles (*hdbc*), and statement handles (*hstmt*) is wrapped in appropriate semaphores to prevent other processes from accessing and potentially altering the driver's internal data structures.  

@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Trace DLL
 The DLL that performs tracing is one of the ODBC core components. The trace DLL is currently provided as a sample DLL in the ODBC component of the Windows SDK, and was formerly included the Microsoft Data Access Components (MDAC) SDK. Therefore, the registry entry, interface, and sample code for the trace DLL are available. This DLL can be replaced by a trace DLL produced by either an ODBC user or a third-party vendor. A custom trace DLL should be given a different name than the original sample trace DLL. Trace DLLs must be installed in the system directory, or they will fail to load. The connection strings will not be passed to the trace DLL by the Driver Manager.  

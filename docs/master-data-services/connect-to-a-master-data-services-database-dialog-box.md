@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to a Master Data Services Database Dialog Box
 

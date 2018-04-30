@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Configure Usage Data Collection for (Power Pivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Exploring the Flexibility of a Tablix Data Region (Report Builder and SSRS)
 In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report, when you add a table, matrix, or list data region from the Insert tab on the ribbon, you start with an initial template for a tablix data region. But you are not limited by that template. You can continue to develop how your data displays by adding or removing any tablix data region feature such as  groups, rows, and columns.  

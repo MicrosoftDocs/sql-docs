@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Database Configuration Page (Master Data Services Configuration Manager)
 

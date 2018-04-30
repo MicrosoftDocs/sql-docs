@@ -21,7 +21,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Find Method Example (JScript)
 This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Find](../../../ado/reference/ado-api/find-method-ado.md) method to locate and display the companies in the ***Northwind*** database whose name begins with the letter G. Cut and paste the following code to Notepad or another text editor, and save it as **FindJS.asp**.  

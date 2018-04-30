@@ -18,7 +18,6 @@ caps.latest.revision: 13
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Builder authoring environment (SSRS)
   Report Builder [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] is a stand-alone authoring environment for creating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports outside of Visual Studio. When you design a report, you specify where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes all the information you have specified, retrieves the data, and combines it with the report layout to generate the report. You can install it from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or from the Microsoft Download Center.  

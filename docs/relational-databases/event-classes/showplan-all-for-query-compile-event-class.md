@@ -19,7 +19,6 @@ caps.latest.revision: 37
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Showplan All for Query Compile Event Class

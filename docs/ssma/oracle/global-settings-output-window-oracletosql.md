@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-pelars"
-ms.workload: "Inactive"
 ---
 # Global Settings (Output Window)  (OracleToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

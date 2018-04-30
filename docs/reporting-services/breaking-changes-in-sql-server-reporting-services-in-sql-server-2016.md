@@ -22,7 +22,6 @@ caps.latest.revision: 121
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Breaking changes in SQL Server Reporting Services in SQL Server 2016

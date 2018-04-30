@@ -23,7 +23,6 @@ caps.latest.revision: 14
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Enable and Disable Client-Side Printing for Reporting Services

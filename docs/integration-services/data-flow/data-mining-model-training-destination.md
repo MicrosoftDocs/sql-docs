@@ -26,7 +26,6 @@ caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Mining Model Training Destination
   The Data Mining Model Training destination trains data mining models by passing the data that the destination receives through the data mining model algorithms. Multiple data mining models can be trained by one destination if the models are built on the same data mining structure. For more information, see [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) and [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  

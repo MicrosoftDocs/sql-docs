@@ -26,7 +26,6 @@ caps.latest.revision: 48
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Add Articles to and Drop Articles from Existing Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

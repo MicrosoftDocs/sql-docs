@@ -21,7 +21,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Status Property Example (Recordset) (VB)
 This example uses the [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) property to display which records have been modified in a batch operation before a batch update has occurred.  

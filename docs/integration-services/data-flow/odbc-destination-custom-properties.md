@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ODBC Destination Custom Properties
   The following table describes the custom properties of the ODBC destination. All properties can be set from SSIS property expressions.  

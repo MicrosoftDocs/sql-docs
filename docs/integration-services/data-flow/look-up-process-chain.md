@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Look Up Process Chain
   Use the **Look Up Process Chain** dialog box to look up a process chain that is defined in the SAP Netweaver BW system. When the list of available process chains appears, select the chain that you want, and the source will populate the associated options with the required values.  

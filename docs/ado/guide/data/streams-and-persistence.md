@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Streams and Persistence
 The [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object [Save](../../../ado/reference/ado-api/save-method.md) method stores, or *persists*, a **Recordset** in a file, and the [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method restores the **Recordset** from that file.  

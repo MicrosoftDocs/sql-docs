@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure HDInsight Pig Task
 Use the **Azure HDInsight Pig Task** to run Pig script on an Azure HDInsight cluster.

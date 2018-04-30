@@ -20,7 +20,6 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect Components in a Data Flow
   This procedure describes how to connect the output of components in a data flow to other components within the same data flow.  

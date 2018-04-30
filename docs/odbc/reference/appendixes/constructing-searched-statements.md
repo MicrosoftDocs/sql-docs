@@ -25,7 +25,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Constructing Searched Statements
 > [!IMPORTANT]  

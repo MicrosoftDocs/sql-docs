@@ -17,7 +17,6 @@ caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Integration Services (SSIS) Catalog Transact-SQL Reference
 [Views &#40;Integration Services Catalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md)  

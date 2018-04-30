@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SET ANSI Command
 Determines how comparisons between strings of different lengths are made with the = operator in Visual FoxPro SQL commands.  

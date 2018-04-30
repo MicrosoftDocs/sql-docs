@@ -18,7 +18,6 @@ caps.latest.revision: 14
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Specify an Axis Interval (Report Builder and SSRS)
 Learn to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report.

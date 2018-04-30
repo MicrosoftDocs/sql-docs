@@ -20,7 +20,6 @@ caps.latest.revision: 18
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Filter Equation Examples (Report Builder and SSRS)
   To create a filter, you must specify one or more filter equations. A filter equation includes an expression, a data type, an operator, and a value. This topic provides examples of commonly used filters.  

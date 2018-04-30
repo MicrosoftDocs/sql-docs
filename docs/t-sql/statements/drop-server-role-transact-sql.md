@@ -25,7 +25,6 @@ caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # DROP SERVER ROLE (Transact-SQL)

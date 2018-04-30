@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Builder Functions - LookupSet Function
   Returns the set of matching values for the specified name from a dataset that contains name/value pairs.  

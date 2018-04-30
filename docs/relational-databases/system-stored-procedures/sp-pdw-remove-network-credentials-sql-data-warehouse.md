@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_remove_network_credentials (SQL Data Warehouse)

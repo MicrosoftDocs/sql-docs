@@ -20,7 +20,6 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance

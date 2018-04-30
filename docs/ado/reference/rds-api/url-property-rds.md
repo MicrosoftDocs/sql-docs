@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # URL Property (RDS)
 Indicates a string that contains a relative or absolute URL.  

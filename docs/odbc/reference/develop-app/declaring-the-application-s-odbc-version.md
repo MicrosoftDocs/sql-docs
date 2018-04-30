@@ -24,7 +24,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Declaring the Application&#39;s ODBC Version
 Before an application allocates a connection, it must set the SQL_ATTR_ODBC_VERSION environment attribute. This attribute states that the application follows the ODBC 2.*x* or ODBC 3.*x* specification when using the following items:  

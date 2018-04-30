@@ -24,7 +24,6 @@ caps.latest.revision: 47
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Secure Reports and Resources
   You can set security for individual reports and resources to control the degree of access that users have to these items. By default, only users who are members of the **Administrators** built-in group can run reports, view resources, modify properties, and delete the items. All other users must have role assignments created for them that allow access to a report or resource.  

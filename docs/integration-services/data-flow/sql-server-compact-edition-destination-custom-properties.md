@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server Compact Edition Destination Custom Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact destination has both custom properties and the properties common to all data flow components.  

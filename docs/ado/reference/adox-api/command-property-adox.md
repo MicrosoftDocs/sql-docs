@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Command Property (ADOX)
 Specifies an ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object that can be used to create or execute the procedure.  

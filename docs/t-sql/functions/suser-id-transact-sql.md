@@ -29,7 +29,6 @@ caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SUSER_ID (Transact-SQL)

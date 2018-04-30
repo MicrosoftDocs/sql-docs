@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # rsServerConfigurationError - Reporting Services Error
     

@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Oracle CDC Instance Data Types
   The Oracle CDC Instance supports most Oracle data types. The following sections describe the supported data types and the non-supported data types.  

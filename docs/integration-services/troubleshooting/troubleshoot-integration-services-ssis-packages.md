@@ -17,7 +17,6 @@ caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Integration Services (SSIS) Packages
 ## In this section

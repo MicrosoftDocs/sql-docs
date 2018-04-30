@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Translation DLL Function Summary
 The following table describes translation DLL functions. For more information about the syntax and semantics for each function, see [Translation DLL Function Reference](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

@@ -22,7 +22,6 @@ caps.latest.revision: 36
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 
 # Perform a planned manual failover of an availability group (SQL Server)

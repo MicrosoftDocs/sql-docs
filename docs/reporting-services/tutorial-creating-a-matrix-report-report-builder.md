@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Tutorial: Creating a Matrix Report (Report Builder)
 This tutorial teaches you to create a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a matrix of sample sales data in nested row and column groups. 

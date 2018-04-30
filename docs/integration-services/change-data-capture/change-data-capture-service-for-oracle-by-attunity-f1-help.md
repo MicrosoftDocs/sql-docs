@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change Data Capture Service for Oracle by Attunity F1 Help
   You use the CDC Service Configuration Console to define a local Oracle CDC Service, update it, and delete it.  

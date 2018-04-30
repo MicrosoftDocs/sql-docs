@@ -17,7 +17,6 @@ helpviewer_keywords:
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # PolyBase installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

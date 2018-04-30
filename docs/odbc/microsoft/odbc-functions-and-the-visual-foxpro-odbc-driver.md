@@ -27,7 +27,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Functions and the Visual FoxPro ODBC Driver
 The topics in this section provide a brief summary of ODBC API functions and any Visual FoxPro–specific details.  

@@ -19,7 +19,6 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Lesson 3-1 - Modifying Measures
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

@@ -21,7 +21,6 @@ caps.latest.revision: 39
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Supported combinations of SharePoint and Reporting Services server

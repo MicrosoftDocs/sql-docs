@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Rendering Report Items (Report Builder and SSRS)
   The number, size, and location of report items affect how the renderers paginate the report body. Below is a description of how various report items are rendered.  

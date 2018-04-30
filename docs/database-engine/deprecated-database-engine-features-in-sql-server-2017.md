@@ -21,7 +21,6 @@ caps.latest.revision:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Deprecated Database Engine Features in SQL Server 2017

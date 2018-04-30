@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Fields Collection Properties, Methods, and Events
 ## Properties  

@@ -21,7 +21,6 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Connect in Online Mode to an Analysis Services Database
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

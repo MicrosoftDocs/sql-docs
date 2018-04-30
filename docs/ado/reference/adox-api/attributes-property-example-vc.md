@@ -21,7 +21,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Attributes Property Example (VC++)
 This example demonstrates the [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md). Setting it to **adColNullable** allows the user to set the value of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Field](../../../ado/reference/ado-api/field-object.md) to an empty string. In this situation, the user can distinguish between a record where data is not known and a record where the data does not apply.  

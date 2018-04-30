@@ -33,7 +33,6 @@ caps.latest.revision: 42
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE ROUTE (Transact-SQL)

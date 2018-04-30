@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Network Example
 This illustration shows how each of the preceding configurations could appear in a single network.  

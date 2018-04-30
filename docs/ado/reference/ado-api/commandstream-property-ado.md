@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CommandStream Property (ADO)
 Indicates the stream used as the input for a [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  

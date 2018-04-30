@@ -20,7 +20,6 @@ caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 ms.manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rename Views

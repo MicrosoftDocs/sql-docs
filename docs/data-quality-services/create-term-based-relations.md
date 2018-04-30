@@ -19,7 +19,6 @@ caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create Term-Based Relations
 

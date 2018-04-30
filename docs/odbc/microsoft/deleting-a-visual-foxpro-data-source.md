@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Deleting a Visual FoxPro Data Source
 ### To delete a Visual FoxPro data source  

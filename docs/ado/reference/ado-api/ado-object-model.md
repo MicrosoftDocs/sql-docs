@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO Object Model
 The following figures show the ADO objects and their collections.  

@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - Version
   Returns the version of the report server in the format Major.Minor.Build.Revision. Read-only.  

@@ -20,7 +20,6 @@ caps.latest.revision: 29
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # rsProcessingError - Reporting Services Error
     

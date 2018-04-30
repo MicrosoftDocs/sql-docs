@@ -26,7 +26,6 @@ caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER FUNCTION (Transact-SQL)

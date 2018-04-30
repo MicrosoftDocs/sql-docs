@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Executing a Statement
 There are four ways to execute a statement, depending on when they are compiled (prepared) by the database engine and who defines them:  

@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # How Permissions Are Determined (Master Data Services)
 

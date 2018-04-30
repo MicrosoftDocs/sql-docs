@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLAsyncNotificationCallback Function
 **Conformance**  

@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Define a Referenced Relationship and Referenced Relationship Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

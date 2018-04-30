@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO Programming Task Table
 The following table lists programming tasks contained in the *ADO Programmer's Guide* and provides references for each task. These references can be textual descriptions or code examples in which you can find information about the ADO feature that performs the task.

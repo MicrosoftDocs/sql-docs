@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Support multi-targeting in your custom components
  You can now use SSIS Designer in SQL Server Data Tools (SSDT) to create, maintain, and run packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012. To get SSDT for Visual Studio 2015, see [Download Latest SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 

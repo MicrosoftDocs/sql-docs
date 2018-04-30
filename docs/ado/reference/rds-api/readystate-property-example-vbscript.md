@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ReadyState Property Example (VBScript)
 > [!IMPORTANT]

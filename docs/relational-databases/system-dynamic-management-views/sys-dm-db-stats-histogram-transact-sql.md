@@ -26,7 +26,6 @@ caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_stats_histogram (Transact-SQL)

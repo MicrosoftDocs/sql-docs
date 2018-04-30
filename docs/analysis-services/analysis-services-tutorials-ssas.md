@@ -19,7 +19,6 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Analysis Services tutorials
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]

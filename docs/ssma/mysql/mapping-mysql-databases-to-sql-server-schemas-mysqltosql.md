@@ -23,7 +23,6 @@ caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Mapping MySQL Databases to SQL Server Schemas (MySQLToSQL)
 By default, SSMA for MySQL migrates all objects in a MySQL schema to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database named for the schema. However, you can customize the mapping between MySQL schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure databases.  

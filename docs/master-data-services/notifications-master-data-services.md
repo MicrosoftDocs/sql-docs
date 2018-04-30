@@ -22,7 +22,6 @@ caps.latest.revision: 15
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Notifications (Master Data Services)
 

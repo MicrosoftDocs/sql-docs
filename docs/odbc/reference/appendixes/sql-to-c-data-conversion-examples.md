@@ -20,7 +20,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQL to C Data Conversion Examples
 The examples shown in the following table illustrate how the driver converts SQL data to C data :  

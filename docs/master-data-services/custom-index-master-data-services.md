@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Custom Index (Master Data Services)
 

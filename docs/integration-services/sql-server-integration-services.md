@@ -27,7 +27,6 @@ caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # SQL Server Integration Services
 

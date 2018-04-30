@@ -24,7 +24,6 @@ caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Retrieving Data Using the CellSet
   When retrieving analytical data, the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object provides the most interactivity and flexibility. The <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object is an in-memory cache of hierarchical data and metadata that retains the original dimensionality of the data. The <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object can also be traversed in either a connected or disconnected state. Because of this disconnected ability, the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object can be used to view data and metadata in any order and provides the most comprehensive object model for data retrieval. This disconnected capability also causes the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object to have the most overhead, and to be the slowest ADOMD.NET data retrieval object model to populate.  

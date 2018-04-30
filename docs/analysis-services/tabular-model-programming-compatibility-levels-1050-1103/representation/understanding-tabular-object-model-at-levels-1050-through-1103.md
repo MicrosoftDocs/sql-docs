@@ -18,7 +18,6 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Understanding Tabular Object Model at Levels 1050 through 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

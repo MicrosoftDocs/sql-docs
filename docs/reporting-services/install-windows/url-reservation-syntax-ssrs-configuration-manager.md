@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # URL Reservation Syntax  (SSRS Configuration Manager)
   This topic describes the parts of the URL string for the Report Server Web service and Report Manager. The URL string that is stored internally has a different structure from a URL that you type in the Address bar of a browser window. The URL reservation string appears in the Results window of the Reporting Services Configuration tool when you configure a URL and in the RSReportServer.config file. Knowing how the URL string is defined can be useful if you are troubleshooting URL reservation problems or querying HTTP.SYS to view the internal URL reservations that are defined on your server.  

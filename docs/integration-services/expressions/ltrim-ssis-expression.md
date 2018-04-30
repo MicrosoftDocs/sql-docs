@@ -20,7 +20,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LTRIM (SSIS Expression)
   Returns a character expression after removing leading spaces.  

@@ -18,7 +18,6 @@ caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Rendering Data (Report Builder and SSRS)
   When using layout renderers, such as HTML, MHTML, Word, Excel, PDF or Image, the data and its organization remains unchanged. When exporting using a data renderer format, such as Comma-Separated Value (CSV) or XML, no visual layout elements are rendered. CSV and XML apply certain rules to the report body and its contents when rendering the report. These rules determine how the data is rendered in these formats.  

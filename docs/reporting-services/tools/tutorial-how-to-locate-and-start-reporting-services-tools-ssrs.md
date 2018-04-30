@@ -28,7 +28,6 @@ caps.latest.revision: 63
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # Tutorial: How to Locate and Start Reporting Services Tools (SSRS)

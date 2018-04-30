@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "On Demand"
 ---
 # Migrating Oracle Data into SQL Server (OracleToSQL)
 After you have successfully synchronized the converted objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can migrate data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

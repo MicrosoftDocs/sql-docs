@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Using the Visual FoxPro ODBC Driver
 In this section, the following topics discuss how to use the Microsoft® Visual FoxPro® ODBC Driver:  

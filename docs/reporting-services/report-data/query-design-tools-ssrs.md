@@ -28,7 +28,6 @@ caps.latest.revision: 38
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Query Design Tools (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a variety of query design tools that you can use to create dataset queries in Report Designer. Some query designers provide alternate modes so that you can choose whether to work in visual mode or directly in the query language. This topic introduces each tool and describes the type of data source each one supports. The following tools are described in this topic:  

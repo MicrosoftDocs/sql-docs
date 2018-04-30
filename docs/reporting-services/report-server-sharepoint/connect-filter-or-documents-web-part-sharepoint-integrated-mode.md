@@ -16,7 +16,6 @@ ms.topic: "article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Connect Filter or Documents web part with a Reporting Services Report Viewer web part
 

@@ -18,7 +18,6 @@ caps.latest.revision: 13
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Exporting to a PDF File (Report Builder and SSRS)
   The PDF rendering extension renders [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports to files that can be opened in Adobe Acrobat and other third-party PDF viewers that support PDF 1.3. Although PDF 1.3 is compatible with Adobe Acrobat 4.0 and later versions, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports Adobe Acrobat 11.0 or later. The rendering extension does not require Adobe software to render the report. However, PDF viewers such as Adobe Acrobat are required to view or print a report in PDF format.  

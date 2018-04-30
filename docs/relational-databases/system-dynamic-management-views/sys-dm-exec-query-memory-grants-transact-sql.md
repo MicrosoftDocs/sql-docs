@@ -26,7 +26,6 @@ caps.latest.revision: 36
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_query_memory_grants (Transact-SQL)

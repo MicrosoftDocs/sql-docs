@@ -23,7 +23,6 @@ caps.latest.revision: 43
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Executing the SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The console application uses certain standard script file commands as enumerated in this section.  

@@ -30,7 +30,6 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # MDX Data Definition - DROP SUBCUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

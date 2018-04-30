@@ -32,7 +32,6 @@ caps.latest.revision: 60
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

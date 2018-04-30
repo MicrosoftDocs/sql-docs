@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "On Demand"
 ---
 # Connecting to Oracle Database (OracleToSQL)
 To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must connect to the Oracle database that you want to migrate. When you connect, SSMA obtains metadata about all Oracle schemas, and then displays it in the Oracle Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  

@@ -18,7 +18,6 @@ caps.latest.revision: 6
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Troubleshoot Server and Database Connection Problems with Reporting Services
 Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about "Unexpected error" messages. For more information about data source configuration and configuring report server connection information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) and [Configure a Report Server Database Connection (SSRS Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  

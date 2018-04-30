@@ -62,6 +62,6 @@ public void DeleteItem(string item);
  [Accessing the SOAP API](accessing-the-soap-api.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)   
  [Reporting Services Report Server](../reporting-services-report-server.md)   
- [Report Server Web Service](../dev-guide/report-server-web-service.md)  
+ [Report Server Web Service](report-server-web-service.md)  
   
   

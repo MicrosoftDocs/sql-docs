@@ -70,7 +70,7 @@ manager: "mblythe"
   
 -   If you are viewing a report on the report server, and if you are running as local administrator on the report server, you can view the call stack if you right-click the page and select **View Source**. Additional information is provided in the call stack.  
   
--   If you are running as local administrator on the report server, search the log file for `ReportProcessingException`. Log entries contain more information. The report server log file is typically located at \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. For more information, see [Reporting Services Log Files and Sources](../reporting-services-log-files-and-sources.md).  
+-   If you are running as local administrator on the report server, search the log file for `ReportProcessingException`. Log entries contain more information. The report server log file is typically located at \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. For more information, see [Reporting Services Log Files and Sources](../report-server/reporting-services-log-files-and-sources.md).  
   
 ### Failed to Load Expression Host Assembly  
  Custom assemblies must have strong name signing and the attribute AllowPartiallyTrustedCallers set. For more information, see [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) and [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md).  

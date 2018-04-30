@@ -41,7 +41,7 @@ manager: "mblythe"
   
 -   **Report Server Project Wizard.** When you select a Report Server Wizard Project, a report server project is automatically created, and the Report Wizard opens. In the wizard, you can create a report by following instructions on each page to create a connection string to a data source, set data source credentials, design a query, add a table or matrix data region, specify report data and groups, pick a font and color style, publish the report to a report server, and preview the report locally. After you create a report with the wizard, you can change the report data and the report designer by using Report Designer in the Report Server project.  
   
- ![New Project templates in SSDT](../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
+ ![New Project templates in SSDT](../../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
   
  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
   
@@ -265,7 +265,7 @@ manager: "mblythe"
   
 -   At least one set of configuration properties, for example, Debug or Release.  
   
- For more information, see [Publishing Data Sources and Reports](reports/publishing-data-sources-and-reports.md).  
+ For more information, see [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md).  
   
  For a report server project, you can specify the following options from the command line:  
   
@@ -321,9 +321,9 @@ manager: "mblythe"
  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
   
 ## See Also  
- [Solution Explorer](../ssms/solution/solution-explorer.md)   
- [Reporting Services Reports &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
- [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)   
+ [Solution Explorer](../../ssms/solution/solution-explorer.md)   
+ [Reporting Services Reports &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   
+ [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

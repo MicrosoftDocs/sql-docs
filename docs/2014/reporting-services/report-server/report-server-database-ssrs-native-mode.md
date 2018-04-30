@@ -41,7 +41,7 @@ manager: "mblythe"
 ## Report Server Database  
  The report server database is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that stores the following content:  
   
--   Items managed by a report server (reports and linked reports, shared data sources, report models, folders, resources) and all of the properties and security settings that are associated with those items.  
+-   Items managed by a report server (../reports and linked reports, shared data sources, report models, folders, resources) and all of the properties and security settings that are associated with those items.  
   
 -   Subscription and schedule definitions.  
   

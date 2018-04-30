@@ -80,6 +80,6 @@ manager: "mblythe"
 ## See Also  
  [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)   
  [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configure Available Memory for Report Server Applications](configure-available-memory-for-report-server-applications.md)  
+ [Configure Available Memory for Report Server Applications](../configure-available-memory-for-report-server-applications.md)  
   
   

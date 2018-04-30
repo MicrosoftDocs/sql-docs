@@ -20,7 +20,7 @@ manager: "mblythe"
 # Reporting Services Reports (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] reports are XML based report definitions that include report data and report layout elements. On a client file system, report definitions have the file extension .rdl. After a report is published, it is a report item stored on the report server or SharePoint site. Reports are one part of the server-based reporting platform provided by [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- If you are new to [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], be sure to review the information in [Reporting Services Concepts &#40;SSRS&#41;](reporting-services-concepts-ssrs.md).  
+ If you are new to [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], be sure to review the information in [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md).  
   
 ## Benefits of Reporting Services Reports  
  You can use [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report solutions to:  
@@ -56,7 +56,7 @@ manager: "mblythe"
   
 -   **Export (optional).** Export the report to a different file format.  
   
- For more information, see [Stages of report development](reporting-services-concepts-ssrs.md#bkmk_StagesofReports) in [Reporting Services Concepts &#40;SSRS&#41;](reporting-services-concepts-ssrs.md).  
+ For more information, see [Stages of report development](../reporting-services-concepts-ssrs.md#bkmk_StagesofReports) in [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md).  
   
 ## Create Reports  
  To create a report:  
@@ -122,7 +122,7 @@ manager: "mblythe"
 ## View Reports  
  In addition to previewing a report saved locally or published to a report server, you can provide a variety of viewing experiences for your report readers. To view a report:  
   
--   **Browser.**  Use the Report Server Web Service or SharePoint site to view published reports. On a SharePoint site, you can also configure a Web part to view published reports. For more information, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md), [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md), and [URL Access &#40;SSRS&#41;](url-access-ssrs.md).  
+-   **Browser.**  Use the Report Server Web Service or SharePoint site to view published reports. On a SharePoint site, you can also configure a Web part to view published reports. For more information, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md), [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md), and [URL Access &#40;SSRS&#41;](../url-access-ssrs.md).  
   
 -   **Delivery.**  Configure a subscription to deliver reports to report readers in e-mail or to a shared file folder.  For more information, see [Subscriptions and Delivery &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -154,17 +154,17 @@ manager: "mblythe"
 ##  <a name="bkmk_SecureReportsSummary"></a> Secure Reports  
  To secure a report:  
   
--   From the report server administrator, identify the authorization and authentication system that is used for your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation. By default, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses Windows authentication, integrated security, and role assignment to help control access to published reports. For more information, see [Roles and Permissions &#40;Reporting Services&#41;](security/roles-and-permissions-reporting-services.md) and [Reporting Services Security and Protection](security/reporting-services-security-and-protection.md).  
+-   From the report server administrator, identify the authorization and authentication system that is used for your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation. By default, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses Windows authentication, integrated security, and role assignment to help control access to published reports. For more information, see [Roles and Permissions &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) and [Reporting Services Security and Protection](../security/reporting-services-security-and-protection.md).  
   
 ## Create Notifications Based on Report Data  
- You can create data alerts for published reports on a SharePoint site. Data alerts are based on data feeds from data regions in the report. By default, data regions are named automatically. Report authors can make it easier to create data alerts in their reports by naming data regions based on their business purpose. When you create a data alert, you are notified in email when data meets the conditions that you specify. For more information, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Create a Data Alert in Data Alert Designer](create-a-data-alert-in-data-alert-designer.md) and [Reporting Services Data Alerts](../ssms/agent/alerts.md).  
+ You can create data alerts for published reports on a SharePoint site. Data alerts are based on data feeds from data regions in the report. By default, data regions are named automatically. Report authors can make it easier to create data alerts in their reports by naming data regions based on their business purpose. When you create a data alert, you are notified in email when data meets the conditions that you specify. For more information, see [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Create a Data Alert in Data Alert Designer](../create-a-data-alert-in-data-alert-designer.md) and [Reporting Services Data Alerts](../reporting-services-data-alerts.md).  
   
 ## Upgrade Reports  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supports multiple versions of report definitions, report servers, and SharePoint sites. To upgrade a report:  
   
--   Upgrade a report server installation. Compiled reports stored on the report server are upgraded automatically on first use. The report definition (.rdl) is not changed. For more information, see [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md).  
+-   Upgrade a report server installation. Compiled reports stored on the report server are upgraded automatically on first use. The report definition (.rdl) is not changed. For more information, see [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
   
--   Open a report in a report authoring environment. The report definition is upgraded in most circumstances. For more information, see [Upgrade Reports](install-windows/upgrade-reports.md) and [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+-   Open a report in a report authoring environment. The report definition is upgraded in most circumstances. For more information, see [Upgrade Reports](../install-windows/upgrade-reports.md) and [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ## Troubleshoot Reports  
  To troubleshoot a report:  
@@ -178,7 +178,7 @@ manager: "mblythe"
   
 ## See Also  
  [Reporting Services Tools](../tools/reporting-services-tools.md)   
- [Extensions &#40;SSRS&#41;](extensions-ssrs.md)   
+ [Extensions &#40;SSRS&#41;](../extensions-ssrs.md)   
  [Reporting Services Report Server](../reporting-services-report-server.md)  
   
   

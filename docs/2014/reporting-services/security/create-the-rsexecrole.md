@@ -27,11 +27,11 @@ manager: "mblythe"
 -   Create and provision the `RSExecRole` in the MSDB system database.  
   
 > [!NOTE]  
->  The instructions in this topic are intended for users who do not want to run a script or write WMI code to provision the report server database. If you manage a large deployment and will be moving databases routinely, you should write a script to automate these steps. For more information, see [Access the Reporting Services WMI Provider](tools/access-the-reporting-services-wmi-provider.md).  
+>  The instructions in this topic are intended for users who do not want to run a script or write WMI code to provision the report server database. If you manage a large deployment and will be moving databases routinely, you should write a script to automate these steps. For more information, see [Access the Reporting Services WMI Provider](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## Before you start  
   
--   Back up the encryption keys so that you can restore them after the database is moved. This is step does not directly affect your ability to create and provision the `RSExecRole`, but you must have a backup of the keys in order to verify your work. For more information, see [Back Up and Restore Reporting Services Encryption Keys](install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
+-   Back up the encryption keys so that you can restore them after the database is moved. This is step does not directly affect your ability to create and provision the `RSExecRole`, but you must have a backup of the keys in order to verify your work. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
 -   Verify you are logged on as a user account that has `sysadmin` permissions on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   
@@ -184,7 +184,7 @@ manager: "mblythe"
 30. Repeat for the sysjobs table. RSExecRole must be granted Select permissions for both tables.  
   
 ## Move the Report Server Database  
- After you create the roles, you can move the report server database to new SQL Server instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ After you create the roles, you can move the report server database to new SQL Server instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  If you are upgrading the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], you can upgrade it before or after moving the database.  
   
@@ -226,9 +226,9 @@ manager: "mblythe"
 15. Click the link to open Report Manager. You should see the report server items from the report server database.  
   
 ## See Also  
- [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+ [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Back Up and Restore Reporting Services Encryption Keys](install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

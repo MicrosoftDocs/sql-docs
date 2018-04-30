@@ -61,8 +61,8 @@ manager: "mblythe"
 6.  To delete a role assignment, click the check box next to the user or group name, and then click **Delete**.  
   
 ## See Also  
- [Create and Manage Role Assignments](../role-assignments.md)   
- [Role Assignments](../role-assignments.md)   
+ [Create and Manage Role Assignments](role-assignments.md)   
+ [Role Assignments](role-assignments.md)   
  [Site Settings Page &#40;Report Manager&#41;](../site-settings-page-report-manager.md)   
  [New System Role Assignments: Edit System Role Assignments Page &#40;Report Manager&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   

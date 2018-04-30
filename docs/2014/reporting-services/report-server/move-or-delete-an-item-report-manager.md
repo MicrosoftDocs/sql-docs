@@ -39,7 +39,7 @@ manager: "mblythe"
   
 #### To move an item from within the Contents page  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;]../report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page, and locate the item that you want to move.  
   
@@ -56,11 +56,11 @@ manager: "mblythe"
  Alternatively, you can navigate to the object you want to move, click **Properties**, and then click **Move** at the top of the page.  
   
 ## Delete an item  
- Before you delete an item, determine if it is used by other items. For example, if you delete a shared data source, reports and models that use that data source will no longer run. If you delete a report, subscriptions and report history associated with that report are also deleted. To find dependent items for an item, see [Dependent Items Page &#40;Report Manager&#41;](../../2014/reporting-services/dependent-items-page-report-manager.md).  
+ Before you delete an item, determine if it is used by other items. For example, if you delete a shared data source, reports and models that use that data source will no longer run. If you delete a report, subscriptions and report history associated with that report are also deleted. To find dependent items for an item, see [Dependent Items Page &#40;Report Manager&#41;]../dependent-items-page-report-manager.md).  
   
 #### To delete a report or item  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;]../report-manager-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page, and locate the item that you want to delete.  
   
@@ -71,7 +71,7 @@ manager: "mblythe"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## See Also  
- [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Contents Page &#40;Report Manager&#41;]../contents-page-report-manager.md)   
+ [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

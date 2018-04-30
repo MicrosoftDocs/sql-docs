@@ -350,7 +350,7 @@ manager: "mblythe"
   
 -   [MHTML Device Information Settings](../html-device-information-settings.md)  
   
--   [HTML Device Information Settings](../../2014/reporting-services/../html-device-information-settings.md)  
+-   [HTML Device Information Settings]../../html-device-information-settings.md)  
   
 -   [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../device-information-settings-for-rendering-extensions-reporting-services.md)  
   

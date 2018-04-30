@@ -51,7 +51,7 @@ End Sub
  For script samples, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
- [Report Server Web Service](../dev-guide/report-server-web-service.md)   
+ [Report Server Web Service](../report-server-web-service/report-server-web-service.md)   
  [Technical Reference &#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [RS.exe Utility &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   

@@ -18,7 +18,7 @@ ms.author: "maghan"
 manager: "mblythe"
 ---
 # System-Level Tasks
-  A system-level task is a collection of permissions that relate to operations that apply to the report server site as a whole. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes item-level tasks that apply to specific items. For more information, see [Item-Level Tasks](tasks-and-permissions-item-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and Permissions](../tasks-and-permissions.md).  
+  A system-level task is a collection of permissions that relate to operations that apply to the report server site as a whole. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes item-level tasks that apply to specific items. For more information, see [Item-Level Tasks](tasks-and-permissions-item-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and Permissions](tasks-and-permissions.md).  
   
 > [!NOTE]  
 >  If you are working with these tasks programmatically, you must use methods that support system-level tasks. For more information, see <xref:ReportService2010.ReportingService2010.ListTasks%2A> and <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  

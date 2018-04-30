@@ -24,7 +24,7 @@ manager: "mblythe"
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a *role**definition* is a named collection of tasks that define the operations available on a report server. Role definitions provide the rules used by the report server to enforce security. When a user attempts to perform a task, such as publishing a report, the report server checks the user's role assignment to determine whether the task is included in their role definition. If the task is included in the role definition, the request is submitted.  
   
 ## Using Roles to Authorize Access to a Report Server  
- A role becomes operative only when it is used in a role assignment. For more information about how roles provide security, see [Role Assignments](../role-assignments.md).  
+ A role becomes operative only when it is used in a role assignment. For more information about how roles provide security, see [Role Assignments](role-assignments.md).  
   
 ## Types of Role Definitions  
  Role definitions are either item-level or system-level definitions. An *item-level role definition* describes tasks that relate to items that are stored and managed on a report server, such as reports, folder, and models. Manage reports, View folders, and Manage individual subscriptions are examples of tasks you can include in an item-level role definitions. A *system role definition* includes tasks that apply to the site as a whole. View report server properties is an example of a task you might include in a system role.  

@@ -78,7 +78,7 @@ manager: "mblythe"
 -   [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## See Also  
- [Tasks and Permissions](../tasks-and-permissions.md)   
+ [Tasks and Permissions](../security/tasks-and-permissions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Role Assignments](../role-assignments.md)  

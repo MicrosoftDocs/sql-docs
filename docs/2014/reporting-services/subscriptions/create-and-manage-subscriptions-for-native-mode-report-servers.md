@@ -169,10 +169,10 @@ manager: "mblythe"
  A subscription is deleted automatically if the underlying report is deleted. If you delete a subscription while it is being processed, the subscription stops if the delete operation occurs before the delivery extension receives subscription data. Otherwise, the subscription continues to be processed.  
   
 ## See Also  
- [Tasks and Permissions](../tasks-and-permissions.md)   
+ [Tasks and Permissions](../security/tasks-and-permissions.md)   
  [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)   
- [Data-Driven Subscriptions](../data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)   
  [Use My Subscriptions](use-my-subscriptions-native-mode-report-server.md)  

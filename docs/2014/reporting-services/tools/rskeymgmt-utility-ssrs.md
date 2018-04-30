@@ -102,7 +102,7 @@ manager: "mblythe"
  (Required for `-u`) Specifies the password of an administrator account on the remote computer that you want to join to the scale-out deployment.  
   
  **-t**  *trace*  
- Outputs error messages to the trace log. This argument does not take a value. For more information, see [Report Server Service Trace Log](../report-server-service-trace-log.md).  
+ Outputs error messages to the trace log. This argument does not take a value. For more information, see [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
 ## Permissions  
  You must be a local administrator to run the tool, and you must run it locally on the computer that hosts the report server. The rskeymgmt utility works with the local Report Server Windows instance (the utility cannot connect to remote instances of the Report Server Windows service so it cannot be used to manage the encryption keys of a remote report server instance).  

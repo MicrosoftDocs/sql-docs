@@ -62,7 +62,7 @@ manager: "mblythe"
   
 2.  Click the **Subscriptions** tab. Alternatively click the **My Subscriptions** link on at the tope of report manager  
   
-3.  Select the subscription you want to modify. The following icon indicates a data-driven subscription: ![Data-driven subscription icon](media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
+3.  Select the subscription you want to modify. The following icon indicates a data-driven subscription: ![Data-driven subscription icon](../media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
   
 #### To modify an existing data-driven subscription (SharePoint Mode)  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
   
  Before you can create a data-driven subscription, ensure that you satisfy the following requirements:  
   
--   **Report requirements**. The report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that uses impersonated or delegated credentials to connect to an external data source; the credentials of the user who creates or owns the subscription will not be available when the subscription is processed. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md).  
+-   **Report requirements**. The report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that uses impersonated or delegated credentials to connect to an external data source; the credentials of the user who creates or owns the subscription will not be available when the subscription is processed. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
      You cannot subscribe to a Report Builder report that uses a model as a data source and the model contains model item security settings. Only reports that use model item security are included in this restriction.  
   
@@ -95,12 +95,12 @@ manager: "mblythe"
 ##  <a name="bkmk_run_subscription"></a> Run a subscription  
  You configure the conditions for subscription processing. You can configure a schedule, or you can trigger the subscription to coincide with updates to a report execution snapshot.  
   
- ![note](media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the “Script: Run (fire) a single subscription” section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![note](../media/rs-fyinote.png "note") While there is no feature in the user interface that you can use to immediately run a subscription, you can use a simple Windows PowerShell script to trigger a subscription to run. For more information, see the “Script: Run (fire) a single subscription” section of [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Schedule and conditions for running a data-driven subscriptions is the same as processing for standard subscriptions.  
   
 ##  <a name="bkmk_manage_and_delete"></a> Manage and delete a data-driven subscription  
- A data-driven subscription that is in progress cannot be stopped or deleted through the Manage Jobs page of Report Manager. For this reason, it is advantageous to use a shared schedule to trigger data-driven subscription. That way, if you want to temporarily prevent a subscription from processing, you can pause the schedule that triggers the subscription. For more information, see [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
+ A data-driven subscription that is in progress cannot be stopped or deleted through the Manage Jobs page of Report Manager. For this reason, it is advantageous to use a shared schedule to trigger data-driven subscription. That way, if you want to temporarily prevent a subscription from processing, you can pause the schedule that triggers the subscription. For more information, see [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md).  
   
  To delete a data-driven subscription, select it from the My Subscriptions page or the Subscriptions page of a report and then click **Delete**.  
   
@@ -109,9 +109,9 @@ manager: "mblythe"
 ## See Also  
  [Create, Modify, and Delete Standard Subscriptions &#40;Reporting Services in Native Mode&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)   
- [Subscriptions Page &#40;Report Manager&#41;](../../2014/reporting-services/subscriptions-page-report-manager.md)   
- [My Subscriptions Page &#40;Report Manager&#41;](../../2014/reporting-services/my-subscriptions-page-report-manager.md)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)   
+ [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Subscriptions Page &#40;Report Manager&#41;](../subscriptions-page-report-manager.md)   
+ [My Subscriptions Page &#40;Report Manager&#41;](../my-subscriptions-page-report-manager.md)  
   
   

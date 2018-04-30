@@ -44,7 +44,7 @@ manager: "mblythe"
   
 -   Provide permission to perform management tasks by using predefined roles: **System Administrator** and **Content Manager**. Effective management of report server content requires that you are assigned to both roles.  
   
- Tools for managing report server content include [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] or Report Manager. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] allows you to set defaults and enable features. Report Manager is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features. For more information, see [Reporting Services Tools](tools/reporting-services-tools.md).  
+ Tools for managing report server content include [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] or Report Manager. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] allows you to set defaults and enable features. Report Manager is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features. For more information, see [Reporting Services Tools](../tools/reporting-services-tools.md).  
   
 ##  <a name="bkmk_ReportServerItems"></a> Report Server Items  
  Report server items include reports, shared data sources, shared datasets, report parts, resources (items that are stored on but not processed by a report server), and folders. Items can depend on other items, for example, a report can depend on the shared data sources it references. If you move a dependent item, the report server updates the reference information automatically.  
@@ -109,21 +109,21 @@ manager: "mblythe"
 ### Deleting Folders and Folder Contents  
  When you delete a folder, you delete all the items that it contains. Before you delete a folder, you should inspect its contents to determine whether it contains items that may be referenced or used by other items in another part of the folder hierarchy. Referenced items include report definitions that support linked reports, shared data sources, and resources.  
   
- If you delete a report that has one or more linked reports that reference it, the linked reports will become invalid after you delete the report. You cannot determine in advance which linked reports are affected, because a report does not retain information about linked reports that are based on it. You can, however, review the properties of a linked report to find out which report it is based on. In contrast, shared data source items list all reports that currently use the item so that you can easily determine whether the connection information is in use. For more information, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Finally, resources that are used by reports do not identify those reports.  
+ If you delete a report that has one or more linked reports that reference it, the linked reports will become invalid after you delete the report. You cannot determine in advance which linked reports are affected, because a report does not retain information about linked reports that are based on it. You can, however, review the properties of a linked report to find out which report it is based on. In contrast, shared data source items list all reports that currently use the item so that you can easily determine whether the connection information is in use. For more information, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Finally, resources that are used by reports do not identify those reports.  
   
  Before you delete a folder, consider whether you need to retain the report history of any report you are about to delete or a report-specific construct (such as a data-driven subscription) that is part of a report. If you may need any of this information, move the item out of the folder before you delete the folder.  
   
  The visibility of an item in a folder depends on both role assignments (that is, permission to view an item) and viewing options in effect for a folder. In Report Manager, you can set the Contents page to list view or details view. In some cases, a report or item may be hidden in list view. Be sure to view a folder in details view before deleting its contents.  
   
 ##  <a name="bkmk_Resources"></a> Resources  
- A resource is a managed item that is stored on a report server, but is not processed by a report server. Typically, a resource provides external content to report users. Examples include an image in a .jpg file, an ESRI shapefile that contains spatial data, or an HTML file that describes the business rules used in a report. The JPG, SHP, or HTML file is stored on the report server, but the report server passes the file directly to the browser rather than processing it first. For more information, see [Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md) and the section “Adding Data to a Map” in [Maps &#40;Report Builder and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ A resource is a managed item that is stored on a report server, but is not processed by a report server. Typically, a resource provides external content to report users. Examples include an image in a .jpg file, an ESRI shapefile that contains spatial data, or an HTML file that describes the business rules used in a report. The JPG, SHP, or HTML file is stored on the report server, but the report server passes the file directly to the browser rather than processing it first. For more information, see [Images &#40;Report Builder and SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) and the section “Adding Data to a Map” in [Maps &#40;Report Builder and SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
 ### Adding and Viewing a Resource  
  To add a resource to a report server, you upload or publish a file:  
   
 |Operation|File type|  
 |---------------|---------------|  
-|Upload|To upload a resource, you must use Report Manager if the report server runs in native mode or an application page on a SharePoint site if the server runs in SharePoint integrated mode. For more information, see [Upload a File or Report &#40;Report Manager&#41;](reports/upload-a-file-or-report-report-manager.md) or [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Upload|To upload a resource, you must use Report Manager if the report server runs in native mode or an application page on a SharePoint site if the server runs in SharePoint integrated mode. For more information, see [Upload a File or Report &#40;Report Manager&#41;](../reports/upload-a-file-or-report-report-manager.md) or [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;]../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publish|All files in a project that are not reports, report parts, data sources, or datasets, are uploaded as resources. To publish a resource, add an existing item to a project in Report Designer and then publish the project to a report server.|  
   
  All resources originate as files on a file system, which are subsequently uploaded to a report server. Except for the 4 megabyte default file size limitations imposed by ASP.NET, there are no restrictions on the kinds of files you can upload. However, when published to a report server as a resource, file types that have equivalent MIME types are more optimal than others. For example, resources that are based on HTML and JPG files will open in a browser window when the user clicks the resource, rendering the HTML as a Web page and the JPG as an image that the user can see. In contrast, resources that do not have equivalent MIME types, such as desktop application files, for example, may not be rendered in the browser window.  
@@ -177,8 +177,8 @@ manager: "mblythe"
  [Upload Files to a Folder](upload-files-to-a-folder.md)  
   
 ## See Also  
- [Reporting Services Tools](tools/reporting-services-tools.md)   
+ [Reporting Services Tools](../tools/reporting-services-tools.md)   
  [Roles and Permissions &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)   
- [Reporting Services Reports &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
+ [Reporting Services Reports &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)  
   
   

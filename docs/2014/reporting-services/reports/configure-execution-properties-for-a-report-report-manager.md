@@ -46,7 +46,7 @@ manager: "mblythe"
   
 ## See Also  
  [Set Report Processing Properties](../report-server/set-report-processing-properties.md)   
- [Open and Close a Report &#40;Report Manager&#41;](open-and-close-a-report-report-manager.md)   
+ [Open and Close a Report &#40;Report Manager&#41;](../open-and-close-a-report-report-manager.md)   
  [Contents Page &#40;Report Manager&#41;](../contents-page-report-manager.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Processing Options Properties Page &#40;Report Manager&#41;](../processing-options-properties-page-report-manager.md)  

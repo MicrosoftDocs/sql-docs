@@ -105,7 +105,7 @@ manager: "mblythe"
  Global variables are available to any function in the script. A backslash and quotation mark (**\\"**) is interpreted as a double quotation mark. The quotation marks are required only if the string contains a space. Variable names must be valid for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; they must start with alphabetical character or underscore and contain alphabetical characters, digits, or underscores. Reserved words cannot be used as variable names. For more information about using global variables, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
- (Optional) Outputs error messages to the trace log. This argument does not take a value. For more information, see [Report Server Service Trace Log](../report-server-service-trace-log.md).  
+ (Optional) Outputs error messages to the trace log. This argument does not take a value. For more information, see [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
  To run the tool, you must have permission to connect to the report server instance you are running the script against. You can run scripts to make changes to the local computer or a remote computer. To make changes to a report server installed on a remote computer, specify the remote computer in the `-s` argument.  
@@ -122,7 +122,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  For additional examples, see [Run a Reporting Services Script File](run-a-reporting-services-script-file.md)  
   
 ## Remarks  
- You can define scripts to set system properties, publish reports, and so forth. The scripts that you create can include any methods of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API. For more information about the methods and properties available to you, see [Report Server Web Service](../dev-guide/report-server-web-service.md).  
+ You can define scripts to set system properties, publish reports, and so forth. The scripts that you create can include any methods of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API. For more information about the methods and properties available to you, see [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
   
  The script must be written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET code, and stored in a Unicode or UTF-8 text file with an .rss file name extension. You cannot debug scripts with the **rs** utility. To debug a script, run the code within [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   

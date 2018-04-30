@@ -75,7 +75,7 @@ manager: "mblythe"
   
 ## See Also  
  [Connect to a Report Server in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
- [Create and Manage Role Assignments](../role-assignments.md)   
+ [Create and Manage Role Assignments](role-assignments.md)   
  [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

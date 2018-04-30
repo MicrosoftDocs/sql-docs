@@ -37,12 +37,12 @@ manager: "mblythe"
 |[Report Server HTTP Log](report-server-http-log.md)|The HTTP log file contains a record of all HTTP requests and responses handled by the Report Server Web service and Report Manager.|  
 |[Windows Application Log](windows-application-log.md)|The Microsoft Windows Application log contains information about report server events.|  
 |Windows Performance logs|The Windows Performance logs contain report server performance data. You can create performance logs, and then choose counters that determine which data to collect. For more information, see [Monitoring Report Server Performance](monitoring-report-server-performance.md).|  
-|Setup log files|Log files are also created during Setup. If Setup fails or succeeds with warnings or other messages, you can examine the log files to troubleshoot the problem. For more information, see [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).|  
+|Setup log files|Log files are also created during Setup. If Setup fails or succeeds with warnings or other messages, you can examine the log files to troubleshoot the problem. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).|  
 |IIS Logs|Log files created by Microsoft Internet Information Services (IIS). For more information, see [How to enable logging in Internet Information Services (IIS)](http://support.microsoft.com/kb/313437).|  
 |Video|View a short video that demonstrates the use of Microsoft Power Query to view [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] log files.<br /><br /> ![view a video about Power Query and SSRS logs](../media/generic-video-thumbnail.png "view a video about Power Query and SSRS logs")|  
   
 ## See Also  
  [Reporting Services Report Server &#40;Native Mode&#41;](reporting-services-report-server-native-mode.md)   
- [Errors and Events Reference &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Errors and Events Reference &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

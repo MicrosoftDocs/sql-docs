@@ -71,7 +71,7 @@ manager: "mblythe"
   
 ## See Also  
  [Configure Execution Properties for a Report  &#40;Report Manager&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Open and Close a Report &#40;Report Manager&#41;](../open-and-close-a-report-report-manager.md)   
+ [Open and Close a Report &#40;Report Manager&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [Limit Report History &#40;Report Manager&#41;](../reports/limit-report-history-report-manager.md)   
  [Schedules](../subscriptions/schedules.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)  

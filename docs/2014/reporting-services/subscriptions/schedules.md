@@ -99,7 +99,7 @@ manager: "mblythe"
 |Create, modify, or delete report-specific schedules in a user-defined subscription|Manage individual subscriptions|Browser, Report Builder, My Reports, Content Manager|Visitors, Members|  
 |Create, modify, or delete report-specific schedules for all other scheduled operations|Manage report history, manage all subscriptions, manage reports|Content Manager|Owners|  
   
- For more information about security in Native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Predefined Roles](../security/role-definitions-predefined-roles.md), [Granting Permissions on a Native Mode Report Server](../security/granting-permissions-on-a-native-mode-report-server.md) and [Tasks and Permissions](../tasks-and-permissions.md). For SharePoint mode, see [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ For more information about security in Native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Predefined Roles](../security/role-definitions-predefined-roles.md), [Granting Permissions on a Native Mode Report Server](../security/granting-permissions-on-a-native-mode-report-server.md) and [Tasks and Permissions](../security/tasks-and-permissions.md). For SharePoint mode, see [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> How Scheduling and Delivery Processing Works  
  The Scheduling and Delivery Processor provides the following functionality:  

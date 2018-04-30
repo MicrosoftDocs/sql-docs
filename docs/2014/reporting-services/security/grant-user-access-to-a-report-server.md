@@ -86,7 +86,7 @@ manager: "mblythe"
  [Create and Manage Role Assignments](role-assignments.md)   
  [New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
  [Security Properties Page, Items &#40;Report Manager&#41;](../security-properties-page-items-report-manager.md)   
- [Role Assignments](../role-assignments.md)   
+ [Role Assignments](role-assignments.md)   
  [Role Definitions](role-definitions.md)  
   
   

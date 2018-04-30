@@ -102,6 +102,6 @@ manager: "jhubbard"
  [Introducing Exception Handling in Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Errors and Events Reference &#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
  [Reporting Services SoapException Class](reporting-services-soapexception-class.md)   
- [Using the Detail Property to Handle Specific Errors](best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Using the Detail Property to Handle Specific Errors](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

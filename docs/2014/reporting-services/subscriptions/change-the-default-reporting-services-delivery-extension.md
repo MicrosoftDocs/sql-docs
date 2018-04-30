@@ -27,7 +27,7 @@ manager: "mblythe"
 ## Default Native mode report server configuration  
  The order of a delivery extension appears in Report Manager in the **Delivered by** list is based on the order of the delivery extension entries in the **RSReportServer.config** file. For example the following image shows e-mail first in the list and it is selected by default.  
   
- ![default list of delivery extensions](media/ssrs-default-delivery.png "default list of delivery extensions")  
+ ![default list of delivery extensions](../media/ssrs-default-delivery.png "default list of delivery extensions")  
   
  The following is the default section of **RSReportServer.config** that controls the default delivery extension and the order they are displayed in Report Manager. Note that email appears first in the file and it is set as the default.  
   
@@ -49,9 +49,9 @@ manager: "mblythe"
   
 1.  The steps in this procedure modify the configuration so that file share delivery is listed as the first option in the UI and it is the default selection.  
   
-     Open the RSReportServer.config file in a text editor. For more information on the configuration file, see [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md). After the configuration changes, the UI will look like the following image:  
+     Open the RSReportServer.config file in a text editor. For more information on the configuration file, see [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). After the configuration changes, the UI will look like the following image:  
   
-     ![modified list of delivery extensions](media/ssrs-modified-delivery.png "modified list of delivery extensions")  
+     ![modified list of delivery extensions](../media/ssrs-modified-delivery.png "modified list of delivery extensions")  
   
 2.  Modify the DeliveryUI section to look like the following sample and note the key changes of:  
   
@@ -110,10 +110,10 @@ manager: "mblythe"
     ```  
   
 ## See Also  
- [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
- [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)   
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)   
  [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [E-Mail Delivery in Reporting Services](e-mail-delivery-in-reporting-services.md)   
- [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

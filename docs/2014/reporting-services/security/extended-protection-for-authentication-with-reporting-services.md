@@ -101,7 +101,7 @@ manager: "mblythe"
 ## Configuring Reporting Rervices extended protection  
  The `rsreportserver.config` file contains the configuration values that control the behavior of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extended protection.  
   
- For more information on using and editing the `rsreportserver.config` file, see [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md). The extended protection settings can also be changed and inspected using WMI APIs. For more information, see [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).  
+ For more information on using and editing the `rsreportserver.config` file, see [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). The extended protection settings can also be changed and inspected using WMI APIs. For more information, see [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).  
   
  When validation of the configuration settings fail, the authentication types `RSWindowsNTLM`, `RSWindowsKerberos` and `RSWindowsNegotiate` are disabled on the report server.  
   
@@ -157,15 +157,15 @@ manager: "mblythe"
   
  `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`  
   
- For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](report-server/register-a-service-principal-name-spn-for-a-report-server.md) and [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+ For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../report-server/register-a-service-principal-name-spn-for-a-report-server.md) and [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## See Also  
- [Connect to the Database Engine Using Extended Protection](../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
+ [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
  [Extended Protection for Authentication Overview](http://go.microsoft.com/fwlink/?LinkID=177943)   
  [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)   
  [Microsoft Security Advisory: Extended protection for authentication](http://go.microsoft.com/fwlink/?LinkId=179923)   
- [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)   
- [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
- [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
+ [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)   
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)   
+ [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
   
   

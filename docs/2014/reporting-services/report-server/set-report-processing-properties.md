@@ -58,6 +58,6 @@ manager: "mblythe"
  [Configure Execution Properties for a Report  &#40;Report Manager&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [How to: Add a Snapshot to Report History](add-a-snapshot-to-report-history-report-manager.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../analysis-services/data-mining/data-sources.md)  
+ [Specify Credential and Connection Information for Report Data Sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

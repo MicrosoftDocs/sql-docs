@@ -46,7 +46,7 @@ manager: "jhubbard"
 ## See Also  
  [Accessing the SOAP API](../accessing-the-soap-api.md)   
  [Building Applications Using the Web Service and the .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Report Server Web Service](../../dev-guide/report-server-web-service.md)   
+ [Report Server Web Service](../report-server-web-service.md)   
  [Technical Reference &#40;SSRS&#41;](../../technical-reference-ssrs.md)  
   
   

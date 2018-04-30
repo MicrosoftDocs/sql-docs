@@ -1,5 +1,5 @@
 # [Developer's Guide (Reporting Services)](../reporting-services-developer-documentation.md)
-## [Integrating Reporting Services into Applications](integrating-reporting-services-into-applications.md)
+## [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)
 ### [Choosing Between URL Access and SOAP](../application-integration/choosing-between-url-access-and-soap.md)
 ### [Integrating Reporting Services Using URL Access](../application-integration/integrating-reporting-services-using-url-access.md)
 #### [Using URL Access in a Web Application](../application-integration/integrating-reporting-services-using-url-access-web-application.md)

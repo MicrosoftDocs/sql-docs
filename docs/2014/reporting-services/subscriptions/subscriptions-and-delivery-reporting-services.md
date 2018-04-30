@@ -31,9 +31,9 @@ manager: "mblythe"
   
  You can create multiple subscriptions for a single report to vary the subscription options; for example, you can specify different parameter values to produce three versions of a report, such as a Western region sales report, Eastern region sales, and all sales.  
   
- ![example ssrs subscription flow](media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
+ ![example ssrs subscription flow](../media/ssrs-subscription-example-flow.png "example ssrs subscription flow")  
   
- Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Subscriptions are not available in every edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]  
 >  Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] you can transfer the ownership of a subscription programmatically. There is no user interface you can use to transfer ownership of subscriptions. For more information, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>and [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
@@ -64,7 +64,7 @@ manager: "mblythe"
   
 -   [Data-Driven Subscriptions](data-driven-subscriptions.md) Provides information about using data-driven subscriptions to customize report output at run time.  
   
--   [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
+-   [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)  
   
 -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
 ##  <a name="bkmk_subscription_scenarios"></a> Subscription and Delivery Scenarios  
  For each subscription, you configure delivery options and the available options are determined by the delivery extension you choose. A delivery extension is a module that supports some manner of distribution. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes several delivery extensions and delivery extension may be available through third-party vendors.  
   
- If you are a developer, you can create custom delivery extensions to support additional scenarios. For more information, see [Implementing a Delivery Extension](extensions/delivery-extension/implementing-a-delivery-extension.md).  
+ If you are a developer, you can create custom delivery extensions to support additional scenarios. For more information, see [Implementing a Delivery Extension](../extensionsdelivery-extension/implementing-a-delivery-extension.md).  
   
  The following table describes the common [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscription scenarios.  
   
@@ -101,7 +101,7 @@ manager: "mblythe"
 |Requirement|Description|  
 |-----------------|-----------------|  
 |Permissions|You must have access to the report. Before you can subscribe to a report, you must have permission to view it.<br /><br /> Your role assignment must include the "Manage individual subscriptions" task.|  
-|Stored credentials|To create a subscription, the report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that is configured to use the impersonated or delegated credentials of the current user to connect to an external data source. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)<br /><br /> You must have permission to view the report and create individual subscriptions. **Scheduled Events and Report Delivery** must be enabled on the report server. For more information, see [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).|  
+|Stored credentials|To create a subscription, the report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that is configured to use the impersonated or delegated credentials of the current user to connect to an external data source. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> You must have permission to view the report and create individual subscriptions. **Scheduled Events and Report Delivery** must be enabled on the report server. For more information, see [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md).|  
 |User dependent values in a report|For standard subscriptions only, you can create subscriptions to reports that incorporate user account information in a filter or as text that appears on the report. In the report, the user account name is specified through a `User!UserID` expression that resolves to the current user. When you create a subscription, the user who creates the subscription is the considered the current user.|  
 |No model item security|You cannot subscribe to a Report Builder report that uses a model as a data source if the model contains model item security settings. Only reports that use model item security are included in this restriction.|  
 |Parameter values|If the report uses parameters, a parameter value must be specified with the report itself, or in the subscription you define. If default values have been defined in the report, you can set the parameter value to use the default.|  
@@ -119,7 +119,7 @@ manager: "mblythe"
 |Null|The null delivery provider is a highly specialized delivery extension that is used to preload a cache with ready-to-view parameterized reports This method is not available to users in individual subscriptions. Null delivery is used by administrators in data-driven subscriptions to improve report server performance by preloading the cache.|  
   
 > [!NOTE]  
->  Report delivery is an extensible part of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] architecture. Third-party vendors can create custom delivery extensions to route reports to different locations or devices. For more information about custom delivery extensions, see [Implementing a Delivery Extension](extensions/delivery-extension/implementing-a-delivery-extension.md).  
+>  Report delivery is an extensible part of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] architecture. Third-party vendors can create custom delivery extensions to route reports to different locations or devices. For more information about custom delivery extensions, see [Implementing a Delivery Extension](../extensionsdelivery-extension/implementing-a-delivery-extension.md).  
   
 ##  <a name="bkmk_parts_of_subscription"></a> Parts of a Subscription  
  A subscription definition consists of the following parts:  
@@ -171,8 +171,8 @@ manager: "mblythe"
 ## See Also  
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Schedules](schedules.md)   
- [Reporting Services Report Server &#40;Native Mode&#41;](report-server/reporting-services-report-server-native-mode.md)   
- [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)   
+ [Reporting Services Report Server &#40;Native Mode&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Monitor Reporting Services Subscriptions](monitor-reporting-services-subscriptions.md)  
   
   

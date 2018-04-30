@@ -18,7 +18,7 @@ manager: "mblythe"
 # Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   Starting with [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscription from one user to another. This topic provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report will display the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
- ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")  
   
 ||  
 |-|  
@@ -73,7 +73,7 @@ manager: "mblythe"
   
 -   Fire Event: ManageWeb  
   
- For more information, see [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../2014/reporting-services/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ For more information, see [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ### Script usage  
  **Create Script files (.ps1)**  
@@ -333,7 +333,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  `</Event>`  
   
- For more information on the configuration file, see [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
+ For more information on the configuration file, see [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
  The script includes delay logic “`Start-Sleep -s 6`” so there is time after the event fires, for the updated status to be available with the ListSubscription method.  
   

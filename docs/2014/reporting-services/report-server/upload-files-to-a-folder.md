@@ -57,9 +57,9 @@ generic resource icon
 |View the contents of a folder|View resources, View reports|  
   
 ## See Also  
- [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;]../report-manager-ssrs-native-mode.md)   
  [Granting Permissions on a Native Mode Report Server](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tasks and Permissions](../security/tasks-and-permissions.md)   
- [Upload a File or Report &#40;Report Manager&#41;](reports/upload-a-file-or-report-report-manager.md)  
+ [Upload a File or Report &#40;Report Manager&#41;](../reports/upload-a-file-or-report-report-manager.md)  
   
   

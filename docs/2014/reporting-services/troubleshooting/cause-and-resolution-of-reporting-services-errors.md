@@ -35,7 +35,7 @@ manager: "mblythe"
 |[Report Server Windows Service &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Report Server Windows service (MSSQLSERVER) cannot connect to the report server database.|  
   
 ## See Also  
- [Reporting Services Log Files and Sources](../reporting-services-log-files-and-sources.md)   
+ [Reporting Services Log Files and Sources](../report-server/reporting-services-log-files-and-sources.md)   
  [Errors and Events Reference &#40;Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
   
   

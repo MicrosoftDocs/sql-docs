@@ -38,7 +38,7 @@ manager: "mblythe"
 |Set security on items|Create and modify role assignments that control access to the shared data source. This task must be used with either "View data source" or "Manage data sources" tasks. If it is not, it has no effect because the user cannot select the item.|  
   
 ## See Also  
- [Manage Report Data Sources](../../analysis-services/data-mining/data-sources.md)   
+ [Manage Report Data Sources](../report-data/manage-report-data-sources.md)   
  [Secure Folders](secure-folders.md)   
  [Secure Reports and Resources](secure-reports-and-resources.md)   
  [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   

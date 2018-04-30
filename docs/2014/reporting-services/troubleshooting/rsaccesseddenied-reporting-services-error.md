@@ -46,7 +46,7 @@ manager: "mblythe"
  This error is also caused by local administration of the report server. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## See Also  
- [Role Assignments](../role-assignments.md)   
+ [Role Assignments](../security/role-assignments.md)   
  [Granting Permissions on a Native Mode Report Server](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Roles and Permissions &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   

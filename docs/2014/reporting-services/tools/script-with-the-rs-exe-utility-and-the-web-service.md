@@ -34,7 +34,7 @@ manager: "mblythe"
   
 ## See Also  
  [Script Deployment and Administrative Tasks](script-deployment-and-administrative-tasks.md)   
- [Report Server Web Service](../dev-guide/report-server-web-service.md)   
+ [Report Server Web Service](../report-server-web-service/report-server-web-service.md)   
  [Technical Reference &#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [RS.exe Utility &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   

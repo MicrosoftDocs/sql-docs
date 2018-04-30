@@ -35,7 +35,7 @@ manager: "mblythe"
  My Subscriptions is available through Report Manager. To access My Subscriptions, click **My Subscriptions** on the Report Manager global toolbar.  
   
 ## Use Windows PowerShell to list MySubscriptions  
- ![PowerShell related content](media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content")  
   
  The following PowerShell script will return the list of subscriptions and subscription properties for the current user. For more information, see [ReportingService2010.ListMySubscriptions Method](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   
@@ -54,6 +54,6 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ## See Also  
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
+ [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)  
   
   

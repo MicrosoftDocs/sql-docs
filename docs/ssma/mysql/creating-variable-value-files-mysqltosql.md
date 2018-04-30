@@ -1,6 +1,6 @@
 ---
 title: "Creating Variable Value Files (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -23,7 +23,6 @@ caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Creating Variable Value Files (MySQLToSQL)
 Variable Value File is an XML file comprising the parameter values of commands like, the source or destination server name that frequently change from one server migration to another. When a large number of database migrations occur, multiple variable files for storing the value of each source server will be created and referenced in a master script file with the **–v** switch at command line. This helps in maintaining static values in a few script files with the variable values in multiple variable files.  

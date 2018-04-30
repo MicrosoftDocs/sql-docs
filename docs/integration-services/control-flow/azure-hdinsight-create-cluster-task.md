@@ -2,7 +2,7 @@
 title: "Azure HDInsight Create Cluster Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"
@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure HDInsight Create Cluster Task
 The **Azure HDInsight Create Cluster Task** enables an SSIS package to create an Azure HDInsight cluster in the specified Azure subscription and resource group.

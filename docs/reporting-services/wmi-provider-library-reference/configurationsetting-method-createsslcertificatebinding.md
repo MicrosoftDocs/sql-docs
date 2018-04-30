@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - CreateSSLCertificateBinding
   Creates an SSL Certificate binding.  

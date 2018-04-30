@@ -2,7 +2,7 @@
 title: "Events Logged by the Integration Services Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "service"
@@ -21,7 +21,6 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Events Logged by the Integration Services Service
   The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service logs various messages to the Windows Application event log. The service logs these messages when the service starts, when the service stops, and when certain problems occur.  

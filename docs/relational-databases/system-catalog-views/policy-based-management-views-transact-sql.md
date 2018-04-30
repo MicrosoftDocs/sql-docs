@@ -21,7 +21,6 @@ caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Policy-Based Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

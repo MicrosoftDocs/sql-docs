@@ -25,7 +25,6 @@ caps.latest.revision: 19
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - DeleteEncryptedInformation
   Deletes the encrypted information from the report server database.  

@@ -1,6 +1,6 @@
 ---
 title: "Assessment Report (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Assessment Report (OracleToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

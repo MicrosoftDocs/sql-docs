@@ -22,7 +22,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # State Property (ADO)
 Indicates for all applicable objects whether the state of the object is open or closed. If the object is executing an asynchronous method, indicates whether the current state of the object is connecting, executing, or retrieving.  

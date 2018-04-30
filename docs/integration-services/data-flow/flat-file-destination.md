@@ -2,7 +2,7 @@
 title: "Flat File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -26,7 +26,6 @@ caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Flat File Destination
   The Flat File destination writes data to a text file. The text file can be in delimited, fixed width, fixed width with row delimiter, or ragged right format.  

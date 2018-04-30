@@ -29,7 +29,6 @@ caps.latest.revision: 82
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CLR Integration Custom Attributes for CLR Routines
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "Monitor and troubleshoot data migration (Stretch Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "stretch-database"
@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Monitor and troubleshoot data migration (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

@@ -27,7 +27,6 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)

@@ -20,7 +20,6 @@ caps.latest.revision: 33
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Unloading an Extended Stored Procedure DLL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

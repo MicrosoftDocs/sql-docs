@@ -2,7 +2,7 @@
 title: "New Project (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-sybase"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # New Project (SybaseToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

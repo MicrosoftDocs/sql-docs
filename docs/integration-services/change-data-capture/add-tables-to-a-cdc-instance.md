@@ -2,7 +2,7 @@
 title: "Add Tables to a CDC Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "change-data-capture"
@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Add Tables to a CDC Instance
   Use the Table Selection dialog box to add additional tables from the Oracle source to the CDC instance. The tables selected are added to the list in the **Tables** tab of the Properties editor.  

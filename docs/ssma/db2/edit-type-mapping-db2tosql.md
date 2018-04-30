@@ -1,6 +1,6 @@
 ---
 title: "Edit Type Mapping (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Edit Type Mapping (DB2ToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

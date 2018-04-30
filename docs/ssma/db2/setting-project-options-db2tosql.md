@@ -1,6 +1,6 @@
 ---
 title: "Setting Project Options (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Setting Project Options (DB2ToSQL)
 For each SSMA project you can set project level options. These options specify object conversion, object loading, user interface and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verify that the configuration options are appropriate for the project.  

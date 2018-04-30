@@ -2,7 +2,7 @@
 title: "XML Output File Format (ssbdiagnose) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssbdiagnose"
@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # XML Output File Format (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

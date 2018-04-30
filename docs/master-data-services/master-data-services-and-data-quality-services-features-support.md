@@ -2,7 +2,7 @@
 title: "Master Data Services and Data Quality Services Features Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Master Data Services and Data Quality Services Features Support
 

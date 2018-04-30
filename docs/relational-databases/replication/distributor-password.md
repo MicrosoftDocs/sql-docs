@@ -19,7 +19,6 @@ caps.latest.revision: 24
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Distributor Password
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

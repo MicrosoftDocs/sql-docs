@@ -1,6 +1,6 @@
 ---
 title: "Global Settings (Dialogs)  (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-pelars"
-ms.workload: "Inactive"
 ---
 # Global Settings (Dialogs)  (OracleToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

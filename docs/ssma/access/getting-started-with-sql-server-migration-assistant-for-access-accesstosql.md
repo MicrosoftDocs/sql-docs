@@ -1,6 +1,6 @@
 ---
 title: "Get Started with SQL Server Migration Assistant for Access | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-access"
@@ -29,7 +29,6 @@ caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
-ms.workload: "On Demand"
 ---
 # Getting started with SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access allows you to quickly convert Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB objects, upload the resulting objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, and migrate data from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. If necessary, you can also link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB tables so that you can continue to use your existing Access front-end applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.  

@@ -17,7 +17,6 @@ caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Code Samples for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

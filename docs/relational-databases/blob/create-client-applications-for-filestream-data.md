@@ -19,7 +19,6 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Create Client Applications for FILESTREAM Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

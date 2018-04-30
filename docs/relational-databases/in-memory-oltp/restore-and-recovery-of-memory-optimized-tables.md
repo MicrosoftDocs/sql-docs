@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Restore and recovery of memory-optimized tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

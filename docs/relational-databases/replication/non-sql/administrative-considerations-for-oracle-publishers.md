@@ -20,7 +20,6 @@ caps.latest.revision: 29
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Administrative Considerations for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

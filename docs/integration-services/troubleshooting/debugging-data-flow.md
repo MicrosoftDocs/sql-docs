@@ -2,7 +2,7 @@
 title: "Debugging Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "troubleshooting"
@@ -23,7 +23,6 @@ caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Debugging Data Flow
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer include features and tools that you can use to troubleshoot the data flows in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  

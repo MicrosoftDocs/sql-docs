@@ -25,7 +25,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Writing ODBC 3.x Applications
 When an ODBC 2.*x* application is upgraded to ODBC 3.*x*, it should be written such that it works with both ODBC 2.*x* and 3.*x* drivers. The application should incorporate conditional code to take full advantage of the ODBC 3.*x* features.  

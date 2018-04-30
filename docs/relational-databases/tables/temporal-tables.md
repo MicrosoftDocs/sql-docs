@@ -17,7 +17,6 @@ caps.latest.revision: 47
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Temporal Tables

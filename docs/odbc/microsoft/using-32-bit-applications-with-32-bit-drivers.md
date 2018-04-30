@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Using 32-Bit Applications with 32-Bit Drivers
 You can run 32-bit applications with 32-bit drivers. The 32-bit applications and the 32-bit drivers use the Win32® API.  

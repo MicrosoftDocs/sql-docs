@@ -1,6 +1,6 @@
 ---
 title: "New GUI Features in SSMA for MySQL (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # New GUI Features in SSMA for MySQL (MySQLToSQL)
 This chapter describes new features of SSMA User Interface  

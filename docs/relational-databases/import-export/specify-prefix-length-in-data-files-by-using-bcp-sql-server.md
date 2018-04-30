@@ -22,7 +22,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify Prefix Length in Data Files by Using bcp (SQL Server)

@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # UPDATE - SQL Command
 Updates records in a table with new values.  

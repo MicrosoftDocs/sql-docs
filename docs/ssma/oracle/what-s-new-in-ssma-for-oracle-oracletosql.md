@@ -1,6 +1,6 @@
 ---
 title: "What's New in SSMA  for Oracle (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # What's New in SSMA for Oracle (OracleToSQL)
 This topic lists SSMA for Oracle changes in each release.  

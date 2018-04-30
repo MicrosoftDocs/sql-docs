@@ -2,14 +2,13 @@
 title: "Connect to Server (Login Page) Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-f1"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -19,7 +18,6 @@ caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to Server (Login Page) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

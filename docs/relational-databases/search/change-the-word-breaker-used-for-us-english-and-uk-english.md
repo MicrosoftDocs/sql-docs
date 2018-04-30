@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Change the Word Breaker Used for US English and UK English

@@ -2,7 +2,7 @@
 title: "Overview: Exporting Data (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -21,7 +21,6 @@ caps.latest.revision: 12
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Overview: Exporting Data (Master Data Services)
 

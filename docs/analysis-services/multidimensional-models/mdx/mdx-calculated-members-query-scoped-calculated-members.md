@@ -22,7 +22,6 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # MDX Calculated Members - Query-Scoped Calculated Members
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

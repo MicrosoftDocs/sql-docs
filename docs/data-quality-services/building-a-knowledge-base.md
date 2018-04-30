@@ -2,7 +2,7 @@
 title: "Building a Knowledge Base | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"
@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Building a Knowledge Base
 

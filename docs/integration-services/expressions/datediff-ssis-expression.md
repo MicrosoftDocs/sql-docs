@@ -2,7 +2,7 @@
 title: "DATEDIFF (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "expressions"
@@ -20,7 +20,6 @@ caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # DATEDIFF (SSIS Expression)
   Returns the number of date and time boundaries crossed between two specified dates. The *datepart* parameter identifies which date and time boundaries to compare.  

@@ -6,15 +6,14 @@ ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
 ms.assetid:
-ms.workload: "Inactive"
 ---
 # Configure SQL Server to send feedback to Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

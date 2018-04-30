@@ -1,6 +1,6 @@
 ---
 title: "Project Settings (Synchronization) (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (Synchronization) (MySQLToSQL)
 The Synchronization **project settings** let you configure how MySQL database objects are synchronized with SQL Server database objects.  

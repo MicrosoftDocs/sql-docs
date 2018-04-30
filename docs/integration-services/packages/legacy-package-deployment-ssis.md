@@ -2,7 +2,7 @@
 title: "Legacy Package Deployment (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "packages"
@@ -38,7 +38,6 @@ caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Legacy Package Deployment (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes tools and wizards that make it simple to deploy packages from the development computer to the production server or to other computers.  

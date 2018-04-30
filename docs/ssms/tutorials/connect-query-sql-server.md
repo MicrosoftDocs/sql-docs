@@ -10,6 +10,8 @@ ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
+ms.prod: sql
+ms.technology: ssms
 ---
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio

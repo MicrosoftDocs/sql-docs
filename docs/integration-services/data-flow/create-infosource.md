@@ -2,7 +2,7 @@
 title: "Create InfoSource | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create InfoSource
   Use the **Create InfoSource** dialog box to create a new InfoSource. To create the new InfoSource, you use either the **Create InfoSource for Transaction Data** or the **Create InfoSource for Master Data** dialog box.  

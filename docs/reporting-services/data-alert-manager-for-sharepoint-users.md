@@ -21,7 +21,6 @@ caps.latest.revision: 16
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Data Alert Manager for SharePoint Users

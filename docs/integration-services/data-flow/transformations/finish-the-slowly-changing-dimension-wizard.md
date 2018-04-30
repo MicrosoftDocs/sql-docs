@@ -2,7 +2,7 @@
 title: "Finish the Slowly Changing Dimension Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Finish the Slowly Changing Dimension Wizard
   Use the **Finish the Slowly Changing Dimension Wizard** dialog box to verify your choices before the wizard builds support for slowly changing dimensions.  

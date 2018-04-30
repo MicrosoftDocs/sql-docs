@@ -24,7 +24,6 @@ caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

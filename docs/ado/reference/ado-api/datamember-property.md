@@ -22,7 +22,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DataMember Property
 Indicates the name of the data member that will be retrieved from the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) referenced by the [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) property.  

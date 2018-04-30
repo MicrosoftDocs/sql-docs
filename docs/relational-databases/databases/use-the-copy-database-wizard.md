@@ -32,7 +32,6 @@ caps.latest.revision: 64
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Use the Copy Database Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

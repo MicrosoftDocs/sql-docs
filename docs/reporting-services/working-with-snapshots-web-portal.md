@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Working with snapshots (web portal)

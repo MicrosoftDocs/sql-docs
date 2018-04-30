@@ -2,7 +2,7 @@
 title: "XML Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -26,7 +26,6 @@ caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # XML Source
   The XML source reads an XML data file and populates the columns in the source output with the data.  

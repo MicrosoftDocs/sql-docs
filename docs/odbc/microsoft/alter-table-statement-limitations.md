@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ALTER TABLE Statement Limitations
 When the dBASE or Paradox driver is used, once an index has been created and a new record added, the structure of the table cannot be changed by the ALTER TABLE statement unless the index is dropped and the contents of the table are deleted.  

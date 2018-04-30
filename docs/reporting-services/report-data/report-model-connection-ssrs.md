@@ -18,7 +18,6 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Model Connection (SSRS)
   To include data from a report model, you must have a dataset that is based on a report model as a data source. Unlike other report data sources, there is no data extension for a report model. In Report Builder, you browse to and select the model directly from the report server. In Report Designer, you specify the URL to the report model.  

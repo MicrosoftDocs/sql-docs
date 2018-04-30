@@ -19,7 +19,6 @@ caps.latest.revision: 93
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Active"
 ---
 
 # System Requirements for the Microsoft Drivers for PHP for SQL Server

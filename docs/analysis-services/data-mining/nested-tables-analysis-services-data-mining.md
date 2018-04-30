@@ -22,7 +22,6 @@ caps.latest.revision: 52
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Nested Tables (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

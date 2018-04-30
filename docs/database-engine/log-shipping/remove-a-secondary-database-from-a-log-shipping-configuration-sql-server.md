@@ -23,7 +23,6 @@ caps.latest.revision: 19
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Remove a Secondary Database from a Log Shipping Configuration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

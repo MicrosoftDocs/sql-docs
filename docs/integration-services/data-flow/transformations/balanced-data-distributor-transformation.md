@@ -2,7 +2,7 @@
 title: "Balanced Data Distributor Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Balanced Data Distributor Transformation
   The Balanced Data Distributor (BDD) transformation takes advantage of concurrent processing capability of modern CPUs. It distributes buffers of incoming rows uniformly across outputs on separate threads. By using separate threads for each output path, the BDD component improves the performance of an SSIS package on multi-core or multi-processor machines.  

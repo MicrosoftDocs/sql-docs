@@ -2,7 +2,7 @@
 title: "Users and Groups (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -22,7 +22,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Users and Groups (Master Data Services)
 

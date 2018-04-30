@@ -2,7 +2,7 @@
 title: "Change Domain Values | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2011"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"
@@ -19,7 +19,6 @@ caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change Domain Values
 

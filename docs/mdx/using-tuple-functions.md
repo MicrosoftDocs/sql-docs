@@ -21,7 +21,6 @@ caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Using Tuple Functions
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

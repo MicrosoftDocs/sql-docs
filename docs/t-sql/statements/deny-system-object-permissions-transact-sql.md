@@ -24,7 +24,6 @@ caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DENY System Object Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

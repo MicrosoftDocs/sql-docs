@@ -1,6 +1,6 @@
 ---
 title: "Finishing Test Case Preparation (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Finishing Test Case Preparation (OracleToSQL)
 The wizard's final page displays the Test Case description and information about objects involved in the test. In addition, on this page you can set the test execution options.  

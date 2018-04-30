@@ -19,7 +19,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RDS Tutorial
 This tutorial illustrates using the RDS programming model to query and update a data source. First, it describes the steps necessary to accomplish this task. Then the tutorial is repeated in Microsoft® Visual Basic Scripting Edition (featuring ADO for Windows Foundation Classes (ADO/WFC)).  

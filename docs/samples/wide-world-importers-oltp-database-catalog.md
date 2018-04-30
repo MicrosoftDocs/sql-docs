@@ -1,7 +1,7 @@
 ---
 title: "WideWorldImporters OLTP database catalog - SQL | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "samples"
 ms.technology:
@@ -16,7 +16,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # WideWorldImporters database catalog
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

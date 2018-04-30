@@ -2,14 +2,13 @@
 title: "List Job Category Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
@@ -17,7 +16,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # List Job Category Information

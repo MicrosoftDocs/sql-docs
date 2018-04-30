@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CopyTo Method (ADO)
 Copies the specified number of characters or bytes (depending on [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)) in the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) to another **Stream** object.  

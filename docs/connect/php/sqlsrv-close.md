@@ -23,7 +23,6 @@ caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

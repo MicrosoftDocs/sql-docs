@@ -29,7 +29,6 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ReportingFirstMonth Element (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

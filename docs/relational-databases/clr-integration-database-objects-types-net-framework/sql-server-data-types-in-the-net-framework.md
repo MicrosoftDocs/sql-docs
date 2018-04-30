@@ -26,7 +26,6 @@ caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server Data Types in the .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

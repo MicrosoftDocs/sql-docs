@@ -2,7 +2,7 @@
 title: "Validate XML with the XML Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"
@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Validate XML with the XML Task
   Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task.  

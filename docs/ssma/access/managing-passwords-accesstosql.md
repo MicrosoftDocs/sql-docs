@@ -1,6 +1,6 @@
 ---
 title: "Managing Passwords (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-access"
@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Managing Passwords (AccessToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

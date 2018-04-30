@@ -2,7 +2,7 @@
 title: "|| (Logical OR) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "expressions"
@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # || (Logical OR) (SSIS Expression)
   Performs a logical OR operation. The expression evaluates to TRUE if one or both conditions are TRUE.  

@@ -20,7 +20,6 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Mining Structure Tasks and How-tos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

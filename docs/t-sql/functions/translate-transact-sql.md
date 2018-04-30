@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # TRANSLATE (Transact-SQL)

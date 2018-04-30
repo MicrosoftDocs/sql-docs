@@ -19,7 +19,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Driver Architecture
 Driver writers must be aware that the driver architecture can affect whether an application can use DBMS-specific SQL.  

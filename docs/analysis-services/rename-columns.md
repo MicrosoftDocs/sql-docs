@@ -20,7 +20,6 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # Rename columns
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

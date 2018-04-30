@@ -2,7 +2,7 @@
 title: "ODBC Flow Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ODBC Flow Components
   This topic describes the concepts necessary for creating an ODBC data flow using [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

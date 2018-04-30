@@ -17,7 +17,6 @@ caps.latest.revision: 17
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Treemap and sunburst charts in Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

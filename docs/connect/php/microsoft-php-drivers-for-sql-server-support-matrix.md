@@ -16,7 +16,6 @@ caps.latest.revision: 1
 author: "David-Engel"
 ms.author: "v-daveng"
 manager: ""
-ms.workload: "On Demand"
 ---
 
 # Microsoft PHP Drivers for SQL Server Support Matrix

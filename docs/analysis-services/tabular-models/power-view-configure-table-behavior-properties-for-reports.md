@@ -21,7 +21,6 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Power View - Configure Table Behavior Properties for Reports
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

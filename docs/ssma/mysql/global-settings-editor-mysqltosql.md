@@ -1,6 +1,6 @@
 ---
 title: "Global Settings (Editor) (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Global Settings (Editor) (MySQLToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

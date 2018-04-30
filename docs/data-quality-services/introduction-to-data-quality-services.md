@@ -2,7 +2,7 @@
 title: "Introduction to Data Quality Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"
@@ -19,7 +19,6 @@ caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Introduction to Data Quality Services
 

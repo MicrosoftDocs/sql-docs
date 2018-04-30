@@ -1,6 +1,6 @@
 ---
 title: "Connect To DB2 (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect To DB2 (DB2ToSQL)
 Use the **Connect to DB2** dialog box to connect to the DB2 database that you want to migrate.  

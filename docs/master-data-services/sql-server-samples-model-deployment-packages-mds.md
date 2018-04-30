@@ -2,7 +2,7 @@
 title: "SQL Server Examples: Model Deployment Packages (MDS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -20,7 +20,6 @@ caps.latest.revision: 21
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)
 

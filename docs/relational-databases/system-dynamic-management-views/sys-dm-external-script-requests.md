@@ -26,7 +26,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Correlation Names
 Correlation names are fully supported, including within the table list. For example, in the following string, E1 is the correlation name for the table named Emp:  

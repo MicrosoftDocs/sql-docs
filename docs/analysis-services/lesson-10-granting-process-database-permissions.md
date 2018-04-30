@@ -19,7 +19,6 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Lesson 10 - Granting Process Database Permissions
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

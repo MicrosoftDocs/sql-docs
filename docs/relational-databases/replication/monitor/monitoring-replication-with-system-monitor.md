@@ -21,7 +21,6 @@ caps.latest.revision: 30
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Monitoring Replication with System Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

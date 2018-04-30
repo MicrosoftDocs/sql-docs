@@ -17,7 +17,6 @@ caps.latest.revision: 1
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLServerException Constructors
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

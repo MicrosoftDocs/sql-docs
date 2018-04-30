@@ -2,7 +2,7 @@
 title: "Access the CDC Designer Console | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "change-data-capture"
@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Access the CDC Designer Console
   You can access the CDC Designer Console from the computer where you installed the console. For more information about installation, see Installation.  

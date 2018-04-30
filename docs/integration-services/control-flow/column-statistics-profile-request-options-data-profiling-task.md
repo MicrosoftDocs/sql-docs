@@ -2,7 +2,7 @@
 title: "Column Statistics Profile Request Options (Data Profiling Task) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Column Statistics Profile Request Options (Data Profiling Task)
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Statistics Profile Request** selected in the requests pane. A Column Statistics profile reports statistics such as minimum, maximum, average, and standard deviation for numeric columns, and minimum and maximum for **datetime** columns. This profile can help you identify problems in your data such as invalid dates. For example, you profile a column of historical dates and discover a maximum date that is in the future.  

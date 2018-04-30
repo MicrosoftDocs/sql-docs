@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Parameterized Query Limitations
 When the Microsoft Access driver is used, a parameterized query can be called using the following syntax: CALL *query-name* [(*parameter*[,*parameter*]...)].

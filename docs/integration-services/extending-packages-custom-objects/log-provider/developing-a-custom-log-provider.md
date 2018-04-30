@@ -2,7 +2,7 @@
 title: "Developing a Custom Log Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "extending-packages-custom-objects"
@@ -26,7 +26,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Developing a Custom Log Provider
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] has extensive logging capabilities that make it possible to capture events that occur during package execution. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes a variety of log providers that enable logs to be created and stored in formats such as XML, text, database, or in the Windows event log. If the log providers and the output formats that are provided do not entirely meet your requirements, you can create a custom log provider.  

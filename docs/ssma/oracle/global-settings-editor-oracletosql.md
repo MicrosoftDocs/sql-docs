@@ -1,6 +1,6 @@
 ---
 title: "Global Settings (Editor) (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Global Settings (Editor) (OracleToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

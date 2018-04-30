@@ -1,6 +1,6 @@
 ---
 title: "Project Settings(Loading System objects) (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Project Settings(Loading System objects) (OracleToSQL)
 The Loading System Objects page of the **Project Settings** dialog box lets you specify which Oracle system objects SSMA converts and loads into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

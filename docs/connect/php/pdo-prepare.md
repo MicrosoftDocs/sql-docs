@@ -17,7 +17,6 @@ caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

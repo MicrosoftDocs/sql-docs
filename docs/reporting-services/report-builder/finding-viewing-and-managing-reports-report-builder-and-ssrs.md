@@ -18,7 +18,6 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Finding, Viewing, and Managing Reports (Report Builder and SSRS )
   In Report Builder, you can browse folders on a report server or SharePoint site to find reports, shared data sources, models, and other related report items and browse your computer to find local reports. To make it easier to find reports, Report Builder maintains a list of recently used servers and sites and provides direct access to the Desktop, My Documents and My Computer folders in the file system of your computer.  

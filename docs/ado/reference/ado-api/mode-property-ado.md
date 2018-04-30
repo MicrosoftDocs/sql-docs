@@ -24,7 +24,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Mode Property (ADO)
 Indicates the available permissions for modifying data in a [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Record](../../../ado/reference/ado-api/record-object-ado.md), or [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

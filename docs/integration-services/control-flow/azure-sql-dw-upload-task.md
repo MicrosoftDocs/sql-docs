@@ -2,7 +2,7 @@
 title: "Azure SQL DW Upload Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "Lingxi-Li"
 ms.author: "lingxl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure SQL DW Upload Task
 The **Azure SQL DW Upload Task** enables an SSIS package to upload local data to a table in Azure SQL Data Warehouse (DW). The currently supported source data file format is delimited text in UTF8 encoding. The uploading process follows the efficient PolyBase approach as described in the article [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/). Specifically, data will first be uploaded to Azure Blob Storage, and then to Azure SQL DW. Therefore, an Azure Blob Storage account is needed to use this task.

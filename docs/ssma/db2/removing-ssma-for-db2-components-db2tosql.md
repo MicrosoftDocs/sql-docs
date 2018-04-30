@@ -1,6 +1,6 @@
 ---
 title: "Removing SSMA for DB2 Components (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Removing SSMA for DB2 Components (DB2ToSQL)
 When you have finished migrating databases from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time. However, you should not uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] unless your migrated databases no longer use functions in the **ssma_DB2** schema of the **sysdb** database.  

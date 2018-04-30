@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Frequently Asked Questions (FAQ) for ODBC Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

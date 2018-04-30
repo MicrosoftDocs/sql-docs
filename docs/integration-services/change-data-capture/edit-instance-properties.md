@@ -2,7 +2,7 @@
 title: "Edit Instance Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "change-data-capture"
@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Edit Instance Properties
   Use the Properties editor to make changes to the CDC instance after you create the initial configurations. You can do the following in the Properties editor.  

@@ -24,7 +24,6 @@ caps.latest.revision: 37
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Role Assignments
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], *role assignments* determine access to stored items and to the report server itself. A role assignment has the following parts:  

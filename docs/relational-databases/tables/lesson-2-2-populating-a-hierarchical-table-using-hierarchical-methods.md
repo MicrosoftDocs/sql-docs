@@ -23,7 +23,6 @@ caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Lesson 2-2 - Populating a Hierarchical Table Using Hierarchical Methods
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

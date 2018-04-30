@@ -1,6 +1,6 @@
 ---
 title: "New Project (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # New Project (DB2ToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

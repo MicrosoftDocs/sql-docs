@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.internal_partitions (Transact-SQL)

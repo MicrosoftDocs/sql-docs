@@ -22,7 +22,6 @@ caps.latest.revision: 9
 author: "jeannt"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # External Scripts Enabled server configuration option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

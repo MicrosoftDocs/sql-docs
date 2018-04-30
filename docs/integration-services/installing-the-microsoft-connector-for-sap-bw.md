@@ -2,7 +2,7 @@
 title: "Installing the Microsoft Connector for SAP BW | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "non-specific"
@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Installing the Microsoft Connector for SAP BW
   The [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 is a component of the SQL Server 2016 Feature Pack. To install the Connector for SAP BW and its documentation, download and run the installer from the [SQL Server 2016 Feature Pack web page](http://go.microsoft.com/fwlink/?LinkId=746297).  

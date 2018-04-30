@@ -26,7 +26,6 @@ caps.latest.revision: 37
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Advanced Merge Replication - Resolve Merge Replication Conflicts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

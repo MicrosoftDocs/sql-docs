@@ -2,7 +2,7 @@
 title: "Connect to a Master Data Services Database Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to a Master Data Services Database Dialog Box
 

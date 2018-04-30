@@ -22,7 +22,6 @@ caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Access WMI Provider for Configuration Management using WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

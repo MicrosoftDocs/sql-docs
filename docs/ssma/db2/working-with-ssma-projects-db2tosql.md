@@ -1,6 +1,6 @@
 ---
 title: "Working with SSMA Projects (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Working with SSMA Projects (DB2ToSQL)
 To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you first create an SSMA project. The project is a file that contains the following information:  

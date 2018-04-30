@@ -2,7 +2,7 @@
 title: "ODBC Source Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ODBC Source Custom Properties
   The following table describes the custom properties of the ODBC source. All properties can be set from SSIS property expressions.  

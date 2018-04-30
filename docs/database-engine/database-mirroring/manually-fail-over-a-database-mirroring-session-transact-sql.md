@@ -21,7 +21,6 @@ caps.latest.revision: 32
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Manually Fail Over a Database Mirroring Session (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

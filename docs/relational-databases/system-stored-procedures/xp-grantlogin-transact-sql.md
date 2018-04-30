@@ -24,7 +24,6 @@ caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

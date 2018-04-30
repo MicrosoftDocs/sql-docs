@@ -2,7 +2,7 @@
 title: "Change Data Capture (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "change-data-capture"
@@ -20,7 +20,6 @@ caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Change Data Capture (SSIS)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], change data capture offers an effective solution to the challenge of efficiently performing incremental loads from source tables to data marts and data warehouses.  

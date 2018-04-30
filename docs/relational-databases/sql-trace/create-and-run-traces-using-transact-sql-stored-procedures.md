@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create and Run Traces Using Transact-SQL Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

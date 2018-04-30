@@ -18,7 +18,6 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Built-in Collections in Expressions (Report Builder)
   In an expression in a report, you can include references to the following built-in collections: ReportItems, Parameters, Fields, DataSets, DataSources, Variables, and built-in fields for global information such as the report name. Not all collections appear in the **Expression** dialog box. The DataSets and DataSources collections are available only at run-time for published reports on a report server. The ReportItems collection is collection of text boxes in a report region, for example, the text boxes on a page or in a page header.  

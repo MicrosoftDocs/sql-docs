@@ -2,7 +2,7 @@
 title: "Explorer Functional Area (Master Data Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Explorer Functional Area (Master Data Manager)
 

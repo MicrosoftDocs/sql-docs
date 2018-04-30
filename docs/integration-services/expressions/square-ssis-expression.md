@@ -2,7 +2,7 @@
 title: "SQUARE (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "expressions"
@@ -20,7 +20,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQUARE (SSIS Expression)
   Returns the square of a numeric expression.  

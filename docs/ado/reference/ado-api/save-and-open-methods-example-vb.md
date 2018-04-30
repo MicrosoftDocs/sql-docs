@@ -22,7 +22,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Save and Open Methods Example (VB)
 These three examples demonstrate how the [Save](../../../ado/reference/ado-api/save-method.md) and [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) methods can be used together.  

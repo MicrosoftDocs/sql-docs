@@ -17,7 +17,6 @@ caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create and Store Column Master Keys (Always Encrypted)

@@ -16,7 +16,6 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Install Analysis Services in Power Pivot Mode
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

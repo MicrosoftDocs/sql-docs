@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Descriptor Transitions
 ODBC descriptors have the following three states.  

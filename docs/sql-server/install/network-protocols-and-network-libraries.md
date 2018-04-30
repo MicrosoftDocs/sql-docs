@@ -2,7 +2,7 @@
 title: "Network Protocols and Network Libraries | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install"
@@ -28,7 +28,6 @@ caps.latest.revision: 50
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Network Protocols and Network Libraries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,6 +1,6 @@
 ---
 title: "Installing SSMA for DB2 Client (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Installing SSMA for DB2 Client (DB2ToSQL)
 The SSMA client consists of the program files that perform the following tasks:  

@@ -21,7 +21,6 @@ caps.latest.revision: 26
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change the Session-Timeout Period for an Availability Replica (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

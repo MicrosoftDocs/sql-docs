@@ -8,7 +8,7 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 
 ms.component: ssis
 ms.date: 02/03/2018

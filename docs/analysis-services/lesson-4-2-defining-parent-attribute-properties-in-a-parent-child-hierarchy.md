@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Lesson 4-2 - Defining Parent Attribute Properties in a Parent-Child Hierarchy
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

@@ -2,7 +2,7 @@
 title: "Project Settings (Synchronization) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-sybase"
@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings (Synchronization) (SybaseToSQL)
 The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  

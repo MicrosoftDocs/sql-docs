@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetVirtualDirectory
   Sets the name of the virtual directory for a given application.  

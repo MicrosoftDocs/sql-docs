@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Binding Arrays of Parameters
 Applications that use arrays of parameters bind the arrays to the parameters in the SQL statement. There are two binding styles:  

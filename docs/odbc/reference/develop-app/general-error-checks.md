@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # General Error Checks
 The Driver Manager checks one general error. It always returns SQL_ERROR when it encounters the following error: The function must be supported by the driver.

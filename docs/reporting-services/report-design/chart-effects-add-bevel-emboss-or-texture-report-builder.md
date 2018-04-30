@@ -18,7 +18,6 @@ caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Chart Effects - Add Bevel, Emboss, or Texture (Report Builder)
   When using certain chart types, you can specify a drawing effect to increase the visual impact of your chart. These drawing effects are only applied to the series of your chart. They have no effect on any other chart element.  

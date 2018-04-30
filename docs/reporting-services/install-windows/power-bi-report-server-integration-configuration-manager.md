@@ -19,7 +19,6 @@ f1_keywords:
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Power BI Report Server Integration (Configuration Manager)

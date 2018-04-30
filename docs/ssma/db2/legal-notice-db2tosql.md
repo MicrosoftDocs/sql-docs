@@ -1,6 +1,6 @@
 ---
 title: "Legal Notice (DB2toSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Legal Notice (DB2toSQL)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  

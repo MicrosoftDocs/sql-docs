@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # CREATE TABLE Statement Limitations
 When the Microsoft Access, Microsoft Excel, or Paradoxdriver is used, and the length of a text or binary column is not specified (or is specified as 0), the column length will be set to 255.  

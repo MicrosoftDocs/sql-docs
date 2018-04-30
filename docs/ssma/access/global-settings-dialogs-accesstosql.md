@@ -1,6 +1,6 @@
 ---
 title: "Global Settings (Dialogs) (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-access"
@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Global Settings (Dialogs) (AccessToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

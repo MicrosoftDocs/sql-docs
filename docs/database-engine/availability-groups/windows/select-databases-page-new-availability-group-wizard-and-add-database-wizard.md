@@ -20,7 +20,6 @@ caps.latest.revision: 16
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

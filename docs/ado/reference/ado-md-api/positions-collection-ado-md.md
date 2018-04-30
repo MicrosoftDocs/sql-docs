@@ -24,7 +24,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Positions Collection (ADO MD)
 Contains the [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objects that define a point on an axis.  

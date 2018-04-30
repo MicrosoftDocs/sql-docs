@@ -2,7 +2,7 @@
 title: "Connecting to SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-sybase"
@@ -22,7 +22,6 @@ caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connecting to SQL Server (SybaseToSQL)
 To migrate Sybase Adaptive Server Enterprise (ASE) databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must connect to any of the target instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. When you connect, SSMA obtains metadata about all the databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and displays database metadata in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer. SSMA stores information about which instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] you are connected to, but does not store passwords.  

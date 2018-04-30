@@ -19,7 +19,6 @@ caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # MSSQLSERVER - Database Engine error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

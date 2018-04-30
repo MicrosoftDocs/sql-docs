@@ -22,7 +22,6 @@ caps.latest.revision: 38
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Design View
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Designer, use Design view to arrange report items in the report. Design view is sometimes called the design surface or layout view.  

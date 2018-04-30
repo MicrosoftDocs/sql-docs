@@ -18,7 +18,6 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Add Scale Breaks to a Chart (Report Builder and SSRS)

@@ -25,7 +25,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)
 The following code demonstrates how to create a new foreign key relationship between two existing tables named **Customers** and **Orders**.  

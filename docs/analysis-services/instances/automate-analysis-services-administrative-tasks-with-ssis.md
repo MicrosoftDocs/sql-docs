@@ -22,7 +22,6 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Automate Analysis Services Administrative Tasks with SSIS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

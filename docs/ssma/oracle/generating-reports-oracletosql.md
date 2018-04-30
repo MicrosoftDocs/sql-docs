@@ -1,6 +1,6 @@
 ---
 title: "Generating Reports (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -21,7 +21,6 @@ caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Generating Reports (OracleToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

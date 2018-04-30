@@ -24,7 +24,6 @@ caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

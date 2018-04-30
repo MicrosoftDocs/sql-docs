@@ -17,7 +17,6 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Install SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +59,7 @@ ms.workload: "Active"
   
 ```  
   
-Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
+Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
  **INSTANCENAME** must be less than 17 characters.  

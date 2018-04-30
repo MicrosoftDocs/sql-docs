@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Cross-Database Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

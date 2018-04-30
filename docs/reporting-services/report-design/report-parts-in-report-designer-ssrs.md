@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Report Parts in Report Designer (SSRS)

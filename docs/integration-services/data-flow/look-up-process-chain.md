@@ -2,7 +2,7 @@
 title: "Look Up Process Chain | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Look Up Process Chain
   Use the **Look Up Process Chain** dialog box to look up a process chain that is defined in the SAP Netweaver BW system. When the list of available process chains appears, select the chain that you want, and the source will populate the associated options with the required values.  

@@ -2,7 +2,7 @@
 title: "Data in Data Flows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -24,7 +24,6 @@ caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data in Data Flows
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of data types that are used in data flows.  

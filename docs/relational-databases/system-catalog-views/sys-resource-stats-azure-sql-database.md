@@ -27,7 +27,6 @@ caps.latest.revision: 28
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.resource_stats (Azure SQL Database)

@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Implementing IDENTITY in a Memory-Optimized Table

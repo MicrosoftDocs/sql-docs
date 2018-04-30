@@ -26,7 +26,6 @@ caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_os_performance_counters (Transact-SQL)

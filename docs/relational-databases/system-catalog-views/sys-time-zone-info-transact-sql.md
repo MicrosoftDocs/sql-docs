@@ -28,7 +28,6 @@ caps.latest.revision: 7
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.time_zone_info (Transact-SQL)

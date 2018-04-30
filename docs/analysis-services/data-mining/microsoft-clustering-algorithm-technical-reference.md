@@ -31,7 +31,6 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Microsoft Clustering Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

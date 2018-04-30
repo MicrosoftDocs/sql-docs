@@ -2,7 +2,7 @@
 title: "Connect to an Excel Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "import-export-data"
@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Connect to an Excel Data Source (SQL Server Import and Export Wizard)
 This article shows you how to connect to a **Microsoft Excel** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.

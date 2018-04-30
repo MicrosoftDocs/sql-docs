@@ -1,6 +1,6 @@
 ---
 title: "Connecting to DB2 Database (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connecting to DB2 Database (DB2ToSQL)
 To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must connect to the DB2 database that you want to migrate. When you connect, SSMA obtains metadata about all DB2 schemas, and then displays it in the DB2 Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  

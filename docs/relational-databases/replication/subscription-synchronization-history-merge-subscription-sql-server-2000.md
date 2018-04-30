@@ -19,7 +19,6 @@ caps.latest.revision: 19
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Subscription, Synchronization History (Merge Subscription, SQL Server 2000)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

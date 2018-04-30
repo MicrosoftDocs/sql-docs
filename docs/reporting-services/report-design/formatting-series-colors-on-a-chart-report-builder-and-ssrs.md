@@ -23,7 +23,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Formatting Series Colors on a Chart (Report Builder and SSRS)
   Reporting Services provides several built-in palettes for charts, or you can define a custom palette. By default, charts use the built-in **Pacific** color palette to fill each series. These colors also appear in the legend. When multiple series are added to the chart, the chart assigns the series a color in the order that the colors have been defined in the palette.  

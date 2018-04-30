@@ -2,7 +2,7 @@
 title: "Configure HealthCheckTimeout Property Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -17,7 +17,6 @@ caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Configure HealthCheckTimeout Property Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

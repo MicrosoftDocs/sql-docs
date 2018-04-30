@@ -2,7 +2,7 @@
 title: "Work with Multiple Versions and Instances of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install"
@@ -27,7 +27,6 @@ caps.latest.revision: 67
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "Active"
 ---
 # Work with Multiple Versions and Instances of SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -22,7 +22,6 @@ caps.latest.revision: 22
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Custom Report Item Implementation Requirements
   This topic will discuss the prerequisites for developing and deploying custom report items.  

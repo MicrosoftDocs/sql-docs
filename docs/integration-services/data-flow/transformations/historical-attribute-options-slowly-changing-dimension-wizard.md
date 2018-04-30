@@ -2,7 +2,7 @@
 title: "Historical Attribute Options (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Historical Attribute Options (Slowly Changing Dimension Wizard)
   Use the **Historical Attributes Options** dialog box to show historical attributes by start and end dates, or to record historical attributes in a column specially created for this purpose.  

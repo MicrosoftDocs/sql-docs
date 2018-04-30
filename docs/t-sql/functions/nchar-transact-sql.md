@@ -25,7 +25,6 @@ caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # NCHAR (Transact-SQL)
@@ -56,8 +55,8 @@ NCHAR ( integer_expression )
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
-DECLARE @d nvarchar(10) = N'ࣅ炙   
--– Old style method.  
+DECLARE @d nvarchar(10) = N'𣅿';
+-- Old style method.  
 SELECT NCHAR(0xD84C) + NCHAR(0xDD7F);   
   
 -- Preferred method.   

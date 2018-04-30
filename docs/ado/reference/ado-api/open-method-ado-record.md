@@ -23,7 +23,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Open Method (ADO Record)
 Opens an existing [Record](../../../ado/reference/ado-api/record-object-ado.md) object, or creates a new item represented by the **Record**, such as a file or directory.  

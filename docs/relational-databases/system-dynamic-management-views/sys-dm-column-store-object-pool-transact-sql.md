@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_column_store_object_pool (Transact-SQL)

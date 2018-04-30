@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # PDOStatement::columnCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

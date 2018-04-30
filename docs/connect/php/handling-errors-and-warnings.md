@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Handling Errors and Warnings
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

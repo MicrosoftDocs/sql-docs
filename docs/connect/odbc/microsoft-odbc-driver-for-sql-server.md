@@ -16,7 +16,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Microsoft ODBC Driver for SQL Server
 

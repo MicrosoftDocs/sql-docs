@@ -24,7 +24,6 @@ caps.latest.revision: 9
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # SSRS Encryption Keys - Delete and Re-create Encryption Keys
   Deleting and re-creating encryption keys are activities that fall outside of routine encryption key maintenance. You perform these tasks in response to a specific threat to your report server, or as a last resort when you can no longer access a report server database.  

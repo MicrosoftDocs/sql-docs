@@ -17,7 +17,6 @@ caps.latest.revision: 31
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Management Studio Support for In-Memory OLTP

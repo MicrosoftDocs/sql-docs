@@ -22,7 +22,6 @@ caps.latest.revision: 24
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Reporting Services Report Server (Native Mode)
   A report server configured for native mode runs as an application server that provides all processing and management capability exclusively through [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]components.  

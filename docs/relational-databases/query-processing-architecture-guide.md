@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Query Processing Architecture Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

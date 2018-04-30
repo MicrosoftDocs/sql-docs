@@ -1,6 +1,6 @@
 ---
 title: "Working with SSMA Projects (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "On Demand"
 ---
 # Working with SSMA Projects (OracleToSQL)
 To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you first create an SSMA project. The project is a file that contains the following information:  

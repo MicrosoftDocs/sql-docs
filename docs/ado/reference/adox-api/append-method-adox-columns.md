@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Append Method (ADOX Columns)
 Adds a new [Column](../../../ado/reference/adox-api/column-object-adox.md) object to the [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) collection.  

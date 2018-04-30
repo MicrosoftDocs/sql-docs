@@ -1,15 +1,14 @@
 ---
 title: "SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.date: "02/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
@@ -17,7 +16,6 @@ caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

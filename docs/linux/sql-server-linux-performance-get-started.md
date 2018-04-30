@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: ""
@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: "sql-linux"
-ms.workload: "Inactive"
 ---
 # Walkthrough for the performance features of SQL Server on Linux
 

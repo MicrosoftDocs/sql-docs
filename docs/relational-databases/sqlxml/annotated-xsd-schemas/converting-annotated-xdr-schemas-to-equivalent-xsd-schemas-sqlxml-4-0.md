@@ -25,7 +25,6 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Converting Annotated XDR Schemas to Equivalent XSD Schemas (SQLXML 4.0)

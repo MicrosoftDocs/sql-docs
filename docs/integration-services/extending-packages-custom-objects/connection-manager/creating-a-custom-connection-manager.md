@@ -2,7 +2,7 @@
 title: "Creating a Custom Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "extending-packages-custom-objects"
@@ -21,7 +21,6 @@ caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Creating a Custom Connection Manager
   The steps that you must follow to create a custom connection manager are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  

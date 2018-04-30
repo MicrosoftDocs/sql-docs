@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # PageSize Property (ADO)
 Indicates how many records constitute one page in the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -21,7 +21,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Cellset Example (VB)
 This Visual Basic project demonstrates the basics of using ADO MD to access cube data. It displays member captions for column and row headers, then displays formatted values of specific cells within the cellset.  

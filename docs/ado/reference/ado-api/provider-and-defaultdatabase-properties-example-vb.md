@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Provider and DefaultDatabase Properties Example (VB)
 This example demonstrates the [Provider](../../../ado/reference/ado-api/provider-property-ado.md) property by opening three [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects using different providers. It also uses the [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) property to set the default database for the Microsoft ODBC Provider.  

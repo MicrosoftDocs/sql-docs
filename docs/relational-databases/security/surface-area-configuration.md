@@ -24,7 +24,6 @@ caps.latest.revision: 79
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Surface Area Configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

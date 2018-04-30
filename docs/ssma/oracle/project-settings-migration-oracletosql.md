@@ -1,6 +1,6 @@
 ---
 title: "Project Settings (Migration) (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Project Settings (Migration) (OracleToSQL)
 The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

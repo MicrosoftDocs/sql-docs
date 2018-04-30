@@ -18,7 +18,6 @@ caps.latest.revision: 2
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Data Collection
 By default, the ReportViewer Control collects anonymous usage information in order for Microsoft to better understand how customers are making use of the control. By creating a better understanding of how customers are deploying and using the Viewer Control, future development can be focused on improvements that deliver the most value to customers.

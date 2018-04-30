@@ -20,7 +20,6 @@ caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Find Property Set GUIDs and Property Integer IDs for Search Properties

@@ -2,7 +2,7 @@
 title: "Integration Services (SSIS) Projects and Solutions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "non-specific"
@@ -25,7 +25,6 @@ caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Integration Services (SSIS) Projects and Solutions
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the development of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  

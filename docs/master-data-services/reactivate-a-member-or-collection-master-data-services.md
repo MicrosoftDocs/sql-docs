@@ -2,7 +2,7 @@
 title: "Reactivate a Member or Collection (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -24,7 +24,6 @@ caps.latest.revision: 11
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Reactivate a Member or Collection (Master Data Services)
 

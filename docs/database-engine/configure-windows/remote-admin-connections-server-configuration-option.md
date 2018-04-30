@@ -23,7 +23,6 @@ caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # remote admin connections Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

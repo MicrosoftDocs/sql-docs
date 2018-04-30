@@ -21,7 +21,6 @@ caps.latest.revision: 20
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Assemblies - Getting Information
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

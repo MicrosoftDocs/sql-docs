@@ -1,6 +1,6 @@
 ---
 title: "Working with the Sample Console Script Files (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -21,7 +21,6 @@ caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Working with the Sample Console Script Files (OracleToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

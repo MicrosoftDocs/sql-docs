@@ -1,6 +1,6 @@
 ---
 title: "Command Line Options in SSMA Console (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -30,7 +30,6 @@ caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Command Line Options in SSMA Console (MySQLToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

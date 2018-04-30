@@ -2,7 +2,7 @@
 title: "Manage a CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "change-data-capture"
@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Manage a CDC Service
   You can use the CDC Designer Console to view the services you created with the CDC Service Configuration Console and manage all of the instances in the Oracle CDC Service.  

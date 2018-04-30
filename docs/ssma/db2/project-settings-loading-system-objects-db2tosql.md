@@ -1,6 +1,6 @@
 ---
 title: "Project Settings(Loading System objects) (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Project Settings(Loading System objects) (DB2ToSQL)
 The Loading System Objects page of the **Project Settings** dialog box lets you specify which DB2 system objects SSMA converts and loads into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

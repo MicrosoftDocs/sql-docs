@@ -24,7 +24,6 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # DMX Statements - Data Definition 
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

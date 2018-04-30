@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Migration Assistant for Oracle (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
-ms.workload: "On Demand"
 ---
 # SQL Server Migration Assistant for Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle is a tool for migrating Oracle databases to [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 on Windows and Linux (Preview), and Azure SQL DB. SSMA for Oracle converts Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects, creates those objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and then migrates data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

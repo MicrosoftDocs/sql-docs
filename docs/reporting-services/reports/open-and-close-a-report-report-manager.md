@@ -22,7 +22,6 @@ caps.latest.revision: 51
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Open and Close a Report (Report Manager)
   You can use Report Manager to view reports that have been published to a report server. By default, all reports open in HTML. After a report is open, you can export it to view it in other application formats. If the report contains interactive features or if it is a Report Builder report that contains interactive data, you can click the links to view additional reports or data.  

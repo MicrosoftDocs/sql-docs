@@ -1,6 +1,6 @@
 ---
 title: "Appendix - 1 (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -20,7 +20,6 @@ caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Appendix - 1 (MySQLToSQL)
 Quick view of the SSMA Console command line options:  

@@ -22,7 +22,6 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # MDX Query and Slicer Axes - Specify the Contents of a Slicer Axis
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

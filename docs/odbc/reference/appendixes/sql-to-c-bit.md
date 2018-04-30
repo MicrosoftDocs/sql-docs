@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQL to C: Bit
 The identifier for the bit ODBC SQL data type is:  

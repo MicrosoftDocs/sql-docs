@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Specify First and Last Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -23,7 +23,6 @@ caps.latest.revision: 24
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify First and Last Triggers
@@ -55,7 +54,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  If an ALTER TRIGGER statement changes a first or last trigger, the **First** or **Last** attribute is dropped and the order value is set to **None**. The order must be reset by using **sp_settriggerorder**.  
   
- The OBJECTPROPERTY function reports whether a trigger is a first or last trigger by using the properties **ExecIsFirstTrigger** and **ExecIsLastTrigger**.  
+ The OBJECTPROPERTY function reports whether a trigger is a first or last trigger by using the followwing properties: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger**, and **ExecIsLastDeleteTrigger**.  
   
  Replication automatically generates a first trigger for any table that is included in an immediate updating or queued updating subscription. Replication requires that its trigger be the first trigger. Replication raises an error when you try to include a table with a first trigger in an immediate updating or queued updating subscription. If you try to make a trigger a first trigger after a table has been included in a subscription, **sp_settriggerorder** returns an error. If you use ALTER on the replication trigger or use **sp_settriggerorder** to change the replication trigger to a last or none trigger, the subscription will not function correctly.  
   

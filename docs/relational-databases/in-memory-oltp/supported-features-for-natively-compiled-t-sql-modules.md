@@ -17,7 +17,6 @@ caps.latest.revision: 44
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Supported Features for Natively Compiled T-SQL Modules

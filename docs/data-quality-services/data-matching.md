@@ -2,7 +2,7 @@
 title: "Data Matching | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"
@@ -17,7 +17,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Matching
 

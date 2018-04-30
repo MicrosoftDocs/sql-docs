@@ -25,7 +25,6 @@ caps.latest.revision: 35
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Implementing a DataReader Class for a Data Processing Extension
   The **DataReader** object enables a client to retrieve a read-only, forward-only stream of data from a data source. Results are returned as the query executes and are stored in the network buffer on the client until you request them using the **Read** method of the **DataReader** class. To create a **DataReader** class, implement <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> and optionally implement <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>. Using a **DataReader** object increases application performance both by retrieving data as soon as it is available, rather than waiting for the entire results of the query to be returned, and (by default) storing only one row at a time in memory, reducing system overhead.  

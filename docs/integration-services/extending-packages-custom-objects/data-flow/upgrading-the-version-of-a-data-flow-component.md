@@ -2,7 +2,7 @@
 title: "Upgrading the Version of a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "extending-packages-custom-objects"
@@ -24,7 +24,6 @@ caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Upgrading the Version of a Data Flow Component
   Packages that were created with an older version of your component may contain metadata that is no longer valid, such as custom properties whose usage has been modified in newer versions of the component. You can override the <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> method of the <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> base class to update the metadata previously saved in older packages to reflect the current properties of your component.  

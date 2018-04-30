@@ -21,7 +21,6 @@ caps.latest.revision: 18
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Application Domains for Report Server Applications
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], the report server is implemented as a single service that contains the Report Server Web service, Report Manager, and a background processing application. Each application runs in its own application domain within the single report server process. For the most part, application domains are created, configured, and managed internally. However, knowing how recycle operations occur for report server application domains can be helpful if you are investigating performance or memory issues or troubleshooting service disruptions.  

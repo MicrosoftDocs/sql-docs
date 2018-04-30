@@ -23,7 +23,6 @@ caps.latest.revision: 6
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Query Store Stored Procedures (Transact-SQL)

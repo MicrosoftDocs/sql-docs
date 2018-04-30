@@ -3,7 +3,7 @@ title: Backup and restore a database using SQL Operations Studio (preview) | Mic
 description: Learn how to backup and restore a database using SQL Operations Studio (preview)
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
@@ -13,7 +13,6 @@ ms.topic: "tutorial"
 author: "erickangMSFT"
 ms.author: "erickang"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Backup and Restore using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

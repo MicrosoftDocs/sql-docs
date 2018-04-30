@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.database_event_session_events (Azure SQL Database)

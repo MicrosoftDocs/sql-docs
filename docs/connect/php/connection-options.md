@@ -17,7 +17,6 @@ caps.latest.revision: 37
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Connection Options
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

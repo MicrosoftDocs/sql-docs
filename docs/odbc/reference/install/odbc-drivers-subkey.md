@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Drivers Subkey
 The values under the ODBC Drivers subkey list the installed drivers. The format of these values is shown in the following table.  

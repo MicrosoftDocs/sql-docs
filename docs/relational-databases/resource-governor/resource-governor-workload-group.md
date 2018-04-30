@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Resource Governor Workload Group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "v-saume"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Tune compression for availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

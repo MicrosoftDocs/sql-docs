@@ -26,7 +26,6 @@ caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)

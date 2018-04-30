@@ -1,6 +1,6 @@
 ---
 title: "Executing the SSMA Console (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -28,7 +28,6 @@ caps.latest.revision: 25
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Executing the SSMA Console (MySQLToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities.  

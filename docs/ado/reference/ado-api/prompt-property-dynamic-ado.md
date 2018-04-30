@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Prompt Property-Dynamic (ADO)
 Specifies whether the OLE DB provider should prompt the user for initialization information.  

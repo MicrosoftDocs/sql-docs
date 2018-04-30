@@ -1,6 +1,6 @@
 ---
 title: "Converting Oracle Schemas (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -19,7 +19,6 @@ caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "On Demand"
 ---
 # Converting Oracle Schemas (OracleToSQL)
 After you have connected to Oracle, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and set project and data mapping options, you can convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects.  

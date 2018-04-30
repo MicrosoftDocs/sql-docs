@@ -16,7 +16,6 @@ ms.topic: "article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Upload documents to a SharePoint library (Reporting Services in SharePoint mode)
 

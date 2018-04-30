@@ -2,7 +2,7 @@
 title: "Master Data Services Features and Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Master Data Services Features and Tasks
 

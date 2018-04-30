@@ -2,7 +2,7 @@
 title: "Extract Data by Using the ODBC Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Extract Data by Using the ODBC Source
   This procedure describes how to extract data by using an ODBC source. To add and configure an ODBC source, the package must already include at least one Data Flow task.  

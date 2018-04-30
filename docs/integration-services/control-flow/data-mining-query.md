@@ -2,7 +2,7 @@
 title: "Data Mining Query | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "control-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Mining Query
   The design pane contains the data mining prediction query builder, which you can use to build data mining prediction queries. You can design either prediction queries based on input tables, or singleton prediction queries. Switch to the result view to run the query and view the results. The query view displays the Data Mining Extensions (DMX) query created by the prediction query builder.  

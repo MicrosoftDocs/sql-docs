@@ -2,7 +2,7 @@
 title: "Operators (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "expressions"
@@ -22,7 +22,6 @@ caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Operators (SSIS Expression)
   This section describes the operators the expression language provides and the operator precedence and associativity that the expression evaluator uses.  

@@ -21,7 +21,6 @@ caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Setup Steps for Extensible Key Management Using the Azure Key Vault
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

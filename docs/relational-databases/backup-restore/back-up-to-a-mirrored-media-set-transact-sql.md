@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Back Up to a Mirrored Media Set (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

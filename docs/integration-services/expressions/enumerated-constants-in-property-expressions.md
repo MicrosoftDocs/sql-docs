@@ -2,7 +2,7 @@
 title: "Enumerated Constants in Property Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "expressions"
@@ -24,7 +24,6 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Enumerated Constants in Property Expressions
   If property expressions include values from an enumerator member list, the expression must use the numeric value of the enumerator member instead of the friendly name of the member. For example, if an expression sets the **LoggingMode** property then you must use the numeric value 2 instead of the friendly name Disabled.  

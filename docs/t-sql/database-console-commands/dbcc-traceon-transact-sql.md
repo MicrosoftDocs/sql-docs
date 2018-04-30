@@ -27,7 +27,6 @@ caps.latest.revision: 36
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

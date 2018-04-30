@@ -2,7 +2,7 @@
 title: "Run Windows PowerShell Steps in SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "powershell"
 ms.service: ""
 ms.component: "powershell"
@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Run Windows PowerShell Steps in SQL Server Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

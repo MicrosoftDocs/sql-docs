@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Configuring IIS for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

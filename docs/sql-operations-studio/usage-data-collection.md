@@ -3,7 +3,7 @@ title: Enable or disable usage data collection, and crash reporting for SQL Oper
 description: This article explains how to control if usage and crash reporting data is collected and sent to Microsoft.
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Enable or disable usage data collection for [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

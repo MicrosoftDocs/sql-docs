@@ -2,7 +2,7 @@
 title: "Hadoop and HDFS Support in Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "non-specific"
@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Hadoop and HDFS Support in Integration Services (SSIS)
   SQL Server 2016 Integration Services (SSIS) includes the following components that provide support for Hadoop and HDFS on premises.  

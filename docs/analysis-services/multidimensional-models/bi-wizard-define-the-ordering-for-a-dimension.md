@@ -26,7 +26,6 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # BI Wizard - Define the Ordering for a Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

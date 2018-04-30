@@ -1,6 +1,6 @@
 ---
 title: "Global Settings (Editor) (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-access"
@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Global Settings (Editor) (AccessToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

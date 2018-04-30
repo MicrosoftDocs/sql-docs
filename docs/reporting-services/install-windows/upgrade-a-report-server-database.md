@@ -22,7 +22,6 @@ caps.latest.revision: 44
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Upgrade a Report Server Database

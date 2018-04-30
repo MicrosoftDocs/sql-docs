@@ -18,7 +18,6 @@ caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)

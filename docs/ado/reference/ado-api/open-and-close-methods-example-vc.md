@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Open and Close Methods Example (VC++)
 This example uses the **Open** and [Close](../../../ado/reference/ado-api/close-method-ado.md) methods on both [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects that have been opened.  

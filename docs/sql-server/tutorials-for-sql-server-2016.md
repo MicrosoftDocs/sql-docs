@@ -2,8 +2,8 @@
 title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
@@ -17,7 +17,6 @@ caps.latest.revision: 40
 author: "craigg-msft"
 ms.author: "craigg"
 manager: craigg
-ms.workload: "Active"
 ---
 # Tutorials for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

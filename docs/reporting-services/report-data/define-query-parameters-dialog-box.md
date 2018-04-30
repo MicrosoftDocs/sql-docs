@@ -21,7 +21,6 @@ caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Define Query Parameters Dialog Box
   Use the **Define Query Parameters** dialog box to specify parameter values when you run a query in a query designer at design time to see sample data. Query parameters filter data on the data source and help to limit the amount of data that a report processes. These values are not saved in the report definition.  

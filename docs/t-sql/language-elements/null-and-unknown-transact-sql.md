@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # NULL and UNKNOWN (Transact-SQL)

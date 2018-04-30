@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # executeUpdate Method (java.lang.String)
 

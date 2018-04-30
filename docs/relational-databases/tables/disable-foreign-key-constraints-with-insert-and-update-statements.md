@@ -23,7 +23,6 @@ caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Disable Foreign Key Constraints with INSERT and UPDATE Statements

@@ -26,7 +26,6 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MDX Scripting Fundamentals (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

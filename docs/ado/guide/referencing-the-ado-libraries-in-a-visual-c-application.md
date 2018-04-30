@@ -22,7 +22,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Referencing the ADO Libraries In a Visual C++ Application
 To use the latest version of ADO in a Visual C++ application, use the following `#import` directive:  

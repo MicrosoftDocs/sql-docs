@@ -21,7 +21,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQL to C: Character
 The identifiers for the character ODBC SQL data types are:  

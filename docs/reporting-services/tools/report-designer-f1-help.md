@@ -20,7 +20,6 @@ caps.latest.revision: 63
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Designer F1 Help
   This section provides F1 Help for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  

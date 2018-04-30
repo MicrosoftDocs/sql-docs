@@ -2,7 +2,7 @@
 title: "Inferred Dimension Members (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Inferred Dimension Members (Slowly Changing Dimension Wizard)
   Use the **Inferred Dimension Members** dialog box to specify options for using inferred members. Inferred members exist when a fact table references dimension members that are not yet loaded. When data for the inferred member is loaded, you can update the existing record rather than create a new one.  

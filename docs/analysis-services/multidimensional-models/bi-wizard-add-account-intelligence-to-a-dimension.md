@@ -23,7 +23,6 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # BI Wizard - Add Account Intelligence to a Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

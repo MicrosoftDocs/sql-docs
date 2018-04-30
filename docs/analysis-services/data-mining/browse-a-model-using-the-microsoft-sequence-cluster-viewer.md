@@ -28,7 +28,6 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Browse a Model Using the Microsoft Sequence Cluster Viewer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

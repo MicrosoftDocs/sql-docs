@@ -2,7 +2,7 @@
 title: "Create a Domain-Based Attribute (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -21,7 +21,6 @@ caps.latest.revision: 12
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create a Domain-Based Attribute (Master Data Services)
 

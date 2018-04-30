@@ -26,7 +26,6 @@ caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_os_process_memory (Transact-SQL)

@@ -2,7 +2,7 @@
 title: "Connect to an ODBC Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "import-export-data"
@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to an **ODBC** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.

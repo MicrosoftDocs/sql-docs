@@ -19,7 +19,6 @@ caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Memory-Optimized Table Dynamic Management Views (Transact-SQL)

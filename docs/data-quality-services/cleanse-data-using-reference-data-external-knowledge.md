@@ -2,7 +2,7 @@
 title: "Cleanse Data Using Reference Data (External) Knowledge | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.service: ""
 ms.component: "data-quality-services"
@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Cleanse Data Using Reference Data (External) Knowledge
 

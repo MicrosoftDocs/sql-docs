@@ -18,7 +18,6 @@ helpviewer_keywords:
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```  
+```cpp  
   
 HRESULT BCPSetBulkMode (  
       int property,  
@@ -87,37 +86,37 @@ HRESULT BCPSetBulkMode (
   
  Below are some examples of function calls that result in a function sequence error:  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_IN);  
 BCPSetBulkMode();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPSetBulkMode();  
 BCPReadFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_HINTS, "select …");  
 BCPSetBulkMode();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPSetBulkMode();  
 BCPColFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPReadFmt();  
 BCPColFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
@@ -125,13 +124,13 @@ BCPControl(BCP_OPTION_HINTS, "select …");
 BCPReadFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPColumns();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetColFmt();  
@@ -140,9 +139,9 @@ BCPSetColFmt();
 ## Example  
  The following sample creates four files using different settings of IBCPSession2::BCPSetBulkMode.  
   
-```  
+```cpp  
   
-// compile with: msoledbsql.lib oleaut32.lib ole32.lib  
+// compile with: oleaut32.lib ole32.lib  
   
 #include <stdio.h>  
 #include "msoledbsql.h"  

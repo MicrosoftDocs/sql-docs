@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Installer DLL Function Summary
 The following table describes the functions in the installer DLL. For more information about the syntax and semantics for each function, see [Installer DLL API Reference](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

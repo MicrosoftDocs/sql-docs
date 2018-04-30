@@ -2,7 +2,7 @@
 title: "Master Data Services Installation and Configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -17,7 +17,6 @@ caps.latest.revision: 44
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Master Data Services Installation and Configuration
 

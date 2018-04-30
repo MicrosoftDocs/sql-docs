@@ -2,7 +2,7 @@
 title: "Fuzzy Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -40,7 +40,6 @@ caps.latest.revision: 75
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Fuzzy Lookup Transformation
   The Fuzzy Lookup transformation performs data cleaning tasks such as standardizing data, correcting data, and providing missing values.  

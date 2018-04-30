@@ -2,8 +2,8 @@
 title: "What's New in SQL Server 2016"
 ms.custom: ""
 ms.date: "07/21/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
@@ -24,7 +24,6 @@ caps.latest.revision: 224
 author: "craigg-msft"
 ms.author: "craigg"
 manager: craigg
-ms.workload: "Active"
 ---
 # What's new in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  

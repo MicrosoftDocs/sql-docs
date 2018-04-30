@@ -2,7 +2,7 @@
 title: "Create Master Data Manager Web Service Proxy Classes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "develop"
@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create Master Data Manager Web Service Proxy Classes
 

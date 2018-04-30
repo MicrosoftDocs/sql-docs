@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Tabular Model Partitions 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

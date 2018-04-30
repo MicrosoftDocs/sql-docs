@@ -19,7 +19,6 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Lesson 6-1 - Defining Calculated Members
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

@@ -3,7 +3,7 @@ title: Use Active Directory Authentication (Kerberos) when connecting with SQL O
 description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Operations Studio (preview)
 ms.custom: "tools|sos"
 ms.date: "11/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "meet-bhagdev"
 ms.author: "meetb"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 

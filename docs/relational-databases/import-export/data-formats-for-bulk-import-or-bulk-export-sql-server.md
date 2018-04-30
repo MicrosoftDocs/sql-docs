@@ -20,7 +20,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Data Formats for Bulk Import or Bulk Export (SQL Server)

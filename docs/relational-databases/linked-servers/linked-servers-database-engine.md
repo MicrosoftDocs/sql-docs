@@ -26,7 +26,6 @@ caps.latest.revision: 36
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Linked Servers (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

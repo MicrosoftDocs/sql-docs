@@ -2,7 +2,7 @@
 title: "Choose a Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "import-export-data"
@@ -19,7 +19,6 @@ caps.latest.revision: 124
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
   After the Welcome page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Choose a Data Source**. On this page, you provide info about the source of your data and about how to connect to it.

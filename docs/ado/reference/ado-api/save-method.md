@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Save Method
 Saves the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in a file or [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

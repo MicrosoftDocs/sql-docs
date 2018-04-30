@@ -2,7 +2,7 @@
 title: "Integration Services (SSIS) Development and Management Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "non-specific"
@@ -25,7 +25,6 @@ caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Integration Services (SSIS) Development and Management Tools
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes two studios for working with packages:  

@@ -24,7 +24,6 @@ caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Create a Server Audit and Server Audit Specification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

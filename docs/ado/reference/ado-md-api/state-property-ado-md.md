@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # State Property (ADO MD)
 Indicates the current state of the cellset.  

@@ -2,7 +2,7 @@
 title: "Walkthrough: Publish an SSIS Package as a SQL View | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
   This walkthrough provides detailed steps to publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  

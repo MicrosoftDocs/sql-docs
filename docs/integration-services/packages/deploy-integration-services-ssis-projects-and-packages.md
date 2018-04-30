@@ -2,7 +2,7 @@
 title: "Deploy Integration Services (SSIS) Projects and Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "packages"
@@ -25,7 +25,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Deploy Integration Services (SSIS) Projects and Packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the legacy package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  

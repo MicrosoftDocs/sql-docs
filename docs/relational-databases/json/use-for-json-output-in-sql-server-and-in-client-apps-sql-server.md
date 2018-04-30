@@ -20,7 +20,6 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)

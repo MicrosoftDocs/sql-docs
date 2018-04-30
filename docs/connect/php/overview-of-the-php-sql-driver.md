@@ -17,7 +17,6 @@ caps.latest.revision: 73
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Overview of the Microsoft Drivers for PHP for SQL Server
 

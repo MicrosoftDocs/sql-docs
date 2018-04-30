@@ -18,7 +18,6 @@ caps.latest.revision: 11
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # DBCC SHRINKLOG (Parallel Data Warehouse)

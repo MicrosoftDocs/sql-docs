@@ -2,7 +2,7 @@
 title: "Welcome to SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "import-export-data"
@@ -19,7 +19,6 @@ caps.latest.revision: 74
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Welcome to SQL Server Import and Export Wizard
   When you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, the first page is **Welcome to SQL Server Import and Export Wizard**. You don't have to take any action on this page.

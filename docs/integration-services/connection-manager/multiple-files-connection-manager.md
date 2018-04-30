@@ -2,7 +2,7 @@
 title: "Multiple Files Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "connection-manager"
@@ -24,7 +24,6 @@ caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Multiple Files Connection Manager
   A Multiple Files connection manager enables a package to reference existing files and folders, or to create files and folders at run time.  

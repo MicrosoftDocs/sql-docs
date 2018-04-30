@@ -26,7 +26,6 @@ caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)

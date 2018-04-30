@@ -2,7 +2,7 @@
 title: "Uninstall an Existing Instance of SQL Server (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install"
@@ -22,7 +22,6 @@ caps.latest.revision: 74
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

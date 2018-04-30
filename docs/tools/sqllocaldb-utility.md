@@ -2,7 +2,7 @@
 title: "SqlLocalDB Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "sqllocaldb"
@@ -21,7 +21,6 @@ caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # SqlLocalDB Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

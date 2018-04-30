@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2012 Release Notes | Microsoft Docs"
 ms.prod: "sql"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: sql
 ms.technology: "supportability"
 ms.custom: ""
 ms.date: "01/31/2017"
@@ -15,7 +15,6 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: "Inactive"
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Release Notes

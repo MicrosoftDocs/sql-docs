@@ -2,7 +2,7 @@
 title: "Create an Entity (MDS Add-in for Excel) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "microsoft-excel-add-in"
@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create an Entity (MDS Add-in for Excel)
 

@@ -2,7 +2,7 @@
 title: "Editions and supported features of SQL Server 2017 ~ Linux | Microsoft Docs"
 ms.custom: "sql-linux"
 ms.date: "09/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: ""

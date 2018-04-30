@@ -19,7 +19,6 @@ caps.latest.revision: 14
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Where to find the Reporting Services add-in for SharePoint Products

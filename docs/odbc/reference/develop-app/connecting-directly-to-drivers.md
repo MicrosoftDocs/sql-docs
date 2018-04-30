@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Connecting Directly to Drivers
 As was discussed in [Choosing a Data Source or Driver](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md), earlier in this section, some applications do not want to use a data source at all. Instead, they want to connect directly to a driver. **SQLDriverConnect** provides a way for the application to connect directly to a driver without specifying a data source. Conceptually, a temporary data source is created at run time.  

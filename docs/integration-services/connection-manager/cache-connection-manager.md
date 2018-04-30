@@ -2,7 +2,7 @@
 title: "Cache Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "connection-manager"
@@ -21,7 +21,6 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Cache Connection Manager
   The Cache connection manager reads data from the Cache transform or from a cache file (.caw), and can save the data to a cache file. Whether you configure the Cache connection manager to use a cache file, the data is always stored in memory.  

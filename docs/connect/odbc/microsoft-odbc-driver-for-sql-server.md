@@ -27,13 +27,13 @@ The ODBC driver comes with tools such as [**sqlcmd**](../../tools/sqlcmd-utility
 
 ## Code example in C++
 
-We have a small .zip file that contains the source code of a C++ program which uses ODBC:
+The following C++ sample demonstrates how to use the ODBC APIs to connect to and access a database:
 
 - [C++ code example, using ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## Download
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](../connect/odbc/download-odbc-driver-for-sql-server.md)
+- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
 
 ## Documentation
 

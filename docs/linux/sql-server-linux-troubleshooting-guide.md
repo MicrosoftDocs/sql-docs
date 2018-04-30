@@ -216,7 +216,7 @@ As a last resort, you can choose to rebuild the master and model databases back 
 
 4. Using special characters in password.
 
-   If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal. You must escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
+   If you use some characters in the SQL Server login password, you might need to escape them with a backslash when you use them in a Linux command in the terminal. For example, you must escape the dollar sign ($) anytime you use it in a terminal command/shell script:
 
    Does not work:
 

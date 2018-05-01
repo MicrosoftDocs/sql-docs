@@ -8,8 +8,7 @@ ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 

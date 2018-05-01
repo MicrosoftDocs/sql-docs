@@ -28,7 +28,7 @@ manager: "mblythe"
   
  For script samples, see the following:  
   
- [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

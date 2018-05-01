@@ -48,7 +48,7 @@ manager: "mblythe"
   
  PowerShell calling the core object model and for the most part valid for SharePoint and native mode, for example the migration work, subscription work, and more related samples for subscriptions work in SQL15.  
   
--   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+-   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 -   [Use PowerShell to Create an Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/azure/dn449661.aspx).  
   

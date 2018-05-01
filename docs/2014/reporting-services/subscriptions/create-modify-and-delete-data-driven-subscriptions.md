@@ -38,7 +38,7 @@ manager: "mblythe"
 -   [Manage and delete a data-driven subscription](#bkmk_manage_and_delete)  
   
 ##  <a name="bkmk_create_and_modify"></a> Create and Modify a Data-Driven Subscription  
- To create a new data-driven subscription or modify an existing subscription, use the Create Data-Driven Subscription pages in Report Manager. These pages walk you through each step of creating or modifying a subscription. To access a subscription after it is created, use the My Subscriptions page and the Subscriptions list of a report. To learn how to create a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md).  
+ To create a new data-driven subscription or modify an existing subscription, use the Create Data-Driven Subscription pages in Report Manager. These pages walk you through each step of creating or modifying a subscription. To access a subscription after it is created, use the My Subscriptions page and the Subscriptions list of a report. To learn how to create a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  To create a data-driven subscription, select a report that uses stored credentials or no credentials. When you create the data-driven subscription, consider using a naming convention for the description field so you can easily differentiate standard subscriptions from data-driven subscriptions.  
   
@@ -83,7 +83,7 @@ manager: "mblythe"
   
 -   **Data requirements**. You must have an accessible external data source that contains subscriber data.  
   
--   **User requirements**. The author of the subscription must have permission to "Manage reports" and "Manage all subscriptions." For more information about item-level task permissions, see [Tasks and Permissions](security/tasks-and-permissions.md). The author must also have the necessary credentials to access the external data source that contains subscriber data.  
+-   **User requirements**. The author of the subscription must have permission to "Manage reports" and "Manage all subscriptions." For more information about item-level task permissions, see [Tasks and Permissions](../security/tasks-and-permissions.md). The author must also have the necessary credentials to access the external data source that contains subscriber data.  
   
 ##  <a name="bkmk_define_query"></a> Define a query that retrieves subscription information  
  A data-driven subscription must specify a query or command that retrieves subscriber data. The query should produce one row for each subscriber. If you are using the e-mail delivery extension, the query should return a valid e-mail alias for each subscriber. The number of deliveries that are made is based on the number of rows returned by the query. If the row set consists of 10,000 rows, the subscription delivers 10,000 reports.  

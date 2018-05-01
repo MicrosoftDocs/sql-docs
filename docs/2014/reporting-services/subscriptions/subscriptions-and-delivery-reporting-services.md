@@ -75,7 +75,7 @@ manager: "mblythe"
 ##  <a name="bkmk_subscription_scenarios"></a> Subscription and Delivery Scenarios  
  For each subscription, you configure delivery options and the available options are determined by the delivery extension you choose. A delivery extension is a module that supports some manner of distribution. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes several delivery extensions and delivery extension may be available through third-party vendors.  
   
- If you are a developer, you can create custom delivery extensions to support additional scenarios. For more information, see [Implementing a Delivery Extension](../extensionsdelivery-extension/implementing-a-delivery-extension.md).  
+ If you are a developer, you can create custom delivery extensions to support additional scenarios. For more information, see [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
  The following table describes the common [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscription scenarios.  
   
@@ -93,7 +93,7 @@ manager: "mblythe"
   
 -   [Data-Driven Subscriptions](data-driven-subscriptions.md)  
   
--   [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
+-   [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)  
   
 ##  <a name="bkmk_subscription_requirements"></a> Subscription Requirements  
  Before you can create a subscription to a report, the following prerequisites must be met:  
@@ -119,7 +119,7 @@ manager: "mblythe"
 |Null|The null delivery provider is a highly specialized delivery extension that is used to preload a cache with ready-to-view parameterized reports This method is not available to users in individual subscriptions. Null delivery is used by administrators in data-driven subscriptions to improve report server performance by preloading the cache.|  
   
 > [!NOTE]  
->  Report delivery is an extensible part of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] architecture. Third-party vendors can create custom delivery extensions to route reports to different locations or devices. For more information about custom delivery extensions, see [Implementing a Delivery Extension](../extensionsdelivery-extension/implementing-a-delivery-extension.md).  
+>  Report delivery is an extensible part of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] architecture. Third-party vendors can create custom delivery extensions to route reports to different locations or devices. For more information about custom delivery extensions, see [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
 ##  <a name="bkmk_parts_of_subscription"></a> Parts of a Subscription  
  A subscription definition consists of the following parts:  
@@ -169,7 +169,7 @@ manager: "mblythe"
  A snapshot update event uses the scheduled update of a report snapshot to trigger a subscription. You can define a subscription that is triggered whenever the report is updated with new data, based on report execution properties that are set on the report.  
   
 ## See Also  
- [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Schedules](schedules.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)   

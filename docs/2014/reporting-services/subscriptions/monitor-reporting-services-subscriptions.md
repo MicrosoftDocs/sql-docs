@@ -92,7 +92,7 @@ manager: "mblythe"
 4.  Select **Manage Subscriptions**  
   
 ### SharePoint ULS Log files  
- Subscription related information is written to the SharePoint ULS log. For more information on configuring [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] events for the ULS log, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  The following is an example ULS log entry related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions.  
+ Subscription related information is written to the SharePoint ULS log. For more information on configuring [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] events for the ULS log, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  The following is an example ULS log entry related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions.  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
@@ -100,7 +100,7 @@ manager: "mblythe"
 |5/21/2014 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Use PowerShell to monitor subscriptions  
- For example PowerShell scripts you can use to check the status of Native mode or SharePoint mode subscriptions, see [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../manage-subscription-owners-and-run-subscription-powershell.md).  
+ For example PowerShell scripts you can use to check the status of Native mode or SharePoint mode subscriptions, see [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ##  <a name="bkmk_manage_inactive"></a> Managing Inactive Subscriptions  
  If a subscription becomes inactive, you should either delete it or reactivate it by resolving the underlying conditions that prevent it from being processed. Subscriptions can become inactive if conditions occur that prevent processing. These conditions include:  

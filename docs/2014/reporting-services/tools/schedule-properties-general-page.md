@@ -61,6 +61,6 @@ manager: "mblythe"
  [Report Server in Management Studio F1 Help](report-server-in-management-studio-f1-help.md)   
  [Connect to a Report Server in Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)   
- [Schedules](schedules.md)  
+ [Schedules](../subscriptions/schedules.md)  
   
   

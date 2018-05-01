@@ -22,6 +22,6 @@ manager: "mblythe"
   
 ## See Also  
  [Feature Reference &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   
- [Reporting Services Reports &#40;SSRS&#41;](../reporting-services-reports-ssrs.md)  
+ [Reporting Services Reports &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)  
   
   

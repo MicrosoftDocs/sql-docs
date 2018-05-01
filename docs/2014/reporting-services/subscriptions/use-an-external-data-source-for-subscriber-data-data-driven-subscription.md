@@ -79,6 +79,6 @@ manager: "mblythe"
 ## See Also  
  [Create, Modify, and Delete a Data-Driven Subscription](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
- [Subscriptions and Delivery &#40;Reporting Services&#41;](../subscriptions-and-delivery-reporting-services.md)  
+ [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

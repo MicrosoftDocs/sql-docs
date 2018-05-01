@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Review [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online for instructions on how to install report server instances.  
   
--   If you are planning to host the scale-out deployment on a network load balanced (NLB) cluster, you should configure the NLB cluster before you configure the scale-out deployment. For more information, see [Configure a Report Server on a Network Load Balancing Cluster](../../../2014/reporting-services/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   If you are planning to host the scale-out deployment on a network load balanced (NLB) cluster, you should configure the NLB cluster before you configure the scale-out deployment. For more information, see [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Review the procedures in this topic for instructions on how to share a report server database and join report servers to a scale-out.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 2.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  
   
-3.  Configure the Report Server Web service URL, Report Manager URL, and the report server database. For more information, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../../../2014/reporting-services/configure-a-report-server-reporting-services-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Configure the Report Server Web service URL, Report Manager URL, and the report server database. For more information, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../report-server/configure-a-report-server-reporting-services-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 4.  Verify that the report server is operational. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
@@ -113,7 +113,7 @@ manager: "jhubbard"
   
 4.  You should now be able to verify that both report server instances are operational. To verify the second instance, you can use the Reporting Services Configuration tool to connect to the report server and click the Web Service URL or the Report Manager URL.  
   
- If you plan to run the report servers in a load-balanced server cluster, additional configuration is required. For more information, see [Configure a Report Server on a Network Load Balancing Cluster](../../../2014/reporting-services/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+ If you plan to run the report servers in a load-balanced server cluster, additional configuration is required. For more information, see [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 ## See Also  
  [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
@@ -122,6 +122,6 @@ manager: "jhubbard"
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [Manage a Reporting Services Native Mode Report Server](../../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md)  
+ [Manage a Reporting Services Native Mode Report Server](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

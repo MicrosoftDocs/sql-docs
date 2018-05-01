@@ -40,22 +40,22 @@ manager: "jhubbard"
   
  You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]). For more information about these tasks, see the following topics:  
   
--   [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../reporting-services/reporting-services-in-sql-server-management-studio-ssrs.md)  
+-   [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
--   [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../reporting-services/administer-a-report-server-database-ssrs-native-mode.md)  
+-   [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
   
--   [Create the RSExecRole](../reporting-services/create-the-rsexecrole.md)  
+-   [Create the RSExecRole](../reporting-services/security/create-the-rsexecrole.md)  
   
  You also manage the server by enabling and configuring various features, setting server defaults, and managing roles and jobs. For more information about these tasks, see the following topics:  
   
--   [Set Report Server Properties &#40;Management Studio&#41;](../reporting-services/set-report-server-properties-management-studio.md)  
+-   [Set Report Server Properties &#40;Management Studio&#41;](../reporting-services/tools/set-report-server-properties-management-studio.md)  
   
--   [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../reporting-services/create-delete-or-modify-a-role-management-studio.md)  
+-   [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../reporting-services/security/role-definitions-create-delete-or-modify.md)  
   
--   [Enable and Disable Client-Side Printing for Reporting Services](../reporting-services/enable-and-disable-client-side-printing-for-reporting-services.md)  
+-   [Enable and Disable Client-Side Printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
 ## See Also  
  [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md)  
+ [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
   
   

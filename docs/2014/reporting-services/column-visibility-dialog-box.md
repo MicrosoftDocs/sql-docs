@@ -45,6 +45,6 @@ manager: "mblythe"
  [Expression Examples &#40;Report Builder and SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Add an Expand or Collapse Action to an Item &#40;Report Builder and SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Images &#40;Report Builder and SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Report Designer F1 Help](../../2014/reporting-services/report-designer-f1-help.md)  
+ [Report Designer F1 Help](tools/report-designer-f1-help.md)  
   
   

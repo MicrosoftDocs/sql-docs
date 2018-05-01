@@ -65,7 +65,7 @@ manager: "mblythe"
  A subscription cannot be processed if it has been deactivated. To update the subscription and make it operational, open and then save the subscription.  
   
 ## See Also  
- [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)   
+ [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

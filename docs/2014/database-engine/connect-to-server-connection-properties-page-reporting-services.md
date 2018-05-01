@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Connect to a Report Server in Management Studio](../../2014/reporting-services/connect-to-a-report-server-in-management-studio.md)   
- [Authentication with the Report Server](../../2014/reporting-services/authentication-with-the-report-server.md)  
+ [Connect to a Report Server in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Authentication with the Report Server](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

@@ -34,7 +34,7 @@ manager: "jhubbard"
 |**Visible**|A value of `false` indicates that the rendering extension should not be visible in user interfaces. If the attribute is not included, the default value is `true`.|  
 |**LogAllExecutionRequests**|A value of `false` indicates that an entry is logged for only the first report execution in a session. If the attribute is not included, the default value is `true`.<br /><br /> For example, this setting determines whether to log an entry for only the first page rendered in a report (when `false`) or an entry for each page rendered in the report (when `true`).|  
   
- For more information, see [RSReportServer Configuration File](../../rsreportserver-configuration-file.md).  
+ For more information, see [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md).  
   
 ## Deploying the Extension to the Report Server  
  The report server uses rendering extensions to export reports to other formats. You should deploy your rendering extension assembly to the report server as a private assembly. You also need to make an entry in the report server configuration file, rsreportserver.config.  
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 2.  After the assembly file is copied, open the rsreportserver.config file. The rsreportserver.config file is also located in the report server bin directory. You need to make an entry in the configuration file for your extension assembly file. You can open the file with [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] or a simple text editor.  
   
-     For more information, see [RSReportServer Configuration File](../../rsreportserver-configuration-file.md).  
+     For more information, see [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md).  
   
 3.  Locate the **Render** element in the Rsreportserver.config file. An entry for your newly created extension should be made in the following location:  
   

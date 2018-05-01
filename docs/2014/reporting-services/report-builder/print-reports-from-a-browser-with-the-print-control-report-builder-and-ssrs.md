@@ -20,7 +20,7 @@ manager: "mblythe"
   
  To improve the print quality of reports that you view in a browser and to print multiple pages, you can use the client-side print functionality provided in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Client-side printing provides a standard **Print** dialog box that can be used to select a printer, specify pages and margins, and preview the report before you print. Client-side printing is intended to be used in place of the **Print** command on the browser's **File** menu. When you use client-side printing, the report is printed as it was designed, without the extra elements you see in a Web page print out.  
   
- To use client-side printing, you need to install a [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX control. For more information, see [Enable and Disable Client-Side Printing for Reporting Services](../enable-and-disable-client-side-printing-for-reporting-services.md).  
+ To use client-side printing, you need to install a [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX control. For more information, see [Enable and Disable Client-Side Printing for Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

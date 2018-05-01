@@ -19,7 +19,7 @@ manager: "mblythe"
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supports map reports that use spatial data sources. Spatial data can come from SQL Server databases, from ESRI Shapefiles, or from the Map Gallery that is installed with either Reporting Services or Report Builder. A map can also display a background of Bing map tiles. A report author can create a report that specifies spatial data or Bing map tiles as dynamic and retrieved at run time or as static and embedded in the report definition.  
   
 ## Support for Bing Maps  
- Maps can include a background layer that displays Bing map tiles. To view a published report that has a map tile layer, the report server must be configured to retrieve tiles from Bing Maps Web Services. For more information, see [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md).  
+ Maps can include a background layer that displays Bing map tiles. To view a published report that has a map tile layer, the report server must be configured to retrieve tiles from Bing Maps Web Services. For more information, see [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
  In each report, report authors can specify whether to use a Secure Sockets Layer (SSL) connection to retrieve tiles from the tile server. To do this, in the Properties pane for the tile layer, they must set the Boolean property UseSecureConnection to `true`.  
   

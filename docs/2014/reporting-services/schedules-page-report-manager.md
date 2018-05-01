@@ -60,7 +60,7 @@ manager: "mblythe"
  Shows whether a shared schedule is paused or active.  
   
 ## See Also  
- [Create, Modify, and Delete Schedules](../../2014/reporting-services/create-modify-and-delete-schedules.md)   
+ [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

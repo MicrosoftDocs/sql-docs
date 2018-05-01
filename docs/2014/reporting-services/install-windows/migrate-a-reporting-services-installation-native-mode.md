@@ -81,9 +81,9 @@ manager: "jhubbard"
   
  If the database name from the existing installation is not suited for the new installation, you should consider creating a new database that has the name, and then load existing application data using the techniques in the following list:  
   
--   Write a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] script that calls Report Server Web service SOAP methods to copy data between databases. You can use the RS.exe utility to run the script. For more information about this approach, see [Scripting and PowerShell with Reporting Services](../scripting-and-powershell-with-reporting-services.md).  
+-   Write a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] script that calls Report Server Web service SOAP methods to copy data between databases. You can use the RS.exe utility to run the script. For more information about this approach, see [Scripting and PowerShell with Reporting Services](../tools/scripting-and-powershell-with-reporting-services.md).  
   
--   Write code that calls the WMI provider to copy data between databases. For more information about this approach, see [Access the Reporting Services WMI Provider](../access-the-reporting-services-wmi-provider.md).  
+-   Write code that calls the WMI provider to copy data between databases. For more information about this approach, see [Access the Reporting Services WMI Provider](../tools/access-the-reporting-services-wmi-provider.md).  
   
 -   If you have just a few items, you can republish reports, report models, and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. You must re-create role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. You will lose report history and report execution log data.  
   
@@ -115,7 +115,7 @@ manager: "jhubbard"
   
 1.  Back up the encryption key for the report server database. This step is critical to migration success. Further on in the migration process, you must restore it for the report server to regain access to encrypted data. To back up the key, use the Reporting Services Configuration Manager.  
   
-2.  Back up the report server database using any of the supported methods for backing up a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information, see the instructions on how to back up the report server database in [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+2.  Back up the report server database using any of the supported methods for backing up a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information, see the instructions on how to back up the report server database in [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 3.  Back up the report server configuration files. Files to back up include:  
   
@@ -161,9 +161,9 @@ manager: "jhubbard"
   
 2.  Start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-3.  Create the `RSExecRole` in the system databases if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] has never hosted a report server database. For more information, see [Create the RSExecRole](../create-the-rsexecrole.md).  
+3.  Create the `RSExecRole` in the system databases if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] has never hosted a report server database. For more information, see [Create the RSExecRole](../security/create-the-rsexecrole.md).  
   
-4.  Follow the instructions in [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+4.  Follow the instructions in [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Remember that both the report server database and the temporary database are interdependent and must be moved together. Do not copy the databases; copying does not transfer all of the security settings to the new installation. Do not move SQL Server Agent jobs for scheduled report server operations. The report server will recreate these jobs automatically.  
   
@@ -213,7 +213,7 @@ manager: "jhubbard"
 >   
 >  The scale-out keys cannot be deleted by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. The old keys must be deleted from the **Keys** table in the **ReportServer** database using SQL Server Management Studio. Delete all rows in the Keys table. This will clear the table and prepare it for restoring the Symmetric key only, as documented in the following steps.  
 >   
->  Prior to deleting the keys it is recommended you first back up the Symmetric Encryption key. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to back up the key. Open the Configuration Manager open, click the **Encryption Keys** tab and then click the **Backup** button. You can also script WMI commands to back up the encryption key. For more information on WMI, see [BackupEncryptionKey Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../backupencryptionkey-method-wmi-msreportserver-configurationsetting.md).  
+>  Prior to deleting the keys it is recommended you first back up the Symmetric Encryption key. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to back up the key. Open the Configuration Manager open, click the **Encryption Keys** tab and then click the **Backup** button. You can also script WMI commands to back up the encryption key. For more information on WMI, see [BackupEncryptionKey Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
 1.  Start the Reporting Services Configuration Manager and connect to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance you just installed. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -223,9 +223,9 @@ manager: "jhubbard"
   
 4.  Restore the encryption keys. This step is necessary for enabling reversible encryption on pre-existing connection strings and credentials that are already in the report server database. For more information, see [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
-5.  If you installed report server on a new computer and you are using Windows Firewall, be sure that the TCP port on which the report server listens is open. By default, this port is 80. For more information, see [Configure a Firewall for Report Server Access](../configure-a-firewall-for-report-server-access.md).  
+5.  If you installed report server on a new computer and you are using Windows Firewall, be sure that the TCP port on which the report server listens is open. By default, this port is 80. For more information, see [Configure a Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md).  
   
-6.  If you want to administer your native mode report server locally, you need to configure the operating system to allow local administration with Report Manager. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+6.  If you want to administer your native mode report server locally, you need to configure the operating system to allow local administration with Report Manager. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="bkmk_copy_custom_config"></a> Copy Custom Configuration Settings to RSReportServer.config File  
  If you modified the RSReportServer.config file or RSWebApplication.config file in the previous installation, you should make the same modifications in the new RSReportServer.config file. The following list summarizes some of the reasons why you might have modified the previous configuration file and provides links to additional information about how to configure the same settings in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -234,7 +234,7 @@ manager: "jhubbard"
 |-------------------|-----------------|  
 |Report Server E-mail delivery with custom settings|[Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) and [E-mail Settings - Configuration Manager &#40;SSRS Native Mode&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Device information settings|[Customize Rendering Extension Parameters in RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
-|Report Manager on a remote instance|[Configure Report Manager &#40;Native Mode&#41;](../configure-report-manager-native-mode.md)|  
+|Report Manager on a remote instance|[Configure Report Manager &#40;Native Mode&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Windows Service Group and Security ACLs  
  In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], there is one service group, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Service group, which is used to create security ACLs for all the registry keys, files, and folders that are installed with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This Windows group name appears in the format SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>. This group takes the place of the two Windows service groups in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. If you have custom ACLs associated with either of the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows groups, you will need to apply those ACLs to the new group for your new report server instance in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -266,7 +266,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [Report Server Database &#40;SSRS Native Mode&#41;](../report-server-database-ssrs-native-mode.md)   
+ [Report Server Database &#40;SSRS Native Mode&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services Backward Compatibility](../reporting-services-backward-compatibility.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

@@ -100,6 +100,6 @@ manager: "mblythe"
   
 ## See Also  
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [RSReportDesigner Configuration File](../rsreportdesigner-configuration-file.md)  
+ [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)  
   
   

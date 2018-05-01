@@ -94,7 +94,7 @@ manager: "jhubbard"
 6.  Restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service.  
   
 ## Configuring Other SQL Server Components  
- For more information about how to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Extended Protection for Authentication with Reporting Services](../../reporting-services/extended-protection-for-authentication-with-reporting-services.md).  
+ For more information about how to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
  When using IIS to access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data using an HTTP or HTTPs connection, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can take advantage of Extended Protection provided by IIS. For more information about how to configure IIS to use Extended Protection, see [Configure Extended Protection in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105).  
   

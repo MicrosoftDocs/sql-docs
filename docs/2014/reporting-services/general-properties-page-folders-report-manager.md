@@ -18,7 +18,7 @@ manager: "mblythe"
 # General Properties Page, Folders (Report Manager)
   Use the General properties page for folders to view and set properties for the folders that you create. Information about who created or modified the folder and when the folder was modified appear at the top of the General properties page.  
   
- Folder properties also include security settings. For more information about folder security, see [Secure Folders](../../2014/reporting-services/secure-folders.md).  
+ Folder properties also include security settings. For more information about folder security, see [Secure Folders](security/secure-folders.md).  
   
  Special-purpose folders such as Home, My Reports, and Users folders cannot be renamed or moved within the report server namespace. The General properties page is not available for these folders.  
   

@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 3.  If you selected a Windows user account, specify the new account and password. The account cannot be more than 20 characters.  
   
-     If the report server is deployed in a network that supports Kerberos authentication, you must register the report server Service Principal Name (SPN) with the domain user account you just specified. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../../2014/reporting-services/register-a-service-principal-name-spn-for-a-report-server.md).  
+     If the report server is deployed in a network that supports Kerberos authentication, you must register the report server Service Principal Name (SPN) with the domain user account you just specified. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
 4.  Click **Apply**.  
   

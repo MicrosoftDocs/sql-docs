@@ -109,7 +109,7 @@ Watch a demonstration of viewing reports on an iPad.
   
  In general, it is recommended that RSWindowsBasic is not used in non-https environments because this type of authentication provides no confidentiality for the transmitted credentials.  
   
- For more information about RSWindowsNTLM and RSWindowsBasic authentication, see [Authentication with the Report Server](../../2014/reporting-services/authentication-with-the-report-server.md).  
+ For more information about RSWindowsNTLM and RSWindowsBasic authentication, see [Authentication with the Report Server](security/authentication-with-the-report-server.md).  
   
 ## Uploading Reports  
  You can publish reports from a Microsoft Surface device using one of the following methods, if you have the appropriate permissions.  

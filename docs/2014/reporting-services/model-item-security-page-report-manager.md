@@ -72,6 +72,6 @@ manager: "mblythe"
  Click this option to specify the user or group account for which you are defining access. If you are using default security, the user and group accounts are Windows domain accounts. Specify the accounts in this format: *\<domain>\\<account\>*.  
   
 ## See Also  
- [Report Server in Management Studio F1 Help](../../2014/reporting-services/report-server-in-management-studio-f1-help.md)  
+ [Report Server in Management Studio F1 Help](tools/report-server-in-management-studio-f1-help.md)  
   
   

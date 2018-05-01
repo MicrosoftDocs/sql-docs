@@ -46,7 +46,7 @@ manager: "mblythe"
   
 -   [Report Definition Language Specifications](http://go.microsoft.com/fwlink/?linkid=116865)  
   
--   [Report Definition Language &#40;SSRS&#41;](report-definition-language-ssrs.md)  
+-   [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   
  For more information about ReportViewer controls, see [ReportViewer Controls (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx).  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
   
 -   **SharePoint:** Upload a report to a SharePoint site that is configured with a SharePoint mode report server.  
   
--   **Programmatically:** Programmatically publish a report by using the SOAP API interfaces to a report server. For more information, see [Report Server Web Service](dev-guide/report-server-web-service.md).  
+-   **Programmatically:** Programmatically publish a report by using the SOAP API interfaces to a report server. For more information, see [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
   
  The following table lists the supported rdl schema version by version of the report server.  
   
@@ -94,7 +94,7 @@ manager: "mblythe"
   
  For more information on [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)], see the following:  
   
--   [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+-   [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
 -   [Microsoft SQL Server Data Tools - Business Intelligence for Visual Studio 2012](http://www.microsoft.com/download/details.aspx?id=36843).  
   
@@ -116,7 +116,7 @@ manager: "mblythe"
   
 ## See Also  
  [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Reporting Services Tools](reporting-services-tools.md)   
- [Report Definition Language &#40;SSRS&#41;](report-definition-language-ssrs.md)  
+ [Reporting Services Tools](tools/reporting-services-tools.md)   
+ [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   
   

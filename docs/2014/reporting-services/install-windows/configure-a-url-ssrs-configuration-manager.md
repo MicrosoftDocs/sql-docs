@@ -81,7 +81,7 @@ manager: "jhubbard"
   
     -   Review the Microsoft Support article, [Information about TCP/IP port assignments](http://support.microsoft.com/kb/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).  
   
-    -   If you are using Windows Firewall, you must open the port. For instructions, see [Configure a Firewall for Report Server Access](../configure-a-firewall-for-report-server-access.md).  
+    -   If you are using Windows Firewall, you must open the port. For instructions, see [Configure a Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md).  
   
 6.  If you have not done so already, verify that IIS (if it is installed) does not have virtual directory with the same name you plan to use.  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 2.  Click **Report Manager URL**.  
   
-3.  Specify the virtual directory. Report Manager listens on the same IP address and port as the Report Server Web service. If you configured Report Manager to point to a different Report Server Web service, you must modify the Report Manager URL settings in the RSReportServer.config file. For instructions, see [Configure Report Manager &#40;Native Mode&#41;](../configure-report-manager-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Specify the virtual directory. Report Manager listens on the same IP address and port as the Report Server Web service. If you configured Report Manager to point to a different Report Server Web service, you must modify the Report Manager URL settings in the RSReportServer.config file. For instructions, see [Configure Report Manager &#40;Native Mode&#41;](../report-server/configure-web-portal.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 4.  If you installed an SSL certificate, you can select it to require that all requests to Report Manager are routed over HTTPS.  
   

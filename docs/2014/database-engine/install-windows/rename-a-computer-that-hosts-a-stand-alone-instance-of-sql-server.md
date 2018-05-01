@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support renaming computers that are involved in replication, except when you use log shipping with replication. The secondary computer in log shipping can be renamed if the primary computer is permanently lost. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md).  
   
--   When you rename a computer that is configured to use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might not be available after the computer name change. For more information, see [Rename a Report Server Computer](../../reporting-services/rename-a-report-server-computer.md).  
+-   When you rename a computer that is configured to use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might not be available after the computer name change. For more information, see [Rename a Report Server Computer](../../reporting-services/report-server/rename-a-report-server-computer.md).  
   
 -   When you rename a computer that is configured to use database mirroring, you must turn off database mirroring before the renaming operation. Then, re-establish database mirroring with the new computer name. Metadata for database mirroring will not be updated automatically to reflect the new computer name. Use the following steps to update system metadata.  
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  Do not write applications that run queries against the report server database. The report server database is not a public schema. The table structure might change from one release to the next. If you write an application that requires access to the report server database, always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] APIs to access the report server database.  
 >   
->  The exception to this are the execution log views. For more information, see [Report Server Execution Log and the ExecutionLog3 View](../../../2014/reporting-services/report-server-execution-log-and-the-executionlog3-view.md)  
+>  The exception to this are the execution log views. For more information, see [Report Server Execution Log and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
 ## Ways to Create the Report Server Database  
  **Native Mode:** You can create the Native mode report server database in the following ways:  

@@ -32,7 +32,7 @@ manager: "mblythe"
   
 -   Named parameters in expressions.  
   
- This topic describes each element in the <`RDLSandboxing`> element in the RSReportServer.Config file. For more information about how to modify this file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md). A server trace log records activity related to the RDL Sandboxing feature. For more information about trace logs, see [Report Server Service Trace Log](../../2014/reporting-services/report-server-service-trace-log.md).  
+ This topic describes each element in the <`RDLSandboxing`> element in the RSReportServer.Config file. For more information about how to modify this file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). A server trace log records activity related to the RDL Sandboxing feature. For more information about trace logs, see [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).  
   
 ## Example Configuration  
  The following example shows the settings and example values for the <`RDLSandboxing`> element in the RSReportServer.Config file.  
@@ -87,7 +87,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  In the report definition, a computer cannot know the type of each instances of an expression reference. When you add a member to the block list, you are denying all members of that name across all types in the allow list.  
   
- RDL expression results are verified at run time. RDL expressions are verified in the report definition when the report is published. Monitor the report server trace log for violations. For more information, see [Report Server Service Trace Log](../../2014/reporting-services/report-server-service-trace-log.md).  
+ RDL expression results are verified at run time. RDL expressions are verified in the report definition when the report is published. Monitor the report server trace log for violations. For more information, see [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).  
   
 ### Working with Types  
  When you add a type to the allow list, you are controlling the following entry points to access RDL expressions:  
@@ -163,7 +163,7 @@ manager: "mblythe"
 -   Add the class to the allow list.  
   
 ## See Also  
- [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
- [Report Server Service Trace Log](../../2014/reporting-services/report-server-service-trace-log.md)  
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
+ [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)  
   
   

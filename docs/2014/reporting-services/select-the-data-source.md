@@ -38,7 +38,7 @@ manager: "mblythe"
   
  Click **Edit** to specify the data source server in the **Connection Properties** dialog box. You can specify a local or remote data source.  
   
- Click **Credentials** to supply database credentials. At a minimum, the credentials you specify must be sufficient for you to connect to the data source for report design purposes. When the report is deployed on a report server, the database credentials must accommodate all users of the report. For example, if you want all report users to connect to the data source using their credentials, choose **Use Windows Authentication (Integrated Security)**. The credentials you specify must be valid for the data source, so if you choose Windows Authentication, be sure that the data source accepts connections from all user accounts that will be running the report. Database credentials can be managed separately from the report. For more information, see [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md).  
+ Click **Credentials** to supply database credentials. At a minimum, the credentials you specify must be sufficient for you to connect to the data source for report design purposes. When the report is deployed on a report server, the database credentials must accommodate all users of the report. For example, if you want all report users to connect to the data source using their credentials, choose **Use Windows Authentication (Integrated Security)**. The credentials you specify must be valid for the data source, so if you choose Windows Authentication, be sure that the data source accepts connections from all user accounts that will be running the report. Database credentials can be managed separately from the report. For more information, see [Manage Report Data Sources](report-data/manage-report-data-sources.md).  
   
  **Make this a shared data source**  
  Select this option to store the data source in the project as a shared data source, instead of in the report. That way, you can use it as the data source for other reports in the project.  
@@ -47,7 +47,7 @@ manager: "mblythe"
  [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
- [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md)   
+ [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Report Wizard Help](../../2014/reporting-services/report-wizard-help.md)  
   

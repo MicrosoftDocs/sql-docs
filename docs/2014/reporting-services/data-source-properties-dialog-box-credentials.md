@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Data Source Properties Dialog Box, Credentials
-  Select **Credentials** on the **Data Source Properties** dialog box to display and modify credentials to connect to a data source in the report. The credentials that you provide are used to access the data source and to cache a copy of the data for previewing reports. For more information about how preview data is cached, see [Previewing Reports](../../2014/reporting-services/previewing-reports.md). For more information about credentials, see [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md).  
+  Select **Credentials** on the **Data Source Properties** dialog box to display and modify credentials to connect to a data source in the report. The credentials that you provide are used to access the data source and to cache a copy of the data for previewing reports. For more information about how preview data is cached, see [Previewing Reports](reports/previewing-reports.md). For more information about credentials, see [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## Options  
  **Use Windows Authentication (integrated security)**  
@@ -45,7 +45,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Source Properties Dialog Box, General](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
- [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

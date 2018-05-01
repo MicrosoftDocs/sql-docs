@@ -55,6 +55,6 @@ manager: "mblythe"
 7.  Click **Apply**.  
   
 ## See Also  
- [Clickthrough Reports &#40;SSRS&#41;](../../2014/reporting-services/clickthrough-reports-ssrs.md)  
+ [Clickthrough Reports &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
   
   

@@ -135,7 +135,7 @@ manager: "mblythe"
  [Return to Data sources table](#DataSourcesTable)  
   
 ## Reporting Services Data Processing Extensions  
- The following data processing extensions are automatically installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. For more information and to verify the installation, see [RSReportDesigner Configuration File](../rsreportdesigner-configuration-file.md) and [RSReportServer Configuration File](../rsreportserver-configuration-file.md).  
+ The following data processing extensions are automatically installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. For more information and to verify the installation, see [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md) and [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 > [!NOTE]  
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  

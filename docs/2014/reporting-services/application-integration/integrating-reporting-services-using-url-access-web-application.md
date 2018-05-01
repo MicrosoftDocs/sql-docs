@@ -44,7 +44,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
   
  In the previous example, the device information setting **LinkTarget** is passed with a value of "main" in the query string of the URL. This ensures that any drillthrough hyperlinks in the report also target the frame named "main".  
   
- For more information about device information settings, see [Passing Device Information Settings to Rendering Extensions](../dev-guide/passing-device-information-settings-to-rendering-extensions.md).  
+ For more information about device information settings, see [Passing Device Information Settings to Rendering Extensions](../report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  Note that many servers and browsers limit the number of characters allowed in a URL. In some cases, a 256-character limit is imposed. To get around this limitation, you can use POST requests using form submission.  
   
@@ -78,7 +78,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
 ```  
   
 ## See Also  
- [Integrating Reporting Services into Applications](../dev-guide/integrating-reporting-services-into-applications.md)   
+ [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)   
  [Integrating Reporting Services Using URL Access](integrating-reporting-services-using-url-access.md)   
  [Using URL Access in a Windows Application](integrating-reporting-services-using-url-access-windows-application.md)   
  [URL Access &#40;SSRS&#41;](../url-access-ssrs.md)  

@@ -46,8 +46,8 @@ manager: "mblythe"
  A report can contain parameters so that users can filter data. You can configure the parameters to use specific values or change how they appear to the user. For more information, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## See Also  
- [Publish a Report to a SharePoint Library](../../2014/reporting-services/publish-a-report-to-a-sharepoint-library.md)   
- [Publish a Shared Data Source to a SharePoint Library](../../2014/reporting-services/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Granting Permissions on Report Server Items on a SharePoint Site](../../2014/reporting-services/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Publish a Report to a SharePoint Library](reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Publish a Shared Data Source to a SharePoint Library](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Granting Permissions on Report Server Items on a SharePoint Site](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

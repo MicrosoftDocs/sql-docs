@@ -135,7 +135,7 @@ manager: "mblythe"
 |None|Impersonate the unattended execution account.|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC, and OLE DB:<br /><br /> Use the credentials defined in the connection string. The connection fails on the report server if the unattended execution account is undefined.<br /><br /> For [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> Always fail the connection if no credentials are specified, even if the unattended execution account is defined.<br /><br /> For XML:<br /><br /> Connect as Anonymous User if the unattended execution account is defined; otherwise, fail the connection.|  
   
 ## Setting Credentials Programmatically  
- You can set credentials in your code to control access to reports and to the report server. For more information, see [Data Sources and Connection Methods](../dev-guide/data-sources-and-connection-methods.md).  
+ You can set credentials in your code to control access to reports and to the report server. For more information, see [Data Sources and Connection Methods](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## See Also  
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   

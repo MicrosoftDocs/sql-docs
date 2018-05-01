@@ -24,12 +24,12 @@ manager: "jhubbard"
 ## The Run-Time Component  
  The run-time component for a custom report item is called by the report processor at run time. The run-time component accepts data passed by the report processor at run time, processes this data, and returns an image containing the rendered custom report item.  
   
- ![Custom report item run-time component](../../../2014/reporting-services/dev-guide/media/customreportitemrun-timecomponentarchitecture.gif "Custom report item run-time component")  
+ ![Custom report item run-time component](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Custom report item run-time component")  
   
 ## The Design-Time Component  
  The design-time component allows the custom report item to be defined and manipulated in the Report Designer interface in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. The design-time component consists of several sub-controls that control the appearance and properties of the custom report item in the design environment.  
   
- ![Custom report item design-time component](../../../2014/reporting-services/dev-guide/media/customreportitemdesign-timecomponentarchitecture.gif "Custom report item design-time component")  
+ ![Custom report item design-time component](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Custom report item design-time component")  
   
 ## See Also  
  [Creating a Custom Report Item Run-Time Component](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   

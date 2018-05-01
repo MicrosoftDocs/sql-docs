@@ -61,9 +61,9 @@ manager: "mblythe"
   
 ## See Also  
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
- [Predefined Roles](../../2014/reporting-services/predefined-roles.md)   
- [Granting Permissions on a Native Mode Report Server](../../2014/reporting-services/granting-permissions-on-a-native-mode-report-server.md)   
- [Role Assignments](../../2014/reporting-services/role-assignments.md)   
- [Role Definitions](../../2014/reporting-services/role-definitions.md)  
+ [Predefined Roles](security/role-definitions-predefined-roles.md)   
+ [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Role Assignments](security/role-assignments.md)   
+ [Role Definitions](security/role-definitions.md)  
   
   

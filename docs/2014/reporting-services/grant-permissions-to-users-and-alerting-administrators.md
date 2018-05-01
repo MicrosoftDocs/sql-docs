@@ -45,7 +45,7 @@ manager: "mblythe"
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## See Also  
- [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

@@ -74,7 +74,7 @@ manager: "mblythe"
 11. Check in your changes and save the page.  
   
 ## See Also  
- [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/add-report-viewer-web-part-to-web-page-reporting-services-sharepoint-integrated-mode.md)   
+ [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Customize the Report Viewer Web Part](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   

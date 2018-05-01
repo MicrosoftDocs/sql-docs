@@ -46,6 +46,6 @@ manager: "jhubbard"
  Describes how to debug your custom assembly code.  
   
 ## See Also  
- [Report Definition Language &#40;SSRS&#41;](../report-definition-language-ssrs.md)  
+ [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)  
   
   

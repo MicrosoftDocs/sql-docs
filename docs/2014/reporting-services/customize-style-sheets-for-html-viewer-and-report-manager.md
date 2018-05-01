@@ -36,7 +36,7 @@ manager: "mblythe"
 |ReportingServices.css|Defines styles for Report Manager.|  
   
 > [!NOTE]  
->  The following style sheets are used for Report Manager online documentation and should never be modified: Sql.css and Mailto.css. Other style sheets define styles for reports and Report Manager that open in SharePoint Web parts. These style sheets include Rswebparts.css, Sp_full.css, and Sp_small.css. Modifying the SharePoint style sheets is not recommended. For more information about how the Web parts are used, see [View and Explore Native Mode Reports Using SharePoint Web Parts &#40;SSRS&#41;](../../2014/reporting-services/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
+>  The following style sheets are used for Report Manager online documentation and should never be modified: Sql.css and Mailto.css. Other style sheets define styles for reports and Report Manager that open in SharePoint Web parts. These style sheets include Rswebparts.css, Sp_full.css, and Sp_small.css. Modifying the SharePoint style sheets is not recommended. For more information about how the Web parts are used, see [View and Explore Native Mode Reports Using SharePoint Web Parts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## Configuring Reporting Services to Use a Custom Style Sheet  
  The style sheet must be a valid cascading style sheet (.css) file and it must be located in the Styles folder. By default, the Styles folder is located at \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL.*n*\Reporting Services\ReportServer\Styles.  
@@ -61,7 +61,7 @@ manager: "mblythe"
 ```  
   
 ### Specifying a Style Sheet on a Report URL  
- You can use the `rc:StyleSheet` URL access parameter to specify a custom style sheet on the report URL. For more information about how to specify URL access parameters, see [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md).  
+ You can use the `rc:StyleSheet` URL access parameter to specify a custom style sheet on the report URL. For more information about how to specify URL access parameters, see [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
  The following example provides an illustration of how to add custom styles:  
   
@@ -72,6 +72,6 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)   
- [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)  
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   
   

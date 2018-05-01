@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 1.  Run **rskeymgmt.exe** locally on the computer that hosts a report server that is already a member of the report server scale-out deployment.  
   
-2.  Use the `-j` argument to join a report server to the report server database. Use the `-m` and `-n` arguments to specify the remote report server instance you want to add to the deployment. Use the `-u` and `-v` arguments to specify an administrator account on the remote computer. If you are creating a scale-out deployment using multiple report server instances on the same computer, the syntax to use is slightly different. For more information about the syntax you should use, see [rskeymgmt Utility &#40;SSRS&#41;](../rskeymgmt-utility-ssrs.md).  
+2.  Use the `-j` argument to join a report server to the report server database. Use the `-m` and `-n` arguments to specify the remote report server instance you want to add to the deployment. Use the `-u` and `-v` arguments to specify an administrator account on the remote computer. If you are creating a scale-out deployment using multiple report server instances on the same computer, the syntax to use is slightly different. For more information about the syntax you should use, see [rskeymgmt Utility &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md).  
   
      The following example illustrates the arguments you must specify if you are joining a remote report server to a scale-out deployment (you can omit credentials if you have administrator permissions on the remote computer):  
   

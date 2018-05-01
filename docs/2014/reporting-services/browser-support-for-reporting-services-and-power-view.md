@@ -129,7 +129,7 @@ manager: "mblythe"
   
  For more information on URL access, see the following topic:  
   
--   [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md)  
+-   [URL Access Parameter Reference](url-access-parameter-reference.md)  
   
 ###  <a name="bkmk_authentication"></a> Authentication Requirements  
  Browsers support specific authentication schemes that must be handled by the report server in order for the client request to succeed. The following table identifies the default authentication types supported by each browser running on a Windows operating system.  
@@ -193,9 +193,9 @@ manager: "mblythe"
  For more information on using the ReportViewer controls, see [Deploying Reports and ReportViewer Controls](http://msdn.microsoft.com/library/ms251723.aspx) (http://msdn.microsoft.com/library/ms251723.aspx).  
   
 ## See Also  
- [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)   
+ [Reporting Services Tools](tools/reporting-services-tools.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)   
- [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md)  
+ [URL Access Parameter Reference](url-access-parameter-reference.md)  
   
   

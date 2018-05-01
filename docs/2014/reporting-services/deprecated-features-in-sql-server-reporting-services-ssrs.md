@@ -65,7 +65,7 @@ manager: "mblythe"
  The[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 rendering extensions [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Word and [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003 binary interchange file format. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] includes extensions that render in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 Open XML format.  
   
 #### Report Definition Language (RDL) 2005 and Earlier  
- Report Definition Language (RDL) 2005 and earlier is deprecated. For more information about RDL, see [Report Definition Language &#40;SSRS&#41;](report-definition-language-ssrs.md).  
+ Report Definition Language (RDL) 2005 and earlier is deprecated. For more information about RDL, see [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  For more information on upgrading reports, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   
@@ -135,7 +135,7 @@ manager: "mblythe"
  The[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] BIFF8 rendering extensions [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Word and [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003 binary interchange file format. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] includes extensions that render in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 2007-2010 Open XML format.  
   
 ### Report Definition Language (RDL) 2005 and Earlier  
- Report Definition Language (RDL) 2005 and earlier is deprecated. For more information about RDL, see [Report Definition Language &#40;SSRS&#41;](report-definition-language-ssrs.md).  
+ Report Definition Language (RDL) 2005 and earlier is deprecated. For more information about RDL, see [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  For more information on upgrading reports, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   

@@ -40,7 +40,7 @@ manager: "jhubbard"
  Local processing mode provides an alternative method for viewing and rendering reports when [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is not installed. Unlike remote processing only a subset of the functionality provided by the report server is available in the control. In local processing mode, data processing is not handled by the control but rather implemented by the hosting application. However report processing is handled by the control itself. In local processing mode, only the PDF, Excel, Word, and Image rendering extensions are available.  
   
 ## See Also  
- [Integrating Reporting Services into Applications](../dev-guide/integrating-reporting-services-into-applications.md)   
+ [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)   
  [Create SSRS Reports Using Visual Studio (Curated Answer)](http://go.microsoft.com/fwlink/?LinkId=321991)  
   
   

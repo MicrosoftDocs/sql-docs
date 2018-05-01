@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  [Server Properties &#40;Database Settings Page&#41;](configure-windows/server-properties-database-settings-page.md)  
   
- [Server Properties &#40;General Page&#41; - SQL Server Management Studio](configure-windows/server-properties-general-page.md)  
+ [Server Properties &#40;General Page&#41; - SQL Server Management Studio](../reporting-services/tools/report-server-properties-general-page.md)  
   
  [Server Properties &#40;Memory Page&#41;](configure-windows/server-properties-memory-page.md)  
   

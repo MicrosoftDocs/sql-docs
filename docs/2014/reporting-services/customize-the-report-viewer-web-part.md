@@ -91,6 +91,6 @@ manager: "mblythe"
   
 ## See Also  
  [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/add-report-viewer-web-part-to-web-page-reporting-services-sharepoint-integrated-mode.md)  
+ [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

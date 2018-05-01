@@ -125,7 +125,7 @@ GO
 |Connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |Network configuration and control for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../sql-server-configuration-manager.md)|  
 |Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../policy-based-management/administer-servers-by-using-policy-based-management.md)|  
-|Manipulating symmetric keys for a report server|[rskeymgmt Utility &#40;SSRS&#41;](../../reporting-services/rskeymgmt-utility-ssrs.md)|  
+|Manipulating symmetric keys for a report server|[rskeymgmt Utility &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
   
 ### SQL Server Security Catalog Views and Functions  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] exposes security information in several views and functions that are optimized for performance and utility. The following table contains information about security views and functions.  

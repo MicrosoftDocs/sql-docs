@@ -40,7 +40,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  In addition to a value of **true** and **false** for the URL access parameter *rc:Parameters*, you can now pass a value of **Collapsed**. When using *rc:Parameters*=**Collapsed** on a URL, the parameter prompt area of the HTML viewer is collapsed out of sight, but can still be toggled by the user. A value of **false** removes the parameter prompt area from the HTML viewer toolbar and makes it unavailable to the end-user.  
   
 ## See Also  
- [URL Access &#40;SSRS&#41;](../../2014/reporting-services/url-access-ssrs.md)   
- [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md)  
+ [URL Access &#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL Access Parameter Reference](url-access-parameter-reference.md)  
   
   

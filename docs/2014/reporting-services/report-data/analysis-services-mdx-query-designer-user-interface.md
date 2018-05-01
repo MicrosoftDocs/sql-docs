@@ -116,7 +116,7 @@ manager: "mblythe"
  [Define Parameters in the MDX Query Designer for Analysis Services &#40;Report Builder and SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
- [RSReportDesigner Configuration File](../rsreportdesigner-configuration-file.md)   
+ [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)   
  [Analysis Services Connection Type for MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

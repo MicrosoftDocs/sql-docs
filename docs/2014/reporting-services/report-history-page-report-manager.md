@@ -53,7 +53,7 @@ manager: "mblythe"
   
 ## See Also  
  [View or Delete Report History &#40;Report Manager&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [Add a Snapshot to Report History &#40;Report Manager&#41;](../../2014/reporting-services/add-a-snapshot-to-report-history-report-manager.md)   
+ [Add a Snapshot to Report History &#40;Report Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [General Properties Page, Reports &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
  [Snapshot Options Properties Page &#40;Report Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

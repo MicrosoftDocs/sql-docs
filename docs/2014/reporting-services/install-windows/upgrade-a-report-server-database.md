@@ -60,7 +60,7 @@ manager: "jhubbard"
  At this point, the report server program files will be upgraded, but the report server database will be in the format of the previous version. The report server will be unavailable until you finish the upgrade process by upgrading the database manually.  
   
 #### To upgrade a Native Mode database With Scripts  
- You can use WMI scripts to upgrade a report server database. For more information, see [GenerateDatabaseUpgradeScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../generatedatabaseupgradescript-method-wmi-msreportserver-configurationsetting.md)  
+ You can use WMI scripts to upgrade a report server database. For more information, see [GenerateDatabaseUpgradeScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)  
   
 ## See Also  
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

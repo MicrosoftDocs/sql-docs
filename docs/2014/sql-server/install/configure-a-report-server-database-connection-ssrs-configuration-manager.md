@@ -121,7 +121,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Manage a Reporting Services Native Mode Report Server](../../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md)   
+ [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   
   

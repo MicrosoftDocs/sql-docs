@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   Automatically updates the login permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance used to host the report server database. The new account will be added to the **RSExecRole**.  
   
-     The database login for the old account will not be removed automatically. Be sure to remove accounts that are no longer in use. For more information, see [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../administer-a-report-server-database-ssrs-native-mode.md) in SQL Server Books Online.  
+     The database login for the old account will not be removed automatically. Be sure to remove accounts that are no longer in use. For more information, see [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../report-server/report-server-database-ssrs-native-mode.md) in SQL Server Books Online.  
   
      Granting database permissions to new service account only occurs if you configured the report server database connection to use the service account in the first place. If you configured the report server database connection to use a domain user account or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database login, the connection information is not affected by the service account update.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   LocalService  
   
- There is no single best approach for choosing an account type. Each account has advantages and disadvantages that you must consider. If you are deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a production server, best practices suggest that you configure the service to run under a domain user account so that you can avoid widespread damage if a shared account is compromised by a malicious user. It also makes it easier to audit the logon activity for this account. A trade-off to using a Windows user account is that if you are deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in a network that uses Kerberos authentication, you must register the service with the user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../register-a-service-principal-name-spn-for-a-report-server.md).  
+ There is no single best approach for choosing an account type. Each account has advantages and disadvantages that you must consider. If you are deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a production server, best practices suggest that you configure the service to run under a domain user account so that you can avoid widespread damage if a shared account is compromised by a malicious user. It also makes it easier to audit the logon activity for this account. A trade-off to using a Windows user account is that if you are deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in a network that uses Kerberos authentication, you must register the service with the user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
  The following guidelines and links in this section can help you decide on an approach that is best for your deployment.  
   

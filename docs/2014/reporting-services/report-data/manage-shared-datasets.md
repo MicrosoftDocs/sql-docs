@@ -34,7 +34,7 @@ manager: "mblythe"
  To use a shared dataset in a report, you open an application such as Report Builder, browse to the report server or SharePoint site, and select the shared dataset. This adds an instance of the shared dataset to the report. In the report, you cannot view or change the query or the shared data source for the shared dataset. You can specify an additional set of dataset property values that apply to the instance in the report. For example, you can add a filter or change data options such as case sensitivity. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 ## Managing Shared Datasets  
- To manage the properties of a published shared dataset, you can use Report Manager for a native mode report server, or application pages on a SharePoint site if you deployed the report server in SharePoint integrated mode. The tasks that you can perform on a shared dataset depend on your role assignments and on site level and item level permissions, including permissions on the folder if permission inheritance is in effect. Item level security for shared datasets follow the same model as item level security for reports. For more information, see [Secure Shared Dataset Items](../secure-shared-dataset-items.md).  
+ To manage the properties of a published shared dataset, you can use Report Manager for a native mode report server, or application pages on a SharePoint site if you deployed the report server in SharePoint integrated mode. The tasks that you can perform on a shared dataset depend on your role assignments and on site level and item level permissions, including permissions on the folder if permission inheritance is in effect. Item level security for shared datasets follow the same model as item level security for reports. For more information, see [Secure Shared Dataset Items](../security/secure-shared-dataset-items.md).  
   
  You can manage the shared dataset item properties, including the shared data source to use, independently from the report that uses the shared dataset or the shared data source that it depends on. To change the query or other dataset properties that are part of the shared dataset definition, you must edit the definition.  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
 |-|-|  
 |Edit Name|Change the name of the shared dataset. All references from dependent items will continue to work.|  
 |Edit Description|Change the description of the shared dataset.|  
-|Edit Query execution time out|Set the query execution timeout in seconds. Zero (0) seconds means no time out. Determines the number of seconds before the dataset query times out. To specify no timeout value, use 0. For more information, see [Setting Time-out Values for Report and Shared Dataset Processing &#40;SSRS&#41;](../setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Edit Query execution time out|Set the query execution timeout in seconds. Zero (0) seconds means no time out. Determines the number of seconds before the dataset query times out. To specify no timeout value, use 0. For more information, see [Setting Time-out Values for Report and Shared Dataset Processing &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |View dependent items|View the items that use this shared dataset: published report parts, shared data sources, and reports.|  
   
  The following additional shared dataset properties are automatically configured:  
@@ -77,9 +77,9 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   **Set security on Items** View and modify security settings for shared datasets.  
   
- For more information about which tasks and permissions control access to data source properties on a native mode report server, see [Secure Shared Dataset Items](../secure-shared-dataset-items.md).  
+ For more information about which tasks and permissions control access to data source properties on a native mode report server, see [Secure Shared Dataset Items](../security/secure-shared-dataset-items.md).  
   
- Permissions to view and edit properties for items in a SharePoint library are determined by the site administrator. For more information, see [SharePoint Site and List Permission Reference for Report Server Items](../sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Permissions to view and edit properties for items in a SharePoint library are determined by the site administrator. For more information, see [SharePoint Site and List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## How to Work with Shared Dataset Properties on a Report Server  
  You can use a variety of tools to work with shared datasets. The following table summarizes the approaches and tools, and provides a link to additional instructions.  
@@ -91,7 +91,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Specify additional shared dataset properties for a shared dataset instance in a report.|Report Builder Report Designer|[Dataset Properties Dialog Box, Query](../dataset-properties-dialog-box-query.md)|  
 |Bind to a different shared data source for a shared dataset.|Report Manager|[Data Source Selection Page &#40;Report Manager&#41;](../data-source-selection-page-report-manager.md)|  
 |Verify default values for dataset parameters.|Open in Report Builder or use URL access syntax.|For example:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|Enable caching|Report Manager|[Cache Shared Datasets &#40;SSRS&#41;](../cache-shared-datasets-ssrs.md)<br /><br /> [Caching Page, Shared Datasets &#40;Report Manager&#41;](../caching-page-shared-datasets-report-manager.md)|  
+|Enable caching|Report Manager|[Cache Shared Datasets &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Caching Page, Shared Datasets &#40;Report Manager&#41;](../caching-page-shared-datasets-report-manager.md)|  
 |Create or edit a cache refresh plan|Report Manager|[Cache Refresh Options &#40;Report Manager&#41;](../cache-refresh-options-report-manager.md)|  
 |View the shared dataset definition schema.|Report Manager|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |In SharePoint integrated mode, synchronize the shared dataset definition between the report server and the SharePoint site|SharePoint application pages|Change shared dataset item properties<br /><br /> Change cache options<br /><br /> Change the shared data source|  
@@ -103,7 +103,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   Like shared data sources, shared datasets are managed independently from the reports that they are used in. Part of managing a shared dataset on a report server is the ability to change the shared data source that it depends on without editing the shared dataset definition.  
   
--   Like reports, shared datasets can be cached. Credentials that are required by the data source must meet caching restrictions and default values must be specified for every parameter. For more information, see [Cache Shared Datasets &#40;SSRS&#41;](../cache-shared-datasets-ssrs.md).  
+-   Like reports, shared datasets can be cached. Credentials that are required by the data source must meet caching restrictions and default values must be specified for every parameter. For more information, see [Cache Shared Datasets &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md).  
   
 -   Like reports, each time processing occurs, the current definition of the item on the report server is used. If you make changes to a shared dataset, each report that uses it will use the current definition on the report server when the report is processed. If caching is enabled for the shared dataset and you make changes to the shared dataset definition, the changes are not used until data in the cache expires. You can use cache refresh plans to help provide a consistent set of data for multiple reports.  
   
@@ -118,7 +118,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 -   Shared datasets follow the same rules for specifying parameter values as subscriptions do.  
   
 ## See Also  
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server-content-management-ssrs-native-mode.md)   
- [Granting Permissions on a Native Mode Report Server](../granting-permissions-on-a-native-mode-report-server.md)  
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Granting Permissions on a Native Mode Report Server](../security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

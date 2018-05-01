@@ -52,10 +52,10 @@ manager: "mblythe"
 3.  Select the check box next to the history snapshot you want to delete, and then click **Delete**.  
   
 ## See Also  
- [Add a Snapshot to Report History &#40;Report Manager&#41;](../../2014/reporting-services/add-a-snapshot-to-report-history-report-manager.md)   
+ [Add a Snapshot to Report History &#40;Report Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Report History Page &#40;Report Manager&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
- [Set Report Processing Properties](../../2014/reporting-services/set-report-processing-properties.md)   
+ [Set Report Processing Properties](report-server/set-report-processing-properties.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Create, Modify, and Delete Snapshots in Report History](../../2014/reporting-services/create-modify-and-delete-snapshots-in-report-history.md)  
+ [Create, Modify, and Delete Snapshots in Report History](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

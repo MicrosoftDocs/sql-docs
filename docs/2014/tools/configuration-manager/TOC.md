@@ -63,5 +63,5 @@
 ## [Choosing a Network Protocol](choosing-a-network-protocol.md)
 ## [Monitoring the Error Logs](monitoring-the-error-logs.md)
 ### [Viewing the SQL Server Error Log](viewing-the-sql-server-error-log.md)
-### [Viewing the Windows Application Log](viewing-the-windows-application-log.md)
+### [Viewing the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)
 ## [About the SQL Server License Terms (SSCM)](about-the-sql-server-license-terms-sscm.md)

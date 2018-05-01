@@ -28,13 +28,13 @@ manager: "mblythe"
   
  URLs in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] can be configured to use an SSL certificate. A certificate normally has just a subject name, which allows only one URL for an SSL (Secure Sockets Layer) session. The SAN is an additional field in the certificate that allows an SSL service to listen and be valid for many URLs, and to share the SSL port with other applications. The SAN looks something like the following: www.s2.com.  
   
- For more information about SSL settings for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Configure SSL Connections on a Native Mode Report Server](../../2014/reporting-services/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ For more information about SSL settings for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Configure SSL Connections on a Native Mode Report Server](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### Configure SSRS to use a subject alternative name for Web Service URL  
   
 1.  Start Reporting Services Configuration Manager.  
   
-     For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+     For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 2.  On the **Web Service URL** page, select an SSL port and SSL Certificate.  
   
@@ -122,9 +122,9 @@ manager: "mblythe"
 10. On the **Report Server Status** page of the Reporting Services Configuration Manager, Click **Stop** and then click **Start** to restart the report server.  
   
 ## See Also  
- [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
+ [Reporting Services Configuration Manager &#40;Native Mode&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

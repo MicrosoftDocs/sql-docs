@@ -32,11 +32,11 @@ manager: "jhubbard"
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS scripts:** Write a Visual Basic script that calls Report Server Web service SOAP methods to copy data between databases. Use the **RS.exe** utility to run the script. Rs.exe is installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-    -   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). The topics explains how to use the sample script you can download from CodePlex.  
+    -   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). The topics explains how to use the sample script you can download from CodePlex.  
   
     -   The sample rss script on CodePlex, [Reporting Services RS.exe script that migrates content from one report server to another](http://azuresql.codeplex.com/releases/view/115207)  
   
-    -   [Scripting and PowerShell with Reporting Services](../scripting-and-powershell-with-reporting-services.md)  
+    -   [Scripting and PowerShell with Reporting Services](../tools/scripting-and-powershell-with-reporting-services.md)  
   
  The following table summarizes the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] objects you can migrate with scripts:  
   
@@ -47,8 +47,8 @@ manager: "jhubbard"
 |Models|Yes||  
 |Datasets|Yes||  
 |Report Parts||Following migration, verify or update the path to the report parts.|  
-|Schedules|Yes|See the ListSchedules method [Subscription and Delivery Methods](../dev-guide/subscription-and-delivery-methods.md)|  
-|Subscriptions|yes|See the List Subscriptions method [Subscription and Delivery Methods](../dev-guide/subscription-and-delivery-methods.md) and the ChangeSubscriptionOwner method <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
+|Schedules|Yes|See the ListSchedules method [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|Subscriptions|yes|See the List Subscriptions method [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) and the ChangeSubscriptionOwner method <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |Snapshots|||  
 ||||  
   

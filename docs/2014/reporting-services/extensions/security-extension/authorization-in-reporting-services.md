@@ -69,7 +69,7 @@ public bool CheckAccess(
 ### Authorization Flow  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] authorization is controlled by the security extension currently configured to run on the server. Authorization is role-based and limited to the permissions and operations supplied by the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] security architecture. The following diagram depicts the process of authorizing users to operate on items in the report server database:  
   
- ![Reporting Services security authorization flow](../../dev-guide/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services security authorization flow")  
+ ![Reporting Services security authorization flow](../../media/rosettasecurityextensionauthorizationflow.gif "Reporting Services security authorization flow")  
   
  As shown in this diagram, authorization follows this sequence:  
   

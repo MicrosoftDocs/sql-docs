@@ -34,7 +34,7 @@ manager: "jhubbard"
 |`Type`|A comma-separated list that includes the fully qualified namespace along with the name of the assembly.|  
 |`Visible`|A value of `false` indicates that the data processing extension should not be visible in user interfaces. If the attribute is not included, the default value is `true`.|  
   
- For more information about the RSReportServer.config or RSReportDesigner.config files, see [Reporting Services Configuration Files](../../reporting-services-configuration-files.md).  
+ For more information about the RSReportServer.config or RSReportDesigner.config files, see [Reporting Services Configuration Files](../../report-server/reporting-services-configuration-files.md).  
   
 ## In This Section  
   

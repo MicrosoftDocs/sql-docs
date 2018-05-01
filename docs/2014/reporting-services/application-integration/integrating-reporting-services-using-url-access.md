@@ -35,7 +35,7 @@ manager: "jhubbard"
  Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 environment.  
   
 ## See Also  
- [Integrating Reporting Services into Applications](../dev-guide/integrating-reporting-services-into-applications.md)   
+ [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)   
  [URL Access &#40;SSRS&#41;](../url-access-ssrs.md)  
   
   

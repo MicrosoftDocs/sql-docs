@@ -31,7 +31,7 @@ manager: "mblythe"
  Choose this option to delete only the group definition.  
   
 ## See Also  
- [Report Designer F1 Help](../../2014/reporting-services/report-designer-f1-help.md)   
+ [Report Designer F1 Help](tools/report-designer-f1-help.md)   
  [Understanding Groups &#40;Report Builder and SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

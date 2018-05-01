@@ -87,7 +87,7 @@ manager: "jhubbard"
   
  If you configure all report servers with \<IsWebServiceEnable> set to False, you will see an error message similar to the following when you try to use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features:  
   
- The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have \<IsWebServiceEnable> set to true. For more information, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have \<IsWebServiceEnable> set to true. For more information, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
 ## See Also  
  [Add web or application servers to farms in SharePoint 2013](http://technet.microsoft.com/library/cc261752.aspx)   

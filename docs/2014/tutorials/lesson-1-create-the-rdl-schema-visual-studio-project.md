@@ -65,7 +65,7 @@ manager: "mblythe"
   
      In the **Add Reference** dialog box, in the **.NET** tab, select **System.Web.Services**, then click **OK**.  
   
-     For more information about how to connect to the Report Server Web service, see [Building Applications Using the Web Service and the .NET Framework](../../2014/reporting-services/dev-guide/building-applications-using-the-web-service-and-the-net-framework.md).  
+     For more information about how to connect to the Report Server Web service, see [Building Applications Using the Web Service and the .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 10. In Solution Explorer, expand the project node. You will see a code file with the default name of Program.cs (Module1.vb for [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) has been added to your project.  
   
@@ -199,6 +199,6 @@ manager: "mblythe"
   
 ## See Also  
  [Updating Reports Using Classes Generated from the RDL Schema &#40;SSRS Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Report Definition Language &#40;SSRS&#41;](../../2014/reporting-services/report-definition-language-ssrs.md)  
+ [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

@@ -59,9 +59,9 @@ manager: "mblythe"
  Click to save your changes.  
   
 ## See Also  
- [Add a Snapshot to Report History &#40;Report Manager&#41;](../../2014/reporting-services/add-a-snapshot-to-report-history-report-manager.md)   
+ [Add a Snapshot to Report History &#40;Report Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Create, Modify, and Delete Snapshots in Report History](../../2014/reporting-services/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Create, Modify, and Delete Snapshots in Report History](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  You can develop data processing extensions for your own data sources, or you can use the interfaces to add an additional layer of data processing to common database infrastructures. You can deploy your custom data processing extensions to enable seamless integration of data into the existing report servers in your organization. You can also use them as part of a custom reporting suite that you provide to your consumers.  
   
- ![Data processing extension architecture](../../dev-guide/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![Data processing extension architecture](../../media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
 Reporting Services data processing extension architecture  
   
  The advantages to implementing a custom [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension include:  
@@ -53,7 +53,7 @@ Reporting Services data processing extension architecture
 ## Data Extension Process Flow  
  Before developing your custom data extension, you should understand how the report server uses data extensions to process data. You should also understand the constructors and methods that are called by the report server.  
   
- ![Process flow for data processing extension](../../dev-guide/media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![Process flow for data processing extension](../../media/bk-ext-01.gif "Process flow for data processing extension")  
 The step-by-step process flow of a data extension that is called by the report server  
   
  The illustration shows the following sequence of events:  

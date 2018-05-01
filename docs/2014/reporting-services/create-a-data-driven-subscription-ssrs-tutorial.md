@@ -57,14 +57,14 @@ manager: "mblythe"
   
 -   The [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database, which provides data to the sample report.  
   
--   A role assignment that includes the Manage all subscriptions task on the sample report. This task is required for defining a data-driven subscription. If you are an administrator on the computer, the default role assignment for local administrators provides the permissions necessary for creating data-driven subscriptions. For more information, see [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md).  
+-   A role assignment that includes the Manage all subscriptions task on the sample report. This task is required for defining a data-driven subscription. If you are an administrator on the computer, the default role assignment for local administrators provides the permissions necessary for creating data-driven subscriptions. For more information, see [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   A shared folder for which you have write permissions. The shared folder must be accessible over a network connection.  
   
  **Estimated time to complete the tutorial:** 30 minutes. An additional 30 minutes if you have not completed the basic report tutorial.  
   
 ## See Also  
- [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

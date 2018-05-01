@@ -57,6 +57,6 @@ manager: "mblythe"
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Contents Page &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
- [Upload Files to a Folder](../../2014/reporting-services/upload-files-to-a-folder.md)  
+ [Upload Files to a Folder](report-server/upload-files-to-a-folder.md)  
   
   

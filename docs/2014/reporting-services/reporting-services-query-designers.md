@@ -22,7 +22,7 @@ manager: "mblythe"
   
  Some data sources support graphical designers that help you build a query interactively. Other data sources use a text-based query designer. By using a graphical query designer, you can drag metadata items that represent the underlying data on a data source to the query design surface. By using a text-based query designer, you can type command text into a query pane. You can change from a graphical query designer to a text-based query designer by clicking the text-based query designer icon on the toolbar.  
   
- The data source types that are available in your report are determined by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data extensions installed on your client or report server. For more information, see [RSReportDesigner Configuration File](../../2014/reporting-services/rsreportdesigner-configuration-file.md) and [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md).  
+ The data source types that are available in your report are determined by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data extensions installed on your client or report server. For more information, see [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md) and [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
  A data processing extension and its associated query designer can differ in support for data sources in the following ways:  
   

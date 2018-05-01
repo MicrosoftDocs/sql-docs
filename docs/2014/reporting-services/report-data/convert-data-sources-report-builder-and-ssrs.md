@@ -35,7 +35,7 @@ manager: "mblythe"
 -   In the Report Data pane, right-click the data source, and then click **Convert to Shared Data Source**.  
   
     > [!NOTE]  
-    >  If the Report Data pane is not visible, on the **View** menu, click **Report Data**. If the pane opens as a floating window, you can dock it. For more information, see [Dock the Report Data Pane in Report Designer &#40;SSRS&#41;](../dock-the-report-data-pane-in-report-designer-ssrs.md).  
+    >  If the Report Data pane is not visible, on the **View** menu, click **Report Data**. If the pane opens as a floating window, you can dock it. For more information, see [Dock the Report Data Pane in Report Designer &#40;SSRS&#41;](../tools/dock-the-report-data-pane-in-report-designer-ssrs.md).  
   
      In the Report Data pane, the data source icon changes to the shared data source icon. In Solution Explorer, a shared data source with the same name appears under the **Shared Data Source** folder.  
   

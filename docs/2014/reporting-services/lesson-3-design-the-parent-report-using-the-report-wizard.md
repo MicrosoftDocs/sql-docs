@@ -16,7 +16,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Lesson 3: Design the Parent Report using the Report Wizard
-  After you create a data connection and a data table for the parent report, your next step is to design the parent report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design Reports with Report Designer &#40;SSRS&#41;](design-reports-with-report-designer-ssrs.md).  
+  After you create a data connection and a data table for the parent report, your next step is to design the parent report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design Reports with Report Designer &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### To design the parent report using the Report Wizard  
   

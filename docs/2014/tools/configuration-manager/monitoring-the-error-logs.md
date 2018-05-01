@@ -42,6 +42,6 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Viewing the SQL Server Error Log](../../../2014/tools/configuration-manager/viewing-the-sql-server-error-log.md)|Contains information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and how to view it.|  
-|[Viewing the Windows Application Log](../../../2014/tools/configuration-manager/viewing-the-windows-application-log.md)|Contains information about the Windows application log and how to view it.|  
+|[Viewing the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|Contains information about the Windows application log and how to view it.|  
   
   

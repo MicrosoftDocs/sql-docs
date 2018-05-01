@@ -27,7 +27,7 @@ manager: "mblythe"
   You can configure a report server to reduce the security risks associated with e-mail and file share distribution.  
   
 ## Securing Reports  
- The first step in controlling report distribution is to secure the report against unauthorized access. To be used in a subscription, a report must use a stored set of credentials that do not vary for individual deliveries. Any user who can access the report on the report server can run it and possibly distribute it. To prevent this from occurring, you must limit report access to only those users who require it. For more information, see [Secure Reports and Resources](../../2014/reporting-services/secure-reports-and-resources.md) and [Secure Folders](../../2014/reporting-services/secure-folders.md).  
+ The first step in controlling report distribution is to secure the report against unauthorized access. To be used in a subscription, a report must use a stored set of credentials that do not vary for individual deliveries. Any user who can access the report on the report server can run it and possibly distribute it. To prevent this from occurring, you must limit report access to only those users who require it. For more information, see [Secure Reports and Resources](security/secure-reports-and-resources.md) and [Secure Folders](security/secure-folders.md).  
   
  Highly confidential reports that use database security to authorize access cannot be distributed by way of subscription.  
   
@@ -46,7 +46,7 @@ manager: "mblythe"
   
 ## See Also  
  [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [Subscriptions and Delivery &#40;Reporting Services&#41;](../../2014/reporting-services/subscriptions-and-delivery-reporting-services.md)   
+ [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

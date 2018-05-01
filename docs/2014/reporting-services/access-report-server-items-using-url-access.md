@@ -23,7 +23,7 @@ manager: "mblythe"
   
  It is not necessary to add this parameter string. If you omit it, the report server evaluates the item type and selects the appropriate parameter value automatically. However, using the *rs:Command*=*Value* string in the URL improves the performance of the report server.  
   
- Note the `_vti_bin` proxy syntax in the examples below. For more information about using the proxy syntax, see [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md).  
+ Note the `_vti_bin` proxy syntax in the examples below. For more information about using the proxy syntax, see [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## Access a Report  
  To view a report in the browser, use the *rs:Command*=*Render* parameter. For example:  
@@ -63,7 +63,7 @@ manager: "mblythe"
 </DataSourceDefinition>  
 ```  
   
- The connection string is returned based on the **SecureConnectionLevel** setting of the report server. For more information about the **SecureConnectionLevel** setting, see [Using Secure Web Service Methods](../../2014/reporting-services/dev-guide/using-secure-web-service-methods.md).  
+ The connection string is returned based on the **SecureConnectionLevel** setting of the report server. For more information about the **SecureConnectionLevel** setting, see [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## Access the Contents of a Folder  
  To access the contents of a folder, use the *rs:Command*=*GetChildren* parameter. A generic folder-navigation page is returned that contains links to the subfolders, reports, data sources, and resources in the requested folder. For example:  
@@ -75,7 +75,7 @@ manager: "mblythe"
  The user interface you see is similar to the directory browsing mode used by [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). The version number, including the build number, of the report server is also displayed below the folder listing.  
   
 ## See Also  
- [URL Access &#40;SSRS&#41;](../../2014/reporting-services/url-access-ssrs.md)   
- [URL Access Parameter Reference](../../2014/reporting-services/url-access-parameter-reference.md)  
+ [URL Access &#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL Access Parameter Reference](url-access-parameter-reference.md)  
   
   

@@ -50,9 +50,9 @@ manager: "mblythe"
  If you publish a report with data source properties embedded in the report, consider switching to shared data source properties. Shared data sources are easier to manage because you can update credentials and connection strings in one page. All reports, models, and data-driven subscriptions that use that data source pick up the changes immediately. You can also take a shared data source offline, effectively pausing the report or subscription to prevent it from executing while you troubleshoot or investigate any problems that arise.  
   
 ## Controlling Access Data Source Properties  
- By default, anyone who has permission to manage reports can set any property on the report, including properties that determine the data source type, connection string, credentials, and whether the report gets connection information from an embedded or a shared data source. For more information about which tasks and permissions control access to data source properties on a native mode report server, see [Secure Shared Data Source Items](../secure-shared-data-source-items.md) and [Secure Reports and Resources](../secure-reports-and-resources.md).  
+ By default, anyone who has permission to manage reports can set any property on the report, including properties that determine the data source type, connection string, credentials, and whether the report gets connection information from an embedded or a shared data source. For more information about which tasks and permissions control access to data source properties on a native mode report server, see [Secure Shared Data Source Items](../security/secure-shared-data-source-items.md) and [Secure Reports and Resources](../security/secure-reports-and-resources.md).  
   
- Permissions to view and edit properties for items in a SharePoint library are determined by the site administrator. For more information about which permissions control access to data source connection properties, see [SharePoint Site and List Permission Reference for Report Server Items](../sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Permissions to view and edit properties for items in a SharePoint library are determined by the site administrator. For more information about which permissions control access to data source connection properties, see [SharePoint Site and List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## How to Work with Data Source Properties on a Report Server  
  You can use a variety of tools to create and modify data source properties. The following table summarizes the approaches and tools, and provides a link to additional instructions.  
@@ -79,6 +79,6 @@ manager: "mblythe"
  [Store Credentials in a Reporting Services Data Source](store-credentials-in-a-reporting-services-data-source.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server-content-management-ssrs-native-mode.md)  
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

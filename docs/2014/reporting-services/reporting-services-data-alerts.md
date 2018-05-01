@@ -54,11 +54,11 @@ manager: "mblythe"
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports a variety of credential types in reports. You can create data alerts on reports with data source configured to use stored credentials, or no credentials. You cannot create alerts on reports configured to use integrated security credentials or prompt for credentials. The report is run as part of processing the alert definition and the processing fails without credentials. For more information, see the following:  
   
--   [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)  
+-   [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
--   [Roles and Permissions &#40;Reporting Services&#41;](../../2014/reporting-services/roles-and-permissions-reporting-services.md)  
+-   [Roles and Permissions &#40;Reporting Services&#41;](security/roles-and-permissions-reporting-services.md)  
   
--   [Authentication with the Report Server](../../2014/reporting-services/authentication-with-the-report-server.md)  
+-   [Authentication with the Report Server](security/authentication-with-the-report-server.md)  
   
 ### Run Reports  
  The first step in creating a data alert definition is to locate the report you want in the SharePoint library, and then run the report. If a report contains no data when you run it, you cannot create an alert on the report at that time.  
@@ -117,7 +117,7 @@ manager: "mblythe"
  You can use the **Provision Subscriptions and Alerts** page in SharePoint Central Administration to find out whether SQL Server Agent is running and create and download customized [!INCLUDE[tsql](../includes/tsql-md.md)] scripts that you then run to grant permissions to SQL Server Agent. If can also generate the [!INCLUDE[tsql](../includes/tsql-md.md)] scripts by using PowerShell. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Configure Data Alerts  
- Starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] the settings for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features, including data alerts, are distributed between the report server configuration file (rsreportserver.config) and a SharePoint configuration database whenever you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode. When you create the service application as a step in installing and configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the SharePoint configuration database is automatically created. For more information, see [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md) and [Reporting Services Configuration Files](../../2014/reporting-services/reporting-services-configuration-files.md).  
+ Starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] the settings for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features, including data alerts, are distributed between the report server configuration file (rsreportserver.config) and a SharePoint configuration database whenever you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode. When you create the service application as a step in installing and configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the SharePoint configuration database is automatically created. For more information, see [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md) and [Reporting Services Configuration Files](report-server/reporting-services-configuration-files.md).  
   
  The settings for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts include the intervals for cleaning up alerting data and metadata and the number of retries when sending data alert messages by email. You can update the configuration file and the configuration database to use different values for data alert settings.  
   
@@ -195,7 +195,7 @@ manager: "mblythe"
   
 -   [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts support two permission levels: information worker and alerting administrator. The following table lists the related SharePoint permissions and user tasks.  
   
@@ -219,7 +219,7 @@ manager: "mblythe"
 ### Logs  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides a number of logs that can help you learn more the reports that are run when processing data alert definitions, the data alert instances that are created and so forth. Three logs are particularly useful: the alerting execution log, the report server execution log, and the report server trace log.  
   
- For information about other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] logs, see [Reporting Services Log Files and Sources](../../2014/reporting-services/reporting-services-log-files-and-sources.md).  
+ For information about other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] logs, see [Reporting Services Log Files and Sources](report-server/reporting-services-log-files-and-sources.md).  
   
 #### Alerting Execution Log  
  The alerting runtime service writes entries in the ExecutionLogView table in the alerting database. You can query the table or run the following stored procedures to get richer diagnostic information about the data alerts saved to the alerting database.  
@@ -243,10 +243,10 @@ manager: "mblythe"
  You can use SQL Agent to run the stored procedure on a schedule. For more information, see [SQL Server Agent](../ssms/agent/sql-server-agent.md).  
   
 #### Report Server Execution Log  
- Reports are run to generate the data feeds that data alert definitions are built upon. The report server execution log in the report server database captures information each time the report is run. You can query the ExecutionLog2 view in the database for detailed information. For more information, see [Report Server Execution Log and the ExecutionLog3 View](../../2014/reporting-services/report-server-execution-log-and-the-executionlog3-view.md).  
+ Reports are run to generate the data feeds that data alert definitions are built upon. The report server execution log in the report server database captures information each time the report is run. You can query the ExecutionLog2 view in the database for detailed information. For more information, see [Report Server Execution Log and the ExecutionLog3 View](report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
 #### Report Server Trace Log  
- The report server trace log contains highly detailed information for report server service operations, including operations performed by the report server Web service and background processing. Trace log information might be useful if you are debugging an application that includes a report server, or investigating a specific problem that was written to the event log or execution log. For more information, see [Report Server Service Trace Log](../../2014/reporting-services/report-server-service-trace-log.md).  
+ The report server trace log contains highly detailed information for report server service operations, including operations performed by the report server Web service and background processing. Trace log information might be useful if you are debugging an application that includes a report server, or investigating a specific problem that was written to the event log or execution log. For more information, see [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).  
   
 ##  <a name="PerformanceCounters"></a> Performance Counters  
  Data alerts provide their own performance counters. All but one performance counter is related to an event that is part of the alerting runtime service. The performance counter related to the event queue tells the length of the queue of all active events.  
@@ -262,7 +262,7 @@ manager: "mblythe"
 |GenerateAlert|Alerting: events processed - GenerateAlert|  
 |DeliverAlert|Alerting: events processed - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides performance counters for other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features. For more information, see [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../2014/reporting-services/performance-counters-reportserver-service-performance-objects.md), [Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects &#40;Native Mode&#41;](../../2014/reporting-services/performance-counters-msrs-2011-web-service-performance-objects.md), and [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../2014/reporting-services/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides performance counters for other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features. For more information, see [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](report-server/performance-counters-reportserver-service-performance-objects.md), [Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects &#40;Native Mode&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), and [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
 ##  <a name="SupportForSSL"></a> Support for SSL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] can use the HTTP SSL (Secure Sockets Layer) service to establish encrypted connections to a report server or SharePoint site.  

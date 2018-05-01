@@ -28,7 +28,7 @@ manager: "mblythe"
  Click to open the New Data Source page, which is used to create a shared data source item.  
   
  **Report Builder**  
- Click to start Report Builder. To access Report Builder from Report Manager, Report Builder must be enabled on the report server and you must have permission to use it. For more information, see [Configure Report Builder Access](../../2014/reporting-services/configure-report-builder-access.md).  
+ Click to start Report Builder. To access Report Builder from Report Manager, Report Builder must be enabled on the report server and you must have permission to use it. For more information, see [Configure Report Builder Access](report-server/configure-report-builder-access.md).  
   
  **Folder Settings**  
  Click to open and manage properties of the current folder.  
@@ -54,7 +54,7 @@ manager: "mblythe"
   
 ## See Also  
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

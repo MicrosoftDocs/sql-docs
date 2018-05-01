@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   The *ServerParameters* that contain the string dictionary object, with the parameters for the report server, if any.  
   
--   The *deviceInfo* parameter that contain the device settings. For more information, see [Passing Device Information Settings to Rendering Extensions](../../dev-guide/passing-device-information-settings-to-rendering-extensions.md).  
+-   The *deviceInfo* parameter that contain the device settings. For more information, see [Passing Device Information Settings to Rendering Extensions](../../report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
 -   The *clientCapabilities* parameter that contains a <xref:System.Collections.Specialized.NameValueCollection> dictionary object that has information about the client to which you are rendering.  
   

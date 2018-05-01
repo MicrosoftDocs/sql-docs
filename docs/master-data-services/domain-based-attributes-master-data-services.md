@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "domain-based attributes [Master Data Services], about domain-based attributes"
   - "domain-based attributes [Master Data Services]"

@@ -14,7 +14,7 @@ ms.component: multidimensional-tabular
 ms.component: data-mining
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "input files [Analysis Services]"
   - "installation targets [Analysis Services]"

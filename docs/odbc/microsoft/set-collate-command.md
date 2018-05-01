@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "set collate command [ODBC]"
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CString class [ODBC]"
 ms.assetid: 18630642-76fa-43c4-a154-3f0969ec9b50

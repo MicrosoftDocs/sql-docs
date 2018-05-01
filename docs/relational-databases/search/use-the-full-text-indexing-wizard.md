@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.fulltextindexingwizard.welcome.f1"
   - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"

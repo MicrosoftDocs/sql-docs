@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "TM: Commit Tran Starting event class"
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547

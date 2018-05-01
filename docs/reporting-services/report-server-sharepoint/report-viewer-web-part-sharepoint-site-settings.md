@@ -11,7 +11,7 @@ ms.suite: ""
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "jt000"
 ms.author: "jasontre"
 ---

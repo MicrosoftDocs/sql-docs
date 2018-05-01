@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "powershell"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
 caps.latest.revision: 3
 author: "stevestein"

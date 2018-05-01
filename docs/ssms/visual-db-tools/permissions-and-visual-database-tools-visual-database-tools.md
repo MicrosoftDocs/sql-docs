@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multiuser environments [Visual Database Tools]"
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0

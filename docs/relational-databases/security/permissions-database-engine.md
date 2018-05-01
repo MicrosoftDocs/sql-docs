@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
   - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"

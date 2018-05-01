@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 caps.latest.revision: 5
 author: "douglaslMS"

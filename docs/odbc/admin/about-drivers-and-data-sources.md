@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC data source administrator [ODBC], concepts"
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d

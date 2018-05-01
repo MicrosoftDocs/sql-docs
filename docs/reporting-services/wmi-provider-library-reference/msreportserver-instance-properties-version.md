@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Version property"
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd

@@ -10,7 +10,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"

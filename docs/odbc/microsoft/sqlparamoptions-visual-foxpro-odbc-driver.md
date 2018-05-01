@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLParamOptions function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715

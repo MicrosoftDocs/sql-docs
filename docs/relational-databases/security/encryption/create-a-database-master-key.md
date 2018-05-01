@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database master key [SQL Server], creating"
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb

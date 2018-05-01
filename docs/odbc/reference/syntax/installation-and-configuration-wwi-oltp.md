@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetDriverConnectInfo function [ODBC]"
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256

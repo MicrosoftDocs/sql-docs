@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Broker:Message Undeliverable event class"
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af

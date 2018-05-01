@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.userroleproperties.f1"
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3

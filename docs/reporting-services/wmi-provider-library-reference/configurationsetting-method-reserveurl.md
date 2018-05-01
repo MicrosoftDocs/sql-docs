@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ReservedURL method"
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899

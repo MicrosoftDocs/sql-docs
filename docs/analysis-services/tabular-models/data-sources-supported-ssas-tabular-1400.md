@@ -3,7 +3,7 @@ title: "Data sources supported in SQL Server Analysis Services tabular 1400 mode
 ms.date: "03/26/2018"
 ms.prod: analysis-services
 ms.suite: "pro-bi"
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 
 author: "Minewiskan"
 ms.author: "owend"

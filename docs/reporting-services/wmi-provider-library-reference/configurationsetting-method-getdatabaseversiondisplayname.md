@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "GetDatabaseVersionDisplayName method"
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4

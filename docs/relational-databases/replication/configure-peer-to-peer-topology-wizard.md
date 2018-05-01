@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Configure Peer-to-Peer Topology Wizard"
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8

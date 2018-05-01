@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC], describing parameters"
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f

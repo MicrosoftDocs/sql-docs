@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "dllExport"
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 caps.latest.revision: 10

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "locks option [SQL Server]"
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973

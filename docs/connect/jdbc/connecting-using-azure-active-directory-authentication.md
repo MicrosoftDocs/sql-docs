@@ -11,7 +11,7 @@ ms.service: ""
 ms.component: "jdbc"
 ms.technology: 
   - "drivers"
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: "MightyPen"

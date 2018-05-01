@@ -1,7 +1,7 @@
 ---
 title: "Schedule SSIS package execution on Azure | Microsoft Docs"
 ms.date: "04/17/2018"
-ms.topic: "article"
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""

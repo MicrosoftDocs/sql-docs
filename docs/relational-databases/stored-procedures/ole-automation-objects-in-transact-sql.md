@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-ole"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], OLE Automation"
   - "batches [SQL Server], OLE Automation"

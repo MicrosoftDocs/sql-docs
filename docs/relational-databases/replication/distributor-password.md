@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.configuredistributionwizard.distributorpassword.f1"
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb

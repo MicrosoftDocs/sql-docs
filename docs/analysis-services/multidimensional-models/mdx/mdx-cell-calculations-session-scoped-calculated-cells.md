@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "session-scoped calculated members [MDX]"
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "selOraTabDia"
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4

@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "query-based subscriptions [Reporting Services]"
   - "queries [Reporting Services], data-driven subscriptions"

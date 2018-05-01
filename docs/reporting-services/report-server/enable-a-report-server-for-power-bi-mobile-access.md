@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 caps.latest.revision: 7
 author: "markingmyname"

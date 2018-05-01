@@ -11,7 +11,7 @@ ms.suite: "pro-bi"
 ms.technology: 
   
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 2d0a9834-db91-403f-847c-79a8f49fc916
 caps.latest.revision: 7
 author: "Minewiskan"

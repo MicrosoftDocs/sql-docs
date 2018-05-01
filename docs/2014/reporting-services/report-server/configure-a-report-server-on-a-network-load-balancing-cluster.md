@@ -96,7 +96,7 @@ manager: "mblythe"
 ##  <a name="Verify"></a> Verify Report Server Access  
  Verify that you can access the scale-out deployment through the virtual server name (for example, https://MyVirtualServerName/reportserver and https://MyVirtualServerName/reports).  
   
- You can check which node actually processes reports by looking at the report server log files or by checking the RS execution log (the execution log table contains a column called **InstanceName** that shows which instance processed a particular request). For more information, see [Reporting Services Log Files and Sources](../reporting-services-log-files-and-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ You can check which node actually processes reports by looking at the report server log files or by checking the RS execution log (the execution log table contains a column called **InstanceName** that shows which instance processed a particular request). For more information, see [Reporting Services Log Files and Sources](../report-server/reporting-services-log-files-and-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
  If you cannot connect to the report server, check the NLB to ensure that requests are sent to the report server and view the report server HTTP log to ensure that the server is receiving the requests.  
   

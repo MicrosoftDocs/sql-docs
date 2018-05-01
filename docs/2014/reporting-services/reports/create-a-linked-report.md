@@ -41,7 +41,7 @@ manager: "mblythe"
      ![Linked report icon](../media/hlp-16linked.gif "Linked report icon")  
   
 ## See Also  
- [Open and Close a Report &#40;Report Manager&#41;](../open-and-close-a-report-report-manager.md)   
+ [Open and Close a Report &#40;Report Manager&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [New Linked Report Page &#40;Report Manager&#41;](../new-linked-report-page-report-manager.md)   
  [Choose Item Location Page &#40;Report Manager&#41;](../choose-item-location-page-report-manager.md)   
  [General Properties Page, Reports &#40;Report Manager&#41;](../general-properties-page-reports-report-manager.md)   

@@ -72,7 +72,7 @@ manager: "mblythe"
  Reports that contain confidential information should be secured at the data-access level, by requiring users to provide credentials to access sensitive data. For more information, see [Specify Credential and Connection Information for Report Data Sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). You can also secure a folder to make it inaccessible to unauthorized users. For more information, see [Secure Folders](secure-folders.md).  
   
 ## See Also  
- [Create and Manage Role Assignments](role-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Configure Report Builder Access](../report-server/configure-report-builder-access.md)   
  [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [Secure Shared Data Source Items](secure-shared-data-source-items.md)   

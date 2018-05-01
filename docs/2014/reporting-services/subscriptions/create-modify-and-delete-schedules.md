@@ -49,7 +49,7 @@ manager: "mblythe"
   
 -   Viewing the Reports page of a given Shared Schedule. This page lists all reports and shared datasets that use the shared schedule.  
   
--   Viewing the report execution log files or trace logs to determine whether reports have been run at the times specified by the schedule. For more information, see [Reporting Services Log Files and Sources](../reporting-services-log-files-and-sources.md).  
+-   Viewing the report execution log files or trace logs to determine whether reports have been run at the times specified by the schedule. For more information, see [Reporting Services Log Files and Sources](../report-server/reporting-services-log-files-and-sources.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Create and Manage Shared Schedules (SharePoint Mode)  
  A shared schedule is a multipurpose schedule that provides ready-to-use schedule information to any number of reports or subscriptions. You create a shared schedule once, and then reference it in a subscription or property page when you need schedule information. Shared schedules can be centrally managed, paused, and resumed. In contrast, you must edit a custom schedule manually to prevent a report or subscription from running.  

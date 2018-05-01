@@ -24,7 +24,7 @@ ms.author: "maghan"
 manager: "mblythe"
 ---
 # Monitoring Report Server Performance
-  Use performance monitoring tools to monitor report server performance to evaluate server activity, watch trends, diagnose system bottlenecks, and gather data that can help you determine whether the current system configuration is sufficient. To tune server performance, you can specify how often to recycle the report server application domain. For more information, see [Configure Available Memory for Report Server Applications](../configure-available-memory-for-report-server-applications.md).  
+  Use performance monitoring tools to monitor report server performance to evaluate server activity, watch trends, diagnose system bottlenecks, and gather data that can help you determine whether the current system configuration is sufficient. To tune server performance, you can specify how often to recycle the report server application domain. For more information, see [Configure Available Memory for Report Server Applications](../report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## Sources of Performance Data  
  Use a combination of technologies and tools to get comprehensive information about how the system is performing. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server operating systems provide performance information through the following tools:  
@@ -77,10 +77,10 @@ manager: "mblythe"
  In addition to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance objects, you might also want to configure SharePoint events if you are running a report server in SharePoint integrated mode and have configured your reporting environment to use a SharePoint product. In this section, use the Events for a Report Server in SharePoint Integrated Mode to review diagnostic events that might provide useful information if your reporting environment is integrated with SharePoint.  
   
 ## In This Section  
- [Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects &#40;Native Mode&#41;](../performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects &#40;Native Mode&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  Describes the performance counters used by the Report Server Web service.  
   
- [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  Describes the performance counters used by the Report Server Windows service.  
   
  [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](performance-counters-reportserver-service-performance-objects.md)  
@@ -90,7 +90,7 @@ manager: "mblythe"
  Describes the useful diagnostic events to log when you run a reporting environment with a SharePoint product.  
   
 ## See Also  
- [Configure Available Memory for Report Server Applications](../configure-available-memory-for-report-server-applications.md)   
+ [Configure Available Memory for Report Server Applications](../report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](reporting-services-report-server-native-mode.md)   
  [Reporting Services Tools](../tools/reporting-services-tools.md)  
   

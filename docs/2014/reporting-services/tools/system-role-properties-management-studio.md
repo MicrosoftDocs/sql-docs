@@ -41,7 +41,7 @@ manager: "mblythe"
 ## See Also  
  [Report Server in Management Studio F1 Help](report-server-in-management-studio-f1-help.md)   
  [System-Level Tasks](../security/tasks-and-permissions-system-level-tasks.md)   
- [Tasks and Permissions](../tasks-and-permissions.md)   
+ [Tasks and Permissions](../security/tasks-and-permissions.md)   
  [Predefined Roles](../security/role-definitions-predefined-roles.md)  
   
   

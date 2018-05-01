@@ -44,7 +44,7 @@ manager: "mblythe"
  Click to copy the data source selection to the Data Sources properties page.  
   
 ## See Also  
- [Manage Report Data Sources](../integration-services/connection-manager/data-sources.md)   
+ [Manage Report Data Sources](report-data/manage-report-data-sources.md)   
  [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Data Sources Properties Page &#40;Report Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [New Data Source Page &#40;Report Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   

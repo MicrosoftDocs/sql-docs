@@ -80,7 +80,7 @@ manager: "mblythe"
 ## See Also  
  [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)   
- [Create and Manage Role Assignments](role-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Specify Credential and Connection Information for Report Data Sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)   
  [Configure SSL Connections on a Native Mode Report Server](configure-ssl-connections-on-a-native-mode-report-server.md)   

@@ -32,7 +32,7 @@ manager: "mblythe"
 ## See Also  
  [Set Report Server Properties &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Connect to a Report Server in Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Reporting Services Log Files and Sources](../reporting-services-log-files-and-sources.md)   
+ [Reporting Services Log Files and Sources](../report-server/reporting-services-log-files-and-sources.md)   
  [Report Server in Management Studio F1 Help](report-server-in-management-studio-f1-help.md)   
  [Report Server Execution Log and the ExecutionLog3 View](../report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   

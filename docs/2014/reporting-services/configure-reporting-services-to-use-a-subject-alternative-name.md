@@ -34,7 +34,7 @@ manager: "mblythe"
   
 1.  Start Reporting Services Configuration Manager.  
   
-     For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+     For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 2.  On the **Web Service URL** page, select an SSL port and SSL Certificate.  
   
@@ -123,7 +123,7 @@ manager: "mblythe"
   
 ## See Also  
  [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager &#40;Native Mode&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

@@ -100,6 +100,6 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [New Data Source Page &#40;Report Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)   
- [Specify Credential and Connection Information for Report Data Sources](../integration-services/connection-manager/data-sources.md)  
+ [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

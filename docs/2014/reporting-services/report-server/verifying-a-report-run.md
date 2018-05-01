@@ -43,7 +43,7 @@ manager: "mblythe"
 |A cached report.|In the schedule used to create and refresh the cached report.|1) Open the report.<br />2) Click the **Properties** page.<br />3) Click the **Execution** tab.<br />4) Open the schedule.|  
   
 ## See Also  
- [Reporting Services Log Files and Sources](../reporting-services-log-files-and-sources.md)   
+ [Reporting Services Log Files and Sources](../report-server/reporting-services-log-files-and-sources.md)   
  [Set Report Processing Properties](set-report-processing-properties.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)  
   

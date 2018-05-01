@@ -114,7 +114,7 @@ manager: "mblythe"
  You can review trace log information to determine whether a report delivery occurred, who received the report, and how many delivery attempts were made. Trace logs also record report execution activity and the environment variables that are in effect during report processing. Errors and exceptions are also entered into trace logs. For example, you may find report time-out errors (indicated as a `ThreadAbortExceptions` entry).  
   
 ## See Also  
- [Reporting Services Log Files and Sources](../reporting-services-log-files-and-sources.md)   
+ [Reporting Services Log Files and Sources](../report-server/reporting-services-log-files-and-sources.md)   
  [Errors and Events Reference &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

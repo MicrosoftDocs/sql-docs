@@ -72,8 +72,8 @@ manager: "mblythe"
  [Predefined Roles](role-definitions-predefined-roles.md)   
  [Granting Permissions on Report Server Items on a SharePoint Site](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentication with the Report Server](authentication-with-the-report-server.md)   
- [Create and Manage Role Assignments](role-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Reporting Services Security and Protection](reporting-services-security-and-protection.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server-content-management-ssrs-native-mode.md)  
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

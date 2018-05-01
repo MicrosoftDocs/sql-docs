@@ -81,6 +81,6 @@ manager: "mblythe"
  [Tasks and Permissions](../security/tasks-and-permissions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
- [Role Assignments](../role-assignments.md)  
+ [Role Assignments](../security/role-assignments.md)  
   
   

@@ -78,7 +78,7 @@ manager: "mblythe"
   
 ## See Also  
  [Report Server Service Trace Log](report-server-service-trace-log.md)   
- [Reporting Services Log Files and Sources](../reporting-services-log-files-and-sources.md)   
+ [Reporting Services Log Files and Sources](../report-server/reporting-services-log-files-and-sources.md)   
  [Errors and Events Reference &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

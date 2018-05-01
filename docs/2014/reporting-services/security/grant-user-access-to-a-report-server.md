@@ -83,7 +83,7 @@ manager: "mblythe"
 7.  Repeat to create assignments for additional users or groups.  
   
 ## See Also  
- [Create and Manage Role Assignments](role-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
  [Security Properties Page, Items &#40;Report Manager&#41;](../security-properties-page-items-report-manager.md)   
  [Role Assignments](role-assignments.md)   

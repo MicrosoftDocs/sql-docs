@@ -82,10 +82,10 @@ manager: "mblythe"
   
      ![Reporting Services Configuration tool](../media/rs-ui-reportserverconfigkatmai.gif "Reporting Services Configuration tool")  
   
- **Next Steps:** [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ **Next Steps:** [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="bkmk_report_manager"></a> Report Manager (Native Mode)  
- Use [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) to set permissions, manage subscriptions and schedules, and work with reports. You can also use Report Manager to view reports.  
+ Use [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md) to set permissions, manage subscriptions and schedules, and work with reports. You can also use Report Manager to view reports.  
   
  **Installation:** Report Manager Is installed when you install [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode: [Install Reporting Services Native Mode Report Server](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
@@ -93,7 +93,7 @@ manager: "mblythe"
   
 #### To start Report Manager  
   
-1.  Open your browser. For information on supported browsers and browser versions, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+1.  Open your browser. For information on supported browsers and browser versions, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 2.  In the address bar of the Web browser, type the Report Manager URL. By default, the URL is **http://\<serverName>/reports**. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
@@ -197,9 +197,9 @@ manager: "mblythe"
 3.  Click **Report Builder Help** to open the documentation for Report Builder.  
   
 ## See Also  
- [Install, Uninstall, and Report Builder Support](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
+ [Install, Uninstall, and Report Builder Support](../install-uninstall-and-report-builder-support.md)   
  [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../install-windows/install-reporting-services-sharepoint-mode.md)   
- [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
+ [Reporting Services Report Server](../reporting-services-report-server.md)   
  [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   

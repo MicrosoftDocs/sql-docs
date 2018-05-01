@@ -146,7 +146,7 @@ manager: "mblythe"
  [Subscriptions and Delivery &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Caching Reports &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server-content-management-ssrs-native-mode.md)   
+ [Report Server Content Management &#40;SSRS Native Mode&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Cache Shared Datasets &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

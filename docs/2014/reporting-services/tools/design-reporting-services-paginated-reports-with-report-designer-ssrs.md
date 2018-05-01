@@ -90,7 +90,7 @@ manager: "mblythe"
   
   
 ##  <a name="bkmk_Resources"></a> Resources  
- You can add files to your project that are related to your report but not processed by the report server. For example, you can add images for pictures or ESRI shapefiles for spatial data. For more information, see [Resources](../report-server-content-management-ssrs-native-mode.md#bkmk_resources).  
+ You can add files to your project that are related to your report but not processed by the report server. For example, you can add images for pictures or ESRI shapefiles for spatial data. For more information, see [Resources](../report-server/report-server-content-management-ssrs-native-mode.md#bkmk_resources).  
   
   
 ##  <a name="bkmk_ReportLayout"></a> Report Layout  

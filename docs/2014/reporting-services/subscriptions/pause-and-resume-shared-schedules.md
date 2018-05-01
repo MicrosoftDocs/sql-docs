@@ -61,7 +61,7 @@ manager: "mblythe"
 4.  Select the schedule, and click **Pause Selected Schedules** or **Run Selected Schedules**. If a Schedule is currently paused, the **Status** column will contain **Paused**.  
   
 ## See Also  
- [Schedules](../../relational-databases/replication/schedules.md)   
+ [Schedules](schedules.md)   
  [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)   
  [Change Time Zones and Clock Settings on a Report Server](change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Manage a Running Process](manage-a-running-process.md)  

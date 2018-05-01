@@ -32,7 +32,7 @@ manager: "mblythe"
   
  [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services Configuration Manager &#40;Native Mode&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
  [Report Wizard Help](../../2014/reporting-services/report-wizard-help.md)  
   

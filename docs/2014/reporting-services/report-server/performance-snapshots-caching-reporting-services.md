@@ -35,7 +35,7 @@ manager: "mblythe"
   
 -   To find out how long it takes to process a report and other usage metrics, review the report server execution log. For more information, see [Report Server Execution Log and the ExecutionLog3 View](report-server-executionlog-and-the-executionlog3-view.md).  
   
--   For more information about how to mitigate performance issues by tuning memory management configuration settings, see [Configure Available Memory for Report Server Applications](../configure-available-memory-for-report-server-applications.md).  
+-   For more information about how to mitigate performance issues by tuning memory management configuration settings, see [Configure Available Memory for Report Server Applications](../report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## In This Section  
  [Monitoring Report Server Performance](monitoring-report-server-performance.md)  
@@ -44,7 +44,7 @@ manager: "mblythe"
  [Set Report Processing Properties](set-report-processing-properties.md)  
  Describes ways of configuring a report to run on demand, from cache, or on a schedule as a report snapshot.  
   
- [Configure Available Memory for Report Server Applications](../configure-available-memory-for-report-server-applications.md)  
+ [Configure Available Memory for Report Server Applications](../report-server/configure-available-memory-for-report-server-applications.md)  
  Describes how you can override default memory management behavior.  
   
  [Caching Reports &#40;SSRS&#41;](caching-reports-ssrs.md)  

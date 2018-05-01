@@ -45,7 +45,7 @@ manager: "craigg"
 ```     
 CREATE SECURITY POLICY [schema_name. ] security_policy_name    
     { ADD [ FILTER | BLOCK ] } PREDICATE tvf_schema_name.security_predicate_function_name   
-      ( { column_name | arguments } [ , …n] ) ON table_schema_name. table_name    
+      ( { column_name | expression } [ , …n] ) ON table_schema_name. table_name    
       [ <block_dml_operation> ] , [ , …n] 
     [ WITH ( STATE = { ON | OFF }  [,] [ SCHEMABINDING = { ON | OFF } ] ) ]  
     [ NOT FOR REPLICATION ] 
@@ -69,8 +69,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *tvf_schema_name.security_predicate_function_name*  
  Is the inline table value function that will be used as a predicate and that will be enforced upon queries against a target table. At most one security predicate can be defined for a particular DML operation against a particular table. The inline table value function must have been created using the SCHEMABINDING option.  
   
- { *column_name* | *arguments* }  
- The column name or expression used as parameters for the security predicate function. Any columns on the target table can be used as arguments for the predicate function. Expressions that include literals, builtins, and expressions that use arithmetic operators can be used.  
+ { *column_name* | *expression* }  
+ A column name or expression used as a parameter for the security predicate function. Any column on the target table can be used. An [Expression](../../t-sql/language-elements/expressions-transact-sql.md) can only include constants, built in scalar functions, operators and columns from the target table. A column name or expression needs to be specified for each parameter of the function.  
   
  *table_schema_name.table_name*  
  Is the target table to which the security predicate will be applied. Multiple disabled security policies can target a single table for a particular DML operation, but only one can be enabled at any given time.  

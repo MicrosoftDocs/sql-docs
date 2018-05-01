@@ -10,7 +10,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENJSON, with explicit schema"
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2

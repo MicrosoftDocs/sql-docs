@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "drop table command [ODBC]"
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8

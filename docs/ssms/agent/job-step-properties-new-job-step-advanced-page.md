@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.stepadvanced.f1"
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40

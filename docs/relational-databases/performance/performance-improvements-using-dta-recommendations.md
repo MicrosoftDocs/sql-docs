@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor, performance improvements"
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6

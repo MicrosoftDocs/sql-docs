@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: xml
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xsd:redefine element"
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e

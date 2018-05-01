@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "push subscriptions [SQL Server replication], creating"
   - "merge replication subscribing [SQL Server replication], push subscriptions"

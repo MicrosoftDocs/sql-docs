@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "standard subscriptions [Reporting Services]"
   - "subscriptions [Reporting Services], standard"

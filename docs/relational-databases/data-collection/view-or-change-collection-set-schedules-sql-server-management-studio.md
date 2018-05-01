@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dc.collectionsetprop.uploads.f1"
   - "sql13.swb.dc.collectionsetprop.description.f1"

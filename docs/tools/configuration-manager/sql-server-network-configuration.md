@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
 caps.latest.revision: 16
 author: "stevestein"

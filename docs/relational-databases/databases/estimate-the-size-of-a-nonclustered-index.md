@@ -10,7 +10,7 @@ ms.component: indexes
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"
   - "size [SQL Server], tables"

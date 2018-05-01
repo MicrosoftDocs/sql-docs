@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.dimensiondesigner.deletelanguagefirm.f1"
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f

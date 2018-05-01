@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Add Login to Server Role event class"
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9

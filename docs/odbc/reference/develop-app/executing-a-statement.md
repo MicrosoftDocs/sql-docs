@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ODBC], executing"
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1

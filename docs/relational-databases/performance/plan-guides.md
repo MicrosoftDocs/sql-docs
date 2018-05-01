@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-plan-guides"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "TEMPLATE plan guide"
   - "SQL plan guides"

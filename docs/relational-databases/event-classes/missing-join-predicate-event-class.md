@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Missing Join Predicate event class"
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479

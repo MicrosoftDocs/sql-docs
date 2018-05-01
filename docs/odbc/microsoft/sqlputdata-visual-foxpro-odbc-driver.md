@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPutData function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8c79e9ba-afa0-4e20-9c53-371cc42b4a97

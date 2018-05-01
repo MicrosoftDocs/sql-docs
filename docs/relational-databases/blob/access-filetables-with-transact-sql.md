@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], accessing files with T-SQL"
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02

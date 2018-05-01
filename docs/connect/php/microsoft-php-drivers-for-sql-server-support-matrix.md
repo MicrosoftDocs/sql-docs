@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 caps.latest.revision: 1
 author: "David-Engel"
 ms.author: "v-daveng"

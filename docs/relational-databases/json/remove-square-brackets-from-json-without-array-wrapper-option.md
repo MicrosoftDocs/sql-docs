@@ -10,7 +10,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "WITHOUT_ARRAY_WRAPPER"
 ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054

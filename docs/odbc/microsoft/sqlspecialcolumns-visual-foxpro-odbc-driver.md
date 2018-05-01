@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSpecialColumns function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: b72a978d-6a60-475a-b7d9-c424d77bbe30

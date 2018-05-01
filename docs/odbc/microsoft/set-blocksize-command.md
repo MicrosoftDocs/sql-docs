@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "set blocksize command [ODBC]"
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433

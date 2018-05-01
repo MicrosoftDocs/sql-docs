@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "REPLICATE function"
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5

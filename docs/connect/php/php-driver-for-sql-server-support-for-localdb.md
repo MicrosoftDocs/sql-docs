@@ -10,7 +10,7 @@ ms.component: php
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 caps.latest.revision: 14
 author: "MightyPen"

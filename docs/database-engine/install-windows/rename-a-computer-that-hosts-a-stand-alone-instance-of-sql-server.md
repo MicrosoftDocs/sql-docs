@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "remote login errors [SQL Server]"
   - "standalone computer names [SQL Server]"

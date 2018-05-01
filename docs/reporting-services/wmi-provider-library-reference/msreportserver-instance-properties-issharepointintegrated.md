@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IsSharePointIntegrated property"
 ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed

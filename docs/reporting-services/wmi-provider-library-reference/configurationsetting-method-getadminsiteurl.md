@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "GetAdminSiteUrl method"
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6

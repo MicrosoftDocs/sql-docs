@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a017f91b-7f07-4a81-aa38-b287f22369e8
 caps.latest.revision: 3
 author: "MightyPen"

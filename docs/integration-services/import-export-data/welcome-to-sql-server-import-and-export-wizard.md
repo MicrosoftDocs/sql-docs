@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.welcome.f1"
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d

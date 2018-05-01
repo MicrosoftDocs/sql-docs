@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, copy facet state to XML file"
 ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd

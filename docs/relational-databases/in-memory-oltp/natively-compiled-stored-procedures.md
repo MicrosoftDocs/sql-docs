@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "natively compiled stored procedures"
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366

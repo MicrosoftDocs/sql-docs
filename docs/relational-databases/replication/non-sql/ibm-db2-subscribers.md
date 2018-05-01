@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "non-SQL Server Subscribers, IBM DB2"
   - "data types [SQL Server replication], non-SQL Server Subscribers"

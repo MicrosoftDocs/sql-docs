@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Login Change Password event class"
 ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056

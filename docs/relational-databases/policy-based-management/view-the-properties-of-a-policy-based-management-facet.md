@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, view facet properties"
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "protocols [SQL Server]"
   - "configuration options [SQL Server], protocols"

@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.scheduleproperties.reports.f1"
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89

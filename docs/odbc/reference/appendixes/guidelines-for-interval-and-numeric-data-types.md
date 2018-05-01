@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
 caps.latest.revision: 5
 author: "MightyPen"

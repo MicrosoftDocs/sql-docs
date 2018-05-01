@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "client protocols [SQL Server]"
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c

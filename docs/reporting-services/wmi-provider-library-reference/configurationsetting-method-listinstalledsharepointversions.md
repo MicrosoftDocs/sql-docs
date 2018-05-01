@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ListInstalledSharePointVersions method"
 ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7

@@ -9,7 +9,7 @@ ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Subquery"
   - "Subqueries"

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc

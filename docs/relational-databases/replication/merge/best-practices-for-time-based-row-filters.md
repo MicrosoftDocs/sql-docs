@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "best practices"
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb

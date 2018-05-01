@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ExistingConnection event class"
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543

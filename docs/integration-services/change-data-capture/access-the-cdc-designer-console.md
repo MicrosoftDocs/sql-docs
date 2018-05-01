@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "accMsDes"
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e

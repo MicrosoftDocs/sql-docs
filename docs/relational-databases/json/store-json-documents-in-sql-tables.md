@@ -12,7 +12,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 
 caps.latest.revision: 
 author: "jovanpop-msft"

@@ -5,7 +5,7 @@ ms.prod: "sql"
 ms.prod_service: "sql-tools"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], delimiter highlighting"
   - "IntelliSense [SQL Server], syntax pair matching"

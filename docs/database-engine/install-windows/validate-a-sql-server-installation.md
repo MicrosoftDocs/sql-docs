@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "validating installations [SQL Server]"
 ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8

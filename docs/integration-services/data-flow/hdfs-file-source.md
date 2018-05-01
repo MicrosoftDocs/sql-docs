@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hdfsfilesrc.f1"
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1

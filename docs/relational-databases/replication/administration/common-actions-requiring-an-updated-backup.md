@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "recovery [SQL Server replication], actions requiring a backup"
   - "restoring [SQL Server replication], actions requiring a backup"

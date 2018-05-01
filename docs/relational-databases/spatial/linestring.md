@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "LineString geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"

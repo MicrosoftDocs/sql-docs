@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [Analysis Services]"
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit App Role Change Password event class"
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e

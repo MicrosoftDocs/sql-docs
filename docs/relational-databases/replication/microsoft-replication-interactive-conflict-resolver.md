@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.replconflictviewer.interactiveresolver.f1"
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24

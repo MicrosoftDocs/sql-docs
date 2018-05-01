@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.configuresnapshotagent.f1"
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951

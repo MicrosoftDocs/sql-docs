@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: multidimensional-tabular
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
 ms.assetid:
 caps.latest.revision: 

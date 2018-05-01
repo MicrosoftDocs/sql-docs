@@ -22,4 +22,4 @@ ms.author: "genemi"
 manager: craigg
 ---
 # Reserved Word Limitations
-Do not use the reserved words listed in the SQL grammar in Appendix C of the *ODBC Programmer's Reference* (or the shorthand form of these reserved words) as identifiers (that is, table or column names), unless you surround the word in back quotes (`).
+Do not use the reserved words listed in the SQL grammar in [Appendix C of the *ODBC Programmer's Reference*](https://msdn.microsoft.com/library/bb177893(v=office.12).aspx) (or the shorthand form of these reserved words) as identifiers (that is, table or column names), unless you surround the word in back quotes (`).

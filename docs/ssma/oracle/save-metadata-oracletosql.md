@@ -8,8 +8,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215

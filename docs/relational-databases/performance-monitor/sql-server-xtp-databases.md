@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server 2016 XTP Databases"
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe

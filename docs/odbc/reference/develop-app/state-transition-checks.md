@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "diagnostic information [ODBC], driver manager error checking"
   - "state transition checks [ODBC]"

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "collations [SQL Server], view"
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f

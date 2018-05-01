@@ -9,7 +9,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology:
   - "drivers"
-ms.topic: "article"
+ms.topic: conceptual
 author: "ulvii"
 ms.author: "v-ulibra"
 manager: "v-mabarw"

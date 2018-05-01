@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-stored-Procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.executeprocedure.general.f1"
   - "sql13.swb.executeprocedure.f1"

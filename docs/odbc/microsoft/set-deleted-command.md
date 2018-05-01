@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SET DELETED command [ODBC]"
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5

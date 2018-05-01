@@ -10,7 +10,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON, special characters"
 ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530

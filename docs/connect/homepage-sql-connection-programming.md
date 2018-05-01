@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: 
   - "drivers"
-ms.topic: "article"
+ms.topic: conceptual
 ms.reviewer: "meetb"
 ms.author: "genemi"
 ---

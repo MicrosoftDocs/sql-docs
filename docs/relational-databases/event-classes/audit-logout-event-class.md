@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Logout event class"
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1

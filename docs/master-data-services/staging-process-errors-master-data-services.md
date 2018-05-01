@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "staging process [Master Data Services], error messages"
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455

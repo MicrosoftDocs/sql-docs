@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-views"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.viewproperties.general.f1"
 helpviewer_keywords: 

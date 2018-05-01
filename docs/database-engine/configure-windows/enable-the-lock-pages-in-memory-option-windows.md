@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Lock Pages in Memory option"
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9

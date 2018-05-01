@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssdqs.designer.cleansing.f1"
   - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"

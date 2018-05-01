@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 caps.latest.revision: 11
 author: "stevestein"

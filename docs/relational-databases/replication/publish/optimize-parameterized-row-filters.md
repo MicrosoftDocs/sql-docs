@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "precomputed partitions [SQL Server replication]"
   - "filters [SQL Server replication], parameterized"

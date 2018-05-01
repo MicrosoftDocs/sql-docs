@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-transaction-log"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "delayed durability"
   - "Lazy Commit"

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 caps.latest.revision: 4
 author: "douglaslMS"

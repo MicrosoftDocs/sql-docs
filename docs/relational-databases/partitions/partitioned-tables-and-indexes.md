@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-partition"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned tables [SQL Server], about partitioned tables"
   - "partitioned indexes [SQL Server], architecture"

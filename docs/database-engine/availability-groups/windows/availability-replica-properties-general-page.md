@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilityreplicaproperties.general.f1"
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6

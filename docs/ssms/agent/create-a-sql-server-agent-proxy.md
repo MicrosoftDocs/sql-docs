@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "proxies [SQL Server Agent], creating"
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988

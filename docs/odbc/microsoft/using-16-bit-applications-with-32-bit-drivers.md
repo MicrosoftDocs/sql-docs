@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], 16-bit applications"
   - "16-bit applications with 32-bit drivers [ODBC]"

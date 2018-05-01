@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "set nullSET NULL"
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f

@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Sample Console Script Files, ServersConnectionFileSample.xml"
   - "Sample Console Script Files, SqlStatementConversionSample.xml"

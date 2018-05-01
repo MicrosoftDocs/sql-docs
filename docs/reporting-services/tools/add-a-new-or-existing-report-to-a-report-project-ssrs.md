@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], creating"
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c

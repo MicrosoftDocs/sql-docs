@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication synchronization [SQL Server replication]"
   - "Internet [SQL Server replication], synchronization"

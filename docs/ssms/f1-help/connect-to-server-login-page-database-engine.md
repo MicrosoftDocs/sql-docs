@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.connecttosqlserver.login.f1"
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32

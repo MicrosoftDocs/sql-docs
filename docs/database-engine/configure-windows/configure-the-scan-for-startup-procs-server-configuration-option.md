@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scan for startup procs option"
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2

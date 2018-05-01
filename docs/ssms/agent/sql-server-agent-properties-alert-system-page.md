@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.agent.alert.f1"
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d

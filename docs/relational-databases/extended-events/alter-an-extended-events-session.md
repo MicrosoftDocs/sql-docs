@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: "xevents"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 caps.latest.revision: 9
 author: "MightyPen"

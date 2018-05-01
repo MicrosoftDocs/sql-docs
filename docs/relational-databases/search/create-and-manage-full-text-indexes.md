@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], about"
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83

@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1"
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f

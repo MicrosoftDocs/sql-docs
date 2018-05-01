@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Broker:Forwarded Message Sent event class"
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f

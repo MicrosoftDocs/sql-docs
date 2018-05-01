@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parameter queries [SQL Server]"
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], upgrading"
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e

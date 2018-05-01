@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "loading the driver"
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec

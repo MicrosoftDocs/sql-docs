@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPrimaryKeys function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b

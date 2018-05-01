@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting subscription views [Master Data Services]"
   - "subscription views [Master Data Services], deleting"

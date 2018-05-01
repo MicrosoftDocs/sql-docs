@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 8
 author: "leolimsft"

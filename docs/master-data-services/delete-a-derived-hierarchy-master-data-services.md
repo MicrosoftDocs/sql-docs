@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting derived hierarchies [Master Data Services]"
   - "derived hierarchies, deleting"

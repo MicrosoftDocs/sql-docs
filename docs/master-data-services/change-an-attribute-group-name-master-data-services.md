@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "attribute groups [Master Data Services], changing name"
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd

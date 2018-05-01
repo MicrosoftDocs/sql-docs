@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.inferrdim.f1"
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628

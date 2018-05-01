@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.backupdatabase.options.f1"
   - "swb.backupdatabase.options.f1"

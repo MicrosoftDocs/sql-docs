@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "table-valued parameters"
   - "table-valued parameters, about table-valued parameters"

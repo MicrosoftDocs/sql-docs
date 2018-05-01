@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.serverproperties.connections.f1"
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2

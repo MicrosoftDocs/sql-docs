@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLTables function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a

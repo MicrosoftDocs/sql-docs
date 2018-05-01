@@ -8,7 +8,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: supportability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "build notes"
   - "release issues"

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetCursorName function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111

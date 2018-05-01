@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "configuring, Internet Information Services"
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461

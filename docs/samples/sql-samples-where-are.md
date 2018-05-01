@@ -10,7 +10,7 @@ ms.prod_service: sql
 ms.service: ""
 ms.component: "samples"
 ms.technology: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"

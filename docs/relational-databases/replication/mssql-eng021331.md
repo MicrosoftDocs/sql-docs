@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG021331 error"
 ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0

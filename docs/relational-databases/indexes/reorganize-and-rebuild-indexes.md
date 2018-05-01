@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.index.rebuild.f1"
   - "sql13.swb.indexproperties.fragmentation.f1"

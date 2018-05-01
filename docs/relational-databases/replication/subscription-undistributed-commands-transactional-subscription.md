@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.subscription.performance.f1"
 ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371

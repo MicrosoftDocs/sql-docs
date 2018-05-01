@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "management tools, upgrading"
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378

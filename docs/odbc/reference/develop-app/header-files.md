@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "header files [ODBC]"
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078

@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.bidtoolset.depservconfig.f1"
   - "sql13.asvs.bidtoolset.semmodelprojprop.f1"

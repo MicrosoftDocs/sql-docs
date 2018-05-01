@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "OLEDB Errors event class"
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008

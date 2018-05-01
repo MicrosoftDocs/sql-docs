@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLRowCount function [ODBC], Cursor Library"
 ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c

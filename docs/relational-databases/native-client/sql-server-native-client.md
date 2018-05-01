@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology:
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 caps.latest.revision: 43
 author: "MightyPen"

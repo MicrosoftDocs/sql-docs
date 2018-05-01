@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "C data types [ODBC], bookmark C data type"
   - "pseudo-type identifiers [ODBC], bookmark C data type"

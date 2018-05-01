@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC [ODBC], about ODBC"
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53

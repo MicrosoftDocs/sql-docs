@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], Availability Groups"
   - "FILESTREAM [SQL Server], Availability Groups"

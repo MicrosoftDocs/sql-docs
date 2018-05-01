@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e

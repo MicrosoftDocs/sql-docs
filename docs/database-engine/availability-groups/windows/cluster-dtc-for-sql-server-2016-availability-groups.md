@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 caps.latest.revision: 3
 author: "MikeRayMSFT"

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-stored-Procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], permissions"
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299

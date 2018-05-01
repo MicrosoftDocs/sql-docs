@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interoperability [ODBC], levels"
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0

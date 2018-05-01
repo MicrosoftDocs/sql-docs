@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "TRUSTWORTHY database property"
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348

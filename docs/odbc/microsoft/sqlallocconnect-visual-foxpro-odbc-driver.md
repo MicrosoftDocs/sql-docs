@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLAllocConnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 70d48b12-def5-475c-b8e1-654a55fdfe0f

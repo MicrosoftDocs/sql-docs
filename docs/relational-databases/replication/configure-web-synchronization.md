@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"
   - "SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"

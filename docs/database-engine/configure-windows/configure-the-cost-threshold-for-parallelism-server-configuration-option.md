@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cost threshold for parallelism option"
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db

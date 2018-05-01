@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "extendedANSISQL [ODBC], reserved words"
 ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d

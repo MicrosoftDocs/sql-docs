@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Plan Guide Successful event class"
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a

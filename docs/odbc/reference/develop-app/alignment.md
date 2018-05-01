@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "alignment issues [ODBC]"
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff

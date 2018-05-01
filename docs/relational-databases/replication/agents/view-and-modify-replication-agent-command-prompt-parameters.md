@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "agents [SQL Server replication], command prompt parameters"
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022

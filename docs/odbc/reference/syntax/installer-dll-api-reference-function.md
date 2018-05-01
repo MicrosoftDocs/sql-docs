@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installer DLL [ODBC]"
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a

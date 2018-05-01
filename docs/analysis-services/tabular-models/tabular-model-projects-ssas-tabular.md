@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 caps.latest.revision: 10
 author: "Minewiskan"

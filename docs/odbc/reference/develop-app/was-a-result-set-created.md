@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [ODBC], determining if created"
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9

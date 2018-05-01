@@ -8,7 +8,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.portal.f1"
 helpviewer_keywords: 

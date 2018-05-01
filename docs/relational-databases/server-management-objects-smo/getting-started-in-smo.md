@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Objects, about SQL Server Management Objects"
   - "SMO [SQL Server], about SQL Server Management Objects"

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: supportability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: "craigg-msft"
 ms.author: "craigg"

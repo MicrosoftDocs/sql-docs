@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [SQL Server], QN:Template"
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a

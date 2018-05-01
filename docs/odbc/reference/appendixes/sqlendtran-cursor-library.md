@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLEndTran function [ODBC], Cursor Library"
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c

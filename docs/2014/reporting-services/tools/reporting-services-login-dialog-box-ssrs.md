@@ -34,7 +34,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Specify Credential and Connection Information for Report Data Sources](../../analysis-services/data-mining/data-sources.md)   
+ [Specify Credential and Connection Information for Report Data Sources](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)
  [Report Designer F1 Help](report-designer-f1-help.md)  
   
   

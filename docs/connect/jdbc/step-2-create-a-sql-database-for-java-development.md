@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Step 2: Create a SQL database for Java development
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

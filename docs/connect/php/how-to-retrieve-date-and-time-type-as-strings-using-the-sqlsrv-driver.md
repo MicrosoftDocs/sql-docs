@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # How to: Retrieve Date and Time Type as Strings Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

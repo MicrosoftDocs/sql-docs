@@ -21,7 +21,6 @@ caps.latest.revision: 12
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create a Consolidated Member (Master Data Services)
 

@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Reporting Services Report Rendering Issues
 After the report data and layout information is combined, the compiled report is sent to a report renderer. For example, when you preview a report locally, you are using the HTML renderer to view the compiled report. Use this topic to help troubleshoot issues specific to report rendering.   

@@ -25,7 +25,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # WillChangeRecord and RecordChangeComplete Events (ADO)
 The **WillChangeRecord** event is called before one or more records (rows) in the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) change. The **RecordChangeComplete** event is called after one or more records change.  

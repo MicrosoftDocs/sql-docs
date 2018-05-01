@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Saving to the XML DOM Object
 You can save a Recordset in XML format to an instance of an MSXML DOM object, as shown in the following Visual Basic code:  

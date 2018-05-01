@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Troubleshooting (OracleToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

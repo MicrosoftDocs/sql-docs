@@ -22,7 +22,6 @@ caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect To Azure SQL DB (AccessToSQL)
 Use the Connect to SQL Azure dialog box to connect to the SQL Azure database that you want to migrate.  

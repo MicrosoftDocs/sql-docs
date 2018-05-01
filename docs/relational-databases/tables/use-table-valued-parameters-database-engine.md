@@ -22,7 +22,6 @@ caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use Table-Valued Parameters (Database Engine)

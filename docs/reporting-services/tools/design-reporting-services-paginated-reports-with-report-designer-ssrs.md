@@ -20,7 +20,6 @@ caps.latest.revision: 77
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Design Reporting Services Paginated Reports with Report Designer (SSRS)

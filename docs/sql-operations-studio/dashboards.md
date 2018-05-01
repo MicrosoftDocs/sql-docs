@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Dashboards in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

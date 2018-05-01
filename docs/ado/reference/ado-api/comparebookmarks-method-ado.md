@@ -24,7 +24,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CompareBookmarks Method (ADO)
 Compares two bookmarks and returns an indication of their relative values.  

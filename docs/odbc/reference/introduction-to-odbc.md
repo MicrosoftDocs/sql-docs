@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Introduction to ODBC
 This section provides a brief history of Structured Query Language and ODBC, and includes conceptual information about the ODBC interface.  

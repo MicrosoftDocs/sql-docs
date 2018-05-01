@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Upgrade DQS Databases Schema After Installing SQL Server Update
 

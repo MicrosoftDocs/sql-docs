@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL Data Warehouse Stored Procedures

@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Deploy a Model Deployment Package by Using MDSModelDeploy
 

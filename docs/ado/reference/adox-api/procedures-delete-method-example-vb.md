@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Procedures Delete Method Example (VB)
 The following code demonstrates how to delete a procedure by using the [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) method of the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

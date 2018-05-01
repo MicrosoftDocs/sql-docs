@@ -26,7 +26,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Troubleshooting (Visual FoxPro ODBC Driver)
 The following sections discuss how to improve performance and solve problems you might encounter while using the Visual FoxPro ODBC Driver.  

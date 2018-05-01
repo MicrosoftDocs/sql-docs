@@ -13,7 +13,6 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "Inactive"
 ---
 # Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux
 

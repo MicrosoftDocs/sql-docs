@@ -20,7 +20,6 @@ caps.latest.revision: 23
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # rsInternalError - Reporting Services Error
     

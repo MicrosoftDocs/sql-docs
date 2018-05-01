@@ -22,7 +22,6 @@ caps.latest.revision: 28
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Master Data Services Overview (MDS)
 

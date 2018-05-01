@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Export Data to Excel from Master Data Services
 

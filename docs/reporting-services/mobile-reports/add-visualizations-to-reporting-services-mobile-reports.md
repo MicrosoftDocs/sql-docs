@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Add visualizations to Reporting Services mobile reports
 Charts are an essential part of data visualization. Learn about the charts you can use in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports to cover a range of scenarios. 

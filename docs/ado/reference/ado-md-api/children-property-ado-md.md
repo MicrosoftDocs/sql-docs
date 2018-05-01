@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Children Property (ADO MD)
 Returns a [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) collection for which the current [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) is the parent in the hierarchy.  

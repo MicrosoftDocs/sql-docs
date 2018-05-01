@@ -13,7 +13,6 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Deploy an SSIS project with C# code in a .NET app
 This quick start tutorial demonstrates how to write C# code to connect to a database server and deploy an SSIS project.

@@ -22,7 +22,6 @@ caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Truncation (SSIS)
   Converting values from one data type to another may cause values to be truncated.  

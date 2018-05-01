@@ -26,7 +26,6 @@ caps.latest.revision:
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   

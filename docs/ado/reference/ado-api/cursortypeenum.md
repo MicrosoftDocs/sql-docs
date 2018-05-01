@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # CursorTypeEnum
 Specifies the type of cursor used in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

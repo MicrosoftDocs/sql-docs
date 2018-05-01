@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: "sql-linux"
-ms.workload: "On Demand"
 ---
 # Export and import a database on Linux with SSMS or SqlPackage.exe on Windows
 

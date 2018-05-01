@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Bookmark Support (Visual FoxPro ODBC Driver)
 The Visual FoxPro ODBC Driver supports simple bookmarks. When you call [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) with the SQL_BOOKMARK_PERSISTENCE *InfoType*, the return value is SQL_BP_SCROLL.  

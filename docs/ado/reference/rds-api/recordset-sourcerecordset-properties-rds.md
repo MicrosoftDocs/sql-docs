@@ -19,7 +19,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Recordset, SourceRecordset Properties (RDS)
 Indicates the **Recordset** object returned from a custom business object.  

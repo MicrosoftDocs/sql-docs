@@ -23,7 +23,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Views Collection (ADOX)
 Contains all [View](../../../ado/reference/adox-api/view-object-adox.md) objects of a catalog.  

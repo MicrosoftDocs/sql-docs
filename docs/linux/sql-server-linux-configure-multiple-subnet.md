@@ -13,7 +13,6 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "On Demand"
 ---
 
 # Configure multiple-subnet Always On Availability Groups and failover cluster instances

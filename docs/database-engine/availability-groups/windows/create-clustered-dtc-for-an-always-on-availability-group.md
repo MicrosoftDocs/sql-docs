@@ -17,10 +17,12 @@ caps.latest.revision: 2
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Clustered DTC for an Always On Availability Group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group. The complete configuration can take up to an hour to complete. 
 
 The walkthrough creates a clustered DTC resource and the SQL Server Availability Groups to align with the requirements at [Cluster DTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).

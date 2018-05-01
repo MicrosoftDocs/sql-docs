@@ -25,7 +25,6 @@ caps.latest.revision: 98
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Integration Services Data Types
   When data enters a data flow in a package, the source that extracts the data converts the data to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type. Numeric data is assigned a numeric data type, string data is assigned a character data type, and dates are assigned a date data type. Other data, such as GUIDs and Binary Large Object Blocks (BLOBs), are also assigned appropriate [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types. If data has a data type that is not convertible to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type, an error occurs.  

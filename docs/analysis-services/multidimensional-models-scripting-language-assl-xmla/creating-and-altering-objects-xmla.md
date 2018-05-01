@@ -28,7 +28,6 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Creating and Altering Objects (XMLA)
   Major objects can be independently created, altered, and deleted. Major objects include the following objects:  

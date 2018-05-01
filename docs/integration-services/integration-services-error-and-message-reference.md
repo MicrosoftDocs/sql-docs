@@ -21,7 +21,6 @@ caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Integration Services Error and Message Reference
   The following tables list predefined [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] errors, warnings, and informational messages, in ascending numerical order within each category, along with their numeric codes and symbolic names. Each of these errors is defined as a field in the <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> class in the <xref:Microsoft.SqlServer.Dts.Runtime> namespace.  

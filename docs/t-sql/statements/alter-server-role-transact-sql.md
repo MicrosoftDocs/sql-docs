@@ -25,7 +25,6 @@ caps.latest.revision: 19
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER SERVER ROLE (Transact-SQL)

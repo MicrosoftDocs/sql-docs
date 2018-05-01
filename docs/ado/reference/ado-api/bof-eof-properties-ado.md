@@ -24,7 +24,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # BOF, EOF Properties (ADO)
 -   **BOF** Indicates that the current record position is before the first record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

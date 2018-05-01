@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Connect To Oracle (OracleToSQL)
 Use the **Connect to Oracle** dialog box to connect to the Oracle database that you want to migrate.  

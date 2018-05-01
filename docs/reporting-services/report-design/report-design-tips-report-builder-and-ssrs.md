@@ -18,7 +18,6 @@ caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Design Tips (Report Builder and SSRS)
   Use the following tips to help design your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports.  

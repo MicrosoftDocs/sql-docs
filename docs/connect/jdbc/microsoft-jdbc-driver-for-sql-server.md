@@ -16,7 +16,6 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Microsoft JDBC Driver for SQL Server
 

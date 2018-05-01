@@ -22,7 +22,6 @@ caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Open, view, and print a deadlock file (SQL Server Management Studio)

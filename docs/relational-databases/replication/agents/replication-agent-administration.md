@@ -29,7 +29,6 @@ caps.latest.revision: 48
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Replication Agent Administration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,8 +90,8 @@ ms.workload: "Inactive"
 |Clean up job|Description|Default schedule|  
 |------------------|-----------------|----------------------|  
 |Agent History Clean Up: Distribution|Removes replication agent history from the distribution database.|Runs every ten minutes|  
-|Distribution Clean Up: Distribution|Removes replicated transactions from the distribution database. Deactivates subscriptions that have not been synchronized within the maximum distribution retention period.|Runs every ten minutes|  
-|Expired Subscription Clean Up|Detects and removes expired subscriptions from publication databases.|Runs every day at 1:00 A.M.|  
+|Distribution Clean Up: Distribution|Removes replicated transactions from the distribution database. |Runs every ten minutes|  
+|Expired Subscription Clean Up|Detects and removes expired subscriptions from publication databases. On the distributor, deactivates subscriptions that have not been synchronized within the maximum distribution retention period.|Runs every day at 1:00 A.M.| 
 |Reinitialize Subscriptions Having Data Validation Failures|Detects all subscriptions that have data validation failures and marks them for reinitialization. The next time the Merge Agent or Distribution Agent runs, a new snapshot will be applied at the Subscribers.|No default schedule (not enabled by default).|  
 |Replication Agents Checkup|Detects replication agents that are not actively logging history. It writes to the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows event log if a job step fails.|Runs every ten minutes.|  
 |Replication monitoring refresher for distribution|Refreshes cached queries used by Replication Monitor..|Runs continuously.|  

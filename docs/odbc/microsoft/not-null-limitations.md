@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # NOT NULL Limitations
 The NOT NULL constraint in the CREATE TABLE statement is not supported.

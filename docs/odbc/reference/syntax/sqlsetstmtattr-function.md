@@ -26,7 +26,6 @@ caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # SQLSetStmtAttr Function
 **Conformance**  

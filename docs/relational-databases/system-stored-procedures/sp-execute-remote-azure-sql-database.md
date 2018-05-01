@@ -23,7 +23,6 @@ caps.latest.revision: 17
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_execute_remote (Azure SQL Database)

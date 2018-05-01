@@ -19,7 +19,6 @@ caps.latest.revision: 74
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Welcome to SQL Server Import and Export Wizard
   When you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, the first page is **Welcome to SQL Server Import and Export Wizard**. You don't have to take any action on this page.

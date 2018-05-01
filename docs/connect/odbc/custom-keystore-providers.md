@@ -17,7 +17,6 @@ caps.latest.revision: 1
 ms.author: "v-chojas"
 manager: craigg
 author: "MightyPen"
-ms.workload: "Inactive"
 ---
 # Custom Keystore Providers
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

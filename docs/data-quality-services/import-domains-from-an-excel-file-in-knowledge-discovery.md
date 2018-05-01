@@ -17,7 +17,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Import Domains from an Excel File in Knowledge Discovery
 

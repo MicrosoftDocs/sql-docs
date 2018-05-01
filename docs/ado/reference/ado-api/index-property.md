@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Index Property
 Indicates the name of the index currently in effect for a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

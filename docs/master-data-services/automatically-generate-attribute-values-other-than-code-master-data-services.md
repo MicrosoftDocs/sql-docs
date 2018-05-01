@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Automatically Generate Attribute Values Other Than Code (Master Data Services)
 

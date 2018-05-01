@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "v-kaywon"
 ms.author: "v-kaywon"
 manager: "mbarwin"
-ms.workload: "Inactive"
 ---
 # Using Always Encrypted with the PHP Drivers for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

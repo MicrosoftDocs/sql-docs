@@ -19,7 +19,6 @@ caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Configure Flat File Destination (SQL Server Import and Export Wizard)
   If you selected a flat file destination, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Configure Flat File Destination** after you specify that you want to copy a table or after you provide a query. On this page, you specify formatting options for the destination flat file. Optionally, you review the mapping of individual columns and preview sample data.  

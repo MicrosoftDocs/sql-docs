@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Create Drillthrough (RDLC) Report with Parameters - ReportViewer
 A [drillthrough](http://technet.microsoft.com/library/ff519554.aspx) report is a report that a user opens by clicking a link within another report. Drillthrough reports commonly contain details about an item that is contained in an original summary report. This tutorial will walk you through the following lessons of creating a drillthrough report with parameters and a query, in [local mode reporting](http://msdn.microsoft.com/library/ff487969.aspx).  

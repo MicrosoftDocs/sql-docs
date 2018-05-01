@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Interval Escape Sequences
 ODBC uses escape sequences for interval literals. The syntax of this escape sequence is as follows:  

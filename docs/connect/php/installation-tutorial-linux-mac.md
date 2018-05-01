@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "ulvii"
 ms.author: "v-ulibra"
 manager: "v-mabarw"
-ms.workload: "Inactive"
 ---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server

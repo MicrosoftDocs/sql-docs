@@ -17,7 +17,6 @@ caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Table and Row Size in Memory-Optimized Tables

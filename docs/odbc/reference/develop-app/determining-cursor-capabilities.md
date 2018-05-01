@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Determining Cursor Capabilities
 The following four options in **SQLGetInfo** describe what types of cursors are supported and what their capabilities are:  

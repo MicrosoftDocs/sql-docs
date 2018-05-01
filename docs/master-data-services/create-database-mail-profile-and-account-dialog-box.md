@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create Database Mail Profile and Account Dialog Box
 

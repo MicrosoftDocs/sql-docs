@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # LevelDepth Property (ADO MD)
 Indicates the number of levels between the root of the hierarchy and a [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

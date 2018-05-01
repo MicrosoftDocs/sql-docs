@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Enable and Disable Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

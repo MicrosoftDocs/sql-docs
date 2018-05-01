@@ -17,7 +17,6 @@ caps.latest.revision: 2
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server XTP IO Governor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

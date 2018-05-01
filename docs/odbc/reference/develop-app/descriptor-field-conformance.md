@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Descriptor Field Conformance
 The following table indicates the conformance level of each ODBC descriptor header field, where this is well defined.  

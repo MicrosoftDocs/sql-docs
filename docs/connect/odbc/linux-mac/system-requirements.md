@@ -21,7 +21,6 @@ caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # System Requirements
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

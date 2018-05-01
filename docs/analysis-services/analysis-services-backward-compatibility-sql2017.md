@@ -24,7 +24,6 @@ ms.assetid:
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 # Analysis Services backward compatibility (SQL 2017)

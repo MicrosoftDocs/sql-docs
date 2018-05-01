@@ -18,7 +18,6 @@ caps.latest.revision: 3
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # How to install custom security extensions

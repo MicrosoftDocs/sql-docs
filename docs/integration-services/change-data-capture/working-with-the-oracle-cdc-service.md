@@ -17,7 +17,6 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Working with the Oracle CDC Service
   This section describes some important concepts of the Oracle CDC Service. The concepts included in this section are:  

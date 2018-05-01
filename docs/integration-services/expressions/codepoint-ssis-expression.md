@@ -20,7 +20,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # CODEPOINT (SSIS Expression)
   Returns the Unicode code point of the leftmost character of a character expression.  

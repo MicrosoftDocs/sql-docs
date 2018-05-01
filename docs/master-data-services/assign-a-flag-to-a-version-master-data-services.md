@@ -20,7 +20,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Assign a Flag to a Version (Master Data Services)
 

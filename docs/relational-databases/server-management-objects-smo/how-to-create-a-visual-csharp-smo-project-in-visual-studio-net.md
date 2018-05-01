@@ -19,7 +19,6 @@ caps.latest.revision: 43
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # How to Create a Visual C# SMO Project in Visual Studio .NET

@@ -19,7 +19,6 @@ helpviewer_keywords:
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 
 
@@ -220,7 +219,7 @@ Sometimes the errors we find in the agent history prove to be insufficient in he
 For more information, please see [Enabling verbose logging for replication agents](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se) 
 
 
-## See Also:
+## See Also
 <br>[Transactional Replication Overview](../../relational-databases/replication/transactional/transactional-replication.md)
 <br>[Replication Tutorials](/../../relational-databases/replication/replication-tutorials.md)
 <br>[ReplTalk Blog](https://blogs.msdn.microsoft.com/repltalk)

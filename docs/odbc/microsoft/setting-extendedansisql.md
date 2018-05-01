@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Setting ExtendedAnsiSQL
 The attribute can be controlled in the connection string by adding the ExtendedAnsiSQL attribute:  

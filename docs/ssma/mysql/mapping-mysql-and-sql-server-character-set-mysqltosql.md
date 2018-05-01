@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Mapping MySQL and SQL Server Character Set (MySQLToSQL)
 Character set (Charset) can be specified for MySQL character data types, expressions and literals.  

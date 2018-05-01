@@ -18,7 +18,6 @@ caps.latest.revision: 6
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Secure Shared Dataset Items
   On a report server, shared dataset items can be used by multiple reports. You can secure shared datasets to control the degree of access that users have. By default, only users who are members of the **Administrators** built-in group can view shared datasets, modify properties, enable caching, create cache refresh plans, and delete the items. All other users must have role assignments created for them that allow access to a shared dataset.  

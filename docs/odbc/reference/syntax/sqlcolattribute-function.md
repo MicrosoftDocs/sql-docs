@@ -26,7 +26,6 @@ caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLColAttribute Function
 **Conformance**  

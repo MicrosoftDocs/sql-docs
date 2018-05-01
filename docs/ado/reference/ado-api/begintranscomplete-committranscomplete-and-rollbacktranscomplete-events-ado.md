@@ -29,7 +29,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO)
 These events will be called after the associated operation on the [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object finishes executing.  

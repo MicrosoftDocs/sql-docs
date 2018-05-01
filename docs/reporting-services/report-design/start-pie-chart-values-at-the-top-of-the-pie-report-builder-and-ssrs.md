@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Start Pie Chart Values at the Top of the Pie (Report Builder and SSRS)
 In pie charts in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, by default the first value in the dataset starts at 90 degrees from the top of the pie. 

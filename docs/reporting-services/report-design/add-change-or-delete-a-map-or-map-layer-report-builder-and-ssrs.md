@@ -35,7 +35,6 @@ caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS)
   A map is a collection of layers. When you add a map to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you define the first layer. You can create additional layers by using the map layer wizard.  

@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Allocating a Statement Handle ODBC
 Before the application can execute a statement, it must allocate a statement handle as follows:  

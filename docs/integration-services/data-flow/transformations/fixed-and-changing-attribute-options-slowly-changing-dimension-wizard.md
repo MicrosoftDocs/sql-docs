@@ -19,7 +19,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
   Use the **Fixed and Changing Attribute Options** dialog box to specify how to respond to changes in fixed and changing attributes.  

@@ -22,7 +22,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Translation DLLs and Desktop Database Drivers
 Not supported.

@@ -19,7 +19,6 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Comparing Execution Functions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

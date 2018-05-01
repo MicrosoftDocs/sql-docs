@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Batch Processing
 Support for batches of SQL statements is not widespread, so interoperable applications should use them conditionally or not at all. For more information, see [Executing Batches](../../../odbc/reference/develop-app/executing-batches.md).

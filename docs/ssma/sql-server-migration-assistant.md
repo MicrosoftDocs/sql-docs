@@ -20,7 +20,6 @@ caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.  

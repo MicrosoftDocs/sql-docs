@@ -20,7 +20,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # NULL (SSIS Expression)
   Returns a null value of a requested data type.  

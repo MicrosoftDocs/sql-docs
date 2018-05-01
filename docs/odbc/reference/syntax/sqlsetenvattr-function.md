@@ -26,7 +26,6 @@ caps.latest.revision: 38
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLSetEnvAttr Function
 **Conformance**  

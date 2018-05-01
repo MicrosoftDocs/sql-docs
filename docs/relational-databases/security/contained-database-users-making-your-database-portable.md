@@ -20,7 +20,6 @@ caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Contained Database Users - Making Your Database Portable

@@ -18,7 +18,6 @@ caps.latest.revision: 10
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Shared Dataset Design View (Report Builder)
   In a report, a dataset represents report data that is returned from running a query on an external data source. Shared datasets are published on a report server and can be used by multiple reports. You can  create datasets to share with others. In the Shared Dataset Design window,  you select a shared data source, specify properties for the shared dataset, and create a query in the query designer.  

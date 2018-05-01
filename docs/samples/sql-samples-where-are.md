@@ -15,7 +15,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # SQL samples
 

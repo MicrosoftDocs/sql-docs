@@ -14,7 +14,6 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "Inactive"
 ---
 # Schedule SQL Server Integration Services package execution on Linux with cron
 

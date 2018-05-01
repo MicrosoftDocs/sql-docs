@@ -19,7 +19,6 @@ caps.latest.revision: 26
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

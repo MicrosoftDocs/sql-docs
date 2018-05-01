@@ -26,7 +26,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Provider Property (ADO)
 Indicates the name of the provider for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

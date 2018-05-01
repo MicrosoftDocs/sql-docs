@@ -20,7 +20,6 @@ caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Attach Domain or Composite Domain to Reference Data
 

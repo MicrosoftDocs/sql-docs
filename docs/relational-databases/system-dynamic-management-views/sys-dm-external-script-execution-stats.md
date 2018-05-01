@@ -26,7 +26,6 @@ caps.latest.revision: 5
 author: "jeannt"
 ms.author: "jeannt"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

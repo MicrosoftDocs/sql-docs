@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # GUID Escape Sequences
 ODBC uses escape sequences for GUID literals. The syntax of this escape sequence is as follows:  

@@ -30,7 +30,6 @@ caps.latest.revision: 62
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Script Deployment and Administrative Tasks

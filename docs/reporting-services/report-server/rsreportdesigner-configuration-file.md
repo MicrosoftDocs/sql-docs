@@ -21,7 +21,6 @@ caps.latest.revision: 47
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # RSReportDesigner Configuration File
   The RSReportDesigner.config file stores settings about the rendering and data processing extensions available to Report Designer. Data processing extension information is stored in the **Data** element. Rendering extension information is stored in the **Render** element. The **Designer** element enumerates the query builders that are used in Report Designer.  

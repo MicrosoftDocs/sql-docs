@@ -24,7 +24,6 @@ caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Process Large Reports
   Large reports present certain processing challenges and require certain configurations if they are to run properly. Large reports should not be run on demand unless they are configured to support pagination.  

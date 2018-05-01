@@ -9,7 +9,6 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Store and retrieve files on file shares on premises and in Azure with SSIS
 This article describes how to update your SQL Server Integration Services (SSIS) packages when you lift and shift packages that use local file systems into SSIS in Azure.

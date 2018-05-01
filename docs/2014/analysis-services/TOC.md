@@ -1,3 +1,4 @@
+# [Analysis Services](analysis-services.md)
 ## [What's New](what-s-new-in-analysis-services.md)
 ## [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)
 ### [Deprecated Features in Analysis Services](deprecated-analysis-services-features-in-sql-server-2014.md)

@@ -147,7 +147,7 @@ manager: "erikre"
  For more information, see [Requirements for the DNS Name of an Availability Group Listener](#DNSnameReqs), earlier in this topic.  
   
  **Port**  
- The TPC port used by this listener.  
+ The TCP port used by this listener.  
   
  **Network Mode**  
  Indicates the TCP protocol used by the listener, one of:  

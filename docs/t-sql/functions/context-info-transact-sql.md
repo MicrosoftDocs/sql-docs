@@ -54,15 +54,10 @@ If **context_info** was not set:
 The Multiple Active Result Sets (MARS) feature enables applications to run multiple batches, or requests, at the same time, on the same connection. When one of the MARS connection batches runs SET CONTEXT_INFO, the `CONTEXT_INFO` function returns the new context value, when the `CONTEXT_INFO` function runs in the same batch as the SET statement. If the `CONTEXT_INFO` function runs in one or more of the other connection batches, the `CONTEXT_FUNCTION` does not return the new value unless those batches started after completion of the batch that ran the SET statement.
   
 ## Permissions  
-Requires no special permissions. The
+Requires no special permissions. The following system views store the context information, but querying these views directly requires SELECT and VIEW SERVER STATE permissions:
 - **sys.dm_exec_requests**
 - **sys.dm_exec_sessions**
-
-and
-
 - **sys.sysprocesses**
-
-system views store the context information, but querying these views directly requires SELECT and VIEW SERVER STATE permissions.
   
 ## Examples  
 This simple example sets the **context_info** value to `0x1256698456`, and then uses the `CONTEXT_INFO` function to retrieve the value.

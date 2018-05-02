@@ -41,7 +41,7 @@ In this tutorial, you will learn how to:
 ## Prerequisites  
 This tutorial is for users who are familiar with fundamental database operations, but who have limited experience with replication. Before you start this tutorial, you must complete [Tutorial: preparing the server for replication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
-To use this tutorial, make sure that your system has the following products and components installed:  
+To complete this tutorial, you need SQL Server, SQL Server Management Studio (SSMS), and an AdventureWorks database: 
   
 - At the publisher server (source), install:  
   
@@ -50,7 +50,7 @@ To use this tutorial, make sure that your system has the following products and 
   
 - At the subscriber server (destination), install any edition of SQL Server, except for [!INCLUDE[ssEW](../../includes/ssew-md.md)]. The publication that's created in this tutorial does not support [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
 
-- Install [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 - Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
@@ -215,7 +215,7 @@ In this section, you add a subscription to the merge publication that you create
 
    !["Run on demand only" selection for the agent](media/tutorial-replicating-data-with-mobile-clients/mergesyncschedule.png)
   
-9. On the **Initialize Subscriptions** page, select **At first synchronization** from the **Initialize When** list. Select **Next**, and then select **Next** again. 
+9. On the **Initialize Subscriptions** page, select **At first synchronization** from the **Initialize When** list. Select **Next** to proceed to the **Subscription Type** page, and select the appropriate subscription type. This tutorial uses **Client**. After you select the subscription type, select **Next** again. 
 
    ![Selections for initializing subscriptions at first synchronization](media/tutorial-replicating-data-with-mobile-clients/firstsync.png)
 

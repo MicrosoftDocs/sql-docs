@@ -45,12 +45,11 @@ You can execute [sp_recompile](../../relational-databases/system-stored-procedur
 The following example creates a memory-optimized table (T1), and a natively compiled stored procedure (SP1) that selects all the T1 columns. Then, SP1 is altered to remove the EXECUTE AS clause, change the LANGUAGE, and select only one column (C1) from T1.  
   
 ```sql  
-CREATE TABLE [dbo].[T1]  
-(  
-[c1] [int] NOT NULL,  
-[c2] [float] NOT NULL,  
-CONSTRAINT [PK_T1] PRIMARY KEY NONCLUSTERED ([c1])  
-)WITH ( MEMORY_OPTIMIZED = ON , DURABILITY = SCHEMA_AND_DATA )  
+CREATE TABLE [dbo].[T1] (  
+  [c1] [int] NOT NULL,  
+  [c2] [float] NOT NULL,  
+  CONSTRAINT [PK_T1] PRIMARY KEY NONCLUSTERED ([c1])  
+  ) WITH ( MEMORY_OPTIMIZED = ON , DURABILITY = SCHEMA_AND_DATA )  
 GO  
   
 CREATE PROCEDURE [dbo].[usp_1]  
@@ -59,7 +58,7 @@ AS BEGIN ATOMIC WITH
 (  
  TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english'  
 )  
- SELECT c1, c2 from dbo.T1  
+   SELECT c1, c2 from dbo.T1  
 END  
 GO  
   
@@ -69,7 +68,7 @@ AS BEGIN ATOMIC WITH
 (  
  TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'Dutch'  
 )  
- SELECT c1 from dbo.T1  
+   SELECT c1 from dbo.T1  
 END  
 GO    
 ```   

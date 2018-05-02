@@ -91,7 +91,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Requires membership in the sysadmin fixed server role or db_owner fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller does not have permission to view the source data, the function returns error 208 (Invalid object name).  
   
 ## Remarks  
- If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 (Invalid object name).  
+ If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 (Invalid object name).
+
+ Modifications on the unique identifier of a row will cause fn_cdc_get_net_changes to show the initial UPDATE command with a DELETE and then INSERT command instead.  This behavior is necessary to track the key both before and after the change.
   
 ## Examples  
  The following example uses the function `cdc.fn_cdc_get_net_changes_HR_Department` to report the net changes made to the source table `HumanResources.Department` during a specific time interval.  

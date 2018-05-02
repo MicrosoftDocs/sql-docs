@@ -175,9 +175,9 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
 
   
 For more information, see:  
-[Filter published data](../../relational-databases/replication/publish/filter-published-data.md)  
-[Parameterized row filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
-[Define an article](../../relational-databases/replication/publish/define-an-article.md)  
+- [Filter published data](../../relational-databases/replication/publish/filter-published-data.md) 
+- [Parameterized row filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+- [Define an article](../../relational-databases/replication/publish/define-an-article.md)  
   
   
 ## Create a subscription to the merge publication
@@ -251,9 +251,9 @@ In this section, you add a subscription to the merge publication that you create
   
   
 For more information, see:  
-[Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)  
-[Create a pull subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
-[Snapshots for merge publications with parameterized filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)  
+- [Create a pull subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
+- [Snapshots for merge publications with parameterized filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
 
 ## Synchronize the subscription to the merge publication
 
@@ -280,9 +280,9 @@ You have successfully configured both your publisher and your subscriber for you
 3. Query the **SalesOrderHeader** or **SalesOrderDetail** table at the other server to view the replicated changes.  
   
 For more information, see:   
-[Initialize a subscription with a snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-[Synchronize data](../../relational-databases/replication/synchronize-data.md)  
-[Synchronize a pull subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
+- [Initialize a subscription with a snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+- [Synchronize data](../../relational-databases/replication/synchronize-data.md)  
+- [Synchronize a pull subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   
   
   

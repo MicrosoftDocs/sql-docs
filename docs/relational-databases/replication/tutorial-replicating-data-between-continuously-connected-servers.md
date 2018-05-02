@@ -212,9 +212,9 @@ In this section, you add a subscriber to the publication that you previously cre
 3. If the subscription is not visible under **AdvWorksProductTrans**, select the F5 key to refresh the list.  
   
 For more information, see:  
-[Initialize a subscription with a snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-[Create a push subscription](../../relational-databases/replication/create-a-push-subscription.md)  
-[Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)  
+- [Initialize a subscription with a snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+- [Create a push subscription](../../relational-databases/replication/create-a-push-subscription.md)  
+- [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)  
 
 ## Measure replication latency
 In this section, you use tracer tokens to verify that changes are being replicated to the subscriber and to determine latency. Latency is the time it takes for a change made at the publisher to appear to the subscriber.
@@ -233,8 +233,8 @@ In this section, you use tracer tokens to verify that changes are being replicat
 
 
 For more information, see: 
-[Measure latency and validate connections for transactional replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-[Troubleshooting transactional replication sync errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [Measure latency and validate connections for transactional replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+- [Troubleshooting transactional replication sync errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
 
 
 ## Next steps

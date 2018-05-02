@@ -239,8 +239,9 @@ If your SQL Server Management Studio instance is running with administrative rig
    ![View of all four accounts in Object Explorer](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
   
   
-For more information, see [Configure distribution](../../relational-databases/replication/configure-distribution.md) and 
-[Replication agent security model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+For more information, see:
+- [Configure distribution](../../relational-databases/replication/configure-distribution.md) 
+- [Replication agent security model](../../relational-databases/replication/security/replication-agent-security-model.md)  
 
 ## Next steps
 You have now successfully prepared your server for replication. The next article teaches you how to configure transactional replication: 

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "functions [ODBC], tables defined"
   - "functions [ODBC], views defined"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Tables and Views
 In ODBC functions, tables and views are interchangeable. The term *table* is used both for tables and for views, except where the term *view* is used explicitly.

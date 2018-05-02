@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFreeConnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLFreeConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

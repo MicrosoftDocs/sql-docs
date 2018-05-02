@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC]"
   - "desktop database drivers [ODBC]"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Index Name Limitations
 When the Paradox driver is used, a primary index must have the same name as the table upon which it is defined. Other unique or non-unique indexes must have the same name as the table upon which they are defined.

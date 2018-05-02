@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Delete Method (ADO Parameters Collection)
 Deletes an object from the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], SQLSetStmtOption"
   - "SQLSetStmtOption function [ODBC], mapping"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLSetStmtOption Mapping
 When an application calls **SQLSetStmtOption** through an ODBC 3*.x* driver, the call to  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "requirements"
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
@@ -19,7 +19,6 @@ caps.latest.revision: 93
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Active"
 ---
 
 # System Requirements for the Microsoft Drivers for PHP for SQL Server

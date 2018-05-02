@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "fetches [ODBC], fetching row count"
   - "row count [ODBC]"
@@ -21,7 +21,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Step 4b: Fetch the Row Count
 The next step is to fetch the row count, as shown in the following illustration.  

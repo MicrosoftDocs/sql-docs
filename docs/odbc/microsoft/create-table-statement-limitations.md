@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CREATE TABLE statement limitations [ODBC]"
   - "ODBC SQL grammar, CREATE TABLE statement limitations"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # CREATE TABLE Statement Limitations
 When the Microsoft Access, Microsoft Excel, or Paradoxdriver is used, and the length of a text or binary column is not specified (or is specified as 0), the column length will be set to 255.  

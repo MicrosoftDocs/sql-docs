@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQLDriverConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

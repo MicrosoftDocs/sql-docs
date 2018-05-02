@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], SQLSetPos"
   - "SQLSetPos function [ODBC], inserting data"
@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Calling SQLSetPos to Insert Data
 When an ODBC 2.*x* application working with an ODBC 3*.x* driver calls **SQLSetPos** with an *Operation* argument of SQL_ADD, the Driver Manager does not map this call to **SQLBulkOperations**. If an ODBC 3*.x* driver should work with an application that calls **SQLSetPos** with SQL_ADD, the driver should support that operation.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan Text (Unencoded) event class"
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Showplan Text (Unencoded) Event Class

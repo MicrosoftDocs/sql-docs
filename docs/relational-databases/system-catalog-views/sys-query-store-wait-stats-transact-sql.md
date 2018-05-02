@@ -25,7 +25,6 @@ caps.latest.revision: 18
 author: "AndrejsAnt"
 ms.author: "AndrejsAnt"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.query_store_wait_stats (Transact-SQL)

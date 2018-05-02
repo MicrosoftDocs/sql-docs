@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: ""
@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.workload: "Active"
 ---
 # Quickstart: Run the SQL Server 2017 container image with Docker
 

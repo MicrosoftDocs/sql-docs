@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [ODBC], fetching"
   - "fetches [ODBC], defined"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Fetching Data
 The process of retrieving rows from the result set and returning them to the application is called *fetching*. This section describes how to fetch data.  

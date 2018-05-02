@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "day-time intervals [ODBC]"
   - "data conversions from C to SQL types [ODBC], day-time intervals"
@@ -22,7 +22,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # C to SQL: Day-Time Intervals
 The identifiers for the day-time interval ODBC C data types are:  

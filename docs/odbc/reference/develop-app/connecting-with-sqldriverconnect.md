@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], connection functions"
   - "functions [ODBC], data source or driver connections"
@@ -27,7 +27,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Connecting with SQLDriverConnect
 **SQLDriverConnect** is used to connect to a data source using a connection string. **SQLDriverConnect** is used instead of **SQLConnect** for the following reasons:  

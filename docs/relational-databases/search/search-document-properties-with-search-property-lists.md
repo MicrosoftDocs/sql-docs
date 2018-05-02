@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], search property lists"
   - "full-text search [SQL Server], properties"
@@ -25,7 +25,6 @@ caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Search Document Properties with Search Property Lists

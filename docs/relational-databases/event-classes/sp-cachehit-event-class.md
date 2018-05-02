@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SP:CacheHit event class"
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
@@ -19,7 +19,6 @@ caps.latest.revision: 41
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SP:CacheHit Event Class

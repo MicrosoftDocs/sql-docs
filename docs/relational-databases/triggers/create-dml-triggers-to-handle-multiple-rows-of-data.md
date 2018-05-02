@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-dml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple row DML triggers"
   - "UPDATE statement [SQL Server], DML triggers"
@@ -24,7 +24,6 @@ caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create DML Triggers to Handle Multiple Rows of Data

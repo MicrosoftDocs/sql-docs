@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "IsWebServiceEnabled"
 apilocation: 
@@ -25,7 +25,6 @@ caps.latest.revision: 18
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - IsWebServiceEnabled
   Indicates whether the Report Server Web service is enabled. Read-only.  

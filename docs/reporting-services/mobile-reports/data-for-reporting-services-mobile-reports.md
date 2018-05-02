@@ -11,13 +11,12 @@ ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Data for Reporting Services mobile reports
 The [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] data model is simple. Data is imported into [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] as a collection of datasets. Formal relationships between datasets aren't necessary. Lookups from one dataset to another work as long as the key values match. Date/time aggregations are handled by the mobile report runtime and they will match between different datasets, even if the date/time data granularity is different between datasets.   

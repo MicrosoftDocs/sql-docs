@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # IRDSService Interface (RDS)
 Exposes the [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) method, which is used to return a pointer to the requested interface on a more capable version of the object.  

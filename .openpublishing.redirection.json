@@ -3677,6 +3677,11 @@
 	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-oltp-database.md",
 	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
 	  "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/relational-databases/import-export/reporting-import-flat-file-failures.md",
+        "redirect_url": "/sql/relational-databases/import-export/import-flat-file-wizard",
+        "redirect_document_id": false
       }
     ]
 }

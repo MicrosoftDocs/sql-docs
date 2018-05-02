@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [full-text search], about full-text queries"
   - "queries [full-text search], predicates"
@@ -24,7 +24,6 @@ caps.latest.revision: 80
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Query with Full-Text Search

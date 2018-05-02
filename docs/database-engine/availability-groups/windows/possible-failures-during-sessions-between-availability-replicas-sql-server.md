@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology:
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "troubleshooting [SQL Server], HADR"
   - "Availability Groups [SQL Server], availability replicas"
@@ -22,7 +22,6 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 
-ms.workload: "Inactive"
 ---
 # Possible Failures During Sessions Between Availability Replicas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

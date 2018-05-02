@@ -21,7 +21,6 @@ caps.latest.revision: 35
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Install Reporting Services 2016 in SharePoint mode
 

@@ -21,7 +21,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # ADO Code Examples in Visual Basic
 Use the following code examples to learn how to use the ADO methods, properties, and events when writing in Visual Basic.  

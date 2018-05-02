@@ -26,7 +26,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Row Property (ADO)
 Gets or sets an OLE DB **Row** object from or on an [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md) object. When you use **put_Row** to set a **Row** object, a row is turned into an ADO **Record** object.  

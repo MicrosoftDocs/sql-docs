@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-partition"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned tables [SQL Server], about partitioned tables"
   - "partitioned indexes [SQL Server], architecture"
@@ -22,7 +22,6 @@ caps.latest.revision: 48
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Partitioned Tables and Indexes

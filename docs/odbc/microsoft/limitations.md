@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "desktop database drivers [ODBC], limitations"
   - "ODBC desktop database drivers [ODBC], limitations"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Limitations
 This section describes limitations of the ODBC Desktop Database Drivers with regard to the following topics:  

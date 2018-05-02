@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interoperability [ODBC], levels"
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Choosing a Level of Interoperability
 Assuming the application will use ODBC, the next step is to determine what level of interoperability is required. The basic level of interoperability is usually a function of the application type: Custom applications tend not to be interoperable, vertical applications tend to be interoperable among a limited number of DBMSs, and generic applications tend to be interoperable among all DBMSs.  

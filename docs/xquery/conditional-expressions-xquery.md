@@ -2,8 +2,8 @@
 title: "Conditional Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""
@@ -26,7 +26,6 @@ caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Conditional Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

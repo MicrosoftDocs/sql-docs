@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-stored-Procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], dependencies"
   - "displaying stored procedure dependencies"
@@ -21,7 +21,6 @@ caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View the Dependencies of a Stored Procedure

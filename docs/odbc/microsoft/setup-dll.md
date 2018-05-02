@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "desktop database drivers [ODBC], setup DLL"
   - "Jet-based ODBC drivers [ODBC], setup DLL"
@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Setup DLL
 The ODBC Administrator calls the function **ConfigDSN** when users configure data sources.

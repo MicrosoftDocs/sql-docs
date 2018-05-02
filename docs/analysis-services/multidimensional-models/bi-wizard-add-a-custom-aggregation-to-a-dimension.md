@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], Business Intelligence enhancements"
   - "Business Intelligence enhancements [Analysis Services], custom aggregations"
@@ -25,7 +25,6 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # BI Wizard - Add a Custom Aggregation to a Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

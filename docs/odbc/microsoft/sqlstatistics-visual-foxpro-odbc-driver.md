@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLStatistics function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLStatistics (Visual FoxPro ODBC Driver)
 > [!NOTE]  

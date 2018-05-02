@@ -2,7 +2,7 @@
 title: "Developing a User Interface for a Custom Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "extending-packages-custom-objects"
@@ -22,7 +22,6 @@ caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Developing a User Interface for a Custom Connection Manager
   After you have overridden the implementation of the properties and methods of the base class to provide your custom functionality, you may want to create a custom user interface for your connection manager. If you do not create a custom user interface, users can configure your connection manager only by using the Properties window.  

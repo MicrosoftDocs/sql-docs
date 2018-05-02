@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "LIKE predicate [ODBC]"
   - "escape sequences [ODBC], LIKE predicate"
@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # LIKE Predicate Escape Character
 In a **LIKE** predicate, the percent sign (%) matches zero or more of any character and the underscore (_) matches any one character. To match an actual percent sign or underscore in a **LIKE** predicate, an escape character must come before the percent sign or underscore. The escape sequence that defines the **LIKE** predicate escape character is:  

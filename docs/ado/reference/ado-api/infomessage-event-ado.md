@@ -23,7 +23,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # InfoMessage Event (ADO)
 The **InfoMessage** event is called whenever a warning occurs during a **ConnectionEvent** operation.  

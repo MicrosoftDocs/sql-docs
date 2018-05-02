@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cursors [ODBC], block"
   - "SQLGetData function [ODBC], block cursors"
@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLGetData and Block Cursors
 **SQLGetData** operates on a single column of a single row and cannot fetch an array containing data from multiple rows. This is because the primary use of **SQLGetData** is to fetch long data in parts, and there is little or no reason to do this for more than one row at a time.  

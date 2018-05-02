@@ -26,7 +26,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # NumericScale Property (ADOX)
 Indicates the scale of a numeric value in the column.  

@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Could not load file or assembly Microsoft-Data-Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

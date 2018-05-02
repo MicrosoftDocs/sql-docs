@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DBase indexes [ODBC]"
   - "DBase driver [ODBC], indexes"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # dBASE Indexes
 The ODBC dBASE driver automatically opens and updates dBASE IV index files. You must use the **Select Indexes** dialog box displayed through the ODBC Data Source Administrator to associate dBASE III .ndx files with dBASE files.  

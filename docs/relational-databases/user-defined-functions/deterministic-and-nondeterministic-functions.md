@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "built-in functions [SQL Server]"
   - "nondeterministic functions"
@@ -23,7 +23,6 @@ caps.latest.revision: 43
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Deterministic and Nondeterministic Functions

@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SSRS, upgrading"
   - "Reporting Services, upgrades"
@@ -23,7 +23,6 @@ caps.latest.revision: 92
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Upgrade and Migrate Reporting Services

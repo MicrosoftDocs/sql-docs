@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Catalog Object Properties, Methods, and Events (ADO MD)
 ## Properties/Collections  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], compared to change tracking"
   - "change data capture vs. change tracking"
@@ -26,7 +26,6 @@ caps.latest.revision: 39
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Track Data Changes (SQL Server)

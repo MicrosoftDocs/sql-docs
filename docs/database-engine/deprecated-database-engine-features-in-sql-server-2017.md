@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
@@ -21,7 +21,6 @@ caps.latest.revision:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Deprecated Database Engine Features in SQL Server 2017

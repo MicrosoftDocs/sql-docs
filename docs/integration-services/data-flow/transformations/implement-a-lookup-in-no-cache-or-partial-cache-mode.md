@@ -2,7 +2,7 @@
 title: "Implement a Lookup in No Cache or Partial Cache Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation"
   - "match exactly [Integration Services]"
@@ -22,7 +22,6 @@ caps.latest.revision: 67
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode
   You can configure the Lookup transformation to use the partial cache or no cache mode:  

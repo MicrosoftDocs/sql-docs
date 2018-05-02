@@ -12,13 +12,12 @@ ms.technology:
   
 ms.component: multidimensional-tabular
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Bi-directional cross filters in tabular models
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

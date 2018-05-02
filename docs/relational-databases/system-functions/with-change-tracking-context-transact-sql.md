@@ -25,7 +25,6 @@ caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)

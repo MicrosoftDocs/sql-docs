@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # GetDataProviderDSO Method
 Retrieves the underlying OLE DB Data Source object from the Shape provider.  

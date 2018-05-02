@@ -21,7 +21,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect Property Example (VBScript)
 > [!IMPORTANT]

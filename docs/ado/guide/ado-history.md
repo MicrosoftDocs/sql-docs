@@ -18,7 +18,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO Features for each Release
 This topic lists the new features introduced by each release of ADO, ADO MD, and ADOX.

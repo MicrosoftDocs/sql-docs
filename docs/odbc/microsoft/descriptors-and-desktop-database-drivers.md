@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "desktop database drivers [ODBC], descriptors"
   - "Jet-based ODBC drivers [ODBC], descriptors"
@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Descriptors and Desktop Database Drivers
 A descriptor is a data structure that holds information about either column data or dynamic parameters. **SQLGetDescField** can be used to retrieve the supported descriptors listed below. Implementation Parameter Descriptors (IPD) are not automatically populated because **SQLDescribeParam** is not supported. Descriptor fields that are not available through Jet (such as SQL_DESC_BASE_TABLE_NAME) are also not supported.  

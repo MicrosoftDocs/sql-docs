@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DTCTransaction event class"
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
@@ -19,7 +19,6 @@ caps.latest.revision: 37
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # DTCTransaction Event Class

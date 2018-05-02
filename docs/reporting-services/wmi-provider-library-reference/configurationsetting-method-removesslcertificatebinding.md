@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RemoveSSLCertificateBindings method"
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - RemoveSSLCertificateBinding
   Removes an SSL Certificate binding.  

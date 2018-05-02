@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], architecture"
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
@@ -19,7 +19,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Driver Architecture
 Driver writers must be aware that the driver architecture can affect whether an application can use DBMS-specific SQL.  

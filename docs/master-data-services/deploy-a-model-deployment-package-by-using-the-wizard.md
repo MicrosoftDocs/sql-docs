@@ -2,7 +2,7 @@
 title: "Deploy a Model Deployment Package by Using the Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deployment packages [Master Data Services], deploying"
   - "models [Master Data Services], deploying a package"
@@ -20,7 +20,6 @@ caps.latest.revision: 16
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Deploy a Model Deployment Package by Using the Wizard
 

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "date arithmetic [ODBC]"
   - "SQL grammar [ODBC], date arithmetic"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Date Arithmetic
 The driver supports adding and subtracting an integer from a DATE, TIME, or TIMESTAMP column. For a DATE column, the integer specifies the number of days to add or subtract. For a TIME or TIMESTAMP column, the integer specifies the number of seconds to add or subtract.

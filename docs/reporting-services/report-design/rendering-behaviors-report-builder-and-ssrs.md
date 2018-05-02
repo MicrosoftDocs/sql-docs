@@ -12,13 +12,12 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Rendering Behaviors (Report Builder  and SSRS)
   Depending on the renderer you select, certain rules are applied to the report body and its contents when rendering a report. How report items fit together on a page is determined by the combination of these factors:  

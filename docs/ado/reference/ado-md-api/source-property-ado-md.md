@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Source Property (ADO MD)
 Indicates the source for the data in the [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  

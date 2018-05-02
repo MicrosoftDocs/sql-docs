@@ -12,13 +12,12 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Builder Functions - Avg Function
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, returns the average of all non-null numeric values specified by the expression, evaluated in the given scope.  

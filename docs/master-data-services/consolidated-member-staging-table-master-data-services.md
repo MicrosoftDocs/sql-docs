@@ -2,7 +2,7 @@
 title: "Consolidated Member Staging Table (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
 ms.service: ""
 ms.component: "non-specific"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database [Master Data Services], attributes staging table"
   - "attributes staging table [Master Data Services]"
@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Consolidated Member Staging Table (Master Data Services)
 

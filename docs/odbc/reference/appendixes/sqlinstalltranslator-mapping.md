@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLInstallTranslator function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLInstallTranslator"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLInstallTranslator Mapping
 When an ODBC 2.*x* application calls **SQLInstallTranslator** through an ODBC 3*.x* driver, the Driver Manager maps the call to **SQLInstallTranslatorEx**.An application should not call **SQLInstallTranslator** in the ODBC 3*.x* Driver Manager with the *lpszInfFile* argument set to a value other than NULL. The ODBC.INF file used in ODBC 2.*x* is no longer supported in ODBC 3*.x*, even for backward compatibility.

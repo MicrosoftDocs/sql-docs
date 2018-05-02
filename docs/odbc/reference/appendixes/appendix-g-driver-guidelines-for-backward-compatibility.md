@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], backward compatibility"
   - "backward compatibility [ODBC], drivers"
@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Appendix G: Driver Guidelines for Backward Compatibility
 This appendix provides information for driver writers working on ODBC 3.*x* drivers that need to support ODBC 2.*x* applications. For more information about backward compatibility, see [Backward Compatibility and Standards Compliance](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

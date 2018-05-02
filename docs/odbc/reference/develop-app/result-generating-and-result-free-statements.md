@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "result-generating statements [ODBC]"
   - "batches [ODBC], result-generating statements"
@@ -23,7 +23,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Result-Generating and Result-Free Statements
 SQL statements can be loosely divided into the following five categories:  

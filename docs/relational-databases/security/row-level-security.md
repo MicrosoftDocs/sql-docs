@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: "security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "access control predicates"
   - "row level security"
@@ -21,7 +21,6 @@ caps.latest.revision: 47
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Row-Level Security

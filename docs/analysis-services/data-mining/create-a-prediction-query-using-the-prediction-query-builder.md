@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "prediction queries [Analysis Services]"
   - "Mining Model Prediction [Analysis Services], prediction queries"
@@ -21,7 +21,6 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Create a Prediction Query Using the Prediction Query Builder
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

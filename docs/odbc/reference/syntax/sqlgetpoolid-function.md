@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetPoolID function [ODBC]"
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
@@ -19,7 +19,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLGetPoolID Function
 **Conformance**  

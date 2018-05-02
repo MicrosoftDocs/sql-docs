@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ReservedURL method"
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ReserveURL
   Adds a URL reservation for a given application.  

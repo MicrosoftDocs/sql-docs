@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.pubproperties.publicationaccesslist.f1"
 ms.assetid: 9587bb9e-c66c-4e70-8171-09b943ec2d50
@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Publication Properties, Publication Access List
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

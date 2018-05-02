@@ -23,7 +23,6 @@ caps.latest.revision: 54
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Discontinued functionality to SQL Server Reporting Services in SQL Server 2016

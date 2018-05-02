@@ -26,7 +26,6 @@ caps.latest.revision: 15
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)

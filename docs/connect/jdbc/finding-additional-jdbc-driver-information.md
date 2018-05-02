@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 caps.latest.revision: 48
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Finding Additional JDBC Driver Information
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

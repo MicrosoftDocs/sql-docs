@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "drivers [ODBC], heterogeneous join engines"
   - "drivers [ODBC], ODBC on the server"
@@ -23,7 +23,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Other Driver Architectures
 Some ODBC drivers do not strictly conform to the architecture described previously. This might be because the drivers perform duties other than those of a traditional ODBC driver, or are not drivers in the normal sense.  

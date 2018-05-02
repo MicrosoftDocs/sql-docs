@@ -21,7 +21,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Manage All Data Alerts on a SharePoint Site in Data Alert Manager
 

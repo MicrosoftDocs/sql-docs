@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "literals [ODBC], SQL grammar"
   - "SQL grammar [ODBC], literals"
@@ -23,7 +23,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Jet: Date, Time, and Timestamp Literals
 For maximum interoperability, applications should pass date literals in the ODBC canonical format using escape-clause syntax:  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "driver-specific diagnostic values [ODBC]"
   - "diagnostic information [ODBC], driver-specific values"
@@ -21,7 +21,6 @@ caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Driver-Specific Data Types, Descriptor Types, Information Types, Diagnostic Types, and Attributes
 Drivers can allocate driver-specific values for the following:  

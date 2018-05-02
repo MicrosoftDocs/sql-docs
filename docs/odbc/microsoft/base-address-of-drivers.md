@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "base address of drivers [ODBC]"
   - "ODBC desktop database drivers [ODBC], base address"
@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Base Address of Drivers
 Each of the ODBC Desktop Database Drivers has been linked with a base address of 0x04c0000.

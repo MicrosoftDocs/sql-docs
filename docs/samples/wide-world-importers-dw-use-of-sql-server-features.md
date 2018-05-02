@@ -1,7 +1,7 @@
 ---
 title: "WideWorldImporters OLAP database - use of SQL Server | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ""
 ms.component: "samples"
 ms.technology:
@@ -11,13 +11,12 @@ ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 
 author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities

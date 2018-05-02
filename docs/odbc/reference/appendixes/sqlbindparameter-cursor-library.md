@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC], Cursor Library"
 ms.assetid: 04c53e4c-cd1d-40b2-9997-684ebe43499f
@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLBindParameter (Cursor Library)
 > [!IMPORTANT]  

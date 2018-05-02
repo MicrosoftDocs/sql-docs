@@ -2,7 +2,7 @@
 title: "Excel Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.excelsource.f1"
   - "sql13.dts.designer.excelsourceadapter.connection.f1"
@@ -25,7 +25,6 @@ caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Excel Source
   The Excel source extracts data from worksheets or ranges in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbooks.  

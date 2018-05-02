@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, tutorials"
   - "Reporting Services, tools"
@@ -28,7 +28,6 @@ caps.latest.revision: 63
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # Tutorial: How to Locate and Start Reporting Services Tools (SSRS)

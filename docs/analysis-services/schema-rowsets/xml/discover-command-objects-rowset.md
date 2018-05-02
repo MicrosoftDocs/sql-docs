@@ -22,7 +22,6 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # DISCOVER_COMMAND_OBJECTS Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

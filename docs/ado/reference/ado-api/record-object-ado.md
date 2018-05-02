@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Record Object (ADO)
 Represents a row from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) or the data provider, or an object returned by a semi-structured data provider, such as a file or directory.  

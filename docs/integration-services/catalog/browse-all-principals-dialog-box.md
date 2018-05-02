@@ -2,7 +2,7 @@
 title: "Browse All Principals Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "service"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.browseprincipals.f1"
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Browse All Principals Dialog Box
   Use the **Browse All Principals** dialog box to select a database principal to change the principal’s permissions on the selected project or on all projects contained in a selected folder.  

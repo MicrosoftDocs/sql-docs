@@ -14,14 +14,12 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.custom: 
 ms.component: "security"
-ms.workload: "On Demand"
 ms.tgt_pltfrm:
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
 
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 --- 
 # Rotate the Transparent Data Encryption (TDE) protector using PowerShell 

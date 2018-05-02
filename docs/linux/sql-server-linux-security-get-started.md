@@ -6,7 +6,7 @@ ms.author: "jroth"
 manager: "craigg"  
 ms.date: 10/02/2017
 ms.topic: article  
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: ""
@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.technology: database-engine  
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0  
 ms.custom: "sql-linux"
-ms.workload: "Inactive"
 ---
 # Walkthrough for the security features of SQL Server on Linux
 

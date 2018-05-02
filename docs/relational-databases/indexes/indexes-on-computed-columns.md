@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "computed columns, index creation"
   - "index creation [SQL Server], computed columns"
@@ -23,7 +23,6 @@ caps.latest.revision: 41
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Indexes on Computed Columns

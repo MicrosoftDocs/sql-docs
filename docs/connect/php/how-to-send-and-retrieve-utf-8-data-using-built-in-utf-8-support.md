@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving data, UTF-8 encoded data"
   - "converting data types"
@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

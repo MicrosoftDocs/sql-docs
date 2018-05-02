@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC [ODBC], database access"
   - "standardizing database access [ODBC], about standardizing"
@@ -23,7 +23,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Database Access Architecture
 One of the questions in the development of ODBC was which part of the database access architecture to standardize. The SQL programming interfaces described in the previous section — embedded SQL, SQL modules, and CLIs — are only one part of this architecture. In fact, because ODBC was primarily intended to connect personal computer–based applications to minicomputer and mainframe DBMSs, there were also a number of network components, some of which could be standardized.  

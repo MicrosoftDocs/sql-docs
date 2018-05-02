@@ -26,7 +26,6 @@ caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.routes (Transact-SQL)

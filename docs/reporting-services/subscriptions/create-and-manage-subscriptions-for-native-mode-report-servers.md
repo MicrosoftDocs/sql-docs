@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "standard subscriptions [Reporting Services]"
   - "subscriptions [Reporting Services], standard"
@@ -21,7 +21,6 @@ caps.latest.revision: 52
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Create and Manage Subscriptions for Native Mode Report Servers
   A standard subscription is one that is created by individual users who want to have a report delivered through e-mail or to a shared folder. This topic provides information about standard subscriptions that are created and managed by individual users. Data-driven subscriptions have different requirements and steps, and are discussed in a separate topic. For more information, see [Create, Modify, and Delete Data-Driven Subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  

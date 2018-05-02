@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "WHERE CURRENT OF clause limitations [ODBC]"
   - "ODBC SQL grammar, WHERE CURRENT OF clause limitations"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # WHERE CURRENT OF Clause Limitations
 Not supported.

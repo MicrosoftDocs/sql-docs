@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "read-only status for text driver [ODBC]"
   - "text file driver [ODBC], read-only status"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Read-Only Status (Text File Driver)
 When the Text driver is used, data source tables are read-only. However, applications can perform insertions for Text tables.

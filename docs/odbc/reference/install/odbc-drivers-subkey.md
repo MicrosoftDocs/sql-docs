@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subkeys [ODBC], drivers subkey"
   - "registry entries for components [ODBC], drivers subkey"
@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Drivers Subkey
 The values under the ODBC Drivers subkey list the installed drivers. The format of these values is shown in the following table.  

@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Creating and Executing a Simple Command
 A simple command is one that is not parameterized and requires no persistence. There are three ways to create and execute a simple command.  

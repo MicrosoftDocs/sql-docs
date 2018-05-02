@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing data sources [Reporting Services]"
   - "publishing reports [Reporting Services]"
@@ -22,7 +22,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Publishing Data Sources and Reports
   Before publishing your report, you should preview the report to see how it will look when it is run. You can continue to refine the design until you are satisfied with the results.  

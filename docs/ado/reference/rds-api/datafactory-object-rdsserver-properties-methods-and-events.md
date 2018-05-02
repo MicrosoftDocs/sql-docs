@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DataFactory Object (RDSServer) Properties, Methods, and Events
 > [!IMPORTANT]

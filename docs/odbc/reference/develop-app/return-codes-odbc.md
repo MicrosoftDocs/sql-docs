@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "return codes [ODBC]"
   - "diagnostic information [ODBC], return codes"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Return Codes ODBC
 Each function in ODBC returns a code, known as its *return code,* which indicates the overall success or failure of the function. Program logic is generally based on return codes.  

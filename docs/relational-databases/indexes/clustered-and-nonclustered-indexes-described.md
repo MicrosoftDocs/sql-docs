@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "query optimizer [SQL Server], index usage"
   - "index concepts [SQL Server]"
@@ -20,7 +20,6 @@ caps.latest.revision: 36
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Clustered and Nonclustered Indexes Described

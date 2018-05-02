@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "CSharp"
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET
 

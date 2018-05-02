@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.deploydacwizard.introduction.f1"
   - "sql13.swb.deploydacwizard.deploydac.f1"
@@ -29,7 +29,6 @@ caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Deploy a Data-tier Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

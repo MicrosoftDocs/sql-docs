@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver"
   - "FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Using the Visual FoxPro ODBC Driver
 In this section, the following topics discuss how to use the Microsoft® Visual FoxPro® ODBC Driver:  

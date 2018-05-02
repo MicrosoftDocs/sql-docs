@@ -216,7 +216,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	7. Click "Create" at the bottom.
 	9. While still in the Azure portal, click the "Settings" tab of your application, and open the "Properties" tab.
 	10. Find the "Application ID" (AKA Client ID) value and copy it aside, you need this later when configuring your application (for example, 1846943b-ad04-4808-aa13-4702d908b5c1). See the following snapshot.
-	11. Find the "App ID URL" value and copy it aside, this is the STS URL.
+	11. Under "App Registrations", find the "End points" tab. Copy the URL under "OATH 2.0 TOKEN ENDPOINT", this is your STS URL.
 	12. Under section “Keys”, create a key by filling in the name field, selecting the duration of the key, and saving the configuration (leave the value field empty). After saving, the value field should be filled automatically, copy the generated value. This is the client Secret.
 
 	![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
@@ -251,7 +251,7 @@ public class TokenBasedExample {
 
 		// Retrieve the access token from the AD.
 		String spn = "https://database.windows.net/";
-		String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+		String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
 		String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
 		String clientSecret = "..."; // Replace with your client secret.
 

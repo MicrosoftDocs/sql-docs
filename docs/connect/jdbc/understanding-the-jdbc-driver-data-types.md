@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Understanding the JDBC Driver Data Types
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

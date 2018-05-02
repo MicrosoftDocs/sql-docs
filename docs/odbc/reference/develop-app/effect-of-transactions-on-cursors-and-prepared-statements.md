@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "rolling back transactions [ODBC]"
   - "committing transactions [ODBC]"
@@ -24,7 +24,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Effect of Transactions on Cursors and Prepared Statements
 Committing or rolling back a transaction has the following effect on cursors and access plans:  

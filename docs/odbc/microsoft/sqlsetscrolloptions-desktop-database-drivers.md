@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetScrollOptions function [ODBC], Desktop Database Drivers"
 ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLSetScrollOptions (Desktop Database Drivers)
 Forward and static cursors are supported for SQL_CONCUR_READ_ONLY.  

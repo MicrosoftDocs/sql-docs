@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLCloseCursor function [ODBC], ODBC"
 ms.assetid: 5e47e3f7-e1b8-451f-bf75-daa19b7c7271
@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLCloseCursor_ODBC
 > [!IMPORTANT]  

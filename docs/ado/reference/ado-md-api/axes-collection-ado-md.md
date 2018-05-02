@@ -23,7 +23,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Axes Collection (ADO MD)
 Contains the [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) objects that define a cellset.  

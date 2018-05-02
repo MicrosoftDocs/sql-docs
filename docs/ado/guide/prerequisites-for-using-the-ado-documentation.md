@@ -18,7 +18,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Prerequisites for Using the ADO Documentation
 To use this documentation, you should have, at a minimum, some experience developing applications with Microsoft Visual Basic, because most of the examples in the guide are written in this language. There are also some examples written in Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript), and Microsoft JScript.  

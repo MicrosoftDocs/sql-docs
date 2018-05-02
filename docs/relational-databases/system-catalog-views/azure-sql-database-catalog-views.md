@@ -20,7 +20,6 @@ caps.latest.revision: 8
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Azure SQL Database Catalog Views

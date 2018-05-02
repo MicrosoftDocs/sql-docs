@@ -26,7 +26,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # RelatedColumn Property (ADOX)
 Indicates the name of the related [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) in the related table (key columns only).  

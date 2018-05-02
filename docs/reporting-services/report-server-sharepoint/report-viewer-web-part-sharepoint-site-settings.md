@@ -11,10 +11,9 @@ ms.suite: ""
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "jt000"
 ms.author: "jasontre"
-ms.workload: "Inactive"
 ---
 # SharePoint site settings for the Report Viewer web part - Reporting Services
 

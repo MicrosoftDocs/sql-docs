@@ -1,7 +1,7 @@
 ---
 title: "Reserved Word Limitations | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "05/01/2018"
 ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC]"
   - "desktop database drivers [ODBC]"
@@ -20,7 +20,16 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
-# Reserved Word Limitations
-Do not use the reserved words listed in the SQL grammar in Appendix C of the *ODBC Programmer's Reference* (or the shorthand form of these reserved words) as identifiers (that is, table or column names), unless you surround the word in back quotes (`).
+# Reserved Keyword Limitations
+
+Avoid using any ODBC reserved keywords as identifiers in your SQL tables or related objects. If an odd case arises where you must use a reserved keyword as an identifier, you must surround the identifier with a pair of *backticks* (`). Another name for *backtick* is *back quote*.
+
+The reserved keyword limitation also applies to any shorthand form of the reserved keywords.
+
+A list of the ODBC reserved keywords is available at:
+
+- [ODBC Reserved Keywords](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+
+- In the *ODBC Programmer's Reference Guide*, see [Appendix C: SQL Grammar](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+

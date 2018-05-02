@@ -10,7 +10,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving data, ASCII data"
   - "sending data"
@@ -19,7 +19,6 @@ helpviewer_keywords:
 author: "yitam"
 ms.author: "v-yitam"
 manager: "mbarwin"
-ms.workload: "On Demand"
 ---
 # How to: Send and Retrieve ASCII Data in Linux and macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

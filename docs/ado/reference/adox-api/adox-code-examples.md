@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADOX Code Examples
 Use the following code examples to learn how to use the ADOX objects, methods, properties, and events.  

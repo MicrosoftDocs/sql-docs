@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ODBC], executing"
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Executing a Statement
 There are four ways to execute a statement, depending on when they are compiled (prepared) by the database engine and who defines them:  

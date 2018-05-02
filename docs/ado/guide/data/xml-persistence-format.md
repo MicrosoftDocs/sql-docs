@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # XML Persistence Format
 ADO uses UTF-8 encoding for the XML stream it persists.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ODBC], procedures"
   - "procedures [ODBC], executing"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Executing Procedures
 ODBC defines a standard escape sequence for executing procedures. For the syntax of this sequence and a code example that uses it, see [Procedure Calls](../../../odbc/reference/develop-app/procedure-calls.md).  

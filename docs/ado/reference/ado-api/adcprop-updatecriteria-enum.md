@@ -22,7 +22,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADCPROP_UPDATECRITERIA_ENUM
 Specifies which fields can be used to detect conflicts during an optimistic update of a row of the data source with a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

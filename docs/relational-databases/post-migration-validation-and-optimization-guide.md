@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "post-migration validation and optimization"
   - "guide, post-migration validation and optimization"
@@ -20,7 +20,6 @@ caps.latest.revision: 3
 author: "pelopes"
 ms.author: "harinid"
 manager: ""
-ms.workload: "Inactive"
 ---
 # Post-migration Validation and Optimization Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

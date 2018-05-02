@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "WindowsServiceIdentityConfigured"
 apilocation: 
@@ -25,7 +25,6 @@ caps.latest.revision: 17
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # WindowsServiceIdentityConfigured Property
   Returns the identity that the Report Server Windows service was last configured to run under. Read-only.  

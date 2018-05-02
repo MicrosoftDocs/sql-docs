@@ -1,6 +1,6 @@
 ---
 title: "Installing SSMA for Oracle Client (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
@@ -8,10 +8,9 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Licensing SSMA"
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
@@ -19,7 +18,6 @@ caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "On Demand"
 ---
 # Installing SSMA for Oracle Client (OracleToSQL)
 The SSMA client consists of the program files that perform the following tasks:  

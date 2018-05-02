@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "long data [ODBC]"
   - "SQLSetPos function [ODBC], long data and SQLBulkOperations"
@@ -23,7 +23,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Long Data and SQLSetPos and SQLBulkOperations
 As is the case with parameters in SQL statements, long data can be sent when updating rows with **SQLBulkOperations** or **SQLSetPos** or when inserting rows with **SQLBulkOperations**. The data is sent in parts, with multiple calls to **SQLPutData**. Columns for which data is sent at execution time are known as *data-at-execution columns*.  

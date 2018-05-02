@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFetch function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLFetch (Visual FoxPro ODBC Driver)
 > [!NOTE]  

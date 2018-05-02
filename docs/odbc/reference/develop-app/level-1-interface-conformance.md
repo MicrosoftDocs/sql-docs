@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interface conformance levels [ODBC]"
   - "conformance levels [ODBC], interface"
@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Level 1 Interface Conformance
 The Level 1 interface conformance level includes the Core interface conformance level functionality plus additional features, such as transactions, that are usually available in an OLTP relational DBMS. A Level 1 interface–conformant driver lets the application do the following, in addition to the features in the Core interface conformance level:  

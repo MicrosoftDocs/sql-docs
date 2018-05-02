@@ -31,7 +31,6 @@ caps.latest.revision: 130
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OPENROWSET (Transact-SQL)

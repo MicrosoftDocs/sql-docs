@@ -9,7 +9,6 @@ ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.technology: "dbe-data-tier-apps"
 ms.custom: ""
-ms.workload: "data-management"
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi

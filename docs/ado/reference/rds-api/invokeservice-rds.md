@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # InvokeService (RDS)
 Returns a pointer to the requested interface on a more capable version of the object.  

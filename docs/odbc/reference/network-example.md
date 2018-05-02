@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "drivers [ODBC], examples"
 ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Network Example
 This illustration shows how each of the preceding configurations could appear in a single network.  

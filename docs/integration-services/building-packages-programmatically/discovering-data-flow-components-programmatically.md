@@ -2,7 +2,7 @@
 title: "Discovering Data Flow Components Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "building-packages-programmatically"
@@ -28,7 +28,6 @@ caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Discovering Data Flow Components Programmatically
   After you have added a data flow task to a package, your next step may be to determine what data flow components are available for your use. You can programmatically discover the data flow sources, transformations, and destinations that are installed and available on the local computer. For information about adding a data flow task to the package, see [Adding the Data Flow Task Programmatically](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md).  

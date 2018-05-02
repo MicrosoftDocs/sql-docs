@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDescribeCol function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLDescribeCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  

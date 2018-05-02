@@ -16,7 +16,6 @@ ms.topic: "get-started-article"
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)

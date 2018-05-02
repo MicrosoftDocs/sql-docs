@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)

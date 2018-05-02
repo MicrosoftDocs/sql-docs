@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "default subkey [ODBC]"
   - "registry entries for components [ODBC], default subkey"
@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Default Driver Subkey
 The Default subkey contains a single value that describes the driver used by the default data source. The format of this value is shown in the following table.  

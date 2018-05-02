@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.Distributor.SubscriptionSummary.merge.f1"
 ms.assetid: 0308bbd2-03ce-4f03-974d-e54ebd6c7f58
@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Distributor Info, Subscription Watch List (Merge Pub, SQL 2005+)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

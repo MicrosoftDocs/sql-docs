@@ -3,7 +3,7 @@ title: "SQL Server Integration Services (SSIS) Scale Out Support for High Availa
 ms.description: "This article describes how to configure SSIS Scale Out for high availability"
 ms.custom: ""
 ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "scale-out"
@@ -12,12 +12,11 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Scale Out support for high availability
 

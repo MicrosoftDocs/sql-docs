@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindCol function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLBindCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  

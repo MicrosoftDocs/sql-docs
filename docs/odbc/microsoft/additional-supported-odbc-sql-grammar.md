@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL grammar [ODBC]"
   - "ODBC drivers [ODBC], SQL grammar"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Additional Supported ODBC SQL Grammar
 The ODBC drivers completely support the Minimum ODBC 2.5 grammar and the following clauses in the Core and Extended ODBC 2.5 grammar. Additional information can be displayed by jumping to the [ALTER TABLE Statement](../../odbc/microsoft/alter-table-statement.md), [Correlation Names](../../odbc/microsoft/correlation-names.md), and [Procedure Invocation](../../odbc/microsoft/procedure-invocation.md) topics.  

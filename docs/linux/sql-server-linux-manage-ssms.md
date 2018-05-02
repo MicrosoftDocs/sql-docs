@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 08/23/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: ""
@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: "sql-linux"
-ms.workload: "On Demand"
 ---
 # Use SQL Server Management Studio on Windows to manage SQL Server on Linux
 

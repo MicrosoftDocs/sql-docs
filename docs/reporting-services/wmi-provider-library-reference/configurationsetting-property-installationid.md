@@ -13,7 +13,7 @@ ms.technology:
 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "InstallationID Property"
 apilocation: 
@@ -26,7 +26,6 @@ caps.latest.revision: 38
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - InstallationID
   This property returns a unique identifier for a specific report server instance.  

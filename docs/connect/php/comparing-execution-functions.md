@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "executing queries"
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
@@ -19,7 +19,6 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Comparing Execution Functions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

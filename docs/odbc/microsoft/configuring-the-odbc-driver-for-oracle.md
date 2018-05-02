@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "configuring ODBC driver for Oracle [ODBC]"
   - "ODBC driver for Oracle [ODBC], configuring"
@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Configuring the ODBC Driver for Oracle
 > [!IMPORTANT]  

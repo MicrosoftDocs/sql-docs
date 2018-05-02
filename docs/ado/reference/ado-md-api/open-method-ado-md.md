@@ -23,7 +23,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Open Method (ADO MD)
 Retrieves the results of a multidimensional query and returns the results to a [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  

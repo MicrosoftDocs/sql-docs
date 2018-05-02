@@ -22,7 +22,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Navigating Through Data
 **Recordset** supports various methods and properties to navigate through the resultant dataset. We examine this functionality by going through a few scenarios with our sample **Recordset** objects.  

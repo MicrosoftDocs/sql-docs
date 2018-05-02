@@ -4,16 +4,15 @@ description: Add extensions to SQL Operations Studio (preview)
 ms.custom: "tools|sos"
 ms.date: "03/28/2018"
 ms.reviewer: "alayu; erickang; sstein"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Extend the functionality of [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

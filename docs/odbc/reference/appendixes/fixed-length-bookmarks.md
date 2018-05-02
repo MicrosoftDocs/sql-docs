@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [ODBC], bookmarks"
   - "bookmarks [ODBC]"
@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Fixed-Length Bookmarks
 If an ODBC 3*.x* driver should work with an ODBC 2.*x* application that uses fixed-length bookmarks, the driver must support the following:  

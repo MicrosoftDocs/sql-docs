@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/13/2018"

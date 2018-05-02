@@ -148,7 +148,6 @@ If you see an error here, see [Troubleshooting Snapshot Agent errors](../../trou
   
    a. Select the **Publication Access List** page, and select **Add**.  
    b. In the **Add Publication Access** dialog box, select <*Publisher_Machine_Name*>**\repl_distribution**, and select **OK**.
-
    
    ![Selections for adding a login to the publication access list](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 

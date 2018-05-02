@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "error messages [ODBC], Visual FoxPro ODBC driver"
   - "Visual FoxPro ODBC driver [ODBC], error messages"

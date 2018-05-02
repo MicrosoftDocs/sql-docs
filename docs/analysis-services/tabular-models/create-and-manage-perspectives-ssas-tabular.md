@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.bidtoolset.perspectivedb.f1"
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "OLEDB QueryInterface event class"
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d

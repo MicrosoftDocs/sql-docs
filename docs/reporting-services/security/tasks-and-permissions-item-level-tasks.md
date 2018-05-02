@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "item-level tasks [Reporting Services]"
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39

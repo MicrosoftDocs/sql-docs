@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Server Scope GDR event class"
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0

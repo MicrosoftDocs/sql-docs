@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "remote servers [SQL Server], stored procedure execution"
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f

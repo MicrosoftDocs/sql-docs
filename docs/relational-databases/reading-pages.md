@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "pages"
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e

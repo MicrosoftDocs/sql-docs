@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 caps.latest.revision: 10
 author: "MikeRayMSFT"

@@ -10,7 +10,7 @@ ms.component: search
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"
   - "full-text indexes [SQL Server], languages"

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "statement parameters [ODBC]"
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a

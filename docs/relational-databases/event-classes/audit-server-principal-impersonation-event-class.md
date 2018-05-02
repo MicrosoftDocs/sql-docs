@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Server Principal Impersonation event class"
 ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f

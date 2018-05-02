@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC], literals"
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f

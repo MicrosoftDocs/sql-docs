@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "pull subscriptions [SQL Server replication], synchronizing"
   - "synchronization [SQL Server replication], pull subscriptions"

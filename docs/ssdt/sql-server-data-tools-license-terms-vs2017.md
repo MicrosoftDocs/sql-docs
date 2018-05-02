@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "tools-ssdt"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 
 caps.latest.revision: 5
 author: "stevestein"

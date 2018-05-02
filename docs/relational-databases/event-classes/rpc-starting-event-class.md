@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RPC:Starting event class"
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "UNIQUE_TSQL"
 helpviewer_keywords: 

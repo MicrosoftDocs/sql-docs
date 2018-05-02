@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "STOPAT clause [RESTORE LOG statement]"
   - "point in time recovery [SQL Server]"

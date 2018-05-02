@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "master database [SQL Server], restoring"
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73

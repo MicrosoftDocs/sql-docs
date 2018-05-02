@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Replication Monitor, non-administrators access"
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86

@@ -1,7 +1,7 @@
 ---
 title: "Connect to data sources and file shares with Windows Authentication | Microsoft Docs"
 ms.date: "02/05/2018"
-ms.topic: "article"
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""

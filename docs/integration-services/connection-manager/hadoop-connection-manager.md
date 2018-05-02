@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoopconn.f1"
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server], creating"
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8

@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "property pages [SQL Server Management Studio]"
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67

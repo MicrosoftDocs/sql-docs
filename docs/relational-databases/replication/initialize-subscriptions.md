@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newsubwizard.initializesubscriptions.f1"
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514

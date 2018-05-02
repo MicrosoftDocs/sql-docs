@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFreeStmt function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 caps.latest.revision: 8
 author: "MikeRayMSFT"

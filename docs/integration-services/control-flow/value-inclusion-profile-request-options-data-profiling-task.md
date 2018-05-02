@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01

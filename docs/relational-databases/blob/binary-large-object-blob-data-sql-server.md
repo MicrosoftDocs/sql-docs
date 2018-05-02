@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], design and implementation"
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a

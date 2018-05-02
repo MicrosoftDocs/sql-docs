@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dta.general.f1"
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8

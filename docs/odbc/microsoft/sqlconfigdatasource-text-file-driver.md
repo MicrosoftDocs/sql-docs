@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "text file driver [ODBC], SQLConfigDataSource"
   - "SQLConfigDataSource function [ODBC], Text File Driver"

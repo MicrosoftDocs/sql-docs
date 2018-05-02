@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLRateConnection function [ODBC]"
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8

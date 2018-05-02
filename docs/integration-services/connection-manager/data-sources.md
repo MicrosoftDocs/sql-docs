@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Integration Services], about data sources"
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3

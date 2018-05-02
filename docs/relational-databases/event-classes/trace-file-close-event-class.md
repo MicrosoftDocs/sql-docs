@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Trace File Close event class"
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef

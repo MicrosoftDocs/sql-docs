@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.configdbmsecurwiz.principalsrvr.f1"
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4

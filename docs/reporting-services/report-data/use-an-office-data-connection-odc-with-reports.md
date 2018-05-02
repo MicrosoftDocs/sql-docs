@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Office Data Connection (.odc) files"
   - "SharePoint integration [Reporting Services], shared data sources"

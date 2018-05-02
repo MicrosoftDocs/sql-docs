@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data-tier application [SQL Server], validate"
   - "data-tier application [SQL Server], compare"

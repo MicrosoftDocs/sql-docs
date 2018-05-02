@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.publicationinfo.warningsandagents.merge.f1"
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6

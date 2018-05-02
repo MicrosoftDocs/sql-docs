@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MERGE statement [SQL Server]"
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b

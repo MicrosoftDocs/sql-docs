@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Broker:Remote Message Ack event class"
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc

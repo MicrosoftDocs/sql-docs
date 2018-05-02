@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "descriptors [ODBC], retrieving or setting field values"
 ms.assetid: 936f983f-c7e9-43f3-97ea-dd4b1bbf4654

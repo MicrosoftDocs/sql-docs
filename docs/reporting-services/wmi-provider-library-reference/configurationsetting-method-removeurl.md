@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RemoveURL method"
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9

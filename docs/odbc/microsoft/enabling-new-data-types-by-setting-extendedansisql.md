@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "extendedANSISQL [ODBC], enabling new data types"
 ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 caps.latest.revision: 8
 author: "barbkess"

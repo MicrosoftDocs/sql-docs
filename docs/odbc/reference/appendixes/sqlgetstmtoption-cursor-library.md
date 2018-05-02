@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetStmtOption function [ODBC], Cursor Library"
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb

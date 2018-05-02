@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "time-out"
 ms.assetid: f1add4bc-e882-440a-a98b-333cfa274c3e

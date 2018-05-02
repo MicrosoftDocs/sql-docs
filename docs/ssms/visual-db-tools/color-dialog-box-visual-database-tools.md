@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptions.FontsAndColors.ColorPicker"
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa

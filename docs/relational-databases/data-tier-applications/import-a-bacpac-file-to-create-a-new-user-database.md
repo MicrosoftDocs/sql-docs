@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb. importdac.results.f1"
   - "sql13.swb.importdac.settings.f1"

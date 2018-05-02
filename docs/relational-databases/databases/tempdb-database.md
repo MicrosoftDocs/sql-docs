@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: 
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "temporary tables [SQL Server], tempdb database"
   - "tempdb database [SQL Server], about tempdb"

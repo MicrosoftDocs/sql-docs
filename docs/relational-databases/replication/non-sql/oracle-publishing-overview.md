@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing [SQL Server replication], Oracle publishing"
   - "snapshot replication [SQL Server], Oracle publishing"

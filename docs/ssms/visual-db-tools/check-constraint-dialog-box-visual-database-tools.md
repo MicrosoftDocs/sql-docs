@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.checkconstraint"
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101

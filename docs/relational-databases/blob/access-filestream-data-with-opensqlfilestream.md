@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "OpenSqlFilestream"
 apilocation: 

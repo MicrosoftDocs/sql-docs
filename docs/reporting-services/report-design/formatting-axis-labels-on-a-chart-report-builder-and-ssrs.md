@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1"
   - "sql13.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1"

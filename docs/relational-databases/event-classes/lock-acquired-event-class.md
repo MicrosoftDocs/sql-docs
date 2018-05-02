@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Acquired event class"
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5

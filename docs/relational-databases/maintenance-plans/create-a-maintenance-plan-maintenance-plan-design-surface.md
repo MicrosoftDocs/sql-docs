@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Maintenance Plan Design Surface"
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1

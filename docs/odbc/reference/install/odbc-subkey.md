@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "registry entries for data sources [ODBC], ODBC subkey"
   - "subkeys [ODBC], ODBC subkey"

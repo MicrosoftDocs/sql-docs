@@ -12,7 +12,7 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.component: "security"
 ms.tgt_pltfrm:
-ms.topic: "article"
+ms.topic: conceptual
 ms.date: "04/10/2018"
 ms.author: "rebeccaz"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"

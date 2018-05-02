@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], managing"
   - "semantic search [SQL Server], monitoring"

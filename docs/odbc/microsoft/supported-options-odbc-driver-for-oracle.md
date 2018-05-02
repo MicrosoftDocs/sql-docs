@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], supported options"
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544

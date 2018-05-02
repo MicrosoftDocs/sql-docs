@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"

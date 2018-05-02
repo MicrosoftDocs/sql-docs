@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Sort Warnings event class"
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72

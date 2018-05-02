@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.serverproperties.memory.f1"
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715

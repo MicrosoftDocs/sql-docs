@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: "xevents"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server], using"
   - "extended events [SQL Server], options for using"

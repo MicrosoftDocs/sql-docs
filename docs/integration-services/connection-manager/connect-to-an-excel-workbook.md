@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Excel [Integration Services]"
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd

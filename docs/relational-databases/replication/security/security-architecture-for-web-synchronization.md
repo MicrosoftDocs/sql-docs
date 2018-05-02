@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Web synchronization, security architecture"
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b

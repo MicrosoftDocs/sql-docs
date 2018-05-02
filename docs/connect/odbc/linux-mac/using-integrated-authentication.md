@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "integrated authentication"
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9

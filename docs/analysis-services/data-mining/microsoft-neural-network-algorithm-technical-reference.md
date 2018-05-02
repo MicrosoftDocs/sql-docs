@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "HIDDEN_NODE_RATIO parameter"
   - "MAXIMUM_INPUT_ATTRIBUTES parameter"

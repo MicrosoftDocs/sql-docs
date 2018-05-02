@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "rrRenderingError"
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322

@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1f911829-8c73-4542-b75e-6273f0dd52bf
 caps.latest.revision: 3
 author: "stevestein"

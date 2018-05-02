@@ -26,7 +26,7 @@ ms.author: "heidist"
 manager: "cgronlun"
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Returns information about the current external resource pool state, the current configuration of resource pools, and resource pool statistics. 
   

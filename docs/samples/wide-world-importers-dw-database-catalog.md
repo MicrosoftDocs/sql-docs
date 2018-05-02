@@ -12,7 +12,6 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-robots: noindex,nofollow
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WideWorldImportersDW database catalog

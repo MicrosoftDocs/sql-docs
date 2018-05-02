@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.facet.f1"
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de

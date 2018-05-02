@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Reporting Services], running"
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f

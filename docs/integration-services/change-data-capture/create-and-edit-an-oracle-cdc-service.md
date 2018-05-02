@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326

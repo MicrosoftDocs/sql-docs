@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], enabling"
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff

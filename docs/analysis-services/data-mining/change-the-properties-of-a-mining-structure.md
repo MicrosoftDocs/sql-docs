@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], properties"
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401

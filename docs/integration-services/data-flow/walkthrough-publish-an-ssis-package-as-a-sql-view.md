@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.packagepublishwizard.f1"
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac

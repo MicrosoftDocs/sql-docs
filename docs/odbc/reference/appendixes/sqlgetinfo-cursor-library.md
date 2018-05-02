@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetInfo function [ODBC], Cursor Library"
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce

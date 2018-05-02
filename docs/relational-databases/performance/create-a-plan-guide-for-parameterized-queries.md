@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-plan-guides"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parameterized queries, plan guides for"
   - "plan guides [SQL Server], parameterized queries"

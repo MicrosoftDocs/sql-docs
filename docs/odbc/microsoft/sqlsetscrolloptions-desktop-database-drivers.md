@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetScrollOptions function [ODBC], Desktop Database Drivers"
 ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca

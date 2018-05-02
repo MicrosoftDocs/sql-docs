@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "DENY DATABASE SCOPED CREDENTIAL"
   - "DENY_DATABASE_SCOPED_CREDENTIAL_TSQL"

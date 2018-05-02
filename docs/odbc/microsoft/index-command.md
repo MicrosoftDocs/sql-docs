@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index command [ODBC]"
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff

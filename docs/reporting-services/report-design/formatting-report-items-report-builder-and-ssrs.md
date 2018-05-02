@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac

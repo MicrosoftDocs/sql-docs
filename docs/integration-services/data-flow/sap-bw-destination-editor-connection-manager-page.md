@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.connection.f1"
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91

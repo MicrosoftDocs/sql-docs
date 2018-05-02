@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "odbcconf.exe"
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology:
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 23
 author: "MightyPen"

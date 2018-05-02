@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL row count [ODBC]"
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404

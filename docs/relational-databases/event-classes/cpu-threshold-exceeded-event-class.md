@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CPU Threshold Exceeded Event Class"
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d

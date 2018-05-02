@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-ole"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "return codes [SQL Server]"
   - "OLE Automation [SQL Server], return codes"

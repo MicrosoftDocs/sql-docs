@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "intrinsic member properties [MDX]"
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8

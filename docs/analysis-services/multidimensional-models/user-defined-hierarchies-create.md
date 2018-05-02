@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined hierarchies [Analysis Services]"
 ms.assetid: 16715b85-0630-4a8e-99b0-c0d213cade26

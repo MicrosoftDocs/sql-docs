@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.maintwiz.integrity.f1"
   - "sql13.ag.maintwiz.order.f1"

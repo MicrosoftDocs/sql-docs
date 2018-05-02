@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.QueryViewColumn"
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954

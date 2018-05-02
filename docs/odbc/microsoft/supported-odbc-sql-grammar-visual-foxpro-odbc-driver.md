@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "native Visual FoxPro language syntax [ODBC]"
   - "FoxPro ODBC driver [ODBC], SQL grammar"

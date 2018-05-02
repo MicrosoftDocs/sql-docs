@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - ", policies"
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90

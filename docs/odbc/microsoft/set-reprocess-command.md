@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SET REPROCESS command [ODBC]"
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b

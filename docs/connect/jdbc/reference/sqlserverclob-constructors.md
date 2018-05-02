@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "Assembly"
 ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
 caps.latest.revision: 14

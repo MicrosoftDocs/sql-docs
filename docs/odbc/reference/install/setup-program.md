@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing ODBC components [ODBC], setup program"
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1

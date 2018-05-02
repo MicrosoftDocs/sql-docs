@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server]"
   - "number capacity specifications [SQL Server]"

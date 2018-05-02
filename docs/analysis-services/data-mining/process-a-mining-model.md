@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models [Analysis Services], processing"
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233

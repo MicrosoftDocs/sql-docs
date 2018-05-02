@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetCursorName function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "master data services"
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d

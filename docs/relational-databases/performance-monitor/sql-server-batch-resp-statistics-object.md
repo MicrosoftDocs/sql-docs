@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Batch Resp Statistics"
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a

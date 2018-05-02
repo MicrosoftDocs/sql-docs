@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-plan-guides"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 caps.latest.revision: 6
 author: "MikeRayMSFT"

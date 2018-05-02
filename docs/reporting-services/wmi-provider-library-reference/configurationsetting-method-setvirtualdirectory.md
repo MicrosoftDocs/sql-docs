@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SetVirtualDirectory method"
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4

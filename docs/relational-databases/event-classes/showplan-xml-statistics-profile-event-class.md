@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan XML Statistics Profile event class"
 ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84

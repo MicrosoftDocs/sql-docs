@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Background Job Error event class"
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197

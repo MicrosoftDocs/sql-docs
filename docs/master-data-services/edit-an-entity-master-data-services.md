@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "entities [Master Data Services], changing name"
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae

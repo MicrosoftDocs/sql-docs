@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.isprojectprop.versions.f1"
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4

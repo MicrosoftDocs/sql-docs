@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-ddl"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event groups"
   - "DDL event groups"

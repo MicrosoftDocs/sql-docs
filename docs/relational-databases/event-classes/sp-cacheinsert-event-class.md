@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SP:CacheInsert event class"
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20

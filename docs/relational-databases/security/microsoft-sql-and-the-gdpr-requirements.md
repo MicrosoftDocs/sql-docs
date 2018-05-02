@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: "security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 caps.latest.revision: 2
 author: "edmacauley"
 ms.author: "edmaca"

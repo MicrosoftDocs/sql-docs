@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.addeditjoin.f1"
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.replicationutilities.administrativepassword.f1"
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904

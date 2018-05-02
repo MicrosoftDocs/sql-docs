@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.xmlindexes"
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477

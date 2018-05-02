@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPrepare function [ODBC], Desktop Database Drivers"
 ms.assetid: dbc8f17b-2913-4bdf-841c-d79213993cd8

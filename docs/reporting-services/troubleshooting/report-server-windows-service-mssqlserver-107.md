@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQLServer 107 error"
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4

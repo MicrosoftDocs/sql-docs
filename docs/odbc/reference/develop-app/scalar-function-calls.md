@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC], scalar function calls"
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47

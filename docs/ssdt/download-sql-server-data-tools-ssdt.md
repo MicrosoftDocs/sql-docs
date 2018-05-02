@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2018"

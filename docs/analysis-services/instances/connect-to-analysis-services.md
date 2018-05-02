@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "instances of Analysis Services, connections"
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f

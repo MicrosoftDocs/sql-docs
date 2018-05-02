@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "GetReportServerUrls method"
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e

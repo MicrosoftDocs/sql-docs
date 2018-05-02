@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.evalpoliciesresults.f1"
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693

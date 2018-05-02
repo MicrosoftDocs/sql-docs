@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "TM: Rollback Tran Completed event class"
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148

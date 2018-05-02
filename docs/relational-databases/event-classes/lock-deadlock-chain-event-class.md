@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Deadlock Chain event class"
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc

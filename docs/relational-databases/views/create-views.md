@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-views"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], creating"
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64

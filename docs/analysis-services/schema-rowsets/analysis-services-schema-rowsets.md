@@ -12,7 +12,7 @@ ms.technology:
   
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016 Preview"
 helpviewer_keywords: 

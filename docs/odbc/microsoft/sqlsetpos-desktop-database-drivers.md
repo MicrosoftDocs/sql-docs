@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetPos function [ODBC], Desktop Database Drivers"
 ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331

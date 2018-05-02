@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Broker:Conversation Group event class"
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb

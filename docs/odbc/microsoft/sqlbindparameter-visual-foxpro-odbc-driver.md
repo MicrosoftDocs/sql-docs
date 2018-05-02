@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074

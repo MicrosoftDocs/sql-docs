@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)"
 apilocation: 

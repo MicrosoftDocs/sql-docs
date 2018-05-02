@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.fulltextcolumn"
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6

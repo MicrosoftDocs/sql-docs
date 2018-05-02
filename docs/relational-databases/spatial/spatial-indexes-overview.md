@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "spatial indexes [SQL Server]"
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293

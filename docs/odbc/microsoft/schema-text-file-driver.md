@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "text file driver [ODBC], schema"
 ms.assetid: 27f1b65e-e04d-457f-bd49-02deb3873613

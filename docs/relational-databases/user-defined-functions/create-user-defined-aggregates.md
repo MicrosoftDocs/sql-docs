@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "aggregate functions [SQL Server], user-defined"
   - "user-defined functions [CLR integration]"

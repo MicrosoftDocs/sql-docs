@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data feeds [Analysis Services with SharePoint]"
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6

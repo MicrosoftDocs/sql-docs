@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "makChanToTab"
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a

@@ -12,7 +12,7 @@ ms.technology:
   
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Local Audit"
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3

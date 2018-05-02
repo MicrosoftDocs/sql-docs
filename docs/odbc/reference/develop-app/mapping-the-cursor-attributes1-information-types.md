@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], mapping cursor attributes1 information types"
   - "application upgrades [ODBC], mapping cursor attributes1 information types"

@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "many-to-many relationships [Analysis Services]"
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Always Encrypted, bulk import"
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e

@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.components.f1"
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f

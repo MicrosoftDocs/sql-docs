@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multidimensional data [Analysis Services], querying"
 ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886

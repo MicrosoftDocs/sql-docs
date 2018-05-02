@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "error messages (ODBC driver for oracle)"
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae

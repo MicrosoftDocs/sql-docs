@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Object:Altered event class"
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e

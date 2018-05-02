@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SP:StmtCompleted event class"
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc

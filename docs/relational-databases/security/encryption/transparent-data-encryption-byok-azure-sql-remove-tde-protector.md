@@ -15,7 +15,7 @@ ms.custom:
 ms.component: "security"
 ms.tgt_pltfrm:
 
-ms.topic: "article"
+ms.topic: conceptual
 ms.date: "08/07/2017"
 ms.author: "rebeccaz"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"

@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.as.daxref.CreataCalculatedColumn.f1"
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da

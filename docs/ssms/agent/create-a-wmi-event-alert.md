@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "WMI event alerts [SQL Server Management Studio]"
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "components [Integration Services], properties"
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5

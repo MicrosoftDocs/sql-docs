@@ -232,15 +232,9 @@ In this section, you use tracer tokens to verify that changes are being replicat
    ![Information for the tracer token](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
-<<<<<<< HEAD
 For more information, see: 
 - [Measure latency and validate connections for transactional replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 - [Troubleshooting transactional replication sync errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
-=======
-For more information, see:
-[Measure latency and validate connections for transactional replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-[Troubleshooting transactional replication sync errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
->>>>>>> e694492cea15afb2937b8f6934c2dfb70388c8a4
 
 
 ## Next steps

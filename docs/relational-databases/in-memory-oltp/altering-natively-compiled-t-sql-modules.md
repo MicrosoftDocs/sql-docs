@@ -37,12 +37,12 @@ When executing `ALTER` on a natively compiled [!INCLUDE[tsql](../../includes/tsq
 > [!NOTE]  
 > Natively compiled [!INCLUDE[tsql](../../includes/tsql-md.md)] modules cannot be converted to non-natively compiled modules. Non-natively compiled T-SQL modules cannot be converted to natively compiled modules.  
   
-For more information on `ALTER PROCEDURE` functionality and syntax, see [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
+For more information on `ALTER PROCEDURE` functionality and syntax, see [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md).  
   
 You can execute [sp_recompile](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) on a natively compiled [!INCLUDE[tsql](../../includes/tsql-md.md)] modules, which causes the module to recompile on the next execution.  
   
 ## Example  
-The following example creates a memory-optimized table (T1), and a natively compiled stored procedure (SP1) that selects all the T1 columns. Then, SP1 is altered to remove the EXECUTE AS clause, change the LANGUAGE, and select only one column (C1) from T1.  
+The following example creates a memory-optimized table (T1), and a natively compiled stored procedure (usp_1) that selects all the T1 columns. Then, usp_1 is altered to remove the `EXECUTE AS` clause, change the `LANGUAGE`, and select only one column (C1) from T1.  
   
 ```sql  
 CREATE TABLE [dbo].[T1] (  
@@ -58,7 +58,7 @@ AS BEGIN ATOMIC WITH
 (  
  TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english'  
 )  
-   SELECT c1, c2 from dbo.T1  
+   SELECT c1, c2 FROM dbo.T1  
 END  
 GO  
   
@@ -68,7 +68,7 @@ AS BEGIN ATOMIC WITH
 (  
  TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'Dutch'  
 )  
-   SELECT c1 from dbo.T1  
+   SELECT c1 FROM dbo.T1  
 END  
 GO    
 ```   

@@ -2,7 +2,7 @@
 title: "Installing ODBC Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing ODBC components [ODBC]"
   - "installing ODBC components [ODBC], about installing"
@@ -20,8 +20,7 @@ ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Installing ODBC Components
 > [!NOTE]  

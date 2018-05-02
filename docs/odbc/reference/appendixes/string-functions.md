@@ -2,7 +2,7 @@
 title: "String Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "functions [ODBC], string functions"
   - "string functions [ODBC]"
@@ -19,8 +19,7 @@ ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # String Functions
 The following table lists string manipulation functions. An application can determine which string functions are supported by a driver by calling **SQLGetInfo** with an *information type* of SQL_STRING_FUNCTIONS.  

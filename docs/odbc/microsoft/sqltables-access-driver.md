@@ -2,7 +2,7 @@
 title: "SQLTables (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLTables function [ODBC], Access Driver"
   - "Access driver [ODBC], SQLTables"
@@ -19,8 +19,7 @@ ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLTables (Access Driver)
 > [!NOTE]  

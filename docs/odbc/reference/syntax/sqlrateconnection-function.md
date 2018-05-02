@@ -2,7 +2,7 @@
 title: "SQLRateConnection Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,15 +11,14 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLRateConnection function [ODBC]"
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLRateConnection Function
 **Conformance**  

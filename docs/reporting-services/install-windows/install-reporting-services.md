@@ -15,7 +15,6 @@ ms.topic: "get-started-article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Install SQL Server Reporting Services (2017 and later)
 

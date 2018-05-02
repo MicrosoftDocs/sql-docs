@@ -2,7 +2,7 @@
 title: "Text File Format (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "delimited text lines"
   - "fixed-width text files"
@@ -21,8 +21,7 @@ ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Text File Format (Text File Driver)
 The ODBC Text driver supports both delimited and fixed-width text files. A text file consists of an optional header line and zero or more text lines.  

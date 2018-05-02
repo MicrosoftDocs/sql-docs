@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "MSReportServer_ConfigurationSetting Methods"
 apilocation: 
@@ -26,7 +26,6 @@ caps.latest.revision: 45
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MSReportServer_ConfigurationSetting Methods
   The MSReportServer_ConfigurationSetting class of the Report Server WMI Provider provides the following public methods.  

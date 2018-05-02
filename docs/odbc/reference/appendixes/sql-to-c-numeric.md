@@ -2,7 +2,7 @@
 title: "SQL to C: Numeric | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data conversions from SQL to C types [ODBC], numeric"
   - "numeric data type [ODBC], converting"
@@ -20,8 +20,7 @@ ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQL to C: Numeric
 The identifiers for the numeric ODBC SQL data types are:  

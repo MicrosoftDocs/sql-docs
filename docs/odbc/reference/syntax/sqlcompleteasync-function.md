@@ -2,7 +2,7 @@
 title: "SQLCompleteAsync Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQLCompleteAsync"
 helpviewer_keywords: 
@@ -20,8 +20,7 @@ ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLCompleteAsync Function
 **Conformance**  

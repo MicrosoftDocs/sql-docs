@@ -2,7 +2,7 @@
 title: "SQLAllocStmt Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLAllocStmt"
 apilocation: 
@@ -25,8 +25,7 @@ ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLAllocStmt Function
 **Conformance**  

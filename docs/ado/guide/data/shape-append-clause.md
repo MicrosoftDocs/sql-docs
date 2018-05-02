@@ -1,6 +1,6 @@
 ---
 title: "Shape APPEND Clause | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "shape commands [ADO]"
   - "data shaping [ADO], APPEND clause"
@@ -21,7 +21,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Shape APPEND Clause
 The shape command APPEND clause appends a column or columns to a **Recordset**. Frequently, these columns are chapter columns, which refer to a child **Recordset**.  

@@ -1,24 +1,17 @@
 ---
-title: "Hardware Configurations (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "The Analytics Platform System (APS) hardware is architected with scalable units so that you buy the right amount of processing and storage according to your business requirements."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: 9
-
+title: Hardware configurations - Analytics Platform System | Microsoft Docs
+description: The Analytics Platform System (APS) appliance hardware is architected with scalable units so that you buy the right amount of processing and storage according to your business requirements. The appliance scales storage for Parallel Data Warehouse from a few terabytes to over 6 petabytes of data.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Hardware configurations
+# Hardware configurations - Analytics Platform System
 The Analytics Platform System (APS) hardware is architected with scalable units so that you buy the right amount of processing and storage according to your business requirements. The appliance scales storage for SQL Server Parallel Data Wareouse (PDW) from a few Terabytes to over 6 Petabytes of data.  
   
 ## Contents  

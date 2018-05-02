@@ -2,7 +2,7 @@
 title: "Configure Alerts to Notify Policy Administrators of Policy Failures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "performance-monitor"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, configure alerts"
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Configure Alerts to Notify Policy Administrators of Policy Failures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

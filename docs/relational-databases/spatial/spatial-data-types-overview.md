@@ -1,8 +1,8 @@
----
+﻿---
 title: "Spatial Data Types Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "spatial"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry data type [SQL Server], understanding"
   - "geography data type [SQL Server], spatial data"
@@ -22,7 +22,7 @@ caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Spatial Data Types Overview
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,10 +100,7 @@ Methods operating on circular arc segment types use straight line segments to ap
 >  If Z values are given for circular arc segments then they must be the same for all points in the circular arc segment for it to be accepted for input. For example: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` is accepted, but `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` is not accepted.  
 
 ### LineString and CircularString comparison  
-The following diagram shows identical isosceles triangles (triangle A uses line segments to define the triangle and triangle B uses circular arc segments to defined the triangle):  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
-This example shows how to store the above isosceles triangles using both a **LineString** instance and **CircularString** instance:  
+This example shows how to store identical isosceles triangles using both a **LineString** instance and **CircularString** instance:  
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -125,17 +122,13 @@ SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-This snippet will produce the following results:  
+This snippet producse the following results:  
 ```
 LS LengthCS Length
 5.65685…6.28318…
 ```
 
-The following illustration shows how each type is stored (red line shows **LineString**`@g1`, blue line shows **CircularString**`@g2`):  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-As the illustration above shows, **CircularString** instances use fewer points to store curve boundaries with greater precision than **LineString** instances. **CircularString** instances are useful for storing circular boundaries like a twenty-mile search radius from a specific point. **LineString** instances are good for storing boundaries that are linear like a square city block.  
+**CircularString** instances use fewer points to store curve boundaries with greater precision than **LineString** instances. **CircularString** instances are useful for storing circular boundaries like a twenty-mile search radius from a specific point. **LineString** instances are good for storing boundaries that are linear like a square city block.  
 
 ### LineString and CompoundCurve comparison  
 The following code examples show how to store the same figure using **LineString** and **CompoundCurve** instances:

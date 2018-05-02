@@ -2,7 +2,7 @@
 title: "SQLParamOptions Mapping | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], SQLParamOptions"
   - "SQLParamOptions function [ODBC], mapping"
@@ -19,8 +19,7 @@ ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLParamOptions Mapping
 When an application calls **SQLParamOptions** through an ODBC 3*.x* driver, the call  

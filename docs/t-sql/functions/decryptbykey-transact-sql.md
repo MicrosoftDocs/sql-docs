@@ -2,7 +2,7 @@
 title: "DECRYPTBYKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "t-sql|functions"
@@ -27,7 +27,6 @@ caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,9 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
  Is a variable that contains data from which to generate an authenticator. Must match the value that was supplied to EncryptByKey.  
   
 ## Return Types  
- **varbinary** with a maximum size of 8,000 bytes.  
+ **varbinary** with a maximum size of 8,000 bytes.
+ 
+Returns NULL if the symmetric key used for encrypting the data is not open or the *ciphertext* is NULL.
   
 ## Remarks  
  DecryptByKey uses a symmetric key. This symmetric key must already be open in the database. There can be multiple keys open at the same time. You do not have to open the key immediately before decrypting the cipher text.  

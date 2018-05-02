@@ -1,8 +1,8 @@
----
+﻿---
 title: "sp_xtp_flush_temporal_history | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "system-stored-procedures"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server (starting with 2016 CTP3)"
 f1_keywords: 
@@ -26,9 +26,9 @@ caps.latest.revision: 7
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Temporal Table - sp_xtp_flush_temporal_history
+# sp_xtp_flush_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Invokes the data flush task to move all committed rows from in-memory staging table to the disk-based history table.  

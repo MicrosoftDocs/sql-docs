@@ -2,7 +2,7 @@
 title: "High Availability Solutions (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/19/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "high availability [SQL Server], solutions"
   - "Database Engine [SQL Server], availability"
@@ -22,8 +22,7 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 caps.latest.revision: 84
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # High Availability Solutions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

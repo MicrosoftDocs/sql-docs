@@ -1,6 +1,6 @@
 ---
 title: "Append Method (ADOX Groups) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Groups::raw_Append"
@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Append Method (ADOX Groups)
 Adds a new [Group](../../../ado/reference/adox-api/group-object-adox.md) object to the [Groups](../../../ado/reference/adox-api/groups-collection-adox.md) collection.  

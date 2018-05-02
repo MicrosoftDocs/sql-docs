@@ -2,7 +2,7 @@
 title: "Supported Versions of FoxPro | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FoxPro ODBC driver [ODBC], supported versions"
   - "installing Visual FoxPro ODBC driver [ODBC]"
@@ -22,8 +22,7 @@ ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Supported Versions of FoxPro
 You can use the Microsoft® Visual FoxPro® ODBC Driver to access data stored in FoxPro tables. The following versions of FoxPro data are supported:  

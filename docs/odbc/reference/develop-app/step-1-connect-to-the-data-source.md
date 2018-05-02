@@ -2,7 +2,7 @@
 title: "Step 1: Connect to the Data Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "application process [ODBC], connecting to data source"
   - "data sources [ODBC], connections"
@@ -20,8 +20,7 @@ ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Step 1: Connect to the Data Source
 The first step in any application is to connect to the data source. This phase, including the functions it requires, is shown in the following illustration.  

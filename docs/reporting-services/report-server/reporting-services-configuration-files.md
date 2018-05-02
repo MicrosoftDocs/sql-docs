@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying [Reporting Services], configuration files"
   - "configuration options [Reporting Services]"
@@ -23,7 +23,6 @@ caps.latest.revision: 52
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Reporting Services Configuration Files
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores component information in the registry and in configuration files that are copied to the file system during setup. Configuration files contain a combination of internal-use-only and user-defined values. User-defined values are specified through Setup, the configuration tools, the command line utilities, and by manually editing the configuration files.  

@@ -2,7 +2,7 @@
 title: "DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|database-console-commands"
@@ -36,7 +36,6 @@ caps.latest.revision: 87
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ The following table describes the columns in the result set.
 ## Remarks  
 DBCC SHRINKFILE applies to the files in the current database. For more information about how to change the current database, see [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
-DBCC SHRINKFILE operations can be stopped at any point in the process, and any completed work is retained.
+DBCC SHRINKFILE operations can be stopped at any point in the process, and any completed work is retained. If the EMPTYFILE parameter is used on a file and the operation is cancelled, the file will not be marked to prevent additional data from being added.
   
 When a DBCC SHRINKFILE operation fails, an error is raised.
   

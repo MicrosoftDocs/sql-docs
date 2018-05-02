@@ -2,7 +2,7 @@
 title: "SQLBindParameter Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLBindParameter"
 apilocation: 
@@ -25,8 +25,7 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # SQLBindParameter Function
 **Conformance**  

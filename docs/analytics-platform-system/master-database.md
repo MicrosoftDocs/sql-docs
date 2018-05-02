@@ -1,24 +1,17 @@
 ---
-title: "master Database (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
-caps.latest.revision: 8
-ms.workload: "not set"
+title: Master database - Parallel Data Warehouse | Microsoft Docs
+description: Learn about the master database in Parallel Data Warehouse.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# master Database
+
+# Master database - Parallel Data Warehouse
 The SQL Server PDW master database stores appliance-level login information and the database catalog. It is a SQL Server master database that resides on the Control node. As such, it provides similar functionality to SQL Server PDW as master provides to SQL Server.  
   
 For more information about system databases, see [System Databases](system-databases.md).  

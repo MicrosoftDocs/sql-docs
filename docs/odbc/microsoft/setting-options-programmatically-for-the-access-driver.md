@@ -2,7 +2,7 @@
 title: "Setting Options Programmatically for the Access Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Access driver [ODBC], setting options programmatically"
   - "ODBC desktop database drivers [ODBC], Access driver"
@@ -21,8 +21,7 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Setting Options Programmatically for the Access Driver
 |Option|Description|Method|  

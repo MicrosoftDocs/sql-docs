@@ -1,8 +1,8 @@
----
+﻿---
 title: "SUBSTRING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|functions"
@@ -30,7 +30,7 @@ caps.latest.revision: 65
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ SUBSTRING ( expression ,start , length )
   
 ## Arguments  
  *expression*  
- Is a **character**, **binary**, **text**, **ntext**, or **image**[expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Is a **character**, **binary**, **text**, **ntext**, or **image** [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
  Is an integer or **bigint** expression that specifies where the returned characters start. (The numbering is 1 based, meaning that the first character in the expression is 1). If *start* is less than 1, the returned expression will begin at the first character that is specified in *expression*. In this case, the number of characters that are returned is the largest value of either the sum of *start* + *length*- 1 or 0. If *start* is greater than the number of characters in the value expression, a zero-length expression is returned.  

@@ -2,7 +2,7 @@
 title: "COS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|functions"
@@ -25,12 +25,12 @@ caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # COS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Is a mathematical function that returns the trigonometric cosine of the specified angle, in radians, in the specified expression.
+A mathematical function that returns the trigonometric cosine of the specified angle - measured in radians - in the specified expression.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -42,13 +42,13 @@ COS ( float_expression )
   
 ## Arguments  
 *float_expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float**.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float**.
   
 ## Return types
 **float**
   
 ## Examples  
-The following example returns the COS of the specific angle.
+This example returns the `COS` value of the specified angle:
   
 ```sql
 DECLARE @angle float;  
@@ -64,13 +64,11 @@ The COS of the angle is: -0.599465
   
 (1 row(s) affected)  
 ```  
-
-## Examples
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
-The following example returns the COS of the specific angle.
+This example returns the COS values of the specified angles:
   
 ```sql
 SELECT COS(14.76) AS cosCalc1, COS(-0.1472738) AS cosCalc2;   

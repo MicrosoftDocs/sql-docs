@@ -4,13 +4,13 @@ ms.custom: ""
 ms.date: "07/25/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
 ms.technology: "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, about"
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
@@ -18,7 +18,6 @@ caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Microsoft ActiveX Data Objects (ADO)
 

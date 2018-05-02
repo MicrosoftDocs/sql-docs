@@ -1,6 +1,6 @@
 ---
 title: "Read Method | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -10,11 +10,11 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Stream::raw_Read"
@@ -26,7 +26,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Read Method
 Reads a specified number of bytes from a binary [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

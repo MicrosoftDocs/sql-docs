@@ -2,7 +2,7 @@
 title: "Rules for Conversions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "numeric data type [ODBC], literals"
   - "conversions with numeric literals [ODBC]"
@@ -21,8 +21,7 @@ ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Rules for Conversions
 The rules in this section apply for conversions involving numeric literals. For the purposes of these rules, the following terms are defined:  

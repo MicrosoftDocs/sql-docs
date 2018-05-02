@@ -2,7 +2,7 @@
 title: "ODBC Component Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], component files"
   - "desktop database drivers [ODBC], component files"
@@ -20,8 +20,7 @@ ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ODBC Component Files
 The ODBC Driver files are required by each component of ODBC Desktop Database Drivers 4.0.  

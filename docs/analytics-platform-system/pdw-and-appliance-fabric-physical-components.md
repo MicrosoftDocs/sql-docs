@@ -1,25 +1,18 @@
 ---
-title: "PDW and Appliance Fabric Physical Components (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: 17
-
+title: Appliance physical components - Analytics Platform System | Microsoft Docs
+description: Names and descriptions for the PDW and appliance fabric physical components. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# PDW and Appliance Fabric Physical Components
-Names and descriptions for the PDW and appliance fabric physical components. The PDW Region contains all of these components.  
+
+# Appliance physical components - Analytics Platform System
+Names and descriptions for the PDW and appliance fabric physical components. 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   

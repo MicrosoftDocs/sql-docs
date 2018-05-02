@@ -2,7 +2,7 @@
 title: "Standards-Compliant Applications and Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "standards-compliant applications and drivers [ODBC]"
   - "ODBC drivers [ODBC], standards-compliant"
@@ -20,8 +20,7 @@ ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Standards-Compliant Applications and Drivers
 A standards-compliant application or driver is one that conforms to the Open Group CAE Specification "Data Management: SQL Call-Level Interface (CLI)," and the ISO/IEC 9075-3:1995 (E) Call-Level Interface (SQL/CLI).  

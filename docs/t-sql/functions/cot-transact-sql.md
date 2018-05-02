@@ -2,7 +2,7 @@
 title: "COT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|functions"
@@ -25,12 +25,12 @@ caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # COT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-A mathematical function that returns the trigonometric cotangent of the specified angle, in radians, in the specified **float** expression.
+A mathematical function that returns the trigonometric cotangent of the specified angle - in radians - in the specified **float** expression.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -42,13 +42,13 @@ COT ( float_expression )
   
 ## Arguments  
 *float_expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md)of type **float** or of a type that can be implicitly converted to **float**.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float**, or of a type that can implicitly convert to **float**.
   
 ## Return types
 **float**
   
 ## Examples  
-The following example returns the COT for the specific angle.
+This example returns the `COT` value for the specific angle:
   
 ```sql
 DECLARE @angle float;  

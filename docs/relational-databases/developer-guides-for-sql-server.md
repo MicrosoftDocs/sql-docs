@@ -1,7 +1,7 @@
----
+﻿---
 title: "Developer Guides for SQL Server | Microsoft Docs"
 ms.date: "10/19/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, analysis-services, integration-services, reporting-services, master-data-services"
 ms.service: ""
 ms.component: "relational-databases-misc"
@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.portal.DevRef.f1"
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
@@ -19,7 +19,7 @@ caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Developer Guides for SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

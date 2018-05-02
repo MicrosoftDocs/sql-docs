@@ -2,7 +2,7 @@
 title: "Table Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "t-sql|queries"
@@ -43,7 +43,6 @@ caps.latest.revision: 174
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Hints (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -132,13 +131,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  The following table hints are allowed with and without the WITH keyword: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT, and NOEXPAND. When these table hints are specified without the WITH keyword, the hints should be specified alone. For example:  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  When the hint is specified with another option, the hint must be specified with the WITH keyword:  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -198,7 +197,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |Combined with an INDEX hint|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|The query optimizer considers only index seek operations to access the table or view through the specified index.|  
 |Parameterized by specifying an index and index columns|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|The query optimizer considers only index seek operations to access the table or view through the specified index using at least the specified index columns.|  
   
- When using the FORCESEEK hint (with or without index parameters), consider the following guidelines.  
+When using the FORCESEEK hint (with or without index parameters), consider the following guidelines.  
   
 -   The hint can be specified as a table hint or as a query hint. For more information about query hints, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
@@ -210,7 +209,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   If FORCESEEK causes no plan to be found, error 8622 is returned.  
   
- When FORCESEEK is specified with index parameters, the following guidelines and restrictions apply.  
+When FORCESEEK is specified with index parameters, the following guidelines and restrictions apply.  
   
 -   The hint cannot be specified for a table that is the target of an INSERT, UPDATE, or DELETE statement.  
   
@@ -346,7 +345,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  The memory-optimized table is accessed under SNAPSHOT isolation. SNAPSHOT can only be used with memory-optimized tables (not with disk-based tables). For more information, see [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -398,7 +397,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## Filtered Index Hints  
  A filtered index can be used as a table hint, but will cause the query optimizer to generate error 8622 if it does not cover all of the rows that the query selects. The following is an example of an invalid filtered index hint. The example creates the filtered index `FIBillOfMaterialsWithComponentID` and then uses it as an index hint for a SELECT statement. The filtered index predicate includes data rows for ComponentIDs 533, 324, and 753. The query predicate also includes data rows for ComponentIDs 533, 324, and 753 but extends the result set to include ComponentIDs 855 and 924, which are not in the filtered index. Therefore, the query optimizer cannot use the filtered index hint and generates error 8622. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -458,7 +457,7 @@ GO
 ### B. Using the FORCESEEK hint to specify an index seek operation  
  The following example uses the FORCESEEK hint without specifying an index to force the query optimizer to perform an index seek operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

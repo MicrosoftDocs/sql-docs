@@ -2,7 +2,7 @@
 title: "Statement Transitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transitioning states [ODBC], statement"
   - "state transitions [ODBC], statement"
@@ -20,8 +20,7 @@ ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Statement Transitions
 ODBC statements have the following states.  

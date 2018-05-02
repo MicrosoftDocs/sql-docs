@@ -2,7 +2,7 @@
 title: "Connect to a Microsoft Azure Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "backup-restore"
@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to a Microsoft Azure Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

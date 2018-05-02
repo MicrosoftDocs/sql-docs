@@ -2,7 +2,7 @@
 title: "Types of Changes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], types of changes"
   - "backward compatibility [ODBC], types of changes"
@@ -19,8 +19,7 @@ ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Types of Changes
 Three types of changes are made in ODBC 3.*x* (and any version of ODBC). Each of these affects backward compatibility differently and is handled in a different way. These changes are described in the following table.  

@@ -2,14 +2,13 @@
 title: "Store and retrieve files on file shares on premises and in Azure | Microsoft Docs"
 description: "This article describes how to use the file system and file shares, both on premises and in Azure, with SSIS"
 ms.date: "11/27/2017"
-ms.topic: "article"
-ms.prod: sql-non-specified
+ms.topic: conceptual
+ms.prod: sql  
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Store and retrieve files on file shares on premises and in Azure with SSIS
 This article describes how to update your SQL Server Integration Services (SSIS) packages when you lift and shift packages that use local file systems into SSIS in Azure.

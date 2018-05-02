@@ -2,7 +2,7 @@
 title: "Adding and Modifying Data Sources Using Setup | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], adding"
   - "editing data sources [ODBC], ODBC driver for Oracle"
@@ -23,8 +23,7 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Adding and Modifying Data Sources Using Setup
 > [!IMPORTANT]  

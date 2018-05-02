@@ -2,7 +2,7 @@
 title: "PolyBase installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "polybase"
@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine-polybase"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "PolyBase, installation"
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # PolyBase installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,17 +25,23 @@ ms.workload: "On Demand"
   
 ## Prerequisites  
   
--   64-bit SQL Server Evaluation edition  
+- 64-bit SQL Server Evaluation edition  
   
--   Microsoft .NET Framework 4.5.  
+- Microsoft .NET Framework 4.5.  
+
+- Oracle Java SE Runtime Environment (JRE). Versions 7 (starting from 7.51) and 8 are supported (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present. JRE9 and JRE10 are not supported.
+    
+- Minimum memory: 4GB  
   
--   Oracle Java SE RunTime Environment (JRE) version 7.51 or 8 (64-bit) (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present. JRE 9 or higher does not work unless you have SQL Server 2017 Cumulative Update 4 or higher. You can install JRE 8, install PolyBase, and then upgrade to JRE 9. 
+- Minimum hard disk space: 2GB  
   
--   Minimum memory: 4GB  
-  
--   Minimum hard disk space: 2GB  
-  
--   TCP/IP must be enabled for Polybase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For Polybase to function correctly on the Developer and Express editions you must enable TCP/IP connectivity (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
+- TCP/IP must be enabled for Polybase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For Polybase to function correctly on the Developer and Express editions you must enable TCP/IP connectivity (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
+
+- An external data source, which is either an Azure blob or a Hadoop cluster. For supported versions of Hadoop, see [Configure PolyBase](#supported).  
+
+
+> [!NOTE]
+>   If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail. 
   
  **Notes**  
   

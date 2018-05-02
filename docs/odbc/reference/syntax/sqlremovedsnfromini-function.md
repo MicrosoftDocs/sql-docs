@@ -2,7 +2,7 @@
 title: "SQLRemoveDSNFromIni Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLRemoveDSNFromIni"
 apilocation: 
@@ -25,8 +25,7 @@ ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLRemoveDSNFromIni Function
 **Conformance**  

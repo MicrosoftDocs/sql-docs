@@ -3,14 +3,14 @@ title: "Updating an Application to OLE DB Driver for SQL Server from MDAC | Micr
 description: "Updating an application to OLE DB Driver for SQL Server from MDAC"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "oledb|applications"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology:
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords:
@@ -21,11 +21,12 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, updating applications"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Updating an Application to OLE DB Driver for SQL Server from MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   There are a number of differences between OLE DB Driver for SQL Server and Microsoft Data Access Components (MDAC); starting with Windows Vista, the data access components are now called Windows Data Access Components (or Windows DAC). Although both provide native data access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases, OLE DB Driver for SQL Server has been specifically designed to expose the new features of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], while at the same time maintaining backward compatibility with earlier versions.   
 
@@ -52,8 +53,6 @@ ms.workload: "Inactive"
 -   OLE DB Driver for SQL Server does not contain XML integration. OLE DB Driver for SQL Server supports SELECT … FOR XML queries, but does not support any other XML functionality. However, OLE DB Driver for SQL Server does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   OLE DB Driver for SQL Server supports configuring client-side network libraries using only connection string attributes. If you need more complete network library configuration, you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
-
--   OLE DB Driver for SQL Server is not compatible with odbcbcp.dll. Applications must be rebuilt to link with msoledbsql.lib in order to use OLE DB Driver for SQL Server.    
 
 -   MDAC connection strings allow a Boolean value (**true**) for the **Trusted_Connection** keyword. A OLE DB Driver for SQL Server connection string must use **yes** or **no**.  
 

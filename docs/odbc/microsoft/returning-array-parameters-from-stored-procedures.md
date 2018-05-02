@@ -2,7 +2,7 @@
 title: "Returning Array Parameters from Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], stored procedures"
@@ -19,8 +19,7 @@ ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Returning Array Parameters from Stored Procedures
 > [!IMPORTANT]  

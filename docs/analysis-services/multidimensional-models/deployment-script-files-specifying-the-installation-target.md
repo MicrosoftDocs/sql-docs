@@ -14,7 +14,7 @@ ms.component: multidimensional-tabular
 ms.component: data-mining
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "input files [Analysis Services]"
   - "installation targets [Analysis Services]"
@@ -27,7 +27,6 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Deployment Script Files - Specifying the Installation Target
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

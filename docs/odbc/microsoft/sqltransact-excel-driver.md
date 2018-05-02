@@ -2,7 +2,7 @@
 title: "SQLTransact (Excel Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLTransact function [ODBC], Excel Driver"
   - "Excel driver [ODBC], SQLTransact"
@@ -19,8 +19,7 @@ ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLTransact (Excel Driver)
 > [!NOTE]  

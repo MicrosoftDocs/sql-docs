@@ -2,7 +2,7 @@
 title: "History of the Desktop Database Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], history"
   - "ODBC desktop database drivers [ODBC], history"
@@ -20,8 +20,7 @@ ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # History of the Desktop Database Drivers
 The following table shows the Desktop Database Drivers version history.  

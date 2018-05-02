@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Data Warehouse and Parallel Data Warehouse Catalog Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,7 +19,7 @@ caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL Data Warehouse and Parallel Data Warehouse Catalog Views
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

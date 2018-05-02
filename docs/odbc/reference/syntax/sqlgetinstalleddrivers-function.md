@@ -2,7 +2,7 @@
 title: "SQLGetInstalledDrivers Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLGetInstalledDrivers"
 apilocation: 
@@ -25,8 +25,7 @@ ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLGetInstalledDrivers Function
 **Conformance**  

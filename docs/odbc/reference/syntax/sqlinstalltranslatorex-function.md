@@ -2,7 +2,7 @@
 title: "SQLInstallTranslatorEx Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLInstallTranslatorEx"
 apilocation: 
@@ -25,8 +25,7 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLInstallTranslatorEx Function
 **Conformance**  

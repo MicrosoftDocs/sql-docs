@@ -2,7 +2,7 @@
 title: "Cursor Characteristics and Cursor Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scrollable cursors [ODBC]"
   - "cursors [ODBC], scrollable"
@@ -20,8 +20,7 @@ ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Cursor Characteristics and Cursor Type
 An application can specify the characteristics of a cursor instead of specifying the cursor type (forward-only, static, keyset-driven, or dynamic). To do this, the application selects the cursor's scrollability (by setting the SQL_ATTR_CURSOR_SCROLLABLE statement attribute) and sensitivity (by setting the SQL_ATTR_CURSOR_SENSITIVITY statement attribute) before opening the cursor on the statement handle. The driver then chooses the cursor type that most efficiently provides the characteristics that the application requested.  

@@ -1,7 +1,7 @@
 ---
 title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
 ms.date: "11/6/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "sql-non-specified"
@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server]"
   - "number capacity specifications [SQL Server]"
@@ -27,8 +27,7 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 caps.latest.revision: 88
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Maximum Capacity Specifications for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

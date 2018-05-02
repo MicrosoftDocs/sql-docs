@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "VirtualDirectoryReportManager property"
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - VirtualDirectoryReportManager
   Returns the virtual directory for the report manager application. Read-only.  

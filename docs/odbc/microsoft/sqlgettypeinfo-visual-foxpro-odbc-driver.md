@@ -2,7 +2,7 @@
 title: "SQLGetTypeInfo (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,15 +11,14 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLGetTypeInfo (Visual FoxPro ODBC Driver)
 > [!NOTE]  

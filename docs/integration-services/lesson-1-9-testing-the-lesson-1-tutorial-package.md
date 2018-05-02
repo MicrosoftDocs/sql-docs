@@ -2,7 +2,7 @@
 title: "Step 9: Testing the Lesson 1 Tutorial Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "tutorial"
@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Lesson 1-9 - Testing the Lesson 1 Tutorial Package
 In this lesson, you have done the following tasks:  

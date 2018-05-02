@@ -1,8 +1,8 @@
 ---
 title: "ODBC Driver on Linux and macOS - High Availability and Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/04/2018"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,29 +69,11 @@ If read-only routing is not in effect, connecting to a secondary replica locatio
 2.  If an application uses **ApplicationIntent=ReadWrite** and the secondary replica location is configured for read-only access.  
   
 A connection fails if a primary replica is configured to reject read-only workloads and the connection string contains **ApplicationIntent=ReadOnly**.  
-  
-## Specifying Application Intent  
-When **ApplicationIntent=ReadOnly**, the client requests a read workload when connecting to an AlwaysOn enabled database. The server enforces the intent at connection time and during a USE database statement but only to an AlwaysOn enabled database.
 
-The **ApplicationIntent** keyword does not work with legacy, read-only databases.  
 
-A database can allow or disallow read workloads on the targeted AlwaysOn database. (Use the **ALLOW_CONNECTIONS** clause of the **PRIMARY_ROLE** and **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql_md.md)] statements.)  
-  
-The **ApplicationIntent** keyword is used to enable read-only routing.  
-  
-## Read-Only Routing  
-Read-only routing is a feature that can ensure the availability of a read-only replica of a database. To enable read-only routing:  
-  
-1.  Connect to an Always On Availability Group availability group listener.  
-  
-2.  The **ApplicationIntent** connection string keyword must be set to **ReadOnly**.  
-  
-3.  The database administrator must configure the Availability Group to enable read-only routing.  
-  
-It is possible for multiple connections that use read-only routing to connect to different read-only replicas. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. To ensure that all read-only requests connect to the same read-only replica, do not pass an availability group listener to the **Server** connection keyword. Instead, specify the name of the read-only instance.  
-  
-Expect longer connection times with read-only routing than connecting to the primary. Therefore, increase your login timeout. Read-only routing first connects to the primary and then looks for the best available readable secondary.  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## ODBC Syntax
 
 Two ODBC connection string keywords support [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  

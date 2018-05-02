@@ -32,7 +32,6 @@ caps.latest.revision: 36
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Reporting Services Delivery Extension Settings
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension and a file share delivery extension. E-mail delivery provides a way to send a report to individual users or groups through e-mail. File share delivery enables you to automatically send rendered reports to a share on your network. You can use either one of the supported delivery extensions with standard subscriptions or data-driven subscriptions. You pass delivery settings that are specific to the type of delivery extension whenever you call the <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>,<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>,<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>, and <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> methods. To retrieve a list of delivery settings programmatically, use the <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> method.  

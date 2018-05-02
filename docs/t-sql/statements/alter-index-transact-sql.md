@@ -1,8 +1,8 @@
----
+﻿---
 title: "ALTER INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/24/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/03/2018"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "tsql|statements"
@@ -52,7 +52,7 @@ caps.latest.revision: 222
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -885,7 +885,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### C. Compress all OPEN AND CLOSED delta rowgroups into the columnstore  
  **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- The command REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) compreses each OPEN and CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This empties the deltastores and forces all rows to get compressed into the columnstore. This is useful especially after performing many insert operations since these operations store the rows in one or more deltastores.  
+ The command REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) compreses each OPEN and CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This empties the deltastore and forces all rows to get compressed into the columnstore. This is useful especially after performing many insert operations since these operations store the rows in one or more delta rowgroups.  
   
  REORGANIZE combines rowgroups to fill rowgroups up to a maximum number of rows \<= 1,024,576. Therefore, when you compress all OPEN and CLOSED rowgroups you won't end up with lots of compressed rowgroups that only have a few rows in them. You want rowgroups to be as full as possible to reduce the compressed size and improve query performance.  
   

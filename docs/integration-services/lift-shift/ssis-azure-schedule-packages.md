@@ -1,8 +1,8 @@
 ---
 title: "Schedule SSIS package execution on Azure | Microsoft Docs"
-ms.date: "01/16/2018"
-ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.date: "04/17/2018"
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "lift-shift"
@@ -13,13 +13,13 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Schedule the execution of an SSIS package on Azure
 You can schedule the execution of packages stored in the SSISDB Catalog database on an Azure SQL Database server by choosing one of the following scheduling options:
 -   [SQL Server Agent](#agent)
 -   [SQL Database elastic jobs](#elastic)
--   [The Azure Data Factory SQL Server Stored Procedure activity](#sproc)
+-   [The Azure Data Factory Execute SSIS Package activity](#activities)
+-   [The Azure Data Factory SQL Server Stored Procedure activity](#activities)
 
 ## <a name="agent"></a> Schedule a package with SQL Server Agent
 
@@ -137,13 +137,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 	@schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> Schedule a package with the Azure Data Factory SQL Server Stored Procedure activity
+## <a name="activities"></a> Schedule a package with Azure Data Factory
 
-For info about how to schedule an SSIS package by using the Azure Data Factory Stored Procedure activity, see the following articles:
+For info about how to schedule an SSIS package by using Azure Data Factory activities, see the following articles:
 
--   For Data Factory version 2: [Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+-   For Data Factory version 2: [Run an SSIS package using SSIS activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   For Data Factory version 1: [Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
+-   For Data Factory version 2: [Run an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   For Data Factory version 1: [Run an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## Next steps
 For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).

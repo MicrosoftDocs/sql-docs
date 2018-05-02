@@ -1,8 +1,8 @@
----
+﻿---
 title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "indexes"
@@ -11,11 +11,11 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Columnstore indexes - what&#39;s new
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,7 +23,7 @@ ms.workload: "On Demand"
   Summary of columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in SQL Database Premium Tier and Standard Tier (S3 and above). For SQL Server (2016 SP1 and above), columnstore indexes are available in all editions. For SQL Server (2016 and earlier), columnstore indexes are only available in Enterprise Edition.
+ > For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in SQL Database Premium tiers, Standard tiers - S3 and above, and all vCore tiers. For SQL Server (2016 SP1 and above), columnstore indexes are available in all editions. For SQL Server (2016 and earlier), columnstore indexes are only available in Enterprise Edition.
  
 ## Feature Summary for Product Releases  
  This table summarizes key features for columnstore indexes and the products in which they are available.  
@@ -114,7 +114,8 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
   
 ### Limitations  
   
--   MERGE is disabled when a B-tree index is defined on a clustered columnstore index.  
+
+  
 -   For in-memory tables, a columnstore index must include all the columns; the columnstore index cannot have a filtered condition.  
 -   For in-memory tables, queries on columnstore indexes run only in InterOP mode, and not in the in-memory native mode. Parallel execution is supported.  
   

@@ -2,7 +2,7 @@
 title: "Dropping a SQL Server Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "native-client-ole-db-tables-indexes"
@@ -24,7 +24,6 @@ caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Dropping a SQL Server Index
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

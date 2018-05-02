@@ -2,7 +2,7 @@
 title: "Upgrade Replicated Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install-windows"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication database upgrades [SQL Server replication]"
   - "replication [SQL Server], upgrading"

@@ -1,7 +1,7 @@
 ---
 title: "Use the Maintenance Plan Wizard | Microsoft Docs"
 ms.date: "06/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "maintenance-plans"
@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.maintwiz.integrity.f1"
   - "sql13.ag.maintwiz.order.f1"
@@ -41,7 +41,6 @@ caps.latest.revision: 43
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Use the Maintenance Plan Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

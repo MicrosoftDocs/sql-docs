@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "UnattendedExecutionAccount"
 apilocation: 
@@ -25,7 +25,6 @@ caps.latest.revision: 17
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - UnattendedExecutionAccount
   Returns the user account that the report server impersonates when running reports unattended. Read-only.  

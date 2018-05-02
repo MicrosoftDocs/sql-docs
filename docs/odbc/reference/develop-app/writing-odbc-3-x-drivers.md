@@ -2,7 +2,7 @@
 title: "Writing ODBC 3.x Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading drivers [ODBC]"
   - "ODBC drivers [ODBC], upgrading"
@@ -21,8 +21,7 @@ ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Writing ODBC 3.x Drivers
 The following table shows function support in an ODBC 3.*x* driver and an ODBC application, and the mapping performed by the Driver Manager when the functions are called against an ODBC 3.*x* driver.  

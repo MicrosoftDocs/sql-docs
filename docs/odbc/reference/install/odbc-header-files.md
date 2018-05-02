@@ -2,7 +2,7 @@
 title: "ODBC Header Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing ODBC components [ODBC], application files"
   - "header files [ODBC]"
@@ -20,8 +20,7 @@ ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ODBC Header Files
 > [!NOTE]  

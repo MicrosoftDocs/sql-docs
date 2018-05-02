@@ -2,7 +2,7 @@
 title: "sys.dm_exec_valid_use_hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "dmv's"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_exec_valid_use_hints"
   - "sys.dm_exec_valid_use_hints_TSQL"
@@ -26,7 +26,6 @@ caps.latest.revision: 5
 author: "pmasl"
 ms.author: "pelopes"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # sys.dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

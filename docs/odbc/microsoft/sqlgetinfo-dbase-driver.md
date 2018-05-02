@@ -2,7 +2,7 @@
 title: "SQLGetInfo (dBASE Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetInfo function [ODBC], dBASE Driver"
   - "DBase driver [ODBC], SQLGetInfo"
@@ -19,8 +19,7 @@ ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLGetInfo (dBASE Driver)
 > [!NOTE]  

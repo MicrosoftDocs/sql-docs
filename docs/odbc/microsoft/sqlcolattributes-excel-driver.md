@@ -2,7 +2,7 @@
 title: "SQLColAttributes (Excel Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Excel driver [ODBC], SQLColAttributes"
   - "SQLColAttribute function [ODBC], Excel Driver"
@@ -19,8 +19,7 @@ ms.assetid: 7c4833e3-ff0c-4313-9ab8-21379ceab656
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQLColAttributes (Excel Driver)
 > [!NOTE]  

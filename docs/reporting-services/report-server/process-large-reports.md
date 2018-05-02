@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "report processing [Reporting Services], large reports"
   - "page breaks [Reporting Services]"
@@ -24,7 +24,6 @@ caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Process Large Reports
   Large reports present certain processing challenges and require certain configurations if they are to run properly. Large reports should not be run on demand unless they are configured to support pagination.  

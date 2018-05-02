@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
@@ -27,7 +27,7 @@ caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

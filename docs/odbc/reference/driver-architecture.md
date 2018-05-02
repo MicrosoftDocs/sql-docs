@@ -2,7 +2,7 @@
 title: "Driver Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC architecture [ODBC], drivers"
   - "drivers [ODBC], architecture"
@@ -19,8 +19,7 @@ ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Driver Architecture
 Driver architecture falls into two categories, depending on which software processes SQL statements:  

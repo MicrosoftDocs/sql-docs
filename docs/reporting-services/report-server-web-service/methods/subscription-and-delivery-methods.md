@@ -25,7 +25,6 @@ caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Subscription and Delivery Methods
   You can use these methods to create and manage subscriptions and delivery of catalog items.  

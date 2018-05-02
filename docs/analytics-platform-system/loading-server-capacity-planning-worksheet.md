@@ -1,24 +1,17 @@
 ---
-title: "Loading Server Capacity Planning Worksheet (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "This capacity planning worksheet helps you to determine the requirements for a loading server for loading data into SQL Server PDW."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
-caps.latest.revision: 9
-
+title: Loading server capacity planning - Analytics Platform System | Microsoft Docs
+description: This capacity planning worksheet helps you to determine the requirements for a loading server for loading data to Analytics Platform System Parallel Data Warehouse."
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Loading server capacity planning worksheet
+# Loading server capacity planning worksheet for Analytics Platform System
 This capacity planning worksheet helps you to determine the requirements for a loading server for loading data into SQL Server PDW. Use this to create your plan for purchasing or provisioning existing loading servers.  
   
 ## Worksheet notes

@@ -2,7 +2,7 @@
 title: "Performance Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.service: ""
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Performance (SQL Server)"
   - "Performance (SQL Database)"
@@ -27,7 +27,6 @@ caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +35,6 @@ ms.workload: "On Demand"
  **Legend**  
   
  ![security-center-legend](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
-  
-## This is a work in process. Does this Performance Center help you? How can we improve it?  
- What information are you looking for, and did you find it? What are we missing? What would you like to see here? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## Configuration Options for Performance  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the ability to affect database engine performance  through a number of configuration options at the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] level. With [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Microsoft performs most, but not all, of these optimizations for you.  

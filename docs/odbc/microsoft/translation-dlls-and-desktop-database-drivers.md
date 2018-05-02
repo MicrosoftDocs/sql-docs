@@ -2,7 +2,7 @@
 title: "Translation DLLs and Desktop Database Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "translation DLLs [ODBC]"
   - "ODBC desktop database drivers [ODBC], translation DLL"
@@ -21,8 +21,7 @@ ms.assetid: 09ebe734-39a0-4af0-a39b-1d5479f69635
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Translation DLLs and Desktop Database Drivers
 Not supported.

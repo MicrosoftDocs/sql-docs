@@ -2,7 +2,7 @@
 title: "Introduction to ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC [ODBC]"
   - "ODBC [ODBC], about ODBC"
@@ -19,8 +19,7 @@ ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Introduction to ODBC
 This section provides a brief history of Structured Query Language and ODBC, and includes conceptual information about the ODBC interface.  

@@ -2,7 +2,7 @@
 title: "ODBC Driver for Oracle Conformance Levels | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], conformance levels"
   - "conformance levels [ODBC], ODBC driver for Oracle"
@@ -19,8 +19,7 @@ ms.assetid: 2ad2ef7a-a86f-4a77-b12c-bbd5a3499dac
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ODBC Driver for Oracle Conformance Levels
 > [!IMPORTANT]  

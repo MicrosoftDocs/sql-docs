@@ -2,16 +2,15 @@
 title: "Getting Started with SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +18,7 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: "craigg"
 ---
 # Getting Started with SSMA for SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for SAP ASE lets you quickly convert SAP Adaptive Server Enterprise (ASE) database schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database schemas, upload the resulting schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database, and migrate data from SAP ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database.  

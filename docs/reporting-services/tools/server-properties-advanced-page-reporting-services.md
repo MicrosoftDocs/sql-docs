@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.serverproperties.advanced.f1"
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
@@ -20,7 +20,6 @@ caps.latest.revision: 18
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Server Properties (Advanced Page) - Reporting Services

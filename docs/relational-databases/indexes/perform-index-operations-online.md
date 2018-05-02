@@ -1,8 +1,8 @@
----
+﻿---
 title: Perform Index Operations Online | Microsoft Docs
 ms.custom: ""
 ms.date: 02/17/2017
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.reviewer: ""
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
@@ -15,12 +15,12 @@ ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.suite: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "indexes"
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Perform Index Operations Online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

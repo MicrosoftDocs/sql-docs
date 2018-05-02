@@ -2,7 +2,7 @@
 title: "Visual Studio Analyzer | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Studio Analyzer [ODBC], about Visual Studio Analyzer"
   - "Visual Studio Analyzer [ODBC]"
@@ -19,8 +19,7 @@ ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Visual Studio Analyzer
 > [!IMPORTANT]  

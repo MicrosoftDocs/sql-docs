@@ -2,7 +2,7 @@
 title: "Add Enhanced Database Failover to an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "availability-groups"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
 - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], enhanced database failover"
 - "Availability Groups [SQL Server], failover"
@@ -21,7 +21,6 @@ author: "allanhirt"
 ms.reviewer: "mikeray"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Add enhanced database failover to an availability group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

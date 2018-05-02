@@ -1,17 +1,15 @@
 ---
 title: SQL Data Discovery & Classification | Microsoft Docs
 description: SQL Data Discovery & Classification
-services: sql-server
 documentationcenter: ''
 author: giladm
 manager: shaik
 ms.reviewer: carlrab
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
-ms.service: sql-server
+ms.service: sql-database
+ms.prod_service: sql-database,sql
 ms.custom: security
-ms.workload: data-management
 ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm

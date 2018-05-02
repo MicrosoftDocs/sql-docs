@@ -12,7 +12,7 @@ ms.technology:
   
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016 Preview"
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
@@ -20,7 +20,6 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Multidimensional Model Programming
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

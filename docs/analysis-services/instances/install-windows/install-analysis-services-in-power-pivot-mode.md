@@ -8,17 +8,14 @@ ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
+ms.technology: "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Install Analysis Services in Power Pivot Mode
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

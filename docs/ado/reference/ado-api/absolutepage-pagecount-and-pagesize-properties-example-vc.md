@@ -1,6 +1,6 @@
 ---
 title: "AbsolutePage, PageCount, and PageSize Properties Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VC++)
 This example uses the [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), and [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) properties to display names and hire dates from the ***Employee*** table, five records at a time.  

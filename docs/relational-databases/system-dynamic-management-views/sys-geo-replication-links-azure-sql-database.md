@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.geo_replication_links (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/18/2016"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "dm_geo_replication_links_TSQL"
   - "dm_geo_replication_links"
@@ -25,7 +25,7 @@ caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.geo_replication_links (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

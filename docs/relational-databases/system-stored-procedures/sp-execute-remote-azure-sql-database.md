@@ -1,4 +1,4 @@
----
+﻿---
 title: "sp_execute_remote (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sp_execute_remote"
   - "sp_execute_remote_TSQL"
@@ -23,7 +23,7 @@ caps.latest.revision: 17
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
-ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "Deprecated Database Engine Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "database-engine"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
@@ -21,7 +21,6 @@ caps.latest.revision: 215
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Deprecated Database Engine Features in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Remote servers|SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set options|**SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements|TOP keyword|SET ROWCOUNT|109|  
 |Table hints|HOLDLOCK table hint without parenthesis.|Use HOLDLOCK with parenthesis.|HOLDLOCK table hint without parenthesis|167|  
-|Tools|sqlmaint Utility|Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintenance plan feature|None|None|  
   
 ## Features Not Supported in a Future Version of SQL Server  
  The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features are supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has not been determined.  

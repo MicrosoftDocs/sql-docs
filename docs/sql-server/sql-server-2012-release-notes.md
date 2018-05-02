@@ -1,24 +1,21 @@
 ---
 title: "SQL Server 2012 Release Notes | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
-ms.technology: "server-general"
+ms.prod: "sql"
+ms.prod_service: sql
+ms.technology: "supportability"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Release Notes, SQL Server"
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Release Notes
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

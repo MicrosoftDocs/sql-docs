@@ -1,6 +1,6 @@
 ---
 title: "Calling a Stored Procedure as a Method on a Connection object | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "calling stored procedures [ADO]"
   - "stored procedures [ADO]"
@@ -21,7 +21,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Calling a Stored Procedure as a Method on a Connection object
 You can call a stored procedure as if it were a native method on the associated open **Connection** object. This is similar to calling a named command on the **Connection** object.  

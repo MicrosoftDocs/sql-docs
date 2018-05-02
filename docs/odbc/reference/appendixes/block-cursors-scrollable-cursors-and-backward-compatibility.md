@@ -2,7 +2,7 @@
 title: "Block Cursors, Scrollable Cursors, and Backward Compatibility | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scrollable cursors [ODBC]"
   - "cursors [ODBC], backward compatibility"
@@ -22,8 +22,7 @@ ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Block Cursors, Scrollable Cursors, and Backward Compatibility
 The existence of both **SQLFetchScroll** and **SQLExtendedFetch** represents the first clear split in ODBC between the Application Programming Interface (API), which is the set of functions the application calls, and the Service Provider Interface (SPI), which is the set of functions the driver implements. This split is necessary so that ODBC 3.*x*, which uses **SQLFetchScroll**,bealigned with the standards and also be compatible with ODBC 2.*x*, which uses **SQLExtendedFetch**.  

@@ -2,7 +2,7 @@
 title: "Step 5: Commit the Transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "application process [ODBC], committing transactions"
   - "committing transactions [ODBC]"
@@ -20,8 +20,7 @@ ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Step 5: Commit the Transaction
 The next step is to commit the transaction, as shown in the following illustration.  

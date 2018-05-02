@@ -30,7 +30,6 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Handling Errors and Warnings (XMLA)
   Error handling is required when an XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) method call does not run, runs successfully but generates errors or warnings, or runs successfully but returns results that contain errors.  

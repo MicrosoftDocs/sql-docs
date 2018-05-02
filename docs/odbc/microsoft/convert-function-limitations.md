@@ -2,7 +2,7 @@
 title: "CONVERT Function Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC SQL grammar, CONVERT function limitations"
   - "Convert function limitations [ODBC]"
@@ -19,8 +19,7 @@ ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # CONVERT Function Limitations
 Type conversion failures result in the affected column being set to NULL.  

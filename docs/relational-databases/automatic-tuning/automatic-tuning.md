@@ -1,9 +1,9 @@
----
+﻿---
 title: "Automatic tuning | Microsoft Docs"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "08/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "automatic-tuning"
@@ -12,7 +12,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "performance tuning [SQL Server]"
 ms.assetid: 
@@ -20,7 +20,7 @@ caps.latest.revision:
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "craigg"
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Automatic tuning
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -76,12 +76,14 @@ When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies the last known g
 than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan. If [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifies
 that the forced plan is better than regressed one, the forced plan will be retained until a recompile (for example, on next statistics or schema change) if it is better than the regressed plan.
 
+Note: Any plans auto forced do not persit on a restart of the SQL Server instance.
+
 ### Enabling automatic plan choice correction
 
 You can enable automatic tuning per database and specify that last good plan should be forced whenever some plan change regression is detected. Automatic tuning is enabled using
 the following command:
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -118,7 +120,7 @@ Some columns from this view are described in the following list:
 
 Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -152,6 +154,8 @@ FROM sys.dm_db_tuning_recommendations
 
 Although [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides all information required to identify plan choice regressions; continuous
 monitoring and fixing performance issues might be a tedious process. Automatic tuning makes this process much easier.
+
+Note: Data in this DMV does not persist after a restart of the SQL Server instance.
 
 ## Automatic index management
 

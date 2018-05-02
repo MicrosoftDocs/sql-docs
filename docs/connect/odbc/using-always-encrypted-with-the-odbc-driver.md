@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: "v-chojas"
-manager: "jhubbard"
+manager: craigg
 author: "MightyPen"
-ms.workload: "On Demand"
 ---
 # Using Always Encrypted with the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -329,10 +328,16 @@ If SQL Server informs the driver that the parameter does not need to be encrypte
 
 ### Column Encryption Key Caching
 
-To reduce the number of calls to a column master key store to decrypt column encryption keys, the driver caches the plaintext CEKs in memory. After receiving the ECEK from database metadata, the driver first tries to find the plaintext CEK corresponding to the encrypted key value in the cache. The driver calls the key store containing the CMK only if it cannot find the corresponding plaintext CEK in the cache.
+To reduce the number of calls to a column master key store to decrypt column encryption keys, the driver caches the plaintext CEKs in memory. The CEK cache is global to the driver and not associated with any one connection. After receiving the ECEK from database metadata, the driver first tries to find the plaintext CEK corresponding to the encrypted key value in the cache. The driver calls the key store containing the CMK only if it cannot find the corresponding plaintext CEK in the cache.
 
 > [!NOTE]
 > In the ODBC Driver for SQL Server, the entries in the cache are evicted after a two hour timeout. This means that for a given ECEK, the driver contacts the key store only once during the lifetime of the application or every two hours, whichever is less.
+
+Starting with the ODBC Driver 17.1 for SQL Server, the CEK cache timeout can be adjusted using the `SQL_COPT_SS_CEKCACHETTL` connection attribute, which specifies the number of seconds a CEK will remain in the cache. Due to the global nature of the cache, this attribute can be adjusted from any connection handle valid for the driver. When the cache TTL is decreased, existing CEKs which would exceed the new TTL are also evicted. If it is 0, no CEKs are cached.
+
+### Trusted Key Paths
+
+Starting with the ODBC Driver 17.1 for SQL Server, the `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attribute allows an application to require that Always Encrypted operations only use a specified list of CMKs, identified by their key paths. By default, this attribute is NULL, which means that the driver accepts any key path. To use this feature, set `SQL_COPT_SS_TRUSTEDCMKPATHS` to point to a null-delimited, null-terminated wide-character string which lists the allowed key path(s). The memory pointed to by this attribute must remain valid during encryption or decryption operations using the connection handle on which it is set --- upon which the driver will check if the CMK path as specified by the server metadata is case-insensitively in this list. If the CMK path is not in the list, the operation fails. The application can change the contents of memory this attribute points at, to change its list of trusted CMKs, without setting the attribute again.
 
 ## Working with Column Master Key Stores
 
@@ -575,6 +580,8 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connect|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disable Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Enable Always Encrypted|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connect|[Set] Attempt to load CEKeystoreProvider<br>[Get] Return a CEKeystoreProvider name|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connect|[Set] Write data to CEKeystoreProvider<br>[Get] Read data from CEKeystoreProvider|
+|`SQL_COPT_SS_CEKCACHETTL`|Post-connect|[Set] Set the CEK cache TTL<br>[Get] Get the current CEK cache TTL|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connect|[Set] Set the trusted CMK paths pointer<br>[Get] Get the current trusted CMK paths pointer|
 
 ### Statement Attributes
 

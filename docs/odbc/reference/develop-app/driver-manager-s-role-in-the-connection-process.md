@@ -2,7 +2,7 @@
 title: "Driver Manager&#39;s Role in the Connection Process | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "driver manager [ODBC], role in connection process"
   - "connecting to data source [ODBC], driver manager"
@@ -21,8 +21,7 @@ ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Driver Manager&#39;s Role in the Connection Process
 Remember that applications do not call driver functions directly. Instead, they call Driver Manager functions with the same name and the Driver Manager calls the driver functions. Usually, this happens almost immediately. For example, the application calls **SQLExecute** in the Driver Manager and after a few error checks, the Driver Manager calls **SQLExecute** in the driver.  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Dynamic Data Masking | Microsoft Docs"
 ms.date: "04/23/2018"
 ms.prod: "sql"

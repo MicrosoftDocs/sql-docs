@@ -174,7 +174,7 @@ This section covers how to script out [extended events](https://docs.microsoft.c
 2. Expand your **Management** node.
 3. Expand your **Extended Events** node.
 4. Expand your **Sessions** node.
-5. Right-click the extended session you're interested in, **Script Session As** > **New Query Editor Window**:
+5. Right-click the extended session you're interested in > **Script Session As** > **New Query Editor Window**:
 
     ![Extended New Query Editor Window session](media/scripting-ssms/scriptxevents.png)
 

@@ -1,22 +1,14 @@
 ---
 title: "Invoke-ProcessPartition cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component:
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Invoke-ProcessPartition cmdlet
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

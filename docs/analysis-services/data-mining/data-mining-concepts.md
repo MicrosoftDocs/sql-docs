@@ -1,37 +1,14 @@
 ---
 title: "Data Mining Concepts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "SQL Server Analysis Services, data mining"
-  - "cleaning data"
-  - "predictive analytics"
-  - "learning algorithms"
-  - "data mining [Analysis Services], concepts"
-  - "inductive learning"
-  - "data mining [Analysis Services], about data mining"
-  - "mining models [Analysis Services]"
-  - "data access [Analysis Services]"
-  - "machine learning algorithms [Analysis Services]"
-  - "mining models [Analysis Services], about data mining"
-  - "SSAS, data mining"
-  - "Analysis Services, data mining"
-ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.topic: article
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Concepts
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

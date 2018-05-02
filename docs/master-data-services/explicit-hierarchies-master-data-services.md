@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "explicit hierarchies, about explicit hierarchies"
   - "hierarchies [Master Data Services], explicit hierarchies"
@@ -21,7 +21,6 @@ caps.latest.revision: 10
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Explicit Hierarchies (Master Data Services)
 

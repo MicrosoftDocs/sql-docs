@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "positive values [Integration Services]"
   - "SIGN function"
@@ -21,7 +21,6 @@ caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SIGN (SSIS Expression)
   Returns the positive (+1), negative (-1), or zero (0) sign of a numeric expression.  

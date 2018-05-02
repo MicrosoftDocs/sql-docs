@@ -11,12 +11,11 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Manage certificates for SQL Server Integration Services Scale Out
 

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to DBF files"
   - "dBase files"
@@ -21,7 +21,6 @@ caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Connect to a dBASE or Other DBF File
   You can connect to a dBASE or other .DBF database file in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package by using an OLE DB connection manager and selecting the Microsoft OLE DB Provider for Jet 4.0.  

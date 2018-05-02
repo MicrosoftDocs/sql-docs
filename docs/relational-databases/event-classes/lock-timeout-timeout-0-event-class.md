@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Timeout event class"
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
@@ -19,7 +19,6 @@ caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Lock:Timeout (timeout &gt; 0) Event Class

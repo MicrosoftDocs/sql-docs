@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replacing string expression"
   - "REPLACE function"
@@ -20,7 +20,6 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # REPLACE (SSIS Expression)
   Returns a character expression after replacing a character string within the expression with either a different character string or an empty string.  

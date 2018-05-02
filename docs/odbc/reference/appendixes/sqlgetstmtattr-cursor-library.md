@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetStmtAttr function [ODBC], Cursor Library"
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLGetStmtAttr (Cursor Library)
 > [!IMPORTANT]  

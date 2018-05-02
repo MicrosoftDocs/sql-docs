@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.erroroutput.f1"
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SAP BW Destination Editor (Error Output Page)
   Use the **Error Output** page of the **SAP BW Destination Editor** to specify error handling options.  

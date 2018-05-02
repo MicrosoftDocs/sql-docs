@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "users [Master Data Services], changing e-mail address"
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change a User&#39;s Email Address (Master Data Services)
 

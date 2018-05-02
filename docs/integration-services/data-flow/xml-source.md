@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.xmlsource.f1"
   - "sql13.dts.designer.xmlsourceadapter.connectionmanager.f1"
@@ -26,7 +26,6 @@ caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # XML Source
   The XML source reads an XML data file and populates the columns in the source output with the data.  

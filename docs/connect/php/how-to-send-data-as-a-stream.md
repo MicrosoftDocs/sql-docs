@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "updating data"
   - "streaming data"
@@ -20,7 +20,6 @@ caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # How to: Send Data as a Stream
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

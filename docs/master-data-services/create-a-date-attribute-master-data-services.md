@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "creating date attributes [Master Data Services]"
   - "attributes [Master Data Services], creating date attributes"
@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Create a Date Attribute (Master Data Services)
 

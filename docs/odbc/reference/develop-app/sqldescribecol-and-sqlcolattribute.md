@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLColAttribute function [ODBC], and SQLDescribeCol"
   - "SQLDescribeCol function [ODBC], and SQLColAttribute"
@@ -23,7 +23,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLDescribeCol and SQLColAttribute
 **SQLDescribeCol** and **SQLColAttribute** are used to retrieve result set metadata. The difference between these two functions is that **SQLDescribeCol** always returns the same five pieces of information (a column's name, data type, precision, scale, and nullability), while **SQLColAttribute** returns a single piece of information requested by the application. However, **SQLColAttribute** can return a much richer selection of metadata, including a column's case-sensitivity, display size, updatability, and searchability.  

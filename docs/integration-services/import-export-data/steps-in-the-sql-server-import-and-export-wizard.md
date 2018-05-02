@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Steps in the SQL Server Import and Export Wizard
 This topic describes the sequence of steps for importing and exporting data with the SQL Server Import and Export Wizard. It also contains links to the individual pages of documentation that describe each page or dialog box you see in the wizard.

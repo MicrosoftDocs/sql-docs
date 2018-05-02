@@ -18,7 +18,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Products and Technologies Table
 The following table lists the Microsoft products, tools, and technologies discussed in the ADO Programmer's Guide. It provides links, wherever possible, to relevant topics in the guide.

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "sql-dma"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
@@ -21,7 +21,6 @@ author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
 
-ms.workload: "Inactive"
 ---
 
 # Report on your consolidated assessments by using Power BI (Data Migration Assistant)

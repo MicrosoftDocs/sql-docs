@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Lesson 1-4 - Adding Package Configurations
 In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  

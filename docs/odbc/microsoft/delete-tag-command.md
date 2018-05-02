@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DELETE TAG command [ODBC]"
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # DELETE TAG Command
 Removes a tag or tags from a compound index (.cdx) file.  

@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_query_stats_xe_file (Transact-SQL)

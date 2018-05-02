@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [Integration Services]"
   - "derived columns"
@@ -22,7 +22,6 @@ caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Derive Column Values by Using the Derived Column Transformation
   To add and configure a Derived Column transformation, the package must already include at least one Data Flow task and one source.  

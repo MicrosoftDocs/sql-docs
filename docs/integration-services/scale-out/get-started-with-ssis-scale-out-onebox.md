@@ -12,13 +12,12 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 ms.reviewer: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Get started with Integration Services (SSIS) Scale Out on a single computer
 This section provides guidance for setting up Integration Services Scale Out in a single-computer environment with the default settings.

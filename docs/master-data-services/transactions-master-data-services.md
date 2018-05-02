@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Master Data Services], about transactions"
   - "transactions [Master Data Services]"
@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Transactions (Master Data Services)
 

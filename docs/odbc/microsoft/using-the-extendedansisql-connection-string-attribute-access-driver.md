@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Access driver [ODBC], ExtendedAnsiSql"
   - "extendedANSISQL [ODBC]"
@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Using the ExtendedAnsiSQL Connection String Attribute (Access Driver)
 Jet 4.0 has several new features that are not enabled by default in the ODBC Desktop Database Drivers version 4.0. To take advantage of these new features, an application will have to set a new connection attribute, add a new attribute to the connection string, or set the attribute in a DSN. The attribute is called ExtendedAnsiSQL and pertains only to the Microsoft ODBC Desktop Database Drivers 4.0 and later.  

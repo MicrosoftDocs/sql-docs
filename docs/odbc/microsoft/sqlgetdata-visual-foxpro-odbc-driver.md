@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetData function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLGetData (Visual FoxPro ODBC Driver)
 > [!NOTE]  

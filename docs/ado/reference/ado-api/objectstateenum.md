@@ -22,7 +22,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ObjectStateEnum
 Specifies whether an object is open or closed, connecting to a data source, executing a command, or retrieving data.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CAST function"
   - "cast operator"
@@ -23,7 +23,6 @@ caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Cast (SSIS Expression)
   Explicitly converts an expression from one data type to a different data type. The cast operator can also function as a truncation operator.  

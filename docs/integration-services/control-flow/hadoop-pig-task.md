@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadooppigtask.f1"
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Hadoop Pig Task
   Use the Hadoop Pig Task to run Pig script on a Hadoop cluster.  

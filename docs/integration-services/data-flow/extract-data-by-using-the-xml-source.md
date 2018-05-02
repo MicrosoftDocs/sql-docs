@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "extracting data [Integration Services]"
   - "sources [Integration Services], XML"
@@ -21,7 +21,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Extract Data by Using the XML Source
   To add and configure an XML source, the package must already include at least one Data Flow task.  

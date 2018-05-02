@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:FileTable"
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server, FileTable Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

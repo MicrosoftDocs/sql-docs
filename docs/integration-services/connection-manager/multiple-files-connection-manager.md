@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "folders [Integration Services], connections"
   - "files [Integration Services], connections"
@@ -24,7 +24,6 @@ caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Multiple Files Connection Manager
   A Multiple Files connection manager enables a package to reference existing files and folders, or to create files and folders at run time.  

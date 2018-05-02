@@ -20,7 +20,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # onReadyStateChange Event (RDS)
 The **onReadyStateChange** event is called whenever the value of the [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) property changes.  

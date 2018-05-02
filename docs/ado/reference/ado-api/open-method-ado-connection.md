@@ -24,7 +24,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Open Method (ADO Connection)
 Opens a connection to a data source.  

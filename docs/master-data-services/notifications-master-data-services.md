@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "notifications [Master Data Services]"
   - "notifications [Master Data Services], about notifications"
@@ -22,7 +22,6 @@ caps.latest.revision: 15
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Notifications (Master Data Services)
 

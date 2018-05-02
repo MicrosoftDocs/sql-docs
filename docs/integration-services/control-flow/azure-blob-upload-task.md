@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpblobuptask.f1"
   - "sql14.dts.designer.afpblobuptask.f1"
@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure Blob Upload Task
 The **Azure Blob Upload Task** enables an SSIS package to upload files to an Azure blob storage.

@@ -36,7 +36,6 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.reviewer: mathoma
-ms.workload: "Active"
 ---
 # CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "&& (logical AND)"
   - "AND, logical AND"
@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # &amp;&amp; (Logical AND) (SSIS Expression)
   Performs a logical AND operation. The expression evaluates to TRUE if all conditions are TRUE.  

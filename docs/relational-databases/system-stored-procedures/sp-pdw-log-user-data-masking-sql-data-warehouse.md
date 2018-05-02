@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_log_user_data_masking (SQL Data Warehouse)

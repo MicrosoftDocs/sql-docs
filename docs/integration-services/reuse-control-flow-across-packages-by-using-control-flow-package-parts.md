@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.toolboxcontrolflowtemplate.f1"
   - "sql13.dts.designer.addcopyexistingtemplate.f1"
@@ -22,7 +22,6 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts
   Save a commonly used control flow task or container to a standalone part file - a “.dtsxp” file - and reuse it multiple times in one or more packages by using control flow package parts. This reusability makes SSIS packages easier to design and maintain.  

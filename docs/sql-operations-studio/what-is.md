@@ -13,7 +13,6 @@ ms.topic: "overview"
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # What is [!INCLUDE[name-sos](../includes/name-sos.md)]?

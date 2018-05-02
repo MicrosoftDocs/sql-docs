@@ -22,7 +22,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # DataSpace Object and CreateObject Method Example (VBScript)
 > [!IMPORTANT]

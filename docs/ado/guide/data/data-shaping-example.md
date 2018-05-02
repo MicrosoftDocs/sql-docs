@@ -19,7 +19,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Data Shaping Example
 The following data shaping command demonstrates how to build a hierarchical **Recordset** from the **Customers** and **Orders** tables in the Northwind database.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "instance configuration, Setup"
 helpviewer_keywords: 
@@ -22,7 +22,6 @@ caps.latest.revision: 62
 ms.author: "mikeray"
 manager: craigg
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # Installation Wizard Help
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -26,7 +26,6 @@ caps.latest.revision:
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  

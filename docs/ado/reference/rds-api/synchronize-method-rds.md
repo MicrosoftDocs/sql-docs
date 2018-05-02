@@ -19,7 +19,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Synchronize Method (RDS)
 Synchronize the given Recordset with the database specified by the connection string for use in ADO 2.5 and later.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Master Data Services, system settings"
   - "system settings [Master Data Services]"
@@ -20,7 +20,6 @@ caps.latest.revision: 17
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # System Settings (Master Data Services)
 

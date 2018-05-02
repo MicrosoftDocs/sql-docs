@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "web configuration file [Master Data Services]"
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Web Configuration Reference (Master Data Services)
 

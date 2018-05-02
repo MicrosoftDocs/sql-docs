@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CursorImplicitConversion event class"
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
@@ -19,7 +19,6 @@ caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CursorImplicitConversion Event Class

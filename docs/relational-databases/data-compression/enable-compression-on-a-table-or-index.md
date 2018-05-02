@@ -10,7 +10,7 @@ ms.component: data-compression
 ms.technology: 
   - "dbe-data-compression"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.compwiz.compressiontype.f1"
   - "sql13.swb.compwiz.outputoptions.f1"
@@ -28,7 +28,6 @@ caps.latest.revision: 10
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Enable Compression on a Table or Index

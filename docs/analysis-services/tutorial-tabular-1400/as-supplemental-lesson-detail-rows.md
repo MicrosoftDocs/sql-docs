@@ -15,7 +15,6 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"

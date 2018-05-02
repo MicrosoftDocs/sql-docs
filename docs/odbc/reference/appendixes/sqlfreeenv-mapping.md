@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFreeEnv function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLFreeEnv"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLFreeEnv Mapping
 When an application calls **SQLFreeEnv** through an ODBC 3*.x* driver, the call to  

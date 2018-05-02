@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSTASK.F1"
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
@@ -19,7 +19,6 @@ author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure Data Lake Store File System Task
 

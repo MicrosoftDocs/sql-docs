@@ -26,7 +26,6 @@ caps.latest.revision: 26
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # PolyBase Guide
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

@@ -11,7 +11,7 @@ ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
@@ -20,7 +20,6 @@ helpviewer_keywords:
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # Reporting Services Configuration Manager (Native Mode)

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interface conformance levels [ODBC]"
   - "level 2 interface conformance levels [ODBC]"
@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Level 2 Interface Conformance
 The Level 2 interface conformance level includes the Level 1 interface conformance–level functionality plus the following features:  

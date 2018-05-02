@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "driver manager [ODBC], backward compatibility"
   - "compatibility [ODBC], driver manager"
@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # What the Driver Manager Does
 The following table summarizes how the ODBC 3*.x* Driver Manager maps calls to ODBC 2.*x* and ODBC 3*.x* drivers.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [Integration Services], parameter mapping"
   - "parameters [Integration Services]"
@@ -22,7 +22,6 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Map Query Parameters to Variables in a Data Flow Component
   When you configure the OLE DB source to use parameterized queries, you can map the parameters to variables.  

@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Append Method (ADOX Groups)
 Adds a new [Group](../../../ado/reference/adox-api/group-object-adox.md) object to the [Groups](../../../ado/reference/adox-api/groups-collection-adox.md) collection.  

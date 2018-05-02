@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], implementing"
   - "ODBC desktop database drivers [ODBC], implementing"
@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Implementing Desktop Database Drivers
 Instructions and technical notes about how to implement and set up the Microsoft ODBC Desktop Database Drivers can be found in the ODBC Data Source Administrator online help. This file can be accessed during driver setup routines from the [Microsoft ODBC Data Source Administrator](../../odbc/admin/odbc-data-source-administrator.md).  

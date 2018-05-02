@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "business rules [Master Data Services], multiple conditions"
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Add Multiple Conditions to a Business Rule (Master Data Services)
 

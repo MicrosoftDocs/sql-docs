@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Receiving Multiple Recordsets
 The [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) supports returning multiple **Recordset** objects for a single command containing multiple SQL statements, one **Recordset** per SQL statement. The order in which the **Recordset**s are returned follows the order in which the SQL statements are placed in the command text.  

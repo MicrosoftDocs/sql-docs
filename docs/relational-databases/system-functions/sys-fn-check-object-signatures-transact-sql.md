@@ -26,7 +26,6 @@ caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_check_object_signatures (Transact-SQL)

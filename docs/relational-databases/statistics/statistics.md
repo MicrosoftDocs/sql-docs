@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-statistics"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "statistical information [SQL Server], query optimization"
   - "query performance [SQL Server], statistics"
@@ -30,7 +30,6 @@ caps.latest.revision: 70
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Statistics

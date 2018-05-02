@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL grammar [ODBC], ORDER BY clause"
   - "ORDER BY clause [ODBC]"
@@ -22,7 +22,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ORDER BY with GROUP BY
 ORDER BY can be performed on any expression in the GROUP BY *expression-list* or any column in the result set.

@@ -12,10 +12,9 @@ ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.component: "security"
-ms.workload: "On Demand"
 ms.tgt_pltfrm:
 ms.devlang: "azurecli, powershell"
-ms.topic: "article"
+ms.topic: conceptual
 ms.date: "04/24/2018"
 ms.author: "aliceku"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"

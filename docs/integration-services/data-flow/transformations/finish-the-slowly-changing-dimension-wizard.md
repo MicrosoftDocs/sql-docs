@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.finish.f1"
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
@@ -19,7 +19,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Finish the Slowly Changing Dimension Wizard
   Use the **Finish the Slowly Changing Dimension Wizard** dialog box to verify your choices before the wizard builds support for slowly changing dimensions.  

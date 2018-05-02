@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "set commands [ODBC]"
   - "commands for FoxPro ODBC driver [ODBC]"
@@ -25,7 +25,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Supported SET Commands (Visual FoxPro ODBC Driver)
 Your application can send the following Visual FoxPro **SET** commands to a data source:  

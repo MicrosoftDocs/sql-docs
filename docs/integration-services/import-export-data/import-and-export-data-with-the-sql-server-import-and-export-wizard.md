@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"
   - "mapping files [Integration Services]"
@@ -30,7 +30,6 @@ caps.latest.revision: 160
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Import and Export Data with the SQL Server Import and Export Wizard
 

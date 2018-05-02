@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "what is master data"
 helpviewer_keywords: 
@@ -22,7 +22,6 @@ caps.latest.revision: 28
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Master Data Services Overview (MDS)
 

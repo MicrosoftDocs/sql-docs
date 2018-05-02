@@ -30,7 +30,6 @@ caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SET ANSI_NULL_DFLT_OFF (Transact-SQL)

@@ -1,7 +1,7 @@
 ---
 title: "Deploy an SSIS project with Transact-SQL (VS Code) | Microsoft Docs"
 ms.date: "09/25/2017"
-ms.topic: "article"
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
@@ -13,7 +13,6 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Deploy an SSIS project from Visual Studio Code with Transact-SQL
 This quick start demonstrates how to use Visual Studio Code to connect to the SSIS Catalog database, and then use Transact-SQL statements to deploy an SSIS project to the SSIS Catalog.

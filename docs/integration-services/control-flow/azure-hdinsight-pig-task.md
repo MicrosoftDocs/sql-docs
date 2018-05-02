@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afppigtask.f1"
   - "sql14.dts.designer.afppigtask.f1"
@@ -20,7 +20,6 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Azure HDInsight Pig Task
 Use the **Azure HDInsight Pig Task** to run Pig script on an Azure HDInsight cluster.

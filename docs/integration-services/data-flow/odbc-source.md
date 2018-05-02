@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.odbcsource.f1"
   - "sql13.ssis.designer.odbcsource.connection.f1"
@@ -22,7 +22,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ODBC Source
   The ODBC source extracts data from ODBC-supported database by using a database table, a view, or an SQL statement.  

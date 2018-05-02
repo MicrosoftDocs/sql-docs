@@ -22,7 +22,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Examining Data
 The [Getting Data](../../../ado/guide/data/getting-data.md) section explained how to retrieve data from a data source as one or more **Recordset** objects. This section will discuss **Recordset** in more detail, including how to navigate through the **Recordset** and view its data.  

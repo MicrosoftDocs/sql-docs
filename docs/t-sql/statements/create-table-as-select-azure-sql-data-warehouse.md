@@ -19,7 +19,6 @@ caps.latest.revision: 40
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE AS SELECT (Azure SQL Data Warehouse)

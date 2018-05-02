@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Master Data Services], determining permissions"
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # How Permissions Are Determined (Master Data Services)
 

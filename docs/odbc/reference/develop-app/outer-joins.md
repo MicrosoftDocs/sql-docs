@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "outer join escape sequences [ODBC]"
   - "escape sequences [ODBC], outer join"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Outer Joins
 ODBC supports the SQL-92 left, right, and full outer join syntax. The escape sequence for outer joins is  

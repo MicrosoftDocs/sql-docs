@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Pseudo-Type Identifiers
 For application programming convenience, ODBC defines a number of pseudo-type identifiers. These identifiers do not actually correspond to actual data types, but instead, depending on the situation, resolve to existing data types.  

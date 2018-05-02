@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "advanced"
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Edit the Advanced Properties
   Use the **Advanced** tab to add special properties to the CDC instance.  

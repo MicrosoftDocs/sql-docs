@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], files to use"
   - "desktop database drivers [ODBC], files to use"
@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Files to Use with the Desktop Database Drivers
 The ODBC Desktop Database Drivers are used with the Microsoft Jet Database Engine, the installable ISAM files, and Microsoft ODBC files. Not all are required for the redistribution of the product, and not all are core components.  

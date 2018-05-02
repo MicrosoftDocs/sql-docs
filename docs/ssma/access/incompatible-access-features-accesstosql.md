@@ -8,10 +8,9 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -38,7 +37,6 @@ caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Incompatible Access Features (AccessToSQL)
 Not all Access database features are compatible with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and Access have different sets of reserved keywords. Issues such as these can prevent a successful migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Use the following table to learn about possible migration issues and what you can do about them.  

@@ -11,12 +11,11 @@ ms.service: ""
 ms.component: "samples"
 ms.technology: 
   - " database-engine "
-ms.topic: "article"
+ms.topic: conceptual
 author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # WideWorldImporters data generation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

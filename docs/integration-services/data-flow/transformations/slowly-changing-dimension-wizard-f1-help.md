@@ -19,7 +19,6 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Slowly Changing Dimension Wizard F1 Help
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions. This section provides F1 Help for the pages of the **Slowly Changing Dimension Wizard**. The following table describes the topics in this section.  

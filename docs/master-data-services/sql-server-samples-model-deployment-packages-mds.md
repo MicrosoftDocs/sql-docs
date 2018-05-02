@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "master data services"
   - "sample"
@@ -20,7 +20,6 @@ caps.latest.revision: 21
 author: "leolimsft"
 ms.author: "lle"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)
 

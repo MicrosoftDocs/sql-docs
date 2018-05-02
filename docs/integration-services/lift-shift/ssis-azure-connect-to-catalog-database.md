@@ -1,7 +1,7 @@
 ---
 title: "Connect to the SSISDB Catalog database on Azure | Microsoft Docs"
 ms.date: "09/25/2017"
-ms.topic: "article"
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
@@ -13,7 +13,6 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to the SSISDB Catalog database on Azure
 

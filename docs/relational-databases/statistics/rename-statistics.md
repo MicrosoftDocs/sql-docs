@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-statistics"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "renaming statistics"
   - "statistics [SQL Server], renaming"
@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rename Statistics

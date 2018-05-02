@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "concatenation [Integration Services]"
   - "+ (concatenate operator)"
@@ -21,7 +21,6 @@ caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # + (Concatenate) (SSIS Expression)
   Concatenates two expressions into one expression.  

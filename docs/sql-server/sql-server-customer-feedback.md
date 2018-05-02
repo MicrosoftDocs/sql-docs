@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
 ms.assetid:
-ms.workload: "Inactive"
 ---
 # Configure SQL Server to send feedback to Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

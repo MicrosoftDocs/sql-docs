@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.propertyexpressionseditor.f1"
 helpviewer_keywords: 
@@ -21,7 +21,6 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Property Expressions Editor
   Use the **Property Expressions Editor** dialog box to create, edit, or delete the property expressions that update property values.  

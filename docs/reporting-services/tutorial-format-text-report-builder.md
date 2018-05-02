@@ -19,7 +19,6 @@ caps.latest.revision: 16
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Tutorial: Format Text (Report Builder)

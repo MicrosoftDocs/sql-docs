@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"
@@ -22,7 +22,6 @@ caps.latest.revision: 148
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Supported Version and Edition Upgrades
 

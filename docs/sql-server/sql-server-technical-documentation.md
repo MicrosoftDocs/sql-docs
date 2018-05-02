@@ -8,7 +8,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.portal.f1"
 helpviewer_keywords: 
@@ -23,7 +23,6 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: "Active"
 monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Documentation

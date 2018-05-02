@@ -28,7 +28,6 @@ caps.latest.revision: 37
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)

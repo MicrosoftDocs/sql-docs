@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "GetDatabaseVersionDisplayName method"
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - GetDatabaseVersionDisplayName
   Gets the display name for a given report server database version string.  

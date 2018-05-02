@@ -194,21 +194,21 @@ crm configure property cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> All distributions that use the latest available Pacemaker package 1.1.18-11.el7 introduce a behavior change for the start-failure-is-fatal cluster setting when its value is false. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to failover to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set start-failure-is-fatal is no longer valid and the setting needs to be reverted back to its default value of `true`. 
+> If you already have an availability group resource managed by a Pacemaker cluster, note that all distributions that use the latest available Pacemaker package 1.1.18-11.el7 introduce a behavior change for the start-failure-is-fatal cluster setting when its value is false. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to failover to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set start-failure-is-fatal is no longer valid and the setting needs to be reverted back to its default value of `true`. 
 > Additionally, the AG resource needs to be updated to include the `failover-timeout` property. 
-
-To update the property value to `true` run:
-
-```bash
-crm configure property start-failure-is-fatal=true
-```
-
-To update the `ag1` resource property `failure-timeout` to `60s` run:
-
-```bash
-crm configure edit ag1
-# In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
-```
+>
+>To update the property value to `true` run:
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>Update your existing AG resource property `failure-timeout` to `60s` run (replace `ag1` with the name of your availability group resource): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 For more information on Pacemaker cluster properties, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 

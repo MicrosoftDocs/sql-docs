@@ -91,6 +91,8 @@ The default setting of **vm.max_map_count** (which is 65536) may not be high eno
 sysctl -w vm.max_map_count=262144
 ```
 
+Linux O/S legacy VM layout is not compatible for SQL. Make sure that **vm.legacy_va_layout** is set to 0 and **Soft Stack limit** is set to 8192. For more information, see [https://support.microsoft.com/help/4134638/sql-server-2017-terminates-and-generates-a-core-dump-on-rhel-7-4-when](https://support.microsoft.com/help/4134638/sql-server-2017-terminates-and-generates-a-core-dump-on-rhel-7-4-when).
+
 ### Disable last accessed date/time on file systems for SQL Server data and log files
 
 Use the **noatime** attribute with any file system that is used to store SQL Server data and log files. Refer to your Linux documentation on how to set this attribute.

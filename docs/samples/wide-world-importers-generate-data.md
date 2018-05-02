@@ -7,14 +7,11 @@ ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
-ms.component: "samples"
-ms.technology: 
-  - " database-engine "
+ms.technology: samples
 ms.topic: conceptual
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 robots: noindex,nofollow
 ---
 # WideWorldImporters data generation

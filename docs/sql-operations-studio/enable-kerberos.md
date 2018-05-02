@@ -9,7 +9,7 @@ ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "meet-bhagdev"
 ms.author: "meetb"
 manager: craigg

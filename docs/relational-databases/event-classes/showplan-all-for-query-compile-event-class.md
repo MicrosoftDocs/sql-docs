@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan All for Query Compile event class"
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f

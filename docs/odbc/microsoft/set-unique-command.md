@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SET UNIQUE command [ODBC]"
 ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5

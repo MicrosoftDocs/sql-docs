@@ -12,7 +12,7 @@ ms.component: "odbc"
 ms.suite: "sql"
 ms.technology: "dbe-data-tier-apps"
 ms.devlang: "C++"
-ms.topic: "article"
+ms.topic: conceptual
 ms.custom: ""
 ms.tgt_pltfrm: "NA"
 ms.date: "07/13/2017"

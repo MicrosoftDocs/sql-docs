@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-statistics"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.stat.properties.f1"
   - "sql13.swb.statistics.filter.f1"

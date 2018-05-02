@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SET PATH command [ODBC]"
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d

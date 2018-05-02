@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10214"
   - "sql13.rtp.rptdesigner.charttitleproperties.shadow.f1"

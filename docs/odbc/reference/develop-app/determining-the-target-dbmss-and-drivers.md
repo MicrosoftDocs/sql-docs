@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "target DBMSs and drivers in interoperability [ODBC]"
   - "interoperability [ODBC], target dbmss and drivers"

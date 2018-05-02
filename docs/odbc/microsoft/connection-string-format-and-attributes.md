@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connection strings [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], connection strings"

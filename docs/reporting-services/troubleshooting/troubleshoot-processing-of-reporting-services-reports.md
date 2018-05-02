@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 caps.latest.revision: 4
 author: "markingmyname"

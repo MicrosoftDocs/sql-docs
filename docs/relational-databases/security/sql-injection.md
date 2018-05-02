@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Injection"
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab

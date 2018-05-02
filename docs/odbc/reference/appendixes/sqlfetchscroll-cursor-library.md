@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFetchScroll function [ODBC], Cursor Library"
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80

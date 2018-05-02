@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.suite: ""
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

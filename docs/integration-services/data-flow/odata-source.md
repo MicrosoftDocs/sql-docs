@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.DTS.DESIGNER.ODATASOURCE.F1"
   - "sql13.dts.designer.odatasource.connection.f1"

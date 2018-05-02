@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [SQL Server], QN:Parameter Table"
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724

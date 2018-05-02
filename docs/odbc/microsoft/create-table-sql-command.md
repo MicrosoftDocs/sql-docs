@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CREATE TABLE [ODBC]"
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860

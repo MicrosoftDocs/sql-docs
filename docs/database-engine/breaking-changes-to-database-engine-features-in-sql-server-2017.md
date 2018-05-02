@@ -12,7 +12,7 @@ ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "breaking changes 2017 [SQL Server]"
 ms.assetid: 

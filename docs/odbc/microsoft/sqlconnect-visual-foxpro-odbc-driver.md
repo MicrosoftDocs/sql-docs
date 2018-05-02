@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLConnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20

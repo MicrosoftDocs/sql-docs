@@ -10,7 +10,7 @@ ms.technology: "server-general"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2014"
   - "SQL Server 2016"

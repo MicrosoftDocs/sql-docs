@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.browseprincipals.f1"
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f

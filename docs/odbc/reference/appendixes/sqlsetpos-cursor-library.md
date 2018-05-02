@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetPos function [ODBC], Cursor Library"
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d

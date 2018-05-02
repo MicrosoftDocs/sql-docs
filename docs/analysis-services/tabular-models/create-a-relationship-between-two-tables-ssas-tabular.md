@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: multidimensional-tabular
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.bidtoolset.createrelatdb.f1"
   - "sql13.asvs.bidtoolset.managereldb.f1"

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLAllocStmt function [ODBC], Cursor Library"
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543

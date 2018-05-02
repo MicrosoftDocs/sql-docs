@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restoredb.options.f1"
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754

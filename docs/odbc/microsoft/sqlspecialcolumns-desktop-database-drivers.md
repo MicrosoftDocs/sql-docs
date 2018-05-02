@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSpecialColumns function [ODBC], Desktop Database Drivers"
 ms.assetid: 3de66fdf-053b-4354-979d-e76a5a5e975f

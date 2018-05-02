@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10460"
   - "sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1"

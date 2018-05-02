@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Log File Viewer"
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2

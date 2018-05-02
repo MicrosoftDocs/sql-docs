@@ -2,7 +2,7 @@
 title: "Store and retrieve files on file shares on premises and in Azure | Microsoft Docs"
 description: "This article describes how to use the file system and file shares, both on premises and in Azure, with SSIS"
 ms.date: "11/27/2017"
-ms.topic: "article"
+ms.topic: conceptual
 ms.prod: sql  
 ms.technology: 
   - "integration-services"

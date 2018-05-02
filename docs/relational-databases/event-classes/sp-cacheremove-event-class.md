@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SP:CacheRemove event class"
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-dml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DML triggers, disabling"
   - "removing DML triggers"

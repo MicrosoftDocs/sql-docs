@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Analysis Services - data mining], about security"
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e

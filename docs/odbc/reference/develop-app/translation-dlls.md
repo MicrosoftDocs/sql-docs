@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "translation DLLs [ODBC]"
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39

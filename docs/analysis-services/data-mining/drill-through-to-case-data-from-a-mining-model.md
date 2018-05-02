@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "drillthrough [Analysis Services]"
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27

@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.errorlog.recyclesqlagenterrorlogs.f1"
 ms.assetid: 10bc2dd1-0505-4527-8ec7-d3b4e5d6352b

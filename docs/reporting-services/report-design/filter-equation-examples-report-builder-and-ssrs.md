@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filtering data [Reporting Services], filter equation examples"
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6

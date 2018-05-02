@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetEnvAttr function [ODBC], Cursor Library"
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83

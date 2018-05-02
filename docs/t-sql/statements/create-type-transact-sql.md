@@ -264,6 +264,12 @@ column_name <data_type>
   
 ## Permissions  
  Requires CREATE TYPE permission in the current database and ALTER permission on *schema_name*. If *schema_name* is not specified, the default name resolution rules for determining the schema for the current user apply. If *assembly_name* is specified, a user must either own the assembly or have REFERENCES permission on it.  
+
+  >[!NOTE]
+  > A user creating a table with a column that uses a user-defined type needs the REFERENCES permission on the user-defined type.
+  > If this table **must** be created in TempDB, then either the REFERENCES permission needs to be granted explicitly each time **before** the table is created, or this data type and REFERENCES permissions need to be added to the Model database. If this is done, then this data type and permissions will be available in TempDB permanently. Otherwise, the user-defined data type and permissions will disappear when SQL Server is restarted. For more information, see [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)
+ 
+ If any columns in the CREATE TABLE statement are defined to be of a user-defined type, REFERENCES permission on the user-defined type is required.
   
 ## Examples  
   

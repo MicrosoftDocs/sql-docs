@@ -41,7 +41,7 @@ In this tutorial, you will learn how to:
   
   
 ## Prerequisites  
-This tutorial is for users who are familiar with basic database operations, but who have limited experience with replication. Before you start this tutorial, you must complete [Preparing the server for replication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+This tutorial is for users who are familiar with basic database operations, but who have limited experience with replication. Before you start this tutorial, you must complete [Tutorial: Prepare SQL Server for replication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 To complete this tutorial, you need SQL Server, SQL Server Management Studio (SSMS), and an AdventureWorks database:  
   

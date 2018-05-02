@@ -2,19 +2,16 @@
 title: "Install and configure WideWorldImporters sample database - SQL | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
-ms.component: "samples"
-ms.technology:
-  - "samples"
+ms.technology: samples
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 robots: noindex,nofollow
 ---
 # Installation and configuration

@@ -14,7 +14,6 @@ caps.latest.revision: 2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-robots: noindex,nofollow
 ---
 # Use of SQL Server features and capabilities
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

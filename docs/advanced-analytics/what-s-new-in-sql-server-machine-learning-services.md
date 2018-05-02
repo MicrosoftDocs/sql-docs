@@ -3,7 +3,7 @@ title: "What&#39;s new in SQL Server Machine Learning Services | Microsoft Docs"
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 04/19/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -22,6 +22,7 @@ This release also introduced **SQL Server Machine Learning Server (Standalone)**
 
 | Release | Feature update |
 |---------|---------------|
+| CU 5 | Bug fixes and package refresh, but no new feature announcements. Fixes include improvements to transform functions and variables in revoscalepy, correcting the long path-related errors in rxInstallPackages, fixing connections in a loopback for RxExec and rx_exec functions, and revisions to warning messages. |
 | CU 4 | Bug fixes and package refresh, but no new feature announcements. |
 | CU 3 | Python model serialization in revoscalepy, using the [rx_serialize_model function](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Native scoring](sql-native-scoring.md) plus enhancements to [Realtime scoring](real-time-scoring.md). With in-database scoring, throughput is a million rows per second using R models. In this update, realtime scoring and native scoring offer better performance in single-row and batch scoring. Native scoring uses a T-SQL function for fast scoring that can be run on any edition of SQL Server, even on Linux. The function requires no installation of R or extra configuration. This means you can train a model elsewhere, save it in SQL Server, and then perform scoring without ever calling R. For more information on scoring methodologies, see [How to perform realtime scoring or native scoring](r/how-to-do-realtime-scoring.md). |
 | CU 2 | Bug fixes and package refresh, but no new feature announcements. |

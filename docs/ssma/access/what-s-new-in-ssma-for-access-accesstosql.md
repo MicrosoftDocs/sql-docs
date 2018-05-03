@@ -2,7 +2,6 @@
 title: "What's New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "03/01/2018"
@@ -18,7 +17,7 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 caps.latest.revision: 37
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # What's New in SSMA for Access (AccessToSQL)
 This topic lists SSMA for Access changes in each release.  

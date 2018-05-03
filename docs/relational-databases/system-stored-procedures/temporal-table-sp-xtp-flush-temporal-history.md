@@ -2,9 +2,8 @@
 title: "sp_xtp_flush_temporal_history | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 caps.latest.revision: 7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_xtp_flush_temporal_history (Transact-SQL)

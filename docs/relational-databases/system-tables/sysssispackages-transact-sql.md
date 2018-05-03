@@ -2,9 +2,8 @@
 title: "sysssispackages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 caps.latest.revision: 43
 author: "douglasl"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

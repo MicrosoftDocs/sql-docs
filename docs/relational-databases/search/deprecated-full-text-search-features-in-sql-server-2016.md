@@ -2,9 +2,8 @@
 title: "Deprecated Full-Text Search Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Deprecated Full-Text Search Features in SQL Server 2016

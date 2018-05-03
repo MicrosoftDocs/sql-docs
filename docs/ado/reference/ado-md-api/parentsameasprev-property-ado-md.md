@@ -1,11 +1,9 @@
 ---
 title: "ParentSameAsPrev Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "ParentSameAsPrev property [ADO MD]"
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ParentSameAsPrev Property (ADO MD)
 Indicates whether the parent of this position [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) is the same as the parent of the immediately preceding member.  

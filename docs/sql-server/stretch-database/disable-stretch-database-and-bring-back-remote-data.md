@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "stretch-database"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Disable Stretch Database and bring back remote data
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

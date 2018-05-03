@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Create a Domain Rule
 

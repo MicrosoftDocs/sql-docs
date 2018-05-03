@@ -2,9 +2,8 @@
 title: "SQL Server, Columnstore Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/12/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server, Columnstore Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,11 +1,9 @@
 ---
 title: "RelatedColumn Property (ADOX) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "RelatedColumn property [ADOX]"
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RelatedColumn Property (ADOX)
 Indicates the name of the related [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) in the related table (key columns only).  

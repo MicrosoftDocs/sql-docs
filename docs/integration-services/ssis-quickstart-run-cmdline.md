@@ -4,7 +4,6 @@ ms.date: "09/25/2017"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "quick-start"
 ms.suite: "sql"
 ms.custom: ""
@@ -12,7 +11,7 @@ ms.technology:
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Run an SSIS package from the command prompt with DTExec.exe
 This quick start tutorial demonstrates how to run an SSIS package from the command prompt by running `DTExec.exe` with the appropriate parameters.

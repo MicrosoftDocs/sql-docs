@@ -1,11 +1,9 @@
 ---
 title: "ADOX Code Examples | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "ADOX code examples"
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADOX Code Examples
 Use the following code examples to learn how to use the ADOX objects, methods, properties, and events.  

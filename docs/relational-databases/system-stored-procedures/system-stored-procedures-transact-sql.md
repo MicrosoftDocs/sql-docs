@@ -2,9 +2,8 @@
 title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,9 +26,9 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server]"
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 caps.latest.revision: 49
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # System Stored Procedures (Transact-SQL)

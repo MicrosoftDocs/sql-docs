@@ -1,11 +1,9 @@
 ---
 title: "Appendix D: ADO Samples | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "ADO, samples"
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Appendix D: ADO Samples in the Windows SDK
 The Windows SDK contains several sample applications that demonstrate the use of ADO and RDS code. These samples are intended to help you learn how to use ADO and RDS, but are not intended to be deployed on production servers.

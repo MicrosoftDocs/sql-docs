@@ -3,7 +3,6 @@ title: "Working with KPIs in Reporting Services | Microsoft Docs"
 ms.date: "07/02/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"

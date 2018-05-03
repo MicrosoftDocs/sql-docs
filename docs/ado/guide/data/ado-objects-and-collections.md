@@ -1,11 +1,9 @@
 ---
 title: "ADO Objects and Collections | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "ADO, objects and collections"
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO Objects and Collections
 ADO consists of the following nine objects and four collections.  

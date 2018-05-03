@@ -2,24 +2,20 @@
 title: "Local Audit for SQL Server Usage Feedback Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  
-  - "dbe-security"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Local Audit"
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Local Audit for SQL Server Usage Feedback Collection
 

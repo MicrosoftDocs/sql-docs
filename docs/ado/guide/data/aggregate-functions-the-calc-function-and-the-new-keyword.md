@@ -1,11 +1,9 @@
 ---
 title: "Aggregate Functions, the CALC Function, and the NEW Keyword | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "aggregate functions [ADO]"
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Aggregate Functions, the CALC Function, and the NEW Keyword
 Data shaping supports the following functions. The name assigned to the chapter containing the column to be operated on is the *chapter-alias*.  

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/18/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "distributed-replay"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 caps.latest.revision: 36
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "craigg"
+manager: craigg
 ---
 # Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

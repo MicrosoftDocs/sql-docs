@@ -1,11 +1,9 @@
 ---
 title: "Prepared Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "Prepared property [ADO]"
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Prepared Property (ADO)
 Indicates whether to save a compiled version of a [Command](../../../ado/reference/ado-api/command-object-ado.md) before execution.  

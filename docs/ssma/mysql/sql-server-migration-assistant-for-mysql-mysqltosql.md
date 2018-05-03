@@ -2,7 +2,6 @@
 title: "SQL Server Migration Assistant for MySQL (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "08/09/2017"

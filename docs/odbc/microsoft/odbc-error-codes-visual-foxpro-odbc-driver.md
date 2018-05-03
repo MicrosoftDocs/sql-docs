@@ -2,14 +2,11 @@
 title: "ODBC Error Codes (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], error codes"
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ODBC Error Codes (Visual FoxPro ODBC Driver)

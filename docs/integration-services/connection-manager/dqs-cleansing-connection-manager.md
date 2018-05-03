@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "connection-manager"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # DQS Cleansing Connection Manager
   A DQS Cleansing connection manager enables a package to connect to a [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] server. The DQS Cleansing transformation uses the DQS Cleansing connection manager.  

@@ -84,16 +84,6 @@ The failure condition level of the AG changes the failure conditions for the hea
 | 4: OnModerateServerError | If the resource component reports an error 
 | 5:  OnAnyQualifiedFailureConitions |  If the query processing component reports an error
 
-  - Level 1: OnServerDown            - Health check takes no action if any resources fail besides the         AG. If AG data is not received         within 5 intervals, or 5/3 \* HealthCheckTimeout, then the AG is         considered dead. 
-
-  - Level 2: OnServerUnresponsive            - If no data is received from `sp_server_diagnostics` for the         HealthCheckTimeout, then the instance is considered dead. 
-
-  - Level 3: OnCriticalServerError            - This is the default level            - If the system component reports an error, then the instance is         considered dead. 
-
-  - Level 4: OnModerateServerError            - If the resource component reports an error, then the instance is         considered dead. 
-
-  - Level 5: OnAnyQualifiedFailureConitions            - If the query processing component reports an error, then the         instance is considered dead. 
-
 ## Updating Cluster and Always On Timeout Values 
 
 ### Cluster Values 

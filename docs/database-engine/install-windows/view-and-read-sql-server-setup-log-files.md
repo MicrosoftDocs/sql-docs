@@ -94,21 +94,6 @@ Each execution of Setup creates log files are created with a new timestamped log
 ### Location  
  It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
-## Summary_\<MachineName>_YYYYMMDD_HHMMss_ComponentUpdate.txt
-  
-### Overview
- The component update summary log file is similar to the summary file and is generated during the component update workflow.
-  
-### Location
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
-  
-## Summary_\<MachineName>_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt
-  
-### Overview
- The global rules summary log file is similar to the summary file generated during the global rules workflow.
-  
-### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
 ## Detail.txt
   
@@ -121,23 +106,7 @@ Each execution of Setup creates log files are created with a new timestamped log
  Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
  If an error occurs during the Setup process, the exception or error are logged at the end of this file. To find the errors in this file, first examine the end of the file followed by a search of the file for the "error" or "exception" keywords.  
-  
-## Detail_ComponentUpdate.txt  
-  
-### Overview  
- The Detail_ComponentUpdate.txt file is generated for the component update workflow and is similar to Detail.txt.  
-  
-### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
-  
-## Detail_GlobalRules.txt  
-  
-### Overview  
- Detail_GlobalRules.txt is generated for the global rules execution and is similar to Detail.txt.  
-  
-### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
-  
+    
 ## MSI log files  
   
 ### Overview  

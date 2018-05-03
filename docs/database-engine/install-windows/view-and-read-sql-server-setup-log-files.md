@@ -52,67 +52,67 @@ Each execution of Setup creates log files are created with a new timestamped log
 ## Summary Text  
   
 ### Overview  
- This file shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that were detected during Setup, the operating system environment, command-line parameter values if they are specified, and the overall status of each MSI/MSP that was executed.  
+ This file shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that were detected during Setup, the operating system environment, command-line parameter values if they are specified, and the overall status of each MSI/MSP that was executed.
   
- The log is organized into the following sections:  
+ The log is organized into the following sections:
   
--   An overall summary of the execution  
+-   An overall summary of the execution
   
--   Properties and the configuration of the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup was run  
+-   Properties and the configuration of the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup was run
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product features previously installed on the computer  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product features previously installed on the computer
   
 -   Description of the installation version and installation package properties  
   
--   Runtime input settings that are provided during install  
+-   Runtime input settings that are provided during install
   
--   Location of the configuration file  
+-   Location of the configuration file
   
--   Details of the execution results  
+-   Details of the execution results
   
--   Global rules  
+-   Global rules
   
--   Rules specific to the installation scenario  
+-   Rules specific to the installation scenario
   
--   Failed rules  
+-   Failed rules
   
--   Location of the rules report file  
+-   Location of the rules report file
 
   >[!NOTE]
   > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similiar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
   
- To find errors in the summary text file, search the file by using the "error" or "failed" keywords.  
+ To find errors in the summary text file, search the file by using the "error" or "failed" keywords.
   
-## Summary_\<MachineName>_YYYYMMDD_HHMMss.txt  
+## Summary_\<MachineName>_YYYYMMDD_HHMMss.txt
   
 ### Overview  
- The summary_engine base file is similar to the summary file and is generated during the main workflow.  
+ The summary_engine base file is similar to the summary file and is generated during the main workflow.
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
-## Summary_\<MachineName>_YYYYMMDD_HHMMss_ComponentUpdate.txt  
+## Summary_\<MachineName>_YYYYMMDD_HHMMss_ComponentUpdate.txt
   
-### Overview  
- The component update summary log file is similar to the summary file and is generated during the component update workflow.  
+### Overview
+ The component update summary log file is similar to the summary file and is generated during the component update workflow.
+  
+### Location
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
+  
+## Summary_\<MachineName>_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt
+  
+### Overview
+ The global rules summary log file is similar to the summary file generated during the global rules workflow.
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
-## Summary_\<MachineName>_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
+## Detail.txt
   
-### Overview  
- The global rules summary log file is similar to the summary file generated during the global rules workflow.  
-  
-### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
-  
-## Detail.txt  
-  
-### Overview  
+### Overview
  Detail.txt is generated for the main workflow such as install or upgrade, and provides the details of the execution. The logs in the file are generated based on the time when each action for the installation was invoked, and show the order in which the actions were executed, and their dependencies.  
   
 ### Location  

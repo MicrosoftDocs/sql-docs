@@ -8,8 +8,7 @@ ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15

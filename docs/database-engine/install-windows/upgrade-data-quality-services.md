@@ -2,13 +2,11 @@
 title: "Upgrade Data Quality Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5

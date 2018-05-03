@@ -2,13 +2,11 @@
 title: "Install SQL Server Servicing Updates | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a

@@ -2,9 +2,8 @@
 title: "Plan and Test the Database Engine Upgrade Plan | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/20/2016"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

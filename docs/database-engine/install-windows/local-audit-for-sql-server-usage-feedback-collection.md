@@ -2,14 +2,11 @@
 title: "Local Audit for SQL Server Usage Feedback Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  
-  - "dbe-security"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: "leolimsft"
-ms.author: "lle"
+author: leolimsft
+ms.author: lle
 manager: "erikre"
 ---
 # Deprecated Master Data Services Features

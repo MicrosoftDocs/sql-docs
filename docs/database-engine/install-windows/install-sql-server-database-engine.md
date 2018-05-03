@@ -2,13 +2,11 @@
 title: "Install SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

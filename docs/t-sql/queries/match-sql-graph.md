@@ -2,14 +2,12 @@
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,7 +22,7 @@ ms.assetid:
 caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # MATCH (Transact-SQL)

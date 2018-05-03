@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sp_set_session_context"
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 caps.latest.revision: 7
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

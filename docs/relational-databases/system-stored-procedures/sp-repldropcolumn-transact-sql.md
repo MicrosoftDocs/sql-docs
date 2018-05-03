@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_repldropcolumn"
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_repldropcolumn (Transact-SQL)

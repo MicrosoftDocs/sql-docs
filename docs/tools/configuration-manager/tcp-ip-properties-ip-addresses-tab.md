@@ -16,7 +16,7 @@ ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 47
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # TCP/IP Properties (IP Addresses Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

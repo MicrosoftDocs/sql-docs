@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSpeer_conflictdetectionconfigureresponse"
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSpeer_conflictdetectionconfigresponse (Transact-SQL)

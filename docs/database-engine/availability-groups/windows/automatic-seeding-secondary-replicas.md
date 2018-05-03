@@ -4,7 +4,7 @@ description: "Use automatic seeding to initialize secondary replicas."
 services: data-lake-analytics
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

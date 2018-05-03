@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_linkedservers"
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_linkedservers (Transact-SQL)

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sp_estimate_data_compression_savings"
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_estimate_data_compression_savings (Transact-SQL)

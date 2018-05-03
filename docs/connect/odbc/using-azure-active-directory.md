@@ -2,7 +2,7 @@
 title: "Using Azure Active Directory with the ODBC Driver | Microsoft Docs for SQL Server"
 ms.custom: ""
 ms.date: "03/21/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

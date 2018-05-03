@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.check_constraints catalog view"
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

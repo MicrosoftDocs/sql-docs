@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpfilegroup"
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpfilegroup (Transact-SQL)

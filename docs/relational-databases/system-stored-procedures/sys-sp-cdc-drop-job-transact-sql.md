@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sp_cdc_drop_job"
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.sp_cdc_drop_job (Transact-SQL)

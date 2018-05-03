@@ -13,7 +13,7 @@ ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Client Protocols (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

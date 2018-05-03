@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.database_audit_specification_details catalog view"
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.database_audit_specification_details (Transact-SQL)

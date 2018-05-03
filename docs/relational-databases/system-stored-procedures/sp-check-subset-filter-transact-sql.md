@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "sp_check_subset_filter"
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_check_subset_filter (Transact-SQL)

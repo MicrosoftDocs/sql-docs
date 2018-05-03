@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_replcounters"
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_replcounters (Transact-SQL)

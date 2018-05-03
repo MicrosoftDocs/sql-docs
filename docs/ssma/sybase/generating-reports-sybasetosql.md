@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Generating Reports (SybaseToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSrepl_queuedtraninfo system table"
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSrepl_queuedtraninfo (Transact-SQL)

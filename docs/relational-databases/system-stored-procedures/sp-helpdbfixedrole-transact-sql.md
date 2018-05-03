@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpdbfixedrole"
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpdbfixedrole (Transact-SQL)

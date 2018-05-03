@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpreplicationoption"
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpreplicationoption (Transact-SQL)

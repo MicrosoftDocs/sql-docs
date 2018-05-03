@@ -17,7 +17,7 @@ ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Replay a Transact-SQL Script (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_changeobjectowner"
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changeobjectowner (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_restoremergeidentityrange"
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_restoremergeidentityrange (Transact-SQL)

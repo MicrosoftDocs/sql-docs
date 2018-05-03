@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.spatial_index_tessellations catalog view"
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.spatial_index_tessellations (Transact-SQL)

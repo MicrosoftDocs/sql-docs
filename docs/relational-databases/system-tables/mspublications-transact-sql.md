@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSpublications system table"
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSpublications (Transact-SQL)

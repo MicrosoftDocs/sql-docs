@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_setdefaultdatatypemapping"
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_setdefaultdatatypemapping (Transact-SQL)

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.partitions catalog view"
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 caps.latest.revision: 60
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 caps.latest.revision: 58
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

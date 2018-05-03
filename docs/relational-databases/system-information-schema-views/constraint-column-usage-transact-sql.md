@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CONSTRAINT_COLUMN_USAGE view"
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

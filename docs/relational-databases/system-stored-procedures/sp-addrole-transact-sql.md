@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addrole"
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addrole (Transact-SQL)

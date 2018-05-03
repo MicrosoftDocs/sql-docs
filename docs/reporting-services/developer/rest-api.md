@@ -4,7 +4,6 @@ ms.description: "The REST API provides programmatic access to the objects in a S
 ms.date: "10/19/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "developer"
 ms.reviewer: ""
 ms.suite: "pro-bi"

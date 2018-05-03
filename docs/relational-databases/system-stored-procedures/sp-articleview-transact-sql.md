@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_articleview"
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_articleview (Transact-SQL)

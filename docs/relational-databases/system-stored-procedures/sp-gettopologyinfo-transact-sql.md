@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_gettopologyinfo"
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_gettopologyinfo (Transact-SQL)

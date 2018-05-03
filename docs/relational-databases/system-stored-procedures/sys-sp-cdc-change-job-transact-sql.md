@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sp_cdc_change_job"
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.sp_cdc_change_job (Transact-SQL)

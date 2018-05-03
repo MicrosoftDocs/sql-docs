@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_changedistributor_property"
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changedistributor_property (Transact-SQL)

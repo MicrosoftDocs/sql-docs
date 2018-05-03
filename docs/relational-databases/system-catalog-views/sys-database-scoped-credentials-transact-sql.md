@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.database_scoped_credentials catalog view"
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 caps.latest.revision: 2
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

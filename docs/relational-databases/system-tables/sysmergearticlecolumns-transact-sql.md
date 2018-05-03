@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sysmergearticlecolumns system table"
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sysmergearticlecolumns (Transact-SQL)

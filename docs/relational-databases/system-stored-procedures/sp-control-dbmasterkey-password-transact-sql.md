@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_control_dbmasterkey_password"
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)

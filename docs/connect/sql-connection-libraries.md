@@ -4,7 +4,7 @@ description: "Provides download links for modules which enable connection to Mic
 author: MightyPen
 ms.component: "connect"
 ms.suite: "sql"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: "dbe-data-tier-apps"
 ms.custom: ""

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "17809 (Database Engine error)"
 ms.assetid: d7f81e0a-13f7-42b2-bddf-1f6b95321fa7
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_17809

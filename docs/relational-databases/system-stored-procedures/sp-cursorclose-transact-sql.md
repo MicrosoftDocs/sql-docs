@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_cursorclose"
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 caps.latest.revision: 7
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_cursorclose (Transact-SQL)

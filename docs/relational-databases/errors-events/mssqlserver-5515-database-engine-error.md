@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "5515 (Database Engine error)"
 ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 robots: noindex,nofollow
 ---

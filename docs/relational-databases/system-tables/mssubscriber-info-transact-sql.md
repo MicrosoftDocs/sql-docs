@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSsubscriber_info system table"
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSsubscriber_info (Transact-SQL)

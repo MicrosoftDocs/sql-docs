@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_prepare"
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

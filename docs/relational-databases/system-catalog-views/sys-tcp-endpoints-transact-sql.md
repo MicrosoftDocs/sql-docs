@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.tcp_endpoints catalog view"
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.tcp_endpoints (Transact-SQL)

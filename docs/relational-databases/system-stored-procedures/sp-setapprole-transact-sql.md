@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_setapprole"
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_setapprole (Transact-SQL)

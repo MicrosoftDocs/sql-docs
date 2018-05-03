@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "17065 (Database Engine error)"
 ms.assetid: 63c2ba5a-be34-461e-bee1-03c25b396cd2
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_17065

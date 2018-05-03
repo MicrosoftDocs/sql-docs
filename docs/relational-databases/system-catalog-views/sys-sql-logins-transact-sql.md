@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.sql_logins catalog view"
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

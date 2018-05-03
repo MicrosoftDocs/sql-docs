@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_db_selective_xml_index procedure"
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_db_selective_xml_index (Transact-SQL)

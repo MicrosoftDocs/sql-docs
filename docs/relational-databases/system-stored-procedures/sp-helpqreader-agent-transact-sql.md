@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpqreader_agent"
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpqreader_agent (Transact-SQL)

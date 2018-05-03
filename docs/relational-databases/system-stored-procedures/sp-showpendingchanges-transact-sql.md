@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_showpendingchanges"
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_showpendingchanges (Transact-SQL)

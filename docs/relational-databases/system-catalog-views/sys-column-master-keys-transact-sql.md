@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "sys.column_master_keys catalog view"
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

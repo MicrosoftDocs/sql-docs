@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_changesubscriber_schedule"
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changesubscriber_schedule (Transact-SQL)

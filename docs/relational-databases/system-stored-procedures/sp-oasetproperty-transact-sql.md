@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_OASetProperty"
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_OASetProperty (Transact-SQL)

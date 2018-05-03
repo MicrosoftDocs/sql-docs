@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropsrvrolemember"
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropsrvrolemember (Transact-SQL)

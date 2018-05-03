@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_describe_cursor"
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_describe_cursor (Transact-SQL)

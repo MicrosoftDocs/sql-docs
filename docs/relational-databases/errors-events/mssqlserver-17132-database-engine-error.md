@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "17132 (Database Engine error)"
 ms.assetid: d1d198bd-6730-4394-bd5f-28f320c01a38
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_17132

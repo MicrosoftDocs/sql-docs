@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "audits [SQL Server], specification"
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Create a Server Audit and Server Audit Specification

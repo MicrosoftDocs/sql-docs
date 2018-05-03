@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "21898 (Database Engine error)"
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 caps.latest.revision: 6
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_21898

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.all_objects catalog view"
 ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "sys.column_encryption_keys catalog view"
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addpublication_snapshot"
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addpublication_snapshot (Transact-SQL)

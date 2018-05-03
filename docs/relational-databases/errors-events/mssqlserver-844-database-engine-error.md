@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "844 (Database Engine error)"
 ms.assetid: 2060c886-1226-4066-bc0c-de90a1cfb82b
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_844

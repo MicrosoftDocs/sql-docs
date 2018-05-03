@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "02/12/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "bcp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -33,7 +32,7 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: 222
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # bcp Utility

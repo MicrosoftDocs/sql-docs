@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_cursoropen"
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_cursoropen (Transact-SQL)

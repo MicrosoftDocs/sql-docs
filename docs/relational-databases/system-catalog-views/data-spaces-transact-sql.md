@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data space catalog views [SQL Server]"
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Data Spaces (Transact-SQL)

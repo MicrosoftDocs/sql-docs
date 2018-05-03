@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "xe"
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.server_event_session_actions (Transact-SQL)

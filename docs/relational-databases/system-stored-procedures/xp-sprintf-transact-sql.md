@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "xp_sprintf"
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

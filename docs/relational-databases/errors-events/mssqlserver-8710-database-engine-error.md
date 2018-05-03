@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "8710 (Database Engine error)"
 ms.assetid: 78b9f9da-5489-4be0-94df-f065d86ed18c
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_8710

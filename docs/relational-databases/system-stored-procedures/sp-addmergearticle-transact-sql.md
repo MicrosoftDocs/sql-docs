@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addmergearticle"
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 caps.latest.revision: 69
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addmergearticle (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_adjustpublisheridentityrange"
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_adjustpublisheridentityrange (Transact-SQL)

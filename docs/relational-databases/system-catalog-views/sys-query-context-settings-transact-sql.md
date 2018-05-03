@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.query_context_settings catalog view"
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

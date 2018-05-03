@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSpeer_request system table"
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSpeer_request (Transact-SQL)

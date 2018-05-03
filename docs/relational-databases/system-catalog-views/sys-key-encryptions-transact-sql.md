@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.key_encryptions catalog view"
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

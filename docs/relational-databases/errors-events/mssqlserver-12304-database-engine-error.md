@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "12304 (Database Engine error)"
 ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
 caps.latest.revision: 4
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_12304

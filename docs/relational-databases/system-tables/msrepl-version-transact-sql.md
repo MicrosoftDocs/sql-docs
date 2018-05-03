@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSrepl_version system table"
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSrepl_version (Transact-SQL)

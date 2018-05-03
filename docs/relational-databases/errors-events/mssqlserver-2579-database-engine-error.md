@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "2579 (Database Engine error)"
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_2579

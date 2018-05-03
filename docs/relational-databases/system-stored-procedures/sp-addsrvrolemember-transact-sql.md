@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addsrvrolemember"
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addsrvrolemember (Transact-SQL)

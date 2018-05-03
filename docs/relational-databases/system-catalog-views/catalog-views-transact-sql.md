@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "catalog views [SQL Server], about catalog views"
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 caps.latest.revision: 45
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

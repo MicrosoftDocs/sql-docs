@@ -2,7 +2,7 @@
 title: "Use the New Availability Group Dialog Box (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

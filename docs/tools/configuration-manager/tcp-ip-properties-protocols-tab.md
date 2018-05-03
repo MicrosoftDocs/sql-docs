@@ -15,7 +15,7 @@ ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # TCP/IP Properties (Protocols Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

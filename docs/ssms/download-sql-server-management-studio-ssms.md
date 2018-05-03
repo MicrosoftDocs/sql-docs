@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/17/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,7 +27,7 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 caps.latest.revision: 145
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Download SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_get_distributor"
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_get_distributor (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_validatelogins"
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_validatelogins (Transact-SQL)

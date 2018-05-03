@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "installing SQL Server, security"
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 caps.latest.revision: 79
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Surface Area Configuration

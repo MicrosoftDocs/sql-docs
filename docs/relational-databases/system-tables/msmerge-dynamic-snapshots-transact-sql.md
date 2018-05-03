@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_dynamic_snapshots system table"
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_dynamic_snapshots (Transact-SQL)

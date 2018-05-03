@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.foreign_keys catalog view"
 ms.assetid: e960df1a-13fc-43ee-ba91-34c1b719ac2c
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

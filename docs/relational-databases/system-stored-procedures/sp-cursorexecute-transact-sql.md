@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_cursor_execute"
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 caps.latest.revision: 7
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_cursorexecute (Transact-SQL)

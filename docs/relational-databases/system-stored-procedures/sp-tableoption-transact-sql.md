@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_tableoption"
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 caps.latest.revision: 60
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

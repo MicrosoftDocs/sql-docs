@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addmergepullsubscription_agent"
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addmergepullsubscription_agent (Transact-SQL)

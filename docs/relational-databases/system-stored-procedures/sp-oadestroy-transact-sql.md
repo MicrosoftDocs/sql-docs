@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_OADestroy"
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_OADestroy (Transact-SQL)

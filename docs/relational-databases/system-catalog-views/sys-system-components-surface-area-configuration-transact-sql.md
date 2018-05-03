@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.system_components_surface_area_configuration catalog view"
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.system_components_surface_area_configuration (Transact-SQL)

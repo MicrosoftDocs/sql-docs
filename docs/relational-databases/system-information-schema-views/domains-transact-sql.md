@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.DOMAINS view"
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

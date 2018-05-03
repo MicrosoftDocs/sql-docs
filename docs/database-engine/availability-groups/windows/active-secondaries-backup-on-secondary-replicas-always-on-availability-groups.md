@@ -2,7 +2,7 @@
 title: "Active Secondaries Backup on Secondary Replicas-Always On Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

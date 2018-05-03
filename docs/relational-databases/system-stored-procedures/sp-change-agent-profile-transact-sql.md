@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_change_agent_profile"
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_change_agent_profile (Transact-SQL)

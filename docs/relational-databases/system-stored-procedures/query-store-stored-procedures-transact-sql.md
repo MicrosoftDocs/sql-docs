@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "query store [SQL Server], stored procedures"
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 caps.latest.revision: 6
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

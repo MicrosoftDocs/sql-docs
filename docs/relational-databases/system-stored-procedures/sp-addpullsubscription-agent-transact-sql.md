@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addpullsubscription_agent"
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addpullsubscription_agent (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_migrate_user_to_contained"
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_migrate_user_to_contained (Transact-SQL)

@@ -3,7 +3,7 @@ title: "Executing a Command | Microsoft Docs"
 description: "Executing a command"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb-driver-for-sql-server"
 ms.reviewer: ""

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_revokedbaccess"
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_revokedbaccess (Transact-SQL)

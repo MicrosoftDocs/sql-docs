@@ -2,7 +2,7 @@
 title: "Basic Availability Groups (Always On Availability Groups) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

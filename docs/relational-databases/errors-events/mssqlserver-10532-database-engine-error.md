@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "10532 (Database Engine error)"
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_10532

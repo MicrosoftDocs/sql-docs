@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "IHpublisherconstraints system table"
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # IHpublisherconstraints (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_grant_publication_access"
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_grant_publication_access (Transact-SQL)

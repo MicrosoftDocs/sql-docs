@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropmergesubscription"
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropmergesubscription (Transact-SQL)

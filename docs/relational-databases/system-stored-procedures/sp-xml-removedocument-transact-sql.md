@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_xml_removedocument"
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_xml_removedocument (Transact-SQL)

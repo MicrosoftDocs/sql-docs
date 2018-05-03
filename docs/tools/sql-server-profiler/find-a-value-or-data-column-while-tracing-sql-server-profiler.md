@@ -17,7 +17,7 @@ ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Find a Value or Data Column While Tracing (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

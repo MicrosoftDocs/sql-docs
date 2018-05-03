@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "DOMAIN_CONSTRAINTS view"
 ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

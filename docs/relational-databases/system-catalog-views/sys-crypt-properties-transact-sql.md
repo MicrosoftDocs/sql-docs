@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.crypt_properties catalog view"
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

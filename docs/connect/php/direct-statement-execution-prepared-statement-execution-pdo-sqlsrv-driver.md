@@ -2,7 +2,7 @@
 title: "Direct Statement - Prepared Statement Execution PDO_SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""

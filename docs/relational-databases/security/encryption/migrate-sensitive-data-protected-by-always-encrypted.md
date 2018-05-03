@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Always Encrypted, bulk import"
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

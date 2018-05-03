@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "REFERENTIAL_CONSTRAINTS view"
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

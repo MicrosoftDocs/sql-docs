@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_get_query_template"
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_get_query_template (Transact-SQL)

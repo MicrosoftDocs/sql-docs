@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_control_plan_guide"
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_control_plan_guide (Transact-SQL)

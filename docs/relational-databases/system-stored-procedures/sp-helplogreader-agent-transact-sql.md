@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_helplogreader_agent"
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helplogreader_agent (Transact-SQL)

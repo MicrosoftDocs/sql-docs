@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_startpublication_snapshot"
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_startpublication_snapshot (Transact-SQL)

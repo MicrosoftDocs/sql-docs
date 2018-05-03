@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpstats"
 ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

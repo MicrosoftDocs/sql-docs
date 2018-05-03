@@ -2,7 +2,7 @@
 title: "Data Source Wizard Screen 3 (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

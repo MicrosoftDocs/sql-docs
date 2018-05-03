@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_restoredbreplication"
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_restoredbreplication (Transact-SQL)

@@ -2,7 +2,7 @@
 title: "Step 4: Connect resiliently to SQL with PHP | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_srvrolepermission"
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_srvrolepermission (Transact-SQL)

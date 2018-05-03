@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Wizard, Always Encrypted"
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

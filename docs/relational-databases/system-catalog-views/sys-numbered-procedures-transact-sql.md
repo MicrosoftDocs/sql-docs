@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.numbered_procedures catalog view"
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

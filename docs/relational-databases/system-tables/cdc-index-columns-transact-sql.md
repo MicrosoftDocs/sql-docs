@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "cdc.index_columns"
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # cdc.index_columns (Transact-SQL)

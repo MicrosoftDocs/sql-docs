@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropdynamicsnapshot_job"
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropdynamicsnapshot_job (Transact-SQL)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_changemergesubscription"
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changemergesubscription (Transact-SQL)

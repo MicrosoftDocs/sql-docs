@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.destination_data_spaces catalog view"
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.destination_data_spaces (Transact-SQL)

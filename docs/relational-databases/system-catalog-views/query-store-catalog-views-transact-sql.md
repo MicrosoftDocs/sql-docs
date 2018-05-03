@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "catalog views [SQL Server], query store"
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
 caps.latest.revision: 5
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

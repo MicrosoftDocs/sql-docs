@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helparticledts"
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helparticledts (Transact-SQL)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/30/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Getting Started with the SSMA for Sybase Console (SybaseToSQL)
 This section describes the procedure for launching and getting started with the SSMA for Sybase console application. Also listed herein are the conventions used in a typical SSMA Console output window.  

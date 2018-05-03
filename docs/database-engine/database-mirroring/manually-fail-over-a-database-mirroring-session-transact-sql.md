@@ -2,7 +2,7 @@
 title: "Manually Fail Over a Database Mirroring Session (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""

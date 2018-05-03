@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSdbms_map system table"
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSdbms_map (Transact-SQL)

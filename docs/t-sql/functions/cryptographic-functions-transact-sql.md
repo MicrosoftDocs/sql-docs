@@ -28,7 +28,7 @@ manager: craigg
 # Cryptographic functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-The following functions support encryption, decryption, digital signing, and the validation of digital signatures.
+These functions support digital signing, digital signature validation, encryption, and decryption.
   
 ## Symmetric encryption and decryption
   
@@ -56,7 +56,7 @@ The following functions support encryption, decryption, digital signing, and the
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## Symmetric decryption with automatic key handling
+## Symmetric decryption, with automatic key handling
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ The following functions support encryption, decryption, digital signing, and the
 |-|-|  
 |[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)||  
   
-## Copying certificates
+## Certificate copying
   
 |||  
 |-|-|  

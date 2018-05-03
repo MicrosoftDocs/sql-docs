@@ -26,7 +26,7 @@ manager: craigg
 # CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Returns the ID of the current request within the current session.
+This function returns the ID of the current request within the current session.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -40,7 +40,7 @@ CURRENT_REQUEST_ID()
 **smallint**
   
 ## Remarks  
-To find exact information about the current session and current request, use @@SPID and CURRENT_REQUEST_ID(), respectively.
+To find exact information about the current session, use @@SPID. For exact information about the current request, use CURRENT_REQUEST_ID().
   
 ## See also
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)

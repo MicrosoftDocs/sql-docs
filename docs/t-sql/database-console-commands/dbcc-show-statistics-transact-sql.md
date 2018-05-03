@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|database-console-commands"
-ms.reviewer: ""
+|ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""
@@ -34,8 +33,8 @@ helpviewer_keywords:
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 caps.latest.revision: 75
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

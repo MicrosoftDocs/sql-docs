@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|database-console-commands"
-ms.reviewer: ""
+|ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""
@@ -28,8 +27,8 @@ helpviewer_keywords:
   - "dropping columns"
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 caps.latest.revision: 53
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC CLEANTABLE (Transact-SQL)

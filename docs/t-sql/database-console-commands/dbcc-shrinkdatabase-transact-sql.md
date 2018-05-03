@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|database-console-commands"
-ms.reviewer: ""
+|ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""
@@ -29,8 +28,8 @@ helpviewer_keywords:
   - "reducing database size"
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 caps.latest.revision: 62
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)

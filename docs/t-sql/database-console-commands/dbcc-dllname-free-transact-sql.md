@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|database-console-commands"
-ms.reviewer: ""
+|ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""
@@ -28,8 +27,8 @@ helpviewer_keywords:
   - "unloading DLLs"
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 caps.latest.revision: 27
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC dllname (FREE) (Transact-SQL)

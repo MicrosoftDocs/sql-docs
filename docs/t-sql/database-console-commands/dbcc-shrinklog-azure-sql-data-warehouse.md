@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/16/2018"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.component: "t-sql|database-console-commands"
-ms.reviewer: ""
+|ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""
@@ -14,7 +13,7 @@ dev_langs:
   - "TSQL"
 caps.latest.revision: 11
 author: "barbkess"
-ms.author: "barbkess"
+ms.author: umajay
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---

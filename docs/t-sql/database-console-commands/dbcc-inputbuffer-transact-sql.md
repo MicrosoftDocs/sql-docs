@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|database-console-commands"
-ms.reviewer: ""
+|ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "DBCC INPUTBUFFER statement"
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 caps.latest.revision: 51
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC INPUTBUFFER (Transact-SQL)

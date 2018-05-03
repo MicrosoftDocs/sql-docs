@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|database-console-commands"
-ms.reviewer: ""
+|ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""
@@ -26,8 +25,8 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: 78
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC SHOWCONTIG (Transact-SQL)

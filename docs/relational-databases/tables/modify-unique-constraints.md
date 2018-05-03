@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "10/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], unique"
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 caps.latest.revision: 16
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

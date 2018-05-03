@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +17,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], switching"
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "barbkess"
-ms.author: "barbkess"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Move an Existing Index to a Different Filegroup

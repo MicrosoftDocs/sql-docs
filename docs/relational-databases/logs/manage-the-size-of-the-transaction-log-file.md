@@ -2,14 +2,11 @@
 title: "Manage Transaction Log File Size | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/05/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "logs"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-transaction-log"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

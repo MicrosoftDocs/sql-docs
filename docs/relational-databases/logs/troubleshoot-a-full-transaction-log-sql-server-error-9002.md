@@ -2,14 +2,11 @@
 title: "Troubleshoot a Full Transaction Log (SQL Server Error 9002) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "logs"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-transaction-log"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

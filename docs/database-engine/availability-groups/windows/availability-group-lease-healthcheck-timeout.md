@@ -91,16 +91,23 @@ The failure condition level of the AG changes the failure conditions for the hea
 There are four values in the WSFC configuration that are responsible for determining cluster timeout values 
 
   - SameSubnetDelay 
-
   - SameSubnetThreshold 
-
   - CrossSubnetDelay 
-
   - CrossSubnetThreshold 
 
 The delay values determine the wait time between heartbeats from the cluster service, and the threshold values set the number of heartbeats that can receive no acknowledgement from the target node or resource before the object is declared dead by the cluster. If there is no successful heartbeat between nodes in the same subnet for more than `SameSubnetDelay \* SameSubnetThreshold` milliseconds, then the node is determined dead. The same is true of cross subnet communication using the cross-subnet values. 
 
-In an elevated PowerShell terminal, Get-Cluster | fl \` on a node in the target cluster lists all current c luster values. To update any of these values, use **(Get-Cluster).\<ValueName\> = \<NewValue\>**. This will update the value for all nodes in the cluster. 
+To list all current cluster values, on any node in the target cluster open an elevated PowerShell terminal. Run the following command:
+
+```PowerShell
+ Get-Cluster | fl \
+``` 
+
+To update any of these values, run the following command in an elevated PowerShell terminal:
+
+```PowerShell
+(Get-Cluster).<ValueName> = <NewValue>
+```
 
 When increasing the Delay \* Threshold product to make the cluster timeout more tolerant, it is more effective to first increase the delay value before increasing the threshold. By increasing the delay, the time between each heartbeat is increased. More time between heartbeats, allows for more time for transient network issues to resolve themselves and decrease network congestion relative to sending more heartbeats in the same period. 
 

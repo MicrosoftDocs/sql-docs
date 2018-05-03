@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "attributes [Master Data Services], domain-based attributes"
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 caps.latest.revision: 10
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Domain-Based Attributes (Master Data Services)
 

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # XML Task
   The XML task is used to work with XML data. Using this task, a package can retrieve XML documents, apply operations to the documents by using Extensible Stylesheet Language Transformations (XSLT) style sheets and XPath expressions, merge multiple documents, or validate, compare, and save the updated documents to files and variables.  

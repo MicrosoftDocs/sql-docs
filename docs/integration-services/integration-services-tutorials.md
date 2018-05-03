@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Integration Services Tutorials
 This section contains tutorials [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

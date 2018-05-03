@@ -1,11 +1,9 @@
 ---
 title: "Members Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,9 +19,9 @@ helpviewer_keywords:
   - "Members collection [ADO MD]"
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Members Collection (ADO MD)
 Contains the [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) objects from a level or a position along an axis.  

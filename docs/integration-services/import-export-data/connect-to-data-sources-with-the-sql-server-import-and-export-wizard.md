@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "02/15/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Connect to Data Sources with the SQL Server Import and Export Wizard
 The topics in this section show you how to connect to many commonly used data sources when you run the SQL Server Import and Export Wizard. You have to provide connection info for your data sources on the **Choose a Data Source** and **Choose a Destination** pages of the wizard.

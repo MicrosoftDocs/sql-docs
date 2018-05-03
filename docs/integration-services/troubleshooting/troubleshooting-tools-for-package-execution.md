@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/26/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "troubleshooting"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Troubleshooting Tools for Package Execution
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  

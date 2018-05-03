@@ -2,9 +2,8 @@
 title: "Configure the General Properties of Policy-Based Management | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "Policy-Based Management, configure properties"
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the General Properties of Policy-Based Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

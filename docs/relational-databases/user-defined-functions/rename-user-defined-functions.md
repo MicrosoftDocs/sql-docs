@@ -2,9 +2,8 @@
 title: "Rename User-defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "udf"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 caps.latest.revision: 7
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rename User-defined Functions

@@ -2,14 +2,11 @@
 title: "Create Clustered Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "indexes [SQL Server], clustered"
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Clustered Indexes

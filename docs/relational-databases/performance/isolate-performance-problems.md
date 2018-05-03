@@ -2,9 +2,8 @@
 title: "Isolate Performance Problems | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,9 +21,9 @@ helpviewer_keywords:
   - "server performance [SQL Server], isolating problems"
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Isolate Performance Problems

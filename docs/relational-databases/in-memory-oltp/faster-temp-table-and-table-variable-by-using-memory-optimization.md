@@ -2,9 +2,8 @@
 title: "Faster temp table and table variable by using memory optimization | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/18/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Faster temp table and table variable by using memory optimization

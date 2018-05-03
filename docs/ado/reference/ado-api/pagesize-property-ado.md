@@ -1,11 +1,9 @@
 ---
 title: "PageSize Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "PageSize property [ADO]"
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PageSize Property (ADO)
 Indicates how many records constitute one page in the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

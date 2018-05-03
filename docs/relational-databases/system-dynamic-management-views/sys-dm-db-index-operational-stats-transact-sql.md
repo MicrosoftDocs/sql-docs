@@ -2,9 +2,8 @@
 title: "sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 caps.latest.revision: 61
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_index_operational_stats (Transact-SQL)

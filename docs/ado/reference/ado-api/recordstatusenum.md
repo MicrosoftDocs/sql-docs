@@ -1,11 +1,9 @@
 ---
 title: "RecordStatusEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "RecordStatusEnum enumeration [ADO]"
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RecordStatusEnum
 Specifies the [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) of a record with regard to batch updates and other bulk operations.  

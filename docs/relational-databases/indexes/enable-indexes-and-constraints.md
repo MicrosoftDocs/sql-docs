@@ -2,14 +2,11 @@
 title: "Enable Indexes and Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,9 +18,9 @@ helpviewer_keywords:
   - "clustered indexes, enabling disabled indexes"
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 caps.latest.revision: 27
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Enable Indexes and Constraints

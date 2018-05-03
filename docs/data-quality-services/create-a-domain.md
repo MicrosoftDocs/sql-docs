@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Create a Domain
 

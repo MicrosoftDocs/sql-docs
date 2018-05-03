@@ -2,14 +2,11 @@
 title: "Unicode Compression Implementation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "compression"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-compression"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,9 +14,9 @@ helpviewer_keywords:
   - "compression [SQL Server], Unicode data"
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Unicode Compression Implementation

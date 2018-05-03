@@ -2,10 +2,9 @@
 title: "sys.database_event_session_events (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.suite: "sql"
 ms.technology: 
@@ -16,9 +15,9 @@ applies_to:
   - "Azure SQL Database"
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.database_event_session_events (Azure SQL Database)

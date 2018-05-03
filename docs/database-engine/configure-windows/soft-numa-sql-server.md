@@ -2,14 +2,11 @@
 title: "Soft-NUMA (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/13/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -23,7 +20,7 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 53
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "firewall_rules, setting database rules"
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_set_database_firewall_rule (Azure SQL Database)

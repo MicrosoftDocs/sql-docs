@@ -2,9 +2,8 @@
 title: "Supported Features for Natively Compiled T-SQL Modules | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Supported Features for Natively Compiled T-SQL Modules

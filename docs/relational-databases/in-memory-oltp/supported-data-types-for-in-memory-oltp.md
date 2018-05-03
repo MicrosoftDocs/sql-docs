@@ -2,9 +2,8 @@
 title: "Supported Data Types for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Supported Data Types for In-Memory OLTP

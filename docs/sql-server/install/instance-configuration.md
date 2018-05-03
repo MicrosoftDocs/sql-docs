@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "2017-04-21"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"

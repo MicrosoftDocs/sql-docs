@@ -4,12 +4,10 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "dta"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-query-tuning"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -20,7 +18,7 @@ ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Lesson 3-1 - Starting the dta Command Prompt Utility and Tuning a Workload
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,14 +2,12 @@
 title: "Start the Configuring Database Mirroring Security Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "Configuring Database Mirroring Security Wizard"
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Start the Configuring Database Mirroring Security Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

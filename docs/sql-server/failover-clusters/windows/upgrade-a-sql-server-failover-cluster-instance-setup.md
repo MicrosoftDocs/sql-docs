@@ -3,13 +3,10 @@ title: "Upgrade a SQL Server Failover Cluster Instance (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], upgrading"
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 caps.latest.revision: 63
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Upgrade a SQL Server Failover Cluster Instance (Setup)

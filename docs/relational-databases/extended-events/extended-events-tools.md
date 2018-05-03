@@ -2,12 +2,11 @@
 title: "Extended Events Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "xevents"
+ms.technology: xevents
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "extended events [SQL Server], options for using"
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Extended Events Tools

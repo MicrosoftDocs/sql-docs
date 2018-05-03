@@ -2,9 +2,8 @@
 title: "sys.foreign_key_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,9 +22,9 @@ helpviewer_keywords:
   - "sys.foreign_key_columns catalog view"
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.foreign_key_columns (Transact-SQL)

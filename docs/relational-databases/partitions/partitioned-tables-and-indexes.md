@@ -2,9 +2,8 @@
 title: "Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "partitions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "partitioned indexes [SQL Server], about partitioned indexes"
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Partitioned Tables and Indexes

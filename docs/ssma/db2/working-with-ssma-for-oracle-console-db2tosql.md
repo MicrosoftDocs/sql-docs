@@ -2,7 +2,6 @@
 title: "Working with SSMA for Oracle Console (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,7 +17,7 @@ ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Working with SSMA for Oracle Console (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) release for DB2 is now accessible through a console application at command line. The script files form the input to the application for executing the commands. As a console application, SSMA enables script-level interfacing, reduces the migration cycle, and scales the migration effort.  

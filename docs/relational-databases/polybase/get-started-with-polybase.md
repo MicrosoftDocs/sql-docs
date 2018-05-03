@@ -2,9 +2,8 @@
 title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ helpviewer_keywords:
 caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg" 
+manager: craigg 
 ---
 # Get started with PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

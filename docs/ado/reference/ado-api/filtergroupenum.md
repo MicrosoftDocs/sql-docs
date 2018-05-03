@@ -1,11 +1,9 @@
 ---
 title: "FilterGroupEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "FilterGroupEnum enumeration [ADO]"
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # FilterGroupEnum
 Specifies the group of records to be filtered from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

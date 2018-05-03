@@ -2,9 +2,8 @@
 title: "Configuring Storage for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # Configuring Storage for Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

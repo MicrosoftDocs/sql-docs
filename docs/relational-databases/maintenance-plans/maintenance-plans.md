@@ -2,9 +2,8 @@
 title: "Maintenance Plans | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "maintenance-plans"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,9 +19,9 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server]"
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Maintenance Plans
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

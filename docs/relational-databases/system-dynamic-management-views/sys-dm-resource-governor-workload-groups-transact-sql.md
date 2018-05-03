@@ -2,9 +2,8 @@
 title: "sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_resource_governor_workload_groups (Transact-SQL)

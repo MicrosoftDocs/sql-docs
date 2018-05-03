@@ -2,9 +2,8 @@
 title: "sys.dm_os_dispatcher_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,7 +25,7 @@ ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # sys.dm_os_dispatcher_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

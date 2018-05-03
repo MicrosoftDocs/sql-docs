@@ -2,23 +2,19 @@
 title: "Troubleshooter: Finding Errors with SQL Server Transactional Replication  | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/26/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
-author: "MashaMSFT"
-ms.author: "mathoma"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 
 

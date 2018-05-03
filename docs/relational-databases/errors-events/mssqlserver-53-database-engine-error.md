@@ -2,14 +2,12 @@
 title: "MSSQLSERVER_53 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "53 (Database Engine error)"
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # MSSQLSERVER_53
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

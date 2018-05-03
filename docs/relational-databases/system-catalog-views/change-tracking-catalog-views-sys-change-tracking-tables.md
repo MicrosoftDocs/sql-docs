@@ -2,9 +2,8 @@
 title: "sys.change_tracking_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,9 +23,9 @@ helpviewer_keywords:
   - "sys.change_tracking_tables"
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_tables

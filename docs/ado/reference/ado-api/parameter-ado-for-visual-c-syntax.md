@@ -1,11 +1,9 @@
 ---
 title: "Parameter (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "Parameter collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Parameter (ADO for Visual C++ Syntax)
 ## Methods  

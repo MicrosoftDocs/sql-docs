@@ -1,11 +1,9 @@
 ---
 title: "Working with Recordsets | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "Recordset object [ADO]"
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Working with Recordsets
 The **Recordset** object has built-in features that let you rearrange the order of the data in the result set, to search for a specific record based on criteria that you supply, and even to optimize those search operations using indexes. Whether these features are available for use depends on the provider and in some cases — such as that of the [Index](../../../ado/reference/ado-api/index-property.md) property — the structure of the data source itself.  

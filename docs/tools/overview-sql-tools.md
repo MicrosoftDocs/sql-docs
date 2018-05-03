@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "02/22/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "misc"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid:
 caps.latest.revision: 0
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse

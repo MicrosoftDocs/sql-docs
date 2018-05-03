@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "business rules [Master Data Services], multiple conditions"
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 9
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Add Multiple Conditions to a Business Rule (Master Data Services)
 

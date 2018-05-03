@@ -3,7 +3,6 @@ title: "What's new in SQL Server 2017 Analysis Services | Microsoft Docs"
 ms.date: "10/27/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"

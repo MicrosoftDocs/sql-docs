@@ -2,14 +2,12 @@
 title: "DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -31,7 +29,7 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 caps.latest.revision: 60
 author: "barbkess" 
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

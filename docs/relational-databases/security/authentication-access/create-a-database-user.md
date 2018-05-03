@@ -2,9 +2,8 @@
 title: "Create a Database User | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,9 +26,9 @@ helpviewer_keywords:
   - "mapping database users"
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---   
 # Create a Database User

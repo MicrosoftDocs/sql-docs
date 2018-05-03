@@ -2,9 +2,8 @@
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-functions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,7 +25,7 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_get_audit_file (Transact-SQL)

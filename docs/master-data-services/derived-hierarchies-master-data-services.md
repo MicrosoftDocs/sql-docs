@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "derived hierarchies, about derived hierarchies"
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 caps.latest.revision: 13
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Derived Hierarchies (Master Data Services)
 

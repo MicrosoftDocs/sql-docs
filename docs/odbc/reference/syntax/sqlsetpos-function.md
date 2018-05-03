@@ -2,14 +2,11 @@
 title: "SQLSetPos Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -23,8 +20,8 @@ helpviewer_keywords:
   - "SQLSetPos function [ODBC]"
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLSetPos Function

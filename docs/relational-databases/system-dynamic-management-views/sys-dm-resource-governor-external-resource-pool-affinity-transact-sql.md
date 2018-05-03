@@ -2,9 +2,8 @@
 title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/13/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,8 +24,8 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 caps.latest.revision: 8
 author: "jeannt"
-ms.author: "edmaca"
-manager: "craigg"
+ms.author: edmaca
+manager: craigg
 ---
 # sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

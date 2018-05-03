@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/11/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Convert Types without Conversion Checking (SQL Server Import and Export Wizard)
   After you select the existing tables and views to copy or review the query that you provided, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard may show **Convert Types without Conversion Checking**. The wizard shows this page when it can't locate one or more of the data type conversion and mapping files that it needs to map data types between your source and destination. The page includes information that helps you to understand what's missing.

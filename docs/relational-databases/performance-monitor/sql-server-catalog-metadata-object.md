@@ -2,9 +2,8 @@
 title: "SQL Server, Catalog Metadata Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server, Catalog Metadata Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

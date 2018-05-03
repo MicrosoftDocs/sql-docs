@@ -2,9 +2,8 @@
 title: "sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,9 +22,9 @@ helpviewer_keywords:
   - "sys.sql_expression_dependencies catalog view"
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)

@@ -2,9 +2,8 @@
 title: "sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-functions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 caps.latest.revision: 9
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)

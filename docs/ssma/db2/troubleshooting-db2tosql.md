@@ -2,7 +2,6 @@
 title: "Troubleshooting (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,7 +17,7 @@ ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Troubleshooting (DB2ToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

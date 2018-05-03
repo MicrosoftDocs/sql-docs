@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # CDC Control Task Custom Properties
   The following table describes the custom properties of the CDC Control task. All properties are read/write.  

@@ -2,14 +2,11 @@
 title: "Perform a Forced Manual Failover of an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -19,9 +16,9 @@ helpviewer_keywords:
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 83
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Perform a Forced Manual Failover of an Availability Group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

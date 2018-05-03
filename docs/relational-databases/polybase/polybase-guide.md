@@ -1,9 +1,8 @@
 ---
 title: "PolyBase Guide | Microsoft Docs"
 ms.date: "05/30/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ helpviewer_keywords:
 caps.latest.revision: 26
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # PolyBase Guide
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

@@ -2,9 +2,8 @@
 title: "Requirements for CLR User-Defined Aggregates | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,7 +25,7 @@ ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 caps.latest.revision: 56
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 ---
 # CLR User-Defined Aggregates - Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

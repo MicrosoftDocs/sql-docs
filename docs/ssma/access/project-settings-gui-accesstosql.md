@@ -2,7 +2,6 @@
 title: "Project Settings (GUI) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,7 +17,7 @@ ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Project Settings (GUI) (AccessToSQL)
 The GUI project settings let you configure how data appears on the **Data** tab and if to include data reports with assessment reports.  

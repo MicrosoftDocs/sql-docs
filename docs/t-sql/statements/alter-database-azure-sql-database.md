@@ -8,15 +8,14 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "t-sql|statements"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
 caps.latest.revision: 37
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Azure SQL Database)

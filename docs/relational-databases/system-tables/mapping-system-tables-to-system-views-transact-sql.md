@@ -2,9 +2,8 @@
 title: "Mapping System Tables to System Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,9 +19,9 @@ helpviewer_keywords:
   - "system tables [SQL Server], mapping to catalog views"
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # Mapping System Tables to System Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

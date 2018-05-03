@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Lesson 3-1 - Copying the Deployment Bundle
 In this task, you will copy the deployment bundle to the destination computer.  

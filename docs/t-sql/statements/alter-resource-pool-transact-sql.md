@@ -2,14 +2,12 @@
 title: "ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,7 +21,7 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: 47
 author: "barbkess" 
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

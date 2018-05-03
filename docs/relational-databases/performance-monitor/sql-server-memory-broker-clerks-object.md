@@ -2,9 +2,8 @@
 title: "SQL Server, Memory Broker Clerks Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server, Memory Broker Clerks Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

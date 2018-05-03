@@ -1,11 +1,9 @@
 ---
 title: "DefinedSize Property | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "DefinedSize property [ADO]"
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DefinedSize Property
 Indicates the data capacity of a [Field](../../../ado/reference/ado-api/field-object.md) object.  

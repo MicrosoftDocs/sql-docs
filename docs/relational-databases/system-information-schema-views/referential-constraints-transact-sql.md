@@ -2,9 +2,8 @@
 title: "REFERENTIAL_CONSTRAINTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-information-schema-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,9 +21,9 @@ helpviewer_keywords:
   - "REFERENTIAL_CONSTRAINTS view"
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # REFERENTIAL_CONSTRAINTS (Transact-SQL)

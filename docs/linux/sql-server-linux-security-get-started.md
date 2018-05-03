@@ -3,12 +3,11 @@ title: Get started with SQL Server security on Linux | Microsoft Docs
 description: This article describes typical security actions.  
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"  
+manager: craigg  
 ms.date: 10/02/2017
 ms.topic: article  
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.technology: database-engine  

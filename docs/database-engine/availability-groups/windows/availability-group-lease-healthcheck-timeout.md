@@ -107,24 +107,35 @@ When increasing the Delay \* Threshold product to make the cluster timeout more 
 
 ### Lease Timeout 
 
-The lease mechanism is controlled by a single value specific to each AG in a WSFC cluster. To navigate to this value, find the target AG role in the roles tab in the Failover Cluster Manager. After selecting the AG role right click the AG resource at the bottom of the window and select properties. In the popup window, navigate to the properties tab and there will be a list of values specific to this AG, one of which is the LeaseTimeout value which can be changed in this menu. Depending on the AG’s configuration there may be additional resources for listeners, shared disks, file shares, etc., these do not require any additional configuration. 
+The lease mechanism is controlled by a single value specific to each AG in a WSFC cluster. To navigate to this value in Failover Cluster Manager:
 
-![](media/availability-group-lease-healthcheck-timeout/image2.png) 
+1. In the roles tab, find the target AG role. Click on the target AG role. 
+2. Right-click the AG resource at the bottom of the window and select **Properties**. 
 
-![](media/availability-group-lease-healthcheck-timeout/image3.png) 
+   ![Failover cluster manager](media/availability-group-lease-healthcheck-timeout/image2.png) 
 
+3. In the popup window, navigate to the properties tab and there will be a list of values specific to this AG. Click the LeaseTimeout vlue to change it. 
+
+   ![Properties](media/availability-group-lease-healthcheck-timeout/image3.png) 
+
+
+   Depending on the AG’s configuration there may be additional resources for listeners, shared disks, file shares, etc., these do not require any additional configuration. 
+
+   
 ### Health Check Values 
 
 The two values which control the Always On health check are FailureConditionLevel and HealthCheckTimeout. The FailureConditionLevel indicates the tolerance level to specific failure conditions reported by `sp_server_diagnostics` and the HealthCheckTimeout configures the time the resource DLL can go without receiving an update from `sp_server_diagnostics`. The update interval for `sp_server_diagnostics` is always HealthCheckTimeout / 3. 
 
-To configure the failover condition level, use the FAILURE\_CONDITION\_LEVEL = *n* option of the CREATE or ALTER AVAILABILITY GROUP T-SQL statement, where n is an integer between 1 and 5. The following command sets the failure condition level to 1 for AG ‘AG1’: 
+To configure the failover condition level, use the `FAILURE_CONDITION_LEVEL = <n>` option of the `CREATE` or `ALTER` `AVAILABILITY GROUP` statement, where `<n>` is an integer between 1 and 5. The following command sets the failure condition level to 1 for AG ‘AG1’: 
 
-`ALTER AVAILABILITY GROUP AG1 SET (FAILURE\_CONDITION\_LEVEL = 1); ` 
+```sql
+ALTER AVAILABILITY GROUP AG1 SET (FAILURE\_CONDITION\_LEVEL = 1); 
+```
 
-To configure the health check timeout, use the HEALTH\_CHECK\_TIMEOUT option of the ALTER or CREATE AVAILABILITY GROUP statements. The following command sets the health check timeout to 60000 milliseconds for AG AG1: 
+To configure the health check timeout, use the `HEALTH_CHECK_TIMEOUT` option of the `CREATE` or `ALTER` `AVAILABILITY GROUP` statements. The following command sets the health check timeout to 60000 milliseconds for AG AG1: 
 
 
-```SQL
+```sql
 ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 ```
 

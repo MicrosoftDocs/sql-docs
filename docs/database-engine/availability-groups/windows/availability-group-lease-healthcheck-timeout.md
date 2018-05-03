@@ -51,9 +51,9 @@ The lease is primarily a synchronization mechanism between the primary instance 
 
 ## Guidelines for cluster timeout values 
 
-Carefully consider the tradeoffs and understand the consequences of using less aggressive monitoring of your SQL Server cluster. Increasing cluster timeout values will increase tolerance of transient network issues but will slowdown reactions to hard failures. Increasing timeouts to deal with resource pressure or large geographical latency, will increase the time to recover from hard, or non-recoverable failures as well. While this is acceptable for many applications, it is not ideal in all cases. 
+Carefully consider the tradeoffs and understand the consequences of using less aggressive monitoring of your SQL Server cluster. Increasing cluster timeout values will increase tolerance of transient network issues but will slow down reactions to hard failures. Increasing timeouts to deal with resource pressure or large geographical latency, will increase the time to recover from hard, or non-recoverable failures as well. While this is acceptable for many applications, it is not ideal in all cases. 
 
-The default settings are optimized for quickly reacting to symptoms of hard failures and limiting downtime, but these settings can also be overly aggressive for certain workloads and configurations. It is not recommended to lower any of the `LeaseTimeout`, `CrossSubnetDelay`, `CrossSubnetThreshold`, `SameSubnetDelay`, `SameSubnetThreshold`, or `HealthCheckTimeout` beyond their default values. The correct settings for each deployment will vary and likely take a longer period of fine tuning to discover. When making changes to any of these values, make them gradually and with consideration of the relationships and dependencies between these values. 
+The default settings are optimized for quickly reacting to symptoms of hard failures and limiting downtime, but these settings can also be overly aggressive for certain workloads and configurations. It is not recommended to lower any of the `LeaseTimeout`, `CrossSubnetDelay`, `CrossSubnetThreshold`, `SameSubnetDelay`, `SameSubnetThreshold`, or `HealthCheckTimeout` beyond their default values. The correct settings for each deployment will vary and likely take a longer period of fine-tuning to discover. When making changes to any of these values, make them gradually and with consideration of the relationships and dependencies between these values. 
 
 ### Relationship between cluster timeout and lease timeout 
 
@@ -74,6 +74,15 @@ When the cluster fails over, the instance of SQL Server that hosts the previous 
 The health check timeout is more flexible because no other failover mechanism depends on it directly. The default value of 30 seconds sets the `sp_server_diagnostics` interval at 10 seconds, with a minimum value for 15 seconds for timeout and a 5 second interval. More generally, the `sp_server_diagnositcs` update interval is always 1/3 \* `HealthCheckTimeout`. When the resource DLL does not receive a new set of health data at an interval, it will continue to use the health data from the previous interval to determine the current AG and instance health. Increasing the health check timeout value will make the primary more tolerant of CPU pressure, which can prevent `sp_server_diagnostics` from providing new data at each interval, however, it will rely on outdated data health checks for longer. Regardless of the timeout value, once data is received indicating the replica is not healthy, the next `IsAlive` call will return that the instance is unhealthy and the cluster service will initiate a failover. 
 
 The failure condition level of the AG changes the failure conditions for the health check. For any failure level, if the AG element is reported unhealthy by `sp_server_diagnostics` then the health check will fail. Each level inherits all the failure conditions from the levels below it. 
+
+
+| Level | Condition under which the instance is considered dead
+|:---|---
+| 1: OnServerDown | Health check takes no action if any resources fail besides the AG. If AG data is not received within 5 intervals, or 5/3 \* HealthCheckTimeout
+| 2: OnServerUnresponsive | If no data is received from `sp_server_diagnostics` for the HealthCheckTimeout
+| 3: OnCriticalServerError | (Default) If the system component reports an error
+| 4: OnModerateServerError | If the resource component reports an error 
+| 5:  OnAnyQualifiedFailureConitions |  If the query processing component reports an error
 
   - Level 1: OnServerDown            - Health check takes no action if any resources fail besides the         AG. If AG data is not received         within 5 intervals, or 5/3 \* HealthCheckTimeout, then the AG is         considered dead. 
 
@@ -114,7 +123,7 @@ The lease mechanism is controlled by a single value specific to each AG in a WSF
 
    ![Failover cluster manager](media/availability-group-lease-healthcheck-timeout/image2.png) 
 
-3. In the popup window, navigate to the properties tab and there will be a list of values specific to this AG. Click the LeaseTimeout vlue to change it. 
+3. In the popup window, navigate to the properties tab and there will be a list of values specific to this AG. Click the LeaseTimeout value to change it. 
 
    ![Properties](media/availability-group-lease-healthcheck-timeout/image3.png) 
 

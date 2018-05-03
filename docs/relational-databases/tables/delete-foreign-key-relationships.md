@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "deleting foreign keys"
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

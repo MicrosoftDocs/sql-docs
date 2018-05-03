@@ -3,12 +3,10 @@ title: "SORT_IN_TEMPDB Option For Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "indexes"
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +18,8 @@ helpviewer_keywords:
   - "index creation [SQL Server], tempdb database"
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 caps.latest.revision: 26
-author: "barbkess"
-ms.author: "barbkess"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

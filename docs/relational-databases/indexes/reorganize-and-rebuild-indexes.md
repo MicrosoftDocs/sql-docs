@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "11/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -33,8 +31,8 @@ helpviewer_keywords:
   - "clustered indexes, defragmenting"
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: "barbkess"
-ms.author: "barbkess"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

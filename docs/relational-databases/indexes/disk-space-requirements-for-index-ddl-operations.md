@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +17,8 @@ helpviewer_keywords:
   - "temporary disk space [SQL Server]"
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 39
-author: "barbkess"
-ms.author: "barbkess"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Disk Space Requirements for Index DDL Operations

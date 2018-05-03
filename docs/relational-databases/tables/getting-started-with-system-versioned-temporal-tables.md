@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45

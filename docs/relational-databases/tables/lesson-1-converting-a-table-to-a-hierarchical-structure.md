@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 caps.latest.revision: 18
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Lesson 1: Converting a Table to a Hierarchical Structure

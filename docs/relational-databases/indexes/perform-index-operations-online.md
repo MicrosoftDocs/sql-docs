@@ -17,8 +17,7 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.suite: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.component: "indexes"
+ms.prod_service: "table-view-index, sql-database"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Perform Index Operations Online

@@ -3,12 +3,10 @@ title: "Set Index Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "indexes"
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -26,8 +24,8 @@ helpviewer_keywords:
   - "ONLINE"
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 caps.latest.revision: 44
-author: "barbkess"
-ms.author: "barbkess"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

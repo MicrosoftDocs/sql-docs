@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Lesson 1-2 - Populating a Table with Existing Hierarchical Data

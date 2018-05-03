@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/27/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "optimizing tables"
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Lesson 1-3 - Optimizing the NewOrg Table

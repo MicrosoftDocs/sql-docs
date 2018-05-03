@@ -3,12 +3,10 @@ title: "Modify Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "views"
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-views"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "renaming views"
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

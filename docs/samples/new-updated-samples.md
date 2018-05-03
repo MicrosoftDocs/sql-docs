@@ -1,7 +1,6 @@
 ---
 title: Updated - Samples for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Sample for Microsoft SQL Server.
-
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -11,7 +10,6 @@ ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
-
 ms.component: samples
 ms.date: 04/28/2018
 ---

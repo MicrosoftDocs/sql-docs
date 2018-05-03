@@ -128,7 +128,7 @@ Two values control the Always On health check: FailureConditionLevel and HealthC
 To configure the failover condition level, use the `FAILURE_CONDITION_LEVEL = <n>` option of the `CREATE` or `ALTER` `AVAILABILITY GROUP` statement, where `<n>` is an integer between 1 and 5. The following command sets the failure condition level to 1 for AG ‘AG1’: 
 
 ```sql
-ALTER AVAILABILITY GROUP AG1 SET (FAILURE\_CONDITION\_LEVEL = 1); 
+ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 
 ```
 
 To configure the health check timeout, use the `HEALTH_CHECK_TIMEOUT` option of the `CREATE` or `ALTER` `AVAILABILITY GROUP` statements. The following command sets the health check timeout to 60000 milliseconds for AG AG1: 

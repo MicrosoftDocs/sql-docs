@@ -6,7 +6,7 @@ ms.author: mikeray
 manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: ""
@@ -14,7 +14,6 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.workload: "On Demand"
 ---
 # Backup and restore SQL Server databases on Linux
 

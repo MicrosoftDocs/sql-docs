@@ -8,10 +8,9 @@ ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-query-tuning"
+ms.technology: performance
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, usage scenarios"
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
@@ -19,7 +18,6 @@ caps.latest.revision: 11
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Query Store Usage Scenarios

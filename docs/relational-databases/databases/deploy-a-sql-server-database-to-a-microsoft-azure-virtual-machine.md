@@ -11,7 +11,7 @@ ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.deploymentwizard.deploymentsettings.f1"
   - "sql13.swb.deploymentwizard.sourcesettings.f1"
@@ -41,7 +41,6 @@ caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Deploy a SQL Server Database to a Microsoft Azure Virtual Machine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

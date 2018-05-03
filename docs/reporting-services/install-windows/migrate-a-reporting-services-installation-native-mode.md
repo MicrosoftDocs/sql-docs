@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "manual Reporting Services migrations"
   - "Report Server Windows service"
@@ -26,7 +26,6 @@ caps.latest.revision: 54
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

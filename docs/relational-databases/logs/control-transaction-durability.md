@@ -2,16 +2,13 @@
 title: "Control Transaction Durability | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/16/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "logs"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-transaction-log"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "delayed durability"
   - "Lazy Commit"
@@ -20,7 +17,6 @@ caps.latest.revision: 27
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Control Transaction Durability

@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)"
 apilocation: 
@@ -25,7 +25,6 @@ caps.latest.revision: 18
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListReportServersInDatabase
   Returns the list of report server installations that are present in the report server database, regardless of whether they have access to secure information.  

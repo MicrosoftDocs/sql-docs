@@ -20,7 +20,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Parameter (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

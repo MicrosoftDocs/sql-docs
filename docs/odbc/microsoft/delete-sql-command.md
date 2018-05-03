@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DELETE [ODBC]"
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # DELETE - SQL Command
 Marks records for deletion.  

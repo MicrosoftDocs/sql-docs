@@ -11,13 +11,12 @@ ms.custom: ""
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Enable a report server for Power BI Mobile access
 You can use the Power BI Mobile app to consume Mobile Reports. There are a few things that you need to configure to allow the Power BI Mobile app to connect to Reporting Services.  

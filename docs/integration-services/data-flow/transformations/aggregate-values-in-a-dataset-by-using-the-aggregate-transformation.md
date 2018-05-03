@@ -2,7 +2,7 @@
 title: "Aggregate Values in a Dataset by Using the Aggregate Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Aggregate transformation [Integration Services]"
   - "aggregate values [Integration Services]"
@@ -21,7 +21,6 @@ caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Aggregate Values in a Dataset by Using the Aggregate Transformation
   To add and configure an Aggregate transformation, the package must already include at least one Data Flow task and one source.  

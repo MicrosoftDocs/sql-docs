@@ -16,7 +16,6 @@ ms.topic: "reference"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Choosing between URL access and SOAP in Reporting Services
 

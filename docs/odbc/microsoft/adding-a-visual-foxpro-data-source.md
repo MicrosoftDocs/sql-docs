@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual FoxPro data source [ODBC], adding"
   - "adding data sources [ODBC], Visual FoxPro ODBC driver"
@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Adding a Visual FoxPro Data Source
 To access Visual FoxPro data from your application, you must have a data source. You can create a data source as follows:  

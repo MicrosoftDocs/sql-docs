@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.udfproperties.general.f1"
   - "sql13.swb.functionproperties.general.f1"
@@ -25,7 +25,6 @@ caps.latest.revision: 30
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View User-defined Functions

@@ -27,7 +27,6 @@ caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_get_audit_file (Transact-SQL)

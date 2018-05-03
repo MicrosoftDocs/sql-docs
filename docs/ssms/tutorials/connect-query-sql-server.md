@@ -10,6 +10,8 @@ ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
+ms.prod: sql
+ms.technology: ssms
 ---
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio
@@ -45,8 +47,6 @@ If you don't have access to a SQL Server instance, select your platform from the
 
     - For **Server type**, select **Database Engine** (usually the default option).
     - For **Server name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).  
-
-    !["Server name" field with example instance name](media/connect-query-sql-server/connection.png)
 
     !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection2.png)
 

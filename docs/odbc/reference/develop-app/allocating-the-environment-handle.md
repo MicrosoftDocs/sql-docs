@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], environment handles"
   - "allocating environment handles [ODBC]"
@@ -25,7 +25,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Allocating the Environment Handle
 The first task for any ODBC application is to load the Driver Manager; how this is done is operating-system dependent. For example, on a computer running Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional, or Microsoft Windows® 95/98, the application either links to the Driver Manager library or calls **LoadLibrary** to load the Driver Manager DLL.  

@@ -2,7 +2,7 @@
 title: "Generate Mirror Tables and CDC Capture Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "change-data-capture"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "mirTab"
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Generate Mirror Tables and CDC Capture Instances
   Use the Generate Mirror Tables page to generate the mirror tables for the tables you included in the CDC instance  

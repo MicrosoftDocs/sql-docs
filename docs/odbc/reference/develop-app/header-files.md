@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "header files [ODBC]"
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Header Files
 The Sql.h header file contains prototypes for the functions and features in the Core ODBC Interface conformance level. The Sqlext.h header file contains prototypes for the functions and features in the Level 1 and Level 2 API conformance levels. The Sqltypes.h header file contains type definitions and indicators for the SQL data types.  

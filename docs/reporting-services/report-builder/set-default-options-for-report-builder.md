@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Set default options for Report Builder
   In Report Builder, you can set a number of useful defaults to make report authoring easier and faster.  For example, if you can set or change the default report server, Report Builder saves your reports to the same report server automatically, unless you specify otherwise.  

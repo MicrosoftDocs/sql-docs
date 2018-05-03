@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-data-compression"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "page compression [Database Engine]"
   - "indexes [SQL Server], compressed"
@@ -29,7 +29,6 @@ caps.latest.revision: 60
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Data Compression

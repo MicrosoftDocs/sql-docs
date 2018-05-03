@@ -21,7 +21,6 @@ caps.latest.revision: 68
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Install Reporting Services 2016 native mode report server
 

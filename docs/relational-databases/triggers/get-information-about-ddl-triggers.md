@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-ddl"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "metadata [SQL Server], triggers"
   - "status information [SQL Server], DDL triggers"
@@ -21,7 +21,6 @@ caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Get Information About DDL Triggers

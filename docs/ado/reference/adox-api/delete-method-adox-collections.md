@@ -37,7 +37,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Delete Method (ADOX Collections)
 Removes an object from a collection.  

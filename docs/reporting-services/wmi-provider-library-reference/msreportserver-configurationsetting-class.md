@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "MSReportServer_ConfigurationSetting Class"
 apilocation: 
@@ -26,7 +26,6 @@ caps.latest.revision: 39
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # MSReportServer_ConfigurationSetting Class
   Represents the installation and runtime parameters of a report server instance. These parameters are stored in the configuration file for the report server.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC], scalar function"
   - "scalar functions [ODBC], escape sequences"
@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Scalar Function Escape Sequence
 ODBC uses escape sequences for scalar functions. The syntax of this escape sequence is as follows:  

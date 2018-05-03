@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "literals [ODBC]"
   - "ODBC literals [ODBC], about literals"
@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Literals in ODBC
 The syntax in the following sections is used for interval and numeric literals in ODBC. This syntax is provided here as an aid to driver writers when conversions are performed from a character string type to a numeric or interval type, or from a numeric or interval type to a character string type. For more information, see [Interval Literals](../../../odbc/reference/appendixes/interval-literals.md) and [Numeric Literals](../../../odbc/reference/appendixes/numeric-literals.md) in Appendix D: Data Types.  

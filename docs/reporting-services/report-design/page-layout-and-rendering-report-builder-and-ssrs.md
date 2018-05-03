@@ -12,13 +12,12 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Page Layout and Rendering (Report Builder and SSRS)
 Read about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendering extensions for paginated reports so you’re sure your report looks the way you want, including page layout, page breaks, and paper size. 

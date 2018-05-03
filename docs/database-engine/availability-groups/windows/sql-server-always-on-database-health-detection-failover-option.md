@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology:
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to:
   - "SQL Server 2016"
 helpviewer_keywords:
@@ -25,7 +25,6 @@ caps.latest.revision: 4
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Availability group database level health detection failover option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

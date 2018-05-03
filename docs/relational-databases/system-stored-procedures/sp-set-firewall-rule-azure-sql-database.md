@@ -27,7 +27,6 @@ caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_set_firewall_rule (Azure SQL Database)

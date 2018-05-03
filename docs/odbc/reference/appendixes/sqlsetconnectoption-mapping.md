@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetConnectOption function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLSetConnectOption"
@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLSetConnectOption Mapping
 When an ODBC 2.*x* application calls **SQLSetConnectOption** through an ODBC 3*.x* driver, the call to  

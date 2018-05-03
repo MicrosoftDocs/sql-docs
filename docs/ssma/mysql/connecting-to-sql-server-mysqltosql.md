@@ -1,6 +1,6 @@
 ---
 title: "Connecting to SQL Server (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
@@ -8,10 +8,9 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -23,7 +22,6 @@ caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Connecting to SQL Server (MySQLToSQL)
 To migrate MySQL databases to SQL Server, you must connect to the target instance of SQL Server. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Server and displays database metadata in the SQL Server Metadata Explorer. SSMA stores information of the instance of SQL Server you are connected to, but does not store passwords.  

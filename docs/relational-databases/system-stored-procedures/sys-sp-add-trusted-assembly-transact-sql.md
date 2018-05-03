@@ -26,7 +26,6 @@ caps.latest.revision:
 author: "tmullaney"
 ms.author: "thmullan"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.sp_add_trusted_assembly (Transact-SQL)  

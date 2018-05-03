@@ -27,7 +27,6 @@ caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.bandwidth_usage (Azure SQL Database)

@@ -11,12 +11,11 @@ ms.suite: "pro-bi"
 ms.technology: 
   
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 # Import data by using a native query

@@ -30,7 +30,6 @@ caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SUSER_NAME (Transact-SQL)

@@ -24,7 +24,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Members Collection (ADO MD)
 Contains the [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) objects from a level or a position along an axis.  

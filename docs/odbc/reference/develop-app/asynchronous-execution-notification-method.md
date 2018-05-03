@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Asynchronous Execution (Notification Method)
 ODBC allows asynchronous execution of connection and statement operations. An application thread can call an ODBC function in asynchronous mode and the function can return before the operation is complete, allowing the application thread to perform other tasks. In the Windows 7 SDK, for asynchronous statement or connection operations, an application determined that the asynchronous operation was complete using the polling method. For more information, see [Asynchronous Execution (Polling Method)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Beginning in the Windows 8 SDK, you can determine that an asynchronous operation is complete using the notification method.  

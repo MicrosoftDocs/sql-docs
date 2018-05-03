@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hardware requirements [ODBC], desktop database drivers"
   - "software requirements [ODBC], desktop database drivers"
@@ -22,7 +22,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Hardware and Software Requirements (ODBC)
 This topic lists requirements for using the ODBC Desktop Database Drivers.  

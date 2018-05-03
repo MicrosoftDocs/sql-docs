@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC data source administrator [ODBC], about ODBC data source administrator"
   - "ODBC data source administrator [ODBC]"
@@ -20,7 +20,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Active"
 ---
 # ODBC Data Source Administrator
 The Microsoft® ODBC Data Source Administrator manages database drivers and data sources. This application is located in the Windows Control Panel under **Administrative Tools**. Beginning in Windows 8, the icon is named **ODBC Data Sources**, and on 64-bit operating systems there is a 32-bit and 64-bit version.  

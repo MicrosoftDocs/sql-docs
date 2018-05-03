@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 7c9bfbc8-3ba6-491f-a7eb-380bb3d98b86
 caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Step 2: Create a SQL database for Java development
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

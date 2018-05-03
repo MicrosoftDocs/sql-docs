@@ -30,7 +30,6 @@ caps.latest.revision: 49
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # System Stored Procedures (Transact-SQL)

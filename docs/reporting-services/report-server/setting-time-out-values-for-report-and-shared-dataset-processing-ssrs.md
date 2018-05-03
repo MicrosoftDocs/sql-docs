@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "time-outs [Reporting Services]"
   - "query time-outs [Reporting Services]"
@@ -23,7 +23,6 @@ caps.latest.revision: 39
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Setting Time-out Values for Report and Shared Dataset Processing (SSRS)
   You can [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specify time-out values to set limits on how system resources are used. Report server supports two time-out values:  

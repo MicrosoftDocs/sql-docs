@@ -29,7 +29,6 @@ caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_virtualservernodes (Transact-SQL)

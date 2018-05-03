@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Reporting Services], configuring"
   - "rsconfig utility"
@@ -24,7 +24,6 @@ caps.latest.revision: 47
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # rsconfig Utility (SSRS)
   The **rsconfig.exe** utility encrypts and stores connection and account values in the RSReportServer.config file. Encrypted values include report server database connection information and account values used for unattended report processing.  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLNativeSql function [ODBC], Cursor Library"
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLNativeSql (Cursor Library)
 > [!IMPORTANT]  

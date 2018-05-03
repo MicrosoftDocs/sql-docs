@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CREATE INDEX [ODBC]"
   - "Paradox driver [ODBC], create index"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # CREATE INDEX for Paradox
 The syntax of the CREATE INDEX statement for the ODBC Paradox driver is:  

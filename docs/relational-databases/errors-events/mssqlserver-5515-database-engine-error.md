@@ -8,8 +8,7 @@ ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
@@ -20,7 +19,6 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5515
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

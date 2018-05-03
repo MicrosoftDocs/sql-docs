@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Customization File Logs Section
 The **logs** section contains a log file entry, which specifies the name of a file that records errors during the operation of the **DataFactory**.  

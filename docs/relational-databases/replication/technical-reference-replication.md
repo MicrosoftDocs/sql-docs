@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "technical reference [SQL Server replication]"
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Technical Reference (Replication)

@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ListReservedURLs method"
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
@@ -20,7 +20,6 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListReservedURLs
   Lists URLs reserved for all applications on the report server.  

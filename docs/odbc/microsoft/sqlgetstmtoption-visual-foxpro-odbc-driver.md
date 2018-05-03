@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetStmtOption function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLGetStmtOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

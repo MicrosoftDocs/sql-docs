@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "outer join escape sequence [ODBC]"
   - "escape sequences [ODBC], outer join"
@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Outer Join Escape Sequence
 ODBC uses escape sequences for outer joins. The syntax of this escape sequence is as follows:  

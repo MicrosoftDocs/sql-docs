@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "native Visual FoxPro language syntax [ODBC]"
   - "FoxPro ODBC driver [ODBC], SQL grammar"
@@ -25,7 +25,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Supported ODBC SQL Grammar (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports the following:  

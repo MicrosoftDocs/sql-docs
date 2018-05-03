@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # FormattedValue Property (ADO MD)
 Indicates the formatted display of a [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) value.  

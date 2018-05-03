@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)"
 apilocation: 
@@ -25,7 +25,6 @@ caps.latest.revision: 20
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - DeleteEncryptionKey
   Deletes the encryption keys from the report server database.  

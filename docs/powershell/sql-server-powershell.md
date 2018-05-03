@@ -2,7 +2,7 @@
 title: "SQL Server PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "powershell"
 ms.service: ""
 ms.component: "powershell"
@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

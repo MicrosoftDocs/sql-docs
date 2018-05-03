@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLNumParams function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLNumParams (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetStmtOption function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36
@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLSetStmtOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

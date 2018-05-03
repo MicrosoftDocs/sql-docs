@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Handler Property Example (VB)
 > [!IMPORTANT]

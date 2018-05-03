@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], interval data types"
   - "interval data type [ODBC], structure"
@@ -21,7 +21,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # C Interval Structure
 Each of the C interval data types listed in the [C Data Types](../../../odbc/reference/appendixes/c-data-types.md) section uses the same structure to contain the interval data. When **SQLFetch**, **SQLFetchScroll**, or **SQLGetData** is called, the driver returns data into the SQL_INTERVAL_STRUCT structure, uses the value that was specified by the application for the C data types (in the call to **SQLBindCol**, **SQLGetData**, or **SQLBindParameter**) to interpret the contents of SQL_INTERVAL_STRUCT, and populates the *interval_type* field of the structure with the *enum* value corresponding to the C type. Note that drivers do not read the *interval_type* field to determine the type of the interval; they retrieve the value of the SQL_DESC_CONCISE_TYPE descriptor field. When the structure is used for parameter data, the driver uses the value specified by the application in the SQL_DESC_CONCISE_TYPE field of the APD to interpret the contents of SQL_INTERVAL_STRUCT, even if the application sets the value of the *interval_type* field to a different value.  

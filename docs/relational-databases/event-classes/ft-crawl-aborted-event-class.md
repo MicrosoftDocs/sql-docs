@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Crawl Aborted event class"
 ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # FT:Crawl Aborted Event Class

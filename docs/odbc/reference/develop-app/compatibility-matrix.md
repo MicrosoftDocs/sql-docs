@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "driver compatibility issues [ODBC]"
   - "ODBC drivers [ODBC], backward compatibility"
@@ -25,7 +25,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Compatibility Matrix
 The following table describes the compatibility of the types of applications and drivers defined previously in this section.  

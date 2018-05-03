@@ -15,7 +15,6 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.workload: "Inactive"
 ---
 # Business continuity and database recovery - SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

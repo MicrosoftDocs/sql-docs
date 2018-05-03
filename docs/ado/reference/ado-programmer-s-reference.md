@@ -18,7 +18,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # ADO Programmer&#39;s Reference
 This section contains the following topics.  

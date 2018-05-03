@@ -20,7 +20,6 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # HelloData: A Simple ADO Application
 This simple application steps through each of the four major ADO operations: getting, examining, editing, and updating data. These operations are performed against the Northwind sample database included with Microsoft® SQL Server. To focus on the fundamentals of ADO and to prevent code clutter, error handling in the example is minimal.  

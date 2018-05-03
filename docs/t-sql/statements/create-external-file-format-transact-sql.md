@@ -26,7 +26,6 @@ caps.latest.revision: 25
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)

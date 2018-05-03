@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Studio Analyzer [ODBC], about Visual Studio Analyzer"
   - "Visual Studio Analyzer [ODBC]"
@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Visual Studio Analyzer
 > [!IMPORTANT]  

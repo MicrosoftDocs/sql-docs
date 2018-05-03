@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Unicode [ODBC], functions"
   - "driver manager [ODBC], function mapping"
@@ -21,7 +21,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Function Mapping in the Driver Manager
 The driver manager supports two entry points for functions that take string arguments. The undecorated function (**SQLDriverConnect**) is the ANSI form of the function. The Unicode form is decorated with a *W* (**SQLDriverConnectW**.)  

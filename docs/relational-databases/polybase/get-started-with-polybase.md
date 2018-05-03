@@ -25,7 +25,6 @@ caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg" 
-ms.workload: "On Demand"
 ---
 # Get started with PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,33 +39,10 @@ ms.workload: "On Demand"
   
 -   An understanding of how to manage PolyBase objects in SQL Server Management Studio (SSMS)  
   
--   Examples of queries using PolyBase objects  
-  
-## Prerequisites  
- An instance of  [SQL Server (64-bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) with the following:  
-  
--   Microsoft .NET Framework 4.5.  
-  
--   Oracle Java SE RunTime Environment (JRE) version 7.51 or higher (64-bit). (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present.   
-  
--   Minimum memory: 4 GB  
-  
--   Minimum hard disk space: 2 GB    
-
--   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) SQL Server Developer and Express editions have TCP/IP disabled by default. PolyBase can be installed but will not fully start until TCP/IP is enabled. You must manually enable TCP/IP to have PolyBase functionality. 
-  
- 
- An external data source, one of the following:  
-  
--   Hadoop cluster. For supported versions see [Configure PolyBase](#supported).  
-
--   Azure Blob storage
-
-> [!NOTE]
->   If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail. 
+-   Examples of queries using PolyBase objects    
 
 ## Install PolyBase  
- If you haven't installed PolyBase, see  [PolyBase installation](../../relational-databases/polybase/polybase-installation.md).  
+If you haven't installed PolyBase, see [PolyBase installation](../../relational-databases/polybase/polybase-installation.md). The installation article explains the prerequisites.
   
 ### How to confirm installation  
  After installation, run the following command to confirm that PolyBase has been successfully installed. If PolyBase is installed, returns 1; otherwise, 0.  
@@ -86,7 +62,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9 - 5.12 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux  
   
 -   Azure Blob Storage  
  

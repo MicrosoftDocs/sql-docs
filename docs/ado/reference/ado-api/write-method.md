@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Write Method
 Writes binary data to a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

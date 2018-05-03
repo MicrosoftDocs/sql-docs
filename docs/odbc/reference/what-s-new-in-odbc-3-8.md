@@ -11,13 +11,12 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # What&#39;s New in ODBC 3.8
 Windows 8 includes an updated version of ODBC 3.8. ODBC 3.8 in Windows 8 includes the following features:  

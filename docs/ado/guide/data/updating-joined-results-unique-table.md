@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Updating JOINed Results: Unique Table
 ADO enables you to closely control modifications to a particular base table in a Recordset that was formed by a JOIN operation on multiple base tables using the Unique Table dynamic property. For details on using Unique Table, refer to the ADO Programmer's Reference topics on the Unique Table and Update Resynch dynamic properties.  

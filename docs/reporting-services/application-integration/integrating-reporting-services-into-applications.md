@@ -18,7 +18,6 @@ applies_to:
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Integrating Reporting Services into Applications
 

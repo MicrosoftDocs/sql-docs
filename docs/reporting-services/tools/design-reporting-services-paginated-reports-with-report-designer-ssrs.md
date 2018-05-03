@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], report creation"
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
@@ -20,7 +20,6 @@ caps.latest.revision: 77
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Design Reporting Services Paginated Reports with Report Designer (SSRS)

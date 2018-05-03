@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBulkOperations function [ODBC], Cursor Library"
 ms.assetid: f6c55be1-f020-4ae2-a423-ef8a0d877e20
@@ -19,7 +19,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLBulkOperations and the Cursor Library
 > [!IMPORTANT]  

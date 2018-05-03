@@ -5,13 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: "sql"
 ms.prod_service: "sql-tools"
 ms.service: ""
-ms.component: "ssms-scripting"
+ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server], PowerShell"
   - "scripts [SQL Server]"
@@ -22,7 +22,6 @@ caps.latest.revision: 23
 author: "mightypen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Database Engine Scripting

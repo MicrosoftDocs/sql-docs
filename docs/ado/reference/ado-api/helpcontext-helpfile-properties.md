@@ -28,7 +28,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # HelpContext, HelpFile Properties
 Indicates the Help file and topic associated with an [Error](../../../ado/reference/ado-api/error-object.md) object.  

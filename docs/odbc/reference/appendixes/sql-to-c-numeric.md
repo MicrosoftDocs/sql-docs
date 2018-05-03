@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data conversions from SQL to C types [ODBC], numeric"
   - "numeric data type [ODBC], converting"
@@ -21,7 +21,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQL to C: Numeric
 The identifiers for the numeric ODBC SQL data types are:  

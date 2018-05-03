@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Internet Server Error: Access Denied
 If you get this error, it usually means that Microsoft Internet Information Services (IIS) returned the following status:  

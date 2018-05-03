@@ -2,7 +2,7 @@
 title: "Configure Cluster Quorum NodeWeight Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "failover-clusters"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Configure Cluster Quorum NodeWeight Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +60,12 @@ ms.workload: "On Demand"
 4.  Output the cluster node properties in a readable format.  
   
 ### Example (Powershell)  
- The following example changes the NodeWeight setting to remove the quorum vote for the “Always OnSrv1” node, and then outputs the settings for all nodes in the cluster.  
+ The following example changes the NodeWeight setting to remove the quorum vote for the “AlwaysOnSrv1” node, and then outputs the settings for all nodes in the cluster.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “Always OnSrv1”  
+$node = “AlwaysOnSrv1”  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -87,10 +86,10 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Use **cluster.exe** to set `NodeWeight` values.  
   
 ### Example (Cluster.exe)  
- The following example changes the NodeWeight value to remove the quorum vote of the “Always OnSrv1” node in the “Cluster001” cluster.  
+ The following example changes the NodeWeight value to remove the quorum vote of the “AlwaysOnSrv1” node in the “Cluster001” cluster.  
   
 ```ms-dos  
-cluster.exe Cluster001 node Always OnSrv1 /prop NodeWeight=0  
+cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
 ```  
   
 ##  <a name="RelatedContent"></a> Related Content  

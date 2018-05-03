@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
   - "SharePoint integration [Reporting Services], permissions"
@@ -23,7 +23,6 @@ caps.latest.revision: 14
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # SharePoint Site and List Permission Reference for Report Server Items
   This topic provides a reference of the permissions in SharePoint that can be used to grant access to report server operations for a report server that runs in SharePoint integrated mode. If you are creating custom permission levels, this topic can help you choose which permissions to use.  

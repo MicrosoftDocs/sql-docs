@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Append Method (ADOX Tables)
 Adds a new [Table](../../../ado/reference/adox-api/table-object-adox.md) object to the [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) collection.  

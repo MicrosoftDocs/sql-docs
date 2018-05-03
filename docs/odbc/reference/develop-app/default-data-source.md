@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], connection functions"
   - "connecting to data source [ODBC], default data source"
@@ -28,7 +28,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Default Data Source
 The driver may select a data source, called the default data source, in certain cases where the application does not explicitly specify one:  

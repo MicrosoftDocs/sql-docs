@@ -22,7 +22,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Append Method (ADOX Indexes)
 Adds a new [Index](../../../ado/reference/adox-api/index-object-adox.md) object to the [Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) collection.  

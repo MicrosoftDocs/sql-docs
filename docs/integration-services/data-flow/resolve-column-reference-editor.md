@@ -2,7 +2,7 @@
 title: "Resolve Column Reference Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
 ms.service: ""
 ms.component: "data-flow"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.resolvereferences.preview.F1"
   - "sql13.dts.designer.resolvereferences.mapper.F1"
@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Resolve Column Reference Editor
   When an input path is disconnected or if there are any unmapped columns in the path, an error icon is displayed beside the corresponding data path. To simplify the resolution of column reference errors, the Resolve References editor allows you to link unmapped output columns with unmapped input columns for all paths in the execution tree. The Resolve References editor will also highlight the paths to indicate which paths are being resolved.  

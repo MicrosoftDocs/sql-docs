@@ -2,16 +2,13 @@
 title: "The Transaction Log (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "logs"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-transaction-log"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], about"
   - "databases [SQL Server], transaction logs"
@@ -21,7 +18,6 @@ caps.latest.revision: 65
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # The Transaction Log (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

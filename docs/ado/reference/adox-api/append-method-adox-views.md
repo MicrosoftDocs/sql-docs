@@ -23,7 +23,6 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Append Method (ADOX Views)
 Creates a new [View](../../../ado/reference/adox-api/view-object-adox.md) object and appends it to the [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection.  

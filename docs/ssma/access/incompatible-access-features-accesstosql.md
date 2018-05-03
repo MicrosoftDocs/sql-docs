@@ -2,7 +2,6 @@
 title: "Incompatible Access Features (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -36,7 +35,7 @@ ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Incompatible Access Features (AccessToSQL)
 Not all Access database features are compatible with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and Access have different sets of reserved keywords. Issues such as these can prevent a successful migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Use the following table to learn about possible migration issues and what you can do about them.  

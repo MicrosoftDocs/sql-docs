@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_defaultlanguage"
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_defaultlanguage (Transact-SQL)

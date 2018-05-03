@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_setsubscriptionxactseqno"
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_setsubscriptionxactseqno (Transact-SQL)

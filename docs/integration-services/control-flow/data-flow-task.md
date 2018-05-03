@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Data Flow Task
   The Data Flow task encapsulates the data flow engine that moves data between sources and destinations, and lets the user transform, clean, and modify data as it is moved. Addition of a Data Flow task to a package control flow makes it possible for the package to extract, transform, and load data.  

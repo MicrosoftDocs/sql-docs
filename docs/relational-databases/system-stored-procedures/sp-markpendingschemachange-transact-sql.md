@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_markpendingschemachange"
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_markpendingschemachange (Transact-SQL)

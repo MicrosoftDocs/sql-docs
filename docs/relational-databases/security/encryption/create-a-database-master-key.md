@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database master key [SQL Server], creating"
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

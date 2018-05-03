@@ -2,14 +2,12 @@
 title: "CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "pdw"
-ms.service: ""
 ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,7 +16,7 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # CREATE DIAGNOSTICS SESSION (Transact-SQL)

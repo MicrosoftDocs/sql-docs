@@ -16,7 +16,7 @@ ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Close a Trace Window (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

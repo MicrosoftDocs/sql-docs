@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "security_policies catalog view"
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

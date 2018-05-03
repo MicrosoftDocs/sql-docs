@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "cdc.<capture_instance>_CT"
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)

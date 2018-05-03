@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "firewall systems, Azure SQL Database"
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

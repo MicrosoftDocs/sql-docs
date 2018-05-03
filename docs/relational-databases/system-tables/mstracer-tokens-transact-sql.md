@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MStracer_tokens system table"
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MStracer_tokens (Transact-SQL)

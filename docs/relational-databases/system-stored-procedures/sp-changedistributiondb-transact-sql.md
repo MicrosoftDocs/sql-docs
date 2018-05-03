@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_changedistributiondb"
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changedistributiondb (Transact-SQL)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Data Mining Model Training Destination Custom Properties
   The Data Mining Model Training destination has both custom properties and the properties common to all data flow components.  

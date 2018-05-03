@@ -15,7 +15,7 @@ ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Open a Trace Table (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

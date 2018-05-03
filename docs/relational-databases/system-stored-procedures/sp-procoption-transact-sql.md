@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_procoption"
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_procoption (Transact-SQL)

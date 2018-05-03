@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_replmonitorhelpmergesession"
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_replmonitorhelpmergesession (Transact-SQL)

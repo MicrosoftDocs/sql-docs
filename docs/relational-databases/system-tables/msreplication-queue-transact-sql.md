@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSreplication_queue system table"
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSreplication_queue (Transact-SQL)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "1807 (Database Engine error)"
 ms.assetid: 13c1b240-098b-4d9e-89aa-21599548e074
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_1807

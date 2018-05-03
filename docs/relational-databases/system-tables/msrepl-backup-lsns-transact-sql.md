@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSrepl_backup_Isns system table"
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSrepl_backup_lsns (Transact-SQL)

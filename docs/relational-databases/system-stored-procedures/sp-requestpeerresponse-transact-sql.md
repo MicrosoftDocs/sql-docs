@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_requestpeerresponse"
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_requestpeerresponse (Transact-SQL)

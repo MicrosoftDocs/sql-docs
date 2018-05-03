@@ -2,7 +2,7 @@
 title: "executeUpdate Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

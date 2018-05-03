@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.master_key_passwords catalog view"
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.master_key_passwords (Transact-SQL)

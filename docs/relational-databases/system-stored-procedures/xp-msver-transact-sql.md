@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "xp_msver"
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # xp_msver (Transact-SQL)

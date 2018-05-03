@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpmergefilter"
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpmergefilter (Transact-SQL)

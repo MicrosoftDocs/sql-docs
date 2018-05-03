@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_past_partition_mappings system table"
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_past_partition_mappings (Transact-SQL)

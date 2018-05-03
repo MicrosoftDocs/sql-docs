@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSdistpublishers system table"
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSdistpublishers (Transact-SQL)

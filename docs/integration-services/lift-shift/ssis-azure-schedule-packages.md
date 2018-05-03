@@ -4,7 +4,6 @@ ms.date: "04/17/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
@@ -12,7 +11,7 @@ ms.technology:
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Schedule the execution of an SSIS package on Azure
 You can schedule the execution of packages stored in the SSISDB Catalog database on an Azure SQL Database server by choosing one of the following scheduling options:

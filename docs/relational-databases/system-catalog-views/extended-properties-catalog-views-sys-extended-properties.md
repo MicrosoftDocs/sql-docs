@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.extended_properties catalog view"
 ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

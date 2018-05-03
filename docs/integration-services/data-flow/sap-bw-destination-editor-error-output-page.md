@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # SAP BW Destination Editor (Error Output Page)
   Use the **Error Output** page of the **SAP BW Destination Editor** to specify error handling options.  

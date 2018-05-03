@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_droparticle"
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_droparticle (Transact-SQL)

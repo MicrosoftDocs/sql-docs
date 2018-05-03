@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "error numbers [SQL Server]"
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Messages (for errors) Catalog Views - sys.messages

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_enumcustomresolvers"
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_enumcustomresolvers (Transact-SQL)

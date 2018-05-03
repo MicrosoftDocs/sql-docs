@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "resource_governor_external_resource_pools"
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.resource_governor_external_resource_pools (Transact-SQL)

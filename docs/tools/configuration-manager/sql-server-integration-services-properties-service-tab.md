@@ -13,7 +13,7 @@ ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server Integration Services Properties (Service Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

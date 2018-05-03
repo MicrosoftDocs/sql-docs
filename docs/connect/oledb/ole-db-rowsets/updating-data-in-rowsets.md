@@ -3,7 +3,7 @@ title: "Updating Data in Rowsets | Microsoft Docs"
 description: "Updating data in rowsets using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "ole-db-rowsets"
 ms.reviewer: ""

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # ODBC Destination Custom Properties
   The following table describes the custom properties of the ODBC destination. All properties can be set from SSIS property expressions.  

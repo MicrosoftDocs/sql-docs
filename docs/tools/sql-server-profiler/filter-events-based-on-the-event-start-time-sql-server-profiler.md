@@ -18,7 +18,7 @@ ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Filter Events Based on the Event Start Time (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

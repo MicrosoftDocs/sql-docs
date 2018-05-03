@@ -13,7 +13,7 @@ ms.assetid: 88e0f096-d746-4b7d-a5a4-73c5dc139f30
 caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Analysis Server &lt;server&gt; (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

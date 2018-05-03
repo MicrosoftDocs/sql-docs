@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_removedbreplication"
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_removedbreplication (Transact-SQL)

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "query_store_runtime_stats_interval catalog view"
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

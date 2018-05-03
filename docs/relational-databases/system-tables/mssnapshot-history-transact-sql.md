@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSsnapshot_history system table"
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSsnapshot_history (Transact-SQL)

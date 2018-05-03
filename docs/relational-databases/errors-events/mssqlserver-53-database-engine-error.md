@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "53 (Database Engine error)"
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_53

@@ -2,7 +2,7 @@
 title: "Replication Subscribers and Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

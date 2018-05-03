@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Configure Threshold Values for Cleansing and Matching
 

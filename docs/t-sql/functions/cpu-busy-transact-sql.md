@@ -2,14 +2,12 @@
 title: "@@CPU_BUSY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,9 +25,9 @@ helpviewer_keywords:
   - "CPU [SQL Server], activity"
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # &#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

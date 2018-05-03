@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sys.query_store_plan catalog view"
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -17,7 +17,7 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Protocols for MSSQLSERVER Properties (Certificate Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

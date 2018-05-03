@@ -13,7 +13,7 @@ ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Report Server Properties (Advanced Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSrepl_transactions system table"
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSrepl_transactions (Transact-SQL)

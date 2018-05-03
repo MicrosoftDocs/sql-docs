@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_replrestart"
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_replrestart (Transact-SQL)

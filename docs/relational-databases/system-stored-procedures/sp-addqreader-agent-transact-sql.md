@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addqreader_agent"
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addqreader_agent (Transact-SQL)

@@ -1,7 +1,7 @@
 ---
 title: "Using Always Encrypted with the PHP Drivers for SQL Server | Microsoft Docs"
 ms.date: "01/08/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.suite: "sql"

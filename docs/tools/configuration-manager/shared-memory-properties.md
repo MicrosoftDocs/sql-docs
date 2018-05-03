@@ -15,7 +15,7 @@ ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Shared Memory Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

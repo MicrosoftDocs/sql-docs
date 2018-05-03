@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.asymmetric_keys catalog view"
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

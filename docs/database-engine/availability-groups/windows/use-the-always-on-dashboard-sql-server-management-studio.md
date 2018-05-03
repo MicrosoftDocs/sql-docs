@@ -2,7 +2,7 @@
 title: "Use the Always On availability group dashboard (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/30/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

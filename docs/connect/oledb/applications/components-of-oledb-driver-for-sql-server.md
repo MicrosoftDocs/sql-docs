@@ -3,7 +3,7 @@ title: "Components of OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Components of OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|applications"
 ms.reviewer: ""

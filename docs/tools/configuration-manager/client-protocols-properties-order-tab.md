@@ -15,7 +15,7 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Client Protocols Properties (Order Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

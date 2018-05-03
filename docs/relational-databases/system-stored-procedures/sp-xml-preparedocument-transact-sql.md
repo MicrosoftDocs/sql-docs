@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_xml_preparedocument"
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_xml_preparedocument (Transact-SQL)

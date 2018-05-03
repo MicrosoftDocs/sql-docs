@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sys.sp_query_store_reset_exec_stats"
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 caps.latest.revision: 6
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

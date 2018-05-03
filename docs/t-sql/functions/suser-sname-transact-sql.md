@@ -2,14 +2,12 @@
 title: "SUSER_SNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -29,9 +27,9 @@ helpviewer_keywords:
   - "names [SQL Server], logins"
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SUSER_SNAME (Transact-SQL)

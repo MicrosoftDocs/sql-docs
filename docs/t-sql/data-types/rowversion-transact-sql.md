@@ -2,14 +2,12 @@
 title: "rowversion (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/22/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -30,9 +28,9 @@ helpviewer_keywords:
   - "size [SQL Server], timestamp"
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 caps.latest.revision: 57
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

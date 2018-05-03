@@ -2,14 +2,12 @@
 title: "LAST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,9 +20,9 @@ helpviewer_keywords:
   - "LAST_VALUE function"
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # LAST_VALUE (Transact-SQL)

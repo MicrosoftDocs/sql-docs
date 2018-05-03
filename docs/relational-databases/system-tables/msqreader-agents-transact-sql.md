@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSqreader_agents system table"
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSqreader_agents (Transact-SQL)

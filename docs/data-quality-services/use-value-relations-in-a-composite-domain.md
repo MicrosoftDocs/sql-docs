@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/22/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Use Value Relations in a Composite Domain
 

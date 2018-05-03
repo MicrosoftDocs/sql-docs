@@ -18,8 +18,8 @@ f1_keywords:
   - "sp_get_redirected_publisher"
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_get_redirected_publisher (Transact-SQL)

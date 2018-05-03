@@ -19,7 +19,7 @@ ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Specify Events and Data Columns for a Trace File (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 caps.latest.revision: 113
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Download SQL Server Data Tools (SSDT)

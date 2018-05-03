@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "905 (Database Engine error)"
 ms.assetid: c828bb2e-e554-4f81-b76c-2b3740d2b944
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_905

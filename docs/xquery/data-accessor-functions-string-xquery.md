@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 ---
 # Data Accessor Functions - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

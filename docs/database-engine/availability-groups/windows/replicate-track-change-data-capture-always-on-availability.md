@@ -2,7 +2,7 @@
 title: "Replication, Change Tracking, & Change Data Capture - Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/25/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

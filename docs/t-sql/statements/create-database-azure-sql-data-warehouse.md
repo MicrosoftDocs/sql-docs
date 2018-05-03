@@ -8,15 +8,14 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "t-sql|statements"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE DATABASE (Azure SQL Data Warehouse)

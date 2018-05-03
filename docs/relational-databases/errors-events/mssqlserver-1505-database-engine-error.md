@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "1505 (Database Engine error)"
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_1505

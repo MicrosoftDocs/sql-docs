@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], about cryptography"
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

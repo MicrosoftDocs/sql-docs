@@ -2,7 +2,6 @@
 title: "Link Access Applications to SQL Server - Azure SQL DB | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "08/17/2017"

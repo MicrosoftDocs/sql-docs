@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "xp_sscanf"
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # xp_sscanf (Transact-SQL)

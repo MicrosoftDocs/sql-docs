@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.server_principals catalog view"
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

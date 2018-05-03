@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sp_query_store_remove_query"
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "sp_check_dynamic_filters"
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_check_dynamic_filters (Transact-SQL)

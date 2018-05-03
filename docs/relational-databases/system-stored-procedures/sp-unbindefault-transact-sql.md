@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_unbindefault"
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_unbindefault (Transact-SQL)

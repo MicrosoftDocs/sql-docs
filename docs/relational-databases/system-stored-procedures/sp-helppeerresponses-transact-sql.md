@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helppeerresponses"
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helppeerresponses (Transact-SQL)

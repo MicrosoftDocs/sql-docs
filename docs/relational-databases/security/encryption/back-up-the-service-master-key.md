@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "service master key [SQL Server], exporting"
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Back Up the Service Master Key

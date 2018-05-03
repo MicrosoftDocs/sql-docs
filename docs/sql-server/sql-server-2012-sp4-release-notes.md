@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2012 Service Pack release notes | Microsoft Docs"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: sql
 ms.technology: "supportability"
 ms.custom: ""

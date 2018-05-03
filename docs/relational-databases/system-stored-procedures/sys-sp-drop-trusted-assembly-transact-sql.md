@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.sp_drop_trusted_assembly"
 ms.assetid: 
 caps.latest.revision: 
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---

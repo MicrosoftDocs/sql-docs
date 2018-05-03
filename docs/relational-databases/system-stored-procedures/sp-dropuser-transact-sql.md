@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropuser"
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropuser (Transact-SQL)

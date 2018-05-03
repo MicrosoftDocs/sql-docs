@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_resetstatus"
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_resetstatus (Transact-SQL)

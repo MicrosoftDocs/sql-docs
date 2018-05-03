@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.TABLES view"
 ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

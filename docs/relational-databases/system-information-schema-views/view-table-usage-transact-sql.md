@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "VIEW_TABLE_USAGE view"
 ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

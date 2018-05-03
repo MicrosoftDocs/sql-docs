@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_droprole"
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_droprole (Transact-SQL)

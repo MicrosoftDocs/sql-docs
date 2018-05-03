@@ -17,7 +17,7 @@ ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
 caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Client Protocols - Named Pipes Properties (Protocol Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

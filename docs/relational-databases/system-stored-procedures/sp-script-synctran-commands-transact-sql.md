@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_script_synctran_commands"
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_script_synctran_commands (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_unprepare"
 ms.assetid: 14320251-c551-49d8-b933-057406114978
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

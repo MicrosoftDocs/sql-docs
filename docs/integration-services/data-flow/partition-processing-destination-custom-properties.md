@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Partition Processing Destination Custom Properties
   The Partition Processing destination has both custom properties and the properties common to all data flow components.  

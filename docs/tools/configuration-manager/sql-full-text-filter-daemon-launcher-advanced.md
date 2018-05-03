@@ -13,7 +13,7 @@ ms.assetid: d0be29c2-19df-4882-9832-2efdbefb4b89
 caps.latest.revision: 8
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Full-text Filter Daemon Launcher (Advanced)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -16,7 +16,7 @@ ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Replay a Trace Table (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

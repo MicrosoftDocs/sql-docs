@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_primarykeys"
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_primarykeys (Transact-SQL)

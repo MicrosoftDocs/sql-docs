@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -15,7 +14,7 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Changelog for SQL Server Data Tools (SSDT)

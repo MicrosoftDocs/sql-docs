@@ -17,7 +17,7 @@ ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Filter Server Process IDs (SPIDs) in a Trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

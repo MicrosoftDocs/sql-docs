@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_password"
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_password (Transact-SQL)

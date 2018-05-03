@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_scriptsubconflicttable"
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_scriptsubconflicttable (Transact-SQL)

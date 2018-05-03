@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.allocation_units catalog view"
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

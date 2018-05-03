@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.column_store_dictionaries catalog view"
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.column_store_dictionaries (Transact-SQL)

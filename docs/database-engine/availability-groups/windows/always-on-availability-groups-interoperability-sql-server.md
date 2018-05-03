@@ -2,7 +2,7 @@
 title: "Always On Availability Groups: Interoperability (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/20/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_droplogin"
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_droplogin (Transact-SQL)

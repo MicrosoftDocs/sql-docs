@@ -13,7 +13,7 @@ ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server Browser Properties (Service Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

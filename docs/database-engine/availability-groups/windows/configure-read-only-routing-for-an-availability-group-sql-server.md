@@ -2,7 +2,7 @@
 title: "Configure Read-Only Routing for an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

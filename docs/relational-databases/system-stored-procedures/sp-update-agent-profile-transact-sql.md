@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_update_agent_profile"
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_update_agent_profile (Transact-SQL)

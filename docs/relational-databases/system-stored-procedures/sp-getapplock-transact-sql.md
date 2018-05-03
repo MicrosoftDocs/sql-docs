@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sp_getapplock"
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

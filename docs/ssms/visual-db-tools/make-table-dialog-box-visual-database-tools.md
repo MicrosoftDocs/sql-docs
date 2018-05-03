@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # Make Table Dialog Box (Visual Database Tools)

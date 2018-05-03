@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "9001 (Database Engine error)"
 ms.assetid: a54de936-90c6-4845-aa96-29d32f154601
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_9001

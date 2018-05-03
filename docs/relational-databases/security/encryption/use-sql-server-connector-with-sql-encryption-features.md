@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "EKM, with SQL Server Connector"
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

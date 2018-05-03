@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSdynamicsnapshotviews system table"
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSdynamicsnapshotviews (Transact-SQL)

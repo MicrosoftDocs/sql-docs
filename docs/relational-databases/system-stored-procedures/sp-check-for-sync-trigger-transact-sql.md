@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_check_for_sync_trigger"
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_check_for_sync_trigger (Transact-SQL)

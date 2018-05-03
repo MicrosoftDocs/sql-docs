@@ -8,8 +8,7 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "t-sql|statements"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,7 +17,7 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 caps.latest.revision: 59
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], disabling tables"
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.sp_cdc_disable_table (Transact-SQL)

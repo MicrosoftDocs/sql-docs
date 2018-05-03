@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.server_sql_modules catalog view"
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.server_sql_modules (Transact-SQL)

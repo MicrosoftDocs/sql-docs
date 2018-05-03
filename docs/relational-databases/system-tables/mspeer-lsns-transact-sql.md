@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSpeer_lsns system table"
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSpeer_lsns (Transact-SQL)

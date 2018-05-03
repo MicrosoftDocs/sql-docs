@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,7 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Cleanse Data Using DQS (Internal) Knowledge
 

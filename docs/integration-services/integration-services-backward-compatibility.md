@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/14/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 caps.latest.revision: 84
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Integration Services Backward Compatibility
   This topic describes changes between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It covers features that are no longer available or are scheduled to be removed in a future release. It also describes changes to the product that are known to break, or to change the behavior of, an existing application that includes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] functionality.  

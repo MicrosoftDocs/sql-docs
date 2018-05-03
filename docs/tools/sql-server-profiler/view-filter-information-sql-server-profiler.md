@@ -19,7 +19,7 @@ ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # View Filter Information (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

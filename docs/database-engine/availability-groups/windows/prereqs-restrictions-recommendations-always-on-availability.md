@@ -2,7 +2,7 @@
 title: "Prereqs, Restrictions, Recommendations - Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/02/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

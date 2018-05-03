@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_enumdsn"
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_enumdsn (Transact-SQL)

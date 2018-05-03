@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_setnetname"
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_setnetname (Transact-SQL)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "1203 (Database Engine error)"
 ms.assetid: 33a35f00-98c8-46c6-b432-544b326b6117
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_1203

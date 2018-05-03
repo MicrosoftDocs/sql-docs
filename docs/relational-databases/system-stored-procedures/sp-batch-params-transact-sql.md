@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_batch_params"
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_batch_params (Transact-SQL)

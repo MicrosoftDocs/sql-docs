@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_requestpeertopologyinfo"
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_requestpeertopologyinfo (Transact-SQL)

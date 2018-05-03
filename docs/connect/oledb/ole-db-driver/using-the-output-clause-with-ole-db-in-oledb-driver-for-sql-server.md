@@ -3,7 +3,7 @@ title: "Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server | Mi
 description: "Using the OUTPUT clause with OLE DB in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb-driver-for-sql-server"
 ms.reviewer: ""

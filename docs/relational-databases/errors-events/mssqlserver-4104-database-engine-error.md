@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "4104 (Database Engine error)"
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_4104

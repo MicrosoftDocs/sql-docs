@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Import Domains from an Excel File in Knowledge Discovery
 

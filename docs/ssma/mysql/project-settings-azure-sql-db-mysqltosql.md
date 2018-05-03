@@ -2,7 +2,6 @@
 title: "Project Settings (Azure SQL DB) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,7 +17,7 @@ ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Project Settings (Azure SQL DB) (MySQLToSQL)
 The SQL Azure project settings let you configure the SQL Azure database suffix to be added in the connection dialog and also allow implementing heartbeat mechanism in SQL Azure connection.  

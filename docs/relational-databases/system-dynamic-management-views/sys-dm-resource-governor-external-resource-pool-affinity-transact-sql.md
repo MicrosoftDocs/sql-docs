@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 caps.latest.revision: 8
 author: "jeannt"
-ms.author: "edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)

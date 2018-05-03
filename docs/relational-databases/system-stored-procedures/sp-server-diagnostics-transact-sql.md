@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_server_diagnostics"
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_server_diagnostics (Transact-SQL)

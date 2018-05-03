@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Connector, appendix"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # SQL Server Connector Maintenance &amp; Troubleshooting

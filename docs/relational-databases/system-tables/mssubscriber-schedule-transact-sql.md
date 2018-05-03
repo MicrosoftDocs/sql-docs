@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "MSsubscriber_schedule system table"
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSsubscriber_schedule (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_resyncmergesubscription"
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_resyncmergesubscription (Transact-SQL)

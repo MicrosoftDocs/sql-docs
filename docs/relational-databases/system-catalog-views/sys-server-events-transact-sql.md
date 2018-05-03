@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.server_events catalog view"
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.server_events (Transact-SQL)

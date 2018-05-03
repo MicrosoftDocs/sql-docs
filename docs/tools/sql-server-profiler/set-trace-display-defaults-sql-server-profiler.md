@@ -15,7 +15,7 @@ ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Set Trace Display Defaults (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSdbms_datatype_mapping system table"
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSdbms_datatype_mapping (Transact-SQL)

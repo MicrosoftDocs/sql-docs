@@ -2,14 +2,12 @@
 title: "HAS_DBACCESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -28,9 +26,9 @@ helpviewer_keywords:
   - "status information [SQL Server], user access"
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # HAS_DBACCESS (Transact-SQL)

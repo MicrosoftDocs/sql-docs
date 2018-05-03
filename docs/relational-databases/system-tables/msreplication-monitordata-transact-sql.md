@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSreplication_monitordata system table"
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSreplication_monitordata (Transact-SQL)

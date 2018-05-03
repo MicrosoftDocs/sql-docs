@@ -2,7 +2,7 @@
 title: "DSN and Connection String Keywords and Attributes Used in the ODBC Driver for SQL Server| Microsoft Docs"
 ms.custom: ""
 ms.date: "03/21/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

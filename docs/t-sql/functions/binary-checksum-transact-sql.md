@@ -2,14 +2,12 @@
 title: "BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,9 +20,9 @@ helpviewer_keywords:
   - "binary [SQL Server], checksum values"
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # BINARY_CHECKSUM  (Transact-SQL)

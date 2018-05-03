@@ -2,7 +2,6 @@
 title: "Working with the Sample Console Script Files (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,7 +17,7 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Working with the Sample Console Script Files (DB2ToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

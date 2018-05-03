@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSreplmonthresholdmetrics system table"
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSreplmonthresholdmetrics (Transact-SQL)

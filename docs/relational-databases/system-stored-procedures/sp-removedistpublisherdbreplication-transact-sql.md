@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_removedistpublisherdbreplication"
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_removedistpublisherdbreplication (Transact-SQL)

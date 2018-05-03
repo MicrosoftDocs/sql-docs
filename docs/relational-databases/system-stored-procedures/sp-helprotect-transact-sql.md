@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helprotect"
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helprotect (Transact-SQL)

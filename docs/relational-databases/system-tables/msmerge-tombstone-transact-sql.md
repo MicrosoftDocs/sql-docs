@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_tombstone system table"
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_tombstone (Transact-SQL)

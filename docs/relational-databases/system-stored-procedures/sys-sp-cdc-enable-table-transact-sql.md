@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "sp_cdc_enable_table"
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.sp_cdc_enable_table (Transact-SQL)

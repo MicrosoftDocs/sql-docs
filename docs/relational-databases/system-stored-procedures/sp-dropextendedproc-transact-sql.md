@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropextendedproc"
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropextendedproc (Transact-SQL)

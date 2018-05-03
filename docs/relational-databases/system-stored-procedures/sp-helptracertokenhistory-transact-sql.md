@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helptracertokenhistory"
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helptracertokenhistory (Transact-SQL)

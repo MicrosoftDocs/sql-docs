@@ -2,7 +2,7 @@
 title: "Release Notes (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

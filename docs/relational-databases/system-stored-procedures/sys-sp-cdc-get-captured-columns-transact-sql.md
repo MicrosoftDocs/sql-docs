@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], querying metadata"
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.sp_cdc_get_captured_columns (Transact-SQL)

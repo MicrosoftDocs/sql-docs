@@ -2,7 +2,7 @@
 title: "sqlsrv_num_fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/23/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""

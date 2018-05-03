@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "sys.database_usage"
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

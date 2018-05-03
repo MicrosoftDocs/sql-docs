@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "COLUMN_DOMAIN_USAGE view"
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

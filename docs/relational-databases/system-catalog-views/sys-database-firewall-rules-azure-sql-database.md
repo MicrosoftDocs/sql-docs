@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "sys.database_firewall_rules"
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

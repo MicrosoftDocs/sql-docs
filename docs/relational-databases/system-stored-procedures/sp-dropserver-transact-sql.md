@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropserver"
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

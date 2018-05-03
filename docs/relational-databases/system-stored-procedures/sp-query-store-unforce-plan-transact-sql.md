@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sp_query_store_unforce_plan"
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_changereplicationserverpasswords"
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changereplicationserverpasswords (Transact-SQL)

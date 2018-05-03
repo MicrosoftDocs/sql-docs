@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_validate_redirected_publisher"
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_validate_redirected_publisher (Transact-SQL)

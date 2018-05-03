@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_getqueuedrows"
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_getqueuedrows (Transact-SQL)

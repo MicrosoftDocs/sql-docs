@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "table types [SQL Server]"
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 caps.latest.revision: 62
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

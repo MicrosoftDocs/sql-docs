@@ -13,7 +13,7 @@ ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
 caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

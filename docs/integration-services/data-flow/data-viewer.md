@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Data Viewer
   If a path is configured to use a data viewer, the Data Viewer displays the data buffer by buffer as data moves between two data flow components.  

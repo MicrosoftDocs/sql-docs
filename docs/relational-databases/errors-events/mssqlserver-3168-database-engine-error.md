@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "3168 (Database Engine error)"
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_3168

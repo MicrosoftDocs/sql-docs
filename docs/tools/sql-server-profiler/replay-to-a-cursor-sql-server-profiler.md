@@ -17,7 +17,7 @@ ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Replay to a Cursor (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

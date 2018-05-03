@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.certificates catalog view"
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

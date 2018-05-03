@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSdistributiondbs system table"
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSdistributiondbs (Transact-SQL)

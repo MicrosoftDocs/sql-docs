@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_changelogreader_agent"
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changelogreader_agent (Transact-SQL)

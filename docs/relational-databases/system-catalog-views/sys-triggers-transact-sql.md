@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.triggers catalog view"
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

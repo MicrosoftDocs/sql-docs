@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_attachsubscription"
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_attachsubscription (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_publication_validation"
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_publication_validation (Transact-SQL)

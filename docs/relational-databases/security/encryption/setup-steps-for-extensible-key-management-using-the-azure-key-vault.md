@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Connector"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Setup Steps for Extensible Key Management Using the Azure Key Vault

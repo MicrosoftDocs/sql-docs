@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "10773 (Database Engine error)"
 ms.assetid: 4a7d33e8-e98a-49f5-8d4b-8224f3c8e22d
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSSQLSERVER_10773

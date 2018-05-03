@@ -1,7 +1,7 @@
 ---
 title: "Azure Active Directory | Microsoft Docs"
 ms.date: "07/13/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.suite: "sql"

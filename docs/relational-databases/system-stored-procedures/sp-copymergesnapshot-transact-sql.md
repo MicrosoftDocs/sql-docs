@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_copymergesnapshot"
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_copymergesnapshot (Transact-SQL)

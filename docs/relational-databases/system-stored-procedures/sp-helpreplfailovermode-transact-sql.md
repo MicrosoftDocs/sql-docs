@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpreplfailovermode"
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpreplfailovermode (Transact-SQL)

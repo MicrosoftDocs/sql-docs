@@ -3,13 +3,11 @@ title: "Database Mirroring - Establish Session - Windows Authentication | Micros
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 caps.latest.revision: 77
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Mirroring - Establish Session - Windows Authentication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

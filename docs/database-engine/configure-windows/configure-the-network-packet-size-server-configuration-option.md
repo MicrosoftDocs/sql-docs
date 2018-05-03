@@ -3,7 +3,7 @@ title: "Configure the network packet size Server Configuration Option | Microsof
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "network packet size option"
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the network packet size Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

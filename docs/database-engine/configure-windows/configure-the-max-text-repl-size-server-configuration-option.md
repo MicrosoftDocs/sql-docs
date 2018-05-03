@@ -3,7 +3,7 @@ title: "Configure the max text repl size Server Configuration Option | Microsoft
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "max text repl size option"
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the max text repl size Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

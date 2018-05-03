@@ -3,7 +3,7 @@ title: "affinity Input-Output mask Server Configuration Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "CPU affinity mask option"
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # affinity Input-Output mask Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

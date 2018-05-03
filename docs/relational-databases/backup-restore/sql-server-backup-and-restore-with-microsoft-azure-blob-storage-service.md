@@ -3,12 +3,10 @@ title: "SQL Server Backup and Restore with Microsoft Azure Blob Storage Service 
 ms.custom: ""
 ms.date: "07/25/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "backup-restore"
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935

@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 

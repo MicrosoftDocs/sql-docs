@@ -3,7 +3,7 @@ title: "SQL Writer Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "VSS"
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SQL Writer Service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

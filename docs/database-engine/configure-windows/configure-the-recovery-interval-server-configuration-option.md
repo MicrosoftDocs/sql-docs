@@ -3,7 +3,7 @@ title: "Configure the recovery interval Server Configuration Option | Microsoft 
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "recovery [SQL Server], recovery interval option"
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the recovery interval Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -3,7 +3,7 @@ title: "View or Change the Default Locations for Data and Log Files | Microsoft 
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "data files [SQL Server], changing default location"
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # View or Change the Default Locations for Data and Log Files
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

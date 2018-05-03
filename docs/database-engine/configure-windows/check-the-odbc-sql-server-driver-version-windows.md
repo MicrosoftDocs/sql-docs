@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "ODBC drivers, version number"
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Check the ODBC SQL Server Driver Version (Windows)

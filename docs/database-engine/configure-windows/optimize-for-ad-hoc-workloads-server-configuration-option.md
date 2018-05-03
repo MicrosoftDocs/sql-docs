@@ -3,7 +3,7 @@ title: "optimize for ad hoc workloads Server Configuration Option | Microsoft Do
 ms.custom: ""
 ms.date: "11/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "optimize for ad hoc workloads option"
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # optimize for ad hoc workloads Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

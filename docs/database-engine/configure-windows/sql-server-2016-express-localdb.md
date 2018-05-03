@@ -3,7 +3,7 @@ title: "SQL Server 2016 Express LocalDB | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "LocalDB"
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

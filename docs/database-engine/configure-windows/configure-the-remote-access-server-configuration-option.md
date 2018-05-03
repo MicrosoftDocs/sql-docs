@@ -3,7 +3,7 @@ title: "Configure the remote access Server Configuration Option | Microsoft Docs
 ms.custom: ""
 ms.date: "08/11/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "remote servers [SQL Server], stored procedure execution"
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the remote access Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

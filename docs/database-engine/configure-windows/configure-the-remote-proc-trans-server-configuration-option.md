@@ -3,7 +3,7 @@ title: "Configure the remote proc trans Server Configuration Option | Microsoft 
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "distributed transactions [SQL Server], enforcing"
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the remote proc trans Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

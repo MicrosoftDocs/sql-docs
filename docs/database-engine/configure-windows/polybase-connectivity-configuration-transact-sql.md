@@ -15,7 +15,7 @@ ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # PolyBase Connectivity Configuration (Transact-SQL)

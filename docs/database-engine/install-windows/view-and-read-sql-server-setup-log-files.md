@@ -3,8 +3,7 @@ title: "View and Read SQL Server Setup Log Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2016"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod_service: high-availability
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,9 +21,9 @@ helpviewer_keywords:
   - "logs [SQL Server], Setup"
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 54
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # View and Read SQL Server Setup Log Files
 

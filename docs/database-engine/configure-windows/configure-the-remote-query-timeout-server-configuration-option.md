@@ -3,7 +3,7 @@ title: "Configure the remote query timeout Server Configuration Option | Microso
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "remote query timeout option"
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the remote query timeout Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

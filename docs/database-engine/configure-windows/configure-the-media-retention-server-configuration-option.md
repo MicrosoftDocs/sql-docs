@@ -3,7 +3,7 @@ title: "Configure the media retention Server Configuration Option | Microsoft Do
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "media retention option"
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the media retention Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

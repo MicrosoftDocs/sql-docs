@@ -4,7 +4,7 @@ description: How to configure CLR strict security in SQL Server
 ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "clr strict security option"
 ms.assetid: 
 caps.latest.revision: 0
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # CLR strict security   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

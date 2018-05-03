@@ -3,12 +3,10 @@ title: "Back up Multiple Databases to Azure Blob Storage - PowerShell | Microsof
 ms.custom: ""
 ms.date: "05/20/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "backup-restore"
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460

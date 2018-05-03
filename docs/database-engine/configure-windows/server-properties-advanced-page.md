@@ -3,7 +3,7 @@ title: "Server Properties (Advanced Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -13,9 +13,9 @@ f1_keywords:
   - "sql13.swb.serverproperties.advanced.f1"
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Server Properties - Advanced Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -3,13 +3,10 @@ title: "Specify Availability Group Options Page (New Availability Group Wizard/A
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -17,9 +14,9 @@ f1_keywords:
   - "sql13.swb.adddatabasewizard.specifyagname.f1"
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Specify Availability Group Options Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

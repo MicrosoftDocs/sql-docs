@@ -3,7 +3,7 @@ title: "Configure the two digit year cutoff Server Configuration Option | Micros
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "four-digit years [SQL Server]"
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the two digit year cutoff Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

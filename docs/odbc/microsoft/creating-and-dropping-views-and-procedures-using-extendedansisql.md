@@ -2,7 +2,7 @@
 title: "Creating and Dropping Views and Procedures Using ExtendedAnsiSQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

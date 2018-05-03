@@ -3,7 +3,7 @@ title: "Configure a Server to Listen on a Specific TCP Port | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/25/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "TCP/IP [SQL Server], port numbers"
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure a Server to Listen on a Specific TCP Port
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

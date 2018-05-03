@@ -3,7 +3,7 @@ title: "Manage the Database Engine Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "SQL Server services"
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 caps.latest.revision: 43
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Manage the Database Engine Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

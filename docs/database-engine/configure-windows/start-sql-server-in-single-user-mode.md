@@ -3,7 +3,7 @@ title: "Start SQL Server in Single-User Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "single-user mode [SQL Server]"
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Start SQL Server in Single-User Mode
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

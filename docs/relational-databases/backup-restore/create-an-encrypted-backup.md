@@ -3,12 +3,10 @@ title: "Create an Encrypted Backup | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "backup-restore"
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe

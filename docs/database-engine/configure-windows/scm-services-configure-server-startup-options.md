@@ -3,7 +3,7 @@ title: "Configure Server Startup Options (SQL Server Configuration Manager) | Mi
 ms.custom: ""
 ms.date: "11/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQL Server services, setting startup parameters"
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SCM Services - Configure Server Startup Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

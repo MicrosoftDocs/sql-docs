@@ -3,12 +3,10 @@ title: "SQL Server Backup to URL Best Practices and Troubleshooting | Microsoft 
 ms.custom: ""
 ms.date: "01/19/2018"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "backup-restore"
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f

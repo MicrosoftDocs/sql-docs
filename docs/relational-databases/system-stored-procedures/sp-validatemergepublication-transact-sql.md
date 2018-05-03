@@ -2,9 +2,8 @@
 title: "sp_validatemergepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "sp_validatemergepublication"
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

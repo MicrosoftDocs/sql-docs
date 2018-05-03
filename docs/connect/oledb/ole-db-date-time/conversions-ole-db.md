@@ -3,14 +3,12 @@ title: "Bindings and Conversions (OLE DB) | Microsoft Docs"
 description: "Bindings and conversions (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

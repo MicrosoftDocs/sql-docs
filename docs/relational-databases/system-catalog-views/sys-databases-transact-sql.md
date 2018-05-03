@@ -2,9 +2,8 @@
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,9 +22,9 @@ helpviewer_keywords:
   - "sys.databases catalog view"
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 caps.latest.revision: 152
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.databases (Transact-SQL)

@@ -1,11 +1,9 @@
 ---
 title: "ADOX Objects | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "ADOX, objects"
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADOX Objects
 ## ADOX Object Summary  

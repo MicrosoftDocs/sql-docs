@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "12/13/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "scale-out"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 ms.reviewer: "douglasl"
-manager: "craigg"
+manager: craigg
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
 ---

@@ -3,14 +3,12 @@ title: "Using IMultipleResults to Process Multiple Result Sets | Microsoft Docs"
 description: "Using IMultipleResults to process multiple result sets"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-commands"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

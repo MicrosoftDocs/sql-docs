@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "distributed-replay"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Prepare the Input Trace Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

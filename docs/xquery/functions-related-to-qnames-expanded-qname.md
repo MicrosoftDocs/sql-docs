@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 caps.latest.revision: 19
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 ---
 # Functions Related to QNames - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

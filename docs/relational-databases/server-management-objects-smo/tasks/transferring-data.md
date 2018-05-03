@@ -2,9 +2,8 @@
 title: "Transferring Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 caps.latest.revision: 50
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Transferring Data

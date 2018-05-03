@@ -26,7 +26,7 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 caps.latest.revision: 28
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.resource_stats (Azure SQL Database)

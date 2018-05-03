@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -31,7 +30,7 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 caps.latest.revision: 44
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 ---
 # FLWOR Statement and Iteration (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

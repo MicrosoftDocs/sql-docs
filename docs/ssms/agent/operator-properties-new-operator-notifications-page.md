@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Operator Properties - New Operator (Notifications Page)

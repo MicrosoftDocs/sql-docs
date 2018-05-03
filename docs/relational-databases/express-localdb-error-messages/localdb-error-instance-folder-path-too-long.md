@@ -2,9 +2,8 @@
 title: "LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

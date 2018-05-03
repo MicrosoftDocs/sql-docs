@@ -2,9 +2,8 @@
 title: "sys.dm_xtp_transaction_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

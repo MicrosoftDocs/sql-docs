@@ -2,9 +2,8 @@
 title: "sp_delete_notification (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # sp_delete_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,9 +2,8 @@
 title: "Data Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "data-collection"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Data Collection
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

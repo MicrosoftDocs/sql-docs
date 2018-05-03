@@ -2,9 +2,8 @@
 title: "sys.dm_tran_database_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5
 caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_tran_database_transactions (Transact-SQL)

@@ -1,7 +1,6 @@
 ---
 title: "RDS Objects | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "RDS objects [ADO]"
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RDS Objects
 > [!IMPORTANT]

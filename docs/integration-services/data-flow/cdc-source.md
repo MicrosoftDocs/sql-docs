@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,7 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # CDC Source
   The CDC source reads a range of change data from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] change tables and delivers the changes downstream to other SSIS components.  

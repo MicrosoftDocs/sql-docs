@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "change-data-capture"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Oracle Credentials for Running Script
   To run the Oracle supplemental logging script from the Oracle CDC Designer console, the program prompts you for the credentials of the Oracle user who is running the script. To run this script, the Oracle user must have ALTER TABLE permission for all the tables to be captured and SELECT permission on the DBA_LOG_GROUPS view.  

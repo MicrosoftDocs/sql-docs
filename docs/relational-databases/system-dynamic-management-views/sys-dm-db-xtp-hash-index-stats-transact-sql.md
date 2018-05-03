@@ -2,9 +2,8 @@
 title: "sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_xtp_hash_index_stats (Transact-SQL)

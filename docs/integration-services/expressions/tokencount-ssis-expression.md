@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # TOKENCOUNT (SSIS Expression)
   Returns the number of tokens in a string that contains tokens separated by the specified delimiters.  

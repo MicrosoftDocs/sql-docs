@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "models [Master Data Services], deploying a package"
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 caps.latest.revision: 16
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Deploy a Model Deployment Package by Using the Wizard
 

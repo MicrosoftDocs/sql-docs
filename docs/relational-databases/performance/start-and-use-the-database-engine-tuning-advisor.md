@@ -2,9 +2,8 @@
 title: "Start and Use the Database Engine Tuning Advisor | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,9 +22,9 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor [SQL Server], starting"
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Start and Use the Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

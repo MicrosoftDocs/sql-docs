@@ -2,9 +2,8 @@
 title: "msdb Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,7 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # msdb Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

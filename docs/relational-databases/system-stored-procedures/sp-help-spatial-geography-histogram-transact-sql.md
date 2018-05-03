@@ -2,9 +2,8 @@
 title: "sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "sp_help_spatial_geography_histogram"
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -2,21 +2,18 @@
 title: "Monitoring Memory-Optimized System-Versioned Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # Monitoring Memory-Optimized System-Versioned Temporal Tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

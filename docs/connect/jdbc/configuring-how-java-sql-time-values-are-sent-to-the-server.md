@@ -2,20 +2,17 @@
 title: "Configuring How java.sql.Time Values are Sent to the Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Configuring How java.sql.Time Values are Sent to the Server

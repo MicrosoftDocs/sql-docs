@@ -2,9 +2,8 @@
 title: "Drag and Drop Text | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], dragging and dropping text"
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Drag and Drop Text

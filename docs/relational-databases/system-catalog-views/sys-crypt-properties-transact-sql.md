@@ -2,9 +2,8 @@
 title: "sys.crypt_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,9 +22,9 @@ helpviewer_keywords:
   - "sys.crypt_properties catalog view"
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.crypt_properties (Transact-SQL)

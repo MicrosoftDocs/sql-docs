@@ -2,21 +2,18 @@
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # Temporal Table Usage Scenarios
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

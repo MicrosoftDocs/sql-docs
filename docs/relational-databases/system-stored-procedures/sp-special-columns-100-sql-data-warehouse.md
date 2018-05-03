@@ -18,7 +18,7 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_special_columns_100 (SQL Data Warehouse)

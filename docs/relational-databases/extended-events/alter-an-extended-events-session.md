@@ -2,19 +2,18 @@
 title: "Alter an Extended Events Session | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "xevents"
+ms.technology: xevents
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Alter an Extended Events Session

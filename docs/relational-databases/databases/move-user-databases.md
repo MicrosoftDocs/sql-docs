@@ -2,9 +2,8 @@
 title: "Move User Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -30,7 +29,7 @@ ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 caps.latest.revision: 37
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Move User Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

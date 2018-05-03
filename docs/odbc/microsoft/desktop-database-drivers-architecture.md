@@ -2,14 +2,11 @@
 title: "Desktop Database Drivers Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +15,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], architecture"
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Desktop Database Drivers Architecture

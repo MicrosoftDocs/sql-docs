@@ -2,9 +2,8 @@
 title: "SQL Server Integration Services Support for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 caps.latest.revision: 12
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Integration Services Support for In-Memory OLTP

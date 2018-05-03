@@ -2,14 +2,11 @@
 title: "DBMS-Based Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +15,8 @@ helpviewer_keywords:
   - "ODBC architecture [ODBC], drivers"
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # DBMS-Based Drivers

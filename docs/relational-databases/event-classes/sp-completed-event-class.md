@@ -2,9 +2,8 @@
 title: "SP:Completed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "event-classes"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SP:Completed Event Class

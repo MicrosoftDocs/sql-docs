@@ -2,9 +2,8 @@
 title: "sys.syscharsets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-compatibility-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,7 +25,7 @@ ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 caps.latest.revision: 42
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.syscharsets (Transact-SQL)

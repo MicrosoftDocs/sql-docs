@@ -2,14 +2,11 @@
 title: "LIKE Predicate Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "ODBC SQL grammar, LIKE predicate limitations"
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # LIKE Predicate Limitations

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "explicit hierarchies, changing name"
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 6
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Change an Explicit Hierarchy Name (Master Data Services)
 

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # != (Unequal) (SSIS Expression)
   Performs a comparison to determine if two expressions with compatible data types are not equal. The expression evaluator automatically converts many data types before it performs the comparison.  

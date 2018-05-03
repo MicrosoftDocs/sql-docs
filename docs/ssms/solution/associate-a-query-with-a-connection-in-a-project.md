@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-solutions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Associate a Query with a Connection in a Project
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

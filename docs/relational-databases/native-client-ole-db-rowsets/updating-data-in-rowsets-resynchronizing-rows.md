@@ -2,9 +2,8 @@
 title: "Resynchronizing Rows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Updating Data in Rowsets - Resynchronizing Rows

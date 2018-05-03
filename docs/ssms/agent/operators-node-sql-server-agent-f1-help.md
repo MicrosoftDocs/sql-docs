@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -15,7 +14,7 @@ ms.assetid: f3665edc-b030-4c83-9ce7-2dfd39c6b398
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Operators Node (SQL Server Agent F1 Help)

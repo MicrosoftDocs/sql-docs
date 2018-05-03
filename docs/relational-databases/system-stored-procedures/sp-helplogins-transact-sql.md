@@ -2,9 +2,8 @@
 title: "sp_helplogins (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "sp_helplogins"
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

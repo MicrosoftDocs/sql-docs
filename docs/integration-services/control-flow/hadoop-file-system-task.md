@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Hadoop File System Task
   The Hadoop File System Task enables an SSIS package to copy files from, to, or within a Hadoop cluster.  

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "consolidated members [Master Data Services], creating"
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 caps.latest.revision: 12
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Create a Consolidated Member (Master Data Services)
 

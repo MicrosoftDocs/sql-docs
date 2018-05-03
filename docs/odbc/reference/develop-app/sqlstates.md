@@ -2,14 +2,11 @@
 title: "SQLSTATEs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "SQLSTATE [ODBC]"
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLSTATEs

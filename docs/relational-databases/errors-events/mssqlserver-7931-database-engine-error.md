@@ -2,23 +2,21 @@
 title: "MSSQLSERVER_7931 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "7931 (Database Engine error)"
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # MSSQLSERVER_7931
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

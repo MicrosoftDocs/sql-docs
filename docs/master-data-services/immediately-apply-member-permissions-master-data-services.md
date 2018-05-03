@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "permissions [Master Data Services], applying member permissions immediately"
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 caps.latest.revision: 6
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Immediately Apply Member Permissions (Master Data Services)
 

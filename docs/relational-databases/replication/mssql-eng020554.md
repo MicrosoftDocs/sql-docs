@@ -2,9 +2,8 @@
 title: "MSSQL_ENG020554 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 caps.latest.revision: 16
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

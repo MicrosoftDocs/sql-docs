@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-menu"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Options (Designers - Maintenance Plans Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -2,9 +2,8 @@
 title: "TM: Begin Tran Completed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "event-classes"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # TM: Begin Tran Completed Event Class

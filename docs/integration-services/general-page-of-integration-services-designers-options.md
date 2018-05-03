@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # General Page of Integration Services Designers Options
   Use the **General** page of the **Integration Services Designers** page in the **Options** dialog box to specify the options for loading, displaying, and upgrading packages.  

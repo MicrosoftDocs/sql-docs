@@ -1,11 +1,9 @@
 ---
 title: "Configuring RDS | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "RDS configuration [ADO]"
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Configuring RDS
 > [!IMPORTANT]

@@ -4,7 +4,7 @@ description: "Learn how to configure an Azure SQL Database and Data Warehouse to
 keywords:
 documentationcenter:
 author: "aliceku"
-manager: "craigg"
+manager: craigg
 editor:
 ms.prod: 
 ms.reviewer: ""

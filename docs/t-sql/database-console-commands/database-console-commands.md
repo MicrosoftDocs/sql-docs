@@ -2,14 +2,12 @@
 title: "Database Console Commands | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,7 +16,7 @@ ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Database Console Commands
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,9 +2,8 @@
 title: "Tutorial: Configure replication between a server and mobile clients (merge) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 caps.latest.revision: 24
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Tutorial: Configure replication between a server and mobile clients (merge)

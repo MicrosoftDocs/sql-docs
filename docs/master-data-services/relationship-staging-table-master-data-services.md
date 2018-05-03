@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "database [Master Data Services], relationships table"
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 8
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Relationship Staging Table (Master Data Services)
 

@@ -2,9 +2,8 @@
 title: "Implement a Business Logic Handler for a Merge Article | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 caps.latest.revision: 44
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Implement a Business Logic Handler for a Merge Article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

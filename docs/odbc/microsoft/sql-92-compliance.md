@@ -2,14 +2,11 @@
 title: "SQL-92 Compliance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], SQL-92 compliance"
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQL-92 Compliance

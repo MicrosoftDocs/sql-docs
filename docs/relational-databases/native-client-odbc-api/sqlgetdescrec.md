@@ -2,9 +2,8 @@
 title: "SQLGetDescRec | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-api"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "SQLGetDescRec function"
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQLGetDescRec

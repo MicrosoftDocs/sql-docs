@@ -2,9 +2,8 @@
 title: "MSreplication_subscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "MSreplication_subscriptions system table"
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

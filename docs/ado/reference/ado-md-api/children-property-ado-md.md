@@ -1,11 +1,9 @@
 ---
 title: "Children Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "Children property [ADO MD]"
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Children Property (ADO MD)
 Returns a [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) collection for which the current [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) is the parent in the hierarchy.  

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-solutions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,7 @@ ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Solutions (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

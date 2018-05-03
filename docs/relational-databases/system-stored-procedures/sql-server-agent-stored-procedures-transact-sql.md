@@ -2,9 +2,8 @@
 title: "SQL Server Agent Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,7 @@ ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server Agent Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

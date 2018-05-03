@@ -2,14 +2,12 @@
 title: "SUSER_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,9 +24,9 @@ helpviewer_keywords:
   - "user IDs [SQL Server]"
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SUSER_ID (Transact-SQL)

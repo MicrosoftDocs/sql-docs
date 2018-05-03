@@ -2,7 +2,6 @@
 title: "Creating Variable Value Files (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,7 +17,7 @@ ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Creating Variable Value Files (DB2ToSQL)
 Variable Value File is an XML file comprising the parameter values of commands like, the source or destination server name that frequently change from one server migration to another. When a large number of database migrations occur, multiple variable files for storing the value of each source server will be created and referenced in a master script file with the **–v** switch at command line. This helps in maintaining static values in a few script files with the variable values in multiple variable files.  

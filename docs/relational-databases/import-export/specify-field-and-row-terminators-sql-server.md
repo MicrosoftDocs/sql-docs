@@ -2,9 +2,8 @@
 title: "Specify Field and Row Terminators (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,7 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify Field and Row Terminators (SQL Server)

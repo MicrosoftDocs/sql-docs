@@ -1,11 +1,9 @@
 ---
 title: "Data Providers | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "ADO, OLE DB providers"
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Data Providers
 Data providers represent diverse sources of data such as SQL databases, indexed-sequential files, spreadsheets, document stores, and mail files. Providers expose data uniformly using a common abstraction called the rowset.  

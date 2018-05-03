@@ -2,9 +2,8 @@
 title: "PolyBase installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ helpviewer_keywords:
   - "PolyBase, installation"
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # PolyBase installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

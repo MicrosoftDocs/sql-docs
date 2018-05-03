@@ -2,14 +2,12 @@
 title: "modify() Method (xml Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|xml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -21,7 +19,7 @@ ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # modify() Method (xml Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

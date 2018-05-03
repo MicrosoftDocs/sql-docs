@@ -2,14 +2,11 @@
 title: "Reporting Services with Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 
 
 ms.tgt_pltfrm: ""
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: "erikre"
 ---
 # Reporting Services with Always On Availability Groups (SQL Server)

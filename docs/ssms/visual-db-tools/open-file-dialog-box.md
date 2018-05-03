@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # Open File Dialog Box

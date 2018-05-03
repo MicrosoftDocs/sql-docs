@@ -2,9 +2,8 @@
 title: "Example: Specifying the ELEMENT Directive and Entity Encoding | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "xml"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Example: Specifying the ELEMENT Directive and Entity Encoding
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

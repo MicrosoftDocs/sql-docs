@@ -2,14 +2,11 @@
 title: "Installing and Configuring | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,8 +18,8 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], installing"
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Installing and Configuring

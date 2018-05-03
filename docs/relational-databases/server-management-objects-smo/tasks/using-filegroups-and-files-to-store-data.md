@@ -2,9 +2,8 @@
 title: "Using Filegroups and Files to Store Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using Filegroups and Files to Store Data

@@ -2,9 +2,8 @@
 title: "trace_xe_event_map (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Extended Events Tables - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

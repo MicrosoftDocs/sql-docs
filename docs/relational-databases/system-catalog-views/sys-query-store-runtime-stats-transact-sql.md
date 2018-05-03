@@ -2,9 +2,8 @@
 title: "sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,9 +23,9 @@ helpviewer_keywords:
   - "sys.query_store_runtime_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)

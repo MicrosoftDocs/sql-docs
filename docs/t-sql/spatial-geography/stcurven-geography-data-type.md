@@ -2,14 +2,12 @@
 title: "STCurveN (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,7 +21,7 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # STCurveN (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

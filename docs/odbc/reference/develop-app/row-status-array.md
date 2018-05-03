@@ -2,14 +2,11 @@
 title: "Row Status Array | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,8 +18,8 @@ helpviewer_keywords:
   - "rowset status [ODBC]"
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Row Status Array

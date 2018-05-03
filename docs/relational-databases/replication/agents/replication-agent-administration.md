@@ -2,9 +2,8 @@
 title: "Replication Agent Administration | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,7 +27,7 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: 48
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Replication Agent Administration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

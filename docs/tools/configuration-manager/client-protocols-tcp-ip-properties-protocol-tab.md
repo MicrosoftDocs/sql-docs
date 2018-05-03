@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "configuration-manager"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,7 +16,7 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Client Protocols - TCP IP Properties (Protocol Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

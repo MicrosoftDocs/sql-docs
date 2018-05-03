@@ -1,11 +1,9 @@
 ---
 title: "Anticipating Errors | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "preventing errors [ADO]"
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Anticipating Errors
 Error prevention is at least as important as error handling. This final section contains a short list of precautions your application can take to help make errors less likely to occur.  

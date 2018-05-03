@@ -2,9 +2,8 @@
 title: "Use Alerts for Replication Agent Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,7 +26,7 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: 39
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Use Alerts for Replication Agent Events
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

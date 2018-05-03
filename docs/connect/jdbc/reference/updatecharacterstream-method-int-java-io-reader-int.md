@@ -2,14 +2,11 @@
 title: "updateCharacterStream Method (java.io.Reader, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -19,8 +16,8 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: b692c372-f6d7-4528-9c5d-cd8421bdb12e
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # updateCharacterStream Method (int, java.io.Reader, int)

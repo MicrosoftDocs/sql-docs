@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "change-data-capture"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # How to Edit the CDC Instance Properties
   This procedure describes how to use the CDC Designer Console to edit the configuration properties for a CDC instance.  

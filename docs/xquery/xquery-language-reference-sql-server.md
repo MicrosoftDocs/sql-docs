@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "xquery"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 caps.latest.revision: 51
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 ---
 # XQuery Language Reference (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

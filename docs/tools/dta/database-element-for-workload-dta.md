@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "dta"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 caps.latest.revision: 12
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Database Element for Workload (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

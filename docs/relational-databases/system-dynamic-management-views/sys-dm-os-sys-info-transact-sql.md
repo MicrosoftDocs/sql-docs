@@ -2,9 +2,8 @@
 title: "sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,7 +26,7 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 caps.latest.revision: 57
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_os_sys_info (Transact-SQL)

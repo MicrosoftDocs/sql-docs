@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 caps.latest.revision: 10
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Refreshing Data (MDS Add-in for Excel)
 

@@ -2,23 +2,21 @@
 title: "MSSQLSERVER_8993 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "8993 (Database Engine error)"
 ms.assetid: 06aac110-a41c-4853-bc8e-a83e8535b8be
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # MSSQLSERVER_8993
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

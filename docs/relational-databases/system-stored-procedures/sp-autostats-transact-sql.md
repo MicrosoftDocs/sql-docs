@@ -2,9 +2,8 @@
 title: "sp_autostats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "sp_autostats"
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_autostats (Transact-SQL)

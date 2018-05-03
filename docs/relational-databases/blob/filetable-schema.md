@@ -2,9 +2,8 @@
 title: "FileTable Schema | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "blob"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # FileTable Schema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

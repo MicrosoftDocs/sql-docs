@@ -2,9 +2,8 @@
 title: "sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_xtp_memory_consumers (Transact-SQL)

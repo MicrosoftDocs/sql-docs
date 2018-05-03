@@ -2,14 +2,12 @@
 title: "WHERE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,7 +25,7 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WHERE (Transact-SQL)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Post Download Instructions

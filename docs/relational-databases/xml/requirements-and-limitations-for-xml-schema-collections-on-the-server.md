@@ -2,9 +2,8 @@
 title: "Requirements and Limitations for XML Schema Collections on the Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "xml"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -29,7 +28,7 @@ ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: 84
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Requirements and Limitations for XML Schema Collections on the Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,9 +2,8 @@
 title: "Login for Updatable Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Login for Updatable Subscriptions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

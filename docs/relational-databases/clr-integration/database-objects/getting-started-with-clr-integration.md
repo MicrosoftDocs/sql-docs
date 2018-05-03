@@ -2,9 +2,8 @@
 title: "Getting Started with CLR Integration | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -31,7 +30,7 @@ ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 caps.latest.revision: 62
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 ---
 # Getting Started with CLR Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

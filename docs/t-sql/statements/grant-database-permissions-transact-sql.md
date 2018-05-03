@@ -2,14 +2,12 @@
 title: "GRANT Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "GRANT statement, databases"
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # GRANT Database Permissions (Transact-SQL)

@@ -2,9 +2,8 @@
 title: "Default Mapping-XSD Elements-Attributes to Tables-Columns (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -31,7 +30,7 @@ ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Default Mapping of XSD Elements and Attributes to Tables and Columns (SQLXML 4.0)

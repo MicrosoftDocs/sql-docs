@@ -2,9 +2,8 @@
 title: "Understanding the WMI Provider for Server Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "wmi"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 caps.latest.revision: 31
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # Understanding the WMI Provider for Server Events
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

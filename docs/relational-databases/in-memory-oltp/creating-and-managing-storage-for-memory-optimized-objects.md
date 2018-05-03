@@ -2,9 +2,8 @@
 title: "Creating and Managing Storage for Memory-Optimized Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 64
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Creating and Managing Storage for Memory-Optimized Objects

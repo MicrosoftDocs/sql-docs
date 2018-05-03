@@ -2,9 +2,8 @@
 title: "Allocating a Connection Handle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-communication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,9 +23,9 @@ helpviewer_keywords:
   - "SQLAllocHandle function"
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Allocating a Connection Handle

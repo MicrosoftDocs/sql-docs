@@ -2,10 +2,9 @@
 title: "Geo-Replication Dynamic Management Views and Functions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "dmv's"
 ms.suite: "sql"
 ms.technology: 
@@ -23,7 +22,7 @@ ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)

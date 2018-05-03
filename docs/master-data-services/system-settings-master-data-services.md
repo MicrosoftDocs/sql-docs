@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "system settings [Master Data Services]"
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # System Settings (Master Data Services)
 

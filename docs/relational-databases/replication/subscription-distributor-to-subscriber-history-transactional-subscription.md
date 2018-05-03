@@ -2,9 +2,8 @@
 title: "Subscription, Distributor to Subscriber History (Transactional Subscription) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Subscription, Distributor to Subscriber History (Transactional Subscription)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,7 +26,7 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server Destination
   The SQL Server destination connects to a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and bulk loads data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables and views. You cannot use the SQL Server destination in packages that access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. Instead, the packages should use the OLE DB destination. For more information, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  

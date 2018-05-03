@@ -2,9 +2,8 @@
 title: "SSVARIANT Structure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-data-types"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "SSVARIANT struct"
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SSVARIANT Structure

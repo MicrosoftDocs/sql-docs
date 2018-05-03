@@ -2,7 +2,6 @@
 title: "Get Started with SQL Server Migration Assistant for Access | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "08/15/2017"

@@ -2,9 +2,8 @@
 title: "Distributed Queries Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "distributed queries [SQL Server], stored procedures"
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # Distributed Queries Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

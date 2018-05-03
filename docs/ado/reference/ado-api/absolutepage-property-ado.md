@@ -1,11 +1,9 @@
 ---
 title: "AbsolutePage Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "AbsolutePage property [ADO]"
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # AbsolutePage Property (ADO)
 Indicates on which page the current record resides.  

@@ -2,9 +2,8 @@
 title: "User-Configurable Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "event-classes"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # User-Configurable Event Category

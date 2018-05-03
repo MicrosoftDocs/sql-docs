@@ -2,9 +2,8 @@
 title: "Command-Line Management Tool: SqlLocalDB.exe | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 caps.latest.revision: 9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # Command-Line Management Tool: SqlLocalDB.exe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

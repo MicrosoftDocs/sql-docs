@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "leaf members [Master Data Services], reactivating"
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 caps.latest.revision: 11
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Reactivate a Member or Collection (Master Data Services)
 

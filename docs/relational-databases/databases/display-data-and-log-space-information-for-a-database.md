@@ -2,9 +2,8 @@
 title: "Display Data and Log Space Information for a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Display Data and Log Space Information for a Database

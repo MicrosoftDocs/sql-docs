@@ -2,9 +2,8 @@
 title: "syscollector_collection_items (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

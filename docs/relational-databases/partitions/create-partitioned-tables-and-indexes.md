@@ -2,9 +2,8 @@
 title: "Create Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "partitions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -32,9 +31,9 @@ helpviewer_keywords:
   - "partition schemes [SQL Server]"
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Partitioned Tables and Indexes

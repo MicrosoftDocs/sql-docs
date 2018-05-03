@@ -2,14 +2,12 @@
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -28,9 +26,9 @@ helpviewer_keywords:
   - "modifying default schemas"
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 caps.latest.revision: 75
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER USER (Transact-SQL)

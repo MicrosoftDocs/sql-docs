@@ -2,14 +2,12 @@
 title: "CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -29,9 +27,9 @@ helpviewer_keywords:
   - "Row-Level Security"
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

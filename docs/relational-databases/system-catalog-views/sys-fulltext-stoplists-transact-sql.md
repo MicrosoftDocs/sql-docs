@@ -2,9 +2,8 @@
 title: "sys.fulltext_stoplists (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,7 +27,7 @@ ms.assetid: eb69fb8f-f6d9-446e-83c0-67afd05dfba0
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fulltext_stoplists (Transact-SQL)

@@ -2,9 +2,8 @@
 title: "Open Activity Monitor (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "opening Activity Monitor"
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Open Activity Monitor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

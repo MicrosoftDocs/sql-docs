@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 caps.latest.revision: 10
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Import Data from Excel to Master Data Services (MDS Add-in for Excel)
 

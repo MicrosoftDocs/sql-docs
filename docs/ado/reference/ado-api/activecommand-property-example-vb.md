@@ -1,11 +1,9 @@
 ---
 title: "ActiveCommand Property Example (VB) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "ActiveCommand property [ADO], Visual Basic example"
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ActiveCommand Property Example (VB)
 This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property.  

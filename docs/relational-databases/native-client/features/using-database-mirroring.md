@@ -2,9 +2,8 @@
 title: "Using Database Mirroring | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client|features"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,9 +21,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, database mirroring"
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 caps.latest.revision: 55
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using Database Mirroring

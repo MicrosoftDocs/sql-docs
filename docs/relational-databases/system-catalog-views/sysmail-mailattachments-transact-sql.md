@@ -2,9 +2,8 @@
 title: "sysmail_mailattachments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

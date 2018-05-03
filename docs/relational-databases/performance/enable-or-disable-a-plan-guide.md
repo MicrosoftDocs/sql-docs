@@ -2,9 +2,8 @@
 title: "Enable or Disable a Plan Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "disabling plan guides"
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Enable or Disable a Plan Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

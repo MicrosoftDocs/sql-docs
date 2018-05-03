@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Loading Converted Database Objects into SQL Server (SybaseToSQL)
 After you have converted Sybase Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database.  

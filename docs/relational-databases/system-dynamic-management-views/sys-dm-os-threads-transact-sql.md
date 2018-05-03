@@ -2,9 +2,8 @@
 title: "sys.dm_os_threads (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_os_threads (Transact-SQL)

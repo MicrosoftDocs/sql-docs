@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,7 @@ ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Create a Data Quality Project
 

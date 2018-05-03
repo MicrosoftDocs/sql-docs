@@ -2,9 +2,8 @@
 title: "Create New Policy or Open Policy Dialog Box, General Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,9 +17,9 @@ f1_keywords:
   - "sql13.swb.dmf.newgroup.f1"
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Create New Policy or Open Policy Dialog Box, General Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

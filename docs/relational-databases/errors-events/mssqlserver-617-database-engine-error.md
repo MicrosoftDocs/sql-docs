@@ -2,23 +2,21 @@
 title: "MSSQLSERVER_617 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "617 (Database Engine error)"
 ms.assetid: 213545d9-08a7-4427-bfd1-8b7e16644281
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # MSSQLSERVER_617
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

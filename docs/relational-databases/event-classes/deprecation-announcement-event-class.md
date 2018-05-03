@@ -2,9 +2,8 @@
 title: "Deprecation Announcement Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "event-classes"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Deprecation Announcement Event Class

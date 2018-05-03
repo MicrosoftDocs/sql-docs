@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Availability Group Lease Health Check Timeout | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2016"
+ms.date: "05/02/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""

@@ -3,13 +3,11 @@ title: "How to: Send Data as a Stream | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "streaming data"
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # How to: Send Data as a Stream

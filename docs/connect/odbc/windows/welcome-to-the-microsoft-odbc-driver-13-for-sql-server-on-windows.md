@@ -1,11 +1,8 @@
 ---
 title: "Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows | Microsoft Docs"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -14,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a017f91b-7f07-4a81-aa38-b287f22369e8
 caps.latest.revision: 3
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows

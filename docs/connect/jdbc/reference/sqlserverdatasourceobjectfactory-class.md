@@ -3,19 +3,16 @@ title: "SQLServerDataSourceObjectFactory Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLServerDataSourceObjectFactory Class

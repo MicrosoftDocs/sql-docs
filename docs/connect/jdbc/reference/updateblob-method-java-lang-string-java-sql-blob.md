@@ -3,13 +3,10 @@ title: "updateBlob Method (java.lang.String, java.sql.Blob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -19,8 +16,8 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # updateBlob Method (java.lang.String, java.sql.Blob)

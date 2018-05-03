@@ -3,13 +3,10 @@ title: "setTypeMap Method (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -19,8 +16,8 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # setTypeMap Method (SQLServerConnection)

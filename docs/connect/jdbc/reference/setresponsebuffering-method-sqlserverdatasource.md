@@ -3,13 +3,10 @@ title: "setResponseBuffering Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -19,8 +16,8 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 caps.latest.revision: 27
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # setResponseBuffering Method (SQLServerDataSource)

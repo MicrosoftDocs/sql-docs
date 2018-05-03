@@ -3,13 +3,10 @@ title: "execute Method (java.lang.String) (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -19,8 +16,8 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # execute Method (java.lang.String) (SQLServerStatement)

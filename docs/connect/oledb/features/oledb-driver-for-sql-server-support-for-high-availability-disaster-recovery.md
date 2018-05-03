@@ -5,12 +5,10 @@ ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "oledb|features"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"

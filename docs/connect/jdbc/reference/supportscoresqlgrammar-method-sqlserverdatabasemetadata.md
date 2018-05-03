@@ -3,13 +3,10 @@ title: "supportsCoreSQLGrammar Method (SQLServerDatabaseMetaData) | Microsoft Do
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -19,8 +16,8 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # supportsCoreSQLGrammar Method (SQLServerDatabaseMetaData)

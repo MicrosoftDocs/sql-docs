@@ -3,19 +3,17 @@ title: "Step 2: Create a SQL database for ADO.NET development | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado-net"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Step 2: Create a SQL database for ADO.NET development

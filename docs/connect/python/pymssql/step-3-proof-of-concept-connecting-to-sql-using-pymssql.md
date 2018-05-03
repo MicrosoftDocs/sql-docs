@@ -3,19 +3,17 @@ title: "Step 3: Proof of concept connecting to SQL using pymssql | Microsoft Doc
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "python"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using pymssql

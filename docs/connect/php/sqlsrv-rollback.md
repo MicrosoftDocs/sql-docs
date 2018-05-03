@@ -3,13 +3,11 @@ title: "sqlsrv_rollback | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "sqlsrv_rollback"
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sqlsrv_rollback

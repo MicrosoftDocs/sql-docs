@@ -3,19 +3,17 @@ title: "Updating Data (Microsoft Drivers for PHP for SQL Server) | Microsoft Doc
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Updating Data (Microsoft Drivers for PHP for SQL Server)

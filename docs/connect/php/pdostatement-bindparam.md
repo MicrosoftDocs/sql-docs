@@ -3,19 +3,17 @@ title: "PDOStatement::bindParam | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # PDOStatement::bindParam

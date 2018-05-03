@@ -8,8 +8,7 @@ ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-query-tuning"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51

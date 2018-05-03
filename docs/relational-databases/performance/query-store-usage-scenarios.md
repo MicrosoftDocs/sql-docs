@@ -8,8 +8,7 @@ ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-query-tuning"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

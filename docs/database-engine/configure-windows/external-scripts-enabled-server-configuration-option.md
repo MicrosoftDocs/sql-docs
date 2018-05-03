@@ -1,15 +1,12 @@
 ---
 title: "External Scripts Enabled server configuration option | Microsoft Docs"
 ms.date: "11/13/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 

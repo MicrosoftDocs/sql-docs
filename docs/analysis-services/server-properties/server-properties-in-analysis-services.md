@@ -1,29 +1,14 @@
 ---
 title: "Server Properties in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, configuration properties"
-  - "Analysis Services, configuration properties"
-  - "SQL Server Analysis Services, configuration properties"
-  - "configuration options [Analysis Services]"
-  - "server properties [Analysis Services]"
-  - "properties [Analysis Services], configuration"
-  - "properties [Analysis Services]"
-ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: 
+ms.topic: article
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Server Properties in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

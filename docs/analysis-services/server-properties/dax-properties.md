@@ -1,21 +1,14 @@
 ---
 title: "DAX Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology:
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: 
+ms.topic: article
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DAX Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

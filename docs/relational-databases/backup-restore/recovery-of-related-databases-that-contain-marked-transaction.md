@@ -2,9 +2,8 @@
 title: "Recovery of Related  Databases That Contain Marked Transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "backup-restore"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,9 +25,9 @@ helpviewer_keywords:
   - "database restores [SQL Server], point in time"
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

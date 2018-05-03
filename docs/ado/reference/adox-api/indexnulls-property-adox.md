@@ -1,11 +1,9 @@
 ---
 title: "IndexNulls Property (ADOX) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "IndexNulls property [ADOX]"
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # IndexNulls Property (ADOX)
 Indicates whether records that have null values in their index fields have index entries.  

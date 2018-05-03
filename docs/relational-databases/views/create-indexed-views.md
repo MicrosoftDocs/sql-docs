@@ -2,9 +2,8 @@
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Indexed Views

@@ -2,9 +2,8 @@
 title: "Create Unique Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Unique Indexes

@@ -2,9 +2,8 @@
 title: "Sending Result Sets to the Server (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "extended-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 ---
 # Sending Result Sets to the Server (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

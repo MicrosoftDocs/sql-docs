@@ -2,9 +2,8 @@
 title: "WITH CHANGE_TRACKING_CONTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-functions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
 caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)

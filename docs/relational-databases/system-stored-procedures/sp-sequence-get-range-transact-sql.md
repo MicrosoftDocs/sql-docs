@@ -2,9 +2,8 @@
 title: "sp_sequence_get_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 caps.latest.revision: 19
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_sequence_get_range (Transact-SQL)

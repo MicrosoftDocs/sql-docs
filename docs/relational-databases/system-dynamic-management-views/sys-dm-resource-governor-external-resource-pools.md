@@ -3,10 +3,9 @@ title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Micros
 ms.custom: ""
 ms.date: "05/02/2018"
 ms.suite: "sql"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: machine-learning
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.tgt_pltfrm: ""

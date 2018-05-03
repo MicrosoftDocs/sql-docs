@@ -2,9 +2,8 @@
 title: "sys.server_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.server_principals (Transact-SQL)

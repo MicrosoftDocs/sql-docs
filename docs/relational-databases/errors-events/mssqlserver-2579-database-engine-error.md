@@ -2,9 +2,8 @@
 title: "MSSQLSERVER_2579 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 caps.latest.revision: 18
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 ---
 # MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,9 +2,8 @@
 title: "sys.dm_exec_trigger_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 863498b4-849c-434d-b748-837411458738
 caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_trigger_stats (Transact-SQL)

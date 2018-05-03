@@ -2,9 +2,8 @@
 title: "sp_server_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 ---
 # sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

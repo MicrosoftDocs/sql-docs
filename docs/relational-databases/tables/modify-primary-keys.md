@@ -2,9 +2,8 @@
 title: "Modify Primary Keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify Primary Keys

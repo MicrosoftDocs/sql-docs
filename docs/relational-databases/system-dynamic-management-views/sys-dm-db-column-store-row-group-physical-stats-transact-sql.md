@@ -2,9 +2,8 @@
 title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ helpviewer_keywords:
 caps.latest.revision: 15
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)

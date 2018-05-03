@@ -2,9 +2,8 @@
 title: "MSdbms_datatype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 ---
 # MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

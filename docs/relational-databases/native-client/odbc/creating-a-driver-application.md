@@ -2,9 +2,8 @@
 title: "Creating a SQL Server Native Client ODBC Driver Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client|ODBC"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,9 +26,9 @@ helpviewer_keywords:
   - "function calls [ODBC]"
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 caps.latest.revision: 42
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Creating a Driver Application

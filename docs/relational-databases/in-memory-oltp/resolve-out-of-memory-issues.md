@@ -2,9 +2,8 @@
 title: "Resolve Out Of Memory Issues | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 18
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # Resolve Out Of Memory issues
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

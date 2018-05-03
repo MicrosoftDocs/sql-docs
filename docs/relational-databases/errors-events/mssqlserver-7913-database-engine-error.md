@@ -2,9 +2,8 @@
 title: "MSSQLSERVER_7913 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b
 caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 ---
 # MSSQLSERVER_7913
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

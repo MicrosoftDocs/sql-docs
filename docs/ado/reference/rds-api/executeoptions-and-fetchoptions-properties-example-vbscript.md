@@ -1,11 +1,9 @@
 ---
 title: "ExecuteOptions and FetchOptions Properties Example (VBScript) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "ExecuteOptions property [ADO]"
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ExecuteOptions and FetchOptions Properties Example (VBScript)
 > [!IMPORTANT]

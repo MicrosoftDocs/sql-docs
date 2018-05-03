@@ -2,9 +2,8 @@
 title: "Lesson 2: Create and Apply a Naming Standards Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -15,9 +14,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 caps.latest.revision: 11
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

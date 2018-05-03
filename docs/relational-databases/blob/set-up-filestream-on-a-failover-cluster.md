@@ -2,9 +2,8 @@
 title: "Set Up FILESTREAM on a Failover Cluster | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "blob"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Set Up FILESTREAM on a Failover Cluster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

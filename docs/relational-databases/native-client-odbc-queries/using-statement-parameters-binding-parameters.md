@@ -2,9 +2,8 @@
 title: "Binding Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-queries"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,9 +23,9 @@ helpviewer_keywords:
   - "bound parameter markers [SQL Server Native Client]"
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using Statement Parameters - Binding Parameters

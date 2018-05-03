@@ -2,9 +2,8 @@
 title: "sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -31,7 +30,7 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_refreshsqlmodule (Transact-SQL)

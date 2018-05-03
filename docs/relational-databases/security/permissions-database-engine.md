@@ -2,9 +2,8 @@
 title: "Permissions (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Permissions (Database Engine)

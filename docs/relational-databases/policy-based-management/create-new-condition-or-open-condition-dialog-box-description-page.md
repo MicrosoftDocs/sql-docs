@@ -2,9 +2,8 @@
 title: "Create New Condition or Open Condition Dialog Box, Description Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ f1_keywords:
   - "sql13.swb.dmf.policy.description.f1"
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Create New Condition or Open Condition Dialog Box, Description Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

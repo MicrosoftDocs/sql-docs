@@ -2,9 +2,8 @@
 title: "Unique Constraints and Check Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Unique Constraints and Check Constraints

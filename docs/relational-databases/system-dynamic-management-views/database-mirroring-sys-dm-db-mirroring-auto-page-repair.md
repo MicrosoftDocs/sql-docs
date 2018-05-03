@@ -2,9 +2,8 @@
 title: "sys.dm_db_mirroring_auto_page_repair (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,7 +26,7 @@ ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Database Mirroring - sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,9 +2,8 @@
 title: "Create Check Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Check Constraints

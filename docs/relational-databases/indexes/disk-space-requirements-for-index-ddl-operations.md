@@ -2,9 +2,8 @@
 title: "Disk Space Requirements for Index DDL Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 39
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # Disk Space Requirements for Index DDL Operations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

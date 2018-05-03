@@ -2,9 +2,8 @@
 title: "Modify Unique Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,7 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify Unique Constraints

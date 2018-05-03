@@ -2,9 +2,8 @@
 title: "sys.objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "0/30/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,7 +27,7 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.objects (Transact-SQL)

@@ -2,9 +2,8 @@
 title: "Restore Database (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/01/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "backup-restore"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,9 +15,9 @@ f1_keywords:
   - "sql13.swb.restoredb.general.f1"
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: 89
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Restore Database (General Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

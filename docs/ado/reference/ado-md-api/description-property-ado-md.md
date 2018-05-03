@@ -1,11 +1,9 @@
 ---
 title: "Description Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "Description property [ADO MD]"
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Description Property (ADO MD)
 Returns a text explanation of the current object.  

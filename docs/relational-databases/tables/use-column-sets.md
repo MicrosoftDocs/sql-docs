@@ -2,9 +2,8 @@
 title: "Use Column Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use Column Sets

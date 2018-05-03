@@ -2,9 +2,8 @@
 title: "sys.stats_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.stats_columns (Transact-SQL)

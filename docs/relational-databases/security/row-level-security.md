@@ -2,9 +2,8 @@
 title: "Row-Level Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: "security"
@@ -20,7 +19,7 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Row-Level Security

@@ -2,7 +2,7 @@
 title: "Use FOR JSON output in SQL Server and in client apps (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""
@@ -19,7 +19,7 @@ caps.latest.revision: 12
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)

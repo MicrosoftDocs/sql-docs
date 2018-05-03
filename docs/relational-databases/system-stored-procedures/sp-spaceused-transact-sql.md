@@ -2,9 +2,8 @@
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_spaceused (Transact-SQL)

@@ -2,9 +2,8 @@
 title: "RPC:Completed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "event-classes"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # RPC:Completed Event Class

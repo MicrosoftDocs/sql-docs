@@ -17,7 +17,7 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # View Offline Log Files
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

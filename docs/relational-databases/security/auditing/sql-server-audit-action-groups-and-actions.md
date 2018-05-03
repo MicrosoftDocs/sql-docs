@@ -2,9 +2,8 @@
 title: "SQL Server Audit Action Groups and Actions | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,7 +26,7 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server Audit Action Groups and Actions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,6 @@
 ---
 title: "URL Property Example (VBScript) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "URL property [ADO], VBScript example"
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # URL Property Example (VBScript)
 > [!IMPORTANT]

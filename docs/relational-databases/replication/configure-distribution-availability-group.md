@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/27/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,9 +23,9 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], configuring distribution"
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Set up replication distribution database in Always On availability group
 

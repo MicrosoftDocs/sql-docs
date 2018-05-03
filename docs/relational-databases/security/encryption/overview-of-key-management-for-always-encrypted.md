@@ -2,9 +2,8 @@
 title: "Overview of Key Management for Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/20/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Overview of Key Management for Always Encrypted

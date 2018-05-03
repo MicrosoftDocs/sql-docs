@@ -1,11 +1,9 @@
 ---
 title: "ADOX Enumerated Constants | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "enumerated constants [ADOX]"
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADOX Enumerated Constants
 To assist debugging, the ADOX enumerated constants list a value for each constant. However, this value is purely advisory, and may change from one release of ADOX to another. Your code should only depend on the name, not the actual value, of enumerated constants.  

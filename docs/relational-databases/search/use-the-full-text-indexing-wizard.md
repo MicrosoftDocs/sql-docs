@@ -2,9 +2,8 @@
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -29,7 +28,7 @@ ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use the Full-Text Indexing Wizard

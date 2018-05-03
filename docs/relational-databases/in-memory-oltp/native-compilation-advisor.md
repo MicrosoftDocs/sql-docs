@@ -2,9 +2,8 @@
 title: "Native Compilation Advisor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ f1_keywords:
   - "swb.nativecompilationwizard.f1"
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Native Compilation Advisor

@@ -2,9 +2,8 @@
 title: "Back Up Database (Media Options Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "backup-restore"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ f1_keywords:
   - "sql13.swb.backupdatabase.mediaoptions.f1"
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Back Up Database (Media Options Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

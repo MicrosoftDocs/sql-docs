@@ -2,9 +2,8 @@
 title: "Media Sets, Media Families, and Backup Sets (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "backup-restore"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,9 +26,9 @@ helpviewer_keywords:
   - "backup sets [SQL Server]"
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Media Sets, Media Families, and Backup Sets (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

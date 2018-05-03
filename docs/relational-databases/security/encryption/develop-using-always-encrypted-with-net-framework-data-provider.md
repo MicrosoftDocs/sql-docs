@@ -2,9 +2,8 @@
 title: "Develop using Always Encrypted with .NET Framework Data Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Develop using Always Encrypted with .NET Framework Data Provider

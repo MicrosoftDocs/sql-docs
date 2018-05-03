@@ -2,9 +2,8 @@
 title: "MSSQLSERVER_5512 | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 robots: noindex,nofollow
 ---
 # MSSQLSERVER_5512

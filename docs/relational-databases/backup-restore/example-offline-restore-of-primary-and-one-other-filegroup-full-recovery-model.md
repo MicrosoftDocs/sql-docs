@@ -2,9 +2,8 @@
 title: "Example Offline Restore: Primary and 1 Filegroup (Full Recovery Model) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "backup-restore"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "restore sequences [SQL Server], offline"
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Example: Offline Restore of Primary and One Other Filegroup (Full Recovery Model)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

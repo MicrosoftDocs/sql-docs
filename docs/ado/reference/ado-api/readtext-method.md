@@ -1,11 +1,9 @@
 ---
 title: "ReadText Method | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "ReadText method [ADO]"
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ReadText Method
 Reads specified number of characters from a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

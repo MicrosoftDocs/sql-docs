@@ -2,9 +2,8 @@
 title: "Move an Existing Index to a Different Filegroup | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # Move an Existing Index to a Different Filegroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

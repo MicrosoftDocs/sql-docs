@@ -2,9 +2,8 @@
 title: "Backup and Restore: Interoperability and Coexistence (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "backup-restore"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,9 +19,9 @@ helpviewer_keywords:
   - "file backups [SQL Server], related features"
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Backup and Restore: Interoperability and Coexistence (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

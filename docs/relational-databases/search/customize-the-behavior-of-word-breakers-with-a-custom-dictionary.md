@@ -2,9 +2,8 @@
 title: "Customize the Behavior of Word Breakers with a Custom Dictionary | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Customize the Behavior of Word Breakers with a Custom Dictionary

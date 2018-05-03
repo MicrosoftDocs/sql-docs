@@ -2,9 +2,8 @@
 title: "Lesson 1: Create stored access policy and shared access signature | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,9 +15,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Lesson 1: Create stored access policy and shared access signature
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

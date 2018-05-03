@@ -1,11 +1,9 @@
 ---
 title: "Command (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "Command collection [ADO], ADO/WFC syntax"
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Command (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

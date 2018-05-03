@@ -2,9 +2,8 @@
 title: "Backup Overview (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/15/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "backup-restore"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,9 +25,9 @@ helpviewer_keywords:
   - "backups [SQL Server], table-level backups unsupported"
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 84
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

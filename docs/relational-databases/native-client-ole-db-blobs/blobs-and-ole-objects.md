@@ -2,9 +2,8 @@
 title: "BLOBs and OLE Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-blobs"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,9 +19,9 @@ helpviewer_keywords:
   - "large data, OLE objects"
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 caps.latest.revision: 43
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # BLOBs and OLE Objects

@@ -2,9 +2,8 @@
 title: "sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,7 +23,7 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 caps.latest.revision: 3
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)

@@ -2,9 +2,8 @@
 title: "Create a Visual C# SMO Project in Visual Studio .NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: 43
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # How to Create a Visual C# SMO Project in Visual Studio .NET

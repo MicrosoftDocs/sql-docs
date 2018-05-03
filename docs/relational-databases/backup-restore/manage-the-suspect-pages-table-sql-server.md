@@ -2,9 +2,8 @@
 title: "Manage the suspect_pages Table (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "backup-restore"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,9 +21,9 @@ helpviewer_keywords:
   - "restoring [SQL Server], pages"
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Manage the suspect_pages Table (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

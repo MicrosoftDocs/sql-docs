@@ -23,7 +23,7 @@ ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Active Geo-Replication - sp_wait_for_database_copy_sync

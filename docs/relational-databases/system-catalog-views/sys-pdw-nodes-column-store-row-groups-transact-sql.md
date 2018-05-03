@@ -18,7 +18,7 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)

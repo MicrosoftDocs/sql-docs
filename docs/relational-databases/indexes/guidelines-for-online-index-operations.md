@@ -2,7 +2,7 @@
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
 ms.date: 07/10/2017
-ms.prod: "sql"
+ms.prod: sql
 ms.reviewer: ""
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
@@ -21,7 +21,6 @@ ms.author: barbkess
 manager: craigg
 ms.suite: "sql"
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "indexes"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -26,7 +26,7 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_database_copies (Azure SQL Database)

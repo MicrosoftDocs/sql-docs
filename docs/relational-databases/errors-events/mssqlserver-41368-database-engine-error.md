@@ -2,9 +2,8 @@
 title: "MSSQLSERVER_41368 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 robots: noindex,nofollow
 ---
 # MSSQLSERVER_41368

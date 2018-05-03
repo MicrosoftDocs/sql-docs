@@ -1,8 +1,6 @@
 ---
 title: "RDS Code Examples | Microsoft Docs"
-ms.service: ""
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "RDS samples [ADO]"
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RDS Code Examples
 > [!IMPORTANT]

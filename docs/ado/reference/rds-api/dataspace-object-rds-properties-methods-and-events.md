@@ -1,11 +1,9 @@
 ---
 title: "DataSpace Object (RDS) Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "DataSpace object [RDS], members"
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DataSpace Object (RDS) Properties, Methods, and Events
 > [!IMPORTANT]

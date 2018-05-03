@@ -18,7 +18,7 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_pdw_physical_databases (Transact-SQL)

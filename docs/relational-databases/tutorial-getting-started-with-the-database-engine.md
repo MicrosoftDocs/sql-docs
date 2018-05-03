@@ -2,9 +2,8 @@
 title: "Tutorial: Getting Started with the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/21/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,7 +21,7 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 caps.latest.revision: 20
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Tutorial: Getting Started with the Database Engine

@@ -16,7 +16,7 @@ dev_langs:
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-manager: "craigg"
+manager: craigg
 ms.reviewer: "barbkess"
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---

@@ -29,7 +29,7 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 caps.latest.revision: 74
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Database Checkpoints (SQL Server)

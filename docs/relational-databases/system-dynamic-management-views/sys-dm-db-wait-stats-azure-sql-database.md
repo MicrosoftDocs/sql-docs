@@ -26,7 +26,7 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)

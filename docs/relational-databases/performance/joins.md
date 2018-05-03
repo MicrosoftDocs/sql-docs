@@ -2,9 +2,8 @@
 title: "Joins (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/18/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "joins [SQL Server], about joins"
   - "join hints [SQL Server]"
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Joins (SQL Server)

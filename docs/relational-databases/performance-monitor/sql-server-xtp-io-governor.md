@@ -2,9 +2,8 @@
 title: "SQL Server XTP IO Governor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 caps.latest.revision: 2
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server XTP IO Governor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

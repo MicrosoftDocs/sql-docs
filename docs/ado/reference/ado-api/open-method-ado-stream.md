@@ -1,11 +1,9 @@
 ---
 title: "Open Method (ADO Stream) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "Open method [ADO]"
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Open Method (ADO Stream)
 Opens a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object to manipulate streams of binary or text data.  

@@ -26,7 +26,7 @@ ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.firewall_rules (Azure SQL Database)

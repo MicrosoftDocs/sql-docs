@@ -29,15 +29,15 @@ manager: craigg
 
 Each execution of Setup creates log files are created with a new timestamped log folder at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is run in an unattended mode, the logs are created at % temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
   
- A typical Setup request goes through three execution phases:  
+ A typical Setup request goes through a single execution phase that accomplishes three things: 
   
-1.  Global rules text  
+1.  Global rules text
   
-2.  Component update  
+2.  Component update
   
-3.  User-requested action  
+3.  User-requested action
   
- In each phase, Setup generates detail and summary logs with additional logs created as appropriate. Setup is called at least three times per user-requested Setup action.  
+ This workflow produces a single summary log, and at most two Detail logs, though typically there is onl one detail log. The second detail log would be present if additional media is slipstreamed along with the original media. 
   
  Datastore files contain a snapshot of the state of all configuration objects being tracked by the Setup process, and are useful for troubleshooting configuration errors. XML file dumps are created for datastore objects for each execution phase. They are saved in their own log subfolder under the time-stamped log folder, as follows:  
   
@@ -77,13 +77,16 @@ Each execution of Setup creates log files are created with a new timestamped log
 -   Failed rules  
   
 -   Location of the rules report file  
+
+  >[!NOTE]
+  > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similiar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### Location  
  It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.  
   
  To find errors in the summary text file, search the file by using the "error" or "failed" keywords.  
   
-## Summary_engine-base_YYYYMMDD_HHMMss.txt  
+## Summary_<MachineName>_YYYYMMDD_HHMMss.txt  
   
 ### Overview  
  The summary_engine base file is similar to the summary file and is generated during the main workflow.  
@@ -91,7 +94,7 @@ Each execution of Setup creates log files are created with a new timestamped log
 ### Location  
  It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
+## Summary_<MachineName>_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
 ### Overview  
  The component update summary log file is similar to the summary file and is generated during the component update workflow.  
@@ -99,7 +102,7 @@ Each execution of Setup creates log files are created with a new timestamped log
 ### Location  
  It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
+## Summary_<MachineName>_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
 ### Overview  
  The global rules summary log file is similar to the summary file generated during the global rules workflow.  

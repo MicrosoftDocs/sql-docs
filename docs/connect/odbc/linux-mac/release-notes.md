@@ -3,17 +3,14 @@ title: "Release Notes - Microsoft ODBC Driver for SQL Server on Linux and macOS 
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS

@@ -3,18 +3,17 @@ title: "Node.js Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
+ms.prod_service: connectivity
 ms.component: "node-js"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: "craigg"
 ---
 # Node.js Driver for SQL Server

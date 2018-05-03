@@ -3,21 +3,19 @@ title: "Retrieve Date and Time Type as Strings Using the SQLSRV Driver | Microso
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "date and time types, retrieving as strings"
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # How to: Retrieve Date and Time Type as Strings Using the SQLSRV Driver

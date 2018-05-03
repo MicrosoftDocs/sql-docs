@@ -2,13 +2,11 @@
 title: "Idle Connection Resiliency"
 ms.date: "07/13/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.topic: conceptual
 author: "david-puglielli"
 ms.author: "v-dapugl"

@@ -6,16 +6,13 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
-ms.technology: 
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Connecting using Azure Active Directory Authentication

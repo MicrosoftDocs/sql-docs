@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "8601 (Database Engine error)"
 ms.assetid: d8603ea1-27b7-4379-a451-744787daea66
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_8601

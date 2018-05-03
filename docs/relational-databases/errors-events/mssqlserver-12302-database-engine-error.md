@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "12302 (Database Engine error)"
 ms.assetid: c1ab574c-c277-4ba7-ab82-f0d09f54a5d0
 caps.latest.revision: 4
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_12302

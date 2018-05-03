@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -35,8 +34,8 @@ helpviewer_keywords:
   - "page count accuracy [SQL Server]"
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 caps.latest.revision: 56
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC UPDATEUSAGE (Transact-SQL)

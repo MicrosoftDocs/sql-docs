@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 
 ms.suite: "sql"

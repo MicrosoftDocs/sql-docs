@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "2570 (Database Engine error)"
 ms.assetid: 29800aa9-81aa-4371-992c-487dbb617f46
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_2570

@@ -3,12 +3,9 @@ title: "Create Custom Collection Set - Generic T-SQL Query Collector Type | Micr
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-collection"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +13,8 @@ helpviewer_keywords:
   - "collection sets [SQL Server], creating custom"
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 caps.latest.revision: 26
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create Custom Collection Set - Generic T-SQL Query Collector Type

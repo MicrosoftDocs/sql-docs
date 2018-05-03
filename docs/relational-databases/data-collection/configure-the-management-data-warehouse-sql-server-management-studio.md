@@ -3,12 +3,9 @@ title: "Configure the Management Data Warehouse (SQL Server Management Studio) |
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-collection"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -26,8 +23,8 @@ helpviewer_keywords:
   - "management data warehouse, configuring"
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure the Management Data Warehouse (SQL Server Management Studio)

@@ -3,12 +3,9 @@ title: "View Collection Set Logs (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-collection"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +13,8 @@ helpviewer_keywords:
   - "collection sets [SQL Server], viewing logs"
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View Collection Set Logs (SQL Server Management Studio)

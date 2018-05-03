@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "605 (Database Engine error)"
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_605

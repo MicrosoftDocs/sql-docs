@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "12303 (Database Engine error)"
 ms.assetid: d7972592-72a5-4e84-b9d5-54324d430dcb
 caps.latest.revision: 4
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_12303

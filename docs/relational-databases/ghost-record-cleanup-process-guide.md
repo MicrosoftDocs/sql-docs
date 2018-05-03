@@ -22,20 +22,20 @@ manager: "craigg"
 ---
 # Ghost Cleanup Process Guide
 
-The ghost cleanup process is a background process that deletes records off of pages that have been marked for deletion. The following topic provides an overview of the this process.
+The ghost cleanup process is a background process that deletes records off of pages that have been marked for deletion. The following article provides an overview of this process.
 
 ## Ghost records
 
-When a record is deleted from from an index page on a table, the delete operation doesn't physically remove the record from the page - instead, it only marks it 'to be deleted' or *ghosted*. This is to optimize performance during a delete operation.  If records were physically deleted instead of being ghosted, then the object (such as the table or index) would be locked for the entirety of the delete operation. This would cause a performance issue by extending the duration of the delete transaction, and by blocking other transactions from accessing the object. Additionally, this helps speed up a delete rollback as the record just has to be unghosted, rather than physically reinserted. The *ghosted* record will then be physically removed asynchronously at a later time by the ghost cleanup task.
-
+Records that are deleted from a leaf level of an index page aren't physically removed from the page - instead, the record is marked as 'to be deleted', or *ghosted*. 
+This means that the row stays on the page but a bit is changed in the row header to indicate that the row is really a ghost. This is to optimize performance during a delete operation.  If records were physically deleted instead of being ghosted, then the object (such as the table or index) would be locked for the entirety of the delete operation. This would cause a performance issue by extending the duration of the delete transaction, and by blocking other transactions from accessing the object. Additionally, this helps speed up a delete rollback as the record just has to be unghosted, rather than physically reinserted. The *ghosted* record will then be physically removed asynchronously at a later time by the ghost cleanup task.
 
 ## Ghost record cleanup Task
 
-Records that are marked for deletion, or *ghosted*, are cleaned up by the background ghost cleanup process. This background process runs sometime after the delete transaction is committed, and physically removes ghosted records from pages. The ghoest cleanup process runs automatically on an interval (every 5 seconds for SQL 2012+, every 10 seconds for SQL 2008/2008R2) and checks to see if any pages have been marked with ghost records. If it finds any, then it goes and deletes the records that are marked for deletion, or *ghosted*, touching a set number of pages with each execution.
+Records that are marked for deletion, or *ghosted*, are cleaned up by the background ghost cleanup process. This background process runs sometime after the delete transaction is committed, and physically removes ghosted records from pages. The ghost cleanup process runs automatically on an interval (every 5 seconds for SQL 2012+, every 10 seconds for SQL 2008/2008R2) and checks to see if any pages have been marked with ghost records. If it finds any, then it goes and deletes the records that are marked for deletion, or *ghosted*, touching at most 10 pages with each execution.
 
 When a record is ghosted, the database is marked as having ghosted entries, and the ghost cleanup process will only scan those databases. The ghost cleanup process will also mark the database as 'having no ghosted records' once all ghosted records have been deleted, and it will skip this database the next time it runs. The process will also skip any databases it is unable to take a shared lock on, and will try again the next time it runs.
 
-The ghost cleanup processes runs on a single thread.
+The ghost cleanup process runs on a single thread.
 
 ## Disabling the ghost cleanup
 

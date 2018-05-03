@@ -2,9 +2,8 @@
 title: "sp_tableoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 caps.latest.revision: 60
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_tableoption (Transact-SQL)

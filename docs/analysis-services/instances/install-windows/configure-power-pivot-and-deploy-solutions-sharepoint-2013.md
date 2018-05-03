@@ -1,22 +1,14 @@
 ---
 title: "Configure Power Pivot and Deploy Solutions (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  - "power-view"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Power Pivot and Deploy Solutions (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

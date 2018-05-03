@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "POWER function"
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc

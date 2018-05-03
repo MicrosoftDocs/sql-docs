@@ -2,9 +2,8 @@
 title: "Mapping CLR Parameter Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -32,7 +31,7 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 71
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 ---
 # Mapping CLR Parameter Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

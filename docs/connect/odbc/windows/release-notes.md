@@ -3,19 +3,16 @@ title: "Release Notes (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Release Notes

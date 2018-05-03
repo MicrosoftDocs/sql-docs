@@ -2,15 +2,14 @@
 title: "Prerequisites for Minimal Logging in Bulk Import | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: data-movement
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "minimal logging [SQL Server]"
   - "logged bulk copy [SQL Server]"
@@ -21,7 +20,7 @@ ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,16 +2,15 @@
 title: "Rename Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "table renaming [SQL Server]"
   - "table names [SQL Server]"
@@ -19,7 +18,7 @@ helpviewer_keywords:
   - "renaming tables"
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rename Tables (Database Engine)

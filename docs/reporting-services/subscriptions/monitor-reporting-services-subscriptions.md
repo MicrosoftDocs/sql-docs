@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], inactive"
   - "subscriptions [Reporting Services], status"

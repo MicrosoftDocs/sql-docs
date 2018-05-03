@@ -2,16 +2,15 @@
 title: "Configure Parallel Index Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index parallel operations [SQL Server]"
   - "processors [SQL Server], parallel index operations"
@@ -22,7 +21,7 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: 43
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure Parallel Index Operations

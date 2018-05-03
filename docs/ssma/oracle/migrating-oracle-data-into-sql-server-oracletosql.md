@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle Data Migration, Client-Side Migration"
   - "Oracle Data Migration,Server-Side Migration"

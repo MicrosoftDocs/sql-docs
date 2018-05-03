@@ -3,7 +3,7 @@ title: "Transparent data encryption for Azure SQL Database and Data Warehouse | 
 description: "An overview of transparent data encryption for SQL Database and Data Warehouse. The document covers its benefits and the options for configuration, which includes service-managed transparent data encryption and Bring Your Own Key."
 keywords:
 author: "becczhang"
-manager: "craigg"
+manager: craigg
 editor: ""
 ms.prod: 
 ms.reviewer: ""
@@ -12,7 +12,7 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.component: "security"
 ms.tgt_pltfrm:
-ms.topic: "article"
+ms.topic: conceptual
 ms.date: "04/10/2018"
 ms.author: "rebeccaz"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"

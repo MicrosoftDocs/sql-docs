@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "proxies [SQL Server Agent], multiserver jobs"
   - "jobs [SQL Server Agent], multiserver jobs using proxies"

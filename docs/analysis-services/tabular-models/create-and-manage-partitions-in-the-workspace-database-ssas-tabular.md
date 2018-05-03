@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.bidtoolset.partitionmgr.f1"
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218

@@ -3,19 +3,17 @@ title: "PDOStatement::setAttribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/13/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # PDOStatement::setAttribute

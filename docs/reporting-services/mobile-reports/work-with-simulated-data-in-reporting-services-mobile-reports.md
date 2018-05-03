@@ -11,7 +11,7 @@ ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 caps.latest.revision: 9
 author: "maggiesMSFT"

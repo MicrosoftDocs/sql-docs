@@ -2,9 +2,8 @@
 title: "sp_query_store_remove_query (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,7 +25,7 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 caps.latest.revision: 8
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_query_store_remove_query (Transact-SQL)

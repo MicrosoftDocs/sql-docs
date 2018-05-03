@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],applying changes"
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41

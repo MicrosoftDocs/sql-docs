@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], help"
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980

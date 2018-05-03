@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc

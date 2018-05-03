@@ -3,24 +3,21 @@ title: "Possible Failures During Sessions Between Availability Replicas (SQL Ser
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology:
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "troubleshooting [SQL Server], HADR"
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], troubleshooting"
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 
 ---
 # Possible Failures During Sessions Between Availability Replicas (SQL Server)

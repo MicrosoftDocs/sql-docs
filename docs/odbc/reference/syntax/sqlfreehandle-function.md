@@ -2,16 +2,13 @@
 title: "SQLFreeHandle Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLFreeHandle"
 apilocation: 
@@ -23,8 +20,8 @@ helpviewer_keywords:
   - "SQLFreeHandle function [ODBC]"
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLFreeHandle Function

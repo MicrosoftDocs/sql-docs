@@ -11,7 +11,7 @@ ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "URL configuration [Reporting Services]"
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14

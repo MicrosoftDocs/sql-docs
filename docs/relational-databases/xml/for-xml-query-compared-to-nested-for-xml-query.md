@@ -2,15 +2,14 @@
 title: "FOR XML Query Compared to Nested FOR XML Query | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "xml"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: xml
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML query"
   - "queries [XML in SQL Server], comparing query types"
@@ -18,7 +17,7 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # FOR XML Query Compared to Nested FOR XML Query
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

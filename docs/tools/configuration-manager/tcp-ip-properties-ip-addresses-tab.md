@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "configuration-manager"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [SQL Server], listening on"
   - "listening [SQL Server], on ports"

@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "version flags [Master Data Services], about version flags"
   - "versions [Master Data Services]"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "versions [Master Data Services], version flags"
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Versions (Master Data Services)
 

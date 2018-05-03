@@ -12,7 +12,7 @@ ms.technology:
   
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
 caps.latest.revision: 15
 author: "Minewiskan"

@@ -3,23 +3,21 @@ title: "Set Up Login Accounts - Database Mirroring Always On Availability | Micr
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
   - "logins [SQL Server], database mirroring"
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Set Up Login Accounts - Database Mirroring Always On Availability
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

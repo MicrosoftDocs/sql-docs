@@ -2,16 +2,15 @@
 title: "Replication Security Best Practices | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], best practices"
   - "security [SQL Server replication], between domains"
@@ -21,7 +20,7 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: 42
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Replication Security Best Practices
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

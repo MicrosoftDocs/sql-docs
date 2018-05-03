@@ -3,24 +3,23 @@ title: "Deprecated Database Engine Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod_service: high-availability
 ms.component: "database-engine"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 215
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Deprecated Database Engine Features in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

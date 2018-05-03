@@ -18,7 +18,7 @@ ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_wait_stats (Transact-SQL)

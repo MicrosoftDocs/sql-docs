@@ -2,24 +2,23 @@
 title: "Delete Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "statistics"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-statistics"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "statistics [SQL Server], deleting"
   - "deleting statistics"
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete Statistics

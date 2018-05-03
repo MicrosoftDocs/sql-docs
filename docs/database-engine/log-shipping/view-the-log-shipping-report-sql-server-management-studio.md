@@ -3,15 +3,13 @@ title: "View the Log Shipping Report (SQL Server Management Studio) | Microsoft 
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod_service: high-availability
 ms.component: "log-shipping"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing log shipping reports"
   - "displaying log shipping reports"
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "log shipping [SQL Server], viewing reports"
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # View the Log Shipping Report (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

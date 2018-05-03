@@ -2,16 +2,13 @@
 title: "Binding Columns for Use with Block Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "column-wise binding [ODBC]"
   - "row-wise binding [ODBC]"
@@ -22,8 +19,8 @@ helpviewer_keywords:
   - "result sets [ODBC], block cursors"
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Binding Columns for Use with Block Cursors

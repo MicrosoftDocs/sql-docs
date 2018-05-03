@@ -2,15 +2,14 @@
 title: "Generate an Inline XDR Schema | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "xml"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: xml
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XDR schemas [SQL Server]"
   - "inline XDR schema generation [SQL Server]"
@@ -20,7 +19,7 @@ ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Generate an Inline XDR Schema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

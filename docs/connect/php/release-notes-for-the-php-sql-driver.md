@@ -3,21 +3,19 @@ title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microso
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 caps.latest.revision: 37
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server

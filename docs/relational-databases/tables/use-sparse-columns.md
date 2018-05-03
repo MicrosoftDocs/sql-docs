@@ -2,16 +2,15 @@
 title: "Use Sparse Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sparse columns, described"
   - "null columns"
@@ -20,7 +19,7 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 47
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use Sparse Columns

@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.newrole.f1"
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c

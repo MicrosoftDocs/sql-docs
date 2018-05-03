@@ -2,16 +2,15 @@
 title: "Parameter Info (IntelliSense) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Parameter Info option [IntelliSense]"
   - "stored function parameter completion [Intellisense]"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], Parameter Info option"
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 caps.latest.revision: 33
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Parameter Info (IntelliSense)

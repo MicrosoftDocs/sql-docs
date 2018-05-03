@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.ssms.partitions.partitionmgr.imbi.f1"
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83

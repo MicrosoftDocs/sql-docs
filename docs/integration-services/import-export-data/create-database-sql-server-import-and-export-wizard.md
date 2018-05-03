@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.createdatabase.f1"
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf

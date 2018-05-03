@@ -3,15 +3,13 @@ title: "sqlsrv_query | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_query"
 apitype: "NA"
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_query"
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 caps.latest.revision: 46
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sqlsrv_query

@@ -2,15 +2,14 @@
 title: "Use Character Format to Import or Export Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/29/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: data-movement
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data formats [SQL Server], character"
   - "character formats [SQL Server]"
@@ -18,7 +17,7 @@ ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use Character Format to Import or Export Data (SQL Server)

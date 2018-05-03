@@ -2,16 +2,15 @@
 title: "Modify Data Through a View | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "views"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-views"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data modifications [SQL Server], views"
   - "views [SQL Server], modifying data through"
@@ -20,7 +19,7 @@ ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify Data Through a View

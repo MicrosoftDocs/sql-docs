@@ -2,16 +2,13 @@
 title: "Data Buffer Length | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data buffers [ODBC], length"
   - "buffers [ODBC], data"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "buffers [ODBC], length"
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Data Buffer Length

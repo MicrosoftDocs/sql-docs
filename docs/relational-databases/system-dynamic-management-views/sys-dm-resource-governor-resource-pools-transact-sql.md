@@ -2,9 +2,8 @@
 title: "sys.dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_resource_governor_resource_pools (Transact-SQL)

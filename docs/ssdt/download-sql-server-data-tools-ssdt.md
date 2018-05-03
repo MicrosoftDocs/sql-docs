@@ -8,10 +8,9 @@ ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssdt"
+ms.technology: ssdt
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "install ssdt, download ssdt, latest ssdt"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361

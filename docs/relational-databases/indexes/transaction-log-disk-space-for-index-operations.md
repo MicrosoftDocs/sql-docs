@@ -2,16 +2,15 @@
 title: "Transaction Log Disk Space for Index Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index disk space [SQL Server]"
   - "space [SQL Server], indexes"
@@ -22,7 +21,7 @@ ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: 17
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # Transaction Log Disk Space for Index Operations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

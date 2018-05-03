@@ -2,16 +2,13 @@
 title: "Enable Encrypted Connections to the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], encrypted"
   - "SSL [SQL Server]"
@@ -24,9 +21,9 @@ helpviewer_keywords:
   - "security [SQL Server], encryption"
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Enable Encrypted Connections to the Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

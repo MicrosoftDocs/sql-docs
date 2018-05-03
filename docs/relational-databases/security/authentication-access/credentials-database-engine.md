@@ -2,16 +2,15 @@
 title: "Credentials (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "principals [SQL Server], credentials"
   - "schemas [SQL Server], credentials"
@@ -27,7 +26,7 @@ ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Credentials (Database Engine)

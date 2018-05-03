@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "CREATE EXTERNAL TABLE AS SELECT"
   - "CREATE_EXTERNAL_TABLE_AS_SELECT"

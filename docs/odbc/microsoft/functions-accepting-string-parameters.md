@@ -2,16 +2,13 @@
 title: "Functions Accepting String Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "desktop database drivers [ODBC], string parameters"
   - "ODBC desktop database drivers [ODBC], string parameters"
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "string parameters [ODBC]"
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Functions Accepting String Parameters

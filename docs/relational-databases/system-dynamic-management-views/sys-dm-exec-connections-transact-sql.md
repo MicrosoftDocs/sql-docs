@@ -2,9 +2,8 @@
 title: "sys.dm_exec_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 caps.latest.revision: 50
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_connections (Transact-SQL)

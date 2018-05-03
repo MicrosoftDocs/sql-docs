@@ -2,16 +2,15 @@
 title: "Modify Check Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CHECK constraints, modifying"
   - "modifying constraints"
@@ -21,7 +20,7 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify Check Constraints

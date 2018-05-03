@@ -2,9 +2,8 @@
 title: "sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   

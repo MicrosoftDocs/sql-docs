@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling task [Integration Services], configuring"
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8

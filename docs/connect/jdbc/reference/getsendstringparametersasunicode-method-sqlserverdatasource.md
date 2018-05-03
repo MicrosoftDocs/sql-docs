@@ -3,15 +3,12 @@ title: "getSendStringParametersAsUnicode Method (SQLServerDataSource) | Microsof
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLServerDataSource.getSendStringParametersAsUnicode"
 apilocation: 
@@ -19,8 +16,8 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # getSendStringParametersAsUnicode Method (SQLServerDataSource)

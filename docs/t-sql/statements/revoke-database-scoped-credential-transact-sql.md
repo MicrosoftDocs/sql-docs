@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "REVOKE DATABASE SCOPED CREDENTIAL"
   - "REVOKE_DATABASE_SCOPED_CREDENTIAL_TSQL"

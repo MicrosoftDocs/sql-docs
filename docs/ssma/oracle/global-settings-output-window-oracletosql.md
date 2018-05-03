@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
 caps.latest.revision: 3
 author: "Shamikg"

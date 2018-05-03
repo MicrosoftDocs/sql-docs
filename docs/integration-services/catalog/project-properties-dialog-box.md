@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.isprojectprop.general.f1"
   - "sql13.ssis.ssms.isprojectprop.permissions.f1"

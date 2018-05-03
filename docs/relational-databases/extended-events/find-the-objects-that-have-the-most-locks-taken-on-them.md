@@ -2,14 +2,13 @@
 title: "Find the Objects That Have the Most Locks Taken on Them | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "xevents"
+ms.technology: xevents
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server], extended events"
   - "xe"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "objects [SQL Server], locks"
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Find the Objects That Have the Most Locks Taken on Them

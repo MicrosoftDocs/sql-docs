@@ -2,16 +2,15 @@
 title: "View and Modify Publication Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing replication properties"
   - "modifying replication properties, articles"
@@ -24,7 +23,7 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 caps.latest.revision: 44
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # View and Modify Publication Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,16 +2,13 @@
 title: "Diagnostics for Desktop Database Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], diagnostic information"
   - "desktop database drivers [ODBC], diagnostic information"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "diagnostic information [ODBC], desktop database drivers"
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Diagnostics for Desktop Database Drivers

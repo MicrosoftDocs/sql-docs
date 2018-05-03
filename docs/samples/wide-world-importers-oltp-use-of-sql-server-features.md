@@ -2,22 +2,18 @@
 title: "Use of SQL Server features and capabilities | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
-ms.component: "samples"
-ms.technology:
-  - "samples"
+ms.technology: samples
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 caps.latest.revision: 2
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
-robots: noindex,nofollow
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Use of SQL Server features and capabilities
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

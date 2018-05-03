@@ -2,16 +2,13 @@
 title: "Prompting the User for Connection Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to data source [ODBC], SqlConnect"
   - "connecting to driver [ODBC], prompting user for information"
@@ -24,8 +21,8 @@ helpviewer_keywords:
   - "SQLDriverConnect function [ODBC], prompting user for connection information"
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Prompting the User for Connection Information

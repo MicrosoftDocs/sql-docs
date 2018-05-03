@@ -3,24 +3,21 @@ title: "Replication Subscribers and Always On Availability Groups (SQL Server) |
 ms.custom: ""
 ms.date: "03/08/2018"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "failover subscribers with AlwaysOn"
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Replication Subscribers and Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

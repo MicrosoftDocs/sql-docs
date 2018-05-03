@@ -2,16 +2,15 @@
 title: "Specify the Processing Order of Merge Table Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -21,7 +20,7 @@ ms.assetid: 9fe576a2-f5fb-4fdf-bd7d-cb322021b669
 caps.latest.revision: 33
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Specify the Processing Order of Merge Table Articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

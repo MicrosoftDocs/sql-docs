@@ -2,16 +2,15 @@
 title: "Set or Change the Database Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "collations"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "collations [SQL Server], database"
   - "database collations [SQL Server]"
@@ -19,7 +18,7 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Set or Change the Database Collation

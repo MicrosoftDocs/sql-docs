@@ -2,16 +2,15 @@
 title: "Disable Check Constraints with INSERT and UPDATE Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CHECK constraints, disabling"
   - "constraints [SQL Server], disabling"
@@ -21,7 +20,7 @@ ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
 caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Disable Check Constraints with INSERT and UPDATE Statements

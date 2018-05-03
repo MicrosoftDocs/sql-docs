@@ -1,11 +1,9 @@
 ---
 title: "DataControl Object Example (VBScript) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "DataControl object [ADO], VBScript example"
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DataControl Object Example (VBScript)
 > [!IMPORTANT]

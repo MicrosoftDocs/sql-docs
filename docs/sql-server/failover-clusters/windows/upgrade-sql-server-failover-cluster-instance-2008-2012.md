@@ -5,16 +5,15 @@ ms.suite: sql
 ms.prod: sql  
 ms.prod_service: database engine
 ms.component: "failover-clustuers"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading failover clusters"
   - "clusters [SQL Server], upgrading"
   - "failover clustering [SQL Server], upgrading"
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 

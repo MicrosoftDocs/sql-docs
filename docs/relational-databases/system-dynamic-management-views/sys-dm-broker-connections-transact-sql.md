@@ -2,9 +2,8 @@
 title: "sys.dm_broker_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 caps.latest.revision: 45
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

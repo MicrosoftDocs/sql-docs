@@ -2,16 +2,15 @@
 title: "PolyBase Queries | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/08/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine-polybase"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "PolyBase"
 helpviewer_keywords: 
@@ -24,7 +23,7 @@ ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 ---
 # PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,11 +1,9 @@
 ---
 title: "Cellset Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "Cellset object [ADO MD], members"
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Cellset Object Properties, Methods, and Events
 ## Properties/Collections  

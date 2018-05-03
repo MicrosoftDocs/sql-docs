@@ -3,24 +3,21 @@ title: "View Availability Group Listener Properties (SQL Server) | Microsoft Doc
 ms.custom: ""
 ms.date: "07/11/2016"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygrouplistenerproperties.general.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # View Availability Group Listener Properties (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

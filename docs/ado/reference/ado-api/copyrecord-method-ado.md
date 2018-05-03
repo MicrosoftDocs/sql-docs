@@ -1,11 +1,9 @@
 ---
 title: "CopyRecord Method (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "CopyRecord method [ADO]"
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # CopyRecord Method (ADO)
 Copies an entity represented by a [record](../../../ado/reference/ado-api/record-object-ado.md) to another location.  

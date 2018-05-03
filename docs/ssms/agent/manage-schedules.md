@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.manageschedules.f1"
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a

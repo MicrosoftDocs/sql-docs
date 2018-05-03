@@ -2,15 +2,14 @@
 title: "Add Namespaces to Queries with WITH XMLNAMESPACES | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "xml"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: xml
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENTS XSINIL directive"
   - "adding namespaces"
@@ -26,7 +25,7 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Add Namespaces to Queries with WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

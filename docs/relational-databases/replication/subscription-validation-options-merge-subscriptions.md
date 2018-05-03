@@ -2,16 +2,15 @@
 title: "Subscription Validation Options (Merge Subscriptions) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.validate.mergeoptions.f1"
 helpviewer_keywords: 
@@ -20,7 +19,7 @@ ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 caps.latest.revision: 15
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Subscription Validation Options (Merge Subscriptions)

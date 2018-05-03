@@ -1,11 +1,9 @@
 ---
 title: "HelpContext, HelpFile Properties | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -25,9 +23,9 @@ helpviewer_keywords:
   - "HelpFile property [ADO]"
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # HelpContext, HelpFile Properties
 Indicates the Help file and topic associated with an [Error](../../../ado/reference/ado-api/error-object.md) object.  

@@ -2,16 +2,13 @@
 title: "Scrollable Cursors and Transaction Isolation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "isolation levels [ODBC]"
   - "scrollable cursors [ODBC]"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "transactions [ODBC], isolation"
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Scrollable Cursors and Transaction Isolation

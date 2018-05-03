@@ -2,16 +2,15 @@
 title: "Find Results Windows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vs.findresults1"
   - "findresultswindow"
@@ -20,9 +19,9 @@ helpviewer_keywords:
   - "Find Results Windows dialog box"
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Find Results Windows

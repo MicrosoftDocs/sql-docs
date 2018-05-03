@@ -2,16 +2,14 @@
 title: "Errors and Events Reference (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/03/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server Database Engine]"
   - "Database Engine [SQL Server], errors"
@@ -20,7 +18,7 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 ---
 # Errors and Events Reference (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

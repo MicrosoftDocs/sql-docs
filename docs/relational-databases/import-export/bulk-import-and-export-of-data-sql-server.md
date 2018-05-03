@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: data-movement
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"
   - "bulk importing [SQL Server], about bulk importing"
@@ -27,7 +27,7 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Bulk Import and Export of Data (SQL Server)

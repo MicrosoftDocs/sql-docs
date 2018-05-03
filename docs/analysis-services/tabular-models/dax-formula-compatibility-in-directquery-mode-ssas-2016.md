@@ -12,7 +12,7 @@ ms.technology:
   
 ms.component: multidimensional-tabular
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
 caps.latest.revision: 10
 author: "Minewiskan"

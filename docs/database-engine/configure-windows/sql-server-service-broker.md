@@ -2,16 +2,13 @@
 title: "SQL Server Service Broker | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1"
   - "SQL13.SWB.SSBCONTRACTPROPERTIES.GENERAL.F1"
@@ -26,9 +23,9 @@ helpviewer_keywords:
   - "Service Broker"
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Service Broker

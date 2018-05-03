@@ -2,9 +2,8 @@
 title: "sp_fkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_fkeys (Transact-SQL)

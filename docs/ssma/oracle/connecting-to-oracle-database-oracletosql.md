@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Refreshing Oracle Metadata"
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6

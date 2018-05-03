@@ -2,23 +2,20 @@
 title: "Determining the Target DBMSs and Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "target DBMSs and drivers in interoperability [ODBC]"
   - "interoperability [ODBC], target dbmss and drivers"
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Determining the Target DBMSs and Drivers

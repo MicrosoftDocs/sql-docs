@@ -2,16 +2,13 @@
 title: "Hardware and Software Requirements (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hardware requirements [ODBC], desktop database drivers"
   - "software requirements [ODBC], desktop database drivers"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "requirements [ODBC], desktop database drivers"
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Hardware and Software Requirements (ODBC)

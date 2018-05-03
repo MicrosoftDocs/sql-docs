@@ -2,16 +2,15 @@
 title: "Access FILESTREAM Data with OpenSqlFilestream | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "blob"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "OpenSqlFilestream"
 apilocation: 
@@ -23,7 +22,7 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Access FILESTREAM Data with OpenSqlFilestream
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

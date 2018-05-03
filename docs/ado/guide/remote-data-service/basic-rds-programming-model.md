@@ -1,11 +1,9 @@
 ---
 title: "Basic RDS Programming Model | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "RDS programming model [ADO]"
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Basic RDS Programming Model
 > [!IMPORTANT]

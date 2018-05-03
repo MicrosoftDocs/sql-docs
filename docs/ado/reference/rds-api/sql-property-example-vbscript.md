@@ -1,7 +1,6 @@
 ---
 title: "SQL Property Example (VBScript) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "SQL property [ADO], VBScript example"
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQL Property Example (VBScript)
 > [!IMPORTANT]

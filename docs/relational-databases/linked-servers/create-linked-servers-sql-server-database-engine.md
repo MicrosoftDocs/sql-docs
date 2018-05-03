@@ -2,16 +2,15 @@
 title: "Create Linked Servers (SQL Server Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "linked-servers"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.linkedserver.properties.general.f1"
   - "sql13.swb.linkedserver.properties.security.f1"
@@ -23,7 +22,7 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Create Linked Servers (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -3,15 +3,12 @@ title: "Database Health Detection Failover Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/28/2017"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology:
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to:
   - "SQL Server 2016"
 helpviewer_keywords:
@@ -22,9 +19,9 @@ helpviewer_keywords:
   - "SQL Server"
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: 4
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Availability group database level health detection failover option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

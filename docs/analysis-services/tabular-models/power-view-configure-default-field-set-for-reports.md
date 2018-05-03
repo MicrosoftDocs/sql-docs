@@ -13,7 +13,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "ql12.asvs.bidtoolset.deffieldset.f1"
 ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189

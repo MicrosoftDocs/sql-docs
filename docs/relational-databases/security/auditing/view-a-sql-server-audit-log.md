@@ -2,16 +2,15 @@
 title: "View a SQL Server Audit Log | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "audits [SQL Server], viewing logs"
   - "viewing audit logs"
@@ -20,7 +19,7 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 ---
 # View a SQL Server Audit Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

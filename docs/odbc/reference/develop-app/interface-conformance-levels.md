@@ -2,16 +2,13 @@
 title: "Interface Conformance Levels | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interface conformance levels [ODBC]"
   - "conformance levels [ODBC], interface"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], conformance levels"
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Interface Conformance Levels

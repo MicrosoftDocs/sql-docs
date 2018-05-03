@@ -12,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "namespaces [Reporting Services]"
   - "data processing extensions [Reporting Services], data sources"

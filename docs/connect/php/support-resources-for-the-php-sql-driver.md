@@ -3,21 +3,19 @@ title: "Support Resources for the Microsoft Drivers for PHP for SQL Server | Mic
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "support"
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Support Resources for the Microsoft Drivers for PHP for SQL Server

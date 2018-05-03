@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.administration.rdsconfiguration.f1"
   - "sql13.dqs.administration.configuration.createDirectRDS.f1"

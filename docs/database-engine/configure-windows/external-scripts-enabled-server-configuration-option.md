@@ -1,15 +1,12 @@
 ---
 title: "External Scripts Enabled server configuration option | Microsoft Docs"
 ms.date: "11/13/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,7 +18,7 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 caps.latest.revision: 9
 author: "jeannt"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 ---
 # External Scripts Enabled server configuration option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

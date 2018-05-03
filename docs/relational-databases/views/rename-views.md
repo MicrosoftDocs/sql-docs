@@ -2,16 +2,15 @@
 title: "Rename Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "views"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-views"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
   - "renaming views"
@@ -19,7 +18,7 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
-ms.manager: "craigg"
+ms.manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rename Views

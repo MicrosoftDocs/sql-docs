@@ -2,24 +2,21 @@
 title: "Hide an Instance of SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2015"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], hiding instances"
   - "hiding instances of Database Engine"
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Hide an Instance of SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

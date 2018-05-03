@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "07/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: profiler
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 

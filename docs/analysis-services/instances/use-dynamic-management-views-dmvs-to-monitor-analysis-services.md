@@ -1,24 +1,14 @@
 ---
 title: "Use Dynamic Management Views (DMVs) to Monitor Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component:
+ms.topic: article
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Use Dynamic Management Views (DMVs) to Monitor Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

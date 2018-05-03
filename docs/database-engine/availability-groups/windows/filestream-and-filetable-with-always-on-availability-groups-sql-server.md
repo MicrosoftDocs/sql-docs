@@ -3,24 +3,21 @@ title: "FILESTREAM and FileTable with Always On Availability Groups (SQL Server)
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], Availability Groups"
   - "FILESTREAM [SQL Server], Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # FILESTREAM and FileTable with Always On Availability Groups (SQL Server)

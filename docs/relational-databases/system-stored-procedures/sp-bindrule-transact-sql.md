@@ -2,9 +2,8 @@
 title: "sp_bindrule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_bindrule (Transact-SQL)

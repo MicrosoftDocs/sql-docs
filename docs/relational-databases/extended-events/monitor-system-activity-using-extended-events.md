@@ -2,22 +2,21 @@
 title: "Monitor System Activity Using Extended Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "xevents"
+ms.technology: xevents
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xe"
   - "extended events [SQL Server], monitoring system activity"
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Monitor System Activity Using Extended Events

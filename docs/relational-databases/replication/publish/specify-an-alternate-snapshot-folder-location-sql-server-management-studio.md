@@ -2,16 +2,15 @@
 title: "Specify an Alternate Snapshot Folder Location (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], alternate folder locations"
   - "snapshot replication [SQL Server], alternate folder locations"
@@ -20,7 +19,7 @@ ms.assetid: 9293f0eb-5531-47ec-b6e2-0392823ce5cc
 caps.latest.revision: 42
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Specify an Alternate Snapshot Folder Location (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

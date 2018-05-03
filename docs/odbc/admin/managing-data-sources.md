@@ -2,16 +2,13 @@
 title: "Managing Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting data sources [ODBC], ODBC data source administrator"
   - "data sources [ODBC], ODBC data source administrator"
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "ODBC data source administrator [ODBC], data source management"
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Managing Data Sources

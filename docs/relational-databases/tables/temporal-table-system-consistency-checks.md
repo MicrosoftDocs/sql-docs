@@ -2,21 +2,20 @@
 title: "Temporal Table System Consistency Checks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Temporal Table System Consistency Checks

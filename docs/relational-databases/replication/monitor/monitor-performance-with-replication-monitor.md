@@ -2,16 +2,15 @@
 title: "Monitor Performance with Replication Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], Replication Monitor"
   - "Log Reader Agent, monitoring"
@@ -25,7 +24,7 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 caps.latest.revision: 36
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Monitor Performance with Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

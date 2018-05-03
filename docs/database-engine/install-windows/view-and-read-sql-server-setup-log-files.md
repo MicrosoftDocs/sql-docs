@@ -86,7 +86,7 @@ Each execution of Setup creates log files are created with a new timestamped log
   
  To find errors in the summary text file, search the file by using the "error" or "failed" keywords.  
   
-## Summary_<MachineName>_YYYYMMDD_HHMMss.txt  
+## Summary_\<MachineName>_YYYYMMDD_HHMMss.txt  
   
 ### Overview  
  The summary_engine base file is similar to the summary file and is generated during the main workflow.  
@@ -94,7 +94,7 @@ Each execution of Setup creates log files are created with a new timestamped log
 ### Location  
  It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Summary_<MachineName>_YYYYMMDD_HHMMss_ComponentUpdate.txt  
+## Summary_\<MachineName>_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
 ### Overview  
  The component update summary log file is similar to the summary file and is generated during the component update workflow.  
@@ -102,7 +102,7 @@ Each execution of Setup creates log files are created with a new timestamped log
 ### Location  
  It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## Summary_<MachineName>_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
+## Summary_\<MachineName>_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
 ### Overview  
  The global rules summary log file is similar to the summary file generated during the global rules workflow.  

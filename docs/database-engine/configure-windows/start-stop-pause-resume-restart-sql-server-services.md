@@ -2,14 +2,11 @@
 title: "Start, Stop, Pause, Resume, Restart SQL Server Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/26/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

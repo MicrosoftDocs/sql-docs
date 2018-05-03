@@ -2,14 +2,11 @@
 title: "optimize for ad hoc workloads Server Configuration Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

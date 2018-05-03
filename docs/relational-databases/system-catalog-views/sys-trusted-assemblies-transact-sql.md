@@ -2,9 +2,8 @@
 title: "sys.trusted_assemblies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "tmullaney"
 ms.author: "thmullan"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.trusted_assemblies (Transact-SQL)  

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # FINDSTRING (SSIS Expression)
   Returns the location of the specified occurrence of a string within a character expression. The return result is the one-based index of the occurrence. The string parameter must evaluate to a character expression, and the occurrence parameter must evaluate to an integer. If the string is not found, the return value is 0. If the string occurs fewer times than the occurrence argument specifies, the return value is 0.  

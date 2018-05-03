@@ -18,7 +18,7 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_index_mappings (Transact-SQL)

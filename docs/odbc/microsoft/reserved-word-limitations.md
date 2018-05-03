@@ -2,14 +2,11 @@
 title: "Reserved Word Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC]"
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Reserved Keyword Limitations

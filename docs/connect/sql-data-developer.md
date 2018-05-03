@@ -2,9 +2,8 @@
 title: "SQL Data Developer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "connect"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -13,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQL Data Developer
 Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud.  

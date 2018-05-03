@@ -2,14 +2,12 @@
 title: "CREATE SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,9 +25,9 @@ helpviewer_keywords:
   - "CREATE SCHEMA statement"
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 caps.latest.revision: 60
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE SCHEMA (Transact-SQL)

@@ -2,19 +2,18 @@
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "xevents"
+ms.technology: xevents
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Targets for Extended Events in SQL Server

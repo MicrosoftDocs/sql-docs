@@ -1,11 +1,9 @@
 ---
 title: "Keys Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "Keys collection [ADOX]"
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Keys Collection (ADOX)
 Contains all [Key](../../../ado/reference/adox-api/key-object-adox.md) objects of a [table](../../../ado/reference/adox-api/table-object-adox.md).  

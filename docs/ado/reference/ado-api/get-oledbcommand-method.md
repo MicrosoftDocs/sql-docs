@@ -1,11 +1,9 @@
 ---
 title: "get_OLEDBCommand Method | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "get_OLEDBCommand method [ADO]"
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # get_OLEDBCommand Method
 Returns the underlying OLE DB Command, first propagating any parameter information set on the ADO Command to the OLE DB Command.  

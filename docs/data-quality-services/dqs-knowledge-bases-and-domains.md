@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "10/01/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # DQS Knowledge Bases and Domains
 

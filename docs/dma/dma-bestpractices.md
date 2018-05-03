@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "10/04/2017"
 ms.prod: sql
 ms.prod_service: "dma"
-ms.service: ""
-ms.component:
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-dma"
+ms.technology: dma
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: ""
@@ -17,9 +14,9 @@ helpviewer_keywords:
   - "Data Migration Assistant, Best Practices"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "HJToland3"
-ms.author: "jtoland"
-manager: "craigg"
+author: HJToland3
+ms.author: jtoland
+manager: craigg
 ---
 
 

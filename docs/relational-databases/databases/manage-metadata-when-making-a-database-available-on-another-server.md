@@ -2,9 +2,8 @@
 title: "Manage Metadata When Making a Database Available on Another Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -40,7 +39,7 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 caps.latest.revision: 84
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Manage Metadata When Making a Database Available on Another Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

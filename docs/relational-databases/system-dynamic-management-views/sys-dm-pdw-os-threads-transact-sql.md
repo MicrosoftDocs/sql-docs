@@ -18,7 +18,7 @@ ms.assetid: ddc12f05-edeb-4848-b6d7-e851684cf044
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_os_threads (Transact-SQL)

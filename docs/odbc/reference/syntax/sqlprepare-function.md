@@ -2,14 +2,11 @@
 title: "SQLPrepare Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -23,8 +20,8 @@ helpviewer_keywords:
   - "SQLPrepare function [ODBC]"
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLPrepare Function

@@ -2,9 +2,8 @@
 title: "Database Properties (Query Store Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Database Properties (Query Store Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

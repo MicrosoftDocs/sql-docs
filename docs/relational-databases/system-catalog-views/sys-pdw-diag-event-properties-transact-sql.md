@@ -2,10 +2,9 @@
 title: "sys.pdw_diag_event_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "pdw"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.suite: "sql"
 ms.technology: 
@@ -18,7 +17,7 @@ ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_diag_event_properties (Transact-SQL)

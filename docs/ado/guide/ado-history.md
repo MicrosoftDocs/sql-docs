@@ -6,18 +6,17 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology: "drivers"
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, what's new"
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO Features for each Release
 This topic lists the new features introduced by each release of ADO, ADO MD, and ADOX.

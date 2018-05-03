@@ -2,10 +2,9 @@
 title: "sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "pdw"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "dmv's"
 ms.suite: "sql"
 ms.technology: 
@@ -18,7 +17,7 @@ ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_os_event_logs (Transact-SQL)

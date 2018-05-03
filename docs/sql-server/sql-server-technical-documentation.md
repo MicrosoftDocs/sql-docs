@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Documentation | Microsoft Docs"
 ms.date: "04/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql"
 ms.reviewer: ""
 ms.suite: "sql"

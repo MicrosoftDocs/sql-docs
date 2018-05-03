@@ -8,7 +8,6 @@ ms.date: 07/12/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.custom: ""

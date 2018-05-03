@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/25/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Azure Blob Download Task
 The Azure Blob Download Task enables an SSIS package to download files from an Azure blob storage.

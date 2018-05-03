@@ -1,11 +1,9 @@
 ---
 title: "Clustered Property (ADOX) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "Clustered property [ADOX]"
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Clustered Property (ADOX)
 Indicates whether the index is clustered.  

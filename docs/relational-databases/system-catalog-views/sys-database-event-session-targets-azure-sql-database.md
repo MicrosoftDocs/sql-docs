@@ -2,10 +2,9 @@
 title: "sys.database_event_session_targets (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.suite: "sql"
 ms.technology: 
@@ -16,9 +15,9 @@ applies_to:
   - "Azure SQL Database"
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.database_event_session_targets (Azure SQL Database)

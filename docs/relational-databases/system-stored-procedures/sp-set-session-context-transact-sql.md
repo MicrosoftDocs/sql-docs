@@ -2,9 +2,8 @@
 title: "sp_set_session_context (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,9 +23,9 @@ helpviewer_keywords:
   - "sp_set_session_context"
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 caps.latest.revision: 7
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_set_session_context (Transact-SQL)

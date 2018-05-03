@@ -1,11 +1,9 @@
 ---
 title: "Flush Method (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "Flush method [ADO]"
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Flush Method (ADO)
 Forces the contents of the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) remaining in the ADO buffer to the underlying object with which the **Stream** is associated.  

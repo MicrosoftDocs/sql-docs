@@ -51,7 +51,7 @@ Disabling the ghost cleanup process can cause your database to grow unnecessaril
 Once the ghost cleanup process is disabled, some action needs to be taken to remove the ghosted records. One option is to execute an index rebuild, which will move data around on pages. Another option is to manually run [sp_clean_db_free_space](/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)(to clean all database data files) or [sp_clean_db_file_free_space](/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)(to clean a single database datafile), which will delete ghosted records.
 
  >[!warning]
- > Disabling the ghost cleanup process is not generally recommended. Doing so should be tested thoroughly in a controlled environment before being implemented permanently in a production environment. 
+ > Disabling the ghost cleanup process is not generally recommended. Doing so should be tested thoroughly in a controlled environment before being implemented permanently in a production environment.    
 
 
 ## See also  

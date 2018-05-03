@@ -2,13 +2,11 @@
 title: "Upgrade Replicated Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2016"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -2,9 +2,8 @@
 title: "Choose a database engine upgrade method | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2017"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

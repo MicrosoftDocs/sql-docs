@@ -2,9 +2,8 @@
 title: "Upgrade Master Data Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2017"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

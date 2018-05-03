@@ -2,9 +2,8 @@
 title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/17/2018"
-ms.prod: "sql"
-ms.prod_service: high-availability
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

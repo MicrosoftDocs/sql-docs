@@ -39,7 +39,10 @@ When a record is ghosted, the database is marked as having ghosted entries, and 
 The below query can identify how many ghosted records exist in a single database. 
 
  ```sql
-   sql query goes here once written
+ SELECT sum(ghost_record_count) total_ghost_records, db_name(database_id) 
+ FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL)
+ group by database_id
+ order by total_ghost_records desc 
 ```
 
 ## Disabling the ghost cleanup

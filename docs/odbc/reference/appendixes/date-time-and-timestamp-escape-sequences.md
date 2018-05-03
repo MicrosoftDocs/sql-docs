@@ -3,13 +3,10 @@ title: "Date, Time, and Timestamp Escape Sequences | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "ODBC escape sequences [ODBC]"
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Date, Time, and Timestamp Escape Sequences

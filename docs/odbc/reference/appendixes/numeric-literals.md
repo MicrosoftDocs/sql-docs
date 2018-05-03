@@ -3,13 +3,10 @@ title: "Numeric Literals | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "literals [ODBC], numeric"
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Numeric Literals

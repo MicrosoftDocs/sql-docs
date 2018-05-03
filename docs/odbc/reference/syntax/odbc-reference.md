@@ -3,13 +3,10 @@ title: "ODBC Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "ODBC [ODBC], API reference"
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ODBC Reference

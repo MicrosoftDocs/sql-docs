@@ -3,13 +3,10 @@ title: "Transferring Data in Its Binary Form | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +15,8 @@ helpviewer_keywords:
   - "binary data transfers [ODBC]"
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Transferring Data in Its Binary Form

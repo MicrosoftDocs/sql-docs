@@ -3,13 +3,10 @@ title: "Error Messages (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], error messages"
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Error Messages (Visual FoxPro ODBC Driver)

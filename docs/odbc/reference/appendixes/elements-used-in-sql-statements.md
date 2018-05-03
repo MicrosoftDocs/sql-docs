@@ -3,13 +3,10 @@ title: "Elements Used in SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +15,8 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Elements Used in SQL Statements

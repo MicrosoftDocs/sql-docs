@@ -3,13 +3,10 @@ title: "Disconnecting from a Data Source or Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,8 +18,8 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], disconnecting"
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Disconnecting from a Data Source or Driver

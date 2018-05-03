@@ -3,13 +3,10 @@ title: "SQLSetConfigMode Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -23,8 +20,8 @@ helpviewer_keywords:
   - "SQLSetConfigMode function [ODBC]"
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLSetConfigMode Function

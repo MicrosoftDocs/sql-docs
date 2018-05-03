@@ -3,21 +3,18 @@ title: "ODBC Driver Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], architecture"
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ODBC Driver Architecture

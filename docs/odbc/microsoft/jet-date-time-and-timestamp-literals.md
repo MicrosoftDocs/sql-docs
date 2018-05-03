@@ -3,13 +3,10 @@ title: "Jet: Date, Time, and Timestamp Literals | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "time literals [ODBC]"
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Jet: Date, Time, and Timestamp Literals

@@ -3,13 +3,10 @@ title: "Step 2: Initialize the Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "application process [ODBC], initializing applications"
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Step 2: Initialize the Application

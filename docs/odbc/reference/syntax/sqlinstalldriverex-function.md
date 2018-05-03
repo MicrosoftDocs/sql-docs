@@ -3,13 +3,10 @@ title: "SQLInstallDriverEx Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -23,8 +20,8 @@ helpviewer_keywords:
   - "SQLInstallDriverEx function [ODBC]"
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLInstallDriverEx Function

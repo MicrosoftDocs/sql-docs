@@ -3,13 +3,10 @@ title: "Using 16-Bit Applications with 32-Bit Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "16-bit applications with 32-bit drivers [ODBC]"
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using 16-Bit Applications with 32-Bit Drivers

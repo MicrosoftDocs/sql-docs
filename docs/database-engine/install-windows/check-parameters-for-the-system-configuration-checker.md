@@ -3,8 +3,7 @@ title: "Check Parameters for the System Configuration Checker | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod_service: high-availability
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,9 +25,9 @@ helpviewer_keywords:
   - "Setup [SQL Server], system configuration checker"
 ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 caps.latest.revision: 46
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Check parameters for the System Configuration Checker
 

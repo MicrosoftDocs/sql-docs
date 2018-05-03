@@ -3,7 +3,7 @@ title: "Connect to SQL Server with Proxy Server-SQL Server Config Manager | Micr
 ms.custom: ""
 ms.date: "12/15/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "local address tables [SQL Server]"
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Connect to SQL Server Through a Proxy Server (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

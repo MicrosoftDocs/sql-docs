@@ -5,7 +5,7 @@ documentationCenter: ""
 authors: "MightyPen"
 manager: craigg
 editor: ""
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.suite: "sql"
 ms.technology: "dbe-data-tier-apps"

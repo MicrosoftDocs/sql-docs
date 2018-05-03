@@ -2,7 +2,7 @@
 title: "Reserved Word Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

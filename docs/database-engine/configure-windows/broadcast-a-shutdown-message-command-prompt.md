@@ -3,7 +3,7 @@ title: "Broadcast a Shutdown Message (Command Prompt) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: configuration
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "stopping SQL Server"
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
 caps.latest.revision: 28
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Broadcast a Shutdown Message (Command Prompt)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

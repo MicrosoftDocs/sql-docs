@@ -2,7 +2,7 @@
 title: "Block and Scrollable Cursors Compatibility for ODBC 3.x | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

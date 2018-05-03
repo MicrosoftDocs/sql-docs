@@ -3,12 +3,10 @@ title: "Restore a Backup from a Device (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "backup-restore"
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

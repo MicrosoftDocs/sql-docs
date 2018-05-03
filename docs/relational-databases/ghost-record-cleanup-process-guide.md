@@ -47,5 +47,7 @@ Once the ghost cleanup process is disabled, some action needs to be taken to rem
 
 
 ## See also  
-<br>[Disabling the ghost clean up process](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
-<br>[Manually removing ghosted records](/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
+[Disabling the ghost clean up process](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
+<br>[Remove ghost records from a single database file](/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
+<br>[Remove ghost records from all database data files](/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
+

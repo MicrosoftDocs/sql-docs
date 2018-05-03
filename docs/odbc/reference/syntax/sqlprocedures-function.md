@@ -3,13 +3,10 @@ title: "SQLProcedures Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -23,8 +20,8 @@ helpviewer_keywords:
   - "SQLProcedures function [ODBC]"
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLProcedures Function

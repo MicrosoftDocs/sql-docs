@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/16/2018"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
-|ms.reviewer: ""
+ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""

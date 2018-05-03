@@ -3,7 +3,7 @@ title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-|ms.reviewer: ""
+ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: t-sql

@@ -2,7 +2,6 @@
 title: "Command Line Options in SSMA Console (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "08/19/2017"

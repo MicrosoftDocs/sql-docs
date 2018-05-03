@@ -2,9 +2,8 @@
 title: "Database Files and Filegroups | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -38,7 +37,7 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Database Files and Filegroups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

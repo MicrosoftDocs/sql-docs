@@ -2,7 +2,6 @@
 title: "Appendix - 1 (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,7 +17,7 @@ ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Appendix - 1 (AccessToSQL)
 Quick view of the SSMA Console command line options:  

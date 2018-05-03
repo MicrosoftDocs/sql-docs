@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_event_sessions (Azure SQL Database)

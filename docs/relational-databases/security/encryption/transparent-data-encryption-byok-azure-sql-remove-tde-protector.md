@@ -5,7 +5,7 @@ keywords:
 services: "sql-database"
 documentationcenter:
 author: "becczhang"
-manager: "craigg"
+manager: craigg
 ms.prod: 
 ms.reviewer: ""
 ms.suite: sql

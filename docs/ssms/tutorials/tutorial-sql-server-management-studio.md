@@ -25,7 +25,7 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ms.reviewer: "sstein"
 ---
 # Tutorials for SQL Server Management Studio (SSMS)

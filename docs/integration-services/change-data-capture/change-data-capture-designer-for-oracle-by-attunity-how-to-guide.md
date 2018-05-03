@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "change-data-capture"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Change Data Capture Designer for Oracle by Attunity How to Guide
   This section describes how to carry out tasks in the Change Data Capture Designer for Oracle by Attunity.  

@@ -1,11 +1,9 @@
 ---
 title: "Name Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -26,9 +24,9 @@ helpviewer_keywords:
   - "Name property [ADO MD]"
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Name Property (ADO MD)
 Indicates the name of an object.  

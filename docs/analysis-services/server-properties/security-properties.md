@@ -1,31 +1,14 @@
 ---
 title: "Security Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "security [Analysis Services], properties"
-  - "SecurityPackageList property"
-  - "BuiltinAdminsAreServerAdmins property"
-  - "DisableClientImpersonation property"
-  - "ErrorMessageMode property"
-  - "RequiredProtectionLevel property"
-  - "ServiceAccountIsServerAdmin property"
-  - "RequireClientAuthentication property"
-ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: 
+ms.topic: article
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Security Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

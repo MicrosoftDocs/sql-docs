@@ -18,7 +18,7 @@ ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)

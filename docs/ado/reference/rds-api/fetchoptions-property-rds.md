@@ -1,11 +1,9 @@
 ---
 title: "FetchOptions Property (RDS) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "FetchOptions property [ADO]"
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # FetchOptions Property (RDS)
 Indicates the type of asynchronous fetching.  

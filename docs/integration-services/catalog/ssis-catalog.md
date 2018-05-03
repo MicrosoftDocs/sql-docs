@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/30/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "service"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 
 # SSIS Catalog

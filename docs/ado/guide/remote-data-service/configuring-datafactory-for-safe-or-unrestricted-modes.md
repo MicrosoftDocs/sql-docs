@@ -1,11 +1,9 @@
 ---
 title: "Configuring DataFactory for Safe or Unrestricted Modes | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "DataFactory configuration in RDS [ADO]"
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Configuring DataFactory for Safe or Unrestricted Modes
 > [!IMPORTANT]

@@ -1,11 +1,9 @@
 ---
 title: "ConvertToString Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "ConvertToString method [ADO], VBScript example"
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ConvertToString Method Example (VBScript)
 > [!IMPORTANT]

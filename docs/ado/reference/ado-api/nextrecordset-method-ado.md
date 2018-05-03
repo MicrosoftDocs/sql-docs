@@ -1,11 +1,9 @@
 ---
 title: "NextRecordset Method (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "03/20/2018"
 ms.reviewer: ""
@@ -21,9 +19,9 @@ helpviewer_keywords:
   - "NextRecordset method [ADO]"
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # NextRecordset Method (ADO)
 Clears the current [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object and returns the next **Recordset** by advancing through a series of commands.  

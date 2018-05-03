@@ -21,7 +21,6 @@ ms.author: barbkess
 manager: craigg
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ""
 ms.component: indexes
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -1,11 +1,9 @@
 ---
 title: "Microsoft OLE DB Provider for Microsoft Jet | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "OLE DB provider for Microsoft Jet [ADO]"
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft OLE DB Provider for Microsoft Jet Overview
 The OLE DB Provider for Microsoft Jet allows ADO to access Microsoft Jet databases.

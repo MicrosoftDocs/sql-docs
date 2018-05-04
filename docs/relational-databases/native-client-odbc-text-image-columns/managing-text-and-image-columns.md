@@ -2,9 +2,8 @@
 title: "Managing Text and Image Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-text-image-columns"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,10 +23,9 @@ helpviewer_keywords:
   - "image columns [ODBC]"
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Managing Text and Image Columns

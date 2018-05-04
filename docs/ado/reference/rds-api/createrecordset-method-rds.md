@@ -1,11 +1,9 @@
 ---
 title: "CreateRecordset Method (RDS) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "CreateRecordset method [RDS]"
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # CreateRecordset Method (RDS)
 Creates an empty, disconnected [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

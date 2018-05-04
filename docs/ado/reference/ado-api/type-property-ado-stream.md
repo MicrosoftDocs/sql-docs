@@ -1,11 +1,9 @@
 ---
 title: "Type Property (ADO Stream) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "Type property [ADO Stream]"
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Type Property (ADO Stream)
 Indicates the type of data contained in the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binary or text).  

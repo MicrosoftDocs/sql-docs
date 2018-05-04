@@ -8,10 +8,12 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 
 ms.component: database-engine
-ms.date: 02/03/2018
+ms.date: 04/28/2018
 ---
 # New and Recently Updated: Database Engine docs
 
@@ -25,7 +27,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
+- *Date range of updates:* &nbsp; **2018-02-03** &nbsp; -to- &nbsp; **2018-04-28**
 - *Subject area:* &nbsp; **Database Engine**.
 
 
@@ -38,7 +40,20 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-***There are no new articles to list, this time.***
+1. [Always On Availability Groups troubleshooting and monitoring guide](availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md)
+2. [Always On Availability Groups extended events](availability-groups/windows/always-on-extended-events.md)
+3. [Always On Availability Groups health diagnostics log](availability-groups/windows/always-on-health-diagnostics-log.md)
+4. [Always On Availability Groups policies](availability-groups/windows/always-on-policies.md)
+5. [Always On Availability Groups ring buffers](availability-groups/windows/always-on-ring-buffers.md)
+6. [Always On Availability Groups wait types](availability-groups/windows/always-on-wait-types.md)
+7. [CLUSTER.LOG (Always On Availability Groups)](availability-groups/windows/cluster-log-always-on-availability-groups.md)
+8. [Dynamic management views and system catalog views (Always On Availability Groups)](availability-groups/windows/dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)
+9. [Monitor performance for Always On Availability Groups](availability-groups/windows/monitor-performance-for-always-on-availability-groups.md)
+10. [SQL Server error log (Always On Availability Groups)](availability-groups/windows/sql-server-error-log-always-on-availability-groups.md)
+11. [Troubleshoot: Availability group exceeded RPO](availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md)
+12. [Troubleshoot: Availability group exceeded RTO](availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md)
+13. [Troubleshoot: Changes on the primary replica are not reflected on the secondary replica](availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md)
+14. [Useful tools for troubleshooting](availability-groups/windows/useful-tools-for-troubleshooting.md)
 
 
 
@@ -64,54 +79,13 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Upgrading Always On Availability Group Replica Instances](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Upgrading Always On Availability Group Replica Instances](availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)
-
-*Updated: 2018-01-29* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 174.  ms.author= "mikeray".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 20ca282e8965889a7a530fb67e125cc876410e41 9f27d0f9a74333b291c1cdc1529edc13960fae29  (PR=4741  ,  Filename=upgrading-always-on-availability-group-replica-instances.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
-
-
-
-**Special steps for change data capture or replication**
-
-
-Depending on the update being applied, additional steps may be required for AG replica databases that are enabled for change data capture or replication. Refer to the release notes for the update to determine if the following steps are required:
-
-1. Upgrade each secondary replica.
-
-1. After all secondary replicas have been upgraded, fail over the AG to an upgraded instance.
-
-1. Run the following Transact-SQL on the instance that hosts the primary replica:
-
-   ```
-   EXECUTE [master].[sys].[sp_vupgrade_replication];
-   ```
-
-   >[!NOTE]
-   >This command may take several minutes to run.
-
-1. Upgrade the instance that was originally the primary replica.
-
-For background information, see [CDC functionality may break after upgrading to the latest CU](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
-
-
-
+***No articles in this area were updated recently, this time.***
 
 
 
@@ -123,40 +97,36 @@ For background information, see [CDC functionality may break after upgrading to 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### Subject areas that *do* have new or recently updated articles
 
-
-- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (11+6): &nbsp; &nbsp;**Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (18+0): &nbsp; &nbsp;**Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (218+14): **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (14+0): &nbsp; &nbsp;**Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (3+2): &nbsp; &nbsp; **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+3): &nbsp; &nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (7+10): &nbsp; &nbsp;**Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (2+3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (5+2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 
 #### Subject areas that do *not* have any new or recently updated articles
 
-
-- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
+- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
-
 

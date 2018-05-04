@@ -2,9 +2,8 @@
 title: "Disallowed Types and Members in Microsoft.VisualBasic.dll | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,8 +18,7 @@ ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 caps.latest.revision: 23
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Disallowed Types and Members in Microsoft.VisualBasic.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

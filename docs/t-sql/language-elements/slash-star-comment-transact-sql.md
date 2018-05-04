@@ -2,14 +2,12 @@
 title: "Slash Star (Block Comment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,8 +25,7 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 
 # Slash Star (Block Comment) (Transact-SQL)

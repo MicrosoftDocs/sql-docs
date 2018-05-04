@@ -1,11 +1,9 @@
 ---
 title: "Type Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "Type property [ADO]"
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Type Property (ADO)
 Indicates the operational type or data type of a [Parameter](../../../ado/reference/ado-api/parameter-object.md), [Field](../../../ado/reference/ado-api/field-object.md), or [Property](../../../ado/reference/ado-api/property-object-ado.md) object.  

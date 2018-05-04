@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,8 +17,7 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Lesson 6-2 - Converting the Project to the Project Deployment Model
 In this task, you will use the Integration Services Project Conversion Wizard to convert the project to the Project Deployment Model.  

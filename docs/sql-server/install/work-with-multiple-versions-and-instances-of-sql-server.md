@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "08/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "concurrent installations [SQL Server]"
   - "versions [SQL Server], multiple"
@@ -27,7 +26,6 @@ caps.latest.revision: 67
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "Active"
 ---
 # Work with Multiple Versions and Instances of SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

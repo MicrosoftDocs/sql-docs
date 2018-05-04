@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -23,7 +22,6 @@ caps.latest.revision: 55
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Reporting Services Properties - Report Server System Properties
   The following system property names are reserved. You cannot create user-defined properties of the same name. You can read or modify many of these properties using the Web service methods.  

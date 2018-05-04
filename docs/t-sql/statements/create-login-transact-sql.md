@@ -2,14 +2,12 @@
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -30,10 +28,9 @@ helpviewer_keywords:
   - "certificates [SQL Server], logins"
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 caps.latest.revision: 101
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE LOGIN (Transact-SQL)

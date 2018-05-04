@@ -2,16 +2,15 @@
 title: "Error List Window (Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-scripting"
+ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ErrorList"
 dev_langs: 
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], error list window"
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Transact-SQL Debugger - Error List Window

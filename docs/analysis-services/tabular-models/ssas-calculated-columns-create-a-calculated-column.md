@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -13,7 +12,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.as.daxref.CreataCalculatedColumn.f1"
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
@@ -21,7 +20,6 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Create a Calculated Column
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

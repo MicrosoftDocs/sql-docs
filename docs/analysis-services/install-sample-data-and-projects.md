@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "02/13/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -19,7 +18,6 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Install sample data and multidimensional projects 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]

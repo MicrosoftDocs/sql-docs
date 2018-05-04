@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "10/22/2015"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Reporting Services], defaults"
   - "default security"
@@ -22,7 +21,6 @@ caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Role Definitions - Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installs with predefined roles that you can use to grant access to report server operations. Each predefined role describes a collection of related tasks. You can assign groups and user accounts to predefined roles to provide immediate access to report server operations.  

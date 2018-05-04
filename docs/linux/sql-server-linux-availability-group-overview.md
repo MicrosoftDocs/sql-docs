@@ -8,13 +8,11 @@ ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1 
-ms.workload: "On Demand"
 ---
 
 # Always On Availability Groups on Linux

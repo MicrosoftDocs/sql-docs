@@ -4,23 +4,19 @@ ms.custom: ""
 ms.date: "08/31/2017"
 ms.prod: sql
 ms.prod_service: "dma"
-ms.service: ""
-ms.component:
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-dma"
+ms.technology: dma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, login migration"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "HJToland3"
-ms.author: "jtoland"
-manager: "craigg"
-ms.workload: "Inactive"
+author: HJToland3
+ms.author: jtoland
+manager: craigg
 ---
 
 # Migrating SQL Server logins using Data Migration Assistant

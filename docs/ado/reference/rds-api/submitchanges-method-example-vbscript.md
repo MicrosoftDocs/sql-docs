@@ -1,8 +1,7 @@
 ---
 title: "SubmitChanges Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -15,10 +14,9 @@ helpviewer_keywords:
   - "SubmitChanges method [ADO], VBScript example"
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SubmitChanges Method Example (VBScript)
 > [!IMPORTANT]

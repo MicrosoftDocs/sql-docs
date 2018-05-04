@@ -1,11 +1,9 @@
 ---
 title: "AbsolutePage, PageCount, and PageSize Properties Example (JScript) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "PageSize property [ADO], JScript example"
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (JScript)
 This example demonstrates the AbsolutePage, PageCount and PageSize properties. Cut and paste the following code to Notepad or another text editor, and save it as **AbsolutePageJS.asp**.  

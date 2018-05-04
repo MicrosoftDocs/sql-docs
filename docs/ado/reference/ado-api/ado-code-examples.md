@@ -1,11 +1,9 @@
 ---
 title: "ADO Code Examples | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "ADO, code examples"
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO Code Examples
 Use the following code examples to learn how to use the ADO objects, methods, properties, and events.  

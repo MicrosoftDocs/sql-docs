@@ -1,11 +1,9 @@
 ---
 title: "DataMember Property | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "DataMember property"
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DataMember Property
 Indicates the name of the data member that will be retrieved from the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) referenced by the [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) property.  

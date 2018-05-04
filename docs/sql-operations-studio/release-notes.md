@@ -9,11 +9,10 @@ ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQL Operations Studio (preview) release notes
 

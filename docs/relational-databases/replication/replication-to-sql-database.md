@@ -2,16 +2,15 @@
 title: "Replication to SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Database replication"
   - "replication, SQL Database"
@@ -19,8 +18,7 @@ ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
 caps.latest.revision: 15
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Replication to SQL Database

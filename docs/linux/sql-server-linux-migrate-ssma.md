@@ -8,13 +8,11 @@ ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: "sql-linux"
-ms.workload: "Inactive"
 ---
 # Automate database migration to Linux with the SQL Server Migration Assistant
 

@@ -2,16 +2,13 @@
 title: "ODBC Functions Not Executed by the Cursor Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cursor library [ODBC], functions"
   - "functions [ODBC], cursor library"
@@ -19,10 +16,9 @@ helpviewer_keywords:
   - "ODBC cursor library [ODBC], functions"
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ODBC Functions Not Executed by the Cursor Library
 > [!IMPORTANT]  

@@ -1,11 +1,9 @@
 ---
 title: "ADO Code Examples in Visual Basic | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "ADO code examples, Visual Basic"
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO Code Examples in Visual Basic
 Use the following code examples to learn how to use the ADO methods, properties, and events when writing in Visual Basic.  

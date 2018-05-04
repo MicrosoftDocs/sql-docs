@@ -8,10 +8,9 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "system-catalog-views"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "elastic pool"
   - "elastic pool, management"
@@ -21,8 +20,7 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.database_service_objectives (Azure SQL Database)

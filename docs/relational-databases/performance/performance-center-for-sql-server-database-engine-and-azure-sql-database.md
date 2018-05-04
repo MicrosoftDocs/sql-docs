@@ -2,16 +2,15 @@
 title: "Performance Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/08/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "performance"
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Performance (SQL Server)"
   - "Performance (SQL Database)"
@@ -26,8 +25,7 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

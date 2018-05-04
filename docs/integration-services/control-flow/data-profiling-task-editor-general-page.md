@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataprofilingtask.general.f1"
 helpviewer_keywords: 
@@ -20,8 +19,7 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Data Profiling Task Editor (General Page)
   Use the **General** page of the **Data Profiling Task Editor** to configure the following options:  

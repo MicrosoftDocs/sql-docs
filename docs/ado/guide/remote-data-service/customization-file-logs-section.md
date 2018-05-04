@@ -1,11 +1,9 @@
 ---
 title: "Customization File Logs Section | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "customization file in RDS [ADO]"
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Customization File Logs Section
 The **logs** section contains a log file entry, which specifies the name of a file that records errors during the operation of the **DataFactory**.  

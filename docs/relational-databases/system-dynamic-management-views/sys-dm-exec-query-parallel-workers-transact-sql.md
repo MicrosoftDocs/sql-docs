@@ -2,14 +2,12 @@
 title: "sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,7 +24,6 @@ caps.latest.revision: 1
 author: "pelopes"
 ms.author: "pelopes"
 manager: "ajayj"
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_query_parallel_workers (Transact-SQL)

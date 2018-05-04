@@ -1,11 +1,9 @@
 ---
 title: "Connection Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "Connection object [ADO], members"
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connection Object Properties, Methods, and Events
 ## Properties/Collections  

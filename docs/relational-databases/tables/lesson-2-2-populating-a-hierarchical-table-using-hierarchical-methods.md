@@ -2,16 +2,13 @@
 title: "Populating a Hierarchical Table Using Hierarchical Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 f1_keywords: 
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Lesson 2-2 - Populating a Hierarchical Table Using Hierarchical Methods
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

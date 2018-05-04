@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.testdomainrule.f1"
   - "sql13.dqs.dm.rules.f1"
@@ -19,8 +18,7 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Create a Domain Rule
 

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "tools"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.connecttors.connectionproperties.f1"
   - "sql13.swb.connecttors.login.f1"
@@ -28,7 +27,6 @@ caps.latest.revision: 53
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Connect to a Report Server in Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] provides Object Explorer, which allows you to connect to any server in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] family and graphically browse its contents. For Reporting Services, you can use Object Explorer to do the following:  

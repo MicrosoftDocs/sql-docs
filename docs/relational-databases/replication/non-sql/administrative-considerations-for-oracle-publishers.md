@@ -2,16 +2,15 @@
 title: "Administrative Considerations for Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle publishing [SQL Server replication], administrative considerations"
   - "administering replication, Oracle publishing"
@@ -19,8 +18,7 @@ ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 caps.latest.revision: 29
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Administrative Considerations for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

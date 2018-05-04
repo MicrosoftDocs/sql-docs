@@ -2,16 +2,13 @@
 title: "Processing SELECT FOR UPDATE Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], statement processing"
   - "SQL statements [ODBC], select for update statements"
@@ -22,10 +19,9 @@ helpviewer_keywords:
   - "cursor library [ODBC], statement processing"
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Processing SELECT FOR UPDATE Statements
 > [!IMPORTANT]  

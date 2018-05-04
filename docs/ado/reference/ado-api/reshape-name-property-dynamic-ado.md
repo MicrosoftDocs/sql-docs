@@ -1,11 +1,9 @@
 ---
 title: "Reshape Name Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "Reshape Name property [ADO]"
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Reshape Name Property-Dynamic (ADO)
 Specifies a name for the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

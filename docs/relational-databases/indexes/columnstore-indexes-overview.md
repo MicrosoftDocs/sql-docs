@@ -2,16 +2,13 @@
 title: "Columnstore indexes - Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "indexes"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes creation, columnstore"
   - "indexes [SQL Server], columnstore"
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "xVelocity, columnstore indexes"
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 80
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Columnstore indexes - Overview

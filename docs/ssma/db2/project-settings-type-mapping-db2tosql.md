@@ -2,16 +2,14 @@
 title: "Project Settings (Type Mapping) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +17,7 @@ ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Project Settings (Type Mapping) (DB2ToSQL)
 The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts DB2 data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types.  

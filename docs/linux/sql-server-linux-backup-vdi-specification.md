@@ -8,13 +8,11 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.workload: "Inactive"
 ---
 # SQL Server on Linux VDI client SDK Specification
 

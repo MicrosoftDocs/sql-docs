@@ -2,9 +2,8 @@
 title: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,10 +18,9 @@ helpviewer_keywords:
   - "WaitForAsynchCompletion method"
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)

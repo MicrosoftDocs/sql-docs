@@ -2,16 +2,15 @@
 title: "View Data Conflicts for Transactional Publications (SSMS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "conflict resolution [SQL Server replication], queued updating subscriptions"
   - "queued updating subscriptions [SQL Server replication]"
@@ -20,8 +19,7 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 caps.latest.revision: 36
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

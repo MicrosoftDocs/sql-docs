@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "custom-assemblies"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -24,7 +23,6 @@ caps.latest.revision: 44
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # How to: Debug Custom Assemblies
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your custom assembly code and locate errors in it. The best tool to use will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

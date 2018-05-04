@@ -7,8 +7,7 @@ ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database
 ms.service: "sql-database"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "Azure SQL Database catalog views"
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Azure SQL Database Catalog Views

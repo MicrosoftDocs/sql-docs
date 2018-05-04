@@ -4,12 +4,10 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -23,8 +21,7 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Comparing the Script Task and the Script Component
   The Script task, available in the Control Flow window of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] designer, and the Script component, available in the Data Flow window, have very different purposes in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. The task is a general-purpose control flow tool, whereas the component serves as a source, transformation, or destination in the data flow. Despite their different purposes, however, the Script task and the Script component have some similarities in the coding tools that they use and the objects in the package that they make available to the developer. Understanding their similarities and differences may help you to use both the task and the component more effectively.  

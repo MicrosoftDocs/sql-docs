@@ -1,11 +1,9 @@
 ---
 title: "Source Property (ADO Recordset) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -25,10 +23,9 @@ helpviewer_keywords:
   - "Source property [ADO Recordset]"
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Source Property (ADO Recordset)
 Indicates the data source for a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

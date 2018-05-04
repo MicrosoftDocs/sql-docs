@@ -2,16 +2,14 @@
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "03/01/2018"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +17,7 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # What's New in SSMA for MySQL (MySQLToSql)
 This topic lists SSMA for MySQL changes in each release. 

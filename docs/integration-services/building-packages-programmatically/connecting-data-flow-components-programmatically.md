@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "building-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,8 +25,7 @@ ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Connecting Data Flow Components Programmatically
   After you have added components to the data flow task, you connect them to create an execution tree that represents the flow of data from sources through transformations to destinations. You use <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> objects to connect the components in the data flow.  

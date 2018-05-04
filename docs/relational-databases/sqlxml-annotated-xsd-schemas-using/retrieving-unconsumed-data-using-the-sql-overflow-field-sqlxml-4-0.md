@@ -2,14 +2,12 @@
 title: "Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -23,8 +21,7 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)

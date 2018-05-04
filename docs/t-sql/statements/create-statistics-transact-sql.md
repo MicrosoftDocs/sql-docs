@@ -2,14 +2,12 @@
 title: "CREATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -29,10 +27,9 @@ helpviewer_keywords:
   - "NORECOMPUTE clause"
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 caps.latest.revision: 105
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE STATISTICS (Transact-SQL)

@@ -1,11 +1,9 @@
 ---
 title: "ConnectModeEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "ConnectModeEnum enumeration [ADO]"
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ConnectModeEnum
 Specifies the available permissions for modifying data in a [Connection](../../../ado/reference/ado-api/connection-object-ado.md), opening a [Record](../../../ado/reference/ado-api/record-object-ado.md), or specifying values for the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property of the **Record** and [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects.  

@@ -4,23 +4,19 @@ ms.custom: ""
 ms.date: "02/02/2018"
 ms.prod: sql
 ms.prod_service: "dma"
-ms.service: ""
-ms.component:
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-dma"
+ms.technology: dma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, new features"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "HJToland3"
-ms.author: "jtoland"
-manager: "craigg"
-ms.workload: "Inactive"
+author: HJToland3
+ms.author: jtoland
+manager: craigg
 ---
 
 # What's new in Data Migration Assistant

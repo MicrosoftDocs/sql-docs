@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "DBCC SQLPERF statement"
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 caps.latest.revision: 43
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC SQLPERF (Transact-SQL)

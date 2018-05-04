@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "trace flags [SQL Server], enabling"
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 caps.latest.revision: 36
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC TRACEON (Transact-SQL)

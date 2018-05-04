@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "21862 (Database Engine error)"
 ms.assetid: a1d393dd-453b-4d45-9aa5-7d371213e32b
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_21862

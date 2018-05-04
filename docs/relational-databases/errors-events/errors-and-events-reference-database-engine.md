@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "events [SQL Server Database Engine]"
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Errors and Events Reference (Database Engine)

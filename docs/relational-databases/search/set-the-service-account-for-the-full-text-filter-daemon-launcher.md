@@ -3,12 +3,11 @@ title: "Set the Service Account for the Full-text Filter Daemon Launcher | Micro
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "search, sql-database"
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "FDHOST Launcher (MSSQLFDLauncher) [SQL Server]"
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

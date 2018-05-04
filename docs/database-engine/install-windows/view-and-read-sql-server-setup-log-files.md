@@ -29,12 +29,10 @@ manager: craigg
 
 Each execution of Setup creates log files are created with a new timestamped log folder at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is run in an unattended mode, the logs are created at % temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
   
- A typical Setup request goes through a single execution phase that accomplishes three things: 
+ SQL server completes three basic phases:  typical Setup request goes through a single execution phase that accomplishes three things: 
   
-1.  Global rules text
-  
-2.  Component update
-  
+1.  Global Rules verification: this step validates basic system requirements   
+2.  Component update: this step verifies 
 3.  User-requested action
   
  This workflow produces a single summary log, and at most two Detail logs, though typically there is onl one detail log. The second detail log would be present if additional media is slipstreamed along with the original media. 

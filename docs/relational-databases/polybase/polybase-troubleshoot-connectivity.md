@@ -1,14 +1,11 @@
 ---
 title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
-description: 
-services: 
-documentationcenter: 
 author: alazad-msft
-manager: 
-editor: 
-tags: 
+ms.author: alazad
+manager: craigg
 ms.assetid: 
 ms.component: "polybase"
+ms.technology: database
 ms.suite: "sql"
 ms.custom: ""
 ms.tgt_pltfrm: na
@@ -17,7 +14,7 @@ ms.topic: article
 ms.date: 07/19/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.author: alazad
+
 ---
 # Troubleshoot PolyBase Kerberos connectivity
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

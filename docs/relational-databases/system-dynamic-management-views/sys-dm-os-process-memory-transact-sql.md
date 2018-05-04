@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_process_memory dynamic management view"
 ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

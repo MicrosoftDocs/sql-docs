@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 caps.latest.revision: 49
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # ALTER QUEUE (Transact-SQL)

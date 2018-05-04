@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 caps.latest.revision: 28
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_tran_session_transactions dynamic management view"
 ms.assetid: c7157491-58c2-49fe-87d7-0c9723113adf
 caps.latest.revision: 30
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

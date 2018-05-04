@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_tasks dynamic management view"
 ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 caps.latest.revision: 34
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

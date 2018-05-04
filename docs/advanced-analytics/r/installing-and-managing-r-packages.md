@@ -1,5 +1,6 @@
 ---
-title: Default package libraries for machine learning on SQL Server | Microsoft Docs
+title: Default R and Python package libraries in SQL Server R and SQL Server Machine Learning | Microsoft Docs
+description: R and Python packages installed by SQL Server for R Services, R Server, Machine Learning Services (In-Database), and Machine Learning Server (Standalone)
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,10 +10,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Default package libraries for machine learning on SQL Server
+# Default R aand Python packages in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the default libraries for R and Python that are installed with SQL Server. This article provides the default locations for these libraries, and explains how you can determine which packages and which version of R or Python are installed in each instance library.
+This article describes the default libraries for R and Python that are installed with SQL Server. This article provides the default file locations fand explains how you can determine which packages and version of R or Python are installed in each instance library.
 
 ## Using the default instance library
 
@@ -24,7 +25,9 @@ To protect server assets, the default instance library is installed to a secured
 
 Even if you own the computer, you should consider the usefulness of any particular R or Python package in a server environment before adding the package to the instance library. Consider factors such as the size of package files and the need for multiple versions, as well as whether the package requires network or internet access.
 
-### SQL Server
+### In-Database engine instance file paths
+
+When you add R and Python feature integration through a database engine instance, R and Python executables are subordinate to the instance folder.
 
 |Version | Instance name|Default path|
 |------|------|------|
@@ -35,9 +38,9 @@ Even if you own the computer, you should consider the usefulness of any particul
 | SQL Server 2017 with Python |default instance |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library` |
 | SQL Server 2017 with Python|named instance|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library` |
 
-### R Server (standalone) or Machine Learning Server (Standalone)
+### Standalone server file paths 
 
-This table lists the default paths of the binaries when the standalone server is installed using SQL Server setup. 
+This table lists the default paths of the binaries when SQL Server 2016 R Server (Standalone) or SQL Server 2017 Machine Learning Server (Standalone) server is installed . 
 
 |Version| Installation|Default path|
 |------|------|------|
@@ -104,4 +107,4 @@ Users who cannot install a package to a secured location often resort to install
 
 Even if you have admin rights and access to a user document folder on the server, the external script runtime that executes in SQL Server cannot access any packages installed outside the default instance library.
 
-For tips on how to resolve problems related to user libraries, see [Package installed in user libraries](packages-installed-in-user-libraries.md).
+For tips on how to resolve problems related to user libraries, see [Workarounds for R user libraries](packages-installed-in-user-libraries.md).

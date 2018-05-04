@@ -1,4 +1,4 @@
----
+﻿---
 title: "FrameWindowVisible | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
@@ -42,7 +42,11 @@ BOOL WINAPI IsFrameWindowVisible(IVsWindowFrame* frame)
 ## Property Value/Return Value  
  A Boolean value that specifies whether the window frame specified by *frame* is visible.  
   
+
+<!-- Necessary temporarily. GeneMi, 2018-05-01.
+     But 'release-sql2014-migration' should win the Conflict Resolution later in May, because this will then be a good link!
 ## See Also  
  [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)  
+-->
   
   

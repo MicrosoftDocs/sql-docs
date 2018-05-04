@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_uncontained_entities dynamic management view"
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 caps.latest.revision: 29
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_db_uncontained_entities (Transact-SQL)

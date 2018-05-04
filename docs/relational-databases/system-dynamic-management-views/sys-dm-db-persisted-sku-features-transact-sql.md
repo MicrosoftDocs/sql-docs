@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.dm_db_persisted_sku_features dynamic management view"
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 caps.latest.revision: 26
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_db_persisted_sku_features (Transact-SQL)

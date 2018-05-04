@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dynamic management views [SQL Server], Resource Governor"
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
 caps.latest.revision: 10
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Resource Governor Related Dynamic Management Views (Transact-SQL)

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_qn_subscriptions dynamic management view"
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 caps.latest.revision: 26
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Query Notifications - sys.dm_qn_subscriptions

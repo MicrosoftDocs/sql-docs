@@ -2,9 +2,27 @@
   "build": {
 
     "content": [
+      {
+        "group": "gr-sql-2014-b",
+        "src": "./2014",
+        "files": [
+          "**/*.md",
+          "**/*.yml",
+          "breadcrumb/toc.yml"
+        ],
+        "exclude": [
+          "**/includes/**",
+          "**/mref/**",
+          "**/obj/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE"
+        ]
+      },
 
       {
         "group": "gr-sql-2016-a",
+        "src": "./",
         "files": [
           "**/*.md",
           "**/*.yml",
@@ -22,9 +40,22 @@
     ],
 
     "resource": [
+      {
+        "group": "gr-sql-2014-b",
+        "src": "./2014",
+        "files": [
+          "**/*.png",
+          "**/*.gif",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**"
+        ]
+      },
 
       {
         "group": "gr-sql-2016-a",
+        "src": "./",
         "files": [
           "**/*.png",
           "**/*.gif",
@@ -41,7 +72,6 @@
 
     "globalMetadata": {
       "layout": "Conceptual",
-      "breadcrumb_path": "~/breadcrumb/toc.yml",
       "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
       "searchScope": ["sql"],
       "_op_documentIdPathDepotMapping": {
@@ -54,6 +84,11 @@
 
     "fileMetadata": {
 
+      "breadcrumb_path": {
+        "**/*.md": "~/breadcrumb/toc.yml",
+        "2014/**/*.md": "~/2014/breadcrumb/toc.yml"
+      },
+      
       "monikerRange": {
 
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
@@ -92,8 +127,14 @@
 
     "groups": {
 
+      "gr-sql-2014-b": {
+        "moniker_range": "= sql-server-2014",
+        "dest": "temp2014b"
+      },
+
       "gr-sql-2016-a": {
-        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "dest": "temp2016a"
       }
     },
 

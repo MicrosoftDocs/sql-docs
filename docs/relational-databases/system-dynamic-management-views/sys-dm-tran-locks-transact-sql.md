@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_tran_locks dynamic management view"
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 caps.latest.revision: 61
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

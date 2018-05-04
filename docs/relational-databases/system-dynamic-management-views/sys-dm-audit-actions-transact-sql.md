@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_audit_actions dynamic management view"
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_audit_actions (Transact-SQL)

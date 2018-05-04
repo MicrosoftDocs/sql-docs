@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_cluster_nodes dynamic management view"
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 caps.latest.revision: 36
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_os_cluster_nodes (Transact-SQL)

@@ -15,8 +15,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 caps.latest.revision: 10
-author: "barbkess"
-ms.author: "barbkess"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

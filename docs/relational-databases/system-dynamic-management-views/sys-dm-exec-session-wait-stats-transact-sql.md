@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_exec_session_wait_stats"
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_exec_session_wait_stats (Transact-SQL)

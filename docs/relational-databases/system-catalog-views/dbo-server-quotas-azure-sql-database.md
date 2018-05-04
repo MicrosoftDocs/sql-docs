@@ -7,8 +7,7 @@ ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database
 ms.service: "sql-database"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 

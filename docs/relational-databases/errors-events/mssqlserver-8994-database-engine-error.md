@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "8994 (Database Engine error)"
 ms.assetid: 8f4b0e2f-04c0-46e4-9208-20a7085d7a1a
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_8994

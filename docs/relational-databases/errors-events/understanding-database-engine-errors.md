@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], errors"
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

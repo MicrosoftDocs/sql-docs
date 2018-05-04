@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "18452 (Database Engine error)"
 ms.assetid: 21da332c-e81d-4dee-a9d2-95598911b3be
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_18452

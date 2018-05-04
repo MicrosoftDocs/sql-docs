@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "dm_exec_external_operations management view"
 ms.assetid: d268217a-85b8-4b7f-9cd1-87865eba2be1
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

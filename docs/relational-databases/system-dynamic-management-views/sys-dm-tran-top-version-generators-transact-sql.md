@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_tran_top_version_generators dynamic management view"
 ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 caps.latest.revision: 34
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

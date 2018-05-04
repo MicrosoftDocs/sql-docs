@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_exec_query_memory_grants dynamic management view"
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 caps.latest.revision: 36
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

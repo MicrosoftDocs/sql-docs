@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "02/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "polybase"
+ms.component: database
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: database
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "barbkess"
-ms.author: "barbkess"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # PolyBase configuration

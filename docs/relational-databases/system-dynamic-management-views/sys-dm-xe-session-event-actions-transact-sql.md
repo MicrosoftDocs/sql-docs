@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.dm_xe_session_event_actions dynamic management view"
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 caps.latest.revision: 16
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_xe_session_event_actions (Transact-SQL)

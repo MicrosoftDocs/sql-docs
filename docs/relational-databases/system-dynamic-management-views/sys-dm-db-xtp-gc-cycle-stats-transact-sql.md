@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_gc_cycle_stats dynamic management view"
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 caps.latest.revision: 12
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

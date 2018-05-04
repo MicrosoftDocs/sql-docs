@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_host_info dynamic management view"
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---

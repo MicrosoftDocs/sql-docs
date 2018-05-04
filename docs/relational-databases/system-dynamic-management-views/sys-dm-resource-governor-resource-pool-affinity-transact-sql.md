@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_resource_pool_affinity"
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)

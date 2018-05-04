@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_volume_stats dynamic management function"
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_os_volume_stats (Transact-SQL)

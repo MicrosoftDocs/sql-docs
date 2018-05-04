@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "PolyBase"
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

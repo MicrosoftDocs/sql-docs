@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_exec_describe_first_result_set catalog view"
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 caps.latest.revision: 25
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

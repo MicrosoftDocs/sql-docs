@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "conversations [Service Broker], moving"
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 caps.latest.revision: 28
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MOVE CONVERSATION (Transact-SQL)

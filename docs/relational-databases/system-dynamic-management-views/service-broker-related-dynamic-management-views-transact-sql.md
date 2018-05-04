@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "dynamic management views [SQL Server], Service Broker"
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Service Broker Related Dynamic Management Views (Transact-SQL)

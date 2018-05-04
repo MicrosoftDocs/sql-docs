@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dynamic management objects (SQL Server)"
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 caps.latest.revision: 12
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Extended Events Dynamic Management Views

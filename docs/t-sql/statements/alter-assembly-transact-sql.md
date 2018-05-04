@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "ALTER ASSEMBLY statement"
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: 76
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # ALTER ASSEMBLY (Transact-SQL)

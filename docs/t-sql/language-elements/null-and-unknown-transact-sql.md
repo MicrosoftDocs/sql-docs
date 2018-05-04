@@ -14,8 +14,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
 caps.latest.revision: 5
-author: "barbkess"
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

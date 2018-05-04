@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/03/2018"
+ms.date: "05/09/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -25,8 +25,8 @@ This article provides details about updates, improvements, and bug fixes for the
 ## [SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
 Release number: 17.7<br>
-Build number: 14.0.xxxxx.0<br>
-Release date: May 03, 2018
+Build number: 14.0.17254.0<br>
+Release date: May 09, 2018
 
 ### What's new
 
@@ -55,7 +55,8 @@ Always On:
 - Fixed an issue where Always On Latency Dashboard was not working with SQL Server 2012.
  
 Scripting: 
-- Fixed an issue where Scripting stored proc, against Azure SQLDW, is not working for non-admin user.
+- Fixed an issue where scripting stored procedure against Azure SQL Data Warehouse, is not working for non-admin user.
+- Fixed an issue where scripting a database against Azure SQL Database was not scripting the *SCOPED CONFIGURATION* properties.
  
 Telemetry: 
 - Fixed issue where  SSMS crashes then trying to connect to a server, after opting out of sending telemetry.
@@ -80,6 +81,9 @@ Misc:
 
 - Better support for Azure SQL Database Managed Instance.
 - Fixed an issue where the user was unable to create a catalog for SQL Server 2014 or before.
+- Fixed two issues with reports:
+   - Removed the machine name for Azure servers.
+   - Improved handling of localized object name.
 
 
 ### Known issues

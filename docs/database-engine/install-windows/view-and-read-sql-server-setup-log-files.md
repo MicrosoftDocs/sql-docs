@@ -136,7 +136,7 @@ Each execution of Setup creates log files are created with a new timestamped log
 ## SystemConfigurationCheck_Report.htm  
   
 ### Overview  
- The system configuration check report contains a short description for each executed rule, and the execution status.  
+ The system configuration check report contains a short description for each executed rule, and the execution status.
   
 ### Location  
  It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  

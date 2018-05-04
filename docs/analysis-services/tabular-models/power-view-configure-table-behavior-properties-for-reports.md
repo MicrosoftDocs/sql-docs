@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -13,7 +12,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.bidtoolset.tablebehavior.f1"
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
@@ -21,7 +20,6 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Power View - Configure Table Behavior Properties for Reports
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

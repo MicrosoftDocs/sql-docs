@@ -1,11 +1,9 @@
 ---
 title: "DataFactory Object (RDSServer) Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "DataFactory object [ADO], members"
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DataFactory Object (RDSServer) Properties, Methods, and Events
 > [!IMPORTANT]

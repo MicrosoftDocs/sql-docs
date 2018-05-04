@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
   - "SharePoint integration [Reporting Services], permissions"
@@ -23,7 +22,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Granting Permissions on Report Server Items on a SharePoint Site
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] provides built-in security features that you can use to grant access to report server items that you access from SharePoint sites and libraries. If you already assigned permissions to users, those same users will have access to report server items and operations immediately after you configure the integration settings between [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] and a report server. You can use existing permissions to upload report definitions and other documents, view reports, create subscriptions, and manage items.  

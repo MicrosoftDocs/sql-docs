@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -25,7 +24,6 @@ caps.latest.revision: 31
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Customize Rendering Extension Parameters in RSReportServer.Config
   You can specify rendering extension parameters in the RSReportServer configuration file to override default report rendering behavior for reports that run on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. You can modify rendering extension parameters to achieve the following objectives:  

@@ -2,16 +2,15 @@
 title: "Optimize Parameterized Row Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "precomputed partitions [SQL Server replication]"
   - "filters [SQL Server replication], parameterized"
@@ -21,8 +20,7 @@ ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 caps.latest.revision: 44
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Optimize Parameterized Row Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

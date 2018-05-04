@@ -7,13 +7,11 @@ author: MikeRayMSFT
 manager: craigg
 editor: ''
 ms.assetid: 
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
-ms.workload: sql-server
 ms.custom: ""
 ms.date: 09/17/2017    
 ms.prod: sql

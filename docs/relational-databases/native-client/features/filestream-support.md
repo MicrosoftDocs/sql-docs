@@ -2,9 +2,8 @@
 title: "FILESTREAM Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "native-client|features"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "SQL Server Native Client [FILESTREAM support]"
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # FILESTREAM Support
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

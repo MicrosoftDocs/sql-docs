@@ -1,11 +1,9 @@
 ---
 title: "Step 2: Initialize the Main List Box | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -14,10 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 2: Initialize the Main List Box
 To declare global Record and Recordset objects, insert the following code into the (General) (Declarations) for Form1:  

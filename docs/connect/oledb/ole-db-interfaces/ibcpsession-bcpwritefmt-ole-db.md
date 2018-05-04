@@ -3,9 +3,8 @@ title: "IBCPSession::BCPWriteFmt (OLE DB) | Microsoft Docs"
 description: "Using IBCPSession::BCPWriteFmt to save the format files in either xml or text format (OLE DB)"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,7 +20,6 @@ helpviewer_keywords:
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

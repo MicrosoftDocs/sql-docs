@@ -1,11 +1,9 @@
 ---
 title: "Visual Basic Example of Data Shaping | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "Visual Basic example of data shaping[ADO], about data shaping"
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Visual Basic Example of Data Shaping
 ```  

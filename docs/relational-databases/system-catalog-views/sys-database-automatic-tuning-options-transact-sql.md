@@ -3,14 +3,12 @@ title: "sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs"
 description: Learn how to view automatic tuning options on a SQL Database
 ms.custom: ""
 ms.date: "07/20/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,8 +25,7 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 caps.latest.revision: 24
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)

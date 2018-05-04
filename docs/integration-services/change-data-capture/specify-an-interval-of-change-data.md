@@ -4,22 +4,20 @@ ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "change-data-capture"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],specifying interval"
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Specify an Interval of Change Data
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to calculate the endpoints of the change interval. These endpoints are **datetime** values and will be stored in package variables for use later in the package.  

@@ -1,11 +1,9 @@
 ---
 title: "Open Method (ADO Connection) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "Open method [ADO]"
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Open Method (ADO Connection)
 Opens a connection to a data source.  

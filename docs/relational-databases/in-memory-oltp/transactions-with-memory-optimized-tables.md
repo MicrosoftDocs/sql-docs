@@ -2,22 +2,20 @@
 title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/16/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Transactions with Memory-Optimized Tables

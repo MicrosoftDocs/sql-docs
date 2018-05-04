@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -31,8 +30,7 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Working with Images with the Script Task
   A database of products or users frequently includes images in addition to text and numeric data. The **System.Drawing** namespace in the Microsoft .NET Framework provides classes for manipulating images.  

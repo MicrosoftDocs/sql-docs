@@ -1,11 +1,9 @@
 ---
 title: "Parameter (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "Parameter collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Parameter (Visual C++ Syntax Index with #import)
 ## Methods  

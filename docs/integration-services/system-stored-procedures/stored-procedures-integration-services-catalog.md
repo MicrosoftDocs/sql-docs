@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,8 +17,7 @@ ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Stored Procedures (Integration Services Catalog)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

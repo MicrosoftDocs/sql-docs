@@ -2,22 +2,18 @@
 title: "Get started with Columnstore for real time operational analytics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Get started with Columnstore for real time operational analytics

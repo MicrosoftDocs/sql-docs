@@ -1,14 +1,14 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
 ms.date: "04/24/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: supportability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "build notes"
   - "release issues"
@@ -16,7 +16,6 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: "Active"
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 

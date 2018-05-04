@@ -2,7 +2,7 @@
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.prod_service: "database-engine"
@@ -19,9 +19,8 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
-ms.workload: "On Demand"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 

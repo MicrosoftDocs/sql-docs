@@ -2,16 +2,14 @@
 title: "Installing SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -32,8 +30,7 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 caps.latest.revision: 31
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Installing SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access is installed by using a Windows Installer-based wizard. This topic provides information about installation prerequisites, a link to the latest version of SSMA, and instructions for installing, licensing, uninstalling, and upgrading SSMA.  

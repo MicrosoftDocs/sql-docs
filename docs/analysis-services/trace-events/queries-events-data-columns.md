@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -19,7 +18,6 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Queries Events Data Columns
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

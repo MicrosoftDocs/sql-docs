@@ -2,16 +2,14 @@
 title: "What&#39;s New in SQLXML 4.0 SP1 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "registry keys [SQLXML]"
   - "SQLNCLI, SQLXML"
@@ -25,8 +23,7 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 caps.latest.revision: 67
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # What&#39;s New in SQLXML 4.0 SP1

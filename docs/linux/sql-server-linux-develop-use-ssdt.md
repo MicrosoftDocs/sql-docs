@@ -8,13 +8,11 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: "sql-linux"
-ms.workload: "On Demand"
 ---
 # Use Visual Studio to create databases for SQL Server on Linux
 

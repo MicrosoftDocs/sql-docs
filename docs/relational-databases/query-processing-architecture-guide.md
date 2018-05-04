@@ -2,16 +2,15 @@
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/16/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, query processing architecture"
   - "query processing architecture guide"
@@ -19,8 +18,7 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Query Processing Architecture Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

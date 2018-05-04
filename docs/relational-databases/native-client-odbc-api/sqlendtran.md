@@ -2,9 +2,8 @@
 title: "SQLEndTran | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-api"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "SQLEndTran function"
 ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQLEndTran

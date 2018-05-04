@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.executetsqlstatementtask.f1"
 helpviewer_keywords: 
@@ -22,8 +21,7 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Execute T-SQL Statement Task
   The Execute T-SQL Statement task runs Transact-SQL statements. For more information, see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md) and [Integration Services &#40;SSIS&#41; Queries](../../integration-services/integration-services-ssis-queries.md).  

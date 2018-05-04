@@ -2,14 +2,12 @@
 title: "sys.objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "0/30/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,10 +24,9 @@ helpviewer_keywords:
   - "table types [SQL Server]"
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 caps.latest.revision: 62
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.objects (Transact-SQL)

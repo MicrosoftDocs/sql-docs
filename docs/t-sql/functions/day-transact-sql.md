@@ -2,14 +2,12 @@
 title: "DAY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,10 +24,9 @@ helpviewer_keywords:
   - "dateparts [SQL Server], day"
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
 caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # DAY (Transact-SQL)

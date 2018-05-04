@@ -2,16 +2,14 @@
 title: "Convert, Load, and Migrate (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -23,8 +21,7 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Convert, Load, and Migrate (AccessToSQL)
 The **Convert, Load, and Migrate** dialog box reports migration status when you use the Convert, Load, and Migrate button or the Migration Wizard.  

@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.updatestatisticstask.f1"
 helpviewer_keywords: 
@@ -21,8 +20,7 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Update Statistics Task
   The Update Statistics task updates information about the distribution of key values for one or more statistics groups (collections) in the specified table or indexed view. For more information, see [Statistics](../../relational-databases/statistics/statistics.md).  

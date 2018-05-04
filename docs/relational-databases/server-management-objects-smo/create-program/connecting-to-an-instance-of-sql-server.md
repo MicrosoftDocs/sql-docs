@@ -2,9 +2,8 @@
 title: "Connecting to an Instance of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,8 +20,7 @@ ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 caps.latest.revision: 50
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Connecting to an Instance of SQL Server

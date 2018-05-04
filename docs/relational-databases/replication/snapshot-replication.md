@@ -2,16 +2,15 @@
 title: "Snapshot Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshot replication [SQL Server], about snapshot replication"
   - "snapshot replication [SQL Server]"
@@ -19,8 +18,7 @@ ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Snapshot Replication

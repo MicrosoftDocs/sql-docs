@@ -2,16 +2,14 @@
 title: "Use a Format File to Bulk Import Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-bulk-import-export"
+ms.technology: data-movement
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], format files"
   - "format files [SQL Server], importing data using"
@@ -19,8 +17,7 @@ ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use a Format File to Bulk Import Data (SQL Server)

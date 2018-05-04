@@ -4,14 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +17,7 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Project Settings (Type Mapping) (SybaseToSQL)
 The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts Sybase Adaptive Server Enterprise (ASE) data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types.  

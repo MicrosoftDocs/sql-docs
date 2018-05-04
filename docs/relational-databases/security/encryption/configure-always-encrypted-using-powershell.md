@@ -2,22 +2,18 @@
 title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "security"
+ms.prod: sql
+ms.prod_service: "security, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-security"
+ms.technology: security
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure Always Encrypted using PowerShell

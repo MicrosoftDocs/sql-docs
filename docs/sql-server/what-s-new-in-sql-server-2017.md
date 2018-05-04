@@ -4,20 +4,18 @@ ms.custom: ""
 ms.date: "10/19/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 caps.latest.revision: 71
 author: "craigg-msft"
 ms.author: "craigg"
 manager: craigg
-ms.workload: "Active"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017

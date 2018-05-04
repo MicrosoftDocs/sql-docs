@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], processing"
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
@@ -20,7 +19,6 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Process a Mining Structure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

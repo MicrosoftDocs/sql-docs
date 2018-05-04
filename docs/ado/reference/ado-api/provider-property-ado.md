@@ -1,11 +1,9 @@
 ---
 title: "Provider Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "Provider property [ADO]"
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Provider Property (ADO)
 Indicates the name of the provider for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

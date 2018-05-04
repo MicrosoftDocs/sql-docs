@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "12/18/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,13 +11,12 @@ ms.technology:
   
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # SQL Server Data Mining Add-Ins for Office
 

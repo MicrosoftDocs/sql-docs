@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/27/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "stretch-database"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, predicates"
   - "predicates for Stretch Database"
@@ -21,8 +20,7 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Select rows to migrate by using a filter function (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

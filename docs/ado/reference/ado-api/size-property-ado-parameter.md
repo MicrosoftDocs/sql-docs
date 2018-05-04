@@ -1,11 +1,9 @@
 ---
 title: "Size Property (ADO Parameter) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "Size property [ADO Parameter]"
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Size Property (ADO Parameter)
 Indicates the maximum size, in bytes or characters, of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

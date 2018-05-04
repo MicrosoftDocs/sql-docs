@@ -1,11 +1,9 @@
 ---
 title: "BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "BeginTrans method [ADO], Visual Basic example"
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB)
 This example changes the book type of all psychology books in the ***Titles*** table of the database. After the [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method starts a transaction that isolates all the changes made to the ***Titles*** table, the [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method saves the changes. You can use the [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method to undo changes that you saved using the [Update](../../../ado/reference/ado-api/update-method.md) method.  

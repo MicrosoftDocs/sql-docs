@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,10 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 44
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Active"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Master Data Services Installation and Configuration
 

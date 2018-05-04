@@ -1,11 +1,9 @@
 ---
 title: "DataSpace Object and CreateObject Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "CreateObject method [ADO], VBScript example"
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DataSpace Object and CreateObject Method Example (VBScript)
 > [!IMPORTANT]

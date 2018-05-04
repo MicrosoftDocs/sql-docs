@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-custom-objects-data-flow-types"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,8 +24,7 @@ ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Developing Specific Types of Data Flow Components
   This section covers the specifics of developing source components, transformation components with synchronous outputs, transformation components with asynchronous outputs, and destination components.  

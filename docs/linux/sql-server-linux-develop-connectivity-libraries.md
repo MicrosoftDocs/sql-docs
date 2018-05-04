@@ -8,13 +8,11 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.workload: "Inactive"
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server
 

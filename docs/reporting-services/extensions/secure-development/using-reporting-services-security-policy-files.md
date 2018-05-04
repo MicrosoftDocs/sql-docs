@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "extensions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -28,7 +27,6 @@ caps.latest.revision: 33
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Using Reporting Services Security Policy Files
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stores component security policy information in three configuration files that are copied to the file system during setup. These configuration files can contain a combination of internal-use and user-defined security policies for code assemblies in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The three configuration files correspond to three securable components in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: The report server and Windows service, the Report Manager Web application, and the Report Designer preview window.  

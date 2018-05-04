@@ -2,9 +2,8 @@
 title: "Bookmarking Rows in ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-cursors"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,10 +19,9 @@ helpviewer_keywords:
   - "bookmarks [ODBC]"
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Scrolling and Fetching Rows - Bookmarking Rows in ODBC

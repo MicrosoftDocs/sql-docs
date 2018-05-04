@@ -1,11 +1,9 @@
 ---
 title: "Mode Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "Mode property [ADO]"
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Mode Property (ADO)
 Indicates the available permissions for modifying data in a [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Record](../../../ado/reference/ado-api/record-object-ado.md), or [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

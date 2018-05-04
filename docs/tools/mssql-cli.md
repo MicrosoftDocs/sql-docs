@@ -9,11 +9,10 @@ ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: mssql-cli
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # mssql-cli command-line query tool for SQL Server

@@ -7,15 +7,11 @@ ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
-ms.component: "samples"
-ms.technology: ""
-ms.topic: "article"
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
-robots: noindex,nofollow
-ms.workload: "On Demand"
+ms.technology: samples
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # SQL samples
 

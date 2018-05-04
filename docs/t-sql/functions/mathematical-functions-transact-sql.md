@@ -2,14 +2,12 @@
 title: "Mathematical Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "functions [SQL Server], mathematical"
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # Mathematical Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

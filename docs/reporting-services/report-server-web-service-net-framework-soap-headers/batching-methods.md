@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service-net-framework-soap-headers"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -29,7 +28,6 @@ caps.latest.revision: 36
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Batching Methods
   The use of SOAP headers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enables you to include multiple Web service methods in a single operation. Methods run within the scope of a single database transaction, in the order in which they are called.  

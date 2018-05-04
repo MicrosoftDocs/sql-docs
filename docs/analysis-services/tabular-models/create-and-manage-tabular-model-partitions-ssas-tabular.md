@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -13,13 +12,12 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Create and manage tabular model partitions
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -1,11 +1,9 @@
 ---
 title: "InvokeService (RDS) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "InvokeService [RDS]"
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # InvokeService (RDS)
 Returns a pointer to the requested interface on a more capable version of the object.  

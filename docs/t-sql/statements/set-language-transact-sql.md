@@ -2,14 +2,12 @@
 title: "SET LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,10 +23,9 @@ helpviewer_keywords:
   - "default languages"
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SET LANGUAGE (Transact-SQL)

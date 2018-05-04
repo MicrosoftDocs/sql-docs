@@ -9,11 +9,10 @@ ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 #  Using source control in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

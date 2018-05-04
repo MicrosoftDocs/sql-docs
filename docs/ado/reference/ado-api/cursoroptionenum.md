@@ -1,11 +1,9 @@
 ---
 title: "CursorOptionEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "CursorOptionEnum enumeration [ADO]"
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # CursorOptionEnum
 Specifies what functionality the [Supports](../../../ado/reference/ado-api/supports-method.md) method should test for.  

@@ -2,9 +2,8 @@
 title: "IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,10 +18,9 @@ helpviewer_keywords:
   - "InsertRow method"
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
 caps.latest.revision: 37
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # IRowsetFastLoad::InsertRow (OLE DB)

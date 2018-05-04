@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,8 +21,7 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Understanding the Script Component Object Model
   As discussed in [Coding and Debugging the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), the Script component project contains three project items:  

@@ -1,11 +1,9 @@
 ---
 title: "Member Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "Member object [ADO MD], members"
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Member Object (ADO MD)
 Represents a member of a level in a cube, the children of a member of a level, or a member of a position along an axis of a cellset.  

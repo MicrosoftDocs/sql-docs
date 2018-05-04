@@ -2,9 +2,8 @@
 title: "Cursor Transaction Isolation Level | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-cursors"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,10 +19,9 @@ helpviewer_keywords:
   - "row versioning [SQL Server], ODBC"
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
 caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Cursor Transaction Isolation Level

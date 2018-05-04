@@ -1,17 +1,16 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2018"
-ms.prod: sql
+ms.date: "04/19/2018"
+ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
@@ -24,10 +23,9 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], configuring distribution"
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Set up replication distribution database in Always On availability group
 

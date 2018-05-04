@@ -2,16 +2,15 @@
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/23/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, memory management architecture"
   - "memory management architecture guide"
@@ -19,8 +18,7 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 caps.latest.revision: 6
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Memory Management Architecture Guide

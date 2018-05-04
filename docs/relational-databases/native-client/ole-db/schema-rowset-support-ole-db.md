@@ -2,9 +2,8 @@
 title: "Schema Rowset Support (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,10 +19,9 @@ helpviewer_keywords:
   - "rowsets [OLE DB], schema"
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 caps.latest.revision: 42
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Schema Rowset Support (OLE DB)

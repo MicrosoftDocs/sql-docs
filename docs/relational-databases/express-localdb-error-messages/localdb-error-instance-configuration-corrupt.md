@@ -2,9 +2,8 @@
 title: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,8 +15,7 @@ ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 caps.latest.revision: 8
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

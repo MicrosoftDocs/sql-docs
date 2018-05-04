@@ -2,9 +2,8 @@
 title: "SMO Object Model Diagram | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,8 +17,7 @@ ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SMO Object Model Diagram

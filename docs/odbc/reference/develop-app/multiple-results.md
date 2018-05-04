@@ -2,16 +2,13 @@
 title: "Multiple Results | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLMoreResults function [ODBC], multiple results"
   - "row counts [ODBC]"
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "SQLGetInfo function [ODBC], multiple results"
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Multiple Results
 A *result* is something returned by the data source after a statement is executed. ODBC has two types of results: result sets and row counts. *Row counts* are the number of rows affected by an update, delete, or insert statement. Batches, described in [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), can generate multiple results.  

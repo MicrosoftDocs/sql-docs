@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/02/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,8 +23,7 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Working with Excel Files with the Script Task
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides the Excel connection manager, Excel source, and Excel destination for working with data stored in spreadsheets in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel file format. The techniques described in this topic use the Script task to obtain information about available Excel databases (workbook files) and tables (worksheets and named ranges).

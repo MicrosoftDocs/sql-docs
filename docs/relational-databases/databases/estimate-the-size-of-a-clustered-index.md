@@ -10,7 +10,7 @@ ms.component: indexes
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"
   - "size [SQL Server], tables"
@@ -27,8 +27,7 @@ ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 49
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Estimate the Size of a Clustered Index

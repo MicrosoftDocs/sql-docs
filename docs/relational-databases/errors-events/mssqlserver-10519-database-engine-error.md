@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "10519 (Database Engine error)"
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_10519

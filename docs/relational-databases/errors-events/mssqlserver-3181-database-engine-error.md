@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "3181 (Database Engine error)"
 ms.assetid: e6d2e716-5263-477c-ad0e-7bcbfef4c1f3
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_3181

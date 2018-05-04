@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "33129 (Database Engine error)"
 ms.assetid: 83b5f368-f1a1-4a40-9bb6-c77e2dec690f
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_33129

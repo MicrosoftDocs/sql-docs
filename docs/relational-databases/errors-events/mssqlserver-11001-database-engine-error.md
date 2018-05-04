@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "11001 (Database Engine error)"
 ms.assetid: 53d4d63a-61e3-441f-bfe9-9d44f7a05fd4
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_11001

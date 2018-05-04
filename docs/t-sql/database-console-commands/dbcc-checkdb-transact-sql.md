@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "12/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -36,8 +35,8 @@ helpviewer_keywords:
   - "page count accuracy [SQL Server]"
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 caps.latest.revision: 144
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC CHECKDB (Transact-SQL)

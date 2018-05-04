@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "2515 (Database Engine error)"
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_2515

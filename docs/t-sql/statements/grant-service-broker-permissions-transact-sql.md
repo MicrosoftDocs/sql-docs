@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "contracts [Service Broker], permissions"
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 caps.latest.revision: 17
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 ---

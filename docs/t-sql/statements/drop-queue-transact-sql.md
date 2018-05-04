@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "removing queues"
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 caps.latest.revision: 33
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 ---

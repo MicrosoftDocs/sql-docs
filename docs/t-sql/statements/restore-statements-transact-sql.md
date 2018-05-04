@@ -41,7 +41,7 @@ helpviewer_keywords:
   - "RESTORE LOG, see RESTORE statement"
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: 248
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"

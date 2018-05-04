@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]"
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 caps.latest.revision: 20
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 ---

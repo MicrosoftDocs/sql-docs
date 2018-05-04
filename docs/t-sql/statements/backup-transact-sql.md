@@ -47,7 +47,7 @@ helpviewer_keywords:
   - "cross-platform backups"
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 caps.latest.revision: 275
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"

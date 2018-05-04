@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "queues [Service Broker], creating"
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: 67
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 ---

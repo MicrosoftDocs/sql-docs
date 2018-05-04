@@ -30,7 +30,7 @@ helpviewer_keywords:
   - "CREATE MESSAGE TYPE statement"
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 caps.latest.revision: 41
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 ---

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "overriding connection values"
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 caps.latest.revision: 27
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 ---

@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 caps.latest.revision: 50
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 ---

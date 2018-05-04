@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "message types [Service Broker], modifying"
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 caps.latest.revision: 27
-author: edmacauley" 
+author: edmacauley
 ms.author: edmaca"
 manager: craigg
 ---

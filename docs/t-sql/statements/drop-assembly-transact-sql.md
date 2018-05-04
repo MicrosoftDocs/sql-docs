@@ -25,7 +25,7 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 caps.latest.revision: 32
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # DROP ASSEMBLY (Transact-SQL)

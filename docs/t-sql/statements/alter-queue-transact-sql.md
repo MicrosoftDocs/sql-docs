@@ -26,7 +26,7 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 caps.latest.revision: 49
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # ALTER QUEUE (Transact-SQL)

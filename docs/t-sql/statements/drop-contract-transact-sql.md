@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 caps.latest.revision: 29
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # DROP CONTRACT (Transact-SQL)

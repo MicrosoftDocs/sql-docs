@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: 47
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)

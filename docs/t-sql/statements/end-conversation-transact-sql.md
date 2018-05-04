@@ -27,7 +27,7 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 caps.latest.revision: 35
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # END CONVERSATION (Transact-SQL)

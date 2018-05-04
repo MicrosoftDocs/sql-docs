@@ -25,7 +25,7 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 caps.latest.revision: 27
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)

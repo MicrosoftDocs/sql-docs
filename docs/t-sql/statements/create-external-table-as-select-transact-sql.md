@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "PolyBase, create table as select"
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 caps.latest.revision: 16
-author: edmacauley"
-ms.author: edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

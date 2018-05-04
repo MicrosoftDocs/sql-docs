@@ -25,7 +25,7 @@ helpviewer_keywords:
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 caps.latest.revision: 64
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

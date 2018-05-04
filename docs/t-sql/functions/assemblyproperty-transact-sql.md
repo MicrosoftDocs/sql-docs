@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 caps.latest.revision: 40
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # ASSEMBLYPROPERTY (Transact-SQL)

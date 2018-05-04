@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 caps.latest.revision: 21
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # DROP RESOURCE POOL (Transact-SQL)

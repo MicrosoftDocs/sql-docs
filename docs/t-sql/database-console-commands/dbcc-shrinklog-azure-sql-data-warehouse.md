@@ -12,7 +12,7 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 caps.latest.revision: 11
-author: edmacauley"
+author: edmacauley
 ms.author: umajay
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"

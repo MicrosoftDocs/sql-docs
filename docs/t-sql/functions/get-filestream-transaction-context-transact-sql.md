@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 caps.latest.revision: 20
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)

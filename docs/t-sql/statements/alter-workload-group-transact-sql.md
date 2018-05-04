@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: 56
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)

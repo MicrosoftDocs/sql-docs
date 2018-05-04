@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 caps.latest.revision: 27
 author: edmacauley
-ms.author: edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)

@@ -2,11 +2,7 @@
 title: "ALTER DATABASE (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-<<<<<<< HEAD
-ms.prod: "sql-non-specified"
-=======
 ms.prod: sql
->>>>>>> bbaa0196d800b8ecf28aed2740038799de9cef27
 ms.prod_service: "pdw"
 ms.component: "t-sql|statements"
 ms.reviewer: ""
@@ -16,17 +12,10 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
 caps.latest.revision: 10
-<<<<<<< HEAD
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
-=======
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
->>>>>>> bbaa0196d800b8ecf28aed2740038799de9cef27
 ---
 # ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

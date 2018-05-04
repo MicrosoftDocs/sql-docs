@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,8 +20,8 @@ helpviewer_keywords:
   - "ghost records"
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_clean_db_free_space (Transact-SQL)

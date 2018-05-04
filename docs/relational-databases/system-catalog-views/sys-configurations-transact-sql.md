@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "sys.configurations catalog view"
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.configurations (Transact-SQL)

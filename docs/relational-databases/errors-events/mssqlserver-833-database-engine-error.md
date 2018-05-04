@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "833 (Database Engine error)"
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_833

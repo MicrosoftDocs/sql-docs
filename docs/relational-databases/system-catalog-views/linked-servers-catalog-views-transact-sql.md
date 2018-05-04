@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "catalog views [SQL Server], linked servers"
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Linked Servers Catalog Views (Transact-SQL)

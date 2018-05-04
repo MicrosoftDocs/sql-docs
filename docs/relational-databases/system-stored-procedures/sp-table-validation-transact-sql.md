@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_table_validation"
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_table_validation (Transact-SQL)

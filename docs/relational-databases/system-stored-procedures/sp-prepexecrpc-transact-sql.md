@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "sp_prepexecrpc"
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 caps.latest.revision: 5
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_prepexecrpc (Transact-SQL)

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_replinfo system table"
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_replinfo (Transact-SQL)

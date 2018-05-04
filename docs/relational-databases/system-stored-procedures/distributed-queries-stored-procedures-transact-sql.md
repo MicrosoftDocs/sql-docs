@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "distributed queries [SQL Server], stored procedures"
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Distributed Queries Stored Procedures (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropanonymousagent"
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropanonymousagent (Transact-SQL)

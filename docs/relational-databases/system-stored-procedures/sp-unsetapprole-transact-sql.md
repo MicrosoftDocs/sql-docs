@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "sp_unsetapprole"
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_unsetapprole (Transact-SQL)

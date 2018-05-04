@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_mergearticlecolumn"
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_mergearticlecolumn (Transact-SQL)

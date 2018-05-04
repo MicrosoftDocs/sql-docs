@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_task_space_usage dynamic management view"
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
 caps.latest.revision: 29
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

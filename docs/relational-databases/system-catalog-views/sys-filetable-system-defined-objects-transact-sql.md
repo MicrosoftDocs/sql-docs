@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "sys.filetable_system_defined_objects catalog view"
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.filetable_system_defined_objects (Transact-SQL)

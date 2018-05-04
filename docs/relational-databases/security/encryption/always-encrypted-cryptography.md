@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Always Encrypted, cryptography system"
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

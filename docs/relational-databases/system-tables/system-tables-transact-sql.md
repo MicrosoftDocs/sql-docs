@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "retrieving system table information"
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # System Tables (Transact-SQL)

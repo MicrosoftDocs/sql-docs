@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], disabling tables"
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.sp_cdc_disable_table (Transact-SQL)

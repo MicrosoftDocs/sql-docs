@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "sp_OACreate"
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_OACreate (Transact-SQL)

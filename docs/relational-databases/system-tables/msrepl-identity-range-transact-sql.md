@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSrepl_identity_range system table"
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSrepl_identity_range (Transact-SQL)

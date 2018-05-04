@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "sys.server_event_notifications catalog view"
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.server_event_notifications (Transact-SQL)

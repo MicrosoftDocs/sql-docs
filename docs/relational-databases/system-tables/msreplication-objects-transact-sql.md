@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSreplication_objects system table"
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSreplication_objects (Transact-SQL)

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_altsyncpartners system table"
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_altsyncpartners (Transact-SQL)

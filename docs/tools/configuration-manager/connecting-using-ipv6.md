@@ -17,7 +17,7 @@ ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Connecting Using IPv6
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_mirroring_connections dynamic management view"
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 caps.latest.revision: 41
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Mirroring - sys.dm_db_mirroring_connections

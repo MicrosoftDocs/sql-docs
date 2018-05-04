@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "1803 (Database Engine error)"
 ms.assetid: d4315390-82f1-4c4c-8d1b-1a4989537cca
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_1803

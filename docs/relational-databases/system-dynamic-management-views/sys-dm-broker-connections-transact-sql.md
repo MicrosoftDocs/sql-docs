@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_broker_connections dynamic management view"
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 caps.latest.revision: 45
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_broker_connections (Transact-SQL)

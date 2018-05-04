@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSpeer_originatorid_history"
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSpeer_originatorid_history (Transact-SQL)

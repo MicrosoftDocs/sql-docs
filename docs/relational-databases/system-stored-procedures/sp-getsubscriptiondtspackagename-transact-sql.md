@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_getsubscriptiondtspackagename"
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_getsubscriptiondtspackagename (Transact-SQL)

@@ -8,16 +8,15 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "system-stored-procedures"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 caps.latest.revision: 9
-author: "barbkess"
-ms.author: "barbkess"
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

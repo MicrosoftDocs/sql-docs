@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "starting time"
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 caps.latest.revision: 57
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

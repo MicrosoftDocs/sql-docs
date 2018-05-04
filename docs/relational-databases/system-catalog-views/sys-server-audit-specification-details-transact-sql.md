@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "sys.server_audit_specification_details catalog view"
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sys.server_audit_specification_details (Transact-SQL)

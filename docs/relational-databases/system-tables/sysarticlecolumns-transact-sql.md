@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sysarticlecolumns system table"
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sysarticlecolumns (Transact-SQL)

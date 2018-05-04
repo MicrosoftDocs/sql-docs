@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_repladdcolumn"
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_repladdcolumn (Transact-SQL)

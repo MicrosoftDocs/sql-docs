@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "security dynamic management views"
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Security-Related Dynamic Management Views and Functions (Transact-SQL)

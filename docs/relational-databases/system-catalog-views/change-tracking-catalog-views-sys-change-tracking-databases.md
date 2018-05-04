@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], sys.change_tracking_databases"
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

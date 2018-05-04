@@ -2,7 +2,7 @@
 title: "Monitor Log Shipping (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.component: "log-shipping"
 ms.reviewer: ""

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addsubscriber"
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addsubscriber (Transact-SQL)

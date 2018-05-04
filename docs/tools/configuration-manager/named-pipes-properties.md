@@ -18,7 +18,7 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Named Pipes Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "sys.dm_exec_distributed_request_steps management view"
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

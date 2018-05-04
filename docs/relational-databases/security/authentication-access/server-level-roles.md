@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "authentication [SQL Server], roles"
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 52
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

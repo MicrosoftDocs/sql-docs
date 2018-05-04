@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "server-wide configuration catalog views [SQL Server]"
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Server-wide Configuration Catalog Views (Transact-SQL)

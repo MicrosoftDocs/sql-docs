@@ -2,7 +2,6 @@
 title: "Project Settings (Conversion) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,7 +17,7 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Project Settings (Conversion) (DB2ToSQL)
 The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts DB2 syntax to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax.  

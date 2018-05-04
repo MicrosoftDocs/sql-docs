@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], error reporting"
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Change Data Capture - sys.dm_cdc_errors

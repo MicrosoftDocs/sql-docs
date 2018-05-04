@@ -13,7 +13,7 @@ ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Unknown Service (Log On Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -7,16 +7,15 @@ ms.prod_service: "pdw"
 ms.reviewer: ""
 ms.component: "dmv's"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: e0cd402f-04d0-4a5b-b725-88b31bb7862e
 caps.latest.revision: 7
-author: "barbkess"
-ms.author: "barbkess"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---

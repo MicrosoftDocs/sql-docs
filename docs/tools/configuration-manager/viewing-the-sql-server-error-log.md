@@ -20,7 +20,7 @@ ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Viewing the SQL Server Error Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

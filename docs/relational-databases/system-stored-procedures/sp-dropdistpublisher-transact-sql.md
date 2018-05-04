@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropdistpublisher"
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropdistpublisher (Transact-SQL)

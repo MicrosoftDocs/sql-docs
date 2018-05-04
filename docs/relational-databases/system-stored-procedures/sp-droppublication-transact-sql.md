@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_droppublication"
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_droppublication (Transact-SQL)

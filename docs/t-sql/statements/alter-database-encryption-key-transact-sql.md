@@ -2,14 +2,12 @@
 title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/16/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "ALTER DATABASE ENCRYPTION KEY"
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

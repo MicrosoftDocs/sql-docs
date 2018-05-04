@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "10507 (Database Engine error)"
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_10507

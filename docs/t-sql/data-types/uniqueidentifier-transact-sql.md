@@ -2,14 +2,12 @@
 title: "uniqueidentifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/1/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.service: ""
 ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "GUIDs [SQL Server]"
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # uniqueidentifier (Transact-SQL)

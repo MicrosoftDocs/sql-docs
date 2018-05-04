@@ -2,7 +2,7 @@
 title: "Step 2: Create a SQL database for Node.js development | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "node-js"
 ms.reviewer: ""

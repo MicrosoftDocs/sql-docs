@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], stored procedures"
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # OLE Automation Stored Procedures (Transact-SQL)

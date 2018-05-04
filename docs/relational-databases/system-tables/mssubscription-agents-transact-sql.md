@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSsubscription_agents system table"
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSsubscription_agents (Transact-SQL)

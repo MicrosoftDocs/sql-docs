@@ -13,7 +13,7 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server Properties (Advanced Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

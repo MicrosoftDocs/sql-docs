@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # &gt; (Greater Than) (SSIS Expression)
   Performs a comparison to determine if the first expression is greater than the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

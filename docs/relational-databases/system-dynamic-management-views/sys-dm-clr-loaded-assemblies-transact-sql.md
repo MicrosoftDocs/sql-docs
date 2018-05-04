@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_clr_loaded_assemblies dynamic management view"
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_clr_loaded_assemblies (Transact-SQL)

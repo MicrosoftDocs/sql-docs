@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "objects [SQL Server], hierarchy syntax"
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Object Hierarchy Syntax (Transact-SQL)

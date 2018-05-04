@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_subscriptions system table"
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_subscriptions (Transact-SQL)

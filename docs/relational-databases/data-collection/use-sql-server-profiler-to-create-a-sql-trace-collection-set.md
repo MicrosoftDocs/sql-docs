@@ -3,20 +3,17 @@ title: "Use SQL Server Profiler to Create a SQL Trace Collection Set | Microsoft
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-collection"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Trace collector set"
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use SQL Server Profiler to Create a SQL Trace Collection Set

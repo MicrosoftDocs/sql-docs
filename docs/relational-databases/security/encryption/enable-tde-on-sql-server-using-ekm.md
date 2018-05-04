@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Transparent Data Encryption, using EKM"
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

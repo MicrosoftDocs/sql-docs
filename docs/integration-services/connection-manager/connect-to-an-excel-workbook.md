@@ -3,7 +3,6 @@ title: "Connect to an Excel Workbook | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "connection-manager"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Connect to an Excel Workbook
   To connect an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to a Microsoft Office Excel workbook requires an Excel connection manager.  

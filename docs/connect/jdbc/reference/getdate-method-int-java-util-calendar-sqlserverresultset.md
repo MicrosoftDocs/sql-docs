@@ -2,7 +2,7 @@
 title: "getDate Method (int, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"

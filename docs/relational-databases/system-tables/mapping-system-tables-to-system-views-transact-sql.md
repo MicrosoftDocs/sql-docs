@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "system tables [SQL Server], mapping to catalog views"
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Mapping System Tables to System Views (Transact-SQL)

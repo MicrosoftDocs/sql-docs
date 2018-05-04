@@ -2,7 +2,7 @@
 title: "What's new in Database Engine - SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.component: "database-engine"
 ms.reviewer: ""

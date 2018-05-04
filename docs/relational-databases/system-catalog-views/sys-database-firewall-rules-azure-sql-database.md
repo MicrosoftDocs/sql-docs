@@ -8,8 +8,7 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "system-catalog-views"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "sys.database_firewall_rules"
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

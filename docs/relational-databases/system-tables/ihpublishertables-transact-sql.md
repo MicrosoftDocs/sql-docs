@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "IHpublishertables system table"
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # IHpublishertables (Transact-SQL)

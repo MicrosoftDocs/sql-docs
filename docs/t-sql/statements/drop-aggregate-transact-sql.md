@@ -2,14 +2,12 @@
 title: "DROP AGGREGATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,9 +24,9 @@ helpviewer_keywords:
   - "DROP AGGREGATE statement"
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 caps.latest.revision: 31
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # DROP AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

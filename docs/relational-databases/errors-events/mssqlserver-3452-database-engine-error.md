@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "3452 (Database Engine error)"
 ms.assetid: bf838f02-7186-4b33-b01e-361b0c02de1f
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_3452

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_mergesubscription_cleanup"
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_mergesubscription_cleanup (Transact-SQL)

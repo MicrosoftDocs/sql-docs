@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_validatemergepublication"
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_validatemergepublication (Transact-SQL)

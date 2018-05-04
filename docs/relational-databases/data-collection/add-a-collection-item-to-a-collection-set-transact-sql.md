@@ -3,12 +3,9 @@ title: "Add a Collection Item to a Collection Set (Transact-SQL) | Microsoft Doc
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-collection"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +13,8 @@ helpviewer_keywords:
   - "collection sets [SQL Server], adding items"
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 21
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)

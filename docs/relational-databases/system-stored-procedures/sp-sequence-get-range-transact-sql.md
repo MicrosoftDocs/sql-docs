@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-data-warehouse"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,8 +20,8 @@ helpviewer_keywords:
   - "sp_sequence_get_range"
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

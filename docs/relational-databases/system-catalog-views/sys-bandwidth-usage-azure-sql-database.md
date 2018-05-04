@@ -8,8 +8,7 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "system-catalog-views"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "bandwidth_usage"
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

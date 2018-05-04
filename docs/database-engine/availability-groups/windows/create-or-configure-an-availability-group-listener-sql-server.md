@@ -2,7 +2,7 @@
 title: "Create or Configure an Availability Group Listener (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
@@ -144,7 +144,7 @@ manager: "erikre"
  For more information, see [Requirements for the DNS Name of an Availability Group Listener](#DNSnameReqs), earlier in this topic.  
   
  **Port**  
- The TPC port used by this listener.  
+ The TCP port used by this listener.  
   
  **Network Mode**  
  Indicates the TCP protocol used by the listener, one of:  

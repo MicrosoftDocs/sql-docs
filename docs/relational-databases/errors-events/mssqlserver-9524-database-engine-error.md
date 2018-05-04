@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "9524 (Database Engine error)"
 ms.assetid: 12da7931-e124-4466-889c-046f1b7b7bfd
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_9524

@@ -7,7 +7,6 @@ author: MikeRayMSFT
 manager: craigg
 editor: ''
 ms.assetid: 
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.devlang: NA

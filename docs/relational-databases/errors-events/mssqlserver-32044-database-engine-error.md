@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "32044 (Database Engine error)"
 ms.assetid: f2d073be-d9a1-4837-8a38-028d3e3403bd
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_32044

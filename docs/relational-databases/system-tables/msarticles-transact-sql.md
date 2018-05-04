@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSarticles system table"
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSarticles (Transact-SQL)

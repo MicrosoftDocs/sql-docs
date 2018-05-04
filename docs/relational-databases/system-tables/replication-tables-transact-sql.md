@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "replication [SQL Server], system tables"
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Replication Tables (Transact-SQL)

@@ -2,7 +2,7 @@
 title: "Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
@@ -14,7 +14,7 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
+manager: craigg
 ---
 # Microsoft Drivers for PHP for SQL Server
 

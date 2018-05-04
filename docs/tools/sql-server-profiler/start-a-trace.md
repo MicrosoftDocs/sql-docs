@@ -26,7 +26,7 @@ ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Start a Trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 applies_to: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "security [SQL Server], stored procedures"
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

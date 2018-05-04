@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "5237 (Database Engine error)"
 ms.assetid: 9ff28935-d1eb-47ee-99b3-1a65cb948ce7
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_5237

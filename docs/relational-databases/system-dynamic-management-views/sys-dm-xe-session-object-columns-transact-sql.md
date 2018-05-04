@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "sys.dm_xe_session_object_columns dynamic management view"
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 caps.latest.revision: 18
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_xe_session_object_columns (Transact-SQL)

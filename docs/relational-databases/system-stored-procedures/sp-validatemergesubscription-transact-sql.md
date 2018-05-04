@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_validatemergesubscription"
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_validatemergesubscription (Transact-SQL)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "12301 (Database Engine error)"
 ms.assetid: 69455df4-4ce9-4a6f-af5a-8bbc93e21245
 caps.latest.revision: 4
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_12301

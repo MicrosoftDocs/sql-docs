@@ -3,12 +3,10 @@ title: "Rename Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "indexes"
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "indexes [SQL Server], renaming"
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: "barbkess"
-ms.author: "barbkess"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

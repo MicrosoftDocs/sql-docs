@@ -2,7 +2,7 @@
 title: "Connection Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
@@ -14,7 +14,7 @@ ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
+manager: craigg
 ---
 # Connection Options
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

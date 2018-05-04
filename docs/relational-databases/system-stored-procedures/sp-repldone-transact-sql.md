@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_repldone"
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_repldone (Transact-SQL)

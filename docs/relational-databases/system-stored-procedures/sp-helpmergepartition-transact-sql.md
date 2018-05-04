@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpmergepartition"
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpmergepartition (Transact-SQL)

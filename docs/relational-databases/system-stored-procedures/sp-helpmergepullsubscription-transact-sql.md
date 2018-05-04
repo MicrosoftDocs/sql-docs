@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpmergepullsubscription"
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpmergepullsubscription (Transact-SQL)

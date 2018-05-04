@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_changesubscriber"
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changesubscriber (Transact-SQL)

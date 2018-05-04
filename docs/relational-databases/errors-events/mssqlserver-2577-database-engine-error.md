@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "2577 (Database Engine error)"
 ms.assetid: f53256a2-2fb0-47fd-9ed9-c45389104145
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_2577

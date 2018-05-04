@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "1406 (Database Engine error)"
 ms.assetid: 915f97de-9b74-41f8-8bd5-b2d061416718
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_1406

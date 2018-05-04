@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_replshowcmds"
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_replshowcmds (Transact-SQL)

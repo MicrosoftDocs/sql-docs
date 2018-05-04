@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], constraints"
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

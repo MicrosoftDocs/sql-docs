@@ -3,7 +3,7 @@ title: "Homepage for SQL client programming | Microsoft Docs"
 description: "Hub page with annotated links to downloads and documentation for numerous combinations of languages and operating systems, for connecting to SQL Server or to Azure SQL Database."
 author: MightyPen
 ms.date: "04/16/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "connect"
 ms.suite: "sql"

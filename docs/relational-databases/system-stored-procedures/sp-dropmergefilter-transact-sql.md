@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropmergefilter"
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropmergefilter (Transact-SQL)

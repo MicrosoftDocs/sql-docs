@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 applies_to: 
@@ -26,8 +25,8 @@ helpviewer_keywords:
   - "security_policies catalog view"
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

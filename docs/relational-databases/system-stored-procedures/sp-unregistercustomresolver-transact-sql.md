@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_unregistercustomresolver"
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_unregistercustomresolver (Transact-SQL)

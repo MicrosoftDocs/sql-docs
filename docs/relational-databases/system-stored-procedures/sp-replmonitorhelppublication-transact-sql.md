@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_replmonitorhelppublication"
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_replmonitorhelppublication (Transact-SQL)

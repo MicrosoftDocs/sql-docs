@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_changedistributor_password"
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_changedistributor_password (Transact-SQL)

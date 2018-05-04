@@ -2,7 +2,6 @@
 title: "Migrating Oracle Databases to SQL Server (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "04/22/2018"

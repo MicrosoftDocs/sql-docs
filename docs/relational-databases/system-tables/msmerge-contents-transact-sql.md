@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_contents system table"
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_contents (Transact-SQL)

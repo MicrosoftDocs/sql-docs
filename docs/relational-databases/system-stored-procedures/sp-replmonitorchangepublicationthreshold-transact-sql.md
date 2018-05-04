@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_replmonitorchangepublicationthreshold"
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_replmonitorchangepublicationthreshold (Transact-SQL)

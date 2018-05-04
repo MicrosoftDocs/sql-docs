@@ -4,7 +4,6 @@ ms.date: "09/25/2017"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.suite: "sql"
 ms.custom: ""
@@ -12,7 +11,7 @@ ms.technology:
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe
 This quick start tutorial demonstrates how to deploy an SSIS project from the command prompt by running the Integration Services Deployment Wizard, `ISDeploymentWizard.exe`.

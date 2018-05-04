@@ -17,7 +17,7 @@ ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

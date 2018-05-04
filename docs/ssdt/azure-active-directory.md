@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -13,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Azure Active Directory support in SQL Server Data Tools (SSDT)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpmergedeleteconflictrows"
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_helpmergedeleteconflictrows (Transact-SQL)

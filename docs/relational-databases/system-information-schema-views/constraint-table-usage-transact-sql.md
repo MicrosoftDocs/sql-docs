@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-information-schema-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.CONSTRAINT_TABLE_USAGE view"
 ms.assetid: 5770b696-6c04-4d5c-a8db-9eb92022fa42
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

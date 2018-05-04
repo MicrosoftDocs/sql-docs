@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "intellectual property"
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 caps.latest.revision: 3
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Protecting Your SQL Server Intellectual Property

@@ -2,7 +2,7 @@
 title: "Pausing and Resuming Database Mirroring (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""

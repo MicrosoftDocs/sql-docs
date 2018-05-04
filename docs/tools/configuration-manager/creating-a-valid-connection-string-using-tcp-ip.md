@@ -19,7 +19,7 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Creating a Valid Connection String Using TCP IP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

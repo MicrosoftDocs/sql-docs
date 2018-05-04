@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], transparent data encryption"
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 75
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

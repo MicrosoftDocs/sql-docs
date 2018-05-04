@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # HDFS File Source
   The HDFS File Source component enables an SSIS package to read data from a HDFS file. The supported file formats are Text and Avro. (ORC sources are not supported.)  

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSpub_identity_range system table"
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSpub_identity_range (Transact-SQL)

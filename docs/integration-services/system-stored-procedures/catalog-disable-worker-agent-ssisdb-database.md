@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
 caps.latest.revision: 3
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # catalog.disable_worker_agent (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

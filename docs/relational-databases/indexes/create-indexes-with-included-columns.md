@@ -3,12 +3,10 @@ title: "Create Indexes with Included Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "indexes"
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -23,8 +21,8 @@ helpviewer_keywords:
   - "nonkey columns"
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: "barbkess"
-ms.author: "barbkess"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

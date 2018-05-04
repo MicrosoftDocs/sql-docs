@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_replication_agent_checkup"
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_replication_agent_checkup (Transact-SQL)

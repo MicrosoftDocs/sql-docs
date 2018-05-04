@@ -2,7 +2,7 @@
 title: "Deprecated Database Engine Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.component: "database-engine"
 ms.reviewer: ""

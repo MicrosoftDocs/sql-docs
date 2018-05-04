@@ -15,7 +15,7 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Native Client 11.0 Configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

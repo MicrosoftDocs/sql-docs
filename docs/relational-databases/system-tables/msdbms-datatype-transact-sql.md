@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSdbms_datatype system table"
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSdbms_datatype (Transact-SQL)

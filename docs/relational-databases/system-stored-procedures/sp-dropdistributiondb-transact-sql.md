@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropdistributiondb"
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_dropdistributiondb (Transact-SQL)

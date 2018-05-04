@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_sessions system table"
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_sessions (Transact-SQL)

@@ -7,14 +7,13 @@ ms.prod_service: "pdw"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
 caps.latest.revision: 6
-author: "barbkess"
-ms.author: "barbkess"
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---

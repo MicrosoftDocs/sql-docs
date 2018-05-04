@@ -3,12 +3,10 @@ title: "Delete Columns from a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "tables"
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "dropping columns"
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 caps.latest.revision: 16
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

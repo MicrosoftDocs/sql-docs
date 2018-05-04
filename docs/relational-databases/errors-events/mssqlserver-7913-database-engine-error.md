@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "7913 (Database Engine error)"
 ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_7913

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSsubscription_articles system table"
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSsubscription_articles (Transact-SQL)

@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "sys.dm_cdc_log_scan_sessions dynamic management view"
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Change Data Capture - sys.dm_cdc_log_scan_sessions

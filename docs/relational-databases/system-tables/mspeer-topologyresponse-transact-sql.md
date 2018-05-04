@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSpeer_topologyresponse"
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

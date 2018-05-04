@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 caps.latest.revision: 9
 author: "jeannt"
-ms.author: "edmaca"
+ms.author: edmaca
 manager: craigg
 ---
 # External Scripts Enabled server configuration option

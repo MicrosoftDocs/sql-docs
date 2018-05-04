@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSsubscription_properties system table"
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSsubscription_properties (Transact-SQL)

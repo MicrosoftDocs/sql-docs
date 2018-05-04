@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-data-warehouse"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 applies_to: 
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "sys.column_encryption_keys catalog view"
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

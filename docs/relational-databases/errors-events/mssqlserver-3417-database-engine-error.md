@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "3417 (Database Engine error)"
 ms.assetid: 005829c8-cf57-4828-818a-bbe8ee2e00f0
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_3417

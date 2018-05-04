@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"

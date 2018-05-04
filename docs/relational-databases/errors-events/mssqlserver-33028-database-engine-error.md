@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "33028 (Database Engine error)"
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_33028

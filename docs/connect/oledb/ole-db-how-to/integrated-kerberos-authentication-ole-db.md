@@ -3,7 +3,7 @@ title: "Integrated Kerberos Authentication (OLE DB) | Microsoft Docs"
 description: "Integrated kerberos authentication (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "ole-db-how-to"
 ms.reviewer: ""

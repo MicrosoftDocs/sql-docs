@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "5554 (Database Engine error)"
 ms.assetid: 7134bbe5-d240-4a98-85ce-b13cc8ae9b0e
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_5554

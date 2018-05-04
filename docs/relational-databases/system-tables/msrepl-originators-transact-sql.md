@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSrepl_originators system table"
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSrepl_originators (Transact-SQL)

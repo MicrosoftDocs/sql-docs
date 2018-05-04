@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "7914 (Database Engine error)"
 ms.assetid: d32a81ce-4ca7-4b33-b536-c7ea0ed6f226
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_7914

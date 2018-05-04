@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "9003 (Database Engine error)"
 ms.assetid: 7fdfb391-5c6f-428b-b434-6c3d0b30fd7b
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_9003

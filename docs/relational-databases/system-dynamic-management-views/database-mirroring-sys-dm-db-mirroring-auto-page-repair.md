@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "sys.dm_db_mirroring_auto_page_repair dynamic management view"
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Mirroring - sys.dm_db_mirroring_auto_page_repair

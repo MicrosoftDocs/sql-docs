@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "IHarticles system table"
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # IHarticles (Transact-SQL)

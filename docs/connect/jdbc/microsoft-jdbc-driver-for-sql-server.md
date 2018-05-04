@@ -2,7 +2,7 @@
 title: "Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
@@ -13,7 +13,7 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
+manager: craigg
 ---
 # Microsoft JDBC Driver for SQL Server
 

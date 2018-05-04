@@ -2,7 +2,7 @@
 title: "How to: Retrieve Output Parameters Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""

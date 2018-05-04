@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSsync_states system table"
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSsync_states (Transact-SQL)

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSlogreader_history system table"
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSlogreader_history (Transact-SQL)

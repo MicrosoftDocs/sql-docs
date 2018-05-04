@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "syssubscriptions system table"
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # syssubscriptions (Transact-SQL)

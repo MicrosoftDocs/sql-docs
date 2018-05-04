@@ -8,7 +8,6 @@ ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.custom: "sql-linux"
 ms.suite: "sql"

@@ -2,7 +2,7 @@
 title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/23/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""

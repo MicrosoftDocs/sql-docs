@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "7711 (Database Engine error)"
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_7711

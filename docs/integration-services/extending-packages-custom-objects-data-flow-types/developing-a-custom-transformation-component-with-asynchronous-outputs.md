@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-custom-objects-data-flow-types"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -31,7 +30,7 @@ ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Developing a Custom Transformation Component with Asynchronous Outputs
   You use a component with asynchronous outputs when a transform cannot output rows until the component has received all its input rows, or when the transformation does not produce exactly one output row for each row received as input. The Aggregate transformation, for example, cannot calculate a sum across rows until it has read all the rows. In contrast, you can use a component with synchronous outputs any time when you modify each row of data as it passes through. You can modify the data for each row in place, or you can create one or more new columns, each of which has a value for every one of the input rows. For more information about the difference between synchronous and asynchronous components, see [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

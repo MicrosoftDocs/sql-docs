@@ -3,7 +3,7 @@ title: "Service Principal Name (SPN) Support in Client Connections | Microsoft D
 description: "Service Principal Name (SPN) support in client connections"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|features"
 ms.reviewer: ""

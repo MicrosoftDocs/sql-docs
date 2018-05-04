@@ -2,7 +2,7 @@
 title: "Step 2: Create a SQL database for ADO.NET development | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "ado-net"
 ms.reviewer: ""

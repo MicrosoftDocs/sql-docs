@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "base tables"
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # System Base Tables

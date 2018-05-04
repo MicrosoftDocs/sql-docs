@@ -2,7 +2,7 @@
 title: "Configure availability group for distributed transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

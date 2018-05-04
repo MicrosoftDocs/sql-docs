@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -21,8 +20,8 @@ helpviewer_keywords:
   - "catalog system stored procedures [SQL Server]"
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Catalog Stored Procedures (Transact-SQL)

@@ -2,7 +2,7 @@
 title: "SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.component: "database-engine"
 ms.reviewer: ""

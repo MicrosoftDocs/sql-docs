@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "dynamic management views [SQL Server], Service Broker"
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Service Broker Related Dynamic Management Views (Transact-SQL)

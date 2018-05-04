@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_schemafilter"
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_schemafilter (Transact-SQL)

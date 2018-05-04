@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "611 (Database Engine error)"
 ms.assetid: ac6a213f-5c38-44ad-bc85-a62863786614
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_611

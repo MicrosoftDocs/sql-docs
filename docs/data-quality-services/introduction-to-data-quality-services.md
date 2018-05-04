@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/05/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +17,7 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Introduction to Data Quality Services
 

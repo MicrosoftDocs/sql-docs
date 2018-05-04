@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "17148 (Database Engine error)"
 ms.assetid: acc6bb58-7248-4237-8bd6-4b3ed2c11446
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_17148

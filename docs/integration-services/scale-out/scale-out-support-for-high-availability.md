@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "12/19/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "scale-out"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.topic: conceptual
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "craigg"
+manager: craigg
 ---
 # Scale Out support for high availability
 

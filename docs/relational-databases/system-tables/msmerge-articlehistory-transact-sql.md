@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_articlehistory system table"
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSmerge_articlehistory (Transact-SQL)

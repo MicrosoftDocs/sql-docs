@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addmergepartition"
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_addmergepartition (Transact-SQL)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "8651 (Database Engine error)"
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_8651

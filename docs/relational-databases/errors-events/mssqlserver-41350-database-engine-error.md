@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "41350 (Database Engine error)"
 ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 caps.latest.revision: 4
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_41350

@@ -3,12 +3,10 @@ title: "Get Information About a View | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "views"
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-views"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -24,8 +22,8 @@ helpviewer_keywords:
   - "view dependencies"
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "846 (Database Engine error)"
 ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_846

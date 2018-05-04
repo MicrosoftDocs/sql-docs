@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "MSreplication_subscriptions system table"
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # MSreplication_subscriptions (Transact-SQL)

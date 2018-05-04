@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sysmergeschemaarticles system table"
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sysmergeschemaarticles (Transact-SQL)

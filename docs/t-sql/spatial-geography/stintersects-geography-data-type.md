@@ -2,14 +2,12 @@
 title: "STIntersects (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,7 +21,7 @@ ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # STIntersects (geography Data Type)

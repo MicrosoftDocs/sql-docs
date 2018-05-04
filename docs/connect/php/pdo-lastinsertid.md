@@ -2,7 +2,7 @@
 title: "PDO::lastInsertId | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""

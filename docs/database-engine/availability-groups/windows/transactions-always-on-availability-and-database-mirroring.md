@@ -2,7 +2,7 @@
 title: "Transactions - Always On availability groups and database mirroring | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

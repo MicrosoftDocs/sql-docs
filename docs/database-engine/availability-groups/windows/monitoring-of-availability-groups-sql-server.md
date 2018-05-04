@@ -2,7 +2,7 @@
 title: "Monitoring of Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/08/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"

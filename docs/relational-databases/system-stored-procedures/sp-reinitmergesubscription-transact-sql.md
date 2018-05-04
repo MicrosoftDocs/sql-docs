@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_reinitmergesubscription"
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # sp_reinitmergesubscription (Transact-SQL)

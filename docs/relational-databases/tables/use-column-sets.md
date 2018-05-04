@@ -3,12 +3,10 @@ title: "Use Column Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2015"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "tables"
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "column sets"
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 28
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

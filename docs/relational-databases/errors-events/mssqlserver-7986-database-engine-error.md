@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "7986 (Database Engine error)"
 ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_7986

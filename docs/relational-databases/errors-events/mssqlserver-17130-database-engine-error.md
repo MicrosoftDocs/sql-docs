@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "17130 (Database Engine error)"
 ms.assetid: 7ce6afca-221d-402f-89df-da7e74a339a8
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_17130

@@ -3,20 +3,17 @@ title: "Configure Data Collection Parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-collection"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data collection [SQL Server]"
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 caps.latest.revision: 16
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure Data Collection Parameters (Transact-SQL)

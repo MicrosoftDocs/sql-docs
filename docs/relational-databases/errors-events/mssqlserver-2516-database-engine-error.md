@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "2516 (Database Engine error)"
 ms.assetid: 79ed14b5-f53c-40c6-8334-8a083f732207
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_2516

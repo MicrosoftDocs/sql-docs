@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -38,8 +37,8 @@ helpviewer_keywords:
   - "informational statements [SQL Server]"
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 caps.latest.revision: 50
-author: "barbkess" 
-ms.author: "barbkess"
+author: uc-msft
+ms.author: umajay
 manager: craigg
 ---
 # DBCC (Transact-SQL)

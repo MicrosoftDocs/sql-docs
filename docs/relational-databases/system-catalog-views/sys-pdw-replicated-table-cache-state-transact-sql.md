@@ -8,8 +8,7 @@ ms.service: "sql-data-warehouse"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -17,7 +16,6 @@ dev_langs:
 author: "ronortloff"
 ms.author: "rortloff"
 manager: craigg
-ms.reviewer: "barbkess"
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)

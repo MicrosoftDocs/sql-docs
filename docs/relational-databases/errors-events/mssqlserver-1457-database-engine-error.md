@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "1457 (Database Engine error)"
 ms.assetid: 28434ba1-b033-4866-ab41-111fccef45a2
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_1457

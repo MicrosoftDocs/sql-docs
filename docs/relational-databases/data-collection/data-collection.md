@@ -3,12 +3,9 @@ title: "Data Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-collection"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "data collection [SQL Server]"
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 46
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Data Collection

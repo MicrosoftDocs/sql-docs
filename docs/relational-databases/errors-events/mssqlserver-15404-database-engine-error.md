@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "15404 (Database Engine error)"
 ms.assetid: 69677f02-bc81-4e4a-99b8-5c1bd1de36df
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_15404

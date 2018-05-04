@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_exec_cached_plans dynamic management view"
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 caps.latest.revision: 44
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

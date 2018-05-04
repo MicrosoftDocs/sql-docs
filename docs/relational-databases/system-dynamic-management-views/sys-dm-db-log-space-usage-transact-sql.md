@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_log_space_usage dynamic management view"
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

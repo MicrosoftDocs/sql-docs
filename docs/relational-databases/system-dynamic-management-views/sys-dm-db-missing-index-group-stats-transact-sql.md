@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view"
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 caps.latest.revision: 43
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

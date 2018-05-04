@@ -7,14 +7,13 @@ ms.prod_service: "database-engine"
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-polybase"
+ms.technology: database
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PolyBase, installation"
-author: "barbkess"
-ms.author: "barbkess"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # PolyBase installation

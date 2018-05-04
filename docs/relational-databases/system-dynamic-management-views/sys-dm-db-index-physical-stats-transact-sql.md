@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "fragmentation [SQL Server]"
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 caps.latest.revision: 95
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

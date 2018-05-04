@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "removing queues"
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 caps.latest.revision: 33
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # DROP QUEUE (Transact-SQL)

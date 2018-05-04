@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: 02/17/2017
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: article
 helpviewer_keywords: 
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ONLINE option"
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.suite: "sql"
 ms.prod_service: "table-view-index, sql-database"

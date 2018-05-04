@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_fts_index_physical_stats dynamic management view"
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-polybase"
+ms.technology: database
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "PolyBase, SQL statements"
   - "PolyBase, SQL objects"
 caps.latest.revision: 20
-author: "barbkess"
-ms.author: "barbkess"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # PolyBase T-SQL objects

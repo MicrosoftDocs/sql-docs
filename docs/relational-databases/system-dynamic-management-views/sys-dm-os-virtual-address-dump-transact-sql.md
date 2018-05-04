@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_virtual_address_dump dynamic management view"
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
 caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

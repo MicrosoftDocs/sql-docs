@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "dm_db_xtp_table_memory_stats"
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

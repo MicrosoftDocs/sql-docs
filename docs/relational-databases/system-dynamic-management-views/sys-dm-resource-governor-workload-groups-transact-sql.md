@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_workload_groups dynamic management view"
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 caps.latest.revision: 27
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

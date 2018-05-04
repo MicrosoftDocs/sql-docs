@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_transactions dynamic management view"
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

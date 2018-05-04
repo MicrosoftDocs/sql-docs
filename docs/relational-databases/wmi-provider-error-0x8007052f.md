@@ -2,8 +2,9 @@
 title: "WMI Error 0x8007052f | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.prod: "sql"
 ms.prod_service: "database-engine"
+ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +18,8 @@ ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
 caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # WMI Provider Error 0x8007052f
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

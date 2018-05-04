@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.dm_external_script_requests dynamic management view"
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_external_script_requests

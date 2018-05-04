@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "cluster shared volume names"
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_io_cluster_valid_path_names (Transact-SQL)

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sys.dm_exec_compute_node_errors management view"
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "execution-related dynamic management objects [SQL Server]"
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 caps.latest.revision: 36
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Execution Related Dynamic Management Views and Functions (Transact-SQL)

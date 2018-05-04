@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_session_space_usage dynamic management view"
 ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
 caps.latest.revision: 34
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

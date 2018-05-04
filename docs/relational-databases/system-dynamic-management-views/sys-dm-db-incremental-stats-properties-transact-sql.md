@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sys.dm_db_incremental_stats_properties"
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_db_incremental_stats_properties (Transact-SQL)

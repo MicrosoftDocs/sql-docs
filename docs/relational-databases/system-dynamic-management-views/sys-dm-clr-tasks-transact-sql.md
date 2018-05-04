@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_clr_tasks dynamic management view"
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
 caps.latest.revision: 21
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

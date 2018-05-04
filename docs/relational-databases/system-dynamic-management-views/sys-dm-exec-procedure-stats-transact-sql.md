@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_exec_procedure_stats dynamic management view"
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 caps.latest.revision: 24
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

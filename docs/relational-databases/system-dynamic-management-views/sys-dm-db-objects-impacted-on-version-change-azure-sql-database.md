@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sys.dm_db_objects_impacted_on_version_change"
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

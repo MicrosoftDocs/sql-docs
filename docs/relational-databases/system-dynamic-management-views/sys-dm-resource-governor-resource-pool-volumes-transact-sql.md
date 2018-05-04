@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_resource_pool_volumes"
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)

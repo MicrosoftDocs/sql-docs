@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "message types [Service Broker], modifying"
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 caps.latest.revision: 27
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)

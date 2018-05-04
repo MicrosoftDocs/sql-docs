@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "dm_db_column_store_row_group_physical_stats"
   - "sys.dm_db_column_store_row_group_physical_stats dynamic management view"
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

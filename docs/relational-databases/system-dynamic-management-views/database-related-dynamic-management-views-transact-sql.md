@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], database"
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Related Dynamic Management Views (Transact-SQL)

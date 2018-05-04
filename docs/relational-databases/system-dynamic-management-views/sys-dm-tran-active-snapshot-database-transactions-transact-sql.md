@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_tran_active_snapshot_database_transactions dynamic management view"
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 caps.latest.revision: 55
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

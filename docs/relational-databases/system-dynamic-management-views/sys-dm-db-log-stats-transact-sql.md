@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_log_stats dynamic management function"
 ms.assetid: 
 caps.latest.revision: 
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---

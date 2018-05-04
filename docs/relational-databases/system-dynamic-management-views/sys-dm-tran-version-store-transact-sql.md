@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_tran_version_store dynamic management view"
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 caps.latest.revision: 32
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

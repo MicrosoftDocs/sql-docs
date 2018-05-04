@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "message types [Service Broker], contracts"
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 caps.latest.revision: 48
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley" 
+ms.author: edmaca"
 manager: craigg
 ---
 # CREATE CONTRACT (Transact-SQL)

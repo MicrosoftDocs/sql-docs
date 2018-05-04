@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "DROP BROKER PRIORITY statement"
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 caps.latest.revision: 15
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley" 
+ms.author: edmaca"
 manager: craigg
 ---
 # DROP BROKER PRIORITY (Transact-SQL)

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_loaded_modules dynamic management view"
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_os_loaded_modules (Transact-SQL)

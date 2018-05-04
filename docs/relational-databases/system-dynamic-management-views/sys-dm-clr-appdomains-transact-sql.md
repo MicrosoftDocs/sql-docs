@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_clr_appdomains dynamic management dynamic management view"
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 caps.latest.revision: 24
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_clr_appdomains (Transact-SQL)

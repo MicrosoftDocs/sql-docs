@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_repl_articles dynamic management function"
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 caps.latest.revision: 16
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_repl_articles (Transact-SQL)

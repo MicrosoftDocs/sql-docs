@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_xtp_transaction_stats dynamic management view"
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ALTER EXTERNAL DATA SOURCE statement"
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 caps.latest.revision: 8
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley" 
+ms.author: edmaca"
 manager: craigg
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)

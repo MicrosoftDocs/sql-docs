@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "starting conversations"
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 caps.latest.revision: 47
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley" 
+ms.author: edmaca"
 manager: craigg
 ---
 # BEGIN DIALOG CONVERSATION (Transact-SQL)

@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "CREATE INDEX statement"
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: 76
-author: "barbkess"
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

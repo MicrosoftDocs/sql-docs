@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "DROP AGGREGATE statement"
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 caps.latest.revision: 31
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # DROP AGGREGATE (Transact-SQL)

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_object_stats dynamic management view"
 ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
 caps.latest.revision: 18
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

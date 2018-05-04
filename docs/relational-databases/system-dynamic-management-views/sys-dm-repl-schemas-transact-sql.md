@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_repl_schemas dynamic management function"
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_repl_schemas (Transact-SQL)

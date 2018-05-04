@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "dm_exec_compute_nodes management view"
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

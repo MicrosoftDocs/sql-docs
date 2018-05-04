@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_exec_background_job_queue dynamic management function"
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 caps.latest.revision: 31
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

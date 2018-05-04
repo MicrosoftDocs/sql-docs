@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: 07/10/2017
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: article
 helpviewer_keywords: 
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.suite: "sql"
 ms.prod_service: "table-view-index, sql-database"

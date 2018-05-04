@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_broker_activated_tasks dynamic management view"
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_broker_activated_tasks (Transact-SQL)

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], creating"
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: 94
-author: "barbkess" 
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

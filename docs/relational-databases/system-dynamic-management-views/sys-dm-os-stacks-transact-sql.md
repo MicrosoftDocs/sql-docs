@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_stacks dynamic management view"
 ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

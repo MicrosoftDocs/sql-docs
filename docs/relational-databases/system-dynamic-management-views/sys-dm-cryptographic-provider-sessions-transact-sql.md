@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_cryptographic_provider_sessions dynamic management function"
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 caps.latest.revision: 13
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_cryptographic_provider_sessions (Transact-SQL)

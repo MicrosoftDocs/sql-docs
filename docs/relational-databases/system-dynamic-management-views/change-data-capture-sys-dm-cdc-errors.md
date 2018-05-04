@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], error reporting"
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Change Data Capture - sys.dm_cdc_errors

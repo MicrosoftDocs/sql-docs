@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
 caps.latest.revision: 11
-author: "barbkess"
-ms.author: "barbkess"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---

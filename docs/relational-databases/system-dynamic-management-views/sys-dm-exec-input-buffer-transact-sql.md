@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_exec_input_buffer dynamic management function"
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 caps.latest.revision: 12
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

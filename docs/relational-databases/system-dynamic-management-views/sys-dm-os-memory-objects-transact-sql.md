@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_os_memory_objects dynamic management view"
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 caps.latest.revision: 40
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

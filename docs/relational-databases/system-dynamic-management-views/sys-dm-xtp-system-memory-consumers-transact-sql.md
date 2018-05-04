@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.dm_xtp_system_memory_consumers dynamic management view"
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.dm_xtp_system_memory_consumers (Transact-SQL)

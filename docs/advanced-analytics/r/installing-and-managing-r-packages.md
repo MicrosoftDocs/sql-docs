@@ -31,12 +31,12 @@ The following table shows the file location of R and Python for version and data
 
 |Version | Instance name|Default path|
 |--------|--------------|------------|
-| SQL Server 2016 |default instance|"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library"|
-| SQL Server 2016 |named instance |"C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library"|
-| SQL Server 2017 with R|default instance |"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library" |
-| SQL Server 2017 with R|named instance|"C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library" |
-| SQL Server 2017 with Python |default instance |"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library" |
-| SQL Server 2017 with Python|named instance|"C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library" |
+| SQL Server 2016 |default instance| C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
+| SQL Server 2016 |named instance | C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library|
+| SQL Server 2017 with R|default instance | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 with R|named instance| C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library |
+| SQL Server 2017 with Python |default instance | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library |
+| SQL Server 2017 with Python|named instance| C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library |
 
 ### Standalone server file paths 
 
@@ -44,12 +44,12 @@ The following table lists the default paths of the binaries when SQL Server 2016
 
 |Version| Installation|Default path|
 |------|------|------|
-| SQL Server 2016|R Server (Standalone)| |"C:\Program Files\Microsoft SQL Server\130\R_SERVER"|
-|SQL Server 2017|Machine Learning Server, with R |"C:\Program Files\Microsoft SQL Server\130\R_SERVER"|
-|SQL Server 2017|Machine Learning Server, with Python |"C:\Program Files\Microsoft SQL Server\130\PYTHON_SERVER"|
+| SQL Server 2016|R Server (Standalone)| |C:\Program Files\Microsoft SQL Server\130\R_SERVER|
+|SQL Server 2017|Machine Learning Server, with R |C:\Program Files\Microsoft SQL Server\130\R_SERVER|
+|SQL Server 2017|Machine Learning Server, with Python |C:\Program Files\Microsoft SQL Server\130\PYTHON_SERVER|
 
-> [!Note}
-> If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Microsoft R Server or [Machine Learning server](https://docs.microsoft.com/machine-learning-server/). These server products have different installers and paths (for example, "C:\Program Files\Microsoft\R Server\R_SERVER" or "C:\Program Files\Microsoft\ML SERVER\R_SERVER"). For more information, see [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) or [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+> [!Note]
+> If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Microsoft R Server or [Machine Learning server](https://docs.microsoft.com/machine-learning-server/). These server products have different installers and paths (for example, C:\Program Files\Microsoft\R Server\R_SERVER or C:\Program Files\Microsoft\ML SERVER\R_SERVER). For more information, see [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) or [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
 ## What is included in a default installation
 
@@ -77,17 +77,17 @@ SQL Server 2017 Machine Learning is the first release to have Python support.
 
 |Release             | Anaconda version| Microsoft packages    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2017 Machine Learning Services  | 4.2 over Python | revoscalepy, microsoftml |
+| SQL Server 2017 Machine Learning Services  | 4.2 over Python 3.5 | revoscalepy, microsoftml |
 
 After an initial installation, Python packages are refreshed through service packs and cumulative updates, but full version upgrades are only possible by binding Python support to Microsoft Machine Learning Server. For more information, see [Upgrade R and Python components in SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
-## Administrative permissions required for package installation
+## Administrative permissions for package installation
 
 The permissions required for package installation have changed between SQL Server 2016 and SQL Server 2017.
 
 + In SQL Server 2016, administrative access is required for installation of new R packages.
 
-+ In SQL Server 2017, you can continue to install packages as an administrator for both R and Python, and this is probably the easiest method.
++ In SQL Server 2017, you can continue to install packages as an administrator for both R and Python, and this is probably the easiest method. 
 
     The DDL statement, CREATE EXTERNAL LIBRARY, allows the database administrator  to install packages without using R tools. 
 

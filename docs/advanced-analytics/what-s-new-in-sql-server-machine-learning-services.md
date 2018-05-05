@@ -52,7 +52,7 @@ Machine learning using R or Python in-database is not currently supported in SQL
 
 However, on Linux you can perform [native scoring](sql-native-scoring.md) using the T-SQL PREDICT function. Native scoring lets you score from a pretrained model very fast, without calling or even requiring an R runtime. This means you can use SQL Server on Linux to generate predictions very fast, to serve client applications.
 
-<a name="azure-sql-database-roadmap></a>
+<a name="azure-sql-database-roadmap"></a>
 
 ## Azure SQL Database roadmap
 

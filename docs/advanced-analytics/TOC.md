@@ -31,7 +31,7 @@
 ### [R Server (Standalone)](install/sql-r-standalone-windows-install.md)
 ## [Command-prompt setup](install/sql-ml-component-commandline-install.md)
 ## [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
-## [Update R and Python components](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## [Upgrade R and Python](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [Set up R tools](r/set-up-a-data-science-client.md)
 ## [Set up Python tools](python/setup-python-client-tools-sql.md)
 
@@ -101,10 +101,10 @@
 ### [Install new R packages](r/install-additional-r-packages-on-sql-server.md)
 ### [Install new Python packages](python/install-additional-python-packages-on-sql-server.md)
 ### R-only
-### [RevoScaleR functions for package management](r/use-revoscaler-to-manage-r-packages.md)
-### [Package synchronization](r/package-install-uninstall-and-sync.md)
-### [miniCRAN for local package repository](r/create-a-local-package-repository-using-minicran.md)
-### [Workarounds for "user libraries"](r/packages-installed-in-user-libraries.md)
+#### [RevoScaleR functions for package management](r/use-revoscaler-to-manage-r-packages.md)
+#### [Package synchronization](r/package-install-uninstall-and-sync.md)
+#### [miniCRAN for local package repository](r/create-a-local-package-repository-using-minicran.md)
+#### [Workarounds for "user libraries"](r/packages-installed-in-user-libraries.md)
 
 ## Data exploration and modeling
 ### [R libraries and data types](r/r-libraries-and-data-types.md)

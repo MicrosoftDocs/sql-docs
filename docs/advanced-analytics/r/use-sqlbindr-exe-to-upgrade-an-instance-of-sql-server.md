@@ -20,7 +20,7 @@ Most data scientists are accustomed to working with newer packages as they becom
 Binding does not change the fundamentals of your installation: R and Python integration is still part of a database engine instance, and SQL Server support policies still hold for the database engine. But rebinding does change how R and Python packages are serviced. The rest of this article explains the binding mechanism and how it works for each version of SQL Server.
 
 > [!Note]
-> There is no additional licensing associated with binding, and licensing for your database engine instance is unchanged when you bind to Machine Learning Server. Binding swaps out R and Python executables of your existing installation in a supported manner. Incidentally, both SQL Server Machine Learning and Microsoft Machine Learning are licensed the same way through SQL Server. For more information, see [Features by edition](r/differences-in-r-features-between-editions-of-sql-server.md).
+> There is no additional cost associated with binding, and licensing for your database engine instance is unchanged when you bind to Machine Learning Server. Both SQL Server Machine Learning and Microsoft Machine Learning are licensed the same way through SQL Server.
 
 **SQL Server 2017**
 
@@ -32,9 +32,7 @@ For SQL Server 2016 R Services customers, getting new and updated packages invol
 
 **Component upgrades available through Microsoft Machine Learning Server**
 
-The following table is a version map, showing the version installed with SQL Server, with possible upgrades when you bind to Microsoft Machine Learning Server.
-
-You can upgrade to the R or Python version installed by Microsoft Machine Learning Server, which may or may not be the newest version of R or Python available on the web.
+The following table is a version map, showing the version installed with SQL Server, with possible upgrades when you bind to Microsoft Machine Learning Server. Binding does not guarantee the very latest version of R or Anaconda. When you bind to Microsoft Machine Learning Server, you get the R or Python version installed through Setup, which may or may not be the latest version available on the web.
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
@@ -67,7 +65,9 @@ Anaconda 4.2 over Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
 
 ## How component upgrade works
 
-Component upgrade is through *binding* a SQL Server 2016 R Services instance (or a SQL Server 2017 Machine Learning Services instance) to Microsoft Machine Learning Server. Binding changes the service update mechanism. Switching support polices is an attractive option for data science teams who require new generation R and Python modules for their solutions. 
+Component upgrade is through *binding* a SQL Server 2016 R Services instance (or a SQL Server 2017 Machine Learning Services instance) to Microsoft Machine Learning Server. The [Microsoft Machine Learning Server Installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) provides the binding mechanism for R and Python components associated with an instance of SQL Server. 
+
+Binding changes the service update mechanism. Switching support polices is an attractive option for data science teams who require new generation R and Python modules for their solutions. 
 
 + Without binding, R and Python packages are patched for bug fixes when you install a service pack or cumulative update (CU). 
 
@@ -75,9 +75,7 @@ Component upgrade is through *binding* a SQL Server 2016 R Services instance (or
 
 Binding applies to R and Python features only. Namely, open-source packages for R and Python features (Microsoft R Open, Anaconda), and the proprietary packages RevoScaleR, revoscalepy, and so forth. Binding does not change the support model for the database engine instance and doesn't change the version of SQL Server.
 
-Binding is reversible. You can revert to SQL Server servicing by [unbinding the instance](#bkmk_Unbind) and uninstalling Microsoft Machine Learning Server.
-
-[Microsoft Machine Learning Server Installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) provides the binding mechanism for R and Python components associated with an instance of SQL Server. 
+Binding is reversible. You can revert to SQL Server servicing by [unbinding the instance](#bkmk_Unbind) and reparing your SQL Server database engine instance.
 
 Summed up, steps for binding are as follows:
 
@@ -120,9 +118,7 @@ Binding affects the contents of these folders: `C:\Program Files\Microsoft SQL S
 
 ## <a name="bkmk_BindCmd"></a>Command line operations
 
-After you run Microsoft Machine Learning Server, a command-line utility called SqlBindR.exe becomes available that you can use for further binding operations. For example, should you decide to reverse a binding, you could either rerun Setup or use the command-line utility.
-
-Additionally, you can use this tool to check for instance compatibility and availability.
+After you run Microsoft Machine Learning Server, a command-line utility called SqlBindR.exe becomes available that you can use for further binding operations. For example, should you decide to reverse a binding, you could either rerun Setup or use the command-line utility. Additionally, you can use this tool to check for instance compatibility and availability.
 
 > [!TIP]
 > Can't find SqlBindR? You probably have not run Setup. SqlBindR is available only after running Machine Learning Server Setup.
@@ -186,7 +182,7 @@ Alternatively, this is more work, but you could also fully uninstall and reinsta
 
 ### Step 3: Add any third-party packages
 
-You might have added other open-source or third-party packages to your package library. Since reversing the binding switches the location of the default package library, you must reinstall the packages to the library that R and Python are now using. For more information, see [Default packages](r/installing-and-managing-r-packages.md), [Install new R packages](r/install-additional-r-packages-on-sql-server.md), and [Install new Python packages](python/install-additional-python-packages-on-sql-server.md).
+You might have added other open-source or third-party packages to your package library. Since reversing the binding switches the location of the default package library, you must reinstall the packages to the library that R and Python are now using. For more information, see [Default packages](installing-and-managing-r-packages.md), [Install new R packages](install-additional-r-packages-on-sql-server.md), and [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md).
 
 ## Known issues
 

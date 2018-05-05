@@ -19,7 +19,7 @@ This article covers package libraries, location, and versions of R and Python pa
 
 When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. 
 
-All script or code that runs In-Database on SQL Server must load functions from the instance library. SQL Server cannot access packages installed to other libraries. This applies to remote clients as well. When connecting to the server from a remote client, any R or Python code that you want to run in the server compute context can use only packages installed in the instance library.
+All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server cannot access packages installed to other libraries. This applies to remote clients as well. When connecting to the server from a remote client, any R or Python code that you want to run in the server compute context can only use packages installed in the instance library.
 
 To protect server assets, the default instance library is installed to a secured folder that is registered with SQL Server and can be modified only by a computer administrator. If you are not the owner of the computer, you might need to get permission from an administrator to install packages to this library. 
 
@@ -31,12 +31,12 @@ The following table shows the file location of R and Python for version and data
 
 |Version | Instance name|Default path|
 |--------|--------------|------------|
-| SQL Server 2016 |default instance|`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`|
-| SQL Server 2016 |named instance |`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library`|
-| SQL Server 2017 with R|default instance |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` |
-| SQL Server 2017 with R|named instance|`C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` |
-| SQL Server 2017 with Python |default instance |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library` |
-| SQL Server 2017 with Python|named instance|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library` |
+| SQL Server 2016 |default instance|"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library"|
+| SQL Server 2016 |named instance |"C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library"|
+| SQL Server 2017 with R|default instance |"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library" |
+| SQL Server 2017 with R|named instance|"C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library" |
+| SQL Server 2017 with Python |default instance |"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library" |
+| SQL Server 2017 with Python|named instance|"C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library" |
 
 ### Standalone server file paths 
 
@@ -44,14 +44,12 @@ The following table lists the default paths of the binaries when SQL Server 2016
 
 |Version| Installation|Default path|
 |------|------|------|
-| SQL Server 2016|R Server (Standalone)| |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
-|SQL Server 2017|Machine Learning Server, with R |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
-|SQL Server 2017|Machine Learning Server, with Python |`C:\Program Files\Microsoft SQL Server\130\PYTHON_SERVER`|
+| SQL Server 2016|R Server (Standalone)| |"C:\Program Files\Microsoft SQL Server\130\R_SERVER"|
+|SQL Server 2017|Machine Learning Server, with R |"C:\Program Files\Microsoft SQL Server\130\R_SERVER"|
+|SQL Server 2017|Machine Learning Server, with Python |"C:\Program Files\Microsoft SQL Server\130\PYTHON_SERVER"|
 
-If you install Microsoft R Server or Machine Learning server using the separate Windows installer, the default paths are different: typically, something like `C:\Program Files\Microsoft\R Server\R_SERVER`. For more information, see:
- 
-+ [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
-+ [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+> [!Note}
+> If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Microsoft R Server or [Machine Learning server](https://docs.microsoft.com/machine-learning-server/). These server products have different installers and paths (for example, "C:\Program Files\Microsoft\R Server\R_SERVER" or "C:\Program Files\Microsoft\ML SERVER\R_SERVER"). For more information, see [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) or [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
 ## What is included in a default installation
 
@@ -59,17 +57,15 @@ This section summarizes R and Python features included in a default installation
 
 ### R components
 
-Components include open-source R as distributed by Microsoft through Microsoft R Open. R **base** packages include core functionality such as `stats` and `utils`. A base installation of R also includes numerous sample datasets, and standard R tools such as RGui (a lightweight interactive editor) and RTerm (an R command prompt).
+Components include open-source R as distributed by Microsoft through Microsoft R Open. R base packages include core functionality such as **stats** and **utils**. A base installation of R also includes numerous sample datasets, and standard R tools such as RGui (a lightweight interactive editor) and RTerm (an R command prompt).
 
 Microsoft packages include RevoScaleR for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. MicrosoftML adds machine learning modeling in R. Other packages include olapR for writing MDX statements in R, and sqlrutils for including R script in stored procedures.
 
 
 |Release             | R version       | Microsoft packages    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2016 R Services | 3.2.2   | RevoScaleR, sqlrutil <sup>1</sup> |
+| SQL Server 2016 R Services | 3.2.2   | RevoScaleR, sqlrutil  |
 | SQL Server 2017 Machine Learning Services| 3.4.3 | RevoScaleR, MicrosoftML, olapR, sqlrutil|
-
-<sup>1</sup>  Add MicrosoftML and olapR to SQL Server 2016 R Services by [binding R to Microsoft Machine Learning Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 After an initial installation, R packages are refreshed through service packs and cumulative updates, but full version upgrades are only possible by product upgrades (from SQL Server 2016 to SQL Server 2017) or by binding R support to Microsoft Machine Learning Server. For more information, see [Upgrade R and Python components in SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 

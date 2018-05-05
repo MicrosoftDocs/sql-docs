@@ -1,5 +1,5 @@
 ---
-title: Install additional R packages on SQL Server | Microsoft Docs
+title: Install new R packages on SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ---
 
-# Install additional R packages on SQL Server
+# Install new R packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled.

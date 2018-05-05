@@ -56,9 +56,7 @@ However, on Linux you can perform [native scoring](sql-native-scoring.md) using 
 
 ## Azure SQL Database roadmap
 
-There is limited support for R in Azure SQL Database: available only in West Central US, in services created at the Premium tier.
-
-Expanded coverage, including Python support, is likely to follow in a future release. However, there is no projected release date at this time.  
+There is limited support for R in Azure SQL Database: available only in West Central US, in services created at the Premium tier. Expanded coverage, including Python support, is likely to follow in a future release. However, there is no projected release date at this time.  
 
 ## Next steps
 

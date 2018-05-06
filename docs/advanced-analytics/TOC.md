@@ -102,7 +102,7 @@
 ### R-only
 #### [Enable remote R package management](r/r-package-how-to-enable-or-disable.md)
 #### [RevoScaleR functions for R package management](r/use-revoscaler-to-manage-r-packages.md)
-#### [R Package synchronization](r/package-install-uninstall-and-sync.md)
+#### [R package synchronization](r/package-install-uninstall-and-sync.md)
 #### [miniCRAN for local R package repository](r/create-a-local-package-repository-using-minicran.md)
 #### [Workarounds for R "user libraries"](r/packages-installed-in-user-libraries.md)
 

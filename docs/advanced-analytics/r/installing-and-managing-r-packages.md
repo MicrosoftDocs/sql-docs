@@ -100,10 +100,10 @@ Users who cannot install a package to a secured location often resort to install
 
 ## Next steps
 
-+ [Get package information](r/determine-which-packages-are-installed-on-sql-server.md)
-+ [Install new R packages](r/install-additional-r-packages-on-sql-server.md)
-+ [Install new Python packages](python/install-additional-python-packages-on-sql-server.md)
-+ [Enable remote R package management](r/r-package-how-to-enable-or-disable.md)
-+ [RevoScaleR functions for R package management](r/use-revoscaler-to-manage-r-packages.md)
-+ [R package synchronization](r/package-install-uninstall-and-sync.md)
-+ [miniCRAN for local R package repository](r/create-a-local-package-repository-using-minicran.md)
++ [Get package information](determine-which-packages-are-installed-on-sql-server.md)
++ [Install new R packages](install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
++ [Enable remote R package management](r-package-how-to-enable-or-disable.md)
++ [RevoScaleR functions for R package management](use-revoscaler-to-manage-r-packages.md)
++ [R package synchronization](package-install-uninstall-and-sync.md)
++ [miniCRAN for local R package repository](create-a-local-package-repository-using-minicran.md)

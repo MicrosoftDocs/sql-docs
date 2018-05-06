@@ -30,9 +30,9 @@ For SQL Server 2017 Machine Learning Services, you would consider binding only w
 
 **SQL Server 2016**
 
-For SQL Server 2016 R Services customers, there are two paths for getting new and updated packages. One involves upgrading to SQL Server 2017; the second, binding to Microsoft Machine Learning Server. At a minimum, binding gives you new packages not available in the initial release.
+For SQL Server 2016 R Services customers, there are two paths for getting new and updated R packages. One involves upgrading to SQL Server 2017; the second, binding to Microsoft Machine Learning Server.
 
-Binding updates R packages only. To get Python support, you must upgrade to SQL Server 2017.
+Upgrading to SQL Server 2017 gets you R packages at the versions included in that release, plus Python features. Binding gets you updated R packages, which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. Binding does not give you Python support. Python support is a 2017 feature. 
 
 **Component upgrades available through Microsoft Machine Learning Server**
 
@@ -86,7 +86,7 @@ Summed up, steps for binding are as follows:
 + Download and run setup for that version. Setup detects the existing instance, adds a binding option, and returns a list of compatible instances.
 + Choose the instance you want to bind and then finish setup to execute the binding.
 
-In terms of user experience, the technology and how you work with it is unchanged. The only difference is the availability of newer-versioned packages and possibily additional packages not originally available through SQL Server (such as MicrosoftML).
+In terms of user experience, the technology and how you work with it is unchanged. The only difference is the presence of newer-versioned packages and possibily additional packages not originally available through SQL Server (such as MicrosoftML for SQL Server 2016 R Services customers).
 
 ## <a name="bkmk_BindWizard"></a>Upgrade using Setup
 

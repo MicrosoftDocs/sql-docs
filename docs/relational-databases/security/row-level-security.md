@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Row-Level Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"

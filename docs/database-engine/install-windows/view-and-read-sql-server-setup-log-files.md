@@ -66,6 +66,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 -   Failed rules  
 -   Location of the rules report file
 
+
   >[!NOTE]
   > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similiar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   

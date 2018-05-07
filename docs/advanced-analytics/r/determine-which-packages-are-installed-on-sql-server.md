@@ -1,21 +1,20 @@
 ---
-title: Viewing R or Python packages installed on SQL Server| Microsoft Docs
+title: Get R and Python package information on SQL Server Machine Learning| Microsoft Docs
+description: Determine R and Python package version, verify installation, and get a list of installed packages on SQL Server R Services or Machine Learning Services.
 ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/08/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Viewing R or Python packages installed on SQL Server
+#  Get R and Python package information on SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. 
-
-This article provides some queries you can use to determine your current version, and to list the packages that are installed in the current SQL Server environment.
+If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. This article provides queries and guidance useful for determininga  package version, and to list the packages that are installed in the current SQL Server environment.
 
 ## Verify the current default library
 

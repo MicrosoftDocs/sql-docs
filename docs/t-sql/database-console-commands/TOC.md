@@ -7,11 +7,7 @@
 # [DBCC CHECKFILEGROUP](dbcc-checkfilegroup-transact-sql.md)  
 # [DBCC CHECKIDENT](dbcc-checkident-transact-sql.md)  
 # [DBCC CHECKTABLE](dbcc-checktable-transact-sql.md)  
-<<<<<<< HEAD
-# [DBCC CLEANTABLE](dbcc-cleantable-transact-sql.md) 
-=======
 # [DBCC CLEANTABLE](dbcc-cleantable-transact-sql.md)
->>>>>>> master
 # [DBCC CLONEDATABASE](dbcc-clonedatabase-transact-sql.md)  
 # [DBCC DBREINDEX](dbcc-dbreindex-transact-sql.md)  
 # [DBCC dllname (FREE)](dbcc-dllname-free-transact-sql.md)  

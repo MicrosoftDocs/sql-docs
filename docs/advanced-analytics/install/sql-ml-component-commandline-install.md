@@ -60,7 +60,7 @@ In-database analytics are available for database engine instances, required for 
 
 To view progress information without the interactive on-screen prompts, use the /qs argument.
 
-> [!Important]
+> [!IMPORTANT]
 > After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation tasks](#post-install) for instructions.
 
 ### SQL Server 2017: database engine, advanced analytics with Python and R

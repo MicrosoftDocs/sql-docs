@@ -43,7 +43,7 @@ Notice that binding does not guarantee the very latest version of R or Anaconda.
 Component |Initial Release | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) over R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 9.0 | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | R 3.2.2  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [pretrained models](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -86,25 +86,31 @@ Summed up, steps for binding are as follows:
 
 In terms of user experience, the technology and how you work with it is unchanged. The only difference is the presence of newer-versioned packages and possibly additional packages not originally available through SQL Server (such as MicrosoftML for SQL Server 2016 R Services customers).
 
-## <a name="bkmk_BindWizard"></a>Upgrade using Setup
+## <a name="bkmk_BindWizard"></a>Bind to MLS using Setup
 
 Microsoft Machine Learning Setup detects the existing features and SQL Server version and invokes a utility called SqlBindR.exe to change the binding. Internally, SqlBindR is chained to Setup and used indirectly. Later, you can run SqlBindR directly from the command line to exercise specific options.
 
-1. Check the version of R and RevoScaleR to confirm the existing versions are lower than what you plan to replace them with. For more information, see [Get R and Python package information](determine-which-packages-are-installed-on-sql-server.md).
+1. For SQL Server 2016 R Services, verify you have applied Service Pack 1 and [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). Binding is not supported on earlier versions.
+
+1. Check the version of R and RevoScaleR to confirm the existing versions are lower than what you plan to replace them with. You can use the standard `installed.packages()` command in an R console to get package version information:
+
+   + Go to \Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
+   + Double-click **R** to open the console.
+   + Type `installed.packages()` to return a list of installed packages. Both Base and RevoScaleR are at 3.2.2.
 
 1. [Download Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer) onto the computer that has the instance you want to upgrade. 
 
-1. Unzip the folder and start Setup.
+1. Unzip the folder and start ServerSetup.
 
     ![Microsoft Machine Learning Server setup wizard](media/mls-921-installer-start.PNG)
 
 1. On **Configure the installation**, confirm the components to upgrade, and review the list of compatible instances. 
 
-   On the left, choose every feature that you want to keep or upgrade. You cannot upgrade some features and not others. An empty checkbox indicates you want that feature removed assuming it is currently installed. In the screenshot, an instance of SQL Server 2017 Machine Learning Services (MSSQL14) with R and Python is selected. This configuration is supported because SQL Server 2017 has R and Python.
+   On the left, choose every feature that you want to keep or upgrade. You cannot upgrade some features and not others. An empty checkbox indicates you want that feature removed assuming it is currently installed. In the screenshot, given an instance of SQL Server 2016 R Services (MSSQL13), R and the R version of the pre-trained models are selected. This configuration is valid because SQL Server 2016 supports R but not Python.
 
-   On the right, select the checkbox next to the instance name. If no instances are listed, you have an incompatible combination. If you do not select an instance, a new standalone installation of Machine Learning Server is created, and the SQL Server libraries are unchanged.
+   On the right, select the checkbox next to the instance name. If no instances are listed, you have an incompatible combination. If you do not select an instance, a new standalone installation of Machine Learning Server is created, and the SQL Server libraries are unchanged. If you can't select an instance, it might not be at [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
-    ![Microsoft Machine Learning Server setup wizard](media/configure-the-installation.PNG)
+    ![Microsoft Machine Learning Server setup wizard](media/mls-931-installer-mssql13.png)
 
 1. On the **License agreement** page, select **I accept these terms** to accept the licensing terms for Machine Learning Server. 
 
@@ -120,9 +126,19 @@ During the installation process, any R or Python libraries used by SQL Server ar
 
 Binding affects the contents of these folders: C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library is replaced with the contents of C:\Program Files\Microsoft\ML Server\R_SERVER. The second folder and its contents are created by Microsoft Machine Learning Server Setup. 
 
+If upgrade fails, check [SqlBindR error codes](upgrade-and-installation-faq-sql-server-r-services.md#SqlBindR-error-codes) for more information.
+
 ## Confirm binding
 
-Recheck the version of R and RevoScaleR to confirm you have newer versions. For more information, see [Get R and Python package information](determine-which-packages-are-installed-on-sql-server.md). SQL Server 2016 R Services customers should also have MicrosoftML.
+Recheck the version of R and RevoScaleR to confirm you have newer versions. Use the standard `installed.packages()` command in an R console to get package version information:
+
+1. Go to \Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
+2. Double-click **R** to open the console.
+3. Type `installed.packages()` to return a list of installed packages. 
+
+Both Base and RevoScaleR are at 3..4
+
+SQL Server 2016 R Services customers should also have MicrosoftML.
 
 ## <a name="bkmk_BindCmd"></a>Command line operations
 

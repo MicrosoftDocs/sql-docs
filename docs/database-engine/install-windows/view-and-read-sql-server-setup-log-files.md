@@ -37,7 +37,7 @@ Each execution of Setup creates log files are created with a new timestamped log
   
  This workflow produces a single summary log, and either a single Detail log for an RTM installation, or two Detail logs for when media is slipstreamed.
   
- Datastore files contain a snapshot of the state of all the configuration objects that are being tracked by the setup process, and are useful for troublshooting configuration errors. XML dump files are created for each execution phase and are saved in the Datastore log subfolder under the time-stamped log folder. 
+ Datastore files contain a snapshot of the state of all the configuration objects that are being tracked by the setup process, and are useful for troubleshooting configuration errors. XML dump files are created for each execution phase and are saved in the Datastore log subfolder under the time-stamped log folder. 
 
  The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup log files.  
   
@@ -101,7 +101,7 @@ Each execution of Setup creates log files are created with a new timestamped log
 ### Location  
  The MSI log files are located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
   
- At the end of the file is a summary of the execution which includes the success or failure status and properties. To find the error in the MSI file, search for "value 3" and review the text before and after.  
+ At the end of the file is a summary of the execution, which includes the success or failure status and properties. To find the error in the MSI file, search for "value 3" and review the text before and after.  
   
 ## ConfigurationFile.ini  
   

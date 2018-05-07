@@ -59,7 +59,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 ### Examples of successful connections
 To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects will be different depending on the type of server you're connected to. 
 
-- Connecting to an on-prem Server: 
+- Connecting to an on-prem SQL server: 
   ![Connecting to an on-prem server](media/connect-query-sql-server/connect-on-prem.png)
 
 - Connecting to SQL Azure DB

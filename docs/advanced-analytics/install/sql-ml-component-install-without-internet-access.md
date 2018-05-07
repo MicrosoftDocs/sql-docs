@@ -1,22 +1,13 @@
 ---
-title: "Install SQL Server machine learning components without internet access | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/05/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
+title: Install SQL Server machine learning components without internet access | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
   
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 
-caps.latest.revision: 30
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Install SQL Server machine learning components without internet access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,6 +57,16 @@ Microsoft R Open     |no change; use previous|
 Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
 Microsoft Python Open     |no change; use previous|
 Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
+**SQL Server 2017 CU5** |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
+Microsoft Python Open     |no change; use previous|
+Microsoft Python Server    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
+**SQL Server 2017 CU6** |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
+Microsoft Python Open     |no change; use previous|
+Microsoft Python Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
 

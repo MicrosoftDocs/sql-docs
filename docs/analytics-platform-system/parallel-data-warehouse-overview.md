@@ -1,25 +1,18 @@
 ---
-title: "Parallel Data Warehouse overview"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "This topic explains the appliance software and the non-appliance software components of Analytics Platform System."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: 20
-
+title: Parallel Data Warehouse components - Analytics Platform System | Microsoft Docs
+description: This articles explains the appliance software and the non-appliance software components of Analytics Platform System.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Parallel Data Warehouse overview
-This topic explains the appliance software and the non-appliance software components of Analytics Platform System.  
+# Parallel Data Warehouse components - Analytics Platform System
+This articles explains the appliance software and the non-appliance software components of Analytics Platform System.  
   
 <!-- MISSING LINKS
 

@@ -2,24 +2,20 @@
 title: "Distributed availability groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/12/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-- "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], distributed"
 ms.assetid: 
 caps.latest.revision: 
 author: "allanhirt"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+ms.author: mikeray
+manager: craigg
 ---
 # Distributed availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,6 +47,9 @@ The only way to make AG 2's primary replica accept inserts, updates, and deletio
 
 > [!NOTE]
 > Distributed availability groups in SQL Server 2016 support failover only from one availability group to another by using the option FORCE_FAILOVER_ALLOW_DATA_LOSS.
+
+> [!NOTE]
+> When using transactional replication with distributed availability groups the forwarder replica can't be configured as a publisher.
 
 ## SQL Server version and edition requirements for distributed availability groups
 

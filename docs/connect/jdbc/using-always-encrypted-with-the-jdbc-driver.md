@@ -2,22 +2,18 @@
 title: "Using Always Encrypted with the JDBC driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "3/14/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 caps.latest.revision: 64
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using Always Encrypted with the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -404,7 +400,7 @@ The **sendTimeAsDatetime** connection property is used to configure how the java
 For more information on this property, see [Configuring How java.sql.Time Values are Sent to the Server](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
 ### Configuring how String values are sent to the server
-The **sendStringParametersAsUnicode** connection property is used to configure how String values are sent to SQL Server. If set to true, String parameters are sent to the server in Unicode format. If set to false, String parameters are sent in non-Unicode format, such as ASCII or MBCS, instead of Unicode. The default value for this property is true. When Always Encrypted is enabled and a char/varchar/varchar(max) column is encrypted, the value of **sendStringParametersAsUnicode** must be set to true (or be left as the default). If this property is set to false, the driver will throw an exception when inserting data to an encrypted char/varchar/varchar(max) column. For more information on this property, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).
+The **sendStringParametersAsUnicode** connection property is used to configure how String values are sent to SQL Server. If set to true, String parameters are sent to the server in Unicode format. If set to false, String parameters are sent in non-Unicode format, such as ASCII or MBCS, instead of Unicode. The default value for this property is true. When Always Encrypted is enabled and a char/varchar/varchar(max) column is encrypted, the value of **sendStringParametersAsUnicode** must be set to false. If this property is set to true, the driver will throw an exception when decrypting data from an encrypted char/varchar/varchar(max) column that has Unicode characters. For more information on this property, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).
   
 ## Retrieving and modifying data in encrypted columns
 Once you enable Always Encrypted for application queries, you can use standard JDBC APIs to retrieve or modify data in encrypted database columns. If your application has the required database permissions and can access the column master key, the driver will encrypt any query parameters that target encrypted columns and will decrypt data that is retrieved from encrypted columns.

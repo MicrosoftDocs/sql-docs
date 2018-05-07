@@ -1,17 +1,15 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2018"
-ms.prod: "sql-non-specified"
+ms.date: "04/17/2018"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "install ssms, download ssms, latest ssms"
   - "SQL Server Management Studio"
@@ -29,8 +27,7 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 caps.latest.revision: 145
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # Download SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,6 +42,9 @@ SSMS 17.x is the latest generation of *SQL Server Management Studio* and provide
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.6 Upgrade Package (upgrades 17.x to 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+> [!WARNING]
+> There is a known issue where SSMS 17.6 becomes unstable and crashes when using [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md). If you use Maintenance Plans, do not install SSMS 17.6. Downgrade to SSMS 17.5 if you already installed 17.6 and this issue is affecting you. 
 
 **Version Information**
 
@@ -136,7 +136,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 ### Minimize Installation Reboots
 
 * Take the following actions to reduce the chances of SSMS setup requiring a reboot at the end of installation:
-  * Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.00.40649.5 (or greater) is required. Only the x64 version is needed.
+  * Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.0.40649.5 (or greater) is required. Only the x64 version is needed.
   * Verify the version of .NET Framework on the computer is 4.6.1 (or greater).
   * Close any other instances of Visual Studio that are open on the computer.
   * Make sure all the latest OS updates are installed on the computer.
@@ -147,7 +147,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 The following are issues and limitations with this 17.6 release:
 
-There are currently no known issues.
+There is currently a known issue where SSMS 17.6 crashes when configuring the schedule in a maintenance plan.
 
 
 ## Previous releases
@@ -156,13 +156,9 @@ There are currently no known issues.
 
 ## Feedback
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## See Also
 
@@ -170,3 +166,5 @@ There are currently no known issues.
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)
 - [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

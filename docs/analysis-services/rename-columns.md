@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -20,7 +19,6 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # Rename columns
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

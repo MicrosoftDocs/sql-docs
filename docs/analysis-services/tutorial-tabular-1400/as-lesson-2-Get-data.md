@@ -1,4 +1,4 @@
----
+﻿---
 title: "Analysis Services tutorial lesson 2: Get data | Microsoft Docs"
 description: Describes how to get and import data in the Analysis Services tutorial project. 
 ms.prod_service: "analysis-services, azure-analysis-services"
@@ -15,9 +15,9 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
+monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 
 # Get data

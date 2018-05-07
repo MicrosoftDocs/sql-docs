@@ -7,15 +7,13 @@ ms.reviewer: "mikeray"
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-engine"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.workload: "Inactive"
 ---
 # Business continuity and database recovery - SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

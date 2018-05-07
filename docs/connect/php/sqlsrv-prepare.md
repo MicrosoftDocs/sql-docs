@@ -2,16 +2,14 @@
 title: "sqlsrv_prepare | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_prepare"
 apitype: "NA"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "sqlsrv_prepare"
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 caps.latest.revision: 52
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -83,12 +80,12 @@ When you prepare a statement that uses variables as parameters, the variables ar
   
 The combination of **sqlsrv_prepare** and **sqlsrv_execute** separates statement preparation and statement execution in to two function calls and can be used to execute parameterized queries. This function is ideal to execute a statement multiple times with different parameter values for each execution.  
   
-For alternative strategies for writing and reading large amounts of information, see [Batches of SQL Statements](http://go.microsoft.com/fwlink/?LinkId=104225) and [BULK INSERT](http://go.microsoft.com/fwlink/?LinkId=104226).  
+For alternative strategies for writing and reading large amounts of information, see [Batches of SQL Statements](../../odbc/reference/develop-app/batches-of-sql-statements.md) and [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 For more information, see [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## Example  
-The following example prepares and executes a statement. The statement, when executed (see [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example prepares and executes a statement. The statement, when executed (see [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -135,7 +132,7 @@ sqlsrv_close($conn);
 ```  
   
 ## Example  
-The following example demonstrates how to prepare a statement and then re-execute it with different parameter values. The example updates the *OrderQty* column of the *Sales.SalesOrderDetail* table in the AdventureWorks database. After the updates have occurred, the database is queried to verify that the updates were successful. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example demonstrates how to prepare a statement and then re-execute it with different parameter values. The example updates the *OrderQty* column of the *Sales.SalesOrderDetail* table in the AdventureWorks database. After the updates have occurred, the database is queried to verify that the updates were successful. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -248,11 +245,17 @@ sqlsrv_close($conn);
 ```
 
 ## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)  
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[How to: Send Data as a Stream](../../connect/php/how-to-send-data-as-a-stream.md)  
-[Using Directional Parameters](../../connect/php/using-directional-parameters.md)  
-[Retrieving Data](../../connect/php/retrieving-data.md)  
-[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-  
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)
+
+[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[How to: Send Data as a Stream](../../connect/php/how-to-send-data-as-a-stream.md)
+
+[Using Directional Parameters](../../connect/php/using-directional-parameters.md)
+
+[Retrieving Data](../../connect/php/retrieving-data.md)
+
+[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+

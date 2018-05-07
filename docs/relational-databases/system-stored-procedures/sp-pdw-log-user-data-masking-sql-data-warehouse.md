@@ -1,4 +1,4 @@
----
+﻿---
 title: "sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,8 +18,8 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

@@ -1,9 +1,8 @@
 ---
 title: "PolyBase Guide | Microsoft Docs"
 ms.date: "05/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,11 +24,10 @@ helpviewer_keywords:
 caps.latest.revision: 26
 author: "barbkess"
 ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # PolyBase Guide
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
   PolyBase is a technology that accesses data outside of the database via the t-sql language.  In SQL Server 2016, it allows you to run queries on external data in Hadoop or to import/export data from Azure Blob Storage. Queries are optimized to push computation to Hadoop. In Azure SQL Data Warehouse, you can import/export data from Azure Blob Storage and Azure Data Lake Store.
   
   

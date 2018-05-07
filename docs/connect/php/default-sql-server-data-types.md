@@ -2,25 +2,22 @@
 title: "Default SQL Server Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "default data types"
   - "converting data types"
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Default SQL Server Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,9 +40,13 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 |DateTime (1)|datetime|Not supported.|  
   
 ## See Also  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
-[PHP Types](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Converting Data Types](../../connect/php/converting-data-types.md)
+
+[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
+
+[PHP Types](http://php.net/manual/language.types.php)
+
+[Data Types (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
   

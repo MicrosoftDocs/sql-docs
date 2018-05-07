@@ -1,17 +1,15 @@
 ---
 title: "ChangePassword Method (ADOX) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "_User25::raw_ChangePassword"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "ChangePassword method [ADOX]"
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ChangePassword Method (ADOX)
 Changes the password for a [user](../../../ado/reference/adox-api/user-object-adox.md) account.  

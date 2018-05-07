@@ -1,48 +1,25 @@
 ---
-title: "Installing SQL Server machine learning features on an Azure virtual machine | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/31/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Install SQL Server machine learning features on an Azure virtual machine | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Installing SQL Server machine learning features on an Azure virtual machine
+# Install SQL Server machine learning features on an Azure virtual machine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-If you deploy an Azure virtual machine that includes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can now select machine learning as a feature to be added to the instance when the VM is created.
+We recommend using the [Data Science virtual machine](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), but if you want a VM that has just SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services, this article guides you through the steps.
 
-+ [Create a new VM that includes SQL Server 2016 and R Services](#new)
-+ [Add machine learning features to an existing virtual machine with SQL Server 2016](#existing)
+## Create a virtual machine on Azure
 
-> [!NOTE]
-> Virtual machines are now available for SQL Server 2017! See [this announcement](https://azure.microsoft.com/blog/announcing-new-azure-vm-images-sql-server-2017-on-linux-and-windows/) for details.
-> 
-> R is also available as a preview feature in Azure SQL Database. For more information, see [Using R in Azure SQL Database](../r/using-r-in-azure-sql-database.md).
-
-## Create a new SQL Server 2017 virtual machine
-
-To use R or Python in SQL Server 2017, be sure to get a Windows-based virtual machine. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] on Linux supports fast [native scoring](../sql-native-scoring.md) using the T-SQL PREDICT function, but other machine learning features are not available yet in this edition.
-
-For a list of SQL Server VM offerings, see this article: [Overview of SQL Server on Azure Virtual Machines (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview).
-
-### <a name="new"></a>Create a new SQL Server Enterprise VM with machine learning
-
-1. In the Azure portal, click VIRTUAL MACHINES and then click NEW.
-2. Select SQL Server 2017 Enterprise Edition.
+1. In the Azure portal in the left-side list, click **Virtual machines** and then click **Add**.
+2. Search for SQL Server 2017 Enterprise Edition or SQL Server 2016 Enterprise Edition.
 3. Configure the server name and account permissions, and select a pricing plan.
-4. In **SQL Server Settings** (Step 4 in the VM setup wizard), locate **Machine Learning Services (Advanced Analytics)** and click **Enable**.
+4. In **SQL Server Settings** (Step 4 in the VM setup wizard), locate **Machine Learning Services (Advanced Analytics)** (or **R Services** for SQL Server 2016) and click **Enable**.
 5. Review the summary presented for validation and click **OK**.
 6. When the virtual machine is ready, connect to it, and open SQL Server Management Studio, which is pre-installed. Machine learning is ready to run.
 7. To verify this, you can open a new query window and run a simple statement such as this one, which uses R to generate a sequence of numbers from 1 to 10.
@@ -109,7 +86,3 @@ If you expect that clients calling the server will need to issue ODBC queries as
   TCP/IP is required for loopback connections. If you get the following error, enable TCP/IP on the virtual machine that supports the instance:
 
   "DBNETLIB; SQL Server does not exist or access denied"
-
-## Related resources
-
-[Using R in Azure SQL Database](../r/using-r-in-azure-sql-database.md)

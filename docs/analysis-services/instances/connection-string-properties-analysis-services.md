@@ -1,25 +1,14 @@
 ---
 title: "Connection String Properties (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component:
+ms.topic: article
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Connection String Properties (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,23 +16,7 @@ ms.workload: "On Demand"
   
  Developers who build custom connection strings in application code should review the API documentation for ADOMD.NET client to view a more detailed list: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- The properties described in this topic are used by the Analysis Services client libraries, ADOMD.NET, AMO, and the OLE DB provider for Analysis Services. The majority of connection string properties can be used with all three client libraries. Exceptions are called out in the description.  
-  
- This topic includes the following sections:  
-  
- [Connection parameters in common use](#bkmk_common)  
-  
- [Authentication and Security](#bkmk_auth)  
-  
- [Special-purpose parameters](#bkmk_special)  
-  
- [Reserved for future use](#bkmk_reserved)  
-  
- [Example connection strings](#bkmk_examples)  
-  
- [Connection string formats used in Analysis Services](#bkmk_supportedstrings)  
-  
- [Encrypting Connection Strings](#bkmk_encrypt)  
+ The properties described in this topic are used by the Analysis Services client libraries, ADOMD.NET, AMO, and the OLE DB provider for Analysis Services. The majority of connection string properties can be used with all three client libraries. Exceptions are called out in the description.
   
 > [!NOTE]  
 >  When setting properties, if you inadvertently set the same property twice, the last one in the connection string is used.  

@@ -3,17 +3,16 @@ title: Use Active Directory Authentication (Kerberos) when connecting with SQL O
 description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Operations Studio (preview)
 ms.custom: "tools|sos"
 ms.date: "11/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "meet-bhagdev"
 ms.author: "meetb"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 
@@ -30,7 +29,7 @@ In order to use Integrated Authentication (Windows Authentication) on macOS or L
 ## Checking if Sql Server has Kerberos Setup
 
 Login to the host machine of Sql Server. From Windows Command Prompt, use the `setspn -L %COMPUTERNAME%` to list all the Service Principal Names for the host. You should see entries that begin with MSSQLSvc/HostName.Domain.com which means that Sql Server has registered an SPN and is ready to accept Kerberos authentication. 
-- If you don't have access to the Host of the Sql Server, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>` where <SQLSERVER_NETBIOS> is the computer name of the hsot of the Sql Server.
+- If you don't have access to the Host of the Sql Server, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>` where <SQLSERVER_NETBIOS> is the computer name of the host of the Sql Server.
 
 
 ## Get the Kerberos Key Distribution Center

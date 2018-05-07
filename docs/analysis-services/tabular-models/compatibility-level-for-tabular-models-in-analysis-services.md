@@ -1,10 +1,9 @@
 ---
 title: "Compatibility level for tabular models in Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/16/2017"
+ms.date: "03/30/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -13,7 +12,7 @@ ms.technology:
 ms.component: multidimensional-tabular
 ms.component: data-mining
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.bidtoolset.versioncompat.f1"
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
@@ -21,7 +20,6 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Compatibility level for Analysis Services tabular models
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +31,7 @@ ms.workload: "On Demand"
 Major features in the 1400 compatibility level include:
 
 *  New infrastructure for data connectivity and import into tabular models with support for TOM APIs and TMSL scripting. This enables support for additional data sources such as Azure Blob storage. Additional data sources will be included in future updates.
-*  Data transformation and data mashup capabilities by using Get Data and M expressions.
+*  Data transformation and data mashup capabilities by using Get Data and M expressions in SSDT.
 *  Measures now support a Detail Rows property with a DAX expression, enabling BI tools such as Microsoft Excel drill-down to detailed data from an aggregated report. For example, when end-users view total sales for a region and month, they can view the associated order details. 
 *  Object-level security for table and column names, in addition to the data within them.
 *  Enhanced support for ragged hierarchies.

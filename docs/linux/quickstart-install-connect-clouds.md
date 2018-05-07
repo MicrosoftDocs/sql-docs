@@ -6,7 +6,7 @@ ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.prod_service: "database-engine"
 ms.component: ""
 ms.custom: "sql-linux"

@@ -1,17 +1,16 @@
----
+﻿---
 title: "Thread and Task Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/26/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, thread and task architecture"
   - "thread and task architecture guide"
@@ -19,8 +18,8 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 caps.latest.revision: 3
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Thread and Task Architecture Guide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

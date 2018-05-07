@@ -2,22 +2,20 @@
 title: "SQL Server PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "powershell"
-ms.service: ""
 ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +33,7 @@ To ship SQL PowerShell updates, we had to change the identity of the SQL PowerSh
 
 **Update your PowerShell scripts if they import the SQLPS module.**
 
-If you have any PowerShell scripts that run `Import-Module -Name SQLPS`, and you want to take advantage of the new provider functionality and new cmdlets, you must change them to `Import-Module -Name SqlServer`. The new module is installed to `%Program Files\WindowsPowerShell\Modules\SqlServer`. Therefore, you do not have to update the $env:PSModulePath variable. If you have scripts that use a third-party or community version of a module named **SqlServer**, use of the Prefix parameter to avoid name collisions. There is no change to the module used by SQL Server Agent. 
+If you have any PowerShell scripts that run `Import-Module -Name SQLPS`, and you want to take advantage of the new provider functionality and new cmdlets, you must change them to `Import-Module -Name SqlServer`. The new module is installed to `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` folder. Therefore, you do not have to update the $env:PSModulePath variable. If you have scripts that use a third-party or community version of a module named **SqlServer**, use of the Prefix parameter to avoid name collisions. There is no change to the module used by SQL Server Agent. 
 
   
 ## SQL Server PowerShell Components  

@@ -1,9 +1,9 @@
----
+﻿---
 title: "Transparent data encryption for Azure SQL Database and Data Warehouse | Microsoft Docs"
 description: "An overview of transparent data encryption for SQL Database and Data Warehouse. The document covers its benefits and the options for configuration, which includes service-managed transparent data encryption and Bring Your Own Key."
 keywords:
 author: "becczhang"
-manager: "craigg"
+manager: craigg
 editor: ""
 ms.prod: 
 ms.reviewer: ""
@@ -11,17 +11,14 @@ ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.component: "security"
-ms.custom: 
-ms.workload:
 ms.tgt_pltfrm:
-ms.devlang: "na"
-ms.topic: "article"
-ms.date: "08/07/2017"
+ms.topic: conceptual
+ms.date: "04/10/2018"
 ms.author: "rebeccaz"
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Transparent data encryption for SQL Database and Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Transparent data encryption helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.
 
@@ -41,9 +38,9 @@ Microsoft also seamlessly moves and manages the keys as needed for geo-replicati
 > All newly created SQL databases are encrypted by default by using service-managed transparent data encryption. Existing databases before May 2017 and databases created through restore, geo-replication, and database copy aren't encrypted by default.
 >
 
-## Bring Your Own Key (preview)
+## Bring Your Own Key
 
-With Bring Your Own Key (in preview) support, you can take control over your transparent data encryption keys and control who can access them and when. Key Vault, which is the Azure cloud-based external key management system, is the first key management service that transparent data encryption has integrated with Bring Your Own Key support. With Bring Your Own Key support, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key never leaves Key Vault. After the server has permissions to a key vault, the server sends basic key operation requests to it through Key Vault. You set the asymmetric key at the server level, and all databases under that server inherit it.
+With Bring Your Own Key support, you can take control over your transparent data encryption keys and control who can access them and when. Key Vault, which is the Azure cloud-based external key management system, is the first key management service that transparent data encryption has integrated with Bring Your Own Key support. With Bring Your Own Key support, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key never leaves Key Vault. After the server has permissions to a key vault, the server sends basic key operation requests to it through Key Vault. You set the asymmetric key at the server level, and all databases under that server inherit it.
 
 With Bring Your Own Key support, you now can control key management tasks such as key rotations and key vault permissions. You also can delete keys and enable auditing/reporting on all encryption keys. Key Vault provides central key management and uses tightly monitored hardware security modules. Key Vault promotes separation of management of keys and data to help meet regulatory compliance. To learn more about Key Vault, see the [Key Vault documentation page](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 

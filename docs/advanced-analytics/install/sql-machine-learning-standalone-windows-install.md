@@ -1,29 +1,20 @@
 ---
-title: "Install SQL Server 2017 Machine Learning Server (Standalone) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 
-caps.latest.revision: 35
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "On Demand"
+title: Install SQL Server 2017 Machine Learning Server (Standalone) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018 
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Install SQL Server 2017 Machine Learning Server (Standalone) on Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server setup includes the option to install a machine learning server that runs outside of SQL Server. This option might be useful if you need to develop high-performance machine learning solutions that can use remote compute contexts, switching interchangeably between the local server and a remote Machine Learning Server on a Spark cluster or on another SQL Server instance.
   
-This article describes how to use SQL Server setup to install the standalone version of **SQL Server 2017 Machine Learning Server**. If you have an Enterprise Edition or Software Assurance, installing the standalone machine learning server is free.
+This article describes how to use SQL Server setup to install the standalone version of **SQL Server 2017 Machine Learning Server**. 
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 

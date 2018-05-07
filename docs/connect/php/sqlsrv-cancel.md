@@ -2,16 +2,14 @@
 title: "sqlsrv_cancel | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_cancel"
 apitype: "NA"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_cancel"
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +41,7 @@ sqlsrv_cancel( resource $stmt)
 A Boolean value: **true** if the operation was successful. Otherwise, **false**.  
   
 ## Example  
-The following example targets the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database to execute a query, then consumes and counts results until the variable *$salesTotal* reaches a specified amount. The remaining query results are then discarded. The example assumes that SQL Server and the AdventureWorks database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example targets the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database to execute a query, then consumes and counts results until the variable *$salesTotal* reaches a specified amount. The remaining query results are then discarded. The example assumes that SQL Server and the AdventureWorks database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -97,9 +94,14 @@ sqlsrv_cancel( $stmt);
 A statement that is prepared and executed using the combination of [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) and [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) can be re-executed with **sqlsrv_execute** after calling **sqlsrv_cancel**. A statement that is executed with [sqlsrv_query](../../connect/php/sqlsrv-query.md) cannot be re-executed after calling **sqlsrv_cancel**.  
   
 ## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
-[Retrieving Data](../../connect/php/retrieving-data.md)  
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[sqlsrv_free_stmt](../../connect/php/sqlsrv-free-stmt.md)  
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
+
+[Retrieving Data](../../connect/php/retrieving-data.md)
+
+[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[sqlsrv_free_stmt](../../connect/php/sqlsrv-free-stmt.md)
+
   

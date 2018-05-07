@@ -1,17 +1,15 @@
 ---
 title: "StreamReadEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "StreamReadEnum"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "StreamReadEnum enumeration [ADO]"
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # StreamReadEnum
 Specifies whether the whole stream or the next line should be read from a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

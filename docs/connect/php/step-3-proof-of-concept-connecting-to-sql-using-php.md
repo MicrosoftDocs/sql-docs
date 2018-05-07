@@ -2,22 +2,19 @@
 title: "Step 3: Proof of concept connecting to SQL using PHP | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -167,4 +164,5 @@ This code example demonstrates the use of transactions in which you:
 ## Additional Examples  
   
 [Example Application (SQLSRV Driver)](../../connect/php/example-application-sqlsrv-driver.md)  
+
 [Example Application (PDO_SQLSRV Driver)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

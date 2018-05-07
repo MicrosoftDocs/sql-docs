@@ -1,17 +1,16 @@
 ---
 title: "Excel Source | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/02/2018"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.excelsource.f1"
   - "sql13.dts.designer.excelsourceadapter.connection.f1"
@@ -24,12 +23,15 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Excel Source
   The Excel source extracts data from worksheets or ranges in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbooks.  
-  
+
+> [!IMPORTANT]
+> For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
+## Access Mode
  The Excel source provides four different data access modes for extracting data:  
   
 -   A table or view.  
@@ -39,9 +41,6 @@ ms.workload: "On Demand"
 -   The results of an SQL statement. The query can be a parameterized query.  
   
 -   The results of an SQL statement stored in a variable.  
-  
-> [!IMPORTANT]  
->  In Excel, a worksheet or range is the equivalent of a table or view. The list of available tables in the Excel Source and Destination editors displays existing worksheets (identified by the $ sign appended to the worksheet name, such as Sheet1$) and named ranges (identified by the absence of the $ sign, such as MyRange). For more information, see the Usage Considerations section.  
   
  The Excel source uses an Excel connection manager to connect to a data source, and the connection manager specifies the workbook file to use. For more information, see [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
@@ -200,13 +199,6 @@ ms.workload: "On Demand"
  Apply the error handling option to the selected cells.  
   
 ## Related Content  
-  
--   Blog entry, [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673), on hrvoje.piasevoli.com  
-  
--   Blog entry, [Excel in Integration Services, Part 1 of 3: Connections and Components](http://go.microsoft.com/fwlink/?LinkId=217674), on dougbert.com  
-  
--   Blog entry, [Excel in Integration Services, Part 2 of 3: Tables and Data Types](http://go.microsoft.com/fwlink/?LinkId=217675), on dougbert.com.  
-  
--   Blog entry, [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](http://go.microsoft.com/fwlink/?LinkId=217676), on dougbert.com.  
-  
-  
+[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+[Excel Destination](excel-destination.md)  
+[Excel Connection Manager](../connection-manager/excel-connection-manager.md)

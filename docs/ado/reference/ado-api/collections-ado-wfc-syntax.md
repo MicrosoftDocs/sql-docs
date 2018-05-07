@@ -1,17 +1,15 @@
 ---
 title: "Collections (ADO - WFC Syntax) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "syntax indexes [ADO], ADO/WFC"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "ADO/WFC syntax index [ADO]"
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Collections (ADO - WFC Syntax)
 **package com.ms.wfc.data**  

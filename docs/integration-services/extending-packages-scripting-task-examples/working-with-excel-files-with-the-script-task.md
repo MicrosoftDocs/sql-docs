@@ -1,10 +1,9 @@
 ---
 title: "Working with Excel Files with the Script Task | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/02/2018"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,31 +23,21 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Working with Excel Files with the Script Task
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides the Excel connection manager, Excel source, and Excel destination for working with data stored in spreadsheets in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel file format. The techniques described in this topic use the Script task to obtain information about available Excel databases (workbook files) and tables (worksheets and named ranges). These samples can easily be modified to work with any of the other file-based data sources supported by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides the Excel connection manager, Excel source, and Excel destination for working with data stored in spreadsheets in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel file format. The techniques described in this topic use the Script task to obtain information about available Excel databases (workbook files) and tables (worksheets and named ranges).
   
- [Configuring a Package to Test the Samples](#configuring)  
-  
- [Example1: Check Whether an Excel File Exists](#example1)  
-  
- [Example 2: Check Whether an Excel Table Exists](#example2)  
-  
- [Example 3: Get a List of Excel Files in a Folder](#example3)  
-  
- [Example 4: Get a List of Tables in an Excel File](#example4)  
-  
- [Displaying the Results of the Samples](#testing)  
-  
-> [!NOTE]  
->  If you want to create a task that you can more easily reuse across multiple packages, consider using the code in this Script task sample as the starting point for a custom task. For more information, see [Developing a Custom Task](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
-  
+> [!TIP]  
+>  If you want to create a task that you can reuse across multiple packages, consider using the code in this Script task sample as the starting point for a custom task. For more information, see [Developing a Custom Task](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
+
+> [!IMPORTANT]
+> For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+ 
 ##  <a name="configuring"></a> Configuring a Package to Test the Samples  
  You can configure a single package to test all the samples in this topic. The samples use many of the same package variables and the same [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classes.  
   
-#### To configure a package for use with the examples in this topic  
+### To configure a package for use with the examples in this topic  
   
 1.  Create a new [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and open the default package for editing.  
   
@@ -81,7 +70,7 @@ ms.workload: "On Demand"
 ##  <a name="example1"></a> Example 1 Description: Check Whether an Excel File Exists  
  This example determines whether the Excel workbook file specified in the `ExcelFile` variable exists, and then sets the Boolean value of the `ExcelFileExists` variable to the result. You can use this Boolean value for branching in the workflow of the package.  
   
-#### To configure this Script Task example  
+### To configure this Script Task example  
   
 1.  Add a new Script task to the package and change its name to **ExcelFileExists**.  
   
@@ -151,7 +140,7 @@ public class ScriptMain
 ##  <a name="example2"></a> Example 2 Description: Check Whether an Excel Table Exists  
  This example determines whether the Excel worksheet or named range specified in the `ExcelTable` variable exists in the Excel workbook file specified in the `ExcelFile` variable, and then sets the Boolean value of the `ExcelTableExists` variable to the result. You can use this Boolean value for branching in the workflow of the package.  
   
-#### To configure this Script Task example  
+### To configure this Script Task example  
   
 1.  Add a new Script task to the package and change its name to **ExcelTableExists**.  
   
@@ -258,7 +247,7 @@ public class ScriptMain
 ##  <a name="example3"></a> Example 3 Description: Get a List of Excel Files in a Folder  
  This example fills an array with the list of Excel files found in the folder specified in the value of the `ExcelFolder` variable, and then copies the array into the `ExcelFiles` variable. You can use the Foreach from Variable enumerator to iterate over the files in the array.  
   
-#### To configure this Script Task example  
+### To configure this Script Task example  
   
 1.  Add a new Script task to the package and change its name to **GetExcelFiles**.  
   
@@ -333,7 +322,7 @@ public class ScriptMain
 > [!NOTE]  
 >  The list of tables in an Excel workbook includes both worksheets (which have the $ suffix) and named ranges. If you have to filter the list for only worksheets or only named ranges, you may have to add additional code for this purpose.  
   
-#### To configure this Script Task example  
+### To configure this Script Task example  
   
 1.  Add a new Script task to the package and change its name to **GetExcelTables**.  
   
@@ -442,7 +431,7 @@ public class ScriptMain
 ##  <a name="testing"></a> Displaying the Results of the Samples  
  If you have configured each of the examples in this topic in the same package, you can connect all the Script tasks to an additional Script task that displays the output of all the examples.  
   
-#### To configure a Script task to display the output of the examples in this topic  
+### To configure a Script task to display the output of the examples in this topic  
   
 1.  Add a new Script task to the package and change its name to **DisplayResults**.  
   
@@ -546,7 +535,7 @@ public class ScriptMain
 ```  
   
 ## See Also  
- [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

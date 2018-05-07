@@ -233,6 +233,9 @@ The following example creates a schema-only clone of the AdventureWorks database
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    
 GO 
+```
+
+## See Also
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
 [How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](http://support.microsoft.com/help/914288)   
 

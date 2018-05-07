@@ -124,7 +124,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  The system configuration check report contains a short description for each executed rule, and the execution status.
   
 ### Location  
-The SystemConfigurationCheck_Report.htm is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+The SystemConfigurationCheck_Report.htm is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
 ## See also  
- [Install SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)  
+ [Install SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

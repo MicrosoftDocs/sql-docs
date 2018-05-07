@@ -29,81 +29,63 @@ manager: craigg
 
 Each execution of Setup creates log files are created with a new timestamped log folder at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is run in an unattended mode, the logs are created at % temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
   
- SQL server completes three basic phases:  typical Setup request goes through a single execution phase that accomplishes three things: 
+ SQL server completes three basic phases: 
   
-1.  Global Rules verification: this step validates basic system requirements   
-2.  Component update: this step verifies 
-3.  User-requested action
+1.  Global Rules verification: validates basic system requirements   
+2.  Component update: checks to see if there are any updates available for the media being installed
+3.  User-requested action: allows the user to select and customize features
   
- This workflow produces a single summary log, and at most two Detail logs, though typically there is onl one detail log. The second detail log would be present if additional media is slipstreamed along with the original media. 
+ This workflow produces a single summary log, and either a single Detail log for an RTM installation, or two Detail logs for when media is slipstreamed.
   
- Datastore files contain a snapshot of the state of all configuration objects being tracked by the Setup process, and are useful for troubleshooting configuration errors. XML file dumps are created for datastore objects for each execution phase. They are saved in their own log subfolder under the time-stamped log folder, as follows:  
-  
--   Datastore_GlobalRules  
-  
--   Datastore_ComponentUpdated  
-  
--   Datastore  
-  
+ Datastore files contain a snapshot of the state of all the configuration objects that are being tracked by the setup process, and are useful for troublshooting configuration errors. XML dump files are created for each execution phase and are saved in the Datastore log subfolder under the time-stamped log folder. 
+
  The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup log files.  
   
-## Summary Text  
+## Summary.txt file 
   
 ### Overview  
  This file shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that were detected during Setup, the operating system environment, command-line parameter values if they are specified, and the overall status of each MSI/MSP that was executed.
   
  The log is organized into the following sections:
   
--   An overall summary of the execution
-  
--   Properties and the configuration of the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup was run
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product features previously installed on the computer
-  
--   Description of the installation version and installation package properties  
-  
--   Runtime input settings that are provided during install
-  
--   Location of the configuration file
-  
--   Details of the execution results
-  
--   Global rules
-  
--   Rules specific to the installation scenario
-  
--   Failed rules
-  
+-   An overall summary of the execution  
+-   Properties and the configuration of the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup was run  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product features previously installed on the computer  
+-   Description of the installation version and installation package properties
+-   Runtime input settings that are provided during install  
+-   Location of the configuration file  
+-   Details of the execution results  
+-   Global rules  
+-   Rules specific to the installation scenario  
+-   Failed rules  
 -   Location of the rules report file
 
   >[!NOTE]
   > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similiar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
+ The summary.txt is located within %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
   
  To find errors in the summary text file, search the file by using the "error" or "failed" keywords.
   
-## Summary_\<MachineName>_YYYYMMDD_HHMMss.txt
+## Summary_\<MachineName>_YYYYMMDD_HHMMss.txt file
   
 ### Overview  
  The summary_engine base file is similar to the summary file and is generated during the main workflow.
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
+ The Summary_\<MachineName>_YYYYMMDD_HHMMss.txt file is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
   
-## Detail.txt
+## Detail.txt file
   
 ### Overview
- Detail.txt is generated for the main workflow such as install or upgrade, and provides the details of the execution. The logs in the file are generated based on the time when each action for the installation was invoked, and show the order in which the actions were executed, and their dependencies.  
+ Detail.txt is generated for the main workflow such as install or upgrade, and provides the details of the execution. The logs in the file are generated based on the time when each action for the installation was invoked. The text file shows the order in which the actions were executed, as well as their dependencies.  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup  
+ It is located within %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
- Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
-  
- If an error occurs during the Setup process, the exception or error are logged at the end of this file. To find the errors in this file, first examine the end of the file followed by a search of the file for the "error" or "exception" keywords
+ If an error occurs during the Setup process, the exception or error is logged at the end of this file. To find the errors in this file, first examine the end of the file followed by a search of the file for the "error" or "exception" keywords
     
 ## MSI log files
   
@@ -112,16 +94,14 @@ Each execution of Setup creates log files are created with a new timestamped log
   
  Types of MSI log files:
   
--   \<Feature>_\<Architecture>\_\<Interaction>.log  
-  
--   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
-  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log   
 -   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### Location  
  The MSI log files are located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
   
- At the end of the file is a summary of the execution which includes the success or failure status and properties. To find the error in the MSI file, search for "value 3" and usually the errors can be found close to the string.  
+ At the end of the file is a summary of the execution which includes the success or failure status and properties. To find the error in the MSI file, search for "value 3" and review the text before and after.  
   
 ## ConfigurationFile.ini  
   
@@ -129,7 +109,7 @@ Each execution of Setup creates log files are created with a new timestamped log
  The configuration file contains the input settings that are provided during installation. It can be used to restart the installation without having to enter the settings manually. However, passwords for the accounts, PID, and some parameters are not saved in the configuration file. The settings can be either added to the file or provided by using the command line or the Setup user interface. For more information, see [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ The ConfigurationFile.ini is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## SystemConfigurationCheck_Report.htm  
   
@@ -137,9 +117,7 @@ Each execution of Setup creates log files are created with a new timestamped log
  The system configuration check report contains a short description for each executed rule, and the execution status.
   
 ### Location  
- It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+The SystemConfigurationCheck_Report.htm is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## See also  
- [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
-  
-  
+ [Install SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)  

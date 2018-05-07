@@ -56,7 +56,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 3. After you've completed all the fields, select **Connect**. 
 
-### Examples
+### Examples of successful connections
 To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects will be different depending on the type of server you're connected to. 
 
 - Connecting to an on-prem Server: 

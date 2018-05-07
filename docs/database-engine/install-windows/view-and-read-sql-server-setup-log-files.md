@@ -27,19 +27,25 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Each execution of Setup creates log files are created with a new timestamped log folder at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is run in an unattended mode, the logs are created at % temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
+SQL Server Setup creates log files in a timestamped log folder within %programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log by default. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is executed in unattended mode, the logs are created within %temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
+
+ ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
+
+ >[!NOTE]
+ > The numbers in the path *nnn* correspond to the version of SQL being installed. In the above picture, SQL 2017 was installed, so the folder is 140. For SQL 2016, the folder would be 130, and for SQL 2014 the folder would be 120.
   
- SQL server completes three basic phases: 
+ SQL server setup completes three basic phases: 
   
-1.  Global Rules verification: validates basic system requirements   
+1.  Global Rules verification: validates basic system requirements
 2.  Component update: checks to see if there are any updates available for the media being installed
 3.  User-requested action: allows the user to select and customize features
   
- This workflow produces a single summary log, and either a single Detail log for an RTM installation, or two Detail logs for when media is slipstreamed.
-  
- Datastore files contain a snapshot of the state of all the configuration objects that are being tracked by the setup process, and are useful for troubleshooting configuration errors. XML dump files are created for each execution phase and are saved in the Datastore log subfolder under the time-stamped log folder. 
 
- The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup log files.  
+This workflow produces a single summary log, and either a single Detail log for an RTM installation, or two Detail logs for when media is slipstreamed.
+  
+Datastore files contain a snapshot of the state of all the configuration objects that are being tracked by the setup process, and are useful for troubleshooting configuration errors. XML dump files are created for each execution phase and are saved in the Datastore log subfolder under the time-stamped log folder. 
+
+The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup log files.  
   
 ## Summary.txt file 
   
@@ -103,7 +109,7 @@ Each execution of Setup creates log files are created with a new timestamped log
   
  At the end of the file is a summary of the execution, which includes the success or failure status and properties. To find the error in the MSI file, search for "value 3" and review the text before and after.  
   
-## ConfigurationFile.ini  
+## ConfigurationFile.ini file
   
 ### Overview  
  The configuration file contains the input settings that are provided during installation. It can be used to restart the installation without having to enter the settings manually. However, passwords for the accounts, PID, and some parameters are not saved in the configuration file. The settings can be either added to the file or provided by using the command line or the Setup user interface. For more information, see [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
@@ -111,7 +117,7 @@ Each execution of Setup creates log files are created with a new timestamped log
 ### Location  
  The ConfigurationFile.ini is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## SystemConfigurationCheck_Report.htm  
+## SystemConfigurationCheck_Report.htm file
   
 ### Overview  
  The system configuration check report contains a short description for each executed rule, and the execution status.

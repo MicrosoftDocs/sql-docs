@@ -126,7 +126,7 @@ During the installation process, any R or Python libraries used by SQL Server ar
 
 Binding affects the contents of these folders: C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library is replaced with the contents of C:\Program Files\Microsoft\ML Server\R_SERVER. The second folder and its contents are created by Microsoft Machine Learning Server Setup. 
 
-If upgrade fails, check [SqlBindR error codes](upgrade-and-installation-faq-sql-server-r-services.md#SqlBindR-error-codes) for more information.
+If upgrade fails, check [SqlBindR error codes](upgrade-and-installation-faq-sql-server-r-services.md#sqlbindr-error-codes) for more information.
 
 ## Confirm binding
 

@@ -19,6 +19,8 @@ This topic provides answers to some common questions about installation of machi
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
+<a name="sqlbinder-error-codes"<a/>
+
 ## SqlBindR error codes
 
 SqlBindR utility is used to upgrade R and Python components in a SQL Server instance by switching over to a Microsoft Machine Learning Server's copies of the same components. If binding fails during upgrade, an error code is written to the Setup log file. Error codes for SqlBindR are as follows:

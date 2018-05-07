@@ -23,7 +23,7 @@ manager: craigg
 
 ## Introduction
 
-Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of [SQL Server Usage Feedback collection](http://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
+Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The Local Audit component of [SQL Server Usage Feedback collection](http://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
 
 As of SQL Server 2016 CU2, Local Audit is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, Local Audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have Local Audit capability for usage feedback collection. 
 
@@ -188,15 +188,15 @@ The columns listed below represent the order of the Local Audit file output. One
 
 | Name | Description | Example values
 |-------|--------| ----------|
-|InstanceUniqueID| Anonymized instance identifier | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
-|SchemaVersion| Schema version of SQLCEIP |  3 
+|instanceUniqueID| Anonymized instance identifier | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
+|schemaVersion| Schema version of SQLCEIP |  3 
 |emitTime |Data point emit-time in UTC | 2016-09-08T17:20:22.1124269Z 
 |sessionId | Session identifier to service SQLCEIP service | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
-| correlationId | Place holder for an additional identifier | 0 
+|correlationId | Place holder for an additional identifier | 0 
 |sequence | Sequence number of the data points sent within the session | 15 
-| clientVersion | SQL Server instance version | 13.0.2161.3 ((SQL16_RTM_QFE-CU).160907-1223) 
-| operatingSystem | The OS version where SQL Server instance is installed | Microsoft Windows Server 2012 R2 Datacenter 
-| querySetVersion | Version of a group of query definitions | 1.0.0.0 
+|clientVersion | SQL Server instance version | 13.0.2161.3 ((SQL16_RTM_QFE-CU).160907-1223) 
+|operatingSystem | The OS version where SQL Server instance is installed | Microsoft Windows Server 2012 R2 Datacenter 
+|querySetVersion | Version of a group of query definitions | 1.0.0.0 
 |traceName | Categories of traces: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | An identifier of the query | SQLServerProperties.002 
 |data	| The output of the information collected on queryIdentifier as an output of T-SQL query, XE session, or the application |	[{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],

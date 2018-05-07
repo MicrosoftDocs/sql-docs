@@ -70,6 +70,7 @@ ms.technology: install
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">Connect with client applications</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/database-features">Relational database concepts</a></li>
+                                                    <li><a class="barLink" href="/sql/relational-databases/security">SQL Security</a></li>
                                                 </ul>
                                                 <h4>Tools</h4>
                                                 <ul class="noBullet">

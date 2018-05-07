@@ -58,10 +58,10 @@ If you don't have access to a SQL Server instance, select your platform from the
 ### Examples of successful connections
 To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects will be different depending on the type of server you're connected to. 
 
-- Connecting to an on-prem SQL server: 
+- Connecting to an on-prem SQL server - in this case NODE5\SQL2016ST: 
   ![Connecting to an on-prem server](media/connect-query-sql-server/connect-on-prem.png)
 
-- Connecting to SQL Azure DB
+- Connecting to SQL Azure DB - in this case msftestserver.database.windows.net:
   ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]

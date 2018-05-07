@@ -38,8 +38,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 ## Connect to a SQL Server instance
 
-1. Start SQL Server Management Studio.  
-    The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
+1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
     ![The Connect link in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
 
@@ -174,8 +173,7 @@ You can find information about the connection properties under the results of yo
 ## Change the server that the query window is connected to
 You can change the server that your current query window is connected to by doing the following:
 
-1. Right-click in the query window, and then select **Connection** > **Change connection**.  
-    The **Connect to Server** window opens again.
+1. Right-click in the query window, and then select **Connection** > **Change connection. The **Connect to Server** window opens again.
 2. Change the server that your query is connected to. 
  
    ![The Change Connection command](media/connect-query-sql-server/changeconnection.png)

@@ -8,7 +8,7 @@
 # [DBCC CHECKIDENT](dbcc-checkident-transact-sql.md)  
 # [DBCC CHECKTABLE](dbcc-checktable-transact-sql.md)  
 # [DBCC CLEANTABLE](dbcc-cleantable-transact-sql.md) 
-# [DBCC CLONEDATABASE](dbcc-clonedatabase-transact-sql.md) 
+# [DBCC CLONEDATABASE](dbcc-clonedatabase-transact-sql.md)  
 # [DBCC DBREINDEX](dbcc-dbreindex-transact-sql.md)  
 # [DBCC dllname (FREE)](dbcc-dllname-free-transact-sql.md)  
 # [DBCC DROPCLEANBUFFERS](dbcc-dropcleanbuffers-transact-sql.md)  

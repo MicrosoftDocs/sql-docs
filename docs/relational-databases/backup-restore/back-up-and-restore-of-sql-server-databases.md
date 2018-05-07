@@ -151,7 +151,149 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 ### Test your backups!  
  You do not have a restore strategy until you have tested your backups. It is very important to thoroughly test your backup strategy for each of your databases by restoring a copy of the database onto a test system. You must test restoring every type of backup that you intend to use.  
   
- We recommend that you maintain an operations manual for each database. This operations manual should document the location of the backups, backup device names (if any), and the amount of time that is required to restore the test backups.  
+ We recommend that you maintain an operations manual for each database. This operations manual should document the location of the backups, backup device names (if any), and the amount of time that is required to restore the test backups. 
+
+## Monitoring Backup Progress
+Backup and restore operations can take a considerable amount of time due to the size of a database and the complexity of the operations involved. There are two trace flags and an extended event that can help monitor the progress of either operation. 
+
+  >[!WARNING]
+  > Using these monitoring options can cause a performance issue and consume a significant amount of disk space. Use for short periods of time, exercise caution, and test thoroughly before implementing in production. 
+
+
+### Trace flag 3004 and 3014
+Trace flag 3004 enables basic logging to the SQL Server error log during both backup and restore operations. Trace flag 3014 enables detailed logging to the SQL Server error log. 
+
+- Enable trace flag 3004
+```sql
+dbcc traceon(3004, -1)
+```
+
+- Enable trace flag 3014
+```sql
+dbcc traceon(3014, -1)
+```
+
+- Disable both trace flags 3004 and 3014
+```sql
+dbcc traceoff (3004, 3014, -1)
+```
+
+### Backup and restore extended event 
+The backup and restore extended event can help monitor backup and restore operations in real time. For more information about extended events, see [extended events](../extended-events/extended-events.md)
+
+- Enable the back up an restore extended event
+
+```sql
+CREATE EVENT SESSION [Backup trace] ON SERVER
+ADD EVENT sqlserver.backup_restore_progress_trace
+ADD TARGET package0.event_file(SET filename=N'Backup trace')
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE, 
+TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF) 
+GO
+```
+
+### Sample output from trace flag 3014
+
+```
+2014-09-10 18:10:48.95 spid51      Backup(backuptest): BACKUP DATABASE started
+2014-09-10 18:10:48.95 spid51      Backup(backuptest): Opening the database with S lock
+2014-09-10 18:10:48.95 spid51      Backup(backuptest): Acquiring bulk-op lock on the database
+2014-09-10 18:10:48.95 spid51      Backup(backuptest): Synchronizing with other operations on the database is complete
+2014-09-10 18:10:49.04 spid51      Backup(backuptest): Opening the backup media set
+2014-09-10 18:10:49.04 spid51      Backup(backuptest): The backup media set is open
+2014-09-10 18:10:49.04 spid51      Backup/Restore buffer configuration parameters
+2014-09-10 18:10:49.04 spid51      Memory limit:               2300 MB
+2014-09-10 18:10:49.04 spid51      BufferCount:                7
+2014-09-10 18:10:49.04 spid51      Sets Of Buffers:            3
+2014-09-10 18:10:49.04 spid51      MaxTransferSize:            1024 KB
+2014-09-10 18:10:49.04 spid51      Min MaxTransferSize:        64 KB
+2014-09-10 18:10:49.04 spid51      Total buffer space:         21 MB
+2014-09-10 18:10:49.04 spid51      Tabular data device count:  1
+2014-09-10 18:10:49.04 spid51      Fulltext data device count: 0
+2014-09-10 18:10:49.04 spid51      Filestream device count:    1
+2014-09-10 18:10:49.04 spid51      TXF device count:           0
+2014-09-10 18:10:49.04 spid51      Filesystem i/o alignment:   512
+2014-09-10 18:10:49.04 spid51      Media Buffer count:         7
+2014-09-10 18:10:49.04 spid51      Media Buffer size:          1024 KB
+2014-09-10 18:10:49.04 spid51      Encode Buffer count:        7
+2014-09-10 18:10:49.04 spid51      Backup(backuptest): Preparing the media set for writing
+2014-09-10 18:10:49.05 spid51      Backup(backuptest): The media set is ready for backup
+2014-09-10 18:10:49.05 spid51      Backup(backuptest): Effective options: Checksum=1, Compression=1, Encryption=0, BufferCount=7, MaxTransferSize=1024 KB
+2014-09-10 18:10:49.05 spid51      Backup(backuptest): Clearing differential bitmaps
+2014-09-10 18:10:49.05 spid51      Backup(backuptest): Differential bitmaps are cleared
+2014-09-10 18:10:49.05 spid51      Backup(backuptest): Writing a checkpoint
+2014-09-10 18:10:49.14 spid51      Backup(backuptest): Checkpoint is complete (elapsed = 90 ms)
+2014-09-10 18:10:49.14 spid51      Backup(backuptest): Start LSN: 74:5558:61, SERepl LSN: 0:0:0
+2014-09-10 18:10:49.14 spid51      Backup(backuptest): Scanning allocation bitmaps
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): Scanning allocation bitmaps is complete
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): Calculating expected size of total data
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): FID=1, ExpectedExtents=655, IsDifferentialMapAccurate=0
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): FID=3, ExpectedExtents=640, IsDifferentialMapAccurate=0
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): FID=65537, Size=9437184 bytes, ExpectedExtents=133, AlignedDataSize=8192512 bytes, OverheadSize=518144 bytes
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): TotalSize=95289344 bytes
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): Estimated total size = 95303680 bytes (data size = 95289344 bytes, log size = 14336 bytes)
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): Work estimation is complete
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): Last LSN: 74:5586:1
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): Writing the leading metadata
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): BackupStream(0): Writing leading metadata to the device D:\DATA\backuptest.bak
+2014-09-10 18:10:49.20 spid51      Shared Backup BufferQ count: 7
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): Calculating expected size of total data
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): FID=1, ExpectedExtents=655, IsDifferentialMapAccurate=0
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): FID=3, ExpectedExtents=640, IsDifferentialMapAccurate=0
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): TotalSize=84869120 bytes
+2014-09-10 18:10:49.20 spid51      Backup(backuptest): Copying data files
+2014-09-10 18:10:49.21 spid51      Backup(backuptest): Number of data file readers = 1
+2014-09-10 18:10:49.21 spid51      Backup(backuptest): Reading the data file D:\DATA\backuptest1.mdf
+2014-09-10 18:10:49.21 spid51      Backup(backuptest): BackupStream(0): Writing MSDA of size 1296 extents
+2014-09-10 18:10:49.24 spid51      Backup(backuptest): 1 percent (1048576/95303680 bytes) processed
+2014-09-10 18:10:49.24 spid51      Backup(backuptest): 2 percent (2097152/95303680 bytes) processed
+2014-09-10 18:10:49.24 spid51      Backup(backuptest): 3 percent (3145728/95303680 bytes) processed
+(snipped)
+processed
+2014-09-10 18:10:50.01 spid51      Backup(backuptest): 42 percent (40894464/95303680 bytes) processed
+2014-09-10 18:10:50.01 spid51      Backup(backuptest): 44 percent (41943040/95303680 bytes) processed
+2014-09-10 18:10:50.01 spid51      Backup(backuptest): Completed reading the data file D:\DATA\backuptest1.mdf
+2014-09-10 18:10:50.01 spid51      Backup(backuptest): 45 percent (42926080/95303680 bytes) processed
+2014-09-10 18:10:50.01 spid51      Backup(backuptest): Reading the data file D:\DATA\backuptest2.ndf
+2014-09-10 18:10:50.06 spid51      Backup(backuptest): 46 percent (43974656/95303680 bytes) processed
+2014-09-10 18:10:50.06 spid51      Backup(backuptest): 47 percent (45023232/95303680 bytes) processed
+(snipped)
+processed
+2014-09-10 18:10:50.81 spid51      Backup(backuptest): 86 percent (82771968/95303680 bytes) processed
+2014-09-10 18:10:50.82 spid51      Backup(backuptest): 87 percent (83820544/95303680 bytes) processed
+2014-09-10 18:10:50.84 spid51      Backup(backuptest): Completed reading the data file D:\DATA\backuptest2.ndf
+2014-09-10 18:10:50.84 spid51      Backup(backuptest): 89 percent (84869120/95303680 bytes) processed
+2014-09-10 18:10:50.85 spid51      Backup(backuptest): BackupStream(0): Padding MSDA with 65536 bytes
+2014-09-10 18:10:50.85 spid51      Backup(backuptest): BackupStream(0): Total MSDA size = 1296 extents
+2014-09-10 18:10:50.85 spid51      Backup(backuptest): InitialExpectedSize=84869120 bytes, FinalSize=84869120 bytes, ExcessMode=0
+2014-09-10 18:10:50.85 spid51      Backup(backuptest): Calculating expected size of total data
+``` 
+
+### Sample output from extended event 
+```
+<valueMap name="database_operation_type" type="UInt8" description="Type of operation database operation" symbol="DatabaseOp">
+	<map name="Backup" value="0" symbol="BACKUP"/>
+	<map name="Restore" value="1" symbol="RESTORE"/>
+</valueMap>
+<valueMap name="backup_restore_trace_level" type="UInt8" description="Indicates the details included in the backup and restore trace progress" symbol="BackupRestoreTraceLevel">
+	<map name="Information of major steps in the operation" value="0" symbol="Level_1"/>
+	<map name="Verbose I/O related information" value="1" symbol="Level_2"/>
+</valueMap>
+
+<event version="1"
+	   name="backup_restore_progress_trace"
+	   guid="{92c4d441-5442-40d7-83d9-3b0250920361}"
+	   description="Prints backup/restore progress trace messages with details"
+	   channel="Analytic">
+	<keyword name="backup_restore" />
+	<data name="operation_type" inType="UInt8" map="database_operation_type" description="Type of operation - Indicates whether the database is being backed up or restored" />
+	<data name="trace_level" inType="UInt8" map="backup_restore_trace_level" description="Backup/Restore trace level" />
+	<data name="database_name" inType="UnicodeString" description="Logical name of the database" />
+	<data name="trace_message" inType="UnicodeString" description="Progress trace messages for key steps in backup or restore" />
+</event>
+```
+ 
   
 ## More about backup tasks  
 -   [Create a Maintenance Plan](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  

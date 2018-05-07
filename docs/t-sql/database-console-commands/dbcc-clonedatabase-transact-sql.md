@@ -49,36 +49,6 @@ manager: "amitban"
 
 Generates a schema-only clone of a database by using DBCC CLONEDATABASE in order to investigate performance issues related to the query optimizer.
 
-The following validations are performed by DBCC CLONEDATABASE. The command fails if any of the validations fail.
-- The source database must be a user database. Cloning of system databases (master, model, msdb, tempdb, distribution database etc.) isn't allowed.
-- The source database must be online or readable.
-- A database that uses the same name as the clone database must not already exist.
-- The command isn't in a user transaction.
-
-If all the validations succeed, the cloning of the source database is performed by the following operations:
-- Creates a new destination database that uses the same file layout as the source but with default file sizes from the model database.
-- Creates an internal snapshot of the source database.
-- Copies the system metadata from the source to the destination database.
-- Copies all schema for all objects from the source to the destination database.
-- Copies statistics for all indexes from the source to the destination database.
-
-> [!NOTE]  
-> The new database generated from DBCC CLONEDATABASE is primarily intended for troubleshooting and diagnostic purposes.  In order for the cloned database to be supported for use as a production database, the VERIFY_CLONEDB option must be used.
-
-All files in the target database will inherit the size and growth settings from the model database. The file names for the destination database will follow the source_file_name _underscore_random number convention. If the generated file name already exists in the destination folder, DBCC CLONEDATABASE will fail.
-
-DBCC CLONEDATABASE doesn't support creation of a clone if there are any user objects (tables, indexes, schemas, roles, and so on) that were created in the model database. If user objects are present in the model database, the database clone fails with following error message:
-
-```
-Msg 2601, Level 14, State 1, Line 1
-Cannot insert duplicate key row in object <system table> with unique index 'index name'. The duplicate key value is <key value>   
-```
-
-> [!IMPORTANT]
-> If you have column store indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.
-
-For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
-
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
@@ -114,6 +84,37 @@ Verifies the consistency of the new database.  This option is required if the cl
 BACKUP_CLONEDB  
 Creates and verifies a backup of the clone database.  If used in combination with VERIFY_CLONEDB, the clone database is verified before the backup is taken.  This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
   
+## Remarks
+The following validations are performed by DBCC CLONEDATABASE. The command fails if any of the validations fail.
+- The source database must be a user database. Cloning of system databases (master, model, msdb, tempdb, distribution database etc.) isn't allowed.
+- The source database must be online or readable.
+- A database that uses the same name as the clone database must not already exist.
+- The command isn't in a user transaction.
+
+If all the validations succeed, the cloning of the source database is performed by the following operations:
+- Creates a new destination database that uses the same file layout as the source but with default file sizes from the model database.
+- Creates an internal snapshot of the source database.
+- Copies the system metadata from the source to the destination database.
+- Copies all schema for all objects from the source to the destination database.
+- Copies statistics for all indexes from the source to the destination database.
+
+> [!NOTE]  
+> The new database generated from DBCC CLONEDATABASE is primarily intended for troubleshooting and diagnostic purposes.  In order for the cloned database to be supported for use as a production database, the VERIFY_CLONEDB option must be used.
+
+All files in the target database will inherit the size and growth settings from the model database. The file names for the destination database will follow the source_file_name _underscore_random number convention. If the generated file name already exists in the destination folder, DBCC CLONEDATABASE will fail.
+
+DBCC CLONEDATABASE doesn't support creation of a clone if there are any user objects (tables, indexes, schemas, roles, and so on) that were created in the model database. If user objects are present in the model database, the database clone fails with following error message:
+
+```
+Msg 2601, Level 14, State 1, Line 1
+Cannot insert duplicate key row in object <system table> with unique index 'index name'. The duplicate key value is <key value>   
+```
+
+> [!IMPORTANT]
+> If you have columnstore indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.
+
+For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
+
 ## Internal Database Snapshot
 DBCC CLONEDATABASE uses an internal database snapshot of the source database for the transactional consistency that is needed to perform the copy. Using this snapshot prevents blocking and concurrency problems when these commands are executed. If a snapshot can't be created, DBCC CLONEDATABASE will fail. 
 

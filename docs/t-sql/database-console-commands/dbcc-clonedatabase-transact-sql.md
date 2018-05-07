@@ -49,6 +49,7 @@ manager: "amitban"
 
 Generates a schema-only clone of a database by using DBCC CLONEDATABASE in order to investigate performance issues related to the query optimizer.
 
+<<<<<<< HEAD
 The following validations are performed by DBCC CLONEDATABASE. The command fails if any of the validations fail.
 - The source database must be a user database. Cloning of system databases (master, model, msdb, tempdb, distribution database etc.) isn't allowed.
 - The source database must be online or readable.
@@ -79,6 +80,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 
 For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
 
+=======
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
@@ -97,13 +99,21 @@ DBCC CLONEDATABASE
 The name of the database to be copied. 
   
 *target_database_name*  
+<<<<<<< HEAD
 The name of the database the source database will be copied to. This database will be created by DBCC CLONEDATABASE and should not already exist. 
+=======
+The name of the database the source database will be copied to. This database will be created by DBCC CLONEDATABASE and shouldn't already exist. 
+>>>>>>> master
   
 NO_STATISTICS  
 Specifies if table/index statistics need to be excluded from the clone. If this option is not specified, table/index statistics are automatically included. This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 NO_QUERYSTORE
+<<<<<<< HEAD
 Specifies if query store data needs to be excluded from the clone. If this option is not specified, query store data is copied to the clone if it is enabled in the source database. This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+=======
+Specifies if query store data needs to be excluded from the clone. If this option is not specified, query store data will be copied to the clone if the query store is enabled in the source database. This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+>>>>>>> master
 
 VERIFY_CLONEDB  
 Verifies the consistency of the new database.  This option is required if the cloned database is intended for production use.  Enabling VERIFY_CLONEDB also disables statistics and query store collection, thus it is equivalent to running WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
@@ -114,14 +124,54 @@ Verifies the consistency of the new database.  This option is required if the cl
 BACKUP_CLONEDB  
 Creates and verifies a backup of the clone database.  If used in combination with VERIFY_CLONEDB, the clone database is verified before the backup is taken.  This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
   
+<<<<<<< HEAD
 ## Internal Database Snapshot
 DBCC CLONEDATABASE uses an internal database snapshot of the source database for the transactional consistency that is needed to perform the copy. This prevents blocking and concurrency problems when these commands are executed. If a snapshot cannot be created, DBCC CLONEDATABASE will fail. 
+=======
+## Remarks
+The following validations are performed by DBCC CLONEDATABASE. The command fails if any of the validations fail.
+- The source database must be a user database. Cloning of system databases (master, model, msdb, tempdb, distribution database etc.) isn't allowed.
+- The source database must be online or readable.
+- A database that uses the same name as the clone database must not already exist.
+- The command isn't in a user transaction.
+
+If all the validations succeed, the cloning of the source database is performed by the following operations:
+- Creates a new destination database that uses the same file layout as the source but with default file sizes from the model database.
+- Creates an internal snapshot of the source database.
+- Copies the system metadata from the source to the destination database.
+- Copies all schema for all objects from the source to the destination database.
+- Copies statistics for all indexes from the source to the destination database.
+
+> [!NOTE]  
+> The new database generated from DBCC CLONEDATABASE is primarily intended for troubleshooting and diagnostic purposes.  In order for the cloned database to be supported for use as a production database, the VERIFY_CLONEDB option must be used.
+
+All files in the target database will inherit the size and growth settings from the model database. The file names for the destination database will follow the source_file_name _underscore_random number convention. If the generated file name already exists in the destination folder, DBCC CLONEDATABASE will fail.
+
+DBCC CLONEDATABASE doesn't support creation of a clone if there are any user objects (tables, indexes, schemas, roles, and so on) that were created in the model database. If user objects are present in the model database, the database clone fails with following error message:
+
+```
+Msg 2601, Level 14, State 1, Line 1
+Cannot insert duplicate key row in object <system table> with unique index 'index name'. The duplicate key value is <key value>   
+```
+
+> [!IMPORTANT]
+> If you have columnstore indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.
+
+For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
+
+## Internal Database Snapshot
+DBCC CLONEDATABASE uses an internal database snapshot of the source database for the transactional consistency that is needed to perform the copy. Using this snapshot prevents blocking and concurrency problems when these commands are executed. If a snapshot can't be created, DBCC CLONEDATABASE will fail. 
+>>>>>>> master
 
 Database level locks are held during following steps of the copy process:
 - Validate the source database
 - Get S lock for the source database
 - Create snapshot of the source database
+<<<<<<< HEAD
 - Create a clone database (this is an empty database which inherits from model)
+=======
+- Create a clone database (an empty database inherited from the model database)
+>>>>>>> master
 - Get X lock for the clone database
 - Copy the metadata to the clone database
 - Release all DB locks
@@ -169,7 +219,11 @@ Only the following objects can be cloned in the destination database. Encrypted 
 Requires membership in the **sysadmin** fixed server role.
 
 ## Error log messages
+<<<<<<< HEAD
 The following is an example of the messages logged in the error log during the cloning process:
+=======
+The following messages are an example of the messages logged in the error log during the cloning process:
+>>>>>>> master
 
 ```
 2018-03-26 15:33:56.05 spid53 Database cloning for 'sourcedb' has started with target as 'sourcedb_clone'.
@@ -190,7 +244,11 @@ The following is an example of the messages logged in the error log during the c
 ## Database Properties
 `DATABASEPROPERTYEX('dbname', 'IsClone')` will return 1 if the database was generated by using DBCC CLONEDATABASE.
 
+<<<<<<< HEAD
 `DATABASEPROPERTYEX('dbname', 'IsVerifiedClone')` will return 1 if the database was successfully verfied using WITH VERIFY_CLONEDB.
+=======
+`DATABASEPROPERTYEX('dbname', 'IsVerifiedClone')` will return 1 if the database was successfully verified using WITH VERIFY_CLONEDB.
+>>>>>>> master
 
 ## Examples  
   
@@ -235,6 +293,10 @@ GO
 ```  
 
 ## See Also  
+<<<<<<< HEAD
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+=======
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
+>>>>>>> master
 [How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](http://support.microsoft.com/help/914288)   
 

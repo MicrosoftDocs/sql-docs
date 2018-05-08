@@ -1,35 +1,14 @@
 ---
 title: "Database Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Database Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "microsoft.xml.analysis.database"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#Database"
-  - "urn:schemas-microsoft-com:xml-analysis#Database"
-helpviewer_keywords: 
-  - "Database element"
-ms.assetid: 2ded06c4-4eaf-4ccb-a416-41ee51ced8bc
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Database Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -220,6 +220,7 @@ In SQL Server Management Studio and Visual Studio, the Help Viewer application m
     
 * Open the %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings file in Notepad and change the date in the following code to some date in the future.
 
+```
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ```
 

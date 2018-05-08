@@ -173,7 +173,7 @@ You can find information about the connection properties under the results of yo
 ## Change the server that the query window is connected to
 You can change the server that your current query window is connected to by doing the following:
 
-1. Right-click in the query window, and then select **Connection** > **Change connection. The **Connect to Server** window opens again.
+1. Right-click in the query window, and then select **Connection** > **Change connection**. The **Connect to Server** window opens again.
 2. Change the server that your query is connected to. 
  
    ![The Change Connection command](media/connect-query-sql-server/changeconnection.png)

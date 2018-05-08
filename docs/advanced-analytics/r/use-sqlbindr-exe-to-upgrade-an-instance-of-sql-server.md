@@ -126,7 +126,7 @@ During the installation process, any R or Python libraries used by SQL Server ar
 
 Binding affects the contents of these folders: C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library is replaced with the contents of C:\Program Files\Microsoft\ML Server\R_SERVER. The second folder and its contents are created by Microsoft Machine Learning Server Setup. 
 
-If upgrade fails, check [SqlBindR error codes](upgrade-and-installation-faq-sql-server-r-services.md#sqlbindr-error-codes) for more information.
+If upgrade fails, check [SqlBindR error codes](#sqlbindr-error-codes) for more information.
 
 ## Confirm binding
 
@@ -254,21 +254,25 @@ If you find folders with a name like this, you can remove it after installation 
 |*bind*| Upgrades the specified SQL database instance to the latest version of R Server and ensures the instance automatically gets future upgrades of R Server|
 |*unbind*|Uninstalls the latest version of R Server from the specified SQL database instance and prevents future R Server upgrades from affecting the instance|
 
+<a name="sqlbinder-error-codes"<a/>
+
 ### Errors
 
 The tool returns the following error messages:
 
-|Error|Resolution|
-|------|------|
-|An error occurred while binding the instance| The instance could not be bound. Contact support for assistance.|
-|The instance is already bound| You ran the *bind* command, but the specified instance is already bound. Choose a different instance.|
-|The instance is not bound| You ran the *unbind* command, but the instance you specified is not bound. Choose a different instance that is compatible.|
-|Not a valid SQL instance ID| You might have typed the instance name incorrectly. Run the command again with the *list* argument to see the available instance IDs.|
-|No instances found| This computer does not have an instance of SQL Server R Services.|
-|The instance must have a compatible version of SQL R Services (In-Database) installed.| See the compatibility requirements in this topic for details.|
-|An error occurred while unbinding the instance| The instance could not be unbound. Contact support for assistance.|
-|An unexpected error has occurred| Other errors. Contact support for assistance.  |
-|No SQL instances found| This computer does not have an instance of SQL Server. |
+|Error code  | Message           | Details               |
+|------------|-------------------|-----------------------|
+|Bind error 0 | Ok (success) | Binding passed with no errors. |
+|Bind error 1 | Invalid arguments | Syntax error. |
+|Bind error 2 | Invalid action | Syntax error. |
+|Bind error 3 | Invalid instance | An instance exists, but is not valid for binding. |
+|Bind error 4 | Not bindable | |
+|Bind error 5 | Already bound | You ran the *bind* command, but the specified instance is already bound. |
+|Bind error 6 | Bind failed | An error occurred while unbinding the instance. |
+|Bind error 7 | Not bound | The database engine instance has R Services or SQL Server Machine Learning Services. The instance is not bound to Microsoft Machine Learning Server. |
+|Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
+|Bind error 9 | No instances found | No instances were found on this computer. |
+
 
 ## See also
 

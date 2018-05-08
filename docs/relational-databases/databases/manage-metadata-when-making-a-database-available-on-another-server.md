@@ -43,7 +43,7 @@ manager: craigg
 ---
 # Manage Metadata When Making a Database Available on Another Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic is relevant in the following situations:  
+  This article is relevant in the following situations:  
   
 -   Configuring the availability replicas of an [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability group.  
   
@@ -60,7 +60,7 @@ manager: craigg
  When you move the database for an application to another server instance, you must re-create all the metadata of the dependant entities and objects in **master** and **msdb** on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system is not enough. The database will not work as expected unless you manually re-create the metadata for those triggers in the **master** database.  
   
 ##  <a name="information_entities_and_objects"></a> Information, Entities, and Objects That Are Stored Outside of User Databases  
- The remainder of this topic summarizes the potential issues that might affect a database that is being made available on another server instance. You might have to re-create one or more of the types of information, entities, or objects listed in the following list. To see a summary, click the link for the item.  
+ The remainder of this article summarizes the potential issues that might affect a database that is being made available on another server instance. You might have to re-create one or more of the types of information, entities, or objects listed in the following list. To see a summary, click the link for the item.  
   
 -   [Server configuration settings](#server_configuration_settings)  
   
@@ -111,7 +111,7 @@ manager: craigg
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these is set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these are set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
@@ -150,7 +150,7 @@ manager: craigg
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### Server-Level Event Notifications  
- Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notification, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  Additionally, event notifications are delivered by using [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Routes for incoming messages are not included in the database that contains a service. Instead, explicit routes are stored in **msdb**. If your service uses an explicit route in the **msdb** database to route incoming messages to the service, when you attach a database in a different instance, you must re-create this route.  
   
@@ -183,7 +183,8 @@ manager: craigg
   
  Extended stored procedures run directly in the address space of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and they may produce memory leaks or other problems that reduce the performance and reliability of the server. You should consider storing extended stored procedures in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is separate from the instance that contains the referenced data. You should also consider using distributed queries to access the database.  
   
-> **IMPORTANT!!** Before adding extended stored procedures to the server and granting EXECUTE permissions to other users, the system administrator should thoroughly review each extended stored procedure to make sure that it does not contain harmful or malicious code.  
+  > [!IMPORTANT]
+  > Before adding extended stored procedures to the server and granting EXECUTE permissions to other users, the system administrator should thoroughly review each extended stored procedure to make sure that it does not contain harmful or malicious code.  
   
  For more information, see [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md), and [REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
@@ -253,7 +254,7 @@ manager: craigg
 -   [Create a Job](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
 #### Best Practices for Using a Script to Re-create a Job  
- We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you to identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  
+ We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  
   
 
 ##  <a name="logins"></a> Logins  
@@ -276,7 +277,8 @@ manager: craigg
   
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Object-Level Permissions** option to **True**.  
   
-> **IMPORTANT!!** If you script logins, the passwords are not scripted. If you have logins that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you have to modify the script on the destination.  
+   > [!IMPORTANT]
+   > If you script logins, the passwords are not scripted. If you have logins that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you have to modify the script on the destination.  
   
  System objects are visible in the [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) catalog view. The permissions on system objects are visible in the [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) catalog view in the **master** database. For information about querying these catalog views and granting system-object permissions, see [GRANT System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). For more information, see [REVOKE System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) and [DENY System Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
@@ -308,7 +310,10 @@ manager: craigg
   
  For more information about certificates and asymmetric keys, see [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-  
+## Trustworthy Property
+The TRUSTWORHTY database property is used to indicate whether this instance of SQL Server trusts the database and the contents within it. When a database is attached, by default and for security, this option is set to OFF, even if this option was set to ON on the original server. For more information about this property, see [TRUSTWORTHY databse property](../security/trustworthy-database-property) and for information on turning this option ON, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  If you restore a backup of a replicated database to another server or database, replication settings cannot be preserved. In this case, you must re-create all publications and subscriptions after backups are restored. To make this process easier, create scripts for your current replication settings and, also, for the enabling and disabling of replication. To help re-create your replication settings, copy these scripts and change the server name references to work for the destination server instance.  
   
@@ -316,7 +321,7 @@ manager: craigg
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- Many aspects of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] application move with the database. However, some aspects of the application must be re-created or reconfigured in the new location.  
+ Many aspects of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] application move with the database. However, some aspects of the application must be re-created or reconfigured in the new location.  By default and for security, when a database is attached from another server, the option for *SERVICE BROKER* is set to off. For information about how to set this option to on, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

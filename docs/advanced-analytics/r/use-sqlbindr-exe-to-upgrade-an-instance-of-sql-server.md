@@ -96,7 +96,7 @@ Microsoft Machine Learning Setup detects the existing features and SQL Server ve
 
    + Go to \Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
    + Double-click **R** to open the console.
-   + Type `installed.packages()` to return a list of installed packages. Both Base and RevoScaleR are at 3.2.2.
+   + Type `installed.packages()` to return a list of installed packages. Both Base and RevoScaleR are at "3.2.2".
 
 1. [Download Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer) onto the computer that has the instance you want to upgrade. 
 
@@ -136,7 +136,7 @@ Recheck the version of R and RevoScaleR to confirm you have newer versions. Use 
 2. Double-click **R** to open the console.
 3. Type `installed.packages()` to return a list of installed packages. 
 
-Both Base and RevoScaleR are at 3..4
+Both Base and RevoScaleR are at "3.4.1".
 
 SQL Server 2016 R Services customers should also have MicrosoftML.
 

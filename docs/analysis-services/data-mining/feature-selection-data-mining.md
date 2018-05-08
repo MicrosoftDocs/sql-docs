@@ -1,33 +1,14 @@
 ---
 title: "Feature Selection (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "mining models [Analysis Services], feature selections"
-  - "attributes [data mining]"
-  - "feature selection algorithms [Analysis Services]"
-  - "data mining [Analysis Services], feature selections"
-  - "neural network algorithms [Analysis Services]"
-  - "naive bayes algorithms [Analysis Services]"
-  - "decision tree algorithms [Analysis Services]"
-  - "datasets [Analysis Services]"
-  - "clustering algorithms [Analysis Services]"
-  - "coding [Data Mining]"
-ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Feature Selection (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

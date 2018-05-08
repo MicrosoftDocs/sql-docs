@@ -3,7 +3,7 @@ title: "Security Audit Data Columns | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.component: trace-events
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend

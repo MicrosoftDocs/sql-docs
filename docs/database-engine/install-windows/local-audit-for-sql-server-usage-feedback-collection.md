@@ -49,14 +49,14 @@ Before turning on Local Audit, a system administrator needs to:
 
 | Version | ***Database engine*** - Registry key |
 | :------ | :----------------------------- |
-| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name-Here*\\CPE |
-| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name-Here*\\CPE |
+| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
+| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
 | &nbsp; | &nbsp; |
 
 | Version | ***Analysis Services*** - Registry key |
 | :------ | :------------------------------- |
-| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name-Here*\\CPE |
-| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name-Here*\\CPE |
+| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
+| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
 | &nbsp; | &nbsp; |
 
 | Version | ***Integration Services*** - Registry key |
@@ -72,7 +72,7 @@ Do the following steps to get the SQL Server CEIP Telemetry service logon accoun
  
 1. Launch **Services** - select on the **Windows**  button and type *services.msc*. 
 
-2. Navigate to the appropriate service. For example, for the database engine locate **SQL Server CEIP service \<instance name\>**. For Analysis Services locate **SQL Server Analysis Services CEIP \<instance name\>**. For Integration Services locate **SQL Server Integration Services CEIP service**.
+2. Navigate to the appropriate service. For example, for the database engine locate **SQL Server CEIP service** **(*Your-Instance-Name*)**. For Analysis Services locate **SQL Server Analysis Services CEIP** **(*Your-Instance-Name*)**. For Integration Services locate **SQL Server Integration Services CEIP service**.
 
 3. Right-click on the service and choose **Properties**. 
 
@@ -141,8 +141,8 @@ SQL Server CEIP should recognize the Local Audit setting immediately if the serv
 
 1. Navigate to the appropriate service. 
 
-    - For Database Engine, use **SQL Server CEIP service (\<INSTANCENAME\>)**.     
-    - For Analysis Services, use **SQL Server Analysis Services CEIP (\<INSTANCENAME\>)**.
+    - For Database Engine, use **SQL Server CEIP service (*Your-Instance-Name*)**.     
+    - For Analysis Services, use **SQL Server Analysis Services CEIP (*Your-Instance-Name*)**.
     - For Integration Services, 
         - For SQL 2016, use *SQL Server Integration Services CEIP service 13.0*.
         - For SQL 2017, use *SQL Server Integration Services CEIP service 14.0*.

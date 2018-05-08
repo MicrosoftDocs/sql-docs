@@ -13,12 +13,12 @@ ms.service: "sql-database"
 ms.component: "security"
 ms.tgt_pltfrm:
 ms.topic: conceptual
-ms.date: "04/10/2018"
+ms.date: "05/08/2018"
 ms.author: "rebeccaz"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Transparent data encryption for SQL Database and Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Transparent data encryption helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.
 

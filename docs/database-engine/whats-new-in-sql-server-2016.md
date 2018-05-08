@@ -78,7 +78,7 @@ This section contains the following subsections:
 -   [Replication Enhancements](#Repl)
 -   [Tools Enhancements](#Tools)
 
-####  <a name="columnstore"></a> Columnstore Indexes
+## Columnstore Indexes
 
 This release offers improvements for columnstore indexes including updateable nonclustered columnstore indexes, columnstore indexes on in-memory tables, and many more new features for operational analytics.
 
@@ -103,7 +103,7 @@ For more details, see these topics in the [Columnstore Indexes Guide](../relatio
 - [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
 
 
-####  <a name="scopedconfiguration"></a> Database Scoped Configurations
+## Database Scoped Configurations
 
 
 The new [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) statement gives you control of certain configurations for your particular database. The configuration settings affect application behavior.
@@ -112,17 +112,17 @@ The new statement is available in both [!INCLUDE[ssSQL15](../includes/sssql15-md
 
 
 
-####  <a name="InMemory"></a> In-Memory OLTP
+## In-Memory OLTP
 
 
-##### Storage format change
+## Storage format change
 
 The storage format for memory-optimized tables is changed between SQL Server 2014 and 2016. For upgrade and attach/restore from SQL Server 2014, the new storage format is serialized and the database is restarted once during database recovery.
 
 - [Upgrade to SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
 
 
-##### ALTER TABLE is log-optimized, and runs in parallel
+### ALTER TABLE is log-optimized, and runs in parallel
 
 Now when you execute an ALTER TABLE statement on a memory-optimized table, only the metadata changes are written to the log. This greatly reduces log IO. Also, most ALTER TABLE scenarios now run in parallel, which can greatly shorten the duration of the statement.
 
@@ -130,18 +130,18 @@ Now when you execute an ALTER TABLE statement on a memory-optimized table, only 
 
 
 
-##### Statistics
+## Statistics
 
 [Statistics for memory-optimized](../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md) tables are now updated automatically. In addition, sampling is now a supported method to collect statistics, allowing you to avoid the more expensive fullscan method.
 
 
-##### Parallel and heap scan for memory-optimized tables
+## Parallel and heap scan for memory-optimized tables
 
 Memory-optimized tables, and indexes on memory-optimized tables, now support parallel scan. This improves the performance of analytical queries.
 
 In addition, heap scan is supported, and can be performed in parallel. In the case of a memory-optimized table, a heap scan refers to scanning all the rows in a table using the in-memory heap data structure used for storing the rows. For a full table scan, heap scan is more efficient than using an index.
 
-##### Transact-SQL Improvements for memory-optimized tables
+## Transact-SQL Improvements for memory-optimized tables
 
 There are several Transact-SQL elements that were not supported for memory-optimized tables in SQL Server 2014, which are now supported in SQL Server 2016:
 
@@ -179,7 +179,7 @@ For overall information, see:
 - [Unsupported SQL Server Features for In-Memory OLTP](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
-##### Transact-SQL Improvements for natively compiled modules
+## Transact-SQL Improvements for natively compiled modules
 
 There are some Transact-SQL elements that were not supported for natively compiled modules in SQL Server 2014, which are now supported in SQL Server 2016:
 
@@ -218,7 +218,7 @@ For overall information, see:
 - [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
 
 
-##### Performance and scaling improvements
+## Performance and scaling improvements
 
 - There is no longer any limitation on data size. See [Estimate Memory Requirements for Memory-Optimized Tables](~/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).
 
@@ -227,7 +227,7 @@ For overall information, see:
 - Parallel plan support for [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).
 
 
-##### Enhancements in SQL Server Management Studio
+## Enhancements in SQL Server Management Studio
 
 - The [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) no longer requires the configuration of data collectors or management data warehouse. The report can now run directly on a production database.
 
@@ -235,7 +235,7 @@ For overall information, see:
 
 - Generate migration checklists by right-clicking on a database, and selecting Tasks > Generate In-Memory OLTP migration checklists.
 
-##### Cross-feature support
+## Cross-feature support
 
 - Support for using temporal system-versioning with In-Memory OLTP. For more information, see [System-Versioned Temporal Tables with Memory-Optimized Tables](../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 
@@ -250,37 +250,37 @@ For overall information, see:
 For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).
 
 
-####  <a name="QueryOptimizer"></a> Query Optimizer
-##### Compatibility Level Guarantees
+## Query Optimizer
+### Compatibility Level Guarantees
 When you upgrade your database to SQL Server 2016, there will be no plan changes seen if you remain at the older compatibility levels that you were using (for example, 120 or 110). New features and improvements related to query optimizer, will be available only under latest compatibility level. 
-##### Trace Flag 4199
+### Trace Flag 4199
 In general, you do not need to use trace flag 4199 in SQL Server 2016 since most of the query optimizer behaviors controlled by this trace flag are enabled unconditionally under the latest compatibility level (130) in SQL Server 2016.
-##### New Referential Integrity Operator
+### New Referential Integrity Operator
 A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] increases the limit for the number of other table and columns that can reference columns in a single table (incoming references), from 253 to 10,000. For restrictions, see [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md). A new referential integrity operator is introduced (under compatibility level 130), which performs the referential integrity checks in place. This improves overall performance for UPDATE and DELETE operations, on tables that have a large number of incoming references, thereby making it feasible to have large number of incoming references. For more information, see [Query Optimizer Additions in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/23/query-optimizer-additions-in-sql-server/)
-##### Parallel update of sampled statistics
+### Parallel update of sampled statistics
 Data sampling to build statistics is now done in parallel (under compatibility level 130), to improve the performance of statistics collection. For more information, see [Update Statistics](../t-sql/statements/update-statistics-transact-sql.md).
-#### Sublinear threshold for update of statistics
+### Sublinear threshold for update of statistics
 Automatic update of statistics is now more aggressive on large tables (under compatibility level 130). The threshold to trigger auto-update of statistics is 20%, starting SQL Server 2016, for larger tables, this threshold will start decreasing (still a percentage) as the number of rows increase in the table. You will no longer need to set trace flag 2371 to reduce the threshold. 
-##### Other enhancements
+### Other enhancements
 The Insert in an Insert-select statement is multi-threaded or can have a parallel plan (under compatibility level 130). To get a parallel plan, INSERT … SELECT statement must use the TABLOCK hint. For more information, see [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)
 
-####  <a name="LiveStats"></a> Live Query Statistics
+## Live Query Statistics
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides the ability to view the live execution plan of an active query. This live query plan provides real-time insights into the query execution process as the controls flow from one query plan operator to another. For more information, see [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
 
-####  <a name="QueryStore"></a> Query Store
+## Query Store
 Query store is a new feature that provides DBAs with insight on query plan choice and performance. It simplifies performance troubleshooting by enabling you to quickly find performance differences caused by changes in query plans. The feature automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows, allowing you to see database usage patterns and understand when query plan changes happened on the server. The query store presents information by using a [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] dialog box, and lets you force the query to one of the selected query plans. For more information, see [Monitoring Performance By Using the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
 
-####  <a name="TT"></a> Temporal Tables
+## Temporal Tables
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] now supports system-versioned temporal tables. A temporal table is a new type of table that provides correct information about stored facts at any point in time. Each temporal table consists of two tables actually, one for the current data and one for the historical data. The system ensures that when the data changes in the table with the current data the previous values are stored in the historical table. Querying constructs are provided to hide this complexity from users. For more information, see [Temporal Tables](../relational-databases/tables/temporal-tables.md).
 
-####  <a name="StripedBackupToAzure"></a> Striped Backups to Microsoft Azure Blob Storage
+## Striped Backups to Microsoft Azure Blob Storage
 In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], SQL Server backup to URL using the Microsoft Azure Blob storage service now supports striped backups sets using block blobs to support a maximum backup size of 12.8 TB. For examples, see [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples).
 
-####  <a name="FileSnapshotBackup"></a> File-Snapshot Backups to Microsoft Azure Blob Storage
+## File-Snapshot Backups to Microsoft Azure Blob Storage
  In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], SQL Server backup to URL now supports using Azure snapshots to backup databases in which all database files are stored using the Microsoft Azure Blob storage service. For more information, see [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
 
-####  <a name="ManagedBackup"></a> Managed Backup
+## Managed Backup
 In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SQL Server Managed Backup to Microsoft Azure uses the new block blob storage for backup files. There are also several changes and enhancements to Managed Backup.
 
 -   Support for both automated and custom scheduling of backups.
@@ -294,7 +294,7 @@ In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SQL Server Managed Backup to M
 > [!NOTE]
 >  For [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], these new managed backup features do not yet have corresponding UI support in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
-####  <a name="multipleTempDB"></a> TempDB Database
+## TempDB Database
  There are several enhancements to TempDB:
 
 -   Trace Flags 1117 and 1118 are not required for tempdb anymore. If there are multiple tempdb database files all files will grow at the same time depending on growth settings. In addition, all allocations in tempdb will use uniform extents.
@@ -307,7 +307,7 @@ In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SQL Server Managed Backup to M
 
 -   You can specify multiple volumes for tempdb database files. If multiple directories are specified tempdb data files will be spread across the directories in a round-robin fashion.
 
-####  <a name="ForJson"></a> Built-in JSON Support
+## Built-in JSON Support
 SQL Server 2016 adds built-in support for importing and exporting JSON and working with JSON strings. This built-in support includes the following statements and functions.
 
 -   Format query results as JSON, or export JSON, by adding the **FOR JSON** clause to a **SELECT** statement. Use the **FOR JSON** clause, for example, to delegate the formatting of JSON output from your client applications to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more info, see [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
@@ -322,22 +322,22 @@ SQL Server 2016 adds built-in support for importing and exporting JSON and worki
 
 -   The **JSON_MODIFY** function updates the value of a property in a JSON string and return the updated JSON string. For more info, see [JSON_MODIFY &#40;Transact-SQL&#41;](../t-sql/functions/json-modify-transact-sql.md).
 
-####  <a name="bkPolyBase"></a> PolyBase
+## PolyBase
  PolyBase allows you to use T-SQL statements to access data stored in Hadoop or Azure Blob Storage and query it in an adhoc fashion. It also lets you query semi-structured data and join the results with relational data sets stored in SQL Server. PolyBase is optimized for data warehousing workloads and intended for analytical query scenarios.
 
  For more information, see [PolyBase Guide](../relational-databases/polybase/polybase-guide.md).
 
-####  <a name="stretch"></a> Stretch Database
+## Stretch Database
  Stretch Database is a new feature in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] that migrates your historical data transparently and securely to the Microsoft Azure cloud. You can access your SQL Server data seamlessly regardless of whether it’s on-premises or stretched to the cloud. You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications – the location of the data is completely transparent to the application. For more info, see [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
-####  <a name="UTF8"></a> Support for UTF-8
+## Support for UTF-8
 [bcp Utility](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md), and [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) now support the UTF-8 code page. For more information, see those topics and [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
 
-####  <a name="DefaultDB"></a> New Default Database Size and Autogrow Values
+## New Default Database Size and Autogrow Values
 New values for the model database and default values for new databases (which are based on model). The initial size of the data and log files is now 8 MB. The default auto-growth of data and log files is now 64MB.
 
 
-###  <a name="TSQL"></a> Transact-SQL Enhancements
+## Transact-SQL Enhancements
 Numerous enhancements support the features described in the other sections of this topic. The following additional enhancements are available.
 - The TRUNCATE TABLE statement now permits the truncation of specified partitions. For more information, see [TRUNCATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/truncate-table-transact-sql.md).
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) now allows many alter column actions to be performed while the table remains available.
@@ -361,7 +361,7 @@ Numerous enhancements support the features described in the other sections of th
 - Allocation of mixed extents: For user databases, default allocation for the first 8 pages of an object will change from using mixed page extents to using uniform extents. Trace flag 1118 is replaced with the SET MIXED_PAGE_ALLOCATION option of ALTER DATABASE, and trace flag 1118 has no affect. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md), and the new `is_mixed_page_allocation_on` column of [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 
-###  <a name="SystemTable"></a> System View Enhancements
+## System View Enhancements
 - Two new views support row level security. For more information, see [sys.security_predicates &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md) and [sys.security_policies &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md).
 - Seven new views support the Query Store feature. For more information, see [Query Store Catalog Views &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md).
 - 24 new columns are added to [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) provide information about memory grants.
@@ -373,21 +373,21 @@ Numerous enhancements support the features described in the other sections of th
 - Two new views support [SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services.md): [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
 
-###  <a name="Security"></a> Security Enhancements
+## Security Enhancements
 
-####  <a name="RLS"></a> Row-Level Security
+### Row-Level Security
 Row-level security introduces predicate based access control. It features a flexible, centralized, predicate-based evaluation that can take into consideration metadata (such as labels) or any other criteria the administrator determines as appropriate. The predicate is used as a criterion to determine whether or not the user has the appropriate access to the data based on user attributes. Label based access control can be implemented by using predicate based access control. For more information, see [Row-Level Security](../relational-databases/security/row-level-security.md).
 
 
-####  <a name="TCE"></a> Always Encrypted
+### Always Encrypted
 With Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform operations on encrypted data, and best of all the encryption key resides with the application inside the customer’s trusted environment and not on the server. Always Encrypted secures customer data so DBAs do not have access to plain text data. Encryption and decryption of data happens transparently at the driver level minimizing changes that have to be made to existing applications. For more information, see [Always Encrypted &#40;Database Engine&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
-####  <a name="Masking"></a> Dynamic Data Masking
+### Dynamic Data Masking
 Dynamic data masking limits sensitive data exposure by masking it to non-privileged users. Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It’s a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed. For more information, see [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 
 
-####  <a name="Perms"></a> New Permissions
+### New Permissions
 - The **ALTER ANY SECURITY POLICY** permission is available as part of the implementation of row level security.
 - The **ALTER ANY MASK** and **UNMASK** permissions are available as part of the implementation of dynamic data masking.
 - The **ALTER ANY COLUMN ENCRYPTION KEY**, **VIEW ANY COLUMN ENCRYPTION KEY**, **ALTER ANY COLUMN MASTER KEY DEFINITION**, and **VIEW ANY COLUMN MASTER KEY DEFINITION** permissions are available as part of the implementation of the Always Encrypted feature.
@@ -395,17 +395,17 @@ Dynamic data masking limits sensitive data exposure by masking it to non-privile
 - The **EXECUTE ANY EXTERNAL SCRIPT** permissions are available as part of the support for R scripts.
  - The **ALTER ANY DATABASE SCOPED CONFIGURATION** permissions is available to authorize the use of the [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) statement.
 
-####  <a name="TDE"></a> Transparent Data Encryption
+### Transparent Data Encryption
 - Transparent Data Encryption has been enhanced with support for Intel AES-NI hardware acceleration of encryption. This will reduce the CPU overhead of turning on Transparent Data Encryption.
 
-###  <a name="AES"></a> AES Encryption for Endpoints
+### AES Encryption for Endpoints
 - The default encryption for endpoints is changed from RC4 to AES.
 
-####  <a name="newcredentialtype"></a> New Credential Type
+### New Credential Type
 - A credential can now be created at the database level (in addition to the server level credential that was previously available). For more information, see [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 
-###  <a name="HighAvailability"></a> High Availability Enhancements
+## High Availability Enhancements
 SQL Server 2016 Standard Edition now supports Always On Basic Availability Groups. Basic availability groups provide support for a primary and secondary replica. This capability replaces the obsolete Database Mirroring technology for high availability. For more information about the differences between basic and advanced availability groups, see [Basic Availability Groups &#40;Always On Availability Groups&#41;](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 
 Load-balancing of read-intent connection requests is now supported across a set of read-only replicas. The previous behavior always directed connections to the first available read-only replica in the routing list. For more information, see [Configure load-balancing across read-only replicas](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).
@@ -426,13 +426,13 @@ Direct seeding allows a secondary replica to be automatically seeded over the ne
 
 **Performance improvements** – The synchronization throughput of availability groups has been increased ~10x through parallel and faster compression of log blocks on the primary replica, an optimized synchronization protocol, and parallel decompression and redo of log records on the secondary replica. This increases the freshness of readable secondaries and reduces database recovery time in case of failover. Note that redo for memory-optimized tables is not yet parallel in SQL Server 2016.
 
-###  <a name="Repl"></a> Replication Enhancements
+## Replication Enhancements
 - Replication of memory-optimized tables are now supported. For more information, see [Replication to Memory-Optimized Table Subscribers](../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).
 - Replication is now supported to [!INCLUDE[ssSDSFull](../includes/sssdsfull-md.md)]. For more information, see [Replication to SQL Database](../relational-databases/replication/replication-to-sql-database.md).
 
-###  <a name="Tools"></a> Tools Enhancements
+## Tools Enhancements
 
-####  <a name="SSMS"></a> Management Studio
+### Management Studio
 Download the latest [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports the Active Directory Authentication Library (ADAL) which is under development for connecting to Microsoft Azure. This replaces the certificate-based authentication used in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
@@ -441,7 +441,7 @@ Download the latest [SQL Server Management Studio (SSMS)](../ssms/download-sql-s
 - SQL Server Management Tools is no longer installed from the main feature tree; for details see [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6.1 as a pre-requisite. .NET 4.6.1 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is installed.
 
-####  <a name="UA"></a> Upgrade Advisor
+### Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users of prior versions to run a set of upgrade rules against their SQL Server database to pinpoint breaking and behavior changes and deprecated features as well as providing help with the adoption of new features such as Stretch Database.
 
  You can download Upgrade Advisor Preview [here](https://www.microsoft.com/en-us/download/details.aspx?id=48119) or you can install it by using the Web Platform Installer.
@@ -452,11 +452,3 @@ SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users 
 [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) 
  
 [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
-
-
-
-
-
-
-
-

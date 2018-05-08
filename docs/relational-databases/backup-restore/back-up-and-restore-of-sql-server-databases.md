@@ -150,17 +150,15 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
   
  We recommend that you maintain an operations manual for each database. This operations manual should document the location of the backups, backup device names (if any), and the amount of time that is required to restore the test backups. 
 
-## Monitoring backup progress
-Backup and restore operations can take a considerable amount of time due to the size of a database and the complexity of the operations involved. When issues arise with either operation, you can use the backup and restore extended event to monitor progress live. 
+## Monitoring progress
+Backup and restore operations can take a considerable amount of time due to the size of a database and the complexity of the operations involved. When issues arise with either operation, you can use the backup-and-restore extended event to monitor progress live. For more information about extended events, see [extended events](../extended-events/extended-events.md)
 
   >[!WARNING]
   > Using this extended event can cause a performance issue and consume a significant amount of disk space. Use for short periods of time, exercise caution, and test thoroughly before implementing in production. 
 
 
-### Backup and restore extended event 
-The backup and restore extended event can help monitor backup and restore operations in real time. For more information about extended events, see [extended events](../extended-events/extended-events.md)
-
-- Manage the back up and restore extended event using Transact-SQL (T-SQL)
+### Backup-and-restore extended event 
+The backup-and-restore extended event can help monitor backup and restore operations in real time. 
 
 ```sql
 -- Create the back up and restore extended event esssion
@@ -176,7 +174,7 @@ ON SERVER
 STATE = start;  
 GO  
 
--- Start the event session  
+-- Stop the event session  
 ALTER EVENT SESSION [BackupRestore trace]  
 ON SERVER  
 STATE = stop;  

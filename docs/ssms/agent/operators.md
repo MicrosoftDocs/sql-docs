@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "operators (users) [Database Engine]"
   - "fail-safe operator [SQL Server]"
@@ -28,7 +27,7 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Operators

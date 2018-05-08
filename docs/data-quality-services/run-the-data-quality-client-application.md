@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.browseforservers.f1"
   - "sql13.dqs.connecttoserver.f1"
@@ -19,7 +18,7 @@ ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Run the Data Quality Client Application
 

@@ -2,14 +2,12 @@
 title: "sys.dm_tran_locks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "sys.dm_tran_locks dynamic management view"
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 caps.latest.revision: 61
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_tran_locks (Transact-SQL)

@@ -4,20 +4,19 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands"
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Options (SQL Server Object Explorer - Commands)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

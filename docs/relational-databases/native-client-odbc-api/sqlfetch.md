@@ -2,9 +2,8 @@
 title: "SQLFetch | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-api"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "SQLFetch function"
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQLFetch

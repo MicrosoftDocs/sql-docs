@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], types"
   - "UNION queries"
@@ -21,7 +20,7 @@ ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # Create UNION Queries (Visual Database Tools)

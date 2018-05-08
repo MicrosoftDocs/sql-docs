@@ -1,30 +1,13 @@
 ﻿---
 title: "SQL Server 2017 Analysis Services backward compatibility  | Microsoft Docs"
-ms.date: "04/27/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "installing Analysis Services, backward compatibility"
-  - "backward compatibility [Analysis Services]"
-  - "compatibility [Analysis Services]"
-  - "Analysis Services, backward compatibility"
-  - "upgrading Analysis Services"
-  - "SSAS, backward compatibility"
-  - "SQL Server Analysis Services, backward compatibility"
-ms.assetid: 
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analysis Services backward compatibility (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]

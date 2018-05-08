@@ -2,14 +2,12 @@
 title: "Arguments and Properties of Spatial Index Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "spatial indexes [SQL Server], stored procedures"
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # Spatial Index Stored Procedures - Arguments and Properties
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

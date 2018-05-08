@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.mergetrans.f1"
   - "sql13.dts.designer.mergetransformation.f1"
@@ -25,7 +24,7 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Merge Transformation
   The Merge transformation combines two sorted datasets into a single dataset. The rows from each dataset are inserted into the output based on values in their key columns.  

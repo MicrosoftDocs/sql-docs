@@ -2,16 +2,14 @@
 title: "SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "08/14/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"

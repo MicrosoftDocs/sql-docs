@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "removing instances of SQL Server"
   - "uninstalling instances of SQL Server"
@@ -21,7 +20,7 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 caps.latest.revision: 74
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "craigg"
+manager: craigg
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

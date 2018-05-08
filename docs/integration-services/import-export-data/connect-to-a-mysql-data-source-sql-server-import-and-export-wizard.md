@@ -4,19 +4,18 @@ ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Connect to a MySQL Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to an **MySQL** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. There are several data providers that you can use to connect to MySQL.

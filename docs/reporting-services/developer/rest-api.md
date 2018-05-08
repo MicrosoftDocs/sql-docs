@@ -4,7 +4,6 @@ ms.description: "The REST API provides programmatic access to the objects in a S
 ms.date: "10/19/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "developer"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -13,7 +12,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"

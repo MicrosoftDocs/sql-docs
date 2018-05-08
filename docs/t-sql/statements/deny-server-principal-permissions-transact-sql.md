@@ -2,14 +2,12 @@
 title: "DENY Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -25,9 +23,9 @@ helpviewer_keywords:
   - "logins [SQL Server], denying access"
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # DENY Server Principal Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

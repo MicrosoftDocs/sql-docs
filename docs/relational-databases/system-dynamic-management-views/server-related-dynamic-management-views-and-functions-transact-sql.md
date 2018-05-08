@@ -2,23 +2,21 @@
 title: "Server-Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Server-Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

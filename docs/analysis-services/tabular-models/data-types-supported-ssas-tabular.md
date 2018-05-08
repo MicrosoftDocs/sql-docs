@@ -1,24 +1,14 @@
 ---
 title: "Data types supported in Analysis Services tabular models | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/22/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data types supported in tabular models
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

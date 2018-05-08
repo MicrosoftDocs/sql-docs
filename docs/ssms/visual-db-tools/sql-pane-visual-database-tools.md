@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Designer [SQL Server], SQL pane"
   - "View Designer, SQL pane"
@@ -19,7 +18,7 @@ ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # SQL Pane (Visual Database Tools)

@@ -2,16 +2,14 @@
 title: "Installing SSMA for MySQL Client (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -21,7 +19,7 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Installing SSMA for MySQL Client (MySQLToSQL)
 The SSMA for MySQL client consists of the program files that perform the following tasks:  

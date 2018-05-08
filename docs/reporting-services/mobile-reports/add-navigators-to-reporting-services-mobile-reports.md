@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 caps.latest.revision: 12
 author: "maggiesMSFT"

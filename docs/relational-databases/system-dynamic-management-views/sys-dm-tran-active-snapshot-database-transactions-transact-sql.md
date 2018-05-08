@@ -2,14 +2,12 @@
 title: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "sys.dm_tran_active_snapshot_database_transactions dynamic management view"
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 caps.latest.revision: 55
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)

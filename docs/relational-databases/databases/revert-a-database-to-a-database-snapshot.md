@@ -2,16 +2,15 @@
 title: "Revert a Database to a Database Snapshot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database snapshots [SQL Server], reverting to"
   - "reverting databases"
@@ -19,7 +18,7 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Revert a Database to a Database Snapshot
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

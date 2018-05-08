@@ -2,24 +2,21 @@
 title: "Diagnostics | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "diagnostic information [ODBC]"
   - "functions [ODBC], diagnostic information"
   - "diagnostic information [ODBC], about diagnostic information"
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Diagnostics

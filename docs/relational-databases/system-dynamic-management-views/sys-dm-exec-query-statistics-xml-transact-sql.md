@@ -2,16 +2,14 @@
 title: "sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_exec_query_statistics_xml"
   - "sys.dm_exec_query_statistics_xml_TSQL"
@@ -23,7 +21,7 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 caps.latest.revision: 6
 author: "pmasl"
 ms.author: "pelopes"
-manager: "craigg"
+manager: craigg
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

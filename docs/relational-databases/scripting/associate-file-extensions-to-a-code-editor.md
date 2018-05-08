@@ -2,25 +2,24 @@
 title: "Associate File Extensions to a Code Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "file extensions [SQL Server]"
   - "associating file extensions [SQL Server]"
   - "Query Editor [SQL Server Management Studio], associating file extensions"
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Associate File Extensions to a Code Editor

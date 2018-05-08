@@ -2,16 +2,13 @@
 title: "Delete Unique Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "removing constraints"
   - "UNIQUE constraints [SQL Server], deleting"
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "constraints [SQL Server], unique"
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete Unique Constraints

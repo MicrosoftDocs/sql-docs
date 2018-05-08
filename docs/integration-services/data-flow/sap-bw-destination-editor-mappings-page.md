@@ -4,21 +4,20 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.columns.f1"
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # SAP BW Destination Editor (Mappings Page)
   Use the **Mappings** page of the **SAP BW Destination Editor** to map input columns to destination columns.  

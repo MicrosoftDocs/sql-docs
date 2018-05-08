@@ -2,25 +2,24 @@
 title: "Specify a Breakpoint Condition | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.breakpt.condition"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint conditions"
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify a Breakpoint Condition

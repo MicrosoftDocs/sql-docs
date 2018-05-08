@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2008 R2 SP2 Release Notes | Microsoft Docs"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: sql
 ms.technology: "supportability"
 ms.custom: ""
@@ -8,7 +8,7 @@ ms.date: "01/31/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server 2008 R2 SP2"
   - "Release Notes, SQL Server 2008 R2 SP2"

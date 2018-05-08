@@ -2,14 +2,12 @@
 title: "sys.dm_os_memory_cache_hash_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_cache_hash_tables dynamic management view"
 ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
 caps.latest.revision: 25
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_os_memory_cache_hash_tables (Transact-SQL)

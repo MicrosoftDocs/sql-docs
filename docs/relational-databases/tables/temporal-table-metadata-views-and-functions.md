@@ -2,21 +2,18 @@
 title: "Temporal Table Metadata Views and Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 caps.latest.revision: 9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Temporal Table Metadata Views and Functions

@@ -1,24 +1,14 @@
 ---
 title: "Use Data Feeds (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Use Data Feeds (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

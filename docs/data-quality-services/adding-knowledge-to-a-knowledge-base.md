@@ -4,19 +4,18 @@ ms.custom: ""
 ms.date: "06/04/2013"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Adding Knowledge to a Knowledge Base
 

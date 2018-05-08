@@ -2,16 +2,15 @@
 title: "SQL Server Index Architecture and Design Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index design guide" 
   - "index design guidance"
@@ -27,7 +26,7 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 caps.latest.revision: 3
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Index Architecture and Design Guide

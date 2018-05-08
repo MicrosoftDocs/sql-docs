@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "EditionName property"
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6

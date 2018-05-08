@@ -2,16 +2,14 @@
 title: "Compare Typed XML to Untyped XML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "xml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xml data type [SQL Server], variables"
   - "parameters [XML in SQL Server]"
@@ -31,7 +29,7 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Compare Typed XML to Untyped XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

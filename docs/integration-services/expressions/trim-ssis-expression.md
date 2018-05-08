@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "leading blanks"
   - "TRIM function"
@@ -20,7 +19,7 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # TRIM (SSIS Expression)
   Returns a character expression after removing leading and trailing spaces.  

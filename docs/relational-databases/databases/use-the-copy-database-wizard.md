@@ -2,16 +2,15 @@
 title: "Use the Copy Database Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.cdw.packageconfiguration.f1"
   - "sql13.swb.cdw.schedule.f1"
@@ -31,7 +30,7 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 64
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Use the Copy Database Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -8,17 +8,16 @@ ms.service: "sql-data-warehouse"
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
 caps.latest.revision: 7
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_distributions (Transact-SQL)

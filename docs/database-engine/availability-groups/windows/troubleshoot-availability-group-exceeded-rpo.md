@@ -5,14 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 caps.latest.revision: 8
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Troubleshoot: Availability group exceeded RPO

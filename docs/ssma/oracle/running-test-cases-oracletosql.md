@@ -2,16 +2,14 @@
 title: "Running Test Cases (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 caps.latest.revision: 6
 author: "Shamikg"

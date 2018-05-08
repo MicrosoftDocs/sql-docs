@@ -2,16 +2,13 @@
 title: "Fetching a Row of Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFetch function [ODBC], fetching a row of data"
   - "cursors [ODBC], fetching rows"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "fetches [ODBC], row of data"
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Fetching a Row of Data

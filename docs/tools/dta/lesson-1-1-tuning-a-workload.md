@@ -4,14 +4,12 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "dta"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-query-tuning"
+ms.technology: performance
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 helpviewer_keywords: 
@@ -20,7 +18,7 @@ ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Lesson 1-1 - Tuning a Workload
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

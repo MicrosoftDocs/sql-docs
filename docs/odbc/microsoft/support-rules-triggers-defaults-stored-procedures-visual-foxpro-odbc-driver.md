@@ -2,16 +2,13 @@
 title: "Support for Rules, Triggers, Default Values, and Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual FoxPro ODBC driver [ODBC], stored procedures"
   - "FoxPro ODBC driver [ODBC], commands and functions"
@@ -32,8 +29,8 @@ helpviewer_keywords:
   - "Visual FoxPro commands and functions [ODBC]"
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)

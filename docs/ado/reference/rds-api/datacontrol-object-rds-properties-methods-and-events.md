@@ -1,11 +1,9 @@
 ---
 title: "DataControl Object (RDS) Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "DataControl object [ADO], members"
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DataControl Object (RDS) Properties, Methods, and Events
 > [!IMPORTANT]

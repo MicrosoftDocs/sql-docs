@@ -2,7 +2,7 @@
 title: "Synonyms (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +17,7 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Synonyms (Database Engine)

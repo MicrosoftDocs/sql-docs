@@ -2,22 +2,20 @@
 title: "How to: Connect on a Specified Port | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to the server, specifying a port"
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # How to: Connect on a Specified Port

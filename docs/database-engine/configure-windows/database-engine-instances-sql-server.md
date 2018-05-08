@@ -2,21 +2,18 @@
 title: "Database Engine Instances (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Engine Instances (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

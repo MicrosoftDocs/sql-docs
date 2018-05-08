@@ -2,16 +2,14 @@
 title: "Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...) (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-bulk-import-export"
+ms.technology: data-movement
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "BULK INSERT statement, importing data from a remote data file"
   - "bulk importing [SQL Server], methods"
@@ -27,7 +25,7 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...) (SQL Server)

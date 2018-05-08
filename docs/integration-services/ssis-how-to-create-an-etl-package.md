@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/17/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,7 +24,7 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # SSIS How to Create an ETL Package
 

@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], adding"
   - "adding tasks"
@@ -21,7 +20,7 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Add or Delete a Task or a Container in a Control Flow
   When you are working in the control flow designer, the Toolbox in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lists the tasks that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for building control flow in a package. For more information about the Toolbox, see [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  

@@ -2,16 +2,13 @@
 title: "Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], about"
   - "secondary replicas, see Availability Groups [SQL Server]"
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

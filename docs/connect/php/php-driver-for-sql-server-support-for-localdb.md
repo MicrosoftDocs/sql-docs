@@ -2,19 +2,18 @@
 title: "Support for LocalDB | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.prod_service: drivers
 ms.component: php
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Support for LocalDB

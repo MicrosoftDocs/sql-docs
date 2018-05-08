@@ -2,16 +2,13 @@
 title: "Thread Support (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "thread support [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], thread support"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "multithreaded applications [ODBC]"
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Thread Support (Visual FoxPro ODBC Driver)

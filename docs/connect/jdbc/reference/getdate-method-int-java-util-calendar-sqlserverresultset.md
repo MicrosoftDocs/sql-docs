@@ -2,16 +2,13 @@
 title: "getDate Method (int, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.getDate (int, java.util.Calendar)"
 apilocation: 
@@ -19,8 +16,8 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # getDate Method (int, java.util.Calendar) (SQLServerResultSet)

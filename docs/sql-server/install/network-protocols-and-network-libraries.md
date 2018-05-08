@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "protocols [SQL Server]"
   - "configuration options [SQL Server], protocols"

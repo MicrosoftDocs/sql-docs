@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing query properties"
   - "displaying query properties"
@@ -20,7 +19,7 @@ ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # Show Query Properties (Visual Database Tools)

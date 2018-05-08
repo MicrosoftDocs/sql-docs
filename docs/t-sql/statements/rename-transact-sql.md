@@ -8,15 +8,14 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "t-sql|statements"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # RENAME (Transact-SQL)

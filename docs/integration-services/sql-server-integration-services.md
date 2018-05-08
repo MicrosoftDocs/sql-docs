@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "SSIS"
 helpviewer_keywords: 
@@ -26,7 +25,7 @@ ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # SQL Server Integration Services
 

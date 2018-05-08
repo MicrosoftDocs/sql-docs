@@ -2,24 +2,21 @@
 title: "Default C Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], pseudo-type identifiers"
   - "pseudo-type identifiers [ODBC], about pseudo-type identifiers"
   - "pseudo-type identifiers [ODBC]"
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Default C Data Types

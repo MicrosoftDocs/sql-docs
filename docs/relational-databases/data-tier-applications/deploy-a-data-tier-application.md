@@ -2,16 +2,15 @@
 title: "Deploy a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "data-tier-applications"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.deploydacwizard.introduction.f1"
   - "sql13.swb.deploydacwizard.deploydac.f1"
@@ -28,7 +27,7 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Deploy a Data-tier Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

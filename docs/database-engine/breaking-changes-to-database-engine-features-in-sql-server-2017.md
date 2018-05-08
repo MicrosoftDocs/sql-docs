@@ -2,9 +2,8 @@
 title: "Breaking Changes to Database Engine Features in SQL Server 2017 | Microsoft Docs"
 description: "Breaking changes to Database Engine Features in SQL Server 2017"
 ms.date: "04/19/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-engine"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -12,14 +11,14 @@ ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "breaking changes 2017 [SQL Server]"
 ms.assetid: 
 caps.latest.revision: 1
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Breaking Changes to Database Engine Features in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]

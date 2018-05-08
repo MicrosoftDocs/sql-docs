@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "08/25/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], Table Designer"
   - "Table Designer, designing tables"
@@ -22,7 +21,7 @@ ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # Create and update database tables

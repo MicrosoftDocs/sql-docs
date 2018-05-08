@@ -1,9 +1,8 @@
 ﻿---
 title: "SQL Server Native Client | Microsoft Docs"
 ms.date: "04/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -11,12 +10,12 @@ ms.custom: ""
 ms.technology:
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 caps.latest.revision: 43
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Native Client

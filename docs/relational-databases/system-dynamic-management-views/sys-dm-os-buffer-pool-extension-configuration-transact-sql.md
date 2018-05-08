@@ -2,14 +2,12 @@
 title: "sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "sys.dm_os_buffer_pool_extension_configuration dynamic management view"
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 caps.latest.revision: 13
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

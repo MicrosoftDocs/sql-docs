@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.termextractiontrans.f1"
   - "sql13.dts.designer.termextraction.termextraction.f1"
@@ -34,7 +33,7 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Term Extraction Transformation
   The Term Extraction transformation extracts terms from text in a transformation input column, and then writes the terms to a transformation output column. The transformation works only with English text and it uses its own English dictionary and linguistic information about English.  

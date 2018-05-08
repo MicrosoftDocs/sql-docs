@@ -3,14 +3,13 @@ title: "SQL Server privacy supplement | Microsoft Docs"
 ms.date: "4/24/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 
 author: "craigg-msft"

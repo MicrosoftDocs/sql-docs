@@ -2,24 +2,21 @@
 title: "Scalar Function Escape Sequence | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC], scalar function"
   - "scalar functions [ODBC], escape sequences"
   - "ODBC escape sequences [ODBC], scalar function"
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Scalar Function Escape Sequence

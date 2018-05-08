@@ -2,16 +2,15 @@
 title: "Execute Scripts Before and After the Snapshot Is Applied | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], scripts"
   - "scripts [SQL Server replication], snapshots"
@@ -21,7 +20,7 @@ ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
 caps.latest.revision: 35
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Execute Scripts Before and After the Snapshot Is Applied

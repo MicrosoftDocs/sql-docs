@@ -4,12 +4,10 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -32,7 +30,7 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 caps.latest.revision: 68
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Referencing Other Assemblies in Scripting Solutions
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class library provides the script developer with a powerful set of tools for implementing custom functionality in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The Script task and the Script component can also use custom managed assemblies.  

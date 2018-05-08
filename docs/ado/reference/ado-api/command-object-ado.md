@@ -1,11 +1,9 @@
 ---
 title: "Command Object (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "Command object [ADO]"
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Command Object (ADO)
 Defines a specific command that you intend to execute against a data source.  

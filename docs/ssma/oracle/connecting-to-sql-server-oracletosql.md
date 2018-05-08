@@ -2,16 +2,14 @@
 title: "Connecting to SQL Server (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to SQL Server,Synchronizing SQL Server Metadata"
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f

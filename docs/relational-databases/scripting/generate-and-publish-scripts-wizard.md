@@ -2,16 +2,15 @@
 title: "Generate and Publish Scripts Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql9.swb.generatescriptswizard.chooseviews.f1"
   - "sql13.swb.generatescriptswizard.manageproviders.f1"
@@ -46,9 +45,9 @@ helpviewer_keywords:
   - "Publish Database Wizard"
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 45
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Generate and Publish Scripts Wizard

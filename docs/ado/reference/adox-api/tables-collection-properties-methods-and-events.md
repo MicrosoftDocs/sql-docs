@@ -1,11 +1,9 @@
 ---
 title: "Tables Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "Tables collection [ADOX], members"
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Tables Collection Properties, Methods, and Events
 ## Properties  

@@ -2,16 +2,15 @@
 title: "Enhance Merge Replication Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"
   - "designing databases [SQL Server], replication performance"
@@ -25,7 +24,7 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Enhance Merge Replication Performance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

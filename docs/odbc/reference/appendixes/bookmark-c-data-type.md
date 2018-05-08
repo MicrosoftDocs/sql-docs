@@ -2,16 +2,13 @@
 title: "Bookmark C Data Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "C data types [ODBC], bookmark C data type"
   - "pseudo-type identifiers [ODBC], bookmark C data type"
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "bookmark C data type [ODBC]"
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Bookmark C Data Type

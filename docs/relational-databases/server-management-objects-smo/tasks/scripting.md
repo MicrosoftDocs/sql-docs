@@ -2,9 +2,8 @@
 title: "Scripting | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 caps.latest.revision: 43
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Scripting

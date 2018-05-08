@@ -2,14 +2,12 @@
 title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,9 +19,9 @@ helpviewer_keywords:
   - "cdc.<capture_instance>_CT"
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

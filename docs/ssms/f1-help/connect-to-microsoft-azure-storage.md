@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-f1"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.windowsazurestorage.connect.f1"
   - "SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1"
@@ -18,7 +17,7 @@ ms.assetid:
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Connect to Microsoft Azure Storage
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

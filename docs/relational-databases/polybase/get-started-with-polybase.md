@@ -2,14 +2,12 @@
 title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "polybase"
+ms.component: database
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-polybase"
+ms.technology: database
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 helpviewer_keywords: 
@@ -22,9 +20,9 @@ helpviewer_keywords:
   - "Hadoop import, PolyBase getting started"
   - "Hadoop export, Polybase getting started"
 caps.latest.revision: 78
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg" 
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg 
 ---
 # Get started with PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "connection-manager"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSCM.F1"
   - "sql14.dts.designer.afpadlscm.f1"
@@ -20,7 +19,7 @@ caps.latest.revision: 7
 author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Azure Data Lake Store Connection Manager
 A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Store connection manager to connect to an Azure Data Lake Store service with one of the two following authentication types:

@@ -2,16 +2,13 @@
 title: "Visual FoxPro ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FoxPro ODBC driver [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], about Visual FoxPro ODBC driver"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], about FoxPro ODBC driver"
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Visual FoxPro ODBC Driver

@@ -2,16 +2,14 @@
 title: "Specify a Server Network Address (Database Mirroring) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
   - "database mirroring [SQL Server], endpoint"
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "server network addresses [SQL Server]"
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Specify a Server Network Address (Database Mirroring)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

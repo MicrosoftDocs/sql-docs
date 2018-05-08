@@ -2,16 +2,14 @@
 title: "Global Settings (Output Window) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,7 +17,7 @@ ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Global Settings (Output Window) (AccessToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

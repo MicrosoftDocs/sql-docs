@@ -2,7 +2,7 @@
 title: "JSON Path Expressions (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/23/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, path expressions"
   - "path expressions (JSON)"
@@ -19,7 +19,7 @@ caps.latest.revision: 14
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # JSON Path Expressions (SQL Server)

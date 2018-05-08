@@ -2,25 +2,22 @@
 title: "Configure the media retention Server Configuration Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backup retention duration [SQL Server]"
   - "backup sets [SQL Server], retention duration"
   - "media retention option"
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure the media retention Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

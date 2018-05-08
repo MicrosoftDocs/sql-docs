@@ -2,14 +2,12 @@
 title: "FOR Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,7 +25,7 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # SELECT - FOR Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

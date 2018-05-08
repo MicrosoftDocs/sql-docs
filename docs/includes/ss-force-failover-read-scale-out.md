@@ -3,7 +3,6 @@ title: "SQL Server force failover for availability group"
 description: "Force failover for Availability Group with cluster type of NONE"
 services: ""
 author: MikeRayMSFT
-ms.service: ""
 ms.topic: "include"
 ms.date: 02/05/2018
 ms.author: mikeray

@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "05/30/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 caps.latest.revision: 12
 author: "markingmyname"

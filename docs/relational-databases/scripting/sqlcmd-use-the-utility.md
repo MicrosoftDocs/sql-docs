@@ -2,16 +2,15 @@
 title: "Use the sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "sqlcmd utility, about sqlcmd utility"
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 caps.latest.revision: 50
-author: "mightypen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sqlcmd - Use the utility

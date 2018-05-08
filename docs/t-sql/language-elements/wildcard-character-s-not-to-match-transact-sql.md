@@ -2,14 +2,12 @@
 title: "[^] (Wildcard - Character(s) Not to Match) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 applies_to: 
@@ -29,7 +27,7 @@ ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 
 # \[^\] (Wildcard - Character(s) Not to Match) (Transact-SQL)

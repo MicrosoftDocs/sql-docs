@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "12/15/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.technology: "server-general"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2014"
   - "SQL Server 2016"

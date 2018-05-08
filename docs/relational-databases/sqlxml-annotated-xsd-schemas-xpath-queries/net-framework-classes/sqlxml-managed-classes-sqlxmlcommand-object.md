@@ -2,14 +2,12 @@
 title: "SqlXmlCommand Object (SQLXML Managed Classes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -36,7 +34,7 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQLXML Managed Classes - SqlXmlCommand Object

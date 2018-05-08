@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "07/25/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpblobsrc.f1"
   - "sql14.dts.designer.afpblobsrc.f1"
@@ -19,7 +18,7 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Azure Blob Source
   The **Azure Blob Source** component enables an SSIS package to read data from an Azure blob. The supported file formats are: CSV and AVRO.

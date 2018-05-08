@@ -2,14 +2,12 @@
 title: "sys.fn_check_object_signatures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
 ms.component: "system-functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,7 +23,7 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_check_object_signatures (Transact-SQL)

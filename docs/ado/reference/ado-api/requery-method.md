@@ -1,11 +1,9 @@
 ---
 title: "Requery Method | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "Requery method [ADO]"
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Requery Method
 Updates the data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object by re-executing the query on which the object is based.  

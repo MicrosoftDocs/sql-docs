@@ -2,16 +2,15 @@
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchies [SQL Server], tables to support"
   - "hierarchyid [Database Engine], concepts"
@@ -23,7 +22,7 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 40
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Hierarchical Data (SQL Server)

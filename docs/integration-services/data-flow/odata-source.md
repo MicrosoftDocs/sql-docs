@@ -3,7 +3,6 @@ title: "OData Source | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -11,7 +10,7 @@ ms.custom: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.DTS.DESIGNER.ODATASOURCE.F1"
   - "sql13.dts.designer.odatasource.connection.f1"
@@ -21,7 +20,7 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # OData Source
 Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service. The component supports the OData v3 and v4 protocols.  

@@ -2,16 +2,15 @@
 title: "Specify a Breakpoint Action | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.breakpt.action"
 helpviewer_keywords: 
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "Transact-SQL debugger, breakpoint when hit action"
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify a Breakpoint Action

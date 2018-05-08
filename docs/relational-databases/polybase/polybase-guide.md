@@ -1,15 +1,13 @@
 ---
 title: "PolyBase Guide | Microsoft Docs"
 ms.date: "05/30/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "database-engine-polybase"
+ms.technology: database
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 f1_keywords: 
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
 caps.latest.revision: 26
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # PolyBase Guide
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

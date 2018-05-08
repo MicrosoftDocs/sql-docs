@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-menu"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL"
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard"
@@ -18,7 +17,7 @@ ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Options (Environment - Keyboard Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

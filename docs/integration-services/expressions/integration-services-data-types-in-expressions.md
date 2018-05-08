@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "expressions [Integration Services], data types"
   - "data types [Integration Services], expressions"
@@ -19,7 +18,7 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Integration Services Data Types in Expressions
   The expression evaluator uses [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types. When data first enters a data flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, the data flow engine converts all column data to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type, and the column data that an expression uses already has an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type. Expressions used in the Conditional Split and the Derived Column transformations can reference columns because they are part of a data flow that includes column data.  

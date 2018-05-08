@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "11/10/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
   - "Developer Edition [SQL Server]"
@@ -300,7 +299,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Basic Python integration|Yes|Yes|Yes|Yes|No|
 |Advanced Python integration|Yes|No|No|No|No| 
 |Machine Learning Server (Standalone)|Yes|No|No|No|No|   
-|Polybase compute node|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>,|Yes <sup>1</sup>, | 
+|Polybase compute node|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup> | 
 |Polybase head node|Yes|No|No|No|No| 
 |JSON|Yes|Yes|Yes|Yes|Yes|   
 |Query Store|Yes|Yes|Yes|Yes|Yes|   

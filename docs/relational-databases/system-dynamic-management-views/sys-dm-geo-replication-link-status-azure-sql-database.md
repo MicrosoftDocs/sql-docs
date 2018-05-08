@@ -8,10 +8,9 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "dmv's"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "dm_geo_replication_link_status"
   - "dm_geo_replication_link_status_TSQL"
@@ -25,7 +24,7 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)

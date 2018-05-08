@@ -2,14 +2,12 @@
 title: "sp_describe_first_result_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,9 +19,9 @@ helpviewer_keywords:
   - "sp_describe_first_result_set"
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_describe_first_result_set (Transact-SQL)

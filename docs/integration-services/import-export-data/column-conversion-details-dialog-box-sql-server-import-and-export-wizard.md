@@ -4,21 +4,20 @@ ms.custom: ""
 ms.date: "02/16/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.issuedetails.f1"
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
   If you double-click the row for an individual column on the **Review Data Type Mapping** page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Column Conversion Details** dialog box. On this page you can review detailed conversion information for an individual column. This information includes the following items.

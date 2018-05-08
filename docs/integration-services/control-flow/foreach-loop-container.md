@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.foreachloopcontainer.f1"
   - "sql13.dts.designer.foreachloopcontainer.general.f1"
@@ -36,7 +35,7 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 73
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Foreach Loop Container
   The Foreach Loop container defines a repeating control flow in a package. The loop implementation is similar to **Foreach** looping structure in programming languages. In a package, looping is enabled by using a Foreach enumerator.  The Foreach Loop container repeats the control flow for each member of a specified enumerator.  

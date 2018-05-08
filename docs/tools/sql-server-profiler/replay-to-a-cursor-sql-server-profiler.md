@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: profiler
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replaying cursors"
   - "traces [SQL Server], replaying"
@@ -20,7 +17,7 @@ ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Replay to a Cursor (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

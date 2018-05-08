@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-registration"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying registered server or server group names"
   - "server groups [SQL Server]"
@@ -22,7 +21,7 @@ ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Change the Name of Registered Server or Registered Server Group
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/13/2018"
@@ -8,15 +8,14 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "t-sql|statements"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
 caps.latest.revision: 37
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Azure SQL Database)
@@ -309,7 +308,7 @@ WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`,
 
 When SERVICE_OBJECTIVE is not specified, the secondary database is created at the same service level as the primary database. When SERVICE_OBJECTIVE is  specified, the secondary database is created at the specified level. This option supports creating geo-replicated secondaries with less expensive service levels. The SERVICE_OBJECTIVE specified must be within the same edition as the source. For example, you cannot specify S0 if the edition is premium.  
   
-ELASTIC_POOL (name = \<elastic_pool_name)  
+ELASTIC_POOL (name = \<elastic_pool_name>)  
 
 When ELASTIC_POOL is not specified, the secondary database is not created in an elastic pool. When ELASTIC_POOL is specified, the secondary database is created in the specified pool.  
   

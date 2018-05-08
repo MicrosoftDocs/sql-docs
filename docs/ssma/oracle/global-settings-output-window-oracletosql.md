@@ -2,16 +2,14 @@
 title: "Global Settings (Output Window)  (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
 caps.latest.revision: 3
 author: "Shamikg"

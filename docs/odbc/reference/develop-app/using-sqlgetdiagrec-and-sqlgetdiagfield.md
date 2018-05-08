@@ -2,16 +2,13 @@
 title: "Using SQLGetDiagRec and SQLGetDiagField | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "diagnostic information [ODBC], SqlGetDiagField"
   - "SQLGetDiagField function [ODBC], and SQLGetDiagRec"
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "retrieving diagnostic information [ODBC]"
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using SQLGetDiagRec and SQLGetDiagField

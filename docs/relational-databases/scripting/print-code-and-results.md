@@ -2,16 +2,15 @@
 title: "Print Code and Results | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Editor [SQL Server Management Studio], printing"
   - "code printing [SQL Server Management Studio]"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "printing code and text"
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Print Code and Results

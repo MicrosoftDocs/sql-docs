@@ -1,27 +1,14 @@
 ---
 title: "Create and Manage Roles | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/22/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.rolemanager.f1"
-  - "sql13.asvs.bidtoolset.roledb.f1"
-ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create and manage roles 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

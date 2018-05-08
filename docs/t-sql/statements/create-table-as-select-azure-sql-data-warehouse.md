@@ -8,17 +8,16 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "t-sql|statements"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 caps.latest.revision: 40
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE AS SELECT (Azure SQL Data Warehouse)

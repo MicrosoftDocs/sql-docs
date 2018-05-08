@@ -2,16 +2,13 @@
 title: "SQL Type Identifiers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], identifiers"
   - "SQL data types [ODBC], identifiers"
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "SQL type identifiers [ODBC]"
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQL Type Identifiers

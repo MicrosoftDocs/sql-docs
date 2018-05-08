@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vs.addexistingproject"
 helpviewer_keywords: 
@@ -19,7 +19,7 @@ ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Add an Existing Project to a Solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

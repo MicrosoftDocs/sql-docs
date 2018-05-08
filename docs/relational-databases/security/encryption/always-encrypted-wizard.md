@@ -2,16 +2,15 @@
 title: "Always Encrypted Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.alwaysencryptedwizard.encryption.f1"
   - "sql13.swb.alwaysencryptedwizard.f1"
@@ -20,9 +19,9 @@ helpviewer_keywords:
   - "Wizard, Always Encrypted"
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Always Encrypted Wizard

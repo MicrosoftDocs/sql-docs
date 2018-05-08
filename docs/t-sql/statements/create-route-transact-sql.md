@@ -2,14 +2,12 @@
 title: "CREATE ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -30,9 +28,9 @@ helpviewer_keywords:
   - "CREATE ROUTE statement"
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 caps.latest.revision: 42
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE ROUTE (Transact-SQL)

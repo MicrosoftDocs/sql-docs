@@ -2,16 +2,15 @@
 title: "Create Charts, Alerts, Logs, and Reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "System Monitor [SQL Server], charts and reports"
   - "charts [SQL Server]"
@@ -23,9 +22,9 @@ helpviewer_keywords:
   - "Windows System Monitor [SQL Server], logs"
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Create Charts, Alerts, Logs, and Reports
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

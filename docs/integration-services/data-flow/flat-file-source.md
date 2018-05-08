@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.flatfilesource.f1"
   - "sql13.dts.designer.flatfilesourceadapter.connection.f1"
@@ -26,7 +25,7 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Flat File Source
   The Flat File source reads data from a text file. The text file can be in delimited, fixed width, or mixed format.  

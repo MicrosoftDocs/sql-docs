@@ -4,12 +4,10 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -25,7 +23,7 @@ ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Comparing Scripting Solutions and Custom Objects
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Script task or Script component can implement much of the same functionality that is possible in a custom managed task or data flow component. Here are some considerations to help you choose the appropriate type of task for your needs:  

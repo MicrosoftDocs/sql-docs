@@ -4,22 +4,21 @@ ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "members staging table [Master Data Services]"
   - "database [Master Data Services], members staging table"
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 caps.latest.revision: 14
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Leaf Member Staging Table (Master Data Services)
 

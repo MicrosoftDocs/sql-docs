@@ -2,16 +2,14 @@
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "CONCAT_WS"
   - "CONCAT_WS_TSQL"
@@ -21,9 +19,9 @@ helpviewer_keywords:
   - "CONCAT_WS function"
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 caps.latest.revision: 5
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # CONCAT_WS (Transact-SQL)

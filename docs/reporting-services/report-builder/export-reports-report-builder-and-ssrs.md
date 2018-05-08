@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/30/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-builder"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336

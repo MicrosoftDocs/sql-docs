@@ -2,16 +2,13 @@
 title: "Replication, Change Tracking, & Change Data Capture - Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/25/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
   - "change data capture [SQL Server], AlwaysOn Availability Groups"
@@ -19,9 +16,9 @@ helpviewer_keywords:
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Replication, change tracking, & change data capture - Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

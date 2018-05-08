@@ -1,15 +1,13 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: "04/11/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.date: "05/08/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology:
-  - "drivers"
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 author: "ulvii"
 ms.author: "v-ulibra"
 manager: "v-mabarw"
@@ -45,12 +43,12 @@ Install the ODBC driver for Ubuntu by following the instructions on the [Linux a
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### Step 4. Install Apache and configure driver loading
 ```
@@ -59,8 +57,9 @@ apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.2
-echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/30-pdo_sqlsrv.ini
+echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/20-sqlsrv.ini
+exit
 ```
 ### Step 5. Restart Apache and test the sample script
 ```
@@ -96,12 +95,12 @@ scl enable devtoolset-7 bash
 ```
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 An issue in PECL may prevent correct installation of the latest version of the drivers even if you have upgraded GCC. To install, download the packages and compile manually:
 ```
@@ -143,7 +142,7 @@ apt-get install curl apt-transport-https
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 apt-get update
-apt-get install –y php7.2 php7.2-dev php7.2-xml
+apt-get install -y php7.2 php7.2-dev php7.2-xml
 ```
 ### Step 2. Install prerequisites
 Install the ODBC driver for Debian by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
@@ -157,12 +156,12 @@ locale-gen
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### Step 4. Install Apache and configure driver loading
 ```
@@ -171,8 +170,8 @@ apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.2
-echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/30-pdo_sqlsrv.ini
+echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/20-sqlsrv.ini
 ```
 ### Step 5. Restart Apache and test the sample script
 ```
@@ -199,12 +198,12 @@ Install the ODBC driver for Suse 12 by following the instructions on the [Linux 
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### Step 4. Install Apache and configure driver loading
 ```

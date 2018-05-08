@@ -2,16 +2,15 @@
 title: "Specify Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-stored-Procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [SQL Server], stored procedures"
   - "stored procedures [SQL Server], parameters"
@@ -21,7 +20,7 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify Parameters

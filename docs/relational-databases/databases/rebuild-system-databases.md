@@ -2,16 +2,15 @@
 title: "Rebuild System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "master database [SQL Server], rebuilding"
   - "REBUILDDATABASE parameter"
@@ -21,7 +20,7 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 39
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Rebuild System Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

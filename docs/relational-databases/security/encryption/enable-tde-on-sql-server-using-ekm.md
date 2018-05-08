@@ -2,16 +2,15 @@
 title: "Enable TDE on SQL Server Using EKM | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/15/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], TDE using an EKM"
   - "TDE, EKM how to"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "Transparent Data Encryption, using EKM"
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Enable TDE on SQL Server Using EKM

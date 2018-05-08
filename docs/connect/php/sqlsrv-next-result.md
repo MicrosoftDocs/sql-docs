@@ -2,16 +2,14 @@
 title: "sqlsrv_next_result | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_next_result"
 apitype: "NA"
@@ -22,8 +20,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_next_result"
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sqlsrv_next_result

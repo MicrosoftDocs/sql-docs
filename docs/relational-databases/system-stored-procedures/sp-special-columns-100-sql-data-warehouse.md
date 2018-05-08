@@ -8,17 +8,16 @@ ms.service: "sql-data-warehouse"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 caps.latest.revision: 9
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_special_columns_100 (SQL Data Warehouse)

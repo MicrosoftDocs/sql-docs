@@ -2,23 +2,22 @@
 title: "How Query Store Collects Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/13/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, data collection"
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # How Query Store Collects Data

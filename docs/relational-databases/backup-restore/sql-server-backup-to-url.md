@@ -2,21 +2,18 @@
 title: "SQL Server Backup to URL | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SQL Server Backup to URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ manager: "craigg"
   
 -   Backup to premium storage is not supported.  
   
--   The maximum backup size supported using a page blob is limited by the maximum size of a single page blob, which 1 TB. The maximum backup size supported using block blobs is not limited by the maximum size of a block blob, which is 200 GB, because backup to block blobs supports striping to support substantially larger backup sizes.  
+-   SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 MB (50,000 blocks * 4MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
   
 -   You can issue backup or restore statements by using TSQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.   
   

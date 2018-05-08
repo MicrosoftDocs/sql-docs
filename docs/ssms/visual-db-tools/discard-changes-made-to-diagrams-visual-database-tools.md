@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "discarding database diagram changes"
   - "database diagrams [SQL Server], discarding changes"
@@ -19,7 +18,7 @@ ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # Discard Changes Made to Diagrams (Visual Database Tools)

@@ -2,16 +2,14 @@
 title: "Use Certificates for a Database Mirroring Endpoint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
   - "certificates [SQL Server], database mirroring"
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Use Certificates for a Database Mirroring Endpoint (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

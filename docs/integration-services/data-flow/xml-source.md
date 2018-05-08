@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.xmlsource.f1"
   - "sql13.dts.designer.xmlsourceadapter.connectionmanager.f1"
@@ -25,7 +24,7 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # XML Source
   The XML source reads an XML data file and populates the columns in the source output with the data.  

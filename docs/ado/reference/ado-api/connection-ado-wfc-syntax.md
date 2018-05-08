@@ -1,11 +1,9 @@
 ---
 title: "Connection (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "Connection collection [ADO], ADO/WFC syntax"
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connection (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

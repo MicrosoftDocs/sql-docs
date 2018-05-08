@@ -2,14 +2,12 @@
 title: "ROW_NUMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "sequential row numbers [SQL Server]"
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 caps.latest.revision: 50
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ROW_NUMBER (Transact-SQL)

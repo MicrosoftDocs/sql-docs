@@ -2,16 +2,14 @@
 title: "Query with Full-Text Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [full-text search], about full-text queries"
   - "queries [full-text search], predicates"
@@ -21,9 +19,9 @@ helpviewer_keywords:
   - "queries [full-text search], functions"
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 80
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Query with Full-Text Search

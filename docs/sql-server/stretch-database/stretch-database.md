@@ -4,21 +4,20 @@ ms.custom: ""
 ms.date: "06/27/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "stretch-database"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database"
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

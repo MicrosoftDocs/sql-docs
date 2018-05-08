@@ -2,23 +2,20 @@
 title: "SQL to C Data Conversion Examples | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data conversions from SQL to C types [ODBC], examples"
   - "converting data from SQL to C types [ODBC], examples"
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQL to C Data Conversion Examples

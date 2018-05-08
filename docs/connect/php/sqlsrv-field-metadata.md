@@ -2,16 +2,14 @@
 title: "sqlsrv_field_metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_field_metadata"
 apitype: "NA"
@@ -20,8 +18,8 @@ helpviewer_keywords:
   - "sqlsrv_field_metadata"
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 caps.latest.revision: 34
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sqlsrv_field_metadata

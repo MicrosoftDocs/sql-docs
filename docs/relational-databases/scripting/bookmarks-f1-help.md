@@ -2,9 +2,8 @@
 title: "Bookmarks F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "SQL Server Management Studio Help [SQL Server], bookmarks"
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Bookmarks F1 Help

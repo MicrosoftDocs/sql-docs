@@ -2,23 +2,22 @@
 title: "SQL Server Extended Events Sessions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "xevents"
+ms.technology: xevents
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xe"
   - "sessions"
   - "extend events [SQL Server]"
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Extended Events Sessions

@@ -2,22 +2,20 @@
 title: "How to: Specify Parameter Direction Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedure support"
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # How to: Specify Parameter Direction Using the SQLSRV Driver

@@ -8,7 +8,6 @@ ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
@@ -138,7 +137,7 @@ sudo pcs property set cluster-recheck-interval=2min
 To update the property value to `true` run:
 
 ```bash
-sudo pcs property set start-failure-is-fatal = true
+sudo pcs property set start-failure-is-fatal=true
 ```
 
 To update the `ag1` resource property `failure-timeout` to `60s` run:

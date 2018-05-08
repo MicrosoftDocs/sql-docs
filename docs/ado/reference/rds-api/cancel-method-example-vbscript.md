@@ -1,11 +1,9 @@
 ---
 title: "Cancel Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "Cancel method [ADO], VBScript example"
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Cancel Method Example (VBScript)
 > [!IMPORTANT]

@@ -2,16 +2,13 @@
 title: "Bookmark Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [ODBC], bookmarks"
   - "variable-length bookmarks [ODBC]"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "fixed-length bookmarks [ODBC]"
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Bookmark Types

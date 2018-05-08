@@ -8,15 +8,14 @@ ms.service: "sql-database"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 caps.latest.revision: 4
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.sp_cleanup_temporal_history (Transact-SQL)

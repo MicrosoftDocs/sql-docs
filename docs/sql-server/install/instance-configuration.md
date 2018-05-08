@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "2017-04-21"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "instance configuration, Setup"
 helpviewer_keywords: 

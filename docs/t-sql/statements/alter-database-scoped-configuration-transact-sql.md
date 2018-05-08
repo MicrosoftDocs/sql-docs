@@ -2,16 +2,14 @@
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "ALTER_DATABASE_SCOPED_CONFIGURATION"
   - "ALTER_DATABASE_SCOPED_CONFIGURATION_TSQL"
@@ -27,7 +25,7 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 caps.latest.revision: 32
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

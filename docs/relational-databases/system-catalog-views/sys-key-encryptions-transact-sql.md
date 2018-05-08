@@ -2,14 +2,12 @@
 title: "sys.key_encryptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,9 +21,9 @@ helpviewer_keywords:
   - "sys.key_encryptions catalog view"
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.key_encryptions (Transact-SQL)

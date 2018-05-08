@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 caps.latest.revision: 14
 author: "MikeRayMSFT"

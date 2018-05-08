@@ -2,16 +2,13 @@
 title: "Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backup compression [SQL Server], Resource Governor"
   - "backup compression [SQL Server], CPU usage"
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "Resource Governor, backup compression"
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,21 +2,18 @@
 title: "Configure Backup Compression (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure Backup Compression (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

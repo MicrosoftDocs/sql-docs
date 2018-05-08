@@ -2,25 +2,24 @@
 title: "Configure IntelliSense (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Options [SQL Server Management Studio], IntelliSense"
   - "modifying IntelliSense options"
   - "IntelliSense [SQL Server], modifying options"
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure IntelliSense (SQL Server Management Studio)

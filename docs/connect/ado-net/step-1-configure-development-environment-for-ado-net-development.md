@@ -2,20 +2,18 @@
 title: "Step 1: Configure development environment for ADO.NET development | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado-net"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Step 1: Configure development environment for ADO.NET development

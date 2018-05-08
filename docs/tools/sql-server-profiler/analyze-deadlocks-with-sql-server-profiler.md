@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: profiler
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "process nodes [SQL Server Profiler]"
   - "Profiler [SQL Server Profiler], deadlocks"
@@ -25,7 +22,7 @@ ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Analyze Deadlocks with SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

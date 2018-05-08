@@ -2,7 +2,7 @@
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""
@@ -19,7 +19,7 @@ caps.latest.revision: 47
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 

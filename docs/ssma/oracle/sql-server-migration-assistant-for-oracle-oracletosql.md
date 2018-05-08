@@ -2,16 +2,14 @@
 title: "SQL Server Migration Assistant for Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "08/09/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
 caps.latest.revision: 10
 author: "Shamikg"

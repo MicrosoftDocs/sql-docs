@@ -2,16 +2,15 @@
 title: "View Conflict Information for Merge Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -24,7 +23,7 @@ ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
 caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # View Conflict Information for Merge Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,9 +2,8 @@
 title: "Database Engine Developer Documentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], development"
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Database Engine Developer Documentation

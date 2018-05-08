@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL pane [Visual Database Tools]"
   - "joins [SQL Server], Query and View Designer"
@@ -19,7 +18,7 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # How the Query and View Designer Represents Joins (Visual Database Tools)

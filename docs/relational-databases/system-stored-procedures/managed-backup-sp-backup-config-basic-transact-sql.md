@@ -2,14 +2,12 @@
 title: "managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,9 +22,9 @@ helpviewer_keywords:
   - "sp_backup_config_basic"
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

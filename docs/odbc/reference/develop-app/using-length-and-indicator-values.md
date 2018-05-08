@@ -2,16 +2,13 @@
 title: "Using Length and Indicator Values | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data buffers [ODBC], length"
   - "length/indicator buffers [ODBC]"
@@ -19,8 +16,8 @@ helpviewer_keywords:
   - "buffers [ODBC], length"
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using Length and Indicator Values

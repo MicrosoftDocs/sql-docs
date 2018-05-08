@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "extensions"
 ms.reviewer: ""
 ms.suite: "pro-bi"

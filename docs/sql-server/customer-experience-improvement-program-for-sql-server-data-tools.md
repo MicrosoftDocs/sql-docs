@@ -4,14 +4,12 @@ ms.custom: ""
 ms.date: "10/21/2016"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssdt"
+ms.technology: ssdt
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 caps.latest.revision: 11
 author: "stevestein"

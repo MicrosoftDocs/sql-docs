@@ -2,16 +2,13 @@
 title: "Backup History and Header Information (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backup headers [SQL Server]"
   - "history tables [SQL Server]"
@@ -37,9 +34,9 @@ helpviewer_keywords:
   - "listing backed up files"
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Backup History and Header Information (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

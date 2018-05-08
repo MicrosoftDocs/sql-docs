@@ -2,21 +2,20 @@
 title: "Import Flat File to SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/26/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: "douglasl"
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.importflatfile.f1"
 author: "yualan"
 ms.author: "alayu"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Import Flat File to SQL Wizard

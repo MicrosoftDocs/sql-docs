@@ -2,16 +2,13 @@
 title: "Create Unique Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "unique indexes"
   - "designing indexes [SQL Server], unique"
@@ -21,9 +18,9 @@ helpviewer_keywords:
   - "unique indexes, design guidelines"
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Unique Indexes

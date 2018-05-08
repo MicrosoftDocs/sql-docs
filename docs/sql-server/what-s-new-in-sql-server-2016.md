@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "new sql server"
 helpviewer_keywords: 

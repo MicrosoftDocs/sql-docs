@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/02/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "HTTP [Reporting Services]"
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f

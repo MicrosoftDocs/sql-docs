@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "powershell"
-ms.service: ""
 ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "query expressions"
   - "unique resource names"
@@ -20,7 +19,7 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 ---
 # Query Expressions and Uniform Resource Names
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

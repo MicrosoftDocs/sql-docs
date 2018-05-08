@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search conditions [SQL Server], rows not matching value"
   - "row not matching value [SQL Server]"
@@ -20,7 +19,7 @@ ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 
 ---
 # Select Rows That Do Not Match a Value (Visual Database Tools)

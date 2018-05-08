@@ -2,16 +2,14 @@
 title: "Working with SSMA for Oracle Console (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 caps.latest.revision: 19
 author: "Shamikg"

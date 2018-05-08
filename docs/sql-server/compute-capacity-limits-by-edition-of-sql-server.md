@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "11/06/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"
   - "number of processors supported"

@@ -2,16 +2,14 @@
 title: "sqlsrv_get_field | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_get_field"
 apitype: "NA"
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "retrieving data, as a single field"
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sqlsrv_get_field

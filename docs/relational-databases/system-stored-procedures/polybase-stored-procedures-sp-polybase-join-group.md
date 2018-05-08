@@ -2,16 +2,14 @@
 title: "sp_polybase_join_group | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sp_polybase_join_group"
 helpviewer_keywords: 
@@ -20,7 +18,7 @@ ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 caps.latest.revision: 12
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 ---
 # sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

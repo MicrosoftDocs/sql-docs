@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbcommandtrans.f1"
 helpviewer_keywords: 
@@ -21,7 +20,7 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # OLE DB Command Transformation
   The OLE DB Command transformation runs an SQL statement for each row in a data flow. For example, you can run an SQL statement that inserts, updates, or deletes rows in a database table.  

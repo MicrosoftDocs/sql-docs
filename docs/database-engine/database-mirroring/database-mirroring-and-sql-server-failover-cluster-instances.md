@@ -2,25 +2,23 @@
 title: "Database Mirroring and SQL Server Failover Cluster Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "failover clustering [SQL Server], database mirroring"
   - "database mirroring [SQL Server], failover"
   - "high-availability mode [SQL Server]"
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Mirroring and SQL Server Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

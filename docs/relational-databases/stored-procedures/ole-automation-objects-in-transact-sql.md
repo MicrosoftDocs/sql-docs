@@ -2,16 +2,15 @@
 title: "OLE Automation Objects in Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-ole"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], OLE Automation"
   - "batches [SQL Server], OLE Automation"
@@ -21,7 +20,7 @@ ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OLE Automation Objects in Transact-SQL

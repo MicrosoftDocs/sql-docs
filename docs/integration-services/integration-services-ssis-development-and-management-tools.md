@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "studio environments [Integration Services]"
   - "tools [Integration Services], Business Intelligence Development Studio"
@@ -24,7 +23,7 @@ ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Integration Services (SSIS) Development and Management Tools
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes two studios for working with packages:  

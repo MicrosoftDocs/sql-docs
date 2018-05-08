@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "less than (<)"
   - "< (less than operator)"
@@ -19,7 +18,7 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # &lt; (Less Than) (SSIS Expression)
   Performs a comparison to determine if the first expression is less than the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

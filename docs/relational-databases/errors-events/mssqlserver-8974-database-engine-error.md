@@ -2,23 +2,21 @@
 title: "MSSQLSERVER_8974 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "8974 (Database Engine error)"
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_8974
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

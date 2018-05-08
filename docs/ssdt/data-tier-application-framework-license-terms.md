@@ -4,14 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssdt"
+ms.technology: ssdt
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
 caps.latest.revision: 4
 author: "stevestein"

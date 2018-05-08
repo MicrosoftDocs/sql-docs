@@ -2,16 +2,15 @@
 title: "Replicate Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned indexes [SQL Server], replicating"
   - "partitioned tables [SQL Server], replicating"
@@ -22,7 +21,7 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Replicate Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

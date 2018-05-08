@@ -1,24 +1,22 @@
-﻿---
+---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssdt"
+ms.technology: ssdt
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "install ssdt, download ssdt, latest ssdt"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 caps.latest.revision: 113
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Download SQL Server Data Tools (SSDT)
@@ -38,7 +36,7 @@ SSDT 15.x is a standalone web installation experience for SQL Server Database, A
 > Non-English versions of SSDT for Visual Studio 2017 15.6.x do not support upgrading from the English 15.4.0 Preview, you must uninstall the English 15.4.0 Preview before installing 15.6.x in other languages. 
 
 
-SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4: [Download Data-Tier Application Framework (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56356)
+SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4.1: [Download Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/en-us/download/details.aspx?id=56508)
 
 
 

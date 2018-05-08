@@ -2,23 +2,21 @@
 title: "Lesson 5: Backup database using file-snapshot backup | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Lesson 5: Backup database using file-snapshot backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

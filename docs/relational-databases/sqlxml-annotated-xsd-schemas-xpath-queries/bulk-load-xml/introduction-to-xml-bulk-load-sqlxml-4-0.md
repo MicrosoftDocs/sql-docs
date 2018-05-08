@@ -2,14 +2,12 @@
 title: "Introduction to XML Bulk Load (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -22,7 +20,7 @@ ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Introduction to XML Bulk Load (SQLXML 4.0)

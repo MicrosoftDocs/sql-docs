@@ -1,11 +1,9 @@
 ---
 title: "LockTypeEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +17,9 @@ helpviewer_keywords:
   - "LockTypeEnum enumeration [ADO]"
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # LockTypeEnum
 Specifies the type of lock placed on records during editing.  

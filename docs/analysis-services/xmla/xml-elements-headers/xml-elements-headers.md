@@ -1,30 +1,14 @@
 ---
 title: "Headers (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "XMLA, headers"
-  - "SOAP headers [XML for Analysis]"
-  - "XML for Analysis, headers"
-  - "headers [XML for Analysis]"
-ms.assetid: 36407b5c-d98d-47e4-8d36-d8896e15a748
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # XML Elements - Headers
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

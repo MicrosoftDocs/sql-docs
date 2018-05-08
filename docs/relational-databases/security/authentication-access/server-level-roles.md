@@ -2,16 +2,15 @@
 title: "Server-Level Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.Security.NT_AUTHORITY.SYSTEM"
   - "sql13.Security.BUILTIN.administrators"
@@ -26,9 +25,9 @@ helpviewer_keywords:
   - "authentication [SQL Server], roles"
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 52
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Server-Level Roles

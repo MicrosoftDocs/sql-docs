@@ -2,14 +2,12 @@
 title: "Sample Annotated XSD Schema for XPath Examples (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,7 +18,7 @@ ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Sample Annotated XSD Schema for XPath Examples (SQLXML 4.0)

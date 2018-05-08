@@ -2,20 +2,18 @@
 title: "PDO::prepare | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # PDO::prepare

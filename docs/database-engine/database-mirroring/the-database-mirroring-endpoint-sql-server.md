@@ -2,16 +2,14 @@
 title: "The Database Mirroring Endpoint (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-mirroring"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
   - "database mirroring [SQL Server], endpoint"
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 47
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # The Database Mirroring Endpoint (SQL Server)

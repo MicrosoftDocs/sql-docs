@@ -4,21 +4,20 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "change-data-capture"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Manage an Oracle CDC Service
   You can use the CDC Service Configuration Console to manage a specific CDC Service.  

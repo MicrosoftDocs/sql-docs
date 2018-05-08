@@ -2,23 +2,20 @@
 title: "SQLAllocConnect Mapping | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLAllocConnect function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLAllocConnect"
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLAllocConnect Mapping

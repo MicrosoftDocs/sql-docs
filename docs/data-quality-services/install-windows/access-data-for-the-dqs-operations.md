@@ -4,19 +4,18 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Access Data for the DQS Operations
 

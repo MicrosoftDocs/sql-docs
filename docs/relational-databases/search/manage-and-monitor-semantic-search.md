@@ -2,24 +2,22 @@
 title: "Manage and Monitor Semantic Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], managing"
   - "semantic search [SQL Server], monitoring"
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Manage and Monitor Semantic Search
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

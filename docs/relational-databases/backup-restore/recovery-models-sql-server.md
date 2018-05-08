@@ -2,16 +2,13 @@
 title: "Recovery Models (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database backups [SQL Server], recovery models"
   - "bulk-logged recovery model [SQL Server]"
@@ -32,9 +29,9 @@ helpviewer_keywords:
   - "backing up transaction logs [SQL Server], recovery models"
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 caps.latest.revision: 70
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Recovery Models (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

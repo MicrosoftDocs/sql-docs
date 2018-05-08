@@ -2,16 +2,15 @@
 title: "Contained Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database"
   - "database_uncontained_usage event"
@@ -21,7 +20,7 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 37
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Contained Databases

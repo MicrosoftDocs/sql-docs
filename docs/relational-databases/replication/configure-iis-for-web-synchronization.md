@@ -2,16 +2,15 @@
 title: "Configure IIS for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IIS server configuration [SQL Server replication]"
   - "websync.log"
@@ -20,7 +19,7 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 88
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ---
 # Configure IIS for Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

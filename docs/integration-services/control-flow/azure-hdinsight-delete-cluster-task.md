@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "02/28/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpdelcltask.f1"
   - "sql14.dts.designer.afpdelcltask.f1"
@@ -19,7 +18,7 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Azure HDInsight Delete Cluster Task
 The **Azure HDInsight Delete Cluster Task** enables an SSIS package to delete an Azure HDInsight cluster in the specified Azure subscription and resource group.

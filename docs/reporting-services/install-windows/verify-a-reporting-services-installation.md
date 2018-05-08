@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/03/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "checking report server installations"
   - "verifying report server installations"

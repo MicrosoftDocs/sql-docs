@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], SQL Server Agent"
   - "writing trace messages"
@@ -21,7 +20,7 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)

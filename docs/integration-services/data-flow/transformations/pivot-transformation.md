@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.pivottrans.f1"
 helpviewer_keywords: 
@@ -24,7 +23,7 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Pivot Transformation
   The Pivot transformation makes a normalized data set into a less normalized but more compact version by pivoting the input data on a column value. For example, a normalized **Orders** data set that lists customer name, product, and quantity purchased typically has multiple rows for any customer who purchased multiple products, with each row for that customer showing order details for a different product. By pivoting the data set on the product column, the Pivot transformation can output a data set with a single row per customer. That single row lists all the purchases by the customer, with the product names shown as column names, and the quantity shown as a value in the product column. Because not every customer purchases every product, many columns may contain null values.  

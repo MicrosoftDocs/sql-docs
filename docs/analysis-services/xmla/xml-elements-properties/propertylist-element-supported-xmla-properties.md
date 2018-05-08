@@ -1,30 +1,14 @@
 ---
 title: "Supported XMLA Properties (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "properties [XML for Analysis]"
-  - "XML for Analysis, properties"
-  - "XMLA, properties"
-ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # PropertyList Element - Supported XMLA Properties
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

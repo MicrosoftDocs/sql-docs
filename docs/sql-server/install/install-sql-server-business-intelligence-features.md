@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "11/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: "setup-install"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 caps.latest.revision: 27
 author: "markingmyname"

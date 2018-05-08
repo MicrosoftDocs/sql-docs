@@ -2,16 +2,15 @@
 title: "Synchronize Subscriptions (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "synchronization [SQL Server replication], subscriptions"
   - "subscriptions [SQL Server replication], synchronizing"
@@ -20,7 +19,7 @@ ms.assetid: cbe13120-8dd9-4309-88dd-07a801c68f5f
 caps.latest.revision: 35
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Synchronize Subscriptions (Replication)

@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "leading blanks"
   - "LTRIM function"
@@ -19,7 +18,7 @@ ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # LTRIM (SSIS Expression)
   Returns a character expression after removing leading spaces.  

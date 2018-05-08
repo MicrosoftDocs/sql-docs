@@ -2,21 +2,18 @@
 title: "Creating a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 caps.latest.revision: 20
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Creating a System-Versioned Temporal Table

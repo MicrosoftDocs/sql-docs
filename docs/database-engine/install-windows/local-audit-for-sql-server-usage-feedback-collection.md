@@ -83,19 +83,19 @@ Create a new folder (Local Audit Directory) where the Local Audit will write the
 
 1. On the **Security tab**, select **Edit** manage Permission.
 
-1. Select **Add** and type the credentials of the SQL Server CEIP Telemetry Service. For example `NT Service\SQLTELEMETRY`.   
+1. Select **Add** and type the credentials of the SQL Server CEIP Telemetry Service. For example `NT Service\SQLTELEMETRY`.
 
-1. Select **Check Names** to validate the name you provided, then select **OK**. 
+1. Select **Check Names** to validate the name you provided, then select **OK**.
 
-1. On the **Permission** dialog box, choose the Log On account to SQL Server CEIP Telemetry service and select **List folder contents**, **Read** and **Write**.  
+1. On the **Permission** dialog box, choose the Log On account to SQL Server CEIP Telemetry service and select **List folder contents**, **Read** and **Write**.
 
 1. Select **OK** to apply the permission changes immediately. 
   
 ### Create a registry key setting to configure Local Audit target directory
 
-1. Launch regedit.  
+1. Launch regedit.
 
-1. Navigate to the appropriate CPE path:  
+1. Navigate to the appropriate CPE path:
 
    | Version | ***Database engine*** - Registry key |
    | :------ | :----------------------------- |

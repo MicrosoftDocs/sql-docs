@@ -43,34 +43,16 @@ Before turning on Local Audit, a system administrator needs to:
 
 1. Configure a new folder for the Local Audit files.
 
-1. Grant permissions to the SQL Server CIEP Telemetry service logon account.
+1. Grant permissions to the SQL Server CEIP Telemetry service logon account.
 
 1. Create a registry key setting to configure Local Audit target directory. 
-
-| Version | ***Database engine*** - Registry key |
-| :------ | :----------------------------- |
-| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
-| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
-| &nbsp; | &nbsp; |
-
-| Version | ***Analysis Services*** - Registry key |
-| :------ | :------------------------------- |
-| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
-| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
-| &nbsp; | &nbsp; |
-
-| Version | ***Integration Services*** - Registry key |
-| :------ | :---------------------------------- |
-| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-| &nbsp; | &nbsp; |
 
 
 ### Get the SQL Server CEIP Service Logon Account 
 
 Do the following steps to get the SQL Server CEIP Telemetry service logon account
  
-1. Launch **Services** - select on the **Windows**  button and type *services.msc*. 
+1. Launch the **Services** console. To do this, select the **Windows Key + R** on your keyboard to open the **Run** dialog box. Next, type in *services.msc* in the text field and select **OK** to launch the **Services** console.  
 
 2. Navigate to the appropriate service. For example, for the database engine locate **SQL Server CEIP service** **(*Your-Instance-Name*)**. For Analysis Services locate **SQL Server Analysis Services CEIP** **(*Your-Instance-Name*)**. For Integration Services locate **SQL Server Integration Services CEIP service**.
 
@@ -90,10 +72,10 @@ Create a new folder (Local Audit Directory) where the Local Audit will write the
   |![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per database per instance.|  
 |![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
 |![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of Analysis Services uses the same instance name, create a separate folder for Analysis Services. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the Local Audit to write to the same log file from both instances.| 
-|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CIEP Telemetry service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP Telemetry service logon account|
+|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CEIP Telemetry service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP Telemetry service logon account|
 
 
-### Grant permissions to the SQL Server CIEP Telemetry service logon account
+### Grant permissions to the SQL Server CEIP Telemetry service logon account
   
 1. In **File Explorer**, navigate to the location where the new folder is located.
 
@@ -113,7 +95,25 @@ Create a new folder (Local Audit Directory) where the Local Audit will write the
 
 1. Launch regedit.  
 
-1. Navigate to the appropriate CPE [path](#pre-configuration-steps-prior-to-turning-on-local-audit). 
+1. Navigate to the appropriate CPE path:  
+
+| Version | ***Database engine*** - Registry key |
+| :------ | :----------------------------- |
+| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
+| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
+| &nbsp; | &nbsp; |
+
+| Version | ***Analysis Services*** - Registry key |
+| :------ | :------------------------------- |
+| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
+| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
+| &nbsp; | &nbsp; |
+
+| Version | ***Integration Services*** - Registry key |
+| :------ | :---------------------------------- |
+| 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+| 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+| &nbsp; | &nbsp; |
 
 1. Right-click the CPE path and choose **New**. Select **String Value**.
 
@@ -125,7 +125,7 @@ After you have completed the preconfiguration steps, you can turn on Local Audit
 
 1. Launch **regedit**.  
 
-1. Navigate to the appropriate CPE [path](#pre-configuration-steps-prior-to-turning-on-local-audit). 
+1. Navigate to the appropriate CPE [path](#create-a-registry-key-setting-to-configure-local-audit-target-directory). 
 
 1. Right-click **UserRequestedLocalAuditDirectory** and select *Modify*. 
 
@@ -137,7 +137,7 @@ After you have completed the preconfiguration steps, you can turn on Local Audit
 
 SQL Server CEIP should recognize the Local Audit setting immediately if the service is already running. To start the SQL Server CEIP Service, a System Administrator or someone who has access to start or stop Windows Services can follow the steps below: 
 
-1. Launch Services application, by opening the Windows Start menu and typing in *Services*.  
+1. Launch the **Services** console. To do this, select the **Windows Key + R** on your keyboard to open the **Run** dialog box. Next, type in *services.msc* in the text field and select **OK** to launch the **Services** console.  
 
 1. Navigate to the appropriate service. 
 

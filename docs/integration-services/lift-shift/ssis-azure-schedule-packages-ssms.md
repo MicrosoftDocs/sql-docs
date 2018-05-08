@@ -51,7 +51,7 @@ When you use SSMS to schedule a package, SSIS automatically creates three new Da
 
     ![Optionally edit the new pipeline](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image6-edit.png)
 
-    This opens the **Edit Trigger** blade for you to customize the scheduling options.
+    The **Edit Trigger** blade opens for you to customize the scheduling options.
 
     ![Edit Trigger](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image7-edit2.png)
 

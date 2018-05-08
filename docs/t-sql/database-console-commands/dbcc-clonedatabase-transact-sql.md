@@ -146,12 +146,14 @@ Only the following objects can be cloned in the destination database. Encrypted 
 - LOGIN
 - PARTITION FUNCTION
 - PARTITION SCHEME
-- PROCEDURE 
-> [!NOTE] 
-> [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures are supported in all releases starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2. CLR procedures are supported starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3. Natively compiled procedures are supported starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
-- QUERY STORE (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)
-> [!NOTE] 
-> Query store data is copied only if it is enabled on the source database. To copy the latest runtime statistics as part of the query store, execute sp_query_store_flush_db to flush the runtime statistics to the query store before executing DBCC CLONEDATABASE.
+- PROCEDURE   
+> [!NOTE]   
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures are supported in all releases starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2. CLR procedures are supported starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3. Natively compiled procedures are supported starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.  
+
+- QUERY STORE (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)   
+> [!NOTE]   
+> Query store data is copied only if it is enabled on the source database. To copy the latest runtime statistics as part of the query store, execute sp_query_store_flush_db to flush the runtime statistics to the query store before executing DBCC CLONEDATABASE.  
+
 - ROLE
 - RULE
 - SCHEMA

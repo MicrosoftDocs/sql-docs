@@ -107,7 +107,7 @@ manager: craigg
  On attach, database startup occurs. Generally, attaching a database places it in the same state that it was in when it was detached or copied. However, attach-and-detach operations both disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
 
  >[!IMPORTANT]
- > By default and for security, the options for *SERVICE BROKER* and *TRUSTWORTHY* are set to OFF whenever the database is attached. For information about how to set either option to on, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ > By default and for security, the options for *is_broker_enabled*, *is_honor_broker_priority_on* and *is_trustworthy_on* are set to OFF whenever the database is attached. For information about how to set these options on, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  For more information about metadata, see [managing metadata when making a database available on another server](/manage-metadata-when-making-a-database-available-on-another-server.md)
   
 ### Backup and Restore and Attach  
  Like any database that is fully or partially offline, a database with restoring files cannot be attached. If you stop the restore sequence, you can attach the database. Then, you can restart the restore sequence.  

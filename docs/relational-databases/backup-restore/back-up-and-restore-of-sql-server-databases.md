@@ -46,12 +46,9 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
      With valid backups of a database, you can recover your data from many failures, such as:  
   
-    -   Media failure.  
-  
-    -   User errors, for example, dropping a table by mistake.  
-  
-    -   Hardware failures, for example, a damaged disk drive or permanent loss of a server.  
-  
+    -   Media failure.    
+    -   User errors, for example, dropping a table by mistake.    
+    -   Hardware failures, for example, a damaged disk drive or permanent loss of a server.    
     -   Natural disasters. By using SQL Server Backup to Windows Azure Blob storage service, you can create an off-site backup in a different region than your on-premises location, to use in the event of a natural disaster affecting your on-premises location.  
   
 -   Additionally, backups of a database are useful for routine administrative purposes, such as copying a database from one server to another, setting up [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] or database mirroring, and archiving.  
@@ -99,8 +96,8 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
  ##  Backup and restore strategies  
  Backing up and restoring data must be customized to a particular environment and must work with the available resources. Therefore, a reliable use of backup and restore for recovery requires a backup and restore strategy. A well-designed backup and restore strategy maximizes data availability and minimizes data loss, while considering your particular business requirements.  
   
-#### Important! 
-**Place the database and backups on separate devices. Otherwise, if the device containing the database fails, your backups will be unavailable. Placing the data and backups on separate devices also enhances the I/O performance for both writing backups and the production use of the database.**  
+  > [!IMPORTANT] 
+  > Place the database and backups on separate devices. Otherwise, if the device containing the database fails, your backups will be unavailable. Placing the data and backups on separate devices also enhances the I/O performance for both writing backups and the production use of the database.**  
   
  A backup and restore strategy contains a backup portion and a restore portion. The backup part of the strategy defines the type and frequency of backups, the nature and speed of the hardware that is required for them, how backups are to be tested, and where and how backup media is to be stored (including security considerations). The restore part of the strategy defines who is responsible for performing restores and how restores should be performed to meet your goals for availability of the database and for minimizing data loss. We recommend that you document your backup and restore procedures and keep a copy of the documentation in your run book.  
   
@@ -175,7 +172,7 @@ dbcc traceon(3014, -1)
 
 - Disable both trace flags 3004 and 3014
 ```sql
-dbcc traceoff (3004, 3014, -1)
+dbcc traceoff(3004, 3014, -1)
 ```
 
 ### Backup and restore extended event 

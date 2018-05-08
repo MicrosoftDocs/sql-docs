@@ -41,6 +41,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @working_directory= ] 'working_directory' ]   
+    [ , [ @storage_connection_string= ] 'storage_connection_string']
     [ , [ @trusted= ] 'trusted' ]   
     [ , [ @encrypted_password= ] encrypted_password ]   
     [ , [ @thirdparty_flag = ] thirdparty_flag ]  
@@ -72,8 +73,15 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  Do not use a blank password. Use a strong password.  
   
  [ **@working_directory=**] **'***working_directory***'**  
- Is the name of the working directory used to store data and schema files for the publication. *working_directory* is **nvarchar(255)**, and defaults to the ReplData folder for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], for example 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. The name should be specified in UNC format.  
-  
+ Is the name of the working directory used to store data and schema files for the publication. *working_directory* is **nvarchar(255)**, and defaults to the ReplData folder for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], for example `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. The name should be specified in UNC format.  
+
+ For Azure SQL Database, use `\\<storage_account>.file.core.windows.net\<share>`.
+
+ [ **@storage_connection_string =**] **'***storage_connection_string***'**  
+ Is required for SQL Database. Use the access key from Azure Portal under storage > settings.
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+
  [ **@trusted=**] **'***trusted***'**  
  This parameter has been deprecated and is provided for backward compatibility only. *trusted* is **nvarchar(5)**, and setting it to anything but **false** will result in an error.  
   

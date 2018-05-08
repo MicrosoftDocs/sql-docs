@@ -67,6 +67,8 @@ manager: craigg
 |**job_step_uid**|**uniqueidentifier**|The unique ID of the SQL Server Agent job step in which the agent is started.|  
 |**subscriptionstreams**|**tinyint**|Sets the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber. A range of values from 1 to 64 is supported.|  
 |**memory_optimized**|**bit**|1 indicates that the subscriber can be used for memory optimized tables.|  
+|**job_login**|**sysname**||  
+|**job_password**|**nvarchar(524)**||  
   
 ## See Also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

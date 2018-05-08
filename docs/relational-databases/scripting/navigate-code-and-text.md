@@ -2,16 +2,15 @@
 title: "Navigate Code and Text | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-scripting"
+ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "searches [SQL Server Management Studio], incremental"
   - "mouse [SQL Server Management Studio]"
@@ -25,10 +24,9 @@ helpviewer_keywords:
   - "Go To command"
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Navigate Code and Text

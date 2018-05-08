@@ -6,15 +6,13 @@ ms.author: jroth
 manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.workload: "On Demand"
 ---
 # Bulk copy data with bcp to SQL Server on Linux
 

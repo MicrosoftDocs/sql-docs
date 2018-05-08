@@ -2,16 +2,13 @@
 title: "SQL Server Multi-Subnet Clustering (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stretch cluster"
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "failover clustering [SQL Server]"
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 52
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: "On Demand"
 ---
 # SQL Server Multi-Subnet Clustering (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

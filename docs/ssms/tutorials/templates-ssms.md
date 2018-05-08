@@ -7,6 +7,8 @@ ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
 ms.suite: "sql"
+ms.prod: sql
+ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg

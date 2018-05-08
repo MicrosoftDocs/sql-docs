@@ -8,8 +8,7 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "system-stored-procedures"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,8 +22,7 @@ ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Active Geo-Replication - sp_wait_for_database_copy_sync

@@ -2,16 +2,15 @@
 title: "Configure Threshold Values for Cleansing and Matching | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
 ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.admin.config.general.f1"
 helpviewer_keywords: 
@@ -22,8 +21,7 @@ ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Configure Threshold Values for Cleansing and Matching
 

@@ -2,16 +2,15 @@
 title: "Polygon | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "spatial"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry subtypes [SQL Server]"
   - "Polygon geometry subtype [SQL Server]"
@@ -19,8 +18,7 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Polygon

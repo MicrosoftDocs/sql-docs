@@ -1,11 +1,9 @@
 ---
 title: "DimensionCount Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "DimensionCount property [ADO MD]"
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DimensionCount Property (ADO MD)
 Indicates the number of dimensions on an [axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  

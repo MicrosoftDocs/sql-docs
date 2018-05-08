@@ -3,14 +3,12 @@ title: "Using the OLE DB Driver for SQL Server Header and Library Files | Micros
 description: "Using the OLE DB Driver for SQL Server header and library files"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "oledb|applications"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -26,7 +24,6 @@ helpviewer_keywords:
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Using the OLE DB Driver for SQL Server Header and Library Files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +38,7 @@ ms.workload: "On Demand"
   
  The OLE DB Driver for SQL Server header file (msoledbsql.h) can be used to add OLE DB Driver for SQL Server data access functionality to your custom applications. The OLE DB Driver for SQL Server header file contains all of the definitions, attributes, properties, and interfaces needed to take advantage of the new features introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- In addition to the OLE DB Driver for SQL Server header file, there is also a msoledbsql.lib library file which is the export library for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Bulk Copy Program (BCP) functionality.  
+ In addition to the OLE DB Driver for SQL Server header file, there is also a msoledbsql.lib library file which is the export library for [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) functionality.  
   
  The OLE DB Driver for SQL Server header file is backwards compatible with the sqloledb.h header file used with Microsoft Data Access Components (MDAC), but does not contain CLSIDs for SQLOLEDB (the OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] included with MDAC) or symbols for XML functionality (which is not supported by OLE DB Driver for SQL Server).    
   

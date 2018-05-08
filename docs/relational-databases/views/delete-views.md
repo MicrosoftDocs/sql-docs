@@ -2,16 +2,13 @@
 title: "Delete Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "views"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-views"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dropping views"
   - "deleting views"
@@ -19,10 +16,9 @@ helpviewer_keywords:
   - "removing views"
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete Views

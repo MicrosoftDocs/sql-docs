@@ -2,16 +2,14 @@
 title: "View SQL Server Agent Error Log (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], SQL Server Agent"
   - "viewing SQL Server Agent error logs"
@@ -22,8 +20,7 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View SQL Server Agent Error Log (SQL Server Management Studio)

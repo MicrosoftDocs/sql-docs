@@ -2,22 +2,19 @@
 title: "PDO::lastInsertId | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

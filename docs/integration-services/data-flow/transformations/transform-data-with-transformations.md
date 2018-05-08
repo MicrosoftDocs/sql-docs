@@ -2,16 +2,15 @@
 title: "Transform Data with Transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data flow [Integration Services], transformations"
   - "transformations [Integration Services], about transformations"
@@ -20,8 +19,7 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Transform Data with Transformations
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes three types of data flow components: sources, transformations, and destinations.  

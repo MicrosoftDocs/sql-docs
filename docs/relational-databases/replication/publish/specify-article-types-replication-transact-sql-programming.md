@@ -2,16 +2,15 @@
 title: "Specify Article Types (Replication Transact-SQL Programming) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -23,8 +22,7 @@ ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 caps.latest.revision: 26
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Specify Article Types (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

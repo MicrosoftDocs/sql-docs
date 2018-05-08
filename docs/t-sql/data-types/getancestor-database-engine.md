@@ -2,14 +2,12 @@
 title: "GetAncestor (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/22/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "GetAncestor [Database Engine]"
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # GetAncestor (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

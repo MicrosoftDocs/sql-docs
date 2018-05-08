@@ -2,26 +2,24 @@
 title: "Deprecated Database Engine Features in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-engine"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
 ms.assetid: 
 caps.latest.revision: 
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Deprecated Database Engine Features in SQL Server 2017

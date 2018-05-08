@@ -2,26 +2,22 @@
 title: "Rename Columns (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [SQL Server], names"
   - "renaming columns"
   - "column names [SQL Server]"
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rename Columns (Database Engine)

@@ -1,7 +1,6 @@
 ---
 title: "ReadyState Property Example (VBScript) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "ReadyState property [ADO], VBScript example"
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ReadyState Property Example (VBScript)
 > [!IMPORTANT]

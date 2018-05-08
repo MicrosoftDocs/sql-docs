@@ -2,9 +2,8 @@
 title: "MSpeer_conflictdetectionconfigrequest (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,10 +22,9 @@ helpviewer_keywords:
   - "MSpeer_conflictdetectionconfigurerequest"
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # MSpeer_conflictdetectionconfigrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

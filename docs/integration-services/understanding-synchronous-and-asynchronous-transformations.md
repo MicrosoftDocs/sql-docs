@@ -2,9 +2,8 @@
 title: "Understanding Synchronous and Asynchronous Transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,8 +22,7 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Understanding Synchronous and Asynchronous Transformations
   To understand the difference between a synchronous and an asynchronous transformation in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], it is easiest to start with an understanding of a synchronous transformation. If a synchronous transformation does not meet your needs, your design might require an asynchronous transformation.  

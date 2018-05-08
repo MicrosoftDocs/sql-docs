@@ -1,11 +1,9 @@
 ---
 title: "Appendix B: ADO Errors | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "errors [ADO], types"
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Appendix B: ADO Error Codes
 See the following topics for more information about particular error messages:

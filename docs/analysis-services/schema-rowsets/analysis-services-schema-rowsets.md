@@ -1,36 +1,14 @@
 ---
 title: "Analysis Services Schema Rowsets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "SSAS, data access interfaces"
-  - "Analysis Services data access interfaces, schema rowsets"
-  - "data access interfaces [Analysis Services]"
-  - "XML for Analysis, schema rowsets"
-  - "rowsets [Analysis Services], retrieving schema rowsets"
-  - "retrieving schema rowsets"
-  - "XMLA, schema rowsets"
-  - "rowsets [Analysis Services]"
-  - "schema rowsets [Analysis Services], retrieving"
-ms.assetid: 820d4b59-d428-4616-b792-c848e5da407e
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analysis Services Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

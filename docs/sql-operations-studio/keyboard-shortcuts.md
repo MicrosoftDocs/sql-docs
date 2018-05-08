@@ -3,17 +3,16 @@ title: Create and customize keyboard shortcuts in SQL Operations Studio (preview
 description: Learn how to create and customize keyboard shortcuts in SQL Operations Studio (preview).
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos.md)]
 

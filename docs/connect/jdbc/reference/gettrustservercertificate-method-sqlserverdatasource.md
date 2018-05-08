@@ -2,16 +2,13 @@
 title: "getTrustServerCertificate Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "getTrustServerCertificate Method (SQLServerDataSource)"
 apilocation: 
@@ -19,10 +16,9 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # getTrustServerCertificate Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

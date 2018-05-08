@@ -2,16 +2,14 @@
 title: "Set a SQL Server Alias for the SQL Server Agent Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "aliases [SQL Server], creating"
   - "SQL Server Agent, aliases"
@@ -19,8 +17,7 @@ ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)

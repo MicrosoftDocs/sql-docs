@@ -1,11 +1,9 @@
 ---
 title: "Source Property (ADO Error) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "Source property [ADO Error]"
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Source Property (ADO Error)
 Indicates the name of the object or application that originally generated an error.  

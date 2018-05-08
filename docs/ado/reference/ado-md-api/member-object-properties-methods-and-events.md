@@ -1,11 +1,9 @@
 ---
 title: "Member Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "Member object [ADO MD]"
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Member Object Properties, Methods, and Events
 ## Properties/Collections  

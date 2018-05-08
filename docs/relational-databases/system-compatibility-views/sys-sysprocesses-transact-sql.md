@@ -2,14 +2,12 @@
 title: "sys.sysprocesses (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-compatibility-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,8 +24,7 @@ ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 caps.latest.revision: 57
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

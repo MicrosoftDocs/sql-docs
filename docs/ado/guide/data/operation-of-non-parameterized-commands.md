@@ -1,11 +1,9 @@
 ---
 title: "Operation of Non-Parameterized Commands | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "data shaping [ADO], non-parameterized commands"
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Operation of Non-Parameterized Commands
 For non-parameterized commands, all the provider commands are executed and the **Recordsets** are created during command execution. If the command is executed synchronously, all the **Recordsets** will be fully populated. If an asynchronous population mode was selected, the populated state of the **Recordsets** will depend on the population mode and the size of the **Recordsets**.  

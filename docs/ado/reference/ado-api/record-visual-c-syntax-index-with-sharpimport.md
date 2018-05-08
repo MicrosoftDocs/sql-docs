@@ -1,11 +1,9 @@
 ---
 title: "Record (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "Record collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Record (Visual C++ Syntax Index with #import)
 ## Methods  

@@ -1,11 +1,9 @@
 ---
 title: "SaveToFile Method | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "SaveToFile method [ADO]"
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SaveToFile Method
 Saves the binary contents of a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) to a file.  

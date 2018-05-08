@@ -2,24 +2,20 @@
 title: "Validate a SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
+ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "validating installations [SQL Server]"
 ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Validate a SQL Server Installation
 

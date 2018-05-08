@@ -2,22 +2,18 @@
 title: "System Requirements, Installation, and Driver Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/14/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "On Demand"
 ---
 # System Requirements, Installation, and Driver Files
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

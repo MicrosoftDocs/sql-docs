@@ -2,9 +2,8 @@
 title: "Batching Stored Procedure Calls | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,10 +19,9 @@ helpviewer_keywords:
   - "ODBC CALL escape sequence"
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Batching Stored Procedure Calls

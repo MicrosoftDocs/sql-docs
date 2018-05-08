@@ -8,8 +8,7 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "dmv's"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +23,9 @@ helpviewer_keywords:
   - "sys.dm_operation_status dynamic management view"
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_operation_status (Azure SQL Database)

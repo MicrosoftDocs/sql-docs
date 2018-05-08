@@ -2,9 +2,8 @@
 title: "Service Principal Name (SPN) Support in Client Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client|features"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,10 +18,9 @@ helpviewer_keywords:
   - "SPNs [SQL Server]"
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Service Principal Name (SPN) Support in Client Connections

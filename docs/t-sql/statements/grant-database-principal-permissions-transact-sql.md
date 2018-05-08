@@ -2,14 +2,12 @@
 title: "GRANT Database Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/12/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -28,10 +26,9 @@ helpviewer_keywords:
   - "application roles [SQL Server], permissions"
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # GRANT Database Principal Permissions (Transact-SQL)

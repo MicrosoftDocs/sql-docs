@@ -5,7 +5,7 @@ keywords:
 services: "sql-database"
 documentationcenter:
 author: "becczhang"
-manager: "craigg"
+manager: craigg
 ms.prod: 
 ms.reviewer: ""
 ms.suite: sql
@@ -13,13 +13,11 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.custom: 
 ms.component: "security"
-ms.workload: "On Demand"
 ms.tgt_pltfrm:
 
-ms.topic: "article"
+ms.topic: conceptual
 ms.date: "08/07/2017"
 ms.author: "rebeccaz"
-ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Remove a Transparent Data Encryption (TDE) protector using PowerShell

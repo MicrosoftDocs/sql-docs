@@ -2,9 +2,8 @@
 title: "sp_MSchange_snapshot_agent_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "sp_MSchange_snapshot_agent_properties"
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

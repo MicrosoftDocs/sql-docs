@@ -2,16 +2,13 @@
 title: "Log In to an Instance of SQL Server (Command Prompt) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server], named instance of SQL Server"
   - "log ins [SQL Server]"
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "logging in [SQL Server]"
 ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Log In to an Instance of SQL Server (Command Prompt)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

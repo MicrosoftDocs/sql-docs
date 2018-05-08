@@ -8,8 +8,7 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "system-catalog-views"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +23,9 @@ helpviewer_keywords:
   - "sys.event_log"
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.event_log (Azure SQL Database)

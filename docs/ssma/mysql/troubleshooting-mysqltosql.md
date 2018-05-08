@@ -1,17 +1,15 @@
 ---
 title: "Troubleshooting (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +17,7 @@ ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Troubleshooting (MySQLToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

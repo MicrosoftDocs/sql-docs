@@ -2,16 +2,13 @@
 title: "Restore a Database Backup Under the Simple Recovery Model (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full backups [SQL Server]"
   - "database restores [SQL Server], full backups"
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], full backups"
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Restore a Database Backup Under the Simple Recovery Model (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

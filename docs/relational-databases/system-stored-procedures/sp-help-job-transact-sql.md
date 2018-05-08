@@ -2,14 +2,12 @@
 title: "sp_help_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,8 +21,7 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

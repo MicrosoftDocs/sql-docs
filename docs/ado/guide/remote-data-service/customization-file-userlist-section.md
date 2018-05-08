@@ -1,11 +1,9 @@
 ---
 title: "Customization File UserList Section | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "customization file in RDS [ADO]"
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Customization File UserList Section
 The **userlist** section pertains to the **connect** section with the same section *identifier* parameter.  

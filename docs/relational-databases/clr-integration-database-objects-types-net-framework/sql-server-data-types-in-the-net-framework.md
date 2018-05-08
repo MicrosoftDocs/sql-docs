@@ -2,9 +2,8 @@
 title: "SQL Server Data Types in the .NET Framework | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -25,8 +24,7 @@ ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQL Server Data Types in the .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

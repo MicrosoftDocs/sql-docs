@@ -2,16 +2,13 @@
 title: "Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.tutorialstart.ssms.f1"
 helpviewer_keywords: 
@@ -28,9 +25,8 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ms.reviewer: "sstein"
-ms.workload: "Active"
 ---
 # Tutorials for SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

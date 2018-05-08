@@ -2,14 +2,12 @@
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -50,10 +48,9 @@ helpviewer_keywords:
   - "maximum number of bytes per row"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1259,7 +1256,9 @@ SELECT * FROM tempdb.sys.database_files
   
 ## Permissions  
  Requires CREATE TABLE permission in the database and ALTER permission on the schema in which the table is being created.  
-  
+ 
+ If any columns in the CREATE TABLE statement are defined to be of a user-defined type, REFERENCES permission on the user-defined type is required. 
+ 
  If any columns in the CREATE TABLE statement are defined to be of a CLR user-defined type, either ownership of the type or REFERENCES permission on it is required.  
   
  If any columns in the CREATE TABLE statement have an XML schema collection associated with them, either ownership of the XML schema collection or REFERENCES permission on it is required.  

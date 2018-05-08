@@ -2,9 +2,8 @@
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,7 +19,7 @@ helpviewer_keywords:
   - "DROP EXTERNAL LIBRARY"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # DROP EXTERNAL LIBRARY (Transact-SQL)  

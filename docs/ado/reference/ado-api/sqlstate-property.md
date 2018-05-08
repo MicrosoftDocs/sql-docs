@@ -1,11 +1,9 @@
 ---
 title: "SQLState Property | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "SQLState property"
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLState Property
 Indicates the SQL state for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  

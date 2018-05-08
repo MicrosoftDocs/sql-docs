@@ -14,10 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Connecting to a Windows Azure SQL Database Using SQL Server Native Client

@@ -188,6 +188,7 @@
 # [Resource Governor](resource-governor-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_resource_governor_configuration](sys-dm-resource-governor-configuration-transact-sql.md)  
 ## [sys.dm_resource_governor_external_resource_pool_affinity](sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+## [sys.dm_resource_governor_external_resource_pools](sys-dm-resource-governor-external-resource-pools.md)
 ## [sys.dm_resource_governor_resource_pool_affinity](sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)  
 ## [sys.dm_resource_governor_resource_pools](sys-dm-resource-governor-resource-pools-transact-sql.md)  
 ## [sys.dm_resource_governor_resource_pool_volumes](sys-dm-resource-governor-resource-pool-volumes-transact-sql.md)  

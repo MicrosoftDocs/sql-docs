@@ -2,14 +2,12 @@
 title: "time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "6/7/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,10 +23,9 @@ helpviewer_keywords:
   - "time data type [SQL Server]"
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # time (Transact-SQL)

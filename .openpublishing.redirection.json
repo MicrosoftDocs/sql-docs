@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/advanced-analytics/r/using-r-in-azure-sql-database.md",
+            "redirect_url": "https://docs.microsoft.com/en-us/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
+            "redirect_document_id": false
+        },        
+        {
             "source_path": "docs/advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md",
             "redirect_url": "https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm",
             "redirect_document_id": false
@@ -3667,6 +3672,11 @@
 	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-oltp-database.md",
 	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
 	  "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/relational-databases/import-export/reporting-import-flat-file-failures.md",
+        "redirect_url": "/sql/relational-databases/import-export/import-flat-file-wizard",
+        "redirect_document_id": false
       }
     ]
 }

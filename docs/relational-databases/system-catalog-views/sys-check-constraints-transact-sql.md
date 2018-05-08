@@ -2,14 +2,12 @@
 title: "sys.check_constraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "sys.check_constraints catalog view"
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.check_constraints (Transact-SQL)

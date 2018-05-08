@@ -8,18 +8,16 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "system-stored-procedures"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 caps.latest.revision: 8
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_database_encryption (SQL Data Warehouse)

@@ -1,11 +1,9 @@
 ---
 title: "Enabling a DLL to Run on DCOM | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "business objects in RDS [ADO]"
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Enabling a DLL to Run on DCOM
 > [!IMPORTANT]

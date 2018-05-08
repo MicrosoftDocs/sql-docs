@@ -2,16 +2,15 @@
 title: "User-Defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "udf"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined functions [SQL Server], components"
   - "user-defined functions [SQL Server], about user-defined functions"
@@ -19,8 +18,7 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 caps.latest.revision: 23
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # User-Defined Functions

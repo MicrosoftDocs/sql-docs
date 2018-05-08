@@ -2,14 +2,12 @@
 title: "sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "sys.dm_exec_sql_text dynamic management function"
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 caps.latest.revision: 36
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_sql_text (Transact-SQL)
@@ -77,7 +74,7 @@ Uniquely identifies a query plan for a batch that is cached or is currently exec
 |**text**|**nvarchar(max** **)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+ Requires `VIEW SERVER STATE` permission on the server.  
   
 ## Remarks  
 For ad hoc queries, the SQL handles are hash values based on the SQL text being submitted to the server, and can originate from any database. 

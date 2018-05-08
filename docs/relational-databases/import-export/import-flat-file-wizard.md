@@ -1,23 +1,21 @@
-﻿---
+---
 title: "Import Flat File to SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2017"
-ms.prod: "sql"
+ms.date: "09/26/2017"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: "douglasl"
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.importflatfile.f1"
 author: "yualan"
 ms.author: "alayu"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Import Flat File to SQL Wizard
@@ -89,11 +87,6 @@ This is simply a summary page displaying your current configuration. If there ar
 This page indicates whether the import was successful. If a green check mark appears, it was a success, otherwise you may need to review your configuration or input file for any errors.
 
 ![Wizard Results](media/import-flat-file-wizard/importffresults.png)
-
-## Reporting import flat file failures
-If you run into any failures, send an email to sqltoolsprosesupport@microsoft.com
-
-For more information, [see these instructions.](reporting-import-flat-file-failures.md)
 
 ## Learn More
 

@@ -2,16 +2,15 @@
 title: "OLE DB Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbsource.f1"
   - "sql13.dts.designer.oledbsourceadapter.connection.f1"
@@ -24,8 +23,7 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # OLE DB Source
   The OLE DB source extracts data from a variety of OLE DB-compliant relational databases by using a database table, a view, or an SQL command. For example, the OLE DB source can extract data from tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  

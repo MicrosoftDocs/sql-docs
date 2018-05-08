@@ -2,14 +2,12 @@
 title: "sys.fn_helpcollations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,8 +23,7 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_helpcollations (Transact-SQL)

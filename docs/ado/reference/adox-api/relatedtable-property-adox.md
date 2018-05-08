@@ -1,11 +1,9 @@
 ---
 title: "RelatedTable Property (ADOX) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "RelatedTable property [ADOX]"
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RelatedTable Property (ADOX)
 Indicates the name of the related table.  

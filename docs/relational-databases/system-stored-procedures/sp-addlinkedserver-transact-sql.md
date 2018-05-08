@@ -2,14 +2,12 @@
 title: "sp_addlinkedserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "sp_addlinkedserver"
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 caps.latest.revision: 70
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

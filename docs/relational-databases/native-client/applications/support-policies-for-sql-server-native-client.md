@@ -1,9 +1,8 @@
 ﻿---
 title: "Support Policies for SQL Server Native Client | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client|applications"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,10 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 caps.latest.revision: 27
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Support Policies for SQL Server Native Client

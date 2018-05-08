@@ -2,16 +2,13 @@
 title: "Restore Files to a New Location (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "restoring files [SQL Server], how-to topics"
   - "restoring databases [SQL Server], moving"
@@ -21,10 +18,9 @@ helpviewer_keywords:
   - "restoring filegroups [SQL Server]"
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Restore Files to a New Location (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

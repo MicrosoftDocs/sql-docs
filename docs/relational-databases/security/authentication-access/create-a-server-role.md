@@ -2,16 +2,15 @@
 title: "Create a Server Role | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.SERVERROLE.GENERAL.F1"
   - "sql13.swb.serverrole.memberships.f1"
@@ -20,10 +19,9 @@ helpviewer_keywords:
   - "SERVER ROLE, creating"
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Server Role

@@ -3,9 +3,8 @@ title: "IDBProperties (OLE DB) | Microsoft Docs"
 description: "IDBProperties interface (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,6 @@ ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # IDBProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

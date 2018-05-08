@@ -2,24 +2,21 @@
 title: "How to: Retrieve Output Parameters Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedure support"
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # How to: Retrieve Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

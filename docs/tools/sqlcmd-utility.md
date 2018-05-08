@@ -2,16 +2,15 @@
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "sqlcmd"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"
   - "QUIT command"
@@ -32,8 +31,7 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: 155
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sqlcmd Utility

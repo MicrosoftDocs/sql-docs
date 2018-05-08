@@ -1,11 +1,9 @@
 ---
 title: "ConnectionString Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "ConnectionString property [ADO]"
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ConnectionString Property (ADO)
 Indicates the information used to establish a connection to a data source.  

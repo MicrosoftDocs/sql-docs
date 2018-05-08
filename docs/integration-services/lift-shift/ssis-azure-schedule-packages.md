@@ -25,6 +25,8 @@ You can schedule the execution of packages stored in the SSISDB Catalog database
 
 In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, SSISDB, and select **Schedule** to open the **New schedule** dialog box. For more info, see [Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md).
 
+This feature requires SQL Server Management Studio version 17.7 or higher. To get the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+
 ## <a name="execute"></a> Schedule a package with the Execute SSIS Package activity
 
 For info about how to schedule an SSIS package by using the Execute SSIS Package activity in Azure Data Factory, see [Run an SSIS package using SSIS activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).

@@ -25,6 +25,10 @@ When you use SSMS to schedule a package, SSIS automatically creates three new Da
 -   An Execute SSIS Package activity named **Activity_MyPackage_2018-05-08T09_00_00Z**.
 -   A trigger named **Trigger_MyPackage_2018-05-08T09_00_00Z**.
 
+## Prerequisites
+
+The feature described in this article requires SQL Server Management Studio version 17.7 or higher. To get the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+
 ## Schedule a package in SSMS
 
 1. In SSMS, in Object Explorer, select the SSISDB database, select a project, and then select a package. Right-click on the package and select **Schedule**.

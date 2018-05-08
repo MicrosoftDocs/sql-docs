@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2018"

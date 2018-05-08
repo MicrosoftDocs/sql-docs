@@ -84,7 +84,7 @@ manager: craigg
   
 -   Backup to premium storage is not supported.  
   
--   The maximum backup size supported using a page blob is limited by the maximum size of a single page blob, which 1 TB. The maximum backup size supported using block blobs is not limited by the maximum size of a block blob, which is 200 GB, because backup to block blobs supports striping to support substantially larger backup sizes.  
+-   SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 MB (50,000 blocks * 4MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
   
 -   You can issue backup or restore statements by using TSQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.   
   

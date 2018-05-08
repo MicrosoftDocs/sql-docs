@@ -160,16 +160,27 @@ Backup and restore operations can take a considerable amount of time due to the 
 ### Backup and restore extended event 
 The backup and restore extended event can help monitor backup and restore operations in real time. For more information about extended events, see [extended events](../extended-events/extended-events.md)
 
-- Enable the back up an restore extended event
+- Manage the back up and restore extended event using Transact-SQL (T-SQL)
 
 ```sql
-CREATE EVENT SESSION [Backup trace] ON SERVER
+-- Create the back up and restore extended event esssion
+CREATE EVENT SESSION [BackupRestore trace] ON SERVER 
 ADD EVENT sqlserver.backup_restore_progress_trace
 ADD TARGET package0.event_file(SET filename=N'Backup trace')
-WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
-MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE, 
-TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF) 
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
 GO
+
+-- Start the event session  
+ALTER EVENT SESSION [BackupRestore trace]  
+ON SERVER  
+STATE = start;  
+GO  
+
+-- Start the event session  
+ALTER EVENT SESSION [BackupRestore trace]  
+ON SERVER  
+STATE = stop;  
+GO  
 ```
 
 ### Sample output from extended event 

@@ -115,7 +115,7 @@ The new statement is available in both [!INCLUDE[ssSQL15](../includes/sssql15-md
 ## In-Memory OLTP
 
 
-## Storage format change
+### Storage format change
 
 The storage format for memory-optimized tables is changed between SQL Server 2014 and 2016. For upgrade and attach/restore from SQL Server 2014, the new storage format is serialized and the database is restarted once during database recovery.
 
@@ -130,18 +130,18 @@ Now when you execute an ALTER TABLE statement on a memory-optimized table, only 
 
 
 
-## Statistics
+### Statistics
 
 [Statistics for memory-optimized](../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md) tables are now updated automatically. In addition, sampling is now a supported method to collect statistics, allowing you to avoid the more expensive fullscan method.
 
 
-## Parallel and heap scan for memory-optimized tables
+### Parallel and heap scan for memory-optimized tables
 
 Memory-optimized tables, and indexes on memory-optimized tables, now support parallel scan. This improves the performance of analytical queries.
 
 In addition, heap scan is supported, and can be performed in parallel. In the case of a memory-optimized table, a heap scan refers to scanning all the rows in a table using the in-memory heap data structure used for storing the rows. For a full table scan, heap scan is more efficient than using an index.
 
-## Transact-SQL Improvements for memory-optimized tables
+### Transact-SQL Improvements for memory-optimized tables
 
 There are several Transact-SQL elements that were not supported for memory-optimized tables in SQL Server 2014, which are now supported in SQL Server 2016:
 
@@ -179,46 +179,8 @@ For overall information, see:
 - [Unsupported SQL Server Features for In-Memory OLTP](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
-## Transact-SQL Improvements for natively compiled modules
 
-There are some Transact-SQL elements that were not supported for natively compiled modules in SQL Server 2014, which are now supported in SQL Server 2016:
-
-
-- Query constructs:
-  - UNION and UNION ALL
-  - SELECT DISTINCT
-  - OUTER JOIN
-  - Subqueries in SELECT
-
-
-- INSERT, UPDATE and DELETE statements can now include the [OUTPUT clause](../t-sql/queries/output-clause-transact-sql.md).
-
-- LOBs can now be used in the following ways in a native proc:
-  - Declaration of variables.
-  - Input parameters received.
-  - Parameters passed into string functions, such as into LTrim or Substring, in a native proc.
-
-
-- Inline (meaning single statement) table-valued functions (TVFs) can now be natively compiled.
-
-- Scalar user-defined functions (UDFs) can now be natively compiled.
-
-- Increased support for a native proc to call:
-  - Built-in [security functions](../t-sql/functions/security-functions-transact-sql.md).
-  - Built-in [math functions](../t-sql/functions/mathematical-functions-transact-sql.md).
-  - Built-in function `@@SPID`.
-
-
-- EXECUTE AS CALLER is now support, which means the EXECUTE AS clause is no longer required when creating a natively compiled T-SQL module.
-
-
-For overall information, see:
-
-- [Supported Features for Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
-- [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
-
-
-## Performance and scaling improvements
+### Performance and scaling improvements
 
 - There is no longer any limitation on data size. See [Estimate Memory Requirements for Memory-Optimized Tables](~/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).
 
@@ -227,7 +189,7 @@ For overall information, see:
 - Parallel plan support for [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).
 
 
-## Enhancements in SQL Server Management Studio
+### Enhancements in SQL Server Management Studio
 
 - The [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) no longer requires the configuration of data collectors or management data warehouse. The report can now run directly on a production database.
 
@@ -235,7 +197,7 @@ For overall information, see:
 
 - Generate migration checklists by right-clicking on a database, and selecting Tasks > Generate In-Memory OLTP migration checklists.
 
-## Cross-feature support
+### Cross-feature support
 
 - Support for using temporal system-versioning with In-Memory OLTP. For more information, see [System-Versioned Temporal Tables with Memory-Optimized Tables](../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 
@@ -274,13 +236,15 @@ Query store is a new feature that provides DBAs with insight on query plan choic
 ## Temporal Tables
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] now supports system-versioned temporal tables. A temporal table is a new type of table that provides correct information about stored facts at any point in time. Each temporal table consists of two tables actually, one for the current data and one for the historical data. The system ensures that when the data changes in the table with the current data the previous values are stored in the historical table. Querying constructs are provided to hide this complexity from users. For more information, see [Temporal Tables](../relational-databases/tables/temporal-tables.md).
 
-## Striped Backups to Microsoft Azure Blob Storage
+## Backups
+
+### Striped Backups to Microsoft Azure Blob Storage
 In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], SQL Server backup to URL using the Microsoft Azure Blob storage service now supports striped backups sets using block blobs to support a maximum backup size of 12.8 TB. For examples, see [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples).
 
-## File-Snapshot Backups to Microsoft Azure Blob Storage
+### File-Snapshot Backups to Microsoft Azure Blob Storage
  In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], SQL Server backup to URL now supports using Azure snapshots to backup databases in which all database files are stored using the Microsoft Azure Blob storage service. For more information, see [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
 
-## Managed Backup
+### Managed Backup
 In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SQL Server Managed Backup to Microsoft Azure uses the new block blob storage for backup files. There are also several changes and enhancements to Managed Backup.
 
 -   Support for both automated and custom scheduling of backups.
@@ -359,6 +323,46 @@ Numerous enhancements support the features described in the other sections of th
 - New string functions [STRING_SPLIT &#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) and [STRING_ESCAPE &#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md) are added.
 - Autogrow options: Trace flag 1117 is replaced by the AUTOGROW_SINGLE_FILE and AUTOGROW_ALL_FILES option of ALTER DATABASE, and trace flag 1117 has no affect. For more information, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) and the new is_autogrow_all_files column of [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).
 - Allocation of mixed extents: For user databases, default allocation for the first 8 pages of an object will change from using mixed page extents to using uniform extents. Trace flag 1118 is replaced with the SET MIXED_PAGE_ALLOCATION option of ALTER DATABASE, and trace flag 1118 has no affect. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md), and the new `is_mixed_page_allocation_on` column of [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+
+### Transact-SQL Improvements for natively compiled modules
+
+There are some Transact-SQL elements that were not supported for natively compiled modules in SQL Server 2014, which are now supported in SQL Server 2016:
+
+
+- Query constructs:
+  - UNION and UNION ALL
+  - SELECT DISTINCT
+  - OUTER JOIN
+  - Subqueries in SELECT
+
+
+- INSERT, UPDATE and DELETE statements can now include the [OUTPUT clause](../t-sql/queries/output-clause-transact-sql.md).
+
+- LOBs can now be used in the following ways in a native proc:
+  - Declaration of variables.
+  - Input parameters received.
+  - Parameters passed into string functions, such as into LTrim or Substring, in a native proc.
+
+
+- Inline (meaning single statement) table-valued functions (TVFs) can now be natively compiled.
+
+- Scalar user-defined functions (UDFs) can now be natively compiled.
+
+- Increased support for a native proc to call:
+  - Built-in [security functions](../t-sql/functions/security-functions-transact-sql.md).
+  - Built-in [math functions](../t-sql/functions/mathematical-functions-transact-sql.md).
+  - Built-in function `@@SPID`.
+
+
+- EXECUTE AS CALLER is now support, which means the EXECUTE AS clause is no longer required when creating a natively compiled T-SQL module.
+
+
+For overall information, see:
+
+- [Supported Features for Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
+- [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
+ 
+
 
 
 ## System View Enhancements

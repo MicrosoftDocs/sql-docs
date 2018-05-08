@@ -161,7 +161,7 @@ Backup and restore operations can take a considerable amount of time due to the 
 The backup-and-restore extended event can help monitor backup and restore operations in real time. 
 
 ```sql
--- Create the backup and restore extended event esssion
+-- Create the backup_restore_progress_trace extended event esssion
 CREATE EVENT SESSION [BackupRestoreTrace] ON SERVER 
 ADD EVENT sqlserver.backup_restore_progress_trace
 ADD TARGET package0.event_file(SET filename=N'BackupRestoreTrace')

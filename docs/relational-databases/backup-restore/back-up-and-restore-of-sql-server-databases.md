@@ -150,7 +150,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
   
  We recommend that you maintain an operations manual for each database. This operations manual should document the location of the backups, backup device names (if any), and the amount of time that is required to restore the test backups. 
 
-## Monitoring Backup Progress
+## Monitoring backup progress
 Backup and restore operations can take a considerable amount of time due to the size of a database and the complexity of the operations involved. There are two trace flags and an extended event that can help monitor the progress of either operation. 
 
   >[!WARNING]

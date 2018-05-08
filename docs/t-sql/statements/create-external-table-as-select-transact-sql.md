@@ -32,18 +32,6 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 
   Creates an external table and then exports, in parallel, the results of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Hadoop or Azure Storage Blob.  
   
- Use the CREATE EXTERNAL TABLE AS SELECT (CETAS) statement to:  
-  
--   Export a database table to Hadoop or Azure blob storage.  
-  
--   Import data from Hadoop or Azure blob storage and store it in the database.  
-  
--   Query data from Hadoop or Azure blob storage, join it with database relational tables, and write the results back to Hadoop or Azure blob storage.  
-  
--   Query data from Hadoop or Azure blob storage, transform it by using the database's fast processing capabilities, and write it back to Hadoop or Azure blob storage.  
-  
- For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

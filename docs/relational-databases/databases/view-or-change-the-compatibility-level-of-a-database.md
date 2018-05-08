@@ -2,16 +2,15 @@
 title: "View or Change the Compatibility Level of a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility levels [SQL Server], viewing"
   - "compatibility [SQL Server], databases"
@@ -20,8 +19,7 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View or Change the Compatibility Level of a Database

@@ -2,9 +2,8 @@
 title: "Bulk Copying Text and Image Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-bulk-copy-operations"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,10 +18,9 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Bulk Copying Text and Image Data

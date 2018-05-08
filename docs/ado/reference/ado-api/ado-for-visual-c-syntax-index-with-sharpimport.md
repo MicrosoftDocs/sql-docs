@@ -1,11 +1,9 @@
 ---
 title: "ADO for Visual C++ Syntax Index with #import | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "#import [ADO]"
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO for Visual C++ Syntax Index with #import
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++ and the **#import** directive.  

@@ -1,11 +1,9 @@
 ---
 title: "Microsoft OLE DB Remoting Provider (ADO Service Provider) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "remoting provider [ADO]"
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft OLE DB Remoting Provider Overview
 The Microsoft OLE DB Remoting Provider enables a local user on a client machine to invoke data providers on a remote machine. Specify the data provider parameters for the remote machine as you would if you were a local user on the remote machine. Then specify the parameters used by the Remoting Provider to access the remote machine. You can then access the remote machine as if you were a local user.

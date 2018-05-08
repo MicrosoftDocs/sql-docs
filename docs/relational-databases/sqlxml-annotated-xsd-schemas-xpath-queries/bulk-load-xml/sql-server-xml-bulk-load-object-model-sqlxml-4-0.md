@@ -2,14 +2,12 @@
 title: "SQL Server XML Bulk Load Object Model (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -37,8 +35,7 @@ ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server XML Bulk Load Object Model (SQLXML 4.0)

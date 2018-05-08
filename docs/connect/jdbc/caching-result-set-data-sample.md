@@ -2,22 +2,18 @@
 title: "Caching Result Set Data Sample | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Caching Result Set Data Sample
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

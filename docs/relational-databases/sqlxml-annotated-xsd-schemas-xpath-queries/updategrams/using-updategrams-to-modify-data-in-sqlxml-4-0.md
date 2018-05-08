@@ -2,14 +2,12 @@
 title: "Using Updategrams to Modify Data in SQLXML 4.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -30,8 +28,7 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using Updategrams to Modify Data in SQLXML 4.0

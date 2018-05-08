@@ -2,16 +2,15 @@
 title: "Permissions (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
   - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"
@@ -22,10 +21,9 @@ helpviewer_keywords:
   - "naming conventions [SQL Server]"
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Permissions (Database Engine)

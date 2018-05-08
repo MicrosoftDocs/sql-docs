@@ -1,11 +1,9 @@
 ---
 title: "Resync Method Example (VB) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "Resync method [ADO], Visual Basic example"
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Resync Method Example (VB)
 This example demonstrates using the [Resync](../../../ado/reference/ado-api/resync-method.md) method to refresh data in a static recordset.  

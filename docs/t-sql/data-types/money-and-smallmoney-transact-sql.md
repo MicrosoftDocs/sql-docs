@@ -2,14 +2,12 @@
 title: "money and smallmoney (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/22/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,10 +25,9 @@ helpviewer_keywords:
   - "currency [SQL Server]"
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # money and smallmoney (Transact-SQL)

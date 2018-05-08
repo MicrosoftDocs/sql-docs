@@ -1,11 +1,9 @@
 ---
 title: "CubeDefs Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "CubeDefs collection [ADO MD], members"
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # CubeDefs Collection Properties, Methods, and Events
 ## Properties  

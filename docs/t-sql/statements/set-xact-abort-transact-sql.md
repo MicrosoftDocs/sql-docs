@@ -2,14 +2,12 @@
 title: "SET XACT_ABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 applies_to: 
@@ -31,10 +29,9 @@ helpviewer_keywords:
   - "SET XACT_ABORT statement"
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 caps.latest.revision: 50
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SET XACT_ABORT (Transact-SQL)

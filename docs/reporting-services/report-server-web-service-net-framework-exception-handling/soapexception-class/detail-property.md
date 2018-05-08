@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service-net-framework-exception-handling"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -23,7 +22,6 @@ caps.latest.revision: 33
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Detail Property
   The **Detail** property of the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** class has the following XML structure:  

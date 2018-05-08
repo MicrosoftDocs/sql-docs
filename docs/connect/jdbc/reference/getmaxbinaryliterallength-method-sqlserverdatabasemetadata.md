@@ -2,16 +2,13 @@
 title: "getMaxBinaryLiteralLength Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.getMaxBinaryLiteralLength"
 apilocation: 
@@ -19,10 +16,9 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 42e49ff9-8072-44e4-ad75-c864c3a4ad8c
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # getMaxBinaryLiteralLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

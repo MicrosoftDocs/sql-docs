@@ -2,9 +2,8 @@
 title: "id Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: sql
 ms.component: "xquery"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,8 +22,7 @@ ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 caps.latest.revision: 19
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Functions on Sequences - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

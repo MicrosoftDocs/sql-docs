@@ -1,11 +1,9 @@
 ---
 title: "Step 2: Invoke the Server Program (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "RDS tutorial [ADO], invoking server program"
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 2: Invoke the Server Program (RDS Tutorial)
 When you invoke a method on the client *proxy*, the actual program on the server executes the method. In this step, you'll execute a query on the server.  

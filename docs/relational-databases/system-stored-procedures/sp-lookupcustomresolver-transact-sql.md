@@ -2,9 +2,8 @@
 title: "sp_lookupcustomresolver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "sp_lookupcustomresolver"
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

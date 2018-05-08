@@ -2,9 +2,8 @@
 title: "AcceptStop Property (SqlService Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "wmi"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,8 +21,7 @@ ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 caps.latest.revision: 35
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # AcceptStop Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

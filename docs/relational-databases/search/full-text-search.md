@@ -2,22 +2,21 @@
 title: "Full-Text Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: database-engine
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Full-Text Search

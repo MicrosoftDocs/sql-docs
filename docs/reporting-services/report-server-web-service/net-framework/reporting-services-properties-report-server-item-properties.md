@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -25,7 +24,6 @@ caps.latest.revision: 43
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Reporting Services Properties - Report Server Item Properties
   Item properties are properties that are specific to items in the report server database. Such items include reports, linked reports, folders, resources, models, and data sources.  

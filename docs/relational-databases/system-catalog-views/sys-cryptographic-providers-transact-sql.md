@@ -2,14 +2,12 @@
 title: "sys.cryptographic_providers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "sys.cryptographic_providers catalog view"
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.cryptographic_providers (Transact-SQL)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-design"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.seriesproperties.seriesdata.f1"
   - "10256"
@@ -28,7 +27,6 @@ caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Charts (Report Builder and SSRS)
 Read about using chart data regions to help readers of your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports understand large volumes of aggregated data at a glance.  

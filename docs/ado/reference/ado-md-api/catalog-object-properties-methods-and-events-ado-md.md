@@ -1,11 +1,9 @@
 ---
 title: "Catalog Object Properties, Methods, and Events (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "Catalog object [ADO MD], members"
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Catalog Object Properties, Methods, and Events (ADO MD)
 ## Properties/Collections  

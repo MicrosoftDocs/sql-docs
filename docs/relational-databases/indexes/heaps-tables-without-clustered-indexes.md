@@ -2,24 +2,20 @@
 title: "Heaps (Tables without Clustered Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/01/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "heaps"
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: 8
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Heaps (Tables without Clustered Indexes)

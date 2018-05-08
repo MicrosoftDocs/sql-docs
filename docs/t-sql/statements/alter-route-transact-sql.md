@@ -2,14 +2,12 @@
 title: "ALTER ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,10 +23,9 @@ helpviewer_keywords:
   - "routes [Service Broker], modifying"
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 caps.latest.revision: 33
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER ROUTE (Transact-SQL)

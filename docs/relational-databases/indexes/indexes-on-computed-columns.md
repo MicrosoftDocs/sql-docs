@@ -2,16 +2,13 @@
 title: "Indexes on Computed Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "computed columns, index creation"
   - "index creation [SQL Server], computed columns"
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "precise [SQL Server]"
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Indexes on Computed Columns

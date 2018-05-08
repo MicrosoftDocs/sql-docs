@@ -2,14 +2,12 @@
 title: "sys.sysfiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-compatibility-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,8 +24,7 @@ ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 caps.latest.revision: 40
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sys.sysfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,16 +2,14 @@
 title: "Create a Schedule | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scheduling jobs [SQL Server]"
   - "SQL Server Agent jobs, scheduling"
@@ -21,8 +19,7 @@ ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Schedule

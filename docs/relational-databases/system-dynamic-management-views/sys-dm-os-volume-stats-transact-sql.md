@@ -2,14 +2,12 @@
 title: "sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "sys.dm_os_volume_stats dynamic management function"
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,14 +2,12 @@
 title: "sys.assembly_modules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,8 +23,7 @@ ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.assembly_modules (Transact-SQL)

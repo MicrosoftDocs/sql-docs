@@ -2,9 +2,8 @@
 title: "Replication Features and Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/11/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,8 +19,7 @@ ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 caps.latest.revision: 21
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Replication Features and Tasks
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

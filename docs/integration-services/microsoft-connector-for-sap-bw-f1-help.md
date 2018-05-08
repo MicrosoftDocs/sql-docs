@@ -2,9 +2,8 @@
 title: "Microsoft Connector for SAP BW F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,8 +17,7 @@ ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Microsoft Connector for SAP BW F1 Help
   This section contains the F1 Help topics for the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. These topics are also available from the user interface by pressing the F1 key, or by clicking Help on wizard pages and dialog boxes.  

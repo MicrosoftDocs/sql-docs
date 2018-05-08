@@ -1,17 +1,15 @@
 ---
 title: "Global Settings (Logging) (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +17,7 @@ ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Global Settings (Logging) (DB2ToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  

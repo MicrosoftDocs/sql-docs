@@ -2,16 +2,13 @@
 title: "position Method (SQLServerBlob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLServerBlob.position"
 apilocation: 
@@ -19,10 +16,9 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: b520f192-6a14-4453-babd-8e7861ab25d6
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # position Method (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

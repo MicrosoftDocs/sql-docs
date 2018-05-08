@@ -1,11 +1,9 @@
 ---
 title: "Catalog Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "Catalog object [ADO MD]"
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Catalog Object (ADO MD)
 Contains multidimensional schema information (that is, cubes and underlying dimensions, hierarchies, levels, and members) specific to a multidimensional data provider (MDP).  

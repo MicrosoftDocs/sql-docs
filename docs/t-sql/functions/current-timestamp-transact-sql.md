@@ -2,14 +2,12 @@
 title: "CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -34,10 +32,9 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 caps.latest.revision: 48
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CURRENT_TIMESTAMP (Transact-SQL)

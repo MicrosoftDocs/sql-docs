@@ -1,11 +1,9 @@
 ---
 title: "Step 4: Populate the Details Text Box | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -14,10 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 4: Populate the Details Text Box
 To populate the Details text box, create a new subroutine named **recFields** and insert the following code:  

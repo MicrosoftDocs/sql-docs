@@ -1,11 +1,9 @@
 ---
 title: "Move Method Example (VB) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "Move method [ADO], Visual Basic example"
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Move Method Example (VB)
 This example uses the [Move](../../../ado/reference/ado-api/move-method-ado.md) method to position the record pointer based on user input.  

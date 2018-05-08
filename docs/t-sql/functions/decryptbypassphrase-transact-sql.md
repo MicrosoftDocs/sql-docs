@@ -2,14 +2,12 @@
 title: "DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "DECRYPTBYPASSPHRASE function"
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

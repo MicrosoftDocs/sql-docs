@@ -2,16 +2,15 @@
 title: "Database Detach and Attach (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading databases"
   - "databases [SQL Server], detaching"
@@ -33,8 +32,7 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 98
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # Database Detach and Attach (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

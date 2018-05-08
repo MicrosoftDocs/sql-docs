@@ -1,11 +1,9 @@
 ---
 title: "Field (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.reviewer: ""
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "Field collection [ADO], ADO/WFC syntax"
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Field (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

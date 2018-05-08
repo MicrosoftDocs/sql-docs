@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/03/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "checking report server installations"
   - "verifying report server installations"
@@ -25,7 +24,6 @@ caps.latest.revision: 45
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers can be installed in one of two modes, Native or SharePoint. The steps you should follow for verifying the installation depend on the report server mode.  

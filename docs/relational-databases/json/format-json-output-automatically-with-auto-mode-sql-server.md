@@ -2,7 +2,7 @@
 title: "Format JSON Output Automatically with AUTO Mode (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""
@@ -10,7 +10,7 @@ ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON AUTO"
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
@@ -18,8 +18,7 @@ caps.latest.revision: 17
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Format JSON Output Automatically with AUTO Mode (SQL Server)

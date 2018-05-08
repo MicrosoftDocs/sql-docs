@@ -2,22 +2,18 @@
 title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 caps.latest.revision: 8
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modifying Data in a System-Versioned Temporal Table

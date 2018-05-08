@@ -2,14 +2,12 @@
 title: "VARP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "VARP function [Transact-SQL]"
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # VARP (Transact-SQL)

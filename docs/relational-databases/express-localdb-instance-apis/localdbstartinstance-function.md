@@ -2,9 +2,8 @@
 title: "LocalDBStartInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,8 +20,7 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 caps.latest.revision: 17
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # LocalDBStartInstance Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

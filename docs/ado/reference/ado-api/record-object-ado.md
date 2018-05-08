@@ -1,11 +1,9 @@
 ---
 title: "Record Object (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "Record object [ADO]"
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Record Object (ADO)
 Represents a row from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) or the data provider, or an object returned by a semi-structured data provider, such as a file or directory.  

@@ -2,16 +2,14 @@
 title: "View Information About an Alert | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, alerts"
   - "viewing alerts"
@@ -22,8 +20,7 @@ ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View Information About an Alert

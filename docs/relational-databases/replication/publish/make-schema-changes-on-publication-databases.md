@@ -2,16 +2,15 @@
 title: "Make Schema Changes on Publication Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], schema changes"
   - "snapshot replication [SQL Server], replicating schema changes"
@@ -23,8 +22,7 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 73
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Make Schema Changes on Publication Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

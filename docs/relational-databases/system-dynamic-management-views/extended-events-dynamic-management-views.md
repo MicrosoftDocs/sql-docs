@@ -2,14 +2,12 @@
 title: "Extended Events Dynamic Management Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "dynamic management objects (SQL Server)"
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 caps.latest.revision: 12
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Extended Events Dynamic Management Views
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -2,9 +2,8 @@
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,8 +23,7 @@ caps.latest.revision: 32
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # OPENJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

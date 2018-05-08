@@ -2,22 +2,20 @@
 title: "Tracing (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 caps.latest.revision: 7
-author: "leolimsft"
-ms.author: "lle"
+author: leolimsft
+ms.author: lle
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Tracing (Master Data Services)
 

@@ -1,11 +1,9 @@
 ---
 title: "CommandTimeout Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "CommandTimeout property [ADO]"
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # CommandTimeout Property (ADO)
 Indicates how long to wait while executing a command before terminating the attempt and generating an error.  

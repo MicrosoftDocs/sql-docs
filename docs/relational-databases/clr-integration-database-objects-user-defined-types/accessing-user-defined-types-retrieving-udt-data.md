@@ -2,9 +2,8 @@
 title: "Retrieving UDT Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,8 +27,7 @@ ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 caps.latest.revision: 17
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Accessing User-Defined Types - Retrieving UDT Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

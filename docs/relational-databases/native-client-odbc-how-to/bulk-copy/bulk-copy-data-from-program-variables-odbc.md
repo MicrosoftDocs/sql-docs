@@ -2,9 +2,8 @@
 title: "Bulk Copy Data from Program Variables (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "bulk copy [ODBC]"
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Bulk Copy Data from Program Variables (ODBC)

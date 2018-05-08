@@ -2,14 +2,12 @@
 title: "sys.sysfulltextcatalogs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
 ms.component: "system-compatibility-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,8 +24,7 @@ ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
 caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.sysfulltextcatalogs (Transact-SQL)

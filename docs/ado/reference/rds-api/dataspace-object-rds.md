@@ -1,11 +1,9 @@
 ---
 title: "DataSpace Object (RDS) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "DataSpace object [RDS]"
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DataSpace Object (RDS)
 > [!IMPORTANT]

@@ -8,16 +8,14 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "dmv's"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_xe_database_session_object_columns (Azure SQL Database)

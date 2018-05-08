@@ -3,20 +3,17 @@ title: "Send Data to FILESTREAM - ISequentialStream Bound to ICommandText | Micr
 description: "Send data to FILESTREAM - ISequentialStream bound to ICommandText"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Send Data to FILESTREAM - ISequentialStream Bound to ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -5,18 +5,13 @@ ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "samples"
-ms.technology: 
-  - " database-engine "
-ms.topic: "article"
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
-robots: noindex,nofollow
-ms.workload: "Inactive"
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: samples
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # WideWorldImporters data generation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

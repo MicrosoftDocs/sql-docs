@@ -2,14 +2,12 @@
 title: "sys.filegroups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "sys.filegroups catalog view"
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
 caps.latest.revision: 54
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.filegroups (Transact-SQL)

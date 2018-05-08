@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "extensions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -25,7 +24,6 @@ caps.latest.revision: 33
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Reporting Services Extension Library
   The Reporting Services Extension Library is a set of classes, interfaces, and value types that are included in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This library provides access to system functionality and is designed to be the foundation on which [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] applications can be used to extend [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.  

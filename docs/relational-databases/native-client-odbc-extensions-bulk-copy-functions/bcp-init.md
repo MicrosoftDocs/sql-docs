@@ -2,9 +2,8 @@
 title: "bcp_init | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-extensions-bulk-copy-functions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "bcp_init function"
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 caps.latest.revision: 40
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # bcp_init

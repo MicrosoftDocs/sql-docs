@@ -1,11 +1,9 @@
 ---
 title: "UpdateBatch Method | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "UpdateBatch method [ADO]"
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # UpdateBatch Method
 Writes all pending batch updates to disk.  

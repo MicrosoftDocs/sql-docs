@@ -1,11 +1,9 @@
 ---
 title: "UpdateRule Property (ADOX) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "UpdateRule property [ADOX]"
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # UpdateRule Property (ADOX)
 Indicates the action performed when a primary [Key](../../../ado/reference/adox-api/key-object-adox.md) is updated.  

@@ -2,14 +2,12 @@
 title: "sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,8 +23,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "tmullaney"
 ms.author: "thmullan"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.sp_add_trusted_assembly (Transact-SQL)  

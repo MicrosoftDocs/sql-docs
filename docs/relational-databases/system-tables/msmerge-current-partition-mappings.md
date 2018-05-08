@@ -2,9 +2,8 @@
 title: "MSmerge_current_partition_mappings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,10 +22,9 @@ helpviewer_keywords:
   - "MSmerge_current_partition_mappings system table"
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # MSmerge_current_partition_mappings
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

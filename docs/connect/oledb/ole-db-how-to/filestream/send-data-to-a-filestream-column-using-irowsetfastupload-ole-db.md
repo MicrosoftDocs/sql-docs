@@ -3,20 +3,17 @@ title: "Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB) | Micr
 description: "Send data to a FILESTREAM column using IRowsetFastUpload (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

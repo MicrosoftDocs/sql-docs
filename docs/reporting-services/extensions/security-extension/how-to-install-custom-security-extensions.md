@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/10/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "extensions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -18,7 +17,6 @@ caps.latest.revision: 3
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # How to install custom security extensions

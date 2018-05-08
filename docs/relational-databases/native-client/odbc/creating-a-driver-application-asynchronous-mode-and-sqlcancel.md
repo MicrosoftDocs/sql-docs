@@ -2,9 +2,8 @@
 title: "Asynchronous Mode and SQLCancel | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client|ODBC"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,10 +21,9 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, asynchronous mode"
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Creating a Driver Application - Asynchronous Mode and SQLCancel

@@ -6,14 +6,12 @@ ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
-ms.workload: "On Demand"
 ---
 
 # Deploy a Pacemaker cluster for SQL Server on Linux

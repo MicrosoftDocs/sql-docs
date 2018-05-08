@@ -2,14 +2,12 @@
 title: "syspolicy_policies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,8 +21,7 @@ ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

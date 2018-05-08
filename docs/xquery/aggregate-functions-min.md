@@ -2,9 +2,8 @@
 title: "min Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: sql
 ms.component: "xquery"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,8 +22,7 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 caps.latest.revision: 28
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Aggregate Functions - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

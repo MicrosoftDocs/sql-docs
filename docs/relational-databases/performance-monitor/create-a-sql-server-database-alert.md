@@ -2,16 +2,15 @@
 title: "Create a SQL Server Database Alert | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database performance [SQL Server], alerts"
   - "alerts [SQL Server], creating"
@@ -24,10 +23,9 @@ helpviewer_keywords:
   - "server performance [SQL Server], alerts"
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Create a SQL Server Database Alert
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

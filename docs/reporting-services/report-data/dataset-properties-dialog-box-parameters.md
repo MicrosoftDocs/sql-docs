@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -22,7 +21,6 @@ caps.latest.revision: 40
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Dataset Properties Dialog Box, Parameters
   Select **Parameters** on the **Dataset Properties** dialog box to add, change, and delete query parameters, including query parameters that link to report parameters.  

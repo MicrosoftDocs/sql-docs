@@ -2,9 +2,8 @@
 title: "Next Fetch Position | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,10 +18,9 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
 ms.assetid: 9ef74b3f-c9c0-492f-9b93-d65738a61abd
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Fetching Rows - Next Fetch Position

@@ -2,16 +2,15 @@
 title: "Monitor and Tune for Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "instances of SQL Server, monitoring performance"
   - "monitoring server performance [SQL Server]"
@@ -32,10 +31,9 @@ helpviewer_keywords:
   - "monitoring server performance [SQL Server], about monitoring server performance"
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Monitor and Tune for Performance

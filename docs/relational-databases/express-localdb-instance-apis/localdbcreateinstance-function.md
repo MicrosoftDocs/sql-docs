@@ -2,9 +2,8 @@
 title: "LocalDBCreateInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,8 +20,7 @@ ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # LocalDBCreateInstance Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

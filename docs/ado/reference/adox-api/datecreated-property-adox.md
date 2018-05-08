@@ -1,11 +1,9 @@
 ---
 title: "DateCreated Property (ADOX) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "DateCreated property [ADOX]"
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DateCreated Property (ADOX)
 Indicates the date the object was created.  

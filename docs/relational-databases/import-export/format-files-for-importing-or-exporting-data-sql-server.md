@@ -2,16 +2,14 @@
 title: "Format Files for Importing or Exporting Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-bulk-import-export"
+ms.technology: data-movement
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk exporting [SQL Server], format files"
   - "bulk importing [SQL Server], format files"
@@ -20,8 +18,7 @@ ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Format Files for Importing or Exporting Data (SQL Server)

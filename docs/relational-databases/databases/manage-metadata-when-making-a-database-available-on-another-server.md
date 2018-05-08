@@ -321,7 +321,7 @@ The TRUSTWORHTY database property is used to indicate whether this instance of S
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- Many aspects of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] application move with the database. However, some aspects of the application must be re-created or reconfigured in the new location.  By default and for security, when a database is attached from another server, the option for *is_broker_enabled* and *is_honoor_broker_priority_on* is set to off. For information about how to set this option on, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ Many aspects of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] application move with the database. However, some aspects of the application must be re-created or reconfigured in the new location.  By default and for security, when a database is attached from another server, the options for *is_broker_enabled* and *is_honoor_broker_priority_on* are set to off. For information about how to set this option on, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

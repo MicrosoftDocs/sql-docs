@@ -226,7 +226,7 @@ Automatic update of statistics is now more aggressive on large tables (under com
 ### Other enhancements
 The Insert in an Insert-select statement is multi-threaded or can have a parallel plan (under compatibility level 130). To get a parallel plan, INSERT … SELECT statement must use the TABLOCK hint. For more information, see [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)
 
-## Live Query Statistics
+## Live Query statistics
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides the ability to view the live execution plan of an active query. This live query plan provides real-time insights into the query execution process as the controls flow from one query plan operator to another. For more information, see [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
 
 ## Query Store
@@ -361,9 +361,6 @@ For overall information, see:
 
 - [Supported Features for Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
 - [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
- 
-
-
 
 ## System View enhancements
 - Two new views support row level security. For more information, see [sys.security_predicates &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md) and [sys.security_policies &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md).
@@ -430,11 +427,11 @@ Direct seeding allows a secondary replica to be automatically seeded over the ne
 
 **Performance improvements** – The synchronization throughput of availability groups has been increased ~10x through parallel and faster compression of log blocks on the primary replica, an optimized synchronization protocol, and parallel decompression and redo of log records on the secondary replica. This increases the freshness of readable secondaries and reduces database recovery time in case of failover. Note that redo for memory-optimized tables is not yet parallel in SQL Server 2016.
 
-## Replication Enhancements
+## Replication enhancements
 - Replication of memory-optimized tables are now supported. For more information, see [Replication to Memory-Optimized Table Subscribers](../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).
 - Replication is now supported to [!INCLUDE[ssSDSFull](../includes/sssdsfull-md.md)]. For more information, see [Replication to SQL Database](../relational-databases/replication/replication-to-sql-database.md).
 
-## Tools Enhancements
+## Tools enhancements
 
 ### Management Studio
 Download the latest [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

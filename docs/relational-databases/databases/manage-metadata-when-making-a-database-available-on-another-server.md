@@ -311,7 +311,7 @@ manager: craigg
  For more information about certificates and asymmetric keys, see [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 ## Trustworthy Property
-The TRUSTWORHTY database property is used to indicate whether this instance of SQL Server trusts the database and the contents within it. When a database is attached, by default and for security, this option is set to OFF, even if this option was set to ON on the original server. For more information about this property, see [TRUSTWORTHY databse property](../security/trustworthy-database-property) and for information on turning this option ON, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+The TRUSTWORHTY database property is used to indicate whether this instance of SQL Server trusts the database and the contents within it. When a database is attached, by default and for security, this option is set to OFF, even if this option was set to ON on the original server. For more information about this property, see [TRUSTWORTHY database property](../security/trustworthy-database-property.md) and for information on turning this option ON, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
 
 ##  <a name="replication_settings"></a> Replication Settings  

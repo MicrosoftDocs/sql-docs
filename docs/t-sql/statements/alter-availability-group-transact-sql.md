@@ -425,7 +425,7 @@ ALTER AVAILABILITY GROUP group_name
  For more information, see [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
- Initiates a manual failover of the availability group without data loss to the secondary replica to which you are connected. The replica on which you enter a failover target failover command is known as the .  The failover target will take over the primary role and recover its copy of each database and bring them online as the new primary databases. The former primary replica concurrently transitions to the secondary role, and its databases become secondary databases and are immediately suspended. Potentially, these roles can be switched back and forth by a series of failures.  
+Initiates a manual failover of the availability group without data loss to the secondary replica to which you are connected. The replica that will host the primary replica is the *failover target*.  The failover target will take over the primary role and recover its copy of each database and bring them online as the new primary databases. The former primary replica concurrently transitions to the secondary role, and its databases become secondary databases and are immediately suspended. Potentially, these roles can be switched back and forth by a series of failures.  
   
  Supported only on a synchronous-commit secondary replica that is currently synchronized with the primary replica. Note that for a secondary replica to be synchronized the primary replica must also be running in synchronous-commit mode.  
   

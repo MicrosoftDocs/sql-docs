@@ -66,7 +66,7 @@ Before turning on Local Audit, a system administrator needs to:
 | &nbsp; | &nbsp; |
 
 
-### Get the SQL Server CEIP Service Logon Account
+### Get the SQL Server CEIP Service Logon Account 
 
 Do the following steps to get the SQL Server CEIP Telemetry service logon account
  

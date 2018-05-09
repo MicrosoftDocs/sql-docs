@@ -41,17 +41,18 @@ There are multiple ways that you can get a complete list of the packages current
 
 ### R
 
-The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](..\..\includes\tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. To avoid parsing the fields in the DESCRIPTION file, only the name is returned.
+The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](..\..\includes\tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. This script returns package name and version fields in the DESCRIPTION file, only the name is returned.
 
 ```SQL
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
 packagematrix <- installed.packages();
-NameOnly <- packagematrix[,1];
-OutputDataSet <- as.data.frame(NameOnly);'
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
 , @input_data_1 = N''
-WITH RESULT SETS ((PackageName nvarchar(250) ))
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
 For more information about the optional and default fields for the R package DESCRIPTION field, see

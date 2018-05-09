@@ -1,5 +1,5 @@
 ---
-title: "Change the Database Compatibility Mode and Use the Query Store | Microsoft Docs"
+title: "Change the Database Compatibility Level and Use the Query Store | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Change the Database Compatibility Mode and Use the Query Store
+# Change the Database Compatibility Level and use the Query Store
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -31,7 +31,7 @@ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent
   
 > [!IMPORTANT]  
 > If the compatibility level of a user database was 100 or higher before the upgrade, it remains the same after upgrade.    
-> If the compatibility level of a user database was 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].    
+> If the compatibility level of a user database was 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].    
 > The compatibility levels of the tempdb, model, msdb and Resource databases are set to the current compatibility level after upgrade.   
 > The master system database retains the compatibility level it had before upgrade.    
   
@@ -45,6 +45,8 @@ The recommended workflow for upgrading the query processor to the latest version
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
  
 ## See Also  
- [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
- [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md) 
+[View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
+[Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md)     
+[ALTER DATABASE &#40;Transact-SQL&#41; Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+    
   

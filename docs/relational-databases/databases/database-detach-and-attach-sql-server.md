@@ -107,7 +107,7 @@ manager: craigg
  On attach, database startup occurs. Generally, attaching a database places it in the same state that it was in when it was detached or copied. However, attach-and-detach operations both disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
 
  >[!IMPORTANT]
- > By default and for security, the options for *is_broker_enabled*, *is_honor_broker_priority_on* and *is_trustworthy_on* are set to OFF whenever the database is attached. For information about how to set these options on, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  For more information about metadata, see [managing metadata when making a database available on another server](/manage-metadata-when-making-a-database-available-on-another-server.md).
+ > By default and for security, the options for *is_broker_enabled*, *is_honor_broker_priority_on* and *is_trustworthy_on* are set to OFF whenever the database is attached. For information about how to set these options on, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  For more information about metadata, see [Manage metadata when making a database available on another server](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
 ### Backup and Restore and Attach  
  Like any database that is fully or partially offline, a database with restoring files cannot be attached. If you stop the restore sequence, you can attach the database. Then, you can restart the restore sequence.  
@@ -117,7 +117,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  A database created by a more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be attached in earlier versions.  
   
- When you attach a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+ When you attach a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage metadata when making a aatabase available on another server instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To detach a database**  

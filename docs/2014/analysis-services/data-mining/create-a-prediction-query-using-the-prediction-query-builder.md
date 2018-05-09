@@ -89,7 +89,7 @@ manager: "mblythe"
 8.  Run the query by clicking the first button on the toolbar of the **Mining Model Prediction** tab, and then selecting **Result**.  
   
 ## See Also  
- [Create a Singleton Query in the Data Mining Designer](data-mining-designer.md)   
+ [Create a Singleton Query in the Data Mining Designer](create-a-singleton-query-in-the-data-mining-designer.md)   
  [Data Mining Queries](data-mining-queries.md)  
   
   

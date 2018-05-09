@@ -46,7 +46,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
  After you have specified the connection string, you must use the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> method to open the connection. When you open a <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object, you can set various levels of security for the connection. The security level that is used for the connection depends on the value of the `ProtectionLevel` connection string setting. For more information about opening secure connections in ADOMD.NET, see [Establishing Secure Connections in ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
   
 ## Working with a Connection  
- Each open connection exists in a session, which provides support for stateful operations. A session can be shared by more than one open connection. Sharing a session enables more than one client to share the same context. For more information, see [Working with Connections and Sessions in ADOMD.NET](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md).  
+ Each open connection exists in a session, which provides support for stateful operations. A session can be shared by more than one open connection. Sharing a session enables more than one client to share the same context. For more information, see [Working with Connections and Sessions in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
  You can use an open connection to retrieve metadata, data, and run commands. For more information, see [Retrieving Metadata from an Analytical Data Source](retrieving-metadata-from-an-analytical-data-source.md), [Retrieving Data from an Analytical Data Source](retrieving-data-from-an-analytical-data-source.md), and [Executing Commands Against an Analytical Data Source](executing-commands-against-an-analytical-data-source.md).  
   
@@ -57,7 +57,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
   
  A connection that is not explicitly closed, but is allowed to fall out of scope, may not release server resources quickly enough to enable high-concurrency [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] client applications to efficiently open new connections. Depending on how you created the connection, the session used by the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object can remain active if the connection is not explicitly closed.  
   
- For more information about sessions, see [Working with Connections and Sessions in ADOMD.NET](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md).  
+ For more information about sessions, see [Working with Connections and Sessions in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
 > [!IMPORTANT]  
 >  In the `Finalize` method of any implemented class, do not call the `Close` or `Dispose` methods of an <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> object, or any other managed object. In a finalizer, only release unmanaged resources that are directly owned by the implemented class. If the implemented class does not own any unmanaged resources, do not include a `Finalize` method in the class definition.  

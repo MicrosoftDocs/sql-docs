@@ -25,7 +25,7 @@ manager: "mblythe"
   
 -   [Create a Prediction Query Using the Prediction Query Builder](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
--   [Create a Singleton Query in the Data Mining Designer](data-mining-designer.md)  
+-   [Create a Singleton Query in the Data Mining Designer](create-a-singleton-query-in-the-data-mining-designer.md)  
   
 -   [Create a Prediction Query Using the Prediction Query Builder](create-a-prediction-query-using-the-prediction-query-builder.md)  
   

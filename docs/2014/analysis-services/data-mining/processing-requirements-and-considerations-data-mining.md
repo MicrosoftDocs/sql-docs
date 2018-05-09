@@ -64,7 +64,7 @@ manager: "mblythe"
   
  When you initiate deployment, processing starts automatically, unless there is a previously processed version on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server and there have been no structural changes. You can deploy a project by selecting **Deploy solution** from the drop-down list or by pressing the F5 key. You can  
   
- For more information about how to set [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deployment properties that control how mining models are deployed, see [Deployment of Data Mining Solutions](data-mining-solutions.md).  
+ For more information about how to set [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deployment properties that control how mining models are deployed, see [Deployment of Data Mining Solutions](deployment-of-data-mining-solutions.md).  
   
  **Moving a mining model**: When you move a mining model by using the EXPORT command, only the definition of the model is exported, which includes the name of the mining structure that is expected to provide data to the model.  
   

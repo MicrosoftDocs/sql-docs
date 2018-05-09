@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Deprecated Database Engine Features in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/09/2017"
+ms.date: "05/09/2018"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.component: "database-engine"
@@ -25,27 +25,32 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 # Deprecated Database Engine Features in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
+  This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Deprecated features should not be used in new applications.  
+  
+When a feature is marked deprecated, it means:
+-  The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
+-  We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if it limits future innovations.
+-  For new development, we don’t recommend using deprecated features.     
   
  You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
  The value of these counters are also available by executing the following statement:  
   
-```  
+```sql  
 SELECT * FROM sys.dm_os_performance_counters   
 WHERE object_name = 'SQLServer:Deprecated Features';  
 ```  
 
->  [!NOTE]  
->  This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)].
+> [!NOTE]  
+> This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)].
 
-## Features Not Supported in the Next Version of SQL Server  
- The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will not be supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and sys.dm_os_performance_counters as the instance name. The **Feature ID** value appears in trace events as the ObjectId.  
+## Features deprecated in the next version of SQL Server  
+ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will be deprecated in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.  
   
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup and Restore|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated. BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued.|None.|BACKUP DATABASE or LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Compatibility levels|Upgrade from version 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Compatibility levels are only available for the last two versions. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|  
+|Compatibility levels|Upgrade from version 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version goes out of [support](http://aka.ms/sqllifecycle), the associated Database Compatibility Level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|  
 |Database objects|Ability to return result sets from triggers|None|Returning results from trigger|12|  
 |Encryption|Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 is not deprecated.|Use another encryption algorithm such as AES.|Deprecated encryption algorithm|253|  
 |Remote servers|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -54,8 +59,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Set options|**SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements|TOP keyword|SET ROWCOUNT|109|  
 |Table hints|HOLDLOCK table hint without parenthesis.|Use HOLDLOCK with parenthesis.|HOLDLOCK table hint without parenthesis|167|  
   
-## Features Not Supported in a Future Version of SQL Server  
- The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features are supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has not been determined.  
+## Features deprecated in a future version of SQL Server  
+ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features are supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but will be deprecated in a later version. The specific version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has not been determined.  
   
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
@@ -155,7 +160,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of \@, \@\@, or \@\@ as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers.|Do not use \@ or \@\@ or names that begin with \@\@ as identifiers.|'\@' and names that start with '\@\@' as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of DEFAULT keyword as default value.|Do not use the word DEFAULT as a default value.|DEFAULT keyword as a default value|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of a space as a separator between table hints.|Use a comma to separate table hints.|Multiple table hints without comma|168|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|The select list of an aggregate indexed view must contain COUNT_BIG (*) in 90 compatibility mode|Use COUNT_BIG (*).|Index view select list without COUNT_BIG(*)|2|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|The select list of an aggregate indexed view must contain COUNT_BIG (\*) in 90 compatibility mode|Use COUNT_BIG (\*).|Index view select list without COUNT_BIG(\*)|2|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|The indirect application of table hints to an invocation of a multi-statement table-valued function (TVF) through a view.|None.|Indirect TVF hints|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE syntax:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |Other|DB-Library<br /><br /> Embedded SQL for C|Although the [!INCLUDE[ssDE](../includes/ssde-md.md)] still supports connections from existing applications that use the DB-Library and Embedded SQL APIs, it does not include the files or documentation required to do programming work on applications that use these APIs. A future version of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will drop support for connections from DB-Library or Embedded SQL applications. Do not use DB-Library or Embedded SQL to develop new applications. Remove any dependencies on either DB-Library or Embedded SQL when you are modifying existing applications. Instead of these APIs, use the SQLClient namespace or an API such as ODBC. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] does not include the DB-Library DLL required to run these applications. To run DB-Library or Embedded SQL applications, you must have available the DB-Library DLL from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0, or [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].|None|None|  
@@ -165,7 +170,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL Trace stored procedures, functions, and catalog views|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Extended Events](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
->  The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. If developers have allocated **varbinary(50)** the application might require changes if the cookie return size increases in a future release. Though not a deprecation issue this is mentioned in this topic because the application adjustments are similar. For more information, see [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+> The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. If developers have allocated **varbinary(50)** the application might require changes if the cookie return size increases in a future release. Though not a deprecation issue this is mentioned in this topic because the application adjustments are similar. For more information, see [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## See Also  
  [Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  

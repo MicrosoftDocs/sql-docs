@@ -14,7 +14,7 @@ manager: cgronlun
 #  Get R and Python package information on SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. This article provides queries and guidance useful for determininga  package version, and to list the packages that are installed in the current SQL Server environment.
+If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. This article provides queries and guidance useful for determinin ga package version, and to list the packages that are installed in the current SQL Server environment.
 
 ## Verify the current default library
 

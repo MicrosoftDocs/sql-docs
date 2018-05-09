@@ -2,9 +2,9 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "04/25/2018"
+ms.date: "05/08/2018"
 ms.prod: sql
-ms.reviewer: "alayu; erickang; sstein"
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
@@ -16,7 +16,34 @@ manager: craigg
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the April Public Preview](download.md)**
+**[Download the May Public Preview](download.md)**
+
+
+## May 2018 (May Public Preview)
+
+release date: May 7, 2018  
+version: 0.29.3
+
+The *May Public Preview* is focused on stabilization and bug fixes. This build contains the following highlights:  
+
+- Announcing Redgate SQL Search extension available in Extension Manager.
+- Community Localization available for 10 languages: German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, Simplified Chinese and Traditional Chinese.
+- GDPR-compliant build has reduced telemetry collection, improved opt-out experience and in-product links to Privacy Statement.
+- Extension Manager has improved Marketplace experience to easily discover community extensions.
+- SQL Agent extension Jobs and Job History view improvement.
+- Updates for whoisactive and Server Reports extensions.
+- Improve Manage Dashboard Properties scrolling.
+- Fix GitHub Issues:
+   - Fix [issue 703](https://github.com/Microsoft/sqlopsstudio/issues/703): Entering HTML-like text in edit data causes value to display incorrectly until refresh
+   - Fix [issue 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb package dependency
+   - Fix [issue 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): Keyword 'distinct' not highlighted
+   - Fix [issue 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): Edit data revert row doesn't work
+   - Fix [issue 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent extension and the status bar
+   - Fix [issue 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent Don´t resize after change windows size
+
+
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 
 ## April 2018 (April Public Preview)

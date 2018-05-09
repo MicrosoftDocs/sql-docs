@@ -16,14 +16,18 @@ manager: craigg
 ---
 # Schedule the execution of an SSIS package deployed to Azure SQL Database with SQL Server Management Studio (SSMS)
 
-SQL Server Management Studio (SSMS) provides a scheduling feature for SSIS packages deployed to Azure SQL Database. Unlike SQL Server on premises and SQL Database Managed Instance (Preview), which have SQL Server Agent as a first-class job scheduler, SQL Database does not have a built-in scheduler. The SSMS feature described in this article provides a familiar user interface that's similar to SQL Server Agent for scheduling packages deployed to SQL Database.
+SQL Server Management Studio (SSMS) provides a scheduling feature for SSIS packages deployed to Azure SQL Database. SQL Server on premises and SQL Database Managed Instance (Preview)  have SQL Server Agent and Managed Instance Agent respectively as a first-class SSIS job scheduler. SQL Database, on the other hand, does not have a built-in first-class SSIS job scheduler. The SSMS feature described in this article provides a familiar user interface that's similar to SQL Server Agent for scheduling packages deployed to SQL Database.
 
 If you're using SQL Database to host the SSIS catalog database, `SSISDB`, you can use this SSMS feature to generate the Data Factory pipelines, activities, and triggers required to schedule SSIS packages. You can then edit and extend these objects in Data Factory.
 
-When you use SSMS to schedule a package, SSIS automatically creates three new Data Factory objects, with names based on the name of the selected package and the timestamp. For example, if the name of the SSIS package is **MyPackage**, SSMS creates the following new Data Factory objects:
--   A pipeline named **Pipeline_MyPackage_2018-05-08T09_00_00Z**.
--   An Execute SSIS Package activity named **Activity_MyPackage_2018-05-08T09_00_00Z**.
--   A trigger named **Trigger_MyPackage_2018-05-08T09_00_00Z**.
+When you use SSMS to schedule a package, SSIS automatically creates three new Data Factory objects, with names based on the name of the selected package and the timestamp. For example, if the name of the SSIS package is **MyPackage**, SSMS creates new Data Factory objects similar to the following:
+
+| Object | Name |
+|---|---|
+| Pipeline | **Pipeline_MyPackage_2018-05-08T09_00_00Z** |
+| Execute SSIS Package activity | **Activity_MyPackage_2018-05-08T09_00_00Z** |
+| Trigger | **Trigger_MyPackage_2018-05-08T09_00_00Z** |
+|||
 
 ## Prerequisites
 
@@ -31,7 +35,7 @@ The feature described in this article requires SQL Server Management Studio vers
 
 ## Schedule a package in SSMS
 
-1. In SSMS, in Object Explorer, select the SSISDB database, select a project, and then select a package. Right-click on the package and select **Schedule**.
+1. In SSMS, in Object Explorer, select the SSISDB database, select a folder, select a project, and then select a package. Right-click on the package and select **Schedule**.
 
     ![Select a package to schedule.](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image1-schedule.png)
 
@@ -64,5 +68,5 @@ The feature described in this article requires SQL Server Management Studio vers
 To learn about other methods for scheduling an SSIS package, see [Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md).
 
 To learn more about Azure Data Factory pipelines, activities, and triggers, see the following articles:
-    [Pipelines and activities in Azure Data Factory](/azure/data-factory/concepts-pipelines-activities.md)
-    [Pipeline execution and triggers in Azure Data Factory](/azure/data-factory/concepts-pipeline-execution-triggers.md)
+-   [Pipelines and activities in Azure Data Factory](/azure/data-factory/concepts-pipelines-activities.md)
+-   [Pipeline execution and triggers in Azure Data Factory](/azure/data-factory/concepts-pipeline-execution-triggers.md)

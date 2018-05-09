@@ -47,7 +47,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 ## Get SQL Operations Studio (preview) for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=873386).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=873388).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 

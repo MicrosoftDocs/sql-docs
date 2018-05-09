@@ -22,7 +22,7 @@ manager: craigg
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step to creating a publication is having the **Snapshot Agent** create the snapshot and save it to the snapshot folder. Next, the **Distribution Agent** will take the snapshot, and apply it to the subscriber. 
 
 This creates the publication, and puts it into the *synchronizing* state. Synchronization works in three phases:
-- Transactions occur on objects that are replicated, and are marked 'for replication' in the transaction log. 
+- Transactions occur on objects that are replicated, and are marked 'for replication' in the transac20180509_repltscleanuption log. 
 - The **Log Reader Agent** scans through the transaction log looking for transactions that are marked 'for replication'. These transactions are then saved to the distribution database. 
 - The **Distribution Agent** scans through the distribution database using the reader thread and then, using the writer thread, connects to the subscriber to apply those changes to the subscriber.
 
@@ -44,7 +44,7 @@ Errors can occur in any step of this process, and finding those errors can be th
 1. Use **Replication Monitor** to identify at which point replication is encountering the error (which agent?).
     - If errors are occurring in the *Synchronization Status*, then the issue is with the snapshot agent. 
     - If errors are occurring in the *Publisher to Distributor* section, then the issue is with the log reader agent. 
-    -  If errors are occurring the *Distributor to Subscriber* section, then the issue is with the distribution agent.  
+    - If errors are occurring in the *Distributor to Subscriber* section, then the issue is with the distribution agent.  
 2. Look through that agent's **Job History**  in **Job Activity Monitor** to identify details of the error. 
     -  If job history is not showing sufficient details,  you can [enable verbose logging](#enable-verbose-logging) on the specific agent.
 3. Attempt to determine a solution for the error.
@@ -53,11 +53,10 @@ Errors can occur in any step of this process, and finding those errors can be th
 ## Troubleshoot Errors with Snapshot Agent
 The **Snapshot Agent** is the agent that generates the snapshot, and writes it to the specified snapshot folder. 
 
-1. To view the status of your snapshot agent, expand the **Local Publication** node under replication, right select your publication **AdvWorksProductTrans** > **View Snapshot Agent Status**. 
+1. View the status of your snapshot agent. To do this, expand the **Local Publication** node under ***Replication** in **Object Explorer**, right-click your publication **AdvWorksProductTrans** > **View Snapshot Agent Status**. 
 2. If an error is reported in the **Snapshot Agent Status**, more details can be found in the **Snapshot Agent** job history. To access this, expand **SQL Server Agent** in **Object Explorer** and open the **Job Activity Monitor**. 
 
-    a. Sort by **Category** and identify the **Snapshot Agent** by the category 'REPL-Snapshot'. 
-
+    a. Sort by **Category** and identify the **Snapshot Agent** by the category 'REPL-Snapshot'.
     b. Right-click the **Snapshot Agent** and **View History**: 
 
    ![Snapshot Agent History](media/troubleshooting-tran-repl-errors/snapshot-agent-history.png)

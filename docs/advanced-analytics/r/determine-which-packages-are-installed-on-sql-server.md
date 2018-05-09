@@ -14,7 +14,7 @@ manager: cgronlun
 #  Get R and Python package information on SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. This article provides queries and guidance useful for determinin ga package version, and to list the packages that are installed in the current SQL Server environment.
+If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. This article provides queries and guidance useful for determining a package version, and to list the packages that are installed in the current SQL Server environment.
 
 ## Verify the current default library
 
@@ -113,64 +113,48 @@ installed_pckg = pckgs.query(''key == @pckg_name'')
 print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
 ```
 
-## View installed packages using a utility or IDE
+## Get package information in R and Python tools
 
-Most development tools provide an object browser or a list of packages that are installed or that are loaded in the current workspace or environment. This section provides some short tips for using popular R or Python tools.
+All of the previous instructions assume you are using a SQL Server tool such as Management Studio (SSMS). If you prefer using R and Python tools, the following instructions explain how to get library and package information from an R or Python command line.
 
-### R tools
+### R commands
 
-There are multiple ways to get a list of installed or loaded packages using R utilities. 
+The instance library for R is \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library.
 
-+ From a local R utility, use a base R function, such as `installed.packages()`, which is included in the `utils` package. To get a list that is accurate for an instance, you must either specify the library path explicitly, or use the R tools associated with the instance library.
+Launch the standard R tools from these locations to ensure packages from the instance library are used:
 
-### Python tools
++ \MSSQL14.MSSQLSERVER\R_SERVICES\bin\R.exe for an R command prompt
++ \MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe for an R console app
 
-Python extensions for Visual Studio make it very easy to view packages installed in the current environment, or in other virtual environments listed in the IDE. You can configure multiple environments, choose an environment from a list, and view the packages or install new packages to that environment.
+You can use standard R commands or RevoScaleR commands to get package information. The RevoScaleR package is loaded automatically. 
 
-+ [Python environments](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio)
+Return RevoScaleR package information:
 
-Visual Studio Code is a free editor that supports Python, with several Python linters available. Although VS Code does not provide a package browser like the one in Visual Studio, it supports configuring and switching between multiple environments.
+    > print(Revo.version)
 
-+ [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
+Return a list of all installed packages:
 
-Some additional configuration might be required to run **revoscalepy** commands from a remote client:
+    > installed.packages()
 
-+ [Install custom Python packages and interpreter locally on Windows](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)
+Return the version of R:
 
-This blog provides some useful tips on configuring other Python environments, including PyCharm, to work with **revoscalepy**.
+    > packageDescription("base")
 
-+ [Get started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
+### Python commands
 
-## Use functions from Machine Learning Server
+Python support is SQL Server 2017 only. The instance library for Python is \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library.
 
-Because the libraries used with SQL Server support execution of code from a remote client, you can use these functions to find out which packages are installed in a remote environment.
+Open the Python command window from this location to ensure packages from the instance library are used:
 
-### RevoScaleR
++ \MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Python.exe
 
-If you are working in a remote client and don't have access to the server, you can still get a list of packages that are installed on SQL Server, by using RevoScaleR functions. You specify the SQL Server as a compute context, which requires that you have permission to connect to the server. 
+Open interactive help:
 
-+ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) finds the path for a package in the remote compute context.
+    > help()
 
-+ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) gets information about packages installed in a compute context.
+Type a module name at the help prompt to get the package contents, version, and file location:
 
-For example, run the following R code to get a list of packages available in the specified SQL Server compute context.
-
-```R
-sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;")
-sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
-sqlPackages
-```
-
-The following example gets the library location of RevoScaleR in the local compute context, and the package version.
-
-```R
-rxFindPackage(RevoScaleR, "local")
-packageVersion("RevoScaleR")
-```
-
-### revoscalepy
-
-Functions similar to those for RevoScaleR are not available at this time. Look for them in a later version of **revoscalepy**.
+    > help> revoscalepy
 
 ## Get library location and version
 
@@ -195,7 +179,7 @@ EXEC sp_execute_external_script
 ```
 
 > [!NOTE]
-> The [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function can be executed only on the target computer. The function cannot return library paths for remote connections.
+> The [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function can be executed only on the local computer. The function cannot return library paths for remote connections.
 
 **Results**
 

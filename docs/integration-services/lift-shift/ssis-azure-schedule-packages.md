@@ -17,7 +17,7 @@ manager: craigg
 You can schedule the execution of packages stored in the SSISDB Catalog database on an Azure SQL Database server by choosing one of the following scheduling options:
 -   [The Schedule option in SQL Server Management Studio (SSMS)](#ssms)
 -   [The Azure Data Factory Execute SSIS Package activity](#execute)
--   [The Azure Data Factory SQL Server Stored Procedure activity](#stored proc)
+-   [The Azure Data Factory SQL Server Stored Procedure activity](#storedproc)
 -   [SQL Database elastic jobs](#elastic)
 -   [SQL Server Agent](#agent)
 

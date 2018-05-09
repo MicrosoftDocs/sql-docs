@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  The following describes how to prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for Oracle Change Data Capture using the CDC Service Configuration Console. This process creates the MSXDBCDC database and defines the required tables, stored procedures, and other required artifacts.  
   
- Preparing the SQL Server for Oracle CDC is done by the Oracle CDC Service Administrator. For more information about the CDC Service Administrator role, see [User Roles for Change Data Capture Service for Oracle by Attunity](change-data-capture-service-for-oracle-by-attunity.md).  
+ Preparing the SQL Server for Oracle CDC is done by the Oracle CDC Service Administrator. For more information about the CDC Service Administrator role, see [User Roles for Change Data Capture Service for Oracle by Attunity](user-roles.md).  
   
 ### To enable SQL Server for CDC  
   

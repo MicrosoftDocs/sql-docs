@@ -86,7 +86,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [SQL Server Connection Required Permissions for the CDC Service](sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
--   [User Roles for Change Data Capture Service for Oracle by Attunity](change-data-capture-service-for-oracle-by-attunity.md)  
+-   [User Roles for Change Data Capture Service for Oracle by Attunity](user-roles.md)  
   
 -   [Working with the Oracle CDC Service](the-oracle-cdc-service.md)  
   

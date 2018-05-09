@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Run a Package on the SSIS Server Using SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
+-   [Run a Package on the SSIS Server Using SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
 ## Related Content  
   

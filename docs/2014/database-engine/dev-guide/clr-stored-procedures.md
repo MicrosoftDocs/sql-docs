@@ -407,7 +407,7 @@ EXEC HelloWorld;
 ```  
   
 ## See Also  
- [CLR User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md)   
+ [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR Triggers](../../../2014/database-engine/dev-guide/clr-triggers.md)  
   

@@ -49,7 +49,7 @@
 ###### [Preventing Invalid Requests](../report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md)
 ###### [Using Try/Catch Blocks](../report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)
 ###### [Handling Warnings and Cases That Do Not Cause Exceptions](../report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md)
-###### [Using the Detail Property to Handle Specific Errors](../../relational-databases/native-client-ole-db-errors/errors.md)
+###### [Using the Detail Property to Handle Specific Errors](../report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)
 ##### [Reporting Services SoapException Class](../report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)
 ###### [Detail Property](../report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)
 ###### [HelpLink Element](../report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md)

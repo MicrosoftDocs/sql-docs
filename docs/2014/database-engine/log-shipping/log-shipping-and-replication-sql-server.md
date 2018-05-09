@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 6.  Execute **sp_replrestart**. This stored procedure can be used to force the Log Reader Agent to ignore all the previous replicated transactions in the publication database log. Transactions applied after the completion of the stored procedure are processed by the Log Reader Agent. For more information, see [sp_replrestart &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md).  
   
-7.  Restart the Log Reader Agent after the stored procedure executes successfully. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
+7.  Restart the Log Reader Agent after the stored procedure executes successfully. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
 8.  Transactions that have already been distributed to Subscriber might be applied at the Publisher. To ensure that the Distribution Agent does not fail with an error when attempting to reapply these transactions at a Subscriber, specify the agent profile titled **Continue On Data Consistency Errors**.  
   

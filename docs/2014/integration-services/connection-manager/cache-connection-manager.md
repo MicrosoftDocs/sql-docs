@@ -52,6 +52,6 @@ manager: "jhubbard"
  For information about how to configure a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## Related Tasks  
- [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](cache-connection-manager.md)  
+ [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
   

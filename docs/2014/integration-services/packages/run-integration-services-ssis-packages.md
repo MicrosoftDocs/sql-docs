@@ -49,11 +49,11 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Schedule a Package by using SQL Server Agent](../../ssms/agent/sql-server-agent.md)  
+-   [Schedule a Package by using SQL Server Agent](../schedule-a-package-by-using-sql-server-agent.md)  
   
 -   [Run a Package in SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
   
--   [Run a Package on the SSIS Server Using SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Run a Package on the SSIS Server Using SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
 ## See Also  
  [dtexec Utility](dtexec-utility.md)   

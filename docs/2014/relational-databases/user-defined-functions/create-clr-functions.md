@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  Creating a CLR function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] involves the following steps:  
   
--   Define the function as a static method of a class in a language supported by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. For more information about how to program functions in the common language runtime, see [CLR User-Defined Functions](user-defined-functions.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] by using the appropriate language compiler.  
+-   Define the function as a static method of a class in a language supported by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. For more information about how to program functions in the common language runtime, see [CLR User-Defined Functions](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] by using the appropriate language compiler.  
   
 -   Register the assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../clr-integration/assemblies-database-engine.md).  
   

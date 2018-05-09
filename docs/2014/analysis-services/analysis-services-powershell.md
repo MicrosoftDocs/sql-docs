@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/08/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,11 +34,13 @@ manager: "mblythe"
  [Authentication Requirements and Security Considerations](#bkmk_auth)  
   
  [Analysis Services PowerShell Tasks](#bkmk_tasks)  
-  
- For more information about syntax and examples, see [Analysis Services PowerShell Reference](~/analysis-services/powershell/analysis-services-powershell-reference.md).  
-  
+
+For more information about syntax and examples, see [Analysis Services PowerShell Reference](~/sql/analysis-services/powershell/analysis-services-powershell-reference?view=sqlallproducts-allversions.
+
 ##  <a name="bkmk_prereq"></a> Prerequisites  
- Windows PowerShell 2.0 must be installed. It is installed by default on newer versions of the Windows operating systems. For more information, see [Install Windows PowerShell 2.0](http://go.microsoft.com/fwlink/?LinkId=227613).  
+ Windows PowerShell 2.0 must be installed. It is installed by default on newer versions of the Windows operating systems. For more information, see [Install Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx)
+
+<!-- ff637750.aspx is linked to by:  (http://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  You must install a SQL Server feature that includes the SQL Server PowerShell (SQLPS) module and client libraries. The easiest way to do this is by installing SQL Server Management Studio, which includes the PowerShell feature and client libraries automatically. The SQL Server PowerShell (SQLPS) module contains the PowerShell providers and cmdlets for all SQL Server features, including the SQLASCmdlets module and SQLAS provider used for navigating the Analysis Services object hierarchy.  
   
@@ -54,8 +56,8 @@ manager: "mblythe"
 |Context|PowerShell Feature Availability|  
 |-------------|-------------------------------------|  
 |Multidimensional instances and databases|Supported for local and remote administration.<br /><br /> Merge-partition requires a local connection.|  
-|Tabular instances and databases|Supported for local and remote administration.<br /><br /> For more information, see [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685).|  
-|PowerPivot for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You must not use Analysis Services PowerShell to backup and restore in-memory PowerPivot database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, PowerPivot for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).|  
+|Tabular instances and databases|Supported for local and remote administration.<br /><br /> For more information, see an August 2011 blog about [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685).|  
+|PowerPivot for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You must not use Analysis Services PowerShell to backup and restore in-memory PowerPivot database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, PowerPivot for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for PowerPivot for SharePoint](~/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint?view=sqlallproducts-allversions).|  
 |Native connections to local cubes<br /><br /> “Data Source=c:\backup\test.cub”|Not supported.|  
 |HTTP connections to BI semantic model (.bism) connection files in SharePoint<br /><br /> “Data Source=http://server/shared_docs/name.bism”|Not supported.|  
 |Embedded connections to PowerPivot databases<br /><br /> “Data Source=$Embedded$”|Not supported.|  
@@ -100,7 +102,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> $pwd -is [System.IDisposable]
 True  
 ```  
   
- You can now backup or restore an encrypted database file, passing the $pwd variable to the password parameter. To view a complete example that combines this illustration with other cmdlets, see [Backup-ASDatabase cmdlet](~/analysis-services/powershell/backup-asdatabase-cmdlet.md) and [Restore-ASDatabase cmdlet](~/analysis-services/powershell/restore-asdatabase-cmdlet.md).  
+ You can now backup or restore an encrypted database file, passing the $pwd variable to the password parameter. To view a complete example that combines this illustration with other cmdlets, see [Backup-ASDatabase cmdlet](~/sql/analysis-services/powershell/backup-asdatabase-cmdlet?view=sqlallproducts-allversions) and [Restore-ASDatabase cmdlet](~/sql/analysis-services/powershell/restore-asdatabase-cmdlet?view=sqlallproducts-allversions).
   
  As a follow up step, remove both the password and variable from the session.  
   
@@ -172,7 +174,6 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
 Enable-psremoting  
 ```  
   
- For more information about remote administration, see [About_remote_requirements](http://go.microsot.com/fwlink/?LinkID=227748).  
   
 ###  <a name="bkmk_connect"></a> Connect to an Analysis Services Object  
  The Analysis Services PowerShell provider supports navigation of the Analysis Services object hierarchy and sets the context for running commands. The provider is an extension of the SQLSERVER root provider available through the SQLPS module. After you load the SQLPS module, you can navigate the path.  
@@ -274,7 +275,7 @@ Restart-service mssqlserverolapservice
   
 ## See Also  
  [Install SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)   
+ [Manage Tabular Models Using PowerShell (blog)](http://go.microsoft.com/fwlink/?linkID=227685)   
  [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

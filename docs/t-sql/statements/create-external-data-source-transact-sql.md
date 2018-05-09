@@ -363,7 +363,7 @@ SECRET = '<azure_storage_account_key>';
 
 -- Create an external data source with CREDENTIAL option.
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
-    TYPE = HADOOP, 
+    TYPE = BLOB_STORAGE, 
     LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
     CREDENTIAL = AzureStorageCredential
 );

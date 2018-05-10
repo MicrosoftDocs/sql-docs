@@ -3,7 +3,7 @@ title: "Understanding Tabular Object Model (TOM) in Analysis Services AMO | Micr
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend

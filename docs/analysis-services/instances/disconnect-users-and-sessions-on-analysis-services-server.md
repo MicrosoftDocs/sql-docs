@@ -3,7 +3,7 @@ title: "Disconnect Users and Sessions on Analysis Services Server | Microsoft Do
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component:
+ms.custom:
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend

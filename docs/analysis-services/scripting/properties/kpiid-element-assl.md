@@ -2,7 +2,7 @@
 title: "KpiID Element (ASSL) | Microsoft Docs"
 ms.date: 5/8/2018
 ms.prod: sql
-ms.component: assl
+ms.custom: assl
 ms.reviewer: owend
 ms.technology: analysis-services
 ms.topic: reference

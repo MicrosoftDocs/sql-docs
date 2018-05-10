@@ -81,4 +81,4 @@ In general, servers that host production databases do not allow connection to th
 
 Identifying all dependencies can be complicated. For R, we recommend that you use [miniCRAN](create-a-local-package-repository-using-minicran.md) to prepare an offline package repository.
 
-For Python, you must similarly prepare all dependencies and save them locally. Be sure to use a Windows-compatible binaries and use the WHL format.
+For Python, you must similarly prepare all dependencies and save them locally. Be sure to use Windows-compatible binaries and the WHL format.

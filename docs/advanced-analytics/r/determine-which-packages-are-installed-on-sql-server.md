@@ -203,6 +203,6 @@ Type a module name at the help prompt to get the package contents, version, and 
 
 ## Next steps
 
-+ [Install new R packages](r/install-additional-r-packages-on-sql-server.md)
-+ [Install new Python packages](python/install-additional-python-packages-on-sql-server.md)
-+ [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)
++ [Install new R packages](install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
++ [Tutorials, samples, solutions](../tutorials/machine-learning-services-tutorials.md)

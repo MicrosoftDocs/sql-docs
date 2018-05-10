@@ -35,15 +35,8 @@ To complete this tutorial, you need SQL Server Management Studio, access to a SQ
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
-=======
-- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
->>>>>>> 13ceead0c5d387f1bb1328765238ed0de80e3946
-=======
-- Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
->>>>>>> 704f3936c3f555803288d4b947e37667050a5e90
+
 
 ## Comment/uncomment your T-SQL code
 You can comment and uncomment portions of your text by using the **Comment** button on the toolbar. Text that is commented out is not executed. 
@@ -130,7 +123,7 @@ When a database has many objects, finding a specific object might be difficult. 
 1. Connect to your SQL server.
 2. Expand **Databases** > **AdventureWorks** > **Tables**. 
    - You'll notice that you can see all the tables that are present in the database.
-5. Right-click the **Tables** node, then select **Filter** > **Filter Settings**:
+5. Right-click the **Tables** node, and then select **Filter** > **Filter Settings**:
 
     ![Filter settings](media/ssms-tricks/filtersettings.png)
 
@@ -140,7 +133,7 @@ When a database has many objects, finding a specific object might be difficult. 
     - Filter by schema: 
     ![Filter by schema](media/ssms-tricks/filterbyschema.png)
 
-7. To clear the filter, right-click **Tables**, then select **Remove Filter**.
+7. To clear the filter, right-click **Tables**, and then select **Remove Filter**.
 
     ![Remove filter](media/ssms-tricks/removefilter.png)
     
@@ -152,7 +145,7 @@ The error log is a file that contains details about things occurring in your SQL
 ### Open the error log in SSMS
 1. Connect to your SQL server.
 2. Expand **Management** > **SQL Server Logs**. 
-4. Right-click the **Current** error log, then select **View SQL Server Log**:
+4. Right-click the **Current** error log, and then select **View SQL Server Log**:
 
     ![View the error log in SSMS](media/ssms-tricks/viewerrorloginssms.png)
 
@@ -186,7 +179,7 @@ The error log is a file that contains details about things occurring in your SQL
 ### Find the error log location if you can't connect to SQL
 1. Open your SQL Server Configuration Manager. 
 2. Expand the **Services** node.
-3. Right-click your SQL Server instance, then select **Properties Window**:
+3. Right-click your SQL Server instance, and then select **Properties Window**:
 
     ![Configuration Manager server properties](media/ssms-tricks/serverproperties.PNG)
 

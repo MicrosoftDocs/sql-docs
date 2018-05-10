@@ -28,7 +28,7 @@ This tutorial introduces you to the pre-built Transact-SQL (T-SQL) templates tha
 > [!div class="checklist"]
 > * Use the template browser to generate T-SQL scripts
 > * Edit an existing template 
-> * Locate the templates on disk
+> * Locate templates on disk
 > * Create a new template
    
 
@@ -44,7 +44,7 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 In this section, you learn how to locate and use **Template Browser**. 
 
 1. Open SQL Server Management Studio.
-2. In the **View** menu, select **Template Browser** (Ctrl + Alt + T): 
+2. In the **View** menu, select **Template Browser** (Ctrl+Alt+T): 
 
     ![Template Browser](media/templates-ssms/templatebrowser.png)
     - You can see recently used templates at the bottom of the template browser.
@@ -69,16 +69,16 @@ You can also edit the existing templates in **Template Browser**.
     ![Edit  a template](media/templates-ssms/edittemplate.png)
 
 3. Make the changes you want to make in the query window that opens.
-4. To save the template, select **File** > **Save** (Ctrl + S).
+4. To save the template, select **File** > **Save** (Ctrl+S).
 5. Close the query window.
 6. Reopen the template. Your edits should be there.
  
 
-## Locate a template on disk
-When a template is open, you can locate the template on disk.
+## Locate templates on disk
+When a template is open, you can locate your templates on disk.
 
 1. In **Template Browser**, select a template, and then select **Edit**.
-2. Right-click **Query Title**, then select **Open Containing Folder**. 
+2. Right-click **Query Title**, and then select **Open Containing Folder**. 
 The explorer should open where the templates are stored on disk: 
 
    ![Templates on disk](media/templates-ssms/templatesondisk.png)
@@ -88,12 +88,12 @@ The explorer should open where the templates are stored on disk:
 You can also create a new template in **Template Browser**. The following steps teach you to create a new folder, and then create a new template within that folder. You can also use these steps to create a custom template within existing folders. 
 
 1. Open **Template Browser**.
-2. Right-click **SQL Server Templates**, then select **New** > **Folder**.
+2. Right-click **SQL Server Templates**, and then select **New** > **Folder**.
 3. Name this folder **Custom Templates**:
 
     ![Creating custom templates](media/templates-ssms/creatingcustomtemplate.png)
 
-4. Right-click the newly created **Custom Templates**, then select **New** > **Template**. Enter a name for your template:
+4. Right-click the newly created **Custom Templates**, and then select **New** > **Template**. Enter a name for your template:
  
     ![Create a custom template](media/templates-ssms/createnewtemplate.png)
    

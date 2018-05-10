@@ -40,7 +40,7 @@ This section describes the various window components that are available in the w
 - **Object Explorer** (F8): Object Explorer is a tree view of all the database objects in a server. This view includes the databases of the SQL Server Database Engine, Analysis Services, Reporting Services, and Integration Services. Object Explorer includes information for all servers that are connected to it. 
     
     ![Object Explorer](media/ssms-configuration/objectexplorer.png)
-- **Query Window** (Ctrl+N): After you select **New Query**, you enter your Transact-SQL (T-SQL) queries in this window. Results of your queries also appear here.
+- **Query Window** (Ctrl+N): After you select **New Query**, enter your Transact-SQL (T-SQL) queries in this window. Results of your queries also appear here.
     
     ![New Query window](media/ssms-configuration/newquery.png)
 
@@ -93,7 +93,7 @@ This section describes how to change the environmental layout, such as how to mo
 Query Editor can be maximized to full-screen mode.
 
 1. Click anywhere in the Query Editor window.
-2. Press SHIFT + ALT + ENTER to toggle between full-screen mode and regular mode. 
+2. Press Shift+Alt+Enter to toggle between full-screen mode and regular mode. 
 
 This keyboard shortcut works with any document window. 
 

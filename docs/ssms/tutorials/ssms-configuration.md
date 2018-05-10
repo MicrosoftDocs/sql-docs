@@ -1,6 +1,6 @@
 ---
-Title: "Tutorial: SQL Server Management Studio Components and Configuration"
-description: A tutorial describing the components and basic configuration options for your SQL Server Management Studio environment. 
+Title: "Tutorial: SQL Server Management Studio components and configuration"
+description: A tutorial that describes the components and basic configuration options for your SQL Server Management Studio environment. 
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
@@ -14,28 +14,28 @@ ms.reviewer: sstein
 manager: craigg
 ---
 
-# Tutorial: SQL Server Management Studio Components and Configuration
-This Tutorial describes the  different window components within SQL Server Management Studio (SSMS) and some basic configuration options for your workspace. In this article, you will learn how about: 
+# Tutorial: SQL Server Management Studio components and configuration
+This tutorial describes the various window components in SQL Server Management Studio (SSMS), and some basic configuration options for your workspace. In this article, you learn about: 
 
 > [!div class="checklist"]
-> * The different components that make up the SSMS environment
-> * Changing the environmental layout and resetting it to default
+> * The various components that make up the SSMS environment
+> * Changing the environmental layout, and resetting it to default
 > * Maximizing the query editor
 > * Changing the font 
 > * Configuring startup options 
-> * Resetting the configuration back to default 
+> * Resetting the configuration to default 
 
 ## Prerequisites
-To complete this Tutorial, you need SQL Server Management Studio.  
+To complete this tutorial, you need SQL Server Management Studio.  
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
-## SQL Server Management Studio Components
-This section covers the different window components available in the workspace, and their purpose. 
+## SQL Server Management Studio components
+This section covers the various window components that are available in the workspace, and their purpose. 
 
-- Every window component can be closed by hitting the X in the corner of the title bar and then reopened from the **View** dropdown in the main menu. 
+- You can close all window components by selecting the **X** in the right corner of the title bar. To reopen a window, select the window in the **View** menu. 
 
-    ![View Menu](media/ssms-configuration/viewmenu.png)
+    ![The View menu](media/ssms-configuration/viewmenu.png)
 
 - **Object Explorer** (F8): Object Explorer is a tree view of all the database objects in a server. This can include the databases of the SQL Server Database Engine, Analysis Services, Reporting Services, and Integration Services. Object Explorer includes information for all servers to which it is connected. 
     

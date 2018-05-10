@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  **To set a maximum file size for a trace file**  
   
- [Set a Maximum File Size for a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [Set a Maximum File Size for a Trace File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)  
   
 ## Maximum Number of Rows  
  A trace with a maximum number of rows stops saving trace information to a table after the maximum number of rows has been reached. Each event constitutes one row, so this parameter sets a limit on the number of events that are gathered. Setting the maximum number of rows makes it easier to run unattended traces. For example, if you need to start a trace that saves trace data to a table, but you want to stop the trace if the table becomes too large, you can do so automatically.  

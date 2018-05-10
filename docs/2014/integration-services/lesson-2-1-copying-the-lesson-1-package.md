@@ -59,6 +59,6 @@ manager: "jhubbard"
 5.  Copy and paste the Lesson 1 package as described in steps 3-8 in the previous procedure.  
   
 ## Next Task in Lesson  
- [Step 2: Adding and Configuring the Foreach Loop Container](control-flow/foreach-loop-container.md)  
+ [Step 2: Adding and Configuring the Foreach Loop Container](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
   

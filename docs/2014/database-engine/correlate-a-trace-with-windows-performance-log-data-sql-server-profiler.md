@@ -63,6 +63,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [Start SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
+ [Start SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

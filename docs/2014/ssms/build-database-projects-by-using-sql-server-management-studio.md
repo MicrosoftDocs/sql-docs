@@ -62,7 +62,7 @@ manager: "jhubbard"
  A solution consists of one or more script projects. A project consists of one or more scripts or connections. A project may also include nonscript files.  
   
 ## See Also  
- [Use SQL Server Management Studio](sql-server-management-studio-ssms.md)   
+ [Use SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)   
  [Query and Text Editors &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [Solutions &#40;SQL Server Management Studio&#41;](solution/solutions-sql-server-management-studio.md)  
   

@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  **To run agents and maintenance jobs**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and Replication Monitor: [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and Replication Monitor: [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
 -   Replication programming: [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   

@@ -186,7 +186,7 @@ GO
   
 -   [Restore a Database to the Point of Failure Under the Full Recovery Model &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
--   [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [Recover to a Log Sequence Number &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   

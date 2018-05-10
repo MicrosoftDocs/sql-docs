@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 5.  Determine the optimal storage location for the index. A nonclustered index can be stored in the same filegroup as the underlying table, or on a different filegroup. The storage location of indexes can improve query performance by increasing disk I/O performance. For example, storing a nonclustered index on a filegroup that is on a different disk than the table filegroup can improve performance because multiple disks can be read at the same time.  
   
-     Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. For more information, see [Partitioned Tables and Indexes](relational-databases/indexes/indexes.md). When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently.  
+     Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. For more information, see [Partitioned Tables and Indexes](relational-databases/partitions/partitioned-tables-and-indexes.md). When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently.  
   
 ##  <a name="General_Design"></a> General Index Design Guidelines  
  Experienced database administrators can design a good set of indexes, but this task is very complex, time-consuming, and error-prone even for moderately complex databases and workloads. Understanding the characteristics of your database, queries, and data columns can help you design optimal indexes.  
@@ -152,7 +152,7 @@ manager: "jhubbard"
   
 -   Make queries run faster and more efficiently. When queries access several partitions of an index, the query optimizer can process individual partitions at the same time and exclude partitions that are not affected by the query.  
   
- For more information, see [Partitioned Tables and Indexes](relational-databases/indexes/indexes.md).  
+ For more information, see [Partitioned Tables and Indexes](relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Index Sort Order Design Guidelines  
  When defining indexes, you should consider whether the data for the index key column should be stored in ascending or descending order. Ascending is the default and maintains compatibility with earlier versions of [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. The syntax of the CREATE INDEX, CREATE TABLE, and ALTER TABLE statements supports the keywords ASC (ascending) and DESC (descending) on individual columns in indexes and constraints.  
@@ -600,6 +600,6 @@ WHERE b = CONVERT(Varbinary(4), 1);
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [Partitioned Tables and Indexes](relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

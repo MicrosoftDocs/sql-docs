@@ -151,7 +151,7 @@ manager: "jhubbard"
  The amount of space in megabytes that the data occupies in the table.  
   
 ### Partitioning  
- This section is only available if the table is partitioned. For more information, see [Partitioned Tables and Indexes](../indexes/indexes.md).  
+ This section is only available if the table is partitioned. For more information, see [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
  **Partition column**  
  The name of the column on which the table is partitioned.  

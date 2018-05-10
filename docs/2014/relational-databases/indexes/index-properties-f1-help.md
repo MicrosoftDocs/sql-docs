@@ -139,7 +139,7 @@ manager: "jhubbard"
  Specifies the filegroup for FILESTREAM data. This list displays only FILESTREAM filegroups. The default list selection is the PRIMARY FILESTREAM filegroup. For more information, see [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
  **Partition scheme**  
- Stores the index in a partition scheme. Clicking **Partition Scheme** enables the grid below. The default list selection is the partition scheme that is used for storing the table data. When you select a different partition scheme in the list, the information in the grid is updated. For more information, see [Partitioned Tables and Indexes](../native-client-ole-db-tables-indexes/tables-and-indexes.md).  
+ Stores the index in a partition scheme. Clicking **Partition Scheme** enables the grid below. The default list selection is the partition scheme that is used for storing the table data. When you select a different partition scheme in the list, the information in the grid is updated. For more information, see [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
  The partition scheme option is unavailable if there are no partition schemes in the database.  
   

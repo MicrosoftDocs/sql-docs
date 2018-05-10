@@ -24,7 +24,7 @@ manager: "jhubbard"
 >  For string type data columns, the filter criteria will show as a LIKE or NOT LIKE string value.  
   
 ## See Also  
- [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Filter Events Based on the Event End Time &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
  [Filter Events Based on the Event Start Time &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
  [Filter a Trace](../relational-databases/sql-trace/filter-a-trace.md)   

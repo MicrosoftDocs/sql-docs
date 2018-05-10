@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 -   The MAXDOP index option cannot be specified in the ALTER INDEX REORGANIZE statement.  
   
--   Memory requirements for partitioned index operations that require sorting can be greater if the query optimizer applies degrees of parallelism to the build operation. The higher the degrees of parallelism, the greater the memory requirement is. For more information, see [Partitioned Tables and Indexes](indexes.md).  
+-   Memory requirements for partitioned index operations that require sorting can be greater if the query optimizer applies degrees of parallelism to the build operation. The higher the degrees of parallelism, the greater the memory requirement is. For more information, see [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Security"></a> Security  
   

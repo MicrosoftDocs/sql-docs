@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  **To filter events in a trace template**  
   
- [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
  [Set a Trace Filter &#40;Transact-SQL&#41;](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md)  
   

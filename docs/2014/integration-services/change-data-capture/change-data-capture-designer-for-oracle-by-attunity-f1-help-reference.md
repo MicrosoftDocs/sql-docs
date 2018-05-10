@@ -56,7 +56,7 @@ manager: "jhubbard"
   
     -   [Add Tables to a CDC Instance](add-tables-to-a-cdc-instance.md)  
   
-    -   [Edit the Table Properties](../../relational-databases/tables/table-properties-ssms.md)  
+    -   [Edit the Table Properties](edit-the-table-properties.md)  
   
     -   [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)  
   

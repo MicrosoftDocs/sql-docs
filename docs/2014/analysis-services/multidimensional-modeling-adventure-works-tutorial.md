@@ -53,7 +53,7 @@ manager: "jhubbard"
 |[Lesson 3: Modifying Measures, Attributes and Hierarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutes|  
 |[Lesson 4: Defining Advanced Attribute and Dimension Properties](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutes|  
 |[Lesson 5: Defining Relationships Between Dimensions and Measure Groups](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutes|  
-|[Lesson 6: Defining Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)|45 minutes|  
+|[Lesson 6: Defining Calculations](lesson-6-defining-calculations.md)|45 minutes|  
 |[Lesson 7: Defining Key Performance Indicators &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutes|  
 |[Lesson 8: Defining Actions](lesson-8-defining-actions.md)|30 minutes|  
 |[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md)|30 minutes|  

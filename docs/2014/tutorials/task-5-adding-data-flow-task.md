@@ -31,6 +31,6 @@ manager: "jhubbard"
 4.  Double-click the **Data Flow Task** to switch to the **Data Flow** tab.  
   
 ## Next Step  
- [Task 6: Adding Excel Source to the Data Flow](../integration-services/data-flow/data-flow.md)  
+ [Task 6: Adding Excel Source to the Data Flow](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

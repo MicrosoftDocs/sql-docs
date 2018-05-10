@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 ## See Also  
  [CLR User-Defined Aggregates](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
- [CLR User-Defined Functions](../../user-defined-functions/user-defined-functions.md)   
+ [CLR User-Defined Functions](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [CLR User-Defined Types](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR Stored Procedures](../../../database-engine/dev-guide/clr-stored-procedures.md)   
  [CLR Triggers](../../../database-engine/dev-guide/clr-triggers.md)  

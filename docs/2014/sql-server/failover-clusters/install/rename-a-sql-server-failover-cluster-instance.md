@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:** Verify and perform the below additional actions for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:  
   
--   Fix the registry settings if SQL Agent is configured for event forwarding. For more information, see [Designate an Events Forwarding Server &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md).  
+-   Fix the registry settings if SQL Agent is configured for event forwarding. For more information, see [Designate an Events Forwarding Server &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
 -   Fix the master server (MSX) and target servers (TSX) instance names when machines / cluster network name is renamed. For more information, see the following topics:  
   

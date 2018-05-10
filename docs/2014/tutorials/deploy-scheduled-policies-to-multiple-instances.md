@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   The servers where you want to deploy the scheduled policies must be registered in Registered Servers in either the **Local Server Groups** or the **Central Management Servers** node. For more information, see the following topics:  
   
-    -   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+    -   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
     -   [Register a Connected Server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
   

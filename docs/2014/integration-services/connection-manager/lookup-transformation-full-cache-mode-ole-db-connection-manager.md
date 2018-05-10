@@ -80,7 +80,7 @@ manager: "jhubbard"
 13. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
 ## See Also  
- [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](cache-connection-manager.md)   
+ [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../data-flow/transformations/integration-services-transformations.md)  
   

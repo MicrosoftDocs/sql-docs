@@ -34,7 +34,7 @@ manager: "mblythe"
   
 -   [New User Role](new-user-role-management-studio.md)  
   
--   [Schedule Properties (General Page)](../../integration-services/general-page-of-integration-services-designers-options.md)  
+-   [Schedule Properties (General Page)](schedule-properties-general-page.md)  
   
 -   [Schedule Properties (Reports Page)](schedule-properties-reports-page.md)  
   

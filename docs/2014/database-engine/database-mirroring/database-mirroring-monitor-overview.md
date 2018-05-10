@@ -98,7 +98,7 @@ manager: "jhubbard"
   
  **To monitor database mirroring by using SQL Server Management Studio to**  
   
--   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## See Also  
  [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

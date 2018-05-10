@@ -30,7 +30,7 @@ manager: "jhubbard"
   
  The Extended Events engine itself does not provide any events or actions to take when an event fires. The processes that use the Extended Events engine define interaction with the engine. These processes add event points and supply the actions to take in response to event firing.  
   
- The following illustration shows a simplified view of an Extended Events session. For more information, see [SQL Server Extended Events Sessions](../native-client-ole-db-data-source-objects/sessions.md).  
+ The following illustration shows a simplified view of an Extended Events session. For more information, see [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md).  
   
  ![Detailed extended events architecture](../../database-engine/media/xearchitecturedetailed.gif "Detailed extended events architecture")  
   

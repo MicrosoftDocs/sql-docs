@@ -43,7 +43,7 @@ manager: "jhubbard"
  [Invoke-Sqlcmd cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Errors and Events Reference**  
- [Database Engine Events and Errors](../relational-databases/native-client-ole-db-errors/errors.md)  
+ [Database Engine Events and Errors](../relational-databases/errors-events/database-engine-events-and-errors.md0  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Showplan Logical and Physical Operators Reference**  
  [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  

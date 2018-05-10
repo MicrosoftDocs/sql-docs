@@ -129,7 +129,7 @@ manager: "jhubbard"
 12. In the Properties window, verify that the `LocaleID` property is set to **English (United States)** and the **DefaultCodePage** property is set to **1252**.  
   
 ## Next Task in Lesson  
- [Step 7: Adding and Configuring the OLE DB Destination](data-flow/ole-db-destination.md)  
+ [Step 7: Adding and Configuring the OLE DB Destination](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## See Also  
  [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  

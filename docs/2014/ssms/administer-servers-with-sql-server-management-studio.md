@@ -57,7 +57,7 @@ manager: "jhubbard"
  To start and stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## See Also  
- [Use SQL Server Management Studio](sql-server-management-studio-ssms.md)   
+ [Use SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)   
  [View or Change Server Properties &#40;SQL Server&#41;](../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

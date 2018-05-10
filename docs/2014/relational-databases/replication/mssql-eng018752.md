@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   Check the output of [sp_who &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-who-transact-sql.md) for specific process identification numbers (SPIDs) that are connected to the published database. Close any connections that might have run **sp_repldone**, **sp_replcmds**, or **sp_replshowcmds**.  
   
--   Restart the Log Reader Agent. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
+-   Restart the Log Reader Agent. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
 -   Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service (bring it offline or online in a cluster) on the Distributor. If there is possibility that a scheduled job could have executed **sp_repldone**, **sp_replcmds**, or **sp_replshowcmds** from any other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for those instances as well. For more information, see [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
   

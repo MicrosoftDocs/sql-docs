@@ -50,7 +50,7 @@ manager: "jhubbard"
  [Manage Files with Encoding](manage-files-with-encoding.md)   
  [Miscellaneous Files](miscellaneous-files.md)   
  [Solution Explorer](solution-explorer.md)   
- [Solutions &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)   
+ [Solutions &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Projects &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [Solution Explorer Source Control](../../database-engine/solution-explorer-source-control.md)  
   

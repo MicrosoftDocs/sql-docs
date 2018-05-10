@@ -79,6 +79,6 @@ manager: "jhubbard"
 7.  In **Select Icon Style**, select the diamond (red), triangle (yellow), circle (green) icon type, and then click **OK**.  
   
 ## Next Step  
- To continue this tutorial, go to the next lesson: [Lesson 9: Create Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md).  
+ To continue this tutorial, go to the next lesson: [Lesson 9: Create Perspectives](lesson-8-create-perspectives.md).  
   
   

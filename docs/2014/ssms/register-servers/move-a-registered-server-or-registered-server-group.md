@@ -34,6 +34,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Register Servers](register-servers.md)   
- [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)  
+ [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)  
   
   

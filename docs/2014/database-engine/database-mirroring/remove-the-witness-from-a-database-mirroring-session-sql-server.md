@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 -   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ## See Also  
  [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

@@ -146,7 +146,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  Before configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on an instance, it might be useful to check for existing configuration, if any. The step to reviewing configuration settings for a database is explained later in this section.  
   
- **SQL Server Management Studio:** To do this task in SQL Server Management Studio, go the object explorer, expand the **Management** node, and right click on **Managed Backup**. Select **Configure**. This opens the **Managed Backup** dialog. Use this dialog to specify the retention period, SQL Credential, Storage URL, and the encryption settings. For specific help with this dialog, see [Configure Managed Backup &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md).  
+ **SQL Server Management Studio:** To do this task in SQL Server Management Studio, go the object explorer, expand the **Management** node, and right click on **Managed Backup**. Select **Configure**. This opens the **Managed Backup** dialog. Use this dialog to specify the retention period, SQL Credential, Storage URL, and the encryption settings. For specific help with this dialog, see [Configure Managed Backup &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md).  
   
 #### Using Transact-SQL  
   

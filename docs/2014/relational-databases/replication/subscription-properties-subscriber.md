@@ -42,7 +42,7 @@ manager: "jhubbard"
  **Snapshot location**  
  Determines the location from which snapshot files are accessed during initialization or reinitialization. The location can be one of the following values:  
   
--   **Default location**: the default location, which is defined when configuring a Distributor. For more information, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
+-   **Default location**: the default location, which is defined when configuring a Distributor. For more information, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md).  
   
 -   **Alternate folder**: an alternate location, which can be specified in the **Publication Properties** dialog box. For more information, see [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).  
   

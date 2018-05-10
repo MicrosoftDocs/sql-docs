@@ -251,7 +251,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   

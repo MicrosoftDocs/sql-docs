@@ -51,7 +51,7 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Description**|**Topic**|  
-|Describes how to collect one or more projects in a solution.|[Solutions &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)|  
+|Describes how to collect one or more projects in a solution.|[Solutions &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)|  
 |Describes how to create a project and add items like scripts and connections.|[Projects &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)|  
 |Describes how to integrate solutions or individual projects into a source code control system.|[Solution Explorer Source Control](../../database-engine/solution-explorer-source-control.md)|  
 |Provides information about the files used by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage solutions and files.|[Files That Manage Solutions and Projects](files-that-manage-solutions-and-projects.md)|  

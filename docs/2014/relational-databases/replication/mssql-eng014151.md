@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## User Action  
  This error can occur in a number of situations; use the following approaches as necessary:  
   
--   Restart the failed agent to see if it will now run without failures. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
+-   Restart the failed agent to see if it will now run without failures. For more information, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
   
 -   Check the agent history and job history for other errors that occurred around the same time. For information about viewing agent status and error details in Replication Monitor, see the following topics:  
   

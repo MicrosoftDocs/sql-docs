@@ -58,7 +58,7 @@ manager: "jhubbard"
   
      In Database Mirroring Monitor, the administrator can view the current configuration of warnings for a selected database at both the principal and mirror server instances at the same time by selecting the **Warnings** tabbed page. From there, the administrator can open the **Set Warning Thresholds** dialog box to enable and configure one or more warning thresholds.  
   
-     For an introduction to the Database Mirroring Monitor interface, see [Database Mirroring Monitor Overview](database-mirroring-monitor-overview.md). For information about launching Database Mirroring Monitor, see [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
+     For an introduction to the Database Mirroring Monitor interface, see [Database Mirroring Monitor Overview](database-mirroring-monitor-overview.md). For information about launching Database Mirroring Monitor, see [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md).  
   
 -   System stored procedures  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
   
  **To monitor database mirroring**  
   
--   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 -   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)  
   

@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Files That Manage Solutions and Projects](files-that-manage-solutions-and-projects.md)   
- [Solutions &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)   
+ [Solutions &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Projects &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)  
   
   

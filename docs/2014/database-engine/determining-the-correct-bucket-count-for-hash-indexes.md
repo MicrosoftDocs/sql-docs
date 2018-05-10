@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  Duplicate index keys can decrease performance with a hash index because the keys are hashed to the same bucket, causing that bucket's chain to increase.  
   
- For more information about nonclustered hash indexes, see [Hash Indexes](../relational-databases/indexes/indexes.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ For more information about nonclustered hash indexes, see [Hash Indexes](hash-indexes.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  One hash table is allocated for each hash index on a memory-optimized table. The size of the hash table allocated for an index is specified by the `BUCKET_COUNT` parameter in [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md) or [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md). The bucket count will internally be rounded up to the next power of two. For example, specifying a bucket count of 300,000 will result in an actual bucket count of 524,288.  
   

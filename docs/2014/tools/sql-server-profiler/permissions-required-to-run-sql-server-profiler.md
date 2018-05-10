@@ -65,7 +65,7 @@ manager: "jhubbard"
 ## See Also  
  [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [Replay Traces](replay-traces.md)   
- [Create a Trace &#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
+ [Create a Trace &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
  [Replay a Trace Table &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [Replay a Trace File &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)  
   

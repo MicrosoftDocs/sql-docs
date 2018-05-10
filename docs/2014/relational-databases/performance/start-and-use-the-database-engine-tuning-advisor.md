@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 #### To start the Database Engine Tuning Advisor from the SQL Server Management Studio Query Editor  
   
-1.  Open a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
+1.  Open a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
   
 2.  Select a query in the [!INCLUDE[tsql](../../includes/tsql-md.md)] script, or select the entire script, right-click the selection, and choose **Analyze Query in Database Engine Tuning Advisor**. The Database Engine Tuning Advisor GUI opens and imports the script as an XML file workload. You can specify a session name and tuning options to tune the selected [!INCLUDE[tsql](../../includes/tsql-md.md)] queries as your workload.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
 ###  <a name="SSMS"></a> To create Transact-SQL script workloads  
   
-1.  Launch the Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
+1.  Launch the Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md).  
   
 2.  Type your [!INCLUDE[tsql](../../includes/tsql-md.md)] script into the Query Editor. This script should contain a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that execute against the database or databases that you want to tune.  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
 2.  Create a trace file or table as described in the following procedures that uses the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** template:  
   
-    -   [Create a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/sql-server-profiler.md)  
+    -   [Create a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
     -   [Save Trace Results to a File &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
   

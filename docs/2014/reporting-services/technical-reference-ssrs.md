@@ -25,7 +25,7 @@ manager: "mblythe"
   Find the tools and PowerShell reference documentation for using or administering [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Errors and Events**  
- [Cause and Resolution of Reporting Services Errors](../relational-databases/native-client-ole-db-errors/errors.md)  
+ [Cause and Resolution of Reporting Services Errors](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Feature Reference**  
  [Report Designer F1 Help](tools/report-designer-f1-help.md)  

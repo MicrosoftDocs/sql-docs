@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Local server groups  
   
-     Use local server groups to easily connect to servers that you frequently manage. Both local and non-local servers are registered into local server groups. Local server groups are unique to each user. For information about how to share registered server information, see [Export Registered Server Information &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md) and [Import Registered Server Information &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md).  
+     Use local server groups to easily connect to servers that you frequently manage. Both local and non-local servers are registered into local server groups. Local server groups are unique to each user. For information about how to share registered server information, see [Export Registered Server Information &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md) and [Import Registered Server Information &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md).  
   
     > [!NOTE]  
     >  We recommend that you use Windows Authentication whenever possible.  
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Hide System Objects in Object Explorer](../object/hide-system-objects-in-object-explorer.md)   
- [Export Registered Server Information &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)   
+ [Export Registered Server Information &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [Import Registered Server Information &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  
   
   

@@ -38,7 +38,7 @@ manager: "jhubbard"
 |[Install SQL Server Replication](install-sql-server-replication.md)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication.|  
 |[Install Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|Lists down the topics to install the Distributed Replay feature.|  
 |[Install SQL Server Management Tools](../../sql-server/install/install-sql-server-management-tools.md)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools.|  
-|[Install SQL Server PowerShell](../../powershell/sql-server-powershell.md)|Describes the considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components.|  
+|[Install SQL Server PowerShell](install-sql-server-powershell.md)|Describes the considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components.|  
   
 ## How to Install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
 ## See Also  
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Upgrade to SQL Server 2014](upgrade-sql-server.md)   
- [Uninstall SQL Server 2014](install-sql-server.md)   
+ [Uninstall SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
  [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
   

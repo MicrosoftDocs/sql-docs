@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 -   [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
--   [Hash Indexes](../relational-databases/indexes/indexes.md)  
+-   [Hash Indexes](hash-indexes.md)  
   
 -   [Determining the Correct Bucket Count for Hash Indexes](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)  
   

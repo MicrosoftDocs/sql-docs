@@ -23,7 +23,7 @@ manager: "jhubbard"
  Estimated time to complete this lesson: **20 minutes**  
   
 ## Prerequisites  
- This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 9: Create Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md).  
+ This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 9: Create Perspectives](lesson-8-create-perspectives.md).  
   
 ## Create Hierarchies  
   

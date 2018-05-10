@@ -38,7 +38,7 @@ manager: "jhubbard"
  In this task, you learn to modify the granularity of a dimension for a specific measure group.  
   
 ## Next Lesson  
- [Lesson 6: Defining Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Lesson 6: Defining Calculations](lesson-6-defining-calculations.md)  
   
 ## See Also  
  [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   

@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   [Step 3: Adding Error Flow Redirection](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Step 4: Adding a Flat File Destination](data-flow/flat-file-destination.md)  
+-   [Step 4: Adding a Flat File Destination](lesson-4-4-adding-a-flat-file-destination.md)  
   
 -   [Step 5: Testing the Lesson 4 Tutorial Package](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   

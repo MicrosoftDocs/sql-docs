@@ -27,7 +27,7 @@ manager: "jhubbard"
  Download and install SSMS from the [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## In This Section  
- [Features in SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
+ [Features in SQL Server Management Studio](features-in-sql-server-management-studio.md)  
  Lists the rich feature set included in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  [Tool Windows in SQL Server Management Studio](../ssms/tool-windows-in-sql-server-management-studio.md)  

@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ## Executing Code During Synchronization  
  Replication supports two methods of executing code during synchronization  

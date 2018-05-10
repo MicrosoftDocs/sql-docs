@@ -31,7 +31,7 @@ manager: "jhubbard"
 4.  From the **Table** list, select the table name. Click **OK**.  
   
 ## See Also  
- [View and Analyze Traces with SQL Server Profiler](sql-server-profiler.md)   
+ [View and Analyze Traces with SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md)   
  [Save Traces and Trace Templates](save-traces-and-trace-templates.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

@@ -33,6 +33,6 @@ manager: "jhubbard"
      If you want to select all counters for a performance object, check the box that is adjacent to the performance object. Checking the topmost node, which indicates the computer, selects all performance objects and counters contained in the performance log file.  
   
 ## See Also  
- [Correlate a Trace with Windows Performance Log Data &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)  
+ [Correlate a Trace with Windows Performance Log Data &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)  
   
   

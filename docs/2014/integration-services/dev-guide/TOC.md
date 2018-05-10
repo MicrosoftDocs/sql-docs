@@ -71,7 +71,7 @@
 #### [Design-time Methods of a Data Flow Component](../extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)
 #### [Run-time Methods of a Data Flow Component](../extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)
 #### [Execution Plan and Buffer Allocation](../extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)
-#### [Working with Data Types in the Data Flow](../data-flow/data-flow.md)
+#### [Working with Data Types in the Data Flow](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)
 #### [Validating a Data Flow Component](../extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)
 #### [Implementing External Metadata](../extending-packages-custom-objects/data-flow/implementing-external-metadata.md)
 #### [Raising and Defining Events in a Data Flow Component](../extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)

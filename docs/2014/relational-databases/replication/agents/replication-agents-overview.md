@@ -57,7 +57,7 @@ manager: "jhubbard"
  Replication has a number of maintenance jobs that perform scheduled and on-demand maintenance. For more information, see [Replication Agent Administration](replication-agent-administration.md).  
   
 ## See Also  
- [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)   
+ [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agent Administration](replication-agent-administration.md)  

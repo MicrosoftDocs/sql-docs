@@ -38,7 +38,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  There are two types of memory-optimized indexes:  
   
--   Nonclustered hash indexes, which are made for point lookups. For more information about hash indexes, see [Hash Indexes](../relational-databases/indexes/indexes.md).  
+-   Nonclustered hash indexes, which are made for point lookups. For more information about hash indexes, see [Hash Indexes](hash-indexes.md).  
   
 -   Nonclustered indexes, which are made for range scans and ordered scans.  
   
@@ -173,6 +173,6 @@ go
 ## See Also  
  [Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Determining the Correct Bucket Count for Hash Indexes](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
- [Hash Indexes](../relational-databases/indexes/indexes.md)  
+ [Hash Indexes](hash-indexes.md)  
   
   

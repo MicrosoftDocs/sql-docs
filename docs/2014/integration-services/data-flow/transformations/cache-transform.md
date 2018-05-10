@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  You can use the Cache connection manager when you want to configure the Lookup Transformation to run in the full cache mode. In this mode, the reference dataset is loaded into cache before the Lookup Transformation runs.  
   
- For instructions on how to configure the Lookup transformation in full cache mode with the Cache connection manager and Cache Transform transformation, see [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
+ For instructions on how to configure the Lookup transformation in full cache mode with the Cache connection manager and Cache Transform transformation, see [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md).  
   
  For more information on caching the reference dataset, see [Lookup Transformation](lookup-transformation.md).  
   

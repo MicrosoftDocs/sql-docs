@@ -66,6 +66,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Profiler](sql-server-profiler.md)   
- [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
+ [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)  
   
   

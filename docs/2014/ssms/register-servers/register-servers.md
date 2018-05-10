@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 |**Description**|**Topic**|  
 |---------------------|---------------|  
-|Register local server instances|[Register a Connected Server &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)|  
+|Register local server instances|[Register a Connected Server &#40;SQL Server Management Studio&#41;](register-a-connected-server-sql-server-management-studio.md)|  
 |Register a server|[Create a New Registered Server &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)|  
 |View registered servers|[View Registered Servers in SQL Server Management Studio](view-registered-servers-in-sql-server-management-studio.md)|  
 |Remove a registered server|[Remove a Registered Server &#40;SQL Server Management Studio&#41;](remove-a-registered-server-sql-server-management-studio.md)|  

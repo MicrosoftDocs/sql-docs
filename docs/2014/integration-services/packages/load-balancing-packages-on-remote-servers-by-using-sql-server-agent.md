@@ -56,9 +56,9 @@ manager: "jhubbard"
 |-----------|-----------------|  
 |[Implementation of Child Packages](../implementation-of-child-packages.md)|Describes the installation of packages, and creation of the SQL Server Agent jobs to run the packages.|  
 |[Implementation of the Parent Package](../implementation-of-the-parent-package.md)|Describes the creation of the parent package that contains many Execute SQL Server Agent Job tasks. Each task runs one of the child packages.|  
-|[Logging for Load Balanced Packages on Remote Servers](../../database-engine/configure-windows/remote-servers.md)|Describes the logging scenario for the remote packages.|  
+|[Logging for Load Balanced Packages on Remote Servers](../logging-for-load-balanced-packages-on-remote-servers.md)|Describes the logging scenario for the remote packages.|  
   
 ## Related Tasks  
- [Schedule a Package by using SQL Server Agent](../../ssms/agent/sql-server-agent.md)  
+ [Schedule a Package by using SQL Server Agent](../schedule-a-package-by-using-sql-server-agent.md)  
   
   

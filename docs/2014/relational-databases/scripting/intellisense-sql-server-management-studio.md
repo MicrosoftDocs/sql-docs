@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to configure IntelliSense options such as statement completion options or the size of Transact-SQL scripts for which you want IntelliSense turned off.|[Configure IntelliSense &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)|  
+|Describes how to configure IntelliSense options such as statement completion options or the size of Transact-SQL scripts for which you want IntelliSense turned off.|[Configure IntelliSense &#40;SQL Server Management Studio&#41;](configure-intellisense-sql-server-management-studio.md)|  
 |Describes how to use Parameter Info to get information about the number, names, and sizes of parameters for a function or stored procedure.|[Parameter Info &#40;IntelliSense&#41;](parameter-info-intellisense.md)|  
 |Describes how to use Quick Info to get tooltips that describe an identifier (such as a table or view name).|[Quick Info &#40;IntelliSense&#41;](quick-info-intellisense.md)|  
 |Describes how to have IntelliSense complete the rest of an identifier after you have typed in enough of the name to get a short list of objects whose names start with the same string.|[Complete Word &#40;IntelliSense&#41;](complete-word-intellisense.md)|  

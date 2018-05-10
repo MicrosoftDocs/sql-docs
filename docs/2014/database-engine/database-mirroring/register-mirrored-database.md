@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  **To use SQL Server Management Studio to monitor database mirroring**  
   
--   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## Options  
  **Server instance**  
@@ -60,7 +60,7 @@ manager: "jhubbard"
  Click this button to register the selected databases (and save credentials for the partner server instances) while keeping the dialog box open.  
   
 ## See Also  
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
+ [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

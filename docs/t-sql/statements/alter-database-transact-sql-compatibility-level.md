@@ -102,7 +102,7 @@ Use **ALTER DATABASE** to change the compatibility level of the database. To vie
 
 ## Compatibility Levels and SQL Server Upgrades  
 Database compatibility level is a valuable tool to assist in database modernization, by allowing the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to be upgraded, while maintaining connecting applications functional status, as certified in a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-As long as the application does not need to leverage enhancements that are only available in a higher database compatibility level, it is a valid interim approach to upgrade the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], while maintaining the previous database compatibility level.
+As long as the application does not need to leverage enhancements that are only available in a higher database compatibility level, it is a valid interim approach to upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], while maintaining the previous database compatibility level.
 For more information on using compatibility level for backward compatibility, see the next [section](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).   
 
 > [!TIP] 

@@ -199,7 +199,7 @@ Open interactive help:
 
 Type a module name at the help prompt to get the package contents, version, and file location:
 
-    > help> revoscalepy
+    help> revoscalepy
 
 <a name="pip-conda"></a>
 

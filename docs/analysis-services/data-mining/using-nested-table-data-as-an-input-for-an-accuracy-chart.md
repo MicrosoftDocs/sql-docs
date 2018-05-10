@@ -3,7 +3,7 @@ title: "Using Nested Table Data as an Input for an Accuracy Chart | Microsoft Do
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend

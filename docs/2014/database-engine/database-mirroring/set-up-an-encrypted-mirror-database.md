@@ -1,7 +1,7 @@
 ---
 title: "Set Up an Encrypted Mirror Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/20/2017"
+ms.date: "06/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,7 +30,7 @@ manager: "jhubbard"
 ## See Also  
  [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](~/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql?view=sql-server-2016)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/sql/t-sql/statements/create-master-key-transact-sql?view=sql-server-2016)   
- [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/sql/t-sql/statements/alter-master-key-transact-sql?view=sql-server-2016)   
+ [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/sql/t-sql/statements/alter-master-key-transact-sql)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

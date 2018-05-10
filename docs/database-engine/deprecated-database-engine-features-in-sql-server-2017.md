@@ -30,7 +30,7 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 When a feature is marked deprecated, it means:
 -  The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
 -  We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
--  For new development, we don’t recommend using deprecated features.     
+-  For new development work, we do not recommend using deprecated features.      
   
 You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   

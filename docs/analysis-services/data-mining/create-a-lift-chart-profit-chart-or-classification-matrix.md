@@ -3,7 +3,7 @@ title: "Create a Lift Chart, Profit Chart, or Classification Matrix | Microsoft 
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend

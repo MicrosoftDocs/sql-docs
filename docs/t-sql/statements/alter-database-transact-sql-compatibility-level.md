@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/18/2018"
+ms.date: "05/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "t-sql|statements"
@@ -65,21 +65,20 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 |SQL Server 2000|8|80|80|  
   
 > [!NOTE]  
-> As of **January 2018**, in SQL Database, the default compatibility level is 140 for newly created databases. We do not update database compatibility level for existing databases. This is up to customers to do at their own discretion. With that said, we highly recommend customers plan on moving to the latest compatibility level in order to leverage the latest improvements.
+> As of **January 2018**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 140 for newly created databases. We do not update database compatibility level for existing databases. This is up to customers to do at their own discretion. With that said, we highly recommend customers plan on moving to the latest compatibility level in order to leverage the latest improvements.
 > 
-> If you want level 140 for your database generally, but you have reason to prefer the level 110 **cardinality estimation** algorithm, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword `LEGACY_CARDINALITY_ESTIMATION = ON`.
+> If you want to leverage database compatibility level 140 for your database overall, but you have reason to prefer the **cardinality estimation** model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], mapping to database compatibility level 110, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword `LEGACY_CARDINALITY_ESTIMATION = ON`.
 >  
->  For details about how to assess the performance differences of your most important queries, between two compatibility levels on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Note that this article refers to compatibility level 130 and SQL Server, but the same methodology applies for moves to 140 for SQL Server and Azure SQL DB.
+> For details about how to assess the performance differences of your most important queries, between two compatibility levels on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Note that this article refers to compatibility level 130 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for moves to 140 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .
 
-
- Execute the following query to determine the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that you are connected to.  
+Execute the following query to determine the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that you are connected to.  
   
 ```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
 > [!NOTE]  
-> Not all features that vary by compatibility level are supported on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+> Not all features that vary by compatibility level are supported on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
  To determine the current compatibility level, query the **compatibility_level** column of [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
@@ -88,24 +87,65 @@ SELECT name, compatibility_level FROM sys.databases;
 ```  
   
 ## Remarks  
-For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is set to the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Databases are set to this level unless the **model** database has a lower compatibility level. When a database is upgraded  from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database retains its existing compatibility level if it is at least minimum allowed for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Upgrading a database with a compatibility level lower than the allowed level, sets the database to the lowest compatibility level allowed. This applies to both system and user databases. Use **ALTER DATABASE** to change the compatibility level of the database. To view the current compatibility level of a database, query the **compatibility_level** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
+For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is set to the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Databases are set to this level unless the **model** database has a lower compatibility level. When a database is upgraded from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database retains its existing compatibility level, if it is at least minimum allowed for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Upgrading a database with a compatibility level lower than the allowed level, automatically sets the database to the lowest compatibility level allowed. This applies to both system and user databases.   
+
+The below behaviors are expected for [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] when a database is attached or restored, and after an in-place upgrade: 
+- If the compatibility level of a user database was 100 or higher before the upgrade, it remains the same after upgrade.    
+- If the compatibility level of a user database was 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].    
+- The compatibility levels of the tempdb, model, msdb and Resource databases are set to the current compatibility level after upgrade.  
+- The master system database retains the compatibility level it had before upgrade.
+
+Use `ALTER DATABASE` to change the compatibility level of the database. The new compatibility level setting for a database takes effect when a `USE <database>` command is issued, or a new login is processed with that database as the default database context.     
+To view the current compatibility level of a database, query the **compatibility_level** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
 
 > [!NOTE]  
-> A [distribution database](../../relational-databases/replication/distribution-database.md) that was created in an earlier version of SQL Server and is upgraded to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM or Service Pack 1 has a compatibility level of 90, which is not supported for other databases. This does not have an impact on the functionality of replication. Upgrading to later service packs and versions of SQL Server will result in the compatibility level of the distribution database to be increased to match that of the **master** database.
-  
+> A [distribution database](../../relational-databases/replication/distribution-database.md) that was created in an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is upgraded to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM or Service Pack 1 has a compatibility level of 90, which is not supported for other databases. This does not have an impact on the functionality of replication. Upgrading to later service packs and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will result in the compatibility level of the distribution database to be increased to match that of the **master** database.
+
+## Compatibility Levels and SQL Server Upgrades  
+Database compatibility level is a valuable tool to assist in database modernization, by allowing the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to be upgraded, while keeping connecting applications functional status by maintaining the same pre-upgrade database compatibility level. 
+As long as the application does not need to leverage enhancements that are only available in a higher database compatibility level, it is a valid approach to upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and maintain the previous database compatibility level.
+For more information on using compatibility level for backward compatibility, see the [Using Compatibility Level for Backward Compatibility](#using-compatibility-level-for-backward-compatibility) later in this article.  
+For more details on upgrading the database compatibility level, see the [Best Practices for upgrading Database Compatibility Level](#best-practices-for-upgrading-database-compatibility-level) later in the article.     
+For more information about differences between compatibility levels, see the appropriate sections later in this article. 
+
+> [!TIP] 
+> If an application was tested and certified on a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version, then it was implicitly tested and certified on that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version native database compatibility level.
+> 
+> So, database compatibility level provides an easy certification path for an existing application, when using the database compatibility level corresponding to the tested [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version.
+> 
+> For an existing application to leverage an enhancement only available in a higher database compatibility level, or for new development work, plan to use the latest database compatibility level available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and certify your application to work with that compatibility level.
+
+To upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to the latest version, while maintaining the database compatibility level that existed before the upgrade and its supportability status, it is recommended to perform static functional surface area validation of the application code in the database, by using the [Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) tool (DMA). The absence of errors in the DMA tool output, about missing or incompatible functionality, protects application from any functional regressions on the new target version. For more information on the DMA tool, see [here](http://blogs.msdn.microsoft.com/datamigration/dma).
+
+> [!NOTE] 
+> DMA supports database compatibility level 100 and above. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] as source version is excluded. 
+
+> [!IMPORTANT] 
+> Microsoft recommends that some minimal testing is done to validate the success of an upgrade, while maintaining the previous database compatibility level. You should determine what minimal testing means for your own application and scenario. 
+
+> [!NOTE] 
+> Microsoft provides query plan shape protection when:
+> - The new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (target) runs on hardware that is comparable to the hardware where the previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (source) was running. 
+> - The same [supported database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks) is used both at the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+> 
+> Any query plan shape regression (as compared to the source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) that occurs in the above conditions will be addressed. Please contact Microsoft Customer Support if this is the case.
+
 ## Using Compatibility Level for Backward Compatibility  
- Compatibility level affects behaviors only for the specified database, not for the entire server. Compatibility level provides only partial backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Starting with compatibility mode 130, any new query plan affecting features have been added only to the new compatibility mode. This has been done in order to minimize the risk during upgrades that arise from performance degradation due to query plan changes. From an application perspective, the goal is still to be at the latest compatibility level in order to inherit some of the new features as well as performance improvements done in the Query optimizer space but to do so in a controlled way. Use compatibility level as an interim migration aid to work around version differences in the behaviors that are controlled by the relevant compatibility-level setting. For more details see the Upgrade best practices later in the article.  
+The *database compatibility level* setting affects behaviors only for the specified database, not for the entire server. Database compatibility level provides only partial backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+Starting with compatibility mode 130, any new query plan affecting features have been intentionaly added only to the new compatibility level. This has been done in order to minimize the risk during upgrades that arise from performance degradation due to query plan changes.   
+From an application perspective, the goal should still be to upgrade to the latest compatibility level at some point in time, in order to inherit some of the new features, as well as performance improvements done in the query optimizer space, but to do so in a controlled way. Use the lower compatibility level as a safer migration aid to work around version differences, in the behaviors that are controlled by the relevant compatibility level setting. 
+For more details, including the recommended workflow for upgrading database compatibility level, see the [Best Practices for upgrading Database Compatibility Level](#best-practices-for-upgrading-database-compatibility-evel) later in the article.  
   
- If existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications are affected by behavioral differences in your version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], convert the application to work seamlessly with the new compatibility mode. Then use `ALTER DATABASE` to change the compatibility level to 130. The new compatibility setting for a database takes effect when a `USE <database>` is issued or a new login is processed with that database as the default database.  
+If existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications are affected by behavioral differences in your version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], convert the application to work seamlessly with the new compatibility mode. Then use `ALTER DATABASE` to change the compatibility level to 130. The new compatibility setting for a database takes effect when a `USE <database>` is issued or a new login is processed with that database as the default database.  
  
 > [!IMPORTANT]
-> Discontinued functionality introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not protected by compatibility level.
+> Discontinued functionality introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not protected by compatibility level. This refers to fucntionality that was removed from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 
 > For example, the `FASTFIRSTROW` hint was discontinued in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and replaced with the `OPTION (FAST n )` hint. Setting the database compatibility level to 110 will not restore the discontinued hint.
 > For more information on discontinued functionality, see [Discontinued Database Engine Functionality in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Discontinued Database Engine Functionality in SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Discontinued Database Engine Functionality in SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)), and [Discontinued Database Engine Functionality in SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).
 
 > [!IMPORTANT]
-> Breaking changes introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version **may** not be protected by compatibility level. [!INCLUDE[tsql](../../includes/tsql-md.md)] behavior is usually protected by compatibility level. However, changed or removed system objects are **not** protected by compatibility level.
+> Breaking changes introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version **may** not be protected by compatibility level. This refers to behavior changes between versions of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[tsql](../../includes/tsql-md.md)] behavior is usually protected by compatibility level. However, changed or removed system objects are **not** protected by compatibility level.
 >
 > An example of a breaking change **protected** by compatibility level is an implicit conversion from datetime to datetime2 data types. Under database compatibility level 130, these show improved accuracy by accounting for the fractional milliseconds, resulting in different converted values. To restore previous conversion behavior, set the database compatibility level to 120 or lower.
 >
@@ -115,9 +155,9 @@ For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 >
 > For more information on breaking changes, see [Breaking Changes to Database Engine Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Breaking Changes to Database Engine Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Breaking Changes to Database Engine Features in SQL Server 2014](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [Breaking Changes to Database Engine Features in SQL Server 2012](http://msdn.microsoft.com/library/ms143179(v=sql.110)), and [Breaking Changes to Database Engine Features in SQL Server 2008](http://msdn.microsoft.com/library/ms143179(v=sql.100)).
   
-## Best Practices  
+## Best Practices for upgrading Database Compatibility Level 
 For the recommended workflow for upgrading the compatibility level, see [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
-  
+
 ## Compatibility Levels and Stored Procedures  
  When a stored procedure executes, it uses the current compatibility level of the database in which it is defined. When the compatibility setting of a database is changed, all of its stored procedures are automatically recompiled accordingly.  
 
@@ -179,7 +219,7 @@ Fixes that were under trace flag 4199 in earlier versions of [!INCLUDE[ssNoVersi
 |The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.|New material cannot be encrypted using RC4 or RC4_128. Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.|  
 |The default style for `CAST` and `CONVERT` operations on **time** and **datetime2** data types is 121 except when either type is used in a computed column expression. For computed columns, the default style is 0. This behavior impacts computed columns when they are created, used in queries involving auto-parameterization, or used in constraint definitions.<br /><br /> Example D in the Examples section below shows the difference between styles 0 and 121. It does not demonstrate the behavior described above. For more information about date and time styles, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).|Under compatibility level 110, the default style for `CAST` and `CONVERT` operations on **time** and **datetime2** data types is always 121. If your query relies on the old behavior, use a compatibility level less than 110, or explicitly specify the 0 style in the affected query.<br /><br /> Upgrading the database to compatibility level 110 will not change user data that has been stored to disk. You must manually correct this data as appropriate. For example, if you used `SELECT INTO` to create a table from a source that contained a computed column expression described above, the data (using style 0) would be stored rather than the computed column definition itself. You would need to manually update this data to match style 121.|  
 |Any columns in remote tables of type **smalldatetime** that are referenced in a partitioned view are mapped as **datetime**. Corresponding columns in local tables (in the same ordinal position in the select list) must be of type **datetime**.|Any columns in remote tables of type **smalldatetime** that are referenced in a partitioned view are mapped as **smalldatetime**. Corresponding columns in local tables (in the same ordinal position in the select list) must be of type **smalldatetime**.<br /><br /> After upgrading to 110, the distributed partitioned view will fail because of the data type mismatch. You can resolve this by changing the data type on the remote table to **datetime** or setting the compatibility level of the local database to 100 or lower.|  
-|`SOUNDEX` function implements the following rules:<br /><br /> 1) Upper-case H or upper-case W are ignored when separating two consonants that have the same number in the `SOUNDEX` code.<br /><br /> 2) If the first 2 characters of *character_expression* have the same number in the `SOUNDEX` code, both characters are included. Else, if a set of side-by-side consonants have same number in the `SOUNDEX` code, all of them are excluded except the first.|`SOUNDEX` function implements the following rules:<br /><br /> 1) If upper-case H or upper-case W separate two consonants that have the same number in the `SOUNDEX` code, the consonant to the right is ignored<br /><br /> 2) If a set of side-by-side consonants have same number in the `SOUNDEX` code, all of them are excluded except the first.<br /><br /> <br /><br /> The additional rules may cause the values computed by the `SOUNDEX` function to be different than the values computed under earlier compatibility levels. After upgrading to compatibility level 110, you may need to rebuild the indexes, heaps, or CHECK constraints that use the `SOUNDEX` function. For more information, see [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)|  
+|`SOUNDEX` function implements the following rules:<br /><br /> 1) Upper-case H or upper-case W are ignored when separating two consonants that have the same number in the `SOUNDEX` code.<br /><br /> 2) If the first 2 characters of *character_expression* have the same number in the `SOUNDEX` code, both characters are included. Else, if a set of side-by-side consonants have same number in the `SOUNDEX` code, all of them are excluded except the first.|`SOUNDEX` function implements the following rules:<br /><br /> 1) If upper-case H or upper-case W separate two consonants that have the same number in the `SOUNDEX` code, the consonant to the right is ignored<br /><br /> 2) If a set of side-by-side consonants have same number in the `SOUNDEX` code, all of them are excluded except the first.<br /><br /> <br /><br /> The additional rules may cause the values computed by the `SOUNDEX` function to be different than the values computed under earlier compatibility levels. After upgrading to compatibility level 110, you may need to rebuild the indexes, heaps, or CHECK constraints that use the `SOUNDEX` function. For more information, see [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md).|  
   
 ## Differences Between Compatibility Level 90 and Level 100  
  This section describes new behaviors introduced with compatibility level 100.  

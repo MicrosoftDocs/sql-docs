@@ -35,8 +35,8 @@ The following table shows the file location of R and Python for version and data
 | SQL Server 2016 |named instance | C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library|
 | SQL Server 2017 with R|default instance | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 | SQL Server 2017 with R|named instance| C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library |
-| SQL Server 2017 with Python |default instance | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library |
-| SQL Server 2017 with Python|named instance| C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library |
+| SQL Server 2017 with Python |default instance | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
+| SQL Server 2017 with Python|named instance| C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\Lib\site-packages |
 
 ### Standalone server file paths 
 

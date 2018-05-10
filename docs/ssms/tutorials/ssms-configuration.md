@@ -15,20 +15,20 @@ manager: craigg
 ---
 
 # Tutorial: SQL Server Management Studio components and configuration
-This tutorial describes the various window components in SQL Server Management Studio (SSMS), and some basic configuration options for your workspace. In this article, you learn about: 
+This tutorial describes the various window components in SQL Server Management Studio (SSMS), and some basic configuration options for your workspace. In this article, you learn how to: 
 
 > [!div class="checklist"]
-> * The various components that make up the SSMS environment
-> * Changing the environmental layout, and resetting it to default
-> * Maximizing the query editor
-> * Changing the font 
-> * Configuring startup options 
-> * Resetting the configuration to default 
+> * Identify the components that make up the SSMS environment
+> * Change the environmental layout, and resetting it to default
+> * Maximize the query editor
+> * Change the font 
+> * Configure startup options 
+> * Reset the configuration to default 
 
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio.  
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## SQL Server Management Studio components
 This section describes the various window components that are available in the workspace, and how to use them. 
@@ -70,9 +70,9 @@ This section describes how to change the environmental layout, such as how to mo
 
     ![Window options](media/ssms-configuration/windowoptions.png)
 
-- When you have two or more query windows open, they can be tabbed vertically or horizontally so that both query windows are visible at once. To achieve this, right-click the title of the query and select the desired tabbed option. 
+- When you have two or more query windows open, the windows can be tabbed vertically or horizontally so that both query windows are visible at once. To achieve this, right-click the title of the query, and then select the desired tabbed option. 
  
-    ![Query Tab Options](media/ssms-configuration/querytabbedoptions.png)
+    ![Query tab options](media/ssms-configuration/querytabbedoptions.png)
 
     - This is the **Horizontal Tab Group**:
     ![Horizontal Tab Group](media/ssms-configuration/horizontaltab.png)     
@@ -81,18 +81,18 @@ This section describes how to change the environmental layout, such as how to mo
         ![Vertical Tab Group](media/ssms-configuration/verticaltabgroup.png)
         
 
-    - To merge the tabs back again, right-click the query title again and **Move to Next Tab Group**  or **Move to Previous Tab Group**:
+    - To merge the tabs back again, right-click the query title, and then select **Move to Next Tab Group**  or **Move to Previous Tab Group**:
     
         ![Merge Query Tabs](media/ssms-configuration/mergetabgroups.png)
 
-- To restore the default environmental layout, click on the **Window Menu** > **Reset Window Layout**:
+- To restore the default environmental layout, select **Window Menu** > **Reset Window Layout**:
  
-    ![Restore Window Layout](media/ssms-configuration/resetwindowlayout.png)
+    ![Restore window layout](media/ssms-configuration/resetwindowlayout.png)
     
 ## Maximize Query Editor
-The query editor can be maximized to full-screen mode.
+Query Editor can be maximized to full-screen mode.
 
-1. Click anywhere in the Query Editor Window.
+1. Click anywhere in the Query Editor window.
 2. Press SHIFT + ALT + ENTER to toggle between full-screen mode and regular mode. 
 
 This keyboard shortcut works with any document window. 

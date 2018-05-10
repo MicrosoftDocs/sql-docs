@@ -33,7 +33,7 @@ This tutorial introduces you to the pre-built Transact-SQL (T-SQL) templates tha
    
 
 ## Prerequisites
-To complete this tutorial, you need SQL Server Management Studio and access to a SQL server. 
+To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
@@ -47,7 +47,7 @@ In this section, you learn how to locate and use **Template Browser**.
 2. In the **View** menu, select **Template Browser** (Ctrl + Alt + T): 
 
     ![Template Browser](media/templates-ssms/templatebrowser.png)
-    - You can see recently used templates at the bottom of **Template Browser**.
+    - You can see recently used templates at the bottom of the template browser.
 
 3. Expand the node you're interested in. Right-click the template, and then select **Open**:
 

@@ -62,6 +62,6 @@ manager: "jhubbard"
 11. To view the **Showplan XML Statistics Profile** event file in SQL Server Management Studio, on the **File** menu, point to **Open**, and click **File**. Navigate to the directory where you saved the **Showplan XML Statistics Profile** event file or files to select one and open it. **Showplan XML Statistics Profile** event files have a .SQLPlan file extension.  
   
 ## See Also  
- [Analyze Queries with SHOWPLAN Results in SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [Analyze Queries with SHOWPLAN Results in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

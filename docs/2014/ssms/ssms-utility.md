@@ -124,6 +124,6 @@ Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 ```  
   
 ## See Also  
- [Use SQL Server Management Studio](sql-server-management-studio-ssms.md)  
+ [Use SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

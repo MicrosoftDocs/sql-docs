@@ -41,7 +41,7 @@ manager: "jhubbard"
  Specify the name of the trace table from which the trace should be read.  
   
 ## See Also  
- [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Save Trace Results to a Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [SQL Server Profiler Templates and Permissions](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   

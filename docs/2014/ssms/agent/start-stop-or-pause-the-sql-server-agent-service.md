@@ -73,6 +73,6 @@ manager: "jhubbard"
   
 -   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
--   [Autostart SQL Server Agent &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)  
+-   [Autostart SQL Server Agent &#40;SQL Server Management Studio&#41;](autostart-sql-server-agent-sql-server-management-studio.md)  
   
   

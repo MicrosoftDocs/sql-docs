@@ -249,7 +249,7 @@ manager: "jhubbard"
 ### Restoring Transaction Logs (Full Recovery Model)  
  **Using SQL Server Management Studio**  
   
--   [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   

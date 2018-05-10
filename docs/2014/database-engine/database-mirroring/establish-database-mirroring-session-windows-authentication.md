@@ -86,6 +86,6 @@ manager: "jhubbard"
  [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
- [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+ [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

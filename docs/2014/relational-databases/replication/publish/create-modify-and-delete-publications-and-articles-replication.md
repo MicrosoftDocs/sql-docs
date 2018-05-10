@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 ## Snapshot Options  
   
--   [Specify Snapshot Format &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
+-   [Specify Snapshot Format &#40;SQL Server Management Studio&#41;](specify-snapshot-format-sql-server-management-studio.md)  
   
 -   [Specify an Alternate Snapshot Folder Location &#40;SQL Server Management Studio&#41;](specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
   

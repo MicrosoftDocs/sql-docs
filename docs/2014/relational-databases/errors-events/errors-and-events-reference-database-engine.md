@@ -25,7 +25,7 @@ manager: "jhubbard"
  Future enhancements to the Events and Errors Message Center will make troubleshooting content available in downloadable form, giving you access to it from a computer that is not connected to the Internet.  
   
 ## In This Section  
- [Database Engine Events and Errors](../native-client-ole-db-errors/errors.md)  
+ [Database Engine Events and Errors](database-engine-events-and-errors.md0  
  Describes the format of [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages and explains how to view error messages and return error messages to applications.  
   
  Provides an explanation of [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages, possible causes, and any actions you can take to correct the problem.  

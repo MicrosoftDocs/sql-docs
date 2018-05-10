@@ -50,7 +50,7 @@ manager: "jhubbard"
  Server registrations that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication store passwords on a per-user basis. After importing the server registrations, users must enter the password for each server the first time they connect, storing the passwords in their lists of registered servers. This is not necessary for servers registered through Windows Authentication.  
   
 ## See Also  
- [Change a Server's Registration &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)   
+ [Change a Server's Registration &#40;SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md) 
  [Export Registered Server Information &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [Create a New Registered Server &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   

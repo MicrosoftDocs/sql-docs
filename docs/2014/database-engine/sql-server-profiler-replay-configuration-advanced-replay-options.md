@@ -56,7 +56,7 @@ manager: "jhubbard"
  Configures how often the blocked processes monitor searches for blocked or blocking processes.  
   
 ## See Also  
- [Replay a Trace Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Replay a Trace Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Replay a Trace File &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Replay Traces](../tools/sql-server-profiler/replay-traces.md)  
   

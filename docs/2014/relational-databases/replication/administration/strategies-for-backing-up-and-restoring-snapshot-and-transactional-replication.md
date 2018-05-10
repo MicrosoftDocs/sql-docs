@@ -113,7 +113,7 @@ manager: "jhubbard"
   
     1.  Run the Distribution Agent until all Subscribers are synchronized with the outstanding commands in the distribution database. Verify that all commands are delivered to Subscribers by using the **Undistributed Commands** tab in Replication Monitor or by querying the [MSdistribution_status](~/relational-databases/system-views/msdistribution-status-transact-sql.md) view in the distribution database. Go to step b.  
   
-         For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
+         For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
          For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
@@ -130,7 +130,7 @@ manager: "jhubbard"
   
     1.  Run the Distribution Agent until all Subscribers are synchronized with the outstanding commands in the distribution database. Verify that all commands are delivered to Subscribers by using the **Undistributed Commands** tab in Replication Monitor or by querying the [MSdistribution_status](~/relational-databases/system-views/msdistribution-status-transact-sql.md) view in the distribution database. Go to step b.  
   
-         For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
+         For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
          For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
@@ -152,7 +152,7 @@ manager: "jhubbard"
   
 2.  Run the Distribution Agent until all Subscribers are synchronized with the outstanding commands in the distribution database. Verify that all commands are delivered to Subscribers by using the **Undistributed Commands** tab in Replication Monitor, or by querying the [MSdistribution_status](~/relational-databases/system-views/msdistribution-status-transact-sql.md) view in the distribution database. Go to step 3.  
   
-     For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
+     For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
      For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
@@ -185,7 +185,7 @@ manager: "jhubbard"
   
 1.  Run the Distribution Agents to synchronize the subscriptions at databases **A** and **C**. Go to step 2.  
   
-     For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
+     For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
 2.  If the distribution database that **B** uses is still available, run Distribution Agents to synchronize subscriptions between databases **B** and **A** and databases and B and **C**. Go to step 3.  
   
@@ -213,7 +213,7 @@ manager: "jhubbard"
   
     1.  Execute [sp_requestpeerresponse](~/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) at database **B** and retrieve the output parameter **@request_id**. Go to step b.  
   
-    2.  By default, the Distribution Agent is set to run continuously; therefore, tokens should be sent to all nodes automatically. If the Distribution Agent is not running in continuous mode, run the agent. For more information, see [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md). Go to step c.  
+    2.  By default, the Distribution Agent is set to run continuously; therefore, tokens should be sent to all nodes automatically. If the Distribution Agent is not running in continuous mode, run the agent. For more information, see [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Go to step c.  
   
     3.  Execute [sp_helppeerresponses](~/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), providing the **@request_id** value retrieved in step b. Wait until all nodes indicate they have received the peer request. Go to step d.  
   
@@ -323,7 +323,7 @@ manager: "jhubbard"
   
 4.  To synchronize the Subscriber, run the Distribution Agent. Recovery is completed.  
   
-     For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
+     For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
 #### msdb Database (Subscriber)  
   

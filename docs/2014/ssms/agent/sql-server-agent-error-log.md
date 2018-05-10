@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  **To view the SQL Server Agent error log**  
   
--   [View SQL Server Agent Error Log &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)  
+-   [View SQL Server Agent Error Log &#40;SQL Server Management Studio&#41;](view-sql-server-agent-error-log-sql-server-management-studio.md) 
   
  **To rename a SQL Server Agent error log**  
   

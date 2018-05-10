@@ -39,6 +39,6 @@ manager: "jhubbard"
 2.  In the **Server group name** box, type the new name for the server group, and then click **Save**.  
   
 ## See Also  
- [Change a Server's Registration &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)  
+ [Change a Server's Registration &#40;SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)
   
   

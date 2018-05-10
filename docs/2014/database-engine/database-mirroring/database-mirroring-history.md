@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  **To use SQL Server Management Studio to monitor database mirroring**  
   
--   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## Options  
  **Server instance**  
@@ -80,7 +80,7 @@ manager: "jhubbard"
 |**Mirror Commit Overhead**|Average delay per transaction in milliseconds (only in synchronous modes). This delay is the amount of overhead incurred while the principal server instance waits for the mirror server instance to write the transaction's log record into the redo queue.|  
   
 ## See Also  
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
+ [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

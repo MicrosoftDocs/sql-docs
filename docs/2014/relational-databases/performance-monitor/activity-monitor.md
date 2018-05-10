@@ -37,7 +37,7 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Description**|**Topic**|  
-|Describes how to open Activity Monitor and how to set the Activity Monitor refresh interval.|[Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)|  
+|Describes how to open Activity Monitor and how to set the Activity Monitor refresh interval.|[Open Activity Monitor &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |Links to topics for server performance and activity monitoring.|[Server Performance and Activity Monitoring](../performance/server-performance-and-activity-monitoring.md)|  
   
   

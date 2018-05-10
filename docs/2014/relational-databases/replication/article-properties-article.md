@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ## Options for all publications  
  **Copy table partitioning schemes** and **Copy index partitioning schemes**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced table partitioning and index partitioning, which are unrelated to the partitioning replication offers through row and column filters. The **Copy table partitioning schemes** and **Copy index partitioning schemes** options specify whether partitioning schemes should be copied to the Subscriber. For more information about partitioning, see [Partitioned Tables and Indexes](../indexes/indexes.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced table partitioning and index partitioning, which are unrelated to the partitioning replication offers through row and column filters. The **Copy table partitioning schemes** and **Copy index partitioning schemes** options specify whether partitioning schemes should be copied to the Subscriber. For more information about partitioning, see [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
  **Convert data types**  
  Determines whether to convert from user-defined data types to base data types when creating objects at the Subscriber. User-defined data types include the user-defined CLR types introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Specify a value of **True** if you will replicate these data types to previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; this ensures they can be handled properly at the Subscriber.  

@@ -89,7 +89,7 @@ manager: "jhubbard"
   
 7.  Select the filegroup in which to move the index.  
   
-     If the table or index is partitioned, select the partition scheme in which to move the index. For more information about partitioned indexes, see [Partitioned Tables and Indexes](indexes.md).  
+     If the table or index is partitioned, select the partition scheme in which to move the index. For more information about partitioned indexes, see [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
      If you are moving a clustered index, you can use online processing. Online processing allows concurrent user access to the underlying data and to nonclustered indexes during the index operation. For more information, see [Perform Index Operations Online](perform-index-operations-online.md).  
   

@@ -167,7 +167,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
 6.  In the **Save As** dialog box, browse to the appropriate folder, and name the file `Market Basket Structure.dmx`.  
   
 ## Executing the Query  
- The final step is to execute the query. After a query is created and saved, it needs to be executed (that is, the statement needs to be run) in order to create the mining structure on the server. For more information about executing queries in Query Editor, see [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md).  
+ The final step is to execute the query. After a query is created and saved, it needs to be executed (that is, the statement needs to be run) in order to create the mining structure on the server. For more information about executing queries in Query Editor, see [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### To execute the query  
   

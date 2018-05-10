@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ### To derive a template from a trace file or trace table  
   
-1.  Open the trace file or trace table on which you want to base your template. For more information, see [Open a Trace File &#40;SQL Server Profiler&#41;](sql-server-profiler.md) or [Open a Trace Table &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+1.  Open the trace file or trace table on which you want to base your template. For more information, see [Open a Trace File &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) or [Open a Trace Table &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
 2.  On the **File** menu, point to **Save As**, and then click **Trace Template**.  
   

@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## Prerequisites  
  To perform this task, you must have configured one or more server registrations in Registered Servers. For more information, see the following topics:  
   
--   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+-   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
 -   [Register a Connected Server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
   

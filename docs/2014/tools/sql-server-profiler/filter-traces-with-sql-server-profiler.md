@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  **To filter traces with SQL Server Profiler**  
   
- [Filter Events in a Trace &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
+ [Filter Events in a Trace &#40;SQL Server Profiler&#41;](filter-events-in-a-trace-sql-server-profiler.md)  
   
 ## See Also  
  [Filter a Trace](../../relational-databases/sql-trace/filter-a-trace.md)  

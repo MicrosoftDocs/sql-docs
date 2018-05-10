@@ -107,7 +107,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to view and use the basic features in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.|[Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)|  
+|Describes how to view and use the basic features in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.|[Database Engine Query Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
 |Describes how to view and use the basic features in the MDX Query Editor.|[MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |Describes how to view and use the basic features in the DMX Query Editor.|[DMX Query Editor &#40;Analysis Services - Data Mining&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Describes how to view and use the basic features in the XML/A Editor.|[XML Editor &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  

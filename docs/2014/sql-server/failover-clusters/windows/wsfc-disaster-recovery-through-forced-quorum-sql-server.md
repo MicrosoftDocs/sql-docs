@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 -   [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
+-   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 
   
 ##  <a name="RelatedContent"></a> Related Content  
   

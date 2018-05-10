@@ -52,7 +52,7 @@ manager: "jhubbard"
 ## See Also  
  [Extended Events](../relational-databases/extended-events/extended-events.md)   
  [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [SQL Server Extended Events Sessions](../relational-databases/native-client-ole-db-data-source-objects/sessions.md)   
+ [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server Extended Events Engine](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

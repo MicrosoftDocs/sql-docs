@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 6.  In the **Causality tracking** section, select the **Track how events are related to one another** check box to track work across multiple tasks.  
   
-     For more information about causality tracking, see “Session Content and Characteristics” in the [SQL Server Extended Events Sessions](../relational-databases/native-client-ole-db-data-source-objects/sessions.md) topic.  
+     For more information about causality tracking, see “Session Content and Characteristics” in the [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md) topic.  
   
      To add events to your session, in the **Select a page** section, click **Events**.  
   

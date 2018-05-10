@@ -55,7 +55,7 @@ manager: "jhubbard"
   
  **To save a trace to a file**  
   
- [Save Trace Results to a File &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
+ [Save Trace Results to a File &#40;SQL Server Profiler&#41;](save-trace-results-to-a-file-sql-server-profiler.md)  
   
  [sp_trace_create &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   

@@ -42,6 +42,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
- [Uninstall SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
+ [Uninstall SQL Server 2014](uninstall-sql-server.md)  
   
   

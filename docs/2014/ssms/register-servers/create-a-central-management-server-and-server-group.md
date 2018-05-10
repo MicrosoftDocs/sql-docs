@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 3.  From **Registered Servers**, right-click the server group and click **New Server Registration**.  
   
-4.  From New Server Registration, select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Create a New Registered Server &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md). Add more servers as appropriate.  
+4.  From New Server Registration, select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Create a New Registered Server &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md). Add more servers as appropriate.  
   
 #### To execute queries against several configuration targets at the same time  
   

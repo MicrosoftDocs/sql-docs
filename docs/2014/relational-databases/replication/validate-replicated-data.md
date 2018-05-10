@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  To handle validation failures, consider the following:  
   
--   Configure the replication alert named **Replication: Subscriber has failed data validation** so that you are notified of the failure. For more information, see [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
+-   Configure the replication alert named **Replication: Subscriber has failed data validation** so that you are notified of the failure. For more information, see [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   Is the fact that validation failed an issue for your application? If the validation failure is an issue, manually update the data so that it is synchronized, or reinitialize the subscription:  
   

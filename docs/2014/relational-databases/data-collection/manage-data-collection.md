@@ -25,7 +25,7 @@ manager: "jhubbard"
 ## Manage Data Collection by Using SQL Server Management Studio  
  You can perform the following data collector-related tasks by using Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
--   [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
 -   [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)  
   

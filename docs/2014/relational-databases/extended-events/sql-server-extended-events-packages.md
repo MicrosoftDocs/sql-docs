@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   Maps  
   
- Objects from different packages can be mixed in an event session. For more information, see [SQL Server Extended Events Sessions](../native-client-ole-db-data-source-objects/sessions.md).  
+ Objects from different packages can be mixed in an event session. For more information, see [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md).  
   
 ## Package Contents  
  The following illustration shows the objects that can exist in packages, which are contained in a module. A module can be an executable or a dynamic link library.  
@@ -212,7 +212,7 @@ where name = 'lock_mode'
  Using this table as an example, assume that you have a column named mode, and its value is 5. The table indicates that 5 maps to X, which means the lock type is Exclusive.  
   
 ## See Also  
- [SQL Server Extended Events Sessions](../native-client-ole-db-data-source-objects/sessions.md)   
+ [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
  [SQL Server Extended Events Engine](sql-server-extended-events-engine.md)   
  [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
   

@@ -80,17 +80,17 @@ manager: "jhubbard"
   
 -   [Step 1: Creating a New Integration Services Project](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Step 2: Adding and Configuring a Flat File Connection Manager](connection-manager/file-connection-manager.md)  
+-   [Step 2: Adding and Configuring a Flat File Connection Manager](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Step 3: Adding and Configuring an OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)  
+-   [Step 3: Adding and Configuring an OLE DB Connection Manager](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [Step 4: Adding a Data Flow Task to the Package](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Step 5: Adding and Configuring the Flat File Source](data-flow/flat-file-source.md)  
+-   [Step 5: Adding and Configuring the Flat File Source](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 -   [Step 6: Adding and Configuring the Lookup Transformations](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Step 7: Adding and Configuring the OLE DB Destination](data-flow/ole-db-destination.md)  
+-   [Step 7: Adding and Configuring the OLE DB Destination](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 -   [Step 8: Making the Lesson 1 Package Easier to Understand](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   

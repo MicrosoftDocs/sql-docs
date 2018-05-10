@@ -55,7 +55,7 @@ manager: "jhubbard"
     >  Although the export files are encrypted, if user names and SQL Server Authentication passwords are included in the file, access to the file should be carefully controlled. User names and passwords are therefore excluded from the export file by default.  
   
 ## See Also  
- [Import Registered Server Information &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)   
+ [Import Registered Server Information &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md) 
  [Create a New Registered Server &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  **To use SQL Server Management Studio to monitor database mirroring**  
   
--   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## Columns  
  **Warning**  
@@ -72,7 +72,7 @@ manager: "jhubbard"
  Membership in the **dbm_monitor** role enables you to view only the most recent status row on the **Warnings** Page.  
   
 ## See Also  
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
+ [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

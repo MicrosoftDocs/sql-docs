@@ -60,7 +60,7 @@ manager: "jhubbard"
   
      ![AddColumnsinTableDesigner](../../database-engine/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
-5.  To specify more properties for a column, such as identity or computed column values, click the column and in the column properties tab, choose the appropriate properties. For more information about column properties, see [Table Column Properties &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md).  
+5.  To specify more properties for a column, such as identity or computed column values, click the column and in the column properties tab, choose the appropriate properties. For more information about column properties, see [Table Column Properties &#40;SQL Server Management Studio&#41;](table-column-properties-sql-server-management-studio.md).  
   
 6.  To specify a column as a primary key, right-click the column and select **Set Primary Key**. For more information, see [Create Primary Keys](../tables/create-primary-keys.md).  
   

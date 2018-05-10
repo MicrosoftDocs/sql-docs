@@ -84,7 +84,7 @@ manager: "jhubbard"
   
 -   [Remove Log Shipping &#40;SQL Server&#41;](remove-log-shipping-sql-server.md)  
   
--   [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
   
 -   [Monitor Log Shipping &#40;Transact-SQL&#41;](/monitor-log-shipping-transact-sql.md)  
   

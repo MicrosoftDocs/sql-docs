@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   [Manage Logins in the Publication Access List](manage-logins-in-the-publication-access-list.md)  
   
--   [Replicate Data in Encrypted Columns &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)  
+-   [Replicate Data in Encrypted Columns &#40;SQL Server Management Studio&#41;](replicate-data-in-encrypted-columns-sql-server-management-studio.md)  
   
 ## See Also  
  [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   

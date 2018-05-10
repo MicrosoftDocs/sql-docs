@@ -112,7 +112,7 @@ manager: "jhubbard"
  The **Analysis Services Tutorial** cube now contains two measure groups, the original measure group based on the **InternetSales** table and a second measure group based on the **ResellerSales** table in the **Adventure Works DW 2012** data source view.  
   
 ## Next Task in Lesson  
- [Defining Parent Attribute Properties in a Parent-Child Hierarchy](multidimensional-models/parent-child-dimension.md)  
+ [Defining Parent Attribute Properties in a Parent-Child Hierarchy](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## See Also  
  [Deploying an Analysis Services Project](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  

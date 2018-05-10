@@ -47,6 +47,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Manage Data Collection](data-collection.md)   
- [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+ [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
   

@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  **To use SQL Server Management Studio to monitor database mirroring**  
   
--   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## Options  
  *Server instance and its connection status*  
@@ -87,7 +87,7 @@ manager: "jhubbard"
  An event is written to the event log for a performance only if its value is at or above its threshold when the status table is being updated. If a peak value reaches the threshold momentarily between status updates that peak is missed.  
   
 ## See Also  
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)   
+ [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

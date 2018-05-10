@@ -66,6 +66,6 @@ manager: "jhubbard"
  Set the date and time for the trace to end and close itself.  
   
 ## See Also  
- [Create a Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/sql-server-profiler.md)  
+ [Create a Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
   

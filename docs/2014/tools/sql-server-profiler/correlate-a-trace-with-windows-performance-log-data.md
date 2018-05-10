@@ -27,6 +27,6 @@ manager: "jhubbard"
  To correlate a trace with performance counters, open a trace file or table that contains the **StartTime** and **EndTime** data columns, and then click **Import Performance Data** on the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu. You can then open a performance log, and select the System Monitor objects and counters that you want to correlate with the trace.  
   
 ## See Also  
- [Correlate a Trace with Windows Performance Log Data &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
+ [Correlate a Trace with Windows Performance Log Data &#40;SQL Server Profiler&#41;](correlate-a-trace-with-windows-performance-log-data.md)  
   
   

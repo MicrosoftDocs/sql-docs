@@ -38,7 +38,7 @@ manager: "jhubbard"
 >  Before adding an existing project from shared directories in a multideveloper environment, you should attempt to ensure that your changes do not adversely affect or overwrite another developer's changes.  
   
 ## See Also  
- [Projects &#40;SQL Server Management Studio&#41;](../sql-server-management-studio-ssms.md)   
+ [Projects &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [Solutions &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)  
   
   

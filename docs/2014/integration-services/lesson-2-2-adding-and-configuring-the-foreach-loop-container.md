@@ -87,7 +87,7 @@ manager: "jhubbard"
 -   Drag the **Extract Sample Currency Data** data flow task onto the Foreach Loop container now renamed `Foreach File in Folder`.  
   
 ## Next Lesson Task  
- [Step 3: Modifying the Flat File Connection Manager](connection-manager/file-connection-manager.md)  
+ [Step 3: Modifying the Flat File Connection Manager](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## See Also  
  [Configure a Foreach Loop Container](control-flow/foreach-loop-container.md)   

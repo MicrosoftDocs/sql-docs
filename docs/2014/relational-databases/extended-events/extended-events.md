@@ -36,7 +36,7 @@ manager: "jhubbard"
 |[SQL Server Extended Events Packages](sql-server-extended-events-packages.md)|Describes the Extended Events packages that contain objects that are used for obtaining and processing data when an Extended Events session is running.|  
 |[SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)|Describes the event consumers that can receive data during an event session.|  
 |[SQL Server Extended Events Engine](sql-server-extended-events-engine.md)|Describes the engine that implements and manages an Extended Events session.|  
-|[SQL Server Extended Events Sessions](../native-client-ole-db-data-source-objects/sessions.md)|Describes the Extended Events session.|  
+|[SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)|Describes the Extended Events session.|  
   
 ## Extended Events Architecture  
  Extended Events (Extended Events) is a general event-handling system for server systems. The Extended Events infrastructure supports the correlation of data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and under certain conditions, the correlation of data from the operating system and database applications. In the latter case, Extended Events output must be directed to Event Tracing for Windows (ETW) to correlate the event data with operating system or application event data.  

@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ### To create a Transact-SQL script to run a trace  
   
-1.  Open a trace file or table. For more information, see [Open a Trace File &#40;SQL Server Profiler&#41;](sql-server-profiler.md) or [Open a Trace Table &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+1.  Open a trace file or table. For more information, see [Open a Trace File &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) or [Open a Trace Table &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
 2.  On the**File**menu, point to **Export**, point to **Script Trace Definition**, and then click the version that corresponds to the server you want to trace.  
   

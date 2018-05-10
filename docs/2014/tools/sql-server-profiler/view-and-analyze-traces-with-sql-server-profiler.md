@@ -59,7 +59,7 @@ AND     CPU < (Duration * 1000)
   
 1.  Create your trace.  
   
-    -   When defining the trace, capture the **Event Class**, **ClientProcessID**, and **Start Time** data columns in addition to any other data columns you want to capture. For more information, see [Create a Trace &#40;SQL Server Profiler&#41;](sql-server-profiler.md).  
+    -   When defining the trace, capture the **Event Class**, **ClientProcessID**, and **Start Time** data columns in addition to any other data columns you want to capture. For more information, see [Create a Trace &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md).  
   
     -   Group the captured data by the **Event Class**data column, and capture the trace to a file or table. To group the captured data, click **Organize Columns** on the **Events Selection** tab of the Trace Properties dialog box. For more information, see [Organize Columns Displayed in a Trace &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md).  
   

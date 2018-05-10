@@ -69,11 +69,11 @@ manager: "jhubbard"
 |[Lesson 2: Add Data](lesson-2-add-data.md)|20 minutes|  
 |[Lesson 3: Rename Columns](rename-columns.md)|20 minutes|  
 |[Lesson 4: Mark as Date Table](lesson-3-mark-as-date-table.md)|3 minutes|  
-|[Lesson 5: Create Relationships](../integration-services/data-flow/transformations/create-relationships.md)|10 minutes|  
+|[Lesson 5: Create Relationships](lesson-4-create-relationships.md)|10 minutes|  
 |[Lesson 6: Create Calculated Columns](lesson-5-create-calculated-columns.md)|15 minutes|  
 |[Lesson 7: Create Measures](lesson-6-create-measures.md)|30 minutes|  
 |[Lesson 8: Create Key Performance Indicators](lesson-7-create-key-performance-indicators.md)|15 minutes|  
-|[Lesson 9: Create Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md)|5 minutes|  
+|[Lesson 9: Create Perspectives](lesson-8-create-perspectives.md)|5 minutes|  
 |[Lesson 10: Create Hierarchies](lesson-9-create-hierarchies.md)|20 minutes|  
 |[Lesson 11: Create Partitions](lesson-10-create-partitions.md)|15 minutes|  
 |[Lesson 12: Create Roles](lesson-11-create-roles.md)|15 minutes|  

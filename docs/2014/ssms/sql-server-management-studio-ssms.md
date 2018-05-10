@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 |Description|Topic|  
 |-----------------|-----------|  
-|Describes common tasks performed by using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], such as customizing keyboard shortcuts and viewing property pages.|[Use SQL Server Management Studio](sql-server-management-studio-ssms.md)|  
+|Describes common tasks performed by using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], such as customizing keyboard shortcuts and viewing property pages.|[Use SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)|  
 |Describes using **Object Explorer** to view and manage all of the objects in one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Object Explorer](object/object-explorer.md)|  
 |Describes how to use **Template Explorer** to build and manage files of boilerplate text that can be used to speed the development of queries and scripts.|[Template Explorer](template/template-explorer.md)|  
 |Describes how to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](solution/solution-explorer.md)|  

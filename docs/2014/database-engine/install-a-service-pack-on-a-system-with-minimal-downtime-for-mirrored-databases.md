@@ -93,7 +93,7 @@ manager: "jhubbard"
   
      **To perform a manual failover**  
   
-    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
     -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   

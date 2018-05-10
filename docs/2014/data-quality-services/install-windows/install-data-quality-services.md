@@ -79,7 +79,7 @@ manager: "jhubbard"
  [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
  [Remove Data Quality Server Objects](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Install SQL Server 2014 BI Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
- [Uninstall SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
+ [Uninstall SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../data-quality-services.md)   
  [Troubleshoot Installation and Configuration Issues in DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   

@@ -83,6 +83,6 @@ manager: "jhubbard"
  Microsoft does not support [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installations with [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] extensions present, so if you have installed [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] extensions, you may want to remove them before calling Microsoft Customer Support about a [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] issue.  
   
 ## See Also  
- [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
+ [Use SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

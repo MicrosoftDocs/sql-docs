@@ -18,7 +18,7 @@ Sometimes when you are working with multiple environments or installations of R 
 
 Examples in this article show you how to get the path and version of the library that is being used by SQL Server.
 
-## Verify the current R library
+## Get the current R library
 
 For **R** in any version of SQL Server, run the following statement to verify the default library for the current instance:
 
@@ -53,7 +53,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## Verify the current Python library
+## Get the current Python library
 
 For **Python** in SQL Server 2017, run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory, and the standard library path.
 
@@ -123,7 +123,7 @@ WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 
 When running `pip` from the command line, there are many other useful functions: `pip list` gets all packages that are installed, whereas `pip freeze` lists the packages installed by `pip`, and doesn't list packages that pip itself depends on. You can also use `pip freeze` to generate a dependency file.
 
-## Verify whether a package is installed with an instance
+## Check whether a package is installed with an instance
 
 If you have installed a package and want to make sure that it is available to a particular SQL Server instance, you can execute the following stored procedure call to load the package and return only messages.
 
@@ -187,7 +187,7 @@ Return the version of R:
 
 ### Python commands
 
-Python support is SQL Server 2017 only. The instance library for Python is \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library.
+Python support is SQL Server 2017 only. The instance library for Python is \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\.
 
 Open the Python command window from this location to ensure packages from the instance library are used:
 
@@ -200,6 +200,25 @@ Open interactive help:
 Type a module name at the help prompt to get the package contents, version, and file location:
 
     > help> revoscalepy
+
+<a name="pip-conda"></a>
+
+### Python package managers (Pip and Conda)
+
+Anaconda includes Python tools for managinage pacakges. On a default instance, Pip, Conda, and other tools can be found at \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts.
+
+SQL Server Setup does not add Pip or Conda to the system path and on a production SQL Server instance, keeping non-essential executables out of the path is a best practice. However, for development and test environments, you could add Conda to the system:
+
+    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+
+Alternatively, you can run commands from the Scripts folder to get package information:
+
+1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+
+1. Right-click **conda.exe** > **Run as administrator**, and enter `conda list` to return a list of packages installed in the current environment.
+
+1. Similarly, right-click **pip.exe** > **Run as administrator**, and enter `pip list` to return the same information. 
+
 
 ## Next steps
 

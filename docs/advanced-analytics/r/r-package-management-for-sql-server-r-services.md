@@ -52,7 +52,7 @@ See the following articles for detailed steps on how to install new R or Python 
 
 Before you attempt to download or install any new package, review the requirements:
 
-+ Make sure that there is a Windows version of the package: [Getting the correct package version and format](#packageVersion)
++ Make sure that there is a Windows version of the package.
 
 + Identify all package dependencies, and ascertain their compatibility with the SQL Server environment.
 

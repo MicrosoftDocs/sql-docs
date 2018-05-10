@@ -76,11 +76,11 @@ Open the Python command prompt associated with the instance.
 
 + If you are accustomed to using the Python command line, use PIP.exe to install new packages. You can find the **pip** installer in the `Scripts` subfolder. 
 
-    If you get an error that `pip` is not recognized as an internal or external command, you can add the path of the Python executable and the Python scripts folder to the PATH variable in Windows.
+  SQL Server Setup does not add Scripts to the system path. If you get an error that `pip` is not recognized as an internal or external command, you can add the Scripts folder to the PATH variable in Windows.
 
-    The full path of the **Scripts** folder in a default installation is as follows:
+  The full path of the **Scripts** folder in a default installation is as follows:
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + If you are using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically. 
 
@@ -126,7 +126,7 @@ There are different ways that you can get a list of installed packages. For exam
 
 If you are using the Python command line, you can use the **conda** package manager, which is included with the Anaconda Python environment added by SQL Server setup.
 
-To view Python packages that have been installed in the current environment, run this command from the command prompt:
+Assuming you added the Scripts folder to the PATH environment variable, run this command from an administrator's command prompt to list the packages in your Python environment.
 
 ```python
 conda list

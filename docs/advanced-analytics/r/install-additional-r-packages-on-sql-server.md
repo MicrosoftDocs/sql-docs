@@ -25,11 +25,9 @@ You can use standard R tools to install new packages on an instance of SQL Serve
 
 This procedure uses RGui but you can use RTerm or any other R command-line tool that supports elevated access.
 
-### Install a package using RGui or RTerm
+### Install a package using RGui
 
-1. [Determine the location of the instance library](installing-and-managing-r-packages.md). Navigate to the folder where the R tools are installed. For example, the default path for a SQL Server 2017 default instance is as follows: 
-
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determine the location of the instance library](installing-and-managing-r-packages.md). Navigate to the folder where the R tools are installed. For example, the default path for a SQL Server 2017 default instance is as follows: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Right-click RGui.exe, and select **Run as administrator**. If you do not have the required permissions, contact the database administrator and provide a list of the packages you need.
 
@@ -40,7 +38,7 @@ This procedure uses RGui but you can use RTerm or any other R command-line tool 
 
 If the target package depends on additional packages, the R installer automatically downloads the dependencies and installs them for you.
 
-If you have multiple instances of SQL Server, such as side-by-side instances of SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services, run installation separately for each instance if you want to use the package in both contexts.. Packages cannot be shared across instances.
+If you have multiple instances of SQL Server, such as side-by-side instances of SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services, run installation separately for each instance if you want to use the package in both contexts. Packages cannot be shared across instances.
 
 ## <a name = "bkmk_offlineInstall"></a> Offline installation using R tools
 
@@ -78,13 +76,15 @@ This procedure assumes that you have prepared all the packages that you need, in
 
 ## <a name="bkmk_createlibrary"></a> Use CREATE EXTERNAL LIBRARY
 
-(SQL Server 2017 only) The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement makes it possible to add a package or set of packages to an instance or a specific database without running R or Python code directly. However, this method requires package preparation and additional database permissions.
+**Applies to:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-+ All packages must be be available as a local zipped file, rather than downloading from the internet.
+The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement makes it possible to add a package or set of packages to an instance or a specific database without running R or Python code directly. However, this method requires package preparation and additional database permissions.
+
++ All packages must be be available as a local zipped file, rather than downloaded on demand from the internet.
 
     If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
-+ The statement fails if required packages are not available. You must analyze dependencies of the package you want to install and make sure that the packages are uploaded to the server and database. We recommend using **miniCRAN** or **igraph** for analyzing packages dependencies.
++ All dependencies must be identified by name and version, and included in the zip file. The statement fails if required packages are not available, including downstream package dependencies. We recommend using **miniCRAN** or **igraph** for analyzing packages dependencies. Installing the wrong version of package or package dependency can also cause the statement to fail. 
 
 + You must have the necessary permissions on the database. For details, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
@@ -119,19 +119,7 @@ This procedure assumes that you have prepared all the packages that you need, in
     library(randomForest)'
     ```
 
-### Known issues with CREATE EXTERNAL LIBRARY
-
-CREATE EXTERNAL LIBRARY is supported under these conditions:
-
-+ You are installing a single package with no dependencies.
-+ You are installing packages with dependencies, and have prepared all packages in advance. 
-
-The DDL statement fails if any package dependencies are missing. For example, the installation process is known to fail in these cases:
-
-+ You installed a package that has second-level dependencies and your analysis did not extend to second-level packages. For example, you want to install **ggplot2**, and identified all the packages listed in the manifest; however, those packages had other dependencies that were not installed.
-+ You installed a set of packages that require different versions of a supporting package, and your server had the wrong version.
-
-## Package installation tips
+## Tips for package installation
 
 This section provides assorted tips and common questions related to R package installation on SQL Server.
 

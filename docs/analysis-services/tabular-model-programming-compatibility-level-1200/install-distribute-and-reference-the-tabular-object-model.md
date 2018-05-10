@@ -3,7 +3,7 @@ title: "Install, distribute, and reference the Tabular Object Model | Microsoft 
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend

@@ -68,5 +68,5 @@ The feature described in this article requires SQL Server Management Studio vers
 To learn about other methods for scheduling an SSIS package, see [Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md).
 
 To learn more about Azure Data Factory pipelines, activities, and triggers, see the following articles:
--   [Pipelines and activities in Azure Data Factory](/azure/data-factory/concepts-pipelines-activities.md)
--   [Pipeline execution and triggers in Azure Data Factory](/azure/data-factory/concepts-pipeline-execution-triggers.md)
+-   [Pipelines and activities in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
+-   [Pipeline execution and triggers in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

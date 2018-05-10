@@ -22,7 +22,7 @@ manager: craigg
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step to creating a publication is having the **Snapshot Agent** create the snapshot and save it to the snapshot folder. Next, the **Distribution Agent** will take the snapshot, and apply it to the subscriber. 
 
 This creates the publication, and puts it into the *synchronizing* state. Synchronization works in three phases:
-- Transactions occur on objects that are replicated, and are marked 'for replication' in the transac20180509_repltscleanuption log. 
+- Transactions occur on objects that are replicated, and are marked 'for replication' in the transaction log. 
 - The **Log Reader Agent** scans through the transaction log looking for transactions that are marked 'for replication'. These transactions are then saved to the distribution database. 
 - The **Distribution Agent** scans through the distribution database using the reader thread and then, using the writer thread, connects to the subscriber to apply those changes to the subscriber.
 
@@ -30,15 +30,16 @@ Errors can occur in any step of this process, and finding those errors can be th
 
   >[!NOTE]
   > - The purpose of this troubleshooting guide is to teach troubleshooting methodology. It is not designed to solve your specific error,  but provide general guidance in finding errors. Some specific examples are provided but the resolution to them may vary depending on environment. 
- > - The errors that are provided as examples are based on the tutorial [Configuring Transacational Replication](/../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md).
+ > - The errors that are provided as examples are based on the [Configuring transacational replication tutorial](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md).
 
 
 
 ## Troubleshooting Methodology 
 
 ### Questions to ask
-1. Where is replication synchronization failing?
-2. Which agent is experiencing an error? 
+1. Where in the synchronization process is replication failing?
+2. Which agent is experiencing an error?
+1. When was the last time replication worked successfully? Has anything changed since then?  
 
 ### Steps to take
 1. Use **Replication Monitor** to identify at which point replication is encountering the error (which agent?).
@@ -46,7 +47,7 @@ Errors can occur in any step of this process, and finding those errors can be th
     - If errors are occurring in the *Publisher to Distributor* section, then the issue is with the log reader agent. 
     - If errors are occurring in the *Distributor to Subscriber* section, then the issue is with the distribution agent.  
 2. Look through that agent's **Job History**  in **Job Activity Monitor** to identify details of the error. 
-    -  If job history is not showing sufficient details,  you can [enable verbose logging](#enable-verbose-logging) on the specific agent.
+    -  If job history is not showing sufficient details, you can [enable verbose logging](#enable-verbose-logging) on that specific agent.
 3. Attempt to determine a solution for the error.
 
 

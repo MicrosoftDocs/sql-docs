@@ -302,7 +302,7 @@ If you find folders with a name like this, you can remove it after installation 
 |*bind*| Upgrades the specified SQL database instance to the latest version of R Server and ensures the instance automatically gets future upgrades of R Server|
 |*unbind*|Uninstalls the latest version of R Server from the specified SQL database instance and prevents future R Server upgrades from affecting the instance|
 
-<a name="sqlbinder-error-codes"<a/>
+<a name="sqlbinder-error-codes"><a/>
 
 ### Errors
 
@@ -319,7 +319,7 @@ The tool returns the following error messages:
 |Bind error 6 | Bind failed | An error occurred while unbinding the instance. |
 |Bind error 7 | Not bound | The database engine instance has R Services or SQL Server Machine Learning Services. The instance is not bound to Microsoft Machine Learning Server. |
 |Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
-|Bind error 9 | No instances found | No instances were found on this computer. |
+|Bind error 9 | No instances found | No database engine instances were found on this computer. |
 
 
 ## See also

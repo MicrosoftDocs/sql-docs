@@ -3,7 +3,7 @@ title: "Data Mining Tutorials (Analysis Services) | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: tutorial
 ms.author: owend
 ms.reviewer: owend

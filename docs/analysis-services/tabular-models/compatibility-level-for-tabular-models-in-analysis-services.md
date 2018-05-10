@@ -3,7 +3,7 @@ title: "Compatibility level for tabular models in Analysis Services | Microsoft 
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend

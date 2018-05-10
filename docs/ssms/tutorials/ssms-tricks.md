@@ -36,10 +36,14 @@ To complete this tutorial, you need SQL Server Management Studio, access to a SQ
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 =======
 - Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 >>>>>>> 13ceead0c5d387f1bb1328765238ed0de80e3946
+=======
+- Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+>>>>>>> 704f3936c3f555803288d4b947e37667050a5e90
 
 ## Comment/uncomment your T-SQL code
 You can comment and uncomment portions of your text by using the **Comment** button on the toolbar. Text that is commented out is not executed. 

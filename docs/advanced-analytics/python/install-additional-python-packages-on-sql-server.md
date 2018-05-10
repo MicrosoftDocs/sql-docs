@@ -13,19 +13,17 @@ manager: cgronlun
 # Install new Python packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to install new Python packages on an instance of SQL Server 2017 Machine Learning Services.
+This article describes how to install new Python packages on an instance of SQL Server 2017 Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
-In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
-
-For help figuring out where packages are installed, or which packages are installed, see [Viewing installed R or Python packages](../r/determine-which-packages-are-installed-on-sql-server.md).
+For help figuring out where packages are installed, or which packages are installed, see [Get R or Python package information](../r/determine-which-packages-are-installed-on-sql-server.md).
 
 ## Prerequisites
 
-+ You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
++ You must have installed SQL Server 2017 Machine Learning Services (In-Database) with the Python language option. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
 + For each server instance, you must install a separate copy of the package. Packages cannot be shared across instances.
 
-+ Determine whether the package you intend to use will work with Python 3.5 and in the Windows environment. 
++ Packages must be Python 3.5 compliant and run on Windows. 
 
 + Assess whether the package is a good fit for use in the SQL Server environment. Typically a database server supports multiple services and applications, and resources on the file system might be limited, as well as connections to the server. In many cases Internet access is blocked entirely.
 

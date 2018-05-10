@@ -14,28 +14,73 @@ manager: cgronlun
 #  Get R and Python package information on SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. This article provides queries and guidance useful for determining a package version, and to list the packages that are installed in the current SQL Server environment.
+Sometimes when you are working with multiple environments or installations of R or Python, you need to verify that the code you are running is using the expected environment for Python, or the correct workspace for R. For example, if you have upgraded the machine learning components using binding, the path to the R library might be in a different folder than the default. Also, if you install R Client or an instance of the Standalone server, you might have multiple R libraries on your computer.
 
-## Verify the current default library
+Examples in this article show you how to get the path and version of the library that is being used by SQL Server.
 
-For **R** in SQL Server, run the following statement to verify the default library for the current instance:
+## Verify the current R library
+
+For **R** in any version of SQL Server, run the following statement to verify the default library for the current instance:
 
 ```sql
-EXECUTE sp_execute_external_script  @language = N'R'
-, @script = N'OutputDataSet <- data.frame(.libPaths());'
+EXECUTE sp_execute_external_script  
+  @language = N'R',
+  @script = N'OutputDataSet <- data.frame(.libPaths());'
 WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-For **Python** in SQL Server, run the following statement to verify the default library for the current instance:
+For SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services with [ugpraded R to at least RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), you can execute this stored procedure to return the path of the instance library and the version of the RevoScaleR package used by SQL Server:
 
 ```sql
 EXEC sp_execute_external_script
+  @language =N'R',
+  @script=N'
+  sql_r_path <- rxSqlLibPaths("local")
+  print(sql_r_path)
+  version_info <-packageVersion("RevoScaleR")
+  print(version_info)'
+```
+
+> [!NOTE]
+> The [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function can be executed only on the local computer. The function cannot return library paths for remote connections.
+
+**Results**
+
+```text
+STDOUT message(s) from external script: 
+[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
+[1] '9.3.0'
+```
+
+## Verify the current Python library
+
+For **Python** in SQL Server 2017, run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory, and the standard library path.
+
+```sql
+EXECUTE sp_execute_external_script
   @language =N'Python',
   @script=N'import sys; print("\n".join(sys.path))'
 ```
 
-## Generate a package list using a stored procedure
+**Results**
+
+```text
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\python35.zip
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\DLLs
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Sphinx-1.5.4-py3.5.egg
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32\lib
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Pythonwin
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
+```
+
+For more information about the variable `sys.path` and how it is used to set the interpreter’s search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+
+## Generate a package list
 
 There are multiple ways that you can get a complete list of the packages currently installed. One advantage of running package list commands from sp_execute_external_script is that you are guaranteed to get packages installed in the instance library.
 
@@ -45,13 +90,13 @@ The following example uses the R function `installed.packages()` in a [!INCLUDE[
 
 ```SQL
 EXECUTE sp_execute_external_script
-@language=N'R'
-,@script = N'str(OutputDataSet);
-packagematrix <- installed.packages();
-Name <- packagematrix[,1];
-Version <- packagematrix[,3];
-OutputDataSet <- data.frame(Name, Version);'
-, @input_data_1 = N''
+  @language=N'R',
+  @script = N'str(OutputDataSet);
+  packagematrix <- installed.packages();
+  Name <- packagematrix[,1];
+  Version <- packagematrix[,3];
+  OutputDataSet <- data.frame(Name, Version);',
+  @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
@@ -63,17 +108,16 @@ For more information about the optional and default fields for the R package DES
 The `pip` module is installed by default, and supports many operations for listing installed packages, in addition to those supported by standard Python. You can run `pip` from a Python command prompt, of course, but you can also call some pip functions from `sp_execute_external_script`.
 
 ```sql
-execute sp_execute_external_script 
-@language = N'Python', 
-@script = N'
-import pip
-import pandas as pd
-installed_packages = pip.get_installed_distributions()
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
+EXECUTE sp_execute_external_script 
+  @language = N'Python', 
+  @script = N'
+  import pip
+  import pandas as pd
+  installed_packages = pip.get_installed_distributions()
+  installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
      for i in installed_packages])
-df = pd.DataFrame(installed_packages_list)
-OutputDataSet = df
-'
+  df = pd.DataFrame(installed_packages_list)
+  OutputDataSet = df'
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
@@ -88,8 +132,9 @@ If you have installed a package and want to make sure that it is available to a 
 This example looks for and loads the RevoScaleR library, if available.
 
 ```sql
-EXEC sp_execute_external_script  @language =N'R',
-@script=N'require("RevoScaleR")'
+EXECUTE sp_execute_external_script  
+  @language =N'R',
+  @script=N'require("RevoScaleR")'
 GO
 ```
 
@@ -102,15 +147,15 @@ GO
 The equivalent check for Python can be performed from the Python shell, using `conda` or `pip` commands. Alternatively, run this statement in a stored procedure:
 
 ```sql
-exec sp_execute_external_script
-       @language = N'Python'
-       , @script = N'
-import pip
-import pkg_resources
-pckg_name = "revoscalepy"
-pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
-installed_pckg = pckgs.query(''key == @pckg_name'')
-print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+  import pip
+  import pkg_resources
+  pckg_name = "revoscalepy"
+  pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
+  installed_pckg = pckgs.query(''key == @pckg_name'')
+  print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
 ```
 
 ## Get package information in R and Python tools
@@ -156,63 +201,8 @@ Type a module name at the help prompt to get the package contents, version, and 
 
     > help> revoscalepy
 
-## Get library location and version
+## Next steps
 
-Sometimes when you are working with multiple environments or installations of R or Python, you need to verify that the code you are running is using the correct environment for Python, or the correct workspace for R.
-
-For example, if you have upgraded the machine learning components using binding, the path to the R library might be in a different folder than the default. Also, if you install R Client or an instance of the Standalone server, you might have multiple R libraries on your computer.
-
-These examples show how to get the path and version of the library that is being used by SQL Server.
-
-### R
-
-This stored procedure returns the path of the instance library, and the version of the RevoScaleR package used by SQL Server:
-
-```sql
-EXEC sp_execute_external_script
-  @language =N'R',
-  @script=N'
-  sql_r_path <- rxSqlLibPaths("local")
-  print(sql_r_path)
-  version_info <-packageVersion("RevoScaleR")
-  print(version_info)'
-```
-
-> [!NOTE]
-> The [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function can be executed only on the local computer. The function cannot return library paths for remote connections.
-
-**Results**
-
-```text
-STDOUT message(s) from external script: 
-[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
-[1] '9.2.1'
-```
-
-### Python
-
-This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory, and the standard library path.
-
-```sql
-EXEC sp_execute_external_script
-  @language =N'Python',
-  @script=N'import sys; print("\n".join(sys.path))'
-```
-
-**Results**
-
-```text
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\python35.zip
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\DLLs
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Sphinx-1.5.4-py3.5.egg
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32\lib
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Pythonwin
-C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
-```
-
-For more information about the variable `sys.path` and how it is used to set the interpreter’s search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
-
++ [Install new R packages](r/install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages](python/install-additional-python-packages-on-sql-server.md)
++ [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)

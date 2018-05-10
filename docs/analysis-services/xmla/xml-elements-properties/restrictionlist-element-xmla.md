@@ -1,35 +1,14 @@
 ---
 title: "RestrictionList Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "RestrictionList Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:xml-analysis#RestrictionList"
-  - "microsoft.xml.analysis.restrictionlist"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#RestrictionList"
-helpviewer_keywords: 
-  - "RestrictionList element"
-ms.assetid: 2297c005-381e-49a4-a207-826f7f9ea93a
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # RestrictionList Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

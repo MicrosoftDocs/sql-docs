@@ -1,35 +1,14 @@
 ---
 title: "DbSchemaName Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "DbSchemaName Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:xml-analysis#DbSchemaName"
-  - "microsoft.xml.analysis.dbschemaname"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#DbSchemaName"
-helpviewer_keywords: 
-  - "DbSchemaName element"
-ms.assetid: 40ca10c9-7597-48fe-a9d9-ee2c7b84d4d1
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DbSchemaName Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

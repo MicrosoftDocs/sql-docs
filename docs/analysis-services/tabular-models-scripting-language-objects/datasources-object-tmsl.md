@@ -3,7 +3,7 @@ title: "DataSources object (TMSL) | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tmsl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend

@@ -53,7 +53,7 @@ Note the following when connecting to a server in an availability group or Failo
   
 -   You cannot connect to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance configured with more than 64 IP addresses.
 
--   Both [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication or Kerberos Authentication can be used with **MultiSubnetFailover=Yes** without affecting the behaviour of the application.
+-   Both [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication or Kerberos Authentication can be used with **MultiSubnetFailover=Yes** without affecting the behavior of the application.
 
 -   You can increase the value of **loginTimeout** to accommodate for failover time and reduce the application's connection retry attempts.
 

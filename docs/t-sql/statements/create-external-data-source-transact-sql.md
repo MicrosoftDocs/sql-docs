@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"
@@ -363,7 +363,7 @@ SECRET = '<azure_storage_account_key>';
 
 -- Create an external data source with CREDENTIAL option.
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
-    TYPE = HADOOP, 
+    TYPE = BLOB_STORAGE, 
     LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
     CREDENTIAL = AzureStorageCredential
 );

@@ -3,8 +3,8 @@ title: "Add Mining Models to a Structure (Analysis Services - Data Mining) | Mic
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
-ms.topic: article
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan

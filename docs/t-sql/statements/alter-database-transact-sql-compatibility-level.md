@@ -102,20 +102,23 @@ Use **ALTER DATABASE** to change the compatibility level of the database. To vie
 
 ## Compatibility Levels and SQL Server Upgrades  
 Database compatibility level is a valuable tool to assist in database modernization, by allowing the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to be upgraded, while maintaining connecting applications functional status, as certified in a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-As long as the application does not need to leverage enhancements that are only available in a higher database compatibility level, it is a valid interim approach to upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], while maintaining the previous database compatibility level.
+As long as the application does not need to leverage enhancements that are only available in a higher database compatibility level, it is a valid approach to upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], while maintaining the previous database compatibility level.
 For more information on using compatibility level for backward compatibility, see the next [section](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).   
 
 > [!TIP] 
 > If an application was tested and certified on a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version, then it was implicitly tested and certified on that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version native database compatibility level.
+> 
 > So, database compatibility level provides an easy certification path for an existing application, when using the database compatibility level corresponding to the tested [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version.
+> 
 > For an existing application to leverage an enhancement only available in a higher database compatibility level, or for new development work, plan to use the latest database compatibility level available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and certify your application to work with that compatibility level.
 
 To upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to the latest version, while maintaining the database compatibility level that existed before the upgrade and its supportability status, it is recommended to perform static functional surface area validation of the application code in the database, by using the [Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) tool (DMA). The absence of errors in the DMAT tool output, about missing or incompatible functionality, protects application from any functional regressions on the new target version. DMA supports database compatibility level 100 and above. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] as source version is excluded. For more information on the DMA tool, see [here](http://blogs.msdn.microsoft.com/datamigration/dma).
 
 > [!NOTE] 
 > Microsoft provides query plan shape protection when:
-> - The new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (target) runs on hardware that is comparable to the hardware where the previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (source) was running.
-> - The same [supported database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks) is used both at the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> - The new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (target) runs on hardware that is comparable to the hardware where the previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (source) was running. 
+> - The same [supported database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks) is used both at the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+> 
 > Any query plan shape regression (as compared to the source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) that occurs in the above conditions will be addressed. Please contact Microsoft Customer Support if this is the case.
 
 > [!IMPORTANT] 

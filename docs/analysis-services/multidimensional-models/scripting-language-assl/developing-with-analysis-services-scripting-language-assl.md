@@ -3,8 +3,8 @@ title: "Developing with Analysis Services Scripting Language (ASSL) | Microsoft 
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: xmla
-ms.topic: article
+ms.custom: xmla
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan

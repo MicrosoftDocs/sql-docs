@@ -55,7 +55,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|A value of 1 indicates that this is a dropped database.|  
 |credential_name|SYSNAME|Name of the SQL Credential used to authenticate to the storage account. NULL value indicates that no SQL Credential has been set.|  
 |retention_days|INT|The current retention period in days. NULL value indicates that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] was never configured for this database.|  
-|is_smart_backup_enabled|INT|Indicates whether [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is currently enabled for this database. A value of 1 indicates that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is currently enabled, and a value of 0 indicates that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is disabled for this database.|  
+|is_managed_backup_enabled|INT|Indicates whether [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is currently enabled for this database. A value of 1 indicates that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is currently enabled, and a value of 0 indicates that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is disabled for this database.|  
 |storage_url|NVARCHAR(1024)|The URL of the storage account.|  
 |Encryption_algorithm|NCHAR(20)|Returns the current encryption algorithm to use when encrypting the backup.|  
 |Encryptor_type|NCHAR(15)|Returns the encryptor setting: Certificate or Asymmetric Key.|  

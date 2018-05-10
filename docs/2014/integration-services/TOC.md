@@ -724,7 +724,7 @@
 #### [Load-Balancing Packages on Remote Servers by Using SQL Server Agent](packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md)
 ##### [Implementation of Child Packages](implementation-of-child-packages.md)
 ##### [Implementation of the Parent Package](implementation-of-the-parent-package.md)
-##### [Logging for Load Balanced Packages on Remote Servers](../logging-for-load-balanced-packages-on-remote-servers.md)
+##### [Logging for Load Balanced Packages on Remote Servers](logging-for-load-balanced-packages-on-remote-servers.md)
 ##### [Use the Values of Variables and Parameters in a Child Package](use-the-values-of-variables-and-parameters-in-a-child-package.md)
 #### [Troubleshooting Tools for Package Execution](troubleshooting/troubleshooting-tools-for-package-execution.md)
 #### [Troubleshooting Reports for Package Execution](troubleshooting/troubleshooting-reports-for-package-execution.md)

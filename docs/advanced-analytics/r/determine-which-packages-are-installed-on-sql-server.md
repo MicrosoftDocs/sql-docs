@@ -30,10 +30,10 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-For SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services with [ugpraded R to at least RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), you can execute this stored procedure to return the path of the instance library and the version of the RevoScaleR package used by SQL Server:
+Optionally, you can use rxSqlLibPaths in newer versions of RevoScaleR in SQL Server 2017 Machine Learning Services or [R Services ugpraded R to at least RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). This stored procedure returns the path of the instance library and the version of RevoScaleR used by SQL Server:
 
 ```sql
-EXEC sp_execute_external_script
+EXECUTE sp_execute_external_script
   @language =N'R',
   @script=N'
   sql_r_path <- rxSqlLibPaths("local")

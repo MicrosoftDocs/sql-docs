@@ -31,8 +31,8 @@ The following table shows the file location of R and Python for version and data
 
 File paths also include instance names. SQL Server installs [database engine instances](../../database-engine/configure-windows/database-engine-instances-sql-server.md) as the default instance (MSSQLSERVER) or as a user-defined named instance. If SQL Server is installed as a named instance, you will see that name appended as follows: `MSSQL13.<instance_name>`.
 
-|Version          | Default path|
-|-----------------|------------|
+|Version and language  | Default path|
+|----------------------|------------|
 | SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
 | SQL Server 2017 with R|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 | SQL Server 2017 with Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |

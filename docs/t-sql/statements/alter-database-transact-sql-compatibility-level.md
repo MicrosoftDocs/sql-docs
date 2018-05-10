@@ -114,7 +114,13 @@ For more information about differences between compatibility levels, see the app
 > 
 > For an existing application to leverage an enhancement only available in a higher database compatibility level, or for new development work, plan to use the latest database compatibility level available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and certify your application to work with that compatibility level.
 
-To upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to the latest version, while maintaining the database compatibility level that existed before the upgrade and its supportability status, it is recommended to perform static functional surface area validation of the application code in the database, by using the [Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) tool (DMA). The absence of errors in the DMAT tool output, about missing or incompatible functionality, protects application from any functional regressions on the new target version. DMA supports database compatibility level 100 and above. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] as source version is excluded. For more information on the DMA tool, see [here](http://blogs.msdn.microsoft.com/datamigration/dma).
+To upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to the latest version, while maintaining the database compatibility level that existed before the upgrade and its supportability status, it is recommended to perform static functional surface area validation of the application code in the database, by using the [Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) tool (DMA). The absence of errors in the DMA tool output, about missing or incompatible functionality, protects application from any functional regressions on the new target version. For more information on the DMA tool, see [here](http://blogs.msdn.microsoft.com/datamigration/dma).
+
+> [!NOTE] 
+> DMA supports database compatibility level 100 and above. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] as source version is excluded. 
+
+> [!IMPORTANT] 
+> Microsoft recommends that some minimal testing is done to validate the success of an upgrade, while maintaining the previous database compatibility level. You should determine what minimal testing means for your own application and scenario. 
 
 > [!NOTE] 
 > Microsoft provides query plan shape protection when:
@@ -122,9 +128,6 @@ To upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to 
 > - The same [supported database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks) is used both at the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 > 
 > Any query plan shape regression (as compared to the source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) that occurs in the above conditions will be addressed. Please contact Microsoft Customer Support if this is the case.
-
-> [!IMPORTANT] 
-> Microsoft recommends that some minimal testing is done to validate the success of an upgrade, while maintaining the previous database compatibility level. You should determine what minimal testing means for your own application and scenario. 
 
 ## Using Compatibility Level for Backward Compatibility  
 Compatibility level affects behaviors only for the specified database, not for the entire server. Compatibility level provides only partial backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Starting with compatibility mode 130, any new query plan affecting features have been added only to the new compatibility mode. This has been done in order to minimize the risk during upgrades that arise from performance degradation due to query plan changes. From an application perspective, the goal is still to be at the latest compatibility level in order to inherit some of the new features as well as performance improvements done in the query optimizer space, but to do so in a controlled way. Use compatibility level as an interim migration aid to work around version differences, in the behaviors that are controlled by the relevant compatibility level setting. For more details, see the [Best Practices for upgrading Database Compatibility Level](#best-practices-for-upgrading-database-compatibility-evel) later in the article.  

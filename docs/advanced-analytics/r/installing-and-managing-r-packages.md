@@ -57,7 +57,7 @@ This section summarizes R and Python features included in a default installation
 
 ### R components
 
-Open-source R is Microsoft's distribution [Microsoft R Open (MRO)](https://mran.microsoft.com/open). R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets, and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt). MRO adds value to base R by including additional open-source packages such as the Intel Math Kernal Library.
+Open-source R is Microsoft's distribution [Microsoft R Open (MRO)](https://mran.microsoft.com/open). R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets, and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
 Proprietary R packages in your installation include:
 

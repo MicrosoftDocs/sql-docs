@@ -189,8 +189,8 @@ The error log is a file that contains details about things occurring in your SQL
     - There are several errorlog.* files in this location. The file name that ends with *.log is the current error log file. The file names that end with numbers are previous log files. A new log is created every time the SQL server restarts. 
 6. Open the errorlog.log file in Notepad. 
 
-## Determine your SQL server name
-You have a few options for determining the name of your SQL server before and after you connect to your SQL server.  
+## <a name="determine-sql-server-name"></a>Find your SQL server name
+You have a few options for finding the name of your SQL server before and after you connect to your SQL server.  
 
 ### Before you connect to the SQL server
 1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). 

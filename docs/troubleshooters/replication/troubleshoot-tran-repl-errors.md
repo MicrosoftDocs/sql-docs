@@ -29,8 +29,8 @@ This creates the publication, and puts it into the *synchronizing* state. Synchr
 Errors can occur in any step of this process, and finding those errors can be the most challenging aspect of troubleshooting synchronization issues. Thankfully, the use of **Replication Monitor** makes this process easy. 
 
   >[!NOTE]
-  > - The purpose of this troubleshooting guide is to teach troubleshooting methodology. It is not designed to solve your specific error,  but provide general guidance in finding errors. Some specific examples are provided but the resolution to them may vary depending on environment. 
- > - The errors that are provided as examples are based on the [Configuring transacational replication tutorial](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md).
+  > - The purpose of this troubleshooting guide is to teach troubleshooting methodology. It is not designed to solve your specific error,  but provide general guidance in finding errors with replication. Some specific examples are provided but the resolution to them may vary depending on environment. 
+  > - The errors that are provided as examples are based on the [Configuring transacational replication tutorial](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md).
 
 
 
@@ -43,7 +43,6 @@ Errors can occur in any step of this process, and finding those errors can be th
 
 ### Steps to take
 1. Use **Replication Monitor** to identify at which point replication is encountering the error (which agent?).
-    - If errors are occurring in the *Synchronization Status*, then the issue is with the snapshot agent. 
     - If errors are occurring in the *Publisher to Distributor* section, then the issue is with the log reader agent. 
     - If errors are occurring in the *Distributor to Subscriber* section, then the issue is with the distribution agent.  
 2. Look through that agent's **Job History**  in **Job Activity Monitor** to identify details of the error. 
@@ -51,11 +50,14 @@ Errors can occur in any step of this process, and finding those errors can be th
 3. Attempt to determine a solution for the error.
 
 
-## Troubleshoot Errors with Snapshot Agent
+## Find errors with Snapshot Agent
 The **Snapshot Agent** is the agent that generates the snapshot, and writes it to the specified snapshot folder. 
 
 1. View the status of your snapshot agent. To do this, expand the **Local Publication** node under ***Replication** in **Object Explorer**, right-click your publication **AdvWorksProductTrans** > **View Snapshot Agent Status**. 
-2. If an error is reported in the **Snapshot Agent Status**, more details can be found in the **Snapshot Agent** job history. To access this, expand **SQL Server Agent** in **Object Explorer** and open the **Job Activity Monitor**. 
+
+    ![View snapshot agent status](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
+
+1. If an error is reported in the **Snapshot Agent Status**, more details can be found in the **Snapshot Agent** job history. To access this, expand **SQL Server Agent** in **Object Explorer** and open the **Job Activity Monitor**. 
 
     a. Sort by **Category** and identify the **Snapshot Agent** by the category 'REPL-Snapshot'.
     b. Right-click the **Snapshot Agent** and **View History**: 
@@ -69,9 +71,9 @@ The **Snapshot Agent** is the agent that generates the snapshot, and writes it t
         The replication agent had encountered an exception.
         Exception Message: Access to path '\\node1\repldata.....' is denied.
 
-If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions to the folder where your snapshot is stored, and make sure that the account used to run the **Snapshot Agent** has adequate permissions to access to the share.  
+If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions to the folder where your snapshot is stored, and make sure that the account used to run the **Snapshot Agent** has adequate permissions to access the share.  
 
-## Troubleshoot Errors with Log Reader Agent
+## Find errors with Log Reader Agent
 The **Log Reader Agent** connects to  your publisher database and scans the transaction log for any transactions that are marked 'for replication'. It then adds those transactions to the **Distribution** database. 
 
 1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**:  
@@ -101,7 +103,7 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
        Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
        Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
 
-6. The aforementioned error is typically caused because the owner of the publisher database is not set correctly. This typically happens when a database has been restored. To verify this, expand **Databases** in **Object Explorer** > right-click **AdventureWorks2012** > **Properties**. Verify that an owner exists under the **Files** page. If this field is blank, then this is the likely cause of your issue: 
+6. The aforementioned error is typically caused because the owner of the publisher database is not set correctly, which can happen when a database is restored. To verify this, expand **Databases** in **Object Explorer** > right-click **AdventureWorks2012** > **Properties**. Verify that an owner exists under the **Files** page. If this field is blank, then this is the likely cause of your issue: 
 
    ![DB Properties](media/troubleshooting-tran-repl-errors/db-properties.png)
 
@@ -114,22 +116,22 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
 
-8. You'll need to restart the **Log Reader Agent**. To do this, expand the **SQL Server Agent** node in **Object Explorer** and open the **Job Activity Monitor**. Sort by **Category** and identify the **Log Reader Agent** by the **'REPL-LogReader'** category. Right-click the **Log Reader Agent** job and **Start Job at Step**: 
+8. You may need to restart the **Log Reader Agent**. To do this, expand the **SQL Server Agent** node in **Object Explorer** and open the **Job Activity Monitor**. Sort by **Category** and identify the **Log Reader Agent** by the **'REPL-LogReader'** category. Right-click the **Log Reader Agent** job and **Start Job at Step**: 
 
-    ![Restart Log Reader Agent](media/troubleshooting-tran-repl-errors/start-job-at-step.png)
+    ![Restart log reader agent](media/troubleshooting-tran-repl-errors/start-job-at-step.png)
 
 9. Validate that your publication is now synchronizing by opening the **Replication Monitor** again. If it's not already open, it can be found by right-clicking **Replication** in **Object Explorer**. 
 10. Select the **AdvWorksProductTrans** publication, select the **Agents** tab, and double-select the **Log Reader Agent** to open the agent history. You should now see that the **Log Reader Agent** is running and either replicating commands, or that it has "No Replicated Transactions":
 
-    ![Log Reader Running](media/troubleshooting-tran-repl-errors/log-reader-running.png)
+    ![Log reader running](media/troubleshooting-tran-repl-errors/log-reader-running.png)
 
-### Troubleshoot errors with Distribution Agent
+## Find errors with distribution agent
 The **Distribution Agent** takes data it finds in the **Distribution** database and then applies it to the Subscriber. 
 
 1. Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**.  
 2. In **Replication Monitor**, select the **AdvWorksProductTrans** publication, and select the **All Subscriptions** tab. Right-click the Subscription and **View Details**:
 
-    ![View Dist Details](media/troubleshooting-tran-repl-errors/view-details.png)
+    ![View distribution agent details](media/troubleshooting-tran-repl-errors/view-details.png)
 
 2. The **Distributor to Subscriber** history dialog box opens, and clarifies what error the agent is encountering: 
 
@@ -174,8 +176,8 @@ The **Distribution Agent** takes data it finds in the **Distribution** database 
      ![Dist Agent Success](media/troubleshooting-tran-repl-errors/dist-agent-success.png)   
 
 
-## Enable Verbose Logging
-Sometimes the errors we find in the agent history prove to be insufficient in helping determine what's going wrong. As such,  you have the ability to enable verbose logging on each agent - the steps are the same for each agent, you just need to make sure you're selecting the correct agent in **Job Activity Monitor**. 
+## Enable verbose logging on any agent
+Sometimes the errors we find in the agent history prove to be insufficient in helping determine what's gone wrong. As such,  you have the ability to enable verbose logging on each agent - the steps are the same for each agent, you just need to make sure you're selecting the correct agent in **Job Activity Monitor**. 
 
    >[!NOTE]   
    > The agents may either be on the publisher, or the subscriber, depending on if it's a pull or push subscription. If you can't find the agent you're looking for on the server you're looking at, try checking the other server as well.  
@@ -199,9 +201,9 @@ Sometimes the errors we find in the agent history prove to be insufficient in he
     ![Verbose Output](media/troubleshooting-tran-repl-errors/verbose.png)
 
    >[!NOTE]
-   > Things that may cause you issues when adding the verbose output parameter: 
+   > Things that may cause your agent to fail, or the output file to be missing, when adding the verbose output parameter:
    > <br> - There is a formatting issue where the dash became a hyphen. 
-   > <br> - The location doesn't exists on disk, or the account unning the agent lacks permission to write to the location. 
+   > <br> - The location doesn't exist on disk, or the account running the agent lacks permission to write to the location specified. 
    > <br> - There is a space missing between the last parameter and the -Output parameter. 
 
 1. Restart the Log Reader agent by right-clicking the agent > **Stop Job at Step**. **Refresh**. Right-click the agent > **Start Job at Step**
@@ -210,7 +212,7 @@ Sometimes the errors we find in the agent history prove to be insufficient in he
     ![output](media/troubleshooting-tran-repl-errors/output.png)
 
     
-1. To disable verbose logging, follow the same steps as before but this time remove the entire line you just added, starting with -Output. 
+1. To disable verbose logging, follow the same steps as before but this time, remove the entire line you just added, starting with -Output. 
 
 For more information, please see [Enabling verbose logging for replication agents](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se) 
 

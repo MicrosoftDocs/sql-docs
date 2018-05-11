@@ -1,7 +1,7 @@
 ---
 title: "Set Up an Encrypted Mirror Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/25/2017"
+ms.date: "06/26/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,7 +35,7 @@ To enable automatic decryption of the database master key of a mirror database, 
 
 [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 
-[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)
+[CREATE MASTER KEY &#40;Transact-SQL&#41;](~/sql/t-sql/statements/create-master-key-transact-sql)
 
 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)
 

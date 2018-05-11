@@ -53,7 +53,7 @@ This section describes the various window components that are available in the w
 
     ![Template Browser](media/ssms-configuration/templates.png)
 
-- **Object Explorer Details**(F7): This view is more granular than what's visible in Object Explorer. You can use Object Explorer Details to manipulate multiple objects at the same time. For example, in this window, you can select multiple databases, and then either delete them or script them out simultaneously. 
+- **Object Explorer Details** (F7): This view is more granular than the view in Object Explorer. You can use Object Explorer Details to manipulate multiple objects at the same time. For example, in this window, you can select multiple databases, and then either delete them or script them out simultaneously. 
 
     ![Object Explorer Details](media/ssms-configuration/objectexplorerdetails.PNG) 
  
@@ -71,7 +71,7 @@ This section describes how to change the environment layout, such as how to move
 
     ![Window options](media/ssms-configuration/windowoptions.png)
 
-- When two or more query windows are open, the windows can be tabbed vertically or horizontally so that both query windows are visible at once. To do this, right-click the title of the query, and then select the tabbed option that you want. 
+- When two or more query windows are open, the windows can be tabbed vertically or horizontally so that both query windows are visible. To view tabbed windows, right-click the title of the query, and then select the tabbed option that you want: 
  
     ![Query tab options](media/ssms-configuration/querytabbedoptions.png)
 
@@ -83,16 +83,16 @@ This section describes how to change the environment layout, such as how to move
 
       ![An example of the Vertical Tab Group](media/ssms-configuration/verticaltabgroup.png)
         
-    - To merge the tabs back again, right-click the query title, and then select **Move to Next Tab Group**  or **Move to Previous Tab Group**:
+    - To merge the tabs, right-click the query title, and then select **Move to Previous Tab Group**  or **Move to Next Tab Group**:
     
-      ![Merge Query Tabs](media/ssms-configuration/mergetabgroups.png)
+      ![Merge query tabs](media/ssms-configuration/mergetabgroups.png)
 
-- To restore the default environment layout, select **Window Menu** > **Reset Window Layout**:
+- To restore the default environment layout, in the **Window** menu, select **Reset Window Layout**:
  
     ![Restore window layout](media/ssms-configuration/resetwindowlayout.png)
     
 ## Maximize Query Editor
-Query Editor can be maximized to full-screen mode.
+You can maximize Query Editor to full-screen mode:
 
 1. Click anywhere in the Query Editor window.
 2. Press Shift+Alt+Enter to toggle between full-screen mode and regular mode. 
@@ -102,7 +102,7 @@ This keyboard shortcut works with any document window.
 
 
 ## Change basic settings
-This section describes how to modify some basic settings in SSMS from the **Tools** menu:
+This section describes how to modify some basic settings in SSMS from the **Tools** menu.
 
   ![Tools menu](media/ssms-configuration/tools.png)
 
@@ -131,9 +131,8 @@ This section describes how to modify some basic settings in SSMS from the **Tool
 ## Next steps
 The next article teaches you some additional tips and tricks for using SSMS, such as how to find your SQL Server error log and your SQL instance name. 
 
-Go to the next article to learn more.
 > [!div class="nextstepaction"]
-> [Next steps button](ssms-tricks.md)
+> [Additional tips and tricks for using SSMS](ssms-tricks.md)
  
  
 

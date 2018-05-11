@@ -23,7 +23,7 @@ helpviewer_keywords:
 ---
 
 # Tutorial: Using templates in SQL Server Management Studio
-This tutorial introduces you to the pre-built Transact-SQL (T-SQL) templates that are available in SQL Server Management Studio (SSMS). In this article, you learn how to:
+This tutorial introduces you to the prebuilt Transact-SQL (T-SQL) templates that are available in SQL Server Management Studio (SSMS). In this article, you learn how to:
 
 > [!div class="checklist"]
 > * Use the template browser to generate T-SQL scripts
@@ -47,12 +47,14 @@ In this section, you learn how to locate and use Template Browser.
 2. In the **View** menu, select **Template Browser** (Ctrl+Alt+T): 
 
     ![Open Template Browser](media/templates-ssms/templatebrowser.png)
-    - You can see recently used templates at the bottom of the template browser.
+    
+    You can see recently used templates at the bottom of the template browser.
 
 3. Expand the node you're interested in. Right-click the template, and then select **Open**:
 
     ![Open a template](media/templates-ssms/opentemplate.png)
-    - You can also double-click the template name to open it.
+    
+    You can also double-click the template name to open it.
 
 4. A new query window opens. The T-SQL script is already populated. 
 5. Modify the template to suit your needs, and then select **Execute** to run the query:
@@ -85,7 +87,7 @@ The explorer should open where the templates are stored on disk:
   
 
 ## Create a new template
-You can also create a new template in Template Browser. The following steps show you how to create a new folder, and then create a new template in that folder. You can also use these steps to create a custom template in existing folders. 
+You can also create a new template in Template Browser. The following steps show you how to create a new folder, and then create a new template in that folder. You can also use these steps to create a custom template in an existing folder. 
 
 1. Open Template Browser.
 2. Right-click **SQL Server Templates**, and then select **New** > **Folder**.
@@ -97,7 +99,7 @@ You can also create a new template in Template Browser. The following steps show
  
     ![Create a custom template](media/templates-ssms/createnewtemplate.png)
    
-5. Right-click the template you created, and then select **Edit**. The **New Query Window** opens.
+5. Right-click the template you created, and then select **Edit**. The New Query Window opens.
 6. Enter the T-SQL text that you want to save. 
 7. In the **File** menu, select **Save**.
 8. Close the existing query window, and then open your new custom template. 
@@ -107,6 +109,5 @@ You can also create a new template in Template Browser. The following steps show
 ## Next steps
 The next article provides additional tips and tricks for using SQL Server Management Studio. 
 
-Go to the next article to learn more.
 > [!div class="nextstepaction"]
-> [Next steps button](ssms-tricks.md)
+> [Additional tips and tricks for using SSMS](ssms-tricks.md)

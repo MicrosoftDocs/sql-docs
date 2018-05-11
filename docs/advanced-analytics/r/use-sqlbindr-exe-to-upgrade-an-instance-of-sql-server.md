@@ -304,9 +304,9 @@ If you find folders with a name like this, you can remove it after installation 
 
 <a name="sqlbinder-error-codes"><a/>
 
-### Errors
+## Binding errors
 
-The tool returns the following error messages:
+MLS Installer and SqlBindR both return the following error codes and messages.
 
 |Error code  | Message           | Details               |
 |------------|-------------------|-----------------------|
@@ -316,7 +316,7 @@ The tool returns the following error messages:
 |Bind error 3 | Invalid instance | An instance exists, but is not valid for binding. |
 |Bind error 4 | Not bindable | |
 |Bind error 5 | Already bound | You ran the *bind* command, but the specified instance is already bound. |
-|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the MLS installer without selecting any features.|
+|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the MLS installer without selecting any features. Binding requires that you select both an MSSQL instance and R and Python, assuming the instance is SQL Server 2017.|
 |Bind error 7 | Not bound | The database engine instance has R Services or SQL Server Machine Learning Services. The instance is not bound to Microsoft Machine Learning Server. |
 |Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
 |Bind error 9 | No instances found | No database engine instances were found on this computer. |

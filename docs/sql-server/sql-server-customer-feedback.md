@@ -103,15 +103,15 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 
     Entry type DWORD: 0 is opt out; 1 is opt in
 
-Additionally, to turn off usage and error reporting at the Visual Studio level, set the following registry subkey and settings:
+    Additionally, SSMS 17.x is based on the Visual Studio 2015 shell, and the Visual Studio installation enables customer feedback by default.  
 
--    Subkey = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    To configure Visual Studio to disable customer feedback on individual computers, change the value of the following registry subkey to string "0":  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    RegEntry name = TurnOffSwitch
+    For example, change the subkey to the following:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    Entry type DWORD: 0 is opt out; 1 is opt in
- 
-Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage data collection.
+    Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage data collection.
 
 ## Set registry subkeys for crash dump collection
 

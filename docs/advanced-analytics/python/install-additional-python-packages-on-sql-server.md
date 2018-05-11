@@ -120,13 +120,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  How to view installed packages using conda
+## List installed packages using conda
 
 There are different ways that you can get a list of installed packages. For example, you can view the installed packages in the **Python Environments** windows of Visual Studio.
 
-If you are using the Python command line, you can use the **conda** package manager, which is included with the Anaconda Python environment added by SQL Server setup.
+If you are using the Python command line, you can use either **Pip** or the **conda** package manager, included with the Anaconda Python environment added by SQL Server setup.
 
-Assuming you added the Scripts folder to the PATH environment variable, run this command from an administrator's command prompt to list the packages in your Python environment.
+Assuming you added the Scripts folder to the PATH environment variable, run this command from an administrator's command prompt to list the packages in your Python environment. Otherwise, see [Get R and Python package information](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda) for pointers on how to run the Python tools in SQL Server.
 
 ```python
 conda list

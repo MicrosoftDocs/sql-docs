@@ -31,7 +31,7 @@ This tutorial gives you some additional tricks for using SQL Server Management S
 > * Find the name of your SQL Server instance
 
 ## Prerequisites
-To complete this tutorial, you need SQL Server Management Studio, access to a SQL Server instance, and an AdventureWorks database. 
+To complete this tutorial, you need SQL Server Management Studio, access to a SQL server, and an AdventureWorks database. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -43,7 +43,7 @@ You can comment and uncomment portions of your text by using the **Comment** but
 
 1. Open SQL Server Management Studio. 
 2. Connect to your SQL server.
-3. Open a **New Query** window. 
+3. Open a New Query window. 
 4. Paste the following T-SQL code in your text window: 
 
   ```sql
@@ -76,16 +76,16 @@ You can comment and uncomment portions of your text by using the **Comment** but
 
     ![Comment everything](media/ssms-tricks/commenteverything.png)
 
-8. Highlight the **Alter Database** portion, and then select **Uncomment** to uncomment it:
+8. Highlight the **Alter Database** portion of the text, and then select **Uncomment** to uncomment it:
 
-    ![Uncomment](media/ssms-tricks/uncomment.png)
+    ![Uncomment text](media/ssms-tricks/uncomment.png)
     
 9. Select **Execute** to run the uncommented portion of the text. 
 
 ## Indent your text
 You can use the indentation buttons in the toolbar to increase and decrease the indent of your text. 
 
-1. Open a **New Query** window. 
+1. Open a New Query window. 
 2. Paste the following T-SQL code in your text window: 
 
   ```sql
@@ -111,27 +111,31 @@ You can use the indentation buttons in the toolbar to increase and decrease the 
  
 3. Highlight the **Alter Database** portion of the text, and then select **Increase Indent** in the toolbar to move this text forward:
 
-    ![Increase Indent](media/ssms-tricks/increaseindent.png)
+    ![Increase the indent](media/ssms-tricks/increaseindent.png)
 
-4. Highlight the **Alter Database** portion of the text again, and then select **Decrease Indent** to move this text back. 
-    ![Decrease Indent](media/ssms-tricks/decreaseindent.png)
+4. Highlight the **Alter Database** portion of the text again, and then select **Decrease Indent** to move this text back.
+
+    ![Decrease the indent](media/ssms-tricks/decreaseindent.png)
 
 
 ## Filter objects in Object Explorer
-When a database has many objects, finding a specific object might be difficult. To make finding an object easier, you can filter objects. This section describes how to filter tables, but you can use the following steps in any other node in **Object Explorer**:
+In a database that has many objects, you can filter objects to make finding a specific object easier. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
 
 1. Connect to your SQL server.
 2. Expand **Databases** > **AdventureWorks** > **Tables**. 
-   - You'll notice that you can see all the tables that are present in the database.
-5. Right-click the **Tables** node, and then select **Filter** > **Filter Settings**:
+   - All the tables that are present in the database appear.
+5. Right-click **Tables**, and then select **Filter** > **Filter Settings**:
 
     ![Filter settings](media/ssms-tricks/filtersettings.png)
 
-6. In the **Filter Settings** window, you can modify filter settings. A few examples:
+6. In the **Filter Settings** window, you can modify some of the following filter settings:
     - Filter by name: 
-   ![Filter by name](media/ssms-tricks/filterbyname.png)
+   
+      ![Filter by name](media/ssms-tricks/filterbyname.png)
+
     - Filter by schema: 
-    ![Filter by schema](media/ssms-tricks/filterbyschema.png)
+    
+      ![Filter by schema](media/ssms-tricks/filterbyschema.png)
 
 7. To clear the filter, right-click **Tables**, and then select **Remove Filter**.
 
@@ -140,7 +144,7 @@ When a database has many objects, finding a specific object might be difficult. 
 
 
 ## Access your SQL Server error log
-The error log is a file that contains details about things occurring in your SQL server instance. You can browse and query the error log in SSMS. The error log is a .log file on disk.
+The error log is a file that contains details about things that occur in your SQL Server instance. You can browse and query the error log in SSMS. The error log is a .log file on your disk.
 
 ### Open the error log in SSMS
 1. Connect to your SQL server.
@@ -151,35 +155,35 @@ The error log is a file that contains details about things occurring in your SQL
 
 ### Query the error log in SSMS
 1. Connect to your SQL server.
-2. Open a **New Query** window.
-3. Paste the following T-SQL code in your query Window:
+2. Open a New Query window.
+3. Paste the following T-SQL code in your query window:
 
  ```sql
    sp_readerrorlog 0,1,'Server process ID' 
   ``` 
 4. Modify the text in the single quotes to text you want to search for.
-5. Execute the query and review the results:
+5. Execute the query, and then review the results:
    
     ![Query the error log](media/ssms-tricks/queryerrorlog.png)
 
 
 ### Find the error log location if you're connected to SQL
-1. Connect to  your SQL server.
-2. Open a **New Query** window.
+1. Connect to your SQL server.
+2. Open a New Query window.
 3. Paste the following T-SQL code in your query window, and then select **Execute**:
 
  ```sql
     SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
   ``` 
 
-4. The results show you the location of the error log in the file system: 
+4. The results show the location of the error log in the file system: 
 
     ![Find the error log by query](media/ssms-tricks/finderrorlogquery.png)
 
 ### Find the error log location if you can't connect to SQL
-1. Open your SQL Server Configuration Manager. 
-2. Expand the **Services** node.
-3. Right-click your SQL Server instance, and then select **Properties Window**:
+1. Open SQL Server Configuration Manager. 
+2. Expand **Services**.
+3. Right-click your SQL Server instance, and then select **Properties**:
 
     ![Configuration Manager server properties](media/ssms-tricks/serverproperties.PNG)
 
@@ -187,7 +191,8 @@ The error log is a file that contains details about things occurring in your SQL
 5. In the **Existing Parameters** area, the path after "-e" is the location of the error log: 
     
     ![Error log](media/ssms-tricks/errorlog.png)
-    - There are several errorlog.* files in this location. The file name that ends with *.log is the current error log file. The file names that end with numbers are previous log files. A new log is created every time the SQL server restarts. 
+    
+    There are several errorlog.* files in this location. The file name that ends with *.log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts. 
 6. Open the errorlog.log file in Notepad. 
 
 ## <a name="determine-sql-server-name"></a>Find your SQL server name
@@ -196,30 +201,32 @@ You have a few options for finding the name of your SQL server before and after 
 ### Before you connect to the SQL server
 1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). 
 2. Open the errorlog.log file in Notepad. 
-3. Scroll through the file until you find the text "Server name is":
-  - Whatever is listed in the single quotes is the name of the SQL server and what you'll be connecting to: 
+3. Scroll through the file until you find the text "Server name is".
+    
+    Whatever is listed in the single quotes is the name of the SQL server and what you'll be connecting to:
+
     ![Server Name in Error Log](media/ssms-tricks/servernameinlog.png)
-    The format of the name is 'HOSTNAME\INSTANCENAME'. If all you see is the hostname, then you've installed the default instance, and your instance name is 'MSSQLSERVER'. When connecting to a default instance, the hostname is all you need to type in to connect to  your SQL Server.  
+    The format of the name is HOSTNAME\INSTANCENAME. If you see only the host name, then you've installed the default instance and your instance name is MSSQLSERVER. When you connect to a default instance, the host name is all you need to enter to connect to your SQL server.  
 
 ### When you're connected to the SQL server 
 When you're connected to SQL Server, you can find the server name in three locations: 
 
-1. The name of the server is listed in **Object Explorer**:
+1. The name of the server is listed in Object Explorer:
 
     ![SQL Server instance name in Object Explorer](media/ssms-tricks/nameinobjectexplorer.png)
-2. The name of the server is listed in the **Query** window:
+2. The name of the server is listed in the Query window:
 
     ![SQL Server instance name in the Query window](media/ssms-tricks/nameinquerywindow.png)
-3. The name of the server is listed in the **Properties** window.
+3. The name of the server is listed in **Properties**.
     - In the **View** menu, select **Properties Window**:
 
-    ![SQL Server instance name in the Properties window](media/ssms-tricks/nameinproperties.png)
+      ![SQL Server instance name in the Properties window](media/ssms-tricks/nameinproperties.png)
 
 ### If you're connected to an alias or Availability Group listener 
-If you're connected to an alias or to an Availability Group listener, that information appears in **Object Explorer** and **Properties**. In this case, the SQL Server name might not be readily apparent, and must be queried. 
+If you're connected to an alias or to an Availability Group listener, that information appears in Object Explorer and Properties. In this case, the SQL Server name might not be readily apparent, and must be queried: 
 
-1. Connect to SQL Server.
-2. Open a **New Query** window.
+1. Connect to your SQL server.
+2. Open a New Query window.
 3. Paste the following T-SQL code in the window: 
 
   ```sql

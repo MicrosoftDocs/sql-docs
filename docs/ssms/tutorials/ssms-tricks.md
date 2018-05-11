@@ -21,7 +21,7 @@ helpviewer_keywords:
 ---
 
 # Tutorial: Additional tips and tricks for using SSMS
-This tutorial gives you some additional tricks for using SQL Server Management Studio (SSMS). This article teaches you how to: 
+This tutorial gives you some additional tricks for using SQL Server Management Studio (SSMS). This article shows you how to: 
 
 > [!div class="checklist"]
 > * Comment/uncomment your Transact-SQL (T-SQL) text
@@ -122,8 +122,7 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 You can filter objects to make finding a specific object easier in databases that have many objects. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
 
 1. Connect to your SQL server.
-2. Expand **Databases** > **AdventureWorks** > **Tables**. 
-   - All the tables that are present in the database appear.
+2. Expand **Databases** > **AdventureWorks** > **Tables**. All the tables in the database appear.
 5. Right-click **Tables**, and then select **Filter** > **Filter Settings**:
 
     ![Filter settings](media/ssms-tricks/filtersettings.png)
@@ -147,7 +146,7 @@ You can filter objects to make finding a specific object easier in databases tha
 The error log is a file that contains details about things that occur in your SQL Server instance. You can browse and query the error log in SSMS. The error log is a .log file that's located on your disk.
 
 ### Open the error log in SSMS
-1. Connect to your SQL server.
+1. Connect to your SQL server.  
 2. Expand **Management** > **SQL Server Logs**. 
 4. Right-click the **Current** error log, and then select **View SQL Server Log**:
 

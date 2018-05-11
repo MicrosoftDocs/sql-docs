@@ -136,8 +136,6 @@ Starting with compatibility mode 130, any new query plan affecting features have
 From an application perspective, the goal should still be to upgrade to the latest compatibility level at some point in time, in order to inherit some of the new features, as well as performance improvements done in the query optimizer space, but to do so in a controlled way. Use the lower compatibility level as a safer migration aid to work around version differences, in the behaviors that are controlled by the relevant compatibility level setting. 
 For more details, including the recommended workflow for upgrading database compatibility level, see the [Best Practices for upgrading Database Compatibility Level](#best-practices-for-upgrading-database-compatibility-evel) later in the article.  
   
-If existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications are affected by behavioral differences in your version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], convert the application to work seamlessly with the new compatibility mode. Then use `ALTER DATABASE` to change the compatibility level to 130. The new compatibility setting for a database takes effect when a `USE <database>` is issued or a new login is processed with that database as the default database.  
- 
 > [!IMPORTANT]
 > Discontinued functionality introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not protected by compatibility level. This refers to fucntionality that was removed from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 

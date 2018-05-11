@@ -201,7 +201,7 @@ You have a few options for finding the name of your SQL server before and after 
 ### Before you connect to the SQL server
 1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). 
 2. Open the errorlog.log file in Notepad. 
-3. Scroll through the file until you find the text "Server name is".
+3. Search for the text *Server name is*.
     
     Whatever is listed in the single quotes is the name of the SQL server and what you'll be connecting to:
 

@@ -11,7 +11,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-#  Get R and Python package information on SQL Server Machine Learning
+#  Get R and Python package information on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Sometimes when you are working with multiple environments or installations of R or Python, you need to verify that the code you are running is using the expected environment for Python, or the correct workspace for R. For example, if you have upgraded the machine learning components using binding, the path to the R library might be in a different folder than the default. Also, if you install R Client or an instance of the Standalone server, you might have multiple R libraries on your computer.
@@ -80,7 +80,7 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 
 For more information about the variable `sys.path` and how it is used to set the interpreter’s search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
-## Generate a package list
+## List all packages
 
 There are multiple ways that you can get a complete list of the packages currently installed. One advantage of running package list commands from sp_execute_external_script is that you are guaranteed to get packages installed in the instance library.
 
@@ -123,7 +123,7 @@ WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 
 When running `pip` from the command line, there are many other useful functions: `pip list` gets all packages that are installed, whereas `pip freeze` lists the packages installed by `pip`, and doesn't list packages that pip itself depends on. You can also use `pip freeze` to generate a dependency file.
 
-## Check whether a package is installed with an instance
+## Find a single package
 
 If you have installed a package and want to make sure that it is available to a particular SQL Server instance, you can execute the following stored procedure call to load the package and return only messages.
 
@@ -207,11 +207,7 @@ Type a module name at the help prompt to get the package contents, version, and 
 
 Anaconda includes Python tools for managing packages. On a default instance, Pip, Conda, and other tools can be found at \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts.
 
-SQL Server Setup does not add Pip or Conda to the system path and on a production SQL Server instance, keeping non-essential executables out of the path is a best practice. However, for development and test environments, you could add Conda to the system:
-
-    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
-
-Alternatively, you can run commands from the Scripts folder to get package information:
+SQL Server Setup does not add Pip or Conda to the system path and on a production SQL Server instance, keeping non-essential executables out of the path is a best practice. However, for development and test environments, you could add the Scripts folder to the system PATH environment variable to run both Pip and Conda on command from any location.
 
 1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 

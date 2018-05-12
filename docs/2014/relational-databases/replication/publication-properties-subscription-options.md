@@ -78,7 +78,7 @@ manager: "jhubbard"
  Applies to only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. Specifies whether conflict detection is enabled for this publication. To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or a later version; and detection must be enabled for all nodes. To use conflict detection, you must also specify a value for **Peer originator id**. For more information, see [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  **Peer originator id**  
- Applies to only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. Specifies an ID for a node in a peer-to-peer topology. This ID is used for conflict detection if **Allow peer-to-peer conflict detection** is set to **True**. Specify a positive, nonzero ID that has never been used in the topology. For a list of IDs that have already been used, query the [Mspeer_originatorid_history](~/relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) system table.  
+ Applies to only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. Specifies an ID for a node in a peer-to-peer topology. This ID is used for conflict detection if **Allow peer-to-peer conflict detection** is set to **True**. Specify a positive, nonzero ID that has never been used in the topology. For a list of IDs that have already been used, query the [Mspeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql) system table.  
   
 ### Updatable Subscriptions  
  **Allow immediate updating subscriptions**  

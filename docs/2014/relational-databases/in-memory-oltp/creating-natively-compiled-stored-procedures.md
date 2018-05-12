@@ -22,11 +22,11 @@ manager: "jhubbard"
   
 -   Atomic blocks. For more information, see [Atomic Blocks](atomic-blocks-in-native-procedures.md).  
   
--   `NOT NULL` constraints on parameters of and variables in natively compiled stored procedures. You cannot assign `NULL` values to parameters or variables declared as `NOT NULL`. For more information, see [DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md).  
+-   `NOT NULL` constraints on parameters of and variables in natively compiled stored procedures. You cannot assign `NULL` values to parameters or variables declared as `NOT NULL`. For more information, see [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql).  
   
 -   Schema binding of natively compiled stored procedures.  
   
- Natively compiled stored procedures are created using [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md). The following example shows a memory-optimized table and a natively compiled stored procedure used for inserting rows into the table.  
+ Natively compiled stored procedures are created using [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). The following example shows a memory-optimized table and a natively compiled stored procedure used for inserting rows into the table.  
   
 ```tsql  
 create table dbo.Ord  

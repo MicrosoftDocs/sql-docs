@@ -35,8 +35,8 @@ sp_helpextendedproc 'xp_hello'
 >  Information will be returned for only those extended stored procedures that the logged in user owns or has permissions to. Only members of the **sysadmin** fixed server role and the **db_owner**, **db_securityadmin**, and the **db_ddladmin** fixed database roles can view information for all extended stored procedures.  
   
 ## See Also  
- [sp_helpextendedproc &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
- [sp_addextendedproc &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_dropextendedproc &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
+ [sp_helpextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql)   
+ [sp_addextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql)   
+ [sp_dropextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
   
   

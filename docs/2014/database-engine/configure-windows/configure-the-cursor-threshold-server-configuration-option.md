@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the `cursor threshold` option to `0` so that cursor keysets are generated asynchronously.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the `cursor threshold` option to `0` so that cursor keysets are generated asynchronously.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -97,10 +97,10 @@ GO
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  
- [@@CURSOR_ROWS &#40;Transact-SQL&#41;](~/t-sql/functions/cursor-rows-transact-sql.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
+ [@@CURSOR_ROWS &#40;Transact-SQL&#41;](/sql/t-sql/functions/cursor-rows-transact-sql)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/update-statistics-transact-sql.md)  
+ [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)  
   
   

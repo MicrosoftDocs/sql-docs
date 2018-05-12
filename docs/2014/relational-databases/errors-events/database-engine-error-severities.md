@@ -50,9 +50,9 @@ manager: "jhubbard"
 |24|Indicates a media failure. The system administrator may have to restore the database. You may also have to call your hardware vendor.|  
   
 ## User-Defined Error Message Severity  
- **sp_addmessage** can be used to add user-defined error messages with severities from 1 through 25 to the **sys.messages** catalog view. These user-defined error messages can be used by RAISERROR. For more information, see [sp_addmessage &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
+ **sp_addmessage** can be used to add user-defined error messages with severities from 1 through 25 to the **sys.messages** catalog view. These user-defined error messages can be used by RAISERROR. For more information, see [sp_addmessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql).  
   
- RAISERROR can be used to generate user-defined error messages with severities from 1 through 25. RAISERROR can reference a user-defined error message stored in the **sys.messages** catalog view or build a message dynamically. When using the user-defined error message in **sys.messages** while generating an error, the severity specified by RAISERROR overrides the severity specified in **sys.messages**. For more information, see [RAISERROR &#40;Transact-SQL&#41;](~/t-sql/language-elements/raiserror-transact-sql.md).  
+ RAISERROR can be used to generate user-defined error messages with severities from 1 through 25. RAISERROR can reference a user-defined error message stored in the **sys.messages** catalog view or build a message dynamically. When using the user-defined error message in **sys.messages** while generating an error, the severity specified by RAISERROR overrides the severity specified in **sys.messages**. For more information, see [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql).  
   
 ## Error Severity and TRY…CATCH  
  A TRY…CATCH construct catches all execution errors with severity greater than 10 that do not terminate the database connection.  
@@ -61,15 +61,15 @@ manager: "jhubbard"
   
  Errors that terminate the database connection, usually with severity from 20 through 25, are not handled by the CATCH block because execution is aborted when the connection terminates.  
   
- For more information, see [TRY...CATCH &#40;Transact-SQL&#41;](~/t-sql/language-elements/try-catch-transact-sql.md).  
+ For more information, see [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   
 ## Retrieving Error Severity  
- The ERROR_SEVERITY system function can be used to retrieve the severity of the error that caused the CATCH block of a TRY…CATCH construct to be run. ERROR_SEVERITY returns NULL if called outside the scope of a CATCH block. For more information, see [ERROR_SEVERITY &#40;Transact-SQL&#41;](~/t-sql/functions/error-severity-transact-sql.md).  
+ The ERROR_SEVERITY system function can be used to retrieve the severity of the error that caused the CATCH block of a TRY…CATCH construct to be run. ERROR_SEVERITY returns NULL if called outside the scope of a CATCH block. For more information, see [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
   
 ## See Also  
  [Understanding Database Engine Errors](../native-client-ole-db-errors/errors.md)   
- [sys.messages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [System Functions &#40;Transact-SQL&#41;](~/t-sql/functions/system-functions-transact-sql.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](~/t-sql/language-elements/try-catch-transact-sql.md)  
+ [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
+ [System Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/system-functions-transact-sql)   
+ [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)  
   
   

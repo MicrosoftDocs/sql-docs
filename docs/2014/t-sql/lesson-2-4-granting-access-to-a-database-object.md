@@ -41,7 +41,7 @@ manager: "jhubbard"
  [Summary: Configuring Permissions on Database Objects](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## See Also  
- [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-transact-sql.md)  
+ [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

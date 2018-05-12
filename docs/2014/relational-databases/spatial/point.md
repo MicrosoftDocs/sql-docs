@@ -60,8 +60,8 @@ SET @g = geometry::Parse('POINT(3 4 NULL NULL)');
   
 ## See Also  
  [MultiPoint](multipoint.md)   
- [STX &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stx-geometry-data-type.md)   
- [STY &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/sty-geometry-data-type.md)   
+ [STX &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
+ [STY &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   
  [Spatial Data &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

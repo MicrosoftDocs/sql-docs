@@ -28,7 +28,7 @@ manager: "mblythe"
 -   To add user-defined member properties programmatically, your application can use either Analysis Manager Objects (AMO) or a combination of XML for Analysis (XMLA) and Analysis Services Scripting Language (ASSL). For more information, see [Attribute Relationships](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 ## Retrieving User-Defined Member Properties  
- You can retrieve user-defined member properties using either the `PROPERTIES` keyword or the [Properties](~/mdx/properties-mdx.md) function.  
+ You can retrieve user-defined member properties using either the `PROPERTIES` keyword or the [Properties](/sql/mdx/properties-mdx) function.  
   
 ### Using the PROPERTIES Keyword to Retrieve User-Defined Member Properties  
  The syntax that retrieves user-defined member properties is similar to that used to retrieve intrinsic level member properties, as shown in the following syntax:  
@@ -66,6 +66,6 @@ FROM [Adventure Works]
   
 ## See Also  
  [Using Member Properties &#40;MDX&#41;](mdx-member-properties.md)   
- [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)  
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

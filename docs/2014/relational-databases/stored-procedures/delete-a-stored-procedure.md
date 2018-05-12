@@ -94,6 +94,6 @@ manager: "jhubbard"
  [Rename a Stored Procedure](rename-a-stored-procedure.md)   
  [View the Definition of a Stored Procedure](view-the-definition-of-a-stored-procedure.md)   
  [View the Dependencies of a Stored Procedure](view-the-dependencies-of-a-stored-procedure.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-procedure-transact-sql.md)  
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   
   

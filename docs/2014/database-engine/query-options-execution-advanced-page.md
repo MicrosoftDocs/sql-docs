@@ -45,7 +45,7 @@ manager: "jhubbard"
  When this check box is selected, statistics regarding input/output (I/O) are returned with each query. This option is cleared by default.  
   
  **SET TRANSACTION ISOLATION LEVEL**  
- The READ COMMITTED transaction isolation level is set by default. For more information, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md). SNAPSHOT transaction isolation level is not available. To use SNAPSHOT isolation, add the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
+ The READ COMMITTED transaction isolation level is set by default. For more information, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql). SNAPSHOT transaction isolation level is not available. To use SNAPSHOT isolation, add the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
 ```  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

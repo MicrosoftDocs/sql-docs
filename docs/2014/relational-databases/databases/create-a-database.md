@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 8.  To change the recovery model, select the **Options** page and select a recovery model from the list.  
   
-9. To change database options, select the **Options** page, and then modify the database options. For a description of each option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
+9. To change database options, select the **Options** page, and then modify the database options. For a description of each option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 10. To add a new filegroup, click the **Filegroups** page. Click **Add** and then enter the values for the filegroup.  
   
@@ -127,12 +127,12 @@ LOG ON
 GO  
 ```  
   
- For more examples, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md).  
+ For more examples, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
 ## See Also  
  [Database Files and Filegroups](database-files-and-filegroups.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)  
   
   

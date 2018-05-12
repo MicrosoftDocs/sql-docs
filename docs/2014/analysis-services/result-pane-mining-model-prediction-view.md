@@ -36,6 +36,6 @@ manager: "mblythe"
 ## See Also  
  [Prediction Query Builder &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   
  [Data Mining Query Interfaces](data-mining/data-mining-query-tools.md)   
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](~/dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

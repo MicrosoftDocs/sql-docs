@@ -28,9 +28,9 @@ manager: "jhubbard"
 ## Parameters and Project Deployment Model  
  When you deploy a project to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, you use views, stored procedures, and the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI to manage project and package parameters. For more information, see the following topics.  
   
--   [Views &#40;Integration Services Catalog&#41;](~/integration-services/system-views/views-integration-services-catalog.md)  
+-   [Views &#40;Integration Services Catalog&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
--   [Stored Procedures &#40;Integration Services Catalog&#41;](~/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
+-   [Stored Procedures &#40;Integration Services Catalog&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  
   
 -   [Configure Dialog Box](catalog/configure-dialog-box.md)  
   
@@ -61,21 +61,21 @@ manager: "jhubbard"
   
  If a project parameter references an environment variable and the literal value from the variable cannot be resolved at execution, the design value is used. The server value is not used.  
   
- To view the environment variables that are assigned to parameter values, query the catalog.object_parameters view. For more information, see [catalog.object_parameters &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
+ To view the environment variables that are assigned to parameter values, query the catalog.object_parameters view. For more information, see [catalog.object_parameters &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database).  
   
 #### Determining Execution Parameter Values  
  The following Transact-SQL views and stored procedure can be used to display and set parameter values.  
   
- [catalog.execution_parameter_values &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(view)  
+ [catalog.execution_parameter_values &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)(view)  
  Shows the actual parameter values that will be used by a specific execution  
   
- [catalog.get_parameter_values &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (stored procedure)  
+ [catalog.get_parameter_values &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (stored procedure)  
  Resolves and shows the actual values for the specified package and environment reference  
   
- [catalog.object_parameters &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (view)  
+ [catalog.object_parameters &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (view)  
  Displays the parameters and properties for all packages and projects in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog, including the design default and server default values.  
   
- [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  Sets the value of a parameter for an instance of execution in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog.  
   
  You can also use the **Execute Package** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] modify the parameter value. For more information, see [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  

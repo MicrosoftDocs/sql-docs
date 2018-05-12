@@ -45,9 +45,9 @@ manager: "jhubbard"
 |[Schedule Traces](schedule-traces.md)|Contains information about how to set the start time and the end time for tracing.|  
   
 ## See Also  
- [sp_trace_create &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
+ [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)   
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)  
   
   

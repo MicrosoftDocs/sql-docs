@@ -82,6 +82,6 @@ GO
  [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [Resource Governor Workload Group](resource-governor-workload-group.md)   
  [Resource Governor Classifier Function](resource-governor-classifier-function.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

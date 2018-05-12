@@ -82,7 +82,7 @@ manager: "jhubbard"
   
          For information about emergency mode, see [Database States](../databases/database-states.md).  
   
-    -   Then, repair the database by using the DBCC REPAIR_ALLOW_DATA_LOSS option in one of the following DBCC statements: [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](~/t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md), or [DBCC CHECKTABLE](~/t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Then, repair the database by using the DBCC REPAIR_ALLOW_DATA_LOSS option in one of the following DBCC statements: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql), or [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
   
          When DBCC encounters the bad page, DBCC deallocates it and repairs any related errors. This approach enables the database to be brought back online in a physically consistent state. However, additional data might also be lost; therefore, this approach should be used as a last resort.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
  [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)   
  [Restore Pages &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

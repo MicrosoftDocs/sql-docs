@@ -25,10 +25,10 @@ manager: "jhubbard"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## Corrective Action  
- When you upgrade, user databases maintain their compatibility mode. Before you change the database compatibility mode to 100 or later, modify views that use both WITH CHECK OPTION and TOP if data modification through the view is required. For more information, see [sp_dbcmptlevel &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbcmptlevel-transact-sql.md).  
+ When you upgrade, user databases maintain their compatibility mode. Before you change the database compatibility mode to 100 or later, modify views that use both WITH CHECK OPTION and TOP if data modification through the view is required. For more information, see [sp_dbcmptlevel &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbcmptlevel-transact-sql).  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

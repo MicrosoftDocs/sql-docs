@@ -27,7 +27,7 @@ manager: "jhubbard"
 -   [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  When you specify a restore task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) script by clicking **Script** and then selecting a destination for the script.  
+>  When you specify a restore task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) script by clicking **Script** and then selecting a destination for the script.  
   
 ## Permissions  
  If the database being restored does not exist, the user must have CREATE DATABASE permissions to be able to execute RESTORE. If the database exists, RESTORE permissions default to members of the **sysadmin** and **dbcreator** fixed server roles and the owner (**dbo**) of the database.  
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 |Term|Definition|  
 |----------|----------------|  
-|**Database**|Enter the database to restore in the list. You can enter a new database or choose an existing database from the drop-down list. The list includes all databases on the server, excluding the system databases **master** and **tempdb**.<br /><br /> Note: To restore a password-protected backup, you must use the [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement.|  
+|**Database**|Enter the database to restore in the list. You can enter a new database or choose an existing database from the drop-down list. The list includes all databases on the server, excluding the system databases **master** and **tempdb**.<br /><br /> Note: To restore a password-protected backup, you must use the [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statement.|  
 |**Restore to**|The **Restore to** box will be set "To the last backup taken" by default. You can also click **Timeline** to show the **Backup Timeline** dialog box, which displays the database backup history in the form of a timeline. Click **Timeline** to designate a specific `datetime` to which you want to restore the database. The database will then be restored to the state it was in at this specified point in time. See [Backup Timeline](backup-timeline.md).|  
   
 ### Restore Plan  
@@ -83,7 +83,7 @@ manager: "jhubbard"
  [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
  [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md)   
+ [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)  
   
   

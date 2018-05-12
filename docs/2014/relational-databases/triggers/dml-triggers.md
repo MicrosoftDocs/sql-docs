@@ -81,10 +81,10 @@ manager: "jhubbard"
 |Describes how to manage trigger security.|[Manage Trigger Security](manage-trigger-security.md)|  
   
 ## See Also  
- [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
- [ALTER TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-trigger-transact-sql.md)   
- [DROP TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-trigger-transact-sql.md)   
- [DISABLE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/disable-trigger-transact-sql.md)   
- [Trigger Functions &#40;Transact-SQL&#41;](~/t-sql/functions/trigger-functions-transact-sql.md)  
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
+ [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
+ [DISABLE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/disable-trigger-transact-sql)   
+ [Trigger Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/trigger-functions-transact-sql)  
   
   

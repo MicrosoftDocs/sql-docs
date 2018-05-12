@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Malicious assemblies with an EXTERNAL_ACCESS or UNSAFE permission setting. For more information, see [CLR Integration Security](../clr-integration/security/clr-integration-security.md).  
   
--   Malicious modules that are defined to execute as high privileged users. For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](~/t-sql/statements/execute-as-clause-transact-sql.md).  
+-   Malicious modules that are defined to execute as high privileged users. For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql).  
   
  Both of these situations require a specific degree of privileges and are protected against by appropriate mechanisms when they are used in the context of a database that is already attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, if the database is taken offline, a user that has access to the database file can potentially attach it to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] of his or her choice and add malicious content to the database. When databases are detached and attached in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permissions are set on the data and log files that restrict access to the database files.  
   
@@ -36,6 +36,6 @@ manager: "jhubbard"
 ## Related Content  
  [Security Center for SQL Server Database Engine and Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

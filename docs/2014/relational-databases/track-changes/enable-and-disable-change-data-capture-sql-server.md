@@ -24,7 +24,7 @@ manager: "jhubbard"
   This topic describes how to enable and disable change data capture for a database and a table.  
   
 ## Enable Change Data Capture for a Database  
- Before a capture instance can be created for individual tables, a member of the `sysadmin` fixed server role must first enable the database for change data capture. This is done by running the stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) in the database context. To determine if a database is already enabled, query the `is_cdc_enabled` column in the `sys.databases` catalog view.  
+ Before a capture instance can be created for individual tables, a member of the `sysadmin` fixed server role must first enable the database for change data capture. This is done by running the stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) in the database context. To determine if a database is already enabled, query the `is_cdc_enabled` column in the `sys.databases` catalog view.  
   
  When a database is enabled for change data capture, the `cdc` schema, `cdc` user, metadata tables, and other system objects are created for the database. The `cdc` schema contains the change data capture metadata tables and, after source tables are enabled for change data capture, the individual change tables serve as a repository for change data. The `cdc` schema also contains associated system functions used to query for change data.  
   
@@ -46,7 +46,7 @@ GO
 ```  
   
 ## Disable Change Data Capture for a Database  
- A member of the `sysadmin` fixed server role can run the stored procedure [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) in the database context to disable change data capture for a database. It is not necessary to disable individual tables before you disable the database. Disabling the database removes all associated change data capture metadata, including the `cdc` user and schema and the change data capture jobs. However, any gating roles created by change data capture will not be removed automatically and must be explicitly deleted. To determine if a database is enabled, query the `is_cdc_enabled` column in the sys.databases catalog view.  
+ A member of the `sysadmin` fixed server role can run the stored procedure [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) in the database context to disable change data capture for a database. It is not necessary to disable individual tables before you disable the database. Disabling the database removes all associated change data capture metadata, including the `cdc` user and schema and the change data capture jobs. However, any gating roles created by change data capture will not be removed automatically and must be explicitly deleted. To determine if a database is enabled, query the `is_cdc_enabled` column in the sys.databases catalog view.  
   
  If a change data capture enabled database is dropped, change data capture jobs are automatically removed.  
   
@@ -117,9 +117,9 @@ GO
   
  `A function to query for net changes.`  
   
- A capture instance will always include a table valued function for returning all change table entries that occurred within a defined interval. This function is named by appending the capture instance name to "cdc.fn_cdc_get_all_changes_". For more information, see [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](~/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
+ A capture instance will always include a table valued function for returning all change table entries that occurred within a defined interval. This function is named by appending the capture instance name to "cdc.fn_cdc_get_all_changes_". For more information, see [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql).  
   
- If the parameter *@supports_net_changes* is set to 1, a net changes function is also generated for the capture instance. This function returns only one change for each distinct row changed in the interval specified in the call. For more information, see [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](~/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+ If the parameter *@supports_net_changes* is set to 1, a net changes function is also generated for the capture instance. This function returns only one change for each distinct row changed in the interval specified in the call. For more information, see [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
  To support net changes queries, the source table must have a primary key or unique index to uniquely identify rows. If a unique index is used, the name of the index must be specified using the *@index_name* parameter. The columns defined in the primary key or unique index must be included in the list of source columns to be captured.  
   

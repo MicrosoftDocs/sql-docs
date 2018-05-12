@@ -81,9 +81,9 @@ manager: "jhubbard"
   
  When you configure replication, you specify accounts under which agents should run. However, all job steps run under the security context of a *proxy*; therefore, replication performs the following mappings internally for the agent accounts that you specify:  
   
--   The account is first mapped to a credential by using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](~/t-sql/statements/create-credential-transact-sql.md) statement. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts.  
+-   The account is first mapped to a credential by using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) statement. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proxies use credentials to store information about Windows user accounts.  
   
--   The [sp_add_proxy](~/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md) stored procedure is called, and the credential is used to create a proxy..  
+-   The [sp_add_proxy](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql) stored procedure is called, and the credential is used to create a proxy..  
   
 > [!NOTE]  
 >  This information is provided to help you understand what is involved in running agents with the appropriate security context. You should not have to interact directly with the credentials or proxies that have been created.  

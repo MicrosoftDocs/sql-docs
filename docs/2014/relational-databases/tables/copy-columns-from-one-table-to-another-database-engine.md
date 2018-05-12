@@ -101,7 +101,7 @@ manager: "jhubbard"
   
 #### To copy column definitions from one table to another  
   
-1.  You cannot copy individual columns from one table to another existing table by using Transact-SQL statements. However, you can create a new table in the default filegroup and inserts the resulting rows from the query into it by using SELECT INTO. For more information, see [INTO Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-into-clause-transact-sql.md).  
+1.  You cannot copy individual columns from one table to another existing table by using Transact-SQL statements. However, you can create a new table in the default filegroup and inserts the resulting rows from the query into it by using SELECT INTO. For more information, see [INTO Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-into-clause-transact-sql).  
   
 #### To copy data from one table to another  
   

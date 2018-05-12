@@ -38,7 +38,7 @@ manager: "jhubbard"
  **Data mining query**  
  Type a data mining query.  
   
- **Related Topics:**  [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
+ **Related Topics:**  [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Build New Query**  
  Create the data mining query using a graphical tool.  

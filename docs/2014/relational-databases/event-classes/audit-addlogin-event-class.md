@@ -58,10 +58,10 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Audit Login Change Property Event Class](audit-login-change-property-event-class.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_droplogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
+ [sp_droplogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droplogin-transact-sql)   
  [Audit Server Principal Management Event Class](audit-server-principal-management-event-class.md)  
   
   

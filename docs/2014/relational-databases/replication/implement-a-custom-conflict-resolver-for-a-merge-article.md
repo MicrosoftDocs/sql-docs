@@ -59,13 +59,13 @@ manager: "jhubbard"
   
 #### To use a custom conflict resolver with a new table article  
   
-1.  Execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article, specifying a value of **MicrosoftSQL** **Server Stored Procedure Resolver** for the **@article_resolver** parameter and the name of the stored procedure that implements the conflict resolver logic for the **@resolver_info** parameter. For more information, see [Define an Article](publish/define-an-article.md).  
+1.  Execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) to define an article, specifying a value of **MicrosoftSQL** **Server Stored Procedure Resolver** for the **@article_resolver** parameter and the name of the stored procedure that implements the conflict resolver logic for the **@resolver_info** parameter. For more information, see [Define an Article](publish/define-an-article.md).  
   
 #### To use a custom conflict resolver with an existing table article  
   
-1.  Execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **@publication**, **@article**, a value of **article_resolver** for **@property**, and a value of **MicrosoftSQL** **Server Stored ProcedureResolver** for **@value**.  
+1.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying **@publication**, **@article**, a value of **article_resolver** for **@property**, and a value of **MicrosoftSQL** **Server Stored ProcedureResolver** for **@value**.  
   
-2.  Execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **@publication**, **@article**, a value of **resolver_info** for **@property**, and the name of the stored procedure that implements the conflict resolver logic for **@value**.  
+2.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying **@publication**, **@article**, a value of **resolver_info** for **@property**, and the name of the stored procedure that implements the conflict resolver logic for **@value**.  
   
 ##  <a name="COM"></a> Using a COM-based Custom Resolver  
  The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and resolve conflicts that occur during the merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLL), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Such a COM–based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
@@ -93,26 +93,26 @@ manager: "jhubbard"
     regsvr32.exe mycustomresolver.dll  
     ```  
   
-8.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) to verify that the library is not already registered as a custom conflict resolver.  
+8.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) to verify that the library is not already registered as a custom conflict resolver.  
   
-9. To register the library as a custom conflict resolver, execute [sp_registercustomresolver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), at the Distributor. Specify the friendly name of the COM object for **@article_resolver**, the library's ID (CLSID) for **@resolver_clsid**, and a value of `false` for **@is_dotnet_assembly**.  
+9. To register the library as a custom conflict resolver, execute [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), at the Distributor. Specify the friendly name of the COM object for **@article_resolver**, the library's ID (CLSID) for **@resolver_clsid**, and a value of `false` for **@is_dotnet_assembly**.  
   
     > [!NOTE]  
-    >  When no longer needed, a custom conflict resolver can be unregistered using [sp_unregistercustomresolver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md).  
+    >  When no longer needed, a custom conflict resolver can be unregistered using [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql).  
   
 10. (Optional) On a cluster, repeat steps 5-8 to register the custom resolver on all nodes of the cluster. This is required to ensure that the custom resolver will be able to properly load the reconciler following a failover.  
   
 #### To use a custom conflict resolver with a new table article  
   
-1.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) and note the friendly name of the desired resolver.  
+1.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) and note the friendly name of the desired resolver.  
   
-2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article. Specify the friendly name of the article resolver from step 1 for **@article_resolver**. For more information, see [Define an Article](publish/define-an-article.md).  
+2.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) to define an article. Specify the friendly name of the article resolver from step 1 for **@article_resolver**. For more information, see [Define an Article](publish/define-an-article.md).  
   
 #### To use a custom conflict resolver with an existing table article  
   
-1.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) and note the friendly name of the desired resolver.  
+1.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) and note the friendly name of the desired resolver.  
   
-2.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **@publication**, **@article**, a value of **article_resolver** for **@property**, and the friendly name of the article resolver from step 1 for **@value**.  
+2.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying **@publication**, **@article**, a value of **article_resolver** for **@property**, and the friendly name of the article resolver from step 1 for **@value**.  
   
 #### Viewing a Sample Custom Resolver  
   

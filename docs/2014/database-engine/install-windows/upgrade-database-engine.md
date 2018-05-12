@@ -124,7 +124,7 @@ manager: "jhubbard"
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs new word breakers for use by Full-Text and Semantic Search. The word breakers are used both at indexing time and at query time. If you do not rebuild the full-text catalogs, your search results may be inconsistent. If you issue a full-text query that looks for a phrase that is broken differently by the word breaker in a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current word breaker, a document or row containing the phrase might not be retrieved. This is because the indexed phrases were broken using different logic than the query is using. The solution is to repopulate (rebuild) the full-text catalogs with the new word breakers so that index time and query time behavior are identical.  
   
-     For more information, see [sp_fulltext_catalog &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md).  
+     For more information, see [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   
 -   Configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features.  
   

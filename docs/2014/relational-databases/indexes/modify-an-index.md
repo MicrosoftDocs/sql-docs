@@ -72,11 +72,11 @@ manager: "jhubbard"
 1.  To add, remove, or change the position of an index column, you must drop and recreate the index.  
   
 ## See Also  
- [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
- [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
- [INDEXPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/indexproperty-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
+ [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
+ [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
  [Set Index Options](set-index-options.md)   
  [Rename Indexes](indexes.md)  
   

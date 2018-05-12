@@ -42,7 +42,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
  The service broker GUID of msdb is of particular interest because that is the location of the target service of the provider.  
   
- To enable [!INCLUDE[ssSB](../../includes/sssb-md.md)] in a database, use the ENABLE_BROKER SET option of the [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement.  
+ To enable [!INCLUDE[ssSB](../../includes/sssb-md.md)] in a database, use the ENABLE_BROKER SET option of the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) statement.  
   
 ## Specifying a Connection String  
  Applications direct the WMI Provider for Server Events to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by connecting to a WMI namespace defined by the provider. The Windows WMI service maps this namespace to the provider DLL, Sqlwep.dll, and loads it into memory. Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has its own WMI namespace, which defaults to: \\\\.\\*root*\Microsoft\SqlServer\ServerEvents\\*instance_name*. *instance_name* defaults to MSSQLSERVER in a default installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -75,7 +75,7 @@ WHERE DatabaseName = "AdventureWorks2012"
   
  The WMI provider translates this query into an event notification that is created in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. This means that the caller must have the required permissions to create such an event notification, specifically CREATE DATABASE DDL EVENT NOTIFICATION permission in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
- If a WQL query specifies an event notification scoped at the server level, for example by issuing the query SELECT * FROM ALTER_TABLE, the calling application must have the server-level CREATE DDL EVENT NOTIFICATION permission. Note that server-scoped event notifications are stored in the master database. You can use the [sys.server_event_notifications](~/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view to see their metadata.  
+ If a WQL query specifies an event notification scoped at the server level, for example by issuing the query SELECT * FROM ALTER_TABLE, the calling application must have the server-level CREATE DDL EVENT NOTIFICATION permission. Note that server-scoped event notifications are stored in the master database. You can use the [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) catalog view to see their metadata.  
   
 > [!NOTE]  
 >  The scope of the event notification that is created by the WMI Provider (server, database, or object) ultimately depends on the outcome of the permissions verification process that is used by the WMI provider. This is affected by the permission set of the user that is calling the provider and on the verification of the database that is being queried.  

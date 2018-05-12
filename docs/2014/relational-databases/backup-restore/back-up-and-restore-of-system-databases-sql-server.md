@@ -35,7 +35,7 @@ manager: "jhubbard"
 |[tempdb](../databases/tempdb-database.md)|A workspace for holding temporary or intermediate result sets. This database is re-created every time an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started. When the server instance is shut down, any data in **tempdb** is deleted permanently.|No|Simple|You cannot back up the **tempdb** system database.|  
 |[Configure Distribution](../replication/configure-distribution.md)|A database that exists only if the server is configured as a replication Distributor. This database stores metadata and history data for all types of replication, and transactions for transactional replication.|Yes|Simple|For information about when to back up the **distribution** database, see [Back Up and Restore Replicated Databases](../replication/administration/back-up-and-restore-replicated-databases.md).|  
   
- <sup>1</sup> To learn the current recovery model of the model, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ <sup>1</sup> To learn the current recovery model of the model, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
 ## Limitations on Restoring System Databases  
   

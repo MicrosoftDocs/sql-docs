@@ -54,9 +54,9 @@ manager: "jhubbard"
   
 -   [Credentials &#40;Database Engine&#41;](authentication-access/credentials-database-engine.md)  
   
--   [Execute as Another Login](~/t-sql/statements/execute-as-transact-sql.md)  
+-   [Execute as Another Login](/sql/t-sql/statements/execute-as-transact-sql)  
   
--   [Execute as Another Database User](~/t-sql/statements/execute-as-transact-sql.md)  
+-   [Execute as Another Database User](/sql/t-sql/statements/execute-as-transact-sql)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Encryption: Storing Secret Data**  
  **Encrypting Files**  
@@ -77,13 +77,13 @@ manager: "jhubbard"
   
  **Column, Data and Key Encryption**  
   
--   [Encrypt by Certificate](~/t-sql/functions/encryptbycert-transact-sql.md)  
+-   [Encrypt by Certificate](/sql/t-sql/functions/encryptbycert-transact-sql)  
   
--   [Encrypt by Asymmetric Key](~/t-sql/functions/encryptbyasymkey-transact-sql.md)  
+-   [Encrypt by Asymmetric Key](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
   
--   [Encrypt by Symmetric Key](~/t-sql/functions/encryptbykey-transact-sql.md)  
+-   [Encrypt by Symmetric Key](/sql/t-sql/functions/encryptbykey-transact-sql)  
   
--   [Encrypt by Passphrase](~/t-sql/functions/encryptbypassphrase-transact-sql.md)  
+-   [Encrypt by Passphrase](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Authorization: What can you do?**  
  **Granting, Revoking, and Denying Permissions**  
@@ -115,9 +115,9 @@ manager: "jhubbard"
   
 -   [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
--   [Azure SQL Database Firewall Settings](~/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
+-   [Azure SQL Database Firewall Settings](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
--   [Azure Service Firewall Settings](~/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
+-   [Azure Service Firewall Settings](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
  **Encrypting Data in Transit**  
   

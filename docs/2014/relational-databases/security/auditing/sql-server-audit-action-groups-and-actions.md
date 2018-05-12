@@ -111,7 +111,7 @@ manager: "jhubbard"
 |SUCCESSFUL_LOGIN_GROUP|Indicates that a principal has successfully logged in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Events in this class are raised by new connections or by connections that are reused from a connection pool. Equivalent to the [Audit Login Event Class](../../event-classes/audit-login-event-class.md).|  
 |TRACE_CHANGE_GROUP|This event is raised for all statements that check for the ALTER TRACE permission. Equivalent to the [Audit Server Alter Trace Event Class](../../event-classes/audit-server-alter-trace-event-class.md).|  
 |USER_CHANGE_PASSWORD_GROUP|This event is raised whenever the password of a contained database user is changed by using the ALTER USER statement.|  
-|USER_DEFINED_AUDIT_GROUP|This group monitors events raised by using [sp_audit_write &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). Typically triggers or stored procedures include calls to `sp_audit_write` to enable auditing of important events.|  
+|USER_DEFINED_AUDIT_GROUP|This group monitors events raised by using [sp_audit_write &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-audit-write-transact-sql). Typically triggers or stored procedures include calls to `sp_audit_write` to enable auditing of important events.|  
   
 ### Considerations  
  Server-level action groups cover actions across a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. For example, any schema object access check in any database is recorded if the appropriate action group is added to a server audit specification. In a database audit specification, only schema object accesses in that database are recorded.  
@@ -148,7 +148,7 @@ manager: "jhubbard"
 |SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP|This event is raised whenever a grant, deny, or revoke is issued for a schema object. Equivalent to the [Audit Schema Object GDR Event Class](../../event-classes/audit-schema-object-gdr-event-class.md).|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indicates that a principal successfully logged in to a contained database. Equivalent to the Audit Successful Database Authentication Event Class.|  
 |USER_CHANGE_PASSWORD_GROUP|This event is raised whenever the password of a contained database user is changed by using the ALTER USER statement.|  
-|USER_DEFINED_AUDIT_GROUP|This group monitors events raised by using [sp_audit_write &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
+|USER_DEFINED_AUDIT_GROUP|This group monitors events raised by using [sp_audit_write &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-audit-write-transact-sql).|  
   
 ## Database-Level Audit Actions  
  Database-level actions support the auditing of specific actions directly on database schema and schema objects, such as Tables, Views, Stored Procedures, Functions, Extended Stored Procedures, Queues, Synonyms. Types, XML Schema Collection, Database, and Schema are not audited. The audit of schema objects may be configured on Schema and Database, which means that events on all schema objects contained by the specified schema or database will be audited. The following table describes database-level audit actions.  
@@ -182,44 +182,44 @@ manager: "jhubbard"
   
  [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md)  
   
- [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-transact-sql.md)  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-audit-specification-transact-sql.md)  
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](~/t-sql/statements/drop-server-audit-transact-sql.md)  
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
- [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-specification-transact-sql.md)  
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   
- [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-audit-transact-sql.md)  
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-transact-sql)  
   
- [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-server-audit-specification-transact-sql.md)  
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)  
   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-database-audit-specification-transact-sql.md)  
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-audit-specification-transact-sql)  
   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-audit-specification-transact-sql.md)  
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)  
   
- [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)  
   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-authorization-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
- [sys.fn_get_audit_file &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)  
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql)  
   
- [sys.server_audits &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)  
+ [sys.server_audits &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)  
   
- [sys.server_file_audits &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)  
+ [sys.server_file_audits &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)  
   
- [sys.server_audit_specifications &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)  
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)  
   
- [sys.server_audit_specification_details &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)  
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)  
   
- [sys.database_audit_specifications &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)  
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)  
   
- [sys.database_audit_specification_details &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)  
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)  
   
- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)  
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)  
   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)  
   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql)  
   
   

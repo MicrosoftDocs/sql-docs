@@ -51,8 +51,8 @@ manager: "jhubbard"
 |XactSequence|`bigint`|Token that describes the current transaction.|50|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
  [Monitor and Respond to Events](../../ssms/agent/monitor-and-respond-to-events.md)  
   
   

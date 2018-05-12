@@ -23,7 +23,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replicate Identity Columns
-  When you assign an IDENTITY property to a column, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatically generates sequential numbers for new rows inserted in the table containing the identity column. For more information, see [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql-identity-property.md). Because identity columns might be included as a part of the primary key, it is important to avoid duplicate values in the identity columns. To use identity columns in a replication topology that has updates at more than one node, each node in the replication topology must use a different range of identity values, so that duplicates do not occur.  
+  When you assign an IDENTITY property to a column, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatically generates sequential numbers for new rows inserted in the table containing the identity column. For more information, see [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Because identity columns might be included as a part of the primary key, it is important to avoid duplicate values in the identity columns. To use identity columns in a replication topology that has updates at more than one node, each node in the replication topology must use a different range of identity values, so that duplicates do not occur.  
   
  For example, the Publisher could be assigned the range 1-100, Subscriber A the range 101-200, and Subscriber B the range 201-300. If a row is inserted at the Publisher and the identity value is, for example, 65, that value is replicated to each Subscriber. When replication inserts data at each Subscriber, it does not increment the identity column value in the Subscriber table; instead, the literal value 65 is inserted. Only user inserts, but not replication agent inserts cause the identity column value to be incremented.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  There are two types of ranges to take into account when replicating identity columns: the ranges assigned to the Publisher and Subscribers, and the range of the data type in the column. The following table shows the ranges available for the data types typically used in identity columns. The range is used across all nodes in a topology. For example, if you use `smallint` starting at 1 with an increment of 1, the maximum number of inserts is 32,767 for the Publisher and all Subscribers. The actual number of inserts depends on whether there are gaps in the values used and whether a threshold value is used. For more information about thresholds, see the following sections "Merge Replication" and "Transactional Replication with Queued Updating Subscriptions".  
   
- If the Publisher exhausts its identity range after an insert, it can automatically assign a new range if the insert was performed by a member of the **db_owner** fixed database role. If the insert was performed by a user not in that role, the Log Reader Agent, Merge Agent, or a user who is a member of the **db_owner** role must run [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md). For transactional publications, the Log Reader Agent must be running to automatically allocate a new range (the default is for the agent to run continuously).  
+ If the Publisher exhausts its identity range after an insert, it can automatically assign a new range if the insert was performed by a member of the **db_owner** fixed database role. If the insert was performed by a user not in that role, the Log Reader Agent, Merge Agent, or a user who is a member of the **db_owner** role must run [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql). For transactional publications, the Log Reader Agent must be running to automatically allocate a new range (the default is for the agent to run continuously).  
   
 > [!WARNING]  
 >  During a large batch insert the replication trigger is fired only once, not for each row of the insert. This can lead to a failure of the insert statement if an identity range is exhausted during an large insert, such as an `INSERT INTO` statement.  
@@ -68,7 +68,7 @@ manager: "jhubbard"
 >  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../sequence-numbers/sequence-numbers.md).  
   
 ### Merge Replication  
- Identity ranges are managed by the Publisher and propagated to Subscribers by the Merge Agent (in a republishing hierarchy, ranges are managed by the root Publisher and the republishers). The identity values are assigned from a pool at the Publisher. When you add an article with an identity column to a publication in the New Publication Wizard or by using [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), you specify values for:  
+ Identity ranges are managed by the Publisher and propagated to Subscribers by the Merge Agent (in a republishing hierarchy, ranges are managed by the root Publisher and the republishers). The identity values are assigned from a pool at the Publisher. When you add an article with an identity column to a publication in the New Publication Wizard or by using [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), you specify values for:  
   
 -   The **@identity_range** parameter, which controls the identity range size initially allocated both to the Publisher and to Subscribers with client subscriptions.  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
   
 ### Transactional Replication with Queued Updating Subscriptions  
- Identity ranges are managed by the Distributor and propagated to Subscribers by the Distribution Agent. The identity values are assigned from a pool at the Distributor. The pool size is based on the size of the data type and the increment used for the identity column. When you add an article with an identity column to a publication in the New Publication Wizard or by using [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), you specify values for:  
+ Identity ranges are managed by the Distributor and propagated to Subscribers by the Distribution Agent. The identity values are assigned from a pool at the Distributor. The pool size is based on the size of the data type and the increment used for the identity column. When you add an article with an identity column to a publication in the New Publication Wizard or by using [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), you specify values for:  
   
 -   The **@identity_range** parameter, which controls the identity range size initially allocated to all Subscribers.  
   
@@ -103,7 +103,7 @@ manager: "jhubbard"
  To assign new ranges to the Publisher or Subscribers, execute DBCC CHECKIDENT and specify a new value to reseed the table. You should have some way to determine when a new range must be assigned. For example, your application could have a mechanism that detects when a node is about to use up its range and assign a new range using DBCC CHECKIDENT. You can also add a check constraint to ensure that a row cannot be added if it would cause an out of range identity value to be used.  
   
 ## Handling Identity Ranges after a Database Restore  
- If you are using automatic identity range management, when a Subscriber is restored from a backup, it automatically requests a new range of identity values. If a Publisher is restored from a backup, you must ensure that the Publisher is assigned an appropriate range. For merge replication, assign a new range using [sp_restoremergeidentityrange &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-restoremergeidentityrange-transact-sql.md). For transactional replication, determine the highest value that has been used and then set the starting point for new ranges. Use the following procedure after the publication database has been restored:  
+ If you are using automatic identity range management, when a Subscriber is restored from a backup, it automatically requests a new range of identity values. If a Publisher is restored from a backup, you must ensure that the Publisher is assigned an appropriate range. For merge replication, assign a new range using [sp_restoremergeidentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-restoremergeidentityrange-transact-sql). For transactional replication, determine the highest value that has been used and then set the starting point for new ranges. Use the following procedure after the publication database has been restored:  
   
 1.  Stop all activity on all Subscribers.  
   
@@ -121,10 +121,10 @@ manager: "jhubbard"
     >  If the value in the identity column is set to decrement rather than increment, record the lowest value found, and then reseed with that value.  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [DBCC CHECKIDENT &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_CURRENT &#40;Transact-SQL&#41;](~/t-sql/functions/ident-current-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql-identity-property.md)   
- [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md)  
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
+ [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
+ [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

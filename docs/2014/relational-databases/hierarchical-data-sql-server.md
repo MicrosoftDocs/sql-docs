@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   A graph of links between Web pages  
   
- Use [hierarchyid](~/t-sql/data-types/hierarchyid-data-type-method-reference.md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](~/t-sql/data-types/hierarchyid-data-type-method-reference.md) in [!INCLUDE[tsql](../includes/tsql-md.md)] to query and manage hierarchical data.  
+ Use [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) in [!INCLUDE[tsql](../includes/tsql-md.md)] to query and manage hierarchical data.  
   
 ##  <a name="keyprops"></a> Key Properties of hierarchyid  
  A value of the `hierarchyid` data type represents a position in a tree hierarchy. Values for `hierarchyid` have the following properties:  
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   Support for arbitrary insertions and deletions  
   
-     By using the [GetDescendant](~/t-sql/data-types/getdescendant-database-engine.md) method, it is always possible to generate a sibling to the right of any given node, to the left of any given node, or between any two siblings. The comparison property is maintained when an arbitrary number of nodes is inserted or deleted from the hierarchy. Most insertions and deletions preserve the compactness property. However, insertions between two nodes will produce hierarchyid values with a slightly less compact representation.  
+     By using the [GetDescendant](/sql/t-sql/data-types/getdescendant-database-engine) method, it is always possible to generate a sibling to the right of any given node, to the left of any given node, or between any two siblings. The comparison property is maintained when an arbitrary number of nodes is inserted or deleted from the hierarchy. Most insertions and deletions preserve the compactness property. However, insertions between two nodes will produce hierarchyid values with a slightly less compact representation.  
   
   
 ##  <a name="limits"></a> Limitations of hierarchyid  
@@ -522,8 +522,8 @@ GO
   
   
 ## See Also  
- [hierarchyid Data Type Method Reference](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)   
+ [hierarchyid Data Type Method Reference](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
  [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
- [hierarchyid &#40;Transact-SQL&#41;](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)  
+ [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

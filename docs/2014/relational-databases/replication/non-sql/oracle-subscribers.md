@@ -85,9 +85,9 @@ manager: "jhubbard"
   
     -   Use the **–SkipErrors** parameter for the Distribution Agent if it is acceptable to be notified of failures in the Distribution Agent history log and to continue processing. Specify the Oracle error code 1400 (**-SkipErrors1400**).  
   
-    -   Modify the generated create table script, removing the NOT NULL attribute from any character columns that may have associated empty strings, and supply the modified script as a custom create script for the article using the @creation_script parameter of [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+    -   Modify the generated create table script, removing the NOT NULL attribute from any character columns that may have associated empty strings, and supply the modified script as a custom create script for the article using the @creation_script parameter of [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
--   Oracle Subscribers support a schema option of 0x4071. For more information about schema options, see [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   Oracle Subscribers support a schema option of 0x4071. For more information about schema options, see [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
 ## Mapping Data Types from SQL Server to Oracle  
  The following table shows the data type mappings that are used when data is replicated to a Subscriber running Oracle.  

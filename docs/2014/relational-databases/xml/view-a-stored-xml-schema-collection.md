@@ -24,7 +24,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View a Stored XML Schema Collection
-  After you import an XML schema collection by using [CREATE XML SCHEMA COLLECTION](~/t-sql/statements/create-xml-schema-collection-transact-sql.md), the schema components are stored in the metadata. You can use the [xml_schema_namespace](~/t-sql/xml/xml-schema-namespace.md)intrinsic function to reconstruct the XML schema collection. This function returns an `xml` data type instance.  
+  After you import an XML schema collection by using [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), the schema components are stored in the metadata. You can use the [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)intrinsic function to reconstruct the XML schema collection. This function returns an `xml` data type instance.  
   
  For example, the following query retrieves an XML schema collection (`ProductDescriptionSchemaCollection`) from the production relational schema in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
@@ -62,7 +62,7 @@ GO
   
  If you want to retain an identical copy of the XML schemas, you should save your XML schema in a file or in a database table in an `xml` type column.  
   
- The [sys.xml_schema_collections](~/relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) catalog view also returns information about XML schema collections. This information includes the name of the collection, the creation date, and the owner of the collection.  
+ The [sys.xml_schema_collections](/sql/relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql) catalog view also returns information about XML schema collections. This information includes the name of the collection, the creation date, and the owner of the collection.  
   
 ## See Also  
  [XML Schema Collections &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  To create plan guides before upgrading follow these steps:  
   
-1.  Record the current plan for each mission critical query by using the [sp_create_plan_guide](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) stored procedure and specifying the query plan in the USE PLAN query hint.  
+1.  Record the current plan for each mission critical query by using the [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) stored procedure and specifying the query plan in the USE PLAN query hint.  
   
 2.  Verify that the plan guide is applied to the query.  
   
@@ -42,11 +42,11 @@ manager: "jhubbard"
 ### Step 1: Collect the Plan  
  The query plan recorded in the plan guide must be in XML format. XML-formatted query plans can be produced through the following ways:  
   
--   [SET SHOWPLAN_XML](~/t-sql/statements/set-showplan-xml-transact-sql.md)  
+-   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
--   [SET STATISTICS XML](~/t-sql/statements/set-statistics-xml-transact-sql.md)  
+-   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Querying the query_plan column of the [sys.dm_exec_query_plan](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) dynamic management function.  
+-   Querying the query_plan column of the [sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) dynamic management function.  
   
 -   The [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), and [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) event classes.  
   
@@ -90,8 +90,8 @@ GO
  Run the query again and examine the query plan that is produced. You should see that the plan matches the one that you specified in the plan guide.  
   
 ## See Also  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Query Hints &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [Plan Guides](../../relational-databases/performance/plan-guides.md)  
   
   

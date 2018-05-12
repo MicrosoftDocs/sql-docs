@@ -43,8 +43,8 @@ manager: "mblythe"
 ## See Also  
  [Set the Locale for a Report or Text Box &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Windows Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/windows-collation-name-transact-sql.md)   
- [SQL Server Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/sql-server-collation-name-transact-sql.md)   
+ [Windows Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [SQL Server Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
  [Aggregate Function &#40;Report Builder and SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
   
   

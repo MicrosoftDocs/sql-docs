@@ -129,6 +129,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](~/t-sql/statements/alter-partition-scheme-transact-sql.md).  
+ For more information, see [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-partition-scheme-transact-sql).  
   
   

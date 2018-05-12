@@ -138,11 +138,11 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- Because the `TYPE` directive returns a query result as `xml` type, you can query the resulting XML by using various `xml` data type methods. For more information, see [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md). In the following query, note the following:  
+ Because the `TYPE` directive returns a query result as `xml` type, you can query the resulting XML by using various `xml` data type methods. For more information, see [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods). In the following query, note the following:  
   
 -   The previous query is added in the `FROM` clause. The query result is returned as a table. Note the `XmlCol` alias that is added.  
   
--   The `SELECT` clause specifies an XQuery against the `XmlCol` returned in the `FROM` clause. The `query()` method of the `xml` data type is used in specifying the XQuery. For more information, see [query&#40;&#41; Method &#40;xml Data Type&#41;](~/t-sql/xml/query-method-xml-data-type.md).  
+-   The `SELECT` clause specifies an XQuery against the `XmlCol` returned in the `FROM` clause. The `query()` method of the `xml` data type is used in specifying the XQuery. For more information, see [query&#40;&#41; Method &#40;xml Data Type&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

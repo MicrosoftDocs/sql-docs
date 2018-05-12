@@ -82,7 +82,7 @@ manager: "mblythe"
 ### Data Mining Extensions (DMX)  
  Data Mining Extensions (DMX) can be used with other command interfaces such as [!INCLUDE[vstecado](../../includes/vstecado-md.md)] or ADOMD.Net to create, delete, and query mining structures and mining models.  
   
--   [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](~/dmx/dmx-statements-data-definition.md)  
+-   [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](/sql/dmx/dmx-statements-data-definition)  
   
  **Restrictions:** Some properties cannot be changed by using DMX.  
   

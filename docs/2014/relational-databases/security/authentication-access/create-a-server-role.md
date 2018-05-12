@@ -41,7 +41,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- Server roles cannot be granted permission on database-level securables. To create database roles, see [CREATE ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-role-transact-sql.md).  
+ Server roles cannot be granted permission on database-level securables. To create database roles, see [CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql).  
   
 ###  <a name="Security"></a> Security  
   
@@ -98,6 +98,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE SERVER ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-role-transact-sql.md).  
+ For more information, see [CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql).  
   
   

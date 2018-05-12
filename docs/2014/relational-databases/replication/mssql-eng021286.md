@@ -31,10 +31,10 @@ manager: "jhubbard"
 |Message Text|Conflict table '%s' does not exist.|  
   
 ## Explanation  
- This error is raised if the conflict table for an article listed in [sysmergearticles &#40;Transact-SQL&#41;](~/relational-databases/system-tables/sysmergearticles-transact-sql.md) does not actually exist. The error can occur when you attempt to add a column to or drop a column from a table published for merge replication.  
+ This error is raised if the conflict table for an article listed in [sysmergearticles &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/sysmergearticles-transact-sql) does not actually exist. The error can occur when you attempt to add a column to or drop a column from a table published for merge replication.  
   
 ## User Action  
- Execute [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database with the missing conflict table to verify there are no data consistency issues.  
+ Execute [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) on the database with the missing conflict table to verify there are no data consistency issues.  
   
  If the conflict table is missing on a Subscriber, drop the subscription and recreate it. If the conflict table is missing on a Publisher, drop all subscriptions, drop the publication, and then recreate the publication and all subscriptions. For more information, see [Publish Data and Database Objects](publish/publish-data-and-database-objects.md) and [Subscribe to Publications](subscribe-to-publications.md).  
   

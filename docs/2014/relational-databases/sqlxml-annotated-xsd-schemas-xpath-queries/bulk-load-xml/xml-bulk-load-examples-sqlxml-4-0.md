@@ -1242,7 +1242,7 @@ End Sub
 ```  
   
 ## J. Bulk loading in xml Data Type columns  
- If the mapping schema specifies a [xml data type](~/t-sql/xml/xml-transact-sql.md) column by using the `sql:datatype="xml"` annotation, XML Bulk Load can copy XML child elements for the mapped field from the source document into this column.  
+ If the mapping schema specifies a [xml data type](/sql/t-sql/xml/xml-transact-sql) column by using the `sql:datatype="xml"` annotation, XML Bulk Load can copy XML child elements for the mapped field from the source document into this column.  
   
  Consider the following XSD schema, which maps a view of the Production.ProductModel table in the AdventureWorks sample database. In this table, the CatalogDescription field of `xml` data type is mapped to a **\<Desc>** element using the `sql:field` and `sql:datatype="xml"` annotations.  
   

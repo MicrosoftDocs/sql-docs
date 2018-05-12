@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  Catalog functions such as SQLColumns in ODBC will not report whether a column is a FILESTREAM column.  
   
- To create FILESTREAM columns or to detect which existing columns are FILESTREAM columns, you can use the `is_filestream` column of the [sys.columns](~/relational-databases/system-catalog-views/sys-columns-transact-sql.md) catalog view.  
+ To create FILESTREAM columns or to detect which existing columns are FILESTREAM columns, you can use the `is_filestream` column of the [sys.columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) catalog view.  
   
  The following is an example:  
   

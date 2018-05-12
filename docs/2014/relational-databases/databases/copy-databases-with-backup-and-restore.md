@@ -57,7 +57,7 @@ manager: "jhubbard"
   
     -   If the existing file cannot be overwritten, a restore error would occur.  
   
- To avoid errors and unintended consequences, before the restore operation, you can use the [backupfile](~/relational-databases/system-tables/backupfile-transact-sql.md) history table to find out the database and log files in the backup you plan to restore.  
+ To avoid errors and unintended consequences, before the restore operation, you can use the [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) history table to find out the database and log files in the backup you plan to restore.  
   
 ## Moving the Database Files  
  If the files within the database backup cannot be restored onto the destination computer because of the reasons mentioned earlier, it is necessary to move the files to a new location while they are being restored. For example:  
@@ -76,13 +76,13 @@ manager: "jhubbard"
  The database name that is explicitly supplied when you restore a database is used automatically as the new database name. Because the database name does not already exist, a new one is created by using the files in the backup.  
   
 ## When Upgrading a Database by Using Restore  
- When restoring backups from an earlier version, it is helpful to know in advance whether the path (drive and directory) of each of the full-text catalogs in a backup exists on the destination computer. To list the logical names and physical names, path and file name) of every file in a backup, including the catalog files, use a RESTORE FILELISTONLY FROM *<backup_device>* statement. For more information, see [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ When restoring backups from an earlier version, it is helpful to know in advance whether the path (drive and directory) of each of the full-text catalogs in a backup exists on the destination computer. To list the logical names and physical names, path and file name) of every file in a backup, including the catalog files, use a RESTORE FILELISTONLY FROM *<backup_device>* statement. For more information, see [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
  If the same path does not exist on the destination computer, you have two alternatives:  
   
 -   Create the equivalent drive/directory mapping on the destination computer.  
   
--   Move the catalog files to a new location during the restore operation, by using the WITH MOVE clause in your RESTORE DATABASE statement. For more information, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
+-   Move the catalog files to a new location during the restore operation, by using the WITH MOVE clause in your RESTORE DATABASE statement. For more information, see [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
  For information about alternative options for upgrading full-text indexes, see [Upgrade Full-Text Search](../search/upgrade-full-text-search.md).  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
  **To view the data and log files in a backup set**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
  **To restore files and filegroups to a new location**  
   
@@ -116,7 +116,7 @@ manager: "jhubbard"
   
  **To change the owner of a database**  
   
--   [sp_changedbowner &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)  
+-   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
  **To copy a database by using SQL Server Management Objects (SMO)**  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
 ## See Also  
  [Copy Databases to Other Servers](copy-databases-to-other-servers.md)   
  [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -66,7 +66,7 @@ manager: "jhubbard"
 -   Transparent Data Encryption  
   
 ### Transact-SQL Functions  
- Individual items can be encrypted as they are inserted or updated using [!INCLUDE[tsql](../../../includes/tsql-md.md)] functions. For more information, see [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbypassphrase-transact-sql.md) and [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](~/t-sql/functions/decryptbypassphrase-transact-sql.md).  
+ Individual items can be encrypted as they are inserted or updated using [!INCLUDE[tsql](../../../includes/tsql-md.md)] functions. For more information, see [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql) and [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql).  
   
 ### Certificates  
  A public key certificate, usually just called a certificate, is a digitally-signed statement that binds the value of a public key to the identity of the person, device, or service that holds the corresponding private key. Certificates are issued and signed by a certification authority (CA). The entity that receives a certificate from a CA is the subject of that certificate. Typically, certificates contain the following information.  
@@ -105,7 +105,7 @@ manager: "jhubbard"
 ## Related Content  
  [Securing SQL Server](../securing-sql-server.md)  
   
- [Security Functions &#40;Transact-SQL&#41;](~/t-sql/functions/security-functions-transact-sql.md)  
+ [Security Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../permissions-hierarchy-database-engine.md)   

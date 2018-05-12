@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], full-text queries can search for synonyms of user-specified terms through the use of a thesaurus. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *thesaurus* defines a set of synonyms for a specific language. System administrators can define two forms of synonyms: expansion sets and replacement sets. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. Thesaurus matching occurs for all [FREETEXT](~/t-sql/queries/freetext-transact-sql.md) and [FREETEXTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) queries and for any [CONTAINS](~/t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) queries that specify the FORMSOF THESAURUS clause.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], full-text queries can search for synonyms of user-specified terms through the use of a thesaurus. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *thesaurus* defines a set of synonyms for a specific language. System administrators can define two forms of synonyms: expansion sets and replacement sets. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. Thesaurus matching occurs for all [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) and [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) queries and for any [CONTAINS](/sql/t-sql/queries/contains-transact-sql) and [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) queries that specify the FORMSOF THESAURUS clause.  
   
 ##  <a name="tasks"></a> Basic Tasks for Setting Up a Thesaurus File  
  Before full-text search queries on your server instance can look for synonyms in a given language, you must define thesaurus mappings (synonyms) for that language. Each thesaurus must be manually configured to define the following:  
@@ -178,11 +178,11 @@ manager: "jhubbard"
   
  **To load an updated thesaurus file**  
   
--   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
+-   [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql)  
   
  **To view the tokenization result of a word breaker, thesaurus, and stoplist combination**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)  
+-   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
 ##  <a name="editing"></a> Editing a Thesaurus File  
@@ -223,7 +223,7 @@ manager: "jhubbard"
   
 4.  Save the file and close Notepad.  
   
-5.  Use [sp_fulltext_load_thesaurus_file](~/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) to load the content of the thesaurus file into tempdb, specifying the local identifier (LCID) that corresponds to the language of the thesaurus file. For example, for the English thesaurus file, tsenu.xml, the corresponding LCID is 1033.  
+5.  Use [sp_fulltext_load_thesaurus_file](/sql/relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql) to load the content of the thesaurus file into tempdb, specifying the local identifier (LCID) that corresponds to the language of the thesaurus file. For example, for the English thesaurus file, tsenu.xml, the corresponding LCID is 1033.  
   
     ```  
     USE AdventureWorks2012 ;  
@@ -233,10 +233,10 @@ manager: "jhubbard"
   
   
 ## See Also  
- [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md)   
- [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
- [FREETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/freetext-transact-sql.md)   
- [FREETEXTTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/freetexttable-transact-sql.md)   
+ [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+ [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
+ [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
+ [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
  [Full-Text Search](full-text-search.md)  
   
   

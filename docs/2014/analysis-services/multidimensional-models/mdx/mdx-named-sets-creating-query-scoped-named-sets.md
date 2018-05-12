@@ -77,7 +77,7 @@ FROM Sales
 ### Using Functions Together with the WITH Keyword  
  Although you can explicitly define each member of a named set, this approach can produce a lengthy statement. To make the creation and maintenance of a named set easier, you can use MDX functions to define the members.  
   
- For example, the following MDX query example uses the [Filter](~/mdx/filter-mdx.md), [CurrentMember](~/mdx/current-mdx.md), and [Name](~/mdx/members-string-mdx.md) MDX functions and the InStr VBA function to create the `[ChardonnayChablis]` named set. This version of the `[ChardonnayChablis]` named set is the same as the explicitly defined version shown previously in this topic.  
+ For example, the following MDX query example uses the [Filter](/sql/mdx/filter-mdx), [CurrentMember](/sql/mdx/current-mdx), and [Name](/sql/mdx/members-string-mdx) MDX functions and the InStr VBA function to create the `[ChardonnayChablis]` named set. This version of the `[ChardonnayChablis]` named set is the same as the explicitly defined version shown previously in this topic.  
   
 ```  
 WITH SET [ChardonnayChablis] AS  
@@ -91,7 +91,7 @@ FROM Sales
 ```  
   
 ## See Also  
- [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md)   
+ [SELECT Statement &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [Creating Session-Scoped Named Sets &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

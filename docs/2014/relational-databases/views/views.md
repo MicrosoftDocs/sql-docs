@@ -34,7 +34,7 @@ manager: "jhubbard"
  A partitioned view joins horizontally partitioned data from a set of member tables across one or more servers. This makes the data appear as if from one table. A view that joins member tables on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a local partitioned view.  
   
  System Views  
- System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the sys.databases catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views &#40;Transact-SQL&#41;](~/t-sql/language-reference.md)  
+ System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the sys.databases catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views &#40;Transact-SQL&#41;](/sql/t-sql/language-reference)  
   
 ## Common View Tasks  
  The following table provides links to common tasks associated with creating or modifying a view.  
@@ -51,6 +51,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Create Views over XML Columns](../xml/create-views-over-xml-columns.md)   
- [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md)  
+ [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)  
   
   

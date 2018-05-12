@@ -65,7 +65,7 @@ manager: "jhubbard"
   
      The preferred way to build indexes on large tables is to start with the clustered index and then build any nonclustered indexes. Consider setting the ONLINE option to ON when you create indexes on existing tables. When set to ON, long-term table locks are not held. This enables queries or updates to the underlying table to continue. For more information, see [Perform Index Operations Online](perform-index-operations-online.md).  
   
--   The index key of a clustered index cannot contain `varchar` columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a `varchar` column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail. To obtain information about tables that might contain row-overflow data, use the [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management function.  
+-   The index key of a clustered index cannot contain `varchar` columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a `varchar` column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail. To obtain information about tables that might contain row-overflow data, use the [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) dynamic management function.  
   
 ###  <a name="Security"></a> Security  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
+ For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
   
 ## See Also  
  [Create Primary Keys](../tables/create-primary-keys.md)   

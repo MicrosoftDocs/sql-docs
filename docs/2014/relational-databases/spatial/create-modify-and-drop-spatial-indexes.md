@@ -28,13 +28,13 @@ manager: "jhubbard"
  There are a number of restrictions on creating spatial indexes. For more information, see [Restrictions on Spatial Indexes](#restrictions) in this topic.  
   
 > [!NOTE]  
->  For information about the relationship of spatial indexes to partition and to filegroups, see the "Remarks" section in [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-spatial-index-transact-sql.md).  
+>  For information about the relationship of spatial indexes to partition and to filegroups, see the "Remarks" section in [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
 ##  <a name="creating"></a> Creating, Modifying, and Dropping Spatial Indexes  
   
 ###  <a name="create"></a> To create a spatial index  
  **To create a spatial index by using Transact-SQL**  
- [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-spatial-index-transact-sql.md)  
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
  **To create a spatial index by using the New Index dialog box in Management Studio**  
  ##### To create a spatial index in Management Studio  
@@ -93,10 +93,10 @@ manager: "jhubbard"
   
 ###  <a name="alter"></a> To alter a spatial index  
   
--   [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
+-   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
     > [!IMPORTANT]  
-    >  To change options that are specific to a spatial index, such as BOUNDING_BOX or GRID, you can either use a CREATE SPATIAL INDEX statement that specifies DROP_EXISTING = ON, or drop the spatial index and create a new one. For an example, see [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-spatial-index-transact-sql.md).  
+    >  To change options that are specific to a spatial index, such as BOUNDING_BOX or GRID, you can either use a CREATE SPATIAL INDEX statement that specifies DROP_EXISTING = ON, or drop the spatial index and create a new one. For an example, see [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
 -   [Modify an Index](../indexes/modify-an-index.md)  
   
@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 ###  <a name="drop"></a> To drop a spatial index  
  **To drop a spatial index by using Transact-SQL**  
- [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  
+ [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
  **To drop an index by using Management Studio**  
  [Delete an Index](../indexes/delete-an-index.md)  

@@ -41,11 +41,11 @@ WHERE Measures.[Internet Sales Amount]
 ```  
   
 > [!NOTE]  
->  This query uses the [Members (Set) (MDX)](~/mdx/members-set-mdx.md) function to return the set of members of the Gender attribute hierarchy on the column axis, and crosses this set with the specified set of members from the Customer attribute hierarchy on the row axis.  
+>  This query uses the [Members (Set) (MDX)](/sql/mdx/members-set-mdx) function to return the set of members of the Gender attribute hierarchy on the column axis, and crosses this set with the specified set of members from the Customer attribute hierarchy on the row axis.  
   
  When you execute the previous query, the cell at the intersection of Aaron A. Allen and Female displays a null. Similarly, the cell at the intersection of Abigail Clark and Male displays a null. These cells do not exist and cannot contain a value, but cells that do not exist can appear in the result returned by a query.  
   
- When you use the [Crossjoin (MDX)](~/mdx/crossjoin-mdx.md) function to return the cross-product of attribute hierarchy members from attribute hierarchies in the same dimension, auto-exists limits those tuples being returned to the set of tuples that actually exist, rather than returning a full Cartesian product. For example, run and then examine the results from the execution of the following query.  
+ When you use the [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) function to return the cross-product of attribute hierarchy members from attribute hierarchies in the same dimension, auto-exists limits those tuples being returned to the set of tuples that actually exist, rather than returning a full Cartesian product. For example, run and then examine the results from the execution of the following query.  
   
 ```  
 SELECT CROSSJOIN  
@@ -60,7 +60,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Notice that 0 is used to designate the column axis, which is shorthand for axis(0) - which is the column axis.  
   
- The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [Crossjoin (MDX)](~/mdx/crossjoin-mdx.md) function.  
+ The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) function.  
   
 ```  
 SELECT   
@@ -314,7 +314,7 @@ WHERE (Measures.[Internet Sales Amount],
  [Tuples](tuples.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Visual Totals and Non Visual Totals](visual-totals-and-non-visual-totals.md)   
- [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
- [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX Language Reference &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Multidimensional Expressions &#40;MDX&#41; Reference](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

@@ -14,7 +14,7 @@ caps.latest.revision: 14
 manager: "jhubbard"
 ---
 # Introduction to Memory-Optimized Tables
-  Memory-optimized tables are tables, created using [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md).  
+  Memory-optimized tables are tables, created using [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
   
  Memory-optimized tables reside in memory. Rows in the table are read from and written to memory. The entire table resides in memory. A second copy of the table data is maintained on disk, but only for durability purposes.  
   

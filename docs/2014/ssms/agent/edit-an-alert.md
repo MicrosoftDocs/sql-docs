@@ -78,6 +78,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_update_alert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md).  
+ For more information, see [sp_update_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql).  
   
   

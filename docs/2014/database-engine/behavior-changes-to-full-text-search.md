@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 -   A new FDHOST Launcher (MSSQLFDLauncher) service has been added. For more information, see [Get Started with Full-Text Search](../relational-databases/search/get-started-with-full-text-search.md).  
   
--   Full-text indexing works with a [FILESTREAM](../relational-databases/blob/filestream-sql-server.md) column in the same way that it does with a `varbinary(max)` column. The FILESTREAM table must have a column that contains the file name extension for each FILESTREAM BLOB. For more information, see [Query with Full-Text Search](../relational-databases/search/query-with-full-text-search.md),[Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md), and [sys.fulltext_document_types &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
+-   Full-text indexing works with a [FILESTREAM](../relational-databases/blob/filestream-sql-server.md) column in the same way that it does with a `varbinary(max)` column. The FILESTREAM table must have a column that contains the file name extension for each FILESTREAM BLOB. For more information, see [Query with Full-Text Search](../relational-databases/search/query-with-full-text-search.md),[Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md), and [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
      The full-text engine indexes the contents of the FILESTREAM BLOBs. Indexing files such as images might not be useful. When a FILESTREAM BLOB is updated it is reindexed.  
   

@@ -36,7 +36,7 @@ manager: "jhubbard"
 >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To create a database mirroring endpoint**  
@@ -77,7 +77,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
  **To View Information About the Database Mirroring Endpoint**  
   
--   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
 ## See Also  
  [Create an Availability Group &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)   

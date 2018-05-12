@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)  
   
   

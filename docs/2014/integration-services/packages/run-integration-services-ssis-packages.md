@@ -38,7 +38,7 @@ manager: "jhubbard"
 |**dtexec**<br /><br /> For more information, see [dtexec Utility](dtexec-utility.md).|Yes|Yes|Yes|  
 |**dtexecui**<br /><br /> For more information, see [Execute Package Utility &#40;DtExecUI&#41; UI Reference](execute-package-utility-dtexecui-ui-reference.md)|No|Yes|Yes|  
 |**SQL Server Agent**<br /><br /> You use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job To schedule a package.<br /><br /> For more information, see [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md).|Yes|Yes|Yes|  
-|**Built-in stored procedure**<br /><br /> For more information, see [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|Yes|No|No|  
+|**Built-in stored procedure**<br /><br /> For more information, see [catalog.start_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Yes|No|No|  
 |**Managed API, by using types and members in the** <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace|Yes|No|No|  
 |**Managed API, by using types and members in the** <xref:Microsoft.SqlServer.Dts.Runtime> namespace|Not currently|Yes|Yes|  
   

@@ -21,7 +21,7 @@ manager: "jhubbard"
  The Bike Buyer mining structure that you will create in this lesson supports adding mining models based on the [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). In later lessons, you will use the clustering mining models to explore the different ways in which customers can be grouped, and will use decision tree mining models to predict whether or not a potential customer will purchase a bicycle.  
   
 ## CREATE MINING STRUCTURE Statement  
- To create a mining structure, you use the [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
+ To create a mining structure, you use the [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx) statement. The code in the statement can be broken into the following parts:  
   
 -   Naming the structure.  
   
@@ -48,7 +48,7 @@ WITH HOLDOUT (<holdout specifier>)
 CREATE MINING STRUCTURE [<mining structure name>]  
 ```  
   
- For information about naming an object in Data Mining Extensions (DMX), see [Identifiers &#40;DMX&#41;](~/dmx/identifiers-dmx.md).  
+ For information about naming an object in Data Mining Extensions (DMX), see [Identifiers &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
   
  The next line of the code defines the key column for the mining structure, which uniquely identifies an entity in the source data:  
   

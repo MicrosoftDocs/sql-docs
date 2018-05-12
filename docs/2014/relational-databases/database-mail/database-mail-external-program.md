@@ -29,7 +29,7 @@ manager: "jhubbard"
 -   [Tasks Related to Configuring Database Mail External Program](#RelatedTasks)  
   
 ##  <a name="ComponentsAndConcepts"></a> Database Mail External Program Concepts  
- When the external program starts, the program connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Windows Authentication and begins processing e-mail messages. When there have been no messages to send for the specified time-out period, the program exits. You can configure the amount of time that the program waits before exiting by using either Database Mail Configuration Wizard or the Database Mail stored procedures. For more information, see [sysmail_configure_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md).  
+ When the external program starts, the program connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Windows Authentication and begins processing e-mail messages. When there have been no messages to send for the specified time-out period, the program exits. You can configure the amount of time that the program waits before exiting by using either Database Mail Configuration Wizard or the Database Mail stored procedures. For more information, see [sysmail_configure_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql).  
   
  The external program stores information in system tables in the **msdb** database. If the external program cannot communicate with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the program logs errors to the Microsoft Windows application event log. Additional message logging is provided when the logging level is set to **Verbose** in the **Configure System Parameters** dialog box of the **Database Mail Configuration Wizard**.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 |Configuration Task|Topic Link|  
 |------------------------|----------------|  
-|Specify the time that the External Program before exiting.|[sysmail_configure_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|  
+|Specify the time that the External Program before exiting.|[sysmail_configure_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)|  
   
 ## See Also  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   

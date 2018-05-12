@@ -92,6 +92,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-application-role-transact-sql.md).  
+ For more information, see [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-application-role-transact-sql).  
   
   

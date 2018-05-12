@@ -333,9 +333,9 @@ GO
  This statement produces a result of `10.3496`, which indicates that the value is stored with all decimal places intact.  
   
 ## See Also  
- [Comment &#40;MDX&#41;](~/mdx/comment-mdx.md)   
- [-- &#40;Comment&#41; &#40;MDX&#41;](~/mdx/comment-mdx.md)   
- [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](~/t-sql/language-elements/raiserror-transact-sql.md)  
+ [Comment &#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)   
+ [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   
   

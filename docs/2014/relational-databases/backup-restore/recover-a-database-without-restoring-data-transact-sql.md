@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   The database is in standby mode, and you want to make the database updatable without applying another log backup.  
   
- The [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) syntax for a recovery-only database restore is as follows:  
+ The [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) syntax for a recovery-only database restore is as follows:  
   
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
@@ -59,7 +59,7 @@ RESTORE DATABASE AdventureWorks2012
   
  A recovery-only restore operation brings the data in the offline filegroup online; no data-copy, redo, or undo phase occurs. For information about the phases of restore, see [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md).  
   
- The [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) syntax for a recovery-only file restore is:  
+ The [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) syntax for a recovery-only file restore is:  
   
  RESTORE DATABASE *database_name* { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* }[ **,**...*n* ] WITH RECOVERY  
   
@@ -91,6 +91,6 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)   
  [File Restores &#40;Full Recovery Model&#41;](file-restores-full-recovery-model.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -31,7 +31,7 @@ manager: "jhubbard"
 ## Built-in Function Determinism  
  You cannot influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query does not change the determinism of a function that used in that query.  
   
- All of the string built-in functions are deterministic. For a list of these functions, see [String Functions &#40;Transact-SQL&#41;](~/t-sql/functions/string-functions-transact-sql.md).  
+ All of the string built-in functions are deterministic. For a list of these functions, see [String Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql).  
   
  The following built-in functions from categories of built-in functions other than string functions are always deterministic.  
   
@@ -53,14 +53,14 @@ manager: "jhubbard"
   
 |Function|Comments|  
 |--------------|--------------|  
-|all aggregate functions|All aggregate functions are deterministic unless they are specified with the OVER and ORDER BY clauses. For a list of these functions, see [Aggregate Functions &#40;Transact-SQL&#41;](~/t-sql/functions/aggregate-functions-transact-sql.md).|  
+|all aggregate functions|All aggregate functions are deterministic unless they are specified with the OVER and ORDER BY clauses. For a list of these functions, see [Aggregate Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql).|  
 |CAST|Deterministic unless used with `datetime`, `smalldatetime`, or `sql_variant`.|  
 |CONVERT|Deterministic unless one of these conditions exists:<br /><br /> Source type is `sql_variant`.<br /><br /> Target type is `sql_variant` and its source type is nondeterministic.<br /><br /> Source or target type is `datetime` or `smalldatetime`, the other source or target type is a character string, and a nondeterministic style is specified. To be deterministic, the style parameter must be a constant. Additionally, styles less than or equal to 100 are nondeterministic, except for styles 20 and 21. Styles greater than 100 are deterministic, except for styles 106, 107, 109 and 113.|  
 |CHECKSUM|Deterministic, with the exception of CHECKSUM(*).|  
 |ISDATE|Deterministic only if used with the CONVERT function, the CONVERT style parameter is specified and style is not equal to 0, 100, 9, or 109.|  
 |RAND|RAND is deterministic only when a *seed* parameter is specified.|  
   
- All the configuration, cursor, metadata, security, and system statistical functions are nondeterministic. For a list of these functions, see [Configuration Functions &#40;Transact-SQL&#41;](~/t-sql/functions/configuration-functions-transact-sql.md), [Cursor Functions &#40;Transact-SQL&#41;](~/t-sql/functions/cursor-functions-transact-sql.md), [Metadata Functions &#40;Transact-SQL&#41;](~/t-sql/functions/metadata-functions-transact-sql.md), [Security Functions &#40;Transact-SQL&#41;](~/t-sql/functions/security-functions-transact-sql.md), and [System Statistical Functions &#40;Transact-SQL&#41;](~/t-sql/functions/system-statistical-functions-transact-sql.md).  
+ All the configuration, cursor, metadata, security, and system statistical functions are nondeterministic. For a list of these functions, see [Configuration Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/configuration-functions-transact-sql), [Cursor Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/cursor-functions-transact-sql), [Metadata Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/metadata-functions-transact-sql), [Security Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql), and [System Statistical Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/system-statistical-functions-transact-sql).  
   
  The following built-in functions from other categories are always nondeterministic.  
   

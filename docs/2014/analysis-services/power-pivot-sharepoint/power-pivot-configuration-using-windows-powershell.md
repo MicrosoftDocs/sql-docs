@@ -25,7 +25,7 @@ manager: "mblythe"
  You can build Windows PowerShell script (.ps1) files to automate configuration tasks. This approach is recommended if you require scripted installation and configuration steps that you can run on any server. You might require such a script as part of a disaster recovery plan for rebuilding a server in the event of a hardware failure.  
   
 ## View a list of the PowerPivot Cmdlets on a Server  
- To see content and examples of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlets, see [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).  
+ To see content and examples of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlets, see [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
  To use PowerShell to view a list of the PowerPivot cmdlets:  
   
@@ -83,6 +83,6 @@ manager: "mblythe"
   
  [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
- [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
+ [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
   

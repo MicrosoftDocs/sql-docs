@@ -34,7 +34,7 @@ manager: "jhubbard"
  When this check box is selected, queries that concatenate an existing value with a NULL, always return a NULL as the result. When this check box is cleared, an existing value concatenated with a NULL, returns the existing value. This check box is selected by default.  
   
  **SET ARITHABORT**  
- When this check box is selected, when an INSERT, DELETE, or UPDATE statement encounters an arithmetic error (overflow, divide-by-zero, or a domain error) during expression evaluation the query or batch is terminated. When this check box is cleared, a NULL is provided for that value if possible, the query continues, and a message is included with the result. For more information, see [SET ARITHABORT &#40;Transact-SQL&#41;](~/t-sql/statements/set-arithabort-transact-sql.md). This check box is selected by default.  
+ When this check box is selected, when an INSERT, DELETE, or UPDATE statement encounters an arithmetic error (overflow, divide-by-zero, or a domain error) during expression evaluation the query or batch is terminated. When this check box is cleared, a NULL is provided for that value if possible, the query continues, and a message is included with the result. For more information, see [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql). This check box is selected by default.  
   
  **SET SHOWPLAN_TEXT**  
  When this check box is selected, the query plan is returned in text format with each query. This check box cleared by default.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
  When this check box is selected, statistics regarding input and output are returned with each query. This check box is cleared by default.  
   
  **SET TRANSACTION ISOLATION LEVEL**  
- The READ COMMITTED transaction isolation level is set by default. For more information, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md). SNAPSHOT transaction isolation level is not available. To use SNAPSHOT isolation, add the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
+ The READ COMMITTED transaction isolation level is set by default. For more information, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql). SNAPSHOT transaction isolation level is not available. To use SNAPSHOT isolation, add the following [!INCLUDE[tsql](../includes/tsql-md.md)] statement:  
   
 ```  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

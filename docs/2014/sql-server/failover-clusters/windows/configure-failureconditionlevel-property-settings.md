@@ -78,7 +78,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To configure FailureConditionLevel property settings:**  
   
- Using the [ALTER SERVER CONFIGURATION](~/t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement, you can specify the FailureConditionLevel property value.  
+ Using the [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement, you can specify the FailureConditionLevel property value.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example sets the FailureConditionLevel property to 0, indicating that failover or restart will not be triggered automatically on any failure conditions.  
@@ -88,7 +88,7 @@ ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel =
 ```  
   
 ## See Also  
- [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)   
+ [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)   
  [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
   
   

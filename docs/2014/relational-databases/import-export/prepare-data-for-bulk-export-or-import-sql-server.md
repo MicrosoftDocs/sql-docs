@@ -65,7 +65,7 @@ manager: "jhubbard"
   
      To bulk import data from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro or Visual FoxPro table (.dbf) file or a [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] worksheet (.xls) file, you would need to convert the data into a CSV file that complies to the preceding restrictions. The file extension will typically be .csv. You can then use the .csv file as a data file in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-import operation.  
   
-     On 32-bit systems, it is possible to import CSV data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table without bulk-import optimizations by using [OPENROWSET](~/t-sql/functions/openrowset-transact-sql.md) with the OLE DB Provider for Jet. Jet treats text files as tables, with the schema defined by a schema.ini file that is located in the same directory as the data source.  For a CSV data, one of the parameters in the schema.ini file would be "FORMAT=CSVDelimited". To use this solution, you would need to understand how the Jet Test IISAMm operations—its connection string syntax, schema.ini usage, registry setting options, and so on).  The best sources of this information are Microsoft Access Help and Knowledge Base (KB) articles. For more information, see [Initializing the Text Data Source Driver](http://go.microsoft.com/fwlink/?LinkId=128503), [How To Use a SQL Server 7.0 Distributed Query with a Linked Server to Secured Access Databases](http://go.microsoft.com/fwlink/?LinkId=128504), [HOW TO: Use Jet OLE DB Provider 4.0 to Connect to ISAM Databases](http://go.microsoft.com/fwlink/?LinkId=128505), and [How To Open Delimited Text Files Using the Jet Provider's Text IIsam](http://go.microsoft.com/fwlink/?LinkId=128501).  
+     On 32-bit systems, it is possible to import CSV data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table without bulk-import optimizations by using [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) with the OLE DB Provider for Jet. Jet treats text files as tables, with the schema defined by a schema.ini file that is located in the same directory as the data source.  For a CSV data, one of the parameters in the schema.ini file would be "FORMAT=CSVDelimited". To use this solution, you would need to understand how the Jet Test IISAMm operations—its connection string syntax, schema.ini usage, registry setting options, and so on).  The best sources of this information are Microsoft Access Help and Knowledge Base (KB) articles. For more information, see [Initializing the Text Data Source Driver](http://go.microsoft.com/fwlink/?LinkId=128503), [How To Use a SQL Server 7.0 Distributed Query with a Linked Server to Secured Access Databases](http://go.microsoft.com/fwlink/?LinkId=128504), [HOW TO: Use Jet OLE DB Provider 4.0 to Connect to ISAM Databases](http://go.microsoft.com/fwlink/?LinkId=128505), and [How To Open Delimited Text Files Using the Jet Provider's Text IIsam](http://go.microsoft.com/fwlink/?LinkId=128501).  
   
  In addition, the bulk import of data from a data file into a table requires the following:  
   
@@ -87,8 +87,8 @@ manager: "jhubbard"
   
 ## See Also  
  [bcp Utility](../../tools/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
+ [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [Use Character Format to Import or Export Data &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)   
  [Use Native Format to Import or Export Data &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   

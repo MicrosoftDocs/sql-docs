@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the secondary replica.  
   
-2.  Use the [SET HADR clause of the ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-hadr.md) statement, as follows:  
+2.  Use the [SET HADR clause of the ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) statement, as follows:  
   
      ALTER DATABASE *database_name* SET HADR OFF  
   
@@ -120,7 +120,7 @@ manager: "jhubbard"
   
 -   If you no longer need the secondary database, you can drop it.  
   
-     For more information, see [DROP DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-audit-specification-transact-sql.md) or [Delete a Database](../../../relational-databases/databases/delete-a-database.md).  
+     For more information, see [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) or [Delete a Database](../../../relational-databases/databases/delete-a-database.md).  
   
 -   If you want to access a removed secondary database after it has been removed from the availability group, you can recover the database. However, if you recover a removed secondary database, two divergent, independent databases that have the same name are online. You must make sure that clients can access only the current primary database.  
   

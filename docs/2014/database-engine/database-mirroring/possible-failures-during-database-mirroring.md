@@ -96,11 +96,11 @@ manager: "jhubbard"
   
  **To change the time-out value (high-safety mode only)**  
   
--   Use the [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](~/t-sql/statements/alter-database-transact-sql.md) statement.  
+-   Use the [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](/sql/t-sql/statements/alter-database-transact-sql) statement.  
   
  **To view the current time-out value**  
   
--   Query **mirroring_connection_timeout** in [sys.database_mirroring](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
+-   Query **mirroring_connection_timeout** in [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
 ## Responding to an Error  
  Regardless of the type of error, a server instance that detects an error responds appropriately based on the role of the instance, the operating mode of the session, and the state of any other connection in the session. For information about what occurs on the loss of a partner, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  

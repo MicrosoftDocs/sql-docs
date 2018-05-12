@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Integer|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
 |String|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
   
- Rest of the SQL Server data types are not supported in DQS. For information about all the SQL Server data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
+ Rest of the SQL Server data types are not supported in DQS. For information about all the SQL Server data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
 ##  <a name="SSIS"></a> Supported SSIS Data Types  
  The following table provides information about the SSIS data types supported for each DQS domain data type:  

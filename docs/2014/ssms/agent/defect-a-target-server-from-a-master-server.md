@@ -69,7 +69,7 @@ manager: "jhubbard"
 sp_msx_defect ;  
 ```  
   
- For more information, see [sp_msx_defect &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md).  
+ For more information, see [sp_msx_defect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server Management Objects (SMO)  
  Use the `MsxDefect Method`.  

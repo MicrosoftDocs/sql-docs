@@ -37,7 +37,7 @@ manager: "jhubbard"
  Rebuild the index by using ALTER INDEX.  
   
 ## See Also  
- [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Reorganize and Rebuild Indexes](../indexes/indexes.md)  
   
   

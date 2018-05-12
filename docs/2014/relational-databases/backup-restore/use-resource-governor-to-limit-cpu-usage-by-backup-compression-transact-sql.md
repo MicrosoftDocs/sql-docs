@@ -50,13 +50,13 @@ manager: "jhubbard"
   
     -   [Create a Login](../security/authentication-access/create-a-login.md)  
   
-    -   [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)  
+    -   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
 2.  Optionally, grant VIEW SERVER STATE to this login.  
   
-    -   [GRANT System Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-system-object-permissions-transact-sql.md)  
+    -   [GRANT System Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql)  
   
-     For more information, see [GRANT Database Principal Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
+     For more information, see [GRANT Database Principal Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql).  
   
 3.  Create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user for this login.  
   
@@ -64,15 +64,15 @@ manager: "jhubbard"
   
     -   [Create a Database User](../security/authentication-access/create-a-database-user.md)  
   
-    -   [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md)  
+    -   [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  
   
 4.  To enable sessions of this login and user to back up a given database, add the user to the db_backupoperator database role of that database. Do this for each database that this user will back up. Optionally, add the user to other fixed database roles.  
   
      **To add a user to a fixed database role**  
   
-    -   [sp_addrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
+    -   [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)  
   
-     For more information, see [GRANT Database Principal Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
+     For more information, see [GRANT Database Principal Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql).  
   
 ### Example A: Setting Up a Login and User (Transact-SQL)  
  The following example is relevant only if you choose to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login and user for low-priority backups. Alternatively, you can use an existing login and user, if an appropriate one exists.  
@@ -130,17 +130,17 @@ GO
   
 ### To configure Resource Governor for limiting CPU usage (Transact-SQL)  
   
-1.  Issue a [CREATE RESOURCE POOL](~/t-sql/statements/create-resource-pool-transact-sql.md) statement to create a resource pool. The example for this procedure uses the following syntax:  
+1.  Issue a [CREATE RESOURCE POOL](/sql/t-sql/statements/create-resource-pool-transact-sql) statement to create a resource pool. The example for this procedure uses the following syntax:  
   
      *CREATE RESOURCE POOL pool_name* WITH ( MAX_CPU_PERCENT = *value* );  
   
      *Value* is an integer from 1 to 100 that indicates the percentage of maximum average CPU bandwidth. The appropriate value depends on your environment. For the purpose of illustration, the example in this topic uses 20%  percent (MAX_CPU_PERCENT = 20.)  
   
-2.  Issue a [CREATE WORKLOAD GROUP](~/t-sql/statements/create-workload-group-transact-sql.md) statement to create a workload group for low-priority operations whose CPU usage you want to govern. The example for this procedure uses the following syntax:  
+2.  Issue a [CREATE WORKLOAD GROUP](/sql/t-sql/statements/create-workload-group-transact-sql) statement to create a workload group for low-priority operations whose CPU usage you want to govern. The example for this procedure uses the following syntax:  
   
      CREATE WORKLOAD GROUP *group_name* USING *pool_name*;  
   
-3.  Issue a [CREATE FUNCTION](~/t-sql/statements/create-function-transact-sql.md) statement to create a classifier function that maps the workload group created in the preceding step to the user of the low-priority login. The example for this procedure uses the following syntax:  
+3.  Issue a [CREATE FUNCTION](/sql/t-sql/statements/create-function-transact-sql) statement to create a classifier function that maps the workload group created in the preceding step to the user of the low-priority login. The example for this procedure uses the following syntax:  
   
      CREATE FUNCTION [*schema_name*.]*function_name*() RETURNS sysname  
   
@@ -162,16 +162,16 @@ GO
   
      For information about the components of this CREATE FUNCTION statement, see:  
   
-    -   [DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md)  
+    -   [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  
   
-    -   [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md)  
+    -   [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql)  
   
         > [!IMPORTANT]  
         >  SUSER_NAME is just one of several system functions that can be used in a classifier function. For more information, see [Create and Test a Classifier User-Defined Function](../resource-governor/create-and-test-a-classifier-user-defined-function.md).  
   
-    -   [SET @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/set-local-variable-transact-sql.md).  
+    -   [SET @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql).  
   
-4.  Issue an [ALTER RESOURCE GOVERNOR](~/t-sql/statements/alter-resource-governor-transact-sql.md) statement to register the classifier function with Resource Governor. The example for this procedure uses the following syntax:  
+4.  Issue an [ALTER RESOURCE GOVERNOR](/sql/t-sql/statements/alter-resource-governor-transact-sql) statement to register the classifier function with Resource Governor. The example for this procedure uses the following syntax:  
   
      ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = *schema_name*.*function_name*);  
   
@@ -237,7 +237,7 @@ GO
  [&#91;Top&#93;](#Top)  
   
 ##  <a name="verifying"></a> Verifying the Classification of the Current Session (Transact-SQL)  
- Optionally, log in as the user that you specified in your classifier function, and verify the session classification by issuing the following [SELECT](~/t-sql/queries/select-transact-sql.md) statement in Object Explorer:  
+ Optionally, log in as the user that you specified in your classifier function, and verify the session classification by issuing the following [SELECT](/sql/t-sql/queries/select-transact-sql) statement in Object Explorer:  
   
 ```tsql  
 USE master;  
@@ -252,7 +252,7 @@ GO
  In the results pane, the **name** column should list one or more sessions for the workload-group name that you specified in your classifier function.  
   
 > [!NOTE]  
->  For information about the dynamic management views called by this SELECT statement, see [sys.dm_exec_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) and [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
+>  For information about the dynamic management views called by this SELECT statement, see [sys.dm_exec_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) and [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql).  
   
  [&#91;Top&#93;](#Top)  
   
@@ -260,7 +260,7 @@ GO
  To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) or select **Compress backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ### Example C: Creating a Compressed Backup (Transact-SQL)  
- The following [BACKUP](~/t-sql/statements/backup-transact-sql.md) example creates a compressed full backup of the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database in a newly formatted backup file, `Z:\SQLServerBackups\AdvWorksData.bak`.  
+ The following [BACKUP](/sql/t-sql/statements/backup-transact-sql) example creates a compressed full backup of the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database in a newly formatted backup file, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```tsql  
 --Run backup statement in the gBackup session.  

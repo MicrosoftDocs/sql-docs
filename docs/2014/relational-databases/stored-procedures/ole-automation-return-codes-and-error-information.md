@@ -111,6 +111,6 @@ GO
 ```  
   
 ## Related Content  
- [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
+ [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql)  
   
   

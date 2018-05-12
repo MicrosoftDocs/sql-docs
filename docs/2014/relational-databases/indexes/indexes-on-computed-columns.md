@@ -41,7 +41,7 @@ manager: "jhubbard"
  **Determinism Requirements**  
   
 > [!IMPORTANT]  
->  Expressions are deterministic if they always return the same result for a specified set of inputs. The **IsDeterministic** property of the [COLUMNPROPERTY](~/t-sql/functions/columnproperty-transact-sql.md) function reports whether a *computed_column_expression* is deterministic.  
+>  Expressions are deterministic if they always return the same result for a specified set of inputs. The **IsDeterministic** property of the [COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql) function reports whether a *computed_column_expression* is deterministic.  
   
  The *computed_column_expression* must be deterministic. A *computed_column_expression* is deterministic when one or more of the following is true:  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
  Any computed column that contains a common language runtime (CLR) expression must be deterministic and marked PERSISTED before the column can be indexed. CLR user-defined type expressions are allowed in computed column definitions. Computed columns whose type is a CLR user-defined type can be indexed as long as the type is comparable. For more information, see [CLR User-Defined Types](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 > [!NOTE]  
->  When you refer to string literals of the date data type in indexed computed columns in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], we recommend that you explicitly convert the literal to the date type that you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT](~/t-sql/functions/cast-and-convert-transact-sql.md). Expressions that involve implicit conversion of character strings to date data types are considered nondeterministic, unless the database compatibility level is set to 80 or earlier. This is because the results depend on the [LANGUAGE](~/t-sql/statements/set-language-transact-sql.md) and [DATEFORMAT](~/t-sql/statements/set-dateformat-transact-sql.md) settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`30 listopad 1996`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting.  
+>  When you refer to string literals of the date data type in indexed computed columns in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], we recommend that you explicitly convert the literal to the date type that you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressions that involve implicit conversion of character strings to date data types are considered nondeterministic, unless the database compatibility level is set to 80 or earlier. This is because the results depend on the [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) and [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`30 listopad 1996`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting.  
 >   
 >  Implicit conversion of non-Unicode character data between collations is also considered nondeterministic, unless the compatibility level is set to 80 or earlier.  
 >   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
  **SET Option Requirements**  
   
--   The ANSI_NULLS connection-level option must be set to ON when the CREATE TABLE or ALTER TABLE statement that defines the computed column is executed. The [OBJECTPROPERTY](~/t-sql/functions/objectpropertyex-transact-sql.md) function reports whether the option is on through the **IsAnsiNullsOn** property.  
+-   The ANSI_NULLS connection-level option must be set to ON when the CREATE TABLE or ALTER TABLE statement that defines the computed column is executed. The [OBJECTPROPERTY](/sql/t-sql/functions/objectpropertyex-transact-sql) function reports whether the option is on through the **IsAnsiNullsOn** property.  
   
 -   The connection on which the index is created, and all connections trying INSERT, UPDATE, or DELETE statements that will change values in the index, must have six SET options set to ON and one option set to OFF. The optimizer ignores an index on a computed column for any SELECT statement executed by a connection that does not have these same option settings.  
   
@@ -118,6 +118,6 @@ manager: "jhubbard"
  You can create an index on a computed column that is defined with a deterministic, but imprecise, expression if the column is marked PERSISTED in the CREATE TABLE or ALTER TABLE statement. This means that the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] uses these persisted values when it creates an index on the column, and when the index is referenced in a query. This option enables you to create an index on a computed column when [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], is both deterministic and precise.  
   
 ## Related Content  
- [COLUMNPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/columnproperty-transact-sql.md)  
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  
   
   

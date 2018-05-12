@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  Notifications are sent only once. For continuous notification of data change, a new subscription must be created by re-executing the query after each notification is processed.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applications typically receive notifications by using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](~/t-sql/statements/receive-transact-sql.md) command to read notifications from the queue associated with the service specified in the notification options.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applications typically receive notifications by using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](/sql/t-sql/statements/receive-transact-sql) command to read notifications from the queue associated with the service specified in the notification options.  
   
 > [!NOTE]  
 >  Table names must be qualified in queries for which notification is required, for example, `dbo.myTable`. Table names must be qualified with two part names. Subscription is invalid if three- or four-part names are used.  

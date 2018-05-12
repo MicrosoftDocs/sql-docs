@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view for non-NULL values.  
+3.  To list the database snapshots of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], query the **source_database_id** column of the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view for non-NULL values.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

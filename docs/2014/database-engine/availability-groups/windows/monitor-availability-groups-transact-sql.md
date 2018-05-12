@@ -36,7 +36,7 @@ manager: "jhubbard"
 ##  <a name="AoAgFeatureOnSI"></a> Monitoring the AlwaysOn Availability Groups Feature on a Server Instance  
  To monitor the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on a server instance, use the following built-in function:  
   
- [SERVERPROPERTY](~/t-sql/functions/serverproperty-transact-sql.md) function  
+ [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) function  
  Returns server property information about whether [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is enabled and, if so, whether it has started on the server instance.  
   
  **Column names:** IsHadrEnabled, HadrManagerStatus  
@@ -44,24 +44,24 @@ manager: "jhubbard"
 ##  <a name="WSFC"></a> Monitoring Availability Groups on the WSFC Cluster  
  To monitor the Windows Server Failover Clustering (WSFC) cluster that hosts a local server instance that is enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], use the following views:  
   
- [sys.dm_hadr_cluster](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
+ [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql)  
  If the Windows Server Failover Clustering (WSFC) node that hosts an instance of SQL Server with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] enabled has WSFC quorum, **sys.dm_hadr_cluster** returns a row that exposes the cluster name and information about the quorum. If the WSFC node has no quorum, no rows are returned.  
   
  **Column names:** cluster_name, quorum_type, quorum_type_desc, quorum_state, quorum_state_desc  
   
- [sys.dm_hadr_cluster_members](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
+ [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)  
  If the WSFC node that hosts the local AlwaysOn-enabled instance of SQL Server has WSFC quorum, returns a row for each of the members that constitute the quorum and the state of each of them.  
   
  **Column names:** member_name, member_type, member_type_desc, member_state, member_state_desc, number_of_quorum_votes  
   
- [sys.dm_hadr_cluster_networks](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
+ [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
  Returns a row for every member that is participating in an availability group's subnet configuration. You can use this dynamic management view to validate the network virtual IP that is configured for each availability replica.  
   
  **Column names:** member_name, network_subnet_ip, network_subnet_ipv4_mask, network_subnet_prefix_length, is_public, is_ipv4  
   
  **Primary key:** member_name + network_subnet_IP + network_subnet_prefix_length  
   
- [sys.dm_hadr_instance_node_map](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql.md)  
+ [sys.dm_hadr_instance_node_map](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql)  
  For every instance of SQL Server that hosts an availability replica that is joined to its AlwaysOn availability group, returns the name of the Windows Server Failover Clustering (WSFC) node that hosts the server instance. This dynamic management view has the following uses:  
   
 -   This dynamic management view is useful for detecting an availability group with multiple availability replicas that are hosted on the same WSFC node, which is an unsupported configuration that could occur after an FCI failover if the availability group is incorrectly configured.  
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
  **Column names:** ag_resource_id, instance_name, node_name  
   
- [sys.dm_hadr_name_id_map](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md)  
+ [sys.dm_hadr_name_id_map](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql)  
  Shows the mapping of AlwaysOn availability groups that the current instance of SQL Server has joined to three unique IDs: an availability group ID, a WSFC resource ID, and a WSFC Group ID. The purpose of this mapping is to handle the scenario in which the WSFC resource/group is renamed.  
   
  **Column names:** ag_name, ag_id, ag_resource_id, ag_group_id  
@@ -83,17 +83,17 @@ manager: "jhubbard"
 ##  <a name="AvGroups"></a> Monitoring Availability Groups  
  To monitor the availability groups for which the server instance hosts an availability replica, use the following views:  
   
- [sys.availability_groups](~/relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
+ [sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)  
  Returns a row for each availability group for which the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hosts an availability replica. Each row contains a cached copy of the availability group metadata.  
   
  **Column names:** group_id, name, resource_id, resource_group_id, failure_condition_level, health_check_timeout, automated_backup_preference, automated_backup_preference_desc  
   
- [sys.availability_groups_cluster](~/relational-databases/system-catalog-views/sys-availability-groups-cluster-transact-sql.md)  
+ [sys.availability_groups_cluster](/sql/relational-databases/system-catalog-views/sys-availability-groups-cluster-transact-sql)  
  Returns a row for each availability group in the WSFC cluster. Each row contains the availability group metadata from the Windows Server Failover Clustering (WSFC) cluster.  
   
  **Column names:** group_id, name, resource_id, resource_group_id, failure_condition_level, health_check_timeout, automated_backup_preference, automated_backup_preference_desc  
   
- [sys.dm_hadr_availability_group_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)  
+ [sys.dm_hadr_availability_group_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql)  
  Returns a row for each availability group that possesses an availability replica on the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Each row displays the states that define the health of a given availability group.  
   
  **Column names:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
@@ -101,32 +101,32 @@ manager: "jhubbard"
 ##  <a name="AvReplicas"></a> Monitoring Availability Replicas  
  To monitor availability replicas, use the following views and system function:  
   
- [sys.availability_replicas](~/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
+ [sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)  
  Returns a row for every availability replica in each availability group for which the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hosts an availability replica.  
   
  **Column names:** replica_id, group_id, replica_metadata_id, replica_server_name, owner_sid, endpoint_url, availability_mode, availability_mode_desc, failover_mode, failover_mode_desc, session_timeout, primary_role_allow_connections, primary_role_allow_connections_desc, secondary_role_allow_connections, secondary_role_allow_connections_desc, create_date, modify_date, backup_priority, read_only_routing_url  
   
- [sys.availability_read_only_routing_lists](~/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  
+ [sys.availability_read_only_routing_lists](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)  
  Returns a row for the read only routing list of each availability replica in an AlwaysOn availability group in the WSFC failover cluster.  
   
  **Column names:** replica_id, routing_priority, read_only_replica_id  
   
- [sys.dm_hadr_availability_replica_cluster_nodes](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql)  
  Returns a row for every availability replica (regardless of join state) of the AlwaysOn availability groups in the Windows Server Failover Clustering (WSFC) cluster.  
   
  **Column names:** group_name, replica_server_name, node_name  
   
- [sys.dm_hadr_availability_replica_cluster_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
  Returns a row for each replica (regardless of join state) of all AlwaysOn availability groups (regardless of replica location) in the Windows Server Failover Clustering (WSFC) cluster.  
   
  **Column names:** replica_id, replica_server_name, group_id, join_state, join_state_desc  
   
- [sys.dm_hadr_availability_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
  Returns a row showing the state of each local availability replica and a row for each remote availability replica in the same availability group.  
   
  **Column names:** replica_id, group_id, is_local, role, role_desc, operational_state, operational_state_desc, connected_state, connected_state_desc, recovery_health, recovery_health_desc, synchronization_health, synchronization_health_desc, last_connect_error_number, last_connect_error_description, and last_connect_error_timestamp  
   
- [sys.fn_hadr_backup_is_preferred_replica](~/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)  
+ [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)  
  Determines whether the current replica is the preferred backup replica.  
   
 > [!NOTE]  
@@ -135,7 +135,7 @@ manager: "jhubbard"
 ##  <a name="AvDbs"></a> Monitoring Availability Databases  
  To monitor availability databases, use the following views:  
   
- [sys.availability_databases_cluster](~/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
+ [sys.availability_databases_cluster](/sql/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql)  
  Contains one row for each database on the instance of SQL Server that are part of all AlwaysOn Availability Groups in the cluster, regardless of whether the local copy database has been joined to the availability group yet.  
   
 > [!NOTE]  
@@ -143,22 +143,22 @@ manager: "jhubbard"
   
  **Column names:** group_id, group_database_id, database_name  
   
- [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+ [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  Contains one row per database in the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If a database belongs to an availability replica, the row for that database displays the GUID of the replica and the unique identifier of the database within its availability group.  
   
  **[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] column names:** replica_id, group_database_id  
   
- [sys.dm_hadr_auto_page_repair](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)  
+ [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  Returns a row for every automatic page-repair attempt on any availability database on an availability replica that is hosted for any availability group by the server instance. This view contains rows for the latest automatic page-repair attempts on a given primary or secondary database, with a maximum of 100 rows per database. As soon as a database reaches the maximum, the row for its next automatic page-repair attempt replaces one of the existing entries.  
   
  **Column names:** database_id, file_id, page_id, error_type, page_status, modification_time  
   
- [sys.dm_hadr_database_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)  
  Returns a row for each database that is participating in any availability group for which the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is hosting an availability replica.  
   
  **Column names:** database_id, group_id, replica_id, group_database_id, is_local, synchronization_state, synchronization_state_desc, is_commit_participant, synchronization_health, synchronization_health_desc, database_state, database_state_desc, is_suspended, suspend_reason, suspend_reason_desc, recovery_lsn, truncation_lsn, last_sent_lsn, last_sent_time, last_received_lsn, last_received_time, last_hardened_lsn, last_hardened_time, last_redone_lsn, last_redone_time, log_send_queue_size, log_send_rate, redo_queue_size, redo_rate, filestream_send_rate, end_of_log_lsn, last_commit_lsn, last_commit_time, low_water_mark_for_ghosts  
   
- [sys.dm_hadr_database_replica_cluster_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)  
+ [sys.dm_hadr_database_replica_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql)  
  Returns a row containing information intended to provide you with insight into the health of the availability databases in each availability group on the Windows Server Failover Clustering (WSFC) cluster. This dynamic management view is useful when planning or responding to a failover or for discovering which secondary replica in an availability group is holding up log truncation on a given primary database.  
   
  **Column names:** replica_id, group_database_id, database_name, is_failover_ready, is_pending_secondary_suspend, is_database_joined, recovery_lsn, truncation_lsn  
@@ -172,17 +172,17 @@ manager: "jhubbard"
 ##  <a name="AGlisteners"></a> Monitoring Availability Group Listeners  
  To monitor the availability group listeners on subnets of the WSFC cluster, use the following views:  
   
- [sys.availability_group_listener_ip_addresses](~/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
+ [sys.availability_group_listener_ip_addresses](/sql/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql)  
  Returns a row for every conformant virtual IP address that is currently online for an availability group listener.  
   
  **Column names:** listener_id, ip_address, ip_subnet_mask, is_dhcp, network_subnet_ip, network_subnet_prefix_length, network_subnet_ipv4_mask, state, state_desc  
   
- [sys.availability_group_listeners](~/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql.md)  
+ [sys.availability_group_listeners](/sql/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql)  
  For a given availability group, returns either zero rows indicating that no network name is associated with the availability group, or returns a row for each availability-group listener configuration in the WSFC cluster.  
   
  **Column names:** group_id, listener_id, dns_name, port, is_conformant, ip_configuration_string_from_cluster  
   
- [sys.dm_tcp_listener_states](~/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)  
+ [sys.dm_tcp_listener_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)  
  Returns a row containing dynamic-state information for each TCP listener.  
   
  **Column names:** listener_id, ip_address, is_ipv4, port, type, type_desc, state, state_desc, start_time  
@@ -204,57 +204,57 @@ manager: "jhubbard"
   
  **AlwaysOn Availability Groups monitoring reference (Transact-SQL):**  
   
--   [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)  
+-   [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  
   
--   [sys.availability_group_listener_ip_addresses &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
+-   [sys.availability_group_listener_ip_addresses &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql)  
   
--   [sys.availability_group_listeners &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql.md)  
+-   [sys.availability_group_listeners &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql)  
   
--   [sys.availability_databases_cluster &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
+-   [sys.availability_databases_cluster &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql)  
   
--   [sys.availability_groups &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
+-   [sys.availability_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)  
   
--   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  
+-   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)  
   
--   [sys.availability_replicas &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
+-   [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)  
   
--   [sys.dm_hadr_availability_replica_cluster_nodes &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql.md)  
+-   [sys.dm_hadr_availability_replica_cluster_nodes &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql)  
   
--   [sys.dm_hadr_availability_replica_cluster_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md)  
+-   [sys.dm_hadr_availability_replica_cluster_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
   
--   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
+-   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
--   [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)  
+-   [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
   
--   [sys.dm_hadr_availability_group_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)  
+-   [sys.dm_hadr_availability_group_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql)  
   
--   [sys.dm_hadr_availability_replica_cluster_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md)  
+-   [sys.dm_hadr_availability_replica_cluster_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
   
--   [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)  
+-   [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
   
--   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+-   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)  
   
--   [sys.dm_hadr_database_replica_cluster_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)  
+-   [sys.dm_hadr_database_replica_cluster_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql)  
   
--   [sys.dm_hadr_cluster &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
+-   [sys.dm_hadr_cluster &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql)  
   
--   [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
+-   [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)  
   
--   [sys.dm_hadr_cluster_networks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
+-   [sys.dm_hadr_cluster_networks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
   
--   [sys.dm_hadr_database_replica_cluster_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)  
+-   [sys.dm_hadr_database_replica_cluster_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql)  
   
--   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+-   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)  
   
--   [sys.dm_hadr_instance_node_map &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql.md)  
+-   [sys.dm_hadr_instance_node_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql)  
   
--   [sys.dm_hadr_name_id_map &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md)  
+-   [sys.dm_hadr_name_id_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql)  
   
--   [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
+-   [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
--   [sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)  
+-   [sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)  
   
--   [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)  
+-   [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)  
   
  **AlwaysOn performance counters:**  
   

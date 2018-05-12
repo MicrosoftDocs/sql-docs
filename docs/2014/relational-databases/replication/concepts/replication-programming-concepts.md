@@ -107,7 +107,7 @@ manager: "jhubbard"
 |[Replication Management Objects Concepts](replication-management-objects-concepts.md)|Managed code|Administration, monitoring, and synchronization.|  
 |<xref:Microsoft.SqlServer.Replication>|Managed code|Synchronization.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Managed code|Creation of business logic handlers to integrate custom logic with the merge synchronization process.|  
-|[Replication Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Scripting|Administration and monitoring.|  
+|[Replication Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)|Scripting|Administration and monitoring.|  
 |[Replication Agent Executables Concepts](replication-agent-executables-concepts.md)|Scripting|Synchronization.|  
   
 ## Example  

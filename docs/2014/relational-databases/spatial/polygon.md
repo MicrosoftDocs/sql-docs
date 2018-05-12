@@ -144,15 +144,15 @@ SELECT @g.ToString()
  The geometry instance returned above is a `Point(1 3)`.  If the `Polygon` given is `POLYGON((1 3, 1 5, 1 3, 1 3))` then `MakeValid()` would return `LINESTRING(1 3, 1 5)`.  
   
 ## See Also  
- [STArea &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/starea-geometry-data-type.md)   
- [STExteriorRing &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
- [STNumInteriorRing &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   
- [STInteriorRingN &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)   
- [STCentroid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
- [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
+ [STArea &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
+ [STExteriorRing &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
+ [STNumInteriorRing &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
+ [STInteriorRingN &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
+ [STCentroid &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
+ [STPointOnSurface &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [MultiPolygon](../spatial/polygon.md)   
  [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [STIsValid &#40;geography Data Type&#41;](~/t-sql/spatial-geography/stisvalid-geography-data-type.md)   
- [STIsValid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ [STIsValid &#40;geography Data Type&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)   
+ [STIsValid &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)  
   
   

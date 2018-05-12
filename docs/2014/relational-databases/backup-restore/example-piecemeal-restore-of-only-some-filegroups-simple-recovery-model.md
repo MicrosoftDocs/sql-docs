@@ -79,8 +79,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Review the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log for the details of the 824 error for this database.  
   
--   Complete a full database consistency check ([DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)).  
+-   Complete a full database consistency check ([DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)).  
   
 -   Implement the user actions that are defined in [MSSQLSERVER_824](http://go.microsoft.com/fwlink/?LinkId=81397).  
   

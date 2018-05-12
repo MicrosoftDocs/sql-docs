@@ -60,7 +60,7 @@ manager: "jhubbard"
   
  **To create a stoplist**  
   
--   [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)  
+-   [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)  
   
 #### To create a full-text stoplist in Management Studio  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
  **To drop a stoplist**  
   
--   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/drop-fulltext-stoplist-transact-sql.md)  
+-   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
 ##  <a name="queries"></a> Using a Stoplist in Full-Text Queries  
@@ -98,11 +98,11 @@ manager: "jhubbard"
   
  **To create a full-text index and associate a stoplist with it**  
   
--   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)  
+-   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
  **To associate or disassociate a stoplist with an existing full-text index**  
   
--   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md)  
+-   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
  **To suppress an error message if stopwords cause a Boolean operation on a full-text query to fail**  
   
@@ -112,23 +112,23 @@ manager: "jhubbard"
 ##  <a name="viewing"></a> Viewing Stoplists and Stoplist Metadata  
  **To view all the stopwords of a stoplist**  
   
--   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
+-   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
  **To get information about all the stoplists in the current database**  
   
--   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
+-   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
--   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
+-   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
  **To view the tokenization result of a word breaker, thesaurus, and stoplist combination**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)  
+-   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
 ##  <a name="change"></a> Changing the Stopwords in a Stoplist  
  **To add or drop stopwords from a stoplist**  
   
--   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-stoplist-transact-sql.md)  
+-   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   
 #### To change the stopwords in a stoplist in Management Studio  
   

@@ -78,7 +78,7 @@ GO
  [Create a Resource Pool](create-a-resource-pool.md)   
  [Change Workload Group Settings](change-workload-group-settings.md)   
  [Create and Test a Classifier User-Defined Function](create-and-test-a-classifier-user-defined-function.md)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-workload-group-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

@@ -27,6 +27,6 @@ manager: "jhubbard"
   
 -   Version 4 of the CLR supports Unicode 5.1. Sort operations involving some accent marks and symbols will be improved. Compatibility problems may occur if your application relies on legacy sorting behavior. To enable legacy sorting, the database compatibility level (`ALTER DATABASE Compatibility Level`) must be set to 100 or lower. To support this, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] will install sort00001000.dll in the .NET Framework 4 directory (C:\Windows\Microsoft.NET\Framework\v4.0.30319). For more information, see [\<CompatSortNLSVersion> Element](http://go.microsoft.com/fwlink/?LinkId=205110).  
   
--   The following columns have been added to [sys.dm_clr_appdomains](~/relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md): `total_processor_time_ms`, `total_allocated_memory_kb`, and `survived_memory_kb`.  
+-   The following columns have been added to [sys.dm_clr_appdomains](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql): `total_processor_time_ms`, `total_allocated_memory_kb`, and `survived_memory_kb`.  
   
   

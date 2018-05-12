@@ -132,6 +132,6 @@ manager: "jhubbard"
  Provide a password to use when authenticating. This option is not available.  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)  
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)  
   
   

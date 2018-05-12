@@ -59,7 +59,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](~/dmx/identifiers-dmx.md).  
+ For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
   
  The next lines of the code define columns from the mining structure that will be used by the mining model:  
   

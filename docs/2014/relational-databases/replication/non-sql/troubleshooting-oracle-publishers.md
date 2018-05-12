@@ -88,9 +88,9 @@ manager: "jhubbard"
   
  "Heterogeneous publishers require a linked server. A linked server named '*\<LinkedServerName>*' already exists. Please remove linked server or choose a different publisher name."  
   
- This error can occur if you attempt to create the linked server directly or if you have previously dropped the relationship between the Oracle Publisher and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and you are now attempting to reconfigure it. If you receive this error while attempting to reconfigure the Publisher, drop the linked server with [sp_dropserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
+ This error can occur if you attempt to create the linked server directly or if you have previously dropped the relationship between the Oracle Publisher and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and you are now attempting to reconfigure it. If you receive this error while attempting to reconfigure the Publisher, drop the linked server with [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
- If you need to connect to the Oracle Publisher over a linked server connection, create another TNS service name, and then use this name when calling [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). For information about creating TNS service names, see the Oracle documentation.  
+ If you need to connect to the Oracle Publisher over a linked server connection, create another TNS service name, and then use this name when calling [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql). For information about creating TNS service names, see the Oracle documentation.  
   
 ## SQL Server Error 21617 Is Raised  
  Oracle publishing uses the Oracle application SQL*PLUS to download the package of Publisher support code to the Oracle database. Before attempting to configure the Oracle Publisher, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifies that SQL\*PLUS is accessible through the system path on the Distributor. If SQL\*PLUS cannot be loaded, the following error message is shown:  
@@ -241,7 +241,7 @@ manager: "jhubbard"
   
  **To drop an Oracle Publisher (Transact-SQL)**  
   
--   Execute **sp_dropdistpublisher**. For more information, see [sp_dropdistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
+-   Execute **sp_dropdistpublisher**. For more information, see [sp_dropdistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql).  
   
 ## See Also  
  [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   

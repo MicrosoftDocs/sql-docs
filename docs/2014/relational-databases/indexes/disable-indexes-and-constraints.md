@@ -79,7 +79,7 @@ manager: "jhubbard"
   
     -   Statistics are required during query optimization.  
   
--   If a clustered index is disabled, [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) cannot return information about the underlying table; instead, the statement reports that the clustered index is disabled. [DBCC INDEXDEFRAG](~/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md) cannot be used to defragment a disabled index; the statement fails with an error message. You can use [DBCC DBREINDEX](~/t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) to rebuild a disabled index.  
+-   If a clustered index is disabled, [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) cannot return information about the underlying table; instead, the statement reports that the clustered index is disabled. [DBCC INDEXDEFRAG](/sql/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql) cannot be used to defragment a disabled index; the statement fails with an error message. You can use [DBCC DBREINDEX](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql) to rebuild a disabled index.  
   
 -   Creating a new clustered index enables previously disabled nonclustered indexes. For more information, see [Enable Indexes and Constraints](enable-indexes-and-constraints.md).  
   
@@ -192,6 +192,6 @@ manager: "jhubbard"
     DISABLE;  
     ```  
   
- For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
+ For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
   

@@ -105,11 +105,11 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Collation Precedence &#40;Transact-SQL&#41;](~/t-sql/statements/collation-precedence-transact-sql.md)   
- [sp_helpsort &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
+ [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys.columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
+ [Collation Precedence &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [sp_helpsort &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
   
   

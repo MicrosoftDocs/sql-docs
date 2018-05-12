@@ -43,14 +43,14 @@ manager: "jhubbard"
  Select the name of an existing search property list from those belonging to the selected database.  
   
 ## Permissions  
- See [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-search-property-list-transact-sql.md).  
+ See [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## To Use SQL Server Management Studio to Manage Search Property Lists  
  For information about how to create, view, change, or delete a search property list, and about how to configure a full-text index for property searching, see [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## See Also  
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-search-property-list-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
  [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [sys.registered_search_property_lists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

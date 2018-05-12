@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  When the database that contains FILESTREAM or FileTable data belongs to an AlwaysOn availability group:  
   
--   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
+-   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql).  
   
 -   All access to FILESTREAM or FileTable data through the file system APIs should use VNNs instead of computer names.  
   

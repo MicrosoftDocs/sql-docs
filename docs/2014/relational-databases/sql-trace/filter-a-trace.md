@@ -141,42 +141,42 @@ manager: "jhubbard"
   
  The following security-related stored procedures are monitored, but no output is written to the **TextData** data column:  
   
- [sp_addapprole &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)  
+ [sp_addapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addapprole-transact-sql)  
   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)  
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)  
   
- [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)  
   
- [sp_adddistributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)  
+ [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)  
   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)  
   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)  
   
- [sp_addlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)  
+ [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)  
   
- [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)  
+ [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)  
   
- [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)  
+ [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)  
   
- [sp_addremotelogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql)  
   
- [sp_addsubscriber &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
+ [sp_addsubscriber &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)  
   
- [sp_approlepassword &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-approlepassword-transact-sql.md)  
+ [sp_approlepassword &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-approlepassword-transact-sql)  
   
- [sp_changedistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)  
+ [sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql)  
   
- [sp_changesubscriber &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)  
+ [sp_changesubscriber &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql)  
   
- [sp_dsninfo &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)  
+ [sp_dsninfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dsninfo-transact-sql)  
   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)  
   
- [sp_link_publication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)  
+ [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)  
   
- [sp_password &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-password-transact-sql.md)  
+ [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)  
   
- [sp_setapprole &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)  
+ [sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)  
   
   

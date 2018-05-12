@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [sp_spaceused](~/relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the `Vendor` table and its indexes.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) system stored procedure to report disk space information for the `Vendor` table and its indexes.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -79,7 +79,7 @@ GO
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_files](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -91,9 +91,9 @@ GO
 ```  
   
 ## See Also  
- [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sp_spaceused &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
+ [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
  [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)   
  [Delete Data or Log Files from a Database](delete-data-or-log-files-from-a-database.md)  
   

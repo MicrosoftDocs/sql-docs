@@ -56,7 +56,7 @@ manager: "mblythe"
 ###  <a name="bkmk_PredFunc"></a> Adding Prediction Functions  
  In addition to predicting a value, you can customize a prediction query to return various kinds of information that are related to the prediction. For example, if the prediction creates a list of products to recommend to a customer, you might also want to return the probability for each prediction, so that you can rank them and present only the top recommendations to the user.  
   
- To do this, you add *prediction functions* to the query. Each model or query type supports specific functions. For example, clustering models support special prediction functions that provide extra detail about the clusters created by the model, whereas time series models have functions that calculate differences over time. There are also general prediction functions that work with almost all model types. For a list of the prediction functions supported in different types of queries, see this topic the DMX reference:  [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md).  
+ To do this, you add *prediction functions* to the query. Each model or query type supports specific functions. For example, clustering models support special prediction functions that provide extra detail about the clusters created by the model, whereas time series models have functions that calculate differences over time. There are also general prediction functions that work with almost all model types. For a list of the prediction functions supported in different types of queries, see this topic the DMX reference:  [General Prediction Functions &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
 ###  <a name="bkmk_SingletonQuery"></a> Creating Singleton Prediction Queries  
  A singleton prediction query is useful when you want to create quick predictions in real time. A common scenario might be that you have obtained information from a customer, perhaps by using a form on a Web site, and you want to submit that data as the input to a singleton prediction query. For example, when a customer chooses a product from a list, you could use that selection as the input to a query that predicts the best products to recommend.  
@@ -80,7 +80,7 @@ manager: "mblythe"
 > [!WARNING]  
 >  If you use the designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the external data source must first be defined as a data source view.  
   
- If you use DMX to create a prediction join, you can specify the external data source by using the OPENQUERY, OPENROWSET, or SHAPE commands. The default data access method in the DMX templates is OPENQUERY. For information about these methods, see [&#60;source data query&#62;](~/dmx/source-data-query.md).  
+ If you use DMX to create a prediction join, you can specify the external data source by using the OPENQUERY, OPENROWSET, or SHAPE commands. The default data access method in the DMX templates is OPENQUERY. For information about these methods, see [&#60;source data query&#62;](/sql/dmx/source-data-query).  
   
 ###  <a name="bkmk_TSQuery"></a> Predictions in Time Series Mining Models  
  Time series models are different from other models types; you can either use the model as it is to create predictions, or you can provide new data to the model to update the model and create predictions based on recent trends. If you add new data, you can specify the way the new data should be used.  
@@ -95,7 +95,7 @@ manager: "mblythe"
   
  Regardless of which approach you use, the starting point for predictions is always the end of the original series.  
   
- For more information about how to create prediction joins on time series models, see [Time Series Model Query Examples](time-series-model-query-examples.md) or [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md).  
+ For more information about how to create prediction joins on time series models, see [Time Series Model Query Examples](time-series-model-query-examples.md) or [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ##  <a name="bkmk_WorkResults"></a> Working with the Results of a Prediction Query  
  Your options for saving the results of a data mining prediction query are different depending on how you create the query.  
@@ -141,7 +141,7 @@ FROM
 |-----------|--------------|  
 |201102|260|  
   
- If your provider cannot handle hierarchical rowsets, you can flatten the results by using the FLATTEN keyword in the prediction query. For more information, including examples of flattened rowsets, see [SELECT &#40;DMX&#41;](~/dmx/select-dmx.md).  
+ If your provider cannot handle hierarchical rowsets, you can flatten the results by using the FLATTEN keyword in the prediction query. For more information, including examples of flattened rowsets, see [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 ## See Also  
  [Content Queries &#40;Data Mining&#41;](content-queries-data-mining.md)   

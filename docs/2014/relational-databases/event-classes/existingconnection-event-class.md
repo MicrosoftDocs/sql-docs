@@ -49,7 +49,7 @@ manager: "jhubbard"
 |TextData|`ntext`|Set options specific to the connection.|1|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Audit Login Event Class](audit-login-event-class.md)  
   
   

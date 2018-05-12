@@ -262,7 +262,7 @@ manager: "jhubbard"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- For more information about the `SHUTDOWN` statement, see [SHUTDOWN &#40;Transact-SQL&#41;](~/t-sql/language-elements/shutdown-transact-sql.md).  
+ For more information about the `SHUTDOWN` statement, see [SHUTDOWN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
   

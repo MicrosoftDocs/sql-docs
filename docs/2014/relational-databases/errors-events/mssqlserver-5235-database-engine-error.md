@@ -57,6 +57,6 @@ manager: "jhubbard"
 |State 5|Run the command again. If the problem persists, contact CSS.|  
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  
+ [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
   
   

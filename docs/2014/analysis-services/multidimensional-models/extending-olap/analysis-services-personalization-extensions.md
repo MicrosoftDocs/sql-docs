@@ -114,19 +114,19 @@ manager: "mblythe"
 #### AdomdCommand class  
  The <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> class now supports of the following MDX commands:  
   
--   [CREATE MEMBER Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-member.md)  
+-   [CREATE MEMBER Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
--   [UPDATE MEMBER Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-update-member.md)  
+-   [UPDATE MEMBER Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
--   [DROP MEMBER Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-drop-member.md)  
+-   [DROP MEMBER Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-set.md)  
+-   [CREATE SET Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
--   [DROP SET Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-drop-set.md)  
+-   [DROP SET Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
--   [CREATE KPI Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-kpi.md)  
+-   [CREATE KPI Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-kpi)  
   
--   [DROP KPI Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-drop-kpi.md)  
+-   [DROP KPI Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-kpi)  
   
 ### MDX extensions and enhancements  
  The CREATE MEMBER command is enhanced with the `caption` property, the `display_folder` property, and the `associated_measure_group` property.  

@@ -124,8 +124,8 @@ manager: "jhubbard"
 |Updated the list of tables in the "Snapshots schema" section. Added snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory, and snapshots.io_virtual_file_stats. Removedsnapshots.os_process_memory and snapshots.distinct_query_stats.|  
   
 ## See Also  
- [Management Data Warehouse Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Management Data Warehouse Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [Data Collector Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Data Collection](data-collection.md)   
  [View a Collection Set Report &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   

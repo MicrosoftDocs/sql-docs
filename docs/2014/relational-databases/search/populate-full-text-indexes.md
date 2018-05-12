@@ -58,9 +58,9 @@ manager: "jhubbard"
   
      **To set up tracking changes with automatic population**  
   
-    -   [CREATE FULLTEXT INDEX](~/t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](~/t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING AUTO  
   
      For more information, see example "E. Altering a full-text index to use automatic change tracking," later in this topic.  
   
@@ -70,17 +70,17 @@ manager: "jhubbard"
   
      **To start tracking changes with manual population**  
   
-    -   [CREATE FULLTEXT INDEX](~/t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](~/t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING MANUAL  
   
      For more information, see examples "C. Creating a full-text index with manual change tracking" and "D. Running a manual population," later in this topic.  
   
  **To turn off change tracking**  
   
--   [CREATE FULLTEXT INDEX](~/t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](~/t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING OFF  
   
 
   
@@ -225,10 +225,10 @@ GO
 
   
 ## See Also  
- [sys.dm_fts_index_population &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
+ [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
  [Get Started with Full-Text Search](get-started-with-full-text-search.md)   
  [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
- [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md)  
+ [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
+ [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
   

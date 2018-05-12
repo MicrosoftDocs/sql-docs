@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 -   To add a new column to a table and not include that column in an existing publication, disable the replication of schema changes, and then execute ALTER TABLE \<Table> ADD \<Column>.  
   
--   To include an existing column in an existing publication, use [sp_articlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box.  
+-   To include an existing column in an existing publication, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql), or the **Publication Properties - \<Publication>** dialog box.  
   
      For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). This will require subscriptions to be reinitialized.  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 -   To drop a column from an existing publication and drop the column from the table at the Publisher, execute ALTER TABLE \<Table> DROP \<Column>. By default, the column is then dropped from the table at all Subscribers.  
   
--   To drop a column from an existing publication but retain the column in the table at the Publisher, use [sp_articlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box.  
+-   To drop a column from an existing publication but retain the column in the table at the Publisher, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql), or the **Publication Properties - \<Publication>** dialog box.  
   
      For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). This will require a new snapshot to be generated.  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
   
 -   Schema changes are propagated to Subscribers running previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], but the DDL statement should only include syntax supported by the version at the Subscriber.  
   
-     If the Subscriber republishes data, the only supported schema changes are adding and dropping a column. These changes should be made on the Publisher using [sp_repladdcolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) and [sp_repldropcolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) rather than ALTER TABLE DDL syntax.  
+     If the Subscriber republishes data, the only supported schema changes are adding and dropping a column. These changes should be made on the Publisher using [sp_repladdcolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) and [sp_repldropcolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql) rather than ALTER TABLE DDL syntax.  
   
 -   Schema changes are not replicated to non-SQL Server Subscribers.  
   
@@ -135,7 +135,7 @@ manager: "jhubbard"
   
 -   How merge replication handles schema changes is determined by the publication compatibility level, and whether the snapshot is set to native mode (default) or character mode:  
   
-    -   To replicate schema changes, the compatibility level of the publication must be at least 90RTM. If Subscribers are running previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or the compatibility level is less than 90RTM you can use [sp_repladdcolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) and [sp_repldropcolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) to add and drop columns. However, these procedures are deprecated.  
+    -   To replicate schema changes, the compatibility level of the publication must be at least 90RTM. If Subscribers are running previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or the compatibility level is less than 90RTM you can use [sp_repladdcolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) and [sp_repldropcolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql) to add and drop columns. However, these procedures are deprecated.  
   
     -   If you try to add to an existing article a column with a data type that was introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has the following behavior:  
   
@@ -152,14 +152,14 @@ manager: "jhubbard"
   
 -   If a schema change is made on a column involved in a join filter or parameterized filter, you must reinitialize all subscriptions and regenerate the snapshot.  
   
--   Merge replication provides stored procedures to skip schema changes during troubleshooting. For more information, see [sp_markpendingschemachange &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) and [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
+-   Merge replication provides stored procedures to skip schema changes during troubleshooting. For more information, see [sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) and [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql).  
   
 ## See Also  
- [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)   
- [ALTER VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/alter-view-transact-sql.md)   
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-procedure-transact-sql.md)   
- [ALTER FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-function-transact-sql.md)   
- [ALTER TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-trigger-transact-sql.md)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
+ [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [ALTER FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
  [Regenerate Custom Transactional Procedures to Reflect Schema Changes](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   

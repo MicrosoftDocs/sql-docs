@@ -46,7 +46,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### Parameters  
  *FilestreamPath*  
- [in] Is the `nvarchar(max)` path that is returned by the [PathName](~/relational-databases/system-functions/pathname-transact-sql.md) function. PathName must be called from the context of an account that has [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT or UPDATE permissions on the FILESTREAM table and column.  
+ [in] Is the `nvarchar(max)` path that is returned by the [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) function. PathName must be called from the context of an account that has [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT or UPDATE permissions on the FILESTREAM table and column.  
   
  *DesiredAccess*  
  [in] Sets the mode used to access FILESTREAM BLOB data. This value is passed to the [DeviceIoControl Function](http://go.microsoft.com/fwlink/?LinkId=105527).  
@@ -73,7 +73,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
 |SQL_FILESTREAM_OPEN_FLAG_RANDOM_ACCESS|0x00000010L|A file is accessed randomly. The system can use this as a hint to optimize file caching.|  
   
  *FilestreamTransactionContext*  
- [in] The value that is returned by the [GET_FILESTREAM_TRANSACTION_CONTEXT](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md) function.  
+ [in] The value that is returned by the [GET_FILESTREAM_TRANSACTION_CONTEXT](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) function.  
   
  *FilestreamTransactionContextLength*  
  [in] Number of bytes in the `varbinary(max)` data that is returned by the GET_FILESTREAM_TRANSACTION_CONTEXT function. The function returns an array of N bytes. N is determined by the function and is a property of the byte array that is returned.  

@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 #### To index the NewOrg table for efficient searches  
   
-1.  To help queries at the same level in the hierarchy, use the [GetLevel](~/t-sql/data-types/getlevel-database-engine.md) method to create a computed column that contains the level in the hierarchy. Then, create a composite index on the level and the `Hierarchyid`. Run the following code to create the computed column and the breadth-first index:  
+1.  To help queries at the same level in the hierarchy, use the [GetLevel](/sql/t-sql/data-types/getlevel-database-engine) method to create a computed column that contains the level in the hierarchy. Then, create a composite index on the level and the `Hierarchyid`. Run the following code to create the computed column and the breadth-first index:  
   
     ```  
     ALTER TABLE NewOrg   

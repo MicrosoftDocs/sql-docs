@@ -75,8 +75,8 @@ GO
  [Create a Workload Group](create-a-workload-group.md)   
  [Create a Resource Pool](create-a-resource-pool.md)   
  [Change Resource Pool Settings](change-resource-pool-settings.md)   
- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-workload-group-transact-sql.md)   
- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-workload-group-transact-sql)   
+ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

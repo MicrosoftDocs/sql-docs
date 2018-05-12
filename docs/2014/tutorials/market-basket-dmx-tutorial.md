@@ -59,14 +59,14 @@ manager: "jhubbard"
   
  This statement is useful if you are creating a mining structure that will contain a single mining model.  
   
- For more information, see [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md).  
+ For more information, see [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx).  
   
  CREATE MINING STRUCTURE  
  Use this statement to create a new mining structure without any models.  
   
  When you use CREATE MINING STRUCTURE, you can also create a holdout data set that can be used for testing any models that are based on the same mining structure.  
   
- For more information, see [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md).  
+ For more information, see [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx).  
   
  `ALTER MINING STRUCTURE`  
  Use this statement to add a mining model to a mining structure that already exists on the server.  
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
  **For More Information**  
   
- [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md), [Understanding the DMX Select Statement](~/dmx/understanding-the-dmx-select-statement.md), [Structure and Usage of DMX Prediction Queries](~/dmx/structure-and-usage-of-dmx-prediction-queries.md)  
+ [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference), [Understanding the DMX Select Statement](/sql/dmx/understanding-the-dmx-select-statement), [Structure and Usage of DMX Prediction Queries](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## What You Will Learn  
  This tutorial is divided into the following lessons:  

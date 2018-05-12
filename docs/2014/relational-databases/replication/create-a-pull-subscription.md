@@ -83,15 +83,15 @@ manager: "jhubbard"
   
 #### To create a pull subscription to a snapshot or transactional publication  
   
-1.  At the Publisher, verify that the publication supports pull subscriptions by executing [sp_helppublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+1.  At the Publisher, verify that the publication supports pull subscriptions by executing [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql).  
   
     -   If the value of **allow_pull** in the result set is **1**, then the publication supports pull subscriptions.  
   
-    -   If the value of **allow_pull** is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_pull** for **@property** and `true` for **@value**.  
+    -   If the value of **allow_pull** is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specifying **allow_pull** for **@property** and `true` for **@value**.  
   
-2.  At the Subscriber, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specify **@publisher** and **@publication**. For information about updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  At the Subscriber, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Specify **@publisher** and **@publication**. For information about updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-3.  At the Subscriber, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify the following:  
+3.  At the Subscriber, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Specify the following:  
   
     -   The **@publisher**, **@publisher_db**, and **@publication** parameters.  
   
@@ -104,17 +104,17 @@ manager: "jhubbard"
   
     -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
-4.  At the Publisher, execute [sp_addsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to register the pull subscription. Specify **@publication**, **@subscriber**, and **@destination_db**. Specify a value of **pull** for **@subscription_type**.  
+4.  At the Publisher, execute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) to register the pull subscription. Specify **@publication**, **@subscriber**, and **@destination_db**. Specify a value of **pull** for **@subscription_type**.  
   
 #### To create a pull subscription to a merge publication  
   
-1.  At the Publisher, verify that the publication supports pull subscriptions by executing [sp_helpmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md).  
+1.  At the Publisher, verify that the publication supports pull subscriptions by executing [sp_helpmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql).  
   
     -   If the value of **allow_pull** in the result set is **1**, then the publication supports pull subscriptions.  
   
-    -   If the value of **allow_pull** is **0**, execute [sp_changemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **allow_pull** for **@property** and `true` for **@value**.  
+    -   If the value of **allow_pull** is **0**, execute [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specifying **allow_pull** for **@property** and `true` for **@value**.  
   
-2.  At the Subscriber, execute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, and the following parameters:  
+2.  At the Subscriber, execute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Specify **@publisher**, **@publisher_db**, **@publication**, and the following parameters:  
   
     -   **@subscriber_type** – specify **local** for a client subscription and **global** for a server subscription.  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
          For more information, see [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-3.  At the Subscriber, execute [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specify the following parameters:  
+3.  At the Subscriber, execute [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Specify the following parameters:  
   
     -   **@publisher**, **@publisher_db**, and **@publication**.  
   
@@ -137,7 +137,7 @@ manager: "jhubbard"
   
     -   A schedule for the Merge Agent job for this subscription. For more information, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-4.  At the Publisher, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, **@subscriber_db**, and a value of **pull** for **@subscription_type**. This registers the pull subscription.  
+4.  At the Publisher, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Specify **@publication**, **@subscriber**, **@subscriber_db**, and a value of **pull** for **@subscription_type**. This registers the pull subscription.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example creates a pull subscription to a transactional publication. The first batch is executed at the Subscriber, and the second batch is executed at the Publisher. Login and password values are supplied at runtime using sqlcmd scripting variables.  
@@ -251,7 +251,7 @@ manager: "jhubbard"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePullSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepullsub)]  
   
- This example creates a pull subscription to a merge publication without creating an associated agent job and subscription metadata in [MSsubscription_properties](~/relational-databases/system-tables/mssubscription-properties-transact-sql.md). The Windows account credentials used to create the Merge Agent job are passed at runtime.  
+ This example creates a pull subscription to a merge publication without creating an associated agent job and subscription metadata in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql). The Windows account credentials used to create the Merge Agent job are passed at runtime.  
   
  [!code-csharp[HowTo#rmo_CreateMergePullSub_NoJob](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepullsub_nojob)]  
   

@@ -80,7 +80,7 @@ GO
   
 ```  
   
- For more information, see [sp_add_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md).  
+ For more information, see [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
   
 ## See Also  
  [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  

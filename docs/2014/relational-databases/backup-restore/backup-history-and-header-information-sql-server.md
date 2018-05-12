@@ -67,14 +67,14 @@ manager: "jhubbard"
   
 |History table|Description|  
 |-------------------|-----------------|  
-|[backupfile](~/relational-databases/system-tables/backupfile-transact-sql.md)|Contains one row for each data or log file that is backed up.|  
-|[backupfilegroup](~/relational-databases/system-tables/backupfilegroup-transact-sql.md)|Contains a row for each filegroup in a backup set.|  
-|[backupmediafamily](~/relational-databases/system-tables/backupmediafamily-transact-sql.md)|Contains one row for each media family. If a media family resides in a mirrored media set, the family has a separate row for each mirror in the media set.|  
-|[backupmediaset](~/relational-databases/system-tables/backupmediaset-transact-sql.md)|Contains one row for each backup media set.|  
-|[backupset](~/relational-databases/system-tables/backupset-transact-sql.md)|Contains a row for each backup set.|  
-|[restorefile](~/relational-databases/system-tables/restorefile-transact-sql.md)|Contains one row for each restored file. This includes files restored indirectly by filegroup name.|  
-|[restorefilegroup](~/relational-databases/system-tables/restorefilegroup-transact-sql.md)|Contains one row for each restored filegroup.|  
-|[restorehistory](~/relational-databases/system-tables/restorehistory-transact-sql.md)|Contains one row for each restore operation.|  
+|[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|Contains one row for each data or log file that is backed up.|  
+|[backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)|Contains a row for each filegroup in a backup set.|  
+|[backupmediafamily](/sql/relational-databases/system-tables/backupmediafamily-transact-sql)|Contains one row for each media family. If a media family resides in a mirrored media set, the family has a separate row for each mirror in the media set.|  
+|[backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)|Contains one row for each backup media set.|  
+|[backupset](/sql/relational-databases/system-tables/backupset-transact-sql)|Contains a row for each backup set.|  
+|[restorefile](/sql/relational-databases/system-tables/restorefile-transact-sql)|Contains one row for each restored file. This includes files restored indirectly by filegroup name.|  
+|[restorefilegroup](/sql/relational-databases/system-tables/restorefilegroup-transact-sql)|Contains one row for each restored filegroup.|  
+|[restorehistory](/sql/relational-databases/system-tables/restorehistory-transact-sql)|Contains one row for each restore operation.|  
   
 > [!NOTE]  
 >  When a restore is performed, backup history tables and restore history tables are modified.  
@@ -83,13 +83,13 @@ manager: "jhubbard"
  The restore information statements correspond with information stored in certain backup history tables.  
   
 > [!IMPORTANT]  
->  The RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, and RESTORE VERIFYONLY Transact-SQL statements require CREATE DATABASE permission. This requirement secures your backup files and protects your backup information more fully than in previous versions. For information about this permission, see [GRANT Database Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-database-permissions-transact-sql.md).  
+>  The RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, and RESTORE VERIFYONLY Transact-SQL statements require CREATE DATABASE permission. This requirement secures your backup files and protects your backup information more fully than in previous versions. For information about this permission, see [GRANT Database Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
   
 |Information statement|Backup history table|Description|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](~/t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](~/relational-databases/system-tables/backupfile-transact-sql.md)|Returns a result set that has a list of the database and log files that are contained in the specified backup set.<br /><br /> For more information, see "Listing Database and Transaction Log Files," later in this topic.|  
-|[RESTORE HEADERONLY](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](~/relational-databases/system-tables/backupset-transact-sql.md)|Retrieves all the backup header information for all backup sets on a particular backup device. The result from executing RESTORE HEADERONLY is a result set.<br /><br /> For more information, see "Viewing the Backup-Header Information," later in this topic.|  
-|[RESTORE LABELONLY](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](~/relational-databases/system-tables/backupmediaset-transact-sql.md)|Returns a result set that contains information about the backup media on a specified backup device.<br /><br /> For more information, see "Viewing the Media-Header Information," later in this topic.|  
+|[RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)|[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|Returns a result set that has a list of the database and log files that are contained in the specified backup set.<br /><br /> For more information, see "Listing Database and Transaction Log Files," later in this topic.|  
+|[RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset](/sql/relational-databases/system-tables/backupset-transact-sql)|Retrieves all the backup header information for all backup sets on a particular backup device. The result from executing RESTORE HEADERONLY is a result set.<br /><br /> For more information, see "Viewing the Backup-Header Information," later in this topic.|  
+|[RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)|[backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)|Returns a result set that contains information about the backup media on a specified backup device.<br /><br /> For more information, see "Viewing the Media-Header Information," later in this topic.|  
   
 ##  <a name="ListDbTlogFiles"></a> Database and Transaction Log Files  
  Information that is displayed when the database and transaction log files are listed in a backup includes the logical name, physical name, file type (database or log), filegroup membership, file size (in bytes), the maximum allowed file size, and the predefined file growth size (in bytes). This information is useful, in the following situations, to determine the names of the files in a database backup before you restore the database backup:  
@@ -143,21 +143,21 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To delete old rows from backup and restore history tables**  
   
--   [sp_delete_backuphistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
+-   [sp_delete_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql)  
   
  **To delete all rows for a specific database from backup and restore history tables**  
   
--   [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)  
+-   [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql)  
   
  **To view the data and log files in a backup set**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A> (SMO)  
   
  **To view media header information**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   
 -   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -167,7 +167,7 @@ manager: "jhubbard"
   
  **To view backup header information**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
 -   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -177,15 +177,15 @@ manager: "jhubbard"
   
  **To delete old rows from backup and restore history tables**  
   
--   [sp_delete_backuphistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
+-   [sp_delete_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql)  
   
  **To delete all rows for a specific database from backup and restore history tables**  
   
--   [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)  
+-   [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql)  
   
  **To view media header information**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   
 -   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -195,7 +195,7 @@ manager: "jhubbard"
   
  **To view backup header information**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
 -   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -207,16 +207,16 @@ manager: "jhubbard"
   
 -   [View the Data and Log Files in a Backup Set &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
  **To verify a backup**  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   

@@ -129,7 +129,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   The NODE_DESCRIPTION column contains a comma-separated list of attributes. Note that the list of attributes might be abbreviated for display purposes.  
   
--   The nested table in the NODE_DISTRIBUTION column contains the full list of attributes for the cluster. If your client does not support hierarchical rowsets, you can return the nested table by adding the FLATTENED keyword before the SELECT column list. For more information about the use of the FLATTENED keyword, see [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](~/dmx/select-from-model-dimension-content-dmx.md).  
+-   The nested table in the NODE_DISTRIBUTION column contains the full list of attributes for the cluster. If your client does not support hierarchical rowsets, you can return the nested table by adding the FLATTENED keyword before the SELECT column list. For more information about the use of the FLATTENED keyword, see [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](/sql/dmx/select-from-model-dimension-content-dmx).  
   
  [Return to Top](#bkmk_top2)  
   
@@ -233,7 +233,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
  [Return to Top](#bkmk_top2)  
   
 ###  <a name="bkmk_Query7"></a> Sample Query 7: Returning Cases that Belong to a Cluster  
- If drillthrough has been enabled on the mining model, you can create queries that return detailed information about the cases used in the model. Moreover, if drillthrough has been enabled on the mining structure, you can include columns from the underlying structure by using the [StructureColumn &#40;DMX&#41;](~/dmx/structurecolumn-dmx.md) function.  
+ If drillthrough has been enabled on the mining model, you can create queries that return detailed information about the cases used in the model. Moreover, if drillthrough has been enabled on the mining structure, you can include columns from the underlying structure by using the [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) function.  
   
  The following example returns two columns that were used in the model, Age and Region, and one more column, First Name, that was not used in the model. The query returns only cases that were classified into Cluster 1.  
   
@@ -257,7 +257,7 @@ WHERE IsInNode('001')
 ###  <a name="bkmk_Query8"></a> Sample Query 8: Predicting Outcomes from a Clustering Model  
  If the clustering model you create contains a predictable attribute, you can use the model to make predictions about outcomes. However, the model handles the predictable attribute differently depending on whether you set the predictable column to `Predict` or `PredictOnly`. If you set the usage of the column to `Predict`, the values for that attribute are added to the clustering model and appear as attributes in the finished model. However, if you set the usage of the column to `PredictOnly`, the values are not used to create clusters. Instead, after the mode is completed, the clustering algorithm creates new values for the `PredictOnly` attribute based on the clusters to which each case belongs.  
   
- The following query provides a single new case to the model, where the only information about the case is the age and gender. The SELECT statement specifies the predictable attribute/value pair that you are interested in, and the [PredictProbability &#40;DMX&#41;](~/dmx/predictprobability-dmx.md) function tells you the probability that a case with those attributes will have the targeted outcome.  
+ The following query provides a single new case to the model, where the only information about the case is the age and gender. The SELECT statement specifies the predictable attribute/value pair that you are interested in, and the [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) function tells you the probability that a case with those attributes will have the targeted outcome.  
   
 ```  
 SELECT  
@@ -281,7 +281,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- In this example, the difference in the model is not significant. However, sometimes it can be important to detect differences between the actual distribution of values and what the model predicts. The [PredictCaseLikelihood &#40;DMX&#41;](~/dmx/predictcaselikelihood-dmx.md) function is useful in this scenario, because it tells you how likely a case is, given the model.  
+ In this example, the difference in the model is not significant. However, sometimes it can be important to detect differences between the actual distribution of values and what the model predicts. The [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) function is useful in this scenario, because it tells you how likely a case is, given the model.  
   
  The number that is returned by the PredictCaseLikelihood function is a probability, and therefore is always between 0 and 1, with a value of .5 representing random outcome. Therefore, a score less than .5 means that the predicted case is unlikely, given the model, and a score over.5 indicates that the predicted case is more likely than not to fit the model.  
   
@@ -308,7 +308,7 @@ NATURAL PREDICTION JOIN
  [Return to Top](#bkmk_top2)  
   
 ###  <a name="bkmk_Query9"></a> Sample Query 9: Determining Cluster Membership  
- This example uses the [Cluster &#40;DMX&#41;](~/dmx/cluster-dmx.md) function to return the cluster to which the new case is most likely to belong, and uses the [ClusterProbability &#40;DMX&#41;](~/dmx/clusterprobability-dmx.md) function to return the probability for membership in that cluster.  
+ This example uses the [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) function to return the cluster to which the new case is most likely to belong, and uses the [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) function to return the probability for membership in that cluster.  
   
 ```  
 SELECT Cluster(), ClusterProbability()  
@@ -331,7 +331,7 @@ NATURAL PREDICTION JOIN
  [Return to Top](#bkmk_top2)  
   
 ###  <a name="bkmk_Query10"></a> Sample Query 10: Returning All Possible Clusters with Probability and Distance  
- In the previous example, the probability score was not very high. To determine if there is a better cluster, you can use the [PredictHistogram &#40;DMX&#41;](~/dmx/predicthistogram-dmx.md) function together with the [Cluster &#40;DMX&#41;](~/dmx/cluster-dmx.md) function to return a nested table that includes all possible clusters, together with the probability that the new case that belongs to each cluster. The FLATTENED keyword is used to change the hierarchical rowset into a flat table for easier viewing.  
+ In the previous example, the probability score was not very high. To determine if there is a better cluster, you can use the [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) function together with the [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) function to return a nested table that includes all possible clusters, together with the probability that the new case that belongs to each cluster. The FLATTENED keyword is used to change the hierarchical rowset into a flat table for easier viewing.  
   
 ```  
 SELECT FLATTENED PredictHistogram(Cluster())  
@@ -358,7 +358,7 @@ NATURAL PREDICTION JOIN
   
  By default, the results are ranked by probability. The results tell you that, even though the probability for Cluster 2 is fairly low, Cluster 2 is still the best fit for the new data point.  
   
- **Note** The additional column, `$DISTANCE`, represents the distance from the data point to the cluster. By default, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering Algorithm uses scalable EM clustering, which assigns multiple clusters to each data point and ranks the possible clusters.  However, if you create your clustering model using the K-means algorithm, only one cluster can be assigned to each data point, and this query would return only one row. Understanding these differences is necessary to interpret the results of the [PredictCaseLikelihood &#40;DMX&#41;](~/dmx/predictcaselikelihood-dmx.md) function. For more information about the differences between EM and K-means clustering, see [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md).  
+ **Note** The additional column, `$DISTANCE`, represents the distance from the data point to the cluster. By default, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering Algorithm uses scalable EM clustering, which assigns multiple clusters to each data point and ranks the possible clusters.  However, if you create your clustering model using the K-means algorithm, only one cluster can be assigned to each data point, and this query would return only one row. Understanding these differences is necessary to interpret the results of the [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) function. For more information about the differences between EM and K-means clustering, see [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md).  
   
  [Return to Top](#bkmk_top2)  
   
@@ -368,22 +368,22 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Prediction Function|Usage|  
-|[Cluster &#40;DMX&#41;](~/dmx/cluster-dmx.md)|Returns the cluster that is most likely to contain the input case.|  
-|[ClusterDistance &#40;DMX&#41;](~/dmx/clusterdistance-dmx.md)|Returns the distance of the input case from the specified cluster, or if no cluster is specified, the distance of the input case from the most likely cluster.<br /><br /> Returns the probability that the input case belongs to the specified cluster.|  
-|[ClusterProbability &#40;DMX&#41;](~/dmx/clusterprobability-dmx.md)|Returns the probability that the input case belongs to the specified cluster.|  
-|[IsDescendant &#40;DMX&#41;](~/dmx/isdescendant-dmx.md)|Determines whether one node is a child of another node in the model.|  
-|[IsInNode &#40;DMX&#41;](~/dmx/isinnode-dmx.md)|Indicates whether the specified node contains the current case.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](~/dmx/predictadjustedprobability-dmx.md)|Returns the weighted probability.|  
-|[PredictAssociation &#40;DMX&#41;](~/dmx/predictassociation-dmx.md)|Predicts membership in an associative dataset.|  
-|[PredictCaseLikelihood &#40;DMX&#41;](~/dmx/predictcaselikelihood-dmx.md)|Returns the likelihood that an input case will fit in the existing model.|  
-|[PredictHistogram &#40;DMX&#41;](~/dmx/predicthistogram-dmx.md)|Returns a table of values related to the current predicted value.|  
-|[PredictNodeId &#40;DMX&#41;](~/dmx/predictnodeid-dmx.md)|Returns the Node_ID for each case.|  
-|[PredictProbability &#40;DMX&#41;](~/dmx/predictprobability-dmx.md)|Returns probability for the predicted value.|  
-|[PredictStdev &#40;DMX&#41;](~/dmx/predictstdev-dmx.md)|Returns the predicted standard deviation for the specified column.|  
-|[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
-|[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns the variance of a specified column.|  
+|[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|Returns the cluster that is most likely to contain the input case.|  
+|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|Returns the distance of the input case from the specified cluster, or if no cluster is specified, the distance of the input case from the most likely cluster.<br /><br /> Returns the probability that the input case belongs to the specified cluster.|  
+|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|Returns the probability that the input case belongs to the specified cluster.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Determines whether one node is a child of another node in the model.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indicates whether the specified node contains the current case.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Returns the weighted probability.|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Predicts membership in an associative dataset.|  
+|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|Returns the likelihood that an input case will fit in the existing model.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Returns a table of values related to the current predicted value.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Returns the Node_ID for each case.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Returns probability for the predicted value.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Returns the predicted standard deviation for the specified column.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Returns the support value for a specified state.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Returns the variance of a specified column.|  
   
- For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
+ For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## See Also  
  [Data Mining Queries](data-mining-queries.md)   

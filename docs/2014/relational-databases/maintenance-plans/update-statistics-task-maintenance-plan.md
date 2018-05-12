@@ -108,6 +108,6 @@ manager: "jhubbard"
  Provide a password to use when authenticating. This option is not available.  
   
 ## See Also  
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/update-statistics-transact-sql.md)  
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)  
   
   

@@ -24,6 +24,6 @@ manager: "jhubbard"
  Set the PAGE_VERIFY database option to CHECKSUM.  
   
 ## For More Information  
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   
   

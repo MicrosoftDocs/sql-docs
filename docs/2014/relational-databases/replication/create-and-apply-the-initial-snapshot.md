@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 1.  Create a snapshot, transactional, or merge publication. For more information, see [Create a Publication](publish/create-a-publication.md).  
   
-2.  Execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify **@publication** and the following parameters:  
+2.  Execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specify **@publication** and the following parameters:  
   
     -   **The @job_login, which specifies** the Windows Authentication credentials under which the Snapshot Agent runs at the Distributor.  
   
@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 3.  Add articles to the publication. For more information, see [Define an Article](publish/define-an-article.md).  
   
-4.  At the Publisher on the publication database, execute [sp_startpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), specifying the value of **@publication** from step 1.  
+4.  At the Publisher on the publication database, execute [sp_startpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql), specifying the value of **@publication** from step 1.  
   
 #### To run the Snapshot Agent to generate the initial snapshot  
   

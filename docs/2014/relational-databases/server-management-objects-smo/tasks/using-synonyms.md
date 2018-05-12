@@ -85,6 +85,6 @@ $syn.Create()
 ```  
   
 ## See Also  
- [CREATE SYNONYM &#40;Transact-SQL&#41;](~/t-sql/statements/create-synonym-transact-sql.md)  
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql)  
   
   

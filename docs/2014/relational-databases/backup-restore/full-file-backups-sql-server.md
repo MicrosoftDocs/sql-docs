@@ -95,7 +95,7 @@ manager: "jhubbard"
 >  File backups are not supported by the Maintenance Plan Wizard.  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   

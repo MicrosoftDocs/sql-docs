@@ -55,6 +55,6 @@ manager: "jhubbard"
 -   [Scale-out Deployment](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;del&#41;](~/2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services Configuration Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

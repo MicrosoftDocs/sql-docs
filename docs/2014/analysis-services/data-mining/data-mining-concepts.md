@@ -134,7 +134,7 @@ manager: "mblythe"
   
  You can also use parameters to adjust each algorithm, and you can apply filters to the training data to use just a subset of the data, creating different results. After you pass data through the model, the mining model object contains summaries and patterns that can be queried or used for prediction.  
   
- You can define a new model by using the Data Mining Wizard in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], or by using the Data Mining Extensions (DMX) language. For more information about how to use the Data Mining Wizard, see [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md). For more information about how to use DMX, see [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md).  
+ You can define a new model by using the Data Mining Wizard in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], or by using the Data Mining Extensions (DMX) language. For more information about how to use the Data Mining Wizard, see [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md). For more information about how to use DMX, see [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference).  
   
  It is important to remember that whenever the data changes, you must update both the mining structure and the mining model. When you update a mining structure by reprocessing it, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retrieves data from the source, including any new data if the source is dynamically updated, and repopulates the mining structure. If you have models that are based on the structure, you can choose to update the models that are based on the structure, which means they are retrained on the new data, or you can leave the models as is. For more information, see [Processing Requirements and Considerations &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md).  
   
@@ -158,7 +158,7 @@ manager: "mblythe"
   
  After the mining models exist in a production environment, you can perform many tasks, depending on your needs. The following are some of the tasks you can perform:  
   
--   Use the models to create predictions, which you can then use to make business decisions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the DMX language that you can use to create prediction queries, and Prediction Query Builder to help you build the queries. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md).  
+-   Use the models to create predictions, which you can then use to make business decisions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the DMX language that you can use to create prediction queries, and Prediction Query Builder to help you build the queries. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference).  
   
 -   Create content queries to retrieve statistics, rules, or formulas from the model. For more information, see [Data Mining Queries](data-mining-queries.md).  
   

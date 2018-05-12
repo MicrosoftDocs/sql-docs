@@ -34,7 +34,7 @@ manager: "jhubbard"
  [Create a Push Subscription](create-a-push-subscription.md)   
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
  [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
- [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md)   
+ [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

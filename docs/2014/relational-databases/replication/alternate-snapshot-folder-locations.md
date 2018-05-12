@@ -27,7 +27,7 @@ manager: "jhubbard"
  If you want to specify an alternate snapshot folder location or if you want to compress snapshot files, create the publication without creating the initial snapshot immediately, set the publication properties for the snapshot location, and then run the Snapshot Agent for that publication. If you change the alternate location after creating the initial snapshot, the location of any generated snapshot for the publication will not be relocated to the new alternate location. In this case, depending on the publication settings, the Merge Agent or Distribution Agent might not be able to find the snapshot files at the new alternate location.  
   
 > [!NOTE]  
->  Do not specify an alternate location (using the **Publication Properties** dialog box or [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)) that is the same as the default snapshot folder location.  
+>  Do not specify an alternate location (using the **Publication Properties** dialog box or [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)) that is the same as the default snapshot folder location.  
   
 > [!CAUTION]  
 >  Do not use both WebSync and alternate snapshot folder locations at the same time.  

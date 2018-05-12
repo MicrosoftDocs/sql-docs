@@ -98,7 +98,7 @@ manager: "jhubbard"
     -   View  
   
 ## Controlling Access to a Securable  
- The entity that receives permission to a securable is called a principal. The most common principals are logins and database users. Access to securables is controlled by granting or denying permissions, or by adding logins and user to roles which have access. For information about controlling permissions, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md), [REVOKE &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-transact-sql.md), [DENY &#40;Transact-SQL&#41;](~/t-sql/statements/deny-transact-sql.md), [sp_addrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md), and [sp_droprolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+ The entity that receives permission to a securable is called a principal. The most common principals are logins and database users. Access to securables is controlled by granting or denying permissions, or by adding logins and user to roles which have access. For information about controlling permissions, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql), [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql), [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql), [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql), and [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql).  
   
 > [!CAUTION]  
 >  The default permissions that are granted to system objects at the time of setup are carefully evaluated against possible threats and need not be altered as part of hardening the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation. Any changes to the permissions on the system objects could limit or break the functionality and could potentially leave your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation in an unsupported state.  
@@ -106,14 +106,14 @@ manager: "jhubbard"
 ## Related Content  
  [Securing SQL Server](securing-sql-server.md)  
   
- [sys.database_principals &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
+ [sys.database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)  
   
- [sys.database_role_members &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)  
+ [sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)  
   
- [sys.server_principals &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
+ [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)  
   
- [sys.server_role_members &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
+ [sys.server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)  
   
- [sys.sql_logins &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)  
+ [sys.sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)  
   
   

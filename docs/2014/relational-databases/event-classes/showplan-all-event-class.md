@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Showplan Logical and Physical Operators Reference](../showplan-logical-and-physical-operators-reference.md)   
  [Showplan XML Statistics Profile Event Class](showplan-xml-statistics-profile-event-class.md)   
  [Showplan XML Event Class](showplan-xml-event-class.md)  

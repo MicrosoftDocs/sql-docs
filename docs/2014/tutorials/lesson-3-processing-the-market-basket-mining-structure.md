@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 3: Processing the Market Basket Mining Structure
-  In this lesson, you will use the [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) statement and the vAssocSeqLineItems and vAssocSeqOrders from the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] sample database to process the mining structures and mining models that you created in [Lesson 1: Creating the Market Basket Mining Structure](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) and [Lesson 2: Adding Mining Models to the Market Basket Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+  In this lesson, you will use the [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) statement and the vAssocSeqLineItems and vAssocSeqOrders from the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] sample database to process the mining structures and mining models that you created in [Lesson 1: Creating the Market Basket Mining Structure](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) and [Lesson 2: Adding Mining Models to the Market Basket Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
  When you process a mining structure, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reads the source data and builds the structures that support mining models. When you process a mining model, the data defined by the mining structure is passed through the data mining algorithm that you chose. The algorithm searches for trends and patterns, and then stores this information in the mining model. The mining model, therefore, does not contain the actual source data, but instead contains the information that was discovered by the algorithm. For more information about processing mining models, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -25,7 +25,7 @@ manager: "jhubbard"
  Because the Market Basket mining structure contains a nested table, you will have to define the mining columns to be trained using the nested table structure, and use the `SHAPE` command to define the queries that pull the training data from the source tables.  
   
 ## INSERT INTO Statement  
- In order to train the Market Basket mining structure and its associated mining models, use the [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) statement. The code in the statement can be broken into the following parts.  
+ In order to train the Market Basket mining structure and its associated mining models, use the [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) statement. The code in the statement can be broken into the following parts.  
   
 -   Identifying the mining structure  
   
@@ -58,7 +58,7 @@ RELATE [<case key>] TO [<foreign key>]
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
 ```  
   
- The next lines of the code specify the columns that are defined by the mining structure. You must list each column in the mining structure, and each column must map to a column contained within the source query data. You can use `SKIP` to ignore columns that exist in the source data but do not exist in the mining structure. For more information about how to use `SKIP`, see [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md).  
+ The next lines of the code specify the columns that are defined by the mining structure. You must list each column in the mining structure, and each column must map to a column contained within the source query data. You can use `SKIP` to ignore columns that exist in the source data but do not exist in the mining structure. For more information about how to use `SKIP`, see [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
   
 ```  
 (  
@@ -81,7 +81,7 @@ RELATE [<case key>] TO [<foreign key>]
 ) AS [<nested table>]  
 ```  
   
- In this lesson, you use `OPENQUERY` to define the source data. For information about other methods of defining a query on the source data, see [&#60;source data query&#62;](~/dmx/source-data-query.md).  
+ In this lesson, you use `OPENQUERY` to define the source data. For information about other methods of defining a query on the source data, see [&#60;source data query&#62;](/sql/dmx/source-data-query).  
   
 ## Lesson Tasks  
  You will perform the following task in this lesson:  

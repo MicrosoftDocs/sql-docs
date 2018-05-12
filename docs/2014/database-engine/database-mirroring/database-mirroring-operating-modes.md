@@ -193,7 +193,7 @@ manager: "jhubbard"
   
      Turning off transaction safety causes the session to operate asynchronously, in high-performance mode. If the SAFETY property is set to OFF, the WITNESS property should also be set to OFF (the default). For information about the impact of the witness in high-performance mode, see [The State of the Witness](#WitnessState), later in this topic. For more information about running with transaction safety turned off, see [Asynchronous Database Mirroring (High-Performance Mode)](#Async), earlier in this topic.  
   
- The transaction safety setting of the database is recorded on each partner in the **sys.database_mirroring** catalog view in the **mirroring_safety_level** and **mirroring_safety_level_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
+ The transaction safety setting of the database is recorded on each partner in the **sys.database_mirroring** catalog view in the **mirroring_safety_level** and **mirroring_safety_level_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
  The database owner can change the transaction safety level at any time.  
   
@@ -208,7 +208,7 @@ manager: "jhubbard"
   
  For information about quorum, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
- The state of each witness on a server instance is recorded in the **sys.database_mirroring** catalog view in the **mirroring_witness_state** and **mirroring_witness_state_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
+ The state of each witness on a server instance is recorded in the **sys.database_mirroring** catalog view in the **mirroring_witness_state** and **mirroring_witness_state_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
  The following table summarizes how the operating mode of a session depends upon its transaction safety setting and on state of the witness.  
   
@@ -237,7 +237,7 @@ manager: "jhubbard"
 SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_state_desc FROM sys.database_mirroring  
 ```  
   
- For more information about this catalog view, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
+ For more information about this catalog view, see [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
 ###  <a name="FactorsOnLossOfPrincipal"></a> Factors Affecting Behavior on Loss of the Principal Server  
  The following table summarizes the combined effect of the transaction safety setting, the state of the database, and the state of the witness on the behavior of a mirroring session on the loss of the principal server.  

@@ -184,7 +184,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  For information about the different target types, see [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
-6.  Review and add any additional configuration options. For example, you can configure options such as the event retention mode, how long events are buffered in memory, or whether the event session should start automatically when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts. The options are described in the topic [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md). Be aware that default values are assigned if these options are not specified.  
+6.  Review and add any additional configuration options. For example, you can configure options such as the event retention mode, how long events are buffered in memory, or whether the event session should start automatically when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts. The options are described in the topic [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql). Be aware that default values are assigned if these options are not specified.  
   
 7.  Start the session.  
   
@@ -217,7 +217,7 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## See Also  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
+ [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   

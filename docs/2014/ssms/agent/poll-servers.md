@@ -53,7 +53,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)  
   
 ## See Also  
  [Manage Events](manage-events.md)  

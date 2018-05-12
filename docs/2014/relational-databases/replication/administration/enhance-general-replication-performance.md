@@ -64,7 +64,7 @@ manager: "jhubbard"
     SET READ_COMMITTED_SNAPSHOT ON  
     ```  
   
-     For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
+     For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 -   Be cautious with application logic in triggers.  
   

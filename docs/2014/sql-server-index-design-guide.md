@@ -184,7 +184,7 @@ ON Purchasing.PurchaseOrderDetail
   
  The [!INCLUDE[ssDE](includes/ssde-md.md)] can move equally efficiently in either direction. An index defined as `(RejectedQty DESC, ProductID ASC)` can still be used for a query in which the sort direction of the columns in the ORDER BY clause are reversed. For example, a query with the ORDER BY clause `ORDER BY RejectedQty ASC, ProductID DESC` can use the index.  
   
- Sort order can be specified only for key columns. The [sys.index_columns](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view and the INDEXKEY_PROPERTY function report whether an index column is stored in ascending or descending order.  
+ Sort order can be specified only for key columns. The [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) catalog view and the INDEXKEY_PROPERTY function report whether an index column is stored in ascending or descending order.  
   
  ![Arrow icon used with Back to Top link](../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Guide](#Top)  
   
@@ -205,7 +205,7 @@ ON Purchasing.PurchaseOrderDetail
 ### Clustered Index Architecture  
  In [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)], indexes are organized as B-trees. Each page in an index B-tree is called an index node. The top node of the B-tree is called the root node. The bottom nodes in the index are called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B-tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list.  
   
- Clustered indexes have one row in [sys.partitions](~/relational-databases/system-catalog-views/sys-partitions-transact-sql.md), with **index_id** = 1 for each partition used by the index. By default, a clustered index has a single partition. When a clustered index has multiple partitions, each partition has a B-tree structure that contains the data for that specific partition. For example, if a clustered index has four partitions, there are four B-tree structures; one in each partition.  
+ Clustered indexes have one row in [sys.partitions](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql), with **index_id** = 1 for each partition used by the index. By default, a clustered index has a single partition. When a clustered index has multiple partitions, each partition has a B-tree structure that contains the data for that specific partition. For example, if a clustered index has four partitions, there are four B-tree structures; one in each partition.  
   
  Depending on the data types in the clustered index, each clustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each clustered index will have one IN_ROW_DATA allocation unit per partition. The clustered index will also have one LOB_DATA allocation unit per partition if it contains large object (LOB) columns. It will also have one ROW_OVERFLOW_DATA allocation unit per partition if it contains variable length columns that exceed the 8,060 byte row size limit.  
   
@@ -277,7 +277,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   If the table has a clustered index, or the index is on an indexed view, the row locator is the clustered index key for the row.  
   
- Nonclustered indexes have one row in [sys.partitions](~/relational-databases/system-catalog-views/sys-partitions-transact-sql.md) with **index_id** >1 for each partition used by the index. By default, a nonclustered index has a single partition. When a nonclustered index has multiple partitions, each partition has a B-tree structure that contains the index rows for that specific partition. For example, if a nonclustered index has four partitions, there are four B-tree structures, with one in each partition.  
+ Nonclustered indexes have one row in [sys.partitions](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) with **index_id** >1 for each partition used by the index. By default, a nonclustered index has a single partition. When a nonclustered index has multiple partitions, each partition has a B-tree structure that contains the index rows for that specific partition. For example, if a nonclustered index has four partitions, there are four B-tree structures, with one in each partition.  
   
  Depending on the data types in the nonclustered index, each nonclustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each nonclustered index will have one IN_ROW_DATA allocation unit per partition that stores the index B-tree pages. The nonclustered index will also have one LOB_DATA allocation unit per partition if it contains large object (LOB) columns . Additionally, it will have one ROW_OVERFLOW_DATA allocation unit per partition if it contains variable length columns that exceed the 8,060 byte row size limit.  
   

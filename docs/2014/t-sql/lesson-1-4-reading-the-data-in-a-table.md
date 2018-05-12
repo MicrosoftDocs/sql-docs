@@ -78,13 +78,13 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|[String Functions &#40;Transact-SQL&#41;](~/t-sql/functions/string-functions-transact-sql.md)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41;](~/t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Mathematical Functions &#40;Transact-SQL&#41;](~/t-sql/functions/mathematical-functions-transact-sql.md)|[Text and Image Functions &#40;Transact-SQL&#41;](~/t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|  
+|[String Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[Mathematical Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Text and Image Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## Next Task in Lesson  
  [Summary: Creating Database Objects](lesson-1-5-summary-creating-database-objects.md)  
   
 ## See Also  
- [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

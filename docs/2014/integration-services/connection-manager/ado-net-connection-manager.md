@@ -37,7 +37,7 @@ manager: "jhubbard"
 |`datetime2`|The [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager truncates the millisecond value.|  
   
 > [!NOTE]  
->  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md) and [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+>  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) and [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## ADO.NET Connection Manager Configuration  
  You can configure an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager in the following ways:  

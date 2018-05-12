@@ -22,11 +22,11 @@ manager: "jhubbard"
   
 -   Create a memory-optimized data filegroup and add a container to the filegroup.  
   
--   Create memory-optimized tables and indexes. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md).  
+-   Create memory-optimized tables and indexes. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
   
 -   Using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], load data into the memory-optimized table and update statistics before creating natively compiled stored procedures. For more information, see [Statistics for Memory-Optimized Tables](memory-optimized-tables.md).  
   
--   Create natively compiled stored procedures to access data in memory-optimized tables. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md).  
+-   Create natively compiled stored procedures to access data in memory-optimized tables. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
 -   As needed, migrate data from existing tables to memory-optimized tables.  
   

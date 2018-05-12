@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Plan and Perform Restore Sequences (Full Recovery Model)
-  This topic explains how to plan and perform a restore sequence for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that ordinarily uses the full recovery model. A *restore sequence* is a sequence of one or more [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statements. Typically, a restore sequences initializes the contents of the database, files, and/or pages being restored (the data-copy phase), rolls forward logged transactions (the redo phase), and rolls back uncommitted transactions (the undo phase).  
+  This topic explains how to plan and perform a restore sequence for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that ordinarily uses the full recovery model. A *restore sequence* is a sequence of one or more [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statements. Typically, a restore sequences initializes the contents of the database, files, and/or pages being restored (the data-copy phase), rolls forward logged transactions (the redo phase), and rolls back uncommitted transactions (the undo phase).  
   
  In simple cases, a restore sequence requires only a full database backup, a differential database backup, and the subsequent log backups. In these cases, constructing a correct restore sequence is easy. For example, to restore a whole database to the point of a failure, start by backing up the active transaction log (the *tail* of the log). Then, restore the most recent full database backup, the most recent differential backup (if any), and all subsequent log backups in the order in which they were taken.  
   

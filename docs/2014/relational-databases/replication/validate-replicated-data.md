@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 -   Binary checksum can be used with any published table. Checksum cannot validate tables with column filters, or logical table structures where column offsets differ (due to ALTER TABLE statements that drop or add columns).  
   
--   Replication validation uses the `checksum` and **binary_checksum** functions. For  information about their behavior, see  [CHECKSUM &#40;Transact-SQL&#41;](~/t-sql/functions/checksum-transact-sql.md) and [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](~/t-sql/functions/binary-checksum-transact-sql.md).  
+-   Replication validation uses the `checksum` and **binary_checksum** functions. For  information about their behavior, see  [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) and [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
 -   Validation by using binary checksum or checksum can incorrectly report a failure if data types are different at the Subscriber than they are at the Publisher. This can occur if you do any one of the following:  
   

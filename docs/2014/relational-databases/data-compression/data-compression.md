@@ -115,7 +115,7 @@ manager: "jhubbard"
   
 -   Use **COLUMNSTORE** data compression to decompress archival compression. This resulting data will continue to be compressed with columnstore compression.  
   
- To add archival compression, use [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md) with the REBUILD option and DATA COMPRESSION = COLUMNSTORE.  
+ To add archival compression, use [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) or [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) with the REBUILD option and DATA COMPRESSION = COLUMNSTORE.  
   
  Examples:  
   
@@ -131,7 +131,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 ```  
   
- To remove archival compression and restore the data to columnstore compression, use [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md) with the REBUILD option and DATA COMPRESSION = COLUMNSTORE.  
+ To remove archival compression and restore the data to columnstore compression, use [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) or [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) with the REBUILD option and DATA COMPRESSION = COLUMNSTORE.  
   
  Examples:  
   
@@ -165,11 +165,11 @@ REBUILD PARTITION = ALL WITH (
 ### Metadata  
  The following system views contain information about data compression for clustered indexes:  
   
--   [sys.indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - The `type` and `type_desc` columns include CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE.  
+-   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - The `type` and `type_desc` columns include CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE.  
   
--   [sys.partitions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – The `data_compression` and `data_compression_desc` columns include COLUMNSTORE and COLUMNSTORE_ARCHIVE.  
+-   [sys.partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) – The `data_compression` and `data_compression_desc` columns include COLUMNSTORE and COLUMNSTORE_ARCHIVE.  
   
- The procedure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) does not apply to columnstore indexes.  
+ The procedure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) does not apply to columnstore indexes.  
   
 ## How Compression Affects Partitioned Tables and Indexes  
  When you use data compression with partitioned tables and indexes, be aware of the following considerations:  
@@ -213,7 +213,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   When the Snapshot Agent generates the initial schema script, the new schema will use the same compression settings for both the table and its indexes. Compression cannot be enabled on just the table and not the index.  
   
--   For transactional replication the article schema option determines what dependent objects and properties have to be scripted. For more information, see [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   For transactional replication the article schema option determines what dependent objects and properties have to be scripted. For more information, see [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
      The Distribution Agent does not check for down-level Subscribers when it applies scripts. If the replication of compression is selected, creating the table on down-level Subscribers will fail. In the case of a mixed topology, do not enable the replication of compression.  
   
@@ -253,11 +253,11 @@ REBUILD PARTITION = ALL WITH (
  [Row Compression Implementation](row-compression-implementation.md)   
  [Page Compression Implementation](page-compression-implementation.md)   
  [Unicode Compression Implementation](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](~/t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-partition-function-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
- [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
+ [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
   

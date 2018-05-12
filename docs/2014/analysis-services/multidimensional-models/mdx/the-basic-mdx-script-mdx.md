@@ -50,22 +50,22 @@ manager: "mblythe"
  All MDX scripting statements  
  In MDX scripts, MDX scripting statements control the context and scope of calculations, and manage the behavior of other statements in the MDX script. This category includes the following statements:  
   
--   [CALCULATE](~/mdx/mdx-scripting-calculate.md)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [FREEZE](~/mdx/mdx-scripting-freeze.md)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
--   [SCOPE](~/mdx/mdx-scripting-scope.md)  
+-   [SCOPE](/sql/mdx/mdx-scripting-scope)  
   
- For more information on MDX scripting statements, see [MDX Scripting Statements &#40;MDX&#41;](~/mdx/mdx-scripting-statements-mdx.md).  
+ For more information on MDX scripting statements, see [MDX Scripting Statements &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CREATE MEMBER](~/mdx/mdx-data-definition-create-member.md)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  The CREATE MEMBER statement creates calculated members. For more information about how to create calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
- [CREATE SET](~/mdx/mdx-data-definition-create-set.md)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  The CREATE SET statement creates named sets. For more information about how to create names sets, see [Building Named Sets in MDX &#40;MDX&#41;](mdx-named-sets-building-named-sets.md).  
   
  Conditional statements  
- Conditional statements add conditional logic to MDX scripts. This category includes the [CASE](~/mdx/case-statement-mdx.md) and [IF](~/mdx/mdx-scripting-if.md) statements.  
+ Conditional statements add conditional logic to MDX scripts. This category includes the [CASE](/sql/mdx/case-statement-mdx) and [IF](/sql/mdx/mdx-scripting-if) statements.  
   
  Assignment expressions  
  An assignment expression assigns an expression, such as a value, to a constrained subcube. A constrained subcube expression is a collection of constrained set expressions that define the "edges" of a subcube within an MDX script. The following codes shows the syntax for a constrained subcube expression:  
@@ -88,7 +88,7 @@ manager: "mblythe"
 ```  
   
 ## See Also  
- [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
+ [MDX Language Reference &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

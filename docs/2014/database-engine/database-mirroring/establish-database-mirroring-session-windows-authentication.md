@@ -51,7 +51,7 @@ manager: "jhubbard"
 5.  The Configure Database Mirroring Security Wizard automatically creates the database mirroring endpoint (if none exists) on each server instance, and enters the server network addresses in the field corresponding to the role of the server instance (**Principal**, **Mirror**, or **Witness**).  
   
     > [!IMPORTANT]  
-    >  When creating an endpoint, the Configure Database Mirroring Security Wizard always uses Windows Authentication. Before you can use the wizard with certificate-based authentication, the mirroring endpoint must already have been configured to use certificates on each of the server instances. Also, all the fields of the wizard's **Service Accounts** dialog box must remain empty. For information about creating a database mirroring endpoint to use certificates, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md).  
+    >  When creating an endpoint, the Configure Database Mirroring Security Wizard always uses Windows Authentication. Before you can use the wizard with certificate-based authentication, the mirroring endpoint must already have been configured to use certificates on each of the server instances. Also, all the fields of the wizard's **Service Accounts** dialog box must remain empty. For information about creating a database mirroring endpoint to use certificates, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
 6.  Optionally, change the operating mode. The availability of certain operating mode(s) depends on whether you have specified a TCP address for a witness. The options are as follows:  
   

@@ -64,7 +64,7 @@ manager: "jhubbard"
 4.  On the **Subscription Options** page, select a value of **True** for the option **Allow non-SQL Server Subscribers**. Selecting this option changes a number of properties so that the publication is compatible with non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
     > [!NOTE]  
-    >  Selecting **True** sets the value of the **pre_creation_cmd** article property to 'drop'. This setting specifies that replication should drop a table at the Subscriber if it matches the name of the table in the article. If you have existing tables at the Subscriber that you want to keep, use the [sp_changearticle](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) stored procedure for each article; specify a value 'none' for **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
+    >  Selecting **True** sets the value of the **pre_creation_cmd** article property to 'drop'. This setting specifies that replication should drop a table at the Subscriber if it matches the name of the table in the article. If you have existing tables at the Subscriber that you want to keep, use the [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) stored procedure for each article; specify a value 'none' for **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] You will be prompted to create a new snapshot for the publication. If you do not want to create one at this time, use the steps described in the next "how to" procedure at a later time.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 #### To retain tables at the Subscriber  
   
--   By default, enabling a publication for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers sets the value of the **pre_creation_cmd** article property to 'drop'. This setting specifies that replication should drop a table at the Subscriber if it matches the name of the table in the article. If you have existing tables at the Subscriber that you want to keep, use the [sp_changearticle](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) stored procedure for each article; specify a value 'none' for **pre_creation_cmd**. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
+-   By default, enabling a publication for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers sets the value of the **pre_creation_cmd** article property to 'drop'. This setting specifies that replication should drop a table at the Subscriber if it matches the name of the table in the article. If you have existing tables at the Subscriber that you want to keep, use the [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) stored procedure for each article; specify a value 'none' for **pre_creation_cmd**. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
 #### To generate a snapshot for the publication  
   
@@ -149,18 +149,18 @@ manager: "jhubbard"
   
 1.  Install the most recent OLE DB provider for the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber at both the Publisher and Distributor. For the replication requirements for an OLE DB provider, see [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md), [Oracle Subscribers](non-sql/oracle-subscribers.md), [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
-2.  At the Publisher on the publication database, verify that the publication supports non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers by executing [sp_helppublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+2.  At the Publisher on the publication database, verify that the publication supports non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers by executing [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql).  
   
     -   If the value of `enabled_for_het_sub` is 1, non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers are supported.  
   
-    -   If the value of `enabled_for_het_sub` is 0, execute [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying `enabled_for_het_sub` for **@property** and `true` for **@value**.  
+    -   If the value of `enabled_for_het_sub` is 0, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specifying `enabled_for_het_sub` for **@property** and `true` for **@value**.  
   
         > [!NOTE]  
         >  Before changing `enabled_for_het_sub` to `true`, you must drop any existing subscriptions to the publication. You cannot set `enabled_for_het_sub` to `true` when the publication also supports updating subscriptions. Changing `enabled_for_het_sub` will affect other publication properties. For more information, see [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, a value of **(default destination)** for **@destination_db**, a value of **push** for **@subscription_type**, and a value of 3 for **@subscriber_type** (specifies an OLE DB provider).  
+3.  At the Publisher on the publication database, execute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specify **@publication**, **@subscriber**, a value of **(default destination)** for **@destination_db**, a value of **push** for **@subscription_type**, and a value of 3 for **@subscriber_type** (specifies an OLE DB provider).  
   
-4.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
+4.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Specify the following:  
   
     -   The **@subscriber**and **@publication** parameters.  
   

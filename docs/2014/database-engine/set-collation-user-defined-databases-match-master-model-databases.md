@@ -40,11 +40,11 @@ manager: "jhubbard"
   
  [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md)  
   
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
- [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)  
+ [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)  
   
- [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
  [Microsoft Knowledge Base article 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
   

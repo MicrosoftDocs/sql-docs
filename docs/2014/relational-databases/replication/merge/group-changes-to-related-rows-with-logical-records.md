@@ -89,7 +89,7 @@ manager: "jhubbard"
   
     -   `UDT`  
   
--   Foreign key relationships in published tables cannot be defined with the CASCADE option. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
+-   Foreign key relationships in published tables cannot be defined with the CASCADE option. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) and [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 -   You cannot update any columns that are used in the logical relation clause.  
   

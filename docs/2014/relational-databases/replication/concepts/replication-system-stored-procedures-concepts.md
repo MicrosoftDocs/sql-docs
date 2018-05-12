@@ -223,7 +223,7 @@ REM -- The following must be supplied on one line.
   
 ## See Also  
  [Replication Programming Concepts](replication-programming-concepts.md)   
- [Replication Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Replication Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)   
  [Scripting Replication](../scripting-replication.md)  
   
   

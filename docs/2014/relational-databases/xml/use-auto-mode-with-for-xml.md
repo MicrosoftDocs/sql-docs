@@ -137,7 +137,7 @@ FOR XML AUTO, ELEMENTS
 -   [Examples: Using AUTO Mode](examples-using-auto-mode.md)  
   
 ## See Also  
- [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

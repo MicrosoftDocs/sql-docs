@@ -23,11 +23,11 @@ manager: "jhubbard"
   
  When you deploy a project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can create dump files that provide information about the execution of the packages contained in the project. When the ISServerExec.exe process ends, the dump files are created. You can specify that a dump file is created when errors occur during the package execution, by selecting the **Dump on errors** option in the **Execute Package** Dialog box. You can also use the following stored procedures:  
   
--   [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+-   [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
   
      Call this stored procedure to configure a dump file to be created when any error or event occurs, and when specific events occur, during a package execution.  
   
--   [catalog.create_execution_dump](~/integration-services/system-stored-procedures/catalog-create-execution-dump.md)  
+-   [catalog.create_execution_dump](/sql/integration-services/system-stored-procedures/catalog-create-execution-dump)  
   
      Call this stored procedure to cause a running package to pause and create a dump file.  
   

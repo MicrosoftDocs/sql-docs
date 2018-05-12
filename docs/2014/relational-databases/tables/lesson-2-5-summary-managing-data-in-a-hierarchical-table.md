@@ -25,6 +25,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Hierarchical Data &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
- [hierarchyid Data Type Method Reference](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)  
+ [hierarchyid Data Type Method Reference](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

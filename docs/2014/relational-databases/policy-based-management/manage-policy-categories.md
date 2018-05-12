@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   When using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], if the **Mandate Database Subscriptions** check box is not selected, the policy category must be individually applied to each relevant portion of the server, such as one or more databases or tables.  
   
--   If you specify a policy category that does not exist, a new policy category is created and the subscription is mandated for all databases when you execute the stored procedure. If you then clear the mandated subscription for the new category, the subscription will only apply for the database that you specified as the *target_object*. For more information about how to change a mandated subscription setting, see [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md).  
+-   If you specify a policy category that does not exist, a new policy category is created and the subscription is mandated for all databases when you execute the stored procedure. If you then clear the mandated subscription for the new category, the subscription will only apply for the database that you specified as the *target_object*. For more information about how to change a mandated subscription setting, see [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql).  
   
 ###  <a name="Security"></a> Security  
   
@@ -89,6 +89,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md).  
+ For more information, see [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql).  
   
   

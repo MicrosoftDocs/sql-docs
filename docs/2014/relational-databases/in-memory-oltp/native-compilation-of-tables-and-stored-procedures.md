@@ -25,7 +25,7 @@ manager: "jhubbard"
  In-Memory OLTP compiles memory-optimized tables when they are created, and natively compiled stored procedures when they are loaded to native DLLs. In addition, the DLLs are recompiled after a database or server restart. The information necessary to recreate the DLLs is stored in the database metadata. The DLLs are not part of the database, though they are associated with the database. For example, the DLLs are not included in database backups.  
   
 > [!NOTE]  
->  Memory-optimized tables are recompiled during a server restart. To speed up database recovery, natively compiled stored procedures are not recompiled during a server restart, they are compiled at the time of first execution. As a result of this deferred compilation, natively compiled stored procedures only appear when calling [sys.dm_os_loaded_modules &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql.md) after first execution.  
+>  Memory-optimized tables are recompiled during a server restart. To speed up database recovery, natively compiled stored procedures are not recompiled during a server restart, they are compiled at the time of first execution. As a result of this deferred compilation, natively compiled stored procedures only appear when calling [sys.dm_os_loaded_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql) after first execution.  
   
 ## Maintenance of In-Memory OLTP DLLs  
  The following query shows all table and stored procedure DLLs currently loaded in memory on the server:  

@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### To configure snapshot properties when creating a snapshot or transactional publication  
   
-1.  At the Publisher, execute [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify a publication name for **@publication**, a value of either **snapshot** or **continuous** for **@repl_freq**, and one or more of the following snapshot-related parameters:  
+1.  At the Publisher, execute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specify a publication name for **@publication**, a value of either **snapshot** or **continuous** for **@repl_freq**, and one or more of the following snapshot-related parameters:  
   
     -   **@alt_snapshot_folder** - specify a path if the snapshot for this publication is accessed from that location instead of or in addition to the snapshot default folder.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ### To configure snapshot properties when creating a merge publication  
   
-1.  At the Publisher, execute [sp_addmergepublication](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify a publication name for **@publication**, a value of either **snapshot** or **continuous** for **@repl_freq**, and one or more of the following snapshot-related parameters:  
+1.  At the Publisher, execute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specify a publication name for **@publication**, a value of either **snapshot** or **continuous** for **@repl_freq**, and one or more of the following snapshot-related parameters:  
   
     -   **@alt_snapshot_folder** - specify a path if the snapshot for this publication is accessed from that location instead of or in addition to the snapshot default folder.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 ### To modify snapshot properties of an existing snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Specify a value of **1** for **@force_invalidate_snapshot** and one of the following values for **@property**:  
+1.  At the Publisher on the publication database, execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specify a value of **1** for **@force_invalidate_snapshot** and one of the following values for **@property**:  
   
     -   **alt_snapshot_folder** -also specify a new path to the alternate snapshot folder for **@value**.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
     -   **snapshot_in_defaultfolder** - also specify a value of either **true** or **false** to indicate whether the snapshot is available only in a non-default location.  
   
-2.  (Optional) At the Publisher on the publication database, execute [sp_changepublication_snapshot](~/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md). Specify **@publication** and one or more of the scheduling or security credential parameters being changed.  
+2.  (Optional) At the Publisher on the publication database, execute [sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql). Specify **@publication** and one or more of the scheduling or security credential parameters being changed.  
   
     > [!IMPORTANT]  
     >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 ### To modify snapshot properties of an existing merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify a value of **1** for **@force_invalidate_snapshot** and one of the following values for **@property**:  
+1.  At the Publisher on the publication database, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specify a value of **1** for **@force_invalidate_snapshot** and one of the following values for **@property**:  
   
     -   **alt_snapshot_folder** -also specify a new path to the alternate snapshot folder for **@value**.  
   

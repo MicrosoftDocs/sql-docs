@@ -47,7 +47,7 @@ manager: "jhubbard"
 -   In the **Properties** dialog box, make the appropriate changes, and then click **OK**.  
   
 ## See Also  
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)   
+ [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [Create an Extended Events Session Using Query Editor](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   
   

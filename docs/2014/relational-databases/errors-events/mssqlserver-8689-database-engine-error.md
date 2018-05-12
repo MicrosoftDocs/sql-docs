@@ -37,7 +37,7 @@ manager: "jhubbard"
  Ensure all databases that are specified in the USE PLAN hint exist.  
   
 ## See Also  
- [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)   
+ [Query Hints &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [Plan Guides](../performance/plan-guides.md)  
   
   

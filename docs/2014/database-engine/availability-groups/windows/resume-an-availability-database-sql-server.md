@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the secondary replica whose database you want to resume.  
   
-2.  Resume the secondary database by using the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-hadr.md)statement:  
+2.  Resume the secondary database by using the following [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)statement:  
   
      ALTER DATABASE *database_name* SET HADR RESUME  
   

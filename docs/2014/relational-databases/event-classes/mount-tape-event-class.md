@@ -48,7 +48,7 @@ manager: "jhubbard"
 |TextData|`ntext`|*physical device name* [ ( *logical device name* ) ]. The logical device name displays only if it is defined in the sys.backup_devices catalog view.|1|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

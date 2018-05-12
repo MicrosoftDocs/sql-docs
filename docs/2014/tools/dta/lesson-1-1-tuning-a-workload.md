@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### Tune a workload Transact-SQL script file  
   
-1.  Copy a sample SELECT statement or statements from "A. Using SELECT to retrieve rows and columns" in [SELECT Examples &#40;Transact-SQL&#41;](~/t-sql/queries/select-examples-transact-sql.md) and paste the statements into the Query Editor of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Save the file as **MyScript.sql** in a directory where you can easily find it.  
+1.  Copy a sample SELECT statement or statements from "A. Using SELECT to retrieve rows and columns" in [SELECT Examples &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) and paste the statements into the Query Editor of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Save the file as **MyScript.sql** in a directory where you can easily find it.  
   
 2.  Start Database Engine Tuning Advisor. See [Launching Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   

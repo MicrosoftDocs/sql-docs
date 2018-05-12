@@ -23,9 +23,9 @@ manager: "jhubbard"
   
  For information about supported data types, see [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
--   Options and operations supported on memory-optimized tables. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md).  
+-   Options and operations supported on memory-optimized tables. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
   
--   Options and operations supported on natively compiled stored procedures. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md).  
+-   Options and operations supported on natively compiled stored procedures. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
 -   Ability to access memory-optimized tables using interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)] provides surface area equivalent to accessing tables that are not memory optimized using stored procedures that are not natively compiled and using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. For more information, see [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log blocks calculate checksum and validate.  
   
--   The new SNAPSHOT table hint. For more information, see [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md).  
+-   The new SNAPSHOT table hint. For more information, see [Table Hints &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   
 -   DB COMPAT level.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
 |Database Containment|Database containment is not supported in a database that has natively-compiled stored procedures and memory-optimized tables. For more information, see [Contained Databases](../databases/contained-databases.md)|  
 |Context Connections|Accessing memory-optimized tables using the context connection from inside CLR stored procedures is not supported.|  
 |Cursors|Keyset and dynamic cursors on queries accessing memory-optimized tables. These queries are degraded to static becoming read-only.|  
-|TABLESTAMP|TABLESTAMP is not supported. See [FROM &#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md) for more information.|  
+|TABLESTAMP|TABLESTAMP is not supported. See [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql) for more information.|  
 |AUTO_CLOSE|AUTO_CLOSE is not supported. For more information, see [Set the AUTO_CLOSE Database Option to OFF](../policy-based-management/set-the-auto-close-database-option-to-off.md).|  
 |Database Snapshots|Database Snapshots are not supported. For more information, see [Database Snapshots &#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md).|  
 |Transactional DDL|Transactional DDL is not supported in In-Memory OLTP.|  

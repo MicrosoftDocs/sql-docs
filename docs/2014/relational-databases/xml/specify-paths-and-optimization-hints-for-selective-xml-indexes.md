@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  You specify node paths and optimization hints at the same time in one of the following statements:  
   
--   In the **FOR** clause of a **CREATE** statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-selective-xml-index-transact-sql.md).  
+-   In the **FOR** clause of a **CREATE** statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
 -   In the **ADD** clause of an **ALTER** statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](../indexes/indexes.md).  
   

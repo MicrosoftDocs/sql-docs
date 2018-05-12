@@ -39,7 +39,7 @@ SELECT * FROM smart_admin.fn_get_parameter (NULL)
 GO  
 ```  
   
- For more information, see [smart_admin.fn_get_parameter &#40;Transact-SQL&#41;](~/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql.md)  
+ For more information, see [smart_admin.fn_get_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)  
   
 ### Extended Events for Monitoring  
  By default, Admin, Operational and Analytical events are turned on. Admin events are most critical, useful when identifying errors that require manual intervention to solve the problem. You may want to turn on the operational and debug events but consider that these events are verbose and may require some filtering. The following procedures describe how to monitor events logged through Extended Events.  
@@ -55,7 +55,7 @@ GO
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     The output from this query will display the event_name, whether it is configurable or not, and whether it is currently enabled.  For more information, see [smart_admin.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](~/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql.md).  
+     The output from this query will display the event_name, whether it is configurable or not, and whether it is currently enabled.  For more information, see [smart_admin.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql).  
   
 2.  To enable debug events, run the following query:  
   
@@ -67,7 +67,7 @@ GO
   
     ```  
   
-     For more information about the stored procedure, see [smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql.md).  
+     For more information about the stored procedure, see [smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql).  
   
 3.  To view the logged events run the following query:  
   
@@ -214,7 +214,7 @@ PS C:\>PS SQLSERVER:\SQL\COMPUTER\DEFAULT> (get-sqlsmartadmin ).EnumHealthStatus
 ```  
   
 ### Objects in MSDB database  
- There are objects that are installed to implement the functionality. These objects are reserved for internal use. However, there is one system table that can be useful in monitoring the backup status: smart_backup_files. Most of the Information   stored in this table relevant to monitoring like the type of backup, database name, first and last lsn, backup expiry dates are exposed through the system function [smart_admin.fn_available_backups &#40;Transact-SQL&#41;](~/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql.md). However the status column in the smart_backup_files table which indicates the status of the backup file is not available using the function. Following is a sample query you can use to retrieve the some information including the status from the system table:  
+ There are objects that are installed to implement the functionality. These objects are reserved for internal use. However, there is one system table that can be useful in monitoring the backup status: smart_backup_files. Most of the Information   stored in this table relevant to monitoring like the type of backup, database name, first and last lsn, backup expiry dates are exposed through the system function [smart_admin.fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). However the status column in the smart_backup_files table which indicates the status of the backup file is not available using the function. Following is a sample query you can use to retrieve the some information including the status from the system table:  
   
 ```  
 USE msdb  

@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|Only '%s' or members of db_owner can drop the anonymous agent.|  
   
 ## Explanation  
- You do not have sufficient permissions to drop the agent for the anonymous subscription. The login used when calling [sp_dropanonymousagent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropanonymousagent-transact-sql.md) must be a member of the **sysadmin** fixed server role at the Distributor or **db_owner** fixed database role in the distribution database, or the user must be the one that initiated the first run of the agent.  
+ You do not have sufficient permissions to drop the agent for the anonymous subscription. The login used when calling [sp_dropanonymousagent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropanonymousagent-transact-sql) must be a member of the **sysadmin** fixed server role at the Distributor or **db_owner** fixed database role in the distribution database, or the user must be the one that initiated the first run of the agent.  
   
 ## User Action  
  Login with the appropriate credentials, and execute **sp_dropanonymousagent**.  

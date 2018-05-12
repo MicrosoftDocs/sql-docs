@@ -27,7 +27,7 @@ manager: "mblythe"
   
  If your data mining solution uses relational data instead of a multidimensional database, transferring models by using `EXPORT` and `IMPORT` is much faster and easier than either using database restore or deploying an entire solution.  
   
- This section provides an overview of how to transfer data mining structures and models by using DMX statements. For details of the syntax, together with examples, see [EXPORT &#40;DMX&#41;](~/dmx/export-dmx.md) and [IMPORT &#40;DMX&#41;](~/dmx/import-dmx.md).  
+ This section provides an overview of how to transfer data mining structures and models by using DMX statements. For details of the syntax, together with examples, see [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx) and [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx).  
   
 > [!NOTE]  
 >  You must be a database or server administrator to export or import objects from a Microsoft SQL Server Analysis Services database.  

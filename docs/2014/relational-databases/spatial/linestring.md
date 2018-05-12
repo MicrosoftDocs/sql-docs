@@ -125,14 +125,14 @@ POINT(1 3) is a valid Point.
 ```  
   
 ## See Also  
- [STLength &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlength-geometry-data-type.md)   
- [STStartPoint &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
- [STEndpoint &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   
- [STPointN &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointn-geometry-data-type.md)   
- [STNumPoints &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   
- [STIsRing &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisring-geometry-data-type.md)   
- [STIsClosed &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
- [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
+ [STLength &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
+ [STStartPoint &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
+ [STEndpoint &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
+ [STPointN &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)   
+ [STNumPoints &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
+ [STIsRing &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
+ [STIsClosed &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
+ [STPointOnSurface &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

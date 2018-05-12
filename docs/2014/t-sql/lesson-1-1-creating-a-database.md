@@ -42,6 +42,6 @@ manager: "jhubbard"
  [Creating a Table &#40;Tutorial&#41;](lesson-1-2-creating-a-table.md)  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

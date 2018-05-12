@@ -84,7 +84,7 @@ propID = 4
  For a complete list of Windows properties, see [Windows Properties](http://go.microsoft.com/fwlink/?LinkId=215013), also in the Windows Search documentation.  
   
 ##  <a name="examples"></a> Adding a Property to a Search Property List  
- The following example shows how to add a property to a search property list. The example uses an [ALTER SEARCH PROPERTY LIST](~/t-sql/statements/alter-search-property-list-transact-sql.md) statement to add the `System.Author` property to a search property list named `PropertyList1`, and provides a user friendly name for the property, `Author`.  
+ The following example shows how to add a property to a search property list. The example uses an [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) statement to add the `System.Author` property to a search property list named `PropertyList1`, and provides a user friendly name for the property, `Author`.  
   
 ```  
 ALTER SEARCH PROPERTY LIST PropertyList1   

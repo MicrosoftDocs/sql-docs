@@ -51,9 +51,9 @@ manager: "jhubbard"
   
 -   [How to: Configure Firewall Settings (Azure SQL Database)](http://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
--   [sp_set_firewall_rule &#40;Azure SQL Database&#41;](~/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
+-   [sp_set_firewall_rule &#40;Azure SQL Database&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
--   [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](~/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
+-   [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
 ## Syntax Differences  
   
@@ -84,6 +84,6 @@ manager: "jhubbard"
 ## See Also  
  [Contained Databases](../databases/contained-databases.md)   
  [Security Best Practices with Contained Databases](../databases/security-best-practices-with-contained-databases.md)   
- [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md)  
+ [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  
   
   

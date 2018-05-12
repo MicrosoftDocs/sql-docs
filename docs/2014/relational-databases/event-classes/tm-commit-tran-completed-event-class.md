@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
- [COMMIT TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/commit-transaction-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+ [COMMIT TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

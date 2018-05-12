@@ -58,7 +58,7 @@ manager: "jhubbard"
 5.  From the **Build** menu, select **Deploy**. This registers the assembly and creates the type in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## Using Transact-SQL to Deploy UDTs  
- The [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY syntax is used to register the assembly in the database in which you wish to use the UDT. It is stored internally in database system tables, not externally in the file system. If the UDT is dependent on external assemblies, they too must be loaded into the database. The CREATE TYPE statement is used to create the UDT in the database in which it is to be used. For more information, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md) and [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md).  
+ The [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY syntax is used to register the assembly in the database in which you wish to use the UDT. It is stored internally in database system tables, not externally in the file system. If the UDT is dependent on external assemblies, they too must be loaded into the database. The CREATE TYPE statement is used to create the UDT in the database in which it is to be used. For more information, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql) and [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql).  
   
 ### Using CREATE ASSEMBLY  
  The CREATE ASSEMBLY syntax registers the assembly in the database in which you wish to use the UDT. Once the assembly is registered, it has no dependencies.  
@@ -91,7 +91,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  The CREATE TYPE syntax is also used for creating native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alias data types, and is intended to replace `sp_addtype` as a means of creating alias data types. Some of the optional arguments in the CREATE TYPE syntax refer to creating UDTs, and are not applicable to creating alias data types (such as base type).  
   
- For more information, see [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md).  
+ For more information, see [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql).  
   
 #### Example  
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement creates the `Point` type. The EXTERNAL NAME is specified using the two-part naming syntax of *AssemblyName*.*UDTName*.  
@@ -146,7 +146,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  You cannot modify a UDT once it is created in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, although you can alter the assembly on which the type is based. In most cases, you must remove the UDT from the database with the [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE statement, make changes to the underlying assembly, and reload it using the ALTER ASSEMBLY statement. You then need to re-create the UDT and any dependent objects.  
   
 ### Example  
- The ALTER ASSEMBLY statement is used after you have made changes to the source code in your UDT assembly and recompiled it. It copies the .dll file to the server and rebinds to the new assembly. For the complete syntax, see [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md).  
+ The ALTER ASSEMBLY statement is used after you have made changes to the source code in your UDT assembly and recompiled it. It copies the .dll file to the server and rebinds to the new assembly. For the complete syntax, see [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
   
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY statement reloads the Point.dll assembly from the specified location on disk.  
   

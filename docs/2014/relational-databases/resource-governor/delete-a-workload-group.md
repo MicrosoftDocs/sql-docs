@@ -94,8 +94,8 @@ GO
  [Create a Resource Pool](create-a-resource-pool.md)   
  [Create a Workload Group](create-a-workload-group.md)   
  [Delete a Resource Pool](delete-a-resource-pool.md)   
- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/drop-workload-group-transact-sql.md)   
- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-workload-group-transact-sql)   
+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-resource-pool-transact-sql)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

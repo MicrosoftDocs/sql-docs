@@ -51,7 +51,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
     * **Create a linked server that connects using SQL Server Authentication.** Select this option if you have not defined a remote server or linked server between the Subscriber and the Publisher. Replication creates a linked server for you. The account you specify must already exist at the Publisher.
 
-    * **Use a linked server or remote server that you have already defined.** Select this option if you have defined a remote server or linked server between the Subscriber and the Publisher using [sp_addserver (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), [sp_addlinkedserver (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), SQL Server Management Studio, or another method.
+    * **Use a linked server or remote server that you have already defined.** Select this option if you have defined a remote server or linked server between the Subscriber and the Publisher using [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio, or another method.
 
     For information about the permissions required by the linked server account, see the **Queued Updating Subscriptions** of [enter link description here](../security/secure-the-subscriber.md).
 
@@ -88,7 +88,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
     * **Create a linked server that connects using SQL Server Authentication.** Select this option if you have not defined a remote server or linked server between the Subscriber and the Publisher. Replication creates a linked server for you. The account you specify must already exist at the Publisher.
 
-    * **Use a linked server or remote server that you have already defined.** Select this option if you have defined a remote server or linked server between the Subscriber and the Publisher using [sp_addserver (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), [sp_addlinkedserver (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), SQL Server Management Studio, or another method.
+    * **Use a linked server or remote server that you have already defined.** Select this option if you have defined a remote server or linked server between the Subscriber and the Publisher using [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio, or another method.
 
     For information about the permissions required by the linked server account, see the **Queued Updating Subscriptions** of [enter link description here](../security/secure-the-subscriber.md).
 

@@ -32,7 +32,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Examples: Using OPENXML
-  The examples in this topic show how OPENXML is used to create a rowset view of an XML document. For information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md). The examples show all aspects of OPENXML, but do not specify metaproperties in OPENXML. For more information about how to specify metaproperties in OPENXML, see [Specify Metaproperties in OPENXML](specify-metaproperties-in-openxml.md).  
+  The examples in this topic show how OPENXML is used to create a rowset view of an XML document. For information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). The examples show all aspects of OPENXML, but do not specify metaproperties in OPENXML. For more information about how to specify metaproperties in OPENXML, see [Specify Metaproperties in OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## Examples  
  In retrieving the data, *rowpattern* is used to identify the nodes in the XML document that determine the rows. Additionally, *rowpattern* is expressed in the XPath pattern language that is used in the MSXML XPath implementation. For example, if the pattern ends in an element or an attribute, a row is created for each element or attribute node that is selected by *rowpattern*.  
@@ -799,9 +799,9 @@ Col1        BinaryCol
 ```  
   
 ## See Also  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
- [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md)   
+ [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

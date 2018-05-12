@@ -38,7 +38,7 @@ manager: "jhubbard"
  From the local server, you can disable a remote server configuration to prevent access to that local server by users on the remote server with which it is paired.  
   
 ## Security for Remote Servers  
- To enable remote procedure calls (RPC) against a remote server, you must set up login mappings on the remote server and possibly on the local server that is running an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. RPC is disabled by default in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This configuration enhances the security of your server by reducing its attackable surface area. Before using RPC you must enable this feature. For more information see [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ To enable remote procedure calls (RPC) against a remote server, you must set up login mappings on the remote server and possibly on the local server that is running an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. RPC is disabled by default in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This configuration enhances the security of your server by reducing its attackable surface area. Before using RPC you must enable this feature. For more information see [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 ### Setting Up the Remote Server  
  Remote login mappings must be set up on the remote server. Using these mappings, the remote server maps the incoming login for an RPC connection from a specified server to a local login. Remote login mappings can be set up by using the **sp_addremotelogin** stored procedure on the remote server.  
@@ -97,10 +97,10 @@ GO
  [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## Related Content  
- [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+ [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
  [Configure the remote access Server Configuration Option](configure-the-remote-access-server-configuration-option.md)  
   
- [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)  
+ [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  
   
   

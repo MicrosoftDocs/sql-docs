@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 2.  On the toolbar, click **New Query**.  
   
-3.  In the query window, enter the following statements that use the [sp_manage_jobs_by_login &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql.md) system stored procedure. The following example reassigns all jobs from `danw` to `françoisa`.  
+3.  In the query window, enter the following statements that use the [sp_manage_jobs_by_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) system stored procedure. The following example reassigns all jobs from `danw` to `françoisa`.  
   
     ```  
     USE msdb ;  

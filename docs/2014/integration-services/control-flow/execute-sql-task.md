@@ -154,7 +154,7 @@ manager: "jhubbard"
   
 -   [Result Sets in the Execute SQL Task](../result-sets-in-the-execute-sql-task.md)  
   
--   [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md)  
+-   [Transact-SQL Reference &#40;Database Engine&#41;](/sql/t-sql/language-reference)  
   
 -   Blog entry, [New Date and Time Functions in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783), on mssqltips.com  
   

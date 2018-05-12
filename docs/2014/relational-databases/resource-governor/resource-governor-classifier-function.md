@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  You can write a scalar function that contains the logic that is used to assign incoming sessions to a workload group. Before you can use this function, you must complete the following actions:  
   
--   Create and register the function using the ALTER RESOURCE GOVERNOR statement. For more information, see [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md).  
+-   Create and register the function using the ALTER RESOURCE GOVERNOR statement. For more information, see [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql).  
   
 -   Update the Resource Governor configuration using the ALTER RESOURCE GOVERNOR statement with the RECONFIGURE parameter.  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
  When classification starts, Resource Governor executes the classifier function and uses the value returned by the function to send requests to the appropriate workload group.  
   
 > [!NOTE]  
->  Information about the execution of the classifier function and LOGON triggers is exposed in [sys.dm_exec_sessions](~/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) and [sys.dm_exec_requests](~/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
+>  Information about the execution of the classifier function and LOGON triggers is exposed in [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) and [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql).  
   
 ## Classification Function Tasks  
   

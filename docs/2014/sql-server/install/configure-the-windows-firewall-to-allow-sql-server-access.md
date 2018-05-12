@@ -161,7 +161,7 @@ manager: "jhubbard"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- For more information about endpoints, see [Configure the Database Engine to Listen on Multiple TCP Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) and [Endpoints Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
+ For more information about endpoints, see [Configure the Database Engine to Listen on Multiple TCP Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) and [Endpoints Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql).  
   
 ###  <a name="BKMK_ssas"></a> Ports Used By Analysis Services  
  The following table lists the ports that are frequently used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

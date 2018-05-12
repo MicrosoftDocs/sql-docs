@@ -33,7 +33,7 @@ manager: "jhubbard"
  For more information about using System Monitor to set up a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database alert, see [Set Up a SQL Server Database Alert &#40;Windows&#41;](../performance/set-up-a-sql-server-database-alert-windows.md) .  
   
 ## See Also  
- [sp_add_alert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sys.sysperfinfo &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
+ [sp_add_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)   
+ [sys.sysperfinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql)  
   
   

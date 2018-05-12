@@ -67,17 +67,17 @@ manager: "jhubbard"
   
 #### To view the properties of a push subscription to a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_helpsubscription](~/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, and a value of **all** for **@article**.  
+1.  At the Publisher on the publication database, execute [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Specify **@publication**, **@subscriber**, and a value of **all** for **@article**.  
   
-2.  At the Publisher on the publication database, execute [sp_helpsubscriberinfo](~/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), specifying **@subscriber**.  
+2.  At the Publisher on the publication database, execute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), specifying **@subscriber**.  
   
 #### To change the properties of a push subscription to a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_changesubscriber](~/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md), specifying **@subscriber** and any parameters for the Subscriber properties being changed.  
+1.  At the Publisher on the publication database, execute [sp_changesubscriber](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql), specifying **@subscriber** and any parameters for the Subscriber properties being changed.  
   
-2.  At the Publisher on the publication database, execute [sp_changesubscription](~/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, **@destination_db**, a value of **all** for **@article**, the subscription property being changed as **@property**, and the new value as **@value**. This changes security settings for the push subscription.  
+2.  At the Publisher on the publication database, execute [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql). Specify **@publication**, **@subscriber**, **@destination_db**, a value of **all** for **@article**, the subscription property being changed as **@property**, and the new value as **@value**. This changes security settings for the push subscription.  
   
-3.  (Optional) To change the Data Transformation Services (DTS) package properties of a subscription, execute [sp_changesubscriptiondtsinfo](~/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) at the Subscriber on the subscription database. Specify the ID of the Distribution Agent job for **@jobid** and the following DTS package properties:  
+3.  (Optional) To change the Data Transformation Services (DTS) package properties of a subscription, execute [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) at the Subscriber on the subscription database. Specify the ID of the Distribution Agent job for **@jobid** and the following DTS package properties:  
   
     -   **@dts_package_name**  
   
@@ -88,17 +88,17 @@ manager: "jhubbard"
      This changes the DTS package properties of a subscription.  
   
     > [!NOTE]  
-    >  The job ID can be obtained by executing [sp_helpsubscription](~/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md).  
+    >  The job ID can be obtained by executing [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql).  
   
 #### To view the properties of a push subscription to a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_helpmergesubscription](~/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md). Specify **@publication** and **@subscriber**.  
+1.  At the Publisher on the publication database, execute [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql). Specify **@publication** and **@subscriber**.  
   
-2.  At the Publisher, execute [sp_helpsubscriberinfo](~/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), specifying **@subscriber**.  
+2.  At the Publisher, execute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), specifying **@subscriber**.  
   
 #### To change the properties of a push subscription to a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_changemergesubscription](~/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, **@subscriber_db**, the subscription property being changed as **@property**, and the new value as **@value**.  
+1.  At the Publisher on the publication database, execute [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql). Specify **@publication**, **@subscriber**, **@subscriber_db**, the subscription property being changed as **@property**, and the new value as **@value**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
   

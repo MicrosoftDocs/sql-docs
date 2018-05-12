@@ -101,10 +101,10 @@ manager: "jhubbard"
   
 ## See Also  
  [Securing SQL Server](../securing-sql-server.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sys.sql_logins &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)   
- [sys.database_role_members &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
+ [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
+ [sys.sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
+ [sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [Server-Level Roles](server-level-roles.md)   
  [Database-Level Roles](database-level-roles.md)  
   

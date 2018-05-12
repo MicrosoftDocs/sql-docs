@@ -209,15 +209,15 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Prediction Function|Usage|  
-|[IsDescendant &#40;DMX&#41;](~/dmx/isdescendant-dmx.md)|Determines whether one node is a child of another node in the neural network graph.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](~/dmx/predictadjustedprobability-dmx.md)|Returns the weighted probability.|  
-|[PredictHistogram &#40;DMX&#41;](~/dmx/predicthistogram-dmx.md)|Returns a table of values related to the current predicted value.|  
-|[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns variance for the predicted value.|  
-|[PredictProbability &#40;DMX&#41;](~/dmx/predictprobability-dmx.md)|Returns probability  for the predicted value.|  
-|[PredictStdev &#40;DMX&#41;](~/dmx/predictstdev-dmx.md)|Returns the standard deviance for the predicted value.|  
-|[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|For neural network and logistic regression models, returns a single value that represents the size of the training set for the entire model.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Determines whether one node is a child of another node in the neural network graph.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Returns the weighted probability.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Returns a table of values related to the current predicted value.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Returns variance for the predicted value.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Returns probability  for the predicted value.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Returns the standard deviance for the predicted value.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|For neural network and logistic regression models, returns a single value that represents the size of the training set for the entire model.|  
   
- For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
+ For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## See Also  
  [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   

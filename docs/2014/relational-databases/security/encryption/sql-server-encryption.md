@@ -44,19 +44,19 @@ manager: "jhubbard"
  [Securing SQL Server](../securing-sql-server.md)  
  Overview of how to help secure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] platform, and how to work with users and securable objects.  
   
- [Cryptographic Functions &#40;Transact-SQL&#41;](~/t-sql/functions/cryptographic-functions-transact-sql.md)  
+ [Cryptographic Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
  Information about how to implement cryptographic functions.  
   
- [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbypassphrase-transact-sql.md)  
+ [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
  Information about how to use a password to encrypt data.  
   
- [ENCRYPTBYKEY &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbykey-transact-sql.md)  
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
  Information about how to use a symmetric key to encrypt data.  
   
- [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbyasymkey-transact-sql.md)  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
  Information about how to use an asymmetric key to encrypt data.  
   
- [ENCRYPTBYCERT &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbycert-transact-sql.md)  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
  Information about how to use a certificate to encrypt data.  
   
 ## External Resources  
@@ -64,7 +64,7 @@ manager: "jhubbard"
  Current information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security.  
   
 ## See Also  
- [sys.key_encryptions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
+ [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   

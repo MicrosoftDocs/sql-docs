@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ### To view a list of languages whose word breakers are currently registered  
   
-1.  Use the [sys.fulltext_languages](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) catalog view, as follows:  
+1.  Use the [sys.fulltext_languages](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) catalog view, as follows:  
   
     ```  
     SELECT * FROM sys.fulltext_languages;   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ### To view a list of the filters that are currently registered  
   
-1.  Use the [sp_help_fulltext_system_components](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) system stored procedure, as follows:  
+1.  Use the [sp_help_fulltext_system_components](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql) system stored procedure, as follows:  
   
     ```  
     EXEC sp_help_fulltext_system_components 'filter';    
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 ### To register newly installed word breakers and filters  
   
-1.  Use the [sp_fulltext_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) system stored procedure to update the list of languages, as follows:  
+1.  Use the [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) system stored procedure to update the list of languages, as follows:  
   
     ```  
     exec sp_fulltext_service 'update_languages';   

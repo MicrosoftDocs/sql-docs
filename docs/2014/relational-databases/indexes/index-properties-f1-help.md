@@ -103,7 +103,7 @@ manager: "jhubbard"
  Moves the selected column down in the index key grid.  
   
  **Columnstore columns**  
- Click **Add** to select columns for the columnstore index. For limitations on a columnstore index, see [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md).  
+ Click **Add** to select columns for the columnstore index. For limitations on a columnstore index, see [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
  **Included columns**  
  Include nonkey columns in the nonclustered index. This option allows you to bypass the current index limits on the total size of an index key and the maximum number of columns participating in an index key by adding columns as nonkey columns in the leaf level of the nonclustered index. For more information, see [Create Indexes with Included Columns](create-indexes-with-included-columns.md)  
@@ -238,7 +238,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Set Index Options](set-index-options.md)   
- [INDEXPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/indexproperty-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
+ [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
   
   

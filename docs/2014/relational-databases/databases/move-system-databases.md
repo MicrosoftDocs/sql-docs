@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  The following procedures apply to moving database files within the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To move a database to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to another server, use the [backup and restore](../backup-restore/back-up-and-restore-of-sql-server-databases.md) or [detach and attach](move-a-database-using-detach-and-attach-transact-sql.md) operations.  
   
- The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md) catalog view.  
+ The procedures in this topic require the logical name of the database files. To obtain the name, query the name column in the [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) catalog view.  
   
 > [!IMPORTANT]  
 >  If you move a system database and later rebuild the master database, you must move the system database again because the rebuild operation installs all system databases to their default location.  
@@ -95,7 +95,7 @@ manager: "jhubbard"
     WHERE name = N'msdb';  
     ```  
   
-     For more information about enabling [!INCLUDE[ssSB](../../../includes/sssb-md.md)], see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
+     For more information about enabling [!INCLUDE[ssSB](../../../includes/sssb-md.md)], see [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 2.  Verify that Database Mail is working by sending a test mail.  
   
@@ -270,7 +270,7 @@ manager: "jhubbard"
  [Move User Databases](move-user-databases.md)   
  [Move Database Files](move-database-files.md)   
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Rebuild System Databases](system-databases.md)  
   
   

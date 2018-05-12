@@ -46,21 +46,21 @@ manager: "jhubbard"
 ## Viewing LSNs Used by Backup and Restore  
  The LSN of a log record at which a given backup and restore event occurred is viewable using one or more of the following:  
   
--   [backupset](~/relational-databases/system-tables/backupset-transact-sql.md)  
+-   [backupset](/sql/relational-databases/system-tables/backupset-transact-sql)  
   
--   [backupfile](~/relational-databases/system-tables/backupfile-transact-sql.md)  
+-   [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)  
   
--   [sys.database_files](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md); [sys.master_files](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+-   [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
--   [RESTORE HEADERONLY](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
+-   [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
--   [RESTORE FILELISTONLY](~/t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
+-   [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
 > [!NOTE]  
 >  LSNs also appear in some message texts.  
   
 ## Transact-SQL Syntax for Restoring to an LSN  
- By using a [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement, you can stop at or immediately before the LSN, as follows:  
+ By using a [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statement, you can stop at or immediately before the LSN, as follows:  
   
 -   Use the WITH STOPATMARK **='**lsn:*<lsn_number>***'** clause, where lsn:*\<lsnNumber>* is a string that specifies that the log record that contains the specified LSN is the recovery point.  
   
@@ -98,6 +98,6 @@ GO
 ## See Also  
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

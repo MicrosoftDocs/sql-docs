@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  The logs that are available depend on how Log File Viewer is opened. For more information, see [Open Log File Viewer](open-log-file-viewer.md).  
   
- The number of rows that are displayed for audit logs can be configured on the **SQL Server Object Explorer/Commands** page of the **Tools/Options** dialog box. For descriptions of the columns that are displayed for audit logs, see [sys.fn_get_audit_file &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
+ The number of rows that are displayed for audit logs can be configured on the **SQL Server Object Explorer/Commands** page of the **Tools/Options** dialog box. For descriptions of the columns that are displayed for audit logs, see [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql).  
   
 ## Options  
  **Load Log**  

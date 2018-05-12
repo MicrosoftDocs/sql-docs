@@ -33,13 +33,13 @@ manager: "jhubbard"
   
 #### To delete an article from a snapshot or transactional publication  
   
-1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. Specify a value of **1** for **@force_invalidate_snapshot**.  
+1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) to delete an article, specified by **@article**, from a publication, specified by **@publication**. Specify a value of **1** for **@force_invalidate_snapshot**.  
   
 2.  (Optional) To remove the published object from the database entirely, execute the `DROP <objectname>` command at the Publisher on the publication database.  
   
 #### To delete an article from a merge publication  
   
-1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. If necessary, specify a value of **1** for **@force_invalidate_snapshot** and a value of **1** for **@force_reinit_subscription**.  
+1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) to delete an article, specified by **@article**, from a publication, specified by **@publication**. If necessary, specify a value of **1** for **@force_invalidate_snapshot** and a value of **1** for **@force_reinit_subscription**.  
   
 2.  (Optional) To remove the published object from the database entirely, execute the `DROP <objectname>` command at the Publisher on the publication database.  
   

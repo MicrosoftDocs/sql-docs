@@ -23,8 +23,8 @@ manager: "jhubbard"
   
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Data Programmability|[sys.soap_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql.md)|Windows Communications Foundation (WCF) or ASP.NET|Native XML Web Services|22|  
-|Data Programmability|[sys.endpoint_webmethods &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql.md)|Windows Communications Foundation (WCF) or ASP.NET|Native XML Web Services|23|  
+|Data Programmability|[sys.soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) or ASP.NET|Native XML Web Services|22|  
+|Data Programmability|[sys.endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) or ASP.NET|Native XML Web Services|23|  
   
 ### Slipstream Functionality  
  The Product Update feature replaces the Slipstream functionality that was available in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Therefore the command-line parameters, /*PCUSource* and /*CUSource*, associated with Slipstream functionality should no longer be used. The parameters will continue to work, but may be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup. The /*UpdateSource* parameter combines the functionality of the Slipstream parameters, /*PCUSource* and /*CUSource*.  

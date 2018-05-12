@@ -35,11 +35,11 @@ manager: "jhubbard"
 ## Where is the documentation for Service Broker?  
  The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
   
--   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](~/odbc/reference/develop-app/ddl-statements.md) for CREATE, ALTER, and DROP statements  
+-   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](/sql/odbc/reference/develop-app/ddl-statements) for CREATE, ALTER, and DROP statements  
   
--   [Service Broker Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
+-   [Service Broker Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql)  
   
--   [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+-   [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql)  
   
 -   [ssbdiagnose Utility &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
@@ -49,13 +49,13 @@ manager: "jhubbard"
  No significant changes are introduced in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ### Messages can be sent to multiple target services (multicast)  
- The syntax of the [SEND &#40;Transact-SQL&#41;](~/t-sql/statements/send-transact-sql.md) statement has been extended to enable multicast by supporting multiple conversation handles.  
+ The syntax of the [SEND &#40;Transact-SQL&#41;](/sql/t-sql/statements/send-transact-sql) statement has been extended to enable multicast by supporting multiple conversation handles.  
   
 ### Queues expose the message enqueued time  
  Queues have a new column, **message_enqueue_time**, that shows how long a message has been in the queue.  
   
 ### Poison message handling can be disabled  
- The [CREATE QUEUE &#40;Transact-SQL&#41;](~/t-sql/statements/create-queue-transact-sql.md) and [ALTER QUEUE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-queue-transact-sql.md) statements now have the ability to enable or disable poison message handling by adding the clause, `POISON_MESSAGE_HANDLING (STATUS = ON | OFF)`. The catalog view **sys.service_queues** now has the column **is_poison_message_handling_enabled** to indicate whether poison message is enabled or disabled.  
+ The [CREATE QUEUE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-queue-transact-sql) and [ALTER QUEUE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-queue-transact-sql) statements now have the ability to enable or disable poison message handling by adding the clause, `POISON_MESSAGE_HANDLING (STATUS = ON | OFF)`. The catalog view **sys.service_queues** now has the column **is_poison_message_handling_enabled** to indicate whether poison message is enabled or disabled.  
   
 ### AlwaysOn support in Service Broker  
  For more information, see [Service Broker with AlwaysOn Availability Groups &#40;SQL Server&#41;](../availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  

@@ -70,12 +70,12 @@ manager: "jhubbard"
 -   If SORT_IN_TEMPDB is set to OFF, the free space in the destination filegroup must be large enough to store the final table. This includes the structures of all the indexes. The continuity of the table and index extents may be improved if more free space is available.  
   
 ## Related Tasks  
- [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
  [Reorganize and Rebuild Indexes](indexes.md)  
   
 ## Related Content  
- [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
  [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   

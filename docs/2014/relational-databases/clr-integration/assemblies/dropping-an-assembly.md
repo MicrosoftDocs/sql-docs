@@ -66,10 +66,10 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [Managing CLR Integration Assemblies](managing-clr-integration-assemblies.md)   
  [Altering an Assembly](altering-an-assembly.md)   
  [Creating an Assembly](creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-aggregate-transact-sql.md)   
- [DROP FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-procedure-transact-sql.md)   
- [DROP TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-trigger-transact-sql.md)   
- [DROP TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-type-transact-sql.md)  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
+ [DROP TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

@@ -28,9 +28,9 @@ manager: "jhubbard"
   
 -   For queued updating subscriptions, data is available for every conflict. Conflict data is available in the Replication Conflict Viewer for the amount of time specified for the conflict retention period, with a default of 14 days. To set the conflict retention period, perform either of the following:  
   
-    -   Specify a retention value for the @conflict_retention parameter of [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
+    -   Specify a retention value for the @conflict_retention parameter of [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql).  
   
-    -   Specify a value of `'conflict_retention'` for the @property parameter and a retention value for the @value parameter of [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md).  
+    -   Specify a value of `'conflict_retention'` for the @property parameter and a retention value for the @value parameter of [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
   
 ### To view conflicts  
   

@@ -64,9 +64,9 @@ manager: "jhubbard"
  The right-click menu of the **Data-tier Applications** node is also used to deploy a new DAC or delete an existing DAC.  
   
 ## Using the DAC System Views and Tables  
- The msdb.dbo.sysdac_history_internal system table records the success or failure of all DAC management actions performed on an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. The table records the time each action occurred, and which login initiated the action. For more information, see [sysdac_history_internal &#40;Transact-SQL&#41;](~/relational-databases/system-tables/data-tier-application-tables-sysdac-history-internal.md).  
+ The msdb.dbo.sysdac_history_internal system table records the success or failure of all DAC management actions performed on an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. The table records the time each action occurred, and which login initiated the action. For more information, see [sysdac_history_internal &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/data-tier-application-tables-sysdac-history-internal).  
   
- The DAC system views report basic catalog information. For more information, see [Data-tier Application Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).  
+ The DAC system views report basic catalog information. For more information, see [Data-tier Application Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances).  
   
 ## Monitoring DAC Databases  
  After a DAC has been successfully deployed, the database contained in the DAC operates the same as any other database. Use standard [!INCLUDE[ssDE](../../includes/ssde-md.md)] techniques and tools for monitoring the performance, log, events, and resource utilization of the database.  

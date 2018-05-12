@@ -94,7 +94,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   The at sign, dollar sign ($), number sign, or underscore.  
   
-3.  The identifier must not be a [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved word. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserves both the uppercase and lowercase versions of reserved words. When identifiers are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the identifiers that do not comply with these rules must be delimited by double quotation marks or brackets. The words that are reserved depend on the database compatibility level. This level can be set by using the [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md) statement.  
+3.  The identifier must not be a [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved word. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserves both the uppercase and lowercase versions of reserved words. When identifiers are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the identifiers that do not comply with these rules must be delimited by double quotation marks or brackets. The words that are reserved depend on the database compatibility level. This level can be set by using the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) statement.  
   
 4.  Embedded spaces or special characters are not allowed.  
   
@@ -103,22 +103,22 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  When identifiers are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the identifiers that do not comply with these rules must be delimited by double quotation marks or brackets.  
   
 > [!NOTE]  
->  Some rules for the format of regular identifiers depend on the database compatibility level. This level can be set by using [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+>  Some rules for the format of regular identifiers depend on the database compatibility level. This level can be set by using [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
 ## See Also  
- [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)   
- [CREATE RULE &#40;Transact-SQL&#41;](~/t-sql/statements/create-rule-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)   
- [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
- [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](~/t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
- [Reserved Keywords &#40;Transact-SQL&#41;](~/t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
+ [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
+ [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
+ [Reserved Keywords &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
+ [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   
   

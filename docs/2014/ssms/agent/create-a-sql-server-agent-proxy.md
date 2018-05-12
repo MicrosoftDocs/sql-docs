@@ -113,10 +113,10 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [sp_add_proxy &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+-   [sp_add_proxy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql)  
   
--   [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+-   [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql)  
   
   

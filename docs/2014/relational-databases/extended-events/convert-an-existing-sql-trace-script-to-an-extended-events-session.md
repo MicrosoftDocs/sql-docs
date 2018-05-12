@@ -173,7 +173,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Casting the event data as XML is optional.  
   
-     For more information about the sys.fn_xe_file_target_read_file function, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
+     For more information about the sys.fn_xe_file_target_read_file function, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  

@@ -73,7 +73,7 @@ manager: "jhubbard"
 ### Deterministic Views  
  The definition of an indexed view must be deterministic. A view is deterministic if all expressions in the select list, as well as the WHERE and GROUP BY clauses, are deterministic. Deterministic expressions always return the same result any time they are evaluated with a specific set of input values. Only deterministic functions can participate in deterministic expressions. For example, the DATEADD function is deterministic because it always returns the same result for any given set of argument values for its three parameters. GETDATE is not deterministic because it is always invoked with the same argument, but the value it returns changes each time it is executed.  
   
- To determine whether a view column is deterministic, use the **IsDeterministic** property of the [COLUMNPROPERTY](~/t-sql/functions/columnproperty-transact-sql.md) function. To determine if a deterministic column in a view with schema binding is precise, use the **IsPrecise** property of the COLUMNPROPERTY function. COLUMNPROPERTY returns 1 if TRUE, 0 if FALSE, and NULL for input that is not valid. This means the column is not deterministic or not precise.  
+ To determine whether a view column is deterministic, use the **IsDeterministic** property of the [COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql) function. To determine if a deterministic column in a view with schema binding is precise, use the **IsPrecise** property of the COLUMNPROPERTY function. COLUMNPROPERTY returns 1 if TRUE, 0 if FALSE, and NULL for input that is not valid. This means the column is not deterministic or not precise.  
   
  Even if an expression is deterministic, if it contains float expressions, the exact result may depend on the processor architecture or version of microcode. To ensure data integrity, such expressions can participate only as non-key columns of indexed views. Deterministic expressions that do not contain float expressions are called precise. Only precise deterministic expressions can participate in key columns and in WHERE or GROUP BY clauses of indexed views.  
   
@@ -129,16 +129,16 @@ manager: "jhubbard"
 -   If the view definition contains a GROUP BY clause, the key of the unique clustered index can reference only the columns specified in the GROUP BY clause.  
   
 ###  <a name="Recommendations"></a> Recommendations  
- When you refer to `datetime` and `smalldatetime` string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md). Expressions that involve implicit conversion of character strings to `datetime` or `smalldatetime` are considered nondeterministic. This is because the results depend on the LANGUAGE and DATEFORMAT settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`listopad`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting.  
+ When you refer to `datetime` and `smalldatetime` string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressions that involve implicit conversion of character strings to `datetime` or `smalldatetime` are considered nondeterministic. This is because the results depend on the LANGUAGE and DATEFORMAT settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`listopad`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting.  
   
  Implicit conversion of non-Unicode character data between collations is also considered nondeterministic.  
   
 ###  <a name="Considerations"></a> Considerations  
- The setting of the **large_value_types_out_of_row** option of columns in an indexed view is inherited from the setting of the corresponding column in the base table. This value is set by using [sp_tableoption](~/relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). The default setting for columns formed from expressions is 0. This means that large value types are stored in-row.  
+ The setting of the **large_value_types_out_of_row** option of columns in an indexed view is inherited from the setting of the corresponding column in the base table. This value is set by using [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). The default setting for columns formed from expressions is 0. This means that large value types are stored in-row.  
   
  Indexed views can be created on a partitioned table, and can themselves be partitioned.  
   
- To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed views, include the OPTION (EXPAND VIEWS) hint on the query. Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the OPTION (EXPAND VIEWS) hint, see [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md).  
+ To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed views, include the OPTION (EXPAND VIEWS) hint on the query. Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the OPTION (EXPAND VIEWS) hint, see [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql).  
   
  All indexes on a view are dropped when the view is dropped. All nonclustered indexes and auto-created statistics on the view are dropped when the clustered index is dropped. User-created statistics on the view are maintained. Nonclustered indexes can be individually dropped. Dropping the clustered index on the view removes the stored result set, and the optimizer returns to processing the view like a standard view.  
   
@@ -206,16 +206,16 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md).  
+ For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
 ## See Also  
- [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](~/t-sql/statements/set-arithabort-transact-sql.md)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](~/t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](~/t-sql/statements/set-numeric-roundabort-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
+ [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

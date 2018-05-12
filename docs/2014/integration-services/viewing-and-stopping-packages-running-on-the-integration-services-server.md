@@ -31,7 +31,7 @@ manager: "jhubbard"
  For information about the other methods that you can use to view the list of running packages, see the following topics.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] access  
- To view the list of packages that are running on the server, query the view, [catalog.executions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-executions-ssisdb-database.md) for packages that have a status of 2.  
+ To view the list of packages that are running on the server, query the view, [catalog.executions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database) for packages that have a status of 2.  
   
  Programmatic access through the managed API  
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
@@ -42,7 +42,7 @@ manager: "jhubbard"
  For information about the other methods that you can use to stop a running package, see the following topics.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] access  
- To stop a package that is running on the server, call the stored procedure, [catalog.stop_operation &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
+ To stop a package that is running on the server, call the stored procedure, [catalog.stop_operation &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database).  
   
  Programmatic access through the managed API  
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
@@ -53,7 +53,7 @@ manager: "jhubbard"
  For information about the other methods that you can use to view the history of running packages, see the following topics.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] access  
- To view information about packages that have run, query the view, [catalog.executions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-executions-ssisdb-database.md).  
+ To view information about packages that have run, query the view, [catalog.executions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database).  
   
  Programmatic access through the managed API  
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  

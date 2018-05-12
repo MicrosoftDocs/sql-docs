@@ -60,7 +60,7 @@ manager: "mblythe"
 |**Sort Ascending**|Click to sort the siblings of the selected row in the **Report** pane in ascending order for the language specified in **Language**.<br /><br /> **Note** This option is enabled only if a cell in the **Reports** pane is selected.|  
 |**Sort Descending**|Click to sort the siblings of the selected row in the **Report** pane in descending order for the language specified in **Language**.<br /><br /> Note: This option is enabled only if a cell in the **Reports** pane is selected.|  
 |**Auto Filter**|Click to automatically filter the results in the **Result** pane.|  
-|**Show Only Top/Bottom**|Select a value or percentage to show only the topmost or bottommost number or percentage of cells in the **Report** pane based on the selected measure.<br /><br /> For more information about this option, see [TopCount &#40;MDX&#41;](~/mdx/topcount-mdx.md), [TopPercent &#40;MDX&#41;](~/mdx/toppercent-mdx.md), [BottomCount &#40;MDX&#41;](~/mdx/bottomcount-mdx.md), and [BottomPercent &#40;MDX&#41;](~/mdx/bottompercent-mdx.md).|  
+|**Show Only Top/Bottom**|Select a value or percentage to show only the topmost or bottommost number or percentage of cells in the **Report** pane based on the selected measure.<br /><br /> For more information about this option, see [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx), [TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx), [BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx), and [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx).|  
 |**Subtotal**|Click to display subtotals.|  
 |**All Item Totals**|Click to display the totals for All members in the **Report** pane.|  
 |**Show Empty Cells**|Click to display empty cells in the **Report** pane.|  

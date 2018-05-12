@@ -57,6 +57,6 @@ manager: "jhubbard"
  Running REPAIR will cause the specified index and all its dependent indexes to be rebuilt.  
   
 ## See Also  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

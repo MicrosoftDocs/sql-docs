@@ -70,6 +70,6 @@ manager: "jhubbard"
  When creating a report server database, be aware that not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. For more information, see the “Report Server Database Server Edition Requirements” section of [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;del&#41;](~/2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services Configuration Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

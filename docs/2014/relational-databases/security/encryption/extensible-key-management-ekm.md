@@ -51,7 +51,7 @@ GO
 > [!NOTE]  
 >  If you use the sp_configure command for this option on editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that do not support EKM, you will receive an error.  
   
- To disable the feature, set the value to **0**. For more information about how to set server options, see [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ To disable the feature, set the value to **0**. For more information about how to set server options, see [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 ## How to Use EKM  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management enables the encryption keys that protect the database files to be stored in an off-box device such as a smartcard, USB device, or EKM/HSM module. This also enables data protection from database administrators (except members of the sysadmin group). Data can be encrypted by using encryption keys that only the database user has access to on the external EKM/HSM module.  
@@ -101,12 +101,12 @@ GO
   
 |Function or feature|Reference|  
 |-------------------------|---------------|  
-|Symmetric key encryption|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-symmetric-key-transact-sql.md)|  
-|Asymmetric Key encryption|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-asymmetric-key-transact-sql.md)|  
-|EncryptByKey(key_guid, 'cleartext', …)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbykey-transact-sql.md)|  
-|DecryptByKey(ciphertext, …)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](~/t-sql/functions/decryptbykey-transact-sql.md)|  
-|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](~/t-sql/functions/encryptbyasymkey-transact-sql.md)|  
-|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](~/t-sql/functions/decryptbyasymkey-transact-sql.md)|  
+|Symmetric key encryption|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Asymmetric Key encryption|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|EncryptByKey(key_guid, 'cleartext', …)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(ciphertext, …)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
+|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   
 #### Database Keys Encryption by EKM Keys  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can use EKM keys to encrypt other keys in a database. You can create and use both symmetric and asymmetric keys on an EKM device. You can encrypt native (non-EKM) symmetric keys with EKM asymmetric keys.  
@@ -138,24 +138,24 @@ DECRYPTION BY EKM_AKey1
  [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
 ## See Also  
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](~/t-sql/statements/create-cryptographic-provider-transact-sql.md)   
- [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-cryptographic-provider-transact-sql.md)   
- [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-cryptographic-provider-transact-sql.md)   
- [sys.cryptographic_providers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql.md)   
- [sys.dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql.md)   
- [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql.md)   
- [sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md)   
- [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql.md)   
- [sys.credentials &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/alter-login-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-asymmetric-key-transact-sql.md)   
- [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/drop-asymmetric-key-transact-sql.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-symmetric-key-transact-sql.md)   
- [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/drop-symmetric-key-transact-sql.md)   
- [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-symmetric-key-transact-sql.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
+ [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
+ [sys.cryptographic_providers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
+ [sys.dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
+ [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
+ [sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
+ [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
+ [sys.credentials &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
+ [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
+ [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
+ [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
  [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   

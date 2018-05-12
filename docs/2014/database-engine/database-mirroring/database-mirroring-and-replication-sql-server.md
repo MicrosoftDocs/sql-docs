@@ -56,7 +56,7 @@ manager: "jhubbard"
   
     1.  We recommend using a remote Distributor. For more information about configuring distribution, see [Configure Distribution](../../relational-databases/replication/configure-distribution.md).  
   
-    2.  You can enable a database for snapshot and transactional publications and/or merge publications. For mirrored databases that will contain more than one type of publication, you must enable the database for both types at the same node using [sp_replicationdboption](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). For example, you could execute the following stored procedure calls at the principal:  
+    2.  You can enable a database for snapshot and transactional publications and/or merge publications. For mirrored databases that will contain more than one type of publication, you must enable the database for both types at the same node using [sp_replicationdboption](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). For example, you could execute the following stored procedure calls at the principal:  
   
         ```  
         exec sp_replicationdboption @dbname='<PublicationDatabase>', @optname='publish', @value=true;  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 2.  Configure database mirroring. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md) and [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-3.  Configure distribution for the mirror. Specify the mirror name as the Publisher, and specify the same Distributor and snapshot folder that the principal uses. For example, if you are configuring replication with stored procedures, execute [sp_adddistpublisher](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) at the Distributor; and then execute [sp_adddistributor](~/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) at the mirror. For **sp_adddistpublisher**:  
+3.  Configure distribution for the mirror. Specify the mirror name as the Publisher, and specify the same Distributor and snapshot folder that the principal uses. For example, if you are configuring replication with stored procedures, execute [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) at the Distributor; and then execute [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) at the mirror. For **sp_adddistpublisher**:  
   
     -   Set the value of the **@publisher** parameter to the network name of the mirror.  
   
@@ -129,7 +129,7 @@ manager: "jhubbard"
   
     -   If the principal is unavailable, the principal and mirror nodes display identical lists of publications. Monitoring should be performed on the publications under the mirror node.  
   
--   When using stored procedures or Replication Management Objects (RMO) to administer replication at the mirror, for cases in which you specify the Publisher name, you must specify the name of the instance on which the database was enabled for replication. To determine the appropriate name, use the function [publishingservername](~/t-sql/functions/replication-functions-publishingservername.md).  
+-   When using stored procedures or Replication Management Objects (RMO) to administer replication at the mirror, for cases in which you specify the Publisher name, you must specify the name of the instance on which the database was enabled for replication. To determine the appropriate name, use the function [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername).  
   
      When a publication database is mirrored, the replication metadata stored in the mirrored database is identical to the metadata stored in the principal database. Consequently, for publication databases enabled for replication at the principal, the Publisher instance name stored in system tables at the mirror is the name of the principal, not the mirror. This affects replication configuration and maintenance if the publication database fails over to the mirror. For example, if you are configuring replication with stored procedures on the mirror after a failover, and you want to add a pull subscription to a publication database that was enabled at the principal, you must specify the principal name rather than the mirror name for the **@publisher** parameter of **sp_addpullsubscription** or **sp_addmergepullsubscription**.  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
   
 -   If the publication database fails over from the principal to the mirror and the mirroring relationship is subsequently disabled or removed, replication agents will not function against the mirror. If the principal is permanently lost, disable and then reconfigure replication with the mirror specified as the Publisher.  
   
--   If database mirroring is removed completely, the mirror database is in a recovery state and must be restored in order to become functional. The behavior of the recovered database with respect to replication depends on whether the KEEP_REPLICATION option is specified. This option forces the restore operation to preserve replication settings when restoring a published database to a server other than that on which the backup was created. Use the KEEP_REPLICATION option only when the other publication database is unavailable. The option is not supported if the other publication database is still intact and replicating. For more information about KEEP_REPLICATION, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
+-   If database mirroring is removed completely, the mirror database is in a recovery state and must be restored in order to become functional. The behavior of the recovered database with respect to replication depends on whether the KEEP_REPLICATION option is specified. This option forces the restore operation to preserve replication settings when restoring a published database to a server other than that on which the backup was created. Use the KEEP_REPLICATION option only when the other publication database is unavailable. The option is not supported if the other publication database is still intact and replicating. For more information about KEEP_REPLICATION, see [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 ## Log Reader Agent Behavior  
  The following table describes Log Reader Agent behavior for the various operating modes of database mirroring.  

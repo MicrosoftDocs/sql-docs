@@ -45,7 +45,7 @@ manager: "jhubbard"
     |Description|For maintainability, the description of the parameter. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], set the parameter description in the Visual Studio Properties window when the parameter is selected in the applicable parameters window.|  
   
     > [!NOTE]  
-    >  When you deploy a project to the catalog, several more properties become associated with the project. To see all properties for all parameters in the catalog, use the [catalog.object_parameters &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-object-parameters-ssisdb-database.md) view.  
+    >  When you deploy a project to the catalog, several more properties become associated with the project. To see all properties for all parameters in the catalog, use the [catalog.object_parameters &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) view.  
   
 4.  Save the project to save changes to parameters. Parameter values are stored in the project file.  
   

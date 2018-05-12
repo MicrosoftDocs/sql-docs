@@ -37,6 +37,6 @@ manager: "jhubbard"
  Set the QUERY_GOVERNOR_COST_LIMIT option to a higher value.  
   
 ## See Also  
- [SET QUERY_GOVERNOR_COST_LIMIT &#40;Transact-SQL&#41;](~/t-sql/statements/set-query-governor-cost-limit-transact-sql.md)  
+ [SET QUERY_GOVERNOR_COST_LIMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-query-governor-cost-limit-transact-sql)  
   
   

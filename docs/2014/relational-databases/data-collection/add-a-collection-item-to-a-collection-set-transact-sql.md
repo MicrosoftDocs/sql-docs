@@ -97,6 +97,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Create a Custom Collection Set That Uses the Generic T-SQL Query Collector Type &#40;Transact-SQL&#41;](create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
+ [Data Collector Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)  
   
   

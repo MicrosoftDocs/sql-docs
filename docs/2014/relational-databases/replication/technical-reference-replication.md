@@ -40,33 +40,33 @@ manager: "jhubbard"
  [More…](agents/replication-agents.md)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Stored Procedures**  
- [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
+ [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)  
   
- [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)  
   
- [sp_adddistributor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)  
+ [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)  
   
- [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  
+ [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)  
   
- [sp_addsubscriber &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
+ [sp_addsubscriber &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)  
   
- [More…](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [More…](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Tables**  
- [MSmerge_conflicts_info &#40;Transact-SQL&#41;](~/relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
+ [MSmerge_conflicts_info &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msmerge-conflicts-info-transact-sql)  
   
- [MSpeer_response &#40;Transact-SQL&#41;](~/relational-databases/system-tables/mspeer-response-transact-sql.md)  
+ [MSpeer_response &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/mspeer-response-transact-sql)  
   
- [syssubscriptions &#40;Transact-SQL&#41;](~/relational-databases/system-tables/syssubscriptions-transact-sql.md)  
+ [syssubscriptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/syssubscriptions-transact-sql)  
   
- [More…](~/relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [More…](/sql/relational-databases/system-tables/replication-tables-transact-sql)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Views**  
- [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](~/relational-databases/system-views/syspublications-system-view-transact-sql.md)  
+ [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](/sql/relational-databases/system-views/syspublications-system-view-transact-sql)  
   
- [syssubscriptions &#40;System View&#41; &#40;Transact-SQL&#41;](~/relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
+ [syssubscriptions &#40;System View&#41; &#40;Transact-SQL&#41;](/sql/relational-databases/system-views/syssubscriptions-system-view-transact-sql)  
   
- [More…](~/relational-databases/system-views/replication-views-transact-sql.md)  
+ [More…](/sql/relational-databases/system-views/replication-views-transact-sql)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Class Library**  
  <xref:Microsoft.SqlServer.Replication>  

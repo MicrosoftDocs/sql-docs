@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  **To create a partial backup**  
   
--   [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md) (READ_WRITE_FILEGROUPS; FILEGROUP option, if needed)  
+-   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (READ_WRITE_FILEGROUPS; FILEGROUP option, if needed)  
   
  **To use a partial backup in a restore sequence**  
   

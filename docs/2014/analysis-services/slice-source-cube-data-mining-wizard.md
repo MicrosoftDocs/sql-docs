@@ -29,7 +29,7 @@ manager: "mblythe"
 -   [Create and Manage a Local Partition &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
->  Note that dynamic MDX functions (such as [Generate &#40;MDX&#41;](~/mdx/generate-mdx.md) or [Except &#40;MDX&#41;](~/mdx/except-mdx-function.md)) are not supported in the Slice property for partitions. You must define the slice by using explicit tuples or member references.  
+>  Note that dynamic MDX functions (such as [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) or [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) are not supported in the Slice property for partitions. You must define the slice by using explicit tuples or member references.  
 >   
 >  For example, rather than using  [: &#40;Range&#41; &#40;MDX&#41;](../Topic/:%20\(Range\)%20\(MDX\).md) to define a range, you would need to enumerate each member by the specific years.  
 >   

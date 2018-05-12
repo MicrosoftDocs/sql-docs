@@ -46,9 +46,9 @@ manager: "jhubbard"
   
 3.  Allow time for the Log Reader Agent to copy transactions to the distribution database, and then stop the agent.  
   
-4.  Execute [sp_replcmds](~/relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) to verify that all transactions have been processed. The result set from this procedure should be empty.  
+4.  Execute [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql) to verify that all transactions have been processed. The result set from this procedure should be empty.  
   
-5.  Execute [sp_replflush](~/relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) to close the connection from sp_replcmds.  
+5.  Execute [sp_replflush](/sql/relational-databases/system-stored-procedures/sp-replflush-transact-sql) to close the connection from sp_replcmds.  
   
 6.  Perform the server upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

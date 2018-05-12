@@ -65,8 +65,8 @@ manager: "jhubbard"
  EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
   
 ## See Also  
- [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md)   
- [SET Statements &#40;Transact-SQL&#41;](~/t-sql/statements/set-statements-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md)  
+ [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   
+ [SET Statements &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  
   
   

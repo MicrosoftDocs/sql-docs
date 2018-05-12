@@ -30,7 +30,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Move Database Files
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can move system and user databases by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement. Data, log, and full-text catalog files can be moved in this way. This may be useful in the following situations:  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can move system and user databases by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) statement. Data, log, and full-text catalog files can be moved in this way. This may be useful in the following situations:  
   
 -   Failure recovery. For example, the database is in suspect mode or has shut down, because of a hardware failure.  
   
@@ -46,8 +46,8 @@ manager: "jhubbard"
 |[Move System Databases](system-databases.md)|Describes the procedures for moving system database files to a new location.|  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Database Detach and Attach &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
   
   

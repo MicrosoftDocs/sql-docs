@@ -61,7 +61,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  If a CLR user-defined type has an XML Serialization, instances of that type can be explicitly cast to an XML datatype. For more details about the XML serialization of a CLR user-defined typed, see [XML Serialization from CLR Database Objects](../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md).  
   
 ### White Space Handling in Typed XML  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], white space inside element content is considered insignificant if it occurs inside a sequence of white-space-only character data delimited by markup, such as begin or end tags, and is not entitized. (CDATA sections are ignored.) This handling of white space handling is different from how white space is described in the XML 1.0 specification published by the World Wide Web Consortium (W3C). This is because the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recognizes only a limited number of DTD subsets, as defined in XML 1.0. For more information about the limited DTD subsets supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], white space inside element content is considered insignificant if it occurs inside a sequence of white-space-only character data delimited by markup, such as begin or end tags, and is not entitized. (CDATA sections are ignored.) This handling of white space handling is different from how white space is described in the XML 1.0 specification published by the World Wide Web Consortium (W3C). This is because the XML parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recognizes only a limited number of DTD subsets, as defined in XML 1.0. For more information about the limited DTD subsets supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
  By default, the XML parser discards insignificant white space when it converts string data to XML if either of the following is true:  
   
@@ -89,7 +89,7 @@ select @x
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
 ```  
   
- If the *style* parameter is either not used or its value is set to 0, insignificant white space is not preserved for the conversion of the xml DT instance. For more information about how to use the CONVERT operator and its *style* parameter when converting string data to xml DT instances, see [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md).  
+ If the *style* parameter is either not used or its value is set to 0, insignificant white space is not preserved for the conversion of the xml DT instance. For more information about how to use the CONVERT operator and its *style* parameter when converting string data to xml DT instances, see [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ### Example: Cast a string value to typed xml and assign it to a column  
  The following example casts a string variable that contains an XML fragment to the `xml` data type and then stores it in the `xml` type column:  
@@ -203,7 +203,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  For typed XML, the XML is validated against the specified schema. For more information, see [Compare Typed XML to Untyped XML](compare-typed-xml-to-untyped-xml.md).  
   
 ## Using Bulk Load  
- The enhanced [OPENROWSET (Transact-SQL)](~/t-sql/functions/openrowset-transact-sql.md) functionality allows you to bulk load XML documents in the database. You can bulk load XML instances from files into the `xml` type columns in the database. For working samples, see [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). For more information about loading XML documents, see [Load XML Data](load-xml-data.md).  
+ The enhanced [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) functionality allows you to bulk load XML documents in the database. You can bulk load XML instances from files into the `xml` type columns in the database. For working samples, see [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). For more information about loading XML documents, see [Load XML Data](load-xml-data.md).  
   
 ## In This Section  
   
@@ -213,8 +213,8 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## See Also  
  [Compare Typed XML to Untyped XML](compare-typed-xml-to-untyped-xml.md)   
- [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40;XML DML&#41;](~/t-sql/xml/xml-data-modification-language-xml-dml.md)   
+ [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods)   
+ [XML Data Modification Language &#40;XML DML&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   
  [XML Data &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

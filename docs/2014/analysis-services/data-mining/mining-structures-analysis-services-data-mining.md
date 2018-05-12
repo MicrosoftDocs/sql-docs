@@ -65,7 +65,7 @@ manager: "mblythe"
   
  Moreover, each model can use the columns from the structure in different ways. For example, your data source view might contain an Income column, which you can bin in different ways for different models.  
   
- The data mining structure stores the definition of the data source and the columns in it in the form of *bindings* to the source data. For more information about data source bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md). However, note that you can also create a data mining structure without binding it to a specific data source by using the DMX [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement.  
+ The data mining structure stores the definition of the data source and the columns in it in the form of *bindings* to the source data. For more information about data source bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md). However, note that you can also create a data mining structure without binding it to a specific data source by using the DMX [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx) statement.  
   
 ### Mining Structure Columns  
  The building blocks of the mining structure are the mining structure columns, which describe the data that the data source contains. These columns contain information such as data type, content type, and how the data is distributed. The mining structure does not contain information about how columns are used for a specific mining model, or about the type of algorithm that is used to build a model; this information is defined in the mining model itself.  
@@ -74,7 +74,7 @@ manager: "mblythe"
   
  To create a data mining model in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you must first create a data mining structure. The Data Mining wizard walks you through the process of creating a mining structure, choosing data, and adding a mining model.  
   
- If you create a mining model by using Data Mining Extensions (DMX), you can specify the model and the columns in it, and DMX will automatically create the required mining structure. For more information, see [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md).  
+ If you create a mining model by using Data Mining Extensions (DMX), you can specify the model and the columns in it, and DMX will automatically create the required mining structure. For more information, see [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx).  
   
  For more information, see [Mining Structure Columns](mining-structure-columns.md).  
   
@@ -100,7 +100,7 @@ manager: "mblythe"
   
  If you want to review the data in the mining structure, you can create queries by using Data Mining Extensions (DMX). For example, the statement `SELECT * FROM <structure>.CASES` returns all the data in the mining structure. To retrieve this information, the mining structure must have been processed, and the results of processing must be cached.  
   
- The statement `SELECT * FROM <model>.CASES` returns the same columns, but only for the cases in that particular model. For more information, see [SELECT FROM &#60;structure&#62;.CASES](~/dmx/select-from-structure-cases.md) and [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](~/dmx/select-from-model-content-dmx.md).  
+ The statement `SELECT * FROM <model>.CASES` returns the same columns, but only for the cases in that particular model. For more information, see [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases) and [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
 ## Using Data Mining Models with Mining Structures  
  A data mining model applies a mining model algorithm to the data that is represented by a mining structure. A mining model is an object that belongs to a particular mining structure, and the model inherits all the values of the properties that are defined by the mining structure. The model can use all the columns that the mining structure contains or a subset of the columns. You can add multiple copies of a structure column to a structure. You can also add multiple copies of a structure column to a model, and then assign different names, or *aliases*, to each structure column in the model. For more information about aliasing structure columns, see [Create an Alias for a Model Column](create-an-alias-for-a-model-column.md) and [Mining Model Properties](mining-model-properties.md).  

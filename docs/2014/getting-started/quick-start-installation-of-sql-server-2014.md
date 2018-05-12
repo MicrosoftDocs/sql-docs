@@ -157,7 +157,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Product Specifications for SQL Server 2014](../../2014/getting-started/sql-server-2014-product-specifications.md)   
- [Get Started with Product Documentation for SQL Server](~/2014/books-online-for-sql-server-2014.md)   
+ [Get Started with Product Documentation for SQL Server](/sql/2014/books-online-for-sql-server-2014)   
  [Backward Compatibility](../../2014/getting-started/backward-compatibility.md)  
   
   

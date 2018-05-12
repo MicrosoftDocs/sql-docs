@@ -53,7 +53,7 @@ manager: "jhubbard"
  The WSFC service monitors the start state of the SQL Server service on the active FCI node to detect when the SQL Server service is stopped.  
   
 ####  <a name="instance"></a> Responsiveness of the SQL Server instance  
- During SQL Server startup, the WSFC service uses the SQL Server Database Engine resource DLL to create a new connection to on a separate thread that is used exclusively for monitoring the health status. This ensures that there the SQL instance has the required resources to report its health status while under load. Using this dedicated connection, SQL Server runs the [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure in repeat mode to periodically report the health status of the SQL Server components to the resource DLL.  
+ During SQL Server startup, the WSFC service uses the SQL Server Database Engine resource DLL to create a new connection to on a separate thread that is used exclusively for monitoring the health status. This ensures that there the SQL instance has the required resources to report its health status while under load. Using this dedicated connection, SQL Server runs the [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) system stored procedure in repeat mode to periodically report the health status of the SQL Server components to the resource DLL.  
   
  The resource DLL determines the responsiveness of the SQL instance using a health check timeout. The HealthCheckTimeout property defines how long the resource DLL should wait for the sp_server_diagnostics stored procedure before it reports the SQL instance as unresponsive to the WSFC service. This property is configurable using T-SQL as well as in the Failover Cluster Manager snap-in. For more information, see [Configure HealthCheckTimeout Property Settings](configure-healthchecktimeout-property-settings.md). The following items describe how this property affects timeout and repeat interval settings:  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
  The failure conditions are set on an increasing scale. For levels 1-5, each level includes all the conditions from the previous levels in addition to its own conditions. This means that with each level, there is an increased probability of a failover or restart. The failure condition levels are described in the following table.  
   
- Review [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) as this system stored procedure plays in important role in the failure condition levels.  
+ Review [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) as this system stored procedure plays in important role in the failure condition levels.  
   
 |Level|Condition|Description|  
 |-----------|---------------|-----------------|  
@@ -107,6 +107,6 @@ manager: "jhubbard"
  For more information on maintaining quorum health, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ## See Also  
- [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)  
+ [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

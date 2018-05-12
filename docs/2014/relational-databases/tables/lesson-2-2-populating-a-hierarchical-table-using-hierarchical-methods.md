@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 ### To insert the root of the hierarchy tree  
   
-1.  The following example inserts **David** the Marketing Manager into the table at the root of the hierarchy. The **OrdLevel** column is a computed column. Therefore, it is not part of the INSERT statement. This first record uses the [GetRoot()](~/t-sql/data-types/getroot-database-engine.md) method to populate this first record as the root of the hierarchy.  
+1.  The following example inserts **David** the Marketing Manager into the table at the root of the hierarchy. The **OrdLevel** column is a computed column. Therefore, it is not part of the INSERT statement. This first record uses the [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) method to populate this first record as the root of the hierarchy.  
   
     ```  
     INSERT HumanResources.EmployeeOrg (OrgNode, EmployeeID, EmpName, Title)  
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 ### To insert a subordinate employee  
   
-1.  **Sariya** reports to **David**. To insert **Sariya's** node, you must create an appropriate **OrgNode** value of data type `hierarchyid`. The following code creates a variable of data type `hierarchyid` and populates it with the root OrgNode value of the table. Then uses that variable with the [GetDescendant()](~/t-sql/data-types/getdescendant-database-engine.md) method to insert row that is a subordinate node. `GetDescendant` takes two arguments. Review the following options for the argument values:  
+1.  **Sariya** reports to **David**. To insert **Sariya's** node, you must create an appropriate **OrgNode** value of data type `hierarchyid`. The following code creates a variable of data type `hierarchyid` and populates it with the root OrgNode value of the table. Then uses that variable with the [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) method to insert row that is a subordinate node. `GetDescendant` takes two arguments. Review the following options for the argument values:  
   
     -   If parent is NULL, `GetDescendant` returns NULL.  
   
@@ -106,7 +106,7 @@ manager: "jhubbard"
   
 ### To create a procedure for entering new nodes  
   
-1.  To simplify entering data, create the following stored procedure to add employees to the **EmployeeOrg** table. The procedure accepts input values about the employee being added. This includes the **EmployeeID** of the new employee's manager, the new employee's **EmployeeID** number, and their first name and title. The procedure uses `GetDescendant()` and also the [GetAncestor()](~/t-sql/data-types/getancestor-database-engine.md) method. Execute the following code to create the procedure:  
+1.  To simplify entering data, create the following stored procedure to add employees to the **EmployeeOrg** table. The procedure accepts input values about the employee being added. This includes the **EmployeeID** of the new employee's manager, the new employee's **EmployeeID** number, and their first name and title. The procedure uses `GetDescendant()` and also the [GetAncestor()](/sql/t-sql/data-types/getancestor-database-engine) method. Execute the following code to create the procedure:  
   
     ```  
     CREATE PROC AddEmp(@mgrid int, @empid int, @e_name varchar(20), @title varchar(20))   

@@ -61,7 +61,7 @@ manager: "jhubbard"
   
  Typically, values from the reference dataset are added to the transformation output. For example, the Lookup transformation can extract a product name from a table using a value from an input column, and then add the product name to the transformation output. The values from the reference table can replace column values or can be added to new columns.  
   
- The lookups performed by the Lookup transformation are case sensitive. To avoid lookup failures that are caused by case differences in data, first use the Character Map transformation to convert the data to uppercase or lowercase. Then, include the UPPER or LOWER functions in the SQL statement that generates the reference table. For more information, see [Character Map Transformation](character-map-transformation.md), [UPPER &#40;Transact-SQL&#41;](~/t-sql/functions/upper-transact-sql.md), and [LOWER &#40;Transact-SQL&#41;](~/t-sql/functions/lower-transact-sql.md).  
+ The lookups performed by the Lookup transformation are case sensitive. To avoid lookup failures that are caused by case differences in data, first use the Character Map transformation to convert the data to uppercase or lowercase. Then, include the UPPER or LOWER functions in the SQL statement that generates the reference table. For more information, see [Character Map Transformation](character-map-transformation.md), [UPPER &#40;Transact-SQL&#41;](/sql/t-sql/functions/upper-transact-sql), and [LOWER &#40;Transact-SQL&#41;](/sql/t-sql/functions/lower-transact-sql).  
   
  The Lookup transformation has the following inputs and outputs:  
   

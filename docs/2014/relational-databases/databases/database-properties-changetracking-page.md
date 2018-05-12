@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  Setting the value to **True** sets a database option that allows change tracking to be enabled on individual tables.  
   
- You can also configure change tracking by using [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md).  
+ You can also configure change tracking by using [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
   
  **Retention Period**  
  Specifies the minimum period for keeping change track information in the database. Data is removed only if the **Auto Clean-Up**value is **True**.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
  Enabling **Auto Clean-Up** resets any previous custom retention period to the default retention period of 2 days.  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

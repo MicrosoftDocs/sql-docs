@@ -38,7 +38,7 @@ manager: "jhubbard"
   
     -   **Default Full-Text Language**  
   
-         Specifies a default language for full-text indexed columns. Linguistic analysis of full-text indexed data is dependent on the language of the data. The default value of this option is the language of the server. For the language that corresponds to the displayed setting, see [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+         Specifies a default language for full-text indexed columns. Linguistic analysis of full-text indexed data is dependent on the language of the data. The default value of this option is the language of the server. For the language that corresponds to the displayed setting, see [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
     -   **Full-Text Upgrade Option**  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
          For information about choosing a full-text upgrade option, see [Upgrade Full-Text Search](upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  The full-text upgrade option can also be set by using the [sp_fulltext_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** action.  
+        >  The full-text upgrade option can also be set by using the [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** action.  
   
 ##  <a name="metadata"></a> Viewing Additional Full-Text Server Properties  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] functions can be used to obtain the value of various server-level properties of full-text search. This information is useful for administrating and troubleshooting full-text search.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 |Property|Description|Function|  
 |--------------|-----------------|--------------|  
-|`IsFullTextInstalled`|Whether the full-text component is installed with the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](~/t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](~/t-sql/functions/serverproperty-transact-sql.md)|  
+|`IsFullTextInstalled`|Whether the full-text component is installed with the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|Whether operating system word breakers and filters are registered and used with this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Specifies whether only signed binaries are loaded by the the Full-Text Engine.|FULLTEXTSERVICEPROPERTY|  
   
@@ -81,30 +81,30 @@ manager: "jhubbard"
   
  **To view information about the full-text catalogs with in-progress population activity**  
   
--   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
+-   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
  **To view current activity of a filter daemon host process**  
   
--   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql.md)  
+-   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
  **To view information about in-progress index populations**  
   
--   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
+-   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
  **To view memory buffers in a memory pool that are used as part of a crawl or crawl range.**  
   
--   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)  
+-   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
  **To view the shared memory pools available to the full-text gatherer component for a full-text crawl or a full-text crawl range**  
   
--   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)  
+-   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
  **To view information about each full-text indexing batch**  
   
--   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)  
+-   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
  **To view information about the specific ranges related to an in-progress population**  
   
--   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md)  
+-   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   
   

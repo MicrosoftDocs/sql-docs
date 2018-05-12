@@ -63,7 +63,7 @@ manager: "jhubbard"
 -   [YEAR &#40;SSIS Expression&#41;](../expressions/year-ssis-expression.md)  
   
  Functions in Transact-SQL that work with `datetime` values  
- [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](~/t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
  Before you use any one of these `datetime` functions to calculate the endpoints, you have to determine whether the interval is fixed and occurs on a regular schedule. Typically, you want to apply changes that have occurred in source tables to destination tables on a regular schedule. For example, you might want to apply those changes on an hourly, daily, or weekly basis.  
   

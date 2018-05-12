@@ -114,11 +114,11 @@ manager: "jhubbard"
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- For definitions of the filtering options for **@keep_partition_changes** and **@use_partition_groups**, see [sp_addmergepublication](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+ For definitions of the filtering options for **@keep_partition_changes** and **@use_partition_groups**, see [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
 #### To specify merge filter optimizations when creating a new publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify **@publication** and a value of `true` for one the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specify **@publication** and a value of `true` for one the following parameters:  
   
     -   **@use_partition_groups**: - the highest performance optimization, provided that the articles conform to the requirements for precomputed partitions. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
   
 2.  Add a snapshot job for the publication. For more information see [Create a Publication](create-a-publication.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), specifying the following parameters:  
+3.  At the Publisher on the publication database, execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), specifying the following parameters:  
   
     -   **@publication** - the name of the publication from step 1.  
   
@@ -140,20 +140,20 @@ manager: "jhubbard"
   
 4.  Repeat step 3 for each article in the publication.  
   
-5.  (Optional) At the Publisher on the publication database, execute [sp_addmergefilter](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define a join filter between two articles. For more information, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+5.  (Optional) At the Publisher on the publication database, execute [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) to define a join filter between two articles. For more information, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 #### To view and modify merge filter behaviors for an existing publication  
   
-1.  (Optional) At the Publisher on the publication database, execute [sp_helpmergepublication](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), specifying **@publication**. Note the value of **keep_partition_changes** and **use_partition_groups** in the result set.  
+1.  (Optional) At the Publisher on the publication database, execute [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specifying **@publication**. Note the value of **keep_partition_changes** and **use_partition_groups** in the result set.  
   
-2.  (Optional) At the Publisher on the publication database, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify a value of **use_partition_groups** for **@property** and either `true` or `false` for **@value**.  
+2.  (Optional) At the Publisher on the publication database, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specify a value of **use_partition_groups** for **@property** and either `true` or `false` for **@value**.  
   
-3.  (Optional) At the Publisher on the publication database, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify a value of **keep_partition_changes** for **@property** and either `true` or `false` for **@value**.  
+3.  (Optional) At the Publisher on the publication database, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specify a value of **keep_partition_changes** for **@property** and either `true` or `false` for **@value**.  
   
     > [!NOTE]  
     >  When enabling **keep_partition_changes**, you must first disable **use_partition_groups** and specify a value of **1** for **@force_reinit_subscription**.  
   
-4.  (Optional) At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **partition_options** for **@property** and the appropriate value for **@value**. See [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) for definitions of these filtering options.  
+4.  (Optional) At the Publisher on the publication database, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specify a value of **partition_options** for **@property** and the appropriate value for **@value**. See [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) for definitions of these filtering options.  
   
 5.  (Optional) Start the Snapshot Agent to regenerate the snapshot if necessary. For information about which changes require a new snapshot to be generated, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   

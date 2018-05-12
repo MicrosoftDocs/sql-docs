@@ -66,9 +66,9 @@ manager: "jhubbard"
   
     |Procedure|Description|  
     |---------------|-----------------|  
-    |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|Adds or changes warning threshold for a specified mirroring performance metric.|  
-    |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|Returns information about warning thresholds on one or all of several key database mirroring monitor performance metrics.|  
-    |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|Drops the warning for a specified performance metric.|  
+    |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|Adds or changes warning threshold for a specified mirroring performance metric.|  
+    |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|Returns information about warning thresholds on one or all of several key database mirroring monitor performance metrics.|  
+    |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Drops the warning for a specified performance metric.|  
   
 ## Performance-Threshold Events Sent to the Windows Event Log  
  If warning thresholdis defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event—a *performance-threshold event*— for the metric and writes the event to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
@@ -119,23 +119,23 @@ manager: "jhubbard"
   
 -   [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
--   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)  
+-   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)  
   
--   [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
+-   [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)  
   
--   [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)  
+-   [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)  
   
--   [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
+-   [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)  
   
--   [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)  
+-   [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)  
   
--   [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)  
+-   [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)  
   
--   [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)  
+-   [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql)  
   
--   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+-   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)  
   
--   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
+-   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

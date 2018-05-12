@@ -98,7 +98,7 @@ manager: "jhubbard"
 2.  The mirror server records the log sequence number (LSN) of the last log record received from the principal as the failover LSN.  
   
     > [!NOTE]  
-    >  To view this LSN, select the **mirroring_failover_lsn** column from [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
+    >  To view this LSN, select the **mirroring_failover_lsn** column from [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
 3.  If any log is waiting in the redo queue, the mirror server finishes rolling forward the mirror database. The amount of time required depends on the speed of the system, the recent workload, and the amount of log in the redo queue. For a synchronous operating mode, the failover time can be regulated by limiting the size of the redo queue. However, this can cause the principal server to slow down to allow the mirror server to keep up.  
   

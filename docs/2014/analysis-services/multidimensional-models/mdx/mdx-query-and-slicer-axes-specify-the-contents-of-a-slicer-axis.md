@@ -28,7 +28,7 @@ manager: "mblythe"
 <SELECT slicer axis clause> ::=  WHERE Set_Expression  
 ```  
   
- In the slicer axis syntax shown, `Set_Expression` can take either a tuple expression, which is treated as a set for the purposes of evaluating the clause, or a set expression. If a set expression is specified, MDX will try to evaluate the set, aggregating the result cells in every tuple along the set. In other words, MDX will try to use the [Aggregate](~/mdx/aggregate-mdx.md) function on the set, aggregating each measure by its associated aggregation function. Also, if the set expression cannot be expressed as a crossjoin of attribute hierarchy members, MDX treats cells that fall outside of the set expression for the slicer as null for evaluation purposes.  
+ In the slicer axis syntax shown, `Set_Expression` can take either a tuple expression, which is treated as a set for the purposes of evaluating the clause, or a set expression. If a set expression is specified, MDX will try to evaluate the set, aggregating the result cells in every tuple along the set. In other words, MDX will try to use the [Aggregate](/sql/mdx/aggregate-mdx) function on the set, aggregating each measure by its associated aggregation function. Also, if the set expression cannot be expressed as a crossjoin of attribute hierarchy members, MDX treats cells that fall outside of the set expression for the slicer as null for evaluation purposes.  
   
 > [!IMPORTANT]  
 >  Unlike the WHERE clause in SQL, the WHERE clause of an MDX SELECT statement never directly filters what is returned on the Rows axis of a query. To filter what appears on the Rows or Columns axis of a query, you can use a variety of MDX functions, for example FILTER, NONEMPTY and TOPCOUNT.  

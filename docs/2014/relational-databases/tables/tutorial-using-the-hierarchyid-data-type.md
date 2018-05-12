@@ -42,8 +42,8 @@ manager: "jhubbard"
 ## See Also  
  [Tutorial: Getting Started with the Database Engine](../tutorial-getting-started-with-the-database-engine.md)   
  [Tutorial: Writing Transact-SQL Statements](../../t-sql/tutorial-writing-transact-sql-statements.md)   
- [hierarchyid Data Type Method Reference](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)   
+ [hierarchyid Data Type Method Reference](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
  [Hierarchical Data &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
- [hierarchyid &#40;Transact-SQL&#41;](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)  
+ [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

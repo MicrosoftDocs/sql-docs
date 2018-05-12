@@ -77,7 +77,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_stop_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md).  
+ For more information, see [sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To stop a job**  

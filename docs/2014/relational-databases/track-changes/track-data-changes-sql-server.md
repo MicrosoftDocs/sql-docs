@@ -75,7 +75,7 @@ manager: "jhubbard"
 ##  <a name="Capture"></a> Change Data Capture  
  Change data capture provides historical change information for a user table by capturing both the fact that DML changes were made and the actual data that was changed. Changes are captured by using an asynchronous process that reads the transaction log and has a low impact on the system.  
   
- As shown in the following illustration, the changes that were made to user tables are captured in corresponding change tables. These change tables provide an historical view of the changes over time. The [change data capture](~/relational-databases/system-functions/change-data-capture-functions-transact-sql.md)functions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides enable the change data to be consumed easily and systematically.  
+ As shown in the following illustration, the changes that were made to user tables are captured in corresponding change tables. These change tables provide an historical view of the changes over time. The [change data capture](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)functions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides enable the change data to be consumed easily and systematically.  
   
  ![Conceptual illustration of change data capture](../../database-engine/media/cdcart1.gif "Conceptual illustration of change data capture")  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
  This section describes the change data capture security model.  
   
  **Configuration and Administration**  
- To either enable or disable change data capture for a database, the caller of [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) or [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) must be a member of the fixed server `sysadmin` role. Enabling and disabling change data capture at the table level requires the caller of [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md) and [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md) to either be a member of the sysadmin role or a member of the database `database db_owner` role.  
+ To either enable or disable change data capture for a database, the caller of [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) or [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) must be a member of the fixed server `sysadmin` role. Enabling and disabling change data capture at the table level requires the caller of [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) and [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) to either be a member of the sysadmin role or a member of the database `database db_owner` role.  
   
  Use of the stored procedures to support the administration of change data capture jobs is restricted to members of the server `sysadmin` role and members of the `database db_owner` role.  
   
@@ -118,12 +118,12 @@ manager: "jhubbard"
   
 1.  Ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is running on the mirror.  
   
-2.  Create the capture job and cleanup job on the mirror after the principal has failed over to the mirror. To create the jobs, use the stored procedure [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+2.  Create the capture job and cleanup job on the mirror after the principal has failed over to the mirror. To create the jobs, use the stored procedure [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
  For more information about database mirroring, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 #### Transactional Replication  
- Change data capture and transactional replication can coexist in the same database, but population of the change tables is handled differently when both features are enabled. Change data capture and transactional replication always use the same procedure, [sp_replcmds](~/relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md), to read changes from the transaction log. When change data capture is enabled on its own, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job calls `sp_replcmds`. When both features are enabled on the same database, the Log Reader Agent calls `sp_replcmds`. This agent populates both the change tables and the distribution database tables. For more information, see [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ Change data capture and transactional replication can coexist in the same database, but population of the change tables is handled differently when both features are enabled. Change data capture and transactional replication always use the same procedure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), to read changes from the transaction log. When change data capture is enabled on its own, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job calls `sp_replcmds`. When both features are enabled on the same database, the Log Reader Agent calls `sp_replcmds`. This agent populates both the change tables and the distribution database tables. For more information, see [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
  Consider a scenario in which change data capture is enabled on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, and two tables are enabled for capture. To populate the change tables, the capture job calls `sp_replcmds`. The database is enabled for transactional replication, and a publication is created. Now, the Log Reader Agent is created for the database and the capture job is deleted. The Log Reader Agent continues to scan the log from the last log sequence number that was committed to the change table. This ensures data consistency in the change tables. If transactional replication is disabled in this database, the Log Reader Agent is removed and the capture job is re-created.  
   
@@ -137,7 +137,7 @@ manager: "jhubbard"
   
 -   If a database is restored to another server, by default change data capture is disabled and all related metadata is deleted.  
   
-     To retain change data capture, use the `KEEP_CDC` option when restoring the database. For more information about this option, see [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md).  
+     To retain change data capture, use the `KEEP_CDC` option when restoring the database. For more information about this option, see [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   If a database is detached and attached to the same server or another server, change data capture remains enabled.  
   
@@ -145,7 +145,7 @@ manager: "jhubbard"
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
- You can use [sys.sp_cdc_disable_db](~/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) to remove change data capture from a restored or attached database.  
+ You can use [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) to remove change data capture from a restored or attached database.  
  
 
   ##  <a name="Tracking"></a> Change Tracking  
@@ -184,10 +184,10 @@ manager: "jhubbard"
 |Describes how applications that use change tracking can obtain tracked changes, apply these changes to another data store, and update the source database. This topic also describes the role change tracking plays when a failover occurs and a database must be restored from a backup.|[Work with Change Tracking &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)|  
   
 ## See Also  
- [Change Data Capture Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
- [Change Tracking Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [Change Data Capture Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [Change Data Capture Tables &#40;Transact-SQL&#41;](~/relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
+ [Change Data Capture Functions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
+ [Change Tracking Functions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
+ [Change Data Capture Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   
+ [Change Data Capture Tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
  [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](../views/views.md)  
   
   

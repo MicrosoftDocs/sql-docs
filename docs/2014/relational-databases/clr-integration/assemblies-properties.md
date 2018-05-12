@@ -48,6 +48,6 @@ manager: "jhubbard"
  Displays the version number of the assembly.  
   
 ## See Also  
- [CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md)  
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
   

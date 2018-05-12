@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   The server instance must be enabled for AlwaysOn. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md).  
   
--   To be eligible to be switched from the local cluster context to a remote cluster cluster, a server instance cannot be hosting any availability replicas. The [sys.availability_replicas](~/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md) catalog view should not return any rows.  
+-   To be eligible to be switched from the local cluster context to a remote cluster cluster, a server instance cannot be hosting any availability replicas. The [sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql) catalog view should not return any rows.  
   
      If any availability replicas exist on the server instance, before you can change the HADR cluster context, you must do one of the following:  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts either the primary replica or a secondary replica of the availability group.  
   
-2.  Use the SET HADR CLUSTER CONTEXT clause of the [ALTER SERVER CONFIGURATION](~/t-sql/statements/alter-server-configuration-transact-sql.md) statement, as follows:  
+2.  Use the SET HADR CLUSTER CONTEXT clause of the [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) statement, as follows:  
   
      ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'*`windows_cluster`*'** | LOCAL }  
   
@@ -118,7 +118,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
 ##  <a name="FollowUp"></a> Follow Up: After Switching the Cluster Context of an Availability Replica  
  The new HADR cluster context takes effect immediately, without restarting the server instance. The HADR cluster context setting is a persistent instance-level setting that remains unchanged if the server instance restarts.  
   
- Confirm the new HADR cluster context by querying the [sys.dm_hadr_cluster](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) dynamic management view, as follows:  
+ Confirm the new HADR cluster context by querying the [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) dynamic management view, as follows:  
   
 ```  
 SELECT cluster_name FROM sys.dm_hadr_cluster  
@@ -161,6 +161,6 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
 ## See Also  
  [AlwaysOn Availability Groups (SQL Server)](always-on-availability-groups-sql-server.md)
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)  
+ [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

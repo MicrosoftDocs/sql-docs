@@ -128,7 +128,7 @@ manager: "jhubbard"
 ## Publishing Views  
  All types of replication allow you to replicate views. The view (and its accompanying index, if it is an indexed view) can be copied to the Subscriber, but the base table must also be replicated.  
   
- For indexed views, transactional replication also allows you to replicate the indexed view as a table rather than a view, eliminating the need to also replicate the base table. To do this, specify one of the "indexed view logbased" options for the *@type* parameter of [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). For more information about using **sp_addarticle**, see [Define an Article](define-an-article.md).  
+ For indexed views, transactional replication also allows you to replicate the indexed view as a table rather than a view, eliminating the need to also replicate the base table. To do this, specify one of the "indexed view logbased" options for the *@type* parameter of [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). For more information about using **sp_addarticle**, see [Define an Article](define-an-article.md).  
   
 ## Publishing User-Defined Functions  
  The CREATE FUNCTION statements for CLR functions and [!INCLUDE[tsql](../../../includes/tsql-md.md)] functions are copied to each Subscriber. In the case of CLR functions, the associated assembly is also copied. Changes to functions are replicated to Subscribers; changes to associated assemblies are not.  
@@ -166,7 +166,7 @@ manager: "jhubbard"
 -   If you are publishing a database object that depends on one or more other database objects, you must publish all referenced objects. For example, if you publish a view that depends on a table, you must publish the table also.  
   
     > [!NOTE]  
-    >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **@processing_order** parameter of [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article as long as the number for the function is lower than the number for the table.  
+    >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **@processing_order** parameter of [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) and [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article as long as the number for the function is lower than the number for the table.  
   
 -   Publication names cannot include the following characters: % * [ ] | : " ? \ / \< >.  
   
@@ -180,7 +180,7 @@ manager: "jhubbard"
   
 -   Tables published for transactional replication must have a primary key. If a table is in a transactional replication publication, you cannot disable any indexes that are associated with primary key columns. These indexes are required by replication. To disable an index, you must first drop the table from the publication.  
   
--   Bound defaults created with [sp_bindefault &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) are not replicated (bound defaults are deprecated in favor of defaults created with the DEFAULT keyword of ALTER TABLE or CREATE TABLE).  
+-   Bound defaults created with [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) are not replicated (bound defaults are deprecated in favor of defaults created with the DEFAULT keyword of ALTER TABLE or CREATE TABLE).  
   
 -   Functions containing the `NOEXPAND` hint on indexed views cannot be published in the same publication as the referenced tables and indexed views, due to the order in which the distribution agent delivers them. To work around this problem, place the table and indexed view creation in a first publication, and add functions containing the `NOEXPAND` hint on the indexed views to a second publication which you publish after the first publication completes. Or, create scripts for these functions and deliver the script by using the *@post_snapshot_script* parameter of `sp_addpublication`.  
   
@@ -223,7 +223,7 @@ manager: "jhubbard"
     |Identity range|**@identity_range**|  
     |Identity range threshold|**@threshold**|  
   
-     For more information about these parameters, see [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+     For more information about these parameters, see [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
 -   If an article is published in more than one merge publication, the following properties must have the same value for the article across all publications:  
   
@@ -243,7 +243,7 @@ manager: "jhubbard"
     |Blob column streaming|**@stream_blob_columns**|  
     |Filter type|**@filter_type** (parameter in **sp_addmergefilter**)|  
   
-     For more information about these parameters, see [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_addmergefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
+     For more information about these parameters, see [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) and [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql).  
   
 -   Transactional replication and unfiltered merge replication support publishing a table in multiple publications and then subscribing within a single table in the subscription database (commonly referred to as a roll up scenario). Roll up is often used for aggregating subsets of data from multiple locations in one table at a central Subscriber. Filtered merge publications do not support the central Subscriber scenario. For merge replication, roll up is typically implemented through a single publication with parameterized row filters. For more information, see [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   

@@ -100,6 +100,6 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md).  
+ For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
   

@@ -27,11 +27,11 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Add Namespaces to Queries with WITH XMLNAMESPACES
-  [WITH XMLNAMESPACES (Transact-SQL)](~/t-sql/xml/with-xmlnamespaces.md) provides namespace URI support in the following way:  
+  [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) provides namespace URI support in the following way:  
   
 -   It makes the namespace prefix to URI mapping available when [Constructing XML Using FOR XML](for-xml-sql-server.md) queries.  
   
--   It makes the namespace to URI mapping available to the static namespace context of the [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md).  
+-   It makes the namespace to URI mapping available to the static namespace context of the [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods).  
   
 ## Using WITH XMLNAMESPACES in the FOR XML Queries  
  WITH XMLNAMESPACES lets you include XML namespaces in FOR XML queries. For example, consider the following FOR XML query:  
@@ -200,7 +200,7 @@ go
 ```  
   
 ## Using WITH XMLNAMESPACES with the xml Data Type Methods  
- The [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md) specified in a SELECT query, or in UPDATE when it is the **modify()** method, all have to repeat the namespace declaration in their prolog. This can be time-consuming. For example, the following query retrieves product model IDs whose catalog descriptions do include specification. That is, the <`Specifications`> element exists.  
+ The [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) specified in a SELECT query, or in UPDATE when it is the **modify()** method, all have to repeat the namespace declaration in their prolog. This can be time-consuming. For example, the following query retrieves product model IDs whose catalog descriptions do include specification. That is, the <`Specifications`> element exists.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -241,9 +241,9 @@ Go
  Note that an explicit declaration in the XQuery prolog overrides the namespace prefix and the default element namespace that are defined in the WITH clause.  
   
 ## See Also  
- [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md)   
- [XQuery Language Reference &#40;SQL Server&#41;](~/xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](~/t-sql/xml/with-xmlnamespaces.md)   
+ [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods)   
+ [XQuery Language Reference &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](/sql/t-sql/xml/with-xmlnamespaces)   
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

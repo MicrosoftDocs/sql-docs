@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 -   64-bit Enterprise, Developer, or Evaluation edition of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] needs enough memory to hold the data in memory-optimized tables and indexes. To account for row versions, you should provide an amount of memory that is two times the expected size of memory-optimized tables and indexes. But the actual amount of memory needed will depend on your workload. You should monitor your memory usage and make adjustments as needed. The size of data in memory-optimized tables must not exceed the allowed percentage of the pool. To discover the size of a memory-optimized table, see [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] needs enough memory to hold the data in memory-optimized tables and indexes. To account for row versions, you should provide an amount of memory that is two times the expected size of memory-optimized tables and indexes. But the actual amount of memory needed will depend on your workload. You should monitor your memory usage and make adjustments as needed. The size of data in memory-optimized tables must not exceed the allowed percentage of the pool. To discover the size of a memory-optimized table, see [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
   
      If you have disk-based tables in the database, you need to provide enough memory for the buffer pool and query processing on those tables.  
   

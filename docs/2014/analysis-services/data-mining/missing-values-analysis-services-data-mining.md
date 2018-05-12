@@ -108,7 +108,7 @@ manager: "mblythe"
 |-----------|-----------|  
 |Add flags to individual model columns to control handling of missing values|[View or Change Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
 |Set properties on a mining model to control handling of missing values|[Change the Properties of a Mining Model](change-the-properties-of-a-mining-model.md)|  
-|Learn how to specify modeling flags in DMX|[Modeling Flags &#40;DMX&#41;](~/dmx/modeling-flags-dmx.md)|  
+|Learn how to specify modeling flags in DMX|[Modeling Flags &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Alter the way that the mining structure handles missing values|[Change the Properties of a Mining Structure](change-the-properties-of-a-mining-structure.md)|  
   
 ## See Also  

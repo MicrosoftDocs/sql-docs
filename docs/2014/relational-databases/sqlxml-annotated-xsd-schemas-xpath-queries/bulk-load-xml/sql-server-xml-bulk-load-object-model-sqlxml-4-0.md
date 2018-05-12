@@ -56,7 +56,7 @@ manager: "jhubbard"
  When the property is set to TRUE, XML Bulk Load checks the constraints for each value inserted (which means that a constraint violation results in an error).  
   
 > [!NOTE]  
->  To leave this property as FALSE, you must have **ALTER TABLE** permissions on target tables. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
+>  To leave this property as FALSE, you must have **ALTER TABLE** permissions on target tables. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
  The default value is FALSE. When it is set to FALSE, XML Bulk Load ignores the constraints during an insert operation. In the current implementation, you must define the tables in the order of primary key and foreign key relationships in the mapping schema. That is, a table with a primary key must be defined before the corresponding table with the foreign key; otherwise, XML Bulk Load fails.  
   
@@ -83,7 +83,7 @@ manager: "jhubbard"
  When set to TRUE, triggers will fire as per normal during insert operations.  
   
 > [!NOTE]  
->  To leave this property as FALSE, you must have **ALTER TABLE** permissions on target tables. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
+>  To leave this property as FALSE, you must have **ALTER TABLE** permissions on target tables. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
  Note that if ID Propagation is being done, then this option does not apply and triggers will be left on. This occurs when `KeepIdentity=False` and there is a relationship defined where the parent is an identity field and the value is given to the child as it is generated.  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
  The value of this property applies to all columns involved in the bulk load. The default value is TRUE.  
   
 > [!NOTE]  
->  To leave this property as TRUE, you must have **ALTER TABLE** permissions on target tables. Otherwise, it must be set to a value of FALSE. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
+>  To leave this property as TRUE, you must have **ALTER TABLE** permissions on target tables. Otherwise, it must be set to a value of FALSE. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
  KeepNulls  
  Specifies what value to use for a column that is missing a corresponding attribute or child element in the XML document. This is a Boolean property. When the property is set to TRUE, XML Bulk Load assigns a null value to the column. It does not assign the column's default value, if any, as set on the server. The value of this property applies to all columns involved in the bulk load.  
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 -   Creates the necessary tables from the element and attribute names. Therefore, it is important that you do not use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reserved words for element and attribute names in the schema.  
   
--   Returns overflow data for any column designated using the [sql:overflow-field](annotation-interpretation-sql-overflow-field.md) in [xml data type](~/t-sql/xml/xml-transact-sql.md) format.  
+-   Returns overflow data for any column designated using the [sql:overflow-field](annotation-interpretation-sql-overflow-field.md) in [xml data type](/sql/t-sql/xml/xml-transact-sql) format.  
   
  SGDropTables  
  Specifies whether existing tables should be dropped and re-created. You use this property when the SchemaGen property is set to TRUE. If SGDropTables is FALSE, the existing tables are retained. When this property is TRUE, the existing tables are deleted and re-created.  

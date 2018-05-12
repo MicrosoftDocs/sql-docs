@@ -85,15 +85,15 @@ manager: "jhubbard"
   
 #### To create a push subscription to a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, verify that the publication supports push subscriptions by executing [sp_helppublication](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+1.  At the Publisher on the publication database, verify that the publication supports push subscriptions by executing [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql).  
   
     -   If the value of **allow_push** is **1**, push subscriptions are supported.  
   
-    -   If the value of **allow_push** is **0**, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_push** for **@property** and `true` for **@value**.  
+    -   If the value of **allow_push** is **0**, execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specifying **allow_push** for **@property** and `true` for **@value**.  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber** and **@destination_db**. Specify a value of **push** for **@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specify **@publication**, **@subscriber** and **@destination_db**. Specify a value of **push** for **@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)  
   
-3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
+3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Specify the following:  
   
     -   The **@subscriber**, **@subscriber_db**, and **@publication** parameters.  
   
@@ -111,13 +111,13 @@ manager: "jhubbard"
   
 #### To create a push subscription to a merge publication  
   
-1.  At the Publisher on the publication database, verify that the publication supports push subscriptions by executing [sp_helpmergepublication](~/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md).  
+1.  At the Publisher on the publication database, verify that the publication supports push subscriptions by executing [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql).  
   
     -   If the value of **allow_push** is **1**, the publication supports push subscriptions.  
   
-    -   If the value of **allow_push** is not **1**, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **allow_push** for **@property** and `true` for **@value**.  
+    -   If the value of **allow_push** is not **1**, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specifying **allow_push** for **@property** and `true` for **@value**.  
   
-2.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md), specifying the following parameters:  
+2.  At the Publisher on the publication database, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql), specifying the following parameters:  
   
     -   **@publication**. This is the name of the publication.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
          For more information, see [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specify the following:  
+3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Specify the following:  
   
     -   The **@subscriber**, **@subscriber_db**, and **@publication** parameters.  
   

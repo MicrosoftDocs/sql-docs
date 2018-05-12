@@ -80,6 +80,6 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [syspolicy_conditions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md).  
+ For more information, see [syspolicy_conditions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syspolicy-conditions-transact-sql).  
   
   

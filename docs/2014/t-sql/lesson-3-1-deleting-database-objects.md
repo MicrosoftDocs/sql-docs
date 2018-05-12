@@ -101,13 +101,13 @@ manager: "jhubbard"
  [Tutorial: Writing Transact-SQL Statements](tutorial-writing-transact-sql-statements.md)  
   
 ## See Also  
- [REVOKE &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-transact-sql.md)   
- [DROP USER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-user-transact-sql.md)   
- [DROP LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/drop-login-transact-sql.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-procedure-transact-sql.md)   
- [DROP VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/drop-view-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](~/t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-table-transact-sql.md)   
- [DROP DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-audit-specification-transact-sql.md)  
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [DROP USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-user-transact-sql)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-login-transact-sql)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
+ [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
+ [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

@@ -205,11 +205,11 @@ SELECT @g.ToString(), @g.STLength();
   
 ## See Also  
  [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [geometry Data Type Method Reference](~/t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)   
- [geography Data Type Method Reference](~/t-sql/spatial-geography/spatial-types-geography.md)   
- [STNumCurves &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
- [STNumCurves &#40;geography Data Type&#41;](~/t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
- [STGeomFromText &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   
- [STGeomFromText &#40;geography Data Type&#41;](~/t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+ [geometry Data Type Method Reference](/sql/t-sql/spatial-geometry/spatial-types-geometry-transact-sql)   
+ [geography Data Type Method Reference](/sql/t-sql/spatial-geography/spatial-types-geography)   
+ [STNumCurves &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stnumcurves-geometry-data-type)   
+ [STNumCurves &#40;geography Data Type&#41;](/sql/t-sql/spatial-geography/stnumcurves-geography-data-type)   
+ [STGeomFromText &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stgeomfromtext-geometry-data-type)   
+ [STGeomFromText &#40;geography Data Type&#41;](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
   
   

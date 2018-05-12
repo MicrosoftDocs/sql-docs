@@ -52,7 +52,7 @@ manager: "jhubbard"
  [Granting Access to a Database](lesson-2-2-granting-access-to-a-database.md)  
   
 ## See Also  
- [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [Choose an Authentication Mode](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

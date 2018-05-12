@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   If the update applies only to indexes, the WITH INDEX clause is included.  
   
- If the Update Statistics task updates statistics in multiple databases, the task runs multiple UPDATE STATISTICS statements, one for each table or view. All instances of UPDATE STATISTICS use the same clause, but different *table_name* or *view_name* values. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md) and [UPDATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/update-statistics-transact-sql.md).  
+ If the Update Statistics task updates statistics in multiple databases, the task runs multiple UPDATE STATISTICS statements, one for each table or view. All instances of UPDATE STATISTICS use the same clause, but different *table_name* or *view_name* values. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql) and [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql).  
   
 > [!IMPORTANT]  
 >  The time the task takes to create the Transact-SQL statement that the task runs is proportionate to the number of statistics the task updates. If the task is configured to update statistics in all the tables and views in a database with a large number of indexes, or to update statistics in multiple databases, the task can take a considerable amount of time to generate the Transact-SQL statement.  

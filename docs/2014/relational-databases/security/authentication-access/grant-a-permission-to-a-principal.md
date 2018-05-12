@@ -55,7 +55,7 @@ manager: "jhubbard"
 1.  In Object Explorer, expand the database that contains the object to which you want to grant permissions.  
   
     > [!NOTE]  
-    >  These steps deal specifically with granting permissions to a stored procedure, but you can use similar steps to add permissions to tables, views, functions, and assemblies, as well as other securables. For more information, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)  
+    >  These steps deal specifically with granting permissions to a stored procedure, but you can use similar steps to add permissions to tables, views, functions, and assemblies, as well as other securables. For more information, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)  
   
 2.  Expand the **Programmability** folder.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md) and [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md).  
+ For more information, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) and [GRANT Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql).  
   
 ## See Also  
  [Principals &#40;Database Engine&#41;](principals-database-engine.md)  

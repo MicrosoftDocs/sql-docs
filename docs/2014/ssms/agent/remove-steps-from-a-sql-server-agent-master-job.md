@@ -81,6 +81,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_delete_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md).  
+ For more information, see [sp_delete_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql).  
   
   

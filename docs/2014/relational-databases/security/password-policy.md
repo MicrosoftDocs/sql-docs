@@ -65,7 +65,7 @@ manager: "jhubbard"
  Password expiration policies are used to manage the lifespan of a password. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enforces password expiration policy, users are reminded to change old passwords, and accounts that have expired passwords are disabled.  
   
 ## Policy Enforcement  
- The enforcement of password policy can be configured separately for each SQL Server login. Use [ALTER LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/alter-login-transact-sql.md) to configure the password policy options of a SQL Server login. The following rules apply to the configuration of password policy enforcement:  
+ The enforcement of password policy can be configured separately for each SQL Server login. Use [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) to configure the password policy options of a SQL Server login. The following rules apply to the configuration of password policy enforcement:  
   
 -   When CHECK_POLICY is changed to ON, the following behaviors occur:  
   
@@ -100,13 +100,13 @@ manager: "jhubbard"
  The security policy might be set in Windows, or might be received from the domain. To view the password policy on the computer, use the Local Security Policy MMC snap-in (**secpol.msc**).  
   
 ## Related Tasks  
- [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)  
+ [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
- [ALTER LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/alter-login-transact-sql.md)  
+ [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
- [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md)  
+ [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  
   
- [ALTER USER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-user-transact-sql.md)  
+ [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
   
  [Create a Login](authentication-access/create-a-login.md)  
   

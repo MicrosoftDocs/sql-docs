@@ -112,43 +112,43 @@ manager: "jhubbard"
   
 -   [SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
  **To create an alert based on severity levels**  
   
 -   [SQL Server Management Studio](create-an-alert-using-severity-level.md)  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
  **To create an alert based on a WMI event**  
   
 -   [SQL Server Management Studio](create-a-wmi-event-alert.md)  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
  **To define the response to an alert**  
   
 -   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
  **To create a user-defined event error message**  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
  **To modify a user-defined event error message**  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
  **To delete a user-defined event error message**  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   
  **To disable or reactivate an alert**  
   
 -   [SQL Server Management Studio](disable-or-reactivate-an-alert.md)  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
 ## See Also  
  [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md)  

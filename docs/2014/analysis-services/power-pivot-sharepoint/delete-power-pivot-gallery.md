@@ -48,6 +48,6 @@ manager: "mblythe"
 5.  Under Permissions and Management, click **Delete this library**.  
   
 ## See Also  
- [PowerPivot Gallery](~/2014/books-online-for-sql-server-2014.md)  
+ [PowerPivot Gallery](/sql/2014/books-online-for-sql-server-2014)  
   
   

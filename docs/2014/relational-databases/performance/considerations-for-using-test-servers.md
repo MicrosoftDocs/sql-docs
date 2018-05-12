@@ -72,6 +72,6 @@ manager: "jhubbard"
   
      Therefore, you may want to ignore any recommendations that [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor makes about the indexed views that hold correlation statistics because [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor knows their costs but not their benefits. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor may not recommend selection of certain indexes such as clustered indexes on **datetime** columns, which could be beneficial when DATE_CORRELATION_OPTIMIZATION is enabled.  
   
-     To determine if a view is based on correlation statistics, select the **is_date_correlation_view** column of the [sys.views](~/relational-databases/system-catalog-views/sys-views-transact-sql.md) catalog view.  
+     To determine if a view is based on correlation statistics, select the **is_date_correlation_view** column of the [sys.views](/sql/relational-databases/system-catalog-views/sys-views-transact-sql) catalog view.  
   
   

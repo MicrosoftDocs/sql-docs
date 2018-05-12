@@ -22,7 +22,7 @@ manager: "jhubbard"
   This topic describes how to create primary and secondary XML indexes.  
   
 ## Creating a Primary XML Index  
- To create a primary XML index, use the [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statement. Not all options available for non-XML indexes are supported on XML indexes.  
+ To create a primary XML index, use the [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statement. Not all options available for non-XML indexes are supported on XML indexes.  
   
  Note the following when you are creating an XML index:  
   
@@ -78,7 +78,7 @@ CREATE PRIMARY XML INDEX idx_xCol on T (xCol)
 ```  
   
 ## Creating a Secondary XML Index  
- Use the [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statement to create secondary XML indexes and specify the type of the secondary XML index that you want.  
+ Use the [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statement to create secondary XML indexes and specify the type of the secondary XML index that you want.  
   
  Note the following when you are creating secondary XML indexes:  
   

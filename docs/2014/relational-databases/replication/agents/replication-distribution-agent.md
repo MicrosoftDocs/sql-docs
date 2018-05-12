@@ -262,7 +262,7 @@ manager: "jhubbard"
 >  Subscriptionstreams do not work for articles configured to deliver [!INCLUDE[tsql](../../../includes/tsql-md.md)]. To use subscriptionstreams, configure articles to deliver stored procedure calls instead.  
   
  **-SubscriptionTableName** *subscription_table*  
- Is the name of the subscription table generated or used at the given Subscriber. When not specified, the [MSreplication_subscriptions &#40;Transact-SQL&#41;](~/relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) table is used. Use this option for database management systems (DBMS) that do not support long file names.  
+ Is the name of the subscription table generated or used at the given Subscriber. When not specified, the [MSreplication_subscriptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-subscriptions-transact-sql) table is used. Use this option for database management systems (DBMS) that do not support long file names.  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
  Specifies the subscription type for distribution. A value of **0** indicates a push subscription, a value of **1** indicates a pull subscription, and a value of **2** indicates an anonymous subscription.  

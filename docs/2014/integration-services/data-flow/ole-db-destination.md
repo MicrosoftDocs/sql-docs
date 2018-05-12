@@ -92,7 +92,7 @@ manager: "jhubbard"
   
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] keywords are traditionally typed using uppercase letters, but the keywords are not case sensitive.  
   
- To learn more about fast load options, see [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
+ To learn more about fast load options, see [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 ## Troubleshooting the OLE DB Destination  
  You can log the calls that the OLE DB destination makes to external data providers. You can use this logging capability to troubleshoot the saving of data to external data sources that the OLE DB destination performs. To log the calls that the OLE DB destination makes to external data providers, enable package logging and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../troubleshooting/troubleshooting-tools-for-package-execution.md).  

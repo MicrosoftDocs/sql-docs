@@ -30,9 +30,9 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
  ![Small File Folder Icon](media/filefolder-small.gif "Small File Folder Icon") **Transact-SQL Reference**  
- [Views &#40;Integration Services Catalog&#41;](~/integration-services/system-views/views-integration-services-catalog.md)  
+ [Views &#40;Integration Services Catalog&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
- [Stored Procedures &#40;Integration Services Catalog&#41;](~/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
+ [Stored Procedures &#40;Integration Services Catalog&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  
   
  [Functions &#40;Integration Services Catalog&#41;](performance/performance-counters.md)  
   

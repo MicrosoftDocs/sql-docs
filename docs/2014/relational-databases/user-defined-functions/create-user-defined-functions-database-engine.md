@@ -192,6 +192,6 @@ FROM dbo.ufn_FindReports(1);
   
 ## See Also  
  [User-Defined Functions](user-defined-functions.md)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-function-transact-sql.md)  
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
   

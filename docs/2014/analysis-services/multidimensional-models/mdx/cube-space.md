@@ -34,11 +34,11 @@ WHERE Measures.[Internet Sales Amount]
 ```  
   
 > [!NOTE]  
->  This query uses the [Members (Set) (MDX)](~/mdx/members-set-mdx.md) function to return the set of members of the Gender attribute hierarchy on the column axis, and crosses this set with the specified set of members from the Customer attribute hierarchy on the row axis.  
+>  This query uses the [Members (Set) (MDX)](/sql/mdx/members-set-mdx) function to return the set of members of the Gender attribute hierarchy on the column axis, and crosses this set with the specified set of members from the Customer attribute hierarchy on the row axis.  
   
  When you execute the previous query, the cell at the intersection of Aaron A. Allen and Female displays a null. Similarly, the cell at the intersection of Abigail Clark and Male displays a null. These cells do not exist and cannot contain a value, but cells that do not exist can appear in the result returned by a query.  
   
- When you use the [Crossjoin (MDX)](~/mdx/crossjoin-mdx.md) function to return the cross-product of attribute hierarchy members from attribute hierarchies in the same dimension, auto-exists limits those tuples being returned to the set of tuples that actually exist, rather than returning a full Cartesian product. For example, run and then examine the results from the execution of the following query.  
+ When you use the [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) function to return the cross-product of attribute hierarchy members from attribute hierarchies in the same dimension, auto-exists limits those tuples being returned to the set of tuples that actually exist, rather than returning a full Cartesian product. For example, run and then examine the results from the execution of the following query.  
   
 ```  
 SELECT CROSSJOIN  
@@ -110,7 +110,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Notice that the `WITH` keyword is used with the [CurrentMember (MDX)](~/mdx/current-mdx.md) and [Name (MDX)](~/mdx/members-string-mdx.md) functions to create a calculated member for use in the query. For more information, see [The Basic MDX Query &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Notice that the `WITH` keyword is used with the [CurrentMember (MDX)](/sql/mdx/current-mdx) and [Name (MDX)](/sql/mdx/members-string-mdx) functions to create a calculated member for use in the query. For more information, see [The Basic MDX Query &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  In the previous query, the name of the member of the Country attribute hierarchy that is associated with each member of the State attribute hierarchy is returned. The expected Country member appears (because an attribute relationship is defined between the City and Country attributes). However, if no attribute relationship were defined between attribute hierarchies in the same dimension, the (All) member would be returned, as illustrated in the following query.  
   
@@ -132,7 +132,7 @@ FROM [Adventure Works]
  [Autoexists](autoexists.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Visual Totals and Non Visual Totals](visual-totals-and-non-visual-totals.md)   
- [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
- [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX Language Reference &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Multidimensional Expressions &#40;MDX&#41; Reference](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

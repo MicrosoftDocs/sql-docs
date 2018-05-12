@@ -130,6 +130,6 @@ manager: "jhubbard"
 |Provides the F1 Help topics for the **PolicyManagement** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Policy Management Node &#40;Object Explorer&#41;](../../ssms/object/object-explorer.md)|  
   
 ## See Also  
- [Policy-Based Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Policy-Based Management Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

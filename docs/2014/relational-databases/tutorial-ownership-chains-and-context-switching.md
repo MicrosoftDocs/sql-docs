@@ -55,7 +55,7 @@ SELECT CURRENT_USER AS 'Current User Name';
 GO  
 ```  
   
- For more information about the CURRENT_USER statement, see [CURRENT_USER &#40;Transact-SQL&#41;](~/t-sql/functions/current-user-transact-sql.md).  
+ For more information about the CURRENT_USER statement, see [CURRENT_USER &#40;Transact-SQL&#41;](/sql/t-sql/functions/current-user-transact-sql).  
   
  Use this code as the dbo user to create two users on the server and in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
@@ -76,7 +76,7 @@ CREATE USER TestEmployeeUser
 GO   
 ```  
   
- For more information about the CREATE USER statement, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md). For more information about the CREATE LOGIN statement, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
+ For more information about the CREATE USER statement, see [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). For more information about the CREATE LOGIN statement, see [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
  Use the following code to change the ownership of the `Purchasing` schema to the `TestManagerUser` account. This allows that account to use all Data Manipulation Language (DML) statement access (such as `SELECT` and `INSERT` permissions) on the objects it contains. `TestManagerUser` is also granted the ability to create stored procedures.  
   
@@ -93,7 +93,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## 2. Create a Stored Procedure to Access Data  
  To switch context within a database, use the EXECUTE AS statement. EXECUTE AS requires IMPERSONATE permissions.  
@@ -151,7 +151,7 @@ REVERT;
 GO  
 ```  
   
- For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#41;](~/t-sql/statements/revert-transact-sql.md).  
+ For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
 ## 3. Access Data Through the Stored Procedure  
  `TestEmployeeUser` has no permissions on the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database objects other than a login and the rights assigned to the public database role. The following code returns an error when `TestEmployeeUser` attempts to access base tables.  

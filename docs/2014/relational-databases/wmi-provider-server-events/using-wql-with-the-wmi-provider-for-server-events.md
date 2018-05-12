@@ -108,9 +108,9 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Note that not all events can be queried at any particular scope. For example, a WQL query on a trace event such as Lock_Deadlock, or a trace event group such as TRC_LOCKS, can only be registered at the server level. Similarly, the CREATE_ENDPOINT event and the DDL_ENDPOINT_EVENTS event group can also be registered only at the server level. For more information about the appropriate scope for registering events, see [Designing Event Notifications](http://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). An attempt to register a WQL query whose *event_type* can only be registered at the server level is always made at the server level. Registration succeeds if the WMI client has permissions. Otherwise, an error is returned to the client. In some cases, however, you can still use the WHERE clause as a filter for server-level events based on the properties that correspond to the event. For example, many trace events have a `DatabaseName` property that can be used in the WHERE clause as a filter.  
   
- Server-scoped event notifications are created in the **master** database and can be queried for metadata by using the [sys.server_event_notifications](~/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view.  
+ Server-scoped event notifications are created in the **master** database and can be queried for metadata by using the [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) catalog view.  
   
- Database-scoped or object-scoped event notifications are created in the specified database and can be queried for metadata by using the [sys.event_notifications](~/relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) catalog view. (You must prefix the catalog view with the corresponding database name.)  
+ Database-scoped or object-scoped event notifications are created in the specified database and can be queried for metadata by using the [sys.event_notifications](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql) catalog view. (You must prefix the catalog view with the corresponding database name.)  
   
 ## Examples  
   

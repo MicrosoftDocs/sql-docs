@@ -43,16 +43,16 @@ manager: "jhubbard"
   
 ### To create and replicate encrypted column data  
   
-1.  At the Publisher, execute [CREATE SYMMETRIC KEY](~/t-sql/statements/create-symmetric-key-transact-sql.md).  
+1.  At the Publisher, execute [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql).  
   
     > [!IMPORTANT]  
     >  The value of KEY_SOURCE is valuable data that can be used to re-create the symmetric key and decrypt data. KEY_SOURCE must always be stored and transported securely.  
   
-2.  Execute [OPEN SYMMETRIC KEY](~/t-sql/statements/open-symmetric-key-transact-sql.md) to open the new key.  
+2.  Execute [OPEN SYMMETRIC KEY](/sql/t-sql/statements/open-symmetric-key-transact-sql) to open the new key.  
   
-3.  Use the [EncryptByKey](~/t-sql/functions/encryptbykey-transact-sql.md) function to encrypt column data at the Publisher.  
+3.  Use the [EncryptByKey](/sql/t-sql/functions/encryptbykey-transact-sql) function to encrypt column data at the Publisher.  
   
-4.  Execute [CLOSE SYMMETRIC KEY](~/t-sql/statements/close-symmetric-key-transact-sql.md) to close the key.  
+4.  Execute [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) to close the key.  
   
 5.  Publish the table that contains the encrypted column. For more information, see [Create a Publication](../publish/create-a-publication.md).  
   
@@ -60,16 +60,16 @@ manager: "jhubbard"
   
 7.  Initialize the subscription. For more information, see [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-8.  At the Subscriber, execute [CREATE SYMMETRIC KEY](~/t-sql/statements/create-symmetric-key-transact-sql.md) using the same values for ALGORITHM, KEY_SOURCE, and IDENTITY_VALUE as in step 1. You can specify a different value for ENCRYPTION BY.  
+8.  At the Subscriber, execute [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql) using the same values for ALGORITHM, KEY_SOURCE, and IDENTITY_VALUE as in step 1. You can specify a different value for ENCRYPTION BY.  
   
     > [!IMPORTANT]  
     >  The value of KEY_SOURCE is valuable data that can be used to re-create the symmetric key and decrypt data. KEY_SOURCE must always be stored and transported securely.  
   
-9. Execute [OPEN SYMMETRIC KEY](~/t-sql/statements/open-symmetric-key-transact-sql.md) to open the new key.  
+9. Execute [OPEN SYMMETRIC KEY](/sql/t-sql/statements/open-symmetric-key-transact-sql) to open the new key.  
   
-10. Use the [DecryptByKey](~/t-sql/functions/decryptbykey-transact-sql.md) function to decrypt replicated data at the Subscriber.  
+10. Use the [DecryptByKey](/sql/t-sql/functions/decryptbykey-transact-sql) function to decrypt replicated data at the Subscriber.  
   
-11. Execute [CLOSE SYMMETRIC KEY](~/t-sql/statements/close-symmetric-key-transact-sql.md) to close the key.  
+11. Execute [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) to close the key.  
   
 ## Example  
  This example creates a symmetric key, a certificate that is used to help secure the symmetric key, and a master key. These keys are created in the publication database. They are then used to create an encrypted column (EncryptedCreditCardApprovalCode) in the `SalesOrderHeader` table. This column is published in the AdvWorksSalesOrdersMerge publication instead of the unencrypted CreditCardApprovalCode column. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  

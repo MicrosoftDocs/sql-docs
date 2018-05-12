@@ -202,14 +202,14 @@ manager: "jhubbard"
   
 #### To validate data for all articles in a transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_publication_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Specify **@publication** and one of the following values for **@rowcount_only**:  
+1.  At the Publisher on the publication database, execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Specify **@publication** and one of the following values for **@rowcount_only**:  
   
     -   **1** - rowcount check only (the default)  
   
     -   **2** - rowcount and binary checksum.  
   
     > [!NOTE]  
-    >  When you execute [sp_publication_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md), [sp_article_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) is executed for each article in the publication. To successfully execute [sp_publication_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base tables.  
+    >  When you execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql), [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) is executed for each article in the publication. To successfully execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql), you must have SELECT permissions on all columns in the published base tables.  
   
 2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
@@ -217,14 +217,14 @@ manager: "jhubbard"
   
 #### To validate data for a single article in a transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
+1.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
   
     -   **1** - Rowcount check only (the default)  
   
     -   **2** - Rowcount and binary checksum.  
   
     > [!NOTE]  
-    >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base table.  
+    >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql), you must have SELECT permissions on all columns in the published base table.  
   
 2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
@@ -232,22 +232,22 @@ manager: "jhubbard"
   
 #### To validate data for a single subscriber to a transactional publication  
   
-1.  At the Publisher on the publication database, open an explicit transaction using [BEGIN TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-transaction-transact-sql.md).  
+1.  At the Publisher on the publication database, open an explicit transaction using [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).  
   
-2.  At the Publisher on the publication database, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Specify the publication for **@publication**, the name of the Subscriber for **@subscriber**, and the name of the subscription database for **@destination_db**.  
+2.  At the Publisher on the publication database, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Specify the publication for **@publication**, the name of the Subscriber for **@subscriber**, and the name of the subscription database for **@destination_db**.  
   
 3.  (Optional) Repeat step 2 for each subscription being validated.  
   
-4.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
+4.  At the Publisher on the publication database, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specify **@publication**, the name of the article for **@article**, and one of the following values for **@rowcount_only**:  
   
     -   **1** - Rowcount check only (the default)  
   
     -   **2** - Rowcount and binary checksum.  
   
     > [!NOTE]  
-    >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base table.  
+    >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql), you must have SELECT permissions on all columns in the published base table.  
   
-5.  At the Publisher on the publication database, commit the transaction using [COMMIT TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/commit-transaction-transact-sql.md).  
+5.  At the Publisher on the publication database, commit the transaction using [COMMIT TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql).  
   
 6.  (Optional) Repeat steps 1 through 5 for each article being validated.  
   
@@ -257,7 +257,7 @@ manager: "jhubbard"
   
 #### To validate data in all subscriptions to a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Specify **@publication** and one of the following values for **@level**:  
+1.  At the Publisher on the publication database, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Specify **@publication** and one of the following values for **@level**:  
   
     -   **1** - Rowcount-only validation.  
   
@@ -271,7 +271,7 @@ manager: "jhubbard"
   
 #### To validate data in selected subscriptions to a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Specify **@publication**, the name of the Subscriber for **@subscriber**, the name of the subscription database for **@subscriber_db**, and one of the following values for **@level**:  
+1.  At the Publisher on the publication database, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Specify **@publication**, the name of the Subscriber for **@subscriber**, the name of the subscription database for **@subscriber_db**, and one of the following values for **@level**:  
   
     -   **1** - Rowcount-only validation.  
   

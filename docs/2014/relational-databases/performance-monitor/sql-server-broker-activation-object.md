@@ -31,8 +31,8 @@ manager: "jhubbard"
 |**Tasks Started/sec**|This counter reports the number of activation stored procedures started per second by all queue monitors in the instance.|  
   
 ## See Also  
- [sys.dm_broker_activated_tasks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)   
- [sys.dm_broker_queue_monitors &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)   
+ [sys.dm_broker_activated_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql)   
+ [sys.dm_broker_queue_monitors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql)   
  [Monitor Resource Usage &#40;System Monitor&#41;](/monitor-resource-usage-system-monitor.md)  
   
   

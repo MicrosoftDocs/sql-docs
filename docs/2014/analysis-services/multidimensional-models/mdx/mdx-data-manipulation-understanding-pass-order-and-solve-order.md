@@ -211,9 +211,9 @@ FROM [Adventure Works]
  Solve order can be a very complex issue to deal with, especially in cubes with a high number of dimensions involving calculated member, custom rollup formulas, or calculated cells. When [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evaluates an MDX query, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] takes into account the solve order values for everything involved within a given pass, including the dimensions of the cube specified in the MDX query.  
   
 ## See Also  
- [CalculationCurrentPass &#40;MDX&#41;](~/mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue &#40;MDX&#41;](~/mdx/calculationpassvalue-mdx.md)   
- [CREATE MEMBER Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-member.md)   
+ [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
+ [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
+ [CREATE MEMBER Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [Manipulating Data &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   The ability to address diverse data sources similarly.  
   
- You can configure a linked server by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or by using the [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) statement. OLE DB providers vary greatly in the type and number of parameters required. For example some providers require you to provide a security context for the connection using [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md). Some OLE DB providers allow [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to update data on the OLE DB source. Others provide only read-only data access. For information about each OLE DB provider, consult documentation for that OLE DB provider.  
+ You can configure a linked server by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or by using the [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) statement. OLE DB providers vary greatly in the type and number of parameters required. For example some providers require you to provide a security context for the connection using [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql). Some OLE DB providers allow [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to update data on the OLE DB source. Others provide only read-only data access. For information about each OLE DB provider, consult documentation for that OLE DB provider.  
   
 ## Linked Server Components  
  A linked server definition specifies the following objects:  
@@ -84,15 +84,15 @@ manager: "jhubbard"
 ## Related Tasks  
  [Create Linked Servers &#40;SQL Server Database Engine&#41;](create-linked-servers-sql-server-database-engine.md)  
   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)  
   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)  
   
- [sp_dropserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)  
+ [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)  
   
 ## Related Content  
- [sys.servers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-servers-transact-sql.md)  
+ [sys.servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)  
   
- [sp_linkedservers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
+ [sp_linkedservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)  
   
   

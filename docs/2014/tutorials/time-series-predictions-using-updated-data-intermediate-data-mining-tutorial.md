@@ -20,7 +20,7 @@ manager: "jhubbard"
 ## Creating Predictions using the Extended Sales Data  
  In this lesson, you will create a prediction query that adds the new sales data to the model. By extending the model with new data, you can get up-to-date predictions that include the newest data points.  
   
- Creating time series predictions that use new data is easy: you simply add the parameter EXTEND_MODEL_CASES to the [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) function, specify the source of the new data, and specify how many predictions you want to get.  
+ Creating time series predictions that use new data is easy: you simply add the parameter EXTEND_MODEL_CASES to the [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx) function, specify the source of the new data, and specify how many predictions you want to get.  
   
 > [!WARNING]  
 >  The parameter EXTEND_MODEL_CASES is optional; by default the model is extended any time that you create a time series prediction query by joining new data as inputs.  

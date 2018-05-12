@@ -50,7 +50,7 @@ manager: "jhubbard"
   
     -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right click on a running Extended Events session and select View Target Data.  
   
-    -   [fn_xe_file_target_read_file](~/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)  
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
     -   You can view more than one .XEL file by selecting **Merge Extended Event Files** from the File -> Open menu.  
   

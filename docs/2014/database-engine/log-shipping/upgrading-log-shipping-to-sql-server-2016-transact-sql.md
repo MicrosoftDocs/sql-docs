@@ -33,12 +33,12 @@ manager: "jhubbard"
   
      For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-2.  Run the [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) command on every primary database.  
+2.  Run the [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) command on every primary database.  
   
 ##  <a name="UpgradeMonitor"></a> Upgrading the Monitor Server Instance  
  The monitor server instance, if any, can be upgraded at any time.  
   
- While the monitor server is being upgraded, the log shipping configuration continues to work, but its status is not recorded in the tables on the monitor. Any alerts that have been configured will not be triggered while the monitor server is being upgraded. After the upgrade, you can update the information in the monitor tables by executing the [sp_refresh_log_shipping_monitor](~/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) system stored procedure.  
+ While the monitor server is being upgraded, the log shipping configuration continues to work, but its status is not recorded in the tables on the monitor. Any alerts that have been configured will not be triggered while the monitor server is being upgraded. After the upgrade, you can update the information in the monitor tables by executing the [sp_refresh_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql) system stored procedure.  
   
 ##  <a name="UpgradeSingleSecondary"></a> Upgrading Log Shipping Configurations with a Single Secondary Server  
  The upgrade process described in this section assumes a configuration consisting of the primary server and only one secondary server. This configuration is represented in the following illustration, which shows a primary server instance, A, and a single secondary server instance, B.  
@@ -61,7 +61,7 @@ manager: "jhubbard"
 >  During the server upgrade, the secondary database is not upgraded to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database. It will get upgraded only if it is brought online.  
   
 > [!IMPORTANT]  
->  The RESTORE WITH STANDBY option is not supported for a database that requires upgrading. If an upgraded secondary database has been configured by using RESTORE WITH STANDBY, transaction logs can no longer be restored after upgrade. To resume log shipping on that secondary database, you will need to set up log shipping again on that standby server. For more information about the STANDBY option, see [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  The RESTORE WITH STANDBY option is not supported for a database that requires upgrading. If an upgraded secondary database has been configured by using RESTORE WITH STANDBY, transaction logs can no longer be restored after upgrade. To resume log shipping on that secondary database, you will need to set up log shipping again on that standby server. For more information about the STANDBY option, see [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
 ###  <a name="UpgradePrimary"></a> Upgrading the Primary Server Instance  
  When planning an upgrade, a significant consideration is the amount of time that your database will be unavailable. The simplest upgrade scenario involves the database being unavailable while you upgrade the primary server (scenario 1, below).  
@@ -104,7 +104,7 @@ manager: "jhubbard"
   
 2.  On the secondary server:  
   
-    1.  Ensure that all backups taken automatically by the log shipping backup jobs have been applied. To check which backup jobs have been applied, use the [sp_help_log_shipping_monitor](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md) system stored procedure on the monitor server or on the primary and secondary servers. The same file should be listed in the **last_backup_file**, **last_copied_file**, and **last_restored_file** columns. If any of the backup files have not been copied and restored, manually invoke the agent copy and restore jobs for the log shipping configuration.  
+    1.  Ensure that all backups taken automatically by the log shipping backup jobs have been applied. To check which backup jobs have been applied, use the [sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql) system stored procedure on the monitor server or on the primary and secondary servers. The same file should be listed in the **last_backup_file**, **last_copied_file**, and **last_restored_file** columns. If any of the backup files have not been copied and restored, manually invoke the agent copy and restore jobs for the log shipping configuration.  
   
          For information about starting a job, see [Start a Job](../../ssms/agent/start-a-job.md).  
   

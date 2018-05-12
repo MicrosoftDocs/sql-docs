@@ -71,7 +71,7 @@ manager: "jhubbard"
   
      If you configure conflict detection by using [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], the Distribution Agent is configured to stop applying changes when a conflict is detected.  
   
--   You can also enable and disable detection by using the following stored procedures: [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) or [sp_configure_peerconflictdetection](~/relational-databases/system-stored-procedures/sp-configure-peerconflictdetection-transact-sql.md).  
+-   You can also enable and disable detection by using the following stored procedures: [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) or [sp_configure_peerconflictdetection](/sql/relational-databases/system-stored-procedures/sp-configure-peerconflictdetection-transact-sql).  
   
      If you configure conflict detection by using stored procedures, you can specify whether the Distribution Agent should stop applying changes when a conflict is detected. The default is for the agent to stop. We recommend that you use the default setting.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
   
 -   Try to synchronize the node again by enabling the Distribution Agent to continue to apply changes:  
   
-    1.  Execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md): specify 'p2p_continue_onconflict' for the @property parameter and `true` for the @value parameter.  
+    1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): specify 'p2p_continue_onconflict' for the @property parameter and `true` for the @value parameter.  
   
     2.  Restart the Distribution Agent.  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
         > [!NOTE]  
         >  If data is inconsistent after this step, you must manually update rows on the node that has the highest priority, and then let the changes propagate from this node. If there are no further conflicting changes in the topology, all nodes will be brought to a consistent state.  
   
-    5.  Execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md): specify 'p2p_continue_onconflict' for the @property parameter and `false` for the @value parameter.  
+    5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): specify 'p2p_continue_onconflict' for the @property parameter and `false` for the @value parameter.  
   
 ## See Also  
  [Peer-to-Peer Transactional Replication](transactional-replication.md)  

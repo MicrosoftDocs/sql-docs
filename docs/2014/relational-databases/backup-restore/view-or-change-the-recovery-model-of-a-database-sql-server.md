@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to query the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to learn the recovery model of the **model** database.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to query the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view to learn the recovery model of the **model** database.  
   
 ```tsql  
 SELECT name, recovery_model_desc  
@@ -108,7 +108,7 @@ GO
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to change the recovery model in the `model` database to `FULL` by using the `SET RECOVERY` option of the [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-options.md) statement.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to change the recovery model in the `model` database to `FULL` by using the `SET RECOVERY` option of the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) statement.  
   
 ```tsql  
 USE master ;  
@@ -161,8 +161,8 @@ ALTER DATABASE model SET RECOVERY FULL ;
 ## See Also  
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

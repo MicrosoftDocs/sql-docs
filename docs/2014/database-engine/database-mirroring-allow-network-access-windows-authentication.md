@@ -30,11 +30,11 @@ manager: "jhubbard"
   
 ### To configure logins for Windows Authentication  
   
-1.  For the user account of each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], create a login on the other instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use a [CREATE LOGIN](~/t-sql/statements/create-login-transact-sql.md) statement with the FROM WINDOWS clause.  
+1.  For the user account of each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], create a login on the other instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use a [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql) statement with the FROM WINDOWS clause.  
   
      For more information, see [Create a Login](../relational-databases/security/authentication-access/create-a-login.md).  
   
-2.  Also, to ensure that the login user has access to the endpoint, use the [GRANT](~/t-sql/statements/grant-transact-sql.md) statement to grant connect permissions on the endpoint to the login. Note that granting connect permissions to the endpoint is unnecessary if the user is an Administrator.  
+2.  Also, to ensure that the login user has access to the endpoint, use the [GRANT](/sql/t-sql/statements/grant-transact-sql) statement to grant connect permissions on the endpoint to the login. Note that granting connect permissions to the endpoint is unnecessary if the user is an Administrator.  
   
      For more information, see [Grant a Permission to a Principal](../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   

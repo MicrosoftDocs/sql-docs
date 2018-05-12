@@ -184,10 +184,10 @@ Circle Two12.566370…
  The perimeter for Circle Two is approximately 4∏, which is the actual value for the perimeter. However, the perimeter for Circle One is significantly inaccurate. Circle One's `CompoundCurve` instance stores one circular arc segment (ABC) and two line segments (CD, DA). The `CompoundCurve` instance has to store two circular arc segments (ABC, CDA) to define a circle. A `LineString` instance defines the second set of points (4 2, 2 4, 0 2) in Circle One's `CompoundCurve` instance. You have to explicitly declare a `CircularString` instance inside a `CompoundCurve`.  
   
 ## See Also  
- [STIsValid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
- [STLength &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlength-geometry-data-type.md)   
- [STStartPoint &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
- [STEndpoint &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   
+ [STIsValid &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
+ [STLength &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
+ [STStartPoint &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
+ [STEndpoint &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
  [LineString](linestring.md)   
  [CircularString](circularstring.md)   
  [Spatial Data Types Overview](spatial-data-types-overview.md)   

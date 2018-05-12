@@ -16,7 +16,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Capture Logon Trigger Event Data
-  To capture XML data about LOGON events for use inside logon triggers, use the [EVENTDATA](~/t-sql/functions/eventdata-transact-sql.md) function. The LOGON event returns the following event data schema:  
+  To capture XML data about LOGON events for use inside logon triggers, use the [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) function. The LOGON event returns the following event data schema:  
   
  `<EVENT_INSTANCE>`  
   

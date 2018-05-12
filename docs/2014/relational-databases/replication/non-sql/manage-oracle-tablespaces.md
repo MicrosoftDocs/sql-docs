@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Specify a tablespace in the **Article Properties** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md).  
   
--   Use [sp_changearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). To use **sp_changearticle**, specify the following:  
+-   Use [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). To use **sp_changearticle**, specify the following:  
   
     -   The name of the Oracle Publisher for the parameter **@publisher**.  
   

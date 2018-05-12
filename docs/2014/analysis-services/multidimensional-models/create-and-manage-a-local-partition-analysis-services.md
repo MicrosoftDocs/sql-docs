@@ -59,7 +59,7 @@ manager: "mblythe"
   
 5.  In the WHERE clause at the bottom, add a filter that segments data for this partition.  
   
-     Examples of WHERE clause syntax include `WHERE OrderDateKey >= '20060101'` or `WHERE OrderDateKey BETWEEN '20051001' AND '20051201'`. For other examples, see [WHERE &#40;Transact-SQL&#41;](~/t-sql/queries/where-transact-sql.md).  
+     Examples of WHERE clause syntax include `WHERE OrderDateKey >= '20060101'` or `WHERE OrderDateKey BETWEEN '20051001' AND '20051201'`. For other examples, see [WHERE &#40;Transact-SQL&#41;](/sql/t-sql/queries/where-transact-sql).  
   
      Notice that the following filters are mutually exclusive within each set:  
   

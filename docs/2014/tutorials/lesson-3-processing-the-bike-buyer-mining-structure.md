@@ -23,7 +23,7 @@ manager: "jhubbard"
  You need to reprocess a mining structure only if you change a structure column or change the source data. If you add a mining model to a mining structure that has already been processed, you can use the INSERT INTO MINING MODEL statement to train the new mining model.  
   
 ## Train Structure Template  
- In order to train the mining structure and its associated mining models, use the [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) statement. The code in the statement can be broken into the following parts:  
+ In order to train the mining structure and its associated mining models, use the [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) statement. The code in the statement can be broken into the following parts:  
   
 -   Identifying the mining structure  
   
@@ -61,7 +61,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- In this lesson, you use `OPENQUERY` to define the source data. For information about other methods of defining the source query, see [&#60;source data query&#62;](~/dmx/source-data-query.md).  
+ In this lesson, you use `OPENQUERY` to define the source data. For information about other methods of defining the source query, see [&#60;source data query&#62;](/sql/dmx/source-data-query).  
   
 ## Lesson Tasks  
  You will perform the following task in this lesson:  

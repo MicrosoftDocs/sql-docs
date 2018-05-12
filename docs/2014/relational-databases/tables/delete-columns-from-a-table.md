@@ -90,6 +90,6 @@ manager: "jhubbard"
   
  If the column contains constraints or other dependencies, an error message will be returned. Resolve the error by deleting the referenced constraints.  
   
- For additional examples, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
+ For additional examples, see [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ##  <a name="FollowUp"></a>  

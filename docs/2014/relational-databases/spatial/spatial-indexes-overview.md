@@ -44,7 +44,7 @@ manager: "jhubbard"
 #### Grid Density  
  The number of cells along the axes of a grid determines its *density*: the larger the number, the denser the grid. For example, an 8x8 grid (which produces 64 cells), is denser than a 4x4 grid (which produces 16 cells). Grid density is defined on a per-level basis.  
   
- The [CREATE SPATIAL INDEX](~/t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement supports a GRIDS clause that enables you to specify different grid densities at different levels. The grid density for a given level is specified by using one of the following keywords.  
+ The [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement supports a GRIDS clause that enables you to specify different grid densities at different levels. The grid density for a given level is specified by using one of the following keywords.  
   
 |Keyword|Grid configuration|Number of cells|  
 |-------------|------------------------|---------------------|  
@@ -57,7 +57,7 @@ manager: "jhubbard"
  You can control the decomposition process by specifying non-default grid densities. For example, different grid densities on different levels might be useful for fine tuning an index based on the size of the indexed space and the objects in the spatial column.  
   
 > [!NOTE]  
->  The grid densities of a spatial index are visible in the level_1_grid, level_2_grid, level_3_grid, and level_4_grid columns of the [sys.spatial_index_tessellations](~/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view when the database compatibility level is set to 100 or lower. The `GEOMETRY_AUTO_GRID`/`GEOGRAPHY_AUTO_GRID` tessellation scheme options do not populate these columns. sys.spatial_index_tessellations catalog view has `NULL` values for these columns when the auto grid options are used.  
+>  The grid densities of a spatial index are visible in the level_1_grid, level_2_grid, level_3_grid, and level_4_grid columns of the [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) catalog view when the database compatibility level is set to 100 or lower. The `GEOMETRY_AUTO_GRID`/`GEOGRAPHY_AUTO_GRID` tessellation scheme options do not populate these columns. sys.spatial_index_tessellations catalog view has `NULL` values for these columns when the auto grid options are used.  
   
 ###  <a name="tessellation"></a> Tessellation  
  After decomposition of an indexed space into a grid hierarchy, the spatial index reads the data from the spatial column, row by row. After reading the data for a spatial object (or instance), the spatial index performs a *tessellation process* for that object. The tessellation processfits the object into the grid hierarchy by associating the object with a set of grid cells that it touches (*touched cells*). Starting at level 1 of the grid hierarchy, the tessellation process proceeds *breadth first* across the level. Potentially, the process can continue through all four levels, one level at a time.  
@@ -97,10 +97,10 @@ manager: "jhubbard"
   
  For example, consider the preceding illustration, which shows an octagon that fits completely into cell 15 of the level-1 grid. In the figure, cell 15 has been tessellated, dissecting the octagon into nine level-2 cells. This illustration assumes that the cells-per-object limit is 9 or more. If the cells-per-object limit were 8 or less, however, cell 15 would not be tessellated, and only that cell 15 would be counted for the object.  
   
- By default, the cells-per-object limit is 16 cells per object, which provides a satisfactory trade-off between space and precision for most spatial indexes. However, the [CREATE SPATIAL INDEX](~/t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement supports a CELLS_PER_OBJECT`=`*n* clause that enables you to specify a cells-per-object limit between 1 and 8192, inclusive.  
+ By default, the cells-per-object limit is 16 cells per object, which provides a satisfactory trade-off between space and precision for most spatial indexes. However, the [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement supports a CELLS_PER_OBJECT`=`*n* clause that enables you to specify a cells-per-object limit between 1 and 8192, inclusive.  
   
 > [!NOTE]  
->  The **cells_per_object** setting of a spatial index is visible in the [sys.spatial_index_tessellations](~/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view.  
+>  The **cells_per_object** setting of a spatial index is visible in the [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) catalog view.  
   
 #### Deepest-Cell Rule  
  The deepest-cell rule exploits the fact that every lower-level cell belongs to the cell above it: a level-4 cell belongs to a level-3 cell, a level-3 cell belongs to a level-2 cell, and a level-2 cell belongs to a level-1 cell. For example, an object that belongs to cell 1.1.1.1 also belongs to cell 1.1.1, cell 1.1, and cell 1. Knowledge of such cell-hierarchy relationships is built into the query processor. Therefore, only the deepest-level cells need to be recorded in the index, minimizing the information that the index needs to store.  
@@ -117,13 +117,13 @@ manager: "jhubbard"
 -   *Geography grid tessellation*, which applies to columns of the `geography` data type.  
   
 > [!NOTE]  
->  The **tessellation_scheme** setting of a spatial index is visible in the [sys.spatial_index_tessellations](~/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view.  
+>  The **tessellation_scheme** setting of a spatial index is visible in the [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) catalog view.  
   
 #### Geometry Grid Tessellation Scheme  
  GEOMETRY_AUTO_GRID tessellation is the default tessellation scheme for the `geometry` data type for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and later.  GEOMETRY_GRID tessellation is the only tessellation scheme available for geometry data types in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This section discusses aspects of geometry grid tessellation that are relevant to working with spatial indexes: supported methods and bounding boxes.  
   
 > [!NOTE]  
->  You can explicitly specify this tessellation scheme by using the USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) clause of the [CREATE SPATIAL INDEX](~/t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
+>  You can explicitly specify this tessellation scheme by using the USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) clause of the [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
   
 ##### The Bounding Box  
  Geometric data occupies a plane that can be infinite. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], however, a spatial index requires a finite space. To establish a finite space for decomposition, the geometry grid tessellation scheme requires a rectangular *bounding box*. The bounding box is defined by four coordinates, `(`*x-min***,***y-min*`)` and `(`*x-max***,***y-max*`)`, which are stored as properties of the spatial index. These coordinates represent the following:  
@@ -137,7 +137,7 @@ manager: "jhubbard"
 -   *y-max* is the y-coordinate of upper-right corner.  
   
 > [!NOTE]  
->  These coordinates are specified by the BOUNDING_BOX clause of the [CREATE SPATIAL INDEX](~/t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
+>  These coordinates are specified by the BOUNDING_BOX clause of the [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
   
  The `(`*x-min***,***y-min*`)` and `(`*x-max***,***y-max*`)` coordinates determine the placement and dimensions of the bounding box. The space outside of the bounding box is treated as a single cell that is numbered 0.  
   
@@ -150,13 +150,13 @@ manager: "jhubbard"
  A bounding box corresponds to some portion of an application's spatial data. Whether the bounding-box of the index completely contains the data stored in the spatial column, or only contains a portion, is up to the application. Only operations computed on objects that are entirely inside of the bounding box benefit from the spatial index. Therefore, to gain the greatest advantage from a spatial index on a `geometry` column, you need to specify a bounding-box that contains all or most of the objects.  
   
 > [!NOTE]  
->  The grid densities of a spatial index are visible in the bounding_box_xmin, bounding_box_ymin, bounding_box_xmax, and bounding_box_ymax columns of the [sys.spatial_index_tessellations](~/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view.  
+>  The grid densities of a spatial index are visible in the bounding_box_xmin, bounding_box_ymin, bounding_box_xmax, and bounding_box_ymax columns of the [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) catalog view.  
   
 #### The Geography Grid Tessellation Scheme  
  This tessellation scheme applies only to a `geography` column. This section summarizes the methods that are supported by geography grid tessellation and discusses how geodetic space is projected onto a plane, which is then decomposed into a grid hierarchy.  
   
 > [!NOTE]  
->  You can explicitly specify this tessellation scheme by using the USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) clause of the [CREATE SPATIAL INDEX](~/t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
+>  You can explicitly specify this tessellation scheme by using the USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) clause of the [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
   
 ##### Projection of the Geodetic Space onto a Plane  
  Computations on `geography` instances (objects) treat the space containing the objects as a geodetic ellipsoid. To decompose this space, the geography grid tessellation scheme divides the surface of the ellipsoid into its upper and lower hemispheres and then performs the following steps:  
@@ -186,21 +186,21 @@ manager: "jhubbard"
   
  Spatial indexes support the following predicate forms:  
   
--   *geometry1*.[STContains](~/t-sql/spatial-geometry/stcontains-geometry-data-type.md)(*geometry2*) = 1  
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1  
   
--   *geometry1*.[STDistance](~/t-sql/spatial-geometry/stdistance-geometry-data-type.md)(*geometry2*) < *number*  
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) < *number*  
   
--   *geometry1*.[STDistance](~/t-sql/spatial-geometry/stdistance-geometry-data-type.md)(*geometry2*) <= *number*  
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *number*  
   
--   *geometry1*.[STEquals](~/t-sql/spatial-geometry/stequals-geometry-data-type.md)(*geometry2*)= 1  
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1  
   
--   *geometry1*.[STIntersects](~/t-sql/spatial-geometry/stintersects-geometry-data-type.md)(*geometry2*)= 1  
+-   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1  
   
--   *geometry1.* [STOverlaps](~/t-sql/spatial-geometry/stoverlaps-geometry-data-type.md) *(geometry2) = 1*  
+-   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*  
   
--   *geometry1*.[STTouches](~/t-sql/spatial-geometry/sttouches-geometry-data-type.md)(*geometry2*) = 1  
+-   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1  
   
--   *geometry1*.[STWithin](~/t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
+-   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Geography Methods Supported by Spatial Indexes  
  Under certain conditions, spatial indexes support the following set-oriented geography methods: STIntersects(),STEquals(), and STDistance(). To be supported by a spatial index, these methods must be used within the WHERE clause of a query, and they must occur within a predicate of the following general form:  
@@ -211,13 +211,13 @@ manager: "jhubbard"
   
  Spatial indexes support the following predicate forms:  
   
--   *geography1*.[STIntersects](~/t-sql/spatial-geography/stintersects-geography-data-type.md)(*geography2*)= 1  
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1  
   
--   *geography1*.[STEquals](~/t-sql/spatial-geography/stequals-geography-data-type.md)(*geography2*)= 1  
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1  
   
--   *geography1*.[STDistance](~/t-sql/spatial-geography/stdistance-geography-data-type.md)(*geography2*) < *number*  
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) < *number*  
   
--   *geography1*.[STDistance](~/t-sql/spatial-geography/stdistance-geography-data-type.md)(*geography2*) <= *number*  
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*  
   
 ### Queries that use Spatial Indexes  
  Spatial indexes are only supported in queries that include an indexed spatial operator in the `WHERE` clause. For example syntax such as:  

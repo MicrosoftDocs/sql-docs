@@ -16,7 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # View and Read Failover Cluster Instance Diagnostics Log
-  All critical errors and warning events for the SQL Server Resource DLL are written to the Windows event log. A running log of the diagnostic information specific to SQL Server is captured by the [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure and is written to the SQL Server failover cluster diagnostics (also known as the *SQLDIAG* logs) log files.  
+  All critical errors and warning events for the SQL Server Resource DLL are written to the Windows event log. A running log of the diagnostic information specific to SQL Server is captured by the [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) system stored procedure and is written to the SQL Server failover cluster diagnostics (also known as the *SQLDIAG* logs) log files.  
   
 -   **Before you begin:**  [Recommendations](#Recommendations), [Security](#Security)  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 ###  <a name="Recommendations"></a> Recommendations  
  By default, the SQLDIAG are stored under a local LOG folder of the SQL Server instance directory, for example, 'C\Program Files\Microsoft SQL Server\MSSQL12.\<InstanceName>\MSSQL\LOG' of the owning node of the AlwaysOn Failover Cluster Instance (FCI). The size of each SQLDIAG log file is fixed at 100 MB. Ten such log files are stored on the computer before they are recycled for new logs.  
   
- The logs use the extended events file format. The **sys.fn_xe_file_target_read_file** system function can be used to read the files that are created by Extended Events. One event, in XML format, is returned per row. Query the system view to parse the XML data as a result-set. For more information, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
+ The logs use the extended events file format. The **sys.fn_xe_file_target_read_file** system function can be used to read the files that are created by Extended Events. One event, in XML format, is returned per row. Query the system view to parse the XML data as a result-set. For more information, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
 ###  <a name="Security"></a> Security  
   
@@ -91,7 +91,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  For an example of this procedure, see [Example (Transact-SQL)](#TsqlExample), later in this section.  
   
- Using the Data Definition Language (DDL) statement, `ALTER SERVER CONFIGURATION`, you can start or stop logging diagnostic data captured by the [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) procedure, and set SQLDIAG log configuration parameters such as the log file rollover count, log file size, and file location. For syntax details, see [Setting diagnostic log options](~/t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
+ Using the Data Definition Language (DDL) statement, `ALTER SERVER CONFIGURATION`, you can start or stop logging diagnostic data captured by the [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) procedure, and set SQLDIAG log configuration parameters such as the log file rollover count, log file size, and file location. For syntax details, see [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
 ###  <a name="ConfigTsqlExample"></a> Examples (Transact-SQL)  
   

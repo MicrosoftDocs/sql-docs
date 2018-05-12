@@ -16,9 +16,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 4: Browsing the Bike Buyer Mining Models
-  In this lesson, you will use the [SELECT (DMX)](~/dmx/select-dmx.md) statement to explore the content in the decision tree and clustering mining models that you created in [Lesson 2: Adding Mining Models to the Predictive Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  In this lesson, you will use the [SELECT (DMX)](/sql/dmx/select-dmx) statement to explore the content in the decision tree and clustering mining models that you created in [Lesson 2: Adding Mining Models to the Predictive Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- The columns contained in a mining model are not the columns defined by the mining structure, but instead are a specific set of columns that describe the trends and patterns that are found by the algorithm. These mining model columns are described in the [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) schema rowset. For example, the MODEL_NAME column in the content schema rowset contains the name of the mining model. For a clustering mining model, the NODE_CAPTION column contains the name of each cluster, and the NODE_DESCRIPTION column contains a description of the characteristics of each cluster. You can browse these columns by using the SELECT FROM \<model>.CONTENT statement in DMX. You can also use this statement to explore the data that was used to create the mining model. Drillthrough must be enabled on the mining structure in order to use this statement. For more information about the statement, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](~/dmx/select-from-model-content-dmx.md).  
+ The columns contained in a mining model are not the columns defined by the mining structure, but instead are a specific set of columns that describe the trends and patterns that are found by the algorithm. These mining model columns are described in the [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) schema rowset. For example, the MODEL_NAME column in the content schema rowset contains the name of the mining model. For a clustering mining model, the NODE_CAPTION column contains the name of each cluster, and the NODE_DESCRIPTION column contains a description of the characteristics of each cluster. You can browse these columns by using the SELECT FROM \<model>.CONTENT statement in DMX. You can also use this statement to explore the data that was used to create the mining model. Drillthrough must be enabled on the mining structure in order to use this statement. For more information about the statement, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
  You can also return all the states of a discrete column by using the SELECT DISTINCT statement. For example, if you perform this operation on a gender column, the query will return `male` and `female`.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
 -   Explore the different states available for a specific discrete column  
   
 ## Returning the Content of a Mining Model  
- In this lesson, you use the [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](~/dmx/select-from-model-dimension-content-dmx.md) statement to return the contents of the clustering model.  
+ In this lesson, you use the [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](/sql/dmx/select-from-model-dimension-content-dmx) statement to return the contents of the clustering model.  
   
  The following is a generic example of the SELECT FROM \<model>.CONTENT statement:  
   
@@ -61,7 +61,7 @@ WHERE <where clause>
 WHERE NODE_SUPPORT > 100  
 ```  
   
- For more information about using the WHERE statement, see [SELECT &#40;DMX&#41;](~/dmx/select-dmx.md).  
+ For more information about using the WHERE statement, see [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 #### To return the content of the clustering mining model  
   
@@ -112,7 +112,7 @@ WHERE NODE_SUPPORT > 100
      The query returns the content of the mining model.  
   
 ## Use Drillthrough  
- The next step is to use the drillthrough statement to return a sampling of the cases that were used to train the decision tree mining model. In this lesson, you use the [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](~/dmx/select-from-model-content-dmx.md) statement to return the contents of the decision tree model.  
+ The next step is to use the drillthrough statement to return a sampling of the cases that were used to train the decision tree mining model. In this lesson, you use the [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx) statement to return the contents of the decision tree model.  
   
  The following is a generic example of the SELECT FROM \<model>.CASES statement:  
   
@@ -136,7 +136,7 @@ SELECT <select list> FROM [<mining model>].CASES
 WHERE IsInNode('<node id>')  
 ```  
   
- For more information about using the WHERE statement with IsInNode, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](~/dmx/select-from-model-content-dmx.md).  
+ For more information about using the WHERE statement with IsInNode, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
 #### To return the cases that were used to train the mining model  
   
@@ -203,7 +203,7 @@ FROM [<mining model>]
 SELECT DISTINCT [<column>]   
 ```  
   
- You must include DISTINCT in order to return all of the states of the column. If you exclude DISTINCT, then the full statement becomes a shortcut for a prediction and returns the most likely state of the specified column. For more information, see [SELECT &#40;DMX&#41;](~/dmx/select-dmx.md).  
+ You must include DISTINCT in order to return all of the states of the column. If you exclude DISTINCT, then the full statement becomes a shortcut for a prediction and returns the most likely state of the specified column. For more information, see [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 #### To return the states of a discrete column  
   

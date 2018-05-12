@@ -75,12 +75,12 @@ END;
 GO  
 ```  
   
- To allow callers to view metadata, you can grant the callers VIEW DEFINITION permission at an appropriate scope: object level, database level or server level. Therefore, in the previous example, if the caller has VIEW DEFINITION permission on `myTable`, the stored procedure returns a row. For more information, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md) and [GRANT Database Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-database-permissions-transact-sql.md).  
+ To allow callers to view metadata, you can grant the callers VIEW DEFINITION permission at an appropriate scope: object level, database level or server level. Therefore, in the previous example, if the caller has VIEW DEFINITION permission on `myTable`, the stored procedure returns a row. For more information, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) and [GRANT Database Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
   
  You can also modify the stored procedure so that it executes under the credentials of the owner. When the procedure owner and the table owner are the same owner, ownership chaining applies, and the security context of the procedure owner enables access to the metadata for `myTable`. Under this scenario, the following code returns a row of metadata to the caller.  
   
 > [!NOTE]  
->  The following example uses the [sys.objects](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view instead of the [sys.sysobjects](~/relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md) compatibility view.  
+>  The following example uses the [sys.objects](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql) catalog view instead of the [sys.sysobjects](/sql/relational-databases/system-compatibility-views/sys-sysobjects-transact-sql) compatibility view.  
   
 ```  
 CREATE PROCEDURE does_not_assume_caller_can_access_metadata  
@@ -95,12 +95,12 @@ GO
 ```  
   
 > [!NOTE]  
->  You can use EXECUTE AS to temporarily switch to the security context of the caller. For more information, see [EXECUTE AS &#40;Transact-SQL&#41;](~/t-sql/statements/execute-as-transact-sql.md).  
+>  You can use EXECUTE AS to temporarily switch to the security context of the caller. For more information, see [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql).  
   
 ## Benefits and Limits of Metadata Visibility Configuration  
  Metadata visibility configuration can play an important role in your overall security plan. However, there are cases in which a skilled and determined user can force the disclosure of some metadata. We recommend that you deploy metadata permissions as one of many defenses-in-depth.  
   
- It is theoretically possible to force the emission of metadata in error messages by manipulating the order of predicate evaluation in queries. The possibility of such *trial-and-error attacks* is not specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It is implied by the associative and commutative transformations permitted in relational algebra. You can mitigate this risk by limiting the information returned in error messages. To further restrict the visibility of metadata in this way, you can start the server with trace flag 3625. This trace flag limits the amount of information shown in error messages. In turn, this helps to prevent forced disclosures. The tradeoff is that error messages will be terse and might be difficult to use for debugging purposes. For more information, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) and [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+ It is theoretically possible to force the emission of metadata in error messages by manipulating the order of predicate evaluation in queries. The possibility of such *trial-and-error attacks* is not specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It is implied by the associative and commutative transformations permitted in relational algebra. You can mitigate this risk by limiting the information returned in error messages. To further restrict the visibility of metadata in this way, you can start the server with trace flag 3625. This trace flag limits the amount of information shown in error messages. In turn, this helps to prevent forced disclosures. The tradeoff is that error messages will be terse and might be difficult to use for debugging purposes. For more information, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) and [Trace Flags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
  The following metadata is not subject to forced disclosure:  
   
@@ -186,11 +186,11 @@ GO
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
 ## See Also  
- [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](~/t-sql/statements/deny-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-transact-sql.md)   
- [EXECUTE AS Clause &#40;Transact-SQL&#41;](~/t-sql/statements/execute-as-clause-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [EXECUTE AS Clause &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
+ [Compatibility Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

@@ -68,7 +68,7 @@ manager: "mblythe"
   
  For information about how to use cross-validation in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], see [Measures in the Cross-Validation Report](../../data-mining/measures-in-the-cross-validation-report.md).  
   
- For information about how to perform cross-validation by using [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stored procedures, see [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
+ For information about how to perform cross-validation by using [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stored procedures, see [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining).  
   
 ## See Also  
  [Properties &#40;ASSL&#41;](properties-assl.md)  

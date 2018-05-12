@@ -66,6 +66,6 @@ manager: "jhubbard"
  Regardless of the source of the event, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service responds to the event by performing the tasks specified in the alert for the event.  
   
 ## See Also  
- [sp_altermessage &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
+ [sp_altermessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

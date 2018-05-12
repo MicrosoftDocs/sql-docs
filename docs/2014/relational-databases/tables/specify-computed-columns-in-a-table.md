@@ -53,14 +53,14 @@ manager: "jhubbard"
   
 1.  In **Object Explorer**, expand the table for which you want to add the new computed column. Right-click **Columns** and select **New Column**.  
   
-2.  Enter the column name and accept the default data type (`nchar`(10)). The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines the data type of the computed column by applying the rules of data type precedence to the expressions specified in the formula. For example, if the formula references a column of type `money` and a column of type `int`, the computed column will be of type `money` because that data type has the higher precedence. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](~/t-sql/data-types/data-type-precedence-transact-sql.md).  
+2.  Enter the column name and accept the default data type (`nchar`(10)). The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines the data type of the computed column by applying the rules of data type precedence to the expressions specified in the formula. For example, if the formula references a column of type `money` and a column of type `int`, the computed column will be of type `money` because that data type has the higher precedence. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql).  
   
 3.  In the **Column Properties** tab, expand the **Computed Column Specification** property.  
   
 4.  In the **(Formula)** child property, enter the expression for this column in the grid cell to the right. For example, in a `SalesTotal` column, the formula you enter might be `SubTotal+TaxAmt+Freight`, which adds the value in these columns for each row in the table.  
   
     > [!IMPORTANT]  
-    >  When a formula combines two expressions of different data types, the rules for data type precedence specify that the data type with the lower precedence is converted to the data type with the higher precedence. If the conversion is not a supported implicit conversion, the error "`Error validating the formula for column column_name.`" is returned. Use the CAST or CONVERT function to resolve the data type conflict. For example, if a column of type `nvarchar` is combined with a column of type `int`, the integer type must be converted to `nvarchar` as shown in this formula `('Prod'+CONVERT(nvarchar(23),ProductID))`. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md).  
+    >  When a formula combines two expressions of different data types, the rules for data type precedence specify that the data type with the lower precedence is converted to the data type with the higher precedence. If the conversion is not a supported implicit conversion, the error "`Error validating the formula for column column_name.`" is returned. Use the CAST or CONVERT function to resolve the data type conflict. For example, if a column of type `nvarchar` is combined with a column of type `int`, the integer type must be converted to `nvarchar` as shown in this formula `('Prod'+CONVERT(nvarchar(23),ProductID))`. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 5.  Indicate whether the data is persisted by choosing **Yes** or **No** from the drop-down for the **Is Persisted** child property.  
   
@@ -131,6 +131,6 @@ manager: "jhubbard"
   
     ```  
   
-     For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md).  
+     For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

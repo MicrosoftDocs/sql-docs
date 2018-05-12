@@ -58,7 +58,7 @@ manager: "jhubbard"
  To move the **tempdb** data and log files, see [Move System Databases](system-databases.md).  
   
 ### Database Options  
- The following table lists the default value for each database option in the **tempdb** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
+ The following table lists the default value for each database option in the **tempdb** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view.  
   
 |Database option|Default value|Can be modified|  
 |---------------------|-------------------|---------------------|  
@@ -91,7 +91,7 @@ manager: "jhubbard"
 |Service Broker Options|ENABLE_BROKER|Yes|  
 |TRUSTWORTHY|OFF|No|  
   
- For a description of these database options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
+ For a description of these database options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 ## Restrictions  
  The following operations cannot be performed on the **tempdb** database:  
@@ -134,9 +134,9 @@ manager: "jhubbard"
   
  [System Databases](system-databases.md)  
   
- [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+ [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [Move Database Files](move-database-files.md)  
   

@@ -117,7 +117,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [ALTER ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-role-transact-sql.md).  
+ For more information, see [ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql).  
   
 #### To add a member to a user-defined database role  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_addrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
+ For more information, see [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).  
   
 ## See Also  
  [Server-Level Roles](server-level-roles.md)   

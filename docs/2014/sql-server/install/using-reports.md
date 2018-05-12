@@ -84,6 +84,6 @@ manager: "jhubbard"
  [How to: Export Reports](../../../2014/sql-server/install/how-to-export-reports.md)   
  [How to: Filter Reports](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Resolving Upgrade Issues](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

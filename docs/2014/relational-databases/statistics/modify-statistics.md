@@ -67,6 +67,6 @@ manager: "jhubbard"
   
  This task cannot be performed using Transact-SQL statements. To modify statistics using Transact-SQL, you must first delete the existing statistic and then re-create it with new attributes.  
   
- For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/drop-statistics-transact-sql.md) and [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md).  
+ For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) and [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
   

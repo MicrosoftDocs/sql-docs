@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 1.  Identify the database snapshot that you want to drop. You can view the snapshots on a database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [View a Database Snapshot &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
   
-2.  Issue a [DROP DATABASE](~/t-sql/statements/drop-database-audit-specification-transact-sql.md) statement, specifying the name of the database snapshot to be dropped. The syntax is as follows:  
+2.  Issue a [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) statement, specifying the name of the database snapshot to be dropped. The syntax is as follows:  
   
      DROP DATABASE *database_snapshot_name* [ **,**...*n* ]  
   
@@ -61,7 +61,7 @@ DROP DATABASE SalesSnapshot0600 ;
 
   
 ## See Also  
- [DROP DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
  [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

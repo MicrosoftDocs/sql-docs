@@ -34,7 +34,7 @@ manager: "jhubbard"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detected a structural inconsistency in an in-memory storage engine structure.  
   
 ## See Also  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [Database Files and Filegroups](../databases/database-files-and-filegroups.md)  
   
   

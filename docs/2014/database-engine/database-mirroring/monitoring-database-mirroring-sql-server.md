@@ -82,11 +82,11 @@ manager: "jhubbard"
   
     |Procedure|Description|  
     |---------------|-----------------|  
-    |[sp_dbmmonitoraddmonitoring](~/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Creates a job that periodically updates the status information for every mirrored database on the server instance.|  
-    |[sp_dbmmonitorchangemonitoring](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Changes the value of a database mirroring monitoring parameter.|  
-    |[sp_dbmmonitorhelpmonitoring](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)|Returns the current update period.|  
-    |[sp_dbmmonitorresults](~/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)|Returns status rows for a monitored database and allows you to choose whether the procedure obtains the latest status beforehand.|  
-    |[sp_dbmmonitordropmonitoring](~/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)|Stops and deletes the mirroring monitor job for all the databases on the server instance.|  
+    |[sp_dbmmonitoraddmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)|Creates a job that periodically updates the status information for every mirrored database on the server instance.|  
+    |[sp_dbmmonitorchangemonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)|Changes the value of a database mirroring monitoring parameter.|  
+    |[sp_dbmmonitorhelpmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql)|Returns the current update period.|  
+    |[sp_dbmmonitorresults](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)|Returns status rows for a monitored database and allows you to choose whether the procedure obtains the latest status beforehand.|  
+    |[sp_dbmmonitordropmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)|Stops and deletes the mirroring monitor job for all the databases on the server instance.|  
   
      The **dbmmonitor** system stored procedures can be used as an adjunct to the Database Mirroring Monitor. For example, even if monitoring was configured using **sp_dbmmonitoraddmonitoring**, Database Mirroring Monitor can be used to view the status.  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
  The status table is updated automatically by both Database Mirroring Monitor and the database mirroring monitor job, if running. **Database Mirroring Monitor Job** updates the table once a minute by default (a system administrator can specify an update period of 1 to 120 minutes). Database Mirroring Monitor, in contrast, updates the table automatically every 30 seconds. For these updates, **Database Mirroring Monitor Job** and Database Mirroring Monitor call **sp_dbmmonitorupdate**.  
   
- The first time **sp_dbmmonitorupdate** runs, it creates the **database mirroring status** table and the **dbm_monitor** fixed database role in the **msdb** database. **sp_dbmmonitorupdate** usually updates the mirroring status by inserting a new row into the status table for every mirrored database on the server instance; for more information, see "Database Mirroring Status Table," later in this topic. This procedure also evaluates the performance metrics in the new rows and truncates rows older than the current retention period (the default is 7 days). For more information, see [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md).  
+ The first time **sp_dbmmonitorupdate** runs, it creates the **database mirroring status** table and the **dbm_monitor** fixed database role in the **msdb** database. **sp_dbmmonitorupdate** usually updates the mirroring status by inserting a new row into the status table for every mirrored database on the server instance; for more information, see "Database Mirroring Status Table," later in this topic. This procedure also evaluates the performance metrics in the new rows and truncates rows older than the current retention period (the default is 7 days). For more information, see [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql).  
   
 > [!NOTE]  
 >  Unless Database Mirroring Monitor is currently being used by a member of the **sysadmin** fixed server role, the status table is automatically updated only if the **Database Mirroring Monitor Job** exists and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is running.  
@@ -110,7 +110,7 @@ manager: "jhubbard"
   
  After **Database Mirroring Monitor Job** is created, assuming that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is running, the job is called once a minute, by default. The job then calls the **sp_dbmmonitorupdate** system stored procedure.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent calls **Database Mirroring Monitor Job** once a minute, by default, and the job calls **sp_dbmmonitorupdate** to update the status table. System administrators can change the update period by using the **sp_dbmmonitorchangemonitoring** system stored procedure, and they can view the current update period by using the **sp_dbmmonitorchangemonitoring** system stored procedure. For more information, see [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) and [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent calls **Database Mirroring Monitor Job** once a minute, by default, and the job calls **sp_dbmmonitorupdate** to update the status table. System administrators can change the update period by using the **sp_dbmmonitorchangemonitoring** system stored procedure, and they can view the current update period by using the **sp_dbmmonitorchangemonitoring** system stored procedure. For more information, see [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql) and [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql).  
   
 #### Monitoring Database Mirroring Status (by System Administrators)  
  Members of the **sysadmin** fixed server role can view and update the status table  
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
 -   Using **sp_dbmmonitorresults**  
   
-     System administrators can use the **sp_dbmmonitorresults** system stored procedure to view and, optionally, to update the status table, if it has not been updated within the previous 15 seconds. This procedure calls the **sp_dbmmonitorupdate** procedure and returns one or more history rows, depending on the amount requested in the procedure call. For information about the status in its results set, see [sp_dbmmonitorresults &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
+     System administrators can use the **sp_dbmmonitorresults** system stored procedure to view and, optionally, to update the status table, if it has not been updated within the previous 15 seconds. This procedure calls the **sp_dbmmonitorupdate** procedure and returns one or more history rows, depending on the amount requested in the procedure call. For information about the status in its results set, see [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
 #### Monitoring Database Mirroring Status (by dbm_monitor Members)  
  As mentioned, the first time **sp_dbmmonitorupdate** runs, it creates the **dbm_monitor** fixed database role in the **msdb** database. Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. To learn the age of the displayed status a user can look at the times in the **Principal log (***\<time>***)** and **Mirror log (***\<time>***)** labels on the **Status** page.  
@@ -133,7 +133,7 @@ manager: "jhubbard"
  Members of the **dbm_monitor** fixed database role depend on the **Database Mirroring Monitor Job** to update the status table at regular intervals. If the job does not exist or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role—principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
   
 #### Dropping the Database Mirroring Monitor Job  
- The database mirroring monitor job, **Database Mirroring Monitor Job**, remains until it is dropped. The monitoring job must be managed by the system administrator. To drop **Database Mirroring Monitor Job**, use **sp_dbmmonitordropmonitoring**. For more information, see [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md).  
+ The database mirroring monitor job, **Database Mirroring Monitor Job**, remains until it is dropped. The monitoring job must be managed by the system administrator. To drop **Database Mirroring Monitor Job**, use **sp_dbmmonitordropmonitoring**. For more information, see [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql).  
   
 ###  <a name="perf_metrics_of_dbm_monitor"></a> Status Displayed by the Database Mirroring Monitor  
  The **Status** page of the Database Mirroring Monitor describes the partners, and also the state of the mirroring session. The status includes performance metrics such as the state of the transaction log and other information that is intended to help currently estimate the time required to complete a failover and the potential of data loss, if the session is not synchronized. In addition, the **Status** page displays status and information about the mirroring session in general.  
@@ -261,21 +261,21 @@ manager: "jhubbard"
   
 -   **sys.database_mirroring**  
   
-     This view displays the database mirroring metadata for each mirrored database in a server instance. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
+     This view displays the database mirroring metadata for each mirrored database in a server instance. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
 -   **sys.database_mirroring_endpoints**  
   
-     The **sys.database_mirroring_endpoints** catalog view displays information about the database mirroring endpoint of the server instance. For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
+     The **sys.database_mirroring_endpoints** catalog view displays information about the database mirroring endpoint of the server instance. For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql).  
   
 -   **sys.database_mirroring_witnesses**  
   
-     This catalog view displays the database mirroring metadata for each session in which a server instance is the witness. For more information, see [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md).  
+     This catalog view displays the database mirroring metadata for each session in which a server instance is the witness. For more information, see [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses).  
   
 -   **sys.dm_db_mirroring_connections**  
   
      This dynamic management view returns a row for each database mirroring network connection.  
   
-     For more information, see [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md).  
+     For more information, see [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections).  
   
 ###  <a name="DbmPerfCounters"></a> Database Mirroring Performance Counters  
  Performance counters let you monitor database mirroring performance. For example, you can examine the **Transaction Delay** counter to see if database mirroring is impacting performance on the principal server, you can examine the **Redo Queue** and **Log Send Queue** counters to see how well the mirror database is keeping up with the principal database. You can examine the **Log Bytes Sent/sec** counter to monitor the amount of log sent per second.  
@@ -309,23 +309,23 @@ manager: "jhubbard"
   
  **Stored procedures**  
   
--   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)  
+-   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)  
   
--   [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
+-   [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)  
   
--   [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)  
+-   [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)  
   
--   [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
+-   [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)  
   
--   [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)  
+-   [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)  
   
--   [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)  
+-   [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)  
   
--   [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)  
+-   [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql)  
   
--   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+-   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)  
   
--   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
+-   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

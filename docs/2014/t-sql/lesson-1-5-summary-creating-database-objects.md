@@ -24,6 +24,6 @@ manager: "jhubbard"
  [Lesson 2: Configuring Permissions on Database Objects](lesson-2-configuring-permissions-on-database-objects.md)  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

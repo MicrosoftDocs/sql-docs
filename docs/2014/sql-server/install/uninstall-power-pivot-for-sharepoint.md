@@ -128,7 +128,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 5.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  
   
- Alternatively, you can use PowerShell to remove features and solutions from the farm. For more information, see [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).  
+ Alternatively, you can use PowerShell to remove features and solutions from the farm. For more information, see [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
 ##  <a name="bkmk_uninstall"></a> Step 3: Run SQL Server Setup to Remove Programs from the Local Computer  
  Deleting program files requires that you run SQL Server Setup to uninstall the software. Uninstall removes both files and the registry entries that were created by Setup. You can use the Programs and Features page to uninstall the software. An installation of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is part of a SQL Server installation.  

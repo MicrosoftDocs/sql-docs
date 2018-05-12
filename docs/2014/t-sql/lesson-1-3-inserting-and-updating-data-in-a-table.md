@@ -85,7 +85,7 @@ manager: "jhubbard"
  [Reading the Data in a Table &#40;Tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## See Also  
- [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  
+ [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
+ [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   
   

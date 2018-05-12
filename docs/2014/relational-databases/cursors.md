@@ -114,9 +114,9 @@ manager: "jhubbard"
  [Cursor Behaviors](native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
 ## See Also  
- [DECLARE CURSOR &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-cursor-transact-sql.md)   
- [Cursors &#40;Transact-SQL&#41;](~/t-sql/language-elements/cursors-transact-sql.md)   
- [Cursor Functions &#40;Transact-SQL&#41;](~/t-sql/functions/cursor-functions-transact-sql.md)   
- [Cursor Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)  
+ [DECLARE CURSOR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
+ [Cursors &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
+ [Cursor Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/cursor-functions-transact-sql)   
+ [Cursor Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   
   

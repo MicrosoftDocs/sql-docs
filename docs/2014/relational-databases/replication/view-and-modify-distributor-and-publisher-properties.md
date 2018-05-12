@@ -85,22 +85,22 @@ manager: "jhubbard"
   
 #### To view Distributor and distribution database properties  
   
-1.  Execute [sp_helpdistributor](~/relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md) to return information about the Distributor, distribution database, and working directory.  
+1.  Execute [sp_helpdistributor](/sql/relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql) to return information about the Distributor, distribution database, and working directory.  
   
-2.  Execute [sp_helpdistributiondb](~/relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) to return properties of a specified distribution database.  
+2.  Execute [sp_helpdistributiondb](/sql/relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql) to return properties of a specified distribution database.  
   
 #### To change Distributor and distribution database properties  
   
-1.  At the Distributor, execute [sp_changedistributor_property](~/relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md) to modify Distributor properties.  
+1.  At the Distributor, execute [sp_changedistributor_property](/sql/relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql) to modify Distributor properties.  
   
-2.  At the Distributor, execute [sp_changedistributiondb](~/relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md) to modify distribution database properties.  
+2.  At the Distributor, execute [sp_changedistributiondb](/sql/relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql) to modify distribution database properties.  
   
-3.  At the Distributor, execute [sp_changedistributor_password](~/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) to change the Distributor password.  
+3.  At the Distributor, execute [sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql) to change the Distributor password.  
   
     > [!IMPORTANT]  
     >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, secure the file to prevent unauthorized access.  
   
-4.  At the Distributor, execute [sp_changedistpublisher](~/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) to change the properties of a Publisher using the Distributor.  
+4.  At the Distributor, execute [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) to change the properties of a Publisher using the Distributor.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example [!INCLUDE[tsql](../../includes/tsql-md.md)] script returns information about the Distributor and distribution database.  

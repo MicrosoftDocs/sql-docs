@@ -21,7 +21,7 @@ manager: "jhubbard"
  This lesson assumes that you are familiar with forecasting models and with the requirements of the Microsoft Time Series algorithm. For more information, see [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
 ## CREATE MINING MODEL Statement  
- In order to create a mining model directly and automatically generate the underlying mining structure, you use the [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md) statement. The code in the statement can be broken into the following parts:  
+ In order to create a mining model directly and automatically generate the underlying mining structure, you use the [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx) statement. The code in the statement can be broken into the following parts:  
   
 -   Naming the model  
   
@@ -49,7 +49,7 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Analysis Services automatically generates a name for the underlying structure, by appending "_structure" to the model name, which ensures that the structure name is unique from the model name. For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](~/dmx/identifiers-dmx.md).  
+ Analysis Services automatically generates a name for the underlying structure, by appending "_structure" to the model name, which ensures that the structure name is unique from the model name. For information about naming an object in DMX, see [Identifiers &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
   
  The next line of the code defines the key column for the mining model, which in the case of a time series model uniquely identifies a time step in the source data. The time step is identified with the `KEY TIME` keywords after the column name and data types. If the time series model has a separate series key, it is identified by using the `KEY` keyword.  
   

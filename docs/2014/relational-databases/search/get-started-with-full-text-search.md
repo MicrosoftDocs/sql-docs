@@ -99,14 +99,14 @@ manager: "jhubbard"
 ### Associating a Stoplist with the Full-Text Index  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduces stoplists. A *stoplist* is a list of stopwords, also known as noise words. A stoplist is associated with each full-text index, and the words in that stoplist are applied to full-text queries on that index. By default, the system stoplist is associated with a new full-text index. However, you can create and use your own stoplist instead. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- For example, the following [CREATE FULLTEXT STOPLIST](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement creates a new full-text stoplist named myStoplist3 by copying from the system stoplist:  
+ For example, the following [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement creates a new full-text stoplist named myStoplist3 by copying from the system stoplist:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- The following [ALTER FULLTEXT STOPLIST](~/t-sql/statements/alter-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement alters a stoplist named myStoplist, adding the word 'en', first for Spanish and then for French:  
+ The following [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement alters a stoplist named myStoplist, adding the word 'en', first for Spanish and then for French:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -130,7 +130,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
 ##  <a name="example"></a> Example: Setting Up Full-Text Search  
  The following two-part example creates a full-text catalog named `AdvWksDocFTCat` on the AdventureWorks database and then creates a full-text index on the `Document` table in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. This statement creates the full-text catalog in the default directory specified during setup. The folder named `AdvWksDocFTCat` is in the default directory.  
   
-1.  To create a full-text catalog named `AdvWksDocFTCat`, the example uses a [CREATE FULLTEXT CATALOG](~/t-sql/statements/create-fulltext-catalog-transact-sql.md) statement:  
+1.  To create a full-text catalog named `AdvWksDocFTCat`, the example uses a [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) statement:  
   
     ```  
     USE AdventureWorks;  
@@ -138,13 +138,13 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
     ```  
   
-2.  Before you can create a full-text index on the Document table, ensure that the table has a unique, single-column, non-nullable index. The following [CREATE INDEX](~/t-sql/statements/create-index-transact-sql.md) statement creates a unique index, `ui_ukDoc`, on the DocumentID column of the Document table:  
+2.  Before you can create a full-text index on the Document table, ensure that the table has a unique, single-column, non-nullable index. The following [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) statement creates a unique index, `ui_ukDoc`, on the DocumentID column of the Document table:  
   
     ```  
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
   
-3.  After you have a unique key, you can create a full-text index on the `Document` table by using the following [CREATE FULLTEXT INDEX](~/t-sql/statements/create-fulltext-index-transact-sql.md) statement.  
+3.  After you have a unique key, you can create a full-text index on the `Document` table by using the following [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) statement.  
   
     ```  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -166,23 +166,23 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 ### To Create a Full-Text Catalog  
   
--   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)  
+-   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
 -   [Create and Manage Full-Text Catalogs](create-and-manage-full-text-catalogs.md)  
   
 ### To View the Indexes of a Table (or View)  
   
--   [sys.indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
+-   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
   
 ### To Create a Unique Index  
   
--   [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
+-   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
 -   [Open Table Designer &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
   
 ### To Create a Full-Text Index  
   
--   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)  
+-   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
 -   [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes.md)  
   
@@ -190,22 +190,22 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 |Catalog or Dynamic Management View|Description|  
 |----------------------------------------|-----------------|  
-|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Returns a row for each full-text catalog to full-text index reference.|  
-|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Contains a row for each column that is part of a full-text index.|  
-|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)|A fulltext index uses internal tables called full-text index fragments to store the inverted index data. This view can be used to query the metadata about these fragments. This view contains a row for each full-text index fragment in every table that contains a full-text index.|  
-|[sys.fulltext_indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)|Contains a row per full-text index of a tabular object.|  
-|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)|Returns information about the content of a full-text index for the specified table.|  
-|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)|Returns information about the document-level content of a full-text index for the specified table. A given keyword can appear in several documents.|  
-|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|Returns information about the full-text index populations currently in progress.|  
+|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql)|Returns a row for each full-text catalog to full-text index reference.|  
+|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)|Contains a row for each column that is part of a full-text index.|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql)|A fulltext index uses internal tables called full-text index fragments to store the inverted index data. This view can be used to query the metadata about these fragments. This view contains a row for each full-text index fragment in every table that contains a full-text index.|  
+|[sys.fulltext_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql)|Contains a row per full-text index of a tabular object.|  
+|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql)|Returns information about the content of a full-text index for the specified table.|  
+|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql)|Returns information about the document-level content of a full-text index for the specified table. A given keyword can appear in several documents.|  
+|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)|Returns information about the full-text index populations currently in progress.|  
   
   
 ## See Also  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [Populate Full-Text Indexes](populate-full-text-indexes.md)   
- [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](~/t-sql/functions/objectproperty-transact-sql.md)  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   
+ [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)  
   
   

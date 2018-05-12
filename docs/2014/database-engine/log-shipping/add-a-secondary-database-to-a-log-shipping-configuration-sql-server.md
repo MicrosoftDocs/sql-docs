@@ -82,13 +82,13 @@ manager: "jhubbard"
   
 #### To add a log shipping secondary database  
   
-1.  On the secondary server, execute [sp_add_log_shipping_secondary_primary](~/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) supplying the details of the primary server and database. This stored procedure returns the secondary ID and the copy and restore job IDs.  
+1.  On the secondary server, execute [sp_add_log_shipping_secondary_primary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql) supplying the details of the primary server and database. This stored procedure returns the secondary ID and the copy and restore job IDs.  
   
-2.  On the secondary server, execute [sp_add_jobschedule](~/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) to set the schedule for the copy and restore jobs.  
+2.  On the secondary server, execute [sp_add_jobschedule](/sql/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) to set the schedule for the copy and restore jobs.  
   
-3.  On the secondary server, execute [sp_add_log_shipping_secondary_database](~/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md) to add a secondary database.  
+3.  On the secondary server, execute [sp_add_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql) to add a secondary database.  
   
-4.  On the primary server, execute [sp_add_log_shipping_primary_secondary](~/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) to add the required information about the new secondary database to the primary server.  
+4.  On the primary server, execute [sp_add_log_shipping_primary_secondary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql) to add the required information about the new secondary database to the primary server.  
   
 5.  On the secondary server, enable the copy and restore jobs. For more information, see [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   

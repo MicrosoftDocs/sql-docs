@@ -77,6 +77,6 @@ manager: "jhubbard"
  [Watch Window](transact-sql-debugger-watch-window.md)   
  [Locals Window](transact-sql-debugger-locals-window.md)   
  [Call Stack Window](transact-sql-debugger-call-stack-window.md)   
- [Expressions &#40;Transact-SQL&#41;](~/t-sql/language-elements/expressions-transact-sql.md)  
+ [Expressions &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
   
   

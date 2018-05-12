@@ -37,7 +37,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- You can additionally process the XML returned in the variable, `@x`, by using one of the `xml` data type methods. For example, you can retrieve the `ProductModelID` attribute value by using the [value() method](~/t-sql/xml/value-method-xml-data-type.md).  
+ You can additionally process the XML returned in the variable, `@x`, by using one of the `xml` data type methods. For example, you can retrieve the `ProductModelID` attribute value by using the [value() method](/sql/t-sql/xml/value-method-xml-data-type).  
   
 ```  
 DECLARE @i int;  
@@ -64,7 +64,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Because the result is of `xml` type, you can specify one of the `xml` data type methods directly against this XML, as shown in the following query. In the query, the [query() method (xml Data Type)](~/t-sql/xml/query-method-xml-data-type.md) is used to retrieve the first <`row`> element child of the <`myRoot`> element.  
+ Because the result is of `xml` type, you can specify one of the `xml` data type methods directly against this XML, as shown in the following query. In the query, the [query() method (xml Data Type)](/sql/t-sql/xml/query-method-xml-data-type) is used to retrieve the first <`row`> element child of the <`myRoot`> element.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  

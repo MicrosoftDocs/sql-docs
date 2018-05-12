@@ -35,7 +35,7 @@ To enable automatic decryption of the database master key of a mirror database, 
 
 [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 
-[CREATE MASTER KEY &#40;Transact-SQL&#41;](~/sql/t-sql/statements/create-master-key-transact-sql)
+[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)
 
 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)
 

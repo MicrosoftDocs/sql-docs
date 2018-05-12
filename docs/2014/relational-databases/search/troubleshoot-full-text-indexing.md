@@ -48,7 +48,7 @@ manager: "jhubbard"
  By default, the full-text indexer requires the filters and word breakers that it loads to be signed. If they are not signed, which is the case sometimes when custom components are installed, you must configure the full-text indexer to ignore signature verification.  
   
 > [!IMPORTANT]  
->  Ignoring signature verification makes the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] less secure. We recommend that you sign any components that you implement or ensure that any components that you acquire are signed. For information about signing components, see [sp_fulltext_service &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+>  Ignoring signature verification makes the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] less secure. We recommend that you sign any components that you implement or ensure that any components that you acquire are signed. For information about signing components, see [sp_fulltext_service &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql).  
   
 
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
 
   
 ## See Also  
- [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
+ [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Populate Full-Text Indexes](../indexes/indexes.md)  
   
   

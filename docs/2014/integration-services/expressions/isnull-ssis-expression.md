@@ -56,6 +56,6 @@ ISNULL(DaysToManufacture + @AddDays)
   
 ## See Also  
  [Functions &#40;SSIS Expression&#41;](functions-ssis-expression.md)   
- [COALESCE &#40;Transact-SQL&#41;](~/t-sql/language-elements/coalesce-transact-sql.md)  
+ [COALESCE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/coalesce-transact-sql)  
   
   

@@ -18,11 +18,11 @@ manager: "jhubbard"
 # Data Flow Taps
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduces a new feature that allows you to add a data tap on a data flow path of a package at runtime and direct the output from the data tap to an external file. To use this feature, you must deploy your SSIS project using the project deployment model to an SSIS Server. After you deploy the package to the server, you need to execute T-SQL scripts against the SSISDB database to add data taps before executing the package. Here is a sample scenario:  
   
-1.  Create an execution instance of a package by using the [catalog.create_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) stored procedure.  
+1.  Create an execution instance of a package by using the [catalog.create_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) stored procedure.  
   
-2.  Add a data tap by using either [catalog.add_data_tap](~/integration-services/system-stored-procedures/catalog-add-data-tap.md) or [catalog.add_data_tap_by_guid](~/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md) stored procedure.  
+2.  Add a data tap by using either [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) or [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid) stored procedure.  
   
-3.  Start the execution instance of the package by using the [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
+3.  Start the execution instance of the package by using the [catalog.start_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).  
   
  Here is a sample SQL script that performs the steps described in the above scenario:  
   
@@ -51,10 +51,10 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  When you execute the script, the output file is stored in \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps. If a file with the name already exists, a new file with a suffix (for example: output[1].txt)  is created.  
   
- As mentioned earlier, you can also use [catalog.add_data_tap_by_guid](~/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)stored procedure instead of using add_data_tap stored procedure. This stored procedure takes the ID of data flow task as a parameter instead of task_package_path. You can get the ID of data flow task from the properties window in Visual Studio.  
+ As mentioned earlier, you can also use [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid)stored procedure instead of using add_data_tap stored procedure. This stored procedure takes the ID of data flow task as a parameter instead of task_package_path. You can get the ID of data flow task from the properties window in Visual Studio.  
   
 ## Removing a data tap  
- You can remove a data tap before starting the execution by using the [catalog.remove_data_tap](~/integration-services/system-stored-procedures/catalog-remove-data-tap.md) stored procedure. This stored procedure takes the ID of data tap as a parameter, which you can get as an output of the add_data_tap stored procedure.  
+ You can remove a data tap before starting the execution by using the [catalog.remove_data_tap](/sql/integration-services/system-stored-procedures/catalog-remove-data-tap) stored procedure. This stored procedure takes the ID of data tap as a parameter, which you can get as an output of the add_data_tap stored procedure.  
   
 ```  
   

@@ -66,7 +66,7 @@ manager: "jhubbard"
  [Hide System Objects in Object Explorer](../../ssms/object/object-explorer.md)  
   
 ## Related Content  
- [Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+ [Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)  
   
  [Databases](databases.md)  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   READ COMMITTED  
   
- The transaction isolation level can be specified as part of the atomic block of a natively compiled stored procedure. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md). When accessing memory-optimized tables from interpreted [!INCLUDE[tsql](../includes/tsql-md.md)], the isolation level can be specified using table-level hints.  
+ The transaction isolation level can be specified as part of the atomic block of a natively compiled stored procedure. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). When accessing memory-optimized tables from interpreted [!INCLUDE[tsql](../includes/tsql-md.md)], the isolation level can be specified using table-level hints.  
   
  You must specify the transaction isolation level when you define a natively compiled stored procedure. You must specify the isolation level in table hints when accessing memory-optimized tables from user transactions in interpreted [!INCLUDE[tsql](../includes/tsql-md.md)]. For more information, see [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   Explicitly use a higher isolation level hint for accessing the memory-optimized table (for example, WITH (SNAPSHOT)).  
   
--   Specify the `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` set option, which will set the isolation level for memory-optimized tables to SNAPSHOT (as if you included WITH(SNAPSHOT) hints to every memory-optimized table). For more information about `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
+-   Specify the `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` set option, which will set the isolation level for memory-optimized tables to SNAPSHOT (as if you included WITH(SNAPSHOT) hints to every memory-optimized table). For more information about `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Alternatively, if the isolation level of the session is READ COMMITTED, you can use autocommit transactions.  
   

@@ -108,7 +108,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
- Note that, the [query() Method (xml Data Type)](~/t-sql/xml/query-method-xml-data-type.md) results in an xml data type instance. Therefore, any result of the **query()** method that is cast to a string or binary type is entitized according to the previously described rules. If you want to obtain the string values that are not entitized, you should use the [value() Method (xml Data Type)](~/t-sql/xml/value-method-xml-data-type.md) instead. Following is an example of using the **query()** method:  
+ Note that, the [query() Method (xml Data Type)](/sql/t-sql/xml/query-method-xml-data-type) results in an xml data type instance. Therefore, any result of the **query()** method that is cast to a string or binary type is entitized according to the previously described rules. If you want to obtain the string values that are not entitized, you should use the [value() Method (xml Data Type)](/sql/t-sql/xml/value-method-xml-data-type) instead. Following is an example of using the **query()** method:  
   
 ```  
 declare @x xml  
@@ -135,7 +135,7 @@ This example contains an entitized char: <.
 ```  
   
 ## Serializing a Typed xml Data Type  
- A typed **xml** data type instance contains values that are typed according to their XML schema types. These values are serialized according to their XML schema type in the same format as the XQuery cast to xs:string produces. For more information, see [Type Casting Rules in XQuery](~/xquery/type-casting-rules-in-xquery.md).  
+ A typed **xml** data type instance contains values that are typed according to their XML schema types. These values are serialized according to their XML schema type in the same format as the XQuery cast to xs:string produces. For more information, see [Type Casting Rules in XQuery](/sql/xquery/type-casting-rules-in-xquery).  
   
  For example, the xs:double value 1.34e1 is serialized to 13.4 as shown in the following example:  
   
@@ -148,7 +148,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
  This returns the string value 13.4.  
   
 ## See Also  
- [Type Casting Rules in XQuery](~/xquery/type-casting-rules-in-xquery.md)   
- [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md)  
+ [Type Casting Rules in XQuery](/sql/xquery/type-casting-rules-in-xquery)   
+ [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

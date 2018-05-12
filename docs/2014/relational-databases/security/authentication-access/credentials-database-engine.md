@@ -33,10 +33,10 @@ manager: "jhubbard"
   
  System credentials are created automatically and are associated with specific endpoints. Names for system credentials start with two hash signs (##).  
   
- For more information about credentials, see the [sys.credentials](~/relational-databases/system-catalog-views/sys-credentials-transact-sql.md) catalog view.  
+ For more information about credentials, see the [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) catalog view.  
   
 ## Related Content  
- [Create a Credential](../authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md)  
+ [Create a Credential](../authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [Securing SQL Server](../securing-sql-server.md)  
   

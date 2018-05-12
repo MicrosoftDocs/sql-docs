@@ -35,7 +35,7 @@ manager: "jhubbard"
   
  The information displayed depends on whether the server instance is a monitor server, primary server, or secondary server. If information is not available, the corresponding cells are grayed out.  
   
- The report calls **sp_help_log_shipping_monitor** to get the data. For information about the required permissions, see [sp_help_log_shipping_monitor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md).  
+ The report calls **sp_help_log_shipping_monitor** to get the data. For information about the required permissions, see [sp_help_log_shipping_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql).  
   
 ### To display the Transaction Log Shipping Status report on a server instance  
   

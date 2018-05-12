@@ -53,7 +53,7 @@ manager: "jhubbard"
  References to synonyms are not schema-bound. Therefore, a synonym can be dropped at any time. However, by dropping a synonym, you run the risk of leaving dangling references to the synonym that was dropped. These references will only be found at run time.  
   
 ## Synonyms and Schemas  
- If you have a default schema that you do not own and want to create a synonym, you must qualify the synonym name with the name of a schema that you do own. For example, if you own a schema **x**, but **y** is your default schema and you use the CREATE SYNONYM statement, you must prefix the name of the synonym with the schema **x**, instead of naming the synonym by using a single-part name. For more information about how to create synonyms, see [CREATE SYNONYM &#40;Transact-SQL&#41;](~/t-sql/statements/create-synonym-transact-sql.md).  
+ If you have a default schema that you do not own and want to create a synonym, you must qualify the synonym name with the name of a schema that you do own. For example, if you own a schema **x**, but **y** is your default schema and you use the CREATE SYNONYM statement, you must prefix the name of the synonym with the schema **x**, instead of naming the synonym by using a single-part name. For more information about how to create synonyms, see [CREATE SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql).  
   
 ## Granting Permissions on a Synonym  
  Only synonym owners, members of **db_owner**, or members of **db_ddladmin** can grant permission on a synonym.  
@@ -110,11 +110,11 @@ EXEC ('ALTER TABLE dbo.MyProduct
  For more information about schema-bound functions, see [Create User-defined Functions &#40;Database Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## Getting Information About Synonyms  
- The sys.synonyms catalog view contains an entry for each synonym in a given database. This catalog view exposes synonym metadata such as the name of the synonym and the name of the base object. For more information about the `sys.synonyms` catalog view, see [sys.synonyms &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-synonyms-transact-sql.md).  
+ The sys.synonyms catalog view contains an entry for each synonym in a given database. This catalog view exposes synonym metadata such as the name of the synonym and the name of the base object. For more information about the `sys.synonyms` catalog view, see [sys.synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
- By using extended properties, you can add descriptive or instructional text, input masks, and formatting rules as properties of a synonym. Because the property is stored in the database, all applications that read the property can evaluate the object in the same way. For more information, see [sp_addextendedproperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md).  
+ By using extended properties, you can add descriptive or instructional text, input masks, and formatting rules as properties of a synonym. Because the property is stored in the database, all applications that read the property can evaluate the object in the same way. For more information, see [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   
- To find the base type of the base object of a synonym, use the OBJECTPROPERTYEX function. For more information, see [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](~/t-sql/functions/objectproperty-transact-sql.md).  
+ To find the base type of the base object of a synonym, use the OBJECTPROPERTYEX function. For more information, see [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql).  
   
 ### Examples  
  The following example returns the base type of a synonym's base object that is a local object.  
@@ -143,8 +143,8 @@ GO
 ## Related Content  
  [Create Synonyms](create-synonyms.md)  
   
- [CREATE SYNONYM &#40;Transact-SQL&#41;](~/t-sql/statements/create-synonym-transact-sql.md)  
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql)  
   
- [DROP SYNONYM &#40;Transact-SQL&#41;](~/t-sql/statements/drop-synonym-transact-sql.md)  
+ [DROP SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-synonym-transact-sql)  
   
   

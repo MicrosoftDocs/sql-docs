@@ -124,7 +124,7 @@ manager: "jhubbard"
  [Replay a Trace Table &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [Replay a Trace File &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
- [sp_defaultdb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)   
+ [sp_defaultdb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql)   
  [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)  
   
   

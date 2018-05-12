@@ -232,6 +232,6 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ## See Also  
  [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

@@ -58,6 +58,6 @@ WITH RECOVERY
  [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [File Restores &#40;Full Recovery Model&#41;](file-restores-full-recovery-model.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

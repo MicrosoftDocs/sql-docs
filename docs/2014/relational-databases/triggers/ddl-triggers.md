@@ -119,6 +119,6 @@ GO
 ## See Also  
  [DML Triggers](dml-triggers.md)   
  [Logon Triggers](logon-triggers.md)   
- [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)  
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)  
   
   

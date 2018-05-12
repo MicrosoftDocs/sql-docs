@@ -108,7 +108,7 @@ manager: "jhubbard"
   
 -   [Dynamic Data Masking](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
--   [Signed Objects](~\t-sql\statements\add-signature-transact-sql.md)  
+-   [Signed Objects](/sql/t-sql/statements/add-signature-transact-sql)  
   
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Connection Security: Restricting and Securing**  
  **Firewall Protection**  

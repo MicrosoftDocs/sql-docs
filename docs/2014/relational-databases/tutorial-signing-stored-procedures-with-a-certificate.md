@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Signing Stored Procedures with a Certificate | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -109,7 +109,7 @@ GO
   
  For more information on stored procedures, see [Stored Procedures &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md).  
   
- For more information on signing stored procedures, see [ADD SIGNATURE &#40;Transact-SQL&#41;](~\t-sql\statements\add-signature-transact-sql.md).  
+ For more information on signing stored procedures, see [ADD SIGNATURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/add-signature-transact-sql).  
   
 ## 4. Create a Certificate Account Using the Certificate  
  Run this code to create a database user (`TestCreditRatingcertificateAccount`) from the certificate. This account has no server login, and will ultimately control access to the underlying tables.  

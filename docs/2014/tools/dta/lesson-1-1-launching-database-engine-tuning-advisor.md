@@ -44,6 +44,6 @@ manager: "jhubbard"
 >  Database Engine Tuning Advisor can take XML files as input when a [!INCLUDE[tsql](../../includes/tsql-md.md)] script is imported from [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor. For more information, see the section on launching Database Engine Tuning Advisor from the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
 ## Next Task in Lesson  
- [Setting Tool Options and Layout](../../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  
+ [Setting Tool Options and Layout](lesson-1-2-setting-tool-options-and-layout.md)  
   
   

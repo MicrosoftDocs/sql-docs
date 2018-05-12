@@ -1,7 +1,7 @@
 ---
 title: "List Job Category Information | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -49,7 +49,7 @@ manager: "jhubbard"
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To list job category information**  
   
- Use the `JobCategory` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.. For more information, see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+ Use the `JobCategory` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.. For more information, see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
   
   
   

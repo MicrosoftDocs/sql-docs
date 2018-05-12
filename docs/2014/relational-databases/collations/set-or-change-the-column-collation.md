@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Set or Change the Column Collation
   You can override the database collation for `char`, `varchar`, `text`, `nchar`, `nvarchar`, and `ntext` data by specifying a different collation for a specific column of a table and using one of the following:  
   
--   The COLLATE clause of [CREATE TABLE](~/t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md). For example:  
+-   The COLLATE clause of [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) and [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql). For example:  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   A FOREIGN KEY constraint  
   
- When you work with **tempdb**, the [COLLATE](~/t-sql/statements/collations.md) clause includes a *database_default* option to specify that a column in a temporary table uses the collation default of the current user database for the connection instead of the collation of **tempdb**.  
+ When you work with **tempdb**, the [COLLATE](/sql/t-sql/statements/collations) clause includes a *database_default* option to specify that a column in a temporary table uses the collation default of the current user database for the connection instead of the collation of **tempdb**.  
   
 ## Collations and text Columns  
  You can insert or update values in a `text` column whose collation is different from the code page of the default collation of the database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implicitly converts the values to the collation of the column.  

@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 -   An ADO connection manager requires that either `time` or `datetimeoffset` data be stored in a parameter whose parameter type is `Input` or `Output`, and whose data type is `adVarWchar`.  
   
- For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md) and [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) and [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ### Using Date and Time Parameters with OLE DB Connection Managers  
  When using an OLE DB connection manager, an Execute SQL task has specific storage requirements for data of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data types, `date`, `time`, `datetime`, `datetime2`, and `datetimeoffset`. You must store this data in one of the following parameter types:  
@@ -161,7 +161,7 @@ manager: "jhubbard"
   
  To use output parameters, the syntax requires that the OUTPUT keyword follow each parameter marker. For example, the following output parameter syntax is correct: `EXEC myStoredProcedure ? OUTPUT`.  
   
- For more information about using input and output parameters with Transact-SQL stored procedures, see [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md).  
+ For more information about using input and output parameters with Transact-SQL stored procedures, see [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
 ##  <a name="Return_codes"></a> Getting Values of Return Codes  
  A stored procedure can return an integer value, called a return code, to indicate the execution status of a procedure. To implement return codes in the Execute SQL task, you use parameters of the `ReturnValue` type.  
@@ -179,7 +179,7 @@ manager: "jhubbard"
   
  In the syntax shown in the previous table, the Execute SQL task uses the **Direct Input** source type to run the stored procedure. The Execute SQL task can also use the **File Connection** source type to run a stored procedure. Regardless of whether the Execute SQL task uses the **Direct Input** or **File Connection** source type, use a parameter of the `ReturnValue` type to implement the return code. For more information about how to configure the source type of the SQL statement that the Execute SQL task runs, see [Execute SQL Task Editor &#40;General Page&#41;](general-page-of-integration-services-designers-options.md).  
   
- For more information about using return codes with Transact-SQL stored procedures, see [RETURN &#40;Transact-SQL&#41;](~/t-sql/language-elements/return-transact-sql.md).  
+ For more information about using return codes with Transact-SQL stored procedures, see [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql).  
   
 ##  <a name="Configure_parameters_and_return_codes"></a> Configuring Parameters and Return Codes in the Execute SQL Task  
  For more information about the properties of parameters and return codes that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  

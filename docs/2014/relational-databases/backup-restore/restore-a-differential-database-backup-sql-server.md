@@ -207,6 +207,6 @@ GO
   
 ## See Also  
  [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

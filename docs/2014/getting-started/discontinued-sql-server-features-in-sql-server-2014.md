@@ -54,7 +54,7 @@ manager: "jhubbard"
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - EnableIntegrated Security property|Use the property settings in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - "Schedule events and report delivery" and "Web service and HTTP access"|Edit the RSReportServer.config configuration file.|  
 |Command line options|No support in this release.|  
-|SOAP and [!INCLUDE[ssSB](../includes/sssb-md.md)] endpoints|Use [CREATE ENDPOINT](~/t-sql/statements/create-endpoint-transact-sql.md)and [ALTER ENDPOINT](~/t-sql/statements/alter-endpoint-transact-sql.md).|  
+|SOAP and [!INCLUDE[ssSB](../includes/sssb-md.md)] endpoints|Use [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)and [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
 ### Discontinued Command Prompt Parameters for SQL Server Setup  
  The following table shows Setup command prompt parameters from earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that are not supported in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  

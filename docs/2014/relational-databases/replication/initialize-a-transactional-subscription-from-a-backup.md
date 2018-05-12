@@ -28,22 +28,22 @@ manager: "jhubbard"
   
 ### To initialize a transactional subscriber from a backup  
   
-1.  For an existing publication, ensure that the publication supports the ability to initialize from backup by executing [sp_helppublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) at the Publisher on the publication database. Note the value of **allow_initialize_from_backup** in the result set.  
+1.  For an existing publication, ensure that the publication supports the ability to initialize from backup by executing [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) at the Publisher on the publication database. Note the value of **allow_initialize_from_backup** in the result set.  
   
     -   If the value is **1**, the publication supports this functionality.  
   
-    -   If the value is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of **allow_initialize_from_backup** for **@property** and a value of `true` for **@value**.  
+    -   If the value is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) at the Publisher on the publication database. Specify a value of **allow_initialize_from_backup** for **@property** and a value of `true` for **@value**.  
   
-2.  For a new publication, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `true` for **allow_initialize_from_backup**. For more information, see [Create a Publication](publish/create-a-publication.md).  
+2.  For a new publication, execute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) at the Publisher on the publication database. Specify a value of `true` for **allow_initialize_from_backup**. For more information, see [Create a Publication](publish/create-a-publication.md).  
   
     > [!WARNING]  
     >  To avoid missing subscriber data, when using **sp_addpublication** with `@allow_initialize_from_backup = N'true'`, always use `@immediate_sync = N'true'`.  
   
-3.  Create a backup of the publication database using the [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md) statement.  
+3.  Create a backup of the publication database using the [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) statement.  
   
-4.  Restore the backup on the Subscriber using the [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md) statement.  
+4.  Restore the backup on the Subscriber using the [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) statement.  
   
-5.  At the Publisher on the publication database, execute the stored procedure [sp_addsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify the following parameters:  
+5.  At the Publisher on the publication database, execute the stored procedure [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specify the following parameters:  
   
     -   **@sync_type** - a value of **initialize with backup**.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
     -   (Optional for tape devices) **@unload** - specify a value of **1** (default) if the tape should be unloaded from the drive after the restore is complete and **0** if it should not be unloaded.  
   
-6.  (Optional) For a pull subscription, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) and [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) at the Subscriber on the subscription database. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
+6.  (Optional) For a pull subscription, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) and [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) at the Subscriber on the subscription database. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 7.  (Optional) Start the Distribution Agent. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) or [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   

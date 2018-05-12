@@ -60,11 +60,11 @@ manager: "jhubbard"
 ##  <a name="taking_db_or_file_offline"></a> Taking a Database or File Offline  
  If you do not want to use online restore, you can take the database offline before you start the restore sequence by using one of the following methods:  
   
--   Under any recovery model, you can take the database offline by using the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement:  
+-   Under any recovery model, you can take the database offline by using the following [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) statement:  
   
      ALTER DATABASE *database_name* SET OFFLINE  
   
--   Alternatively, under the full recovery model, you can force a file or page restore to be offline, by using the following [BACKUP LOG](~/t-sql/statements/backup-transact-sql.md) statement put the database in to the restoring state:  
+-   Alternatively, under the full recovery model, you can force a file or page restore to be offline, by using the following [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) statement put the database in to the restoring state:  
   
      BACKUP LOG *database_name* WITH NORECOVERY.  
   

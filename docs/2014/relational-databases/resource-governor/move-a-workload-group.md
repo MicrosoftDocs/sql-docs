@@ -31,7 +31,7 @@ manager: "jhubbard"
  You cannot move a workload group if there is a pending Resource Governor configuration operation.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
- You cannot move a workload group if there is a pending Resource Governor configuration operation. You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current status of is_configuration_pending.  
+ You cannot move a workload group if there is a pending Resource Governor configuration operation. You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) dynamic management view to get the current status of is_configuration_pending.  
   
 ###  <a name="Permissions"></a> Permissions  
  Moving a workload group requires CONTROL SERVER permission.  
@@ -76,7 +76,7 @@ GO
  [Enable Resource Governor](enable-resource-governor.md)   
  [Create a Resource Pool](create-a-resource-pool.md)   
  [Create a Workload Group](create-a-workload-group.md)   
- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-workload-group-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-workload-group-transact-sql)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

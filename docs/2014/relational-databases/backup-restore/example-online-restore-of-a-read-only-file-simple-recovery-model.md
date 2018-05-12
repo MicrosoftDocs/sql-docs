@@ -57,6 +57,6 @@ WITH RECOVERY
  [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

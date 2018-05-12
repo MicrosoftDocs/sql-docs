@@ -72,17 +72,17 @@ manager: "jhubbard"
   
 -   Failover cluster instances (FCIs) can now use Cluster Shared Volumes (CSVs) as cluster shared disks. For more information, see [Always On Failover Cluster Instances](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
--   A new system function, [sys.fn_hadr_is_primary_replica](~/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md), and a new DMV, [sys.dm_io_cluster_valid_path_names](~/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md), is available.  
+-   A new system function, [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql), and a new DMV, [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql), is available.  
   
--   The following DMVs were enhanced and now return FCI information: [sys.dm_hadr_cluster](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), and [sys.dm_hadr_cluster_networks](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md).  
+-   The following DMVs were enhanced and now return FCI information: [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), and [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
   
   
 ###  <a name="OIR"></a> Partition Switching and Indexing  
- The individual partitions of partitioned tables can now be rebuilt. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
+ The individual partitions of partitioned tables can now be rebuilt. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="Lock"></a> Managing the Lock Priority of Online Operations  
- The `ONLINE = ON` option now contains a `WAIT_AT_LOW_PRIORITY` option which permits you to specify how long the rebuild process should wait for the necessary locks. The `WAIT_AT_LOW_PRIORITY` option also allows you to configure the termination of blocking processes related to that rebuild statement. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md) and [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md). Troubleshooting information about new types of lock states is available in [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) and [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
+ The `ONLINE = ON` option now contains a `WAIT_AT_LOW_PRIORITY` option which permits you to specify how long the rebuild process should wait for the necessary locks. The `WAIT_AT_LOW_PRIORITY` option also allows you to configure the termination of blocking processes related to that rebuild statement. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) and [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Troubleshooting information about new types of lock states is available in [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) and [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
  
   
 ###  <a name="CCI"></a> Columnstore Indexes  
@@ -98,7 +98,7 @@ manager: "jhubbard"
   
 -   **Archival data compression**  
   
-     ALTER INDEX … REBUILD has a new COLUMNSTORE_ARCHIVE data compression option that further compresses the specified partitions of a columnstore index. Use this for archival, or for other situations that require a smaller data storage size and can afford more time for storage and retrieval. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
+     ALTER INDEX … REBUILD has a new COLUMNSTORE_ARCHIVE data compression option that further compresses the specified partitions of a columnstore index. Use this for archival, or for other situations that require a smaller data storage size and can afford more time for storage and retrieval. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="Buffer"></a> Buffer Pool Extension  
@@ -106,13 +106,13 @@ manager: "jhubbard"
    
   
 ###  <a name="Stats"></a> Incremental Statistics  
- CREATE STATISTICS and related statistic statements now permits per partition statistics to be created by using the INCREMENTAL option. Related statements allow or report incremental statistics. Affected syntax includes UPDATE STATISTICS, sp_createstats, CREATE INDEX, ALTER INDEX, ALTER DATABASE SET options, DATABASEPROPERTYEX, sys.databases, and sys.stats. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md).  
+ CREATE STATISTICS and related statistic statements now permits per partition statistics to be created by using the INCREMENTAL option. Related statements allow or report incremental statistics. Affected syntax includes UPDATE STATISTICS, sp_createstats, CREATE INDEX, ALTER INDEX, ALTER DATABASE SET options, DATABASEPROPERTYEX, sys.databases, and sys.stats. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
   
 ###  <a name="RG"></a> Resource Governor Enhancements for Physical IO Control  
- The Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use within a resource pool. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], you can use the new MIN_IOPS_PER_VOLUME and MAX_IOPS_PER_VOLUME settings to control the physical IOs issued for user threads for a given resource pool. For more information, see [Resource Governor Resource Pool](../relational-databases/resource-governor/resource-governor-resource-pool.md) and [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/create-resource-pool-transact-sql.md).  
+ The Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use within a resource pool. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], you can use the new MIN_IOPS_PER_VOLUME and MAX_IOPS_PER_VOLUME settings to control the physical IOs issued for user threads for a given resource pool. For more information, see [Resource Governor Resource Pool](../relational-databases/resource-governor/resource-governor-resource-pool.md) and [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
- The MAX_OUTSTANDING_IO_PER_VOLUME setting of the ALTER RESOURCE GOVENOR sets the maximum outstanding I/O operations per disk volume. You can use this setting to tune IO resource governance to the IO characteristics of a disk volume and can be used to limit the number of IOs issued at the SQL Server instance boundary. For more information, see [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md).  
+ The MAX_OUTSTANDING_IO_PER_VOLUME setting of the ALTER RESOURCE GOVENOR sets the maximum outstanding I/O operations per disk volume. You can use this setting to tune IO resource governance to the IO characteristics of a disk volume and can be used to limit the number of IOs issued at the SQL Server instance boundary. For more information, see [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql).  
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation Event Class  
@@ -120,7 +120,7 @@ manager: "jhubbard"
   
   
 ###  <a name="Compat"></a> Database Compatibility Level  
- The 90 compatibility level is not valid in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
+ The 90 compatibility level is not valid in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
 ##  <a name="TSQL"></a> Transact-SQL Enhancements  
   
@@ -137,16 +137,16 @@ manager: "jhubbard"
 ##  <a name="SystemTable"></a> System View Enhancements  
   
 ### sys.xml_indexes  
- [sys.xml_indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) has 3 new columns: `xml_index_type`, `xml_index_type_description`, and `path_id`.  
+ [sys.xml_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) has 3 new columns: `xml_index_type`, `xml_index_type_description`, and `path_id`.  
   
 ### sys.dm_exec_query_profiles  
- [sys.dm_exec_query_profiles &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) monitors real time query progress while a query is in execution.  
+ [sys.dm_exec_query_profiles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) monitors real time query progress while a query is in execution.  
   
 ### sys.column_store_row_groups  
- [sys.column_store_row_groups &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md) provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions.  
+ [sys.column_store_row_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions.  
   
 ### sys.databases  
- [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) has 3 new columns: `is_auto_create_stats_incremental_on`, `is_query_store_on`, and `resource_pool_id`.  
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) has 3 new columns: `is_auto_create_stats_incremental_on`, `is_query_store_on`, and `resource_pool_id`.  
   
 ### System View Enhancements for In-Memory OLTP  
  For information about system view enhancements to support In-Memory OLTP, see [System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  

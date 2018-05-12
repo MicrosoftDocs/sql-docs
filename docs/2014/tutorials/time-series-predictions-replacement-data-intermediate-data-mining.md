@@ -30,7 +30,7 @@ manager: "jhubbard"
 ## Performing Cross-Prediction with a Time Series Model  
  The process of using data from one series to predict trends in another series is called cross-prediction. You can use cross-prediction in many scenarios: for example, you might decide that television sales are a good predictor of overall economic activity, and apply a model trained on television sales to general economic data.  
   
- In SQL Server Data Mining, you perform cross-prediction by using the parameter REPLACE_MODEL_CASES within the arguments to the function, [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md).  
+ In SQL Server Data Mining, you perform cross-prediction by using the parameter REPLACE_MODEL_CASES within the arguments to the function, [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
  In the next task, you will learn how to use REPLACE_MODEL_CASES. You will use the merged world sales data to build a model, and then create a prediction query that maps the general model to the replacement data.  
   
@@ -160,6 +160,6 @@ AND
   
 ## See Also  
  [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

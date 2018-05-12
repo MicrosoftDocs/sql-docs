@@ -99,11 +99,11 @@ manager: "jhubbard"
   
  **Storage Namespace**  
   
- In FILESTREAM, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] controls the BLOB physical file system namespace. A new intrinsic function, [PathName](~/relational-databases/system-functions/pathname-transact-sql.md), provides the logical UNC path of the BLOB that corresponds to each FILESTREAM cell in the table. The application uses this logical path to obtain the Win32 handle and operate on the BLOB data by using regular Win32 file system interfaces. The function returns NULL if the value of the FILESTREAM column is NULL.  
+ In FILESTREAM, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] controls the BLOB physical file system namespace. A new intrinsic function, [PathName](/sql/relational-databases/system-functions/pathname-transact-sql), provides the logical UNC path of the BLOB that corresponds to each FILESTREAM cell in the table. The application uses this logical path to obtain the Win32 handle and operate on the BLOB data by using regular Win32 file system interfaces. The function returns NULL if the value of the FILESTREAM column is NULL.  
   
  **Transacted File System Access**  
   
- A new intrinsic function, [GET_FILESTREAM_TRANSACTION_CONTEXT()](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md), provides the token that represents the current transaction that the session is associated with. The transaction must have been started and not yet aborted or committed. By obtaining a token, the application binds the FILESTREAM file system streaming operations with a started transaction. The function returns NULL in case of no explicitly started transaction.  
+ A new intrinsic function, [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql), provides the token that represents the current transaction that the session is associated with. The transaction must have been started and not yet aborted or committed. By obtaining a token, the application binds the FILESTREAM file system streaming operations with a started transaction. The function returns NULL in case of no explicitly started transaction.  
   
  All file handles must be closed before the transaction commits or aborts. If a handle is left open beyond the transaction scope, additional reads against the handle will cause a failure; additional writes against the handle will succeed, but the actual data will not be written to disk. Similarly, if the database or instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] shuts down, all open handles are invalidated.  
   

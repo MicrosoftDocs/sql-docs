@@ -37,6 +37,6 @@ manager: "jhubbard"
  Removes the selected extended property.  
   
 ## See Also  
- [Extended Properties Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [Extended Properties Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties)  
   
   

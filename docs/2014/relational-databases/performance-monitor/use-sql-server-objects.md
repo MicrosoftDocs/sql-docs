@@ -126,6 +126,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
+ [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
   

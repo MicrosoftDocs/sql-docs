@@ -68,7 +68,7 @@ manager: "jhubbard"
 ###  <a name="creating_sub"></a> Creating a Search Property List  
  **To create a search property list with Transact-SQL**  
   
- Use the [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-search-property-list-transact-sql.md) statement and provide at least a name the list.  
+ Use the [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql) statement and provide at least a name the list.  
   
 ##### To create a search property list in Management Studio  
   
@@ -130,7 +130,7 @@ manager: "jhubbard"
   
  **To add a property to a search property list with Transact-SQL**  
   
- Use the [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-search-property-list-transact-sql.md) statement with the values that you obtained by using one of the methods described in the topic, [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ Use the [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) statement with the values that you obtained by using one of the methods described in the topic, [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  The following example demonstrates the use of these values when adding a property to a search property list:  
   
@@ -152,11 +152,11 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  As long as the full-text index remains associated with this search property list, full-text query can use the PROPERTY option of the CONTAINS predicate to search on properties that are registered for that search property list.  
   
- If you change the search property list associated with a full-text index, then the index must be rebuilt to bring it into a consistent state. The index is truncated immediately and is empty until the full population runs. For more information about when changing the search property list causes rebuilding the index, see "Remarks," in [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md).  
+ If you change the search property list associated with a full-text index, then the index must be rebuilt to bring it into a consistent state. The index is truncated immediately and is empty until the full population runs. For more information about when changing the search property list causes rebuilding the index, see "Remarks," in [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  **To associate a search property list with a full-text index with Transact-SQL**  
   
- Use the [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md) statement with the `SET SEARCH PROPERTY LIST = <property_list_name>` clause.  
+ Use the [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) statement with the `SET SEARCH PROPERTY LIST = <property_list_name>` clause.  
   
  **To associate a search property list with a full-text index with Management Studio**  
   
@@ -165,7 +165,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
   
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Querying Search Properties with CONTAINS  
- The basic [CONTAINS](~/t-sql/queries/contains-transact-sql.md) syntax for a property-scoped full-text query is as follows:  
+ The basic [CONTAINS](/sql/t-sql/queries/contains-transact-sql) syntax for a property-scoped full-text query is as follows:  
   
 ```tsql  
 SELECT column_name FROM table_name  
@@ -191,7 +191,7 @@ GO
 ###  <a name="viewing"></a> Viewing and Changing a Search Property List  
  **To change a search property list with Transact-SQL**  
   
- Use the [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-search-property-list-transact-sql.md) statement to add or remove search properties.  
+ Use the [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) statement to add or remove search properties.  
   
 ##### To view and change a search property list in Management Studio  
   
@@ -222,7 +222,7 @@ GO
   
  **To delete a search property list with Transact-SQL**  
   
- Use the [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/drop-search-property-list-transact-sql.md) statement.  
+ Use the [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-search-property-list-transact-sql) statement.  
   
 ##### To delete a search property list in Management Studio  
   

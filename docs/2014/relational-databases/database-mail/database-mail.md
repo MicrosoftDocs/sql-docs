@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   Profile security: Database Mail enforces security for mail profiles. You choose the **msdb** database users or groups that have access to a Database Mail profile. You can grant access to either specific users, or all users in **msdb**. A private profile restricts access to a specified list of users. A public profile is available to all users in a database.  
   
--   Attachment size governor: Database Mail enforces a configurable limit on the attachment file size. You can change this limit by using the [sysmail_configure_sp](~/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) stored procedure.  
+-   Attachment size governor: Database Mail enforces a configurable limit on the attachment file size. You can change this limit by using the [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) stored procedure.  
   
 -   Prohibited file extensions: Database Mail maintains a list of prohibited file extensions. Users cannot attach files with an extension that appears in the list. You can change this list by using sysmail_configure_sp.  
   

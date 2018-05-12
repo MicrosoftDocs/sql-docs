@@ -44,13 +44,13 @@ manager: "jhubbard"
  If any of these tables has 10,000 or more rows, Upgrade Advisor reports a noncompliance failure. It does not report which table exceeds the allowed number of rows. The first table that exceeds 10,000 rows causes the failure.  
   
 ## Corrective Action  
- Before you upgrade a database, if any of these tables exceeds 10,000 rows, we recommend that you reduce the number to less than 10,000. To reduce rows in all of these tables, you can run the **sp_delete_backuphistory** stored procedure. This procedure deletes the entries in all of the backup and restore history tables for backup sets older than a specified date. For more information, see [sp_delete_backuphistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md).  
+ Before you upgrade a database, if any of these tables exceeds 10,000 rows, we recommend that you reduce the number to less than 10,000. To reduce rows in all of these tables, you can run the **sp_delete_backuphistory** stored procedure. This procedure deletes the entries in all of the backup and restore history tables for backup sets older than a specified date. For more information, see [sp_delete_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql).  
   
 > [!NOTE]  
 >  You can upgrade a database whose backup and restore history tables are larger than 10,000 rows. But the upgrade may appear to stall while large tables are being altered. The larger the tables, the longer that Setup takes to complete.  
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](~/2014/sql-server/install/sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

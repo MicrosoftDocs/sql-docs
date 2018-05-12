@@ -234,7 +234,7 @@ Execution of natively compiled stored procedures.
   
  Interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedures are compiled at first execution, in contrast to natively compiled stored procedures, which are compiled at create time. When interpreted stored procedures are compiled at invocation, the values of the parameters supplied for this invocation are used by the optimizer when generating the execution plan. This use of parameters during compilation is called parameter sniffing.  
   
- Parameter sniffing is not used for compiling natively compiled stored procedures. All parameters to the stored procedure are considered to have UNKNOWN values. Like interpreted stored procedures, natively compiled stored procedures also support the `OPTIMIZE FOR` hint. For more information, see [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md).  
+ Parameter sniffing is not used for compiling natively compiled stored procedures. All parameters to the stored procedure are considered to have UNKNOWN values. Like interpreted stored procedures, natively compiled stored procedures also support the `OPTIMIZE FOR` hint. For more information, see [Query Hints &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### Retrieving a Query Execution Plan for Natively Compiled Stored Procedures  
  The query execution plan for a natively compiled stored procedure can be retrieved using **Estimated Execution Plan** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], or using the SHOWPLAN_XML option in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. For example:  

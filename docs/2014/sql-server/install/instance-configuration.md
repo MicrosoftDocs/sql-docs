@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   Instance names cannot start or end with an underscore (_).  
   
--   Instance names cannot contain the term "Default" or other reserved keywords. If a reserved keyword is used in an instance name, a Setup error will occur. For more information, see [Reserved Keywords &#40;Transact-SQL&#41;](~/t-sql/language-elements/reserved-keywords-transact-sql.md).  
+-   Instance names cannot contain the term "Default" or other reserved keywords. If a reserved keyword is used in an instance name, a Setup error will occur. For more information, see [Reserved Keywords &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
   
 -   If you specify MSSQLServer for the instance name, a default instance will be created.  
   

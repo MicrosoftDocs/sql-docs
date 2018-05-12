@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Use Sparse Columns
-  Sparse columns are ordinary columns that have an optimized storage for null values. Sparse columns reduce the space requirements for null values at the cost of more overhead to retrieve nonnull values. Consider using sparse columns when the space saved is at least 20 percent to 40 percent. Sparse columns and column sets are defined by using the [CREATE TABLE](~/t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) statements.  
+  Sparse columns are ordinary columns that have an optimized storage for null values. Sparse columns reduce the space requirements for null values at the cost of more overhead to retrieve nonnull values. Consider using sparse columns when the space saved is at least 20 percent to 40 percent. Sparse columns and column sets are defined by using the [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) or [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) statements.  
   
  Sparse columns can be used with column sets and filtered indexes:  
   
@@ -156,7 +156,7 @@ manager: "jhubbard"
   
      Transactional replication supports sparse columns, but it does not support column sets, which can be used with sparse columns. For more information about column sets, see [Use Column Sets](../tables/use-column-sets.md).  
   
-     The replication of the SPARSE attribute is determined by a schema option that is specified by using [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) or by using the **Article Properties** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not support sparse columns. If you must replicate data to an earlier version, specify that the SPARSE attribute should not be replicated.  
+     The replication of the SPARSE attribute is determined by a schema option that is specified by using [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) or by using the **Article Properties** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not support sparse columns. If you must replicate data to an earlier version, specify that the SPARSE attribute should not be replicated.  
   
      For tables that are published, you cannot add any new sparse columns to a table or change the sparse property of an existing column. If such an operation is required, drop and re-create the publication.  
   
@@ -231,8 +231,8 @@ WHERE ProductionSpecification IS NOT NULL ;
   
 ## See Also  
  [Use Column Sets](../tables/use-column-sets.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [sys.columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)  
   
   

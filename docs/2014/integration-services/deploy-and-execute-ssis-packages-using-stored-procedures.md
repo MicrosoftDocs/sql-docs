@@ -32,9 +32,9 @@ manager: "jhubbard"
   
 ## To deploy and execute a package using stored procedures  
   
-1.  Call [catalog.deploy_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) to deploy the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
+1.  Call [catalog.deploy_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) to deploy the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains the package to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   
-     To retrieve the binary contents of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project deployment file, for the *@project_stream* parameter, use a SELECT statement with the OPENROWSET function and the BULK rowset provider. The BULK rowset provider enables you to read data from a file. The SINGLE_BLOB argument for the BULK rowset provider returns the contents of the data file as a single-row, single-column rowset of type varbinary(max). For more information, see [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
+     To retrieve the binary contents of the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project deployment file, for the *@project_stream* parameter, use a SELECT statement with the OPENROWSET function and the BULK rowset provider. The BULK rowset provider enables you to read data from a file. The SINGLE_BLOB argument for the BULK rowset provider returns the contents of the data file as a single-row, single-column rowset of type varbinary(max). For more information, see [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
      In the following example, the SSISPackages_ProjectDeployment project is deployed to the SSIS Packages folder on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. The binary data is read from the project file (SSISPackage_ProjectDeployment.ispac) and is stored in the *@ProjectBinary* parameter of type varbinary(max). The *@ProjectBinary* parameter value is assigned to the *@project_stream* parameter.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
     ```  
   
-2.  Call [catalog.create_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) to create an instance of the package execution, and optionally call [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) to set runtime parameter values.  
+2.  Call [catalog.create_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) to create an instance of the package execution, and optionally call [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) to set runtime parameter values.  
   
      In the following example, catalog.create_execution creates an instance of execution for package.dtsx that is contained in the SSISPackage_ProjectDeployment project. The project is located in the SSIS Packages folder. The execution_id returned by the stored procedure is used in the call to catalog.set_execution_parameter_value. This second stored procedure sets the LOGGING_LEVEL parameter to 3 (verbose logging) and sets a package parameter named Parameter1 to a value of 1.  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
     ```  
   
-3.  Call [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) to execute the package.  
+3.  Call [catalog.start_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) to execute the package.  
   
      In the following example, a call to catalog.start_execution is added to the Transact-SQL to start the package execution. The execution_id returned by the catalog.create_execution stored procedure is used.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
     ```  
   
 ## To deploy a project from server to server using stored procedures  
- You can deploy a project from server to server by using the [catalog.get_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md) and [catalog.deploy_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) stored procedures.  
+ You can deploy a project from server to server by using the [catalog.get_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-get-project-ssisdb-database) and [catalog.deploy_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) stored procedures.  
   
  You need to do the following before running the stored procedures.  
   

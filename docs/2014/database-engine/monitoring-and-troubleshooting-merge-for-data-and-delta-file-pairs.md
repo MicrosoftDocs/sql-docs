@@ -22,10 +22,10 @@ manager: "jhubbard"
   
 -   Compare the size of in-memory storage to overall size of storage. If the storage is dis-proportionately large, then it is likely that merge is not getting triggered. For information  
   
--   Look at the used space in data and delta files using [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) to see if merge is not getting triggered when it should.  
+-   Look at the used space in data and delta files using [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) to see if merge is not getting triggered when it should.  
   
 ## Performing a Manual Merge  
- You can use [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md) to perform a manual merge.  
+ You can use [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql) to perform a manual merge.  
   
  Use the following query to retrieve information about the data and delta files,  
   

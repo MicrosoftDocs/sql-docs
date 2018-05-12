@@ -154,6 +154,6 @@ To configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use so
 ## See Also  
  [Map TCP IP Ports to NUMA Nodes &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
  [affinity mask Server Configuration Option](affinity-mask-server-configuration-option.md)   
- [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)  
+ [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

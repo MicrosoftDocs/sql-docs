@@ -41,7 +41,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- Indexes created as the result of a PRIMARY KEY or UNIQUE constraint cannot be deleted by using this method. Instead, the constraint must be deleted. To remove the constraint and corresponding index, use [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) with the DROP CONSTRAINT clause in [!INCLUDE[tsql](../../includes/tsql-md.md)]. For more information, see [Delete Primary Keys](../tables/delete-primary-keys.md).  
+ Indexes created as the result of a PRIMARY KEY or UNIQUE constraint cannot be deleted by using this method. Instead, the constraint must be deleted. To remove the constraint and corresponding index, use [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) with the DROP CONSTRAINT clause in [!INCLUDE[tsql](../../includes/tsql-md.md)]. For more information, see [Delete Primary Keys](../tables/delete-primary-keys.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -102,6 +102,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md).  
+ For more information, see [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql).  
   
   

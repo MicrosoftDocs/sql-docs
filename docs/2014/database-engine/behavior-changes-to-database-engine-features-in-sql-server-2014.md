@@ -30,7 +30,7 @@ manager: "jhubbard"
 ### Metadata Discovery  
  Improvements in the [!INCLUDE[ssDE](../includes/ssde-md.md)] beginning with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] allow SQLDescribeCol to obtain more accurate descriptions of the expected results than those returned by SQLDescribeCol in previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
   
- The [SET FMTONLY](~/t-sql/statements/set-fmtonly-transact-sql.md) option for determining the format of a response without actually running the query is replaced with [sp_describe_first_result_set &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
+ The [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) option for determining the format of a response without actually running the query is replaced with [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### Changes to Behavior in Scripting a SQL Server Agent Task  
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], if you create a new job by copying the script from an existing job, the new job might inadvertently affect the existing job. To create a new job using the script from an existing job, manually delete the parameter *@schedule_uid* which is usually the last parameter of the section which creates the job schedule in the existing job. This will create a new independent schedule for the new job without affecting existing jobs.  
@@ -69,10 +69,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 -- returns GEOMETRYCOLLECTION EMPTY  
 ```  
   
- To determine whether a spatial object is empty, call the [STIsEmpty &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisempty-geometry-data-type.md) method.  
+ To determine whether a spatial object is empty, call the [STIsEmpty &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) method.  
   
 ### LOG Function Has New Optional Parameter  
- The `LOG` function now has an optional *base* parameter. For more information, see [LOG &#40;Transact-SQL&#41;](~/t-sql/functions/log-transact-sql.md).  
+ The `LOG` function now has an optional *base* parameter. For more information, see [LOG &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
   
 ### Statistics Computation during Partitioned Index Operations Has Changed  
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], statistics are not created by scanning all rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. After upgrading a database with partitioned indexes, you may notice a difference in the histogram data for these indexes. This change in behavior may not affect query performance. To obtain statistics on partitioned indexes by scanning all the rows in the table, use CREATE STATISTICS or UPDATE STATISTICS with the FULLSCAN clause.  
@@ -101,7 +101,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 ### DBCC CHECKIDENT Revised Message  
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the message returned by the DBCC CHECKIDENT command has changed only when it is used with RESEED *new_reseed_value*  to change current identity value. The new message is "Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator."  
   
- In earlier versions, the message is "Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator." The message is unchanged when DBCC CHECKIDENT is specified with NORESEED, without a second parameter, or without a reseed value. For more information, see [DBCC CHECKIDENT &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ In earlier versions, the message is "Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator." The message is unchanged when DBCC CHECKIDENT is specified with NORESEED, without a second parameter, or without a reseed value. For more information, see [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### Behavior of exist() function on XML datatype has changed  
  The behavior of the **exist()** function has changed when comparing an XML data type with a null value to 0 (zero). Consider the following example:  
@@ -127,6 +127,6 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
  [Breaking Changes to Database Engine Features in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
  [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
  [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
+ [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   

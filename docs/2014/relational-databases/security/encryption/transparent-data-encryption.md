@@ -108,19 +108,19 @@ GO
   
 |Command or function|Purpose|  
 |-------------------------|-------------|  
-|[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-database-encryption-key-transact-sql.md)|Creates a key that is used to encrypt a database.|  
-|[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-encryption-key-transact-sql.md)|Changes the key that is used to encrypt a database.|  
-|[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-transact-sql.md)|Removes the key that was used to encrypt a database.|  
-|[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)|Explains the `ALTER DATABASE` option that is used to enable TDE.|  
+|[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Creates a key that is used to encrypt a database.|  
+|[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Changes the key that is used to encrypt a database.|  
+|[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|Removes the key that was used to encrypt a database.|  
+|[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Explains the `ALTER DATABASE` option that is used to enable TDE.|  
   
 ## Catalog Views and Dynamic Management Views  
  The following table shows TDE catalog views and dynamic management views.  
   
 |Catalog view or dynamic management view|Purpose|  
 |---------------------------------------------|-------------|  
-|[sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Catalog view that displays database information.|  
-|[sys.certificates &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Catalog view that shows the certificates in a database.|  
-|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)|Dynamic management view that provides information about the encryption keys used in a database, and the state of encryption of a database.|  
+|[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Catalog view that displays database information.|  
+|[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Catalog view that shows the certificates in a database.|  
+|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Dynamic management view that provides information about the encryption keys used in a database, and the state of encryption of a database.|  
   
 ## Permissions  
  Each TDE feature and command has individual permission requirements, described in the tables shown earlier.  

@@ -109,8 +109,8 @@ GO
 ```  
   
 ## See Also  
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-procedure-transact-sql.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)   
+ [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Create a Stored Procedure](../stored-procedures/create-a-stored-procedure.md)   
  [Modify a Stored Procedure](../stored-procedures/modify-a-stored-procedure.md)   
  [Delete a Stored Procedure](../stored-procedures/delete-a-stored-procedure.md)   

@@ -64,7 +64,7 @@ manager: "mblythe"
   
  [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot Gallery](~/2014/books-online-for-sql-server-2014.md)  
+ [PowerPivot Gallery](/sql/2014/books-online-for-sql-server-2014)  
   
  [PowerPivot Data Access](power-pivot-data-access.md)  
   
@@ -81,7 +81,7 @@ manager: "mblythe"
   
  [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
- [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
+ [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
  [Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   

@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 4.  When finished, click **Close**.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends viewing the audit log by using the Log File Viewer. However, if you are creating an automated monitoring system, the information in the audit file can be read directly by using the [sys.fn_get_audit_file &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) function. Reading the file directly returns data in a slightly different (unprocessed) format. See **sys.fn_get_audit_file** for more information  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends viewing the audit log by using the Log File Viewer. However, if you are creating an automated monitoring system, the information in the audit file can be read directly by using the [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) function. Reading the file directly returns data in a slightly different (unprocessed) format. See **sys.fn_get_audit_file** for more information  
   
 ## See Also  
  [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)   

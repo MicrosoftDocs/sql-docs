@@ -23,7 +23,7 @@ manager: "jhubbard"
  Any interpreted query that references memory-optimized tables is considered a part of a cross-container transaction, whether executed from an explicit or implicit transaction or in auto-commit mode.  
   
 ##  <a name="isolation"></a> Isolation of Individual Operations  
- Each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction has an isolation level. The default isolation level is Read Committed. To use a different isolation level, you can set the isolation level using [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] transaction has an isolation level. The default isolation level is Read Committed. To use a different isolation level, you can set the isolation level using [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  It is often necessary to perform operations on memory-optimized tables at a different isolation level than operations on disk-based tables. In a transaction, it is possible to set a different isolation level for a collection of statements or for an individual read operation.  
   
@@ -63,7 +63,7 @@ commit
 ### Isolation Semantics for Individual Operations  
  A serializable transaction T is executed in complete isolation. It is as if every other transaction has either committed before T started, or is started after T committed. It becomes more complex when different operations in a transaction have different isolation levels.  
   
- The general semantics of the transaction isolation levels in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], along with the implications on locking, is explained in [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ The general semantics of the transaction isolation levels in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], along with the implications on locking, is explained in [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  For cross-container transactions where different operations may have different isolation levels, you need to understand the semantics of isolation of individual read operations. Write operations are always isolated. Writes in different transactions cannot impact each other.  
   

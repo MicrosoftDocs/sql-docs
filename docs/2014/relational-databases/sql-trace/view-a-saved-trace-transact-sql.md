@@ -50,7 +50,7 @@ manager: "jhubbard"
  ALTER TRACE on the server.  
   
 ## See Also  
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
  [View and Analyze Traces with SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)  
   
   

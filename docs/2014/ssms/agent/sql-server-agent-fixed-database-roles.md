@@ -130,9 +130,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)   
- [sp_update_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [sp_update_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_notify_operator &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)   
- [sp_purge_jobhistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)  
+ [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
+ [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
+ [sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
   
   

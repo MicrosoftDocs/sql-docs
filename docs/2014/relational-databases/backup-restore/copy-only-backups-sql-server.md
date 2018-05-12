@@ -36,7 +36,7 @@ manager: "jhubbard"
   
      The transaction log is never truncated after a copy-only backup.  
   
- Copy-only backups are recorded in the **is_copy_only** column of the [backupset](~/relational-databases/system-tables/backupset-transact-sql.md) table.  
+ Copy-only backups are recorded in the **is_copy_only** column of the [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) table.  
   
 ## To Create a Copy-Only Backup  
  You can create a copy-only backup by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
  **To view copy-only backups**  
   
--   [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)  
+-   [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)  
   
  **To set up and use the SQL Server PowerShell provider**  
   

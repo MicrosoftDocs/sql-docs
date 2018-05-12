@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## Installing Semantic Search  
   
 ###  <a name="HowToCheckInstalled"></a> How To: Check Whether Semantic Search Is Installed  
- Query the **IsFullTextInstalled** property of the [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md) metadata function.  
+ Query the **IsFullTextInstalled** property of the [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) metadata function.  
   
  A return value of 1 indicates that Full-Text Search and Semantic Search are installed; a return value of 0 indicates that they are not installed.  
   
@@ -42,7 +42,7 @@ GO
  Semantic Search has an additional external dependency that is called the semantic language statistics database. This database contains the statistical language models required by semantic search. A single semantic language statistics database contains the language models for all the languages that are supported for semantic indexing.  
   
 ###  <a name="HowToCheckDatabase"></a> How To: Check Whether the Semantic Language Statistics Database Is Installed  
- Query the catalog view [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Query the catalog view [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql).  
   
  If the semantic language statistics database is installed and registered for the instance, then the query results contain a single row of information about the database.  
   
@@ -73,7 +73,7 @@ GO
 >  When the semantic language statistics database is extracted, restricted permissions are assigned to the database file and log file in the default location in the file system. As a result, you may not have permission to attach the database if you leave it in the default location. If an error is raised when you try to attach the database, move the files, or check and fix file system permissions as appropriate.  
   
  **2. Attach the semantic language statistics database.**  
- Attach the database to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or by calling [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md) with the **FOR ATTACH** syntax. For more information, see [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md).  
+ Attach the database to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or by calling [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) with the **FOR ATTACH** syntax. For more information, see [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md).  
   
  By default, the name of the database is **semanticsdb**. You can optionally give the database a different name when you attach it. You have to provide this name when you register the database in the subsequent step.  
   
@@ -88,7 +88,7 @@ GO
  This code sample assumes that you have moved the database from its default location to a new location.  
   
  **3. Register the semantic language statistics database.**  
- Call the stored procedure [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) and provide the name that you gave to the database when you attached it.  
+ Call the stored procedure [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) and provide the name that you gave to the database when you attached it.  
   
 ```tsql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
@@ -97,7 +97,7 @@ GO
   
 ###  <a name="HowToUnregister"></a> How To: Unregister, Detach, and Remove the Semantic Language Statistics Database  
  **Unregister the semantic language statistics database.**  
- Call the stored procedure [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md). You do not have to provide the name of the database since an instance can have only one semantic language statistics database.  
+ Call the stored procedure [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). You do not have to provide the name of the database since an instance can have only one semantic language statistics database.  
   
 ```tsql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
@@ -105,7 +105,7 @@ GO
 ```  
   
  **Detach the semantic language statistics database.**  
- Call the stored procedure [sp_detach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) and provide the name of the database.  
+ Call the stored procedure [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql) and provide the name of the database.  
   
 ```tsql  
 USE master;  

@@ -30,7 +30,7 @@ manager: "jhubbard"
 ##  <a name="Top"></a> Before You Begin  
   
 ### Limitations and Restrictions  
- For a list of limitations and restrictions related to creating DML triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md).  
+ For a list of limitations and restrictions related to creating DML triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
 ###  <a name="Permissions"></a> Permissions  
  Requires ALTER permission on the table or view on which the trigger is being created.  

@@ -47,17 +47,17 @@ manager: "jhubbard"
 ### Supported Data Definition Language (DDL) statements  
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements and database engine stored procedures support SMB file shares:  
   
-1.  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
+1.  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
-2.  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
+2.  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-3.  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+3.  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
-4.  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)  
+4.  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)  
   
-5.  [sp_attach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
+5.  [sp_attach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
   
-6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
+6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
 ### Installation options  
   

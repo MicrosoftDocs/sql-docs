@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 ### To populate the NewOrg table  
   
-1.  Recursive queries forbid subqueries with aggregates. Instead, populate the **#Children** table with the following code, which uses the [ROW_NUMBER()](~/t-sql/functions/row-number-transact-sql.md) method to populate the **Num** column:  
+1.  Recursive queries forbid subqueries with aggregates. Instead, populate the **#Children** table with the following code, which uses the [ROW_NUMBER()](/sql/t-sql/functions/row-number-transact-sql) method to populate the **Num** column:  
   
     ```  
     INSERT #Children (EmployeeID, ManagerID, Num)  

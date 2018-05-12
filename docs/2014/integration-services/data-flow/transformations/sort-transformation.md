@@ -30,7 +30,7 @@ manager: "jhubbard"
  The Sort transformation includes a set of comparison options to define how the transformation handles the string data in a column. For more information, see [Comparing String Data](../comparing-string-data.md).  
   
 > [!NOTE]  
->  The Sort transformation does not sort GUIDs in the same order as the ORDER BY clause does in Transact-SQL. While the Sort transformation sorts GUIDs that start with 0-9 before GUIDs that start with A-F, the ORDER BY clause, as implemented in the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], sorts them differently. For more information, see [ORDER BY Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-order-by-clause-transact-sql.md).  
+>  The Sort transformation does not sort GUIDs in the same order as the ORDER BY clause does in Transact-SQL. While the Sort transformation sorts GUIDs that start with 0-9 before GUIDs that start with A-F, the ORDER BY clause, as implemented in the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], sorts them differently. For more information, see [ORDER BY Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql).  
   
  The Sort transformation can also remove duplicate rows as part of its sort. Duplicate rows are rows with the same sort key values. The sort key value is generated based on the string comparison options being used, which means that different literal strings may have the same sort key values. The transformation identifies rows in the input columns that have different values but the same sort key as duplicates.  
   

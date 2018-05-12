@@ -23,7 +23,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Suspect Data Page Event Class
-  The **Database Suspect Data Page** event class indicates when a page is added to the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) table in [msdb](../databases/msdb-database.md). Include this event class in traces that are monitoring the occurrence of suspect pages.  
+  The **Database Suspect Data Page** event class indicates when a page is added to the [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) table in [msdb](../databases/msdb-database.md). Include this event class in traces that are monitoring the occurrence of suspect pages.  
   
 > [!NOTE]  
 >  This event is issued asynchronously from the insertion of a corresponding row into the **suspect_pages** table. Therefore, a job listening on this event might not find the corresponding **suspect_pages** entry immediately.  
@@ -44,7 +44,7 @@ manager: "jhubbard"
 |**Error**|**int**|Type of error that was encountered . This value is the same as the **event_type** value for the page in the **suspect_pages** table.|31|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

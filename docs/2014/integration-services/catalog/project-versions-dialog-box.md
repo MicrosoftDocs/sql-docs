@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Project Versions Dialog Box
   Use the **Project Versions** dialog box to view versions of a project and to restore a previous version.  
   
- You can also view previous versions in the [catalog.object_versions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-object-versions-ssisdb-database.md) view, and use the [catalog.restore_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md) stored procedure to restore previous versions.  
+ You can also view previous versions in the [catalog.object_versions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-object-versions-ssisdb-database) view, and use the [catalog.restore_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database) stored procedure to restore previous versions.  
   
  **What do you want to do?**  
   

@@ -212,7 +212,7 @@ manager: "jhubbard"
  Select to grant this permission to the login. Clear to revoke this permission.  
   
  **With Grant**  
- Reflects the state of the WITH GRANT option for the listed permission. This box is read-only. To apply this permission, use the [GRANT](~/t-sql/statements/grant-transact-sql.md) statement.  
+ Reflects the state of the WITH GRANT option for the listed permission. This box is read-only. To apply this permission, use the [GRANT](/sql/t-sql/statements/grant-transact-sql) statement.  
   
  **Deny**  
  Select to deny this permission to the login. Clear to revoke this permission.  
@@ -274,7 +274,7 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
+ For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
 ##  <a name="FollowUp"></a> Follow Up: Steps to take after you create a login  
  After creating a login, the login can connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], but does not necessarily have sufficient permission to perform any useful work. The following list provides links to common login actions.  

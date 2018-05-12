@@ -49,7 +49,7 @@ manager: "jhubbard"
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
- For more information, see [sp_purge_jobhistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md).  
+ For more information, see [sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql).  
   
  Members of the **sysadmin** fixed server role can view the definition or history of any job, and can modify any job.  
   
@@ -65,6 +65,6 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |Describes how to change the properties of [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent jobs.|[Modify a Job](modify-a-job.md)|  
   
 ## See Also  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
+ [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
   
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The SecAudit package is used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit. None of the objects in the package are available through the Extended Events data definition language (DDL).  
   
- Packages are identified by a name, a GUID, and the binary module that contains the package. For more information, see [sys.dm_xe_packages &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md).  
+ Packages are identified by a name, a GUID, and the binary module that contains the package. For more information, see [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql).  
   
  A package can contain any or all of the following objects, which are discussed in greater detail later in this topic:  
   
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   type  
   
- For more information, see [sys.dm_xe_objects &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
+ For more information, see [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   
 ### Maps  
  A map table maps an internal value to a string, which enables a user to know what the value represents. Instead of only being able to obtain a numeric value, a user can get a meaningful description of the internal value. The following query shows how to obtain map values.  

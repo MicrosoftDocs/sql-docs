@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query. This example shows how to use [sp_dropdevice](~/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) to delete a backup device. Execute the first example to create the `mybackupdisk` backup device and the physical name `c:\backup\backup1.bak`. Execute `sp_dropdevice` to delete the `mybackupdisk` backup device. The `delfile` parameter deletes the physical name.  
+3.  Copy and paste the following example into the query. This example shows how to use [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) to delete a backup device. Execute the first example to create the `mybackupdisk` backup device and the physical name `c:\backup\backup1.bak`. Execute `sp_dropdevice` to delete the `mybackupdisk` backup device. The `delfile` parameter deletes the physical name.  
   
 ```tsql  
 --Define a backup device and physical name.   
@@ -83,9 +83,9 @@ GO
   
 ## See Also  
  [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
  Select the table to update, and then choose **OK**.\  
   
 > [!NOTE]  
->  If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
+>  If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
 ## See Also  
  [Create Update Queries &#40;Visual Database Tools&#41;](visual-database-tools.md)  

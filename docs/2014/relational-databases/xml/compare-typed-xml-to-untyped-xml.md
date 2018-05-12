@@ -61,7 +61,7 @@ manager: "jhubbard"
  Typed XML columns, parameters, and variables can store XML documents or content. However, you have to specify with a flag whether you are storing a document or content at the time of declaration. Additionally, you have to provide the collection of XML schemas. Specify DOCUMENT if each XML instance has exactly one top-level element. Otherwise, use CONTENT. The query compiler uses the DOCUMENT flag in type checks during query compilation to infer singleton top-level elements.  
   
 ## Creating Typed XML  
- Before you can create typed `xml` variables, parameters, or columns, you must first register the XML schema collection by using [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-xml-schema-collection-transact-sql.md). You can then associate the XML schema collection with variables, parameters, or columns of the `xml` data type.  
+ Before you can create typed `xml` variables, parameters, or columns, you must first register the XML schema collection by using [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). You can then associate the XML schema collection with variables, parameters, or columns of the `xml` data type.  
   
  In the following examples, a two-part naming convention is used for specifying the XML schema collection name. The first part is the schema name, and the second part is the XML schema collection name.  
   
@@ -93,7 +93,7 @@ AS
   
  Note the following about the XML schema collection:  
   
--   An XML schema collection is available only in the database in which it was registered by using [Creating an XML Schema Collection](~/t-sql/statements/create-xml-schema-collection-transact-sql.md).  
+-   An XML schema collection is available only in the database in which it was registered by using [Creating an XML Schema Collection](/sql/t-sql/statements/create-xml-schema-collection-transact-sql).  
   
 -   If you cast from a string to a typed `xml` data type, the parsing also performs validation and typing, based on the XML schema namespaces in the collection specified.  
   
@@ -155,8 +155,8 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## See Also  
  [Create Instances of XML Data](create-instances-of-xml-data.md)   
- [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40;XML DML&#41;](~/t-sql/xml/xml-data-modification-language-xml-dml.md)   
+ [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods)   
+ [XML Data Modification Language &#40;XML DML&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   
  [XML Data &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

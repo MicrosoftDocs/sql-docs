@@ -75,7 +75,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_help_jobhistory &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md).  
+ For more information, see [sp_help_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To view the job history log**  

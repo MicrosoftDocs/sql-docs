@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   Review the list of database features that are modified for partially contained databases. For more information, see [Modified Features &#40;Contained Database&#41;](modified-features-contained-database.md).  
   
--   Query [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) to find uncontained objects or features in the database. For more information, see.  
+-   Query [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) to find uncontained objects or features in the database. For more information, see.  
   
 -   Monitor the **database_uncontained_usage** XEvent to see when uncontained features are used.  
   
@@ -117,7 +117,7 @@ DEALLOCATE user_cursor ;
   
 ## See Also  
  [Contained Databases](contained-databases.md)   
- [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
- [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
+ [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql)   
+ [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)  
   
   

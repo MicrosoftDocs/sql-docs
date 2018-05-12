@@ -31,7 +31,7 @@ manager: "jhubbard"
  When this value is set, all user-defined data types or columns that are not explicitly defined as NOT NULL during a CREATE TABLE or ALTER TABLE statement default to allowing null values. This check box is selected by default.  
   
  **SET IMPLICIT_TRANSACTIONS**  
- When this check box is selected, SET IMPLICIT_TRANSACTIONS sets the connection into implicit transaction mode. When this check box is cleared, it returns the connection to autocommit transaction mode. To review the statements that start an implicit transaction when selected, see [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](~/t-sql/statements/set-implicit-transactions-transact-sql.md). This check box is cleared by default.  
+ When this check box is selected, SET IMPLICIT_TRANSACTIONS sets the connection into implicit transaction mode. When this check box is cleared, it returns the connection to autocommit transaction mode. To review the statements that start an implicit transaction when selected, see [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql). This check box is cleared by default.  
   
  **SET CURSOR_CLOSE_ON_COMMIT**  
  When this check box is selected, any open cursors are closed automatically (in compliance with ISO) when a transaction is committed. When this value is set to OFF, cursors remain open across transaction boundaries, closing only when the connection is closed or when they are explicitly closed. This check box is cleared by default.  

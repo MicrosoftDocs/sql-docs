@@ -40,7 +40,7 @@ manager: "jhubbard"
 |Cross-database|Cross-database queries<br /><br /> Cross-database transactions<br /><br /> Linked servers|  
   
 ## Table Hints  
- For more information about table hints, see. [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md). SNAPSHOT isolation was added to support [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ For more information about table hints, see. [Table Hints &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). SNAPSHOT isolation was added to support [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
  The following table hints are not supported when accessing a memory-optimized table using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- When accessing a memory-optimized table from an explicit or implicit transaction using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] you must include either an isolation level table hint such as SNAPSHOT, REPEATABLEREAD, or SERIALIZABLE, or you can use MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. For more information, see [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](memory-optimized-tables.md) and [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
+ When accessing a memory-optimized table from an explicit or implicit transaction using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] you must include either an isolation level table hint such as SNAPSHOT, REPEATABLEREAD, or SERIALIZABLE, or you can use MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. For more information, see [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](memory-optimized-tables.md) and [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  An isolation level table hint is not required for memory-optimized tables accessed by queries running in auto-commit mode.  

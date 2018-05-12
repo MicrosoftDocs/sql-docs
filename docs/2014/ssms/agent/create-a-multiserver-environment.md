@@ -63,7 +63,7 @@ manager: "jhubbard"
 |Describes how to enlist a target server into a master server.|[Enlist a Target Server to a Master Server](enlist-a-target-server-to-a-master-server.md)|  
 |Describes how to defect a target server from a master server.|[Defect a Target Server from a Master Server](defect-a-target-server-from-a-master-server.md)|  
 |Describes how to defect multiple target servers from a master server.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
-|Describes how to check the status of a target server.|[sp_help_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)|  
+|Describes how to check the status of a target server.|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## See Also  
  [Troubleshoot Multiserver Jobs That Use Proxies](troubleshoot-multiserver-jobs-that-use-proxies.md)  

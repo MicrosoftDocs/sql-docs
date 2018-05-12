@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   Making a schema change on a published table.  
   
--   Performing on-demand script execution with [sp_addscriptexec &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
+-   Performing on-demand script execution with [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql).  
   
 -   Changing any article property.  
   

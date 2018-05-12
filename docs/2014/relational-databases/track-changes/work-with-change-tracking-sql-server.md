@@ -259,7 +259,7 @@ BEGIN TRAN
 COMMIT TRAN  
 ```  
   
- For more information about snapshot transactions, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ For more information about snapshot transactions, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
 #### Alternatives to Using Snapshot Isolation  
  There are alternatives to using snapshot isolation, but they require more work to make sure all application requirements are met. To make sure the *last_synchronization_version* is valid and data is not removed by the cleanup process before changes are obtained, do the following:  
@@ -434,9 +434,9 @@ COMMIT TRAN
  [About Change Tracking &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
  [Manage Change Tracking &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [Enable and Disable Change Tracking &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/changetable-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](~/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](~/relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](~/relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
+ [CHANGETABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
+ [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/with-change-tracking-context-transact-sql)  
   
   

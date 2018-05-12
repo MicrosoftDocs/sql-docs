@@ -35,10 +35,10 @@ manager: "jhubbard"
   
 4.  Bulk copy the data for the new table manually at all nodes by using the [bcp utility](../../../tools/bcp-utility.md).  
   
-5.  Execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) to create the new article at each node in the topology. For more information, see [Define an Article](../publish/define-an-article.md).  
+5.  Execute [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) to create the new article at each node in the topology. For more information, see [Define an Article](../publish/define-an-article.md).  
   
     > [!NOTE]  
-    >  After [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) is executed, replication automatically adds the article to the subscriptions in the topology.  
+    >  After [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) is executed, replication automatically adds the article to the subscriptions in the topology.  
   
 6.  Restart the Distribution Agents at each node in the topology.  
   

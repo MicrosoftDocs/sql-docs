@@ -167,7 +167,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   Execute any fully durable transaction that alters the same database. This forces a flush of the log records of all preceding committed delayed durability transactions to disk.  
   
--   Execute the system stored procedure `sp_flush_log`. This procedure forces a flush of the log records of all preceding committed delayed durable transactions to disk. For more information see [sys.sp_flush_log &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md).  
+-   Execute the system stored procedure `sp_flush_log`. This procedure forces a flush of the log records of all preceding committed delayed durable transactions to disk. For more information see [sys.sp_flush_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql).  
   
 ##  <a name="bkmk_OtherSQLFeatures"></a> Delayed durability and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features  
  **Change tracking and change data capture**  

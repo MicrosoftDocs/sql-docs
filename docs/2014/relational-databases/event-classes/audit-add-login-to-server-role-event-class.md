@@ -57,8 +57,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_addsrvrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)   
+ [sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)  
   
   

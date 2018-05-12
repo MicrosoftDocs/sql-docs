@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   To prevent loss of extended characters during conversion, either use Unicode character format or specify a code page.  
   
--   Any `sql_variant` data that is stored in a character-format file is stored without metadata. Each data value is converted to `char` format, according to the rules of implicit data conversion. When imported into a `sql_variant` column, the data is imported as `char`. When imported into a column with a data type other than `sql_variant`, the data is converted from `char` by using implicit conversion. For more information about data conversion, see [Data Type Conversion &#40;Database Engine&#41;](~/t-sql/data-types/data-type-conversion-database-engine.md).  
+-   Any `sql_variant` data that is stored in a character-format file is stored without metadata. Each data value is converted to `char` format, according to the rules of implicit data conversion. When imported into a `sql_variant` column, the data is imported as `char`. When imported into a column with a data type other than `sql_variant`, the data is converted from `char` by using implicit conversion. For more information about data conversion, see [Data Type Conversion &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 -   The **bcp** utility exports `money` values as character-format data files with four digits after the decimal point and without any digit-grouping symbols such as comma separators. For example, a `money` column that contains the value 1,234,567.123456 is bulk exported to a data file as the character string 1234567.1235.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  <sup>1</sup> To load character (**-c**) data to a format compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients, use the **-V** switch. For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
- For more information, see [bcp Utility](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md), or [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
+ For more information, see [bcp Utility](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), or [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
 >  Alternatively, you can specify formatting on a per-field basis in a format file. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
@@ -136,9 +136,9 @@ GO
   
 ## See Also  
  [bcp Utility](../../tools/bcp-utility.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [Import Native and Character Format Data from Earlier Versions of SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
   

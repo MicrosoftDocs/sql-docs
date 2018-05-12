@@ -51,12 +51,12 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Automatic**|The full-text index is automatically updated when the data in the underlying table is modified, added, or deleted.|  
-|**Manual**|When data is modified, added, or deleted in the indexed data, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tracks the changes. When **Manual** change tracking is in effect, the index is not automatically updated with these changes. Instead, an administrator can apply the changes manually by using an [ALTER FULLTEXT INDEX ... START UPDATE POPULATION](~/t-sql/statements/alter-fulltext-index-transact-sql.md) statement.|  
+|**Manual**|When data is modified, added, or deleted in the indexed data, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tracks the changes. When **Manual** change tracking is in effect, the index is not automatically updated with these changes. Instead, an administrator can apply the changes manually by using an [ALTER FULLTEXT INDEX ... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) statement.|  
 |**Do not track change**|With this option in effect, changes to the indexed data in the catalog are not recorded. An administrator must build the index by using ALTER FULLTEXT INDEX with either FULL POPULATION or INCREMENTAL POPULATION.|  
   
 ## See Also  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
   

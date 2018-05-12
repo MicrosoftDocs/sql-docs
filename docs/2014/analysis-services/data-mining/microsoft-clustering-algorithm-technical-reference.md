@@ -73,7 +73,7 @@ manager: "mblythe"
  1 - P(data point, cluster)  
   
 > [!NOTE]  
->  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm does not expose the distance function used in computing k-means, and measures of distance are not available in the completed model. However, you can use a prediction function to return a value that corresponds to distance, where distance is computed as the probability of a data point belonging to the cluster. For more information, see [ClusterProbability &#40;DMX&#41;](~/dmx/clusterprobability-dmx.md).  
+>  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm does not expose the distance function used in computing k-means, and measures of distance are not available in the completed model. However, you can use a prediction function to return a value that corresponds to distance, where distance is computed as the probability of a data point belonging to the cluster. For more information, see [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx).  
   
  The k-means algorithm provides two methods of sampling the data set: non-scalable K-means, which loads the entire data set and makes one clustering pass, or scalable k-means, where the algorithm uses the first 50,000 cases and reads more cases only if it needs more data to achieve a good fit of model to data.  
   

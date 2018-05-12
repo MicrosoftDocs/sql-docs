@@ -167,7 +167,7 @@ manager: "jhubbard"
   
 8.  On the **Directory Access** page:  
   
-    1.  Click **Add**, and then in the **Select Users or Groups** dialog box, add the accounts under which Subscribers will make connections to IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* parameter.  
+    1.  Click **Add**, and then in the **Select Users or Groups** dialog box, add the accounts under which Subscribers will make connections to IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* parameter.  
   
 9. On the **Snapshot Share Access** page, enter the snapshot share. The appropriate permissions are set on this share so that Subscribers can access the snapshot files. For more information about permissions for the share, see [Secure the Snapshot Folder](security/secure-the-snapshot-folder.md).  
   

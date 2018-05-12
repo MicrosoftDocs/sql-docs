@@ -233,7 +233,7 @@ manager: "jhubbard"
   
 1.  Connect to the primary replica.  
   
-2.  Query the `last_commit_lsn` (LSN of the last committed transaction) and `last_commit_time` (time of the last commit) columns of the [sys.dm_hadr_database_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) dynamic management view.  
+2.  Query the `last_commit_lsn` (LSN of the last committed transaction) and `last_commit_time` (time of the last commit) columns of the [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) dynamic management view.  
   
 3.  Compare the values returned for each primary database and each of its secondary databases. The difference between their Last Commit LSNs indicate the amount of lag.  
   

@@ -83,7 +83,7 @@ GO
  Back up the **master** database after you rename any database.  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Database Identifiers](database-identifiers.md)  
   
   

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Folder Properties Dialog Box
-  A folder contains projects and environments in the `SSISDB` catalog. Each folder defines permissions that apply to the contents of the folder. For more information about [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permissions, see [catalog.grant_permission &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
+  A folder contains projects and environments in the `SSISDB` catalog. Each folder defines permissions that apply to the contents of the folder. For more information about [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permissions, see [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
   
 ## To Set Folder Description and Permissions  
   
@@ -36,6 +36,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Server](integration-services-ssis-server-and-catalog.md)   
- [catalog.grant_permission &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
+ [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
   
   

@@ -72,20 +72,20 @@ manager: "jhubbard"
   
 1.  Stop all replication-related jobs. For a list of job names, see the "Agent Security Under SQL Server Agent" section of [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
-2.  At each Subscriber on the subscription database, execute [sp_removedbreplication](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove replication objects from the database. This stored procedure will not remove replication jobs at the Distributor.  
+2.  At each Subscriber on the subscription database, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) to remove replication objects from the database. This stored procedure will not remove replication jobs at the Distributor.  
   
-3.  At the Publisher on the publication database, execute [sp_removedbreplication](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove replication objects from the database.  
+3.  At the Publisher on the publication database, execute [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) to remove replication objects from the database.  
   
-4.  If the Publisher uses a remote Distributor, execute [sp_dropdistributor](~/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md).  
+4.  If the Publisher uses a remote Distributor, execute [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql).  
   
-5.  At the Distributor, execute [sp_dropdistpublisher](~/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md). This stored procedure should be run once for each Publisher registered at the Distributor.  
+5.  At the Distributor, execute [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql). This stored procedure should be run once for each Publisher registered at the Distributor.  
   
-6.  At the Distributor, execute [sp_dropdistributiondb](~/relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) to delete the distribution database. This stored procedure should be run once for each distribution database at the Distributor. This also removes any Queue Reader Agent jobs associated with the distribution database.  
+6.  At the Distributor, execute [sp_dropdistributiondb](/sql/relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql) to delete the distribution database. This stored procedure should be run once for each distribution database at the Distributor. This also removes any Queue Reader Agent jobs associated with the distribution database.  
   
-7.  At the Distributor, execute [sp_dropdistributor](~/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) to remove the Distributor designation from the server.  
+7.  At the Distributor, execute [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) to remove the Distributor designation from the server.  
   
     > [!NOTE]  
-    >  If all replication publishing and distribution objects are not dropped before you execute [sp_dropdistpublisher](~/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) and [sp_dropdistributor](~/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md), these procedures will return an error. To drop all replication-related objects when a Publisher or Distributor is dropped, the **@no_checks** parameter must be set to **1**. If a Publisher or Distributor is offline or unreachable, the **@ignore_distributor** parameter can be set to **1** so that they can be dropped; however, any publishing and distributing objects left behind must be removed manually.  
+    >  If all replication publishing and distribution objects are not dropped before you execute [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) and [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), these procedures will return an error. To drop all replication-related objects when a Publisher or Distributor is dropped, the **@no_checks** parameter must be set to **1**. If a Publisher or Distributor is offline or unreachable, the **@ignore_distributor** parameter can be set to **1** so that they can be dropped; however, any publishing and distributing objects left behind must be removed manually.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example script removes replication objects from the subscription database.  

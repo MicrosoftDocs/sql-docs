@@ -31,7 +31,7 @@ manager: "mblythe"
   
  Data members are available only to dimensions with parent-child hierarchies, and are visible only if allowed by the parent attribute. You can use Dimension Designer to control the visibility of data members. To expose data members, set the `MembersWithData` property for the parent attribute to `NonLeafDataVisible.` To hide data members contained by the parent attribute, set the `MembersWithData` property on the parent attribute to `NonLeafDataHidden`.  
   
- This setting does not override the normal aggregation behavior for nonleaf members; the data member is always included as a child member for the purposes of aggregation. However, a custom rollup formula can be used to override the normal aggregation behavior. The Multidimensional Expressions (MDX) [DataMember](~/mdx/datamember-mdx.md) function gives you the ability to access the value of the associated data member regardless of the value of the `MembersWithData` property.  
+ This setting does not override the normal aggregation behavior for nonleaf members; the data member is always included as a child member for the purposes of aggregation. However, a custom rollup formula can be used to override the normal aggregation behavior. The Multidimensional Expressions (MDX) [DataMember](/sql/mdx/datamember-mdx) function gives you the ability to access the value of the associated data member regardless of the value of the `MembersWithData` property.  
   
  The `MembersWithDataCaption` property of the parent attribute provides [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] with the naming template used to generate member names for data members.  
   

@@ -72,7 +72,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  For information about how to respond to a full transaction log, see [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
- Log truncation can be delayed by a variety of factors. You can discover what, if anything, is preventing log truncation by querying the **log_reuse_wait** and **log_reuse_wait_desc** columns of the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. The following table describes the values of these columns.  
+ Log truncation can be delayed by a variety of factors. You can discover what, if anything, is preventing log truncation by querying the **log_reuse_wait** and **log_reuse_wait_desc** columns of the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view. The following table describes the values of these columns.  
   
 |log_reuse_wait value|log_reuse_wait_desc value|Description|  
 |----------------------------|----------------------------------|-----------------|  
@@ -104,28 +104,28 @@ manager: "jhubbard"
   
  The following operations, which are fully logged under the full recovery model, are minimally logged under the simple and bulk-logged recovery model:  
   
--   Bulk import operations ([bcp](../../tools/bcp-utility.md), [BULK INSERT](~/t-sql/statements/bulk-insert-transact-sql.md), and [INSERT... SELECT](~/t-sql/statements/insert-transact-sql.md)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Bulk import operations ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql), and [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  When transactional replication is enabled, BULK INSERT operations are fully logged even under the Bulk Logged recovery model.  
   
--   SELECT [INTO](~/t-sql/queries/select-into-clause-transact-sql.md) operations.  
+-   SELECT [INTO](/sql/t-sql/queries/select-into-clause-transact-sql) operations.  
   
     > [!NOTE]  
     >  When transactional replication is enabled, SELECT INTO operations are fully logged even under the Bulk Logged recovery model.  
   
--   Partial updates to large value data types, using the .WRITE clause in the [UPDATE](~/t-sql/queries/update-transact-sql.md) statement when inserting or appending new data. Note that minimal logging is not used when existing values are updated. For more information about large value data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
+-   Partial updates to large value data types, using the .WRITE clause in the [UPDATE](/sql/t-sql/queries/update-transact-sql) statement when inserting or appending new data. Note that minimal logging is not used when existing values are updated. For more information about large value data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
--   [WRITETEXT](~/t-sql/queries/writetext-transact-sql.md) and [UPDATETEXT](~/t-sql/queries/updatetext-transact-sql.md) statements when inserting or appending new data into the `text`, `ntext`, and `image` data type columns. Note that minimal logging is not used when existing values are updated.  
+-   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) and [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) statements when inserting or appending new data into the `text`, `ntext`, and `image` data type columns. Note that minimal logging is not used when existing values are updated.  
   
     > [!NOTE]  
     >  The WRITETEXT and UPDATETEXT statements are deprecated, so you should avoid using them in new applications.  
   
 -   If the database is set to the simple or bulk-logged recovery model, some index DDL operations are minimally logged whether the operation is executed offline or online. The minimally logged index operations are as follows:  
   
-    -   [CREATE INDEX](~/t-sql/statements/create-index-transact-sql.md) operations (including indexed views).  
+    -   [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) operations (including indexed views).  
   
-    -   [ALTER INDEX](~/t-sql/statements/alter-index-transact-sql.md) REBUILD or DBCC DBREINDEX operations.  
+    -   [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql) REBUILD or DBCC DBREINDEX operations.  
   
         > [!NOTE]  
         >  The DBCC DBREINDEX statement is deprecated so you should avoid using it in new applications.  
@@ -133,7 +133,7 @@ manager: "jhubbard"
     -   DROP INDEX new heap rebuild (if applicable).  
   
         > [!NOTE]  
-        >  Index page deallocation during a [DROP INDEX](~/t-sql/statements/drop-index-transact-sql.md) operation is always fully logged.  
+        >  Index page deallocation during a [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) operation is always fully logged.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  `Managing the transaction log`  

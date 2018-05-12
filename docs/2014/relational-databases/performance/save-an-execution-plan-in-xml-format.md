@@ -90,7 +90,7 @@ manager: "jhubbard"
      As an alternative, in Windows Explorer, double-click a file with extension **.sqlplan**. The plan opens in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## See Also  
- [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](~/t-sql/statements/set-showplan-xml-transact-sql.md)   
- [SET STATISTICS XML &#40;Transact-SQL&#41;](~/t-sql/statements/set-statistics-xml-transact-sql.md)  
+ [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
+ [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

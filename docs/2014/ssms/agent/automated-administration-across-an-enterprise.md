@@ -80,18 +80,18 @@ manager: "jhubbard"
  Contains information about how automated administration in a multiserver environment takes advantage of the self-tuning features of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## See Also  
- [SQL Server Database Engine Backward Compatibility](../../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Register Servers](../register-servers/register-servers.md)   
- [sp_add_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_help_downloadlist &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
- [sp_help_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
- [sp_help_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
- [sp_resync_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
- [sp_update_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo.sysjobservers &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
- [sys.syslogins &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)   
- [dbo.systargetservers &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
+ [sp_delete_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
+ [sp_delete_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
+ [sp_help_downloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
+ [sp_help_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
+ [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
+ [sp_resync_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
+ [sp_update_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
+ [dbo.sysjobservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo.systargetservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

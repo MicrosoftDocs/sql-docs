@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Signing Stored Procedures with a Certificate | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -60,10 +60,10 @@ FOR LOGIN TestCreditRatingUser;
 GO  
 ```  
   
- For more information on the CREATE USER statement, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md). For more information on the CREATE LOGIN statement, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
+ For more information on the CREATE USER statement, see [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). For more information on the CREATE LOGIN statement, see [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
 ## 2. Create a Certificate  
- You can create certificates in the server using the master database as the context, using a user database, or both. There are multiple options for securing the certificate. For more information on certificates, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md).  
+ You can create certificates in the server using the master database as the context, using a user database, or both. There are multiple options for securing the certificate. For more information on certificates, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
   
  Run this code to create a database certificate and secure it using a password.  
   
@@ -109,7 +109,7 @@ GO
   
  For more information on stored procedures, see [Stored Procedures &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md).  
   
- For more information on signing stored procedures, see [ADD SIGNATURE &#40;Transact-SQL&#41;](~\t-sql\statements\add-signature-transact-sql.md).  
+ For more information on signing stored procedures, see [ADD SIGNATURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/add-signature-transact-sql).  
   
 ## 4. Create a Certificate Account Using the Certificate  
  Run this code to create a database user (`TestCreditRatingcertificateAccount`) from the certificate. This account has no server login, and will ultimately control access to the underlying tables.  
@@ -137,7 +137,7 @@ GRANT EXECUTE
 GO  
 ```  
   
- For more information on granting permissions to objects, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md).  
+ For more information on granting permissions to objects, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 ## 6. Display the Access Context  
  To display the rights associated with the stored procedure access, run the following code to grant the rights to run the stored procedure to the `TestCreditRatingUser` user.  
@@ -188,7 +188,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
- For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#41;](~/t-sql/statements/revert-transact-sql.md).  
+ For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
 ##  <a name="CompleteExample"></a> Complete Example  
  This section displays the complete example code.  

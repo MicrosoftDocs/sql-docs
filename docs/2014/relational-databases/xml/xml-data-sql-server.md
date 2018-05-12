@@ -36,9 +36,9 @@ manager: "jhubbard"
  [XML Indexes &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
  [XML Schema Collections &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
- [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md)  
+ [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)  
   
 ## Related Content  
  [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
- [XQuery Language Reference &#40;SQL Server&#41;](~/xquery/xquery-language-reference-sql-server.md)  
+ [XQuery Language Reference &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)  
   

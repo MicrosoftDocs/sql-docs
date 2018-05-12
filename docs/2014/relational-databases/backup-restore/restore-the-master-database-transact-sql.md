@@ -26,7 +26,7 @@ manager: "jhubbard"
   
      For information about how to specify the single-user startup parameter (**-m**), see [Configure Server Startup Options &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
-2.  To restore a full database backup of **master**, use the following [RESTORE DATABASE](~/t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
+2.  To restore a full database backup of **master**, use the following [RESTORE DATABASE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
      `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
  [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
  [SQL Server Configuration Manager](../sql-server-configuration-manager.md)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
   
   

@@ -29,7 +29,7 @@ ALTER ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY does not disrupt currently running processes that are using the assembly; the processes continue executing with the unaltered assembly. ALTER ASSEMBLY cannot be used to change the signatures of common language runtime (CLR) functions, aggregate functions, stored procedures, and triggers. New public methods can be added to the assembly, private methods can be modified in any way, and public methods can be modified as long as signatures or attributes are not changed. Fields that are contained within a native-serialized user-defined type, including data members or base classes, cannot be changed by using ALTER ASSEMBLY. All other changes are unsupported. For more information, see [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md).  
+ ALTER ASSEMBLY does not disrupt currently running processes that are using the assembly; the processes continue executing with the unaltered assembly. ALTER ASSEMBLY cannot be used to change the signatures of common language runtime (CLR) functions, aggregate functions, stored procedures, and triggers. New public methods can be added to the assembly, private methods can be modified in any way, and public methods can be modified as long as signatures or attributes are not changed. Fields that are contained within a native-serialized user-defined type, including data members or base classes, cannot be changed by using ALTER ASSEMBLY. All other changes are unsupported. For more information, see [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
   
 ## Changing the Permission Set of an Assembly  
  The permission set of an assembly can also be changed using the ALTER ASSEMBLY statement. The following statement changes the permission set of the SQLCLRTest assembly to `EXTERNAL_ACCESS`.  
@@ -54,6 +54,6 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
  [Managing CLR Integration Assemblies](managing-clr-integration-assemblies.md)   
  [Creating an Assembly](creating-an-assembly.md)   
  [Dropping an Assembly](dropping-an-assembly.md)   
- [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md)  
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
   

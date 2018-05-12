@@ -24,7 +24,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Limit Search Results with RANK
-  The [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) functions return a column named RANK that contains ordinal values from 0 through 1000 (rank values). These values are used to rank the rows returned according to how well they match the selection criteria. The rank values indicate only a relative order of relevance of the rows in the result set, with a lower value indicating lower relevance. The actual values are unimportant and typically differ each time the query is run.  
+  The [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) and [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) functions return a column named RANK that contains ordinal values from 0 through 1000 (rank values). These values are used to rank the rows returned according to how well they match the selection criteria. The rank values indicate only a relative order of relevance of the rows in the result set, with a lower value indicating lower relevance. The actual values are unimportant and typically differ each time the query is run.  
   
 > [!NOTE]  
 >  The CONTAINS and FREETEXT predicates do not return any rank values.  
@@ -152,7 +152,7 @@ GO
   
   
 ### Ranking of CONTAINSTABLE  
- [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md) ranking uses the following algorithm:  
+ [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) ranking uses the following algorithm:  
   
 ```  
 StatisticalWeight = Log2( ( 2 + IndexedRowCount ) / KeyRowCount )  
@@ -182,7 +182,7 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
   
   
 ### Ranking of FREETEXTTABLE  
- [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) ranking is based on the OKAPI BM25 ranking formula. FREETEXTTABLE queries will add words to the query via inflectional generation (inflected forms of the original query words); these words are treated as separate words with no special relationship to the words from which they were generated. Synonyms generated from the Thesaurus feature are treated as separate, equally weighted terms. Each word in the query contributes to the rank.  
+ [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) ranking is based on the OKAPI BM25 ranking formula. FREETEXTTABLE queries will add words to the query via inflectional generation (inflected forms of the original query words); these words are treated as separate words with no special relationship to the words from which they were generated. Synonyms generated from the Thesaurus feature are treated as separate, equally weighted terms. Each word in the query contributes to the rank.  
   
 ```  
 Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  

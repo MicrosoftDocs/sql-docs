@@ -131,7 +131,7 @@ manager: "mblythe"
   
 -   String data type comparisons are: **is**, **is not**, and **contains**  
   
- When you create a rule, you specify whether to use to use a value or field in the comparison by choosing **Value Entry Mode** or **Field Selection Mode**. If you choose **Value Entry Mode**, you provide a list of values to compare to. A comparison that includes multiple OR clauses is very similar to the IN logical comparison in [!INCLUDE[tsql](../includes/tsql-md.md)], which is a list of values to test for a match. For more information, see [IN &#40;Transact-SQL&#41;](~/t-sql/language-elements/in-transact-sql.md).  
+ When you create a rule, you specify whether to use to use a value or field in the comparison by choosing **Value Entry Mode** or **Field Selection Mode**. If you choose **Value Entry Mode**, you provide a list of values to compare to. A comparison that includes multiple OR clauses is very similar to the IN logical comparison in [!INCLUDE[tsql](../includes/tsql-md.md)], which is a list of values to test for a match. For more information, see [IN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/in-transact-sql).  
   
  If you choose **Field Selection Mode**, the comparison is between two fields, row by row. The two fields must have compatible data types (for example, two numeric fields) or the comparison is not valid. A list of fields displays automatically when you choose **Field Selection Mode**.  
   

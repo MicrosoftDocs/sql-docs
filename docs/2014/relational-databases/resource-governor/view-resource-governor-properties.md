@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  If the create or reconfigure operation for the resource pool or workload group fails, a summary error message appears below the title of the property page. To see a detailed error message, click the down arrow on the error message.  
   
- You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration](~/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) dynamic management view to get the current status of is_configuration_pending.  
+ You can determine whether there is a configuration pending by querying the [sys.dm_resource_governor_configuration](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) dynamic management view to get the current status of is_configuration_pending.  
   
 ###  <a name="Permissions"></a> Permissions  
  Viewing resource governor properties requires VIEW SERVER STATER permission. The resource governor configuration tasks require CONTROL SERVER permission.  
@@ -88,7 +88,7 @@ manager: "jhubbard"
  **Maximum Memory %**  
  Specify the total server memory that can be used by requests in this resource pool. Range is 0 to 100. The default setting is 100.  
   
- For more information, see [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/create-resource-pool-transact-sql.md).  
+ For more information, see [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  **Workload groups for resource pool**  
  Create or change the workload group configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default groups. Select a group to work with by clicking the first column in the row for the pool. To create a new workload group, click the row that is prefixed by the asterisk (**\***).  
@@ -114,14 +114,14 @@ manager: "jhubbard"
  **Degree of Parallelism**  
  Specify the maximum degree of parallelism (DOP) for parallel requests. Range is 0 to 64.  
   
- For more information, see [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-workload-group-transact-sql.md).  
+ For more information, see [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql).  
   
 ## View Resource Governor Properties by Using Transact-SQL  
  **View resource governor properties by using Transact-SQL**  
   
-1.  To view the definitions of resource governor entities, use the [Resource Governor Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
+1.  To view the definitions of resource governor entities, use the [Resource Governor Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql).  
   
-2.  To view the current configuration of resource governor entities, use the [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
+2.  To view the current configuration of resource governor entities, use the [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql).  
   
 ## See Also  
  [Resource Governor](resource-governor.md)   

@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Collection](data-collection.md)   
- [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
+ [Data Collector Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)  
   
   

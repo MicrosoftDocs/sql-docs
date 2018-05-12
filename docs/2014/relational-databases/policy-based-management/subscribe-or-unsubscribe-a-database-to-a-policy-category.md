@@ -93,7 +93,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md).  
+ For more information, see [sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql).  
   
 #### To unsubscribe a database to a policy category  
   
@@ -110,6 +110,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md).  
+ For more information, see [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql).  
   
   

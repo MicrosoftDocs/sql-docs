@@ -87,6 +87,6 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [DROP TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-table-transact-sql.md)  
+ For more information, see [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)  
   
   

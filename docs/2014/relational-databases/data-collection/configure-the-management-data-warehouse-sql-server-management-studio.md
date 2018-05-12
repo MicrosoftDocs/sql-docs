@@ -70,7 +70,7 @@ manager: "jhubbard"
  Use this page to select a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and management data warehouse. The management data warehouse is a relational database that will store collected data.  
   
 > [!NOTE]  
->  You must have the appropriate level of permissions in order to create the management data warehouse on the server. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md). You also must have the appropriate level of permissions to create logins for management data warehouse roles.  
+>  You must have the appropriate level of permissions in order to create the management data warehouse on the server. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql). You also must have the appropriate level of permissions to create logins for management data warehouse roles.  
   
  **Server name**  
  Specifies the name of the server that will host the management data warehouse.  
@@ -132,8 +132,8 @@ manager: "jhubbard"
  Close the wizard.  
   
 ## See Also  
- [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
- [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [Data Collection](data-collection.md)   
  [Manage Data Collection](manage-data-collection.md)  
   

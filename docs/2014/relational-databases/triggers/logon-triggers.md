@@ -30,7 +30,7 @@ manager: "jhubbard"
  Note that the LOGON event corresponds to the AUDIT_LOGIN SQL Trace event, which can be used in [Event Notifications](../service-broker/event-notifications.md). The primary difference between triggers and event notifications is that triggers are raised synchronously with events, whereas event notifications are asynchronous. This means, for example, that if you want to stop a session from being established, you must use a logon trigger. An event notification on an AUDIT_LOGIN event cannot be used for this purpose.  
   
 ## Specifying First and Last Trigger  
- Multiple triggers can be defined on the LOGON event. Any one of these triggers can be designated the first or last trigger to be fired on an event by using the [sp_settriggerorder](~/relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md) system stored procedure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not guarantee the execution order of the remaining triggers.  
+ Multiple triggers can be defined on the LOGON event. Any one of these triggers can be designated the first or last trigger to be fired on an event by using the [sp_settriggerorder](/sql/relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql) system stored procedure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not guarantee the execution order of the remaining triggers.  
   
 ## Managing Transactions  
  Before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fires a logon trigger, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an implicit transaction that is independent from any user transaction. Therefore, when the first logon trigger starts firing, the transaction count is 1. After all the logon triggers finish executing, the transaction commits. As with other types of triggers, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error if a logon trigger finishes execution with a transaction count of 0. The ROLLBACK TRANSACTION statement resets the transaction count to 0, even if the statement is issued inside a nested transaction. COMMIT TRANSACTION might decrement the transaction count to 0. Therefore, we advise against issuing COMMIT TRANSACTION statements inside logon triggers.  
@@ -54,10 +54,10 @@ manager: "jhubbard"
   
 |Task|Topic|  
 |----------|-----------|  
-|Describes how to create logon triggers. Logon triggers can be created from any database, but are registered at the server level and reside in the **master** database.|[CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)|  
-|Describes how to modify logon triggers.|[ALTER TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-trigger-transact-sql.md)|  
-|Describes how to delete logon triggers.|[DROP TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/drop-trigger-transact-sql.md)|  
-|Describes how to return information about logon triggers.|[sys.server_triggers &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)<br /><br /> [sys.server_trigger_events &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql.md)|  
+|Describes how to create logon triggers. Logon triggers can be created from any database, but are registered at the server level and reside in the **master** database.|[CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)|  
+|Describes how to modify logon triggers.|[ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)|  
+|Describes how to delete logon triggers.|[DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)|  
+|Describes how to return information about logon triggers.|[sys.server_triggers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-triggers-transact-sql)<br /><br /> [sys.server_trigger_events &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql)|  
 |Describes how to capture logon trigger event data.||  
   
 ## See Also  

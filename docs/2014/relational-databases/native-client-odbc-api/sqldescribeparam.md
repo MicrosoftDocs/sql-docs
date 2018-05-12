@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  When processing a batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the driver also does not support calling SQLDescribeParam for parameter markers in statements after the first statement in the batch.  
   
- When describing the parameters of prepared stored procedures, SQLDescribeParam uses the system stored procedure [sp_sproc_columns](~/relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md) to retrieve parameter characteristics. sp_sproc_columns can report data for stored procedures within the current user database. Preparing a fully qualified stored procedure name allows SQLDescribeParam to execute across databases. For example, the system stored procedure [sp_who](~/relational-databases/system-stored-procedures/sp-who-transact-sql.md) can be prepared and executed in any database as:  
+ When describing the parameters of prepared stored procedures, SQLDescribeParam uses the system stored procedure [sp_sproc_columns](/sql/relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql) to retrieve parameter characteristics. sp_sproc_columns can report data for stored procedures within the current user database. Preparing a fully qualified stored procedure name allows SQLDescribeParam to execute across databases. For example, the system stored procedure [sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) can be prepared and executed in any database as:  
   
 ```  
 SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);  

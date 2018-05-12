@@ -64,7 +64,7 @@ manager: "jhubbard"
         @password = '**Strong password for publisher**';  
     ```  
   
- For more information, see [sp_adddistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+ For more information, see [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql).  
   
  **Configure the publisher at the original publisher**  
   

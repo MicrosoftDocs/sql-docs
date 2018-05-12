@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ### To find subordinate nodes  
   
-1.  Sariya has one subordinate employee. To query for Sariya's subordinates, execute the following query that uses the [IsDescendantOf](~/t-sql/data-types/isdescendantof-database-engine.md) method:  
+1.  Sariya has one subordinate employee. To query for Sariya's subordinates, execute the following query that uses the [IsDescendantOf](/sql/t-sql/data-types/isdescendantof-database-engine) method:  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
      The result lists both Sariya and Wanida. Sariya is listed because she is the descendant at the 0 level. Wanida is the descendant at the 1 level.  
   
-2.  You can also query for this information by using the [GetAncestor](~/t-sql/data-types/getancestor-database-engine.md) method. `GetAncestor` takes an argument for the level that you are trying to return. Since Wanida is one level underneath Sariya, use `GetAncestor(1)` as demonstrated in the following code:  
+2.  You can also query for this information by using the [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) method. `GetAncestor` takes an argument for the level that you are trying to return. Since Wanida is one level underneath Sariya, use `GetAncestor(1)` as demonstrated in the following code:  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 ### To use GetRoot, and GetLevel  
   
-1.  As the hierarchy grows larger it is more difficult to determine where the members are in the hierarchy. Use the [GetLevel](~/t-sql/data-types/getlevel-database-engine.md) method to find how many levels down each row is in the hierarchy. Execute the following code to view the levels of all the rows:  
+1.  As the hierarchy grows larger it is more difficult to determine where the members are in the hierarchy. Use the [GetLevel](/sql/t-sql/data-types/getlevel-database-engine) method to find how many levels down each row is in the hierarchy. Execute the following code to view the levels of all the rows:  
   
     ```  
     SELECT OrgNode.ToString() AS Text_OrgNode,   
@@ -82,7 +82,7 @@ manager: "jhubbard"
   
     ```  
   
-2.  Use the [GetRoot](~/t-sql/data-types/getroot-database-engine.md) method to find the root node in the hierarchy. The following code returns the single row which is the root:  
+2.  Use the [GetRoot](/sql/t-sql/data-types/getroot-database-engine) method to find the root node in the hierarchy. The following code returns the single row which is the root:  
   
     ```  
     SELECT OrgNode.ToString() AS Text_OrgNode, *  

@@ -119,7 +119,7 @@ manager: "jhubbard"
   
 -   Connect to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the database compatibility level will be changed from 90 to 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], valid values for the database compatibility level are 100, 110 and 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
+ When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the database compatibility level will be changed from 90 to 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], valid values for the database compatibility level are 100, 110 and 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
   
  Any scenarios not specified in the list above are not supported, including but not limited to the following:  
   

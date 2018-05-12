@@ -88,7 +88,7 @@ manager: "jhubbard"
 ## Overview of Using SQL Server Audit  
  You can use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)] to define an audit. After the audit is created and enabled, the target will receive entries.  
   
- You can read the Windows event logs by using the **Event Viewer** utility in Windows. For file targets, you can use either the **Log File Viewer** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the [fn_get_audit_file](~/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) function to read the target file.  
+ You can read the Windows event logs by using the **Event Viewer** utility in Windows. For file targets, you can use either the **Log File Viewer** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the [fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) function to read the target file.  
   
  The general process for creating and using an audit is as follows.  
   
@@ -134,33 +134,33 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|[ALTER AUTHORIZATION](~/t-sql/statements/alter-authorization-transact-sql.md)|[CREATE SERVER AUDIT](~/t-sql/statements/create-server-audit-transact-sql.md)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](~/t-sql/statements/alter-database-audit-specification-transact-sql.md)|[CREATE SERVER AUDIT SPECIFICATION](~/t-sql/statements/create-server-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT](~/t-sql/statements/alter-server-audit-specification-transact-sql.md)|[DROP DATABASE AUDIT SPECIFICATION](~/t-sql/statements/drop-database-encryption-key-transact-sql.md)|  
-|[ALTER SERVER AUDIT SPECIFICATION](~/t-sql/statements/alter-server-audit-transact-sql.md)|[DROP SERVER AUDIT](~/t-sql/statements/drop-server-audit-transact-sql.md)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](~/t-sql/statements/create-database-audit-specification-transact-sql.md)|[DROP SERVER AUDIT SPECIFICATION](~/t-sql/statements/drop-server-audit-specification-transact-sql.md)|  
+|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
+|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREATE SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
+|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[CREATE DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### Dynamic Views and Functions  
  The following table lists the dynamic views and function that you can use for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Auditing.  
   
 |Dynamic views and functions|Description|  
 |---------------------------------|-----------------|  
-|[sys.dm_audit_actions](~/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Returns a row for every audit action that can be reported in the audit log and every audit action group that can be configured as part of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
-|[sys.dm_server_audit_status](~/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Provides information about the current state of the audit.|  
-|[sys.dm_audit_class_type_map](~/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)|Returns a table that maps the class_type field in the audit log to the class_desc field in sys.dm_audit_actions.|  
-|[fn_get_audit_file](~/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)|Returns information from an audit file created by a server audit.|  
+|[sys.dm_audit_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)|Returns a row for every audit action that can be reported in the audit log and every audit action group that can be configured as part of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
+|[sys.dm_server_audit_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)|Provides information about the current state of the audit.|  
+|[sys.dm_audit_class_type_map](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql)|Returns a table that maps the class_type field in the audit log to the class_desc field in sys.dm_audit_actions.|  
+|[fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql)|Returns information from an audit file created by a server audit.|  
   
 ### Catalog Views  
  The following table lists the catalog views that you can use for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auditing.  
   
 |Catalog views|Description|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](~/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
-|[sys.database_audit_specification_details](~/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance for all databases.|  
-|[sys.server_audits](~/relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)|Contains one row for each [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit in a server instance.|  
-|[sys.server_audit_specifications](~/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)|Contains information about the server audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
-|[sys.server_audit_specifications_details](~/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)|Contains information about the server audit specification details (actions) in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
-|[sys.server_file_audits](~/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)|Contains stores extended information about the file audit type in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
+|[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
+|[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance for all databases.|  
+|[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|Contains one row for each [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit in a server instance.|  
+|[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|Contains information about the server audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
+|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contains information about the server audit specification details (actions) in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
+|[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Contains stores extended information about the file audit type in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
   
 ## Permissions  
  Each feature and command for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit has individual permission requirements.  
@@ -181,7 +181,7 @@ manager: "jhubbard"
   
  A principal must have the VIEW SERVER STATE or ALTER ANY AUDIT permission to use the Dynamic Management Views.  
   
- For more information about how to grant rights and permissions, see [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md).  
+ For more information about how to grant rights and permissions, see [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 > [!CAUTION]  
 >  Principals in the sysadmin role can tamper with any audit component and those in the db_owner role can tamper with audit specifications in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit will validate that a logon that creates or alters an audit specification has at least the ALTER ANY DATABASE AUDIT permission. However, it does no validation when you attach a database. You should assume all Database Audit Specifications are only as trustworthy as those principals in the sysadmin or db_owner role.  

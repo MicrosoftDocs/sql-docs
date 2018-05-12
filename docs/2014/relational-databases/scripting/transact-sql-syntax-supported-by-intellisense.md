@@ -45,17 +45,17 @@ manager: "jhubbard"
   
 |Transact-SQL statement|Syntax supported|  
 |-----------------------------|----------------------|  
-|[INSERT](~/t-sql/statements/insert-transact-sql.md)|All syntax, except the *execute_statement* clause.|  
-|[UPDATE](~/t-sql/queries/update-transact-sql.md)|All syntax.|  
-|[DELETE](~/t-sql/statements/delete-transact-sql.md)|All syntax.|  
-|[DECLARE @local_variable](~/t-sql/language-elements/declare-local-variable-transact-sql.md)|All syntax.|  
-|[SET @local_variable](~/t-sql/language-elements/set-local-variable-transact-sql.md)|All syntax.|  
-|[EXECUTE](~/t-sql/language-elements/execute-transact-sql.md)|Execution of user-defined stored procedures, system stored procedures, user-defined functions, and system functions.|  
-|[CREATE TABLE](~/t-sql/statements/create-table-transact-sql.md)|All syntax.|  
-|[CREATE VIEW](~/t-sql/statements/create-view-transact-sql.md)|All syntax.|  
-|[CREATE PROCEDURE](~/t-sql/statements/create-procedure-transact-sql.md)|All syntax, with the following exceptions:<br /><br /> There is no IntelliSense support for the EXTERNAL NAME clause.<br /><br /> In the AS clause, IntelliSense supports only the statements and syntax that are listed in this topic.|  
-|[ALTER PROCEDURE](~/t-sql/statements/alter-procedure-transact-sql.md)|All syntax, with the following exceptions:<br /><br /> There is no IntelliSense support for the EXTERNAL NAME clause.<br /><br /> In the AS clause, IntelliSense supports only the statements and syntax that are listed in this topic.|  
-|[USE](~/t-sql/language-elements/use-transact-sql.md)|All syntax.|  
+|[INSERT](/sql/t-sql/statements/insert-transact-sql)|All syntax, except the *execute_statement* clause.|  
+|[UPDATE](/sql/t-sql/queries/update-transact-sql)|All syntax.|  
+|[DELETE](/sql/t-sql/statements/delete-transact-sql)|All syntax.|  
+|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|All syntax.|  
+|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|All syntax.|  
+|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Execution of user-defined stored procedures, system stored procedures, user-defined functions, and system functions.|  
+|[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|All syntax.|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|All syntax.|  
+|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|All syntax, with the following exceptions:<br /><br /> There is no IntelliSense support for the EXTERNAL NAME clause.<br /><br /> In the AS clause, IntelliSense supports only the statements and syntax that are listed in this topic.|  
+|[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|All syntax, with the following exceptions:<br /><br /> There is no IntelliSense support for the EXTERNAL NAME clause.<br /><br /> In the AS clause, IntelliSense supports only the statements and syntax that are listed in this topic.|  
+|[USE](/sql/t-sql/language-elements/use-transact-sql)|All syntax.|  
   
 ## IntelliSense in Supported Statements  
  IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor supports the following syntax elements when they are used in one of the supported [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  

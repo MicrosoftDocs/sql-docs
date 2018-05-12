@@ -67,17 +67,17 @@ manager: "jhubbard"
   
  To monitor the availability group listeners, use the following views:  
   
- [sys.availability_group_listener_ip_addresses](~/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
+ [sys.availability_group_listener_ip_addresses](/sql/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql)  
  Returns a row for every conformant virtual IP address that is currently online for an availability group listener.  
   
  **Column names:** listener_id, ip_address, ip_subnet_mask, is_dhcp, network_subnet_ip, network_subnet_prefix_length, network_subnet_ipv4_mask, state, state_desc  
   
- [sys.availability_group_listeners](~/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql.md)  
+ [sys.availability_group_listeners](/sql/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql)  
  For a given availability group, returns either zero rows indicating that no network name is associated with the availability group, or returns a row for each availability-group listener configuration in the WSFC cluster.  
   
  **Column names:** group_id, listener_id, dns_name, port, is_conformant, ip_configuration_string_from_cluster  
   
- [sys.dm_tcp_listener_states](~/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)  
+ [sys.dm_tcp_listener_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)  
  Returns a row containing dynamic-state information for each TCP listener.  
   
  **Column names:** listener_id, ip_address, is_ipv4, port, type, type_desc, state, state_desc, start_time  

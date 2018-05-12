@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Environment (SET statement) changes. Changes in session settings such as ANSI_PADDING or ANSI_NULLS can cause a query to be recompiled.  
   
- For more information about simple and forced parameterization, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
+ For more information about simple and forced parameterization, see [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
  These are the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** counters.  
   

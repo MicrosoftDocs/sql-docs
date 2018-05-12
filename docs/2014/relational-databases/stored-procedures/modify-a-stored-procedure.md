@@ -145,6 +145,6 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-procedure-transact-sql.md)  
+ [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)  
   
   

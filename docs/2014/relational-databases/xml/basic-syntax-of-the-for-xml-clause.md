@@ -27,7 +27,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Following is the basic syntax that is described in [FOR Clause (Transact-SQL)](~/t-sql/queries/select-for-clause-transact-sql.md):  
+ Following is the basic syntax that is described in [FOR Clause (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -94,7 +94,7 @@ XML
  [Use AUTO Mode with FOR XML](use-auto-mode-with-for-xml.md)   
  [Use EXPLICIT Mode with FOR XML](use-explicit-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

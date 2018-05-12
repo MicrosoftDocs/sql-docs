@@ -41,7 +41,7 @@ manager: "jhubbard"
 |HostName|`nvarchar`|Name of the computer on which the client is running. This data column is populated if the client provides the host name. To determine the host name, use the HOST_NAME function.|8|Yes|  
 |IsSystem|`int`|Indicates whether the event occurred on a system process or a user process: 1 = system, 0 = user.|60|Yes|  
 |LoginName|`nvarchar`|Name of the login of the user (either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security login or the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login credentials in the form of DOMAIN\\*username*).|11|Yes|  
-|LoginSid|`image`|Security identification number (SID) of the logged-in user. You can find this information in the [sys.server_principals](~/relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) or the [sys.sql_logins](~/relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) catalog views. Each SID is unique for each login in the server.|41|Yes|  
+|LoginSid|`image`|Security identification number (SID) of the logged-in user. You can find this information in the [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) or the [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) catalog views. Each SID is unique for each login in the server.|41|Yes|  
 |NTDomainName|`nvarchar`|Windows domain to which the user belongs.|7|Yes|  
 |NTUserName|`nvarchar`|Windows user name.|6|Yes|  
 |ObjectID|`int`|Object ID of the module that was being compiled when the plan guide was applied. If the plan guide was not applied to a module, this column is set to NULL.|22|Yes|  
@@ -57,6 +57,6 @@ manager: "jhubbard"
 ## See Also  
  [Plan Guide Unsuccessful Event Class](plan-guide-unsuccessful-event-class.md)   
  [Extended Events](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

@@ -58,6 +58,6 @@ manager: "jhubbard"
 ## See Also  
  [Understand Database Diagram Ownership &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Upgrade Database Diagrams from Previous Editions &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-authorization-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

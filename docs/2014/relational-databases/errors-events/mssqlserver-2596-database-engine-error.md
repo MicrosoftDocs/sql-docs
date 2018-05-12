@@ -37,6 +37,6 @@ manager: "jhubbard"
  Set the database to read-write by using ALTER DATABASE, and then re-run the DBCC command.  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

@@ -46,10 +46,10 @@ manager: "jhubbard"
   
 |Property|Description|Function|  
 |--------------|-----------------|--------------|  
-|`FullTextTypeColumn`|TYPE COLUMN in the table that holds the document type information of the column.|[COLUMNPROPERTY](~/t-sql/functions/columnproperty-transact-sql.md)|  
+|`FullTextTypeColumn`|TYPE COLUMN in the table that holds the document type information of the column.|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|Whether a column has been enabled for full-text indexing.|COLUMNPROPERTY|  
-|`IsFulltextKey`|Whether the index is the full-text key for a table.|[INDEXPROPERTY](~/t-sql/functions/indexproperty-transact-sql.md)|  
-|**TableFulltextBackgroundUpdateIndexOn**|Whether a table has full-text background update indexing.|[OBJECTPROPERTYEX](~/t-sql/functions/objectproperty-transact-sql.md)|  
+|`IsFulltextKey`|Whether the index is the full-text key for a table.|[INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql)|  
+|**TableFulltextBackgroundUpdateIndexOn**|Whether a table has full-text background update indexing.|[OBJECTPROPERTYEX](/sql/t-sql/functions/objectproperty-transact-sql)|  
 |`TableFulltextCatalogId`|Full-text catalog ID in which the full-text index data for the table resides.|OBJECTPROPERTYEX|  
 |`TableFulltextChangeTrackingOn`|Whether a table has full-text change-tracking enabled.|OBJECTPROPERTYEX|  
 |`TableFulltextDocsProcessed`|Number of rows processed since the start of full-text indexing.|OBJECTPROPERTYEX|  
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 #### To inquire whether a given unique index is used as the full-text key column  
   
-1.  Use a [SELECT](~/t-sql/queries/select-transact-sql.md) statement to call the [INDEXPROPERTY](~/t-sql/functions/indexproperty-transact-sql.md) function. In the function call use the OBJECT_ID function to convert the name of the table (*table_name*) into the table ID, specify the name of a unique index for the table, and specify the `IsFulltextKey` index property, as follows:  
+1.  Use a [SELECT](/sql/t-sql/queries/select-transact-sql) statement to call the [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) function. In the function call use the OBJECT_ID function to convert the name of the table (*table_name*) into the table ID, specify the name of a unique index for the table, and specify the `IsFulltextKey` index property, as follows:  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  

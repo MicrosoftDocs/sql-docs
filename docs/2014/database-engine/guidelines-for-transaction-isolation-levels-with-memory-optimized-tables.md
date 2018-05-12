@@ -89,7 +89,7 @@ COMMIT
   
      Some applications may assume readers always wait for writers to commit, particularly if there is any synchronization between the two transactions in the application tier.  
   
-     **Guideline:** Applications cannot rely on blocking behavior. If an application needs synchronization between concurrent transactions, such logic can be implemented in the application tier or in the database tier, through [sp_getapplock &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md).  
+     **Guideline:** Applications cannot rely on blocking behavior. If an application needs synchronization between concurrent transactions, such logic can be implemented in the application tier or in the database tier, through [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   In transactions that use READ COMMITTED isolation, each statement sees the most recent version of the rows in the database. Therefore, subsequent statements see changes in the state of the database.  
   
@@ -121,7 +121,7 @@ COMMIT
 ```  
   
 ## Locking Table Hints  
- Locking hints ([Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)) such as HOLDLOCK and XLOCK can be used with disk-based tables to have [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] take more locks than are required for the specified isolation level.  
+ Locking hints ([Table Hints &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) such as HOLDLOCK and XLOCK can be used with disk-based tables to have [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] take more locks than are required for the specified isolation level.  
   
  Memory-optimized tables do not use locks. Higher isolation levels such as REPEATABLE READ and SERIALIZABLE can be used to declare the desired guarantees.  
   

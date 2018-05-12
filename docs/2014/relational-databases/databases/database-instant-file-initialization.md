@@ -68,6 +68,6 @@ manager: "jhubbard"
 >  Disabling instant file initialization only affects files that are created or increased in size after the user right is revoked.  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

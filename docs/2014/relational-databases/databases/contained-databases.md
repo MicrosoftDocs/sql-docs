@@ -102,7 +102,7 @@ manager: "jhubbard"
 ###  <a name="partial"></a> Partially Contained Database  
  The contained database feature is currently available only in a partially contained state. A partially contained database is a contained database that allows the use of uncontained features.  
   
- Use the [sys.dm_db_uncontained_entities](~/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) and [sys.sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) view to return information about uncontained objects or features. By determining the containment status of the elements of your database, you can discover what objects or features must be replaced or altered to promote containment.  
+ Use the [sys.dm_db_uncontained_entities](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) and [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) view to return information about uncontained objects or features. By determining the containment status of the elements of your database, you can discover what objects or features must be replaced or altered to promote containment.  
   
 > [!IMPORTANT]  
 >  Because certain objects have a default containment setting of **NONE**, this view can return false positives.  
@@ -148,10 +148,10 @@ manager: "jhubbard"
 >  Temporary stored procedures are currently permitted. Because temporary stored procedures breach containment, they are not expected to be supported in future versions of contained database.  
   
 ##  <a name="Identifying"></a> Identifying Database Containment  
- There are two tools to help identify the containment status of the database. The [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) is a view that shows all the potentially uncontained entities in the database. The database_uncontained_usage event occurs when any actual uncontained entity is identified at run time.  
+ There are two tools to help identify the containment status of the database. The [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) is a view that shows all the potentially uncontained entities in the database. The database_uncontained_usage event occurs when any actual uncontained entity is identified at run time.  
   
 ### sys.dm_db_uncontained_entities  
- This view shows any entities in the database that have the potential to be uncontained, such as those that cross-the database boundary. This includes those user entities that may use objects outside the database model. However, because the containment of some entities (for example, those using dynamic SQL) cannot be determined until run time, the view may show some entities that are not actually uncontained. For more information, see [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
+ This view shows any entities in the database that have the potential to be uncontained, such as those that cross-the database boundary. This includes those user entities that may use objects outside the database model. However, because the containment of some entities (for example, those using dynamic SQL) cannot be determined until run time, the view may show some entities that are not actually uncontained. For more information, see [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql).  
   
 ### database_uncontained_usage event  
  This XEvent occurs whenever an uncontained entity is identified at run time. This includes entities originated in client code. This XEvent will occur only for actual uncontained entities. However, the event only occurs at run time. Therefore, any uncontained user entities you have not run will not be identified by this XEvent  

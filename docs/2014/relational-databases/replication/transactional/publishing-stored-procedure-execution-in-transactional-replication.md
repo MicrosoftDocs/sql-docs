@@ -50,7 +50,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Publish the Execution of a Stored Procedure in a Transactional Publication &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Replication Transact-SQL Programming: execute [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and specify a value of 'serializable proc exec' (recommended) or 'proc exec' for the parameter **@type**. For more information about defining articles, see [Define an Article](../publish/define-an-article.md).  
+-   Replication Transact-SQL Programming: execute [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) and specify a value of 'serializable proc exec' (recommended) or 'proc exec' for the parameter **@type**. For more information about defining articles, see [Define an Article](../publish/define-an-article.md).  
   
 ## Modifying the Procedure at the Subscriber  
  By default, the stored procedure definition at the Publisher is propagated to each Subscriber. However, you can also modify the stored procedure at the Subscriber. This is useful if you want different logic to be executed at the Publisher and Subscriber. For example, consider **sp_big_delete**, a stored procedure at the Publisher that has two functions: it deletes 1,000,000 rows from the replicated table **big_table1** and updates the nonreplicated table **big_table2**. To reduce the demand on network resources, you should propagate the 1 million row delete as a stored procedure by publishing **sp_big_delete**. At the Subscriber, you can modify **sp_big_delete** to delete only the 1 million rows and not perform the subsequent update to **big_table2**.  
@@ -87,7 +87,7 @@ COMMIT TRANSACTION T2
  Locks will be held longer when you execute the procedure within a serializable transaction and may result in reduced concurrency.  
   
 ## The XACT_ABORT Setting  
- When replicating stored procedure execution, the setting for the session executing the stored procedure should specify XACT_ABORT ON. If XACT_ABORT is set to OFF, and an error occurs during execution of the procedure at the Publisher, the same error will occur at the Subscriber, causing the Distribution Agent to fail. Specifying XACT_ABORT ON ensures that any errors encountered during execution at the Publisher cause the entire execution to be rolled back, avoiding the Distribution Agent failure. For more information about setting XACT_ABORT, see [SET XACT_ABORT &#40;Transact-SQL&#41;](~/t-sql/statements/set-xact-abort-transact-sql.md).  
+ When replicating stored procedure execution, the setting for the session executing the stored procedure should specify XACT_ABORT ON. If XACT_ABORT is set to OFF, and an error occurs during execution of the procedure at the Publisher, the same error will occur at the Subscriber, causing the Distribution Agent to fail. Specifying XACT_ABORT ON ensures that any errors encountered during execution at the Publisher cause the entire execution to be rolled back, avoiding the Distribution Agent failure. For more information about setting XACT_ABORT, see [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
  If you require a setting of XACT_ABORT OFF, specify the **-SkipErrors** parameter for the Distribution Agent. This allows the agent to continue applying changes at the Subscriber even if an error is encountered.  
   

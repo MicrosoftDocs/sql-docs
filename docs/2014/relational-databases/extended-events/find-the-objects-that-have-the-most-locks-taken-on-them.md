@@ -104,10 +104,10 @@ manager: "jhubbard"
 -   lock_count  
   
 ## See Also  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)   
- [sys.server_event_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)  
+ [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
+ [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [sys.dm_xe_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql)   
+ [sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)  
   
   

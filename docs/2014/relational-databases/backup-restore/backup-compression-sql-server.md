@@ -61,7 +61,7 @@ manager: "jhubbard"
   
   
 ##  <a name="CompressionRatio"></a> Calculate the Compression Ratio of a Compressed Backup  
- To calculate the compression ratio of a backup, use the values for the backup in the **backup_size** and **compressed_backup_size** columns of the [backupset](~/relational-databases/system-tables/backupset-transact-sql.md) history table, as follows:  
+ To calculate the compression ratio of a backup, use the values for the backup in the **backup_size** and **compressed_backup_size** columns of the [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) history table, as follows:  
   
  **backup_size**:**compressed_backup_size**  
   
@@ -103,12 +103,12 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [DBCC TRACEON &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
+-   [DBCC TRACEON &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-transact-sql)  
   
--   [DBCC TRACEOFF &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
+-   [DBCC TRACEOFF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceoff-transact-sql)  
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
+ [Trace Flags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   
   

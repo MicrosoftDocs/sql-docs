@@ -40,32 +40,32 @@ manager: "jhubbard"
   
  To view the properties and states of availability replicas, use the following views and system function:  
   
- [sys.availability_replicas](~/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
+ [sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)  
  Returns a row for every availability replica in each availability group for which the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hosts an availability replica.  
   
  **Column names:** replica_id, group_id, replica_metadata_id, replica_server_name, owner_sid, endpoint_url, availability_mode, availability_mode_desc, failover_mode, failover_mode_desc, session_timeout, primary_role_allow_connections, primary_role_allow_connections_desc, secondary_role_allow_connections, secondary_role_allow_connections_desc, create_date, modify_date, backup_priority, read_only_routing_url  
   
- [sys.availability_read_only_routing_lists](~/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  
+ [sys.availability_read_only_routing_lists](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)  
  Returns a row for the read only routing list of each availability replica in an AlwaysOn availability group in the WSFC failover cluster.  
   
  **Column names:** replica_id, routing_priority, read_only_replica_id  
   
- [sys.dm_hadr_availability_replica_cluster_nodes](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql)  
  Returns a row for every availability replica (regardless of join state) of the AlwaysOn availability groups in the Windows Server Failover Clustering (WSFC) cluster.  
   
  **Column names:** group_name, replica_server_name, node_name  
   
- [sys.dm_hadr_availability_replica_cluster_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
  Returns a row for each replica (regardless of join state) of all AlwaysOn availability groups (regardless of replica location) in the Windows Server Failover Clustering (WSFC) cluster.  
   
  **Column names:** replica_id, replica_server_name, group_id, join_state, join_state_desc  
   
- [sys.dm_hadr_availability_replica_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)  
+ [sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
  Returns a row showing the state of each local availability replica and a row for each remote availability replica in the same availability group.  
   
  **Column names:** replica_id, group_id, is_local, role, role_desc, operational_state, operational_state_desc, connected_state, connected_state_desc, recovery_health, recovery_health_desc, synchronization_health, synchronization_health_desc, last_connect_error_number, last_connect_error_description, and last_connect_error_timestamp  
   
- [sys.fn_hadr_backup_is_preferred_replica](~/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)  
+ [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)  
  Determines whether the current replica is the preferred backup replica. Returns 1 if the database on the current server instance is the preferred replica. Otherwise, it returns 0.  
   
 > [!NOTE]  

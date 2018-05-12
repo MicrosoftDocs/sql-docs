@@ -51,7 +51,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
+     For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
      To view the logins on this server instance, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
     SELECT * FROM sys.server_principals  
     ```  
   
-     For more information, see [sys.server_principals &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+     For more information, see [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql).  
   
 2.  Create a user for that login.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md).  
+     For more information, see [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
      To view the users on this server instance, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
@@ -79,13 +79,13 @@ manager: "jhubbard"
     SELECT * FROM sys.sysusers;  
     ```  
   
-     For more information, see [sys.sysusers &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md).  
+     For more information, see [sys.sysusers &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql).  
   
 3.  Obtain the certificate for the mirroring endpoint of the other server instance.  
   
      If you have not already done so when configuring outbound connections, obtain a copy of the certificate for the mirroring endpoint of the remote server instance. To do this, back up the certificate on that server instance as described in [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
-     For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/backup-certificate-transact-sql.md).  
+     For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql).  
   
 4.  Associate the certificate with the user created in step 2.  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md).  
+     For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
   
      To view the certificates on this server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
     SELECT * FROM sys.certificates  
     ```  
   
-     For more information, see [sys.certificates &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-certificates-transact-sql.md).  
+     For more information, see [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql).  
   
 5.  Grant CONNECT permission on the login for the remote mirroring endpoint.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+     For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
  This completes setting up certificate authentication for HOST_B to log in to HOST_A.  
   
@@ -162,7 +162,7 @@ GO
   
 ## See Also  
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Set Up an Encrypted Mirror Database](set-up-an-encrypted-mirror-database.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  

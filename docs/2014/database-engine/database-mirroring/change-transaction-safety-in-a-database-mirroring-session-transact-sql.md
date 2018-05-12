@@ -47,7 +47,7 @@ manager: "jhubbard"
      where *\<database>* is the mirrored database.  
   
 ## See Also  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
   
   

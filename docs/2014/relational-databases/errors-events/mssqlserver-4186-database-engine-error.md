@@ -105,6 +105,6 @@ WHERE ProductModelID BETWEEN 75 and 80;
 -   Remove the column from the OUTPUT clause.  
   
 ## See Also  
- [OUTPUT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/output-clause-transact-sql.md)  
+ [OUTPUT Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)  
   
   

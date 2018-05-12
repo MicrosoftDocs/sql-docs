@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   See the section 'Updatable Views' in [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md).  
+-   See the section 'Updatable Views' in [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
 ###  <a name="Security"></a> Security  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md).  
+ For more information, see [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql).  
   
 #### To insert table data through a view  
   
@@ -104,6 +104,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md).  
+ For more information, see [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql).  
   
   

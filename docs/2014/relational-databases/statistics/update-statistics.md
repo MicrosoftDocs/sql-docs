@@ -92,7 +92,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/update-statistics-transact-sql.md).  
+ For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql).  
   
 #### To update all statistics in a database  
   
@@ -109,6 +109,6 @@ manager: "jhubbard"
     EXEC sp_updatestats;  
     ```  
   
- For more information, see [sp_updatestats &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
+ For more information, see [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).  
   
   

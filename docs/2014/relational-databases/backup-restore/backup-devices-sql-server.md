@@ -80,7 +80,7 @@ manager: "jhubbard"
 >  We recommend that a backup disk be a different disk than the database data and log disks. This is necessary to make sure that you can access the backups if the data or log disk fails.  
   
 ###  <a name="BackupFileUsingPhysicalName"></a> Specifying a Backup File by Using Its Physical Name (Transact-SQL)  
- The basic [BACKUP](~/t-sql/statements/backup-transact-sql.md) syntax for specifying a backup file by using its physical device name is:  
+ The basic [BACKUP](/sql/t-sql/statements/backup-transact-sql) syntax for specifying a backup file by using its physical device name is:  
   
  BACKUP DATABASE *database_name*  
   
@@ -94,7 +94,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
- To specify a physical disk device in a [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement, the basic syntax is:  
+ To specify a physical disk device in a [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statement, the basic syntax is:  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -131,7 +131,7 @@ GO
 -   You can connect with the network service account by using the computer account instead of a domain user. To enable backups from specific computers to a shared drive, grant access to the computer accounts. As long as the Sqlservr.exe process that is writing the backup has access, it is irrelevant whether the user sending the BACKUP command has access.  
   
     > [!IMPORTANT]  
-    >  Backing up data over a network can be subject to network errors; therefore, we recommend that when you are using a remote disk you verify the backup operation after it finishes. For more information, see [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+    >  Backing up data over a network can be subject to network errors; therefore, we recommend that when you are using a remote disk you verify the backup operation after it finishes. For more information, see [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
 #### Specifying a Universal Naming Convention (UNC) Name  
  To specify a network share in a backup or restore command, you should use the fully qualified universal naming convention (UNC) name of the file for the backup device. A UNC name has the form **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName*.  
@@ -168,7 +168,7 @@ GO
 -   If a tape backup device is filled during the backup operation, but more data still must be written, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prompts for a new tape and continues the backup operation after a new tape is loaded.  
   
 ###  <a name="BackupTapeUsingPhysicalName"></a> Specifying a Backup Tape by Using Its Physical Name (Transact-SQL)  
- The basic [BACKUP](~/t-sql/statements/backup-transact-sql.md) syntax for specifying a backup tape using the physical device name of the tape drive is:  
+ The basic [BACKUP](/sql/t-sql/statements/backup-transact-sql) syntax for specifying a backup tape using the physical device name of the tape drive is:  
   
  BACKUP { DATABASE | LOG } *database_name*  
   
@@ -182,7 +182,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
- To specify a physical tape device in a [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement, the basic syntax is:  
+ To specify a physical tape device in a [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statement, the basic syntax is:  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -200,12 +200,12 @@ GO
      You can control whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keeps the tape remains open after the backup or restore operation or releases and rewinds the tape after it fills. The default behavior is to rewind the tape (REWIND).  
   
 > [!NOTE]  
->  For more information about the BACKUP syntax and arguments, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md). For more information about the RESTORE syntax and arguments, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md) and [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md), respectively.  
+>  For more information about the BACKUP syntax and arguments, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). For more information about the RESTORE syntax and arguments, see [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) and [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql), respectively.  
   
 ###  <a name="OpenTapes"></a> Managing Open Tapes  
- To view a list of open tape devices and the status of mount requests, query the [sys.dm_io_backup_tapes](~/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) dynamic management view. This view shows all the open tapes. These include in-use tapes that are temporarily idle while they wait for the next BACKUP or RESTORE operation.  
+ To view a list of open tape devices and the status of mount requests, query the [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) dynamic management view. This view shows all the open tapes. These include in-use tapes that are temporarily idle while they wait for the next BACKUP or RESTORE operation.  
   
- If a tape has been accidentally left open, the fastest way to release the tape is by using the following command: RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. For more information, see [RESTORE REWINDONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ If a tape has been accidentally left open, the fastest way to release the tape is by using the following command: RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. For more information, see [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## Using the Windows Azure Blob Storage Service  
  SQL Server Backups can be written to the Windows Azure Blob Storage Service.  For more information on how to use the Windows Azure Blob storage service for your backups, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -215,7 +215,7 @@ GO
   
  Defining a logical backup device involves assigning a logical name to a physical device. For example, a logical device, AdventureWorksBackups, could be defined to point to the Z:\SQLServerBackups\AdventureWorks2012.bak file or the \\\\.\tape0 tape drive. Backup and restore commands can then specify AdventureWorksBackups as the backup device, instead of DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' or TAPE = '\\\\.\tape0'.  
   
- The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](~/relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) catalog view. This view displays the name of each logical backup device and describes the type and physical file name or path of the corresponding physical backup device.  
+ The logical device name must be unique among all the logical backup devices on the server instance. To view the existing logical device names, query the [sys.backup_devices](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql) catalog view. This view displays the name of each logical backup device and describes the type and physical file name or path of the corresponding physical backup device.  
   
  After a logical backup device is defined, in a BACKUP or RESTORE command, you can specify the logical backup device instead of the physical name of the device. For example, the following statement backs up the `AdventureWorks2012` database to the `AdventureWorksBackups` logical backup device.  
   
@@ -258,7 +258,7 @@ GO
   
  **To define a logical backup device**  
   
--   [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
+-   [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)  
   
 -   [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -272,9 +272,9 @@ GO
   
 -   [Restore a Backup from a Device &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)  
+-   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)  
   
--   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+-   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
  **To View Information About Backup Devices**  
   
@@ -286,19 +286,19 @@ GO
   
  **To delete a logical backup device**  
   
--   [sp_dropdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)  
+-   [sp_dropdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql)  
   
 -   [Delete a Backup Device &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
 ## See Also  
  [SQL Server, Backup Device Object](../performance-monitor/sql-server-backup-device-object.md)   
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Maintenance Plans](../maintenance-plans/maintenance-plans.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
- [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)   
- [sys.backup_devices &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
- [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
  [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   
   

@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 #### To specify that a new merge table article is download-only  
   
-1.  Execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), specifying a value of **1** or **2** for the parameter **@subscriber_upload_options**. The numbers correspond to the following behavior:  
+1.  Execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), specifying a value of **1** or **2** for the parameter **@subscriber_upload_options**. The numbers correspond to the following behavior:  
   
     -   **0** - No restrictions (default). Changes made at the Subscriber are uploaded to the Publisher.  
   
@@ -78,9 +78,9 @@ manager: "jhubbard"
   
 #### To modify an existing merge table article to be download-only  
   
-1.  To determine if an article is download-only, execute [sp_helpmergearticle](~/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Note the value of **upload_options** for the article in the result set.  
+1.  To determine if an article is download-only, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Note the value of **upload_options** for the article in the result set.  
   
-2.  If the value returned in step 1 is **0**, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying a value of **subscriber_upload_options** for **@property**, a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**, and a value of **1** or **2** for **@value**, which corresponds to the following behavior:  
+2.  If the value returned in step 1 is **0**, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specifying a value of **subscriber_upload_options** for **@property**, a value of **1** for **@force_invalidate_snapshot** and **@force_reinit_subscription**, and a value of **1** or **2** for **@value**, which corresponds to the following behavior:  
   
     -   **1** - Changes are allowed at the Subscriber, but they are not uploaded to the Publisher.  
   

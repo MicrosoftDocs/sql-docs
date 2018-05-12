@@ -99,13 +99,13 @@ GO
 |---------------------------|---------|  
 |The encryption hierarchy in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Encryption Hierarchy](encryption/encryption-hierarchy.md)|  
 |Implementing secure connections|[Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
-|Encryption functions|[Cryptographic Functions &#40;Transact-SQL&#41;](~/t-sql/functions/cryptographic-functions-transact-sql.md)|  
+|Encryption functions|[Cryptographic Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)|  
   
  Certificates are software "keys" shared between two servers that enable secure communications by way of strong authentication. You can create and use certificates in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to enhance object and connection security. The following table contains information about how to use certificates with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |For information about|See|  
 |---------------------------|---------|  
-|Creating a certificate for use by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)|  
+|Creating a certificate for use by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
 |Using a certificate with database mirroring|[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ## Application Security  
@@ -132,9 +132,9 @@ GO
   
 |For information about|See|  
 |---------------------------|---------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security catalog views, which return information about database-level and server-level permissions, principals, roles, and so on. In addition, there are catalog views that provide information about encryption keys, certificates, and credentials.|[Security Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security functions, which return information about the current user, permissions and schemas.|[Security Functions &#40;Transact-SQL&#41;](~/t-sql/functions/security-functions-transact-sql.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security dynamic management views.|[Security-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security catalog views, which return information about database-level and server-level permissions, principals, roles, and so on. In addition, there are catalog views that provide information about encryption keys, certificates, and credentials.|[Security Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security functions, which return information about the current user, permissions and schemas.|[Security Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security dynamic management views.|[Security-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql)|  
   
 ## Related Content  
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

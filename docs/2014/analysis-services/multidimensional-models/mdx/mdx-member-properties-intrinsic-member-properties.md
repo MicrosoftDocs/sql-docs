@@ -204,16 +204,16 @@ FROM [Adventure Works]
 ```  
   
 ## See Also  
- [PeriodsToDate &#40;MDX&#41;](~/mdx/periodstodate-mdx.md)   
- [Children &#40;MDX&#41;](~/mdx/children-mdx.md)   
- [Hierarchize &#40;MDX&#41;](~/mdx/hierarchize-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](~/mdx/count-set-mdx.md)   
- [Filter &#40;MDX&#41;](~/mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](~/mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](~/mdx/drilldownlevel-mdx.md)   
- [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](~/mdx/prevmember-mdx.md)   
+ [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
+ [Children &#40;MDX&#41;](/sql/mdx/children-mdx)   
+ [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
+ [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
+ [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
+ [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
  [Using Member Properties &#40;MDX&#41;](mdx-member-properties.md)   
- [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)  
+ [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

@@ -87,7 +87,7 @@ manager: "jhubbard"
   
 #### To enable FTP snapshot delivery for a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify **@publication**, a value of `true` for **@enabled_for_internet**, and appropriate values for the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specify **@publication**, a value of `true` for **@enabled_for_internet**, and appropriate values for the following parameters:  
   
     -   **@ftp_address** - the address of the FTP server used to deliver the snapshot.  
   
@@ -103,7 +103,7 @@ manager: "jhubbard"
   
 #### To enable FTP snapshot delivery for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specify **@publication**, a value of `true` for **@enabled_for_internet** and appropriate values for the following parameters:  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specify **@publication**, a value of `true` for **@enabled_for_internet** and appropriate values for the following parameters:  
   
     -   **@ftp_address** - the address of the FTP server used to deliver the snapshot.  
   
@@ -119,23 +119,23 @@ manager: "jhubbard"
   
 #### To create a pull subscription to a snapshot or transactional publication that uses FTP snapshot delivery  
   
-1.  At the Subscriber on the subscription database, execute [sp_addpullsubscription](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specify **@publisher** and **@publication**.  
+1.  At the Subscriber on the subscription database, execute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Specify **@publisher** and **@publication**.  
   
-    -   At the Subscriber on the subscription database, execute [sp_addpullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_login** and **@job_password**, and a value of `true` for **@use_ftp**.  
+    -   At the Subscriber on the subscription database, execute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Specify **@publisher**, **@publisher_db**, **@publication**, the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_login** and **@job_password**, and a value of `true` for **@use_ftp**.  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) to register the pull subscription. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 #### To create a pull subscription to a merge publication that uses FTP snapshot delivery  
   
-1.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specify **@publisher** and **@publication**.  
+1.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Specify **@publisher** and **@publication**.  
   
-2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, the Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_login** and **@job_password**, and a value of `true` for **@use_ftp**.  
+2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Specify **@publisher**, **@publisher_db**, **@publication**, the Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_login** and **@job_password**, and a value of `true` for **@use_ftp**.  
   
-3.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
+3.  At the Publisher on the publication database, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) to register the pull subscription. For more information, see [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 #### To change one or more FTP snapshot delivery settings for a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Specify one of the following values for **@property** and a new value of this setting for **@value**:  
+1.  At the Publisher on the publication database, execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specify one of the following values for **@property** and a new value of this setting for **@value**:  
   
     -   `ftp_address` - the address of the FTP server used to deliver the snapshot.  
   
@@ -149,11 +149,11 @@ manager: "jhubbard"
   
 2.  (Optional) Repeat step 1 for each FTP setting being changed.  
   
-3.  (Optional) To disable FTP snapshot delivery, execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `enabled_for_internet` for **@property** and a value of `false` for **@value**.  
+3.  (Optional) To disable FTP snapshot delivery, execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) at the Publisher on the publication database. Specify a value of `enabled_for_internet` for **@property** and a value of `false` for **@value**.  
   
 #### To change FTP snapshot delivery settings for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify one of the following values for **@property** and a new value of this setting for **@value**:  
+1.  At the Publisher on the publication database, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specify one of the following values for **@property** and a new value of this setting for **@value**:  
   
     -   `ftp_address` - the address of the FTP server used to deliver the snapshot.  
   
@@ -167,7 +167,7 @@ manager: "jhubbard"
   
 2.  (Optional) Repeat step 1 for each FTP setting being changed.  
   
-3.  (Optional) To disable FTP snapshot delivery, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `enabled_for_internet` for **@property** and a value of `false` for **@value**.  
+3.  (Optional) To disable FTP snapshot delivery, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) at the Publisher on the publication database. Specify a value of `enabled_for_internet` for **@property** and a value of `false` for **@value**.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example creates a merge publication that allows Subscribers to access the snapshot data using FTP. The Subscriber should use a secure VPN connection when accessing the FTP share. **sqlcmd** scripting variables are used to supply login and password values. For more information, see [Use sqlcmd with Scripting Variables](../../scripting/sqlcmd-use-with-scripting-variables.md).  

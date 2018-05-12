@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  For more information about nonclustered hash indexes, see [Hash Indexes](hash-indexes.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- One hash table is allocated for each hash index on a memory-optimized table. The size of the hash table allocated for an index is specified by the `BUCKET_COUNT` parameter in [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md) or [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md). The bucket count will internally be rounded up to the next power of two. For example, specifying a bucket count of 300,000 will result in an actual bucket count of 524,288.  
+ One hash table is allocated for each hash index on a memory-optimized table. The size of the hash table allocated for an index is specified by the `BUCKET_COUNT` parameter in [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) or [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). The bucket count will internally be rounded up to the next power of two. For example, specifying a bucket count of 300,000 will result in an actual bucket count of 524,288.  
   
  For links to an article and video on bucket count, see [How to determine the right bucket count for hash indexes (In-Memory OLTP)](http://go.microsoft.com/fwlink/p/?LinkId=525853).  
   
@@ -61,7 +61,7 @@ FROM
  For the example index on (SpecialOfferID, ProductID), this leads to 121317 / 484 = 251. This means index key values have an average of 251, and thus this should be a nonclustered index.  
   
 ## Troubleshooting the Bucket Count  
- To troubleshoot bucket count issues in memory-optimized tables, use [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md) to obtain statistics about the empty buckets and the length of row chains. The following query can be used to obtain statistics about all the hash indexes in the current database. The query can take several minutes to run if there are large tables in the database.  
+ To troubleshoot bucket count issues in memory-optimized tables, use [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) to obtain statistics about the empty buckets and the length of row chains. The following query can be used to obtain statistics about all the hash indexes in the current database. The query can take several minutes to run if there are large tables in the database.  
   
 ```tsql  
 SELECT   

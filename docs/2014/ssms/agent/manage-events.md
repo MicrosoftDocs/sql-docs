@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 -   [SQL Server Management Studio](define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](~/relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)  
+-   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
 ## Running Event-Triggered Jobs  
  You can define a job to be executed in response to an alert. For example, you can execute a job that corrects or further diagnoses a problem detected by the alert.  
@@ -86,6 +86,6 @@ manager: "jhubbard"
 >  Because a job can raise an event, be careful not to create a recursive alert-job loop.  
   
 ## See Also  
- [sys.sysmessages &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql.md)  
+ [sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

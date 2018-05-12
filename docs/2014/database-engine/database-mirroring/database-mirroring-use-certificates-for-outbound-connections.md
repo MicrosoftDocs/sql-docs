@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 #### To configure server instances for outbound mirroring connections (On HOST_A)  
   
-1.  On the **master** database, create the database Master Key, if none exists. To view the existing keys for a database, use the [sys.symmetric_keys](~/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) catalog view.  
+1.  On the **master** database, create the database Master Key, if none exists. To view the existing keys for a database, use the [sys.symmetric_keys](/sql/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql) catalog view.  
   
      To create the database Master Key, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command:  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
      Use a unique, strong password, and record it in a safe place.  
   
-     For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md) and [Create a Database Master Key](../../relational-databases/security/encryption/create-a-database-master-key.md).  
+     For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) and [Create a Database Master Key](../../relational-databases/security/encryption/create-a-database-master-key.md).  
   
 2.  In the **master** database, create an encrypted certificate on the server instance to use for its outbound connections for database mirroring.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md).  
+     For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
   
      To view the certificates in the **master** database, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
     SELECT * FROM sys.certificates;  
     ```  
   
-     For more information, see [sys.certificates &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-certificates-transact-sql.md).  
+     For more information, see [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql).  
   
 3.  Ensure that the database mirroring endpoint exist on each of the server instances.  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md).  
+     For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
 4.  Back up the certificate and copy it to the other system or systems. This is necessary in order to configure inbound connections on the other system.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/backup-certificate-transact-sql.md).  
+     For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql).  
   
      Copy this certificate using any secure method you choose. Be extremely careful to keep all of your certificates secure.  
   
@@ -176,7 +176,7 @@ GO
 ## See Also  
  [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
+ [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [Example: Setting Up Database Mirroring Using Certificates &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   

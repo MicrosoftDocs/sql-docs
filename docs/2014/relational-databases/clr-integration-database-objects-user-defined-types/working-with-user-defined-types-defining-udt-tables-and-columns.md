@@ -46,7 +46,7 @@ CREATE TABLE dbo.Points
   
 -   Index UDT expressions. You can create indexes on persisted computed columns over UDT expressions. The UDT expression can be a field, method, or property of a UDT. The expression must be deterministic and must not perform data access.  
   
- For more information, see [CLR User-Defined Types](clr-user-defined-types.md) and [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
+ For more information, see [CLR User-Defined Types](clr-user-defined-types.md) and [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
   
 ## See Also  
  [Working with User-Defined Types in SQL Server](working-with-user-defined-types-in-sql-server.md)  

@@ -108,6 +108,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [DROP FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-function-transact-sql.md).  
+ For more information, see [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql).  
   
   

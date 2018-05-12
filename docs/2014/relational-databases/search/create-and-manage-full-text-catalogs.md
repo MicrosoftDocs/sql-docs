@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 |Property|Description|Function|  
 |--------------|-----------------|--------------|  
-|`AccentSensitivity`|Accent-sensitivity setting.|[FULLTEXTCATALOGPROPERTY](~/t-sql/functions/fulltextcatalogproperty-transact-sql.md)|  
+|`AccentSensitivity`|Accent-sensitivity setting.|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|Whether the full-text catalog is being imported.|FULLTEXTCATALOGPROPERTY|  
 |`IndexSize`|Size of the full-text catalog in megabytes (MB).|FULLTEXTCATALOGPROPERTY|  
 |`ItemCount`|Number of full-text indexed items currently in the full-text catalog.|FULLTEXTCATALOGPROPERTY|  
@@ -105,6 +105,6 @@ manager: "jhubbard"
   
   
 ## See Also  
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

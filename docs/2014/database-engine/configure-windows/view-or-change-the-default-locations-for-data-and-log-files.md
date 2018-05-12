@@ -56,7 +56,7 @@ manager: "jhubbard"
  You must stop and start the SQL Server service to complete the change.  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Create a Database](../../relational-databases/databases/create-a-database.md)  
   
   

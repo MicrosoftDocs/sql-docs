@@ -304,8 +304,8 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [float and real &#40;Transact-SQL&#41;](~/t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar and nvarchar &#40;Transact-SQL&#41;](~/t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [float and real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
+ [nchar and nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Using Annotated XSD Schemas in Queries &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

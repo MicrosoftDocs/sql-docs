@@ -171,7 +171,7 @@ manager: "jhubbard"
 |Option|FOR XML|This option is not supported. Remove `FOR XML` from the natively compiled stored procedure.|  
 |Option|FOR BROWSE|This option is not supported. Remove `FOR BROWSE` from the natively compiled stored procedure.|  
 |Join hint|HASH, MERGE|Natively compiled stored procedures only support nested-loops joins. Hash and merge joins are not supported. Remove the join hint.|  
-|Query hint|*Query hint*|This query hint is not inside natively compiled stored procedures. For supported query hints see [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md).|  
+|Query hint|*Query hint*|This query hint is not inside natively compiled stored procedures. For supported query hints see [Query Hints &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).|  
 |Option|DISTINCT|This option is not supported. Remove `DISTINCT` from the query in the natively compiled stored procedure.|  
 |Option|PERCENT|This option is not supported with `TOP` clauses. Remove `PERCENT` from the query in the natively compiled stored procedure.|  
 |Option|WITH TIES|This option is not supported with `TOP` clauses. Remove `WITH TIES` from the query in the natively compiled stored procedure.|  

@@ -89,7 +89,7 @@ manager: "jhubbard"
 |Explains how to define the CPU idle condition for your server.|[Set CPU Idle Time and Duration &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## See Also  
- [sp_help_jobschedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
- [dbo.sysjobschedules &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [sp_help_jobschedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
+ [dbo.sysjobschedules &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

@@ -349,7 +349,7 @@ FROM Forecasting.CONTENT
 WHERE [PARENT_UNIQUE_NAME] = ' TA00000001'  
 ```  
   
- Because this is an ARIMA tree, not an ARTXP tree, you cannot use the [IsDescendant &#40;DMX&#41;](~/dmx/isdescendant-dmx.md) function to return the child nodes of this periodic structure. Instead, you can use the attribute and node types to filter the results and return the child nodes that provide more detail about how the equation was built, including the moving averages and difference order.  
+ Because this is an ARIMA tree, not an ARTXP tree, you cannot use the [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) function to return the child nodes of this periodic structure. Instead, you can use the attribute and node types to filter the results and return the child nodes that provide more detail about how the equation was built, including the moving averages and difference order.  
   
 ```  
 SELECT MODEL_NAME, ATTRIBUTE_NAME, NODE_UNIQUE_NAME,  

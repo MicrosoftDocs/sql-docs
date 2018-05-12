@@ -76,7 +76,7 @@ manager: "jhubbard"
   
  Utility administrators can enroll instances of SQL Server into and remove instances of SQL Server from a SQL Server Utility, as well as modify policies on managed instances and modify administration settings on the UCP.  
   
- To be a Utility administrator, you must have sysadmin privileges on the instance of SQL Server. To add or change user accounts for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, use Object Explorer in SSMS to add the user to the server logins of the UCP instance of SQL Server. For more information, see [sp_addlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md).  
+ To be a Utility administrator, you must have sysadmin privileges on the instance of SQL Server. To add or change user accounts for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, use Object Explorer in SSMS to add the user to the server logins of the UCP instance of SQL Server. For more information, see [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql).  
   
 ## UIElement List  
  Data Warehouse tab - Displays configuration details for the utility management data warehouse.  
@@ -94,7 +94,7 @@ manager: "jhubbard"
  The UMDW directory is configurable: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> is normally the C:\ drive. The log file, UMDW_\<GUID>_LOG, is located in the same directory.  
   
 > [!NOTE]  
->  The UMDW (sysutility_mdw) file location can be changed using detach/attach or ALTER DATABASE. We recommend the use of ALTER DATABASE. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
+>  The UMDW (sysutility_mdw) file location can be changed using detach/attach or ALTER DATABASE. We recommend the use of ALTER DATABASE. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
  Go back to out-of-the-box defaults  
  To reset settings on this tab to default values, click the **Restore Defaults** button, then click **Apply**.  

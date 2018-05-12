@@ -33,7 +33,7 @@ manager: "jhubbard"
  If an option is displayed as read-only, it can only be set when the subscription is created. If you want to set options that are not available in the New Subscription Wizard, create the subscription with stored procedures. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md) and [Create a Push Subscription](create-a-push-subscription.md).  
   
 > [!NOTE]  
->  If a Distribution Agent or Merge Agent job has not yet been created for the subscription, many subscription properties are not displayed. To create an agent job for a pull subscription, Execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (for a subscription to a snapshot or transactional publication) or [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (for a subscription to a merge publication).  
+>  If a Distribution Agent or Merge Agent job has not yet been created for the subscription, many subscription properties are not displayed. To create an agent job for a pull subscription, Execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) (for a subscription to a snapshot or transactional publication) or [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (for a subscription to a merge publication).  
   
 ## Options for all subscriptions  
  **Initialize published data from a snapshot**  

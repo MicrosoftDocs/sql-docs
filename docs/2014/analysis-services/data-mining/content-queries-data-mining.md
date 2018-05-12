@@ -169,7 +169,7 @@ ORDER BY NODE_SUPPORT DESC
   
  In a decision tree model, nodes are used to represent both trees and leaf nodes. The caption for each node contains the description of the path to the outcome. Therefore, to trace the path for any particular outcome, you need to identify the node that contains it, and get the details for that node.  
   
- In your prediction query, you add the prediction function [PredictNodeId &#40;DMX&#41;](~/dmx/predictnodeid-dmx.md), to get the ID of the related node, as shown in the following example:  
+ In your prediction query, you add the prediction function [PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx), to get the ID of the related node, as shown in the following example:  
   
 ```  
 SELECT  Predict([Bike Buyer]), PredictNodeID([Bike Buyer])   
@@ -194,7 +194,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  For more information about how to work with hierarchical rowsets, see the OLEDB specification on MSDN.  
   
 ## See Also  
- [Understanding the DMX Select Statement](~/dmx/understanding-the-dmx-select-statement.md)   
+ [Understanding the DMX Select Statement](/sql/dmx/understanding-the-dmx-select-statement)   
  [Data Mining Queries](data-mining-queries.md)  
   
   

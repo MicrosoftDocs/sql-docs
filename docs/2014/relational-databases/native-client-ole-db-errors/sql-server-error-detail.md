@@ -55,6 +55,6 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 ## See Also  
  [Errors](errors.md)   
- [RAISERROR &#40;Transact-SQL&#41;](~/t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   
   

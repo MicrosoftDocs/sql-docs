@@ -81,7 +81,7 @@ AND     CPU < (Duration * 1000)
   
 ## See Also  
  [View a Saved Trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
  [View Filter Information &#40;SQL Server Profiler&#41;](view-filter-information-sql-server-profiler.md)   
  [View Filter Information &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
  [Open a Trace File &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)   

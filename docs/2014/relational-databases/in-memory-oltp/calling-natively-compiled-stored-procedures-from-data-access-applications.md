@@ -27,10 +27,10 @@ manager: "jhubbard"
   
  SqlClient does not support prepared RPC procedure calls.  
   
- SqlClient does not support retrieving schema-only information (metadata discovery) about the result sets returned by a natively compiled stored procedure (CommandType.SchemaOnly). Instead, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ SqlClient does not support retrieving schema-only information (metadata discovery) about the result sets returned by a natively compiled stored procedure (CommandType.SchemaOnly). Instead, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
- Versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do not support retrieving schema-only information (metadata discovery) about the result sets returned by a natively compiled stored procedure. Instead, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ Versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do not support retrieving schema-only information (metadata discovery) about the result sets returned by a natively compiled stored procedure. Instead, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql).  
   
  The following recommendations apply to calls of natively compiled stored procedure using the ODBC driver in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   

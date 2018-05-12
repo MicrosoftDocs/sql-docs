@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  While you can use **sp_rename** to change the name of the view, we recommend that you delete the existing view and then re-create it with the new name.  
   
- For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/create-view-transact-sql.md) and [DROP VIEW &#40;Transact-SQL&#41;](~/t-sql/statements/drop-view-transact-sql.md).  
+ For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) and [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Renaming a View  
  Ensure that all objects, scripts, and applications that reference the view’s old name now use the new name.  

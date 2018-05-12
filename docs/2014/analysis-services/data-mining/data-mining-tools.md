@@ -88,7 +88,7 @@ manager: "mblythe"
  **For More Information:** [Related Projects for Data Mining Solutions](data-mining-solutions.md)  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)   
  [Mining Model Viewer Tasks and How-tos](mining-model-viewer-tasks-and-how-tos.md)   
  [Data Mining Solutions](data-mining-solutions.md)  

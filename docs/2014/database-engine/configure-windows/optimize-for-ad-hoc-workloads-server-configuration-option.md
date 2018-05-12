@@ -32,7 +32,7 @@ manager: "jhubbard"
 >  Trace flag 8032 can cause poor performance if large caches make less memory available for other memory consumers, such as the buffer pool.  
   
 ## See Also  
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -57,10 +57,10 @@ manager: "jhubbard"
  Indicates this table is a system table, used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to contain internal information. Users should not directly change or reference system tables.  
   
  **ANSI NULLs**  
- Indicates if the object was created with the ANSI NULLs option set to ON. For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-nulls-transact-sql.md)  
+ Indicates if the object was created with the ANSI NULLs option set to ON. For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)  
   
  **Quoted identifier**  
- Indicates if the object was created with the quoted identifier option set to ON. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)  
+ Indicates if the object was created with the quoted identifier option set to ON. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
  **Lock Escalation**  
  Indicates the lock escalation granularity of the table. For more information about locking in the Database Engine, see [SQL Server Transaction Locking and Row Versioning Guide](http://msdn.microsoft.com/library/jj856598.aspx). Possible values are:  
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
  This option is available only when change tracking is enabled for the database.  
   
- To enable change tracking, the table must have a primary key, and you must have permission to modify the table. You can configure change tracking by using [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md).  
+ To enable change tracking, the table must have a primary key, and you must have permission to modify the table. You can configure change tracking by using [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
  **Track Columns Updated**  
  Indicates whether the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tracks which columns were updated.  
@@ -139,10 +139,10 @@ manager: "jhubbard"
   
 ### General  
  **Vardecimal storage format is enabled**  
- When `True`, this read-only value indicates that `decimal` and `numeric` data types are stored by using the vardecimal storage format. To change this option, use the `vardecimal storage format` option of [sp_tableoption](~/relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Vardecimal storage format is deprecated. Use ROW compression instead.  
+ When `True`, this read-only value indicates that `decimal` and `numeric` data types are stored by using the vardecimal storage format. To change this option, use the `vardecimal storage format` option of [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Vardecimal storage format is deprecated. Use ROW compression instead.  
   
  **Index space**  
- The amount of space in megabytes that the indexes occupy in the table. This value does not include XML index space usage for the table. If XML indexes belong to the table, use [sp_spaceused](~/relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) instead.  
+ The amount of space in megabytes that the indexes occupy in the table. This value does not include XML index space usage for the table. If XML indexes belong to the table, use [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) instead.  
   
  **Row count**  
  The number of rows in the table.  

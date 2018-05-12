@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Optimize SQL Trace
   Although running SQL Trace incurs a performance cost because it uses system resources to gather data, you can do many things to minimize it. To minimize the performance cost incurred by a trace, try the following:  
   
--   Consider using the command prompt to run traces. Using a graphical user interface hinders performance. For more information, see [sp_trace_create &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
+-   Consider using the command prompt to run traces. Using a graphical user interface hinders performance. For more information, see [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql).  
   
 -   Avoid including events that occur frequently. If possible, narrow your trace by means of specific event classes and filters. If fewer trace events are gathered, fewer system resources are required to support tracing.  
   

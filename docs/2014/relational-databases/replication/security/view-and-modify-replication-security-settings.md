@@ -218,7 +218,7 @@ manager: "jhubbard"
   
 2.  In the **Enter Connection Information** dialog box, select one of the following options:  
   
-    -   **Use a login from a linked or remote server**. Select this option if you have defined a remote server or linked server between the Subscriber and the Publisher using [sp_addserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], or another method.  
+    -   **Use a login from a linked or remote server**. Select this option if you have defined a remote server or linked server between the Subscriber and the Publisher using [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], or another method.  
   
     -   **Use SQL Server Authentication with the following login and password**. Select this option if you have not defined a remote server or linked server between the Subscriber and the Publisher. Replication will create a linked server for you. The account you specify must already exist at the Publisher.  
   
@@ -227,7 +227,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  This procedure changes the method that replication triggers use to connect from the Subscriber to the Publisher when changes are made at the Subscriber. You can also change settings associated with the Distribution Agent for an immediate updating subscription. For more information, see the procedures earlier in this topic.  
 >   
->  This procedure applies only to pull subscriptions. For push subscriptions, use the stored procedure [sp_link_publication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md).  
+>  This procedure applies only to pull subscriptions. For push subscriptions, use the stored procedure [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql).  
   
 #### To change the password for the administrative connection from the Publisher to the Distributor  
   
@@ -246,7 +246,7 @@ manager: "jhubbard"
   
 #### To change all instances of a stored password at a replication server  
   
-1.  At a server in a replication topology on the master database, execute [sp_changereplicationserverpasswords](~/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md). Specify the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login whose password is being changed for **@login** and new password for the account or login for **@password**. This changes every instance of the password used by all agents on the server when connecting to other servers in the topology.  
+1.  At a server in a replication topology on the master database, execute [sp_changereplicationserverpasswords](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql). Specify the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login whose password is being changed for **@login** and new password for the account or login for **@password**. This changes every instance of the password used by all agents on the server when connecting to other servers in the topology.  
   
     > [!NOTE]  
     >  To only change the login and password for a connection to a particular server in the topology (such as the Distributor or Subscriber), specify this server's name for **@server**.  
@@ -258,9 +258,9 @@ manager: "jhubbard"
   
 #### To change security settings for the Snapshot Agent  
   
-1.  At the Publisher, execute [sp_helppublication_snapshot](~/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), specifying **@publication**. This returns the current security settings for the Snapshot Agent.  
+1.  At the Publisher, execute [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql), specifying **@publication**. This returns the current security settings for the Snapshot Agent.  
   
-2.  At the Publisher, execute [sp_changepublication_snapshot](~/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md), specifying **@publication** and one or more of the following security settings to change:  
+2.  At the Publisher, execute [sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql), specifying **@publication** and one or more of the following security settings to change:  
   
     -   To change the Windows account under which the agent runs or just password for this account, specify **@job_login** and **@job_password**.  
   
@@ -273,9 +273,9 @@ manager: "jhubbard"
   
 #### To change security settings for the Log Reader Agent  
   
-1.  At the Publisher, execute [sp_helplogreader_agent](~/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md), specifying **@publisher**. This returns the current security settings for the Log Reader Agent.  
+1.  At the Publisher, execute [sp_helplogreader_agent](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql), specifying **@publisher**. This returns the current security settings for the Log Reader Agent.  
   
-2.  At the Publisher, execute [sp_changelogreader_agent](~/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), specifying **@publication** and one or more of the following security settings to change:  
+2.  At the Publisher, execute [sp_changelogreader_agent](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), specifying **@publication** and one or more of the following security settings to change:  
   
     -   To change the Windows account under which the agent runs or just password for this account, specify **@job_login** and **@job_password**.  
   
@@ -291,9 +291,9 @@ manager: "jhubbard"
   
 #### To change security settings for the Distribution Agent for a push subscription  
   
-1.  At the Publisher on the publication database, execute [sp_helpsubscription](~/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md), specifying **@publication** and **@subscriber**. This returns subscription properties, including security settings for the Distribution Agent running at the Distributor.  
+1.  At the Publisher on the publication database, execute [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql), specifying **@publication** and **@subscriber**. This returns subscription properties, including security settings for the Distribution Agent running at the Distributor.  
   
-2.  At the Publisher on the publication database, execute [sp_changesubscription](~/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), specifying **@publication**, **@subscriber**, **@subscriber_db**, a value of **all** for **@article**, the name of the security property for **@property**, and the new value of the property for **@value**.  
+2.  At the Publisher on the publication database, execute [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql), specifying **@publication**, **@subscriber**, **@subscriber_db**, a value of **all** for **@article**, the name of the security property for **@property**, and the new value of the property for **@value**.  
   
 3.  Repeat step 2 for each of the following security properties being changed:  
   
@@ -311,9 +311,9 @@ manager: "jhubbard"
   
 #### To change security settings for the Distribution Agent for a pull subscription  
   
-1.  At the Subscriber, execute [sp_helppullsubscription](~/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md), specifying **@publication**. This returns subscription properties, including security settings for the Distribution Agent running at the Subscriber.  
+1.  At the Subscriber, execute [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql), specifying **@publication**. This returns subscription properties, including security settings for the Distribution Agent running at the Subscriber.  
   
-2.  At the Subscriber on the subscription database, execute [sp_change_subscription_properties](~/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), specifying **@publisher**, **@publisher_db**, **@publication**, the name of the security property for **@property**, and the new value of the property for **@value**.  
+2.  At the Subscriber on the subscription database, execute [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql), specifying **@publisher**, **@publisher_db**, **@publication**, the name of the security property for **@property**, and the new value of the property for **@value**.  
   
 3.  Repeat step 2 for each of the following security properties being changed:  
   
@@ -328,9 +328,9 @@ manager: "jhubbard"
   
 #### To change security settings for the Merge Agent for a push subscription  
   
-1.  At the Publisher on the publication database, execute [sp_helpmergesubscription](~/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md), specifying **@publication**, **@subscriber**, and **@subscriber_db**. This returns subscription properties, including security settings for the Merge Agent running at the Distributor.  
+1.  At the Publisher on the publication database, execute [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql), specifying **@publication**, **@subscriber**, and **@subscriber_db**. This returns subscription properties, including security settings for the Merge Agent running at the Distributor.  
   
-2.  At the Publisher on the publication database, execute [sp_changemergesubscription](~/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md), specifying **@publication**, **@subscriber**, **@subscriber_db**, the name of the security property for **@property**, and the new value of the property for **@value**.  
+2.  At the Publisher on the publication database, execute [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql), specifying **@publication**, **@subscriber**, **@subscriber_db**, the name of the security property for **@property**, and the new value of the property for **@value**.  
   
 3.  Repeat step 2 for each of the following security properties being changed:  
   
@@ -352,9 +352,9 @@ manager: "jhubbard"
   
 #### To change security settings for the Merge Agent for a pull subscription  
   
-1.  At the Subscriber, execute [sp_helpmergepullsubscription](~/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md), specifying **@publication**. This returns subscription properties, including security settings for the Merge Agent running at the Subscriber.  
+1.  At the Subscriber, execute [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql), specifying **@publication**. This returns subscription properties, including security settings for the Merge Agent running at the Subscriber.  
   
-2.  At the Subscriber on the subscription database, execute [sp_change_subscription_properties](~/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), specifying **@publisher**, **@publisher_db**, **@publication**, the name of the security property for **@property**, and the new value of the property for **@value**.  
+2.  At the Subscriber on the subscription database, execute [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql), specifying **@publisher**, **@publisher_db**, **@publication**, the name of the security property for **@property**, and the new value of the property for **@value**.  
   
 3.  Repeat step 2 for each of the following security properties being changed:  
   
@@ -373,18 +373,18 @@ manager: "jhubbard"
   
 #### To change security settings for the Snapshot Agent to generate a filtered snapshot for a Subscriber  
   
-1.  At the Publisher, execute [sp_helpdynamicsnapshot_job](~/relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md), specifying **@publication**. In the result set, note the value of **job_name** for the Subscriber's partition to change.  
+1.  At the Publisher, execute [sp_helpdynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql), specifying **@publication**. In the result set, note the value of **job_name** for the Subscriber's partition to change.  
   
-2.  At the Publisher, execute [sp_changedynamicsnapshot_job](~/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md), specifying **@publication**, the value obtained from step 1 for **@dynamic_snapshot_jobname**, and a new password for **@job_password** or login and password for the Windows account under which the agent runs for **@job_login** and **@job_password**.  
+2.  At the Publisher, execute [sp_changedynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql), specifying **@publication**, the value obtained from step 1 for **@dynamic_snapshot_jobname**, and a new password for **@job_password** or login and password for the Windows account under which the agent runs for **@job_login** and **@job_password**.  
   
     > [!IMPORTANT]  
     >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### To change security settings for the Queue Reader Agent  
   
-1.  At the Distributor, execute [sp_helpqreader_agent](~/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md). This returns the current Windows account under which the Queue Reader Agent runs.  
+1.  At the Distributor, execute [sp_helpqreader_agent](/sql/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql). This returns the current Windows account under which the Queue Reader Agent runs.  
   
-    -   At the Distributor, execute [sp_changeqreader_agent](~/relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md), specifying the Windows account settings for **@job_login** and **@job_passwsord**.  
+    -   At the Distributor, execute [sp_changeqreader_agent](/sql/relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql), specifying the Windows account settings for **@job_login** and **@job_passwsord**.  
   
     > [!NOTE]  
     >  After changing an agent login or password, you must stop and restart the agent before the change takes effect. There is one Queue Reader Agent for each distribution database. Changing the security settings for the agent affects the settings for all publications at all Publishers that use this distribution database.  
@@ -393,22 +393,22 @@ manager: "jhubbard"
   
 #### To change security mode used by an immediate updating Subscriber when connecting to the Publisher  
   
-1.  At the Subscriber on the subscription database, execute [sp_link_publication](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Specify **@publisher**, **@publication**, the name of the publication database for **@publisher_db**, and one of the following values for **@security_mode**:  
+1.  At the Subscriber on the subscription database, execute [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Specify **@publisher**, **@publication**, the name of the publication database for **@publisher_db**, and one of the following values for **@security_mode**:  
   
     -   **0** to use SQL Server Authentication when making updates at the Publisher. This option requires you to specify a valid login at the Publisher for **@login** and **@password**.  
   
-    -   **1** to use the security context of the user making changes at the Subscriber when connecting to the Publisher. See [sp_link_publication](~/relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) for restrictions related to this security mode.  
+    -   **1** to use the security context of the user making changes at the Subscriber when connecting to the Publisher. See [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) for restrictions related to this security mode.  
   
-    -   **2** to use an existing, user-defined linked server login created using [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+    -   **2** to use an existing, user-defined linked server login created using [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
 #### To change the password for a remote Distributor  
   
-1.  At the Distributor on the distribution database, execute [sp_changedistributor_password](~/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), specifying the new password for this login for **@password**.  
+1.  At the Distributor on the distribution database, execute [sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql), specifying the new password for this login for **@password**.  
   
     > [!IMPORTANT]  
     >  Do not change the password for **distributor_admin** directly.  
   
-2.  At every Publisher that uses this remote Distributor, execute [sp_changedistributor_password](~/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), specifying the password from step 1 for **@password**.  
+2.  At every Publisher that uses this remote Distributor, execute [sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql), specifying the password from step 1 for **@password**.  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   

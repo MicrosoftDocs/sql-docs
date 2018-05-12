@@ -89,7 +89,7 @@ GO
  The events for the next week are now flagged as being ready to replicate. The next time the Merge Agent runs for the subscription that event coordinator 112 uses, rows 2, 3, and 4 will be downloaded to the Subscriber and row 1 will be removed from the Subscriber.  
   
 ## See Also  
- [GETDATE &#40;Transact-SQL&#41;](~/t-sql/functions/getdate-transact-sql.md)   
+ [GETDATE &#40;Transact-SQL&#41;](/sql/t-sql/functions/getdate-transact-sql)   
  [Implement Jobs](../../../ssms/agent/implement-jobs.md)   
  [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)  
   

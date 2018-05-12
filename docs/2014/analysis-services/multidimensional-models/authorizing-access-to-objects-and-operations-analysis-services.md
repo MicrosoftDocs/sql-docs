@@ -69,7 +69,7 @@ manager: "mblythe"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides security settings for setting permissions on individual objects, including dimension members and cells within a data model. For details, see [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) and [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md).  
   
- You can also vary permissions based on user identity. This is often referred to as dynamic security, and is implemented using the [UserName &#40;MDX&#41;](~/mdx/username-mdx.md) function  
+ You can also vary permissions based on user identity. This is often referred to as dynamic security, and is implemented using the [UserName &#40;MDX&#41;](/sql/mdx/username-mdx) function  
   
 ## Best practices  
  To better manage permissions, we suggest an approach similar to the following:  

@@ -137,7 +137,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  Use the LISTENER option of the [CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md) statement or the ADD LISTENER option of the [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md) statement.  
+2.  Use the LISTENER option of the [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql) statement or the ADD LISTENER option of the [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) statement.  
   
      The following example adds an availability group listener to an existing availability group named `MyAg2`. A unique DNS name, `MyAg2ListenerIvP6`, is specified for this listener. The two replicas are on different subnets, so , as recommended, the listener uses static IP addresses. For each of the two availability replicas, the WITH IP clause specifies a static IP address, `2001:4898:f0:f00f::cf3c and 2001:4898:e0:f213::4ce2`, which use the IPv6 format. This example also specifies uses the optional PORT argument to specify port `60173` as the listener port.  
   

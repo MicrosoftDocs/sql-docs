@@ -23,7 +23,7 @@ manager: "jhubbard"
   These properties appear in the bottom pane of Table Designer. Unless otherwise noted, you can edit these properties in the Properties window when the column is selected. The **Column Properties** can be displayed in categories or alphabetically. Many properties only appear or can only be changed for certain data types.  
   
 > [!NOTE]  
->  If the table is published for replication, you must make schema changes using the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
+>  If the table is published for replication, you must make schema changes using the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
  **General**  
  Expands to show **Name**, **Allow Nulls**, **Data Type**, **Default Value or Binding**, **Length**, **Precision**, and **Scale**.  

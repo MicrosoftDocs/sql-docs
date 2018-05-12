@@ -61,6 +61,6 @@ manager: "jhubbard"
  [Locals Window](transact-sql-debugger-locals-window.md)   
  [Call Stack Window](transact-sql-debugger-call-stack-window.md)   
  [QuickWatch Dialog Box](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](~/t-sql/language-elements/expressions-transact-sql.md)  
+ [Expressions &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
   
   

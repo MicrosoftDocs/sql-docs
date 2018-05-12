@@ -99,7 +99,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/Book/*/Title` where the wildcard character (`*`) is specified in the middle of the expression.  
   
- The query processor uses the primary XML index for queries that involve [xml Data Type Methods](~/t-sql/xml/xml-data-type-methods.md) and returns either scalar values or the XML subtrees from the primary index itself. (This index stores all the necessary information to reconstruct the XML instance.)  
+ The query processor uses the primary XML index for queries that involve [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) and returns either scalar values or the XML subtrees from the primary index itself. (This index stores all the necessary information to reconstruct the XML instance.)  
   
  For example, the following query returns summary information stored in the `CatalogDescription``xml` type column in the `ProductModel` table. The query returns <`Summary`> information only for product models whose catalog description also stores the <`Features`> description.  
   
@@ -198,21 +198,21 @@ WHERE ProductModelID = 19
   
  Except for the differences described later in this topic, creating an XML index on an`xml` type column is similar to creating an index on a non-`xml` type column. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements can be used to create and manage XML indexes:  
   
--   [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
+-   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
+-   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
--   [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  
+-   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ## Getting Information about XML Indexes  
  XML index entries appear in the catalog view, sys.indexes, with the index "type" 3. The name column contains the name of the XML index.  
   
  XML indexes are also recorded in the catalog view, sys.xml_indexes. This contains all the columns of sys.indexes and some specific ones that are useful for XML indexes. The value NULL in the column, secondary_type, indicates a primary XML index; the values 'P', 'R' and 'V' stand for PATH, PROPERTY, and VALUE secondary XML indexes, respectively.  
   
- The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). It provides information, such as the number of disk pages occupied, average row size in bytes, and number of records, for all index types.. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.  
+ The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql). It provides information, such as the number of disk pages occupied, average row size in bytes, and number of records, for all index types.. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.  
   
 ## See Also  
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
+ [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)   
  [XML Data &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
   

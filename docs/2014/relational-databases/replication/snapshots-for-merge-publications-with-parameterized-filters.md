@@ -47,7 +47,7 @@ manager: "jhubbard"
  To create a snapshot for a publication with parameterized filters, see [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## Security Settings for the Snapshot Agent  
- The Snapshot Agent creates snapshots for each partition. For pre-generated snapshots and snapshots requested by a Subscriber, the agent runs and makes connections under the credentials that were specified when the snapshot agent job for the publication was created (the job is created by the New Publication Wizard or **sp_addpublication_snapshot**). To change the credentials, use **sp_changedynamicsnapshot_job**. For more information, see [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
+ The Snapshot Agent creates snapshots for each partition. For pre-generated snapshots and snapshots requested by a Subscriber, the agent runs and makes connections under the credentials that were specified when the snapshot agent job for the publication was created (the job is created by the New Publication Wizard or **sp_addpublication_snapshot**). To change the credentials, use **sp_changedynamicsnapshot_job**. For more information, see [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql).  
   
 ## See Also  
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   

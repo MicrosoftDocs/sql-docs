@@ -30,12 +30,12 @@ manager: "jhubbard"
 |CPU control effect %|The effect of Resource Governor on the resource pool. Calculated as (CPU usage %) / (CPU usage % without Resource Governor.|  
 |Compile memory target (KB)|The current memory broker target, in kilobytes (KB), for query compiles.|  
 |Cache memory target (KB)|The current memory broker target, in kilobytes (KB), for cache.|  
-|Query exec memory target (KB)|The current memory broker target, in kilobytes (KB), for query execution memory grant. This information is also available in [sys.dm_exec_query_memory_grants](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  
+|Query exec memory target (KB)|The current memory broker target, in kilobytes (KB), for query execution memory grant. This information is also available in [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql).|  
 |Memory grants/sec|The number of memory grants occurring in this resource pool per second.|  
-|Active memory grants count|Current total count of memory grants. This information is also available in [sys.dm_exec_query_memory_grants](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  
+|Active memory grants count|Current total count of memory grants. This information is also available in [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql).|  
 |Memory grant timeouts/sec|The number of memory grant time-outs per second.|  
-|Active memory grant amount (KB)|The current total amount, in kilobytes (KB), of granted memory. This information is also available in [sys.dm_exec_query_resource_semaphores](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).|  
-|Pending memory grant count|The number of requests for memory grants pending in the queues. This information is also available in [sys.dm_exec_query_resource_semaphores](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).|  
+|Active memory grant amount (KB)|The current total amount, in kilobytes (KB), of granted memory. This information is also available in [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
+|Pending memory grant count|The number of requests for memory grants pending in the queues. This information is also available in [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
 |Max memory (KB)|The maximum amount, in kilobytes (KB), of memory that the resource pool can have based on the resource pool settings and server state.|  
 |Used memory (KB)|The amount of memory used, in kilobytes (KB), for the resource pool.|  
 |Target memory (KB)|The target amount, in kilobytes (KB), of memory the resource pool is trying to obtain based on the resource pool settings and server state.|  

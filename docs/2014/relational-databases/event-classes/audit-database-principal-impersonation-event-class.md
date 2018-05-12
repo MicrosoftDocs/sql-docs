@@ -53,8 +53,8 @@ manager: "jhubbard"
 |**XactSequence**|**bigint**|Token used to describe the current transaction.|50|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [EXECUTE AS Clause &#40;Transact-SQL&#41;](~/t-sql/statements/execute-as-clause-transact-sql.md)   
- [SETUSER &#40;Transact-SQL&#41;](~/t-sql/statements/setuser-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [EXECUTE AS Clause &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)  
   
   

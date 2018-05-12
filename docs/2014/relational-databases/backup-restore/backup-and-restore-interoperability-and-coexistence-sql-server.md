@@ -44,7 +44,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  When a database is started, only filegroups whose files were online when the database was closed are recovered and brought online.  
   
- If a problem is encountered during database startup, recovery fails, and the database is marked as SUSPECT. If the problem can be isolated to a file or files, the database administrator can take the files offline and try to restart the database. To take a file offline, you can use the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement:  
+ If a problem is encountered during database startup, recovery fails, and the database is marked as SUSPECT. If the problem can be isolated to a file or files, the database administrator can take the files offline and try to restart the database. To take a file offline, you can use the following [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) statement:  
   
  ALTER DATABASE *database_name* MODIFY FILE (NAME **='*`filename`*'**, OFFLINE)  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
  Full-text indexes are stored in database filegroups and can be affected by a piecemeal restore. If the full-text index resides in the same filegroup as any of the associated table data, piecemeal restore works as expected.  
   
 > [!NOTE]  
->  To view the filegroup ID of the filegroup that contains a full-text index, select the data_space_id column of [sys.fulltext_indexes](~/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  To view the filegroup ID of the filegroup that contains a full-text index, select the data_space_id column of [sys.fulltext_indexes](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql).  
   
 ### Full-Text Indexes and Tables in Separate Filegroups  
  If a full-text index resides in a separate filegroup from all of the associated table data, the behavior of piecemeal restore depends on which of the filegroups is restored and brought online first:  

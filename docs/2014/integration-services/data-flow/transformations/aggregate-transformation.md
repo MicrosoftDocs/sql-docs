@@ -30,13 +30,13 @@ manager: "jhubbard"
   
 |Operation|Description|  
 |---------------|-----------------|  
-|Group by|Divides datasets into groups. Columns of any data type can be used for grouping. For more information, see [GROUP BY &#40;Transact-SQL&#41;](~/t-sql/queries/select-group-by-transact-sql.md).|  
-|Sum|Sums the values in a column. Only columns with numeric data types can be summed. For more information, see [SUM &#40;Transact-SQL&#41;](~/t-sql/functions/sum-transact-sql.md).|  
-|Average|Returns the average of the column values in a column. Only columns with numeric data types can be averaged. For more information, see [AVG &#40;Transact-SQL&#41;](~/t-sql/functions/avg-transact-sql.md).|  
-|Count|Returns the number of items in a group. For more information, see [COUNT &#40;Transact-SQL&#41;](~/t-sql/functions/count-transact-sql.md).|  
+|Group by|Divides datasets into groups. Columns of any data type can be used for grouping. For more information, see [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
+|Sum|Sums the values in a column. Only columns with numeric data types can be summed. For more information, see [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
+|Average|Returns the average of the column values in a column. Only columns with numeric data types can be averaged. For more information, see [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
+|Count|Returns the number of items in a group. For more information, see [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |Count distinct|Returns the number of unique nonnull values in a group.|  
-|Minimum|Returns the minimum value in a group. For more information, see [MIN &#40;Transact-SQL&#41;](~/t-sql/functions/min-transact-sql.md). In contrast to the Transact-SQL MIN function, this operation can be used only with numeric, date, and time data types.|  
-|Maximum|Returns the maximum value in a group. For more information, see [MAX &#40;Transact-SQL&#41;](~/t-sql/functions/max-transact-sql.md). In contrast to the Transact-SQL MAX function, this operation can be used only with numeric, date, and time data types.|  
+|Minimum|Returns the minimum value in a group. For more information, see [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). In contrast to the Transact-SQL MIN function, this operation can be used only with numeric, date, and time data types.|  
+|Maximum|Returns the maximum value in a group. For more information, see [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). In contrast to the Transact-SQL MAX function, this operation can be used only with numeric, date, and time data types.|  
   
  The Aggregate transformation handles null values in the same way as the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] relational database engine. The behavior is defined in the SQL-92 standard. The following rules apply:  
   

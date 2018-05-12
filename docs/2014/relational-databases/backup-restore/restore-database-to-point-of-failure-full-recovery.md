@@ -24,14 +24,14 @@ manager: "jhubbard"
   
 ### To restore to the point of failure  
   
-1.  Back up the tail of the log by running the following basic [BACKUP](~/t-sql/statements/backup-transact-sql.md) statement:  
+1.  Back up the tail of the log by running the following basic [BACKUP](/sql/t-sql/statements/backup-transact-sql) statement:  
   
     ```  
     BACKUP LOG <database_name> TO <backup_device>   
        WITH NORECOVERY, NO_TRUNCATE;  
     ```  
   
-2.  Restore a full database backup by running the following basic [RESTORE DATABASE](~/t-sql/statements/restore-statements-transact-sql.md) statement:  
+2.  Restore a full database backup by running the following basic [RESTORE DATABASE](/sql/t-sql/statements/restore-statements-transact-sql) statement:  
   
     ```  
     RESTORE DATABASE <database_name> FROM <backup_device>   
@@ -62,7 +62,7 @@ manager: "jhubbard"
 ## Example  
  Before you can run the example, you must complete the following preparations:  
   
-1.  The default recovery model of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database is the simple recovery model. Because this recovery model does not support restoring to the point of a failure, set [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] to use the full recovery model by running the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement:  
+1.  The default recovery model of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database is the simple recovery model. Because this recovery model does not support restoring to the point of a failure, set [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] to use the full recovery model by running the following [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) statement:  
   
     ```  
     USE master;  
@@ -118,7 +118,7 @@ GO
 ```  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

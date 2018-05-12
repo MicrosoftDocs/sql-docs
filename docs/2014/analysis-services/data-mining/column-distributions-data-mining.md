@@ -48,7 +48,7 @@ manager: "mblythe"
  [Content Types &#40;Data Mining&#41;](content-types-data-mining.md)   
  [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
  [Discretization Methods &#40;Data Mining&#41;](discretization-methods-data-mining.md)   
- [Distributions &#40;DMX&#41;](~/dmx/distributions-dmx.md)   
+ [Distributions &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
  [Mining Structure Columns](mining-structure-columns.md)  
   
   

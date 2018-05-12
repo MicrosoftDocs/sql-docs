@@ -169,7 +169,7 @@ ElementName!TagNumber!AttributeName!Directive
  [Use RAW Mode with FOR XML](../xml/use-raw-mode-with-for-xml.md)   
  [Use AUTO Mode with FOR XML](../xml/use-auto-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](../xml/use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   
   

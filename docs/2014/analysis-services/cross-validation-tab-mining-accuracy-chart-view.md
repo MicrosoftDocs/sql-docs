@@ -100,6 +100,6 @@ manager: "mblythe"
  [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)   
  [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Measures in the Cross-Validation Report](data-mining/measures-in-the-cross-validation-report.md)   
- [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
+ [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

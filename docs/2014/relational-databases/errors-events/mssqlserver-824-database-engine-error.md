@@ -45,7 +45,7 @@ manager: "jhubbard"
 ### Restore from Backup  
  If the problem is not hardware-related and a known clean backup is available, restore the database from the backup.  
   
- Consider changing the databases to use the PAGE_VERIFY CHECKSUM option. For information about PAGE_VERIFY, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
+ Consider changing the databases to use the PAGE_VERIFY CHECKSUM option. For information about PAGE_VERIFY, see [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 ## See Also  
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  

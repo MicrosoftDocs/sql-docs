@@ -50,12 +50,12 @@ manager: "jhubbard"
 -   Refer to the object by using delimited identifiers. For example, the statement `CREATE TABLE [MERGE] ([MERGE] int);` uses brackets to delimit the object name MERGE.  
   
 ## External Resources  
- [Reserved Keywords &#40;Transact-SQL&#41;](~/t-sql/language-elements/reserved-keywords-transact-sql.md)  
+ [Reserved Keywords &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
- [MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  
+ [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
  [Delimited Identifiers (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=112509)  
   
- [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
+ [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   

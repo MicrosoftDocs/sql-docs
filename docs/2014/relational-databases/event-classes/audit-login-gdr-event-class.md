@@ -54,10 +54,10 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [sp_denylogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-revokelogin-transact-sql)   
+ [sp_denylogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-denylogin-transact-sql)   
  [Audit Server Principal Management Event Class](audit-server-principal-management-event-class.md)  
   
   

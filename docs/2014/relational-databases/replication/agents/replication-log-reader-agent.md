@@ -180,7 +180,7 @@ manager: "jhubbard"
  Is the number of replication commands to be read from the transaction log before being issued to the Subscriber by the Distribution Agent. The default is 0. If this parameter is not specified, the Log Reader Agent will read to the end of the log or to the number specified in **-ReadBatchSize** (number of transactions).  
   
  **-RecoverFromDataErrors**  
- Specifies that the Log Reader Agent continue to run when it encounters errors in column data published from a non-SQL Server Publisher. By default, such errors cause the Log Reader Agent to fail. When you use **-RecoverFromDataErrors**, erroneous column data is replicated either as NULL or an appropriate nonnull value, and warning messages are logged to the [MSlogreader_history](~/relational-databases/system-tables/mslogreader-history-transact-sql.md) table. This parameter is only supported for Oracle Publishers.  
+ Specifies that the Log Reader Agent continue to run when it encounters errors in column data published from a non-SQL Server Publisher. By default, such errors cause the Log Reader Agent to fail. When you use **-RecoverFromDataErrors**, erroneous column data is replicated either as NULL or an appropriate nonnull value, and warning messages are logged to the [MSlogreader_history](/sql/relational-databases/system-tables/mslogreader-history-transact-sql) table. This parameter is only supported for Oracle Publishers.  
   
 ## Remarks  
   

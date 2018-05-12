@@ -109,9 +109,9 @@ manager: "jhubbard"
  [Modify a Stored Procedure](modify-a-stored-procedure.md)   
  [Delete a Stored Procedure](delete-a-stored-procedure.md)   
  [Rename a Stored Procedure](rename-a-stored-procedure.md)   
- [OBJECT_DEFINITION &#40;Transact-SQL&#41;](~/t-sql/functions/object-definition-transact-sql.md)   
- [sys.sql_modules &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sp_helptext &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [OBJECT_ID &#40;Transact-SQL&#41;](~/t-sql/functions/object-id-transact-sql.md)  
+ [OBJECT_DEFINITION &#40;Transact-SQL&#41;](/sql/t-sql/functions/object-definition-transact-sql)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)   
+ [sp_helptext &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptext-transact-sql)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](/sql/t-sql/functions/object-id-transact-sql)  
   
   

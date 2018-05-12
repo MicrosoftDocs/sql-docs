@@ -56,11 +56,11 @@ manager: "jhubbard"
 ##  <a name="tuning"></a> Tuning the Performance of Full-Text Indexes  
  To maximize the performance of your full-text indexes, implement the following best practices:  
   
--   To use all processors or cores to the maximum, set [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)‘`max full-text crawl ranges`’ to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   To use all processors or cores to the maximum, set [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)‘`max full-text crawl ranges`’ to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Make sure that the base table has a clustered index. Use an integer data type for the first column of the clustered index. Avoid using GUIDs in the first column of the clustered index. A multi-range population on a clustered index can produce the highest population speed. We recommend that the column serving as the full-text key be an integer data type.  
   
--   Update the statistics of the base table by using the [UPDATE STATISTICS](~/t-sql/statements/update-statistics-transact-sql.md) statement. More important, update the statistics on the clustered index or the full-text key for a full population. This helps a multi-range population to generate good partitions on the table.  
+-   Update the statistics of the base table by using the [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) statement. More important, update the statistics on the clustered index or the full-text key for a full population. This helps a multi-range population to generate good partitions on the table.  
   
 -   Build a secondary index on a `timestamp` column if you want to improve the performance of incremental population.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
  During a full-text population, it is possible for fdhost.exe or sqlservr.exe to run low on memory or to run out of memory. If the full-text crawl log shows that fdhost.exe is being restarted often or that error code 8007008 is being returned it means one of these processes is running out of memory. If fdhost.exe is producing dumps, particularly on large, multi-CPU computers, it might be running out of memory.  
   
 > [!NOTE]  
->  To obtain information about memory buffers used by a full-text crawl, see [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md).  
+>  To obtain information about memory buffers used by a full-text crawl, see [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
   
  The possible causes are as follows:  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
   
  **Example: Setting max server memory**  
   
- This example uses the [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md) and [RECONFIGURE](~/t-sql/language-elements/reconfigure-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statements to set `max server memory` to the value calculated for *M* in the preceding example, `7052`:  
+ This example uses the [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) and [RECONFIGURE](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statements to set `max server memory` to the value calculated for *M* in the preceding example, `7052`:  
   
 ```  
 USE master;  
@@ -182,7 +182,7 @@ GO
     |PAGEIO_LATCH_SH (_EX or _UP)|This could indicate an IO bottleneck, in which case you would typically also see a high average disk-queue length.|Moving the full-text index to a different filegroup on a different disk could help reduce the IO bottleneck.|  
     |PAGELATCH_EX (or _UP)|This could indicate a lot of contention among threads that are trying to write to the same database file.|Adding files to the filegroup on which the fulltext index resides could help alleviate such contention.|  
   
-     For more information, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
+     For more information, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
   
 -   Inefficiencies in scanning the base table  
   
@@ -190,7 +190,7 @@ GO
   
     -   If the base table has a high percentage of out-of-row columns that are being full-text indexed, scanning the base table to produce batches might be the bottleneck. In this case, moving the smaller data in-row using `varchar(max)` or `nvarchar(max)` might help.  
   
-    -   If the base table is very fragmented, scanning might be inefficient. For information about computing out-of-row data and index fragmentation, see [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) and [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
+    -   If the base table is very fragmented, scanning might be inefficient. For information about computing out-of-row data and index fragmentation, see [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql) and [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
          To reduce fragmentation, you can reorganize or rebuild the clustered index. For more information, see [Reorganize and Rebuild Indexes](../indexes/reorganize-and-rebuild-indexes.md).  
   
@@ -210,8 +210,8 @@ GO
  [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Populate Full-Text Indexes](populate-full-text-indexes.md)   
  [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes.md)   
- [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
- [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
+ [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
+ [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
  [Troubleshoot Full-Text Indexing](troubleshoot-full-text-indexing.md)  
   
   

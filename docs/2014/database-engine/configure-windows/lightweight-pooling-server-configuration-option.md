@@ -43,7 +43,7 @@ manager: "jhubbard"
 ## See Also  
  [clr enabled Server Configuration Option](clr-enabled-server-configuration-option.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [clr enabled Server Configuration Option](clr-enabled-server-configuration-option.md)  
   
   

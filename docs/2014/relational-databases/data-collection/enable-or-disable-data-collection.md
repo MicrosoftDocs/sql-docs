@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_enable_collector](~/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) to enable the data collector.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql) to enable the data collector.  
   
 ```tsql  
 USE msdb;  
@@ -76,7 +76,7 @@ EXEC dbo.sp_syscollector_enable_collector ;
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_disable_collector](~/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md) to disable the data collector.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql) to disable the data collector.  
   
 ```tsql  
 USE msdb;  
@@ -86,6 +86,6 @@ EXEC dbo.sp_syscollector_disable_collector;
   
 ## See Also  
  [Data Collection](data-collection.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [System Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
   
   

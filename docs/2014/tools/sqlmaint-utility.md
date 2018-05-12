@@ -138,10 +138,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  A warning is written to *text_file* if the database is in use when **sqlmaint** runs.  
   
  **-CkAl** | **-CkAlNoIdx**  
- Specifies that a DBCC CHECKALLOC statement with the NOINDEX option be run in the database specified in **-D**. For more information, see [DBCC CHECKALLOC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md).  
+ Specifies that a DBCC CHECKALLOC statement with the NOINDEX option be run in the database specified in **-D**. For more information, see [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql).  
   
  **-CkCat**  
- Specifies that a DBCC CHECKCATALOG (Transact-SQL) statement be run in the database specified in **-D**. For more information, see [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md).  
+ Specifies that a DBCC CHECKCATALOG (Transact-SQL) statement be run in the database specified in **-D**. For more information, see [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkcatalog-transact-sql).  
   
  **-UpdOptiStats** *sample_percent*  
  Specifies that the following statement be run on each table in the database:  
@@ -152,7 +152,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  If the tables contain computed columns, you must also specify the **-SupportedComputedColumn** argument when you use **-UpdOptiStats**.  
   
- For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/update-statistics-transact-sql.md).  
+ For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql).  
   
  **-RebldIdx** *free_space*  
  Specifies that indexes on tables in the target database should be rebuilt by using the *free_space* percent value as the inverse of the fill factor. For example, if *free_space* percentage is 30, then the fill factor used is 70. If a *free_space* percentage value of 100 is specified, then the indexes are rebuilt with the original fill factor value.  
@@ -268,7 +268,7 @@ sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir
 ```  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/update-statistics-transact-sql.md)  
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)  
   
   

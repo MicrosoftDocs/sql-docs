@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   The object name is spelled correctly.  
   
--   The current database context is correct. If a database name for the object is not specified, the object must exist in the current database. For more information about setting the database context, see [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md).  
+-   The current database context is correct. If a database name for the object is not specified, the object must exist in the current database. For more information about setting the database context, see [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 -   The object exists in the system tables. To verify whether a table or other schema-scoped object exists, query the **sys.objects** catalog view. If the object is not in the system tables, the object has been deleted, or the user does not have permissions to view the object metadata. For more information about permissions to view object metadata, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
@@ -68,8 +68,8 @@ manager: "jhubbard"
 -   The user has permission to access the object. To verify the permissions the user has on the object, use the **Has_Perms_By_Name** system function.  
   
 ## See Also  
- [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md)   
+ [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)   
  [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)   
- [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/has-perms-by-name-transact-sql.md)  
+ [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/has-perms-by-name-transact-sql)  
   
   

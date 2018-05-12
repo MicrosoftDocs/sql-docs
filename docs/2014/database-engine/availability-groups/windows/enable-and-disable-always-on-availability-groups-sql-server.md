@@ -82,7 +82,7 @@ manager: "jhubbard"
 ###  <a name="Tsql1Procedure"></a> Using Transact-SQL  
  **To determine whether AlwaysOn Availability Groups is enabled**  
   
-1.  Use the following [SERVERPROPERTY](~/t-sql/functions/serverproperty-transact-sql.md) statement:  
+1.  Use the following [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) statement:  
   
     ```  
     SELECT SERVERPROPERTY ('IsHadrEnabled');  
@@ -95,7 +95,7 @@ manager: "jhubbard"
     -   If `IsHadrEnabled` = 0, AlwaysOn Availability Groups is disabled.  
   
     > [!NOTE]  
-    >  For more information about the `IsHadrEnabled` server property, see [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md).  
+    >  For more information about the `IsHadrEnabled` server property, see [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql).  
   
 ###  <a name="PowerShell1Procedure"></a> Using PowerShell  
  **To determine whether AlwaysOn Availability Groups is enabled**  
@@ -230,7 +230,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 -   Availability databases do not start up at SQL Server startup, making them inaccessible.  
   
--   The only supported AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement is [DROP AVAILABILITY GROUP](~/t-sql/statements/drop-availability-group-transact-sql.md). CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP, and the SET HADR options of ALTER DATABASE are not supported.  
+-   The only supported AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement is [DROP AVAILABILITY GROUP](/sql/t-sql/statements/drop-availability-group-transact-sql). CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP, and the SET HADR options of ALTER DATABASE are not supported.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] metadata and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] configuration data in WSFC are unaffected by disabling AlwaysOn Availability Groups.  
   
@@ -256,6 +256,6 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)  
+ [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  
   
   

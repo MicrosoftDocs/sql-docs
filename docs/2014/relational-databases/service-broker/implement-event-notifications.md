@@ -88,14 +88,14 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
  **To create an event notification**  
   
--   [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-notification-transact-sql.md)  
+-   [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql)  
   
  **To drop an event notification**  
   
--   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-event-notification-transact-sql.md)  
+-   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-notification-transact-sql)  
   
 ## See Also  
  [Get Information About Event Notifications](event-notifications.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)  
+ [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

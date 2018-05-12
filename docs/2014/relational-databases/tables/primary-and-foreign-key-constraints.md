@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 -   All the cascading referential actions directly caused by the original DELETE or UPDATE are performed first.  
   
--   If there are any AFTER triggers defined on the affected tables, these triggers fire after all cascading actions are performed. These triggers fire in opposite order of the cascading action. If there are multiple triggers on a single table, they fire in random order, unless there is a dedicated first or last trigger for the table. This order is as specified by using [sp_settriggerorder](~/relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md).  
+-   If there are any AFTER triggers defined on the affected tables, these triggers fire after all cascading actions are performed. These triggers fire in opposite order of the cascading action. If there are multiple triggers on a single table, they fire in random order, unless there is a dedicated first or last trigger for the table. This order is as specified by using [sp_settriggerorder](/sql/relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql).  
   
 -   If multiple cascading chains originate from the table that was the direct target of an UPDATE or DELETE action, the order in which these chains fire their respective triggers is unspecified. However, one chain always fires all its triggers before another chain starts firing.  
   

@@ -37,7 +37,7 @@ manager: "jhubbard"
 -   [Reorganize a Clustered Columnstore Index](#reorganize)  
   
 ##  <a name="create"></a> Create a Clustered Columnstore Index  
- To create a clustered columnstore index, first create a rowstore table as a heap or clustered index, and then use the [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md) statement to convert the table to a clustered columnstore index. If you want the clustered columnstore index to have the same name as the clustered index, use the DROP_EXISTING option.  
+ To create a clustered columnstore index, first create a rowstore table as a heap or clustered index, and then use the [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) statement to convert the table to a clustered columnstore index. If you want the clustered columnstore index to have the same name as the clustered index, use the DROP_EXISTING option.  
   
  This example creates a table as a heap and then converts it to a clustered columnstore index named cci_Simple. This changes the storage for the entire table from rowstore to columnstore.  
   
@@ -52,10 +52,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_T1 ON T1;
 GO  
 ```  
   
- For more examples, see the Examples section in [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md).  
+ For more examples, see the Examples section in [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
 ##  <a name="drop"></a> Drop a Clustered Columnstore Index  
- Use the [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md) statement to drop a clustered columnstore index. This operation will drop the index and convert the columnstore table to a rowstore heap.  
+ Use the [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql) statement to drop a clustered columnstore index. This operation will drop the index and convert the columnstore table to a rowstore heap.  
   
 ##  <a name="load"></a> Load Data into a Clustered Columnstore Index  
  You can add data to an existing clustered columnstore index by using any of the standard loading methods.  For example, the bcp bulk loading tool, Integration Services, and INSERT … SELECT can all load data into a clustered columnstore index.  
@@ -98,22 +98,22 @@ SELECT * FROM sys.column_store_row_groups
 ##  <a name="change"></a> Change Data in a Clustered Columnstore Index  
  Clustered columnstore indexes support insert, update, and delete DML operations.  
   
- Use [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md) to insert a row. The row will be added to the deltastore.  
+ Use [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) to insert a row. The row will be added to the deltastore.  
   
- Use [DELETE &#40;Transact-SQL&#41;](~/t-sql/statements/delete-transact-sql.md) to delete a row.  
+ Use [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) to delete a row.  
   
 -   If the row is in the columnstore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marks the row as logically deleted but does not reclaim the physical storage for the row until the index is rebuilt.  
   
 -   If the row is in the deltastore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logically and physically deletes the row.  
   
- Use [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md) to update a row.  
+ Use [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql) to update a row.  
   
 -   If the row is in the columnstore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marks the row as logically deleted, and then inserts the updated row into the deltastore.  
   
 -   If the row is in the deltastore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] updates the row in the deltastore.  
   
 ##  <a name="rebuild"></a> Rebuild a Clustered Columnstore Index  
- Use [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md) to perform a full rebuild of an existing clustered columnstore index. Additionally, you can use ALTER INDEX … REBUILD to rebuild a specific partition.  
+ Use [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) or [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) to perform a full rebuild of an existing clustered columnstore index. Additionally, you can use ALTER INDEX … REBUILD to rebuild a specific partition.  
   
 ### Rebuild Process  
  To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -144,7 +144,7 @@ SELECT * FROM sys.column_store_row_groups
      This ensures all data is stored in the columnstore. If multiple loads occur at the same time, each partition could end up having multiple deltastores. Rebuilding will move all deltastore rows into the columnstore.  
   
 ##  <a name="reorganize"></a> Reorganize a Clustered Columnstore Index  
- Reorganizing a clustered columnstore index moves all CLOSED rowgroups into the columnstore. To perform a reorganize, use [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)with the REORGANIZE option.  
+ Reorganizing a clustered columnstore index moves all CLOSED rowgroups into the columnstore. To perform a reorganize, use [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)with the REORGANIZE option.  
   
  Reorganizing is not required in order to move CLOSED rowgroups into the columnstore. The tuple-mover process will eventually find all CLOSED rowgroups and move them. However, the tuple-mover is single-threaded and might not move rowgroups fast enough for your workload.  
   

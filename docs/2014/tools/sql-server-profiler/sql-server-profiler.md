@@ -179,7 +179,7 @@ manager: "jhubbard"
 |Describes how to filter traces with SQL Server Profiler.|[Filter Traces with SQL Server Profiler](filter-traces-with-sql-server-profiler.md)|  
 |Describes how to use the replay features of SQL Server Profiler.|[Replay Traces](replay-traces.md)|  
 |Lists the context-sensitive help topics for SQL Server Profiler.|[SQL Server Profiler F1 Help](sql-server-profiler-f1-help.md)|  
-|Lists the system stored procedures that are used by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity.|[SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
+|Lists the system stored procedures that are used by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity.|[SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)|  
   
 ## See Also  
  [Locks Event Category](../../relational-databases/event-classes/locks-event-category.md)   

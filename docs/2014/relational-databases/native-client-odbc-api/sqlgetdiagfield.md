@@ -26,7 +26,7 @@ manager: "jhubbard"
 |Diagnostics record field|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Reports the line number of a stored procedure generating an error. The value of SQL_DIAG_SS_LINE is meaningful only if SQL_DIAG_SS_PROCNAME returns a value. The value is returned as an unsigned, 16-bit integer.|  
-|SQL_DIAG_SS_MSGSTATE|The state of an error message. For information about the error message state, see [RAISERROR](~/t-sql/language-elements/raiserror-transact-sql.md). The value is returned as a signed, 32-bit integer.|  
+|SQL_DIAG_SS_MSGSTATE|The state of an error message. For information about the error message state, see [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). The value is returned as a signed, 32-bit integer.|  
 |SQL_DIAG_SS_PROCNAME|Name of the stored procedure generating an error, if appropriate. The value is returned as a character string. The length of the string (in characters) depends on the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It can be determined by calling [SQLGetInfo](sqlgetinfo.md) requesting the value for SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|The severity level of the associated error message. The value is returned as a signed, 32-bit integer.|  
 |SQL_DIAG_SS_SRVNAME|The name of the server on which the error occurred. The value is returned as a character string. The length of the string (in characters) is defined by the SQL_MAX_SQLSERVERNAME macro in sqlncli.h.|  

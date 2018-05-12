@@ -41,10 +41,10 @@ manager: "jhubbard"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent records job and job step information in the job history.  
   
 ## See Also  
- [sp_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)   
- [dbo.sysjobs &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo.sysjobsteps &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)   
+ [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
+ [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
+ [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
+ [dbo.sysjobsteps &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
  [Implement Jobs](implement-jobs.md)   
  [Manage Job Steps](manage-job-steps.md)  
   

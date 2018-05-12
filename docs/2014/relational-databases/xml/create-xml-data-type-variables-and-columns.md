@@ -19,7 +19,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Create XML Data Type Variables and Columns
-  The `xml` data type is a built-in data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is somewhat similar to other built-in types such as `int` and `varchar`. As with other built-in types, you can use the `xml` data type as a column type when you create a table as a variable type, a parameter type, a function-return type, or in [CAST and CONVERT](~/t-sql/functions/cast-and-convert-transact-sql.md).  
+  The `xml` data type is a built-in data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is somewhat similar to other built-in types such as `int` and `varchar`. As with other built-in types, you can use the `xml` data type as a column type when you create a table as a variable type, a parameter type, a function-return type, or in [CAST and CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## Creating Columns and Variables  
  To create an `xml` type column as part of a table, use a `CREATE TABLE` statement, as shown in the following example:  
@@ -46,7 +46,7 @@ DECLARE @x xml (Sales.StoreSurveySchemaCollection)
 CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...   
 ```  
   
- You can use XQuery to query XML instances stored in columns, parameters, or variables. You can also use the XML Data Manipulation Language (XML DML) to apply updates to the XML instances. Because the XQuery standard did not define XQuery DML at the time of development, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduces [XML Data Modification Language](~/t-sql/xml/xml-data-modification-language-xml-dml.md) extensions to XQuery. These extensions allow you to perform insert, update, and delete operations.  
+ You can use XQuery to query XML instances stored in columns, parameters, or variables. You can also use the XML Data Manipulation Language (XML DML) to apply updates to the XML instances. Because the XQuery standard did not define XQuery DML at the time of development, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduces [XML Data Modification Language](/sql/t-sql/xml/xml-data-modification-language-xml-dml) extensions to XQuery. These extensions allow you to perform insert, update, and delete operations.  
   
 ## Assigning Defaults  
  In a table, you can assign a default XML instance to a column of `xml` type. You can provide the default XML in one of two ways: by using an XML constant, or by using an explicit cast to the `xml` type.  
@@ -77,7 +77,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   Your constraint involves other XML or non-XML columns in the table. An example is the enforcement of the ID of a Customer (`/Customer/@CustId`) found in an XML instance to match the value in a relational CustomerID column.  
   
- You can specify constraints for typed or untyped `xml` data type columns. However, you cannot use the [XML data type methods](~/t-sql/xml/xml-data-type-methods.md) when you specify constraints. Also, note that the `xml` data type does not support the following column and table constraints:  
+ You can specify constraints for typed or untyped `xml` data type columns. However, you cannot use the [XML data type methods](/sql/t-sql/xml/xml-data-type-methods) when you specify constraints. Also, note that the `xml` data type does not support the following column and table constraints:  
   
 -   PRIMARY KEY/ FOREIGN KEY  
   

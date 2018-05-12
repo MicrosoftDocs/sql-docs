@@ -40,7 +40,7 @@ manager: "jhubbard"
 -   Write a custom application in C# or Visual Basic.NET that uses methods from the **System.IO** namespace to move or copy the files.  
   
 ###  <a name="HowToMigrateFiles"></a> Example: Migrating Files from the File System into a FileTable  
- In this scenario, your files are stored in the file system, and you have a table of metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contains pointers to the files. You want to move the files into a FileTable, and then replace the original UNC path for each file in the metadata with the FileTable UNC path. The [GetPathLocator &#40;Transact-SQL&#41;](~/relational-databases/system-functions/getpathlocator-transact-sql.md) function helps you to achieve this goal.  
+ In this scenario, your files are stored in the file system, and you have a table of metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contains pointers to the files. You want to move the files into a FileTable, and then replace the original UNC path for each file in the metadata with the FileTable UNC path. The [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) function helps you to achieve this goal.  
   
  For this example, assume that there is an existing database table, `PhotoMetadata`, which contains data about photographs. This table has a column `UNCPath` of type `varchar`(512) which contains the actual UNC path to a .jpg file.  
   

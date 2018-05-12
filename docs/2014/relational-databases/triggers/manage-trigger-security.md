@@ -37,7 +37,7 @@ manager: "jhubbard"
 ## Trigger Security Best Practices  
  You can take the following measures to prevent trigger code from executing under escalated privileges:  
   
--   Be aware of the DML and DDL triggers that exist in the database and on the server instance by querying the [sys.triggers](~/relational-databases/system-catalog-views/sys-triggers-transact-sql.md) and [sys.server_triggers](~/relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) catalog views. The following query returns all DML and database-level DDL triggers in the current database, and all server-level DDL triggers on the server instance:  
+-   Be aware of the DML and DDL triggers that exist in the database and on the server instance by querying the [sys.triggers](/sql/relational-databases/system-catalog-views/sys-triggers-transact-sql) and [sys.server_triggers](/sql/relational-databases/system-catalog-views/sys-server-triggers-transact-sql) catalog views. The following query returns all DML and database-level DDL triggers in the current database, and all server-level DDL triggers on the server instance:  
   
     ```  
     SELECT type, name, parent_class_desc FROM sys.triggers  
@@ -45,7 +45,7 @@ manager: "jhubbard"
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
   
--   Use [DISABLE TRIGGER](~/t-sql/statements/disable-trigger-transact-sql.md) to disable triggers that can harm the integrity of the database or server if the triggers execute under escalated privileges. The following statement disables all database-level DDL triggers in the current database:  
+-   Use [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigger-transact-sql) to disable triggers that can harm the integrity of the database or server if the triggers execute under escalated privileges. The following statement disables all database-level DDL triggers in the current database:  
   
     ```  
     DISABLE TRIGGER ALL ON DATABASE  
@@ -91,7 +91,7 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md)   
+ [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DML Triggers](../triggers/dml-triggers.md)   
  [DDL Triggers](../triggers/ddl-triggers.md)  
   

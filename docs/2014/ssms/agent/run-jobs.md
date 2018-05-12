@@ -33,6 +33,6 @@ manager: "jhubbard"
 |Describes how to disable or enable a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Disable or Enable a Job](disable-or-enable-a-job.md)|  
   
 ## See Also  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

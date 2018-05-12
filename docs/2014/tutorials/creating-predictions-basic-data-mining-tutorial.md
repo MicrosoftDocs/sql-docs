@@ -92,7 +92,7 @@ manager: "jhubbard"
   
      When you let go, [TM_Decision_Tree].[Bike Buyer] appears in the **Criteria/Argument** cell.  
   
-     This specifies the target column for the `PredictProbability` function. For more information about functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
+     This specifies the target column for the `PredictProbability` function. For more information about functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 5.  Click the next empty row in the **Source** column, and then select TM_Decision_Tree mining model**.**  
   

@@ -39,7 +39,7 @@ manager: "jhubbard"
 |**TransactionID**|**bigint**|Not used.|4|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Lock:Deadlock Event Class](lock-deadlock-event-class.md)  
   
   

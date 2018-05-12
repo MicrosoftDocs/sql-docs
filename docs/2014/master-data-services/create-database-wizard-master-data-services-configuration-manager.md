@@ -38,7 +38,7 @@ manager: "jhubbard"
 |------------------|-----------------|  
 |**Database name**|Specify a name for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.|  
 |**SQL Server default collation**|Select to use the current database collation setting of the specified [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance for the new database.|  
-|**Windows collation**|Specify the Windows collation settings to use for the new database. Windows collations define rules for storing character data based on an associated Windows locale. For more information about Windows collations and the associated options, see [Windows Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/windows-collation-name-transact-sql.md).<br /><br /> Note: The **Windows collation** list and associated options enable only after you clear the **SQL Server default collation** box.|  
+|**Windows collation**|Specify the Windows collation settings to use for the new database. Windows collations define rules for storing character data based on an associated Windows locale. For more information about Windows collations and the associated options, see [Windows Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql).<br /><br /> Note: The **Windows collation** list and associated options enable only after you clear the **SQL Server default collation** box.|  
   
 ## Administrator Account  
   

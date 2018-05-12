@@ -52,7 +52,7 @@ manager: "jhubbard"
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)  
   
   

@@ -50,6 +50,6 @@ manager: "jhubbard"
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-         For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](~/t-sql/functions/cast-and-convert-transact-sql.md).  
+         For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
   

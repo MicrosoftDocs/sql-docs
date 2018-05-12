@@ -28,7 +28,7 @@ manager: "mblythe"
 SELECT <model column list>, StructureColumn('<structure column name') FROM <modelname>.CASES  
 ```  
   
- For additional information about using DMX queries to return case data, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](~/dmx/select-from-model-content-dmx.md) and [SELECT FROM &#60;structure&#62;.CASES](~/dmx/select-from-structure-cases.md).  
+ For additional information about using DMX queries to return case data, see [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx) and [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases).  
   
 ## Examples  
  The following DMX query returns the case data for a specific product series, from a time series model. The query also returns the column `Amount`, which was not used in the model but is available in the mining structure.  

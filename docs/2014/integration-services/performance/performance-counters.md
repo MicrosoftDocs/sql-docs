@@ -49,7 +49,7 @@ manager: "jhubbard"
  For information about how to improve performance, see [Data Flow Performance Features](../data-flow/data-flow-performance-features.md).  
   
 ## Obtain Performance Counter Statistics  
- For [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can obtain performance counter statistics by using the [dm_execution_performance_counters &#40;SSISDB Database&#41;](~/integration-services/functions-dm-execution-performance-counters.md) function.  
+ For [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can obtain performance counter statistics by using the [dm_execution_performance_counters &#40;SSISDB Database&#41;](/sql/integration-services/functions-dm-execution-performance-counters) function.  
   
  In the following example, the function returns statistics for a running execution with an ID of 34.  
   

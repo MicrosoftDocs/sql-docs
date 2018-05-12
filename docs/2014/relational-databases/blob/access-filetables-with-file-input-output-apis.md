@@ -23,7 +23,7 @@ manager: "jhubbard"
 ##  <a name="accessing"></a> Get Started Using File I/O APIs with FileTables  
  The primary usage of FileTables is expected to be through the Windows file system and file I/O APIs. FileTables support non-transactional access through the rich set of available file I/O APIs.  
   
-1.  File I/O API access typically begins by acquiring a logical UNC path for the file or directory. Applications can use a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement with the [GetFileNamespacePath &#40;Transact-SQL&#41;](~/relational-databases/system-functions/getfilenamespacepath-transact-sql.md) function to obtain the logical path for the file or directory. For more information, see [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md).  
+1.  File I/O API access typically begins by acquiring a logical UNC path for the file or directory. Applications can use a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement with the [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) function to obtain the logical path for the file or directory. For more information, see [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md).  
   
 2.  Then the application uses this logical path to obtain a handle to the file or directory and do something with the object. The path can be passed to any supported file system API function, such as CreateFile() or CreateDirectory(), to create or open a file and obtain a handle. The handle can then be used to stream data, to enumerate or organize directories, to get or set file attributes, to delete files or directories, and so forth.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
  When the database that contains FILESTREAM or FileTable data belongs to an AlwaysOn availability group, then all access to FILESTREAM or FileTable data through the file system APIs should use VNNs instead of computer names. For more information, see [FILESTREAM and FileTable with AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="partial"></a> Partial Updates  
- A writable handle obtained for FILESTREAM data in a FileTable by using the [GetFileNamespacePath &#40;Transact-SQL&#41;](~/relational-databases/system-functions/getfilenamespacepath-transact-sql.md) function can be used to make in-place, partial updates to the FILESTREAM content. This behavior is different from the transacted FILESTREAM access through a handle obtained by calling **OpenSQLFILESTREAM()** and passing an explicit transaction context.  
+ A writable handle obtained for FILESTREAM data in a FileTable by using the [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) function can be used to make in-place, partial updates to the FILESTREAM content. This behavior is different from the transacted FILESTREAM access through a handle obtained by calling **OpenSQLFILESTREAM()** and passing an explicit transaction context.  
   
 ###  <a name="trans"></a> Transactional Semantics  
  When you access the files in a FileTable by using file I/O APIs, these operations are not associated with any user transactions, and have the following additional characteristics:  

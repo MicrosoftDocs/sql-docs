@@ -407,12 +407,12 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+-   [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
--   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-partition-function-transact-sql.md)  
+-   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
   
--   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](~/t-sql/statements/create-partition-scheme-transact-sql.md)  
+-   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
   
--   [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)  
+-   [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   
   

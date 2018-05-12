@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 2.  To replace the template parameters, click **Specify Values for Template Parameters** on the **Query** menu.  
   
-     For more information on how to create a new stored procedure, see [CREATE TYPE &#40;Transact-SQL&#41;](~/t-sql/statements/create-type-transact-sql.md).  
+     For more information on how to create a new stored procedure, see [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql).  
   
 ## Memory Monitoring  
   

@@ -82,6 +82,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_resync_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md).  
+ For more information, see [sp_resync_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql).  
   
   

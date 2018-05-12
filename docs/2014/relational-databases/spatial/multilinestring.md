@@ -92,8 +92,8 @@ SET @g.STSrid = 13;
 ```  
   
 ## See Also  
- [STLength &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stlength-geometry-data-type.md)   
- [STIsClosed &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
+ [STLength &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
+ [STIsClosed &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
  [LineString](../spatial/linestring.md)   
  [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   

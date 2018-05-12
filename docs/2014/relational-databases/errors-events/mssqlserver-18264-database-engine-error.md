@@ -39,6 +39,6 @@ manager: "jhubbard"
  For information about using trace flags, see SQL Server Books Online.  
   
 ## See Also  
- [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
+ [Trace Flags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   
   

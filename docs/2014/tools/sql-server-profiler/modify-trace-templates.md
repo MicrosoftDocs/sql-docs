@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  [Using SQL Server Profiler](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
- [Using Transact-SQL](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+ [Using Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
 ## See Also  
  [Start a Trace](start-a-trace.md)  

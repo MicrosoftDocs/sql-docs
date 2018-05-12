@@ -168,11 +168,11 @@ manager: "jhubbard"
   
 -   **Schema qualify object names** - Includes the schema name in the name of objects that are created. The default is **True**.  
   
--   **Script binding** - Generates a script for binding default and rule objects. The default is **False**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md) and [CREATE RULE &#40;Transact-SQL&#41;](~/t-sql/statements/create-rule-transact-sql.md).  
+-   **Script binding** - Generates a script for binding default and rule objects. The default is **False**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) and [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
 -   **Script collation** - Includes collation information in the script. The default is **False**. For more information, see [Collation and Unicode Support](../collations/collation-and-unicode-support.md).  
   
--   **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md).  
+-   **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
 -   **Script drop and create** - When **Script CREATE**, [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements are included to create objects. When **Script DROP**, [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements are included to drop objects. When **Script DROP and CREATE**, the [!INCLUDE[tsql](../../../includes/tsql-md.md)] drop statement is included in the script, followed by the create statement, for each scripted object. The default is **Script CREATE**.  
   
@@ -186,9 +186,9 @@ manager: "jhubbard"
   
 -   **Script object-Level permissions** - Includes scripts to set permission on the objects in the database. The default is **False**.  
   
--   **Script statistics** - When set to **Script Statistics**, this option includes the `CREATE STATISTICS` statement to re-create statistics on the object. The **Script statistics and histograms** option also creates histogram information. The default is **Do not script statistics**. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md).  
+-   **Script statistics** - When set to **Script Statistics**, this option includes the `CREATE STATISTICS` statement to re-create statistics on the object. The **Script statistics and histograms** option also creates histogram information. The default is **Do not script statistics**. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Script USE DATABASE** - Adds the `USE DATABASE` statement to the script. To make sure that database objects are created in the correct database, include the `USE DATABASE` statement. When the script is expected to be used in a different database, select **False** to omit the `USE DATABASE` statement. The default is **True**. For more information, see [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md).  
+-   **Script USE DATABASE** - Adds the `USE DATABASE` statement to the script. To make sure that database objects are created in the correct database, include the `USE DATABASE` statement. When the script is expected to be used in a different database, select **False** to omit the `USE DATABASE` statement. The default is **True**. For more information, see [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 -   **Types of data to script** - Selects what should be scripted: **Data only**, **Schema only**, or both. The default is **Schema only**.  
   
@@ -240,7 +240,7 @@ manager: "jhubbard"
   
 2.  **Publish collation** - Includes collation information for table columns. The default is **False**. For more information, see [Collation and Unicode Support](../collations/collation-and-unicode-support.md).  
   
-3.  **Publish defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md).  
+3.  **Publish defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
 4.  **Publish dependent objects** - Publishes any object that is required to be present when the script for the selected object is executed. The default is **True**.  
   
@@ -250,13 +250,13 @@ manager: "jhubbard"
   
 7.  **Publish object-Level permissions** - Includes the permissions on the selected objects in the database. The default is **False**.  
   
-8.  **Publish statistics** - When set to **Publish Statistics**, includes the `CREATE STATISTICS` statement to re-create statistics on the object. The **Publish statistics and histograms** option also creates histogram information. The default is **Do not publish statistics**. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md).  
+8.  **Publish statistics** - When set to **Publish Statistics**, includes the `CREATE STATISTICS` statement to re-create statistics on the object. The **Publish statistics and histograms** option also creates histogram information. The default is **Do not publish statistics**. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
 9. **Publish vardecimal options** - Enables the `vardecimal` table format on the target database table when it is enabled on the origin database table. The default is **True**.  
   
 10. **Schema qualify object names** - Includes the schema name in the name of objects that are created. The default is **True**.  
   
-11. **Script binding** - Includes binding for default and rule objects in the script sent to the provider for publishing. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md) and [CREATE RULE &#40;Transact-SQL&#41;](~/t-sql/statements/create-rule-transact-sql.md).  
+11. **Script binding** - Includes binding for default and rule objects in the script sent to the provider for publishing. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) and [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
 12. **Types of data to publish** - Selects what should be scripted: **Data only**, **Schema Only**, or both. The default is **Schema and Data**.  
   

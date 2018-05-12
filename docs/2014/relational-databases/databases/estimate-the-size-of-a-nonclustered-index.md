@@ -127,7 +127,7 @@ manager: "jhubbard"
   
      ***Max_Var_Leaf_Size***  = ***Max_Var_Key_Size***  
   
-     If the nonclustered index does have included columns, add the appropriate values to the values from Step 1, including any modifications in Step 1.3. The size of a column depends on the data type and length specification. For more information, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
+     If the nonclustered index does have included columns, add the appropriate values to the values from Step 1, including any modifications in Step 1.3. The size of a column depends on the data type and length specification. For more information, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
      ***Num_Leaf_Cols***  = ***Num_Key_Cols*** + number of included columns  
   

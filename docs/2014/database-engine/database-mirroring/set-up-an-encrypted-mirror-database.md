@@ -1,7 +1,7 @@
 ---
 title: "Set Up an Encrypted Mirror Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/25/2017"
+ms.date: "06/26/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

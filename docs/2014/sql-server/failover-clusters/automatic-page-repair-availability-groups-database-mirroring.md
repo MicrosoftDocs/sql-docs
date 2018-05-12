@@ -39,7 +39,7 @@ manager: "jhubbard"
 |[824](../../relational-databases/errors-events/mssqlserver-824-database-engine-error.md)|Logical errors.|Logical data errors, such as torn write or bad page checksum.|  
 |829|A page has been marked as restore pending.|All.|  
   
- To view recent 823 CRC errors and 824 errors, see the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) table in the [msdb](../../relational-databases/databases/msdb-database.md) database.  
+ To view recent 823 CRC errors and 824 errors, see the [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) table in the [msdb](../../relational-databases/databases/msdb-database.md) database.  
   
   
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
 ##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
  On the principal/primary database, automatic page repair is tried only when the database is in the SYNCHRONIZED state and the principal/primary is still sending log records for the database to the mirror/secondary. The basic sequence of actions in an automatic page-repair attempt are as follows:  
   
-1.  When a read error occurs on a data page in the principal/primary database, the principal/primary inserts a row in the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) table with the appropriate error status. For database mirroring, the principal then requests a copy of the page from the mirror. For [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the primary broadcasts the request to all the secondaries and gets the page from the first to respond. The request specifies the page ID and the LSN that is currently at the end of the flushed log. The page is marked as *restore pending*. This makes it inaccessible during the automatic page-repair attempt. Attempts to access this page during the repair attempt will fail with error 829 (restore pending).  
+1.  When a read error occurs on a data page in the principal/primary database, the principal/primary inserts a row in the [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) table with the appropriate error status. For database mirroring, the principal then requests a copy of the page from the mirror. For [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the primary broadcasts the request to all the secondaries and gets the page from the first to respond. The request specifies the page ID and the LSN that is currently at the end of the flushed log. The page is marked as *restore pending*. This makes it inaccessible during the automatic page-repair attempt. Attempts to access this page during the repair attempt will fail with error 829 (restore pending).  
   
 2.  After receiving the page request, the mirror/secondary waits until it has redone the log up to the LSN specified in the request. Then, the mirror/secondary tries to access the page in its copy of the database. If the page can be accessed, the mirror/secondary sends the copy of the page to the principal/primary. Otherwise, the mirror/secondary returns an error to the principal/primary, and the automatic page-repair attempt fails.  
   
@@ -91,13 +91,13 @@ manager: "jhubbard"
   
 -   **AlwaysOn Availability Groups:**  
   
-     [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)  
+     [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
   
      Returns a row for every automatic page-repair attempt on any availability database on an availability replica that is hosted for any availability group by the server instance.  
   
 -   **Database mirroring:**  
   
-     [sys.dm_db_mirroring_auto_page_repair &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)  
+     [sys.dm_db_mirroring_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair)  
   
      Returns a row for every automatic page-repair attempt on any mirrored database on the server instance.  
   

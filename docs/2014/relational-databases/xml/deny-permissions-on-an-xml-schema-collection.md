@@ -190,8 +190,8 @@ GO
  [Compare Typed XML to Untyped XML](compare-typed-xml-to-untyped-xml.md)   
  [XML Schema Collections &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   
  [Requirements and Limitations for XML Schema Collections on the Server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   
- [DENY Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/deny-object-permissions-transact-sql.md)   
- [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md)   
+ [DENY Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-object-permissions-transact-sql)   
+ [GRANT Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql)   
  [XML Data &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

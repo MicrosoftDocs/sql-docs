@@ -61,7 +61,7 @@ manager: "jhubbard"
  CREATE MINING MODEL  
  Use this statement to create a mining structure and associated mining model together using the same name. The mining model name is appended with "Structure" to differentiate it from the mining structure. This statement is useful if you are creating a mining structure that will contain a single mining model.  
   
- For more information, see [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md).  
+ For more information, see [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx).  
   
  ALTER MINING STRUCTURE  
  Use this statement to add a mining model to a mining structure that already exists on the server. This statement is useful if you want to create a mining structure that contains several different mining models. There are several reasons that you would want to add more than one mining model in a single mining structure. For example, you might create several mining models that use different algorithms to see which algorithm works best. You might create several mining models that use the same algorithm, but with a parameter set differently for each mining model to find the best setting for the parameter.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
  **For More Information**  
   
- [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md), [Understanding the DMX Select Statement](~/dmx/understanding-the-dmx-select-statement.md), [Structure and Usage of DMX Prediction Queries](~/dmx/structure-and-usage-of-dmx-prediction-queries.md)  
+ [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference), [Understanding the DMX Select Statement](/sql/dmx/understanding-the-dmx-select-statement), [Structure and Usage of DMX Prediction Queries](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## What You Will Learn  
  This tutorial is divided into the following lessons:  

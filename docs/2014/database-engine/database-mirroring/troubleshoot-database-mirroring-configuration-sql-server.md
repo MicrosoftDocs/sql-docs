@@ -52,11 +52,11 @@ manager: "jhubbard"
 ##  <a name="Endpoints"></a> Endpoints  
  Endpoints must be correctly configured.  
   
-1.  Make sure that each server instance (the principal server, mirror server, and witness, if any) has a database mirroring endpoint. For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) and, depending on the form of authentication, either [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) or [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+1.  Make sure that each server instance (the principal server, mirror server, and witness, if any) has a database mirroring endpoint. For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) and, depending on the form of authentication, either [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) or [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
 2.  Check that the port numbers are correct.  
   
-     To identify the port currently associated with database mirroring endpoint of a server instance, use the [sys.database_mirroring_endpoints](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) and [sys.tcp_endpoints](~/relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) catalog views.  
+     To identify the port currently associated with database mirroring endpoint of a server instance, use the [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) and [sys.tcp_endpoints](/sql/relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql) catalog views.  
   
 3.  For database mirroring setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports. For information about verifying port availability, see [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md).  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
     SELECT state_desc FROM sys.database_mirroring_endpoints  
     ```  
   
-     For more information about the **state_desc** column, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
+     For more information about the **state_desc** column, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql).  
   
      To start an endpoint, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md).  
+     For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql).  
   
 5.  Check that the ROLE is correct. On each server instance use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
@@ -87,7 +87,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
+     For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql).  
   
 6.  The login for the service account from the other server instance requires CONNECT permission. Make sure that the login from the other server has CONNECT permission. To determine who has CONNECT permission for an endpoint, on each server instance use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
@@ -146,7 +146,7 @@ manager: "jhubbard"
   
 2.  The second ALTER DATABASE statement must be run on the principal server. This statement causes the principal server to try to connect to the mirror server. After that connection is created, the mirror then tries to connect to the principal server on another connection.  
   
- For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
+ For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 > [!NOTE]  
 >  For information about using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to start mirroring, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  

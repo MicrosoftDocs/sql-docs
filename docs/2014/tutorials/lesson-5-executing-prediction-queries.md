@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 5: Executing Prediction Queries
-  In this lesson, you will use the [SELECT FROM \<model> PREDICTION JOIN (DMX)](~/dmx/select-from-model-cases-dmx.md) form of the SELECT statement to create two different types of predictions based on the decision tree model you created in [Lesson 2: Adding Mining Models to the Association Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). These prediction types are defined below.  
+  In this lesson, you will use the [SELECT FROM \<model> PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) form of the SELECT statement to create two different types of predictions based on the decision tree model you created in [Lesson 2: Adding Mining Models to the Association Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). These prediction types are defined below.  
   
  Singleton Query  
  Use a singleton query to provide ad hoc values when making predictions. For example, you can determine whether a single customer is likely to be a bike buyer, by passing inputs to the query such as the commute distance, the area code, or the number of children of the customer. The singleton query returns a value that indicates how likely the person is to purchase a bicycle based on those inputs.  
@@ -24,7 +24,7 @@ manager: "jhubbard"
  Batch Query  
  Use a batch query to determine who in a table of potential customers is likely to purchase a bicycle. For example, if your marketing department provides you with a list of customers and customer attributes, then you can use a batch prediction to determine who from the table is likely to purchase a bicycle.  
   
- The [SELECT FROM \<model> PREDICTION JOIN (DMX)](~/dmx/select-from-model-cases-dmx.md) form of the SELECT statement contains three parts:  
+ The [SELECT FROM \<model> PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) form of the SELECT statement contains three parts:  
   
 -   A list of the mining model columns and prediction functions that are returned in the results. The results can also contain input columns from the source data.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   A mapping between the mining model columns and the source data. If these names match, then you can use NATURAL syntax and leave out the column mappings.  
   
- You can further enhance the query by using prediction functions. Prediction functions provide additional information, such as the probability of a prediction occurring, and provide support for the prediction in the training dataset. For more information about prediction functions, see [Functions &#40;DMX&#41;](~/dmx/functions-dmx.md).  
+ You can further enhance the query by using prediction functions. Prediction functions provide additional information, such as the probability of a prediction occurring, and provide support for the prediction in the training dataset. For more information about prediction functions, see [Functions &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
  The predictions in this tutorial are based on the ProspectiveBuyer table in the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] sample database. The ProspectiveBuyer table contains a list of potential customers and their associated characteristics. The customers in this table are independent of the customers that were used to create the decision tree mining model.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 -   Create a batch query to determine which customers, listed in a table of customers, are likely to purchase a bicycle.  
   
 ## Singleton Query  
- The first step is to use the [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](~/dmx/select-from-model-cases-dmx.md) in a singleton prediction query. The following is a generic example of the singleton statement:  
+ The first step is to use the [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx) in a singleton prediction query. The following is a generic example of the singleton statement:  
   
 ```  
 SELECT <select list> FROM [<mining model name>]   
@@ -92,7 +92,7 @@ ORDER BY <expression>
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
     ```  
   
-     The AS statement is used to alias columns returned by the query. The [PredictHistogram](~/dmx/predicthistogram-dmx.md) function returns statistics about the prediction, including the probability and the support. For more information about the functions that can be used in a prediction statement, see [Functions &#40;DMX&#41;](~/dmx/functions-dmx.md).  
+     The AS statement is used to alias columns returned by the query. The [PredictHistogram](/sql/dmx/predicthistogram-dmx) function returns statistics about the prediction, including the probability and the support. For more information about the functions that can be used in a prediction statement, see [Functions &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
 4.  Replace the following:  
   
@@ -147,7 +147,7 @@ ORDER BY <expression>
      The query returns a prediction about whether a customer with the specified characteristics will purchase a bicycle, as well as statistics about that prediction.  
   
 ## Batch Query  
- The next step is to use the [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](~/dmx/select-from-model-cases-dmx.md) in a batch prediction query. The following is a generic example of a batch statement:  
+ The next step is to use the [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx) in a batch prediction query. The following is a generic example of a batch statement:  
   
 ```  
 SELECT TOP <number> <select list>   
@@ -169,7 +169,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   AS [<input alias>]  
 ```  
   
- You have several options for the method of retrieving the source data, but in this tutorial, you will use OPENQUERY. For more information about the options available, see [&#60;source data query&#62;](~/dmx/source-data-query.md).  
+ You have several options for the method of retrieving the source data, but in this tutorial, you will use OPENQUERY. For more information about the options available, see [&#60;source data query&#62;](/sql/dmx/source-data-query).  
   
  The next line defines the mapping between the source columns in the mining model and the columns in the source data:  
   

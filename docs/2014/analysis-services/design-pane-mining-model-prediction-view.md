@@ -89,7 +89,7 @@ manager: "mblythe"
  Specify a condition or user expression that applies to the column. Columns can be dragged from the tables containing the mining model and input tables onto the cell.  
   
 ## See Also  
- [Data Mining Extensions &#40;DMX&#41; Statement Reference](~/dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; Statement Reference](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Data Mining Query Interfaces](data-mining/data-mining-query-tools.md)   
  [Prediction Query Builder &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   

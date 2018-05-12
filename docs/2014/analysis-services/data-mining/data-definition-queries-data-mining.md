@@ -37,7 +37,7 @@ manager: "mblythe"
 ##  <a name="bkmk_Create"></a> Creating Data Definition Queries  
  You can create data definition queries (statements) by using the Prediction Query Builder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or by using the DMX Query window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Data definition statements in DMX are part of the Analysis Services data definition language (DDL).  
   
- For information about the syntax of specific data definition statements, see [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md).  
+ For information about the syntax of specific data definition statements, see [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference).  
   
 ###  <a name="bkmk_ssdt"></a> Data Definition Queries in SQL Server Data Tools  
  The Data Mining Wizard is the preferred tool in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for creating and modifying mining models and mining structures, and for defining the data sources that are used in prediction queries and for training.  
@@ -49,13 +49,13 @@ manager: "mblythe"
 ###  <a name="bkmk_SSMS"></a> Data Definition Queries in SQL Server Management Studio  
  For data mining objects, you can use data definition queries to perform the following actions:  
   
--   Create specific types of models, such as a clustering model or decision tree model, by using [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md).  
+-   Create specific types of models, such as a clustering model or decision tree model, by using [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx).  
   
--   Alter an existing mining structure by adding a model or by changing the columns, by using [ALTER MINING STRUCTURE &#40;DMX&#41;](~/dmx/alter-mining-structure-dmx.md). Note that you cannot alter a mining model by using DMX; you only add new models to an existing structure.  
+-   Alter an existing mining structure by adding a model or by changing the columns, by using [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx). Note that you cannot alter a mining model by using DMX; you only add new models to an existing structure.  
   
--   Make a copy of a mining model and then alter it, by using [SELECT INTO &#40;DMX&#41;](~/dmx/select-into-dmx.md).  
+-   Make a copy of a mining model and then alter it, by using [SELECT INTO &#40;DMX&#41;](/sql/dmx/select-into-dmx).  
   
--   Define the data set used for training a model, by using [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) together with a data source query such as OPENROWSET.  
+-   Define the data set used for training a model, by using [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) together with a data source query such as OPENROWSET.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides query templates that can help you create data definition queries. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
   
@@ -83,8 +83,8 @@ manager: "mblythe"
 |Design queries of all kinds, using Prediction Query Builder.|[Create a Prediction Query Using the Prediction Query Builder](create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |Capture query definitions by using SQL Server Profiler, and use traces to monitor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |Learn more about the scripting languages and programming languages provided for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML for Analysis  &#40;XMLA&#41; Reference](../xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Developing with Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Learn how to manage models in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Export and Import Data Mining Objects](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](~/dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](~/dmx/import-dmx.md)|  
-|Learn more about OPENROWSET and other ways to query external data.|[&#60;source data query&#62;](~/dmx/source-data-query.md).|  
+|Learn how to manage models in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Export and Import Data Mining Objects](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|  
+|Learn more about OPENROWSET and other ways to query external data.|[&#60;source data query&#62;](/sql/dmx/source-data-query).|  
   
 ## See Also  
  [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md)  

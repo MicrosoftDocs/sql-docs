@@ -33,7 +33,7 @@ manager: "jhubbard"
 |`datetime2`|The ADO connection manager truncates the millisecond value.|  
   
 > [!NOTE]  
->  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md) and [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+>  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types and how they map to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) and [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## Configuring the ADO Connection Manager  
  You can configure an ADO connection manager in the following ways:  

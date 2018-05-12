@@ -52,7 +52,7 @@ manager: "jhubbard"
  When you create a new full-text index with the **CREATE FULLTEXT INDEX** statement, you can enable semantic indexing at the column level by specifying the keyword **STATISTICAL_SEMANTICS** as part of the column definition. You can also enable semantic indexing when you use the Full-Text Indexing Wizard to create a new full-text index.  
   
  **Create a new semantic index by using Transact-SQL**  
- Call the **CREATE FULLTEXT INDEX** statement and specify **STATISTICAL_SEMANTICS** for each column on which you want to create a semantic index. For more information about all the options for this statement, see [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md).  
+ Call the **CREATE FULLTEXT INDEX** statement and specify **STATISTICAL_SEMANTICS** for each column on which you want to create a semantic index. For more information about all the options for this statement, see [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql).  
   
  **Example 1: Create a unique index, full-text index, and semantic index**  
   
@@ -117,7 +117,7 @@ GO
  You can add semantic indexing when you alter an existing full-text index with the **ALTER FULLTEXT INDEX** statement. You can also add semantic indexing by using various dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Add a semantic index by using Transact-SQL**  
- Call the **ALTER FULLTEXT INDEX** statement with the options described below for each column on which you want to add a semantic index. For more information about all the options for this statement, see [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md).  
+ Call the **ALTER FULLTEXT INDEX** statement with the options described below for each column on which you want to add a semantic index. For more information about all the options for this statement, see [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Both full-text and semantic indexes are repopulated after a call to **ALTER**, unless you specify otherwise.  
   
@@ -191,7 +191,7 @@ GO
   
 ###  <a name="HowToCheckEnabled"></a> How To: Check Whether Semantic Search Is Enabled on Database Objects  
  **Is semantic search enabled for a database?**  
- Query the **IsFullTextEnabled** property of the [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](~/t-sql/functions/databasepropertyex-transact-sql.md) metadata function.  
+ Query the **IsFullTextEnabled** property of the [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) metadata function.  
   
  A return value of 1 indicates that full-text search and semantic search are enabled for the database; a return value of 0 indicates that they are not enabled.  
   
@@ -201,7 +201,7 @@ GO
 ```  
   
  **Is semantic search enabled for a table?**  
- Query the **TableFullTextSemanticExtraction** property of the [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](~/t-sql/functions/objectproperty-transact-sql.md) metadata function.  
+ Query the **TableFullTextSemanticExtraction** property of the [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql) metadata function.  
   
  A return value of 1 indicates that semantic search is enabled for the table; a return value of 0 indicates that it is not enabled.  
   
@@ -213,7 +213,7 @@ GO
  **Is semantic search enabled for a column?**  
  To determine whether semantic search is enabled for a specific column:  
   
--   Query the **StatisticalSemantics** property of the [COLUMNPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/columnproperty-transact-sql.md) metadata function.  
+-   Query the **StatisticalSemantics** property of the [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql) metadata function.  
   
      A return value of 1 indicates that semantic search is enabled for the column; a return value of 0 indicates that it is not enabled.  
   
@@ -222,7 +222,7 @@ GO
     GO  
     ```  
   
--   Query the catalog view [sys.fulltext_index_columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) for the full-text index.  
+-   Query the catalog view [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql) for the full-text index.  
   
      A value of 1 in the **statistical_semantics** column indicates that the specified column is enabled for semantic indexing in addition to full-text indexing.  
   
@@ -242,14 +242,14 @@ GO
 > [!IMPORTANT]  
 >  Fewer languages are supported for semantic indexing than for full-text indexing. As a result, there may be columns that you can index for full-text search, but not for semantic search.  
   
- Query the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
+ Query the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql).  
   
 ```tsql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
   
- The following languages are supported for semantic indexing. This list represents the output of the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md), ordered by LCID.  
+ The following languages are supported for semantic indexing. This list represents the output of the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql), ordered by LCID.  
   
 |Language|LCID|  
 |--------------|----------|  
@@ -265,7 +265,7 @@ GO
 |Spanish|3082|  
   
 ###  <a name="doctypes"></a> How To: Determine Which Document Types Can Be Indexed  
- Query the catalog view [sys.fulltext_document_types &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
+ Query the catalog view [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  If the document type that you want to index is not in the list of supported types, then you may have to locate, download, and install additional filters. For more information, see [View or Change Registered Filters and Word Breakers](view-or-change-registered-filters-and-word-breakers.md).  
   

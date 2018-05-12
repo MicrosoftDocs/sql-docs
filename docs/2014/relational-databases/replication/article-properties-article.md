@@ -142,7 +142,7 @@ manager: "jhubbard"
  **Destination object owner**  
  If you enter a value other than **dbo**:  
   
--   For Subscribers running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later, you must ensure that a schema is created at the Subscriber with the same name as the value you enter. For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](~/t-sql/statements/create-schema-transact-sql.md).  
+-   For Subscribers running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later, you must ensure that a schema is created at the Subscriber with the same name as the value you enter. For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-schema-transact-sql).  
   
 -   For Subscribers running versions prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], for each schema, add a user to the subscription database with the same name as the schema.  
   

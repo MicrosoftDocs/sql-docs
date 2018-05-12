@@ -31,7 +31,7 @@ manager: "jhubbard"
  The following examples demonstrate the capabilities of Semantic Search.  
   
 ###  <a name="find1"></a> Find the Key Phrases in a Document  
- The following query gets the key phrases that were identified in the sample document. It presents the results in descending order by the score that ranks the statistical significance of each key phrase. This query calls the [semantickeyphrasetable &#40;Transact-SQL&#41;](~/relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) function.  
+ The following query gets the key phrases that were identified in the sample document. It presents the results in descending order by the score that ranks the statistical significance of each key phrase. This query calls the [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) function.  
   
 ```tsql  
 SET @Title = 'Sample Document.docx'  
@@ -49,7 +49,7 @@ SELECT @Title AS Title, keyphrase, score
   
   
 ###  <a name="find2"></a> Find Similar or Related Documents  
- The following query gets the documents that were identified as similar or related to the sample document. It presents the results in descending order by the score that ranks the similarity of the 2 documents. This query calls the [semanticsimilaritytable &#40;Transact-SQL&#41;](~/relational-databases/system-functions/semanticsimilaritytable-transact-sql.md) function.  
+ The following query gets the documents that were identified as similar or related to the sample document. It presents the results in descending order by the score that ranks the similarity of the 2 documents. This query calls the [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) function.  
   
 ```vb  
 SET @Title = 'Sample Document.docx'  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
   
 ###  <a name="find3"></a> Find the Key Phrases That Make Documents Similar or Related  
- The following query gets the key phrases that make the 2 sample documents similar or related to one another. It presents the results in descending order by the score that ranks the weight of each key phrase. This query calls the [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](~/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) function.  
+ The following query gets the key phrases that make the 2 sample documents similar or related to one another. It presents the results in descending order by the score that ranks the weight of each key phrase. This query calls the [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) function.  
   
 ```tsql  
 SET @SourceTitle = 'first.docx'  

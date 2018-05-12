@@ -41,7 +41,7 @@ manager: "jhubbard"
  A database user for which the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is undefined or is incorrectly defined on a server instance cannot log in to the instance. Such a user is said to be an *orphaned user* of the database on that server instance. A database user can become orphaned if the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is dropped. Also, a database user can become orphaned after a database is restored or attached to a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Orphaning can happen if the database user is mapped to a SID that is not present in the new server instance.  
   
 > [!NOTE]  
->  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login cannot access a database in which it lacks a corresponding database user unless **guest** is enabled in that database. For information about creating a database user account, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md).  
+>  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login cannot access a database in which it lacks a corresponding database user unless **guest** is enabled in that database. For information about creating a database user account, see [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
 ## To Detect Orphaned Users  
  To detect orphaned users, execute the following Transact-SQL statements:  
@@ -53,7 +53,7 @@ sp_change_users_login @Action='Report';
 GO;  
 ```  
   
- The output lists the users and corresponding security identifiers (SID) in the current database that are not linked to any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. For more information, see [sp_change_users_login &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md).  
+ The output lists the users and corresponding security identifiers (SID) in the current database that are not linked to any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. For more information, see [sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 > [!NOTE]  
 >  **sp_change_users_login** cannot be used with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins that are created from Windows.  
@@ -71,7 +71,7 @@ GO;
   
     ```  
   
-     For more information, see [sp_change_users_login &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md).  
+     For more information, see [sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 2.  After you run the code in the preceding step, the user can access the database. The user then can alter the password of the *<login_name>* login account by using the **sp_password** stored procedure, as follows:  
   
@@ -88,16 +88,16 @@ GO;
     > [!NOTE]  
     >  **sp_password** cannot be used for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows accounts. Users connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through their Windows network account are authenticated by Windows; therefore, their passwords can only be changed in Windows.  
   
-     For more information, see [sp_password &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-password-transact-sql.md).  
+     For more information, see [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
 ## See Also  
- [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)   
- [sp_change_users_login &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_password &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-password-transact-sql.md)   
- [sys.sysusers &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md)   
- [sys.syslogins &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+ [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)   
+ [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
+ [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
+ [sys.sysusers &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

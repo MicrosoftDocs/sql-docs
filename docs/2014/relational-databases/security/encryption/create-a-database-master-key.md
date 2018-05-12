@@ -56,6 +56,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md).  
+ For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql).  
   
   

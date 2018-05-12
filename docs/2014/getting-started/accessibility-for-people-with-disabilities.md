@@ -73,7 +73,7 @@ manager: "jhubbard"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] product documentation is available in alternative formats to help our customers with accessibility needs.  
   
 ### Obtaining Documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- The documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available online. For more information, see [Use Product Documentation for SQL Server](~/2014/books-online-for-sql-server-2014.md).  
+ The documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available online. For more information, see [Use Product Documentation for SQL Server](/sql/2014/books-online-for-sql-server-2014).  
   
 ## Obtaining Documentation for Additional [!INCLUDE[msCoName](../includes/msconame-md.md)] Products  
  You can obtain accessible documentation for [!INCLUDE[msCoName](../includes/msconame-md.md)] products from the [Microsoft Accessibility Web Site](http://go.microsoft.com/fwlink/?LinkID=67164).  
@@ -106,7 +106,7 @@ manager: "jhubbard"
  A free monthly electronic newsletter is available to help you keep up to date with accessibility topics about [!INCLUDE[msCoName](../includes/msconame-md.md)] products. To subscribe, see the [Microsoft Accessibility Web Site](http://go.microsoft.com/fwlink/?LinkID=8287).  
   
 ## See Also  
- [Get Started with Product Documentation for SQL Server](~/2014/books-online-for-sql-server-2014.md)   
+ [Get Started with Product Documentation for SQL Server](/sql/2014/books-online-for-sql-server-2014)   
  [Getting SQL Server Assistance](../../2014/getting-started/getting-sql-server-assistance.md)  
   
   

@@ -111,26 +111,26 @@ manager: "jhubbard"
   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
- [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
- [sp_who &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+ [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
   
- [sp_lock &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-lock-transact-sql.md)  
+ [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
   
- [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md)  
+ [KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql)  
   
- [DBCC CHECKALLOC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
+ [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)  
   
- [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
- [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md)  
+ [DBCC OPENTRAN &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-opentran-transact-sql)  
   
- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
+ [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-inputbuffer-transact-sql)  
   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
- [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql)  
   
- [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
+ [Trace Flags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   
   

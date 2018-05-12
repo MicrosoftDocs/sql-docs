@@ -70,7 +70,7 @@ manager: "jhubbard"
   
     4.  Modify the file and save it to a different directory.  
   
-    5.  Execute sp_changearticle, specifying the file path and name for the *creation_script* property. For more information, see [sp_changearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md).  
+    5.  Execute sp_changearticle, specifying the file path and name for the *creation_script* property. For more information, see [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql).  
   
      **To create an article script and supply it as a custom creation script**  
   

@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  You should consider using column sets when the number of columns in a table is large, and operating on them individually is cumbersome. Applications might see some performance improvement when they select and insert data by using column sets on tables that have lots of columns. However, the performance of column sets can be reduced when many indexes are defined on the columns in the table. This is because the amount of memory that is required for an execution plan increases.  
   
- To define a column set, use the *<column_set_name>* FOR ALL_SPARSE_COLUMNS keywords in the[CREATE TABLE](~/t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) statements.  
+ To define a column set, use the *<column_set_name>* FOR ALL_SPARSE_COLUMNS keywords in the[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) or [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) statements.  
   
 ## Guidelines for Using Column Sets  
  When you use column sets, consider the following guidelines:  

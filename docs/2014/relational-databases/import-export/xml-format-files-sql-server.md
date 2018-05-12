@@ -176,7 +176,7 @@ manager: "jhubbard"
 |LENGTH **="*`n`*"**|This attribute defines the length for an instance of a fixed-length data type.<br /><br /> The value of *n* must be a positive integer.|Optional unless required by the xsi:type value|  
 |PREFIX_LENGTH **="*`p`*"**|This attribute defines the prefix length for a binary data representation. The PREFIX_LENGTH value, *p*, must be one of the following: 1, 2, 4, or 8.|Optional unless required by the xsi:type value|  
 |MAX_LENGTH **="*`m`*"**|This attribute is the maximum number of bytes that can be stored in a given field. Without a target table, the column max-length is not known. The MAX_LENGTH attribute restricts the maximum length of an output character column, limiting the storage allocated for the column value. This is especially convenient when using the OPENROWSET function's BULK option in a SELECT FROM clause.<br /><br /> The value of *m* must be a positive integer. By default, the maximum length is 8000 characters for a **char** column and 4000 characters for an **nchar** column.|Optional|  
-|COLLATION **="*`collationName`*"**|COLLATION is only allowed for character fields. For a list of the SQL collation names, see [SQL Server Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
+|COLLATION **="*`collationName`*"**|COLLATION is only allowed for character fields. For a list of the SQL collation names, see [SQL Server Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Optional|  
 |TERMINATOR **= "*`terminator`*"**|This attribute specifies the terminator of a data field. The terminator can be any character. The terminator must be a unique character that is not part of the data.<br /><br /> By default, the field terminator is the tab character (represented as \t). To represent a paragraph mark, use \r\n.|Used only with an xsi:type of character data, which requires this attribute|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Xsi:type values of the \<FIELD> Element  
@@ -195,7 +195,7 @@ manager: "jhubbard"
 |**CharTerm**|`TERMINATOR`|MAX_LENGTH, COLLATION|  
 |**NCharTerm**|`TERMINATOR`|MAX_LENGTH, COLLATION|  
   
- For more information about [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
+ For more information about [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
 ####  <a name="AttrOfColumnElement"></a> Attributes of the \<COLUMN> Element  
  This section describes the attributes of the \<COLUMN> element, which are summarized in the following schema syntax:  
@@ -249,7 +249,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  To bulk export or import SQLXML data, use one of the following data types in your format file: SQLCHAR or SQLVARYCHAR (the data is sent in the client code page or in the code page implied by the collation), SQLNCHAR or SQLNVARCHAR (the data is sent as Unicode), or SQLBINARY or SQLVARYBIN (the data is sent without any conversion).  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
 ###  <a name="HowUsesROW"></a> How Bulk Import Uses the \<ROW> Element  
  The \<ROW> element is ignored in some contexts. Whether the \<ROW> element affects a bulk-import operation depends on how the operation is performed:  
@@ -522,7 +522,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 ## See Also  
  [Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
+ [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [Non-XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)  
   

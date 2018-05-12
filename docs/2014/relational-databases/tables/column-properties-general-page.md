@@ -27,7 +27,7 @@ manager: "jhubbard"
  The name of the column.  
   
  **Data Type**  
- The type of data that the column can hold. If the data type is a user-defined data type, the user-defined data type is displayed. If the data type is not a user-defined data type, then the system data type is displayed. For more information, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md).  
+ The type of data that the column can hold. If the data type is a user-defined data type, the user-defined data type is displayed. If the data type is not a user-defined data type, then the system data type is displayed. For more information, see [Data Types &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
  **System Type**  
  The type of data that the column can hold. If the data type is a system data type, then the system data type is displayed. If the data type is a user-defined data type, the system data type that makes up the user-defined data type is displayed.  
@@ -93,7 +93,7 @@ manager: "jhubbard"
  Indicates whether the column is a column set. Possible values are **True** and **False**. For more information, see [Use Column Sets](use-column-sets.md).  
   
  **ANSI Padding Status**  
- Indicates whether ANSI padding is on or off. For more information, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-padding-transact-sql.md).  
+ Indicates whether ANSI padding is on or off. For more information, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
  **Full Text**  
  Displays whether the column participates in full-text queries.  

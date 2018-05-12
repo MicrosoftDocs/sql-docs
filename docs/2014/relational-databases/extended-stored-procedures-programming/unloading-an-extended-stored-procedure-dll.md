@@ -31,6 +31,6 @@ DBCC xp_hello(FREE)
 ```  
   
 ## See Also  
- [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)  
+ [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dllname-free-transact-sql)  
   
   

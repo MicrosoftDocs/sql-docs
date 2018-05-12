@@ -59,11 +59,11 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_revokedbaccess &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_grantdbaccess &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql)   
+ [sp_revokedbaccess &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql)   
+ [sp_adduser &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adduser-transact-sql)   
+ [sp_dropuser &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropuser-transact-sql)   
  [Audit Database Principal Management Event Class](audit-database-principal-management-event-class.md)  
   
   

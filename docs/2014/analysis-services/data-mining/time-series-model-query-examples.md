@@ -154,7 +154,7 @@ AND NODE_TYPE = 15
   
  For example, assume that the existing model has six months' worth of data. You want to extend this model by adding the sales figures from the last three months. At the same time, you want to make a prediction about the next three months. To obtain only the new predictions when you add the new data, specify the starting point as time slice 4, and the ending point as time slice 7. You could also request a total of six predictions, but the time slices for the first three would overlap with the new data just added.  
   
- For query examples and more information about the syntax for using `REPLACE_MODEL_CASES` and `EXTEND_MODEL_CASES`, see [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md).  
+ For query examples and more information about the syntax for using `REPLACE_MODEL_CASES` and `EXTEND_MODEL_CASES`, see [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="bkmk_EXTEND"></a> Making Predictions with EXTEND_MODEL_CASES  
  Prediction behavior differs depending on whether you extend or replace the model cases. When you extend a model, the new data is attached to the end of the series and the size of the training set increases. However, the time slices used for prediction queries always start at the end of the original series. Therefore, if you add three new data points and request six predictions, the first three predictions returned overlap with the new data. In this case, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] returns the actual new data points instead of making a prediction, until all the new data points are used up. Then, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] makes predictions based on the composite series.  
@@ -196,7 +196,7 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  With REPLACE_MODEL_CASES, starting at timestamp 1 you get new predictions based on the new data, which replaces the old training data.  
   
- For query examples and more information about the syntax for using `REPLACE_MODEL_CASES` and `EXTEND_MODEL_CASES`, see [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md).  
+ For query examples and more information about the syntax for using `REPLACE_MODEL_CASES` and `EXTEND_MODEL_CASES`, see [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="bkmk_MissingValues"></a> Missing Value Substitution in Time Series Models  
  When you add new data to a time series model by using a `PREDICTION JOIN` statement, the new dataset cannot have any missing values. If any series is incomplete, the model must supply the missing values by using either a null, a numeric means, a specific numeric mean, or a predicted value. If you specify `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] replaces the missing values with predictions based on the original model. If you use `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] replaces the missing values with the value that you specify in the *MISSING_VALUE_SUBSTITUTION* parameter.  
@@ -207,13 +207,13 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |Prediction Function|Usage|  
-|[Lag &#40;DMX&#41;](~/dmx/lag-dmx.md)|Returns a number of time slices between the date of the current case and the last date of the training set.<br /><br /> A typical use of this function is to identify recent training cases so that you can retrieve detailed data about the cases.|  
-|[PredictNodeId &#40;DMX&#41;](~/dmx/predictnodeid-dmx.md)|Returns the node ID for the specified predictable column.<br /><br /> A typical use of this function is to identify the node that generated a particular predicted value so that you can review the cases associated with the node, or retrieve the equation and other details.|  
-|[PredictStdev &#40;DMX&#41;](~/dmx/predictstdev-dmx.md)|Returns the standard deviation of the predictions in the specified predictable column.<br /><br /> This function replaces the INCLUDE_STATISTICS argument, which is not supported for time series models.|  
-|[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns the variance of the predictions for the specified predictable column.<br /><br /> This function replaces the INCLUDE_STATISTICS argument, which is not supported for time series models.|  
-|[PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md)|Returns predicted historical values or future predicted values for a time series.<br /><br /> You can also query time series models by using the general prediction function, [Predict &#40;DMX&#41;](~/dmx/predict-dmx.md).|  
+|[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|Returns a number of time slices between the date of the current case and the last date of the training set.<br /><br /> A typical use of this function is to identify recent training cases so that you can retrieve detailed data about the cases.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Returns the node ID for the specified predictable column.<br /><br /> A typical use of this function is to identify the node that generated a particular predicted value so that you can review the cases associated with the node, or retrieve the equation and other details.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Returns the standard deviation of the predictions in the specified predictable column.<br /><br /> This function replaces the INCLUDE_STATISTICS argument, which is not supported for time series models.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Returns the variance of the predictions for the specified predictable column.<br /><br /> This function replaces the INCLUDE_STATISTICS argument, which is not supported for time series models.|  
+|[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)|Returns predicted historical values or future predicted values for a time series.<br /><br /> You can also query time series models by using the general prediction function, [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).|  
   
- For a list of the functions that are common to all [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
+ For a list of the functions that are common to all [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## See Also  
  [Data Mining Queries](data-mining-queries.md)   

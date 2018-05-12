@@ -60,9 +60,9 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|Encrypting using a symmetric key.|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-symmetric-key-transact-sql.md)|  
-|Encrypting using an asymmetric key.|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-asymmetric-key-transact-sql.md)|  
-|Encrypting using a certificate.|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)|  
+|Encrypting using a symmetric key.|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Encrypting using an asymmetric key.|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|Encrypting using a certificate.|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
 |Encrypting database files using transparent data encryption.|[Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)|  
 |How to encrypt one column of a table.|[Encrypt a Column of Data](encrypt-a-column-of-data.md)|  
   

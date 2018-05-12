@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   Views  
   
-     For more information, see [Views &#40;Integration Services Catalog&#41;](~/integration-services/system-views/views-integration-services-catalog.md).  
+     For more information, see [Views &#40;Integration Services Catalog&#41;](/sql/integration-services/system-views/views-integration-services-catalog).  
   
 -   Performance counters  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
 -   Data taps  
   
 ## Operation Types  
- Several different types of operations are monitored in the `SSISDB` catalog, on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Each operation can have multiple messages associated with it. Each message can be classified into one of several different types. For example, a message can be of type Information, Warning, or Error. For the full list of message types, see the documentation for the Transact-SQL [catalog.operation_messages &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-operation-messages-ssisdb-database.md) view. For a full list of the operations types, see [catalog.operations &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-operations-ssisdb-database.md).  
+ Several different types of operations are monitored in the `SSISDB` catalog, on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Each operation can have multiple messages associated with it. Each message can be classified into one of several different types. For example, a message can be of type Information, Warning, or Error. For the full list of message types, see the documentation for the Transact-SQL [catalog.operation_messages &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) view. For a full list of the operations types, see [catalog.operations &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database).  
   
- Nine different status types are used to indicate the status of an operation. For a full list of the status types, see the [catalog.operations &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-operations-ssisdb-database.md) view.  
+ Nine different status types are used to indicate the status of an operation. For a full list of the status types, see the [catalog.operations &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database) view.  
   
 ## Related Content  
  Blog entry, [SSIS T-SQL API Overview](http://go.microsoft.com/fwlink/?LinkId=249051), on blogs.msdn.com.  

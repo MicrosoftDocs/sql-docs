@@ -86,6 +86,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md) and [sys.key_constraints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)  
+ For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) and [sys.key_constraints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-constraints-transact-sql)  
   
 ###  <a name="TsqlExample"></a>  

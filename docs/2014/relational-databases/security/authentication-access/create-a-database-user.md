@@ -48,7 +48,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Background  
- A user is a database level security principal. Logins must be mapped to a database user to connect to a database. A login can be mapped to different databases as different users but can only be mapped as one user in each database. In a partially contained database, a user can be created that does not have a login. For more information about contained database users, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md). If the guest user in a database is enabled, a login that is not mapped to a database user can enter the database as the guest user.  
+ A user is a database level security principal. Logins must be mapped to a database user to connect to a database. A login can be mapped to different databases as different users but can only be mapped as one user in each database. In a partially contained database, a user can be created that does not have a login. For more information about contained database users, see [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). If the guest user in a database is enabled, a login that is not mapped to a database user can enter the database as the guest user.  
   
 > [!IMPORTANT]  
 >  The guest user is ordinarily disabled. Do not enable the guest user unless it is necessary.  
@@ -131,7 +131,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md).  
+ For more information, see [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
 ## See Also  
  [Principals &#40;Database Engine&#41;](principals-database-engine.md)  

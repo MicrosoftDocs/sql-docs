@@ -31,7 +31,7 @@ manager: "jhubbard"
  Uses mixed mode authentication to verify attempted connections, for backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the **sa** password is blank when the security mode is being changed, the user is prompted to enter an **sa** password.  
   
 > [!NOTE]  
->  Changing the security configuration requires a restart of the service. When changing the Server Authentication to SQL Server and Windows Authentication mode the SA account is not automatically enabled. To use the SA account, execute [ALTER LOGIN](~/t-sql/statements/alter-login-transact-sql.md) with the ENABLE option.  
+>  Changing the security configuration requires a restart of the service. When changing the Server Authentication to SQL Server and Windows Authentication mode the SA account is not automatically enabled. To use the SA account, execute [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) with the ENABLE option.  
   
 ## Login Auditing  
  **None**  

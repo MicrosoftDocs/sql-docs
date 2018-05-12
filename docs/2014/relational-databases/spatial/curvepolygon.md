@@ -184,8 +184,8 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   
- [geometry Data Type Method Reference](~/t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)   
- [geography Data Type Method Reference](~/t-sql/spatial-geography/spatial-types-geography.md)   
+ [geometry Data Type Method Reference](/sql/t-sql/spatial-geometry/spatial-types-geometry-transact-sql)   
+ [geography Data Type Method Reference](/sql/t-sql/spatial-geography/spatial-types-geography)   
  [Spatial Data Types Overview](spatial-data-types-overview.md)  
   
   

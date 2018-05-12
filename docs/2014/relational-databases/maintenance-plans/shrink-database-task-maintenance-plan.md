@@ -98,6 +98,6 @@ manager: "jhubbard"
  Provide a password to use when authenticating. This option is not available.  
   
 ## See Also  
- [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
+ [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)  
   
   

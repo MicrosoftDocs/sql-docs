@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features statement-level recompilation of procedures. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recompiles stored procedures, only the statement that caused the recompilation is compiled, instead of the complete procedure.  
   
--   If certain queries in a procedure regularly use atypical or temporary values, procedure performance can be improved by using the RECOMPILE query hint inside those queries. Since only the queries using the query hint will be recompiled instead of the complete procedure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]'s statement-level recompilation behavior is mimicked. But in addition to using the procedure's current parameter values, the RECOMPILE query hint also uses the values of any local variables inside the stored procedure when you compile the statement. For more information, see [Query Hint (Transact-SQL)](~/t-sql/queries/hints-transact-sql-query.md).  
+-   If certain queries in a procedure regularly use atypical or temporary values, procedure performance can be improved by using the RECOMPILE query hint inside those queries. Since only the queries using the query hint will be recompiled instead of the complete procedure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]'s statement-level recompilation behavior is mimicked. But in addition to using the procedure's current parameter values, the RECOMPILE query hint also uses the values of any local variables inside the stored procedure when you compile the statement. For more information, see [Query Hint (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ###  <a name="Security"></a> Security  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
  `WITH RECOMPILE` Option  
  If this option is used when the procedure definition is created, it requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
   
- If this option is used in an EXECUTE statement, it requires EXECUTE permissions on the procedure. Permissions are not required on the EXECUTE statement itself but execute permissions are required on the procedure referenced in the EXECUTE statement. For more information, see [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md).  
+ If this option is used in an EXECUTE statement, it requires EXECUTE permissions on the procedure. Permissions are not required on the EXECUTE statement itself but execute permissions are required on the procedure referenced in the EXECUTE statement. For more information, see [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
  `RECOMPILE` Query Hint  
  This feature is used when the procedure is created and the hint is included in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the procedure. Therefore, it requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
@@ -135,6 +135,6 @@ GO
  [Rename a Stored Procedure](rename-a-stored-procedure.md)   
  [View the Definition of a Stored Procedure](view-the-definition-of-a-stored-procedure.md)   
  [View the Dependencies of a Stored Procedure](view-the-dependencies-of-a-stored-procedure.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-procedure-transact-sql.md)  
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   
   

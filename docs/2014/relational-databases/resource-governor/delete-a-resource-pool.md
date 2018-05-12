@@ -70,8 +70,8 @@ GO
  [Change Resource Pool Settings](change-resource-pool-settings.md)   
  [Resource Governor Workload Group](resource-governor-workload-group.md)   
  [Resource Governor Classifier Function](resource-governor-classifier-function.md)   
- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/drop-workload-group-transact-sql.md)   
- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-workload-group-transact-sql)   
+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-resource-pool-transact-sql)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

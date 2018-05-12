@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_helpserver](~/relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) to return information about all remote servers.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_helpserver](/sql/relational-databases/system-stored-procedures/sp-helpserver-transact-sql) to return information about all remote servers.  
   
 ```tsql  
 USE master;  
@@ -77,7 +77,7 @@ EXEC sp_helpserver ;
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_serveroption](~/relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md) to configure a remote server. The example configures a remote server corresponding to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `SEATTLE3`, to be collation compatible with the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_serveroption](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql) to configure a remote server. The example configures a remote server corresponding to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `SEATTLE3`, to be collation compatible with the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```tsql  
 USE master;  
@@ -91,8 +91,8 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [Remote Servers](remote-servers.md)   
  [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_serveroption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
+ [sp_linkedservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)   
+ [sp_helpserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpserver-transact-sql)   
+ [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
   
   

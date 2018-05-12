@@ -47,7 +47,7 @@ manager: "jhubbard"
  When using updatable subscriptions you can specify that a subscription should use one update mode and then switch to the other if the application requires it. For example, you can specify that a subscription should use immediate updating, but switch to queued updating if a system failure results in the loss of network connectivity.  
   
 > [!NOTE]  
->  Replication does not switch automatically between update modes. You must set the update mode through SQL Server Management Studio or your application must call [sp_setreplfailovermode &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md) to switch between modes.  
+>  Replication does not switch automatically between update modes. You must set the update mode through SQL Server Management Studio or your application must call [sp_setreplfailovermode &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql) to switch between modes.  
   
  If you switch from immediate updating to queued updating, you cannot switch back to immediate updating until the Subscriber and Publisher are connected and the Queue Reader Agent has applied all pending messages in the queue to the Publisher.  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
 -   If the application requires triggers at the Subscriber, the triggers should be defined with the `NOT FOR REPLICATION` option at the Publisher and Subscriber. This ensures that triggers fire only for the original data change, but not when that change is replicated.  
   
-     Ensure that the user-defined trigger does not fire when the replication trigger updates the table. This is accomplished by calling the procedure `sp_check_for_sync_trigger` in the body of the user-defined trigger. For more information, see [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql.md).  
+     Ensure that the user-defined trigger does not fire when the replication trigger updates the table. This is accomplished by calling the procedure `sp_check_for_sync_trigger` in the body of the user-defined trigger. For more information, see [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
   
 ### Immediate Updating  
   

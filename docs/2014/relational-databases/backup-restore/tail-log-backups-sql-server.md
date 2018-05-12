@@ -35,7 +35,7 @@ manager: "jhubbard"
 ##  <a name="TailLogScenarios"></a> Scenarios That Require a Tail-Log Backup  
  We recommend that you take a tail-log backup in the following scenarios:  
   
--   If the database is online and you plan to perform a restore operation on the database, begin by backing up the tail of the log. To avoid an error for an online database, you must use the … WITH NORECOVERY option of the [BACKUP](~/t-sql/statements/backup-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
+-   If the database is online and you plan to perform a restore operation on the database, begin by backing up the tail of the log. To avoid an error for an online database, you must use the … WITH NORECOVERY option of the [BACKUP](/sql/t-sql/statements/backup-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
 -   If a database is offline and fails to start and you need to restore the database, first back up the tail of the log. Because no transactions can occur at this time, using the WITH NORECOVERY is optional.  
   
@@ -53,9 +53,9 @@ manager: "jhubbard"
 ##  <a name="IncompleteMetadata"></a> Tail-Log Backups That Have Incomplete Backup Metadata  
  Tail log backups capture the tail of the log even if the database is offline, damaged, or missing data files. This might cause incomplete metadata from the restore information commands and **msdb**. However, only the metadata is incomplete; the captured log is complete and usable.  
   
- If a tail-log backup has incomplete metadata, in the [backupset](~/relational-databases/system-tables/backupset-transact-sql.md) table, **has_incomplete_metadata** is set to **1**. Also, in the output of [RESTORE HEADERONLY](~/t-sql/statements/restore-statements-headeronly-transact-sql.md), **HasIncompleteMetadata** is set to **1**.  
+ If a tail-log backup has incomplete metadata, in the [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) table, **has_incomplete_metadata** is set to **1**. Also, in the output of [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql), **HasIncompleteMetadata** is set to **1**.  
   
- If the metadata in a tail-log backup is incomplete, the [backupfilegroup](~/relational-databases/system-tables/backupfilegroup-transact-sql.md) table will be missing most of the information about filegroups at the time of the tail-log backup. Most of the **backupfilegroup** table columns are NULL; the only meaningful columns are as follows:  
+ If the metadata in a tail-log backup is incomplete, the [backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql) table will be missing most of the information about filegroups at the time of the tail-log backup. Most of the **backupfilegroup** table columns are NULL; the only meaningful columns are as follows:  
   
 -   **backup_set_id**  
   
@@ -73,8 +73,8 @@ manager: "jhubbard"
  To restore a transaction log backup, see [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
   
 ## See Also  
- [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   
  [Copy-Only Backups &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

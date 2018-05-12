@@ -64,12 +64,12 @@ manager: "jhubbard"
   
 -   Because transaction marks consume log space, use them only for transactions that play a significant role in the database recovery strategy.  
   
--   After a marked transaction commits, a row is inserted in the [logmarkhistory](~/relational-databases/system-tables/logmarkhistory-transact-sql.md) table in **msdb**.  
+-   After a marked transaction commits, a row is inserted in the [logmarkhistory](/sql/relational-databases/system-tables/logmarkhistory-transact-sql) table in **msdb**.  
   
 -   If a marked transaction spans multiple databases on the same database server or on different servers, the marks must be recorded in the logs of all the affected databases.  
   
 ## Creating the Marked Transactions  
- To create a marked transaction, use the [BEGIN TRANSACTION](~/t-sql/language-elements/begin-transaction-transact-sql.md) statement and the WITH MARK [*description*] clause. The optional *description* is a textual description of the mark. A mark name for the transaction is required. A mark name can be reused. The transaction log records the mark name, description, database, user, datetime information, and the log sequence number (LSN). The datetime information is used along with the mark name to uniquely identify the mark.  
+ To create a marked transaction, use the [BEGIN TRANSACTION](/sql/t-sql/language-elements/begin-transaction-transact-sql) statement and the WITH MARK [*description*] clause. The optional *description* is a textual description of the mark. A mark name for the transaction is required. A mark name can be reused. The transaction log records the mark name, description, database, user, datetime information, and the log sequence number (LSN). The datetime information is used along with the mark name to uniquely identify the mark.  
   
  **To create marked transactions in a set of databases:**  
   
@@ -172,12 +172,12 @@ GO
  For information about how to recover a database that contains marked transactions to or just before a particular mark, see [Recovery of Related  Databases That Contain Marked Transaction](recovery-of-related-databases-that-contain-marked-transaction.md).  
   
 ## See Also  
- [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
+ [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [BEGIN TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Full Database Backups &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Recovery of Related  Databases That Contain Marked Transaction](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

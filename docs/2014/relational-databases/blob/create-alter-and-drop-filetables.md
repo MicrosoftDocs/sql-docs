@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ###  <a name="HowToCreate"></a> How To: Create a FileTable  
  **Create a FileTable by Using Transact-SQL**  
- Create a FileTable by calling the [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md) statement with the **AS FileTable** option. Since a FileTable has a fixed schema, you do not have to specify a list of columns. You can specify the following settings for the new FileTable:  
+ Create a FileTable by calling the [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) statement with the **AS FileTable** option. Since a FileTable has a fixed schema, you do not have to specify a list of columns. You can specify the following settings for the new FileTable:  
   
 1.  **FILETABLE_DIRECTORY**. Specifies the directory that serves as the root directory for all the files and directories stored in the FileTable. This name should be unique among all the FileTable directory names in the database. Comparison for uniqueness is case-insensitive, regardless of the current collation settings.  
   
@@ -129,7 +129,7 @@ GO
 -   You cannot add new user columns, computed columns, or persisted computed columns to a FileTable.  
   
 ##  <a name="BasicsDrop"></a> Dropping a FileTable  
- You can drop a FileTable by using the ordinary syntax for the [DROP TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-table-transact-sql.md) statement.  
+ You can drop a FileTable by using the ordinary syntax for the [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql) statement.  
   
  When you drop a FileTable, the following objects are also dropped:  
   
@@ -140,7 +140,7 @@ GO
  The DROP TABLE command fails if there are open file handles in the FileTable’s file namespace. For information about closing open handles, see [Manage FileTables](manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> Other Database Objects Are Created When You Create a FileTable  
- When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
+ When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql).  
   
 ```tsql  
 --View all objects for all filetables, unsorted  

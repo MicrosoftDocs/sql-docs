@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `max text repl size` option to `-1`.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to configure the `max text repl size` option to `-1`.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -87,12 +87,12 @@ GO
   
 ## See Also  
  [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
- [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)   
- [UPDATETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/updatetext-transact-sql.md)   
- [WRITETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/writetext-transact-sql.md)  
+ [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
+ [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)   
+ [UPDATETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/updatetext-transact-sql)   
+ [WRITETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/writetext-transact-sql)  
   
   

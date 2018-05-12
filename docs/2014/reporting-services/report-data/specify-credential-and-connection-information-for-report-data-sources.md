@@ -108,7 +108,7 @@ manager: "mblythe"
     2.  If the account is listed, select it and then click **Remove**.  
   
 #### Using Impersonation with Stored Credentials  
- You can also use credentials to impersonate the identity of another user. For SQL Server databases, using the impersonation options sets the [SETUSER](~/t-sql/statements/setuser-transact-sql.md) function.  
+ You can also use credentials to impersonate the identity of another user. For SQL Server databases, using the impersonation options sets the [SETUSER](/sql/t-sql/statements/setuser-transact-sql) function.  
   
 > [!IMPORTANT]  
 >  Do not use impersonation for reports that support subscriptions or that use schedules to generate report history or refresh a report execution snapshot.  

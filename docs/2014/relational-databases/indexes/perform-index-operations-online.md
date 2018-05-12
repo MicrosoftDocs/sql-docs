@@ -47,13 +47,13 @@ manager: "jhubbard"
   
 -   The ONLINE option is available in the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
-    -   [CREATE INDEX](~/t-sql/statements/create-index-transact-sql.md)  
+    -   [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql)  
   
-    -   [ALTER INDEX](~/t-sql/statements/alter-index-transact-sql.md)  
+    -   [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql)  
   
-    -   [DROP INDEX](~/t-sql/statements/drop-index-transact-sql.md)  
+    -   [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql)  
   
-    -   [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) (To add or drop UNIQUE or PRIMARY KEY constraints with CLUSTERED index option)  
+    -   [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) (To add or drop UNIQUE or PRIMARY KEY constraints with CLUSTERED index option)  
   
 -   For more limitations and restrictions concerning creating, rebuilding, or dropping indexes online, see [Guidelines for Online Index Operations](guidelines-for-online-index-operations.md).  
   
@@ -108,6 +108,6 @@ manager: "jhubbard"
   
      [!code-sql[IndexDDL#DropIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql#dropindex4)]  
   
- For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
+ For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
   

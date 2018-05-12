@@ -47,7 +47,7 @@ FROM SalesModel
 ## What is a Stored Procedure?  
  A *stored procedure* is a method that has the following characteristics:  
   
--   You call a stored procedure on its own with the MDX [CALL](~/mdx/mdx-data-manipulation-call.md) statement.  
+-   You call a stored procedure on its own with the MDX [CALL](/sql/mdx/mdx-data-manipulation-call) statement.  
   
 -   A stored procedure can take any number of parameters.  
   

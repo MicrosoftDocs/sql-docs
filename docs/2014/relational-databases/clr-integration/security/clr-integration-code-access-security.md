@@ -39,7 +39,7 @@ manager: "jhubbard"
  The set of code access security permissions that are granted to managed code when running inside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grants a set of permissions to an assembly loaded in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the eventual set of permissions given to user code may be restricted further by the user and machine-level policies.  
   
 ## SQL Server Host Policy Level Permission Sets  
- The set of code access security permissions granted to assemblies by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] host policy level is determined by the permission set specified when creating the assembly. There are three permission sets: `SAFE`, `EXTERNAL_ACCESS` and `UNSAFE` (specified using the **PERMISSION_SET** option of[CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md)).  
+ The set of code access security permissions granted to assemblies by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] host policy level is determined by the permission set specified when creating the assembly. There are three permission sets: `SAFE`, `EXTERNAL_ACCESS` and `UNSAFE` (specified using the **PERMISSION_SET** option of[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This policy is not meant for the default application domain that would be in effect when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] creates an instance of the CLR.  
   

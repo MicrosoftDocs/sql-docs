@@ -23,21 +23,21 @@ manager: "jhubbard"
   
  For more detailed information about data volume, fragmentation and usage, use the following dynamic management views:  
   
--   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
+-   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql)  
   
--   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)  
   
--   [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)  
+-   [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql)  
   
--   [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)  
+-   [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql)  
   
  For space consumption in **tempdb** at the file, task and session level, use these dynamic management views:  
   
--   [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
+-   [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql)  
   
--   [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)  
+-   [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql)  
   
--   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+-   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql)  
   
  This table describes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** counters.  
   
@@ -70,11 +70,11 @@ manager: "jhubbard"
 |**LobSS Provider Destroy Count**|Count of LobSSP destroyed.|  
 |**LobSS Provider Truncation Count**|Count of LobSSP truncated.|  
 |**Mixed page allocations/sec**|Number of pages allocated per second from mixed extents. These could be used for storing the IAM pages and the first eight pages that are allocated to an allocation unit.|  
-|**Page compression attempts/sec**|Number of pages evaluated for page-level compression. Includes pages that were not compressed because significant savings could be achieved. Includes all objects in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).|  
+|**Page compression attempts/sec**|Number of pages evaluated for page-level compression. Includes pages that were not compressed because significant savings could be achieved. Includes all objects in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).|  
 |**Page Deallocations/sec**|Number of pages deallocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e. These include pages from mixed extents and uniform extents.|  
 |**Page Splits/sec**|Number of page splits per second that occur as the result of overflowing index pages.|  
 |**Pages Allocated/sec**|Number of pages allocated per second in all databases in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These include pages allocations from both mixed extents and uniform extents.|  
-|**Pages compressed/sec**|Number of data pages that are compressed by using PAGE compression. Includes all objects in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).|  
+|**Pages compressed/sec**|Number of data pages that are compressed by using PAGE compression. Includes all objects in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about specific objects, see [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).|  
 |**Probe Scans/sec**|Number of probe scans per second that are used to find at most one single qualified row in an index or base table directly.|  
 |**Range Scans/sec**|Number of qualified range scans through indexes per second.|  
 |**Scan Point Revalidations/sec**|Number of times per second that the scan point had to be revalidated to continue the scan.|  

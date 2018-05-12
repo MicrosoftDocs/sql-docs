@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica, if possible, or connect to another server instance that is enabled for AlwaysOn Availability Groups on a WSFC node that possess the correct security credentials for the availability group.  
   
-2.  Use the [DROP AVAILABILITY GROUP](~/t-sql/statements/drop-availability-group-transact-sql.md) statement, as follows  
+2.  Use the [DROP AVAILABILITY GROUP](/sql/t-sql/statements/drop-availability-group-transact-sql) statement, as follows  
   
      DROP AVAILABILITY GROUP *group_name*  
   

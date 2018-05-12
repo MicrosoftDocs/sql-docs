@@ -139,14 +139,14 @@ GO
 ## Related Content  
  [OLE Automation Objects in Transact-SQL](ole-automation-objects-in-transact-sql.md)  
   
- [sp_OACreate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  
+ [sp_OACreate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oacreate-transact-sql)  
   
- [sp_OAGetProperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oagetproperty-transact-sql.md)  
+ [sp_OAGetProperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oagetproperty-transact-sql)  
   
- [sp_OASetProperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oasetproperty-transact-sql.md)  
+ [sp_OASetProperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oasetproperty-transact-sql)  
   
- [sp_OAMethod &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oamethod-transact-sql.md)  
+ [sp_OAMethod &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oamethod-transact-sql)  
   
- [sp_OADestroy &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oadestroy-transact-sql.md)  
+ [sp_OADestroy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oadestroy-transact-sql)  
   
   

@@ -91,6 +91,6 @@ manager: "mblythe"
 ## See Also  
  [MiningModel Element &#40;ASSL&#41;](miningmodel-element-assl.md)   
  [Objects &#40;ASSL&#41;](objects-assl.md)   
- [SELECT &#40;DMX&#41;](~/dmx/select-dmx.md)  
+ [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx)  
   
   

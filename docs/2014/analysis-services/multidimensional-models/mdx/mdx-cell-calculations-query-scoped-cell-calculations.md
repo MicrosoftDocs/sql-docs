@@ -31,8 +31,8 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |--------------|-----------------|  
 |Empty set|An MDX set expression that resolves into an empty set. In this case, the scope of the calculated cell is the whole cube.|  
 |Single member set|An MDX set expression that resolves into a single member.|  
-|Set of level members|An MDX set expression that resolves into the members of a single level. An example of such a set expression is the *Level_Expression*.`Members` MDX function. To include calculated members, use the *Level_Expression*.`AllMembers` MDX function. For more information, see [AllMembers &#40;MDX&#41;](~/mdx/allmembers-mdx.md).|  
-|Set of descendants|An MDX set expression that resolves into the descendants of a specified member. An example of such a set expression is the `Descendants`(*Member_Expression*, *Level_Expresion*, *Desc_Flag*) MDX function. For more information, see [Descendants &#40;MDX&#41;](~/mdx/descendants-mdx.md).|  
+|Set of level members|An MDX set expression that resolves into the members of a single level. An example of such a set expression is the *Level_Expression*.`Members` MDX function. To include calculated members, use the *Level_Expression*.`AllMembers` MDX function. For more information, see [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Set of descendants|An MDX set expression that resolves into the descendants of a specified member. An example of such a set expression is the `Descendants`(*Member_Expression*, *Level_Expresion*, *Desc_Flag*) MDX function. For more information, see [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
  If the `String_Expression` argument does not describe a dimension, MDX assumes that all members are included for the purposes of constructing the calculation subcube. Therefore, if the `String_Expression` argument is NULL, the calculated cells definition applies to the whole cube.  
   
@@ -52,6 +52,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  On the other hand, MDX processes the calculation formula whenever an MDX query is issued against the cube involving cells included in the calculated cells definition. This processing occurs regardless of the creation scope.  
   
 ## See Also  
- [CREATE CELL CALCULATION Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CREATE CELL CALCULATION Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

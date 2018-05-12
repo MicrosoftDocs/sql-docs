@@ -155,6 +155,6 @@ manager: "jhubbard"
     END;  
     ```  
   
- For more information, see [ALTER FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-function-transact-sql.md).  
+ For more information, see [ALTER FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql).  
   
   

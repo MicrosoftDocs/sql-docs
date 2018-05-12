@@ -43,10 +43,10 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Security"></a> Security  
- For information about security, see [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md).  
+ For information about security, see [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql).  
   
 ####  <a name="Permissions"></a> Permissions  
- In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-database-permissions-transact-sql.md).  
+ In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Use the [RESTORE HEADERONLY](~/t-sql/statements/restore-statements-headeronly-transact-sql.md) statement. This example returns information about the file named `AdventureWorks2012-FullBackup.bak`.  
+3.  Use the [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement. This example returns information about the file named `AdventureWorks2012-FullBackup.bak`.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -84,11 +84,11 @@ GO
 ```  
   
 ## See Also  
- [backupfilegroup &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupfile &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)   
+ [backupfile &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupfile-transact-sql)   
+ [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupmediaset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediaset-transact-sql)   
+ [backupmediafamily &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql)   
  [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  

@@ -52,7 +52,7 @@ manager: "jhubbard"
  [Use AUTO Mode with FOR XML](use-auto-mode-with-for-xml.md)   
  [Use EXPLICIT Mode with FOR XML](use-explicit-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   
   

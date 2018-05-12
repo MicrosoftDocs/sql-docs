@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### How to: Create a Selective XML Index  
  **Create a Selective XML Index by Using Transact-SQL**  
- Create a selective XML index by calling the CREATE SELECTIVE XML INDEX statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ Create a selective XML index by calling the CREATE SELECTIVE XML INDEX statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
  **Example**  
   
@@ -52,7 +52,7 @@ FOR(
   
  **Example**  
   
- The following example shows an ALTER INDEX statement. This statement adds the path `'/a/b/m'` to the XQuery part of the index and deletes the path `'/a/b/e'` from the SQL part of the index created in the example in the topic [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-selective-xml-index-transact-sql.md). The path to delete is identified by the name that was given to it when it was created.  
+ The following example shows an ALTER INDEX statement. This statement adds the path `'/a/b/m'` to the XQuery part of the index and deletes the path `'/a/b/e'` from the SQL part of the index created in the example in the topic [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql). The path to delete is identified by the name that was given to it when it was created.  
   
 ```tsql  
 ALTER INDEX sxi_index  
@@ -70,7 +70,7 @@ FOR
   
 ### How to: Drop a Selective XML Index  
  **Drop a Selective XML Index by Using Transact-SQL**  
- Drop a selective XML index by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/drop-index-selective-xml-indexes.md).  
+ Drop a selective XML index by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](/sql/t-sql/statements/drop-index-selective-xml-indexes).  
   
  **Example**  
   

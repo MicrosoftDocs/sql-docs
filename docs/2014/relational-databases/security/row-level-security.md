@@ -25,12 +25,12 @@ manager: "jhubbard"
   Row-Level Security enables customers to control access to rows in a database table based on the characteristics of the user executing a query (e.g., group membership or execution context). Row-Level Security is now available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. See [Row-Level Security](https://msdn.microsoft.com/library/dn765131.aspx) in the current documentation for the current description of this feature.  
   
 ## See Also  
- [CREATE SECURITY POLICY &#40;Azure SQL Database&#41;](~/t-sql/statements/create-security-policy-transact-sql.md)   
- [ALTER SECURITY POLICY &#40;Azure SQL Database&#41;](~/t-sql/statements/alter-security-policy-transact-sql.md)   
- [DROP SECURITY POLICY &#40;Azure SQL Database&#41;](~/t-sql/statements/drop-security-policy-transact-sql.md)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-function-transact-sql.md)   
- [sys.security_policies &#40;Azure SQL Database&#41;](~/relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys.security_predicates &#40;Azure SQL Database&#41;](~/relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
+ [CREATE SECURITY POLICY &#40;Azure SQL Database&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   
+ [ALTER SECURITY POLICY &#40;Azure SQL Database&#41;](/sql/t-sql/statements/alter-security-policy-transact-sql)   
+ [DROP SECURITY POLICY &#40;Azure SQL Database&#41;](/sql/t-sql/statements/drop-security-policy-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [sys.security_policies &#40;Azure SQL Database&#41;](/sql/relational-databases/system-catalog-views/sys-security-policies-transact-sql)   
+ [sys.security_predicates &#40;Azure SQL Database&#41;](/sql/relational-databases/system-catalog-views/sys-security-predicates-transact-sql)   
  [Create User-defined Functions &#40;Database Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   

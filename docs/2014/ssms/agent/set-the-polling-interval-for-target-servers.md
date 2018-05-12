@@ -61,9 +61,9 @@ manager: "jhubbard"
   
 2.  On the toolbar, click **New Query**.  
   
-3.  In the query window, use the [sp_post_msx_operation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md) system stored procedure to set the polling interval for target servers.  
+3.  In the query window, use the [sp_post_msx_operation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) system stored procedure to set the polling interval for target servers.  
   
 ## See Also  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

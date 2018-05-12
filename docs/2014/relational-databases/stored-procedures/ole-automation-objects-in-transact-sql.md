@@ -46,22 +46,22 @@ manager: "jhubbard"
  When it references objects, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE Automation objects support traversing the referenced object to other objects that it contains. For example, when using the SQL-DMO **SQLServer** object, references can be made to databases and tables contained on that server.  
   
 ## Related Content  
- [Object Hierarchy Syntax &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/object-hierarchy-syntax-transact-sql.md)  
+ [Object Hierarchy Syntax &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/object-hierarchy-syntax-transact-sql)  
   
  [Surface Area Configuration](../security/surface-area-configuration.md)  
   
  [Ole Automation Procedures Server Configuration Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
   
- [sp_OACreate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  
+ [sp_OACreate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oacreate-transact-sql)  
   
- [sp_OAGetProperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oagetproperty-transact-sql.md)  
+ [sp_OAGetProperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oagetproperty-transact-sql)  
   
- [sp_OASetProperty &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oasetproperty-transact-sql.md)  
+ [sp_OASetProperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oasetproperty-transact-sql)  
   
- [sp_OAMethod &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oamethod-transact-sql.md)  
+ [sp_OAMethod &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oamethod-transact-sql)  
   
- [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
+ [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql)  
   
- [sp_OADestroy &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oadestroy-transact-sql.md)  
+ [sp_OADestroy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-oadestroy-transact-sql)  
   
   

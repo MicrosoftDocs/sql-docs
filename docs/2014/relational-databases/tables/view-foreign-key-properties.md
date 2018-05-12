@@ -79,6 +79,6 @@ manager: "jhubbard"
     WHERE f.parent_object_id = OBJECT_ID('HumanResources.Employee');  
     ```  
   
- For more information, see [sys.foreign_keys &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) and [sys.foreign_key_columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-foreign-key-columns-transact-sql.md).  
+ For more information, see [sys.foreign_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-foreign-keys-transact-sql) and [sys.foreign_key_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-foreign-key-columns-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

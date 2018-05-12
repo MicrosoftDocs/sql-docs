@@ -22,39 +22,39 @@ manager: "jhubbard"
   
 ##  <a name="ddl"></a> Transact-SQL Data Definition Language (DDL) Statements  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
+-   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
--   [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)  
+-   [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   
--   [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)  
+-   [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
+-   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)DROP INDEX  
+-   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)DROP INDEX  
   
 ##  <a name="func"></a> System Functions  
   
--   [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md)  
+-   [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)  
   
--   [PathName &#40;Transact-SQL&#41;](~/relational-databases/system-functions/pathname-transact-sql.md)  
+-   [PathName &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/pathname-transact-sql)  
   
 ##  <a name="proc"></a> System Stored Procedures  
   
--   [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
+-   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection)  
   
 ##  <a name="cat"></a> System Views – Catalog Views  
   
--   [sys.database_filestream_options &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
+-   [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)  
   
 ##  <a name="dmv"></a> System Views – Dynamic Management Views  
   
--   [sys.dm_filestream_file_io_handles &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql.md)  
+-   [sys.dm_filestream_file_io_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql)  
   
--   [sys.dm_filestream_file_io_requests &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-requests-transact-sql.md)  
+-   [sys.dm_filestream_file_io_requests &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-requests-transact-sql)  
   
 ##  <a name="api"></a> Programming APIs  
   

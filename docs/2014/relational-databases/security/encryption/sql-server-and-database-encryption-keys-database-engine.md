@@ -83,9 +83,9 @@ manager: "jhubbard"
  [Enable TDE Using EKM](enable-tde-on-sql-server-using-ekm.md)  
   
 ## Related Content  
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)  
+ [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
- [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-service-master-key-transact-sql.md)  
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
  [Restore a Database Master Key](restore-a-database-master-key.md)  
   

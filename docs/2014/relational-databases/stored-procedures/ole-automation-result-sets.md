@@ -44,7 +44,7 @@ manager: "jhubbard"
 |`nvarchar`|`nvarchar`|`nvarchar`|`nvarchar`|`nvarchar`|`nvarchar`|`nvarchar`|  
   
 ## Related Content  
- [OLE Automation Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
+ [OLE Automation Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql)  
   
  [Ole Automation Procedures Server Configuration Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
   

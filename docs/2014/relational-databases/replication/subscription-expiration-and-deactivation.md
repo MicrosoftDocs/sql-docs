@@ -31,7 +31,7 @@ manager: "jhubbard"
  To set retention periods, see [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md), [Set the Distribution Retention Period for Transactional Publications &#40;SQL Server Management Studio&#41;](set-distribution-retention-period-for-transactional-publications.md), and [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
   
 ## Transactional Replication  
- Transactional replication uses the maximum distribution retention period (the **@max_distretention** parameter of [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) and the publication retention period (the **@retention** parameter of [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
+ Transactional replication uses the maximum distribution retention period (the **@max_distretention** parameter of [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)) and the publication retention period (the **@retention** parameter of [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)):  
   
 -   If a subscription is not synchronized within the maximum distribution retention period (default of 72 hours) and there are changes in the distribution database that have not been delivered to the Subscriber, the subscription will be marked deactivated by the **Distribution clean up** job that runs on the Distributor. The subscription must be reinitialized.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
      If a push subscription expires, it is completely removed, but pull subscriptions are not. You must clean up pull subscriptions at the Subscriber. For more information, see [Delete a Pull Subscription](delete-a-pull-subscription.md).  
   
 ## Merge Replication  
- Merge replication uses the publication retention period (the **@retention** and **@retention_period_unit** parameters of [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). When a subscription expires, it must be reinitialized, because metadata for the subscription is removed. Subscriptions that are not reinitialized are dropped by the **Expired subscription clean up** job that runs on the Publisher. By default, this job runs daily; it removes all push subscriptions that have not synchronized for double the length of the publication retention period. For example:  
+ Merge replication uses the publication retention period (the **@retention** and **@retention_period_unit** parameters of [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)). When a subscription expires, it must be reinitialized, because metadata for the subscription is removed. Subscriptions that are not reinitialized are dropped by the **Expired subscription clean up** job that runs on the Publisher. By default, this job runs daily; it removes all push subscriptions that have not synchronized for double the length of the publication retention period. For example:  
   
 -   If a publication has a retention period of 14 days, a subscription can expire if it has not synchronized within 14 days.  
   

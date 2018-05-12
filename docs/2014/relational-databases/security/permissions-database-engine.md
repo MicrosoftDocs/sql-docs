@@ -400,7 +400,7 @@ manager: "jhubbard"
  The examples in this section show how to retrieve permissions information.  
   
 ### A. Returning the complete list of grantable permissions  
- The following statement returns all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permission by using the `fn_builtin_permissions` function. For more information, see [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
+ The following statement returns all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permission by using the `fn_builtin_permissions` function. For more information, see [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  
 SELECT * FROM fn_builtin_permissions(default);  
@@ -416,7 +416,7 @@ GO
 ```  
   
 ### C. Returning the permissions granted to the executing principal on an object  
- The following example uses `fn_my_permissions` to return a list of the effective permissions that are held by the calling principal on a specified securable. The example returns permissions on an object named `Orders55`. For more information, see [sys.fn_my_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
+ The following example uses `fn_my_permissions` to return a list of the effective permissions that are held by the calling principal on a specified securable. The example returns permissions on an object named `Orders55`. For more information, see [sys.fn_my_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-my-permissions-transact-sql).  
   
 ```  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
@@ -434,6 +434,6 @@ GO
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](permissions-hierarchy-database-engine.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
+ [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

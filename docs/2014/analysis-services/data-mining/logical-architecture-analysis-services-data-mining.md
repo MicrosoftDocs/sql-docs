@@ -65,7 +65,7 @@ manager: "mblythe"
   
  The result of training is a set of summary data, contained within the *model content*, which describes the patterns that were found and provides rules by which to generate predictions. For more information, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
- In limited cases, the logical structure of the model can also be exported into a file that represents model formulas and data bindings according to a standard format, the Predictive Modeling Markup Language (PMML). This logical structure can be imported into other systems that utilize PMML and the model so described can then be used for prediction. For more information, see [Understanding the DMX Select Statement](~/dmx/understanding-the-dmx-select-statement.md).  
+ In limited cases, the logical structure of the model can also be exported into a file that represents model formulas and data bindings according to a standard format, the Predictive Modeling Markup Language (PMML). This logical structure can be imported into other systems that utilize PMML and the model so described can then be used for prediction. For more information, see [Understanding the DMX Select Statement](/sql/dmx/understanding-the-dmx-select-statement).  
   
 
   
@@ -86,7 +86,7 @@ manager: "mblythe"
   
  The following stored procedures are supported for use in performing cross-validation.  
   
- [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
+ [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  Additionally, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contains many system stored procedures that are used internally for data mining. Although the system stored procedures are for internal use, you might find them useful shortcuts. Microsoft reserves the right to change these stored procedures as needed; therefore, for production use, we recommend that you create queries by using DMX, AMO, or XMLA.  
   
@@ -101,6 +101,6 @@ manager: "mblythe"
   
 ## See Also  
  [Multidimensional Model Object Processing](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

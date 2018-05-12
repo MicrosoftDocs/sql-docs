@@ -32,11 +32,11 @@ manager: "jhubbard"
 ##  <a name="func"></a> Functions for Working with FILESTREAM Data  
  When you use FILESTREAM to store binary large object (BLOB) data, you can use Win32 APIs to work with the files. To support working with FILESTREAM BLOB data in Win32 applications, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following functions and API:  
   
--   [PathName](~/relational-databases/system-functions/pathname-transact-sql.md) returns a path as a token to a BLOB. An application uses this token to obtain a Win32 handle and operate on BLOB data.  
+-   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) returns a path as a token to a BLOB. An application uses this token to obtain a Win32 handle and operate on BLOB data.  
   
      When the database that contains FILESTREAM data belongs to an AlwaysOn availability group, then the PathName function returns a virtual network name (VNN) instead of a computer name.  
   
--   [GET_FILESTREAM_TRANSACTION_CONTEXT()](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md) returns a token that represents the current transaction of a session. An application uses this token to bind FILESTREAM file system streaming operations to the transaction.  
+-   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) returns a token that represents the current transaction of a session. An application uses this token to bind FILESTREAM file system streaming operations to the transaction.  
   
 -   The [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) obtains a Win32 file handle. The application uses the handle to stream the FILESTREAM data, and can then pass the handle to the following Win32 APIs: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). If the application calls any other API by using the handle, an ERROR_ACCESS_DENIED error is returned. The application should close the handle by using [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428).  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
 ###  <a name="trx"></a> Reading the Transaction Context  
- To obtain the current transaction context, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md) function. The following example shows how to begin a transaction and read the current transaction context.  
+ To obtain the current transaction context, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) function. The following example shows how to begin a transaction and read the current transaction context.  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   

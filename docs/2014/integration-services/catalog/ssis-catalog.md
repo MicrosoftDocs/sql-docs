@@ -85,14 +85,14 @@ manager: "jhubbard"
 -   Subsequent characters can be letters or numbers as defined in the Unicode Standard 2.0, or an underscore (_).  
   
 ## Catalog Configuration  
- You fine-tune how the catalog behaves by adjusting the catalog properties. Catalog properties define how sensitive data is encrypted, and how operations and project versioning data is retained. To set catalog properties, use the **Catalog Properties** dialog box or call the [catalog.configure_catalog &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) stored procedure. To view the properties, use the dialog box or query [catalog.catalog_properties &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). You access the dialog box by right-clicking `SSISDB` in Object Explorer.  
+ You fine-tune how the catalog behaves by adjusting the catalog properties. Catalog properties define how sensitive data is encrypted, and how operations and project versioning data is retained. To set catalog properties, use the **Catalog Properties** dialog box or call the [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) stored procedure. To view the properties, use the dialog box or query [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). You access the dialog box by right-clicking `SSISDB` in Object Explorer.  
   
 ### Operations and Project Version Cleanup  
  Status data for many of the operations in the catalog is stored in internal database tables. For example, the catalog tracks the status of package executions and project deployments. To maintain the size of the operations data, the **SSIS Server Maintenance Job** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is used to remove old data. This [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job is created when [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is installed.  
   
  You can update or redeploy an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project by deploying it with the same name to the same folder in the catalog. By default, each time you redeploy a project, the `SSISDB` catalog retains the previous version of the project. To maintain the size of the operations data, the **SSIS Server Maintenance Job** is used to remove old versions of projects.  
   
- The following `SSISDB` catalog properties define how this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job behaves. You can view and modify the properties by using the **Catalog Properties** dialog box or by using [catalog.catalog_properties &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ The following `SSISDB` catalog properties define how this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job behaves. You can view and modify the properties by using the **Catalog Properties** dialog box or by using [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) and [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Clean Logs Periodically**  
  The job step for operations cleanup runs when this property is set to `True`.  
@@ -100,7 +100,7 @@ manager: "jhubbard"
  **Retention Period (days)**  
  Defines the maximum age of allowable operations data (in days). Older data are removed.  
   
- The minimum value is one day. The maximum value is limited only by the maximum value of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` data. For information about this data type, see [int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](~/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
+ The minimum value is one day. The maximum value is limited only by the maximum value of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` data. For information about this data type, see [int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Periodically Remove Old Versions**  
  The job step for project version cleanup runs when this property is set to `True`.  
@@ -129,7 +129,7 @@ manager: "jhubbard"
   
  Changing the encryption algorithm is a time-intensive operation. First, the server has to use the previously specified algorithm to decrypt all configuration values. Then, the server has to use the new algorithm to re-encrypt the values. During this time, there cannot be other [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] operations on the server. Thus, to enable [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] operations to continue uninterrupted, the encryption algorithm is a read-only value in the  dialog box in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- To change the **Encryption Algorithm** property setting, set the `SSISDB` database to the single-user mode and then call the catalog.configure_catalog stored procedure. Use ENCRYPTION_ALGORITHM for the *property_name* argument. For the supported property values, see [catalog.catalog_properties &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). For more information about the stored procedure, see [catalog.configure_catalog &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ To change the **Encryption Algorithm** property setting, set the `SSISDB` database to the single-user mode and then call the catalog.configure_catalog stored procedure. Use ENCRYPTION_ALGORITHM for the *property_name* argument. For the supported property values, see [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). For more information about the stored procedure, see [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  For more information about single-user mode, see [Set a Database to Single-user Mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -166,112 +166,112 @@ manager: "jhubbard"
   
 -   For a project, use the **Permissions** page in the [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- To manage permissions using Transact-SQL, call [catalog.grant_permission &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) and [catalog.revoke_permission &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md). To view effective permissions for the current principal for all objects, query [catalog.effective_object_permissions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md). This topic provides descriptions of the different types of permissions. To view permissions that have been explicitly assigned to the user, query [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md).  
+ To manage permissions using Transact-SQL, call [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) and [catalog.revoke_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). To view effective permissions for the current principal for all objects, query [catalog.effective_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). This topic provides descriptions of the different types of permissions. To view permissions that have been explicitly assigned to the user, query [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
   
 ## Folders  
- A folder contains one or more projects and environments in the `SSISDB` catalog. You can use the [catalog.folders &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-folders-ssisdb-database.md) view to access information about folders in the catalog. You can use the following stored procedures to manage folders.  
+ A folder contains one or more projects and environments in the `SSISDB` catalog. You can use the [catalog.folders &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) view to access information about folders in the catalog. You can use the following stored procedures to manage folders.  
   
--   [catalog.create_folder &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
+-   [catalog.create_folder &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database)  
   
--   [catalog.delete_folder &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md)  
+-   [catalog.delete_folder &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database)  
   
--   [catalog.rename_folder &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md)  
+-   [catalog.rename_folder &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database)  
   
--   [catalog.set_folder_description &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
+-   [catalog.set_folder_description &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database)  
   
 ## Projects and Packages  
  Each project can contain multiple packages. Both projects and packages can contain parameters and references to environments. You can access the parameters and environment references by using the [Configure Dialog Box](configure-dialog-box.md).  
   
  You can carry out other project tasks by calling the following stored procedures.  
   
--   [catalog.delete_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md)  
+-   [catalog.delete_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database)  
   
--   [catalog.deploy_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)  
+-   [catalog.deploy_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database)  
   
--   [catalog.get_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
+-   [catalog.get_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-get-project-ssisdb-database)  
   
--   [catalog.move_project &#40;&#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
+-   [catalog.move_project &#40;&#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-move-project-ssisdb-database)  
   
--   [catalog.restore_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
+-   [catalog.restore_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database)  
   
  These views provide details about packages, projects, and project versions.  
   
--   [catalog.projects &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-projects-ssisdb-database.md)  
+-   [catalog.projects &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-projects-ssisdb-database)  
   
--   [catalog.packages &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-packages-ssisdb-database.md)  
+-   [catalog.packages &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-packages-ssisdb-database)  
   
--   [catalog.object_versions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
+-   [catalog.object_versions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-object-versions-ssisdb-database)  
   
 ## Parameters  
- You use parameters to assign values to package properties at the time of package execution. To set the value of a package or project parameter and to clear the value, call [catalog.set_object_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) and [catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md). To set the value of a parameter for an instance of execution, call [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md). You can retrieve default parameter values by calling [catalog.get_parameter_values &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md).  
+ You use parameters to assign values to package properties at the time of package execution. To set the value of a package or project parameter and to clear the value, call [catalog.set_object_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database) and [catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database). To set the value of a parameter for an instance of execution, call [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database). You can retrieve default parameter values by calling [catalog.get_parameter_values &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database).  
   
  These views show the parameters for all packages and projects, and parameter values that are used for an instance of execution.  
   
--   [catalog.object_parameters &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-object-parameters-ssisdb-database.md)  
+-   [catalog.object_parameters &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database)  
   
--   [catalog.execution_parameter_values &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
+-   [catalog.execution_parameter_values &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)  
   
 ## Server Environments, Server Variables, and Server Environment References  
  Server environments contain server variables. The variable values can be used when a package is executed or validated on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
  The following stored procedures enable you to perform many other management tasks for environments and variables.  
   
--   [catalog.create_environment &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md)  
+-   [catalog.create_environment &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database)  
   
--   [catalog.delete_environment &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md)  
+-   [catalog.delete_environment &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database)  
   
--   [catalog.move_environment &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md)  
+-   [catalog.move_environment &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database)  
   
--   [catalog.rename_environment &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md)  
+-   [catalog.rename_environment &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database)  
   
--   [catalog.set_environment_property &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md)  
+-   [catalog.set_environment_property &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database)  
   
--   [catalog.create_environment_variable &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md)  
+-   [catalog.create_environment_variable &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database)  
   
--   [catalog.delete_environment_variable &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md)  
+-   [catalog.delete_environment_variable &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database)  
   
--   [catalog.set_environment_variable_property &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md)  
+-   [catalog.set_environment_variable_property &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database)  
   
--   [catalog.set_environment_variable_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md)  
+-   [catalog.set_environment_variable_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database)  
   
- By calling the [catalog.set_environment_variable_protection &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md) stored procedure, you can set the sensitivity bit for a variable.  
+ By calling the [catalog.set_environment_variable_protection &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database) stored procedure, you can set the sensitivity bit for a variable.  
   
  To use the value of a server variable, specify the reference between the project and the server environment. You can use the following stored procedures to create and delete references. You can also indicate whether the environment can be located in the same folder as the project or in a different folder.  
   
--   [catalog.create_environment_reference &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database.md)  
+-   [catalog.create_environment_reference &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database)  
   
--   [catalog.delete_environment_reference &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md)  
+-   [catalog.delete_environment_reference &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database)  
   
--   [catalog.set_environment_reference_type &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database.md)  
+-   [catalog.set_environment_reference_type &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database)  
   
  For more details about environments and variables, query these views.  
   
--   [catalog.environments &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-environments-ssisdb-database.md)  
+-   [catalog.environments &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-environments-ssisdb-database)  
   
--   [catalog.environment_variables &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-environment-variables-ssisdb-database.md)  
+-   [catalog.environment_variables &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-environment-variables-ssisdb-database)  
   
--   [catalog.environment_references &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
+-   [catalog.environment_references &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-environment-references-ssisdb-database)  
   
 ## Executions and Validations  
- An execution is an instance of a package execution. Call [catalog.create_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) and [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) to create and start an execution. To stop an execution or a package/project validation, call [catalog.stop_operation &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
+ An execution is an instance of a package execution. Call [catalog.create_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) and [catalog.start_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) to create and start an execution. To stop an execution or a package/project validation, call [catalog.stop_operation &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database).  
   
  To cause a running package to pause and create a dump file, call the catalog.create_execution_dump stored procedure. A dump file provides information about the execution of a package that can help you troubleshoot execution issues. For more information about generating and configuring dump files, see [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md).  
   
  For details about executions, validations, messages that are logged during operations, and contextual information related to errors, query these views.  
   
--   [catalog.executions &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-executions-ssisdb-database.md)  
+-   [catalog.executions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database)  
   
--   [catalog.operations &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-operations-ssisdb-database.md)  
+-   [catalog.operations &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database)  
   
--   [catalog.operation_messages &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-operation-messages-ssisdb-database.md)  
+-   [catalog.operation_messages &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database)  
   
--   [catalog.extended_operation_info &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)  
+-   [catalog.extended_operation_info &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-extended-operation-info-ssisdb-database)  
   
--   [catalog.event_messages](~/integration-services/system-views/catalog-event-messages.md)  
+-   [catalog.event_messages](/sql/integration-services/system-views/catalog-event-messages)  
   
--   [catalog.event_message_context](~/integration-services/system-views/catalog-event-message-context.md)  
+-   [catalog.event_message_context](/sql/integration-services/system-views/catalog-event-message-context)  
   
- You can validate projects and packages by calling the [catalog.validate_project &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md) and [catalog.validate_package &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md) stored procedures. The [catalog.validations &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-validations-ssisdb-database.md) view provides details about validations such as the server environment references that are considered in the validation, whether it is a dependency validation or a full validation, and whether the 32-bit runtime or the 64-bit runtime is used to run the package.  
+ You can validate projects and packages by calling the [catalog.validate_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database) and [catalog.validate_package &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database) stored procedures. The [catalog.validations &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-validations-ssisdb-database) view provides details about validations such as the server environment references that are considered in the validation, whether it is a dependency validation or a full validation, and whether the 32-bit runtime or the 64-bit runtime is used to run the package.  
   
 ## Related Tasks  
   

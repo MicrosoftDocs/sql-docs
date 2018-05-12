@@ -91,9 +91,9 @@ SET @g = geometry::Parse('MULTIPOLYGON EMPTY');
   
 ## See Also  
  [Polygon](../spatial/polygon.md)   
- [STArea &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/starea-geometry-data-type.md)   
- [STCentroid &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
- [STPointOnSurface &#40;geometry Data Type&#41;](~/t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
+ [STArea &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
+ [STCentroid &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
+ [STPointOnSurface &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

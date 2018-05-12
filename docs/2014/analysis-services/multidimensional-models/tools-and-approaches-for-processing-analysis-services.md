@@ -120,13 +120,13 @@ manager: "mblythe"
   
 1.  Starting in this release of SQL Server, you can use Analysis Services PowerShell cmdlets to process objects. The following cmdlets can be run interactively or in script:  
   
-    -   [Invoke-ProcessCube cmdlet](~/analysis-services/powershell/invoke-processcube-cmdlet.md)  
+    -   [Invoke-ProcessCube cmdlet](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
   
-    -   [Invoke-ProcessDimension cmdlet](~/analysis-services/powershell/invoke-processdimension-cmdlet.md)  
+    -   [Invoke-ProcessDimension cmdlet](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
   
-    -   [Invoke-ProcessPartition cmdlet](~/analysis-services/powershell/invoke-processpartition-cmdlet.md)  
+    -   [Invoke-ProcessPartition cmdlet](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
   
-    -   [Invoke-ASCmd cmdlet](~/analysis-services/powershell/invoke-ascmd-cmdlet.md), which can be used to execute XMLA, MDX, or DMX script that includes processing commands.  
+    -   [Invoke-ASCmd cmdlet](/sql/analysis-services/powershell/invoke-ascmd-cmdlet), which can be used to execute XMLA, MDX, or DMX script that includes processing commands.  
   
 ### Monitoring object processing using SQL Server Profiler  
   

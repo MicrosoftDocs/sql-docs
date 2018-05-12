@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Logins  
  On every server instances that hosts a copy of the database, you should reproduce the logins that have permission to access the principal database. When the primary/principal role switches, only users whose logins exist on the new primary/principal server instance can access the new primary/principal database. Users whose logins are not defined on the new primary/principal server instance are orphaned and cannot access the database.  
   
- If a user is orphaned, create the login on the new primary/principal server instance and run [sp_change_users_login](~/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md). For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md).  
+ If a user is orphaned, create the login on the new primary/principal server instance and run [sp_change_users_login](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql). For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md).  
   
 ###  <a name="SSauthentication"></a> Logins Of Applications That Use SQL Server Authentication or a Local Windows Login  
  If an application uses SQL Server Authentication or a local Windows login, mismatched SIDs can prevent the application's login from resolving on a remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The mismatched SIDs cause the login to become an orphaned user on the remote server instance. This issue can occur when an application connects to a mirrored or log shipping database after a failover or to a replication subscriber database that was initialized from a backup.  

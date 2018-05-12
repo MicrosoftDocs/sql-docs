@@ -50,7 +50,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION(PARAMETERIZATION FORCED)';  
 ```  
   
- In the previous example, the value for the `@stmt` parameter is the parameterized form of the query. The only reliable way to obtain this value for use in sp_create_plan_guide is to use the [sp_get_query_template](~/relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) system stored procedure. The following script can be used both to obtain the parameterized query and then create a plan guide on it.  
+ In the previous example, the value for the `@stmt` parameter is the parameterized form of the query. The only reliable way to obtain this value for use in sp_create_plan_guide is to use the [sp_get_query_template](/sql/relational-databases/system-stored-procedures/sp-get-query-template-transact-sql) system stored procedure. The following script can be used both to obtain the parameterized query and then create a plan guide on it.  
   
 ```  
 DECLARE @stmt nvarchar(max);  

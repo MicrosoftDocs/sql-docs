@@ -37,7 +37,7 @@ manager: "jhubbard"
 |**Windows administrators**|View execution details of all running packages.|Stop all currently running packages.|  
   
 ## Sysssispackages Table  
- The **sysssispackages** table in `msdb` contains the packages that are saved to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [sysssispackages &#40;Transact-SQL&#41;](~/relational-databases/system-tables/sysssispackages-transact-sql.md).  
+ The **sysssispackages** table in `msdb` contains the packages that are saved to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [sysssispackages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/sysssispackages-transact-sql).  
   
  The **sysssispackages** table includes columns that contain information about the roles that are assigned to packages.  
   

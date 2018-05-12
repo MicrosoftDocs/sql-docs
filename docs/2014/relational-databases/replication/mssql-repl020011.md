@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
- [sp_replcmds &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)  
+ [sp_replcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)   
+ [sp_repldone &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-repldone-transact-sql)  
   
   

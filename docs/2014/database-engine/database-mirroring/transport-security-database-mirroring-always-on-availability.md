@@ -57,7 +57,7 @@ manager: "jhubbard"
  By default, a database mirroring endpoint requires encryption of data sent over mirroring connections. In this case, the endpoint can connect only to endpoints that also use encryption. Unless you can guarantee that your network is secure, we recommend that you require encryption for your database mirroring connections. However, you can disable encryption or make it supported, but not required. If encryption is disabled, data is never encrypted and the endpoint cannot connect to an endpoint that requires encryption. If encryption is supported, data is encrypted only if the opposite endpoint either supports or requires encryption.  
   
 > [!NOTE]  
->  Mirroring endpoints created by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] are created with encryption either required or disabled. To change the encryption setting to SUPPORTED, use the ALTER ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md).  
+>  Mirroring endpoints created by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] are created with encryption either required or disabled. To change the encryption setting to SUPPORTED, use the ALTER ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql).  
   
  Optionally, you can control the encryption algorithms that can be used by an endpoint, by specifying one of the following values for the ALGORITHM option in a CREATE ENDPOINT statement or ALTER ENDPOINT statement:  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
 >   
 >  Though considerably faster than AES, RC4 is a relatively weak algorithm, while AES is a relatively strong algorithm. Therefore, we recommend that you use the AES algorithm.  
   
- For information about the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for specifying encryption, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md).  
+ For information about the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for specifying encryption, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To configure transport security for a database mirroring endpoint**  
@@ -90,13 +90,13 @@ manager: "jhubbard"
   
 ## See Also  
  [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
- [DROP ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/drop-endpoint-transact-sql.md)   
+ [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
- [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
+ [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
   

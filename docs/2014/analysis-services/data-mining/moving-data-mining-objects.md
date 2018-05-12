@@ -71,9 +71,9 @@ manager: "mblythe"
 ### Exporting and Importing  
  Exporting and then re-importing mining models and structures by using DMX statements is the easiest way to move or back up individual relational data mining objects. For more information about the DMX syntax for these operations, see the following topics:  
   
--   [EXPORT &#40;DMX&#41;](~/dmx/export-dmx.md)  
+-   [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [IMPORT &#40;DMX&#41;](~/dmx/import-dmx.md)  
+-   [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
  If you specify the INCLUDE DEPENDENCIES option, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will also export the definition of any required data source views, and when you import the model or structure, it will re-create the data source view on the target server. After you have finished importing the model, make sure to set the necessary mining permissions on the object.  
   

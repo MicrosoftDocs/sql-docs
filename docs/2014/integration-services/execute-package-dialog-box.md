@@ -67,7 +67,7 @@ manager: "jhubbard"
  Click to add, edit, or remove a property.  
   
  **Logging level**  
- Select the logging level for the package execution. For more information, see [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md).  
+ Select the logging level for the package execution. For more information, see [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database).  
   
  **Dump on errors**  
  Specify whether a dump file is created when errors occur during the package execution. For more information, see [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -76,6 +76,6 @@ manager: "jhubbard"
  Specify that the package will execute on a 32-bit system.  
   
 ##  <a name="script"></a> Scripting the Options in the Execute Package Dialog Box  
- While you are in the **Execute Package** dialog box, you can also use the **Script** button on the toolbar to write [!INCLUDE[tsql](../includes/tsql-md.md)] code for you. The generated script calls the stored procedures [catalog.start_execution &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) with the same options that you have selected in the **Execute Package** dialog box. The script appears in a new script window in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+ While you are in the **Execute Package** dialog box, you can also use the **Script** button on the toolbar to write [!INCLUDE[tsql](../includes/tsql-md.md)] code for you. The generated script calls the stored procedures [catalog.start_execution &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) with the same options that you have selected in the **Execute Package** dialog box. The script appears in a new script window in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
   

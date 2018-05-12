@@ -27,6 +27,6 @@ manager: "jhubbard"
   
 ## See Also  
  [CLR Triggers](../../database-engine/dev-guide/clr-triggers.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)  
+ [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

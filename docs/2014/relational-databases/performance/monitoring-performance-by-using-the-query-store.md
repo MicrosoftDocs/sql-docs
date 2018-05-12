@@ -16,7 +16,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Monitoring Performance By Using the Query Store
-  The query store feature provides DBAs with insight on query plan choice and performance. It simplifies performance troubleshooting by enabling you to quickly find performance differences caused by changes in query plans. The feature automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows, allowing you to see database usage patterns and understand when query plan changes happened on the server. The query store can be configured by using the [ALTER DATABASE SET](~/t-sql/statements/alter-database-transact-sql-set-options.md) option.  
+  The query store feature provides DBAs with insight on query plan choice and performance. It simplifies performance troubleshooting by enabling you to quickly find performance differences caused by changes in query plans. The feature automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows, allowing you to see database usage patterns and understand when query plan changes happened on the server. The query store can be configured by using the [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) option.  
   
 ||  
 |-|  
@@ -44,7 +44,7 @@ manager: "jhubbard"
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
-     For more syntax options related to the query store, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
+     For more syntax options related to the query store, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  You cannot enable the query store for the master database.  
@@ -54,7 +54,7 @@ manager: "jhubbard"
 ##  <a name="About"></a> Information in the Query Store  
  Execution plans for any specific query in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] typically evolve over time due to a number of different reasons such as statistics changes, schema changes, creation/deletion of indexes, etc. The procedure cache (where cached query plans are stored) only stores the latest execution plan. Plans also get evicted from the plan cache due to memory pressure. As a result, query performance regressions caused by execution plan changes can be non-trivial and time consuming to resolve.  
   
- Since the query store retains multiple execution plans per query, it can enforce policies to direct the query processor to use a specific execution plan for a query. This is referred to as plan forcing. Plan forcing in Query Store is provided by using a mechanism similar to the [USE PLAN](~/t-sql/queries/hints-transact-sql-query.md) query hint, but it does not require any change in user applications. Plan forcing can resolve a query performance regression caused by a plan change in a very short period of time.  
+ Since the query store retains multiple execution plans per query, it can enforce policies to direct the query processor to use a specific execution plan for a query. This is referred to as plan forcing. Plan forcing in Query Store is provided by using a mechanism similar to the [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) query hint, but it does not require any change in user applications. Plan forcing can resolve a query performance regression caused by a plan change in a very short period of time.  
   
  Common scenarios for using the Query Store feature are:  
   
@@ -121,39 +121,39 @@ JOIN sys.query_store_query_text AS Txt
 ##  <a name="Related"></a> Related Views, Functions, and Procedures  
  The Query Store can be viewed and managed through [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] or by using the following views and procedures.  
   
--   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+-   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
 ### Query Store Catalog Views  
  Seven catalog views present information about the Query Store.  
   
--   [sys.database_query_store_options &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
+-   [sys.database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)  
   
--   [sys.query_context_settings &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)  
+-   [sys.query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)  
   
--   [sys.query_store_plan &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)  
+-   [sys.query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)  
   
--   [sys.query_store_query &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)  
+-   [sys.query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)  
   
--   [sys.query_store_query_text &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)  
+-   [sys.query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)  
   
--   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)  
+-   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)  
   
--   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
+-   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)  
   
 ### Query Store Stored Procedures  
  Six stored procedures configure the Query Store.  
   
--   [sp_query_store_flush_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
+-   [sp_query_store_flush_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)  
   
--   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)  
+-   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)  
   
--   [sp_query_store_force_plan &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
+-   [sp_query_store_force_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)  
   
--   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)  
+-   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)  
   
--   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](~/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
+-   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)  
   
--   [sp_query_store_remove_query &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
+-   [sp_query_store_remove_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)  
   
 
   

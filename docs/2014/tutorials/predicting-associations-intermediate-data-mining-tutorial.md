@@ -207,7 +207,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
- [PredictAssociation &#40;DMX&#41;](~/dmx/predictassociation-dmx.md)   
+ [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

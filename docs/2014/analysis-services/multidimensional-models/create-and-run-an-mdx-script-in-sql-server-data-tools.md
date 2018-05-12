@@ -35,6 +35,6 @@ manager: "mblythe"
 ## See Also  
  [The Basic MDX Script &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
  [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX Scripting Statements &#40;MDX&#41;](~/mdx/mdx-scripting-statements-mdx.md)  
+ [MDX Scripting Statements &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
   
   

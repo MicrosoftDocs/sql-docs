@@ -134,6 +134,6 @@ manager: "jhubbard"
     MERGE RANGE (100);  
     ```  
   
- For more information, see [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-partition-function-transact-sql.md).  
+ For more information, see [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-partition-function-transact-sql).  
   
   

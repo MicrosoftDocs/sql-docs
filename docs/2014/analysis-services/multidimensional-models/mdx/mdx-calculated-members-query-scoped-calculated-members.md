@@ -89,8 +89,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## See Also  
- [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)   
- [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md)   
+ [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT Statement &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [Creating Session-Scoped Calculated Members &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

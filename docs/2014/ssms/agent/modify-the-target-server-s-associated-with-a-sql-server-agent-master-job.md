@@ -80,7 +80,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_delete_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md).  
+ For more information, see [sp_delete_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql).  
   
 #### To associate a target server with the current SQL Server Agent master job  
   
@@ -103,6 +103,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_add_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md).  
+ For more information, see [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
   
   

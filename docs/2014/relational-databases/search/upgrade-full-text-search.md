@@ -95,9 +95,9 @@ manager: "jhubbard"
 ## Ensuring Consistent Query Results after Importing a SQL Server 2005 Full-Text Index  
  If a full-text catalog was imported when upgrading a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], mismatches between the query and the full-text index content might occur because of differences in the behavior of the old and new word breakers. In this case, to guarantee a total match between queries and the full-text index content, choose one of the following options:  
   
--   Rebuild the full-text catalog that contains the full-text index ([ALTER FULLTEXT CATALOG](~/t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REBUILD)  
+-   Rebuild the full-text catalog that contains the full-text index ([ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)*catalog_name* REBUILD)  
   
--   Issue a FULL POPULATION on the full-text index ([ALTER FULLTEXT INDEX](~/t-sql/statements/alter-fulltext-index-transact-sql.md) ON *table_name* START FULL POPULATION).  
+-   Issue a FULL POPULATION on the full-text index ([ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ON *table_name* START FULL POPULATION).  
   
  For more information about word breakers, see [Configure and Manage Word Breakers and Stemmers for Search](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
 -   If you never added, modified, or deleted any noise-word files in your installation of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the system stoplist should meet your needs.  
   
--   If your noise-word files were modified in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], those modifications are lost during upgrade. To re-create those updates, you must manually recreate those modifications in the corresponding [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] stoplist. For more information, see [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-stoplist-transact-sql.md).  
+-   If your noise-word files were modified in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], those modifications are lost during upgrade. To re-create those updates, you must manually recreate those modifications in the corresponding [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] stoplist. For more information, see [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql).  
   
 -   If you do not want to apply any stopwords to your full-text indexes (for example, if you deleted or erased your noise-word files in your [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] installation), you must turn off the stoplist for each upgraded full-text index. Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (replacing *database* with the name of the upgraded database and *table* with the name of the *table*):  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
   
  **To change full-text upgrade behavior on a server instance**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use the **Full-Text Upgrade Option** of the **Server Properties** dialog box. For more information, see [Manage and Monitor Full-Text Search for a Server Instance](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -165,7 +165,7 @@ manager: "jhubbard"
 -   [Complete Database Restores &#40;Full Recovery Model&#41;](../backup-restore/complete-database-restores-full-recovery-model.md)  
   
 ### Example  
- The following example uses the MOVE clause in the [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement, to restore a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database named `ftdb1`. The [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database, log, and catalog files are moved to new locations on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, as follows:  
+ The following example uses the MOVE clause in the [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statement, to restore a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database named `ftdb1`. The [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database, log, and catalog files are moved to new locations on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, as follows:  
   
 -   The database file, `ftdb1.mdf`, is moved to `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
   
@@ -187,7 +187,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  If [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cannot find a full-text catalog file or if the full-text file was moved during the attach operation without specifying a new location, the behavior depends on the selected full-text upgrade option. If the full-text upgrade option is **Import** or **Rebuild**, the attached full-text catalog is rebuilt. If the full-text upgrade option is **Reset**, the attached full-text catalog is reset.  
   
- For more information about detaching and attaching a database, see [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](~/relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md), and [sp_detach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ For more information about detaching and attaching a database, see [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql), and [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql).  
   
 ## See Also  
  [Get Started with Full-Text Search](get-started-with-full-text-search.md)   

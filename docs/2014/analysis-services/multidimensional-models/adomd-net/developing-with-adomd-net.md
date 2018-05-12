@@ -33,8 +33,8 @@ manager: "mblythe"
 |<xref:Microsoft.AnalysisServices.AdomdClient>|Details the objects that are contained in the `Microsoft.AnalysisServices.AdomdClient` namespace.|  
   
 ## See Also  
- [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)   
+ [Multidimensional Expressions &#40;MDX&#41; Reference](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Analysis Services Schema Rowsets](../../schema-rowsets/analysis-services-schema-rowsets.md)   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  

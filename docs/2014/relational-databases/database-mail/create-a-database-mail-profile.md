@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 -   Connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
--   To create a new profile, run the system stored procedure [sysmail_add_profile_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) as follows:  
+-   To create a new profile, run the system stored procedure [sysmail_add_profile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql) as follows:  
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
      where *@profile_name* is the name of the profile, and *@description* is the description of the profile. This parameter is optional.  
   
--   For each account, run the stored procedure [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) as follows:  
+-   For each account, run the stored procedure [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql) as follows:  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
      where *@profile_name* is the name of the profile, and *@account_name* is the name of the account to add to the profile, *@sequence_number* determines the order in which the accounts are used in the profile.  
   
--   For each database role or user that will send mail using this profile, grant access to the profile. To do this, run the stored procedure [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) as follows:  
+-   For each database role or user that will send mail using this profile, grant access to the profile. To do this, run the stored procedure [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql) as follows:  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
@@ -156,7 +156,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 -   Connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
--   To create a new profile, run the system stored procedure [sysmail_add_profile_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) as follows:  
+-   To create a new profile, run the system stored procedure [sysmail_add_profile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql) as follows:  
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
@@ -166,7 +166,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      where *@profile_name* is the name of the profile, and *@description* is the description of the profile. This parameter is optional.  
   
--   For each account, run the stored procedure [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) as follows:  
+-   For each account, run the stored procedure [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql) as follows:  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
@@ -178,7 +178,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      where *@profile_name* is the name of the profile, and *@account_name* is the name of the account to add to the profile, *@sequence_number* determines the order in which the accounts are used in the profile.  
   
--   To grant public access, run the stored procedure [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) as follows:  
+-   To grant public access, run the stored procedure [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql) as follows:  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   

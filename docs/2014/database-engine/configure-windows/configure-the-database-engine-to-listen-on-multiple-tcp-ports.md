@@ -100,9 +100,9 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)   
- [DROP ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/drop-endpoint-transact-sql.md)   
- [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
+ [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Map TCP IP Ports to NUMA Nodes &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)  
   
   

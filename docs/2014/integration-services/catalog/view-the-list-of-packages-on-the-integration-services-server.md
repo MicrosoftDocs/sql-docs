@@ -19,7 +19,7 @@ manager: "jhubbard"
   You can view the list of packages that are stored on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server in one of two ways.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
- To view the list of packages that are stored on the server, query the view, [catalog.packages &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-packages-ssisdb-database.md).  
+ To view the list of packages that are stored on the server, query the view, [catalog.packages &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-packages-ssisdb-database).  
   
  In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  To view packages stored on the server by using Object Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], follow the procedure below.  

@@ -106,6 +106,6 @@ manager: "jhubbard"
     );  
     ```  
   
- For more examples, see [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md).  
+ For more examples, see [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
   
   

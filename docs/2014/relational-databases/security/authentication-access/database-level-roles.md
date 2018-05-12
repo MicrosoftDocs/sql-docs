@@ -90,32 +90,32 @@ manager: "jhubbard"
   
 |Feature|Type|Description|  
 |-------------|----------|-----------------|  
-|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|Metadata|Returns a list of the fixed database roles.|  
-|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|Metadata|Displays the permissions of a fixed database role.|  
-|[sp_helprole &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)|Metadata|Returns information about the roles in the current database.|  
-|[sp_helprolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|Metadata|Returns information about the members of a role in the current database.|  
-|[sys.database_role_members &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|Metadata|Returns one row for each member of each database role.|  
-|[IS_MEMBER &#40;Transact-SQL&#41;](~/t-sql/functions/is-member-transact-sql.md)|Metadata|Indicates whether the current user is a member of the specified Microsoft Windows group or Microsoft SQL Server database role.|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-role-transact-sql.md)|Command|Creates a new database role in the current database.|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-role-transact-sql.md)|Command|Changes the name of a database role.|  
-|[DROP ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-role-transact-sql.md)|Command|Removes a role from the database.|  
-|[sp_addrole &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|Creates a new database role in the current database.|  
-|[sp_droprole &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|Removes a database role from the current database.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Adds a database user, database role, Windows login, or Windows group to a database role in the current database.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Removes a security account from a SQL Server role in the current database.|  
+|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadata|Returns a list of the fixed database roles.|  
+|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadata|Displays the permissions of a fixed database role.|  
+|[sp_helprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Metadata|Returns information about the roles in the current database.|  
+|[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadata|Returns information about the members of a role in the current database.|  
+|[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Metadata|Returns one row for each member of each database role.|  
+|[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|Metadata|Indicates whether the current user is a member of the specified Microsoft Windows group or Microsoft SQL Server database role.|  
+|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Command|Creates a new database role in the current database.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Command|Changes the name of a database role.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Command|Removes a role from the database.|  
+|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Command|Creates a new database role in the current database.|  
+|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Command|Removes a database role from the current database.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Command|Adds a database user, database role, Windows login, or Windows group to a database role in the current database.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Command|Removes a security account from a SQL Server role in the current database.|  
   
 ## public Database Role  
  Every database user belongs to the **public** database role. When a user has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to **public** on that object.  
   
 ## Related Content  
- [Security Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
+ [Security Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)  
   
- [Security Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
+ [Security Stored Procedures &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/security-stored-procedures-transact-sql)  
   
- [Security Functions &#40;Transact-SQL&#41;](~/t-sql/functions/security-functions-transact-sql.md)  
+ [Security Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
  [Securing SQL Server](../securing-sql-server.md)  
   
- [sp_helprotect &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprotect-transact-sql)  
   
   

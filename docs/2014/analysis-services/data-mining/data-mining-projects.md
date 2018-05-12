@@ -117,7 +117,7 @@ manager: "mblythe"
   
 -   When you use data from an OLAP cube, the mining structure must be in the same database as the OLAP solution.  To create a mining structure, you select attributes from the dimensions and related measures in your OLAP solution. Numeric values are typically found in measures, and categorical variables in dimensions. For more information, see [Create an OLAP Mining Structure](create-an-olap-mining-structure.md).  
   
--   You can also define mining structures by using DMX. For more information, see [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](~/dmx/dmx-statements-data-definition.md).  
+-   You can also define mining structures by using DMX. For more information, see [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](/sql/dmx/dmx-statements-data-definition).  
   
  After you have created the initial mining structure, you can copy, modify, and alias the structure columns.  
   
@@ -183,7 +183,7 @@ manager: "mblythe"
  
   
 ##  <a name="bkmk_API"></a> Programmatic Access to Data Mining Objects  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several tools that you can use to programmatically work with data mining projects and the objects in them. The DMX language provides statements that you can use to create data sources and data source views, and to create, train, and use data mining structure and models. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several tools that you can use to programmatically work with data mining projects and the objects in them. The DMX language provides statements that you can use to create data sources and data source views, and to create, train, and use data mining structure and models. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference).  
   
  You can also perform these tasks by using the Analysis Services Scripting Language (ASSL), or by using Analysis Management Objects (AMO). For more information, see [Developing with XMLA in Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   

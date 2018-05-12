@@ -78,7 +78,7 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [sp_delete_category &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md).  
+ For more information, see [sp_delete_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
   
 
   

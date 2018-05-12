@@ -1,7 +1,7 @@
 ---
 title: "Implementing Assemblies | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  **To create an assembly by using Transact-SQL**  
   
--   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md)  
+-   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
  **To create an assembly by using SQL Server Management Studio**  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  **To modify an assembly by using Transact-SQL**  
   
--   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
  **To modify an assembly by using SQL Server Management Studio**  
   
@@ -64,17 +64,17 @@ manager: "jhubbard"
   
  **To drop an assembly by using Transact-SQL**  
   
--   [DROP ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/drop-assembly-transact-sql.md)  
+-   [DROP ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
  **To drop an assembly by using SQL Server Management Studio**  
   
 -   [Delete Objects](../../ssms/object/delete-objects.md)  
   
- By default, all assemblies that are created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are disabled from executing. You can use the **clr enabled** option of the **sp_configure** system stored procedure to disable or enable the execution of all assemblies that are uploaded in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Disabling assembly execution prevents common language runtime (CLR) functions, stored procedures, triggers, aggregates, and user-defined types from executing, and stops those that are currently executing. Disabling assembly execution does not disable the ability to create, alter, or drop assemblies. For more information, see [clr enabled Server Configuration Option](../../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ By default, all assemblies that are created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are disabled from executing. You can use the **clr enabled** option of the **sp_configure** system stored procedure to disable or enable the execution of all assemblies that are uploaded in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Disabling assembly execution prevents common language runtime (CLR) functions, stored procedures, triggers, aggregates, and user-defined types from executing, and stops those that are currently executing. Disabling assembly execution does not disable the ability to create, alter, or drop assemblies. For more information, see [clr enabled Server Configuration Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **To disable and enable assembly execution**  
   
--   [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 ##  <a name="_managing"></a> Managing Assembly Versions  
  When an assembly is uploaded to an instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the assembly is stored and managed within the database system catalogs. Any changes made to the definition of the assembly in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] should be propagated to the assembly that is stored in the database catalog.  
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
  **To update the version of an assembly**  
   
--   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md)  
+-   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
 ## See Also  
  [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   

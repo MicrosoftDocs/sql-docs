@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 1.  Connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the database resides.  
   
-2.  Use the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-set-options.md)statement, as follows:  
+2.  Use the following [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)statement, as follows:  
   
      TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
   
@@ -74,6 +74,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   
   

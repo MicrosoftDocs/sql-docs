@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  When searching for records that have a specific value, or range of values, for one or more columns in the table, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can use an index on those columns to quickly locate the corresponding records. Both disk-based and memory-optimized tables benefit from indexes. There are, however, certain differences between index structures that need to be considered when using memory-optimized tables. (Indexes on memory-optimized tables are referred to as memory-optimized indexes.) Some of the key differences are:  
   
--   Memory-optimized indexes must be created with [CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md). Disk-based indexes can be created with `CREATE TABLE` and `CREATE INDEX`.  
+-   Memory-optimized indexes must be created with [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Disk-based indexes can be created with `CREATE TABLE` and `CREATE INDEX`.  
   
 -   Memory-optimized indexes exist only in memory. Index structures are not persisted to disk and index operations are not logged in the transaction log. The index structure is created when the memory-optimized table is created in memory, both during CREATE TABLE and during database startup.  
   

@@ -92,6 +92,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/drop-statistics-transact-sql.md).  
+ For more information, see [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql).  
   
   

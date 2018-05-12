@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  When you are packaging code into assembly, you should consider the following:  
   
--   CLR user-defined types and indexes that depend on CLR user-defined functions can cause persisted data to be in the database that depends on the assembly. Modifying the code of an assembly is frequently more complex when there is persisted data that depends on the assembly in the database. Therefore, it is generally better to separate code on which persisted data dependencies rely (such as user-defined types and indexes using user-defined functions) from code that does not have such persisted data dependencies. For more information, see [Implementing Assemblies](assemblies-implementing.md) and [ALTER ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-assembly-transact-sql.md).  
+-   CLR user-defined types and indexes that depend on CLR user-defined functions can cause persisted data to be in the database that depends on the assembly. Modifying the code of an assembly is frequently more complex when there is persisted data that depends on the assembly in the database. Therefore, it is generally better to separate code on which persisted data dependencies rely (such as user-defined types and indexes using user-defined functions) from code that does not have such persisted data dependencies. For more information, see [Implementing Assemblies](assemblies-implementing.md) and [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
   
 -   If a piece of managed code requires higher permission, it is better to separate that code into a separate assembly from code that does not require higher permission.  
   

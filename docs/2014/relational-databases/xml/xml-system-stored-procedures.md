@@ -24,9 +24,9 @@ manager: "jhubbard"
 # XML System Stored Procedures
   SQL Server provides the following system stored procedures that are used together with OPENXML:  
   
--   [sp_xml_preparedocument &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)  
+-   [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)  
   
--   [sp_xml_removedocument &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)  
+-   [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)  
   
  To write queries by using OPENXML, you must first create an internal representation of the XML document by calling **sp_xml_preparedocument**. The stored procedure returns a handle to the internal representation of the XML document. This handle is then passed to OPENXML. OPENXML provides rowset views of the document based on XPaths. Specifically, this is one row pattern and one or more column patterns.  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
  The internal representation of an XML document can be removed from memory by calling the **sp_xml_removedocument** system stored procedure.  
   
 ## See Also  
- [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md)   
+ [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML &#40;SQL Server&#41;](../xml/openxml-sql-server.md)  
   
   

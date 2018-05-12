@@ -66,6 +66,6 @@ manager: "jhubbard"
   
     ```  
   
- For more information, see [sys.tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-tables-transact-sql.md).  
+ For more information, see [sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

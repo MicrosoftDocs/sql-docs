@@ -39,6 +39,6 @@ manager: "jhubbard"
 |[XQuery Static Type Event Class](xquery-static-type-event-class.md)|Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an XQuery expression.|  
   
 ## See Also  
- [Transact-SQL Reference &#40;Database Engine&#41;](~/t-sql/language-reference.md)  
+ [Transact-SQL Reference &#40;Database Engine&#41;](/sql/t-sql/language-reference)  
   
   

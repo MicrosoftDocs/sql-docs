@@ -65,7 +65,7 @@ manager: "mblythe"
  The element that corresponds to the parent of `MdxMissingMemberMode` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## See Also  
- [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)   
+ [Multidimensional Expressions &#40;MDX&#41; Reference](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Properties &#40;ASSL&#41;](properties-assl.md)  
   
   

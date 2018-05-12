@@ -52,6 +52,6 @@ GO
 ## See Also  
  [Complete Database Restores &#40;Full Recovery Model&#41;](complete-database-restores-full-recovery-model.md)   
  [Complete Database Restores &#40;Simple Recovery Model&#41;](complete-database-restores-simple-recovery-model.md)   
- [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

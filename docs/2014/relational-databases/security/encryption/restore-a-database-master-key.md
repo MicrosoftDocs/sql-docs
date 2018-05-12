@@ -73,6 +73,6 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
   
- For more information, see [RESTORE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-master-key-transact-sql.md)  
+ For more information, see [RESTORE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-master-key-transact-sql)  
   
   

@@ -106,12 +106,12 @@ manager: "jhubbard"
  For more information about this feature, see [Credentials &#40;Database Engine&#41;](../security/authentication-access/credentials-database-engine.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy accounts use credentials. To learn the credential ID of a proxy account, use the [sysproxies](~/relational-databases/system-tables/dbo-sysproxies-transact-sql.md) system table.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy accounts use credentials. To learn the credential ID of a proxy account, use the [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) system table.  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these is set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
+ The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these is set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
  Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
   
  To enable the automatic decryption of the database master key on a server instance, a copy of this key is encrypted by using the service master key. This encrypted copy is stored in both the database and in **master**. Typically, the copy stored in **master** is silently updated whenever the master key is changed. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first tries to decrypt the database master key with the service master key of the instance. If that decryption fails, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] searches the credential store for master key credentials that have the same family GUID as the database for which it requires the master key. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] then tries to decrypt the database master key with each matching credential until the decryption succeeds or there are no more credentials. A master key that is not encrypted by the service master key must be opened by using the OPEN MASTER KEY statement and a password.  
   
- When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-master-key-transact-sql.md).  
+ When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -147,14 +147,14 @@ manager: "jhubbard"
  [&#91;Top&#93;](#information_entities_and_objects)  
   
 ##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
- User-defined error messages reside in the [sys.messages](~/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) catalog view. This catalog view is stored in **master**. If a database application depends on user-defined error messages and the database is made available on another server instance, use [sp_addmessage](~/relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) to add those user-defined messages on the destination server instance.  
+ User-defined error messages reside in the [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) catalog view. This catalog view is stored in **master**. If a database application depends on user-defined error messages and the database is made available on another server instance, use [sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql) to add those user-defined messages on the destination server instance.  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### Server-Level Event Notifications  
- Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](~/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../service-broker/event-notifications.md).  
+ Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) catalog view. For more information, see [Event Notifications](../service-broker/event-notifications.md).  
   
  Additionally, event notifications are delivered by using [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Routes for incoming messages are not included in the database that contains a service. Instead, explicit routes are stored in **msdb**. If your service uses an explicit route in the **msdb** database to route incoming messages to the service, when you attach a database in a different instance, you must re-create this route.  
   
@@ -193,12 +193,12 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  Before adding extended stored procedures to the server and granting EXECUTE permissions to other users, the system administrator should thoroughly review each extended stored procedure to make sure that it does not contain harmful or malicious code.  
   
- For more information, see [GRANT Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-object-permissions-transact-sql.md), [DENY Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/deny-object-permissions-transact-sql.md), and [REVOKE Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-object-permissions-transact-sql.md).  
+ For more information, see [GRANT Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql), [DENY Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-object-permissions-transact-sql), and [REVOKE Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-object-permissions-transact-sql).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
 ##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
- Properties are set on the Full-Text Engine by [sp_fulltext_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md). Make sure that the destination server instance has the required settings for these properties. For more information about these properties, see [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/fulltextserviceproperty-transact-sql.md).  
+ Properties are set on the Full-Text Engine by [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql). Make sure that the destination server instance has the required settings for these properties. For more information about these properties, see [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextserviceproperty-transact-sql).  
   
  Additionally, if the [word breakers and stemmers](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md) component or [full-text search filters](../search/configure-and-manage-filters-for-search.md) component have different versions on the original and destination server instances, full-text index and queries may behave differently. Also, the [thesaurus](../search/full-text-search.md) is stored in instance-specific files. You must either transfer a copy of those files to an equivalent location on the destination server instance or re-create them on new instance.  
   
@@ -251,11 +251,11 @@ manager: "jhubbard"
   
 -   [Monitor Job Activity](../../ssms/agent/monitor-job-activity.md)  
   
--   [sp_help_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
+-   [sp_help_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-job-transact-sql)  
   
 -   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
--   [dbo.sysjobs &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
+-   [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
   
  **To create a job**  
   
@@ -293,12 +293,12 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If you script logins, the passwords are not scripted. If you have logins that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you have to modify the script on the destination.  
   
- System objects are visible in the [sys.system_objects](~/relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) catalog view. The permissions on system objects are visible in the [sys.database_permissions](~/relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) catalog view in the **master** database. For information about querying these catalog views and granting system-object permissions, see [GRANT System Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-system-object-permissions-transact-sql.md). For more information, see [REVOKE System Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-system-object-permissions-transact-sql.md) and [DENY System Object Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/deny-system-object-permissions-transact-sql.md).  
+ System objects are visible in the [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) catalog view. The permissions on system objects are visible in the [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) catalog view in the **master** database. For information about querying these catalog views and granting system-object permissions, see [GRANT System Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql). For more information, see [REVOKE System Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql) and [DENY System Object Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql).  
   
 ### GRANT, REVOKE, and DENY Permissions on a Server Instance  
- Permissions at the server scope are stored in the **master** database and must be configured on the destination server instance. For information about the server permissions of a server instance, query the [sys.server_permissions](~/relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) catalog view, for information about server principals query the [sys.server_principals](~/relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)s catalog view, and for information about membership of server roles query the [sys.server_role_members](~/relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) catalog view.  
+ Permissions at the server scope are stored in the **master** database and must be configured on the destination server instance. For information about the server permissions of a server instance, query the [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) catalog view, for information about server principals query the [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)s catalog view, and for information about membership of server roles query the [sys.server_role_members](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql) catalog view.  
   
- For more information, see [GRANT Server Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-server-permissions-transact-sql.md), [REVOKE Server Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-server-permissions-transact-sql.md), and [DENY Server Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/deny-server-permissions-transact-sql.md).  
+ For more information, see [GRANT Server Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql), [REVOKE Server Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-server-permissions-transact-sql), and [DENY Server Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-server-permissions-transact-sql).  
   
 #### Server-Level Permissions for a Certificate or Asymmetric Key  
  Server-level permissions cannot be granted directly to a certificate or asymmetric key. Instead, server-level permissions are granted to a mapped login that is created exclusively for a specific certificate or asymmetric key. Therefore, each certificate or asymmetric key that requires server-level permissions, requires its own *certificate-mapped login* or *asymmetric key-mapped login*. To grant server-level permissions for a certificate or asymmetric key, grant the permissions to its mapped login.  
@@ -310,17 +310,17 @@ manager: "jhubbard"
   
  **To create a certificate or asymmetric key**  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-asymmetric-key-transact-sql.md)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
  **To map a certificate or asymmetric key to a login**  
   
--   [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
  **To assign permissions to the mapped login**  
   
--   [GRANT Server Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-server-permissions-transact-sql.md)  
+-   [GRANT Server Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
   
  For more information about certificates and asymmetric keys, see [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md).  
   

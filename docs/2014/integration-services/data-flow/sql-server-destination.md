@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   Specify the columns in the input that contain sorted data.  
   
- For more information about bulk load options, see [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md).  
+ For more information about bulk load options, see [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 #### Performance Improvements  
  To improve the performance of a bulk insert and the access to table data during the bulk insert operation, you should change the default options as follows:  

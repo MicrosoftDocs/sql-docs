@@ -65,6 +65,6 @@ manager: "mblythe"
   
 ## See Also  
  [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
+ [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

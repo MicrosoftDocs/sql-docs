@@ -60,8 +60,8 @@ manager: "jhubbard"
   
 ## See Also  
  [View Job Activity](view-job-activity.md)   
- [dbo.sysjobactivity &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)   
- [dbo.syssessions &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-syssessions-transact-sql.md)   
- [sp_help_jobactivity &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql.md)  
+ [dbo.sysjobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo.syssessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [sp_help_jobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

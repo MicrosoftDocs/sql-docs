@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ### Requirements for Filter Clauses  
   
--   Any functions used in parameterized row filters, such as HOST_NAME() and SUSER_SNAME(), should appear directly in the parameterized filter clause and not be nested inside of a view or dynamic function. For more information about these functions, see [HOST_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/host-name-transact-sql.md), [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md), and [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+-   Any functions used in parameterized row filters, such as HOST_NAME() and SUSER_SNAME(), should appear directly in the parameterized filter clause and not be nested inside of a view or dynamic function. For more information about these functions, see [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql), [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql), and [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
   
 -   The values returned for each Subscriber should not change after the partition is created. For example, if you use HOST_NAME() in a filter (and do not override the HOST_NAME() value) do not change the computer name at the Subscriber.  
   

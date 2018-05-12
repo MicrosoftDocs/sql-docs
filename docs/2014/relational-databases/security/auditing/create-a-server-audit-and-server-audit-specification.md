@@ -191,6 +191,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-transact-sql.md) and [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-specification-transact-sql.md).  
+ For more information, see [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql) and [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql).  
   
   

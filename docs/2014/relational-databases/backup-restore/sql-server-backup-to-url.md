@@ -130,9 +130,9 @@ manager: "jhubbard"
 |RESTORE VERIFYONLY|√||Requires WITH CREDENTIAL specified|  
 |RESTORE REWINDONLY|−|||  
   
- For syntax and general information about backup statements, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md).  
+ For syntax and general information about backup statements, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
- For syntax and general information about restore statements, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
+ For syntax and general information about restore statements, see [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 ### Support for Backup Arguments  
   
@@ -168,7 +168,7 @@ manager: "jhubbard"
 |NORECOVERY &#124; STANDBY|√|||  
 |NO_TRUNCATE|√|||  
   
- For more information about backup arguments, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md).  
+ For more information about backup arguments, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
 ### Support for Restore Arguments  
   
@@ -205,7 +205,7 @@ manager: "jhubbard"
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
 |STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
   
- For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
 ##  <a name="BackupTaskSSMS"></a> Using Backup Task in SQL Server Management Studio  
  The Backup task in SQL Server Management Studio has been enhanced to include URL as one of the destination options, and other supporting objects required to backup to Windows Azure storage like the SQL Credential.  

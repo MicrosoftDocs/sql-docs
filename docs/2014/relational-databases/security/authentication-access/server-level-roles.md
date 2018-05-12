@@ -64,33 +64,33 @@ manager: "jhubbard"
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   
- For more information about permissions, see [Permissions &#40;Database Engine&#41;](../permissions-database-engine.md) and [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
+ For more information about permissions, see [Permissions &#40;Database Engine&#41;](../permissions-database-engine.md) and [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ## Working with Server-Level Roles  
  The following table explains the commands, views, and functions that you can use to work with server-level roles.  
   
 |Feature|Type|Description|  
 |-------------|----------|-----------------|  
-|[sp_helpsrvrole &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Metadata|Returns a list of server-level roles.|  
-|[sp_helpsrvrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Metadata|Returns information about the members of a server-level role.|  
-|[sp_srvrolepermission &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)|Metadata|Displays the permissions of a server-level role.|  
-|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](~/t-sql/functions/is-srvrolemember-transact-sql.md)|Metadata|Indicates whether a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login is a member of the specified server-level role.|  
-|[sys.server_role_members &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)|Metadata|Returns one row for each member of each server-level role.|  
-|[sp_addsrvrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Command|Adds a login as a member of a server-level role. Deprecated. Use [ALTER SERVER ROLE](~/t-sql/statements/alter-server-role-transact-sql.md) instead.|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Command|Removes a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login or a Windows user or group from a server-level role. Deprecated. Use [ALTER SERVER ROLE](~/t-sql/statements/alter-server-role-transact-sql.md) instead.|  
-|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-role-transact-sql.md)|Command|Creates a user-defined server role.|  
-|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-role-transact-sql.md)|Command|Changes the membership of a server role or changes name of a user-defined server role.|  
-|[DROP SERVER ROLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-server-role-transact-sql.md)|Command|Removes a user-defined server role.|  
-|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](~/t-sql/functions/is-srvrolemember-transact-sql.md)|Function|Determines membership of server role.|  
+|[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadata|Returns a list of server-level roles.|  
+|[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadata|Returns information about the members of a server-level role.|  
+|[sp_srvrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadata|Displays the permissions of a server-level role.|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Metadata|Indicates whether a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login is a member of the specified server-level role.|  
+|[sys.server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|Metadata|Returns one row for each member of each server-level role.|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Command|Adds a login as a member of a server-level role. Deprecated. Use [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) instead.|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Command|Removes a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login or a Windows user or group from a server-level role. Deprecated. Use [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) instead.|  
+|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|Command|Creates a user-defined server role.|  
+|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|Command|Changes the membership of a server role or changes name of a user-defined server role.|  
+|[DROP SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|Command|Removes a user-defined server role.|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Function|Determines membership of server role.|  
   
 ## See Also  
  [Database-Level Roles](../authentication-access/database-level-roles.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Security Functions &#40;Transact-SQL&#41;](~/t-sql/functions/security-functions-transact-sql.md)   
+ [Security Catalog Views &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
+ [Security Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)   
  [Securing SQL Server](../securing-sql-server.md)   
- [GRANT Server Principal Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-server-principal-permissions-transact-sql.md)   
- [REVOKE Server Principal Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
- [DENY Server Principal Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
+ [GRANT Server Principal Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
+ [REVOKE Server Principal Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   
+ [DENY Server Principal Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   
  [Create a Server Role](../authentication-access/create-a-server-role.md)  
   
   

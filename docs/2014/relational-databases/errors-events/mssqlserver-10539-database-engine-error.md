@@ -37,6 +37,6 @@ manager: "jhubbard"
  Make sure that all necessary database objects exist, and execute the statement before creating the plan guide.  
   
 ## See Also  
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
+ [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

@@ -99,6 +99,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see  [sp_rename &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-rename-transact-sql.md).  
+ For more information, see  [sp_rename &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql).  
   
   

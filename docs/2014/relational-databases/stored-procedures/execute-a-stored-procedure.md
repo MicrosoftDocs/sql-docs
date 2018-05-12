@@ -55,7 +55,7 @@ manager: "jhubbard"
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
-     To display the exact system procedure names, query the [sys.system_objects](~/relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) and [sys.system_parameters](~/relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md) catalog views.  
+     To display the exact system procedure names, query the [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) and [sys.system_parameters](/sql/relational-databases/system-catalog-views/sys-system-parameters-transact-sql) catalog views.  
   
 -   If a user-defined procedure has the same name as a system procedure, the user-defined procedure might not ever execute.  
   
@@ -111,17 +111,17 @@ manager: "jhubbard"
   
      Only the system administrator (**sa**) can mark a procedure to execute automatically. In addition, the procedure must be in the **master** database, owned by **sa**, and cannot have input or output parameters.  
   
-     Use [sp_procoption](~/relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to:  
+     Use [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) to:  
   
     1.  Designate an existing procedure as a startup procedure.  
   
     2.  Stop a procedure from executing at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup.  
   
 ###  <a name="Security"></a> Security  
- For more information, see [EXECUTE AS &#40;Transact-SQL&#41;](~/t-sql/statements/execute-as-transact-sql.md) and [EXECUTE AS Clause &#40;Transact-SQL&#41;](~/t-sql/statements/execute-as-clause-transact-sql.md).  
+ For more information, see [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql) and [EXECUTE AS Clause &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql).  
   
 ####  <a name="Permissions"></a> Permissions  
- For more information, see the "Permissions" section in [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md).  
+ For more information, see the "Permissions" section in [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -175,7 +175,7 @@ GO
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_procoption](~/relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to set a procedure for automatic execution.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) to set a procedure for automatic execution.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -191,7 +191,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_procoption](~/relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) to stop a procedure from executing automatically.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) to stop a procedure from executing automatically.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -205,8 +205,8 @@ EXEC sp_procoption @ProcName = '<procedure name>'
 ## See Also  
  [Specify Parameters](specify-parameters.md)   
  [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
- [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)   
+ [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Stored Procedures &#40;Database Engine&#41;](stored-procedures-database-engine.md)  
   
   

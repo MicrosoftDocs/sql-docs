@@ -21,39 +21,39 @@ manager: "mblythe"
 # Supported MDX (MDX)
   The following statements and functions are supported within Multidimensional Expressions (MDX) Script:  
   
- [&#40;Comment&#41; &#40;MDX&#41;](~/mdx/comment-mdx.md)  
+ [&#40;Comment&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [-- &#40;Comment&#41; &#40;MDX&#41;](~/mdx/comment-mdx.md)  
+ [-- &#40;Comment&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [Comment &#40;MDX&#41;](~/mdx/comment-mdx.md)  
+ [Comment &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [ALTER CUBE Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-alter-cube.md)  
+ [ALTER CUBE Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)  
   
 > [!NOTE]  
 >  Only altering the default member is supported in MDX Scripting.  
   
- [CALCULATE Statement &#40;MDX&#41;](~/mdx/mdx-scripting-calculate.md)  
+ [CALCULATE Statement &#40;MDX&#41;](/sql/mdx/mdx-scripting-calculate)  
   
- [CASE Statement &#40;MDX&#41;](~/mdx/case-statement-mdx.md)  
+ [CASE Statement &#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
   
- [CREATE CELL CALCULATION Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CREATE CELL CALCULATION Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
- [CREATE MEMBER Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-member.md)  
+ [CREATE MEMBER Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
- [CREATE SET Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-set.md)  
+ [CREATE SET Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
  [EXISTING Keyword &#40;MDX&#41;](mdx-query-existing-keyword.md)  
   
- [FREEZE Statement &#40;MDX&#41;](~/mdx/mdx-scripting-freeze.md)  
+ [FREEZE Statement &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
   
- [IF Statement  &#40;MDX&#41;](~/mdx/mdx-scripting-if.md)  
+ [IF Statement  &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
   
- [This &#40;MDX&#41;](~/mdx/this-mdx.md)  
+ [This &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX supports assignment to the following cell properties: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME`, and `FONT_SIZE`. For more information, see [Using Cell Properties &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX also supports assignment to the `NON_EMPTY_BEHAVIOR` property of the [CREATE MEMBER](~/mdx/mdx-data-definition-create-member.md) statement.  
+>  MDX supports assignment to the following cell properties: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME`, and `FONT_SIZE`. For more information, see [Using Cell Properties &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX also supports assignment to the `NON_EMPTY_BEHAVIOR` property of the [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) statement.  
   
- [SCOPE Statement &#40;MDX&#41;](~/mdx/mdx-scripting-scope.md)  
+ [SCOPE Statement &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   
 ## See Also  
  [The Basic MDX Script &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  

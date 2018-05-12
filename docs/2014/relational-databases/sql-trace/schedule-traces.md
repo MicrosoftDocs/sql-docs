@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  [Filter Events Based on the Event End Time &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)  
   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)  
   
 ## See Also  
  [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md)  

@@ -66,21 +66,21 @@ manager: "jhubbard"
   
 3.  In the query window, use the following system stored procedures to modify a job.  
   
-    -   Execute [sp_update_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) to change the attributes of a job.  
+    -   Execute [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) to change the attributes of a job.  
   
-    -   Execute [sp_update_schedule &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md) to change the scheduling details for a job definition.  
+    -   Execute [sp_update_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql) to change the scheduling details for a job definition.  
   
-    -   Execute [sp_add_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md) to add new job steps.  
+    -   Execute [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) to add new job steps.  
   
-    -   Execute [sp_update_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) to change pre-existing job steps.  
+    -   Execute [sp_update_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) to change pre-existing job steps.  
   
-    -   Execute [sp_delete_jobstep &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md) to remove a job step from a job.  
+    -   Execute [sp_delete_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql) to remove a job step from a job.  
   
     -   Additional stored procedures to modify any SQL Server Agent master job:  
   
-        -   Execute [sp_delete_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md) to delete a server currently associated with a job.  
+        -   Execute [sp_delete_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql) to delete a server currently associated with a job.  
   
-        -   Execute [sp_add_jobserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md) to associate a server with the current job.  
+        -   Execute [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) to associate a server with the current job.  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
  **To modify a job**  

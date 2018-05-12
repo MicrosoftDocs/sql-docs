@@ -109,17 +109,17 @@ manager: "mblythe"
   
  For the first phase, you call a system stored procedure that creates as many partitions as you specify within the data set, and returns accuracy results for each partition. For each metric, Analysis Services then calculates the mean and standard deviation for the partitions.  
   
--   [SystemGetCrossValidationResults &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetCrossValidationResults &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
   
--   [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
   
  **Generate metrics for entire data set**  
   
  In the second phase, you call a different set of stored procedures. These stored procedures do not partition the data set, but generate accuracy results for the specified data set as a whole. If you have already partitioned and processed a mining structure, you can call this second set of stored procedures to get just the results.  
   
--   [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
   
--   [SystemGetClusterAccuracyResults &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
   
 #### Defining the Testing Data  
  When you run the cross-validation stored procedures that calculate accuracy (SystemGetAccuracyResults or SystemGetClusterAccuracyResults), you can specify the source of the data that is used for testing during cross-validation. This option is not available in the user interface.  
@@ -182,7 +182,7 @@ manager: "mblythe"
 |Describes how to set cross-validation parameters in SQL Server Development Studio.|[Cross-Validation Tab &#40;Mining Accuracy Chart View&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Describes the metrics that are provided by cross-validation|[Cross-Validation Formulas](cross-validation-formulas.md)|  
 |Explains the cross-validation report format and defines the statistical measures provided for each model type.|[Measures in the Cross-Validation Report](measures-in-the-cross-validation-report.md)|  
-|Lists the stored procedures for computing cross-validation statistics.|[Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
+|Lists the stored procedures for computing cross-validation statistics.|[Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |Describes how to create a testing data set for mining structures and related models.|[Training and Testing Data Sets](training-and-testing-data-sets.md)|  
 |See examples of other accuracy chart types.|[Classification Matrix &#40;Analysis Services - Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Lift Chart &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  

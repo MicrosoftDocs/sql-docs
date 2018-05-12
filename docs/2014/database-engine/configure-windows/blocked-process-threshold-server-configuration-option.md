@@ -44,7 +44,7 @@ GO
 ```  
   
 ## See Also  
- [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Blocked Process Report Event Class](../../relational-databases/event-classes/blocked-process-report-event-class.md)  
   
   

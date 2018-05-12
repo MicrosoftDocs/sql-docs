@@ -131,7 +131,7 @@ GO
 |Required Setting|Description|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|Supported values are `SNAPSHOT`, `REPEATABLEREAD`, and `SERIALIZABLE`.|  
-|`LANGUAGE`|Determines date and time formats and system messages. All languages and aliases in [sys.syslanguages &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) are supported.|  
+|`LANGUAGE`|Determines date and time formats and system messages. All languages and aliases in [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) are supported.|  
   
  The following settings are optional:  
   

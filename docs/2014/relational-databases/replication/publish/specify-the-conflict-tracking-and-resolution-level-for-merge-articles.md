@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To specify conflict tracking options for a new merge article  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and specify one of the following values for **@column_tracking**:  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) and specify one of the following values for **@column_tracking**:  
   
     -   **true** - Use column-level tracking for the article.  
   
@@ -69,9 +69,9 @@ manager: "jhubbard"
   
 #### To change conflict tracking options for a merge article  
   
-1.  To determine the conflict tracking options for a merge article, execute [sp_helpmergearticle](~/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Note the value of the **column_tracking** option in the result set for the article. A value of **1** means that column-level tracking is being used, and a value of **0** means that row-level tracking is being used.  
+1.  To determine the conflict tracking options for a merge article, execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Note the value of the **column_tracking** option in the result set for the article. A value of **1** means that column-level tracking is being used, and a value of **0** means that row-level tracking is being used.  
   
-2.  At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **column_tracking** for **@property** and one of the following values for **@value**:  
+2.  At the Publisher on the publication database, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specify a value of **column_tracking** for **@property** and one of the following values for **@value**:  
   
     -   **true** - Use column-level tracking for the article.  
   

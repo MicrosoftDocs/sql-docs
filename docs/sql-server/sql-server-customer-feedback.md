@@ -5,14 +5,13 @@ author: annashres
 ms.author: anshrest 
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: database-engine
-ms.assetid:
+ms.technology: configuration
 ---
 # Configure SQL Server to send feedback to Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ SQL Server 2017 always collects and sends information about the installation exp
 - By using the Error and Usage Reporting application
 - By setting registry subkeys on the server
 
-For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md)
+For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)
 
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.

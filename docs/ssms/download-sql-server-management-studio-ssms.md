@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/09/2018"
+ms.date: "05/14/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -133,6 +133,31 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 The following are issues and limitations with this 17.7 release:
 
 Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
+
+
+## Full uninstall and reinstall
+
+If your SSMS installation is having *random* problems, and reinstalling SSMS isn't resolving them, you can first try repairing the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, a *hard* reinstall might help.
+
+1.	Uninstall SSMS the same way you uninstall any application (using *Apps & features*, *Programs and features*, etc. depending on your version of Windows).
+
+2.	Uninstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist    
+    vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3.	Uninstall Microsoft Visual C++ 2015 Redistributable the same way you uninstall any application. Uninstall both x86 and x64 if they're on your computer.
+
+4.	Reinstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist" 
+    vs_isoshell.exe /PromptRestart```
+
+5.	Reinstall SSMS.
+
+6.	If needed, update Microsoft Visual C++ 2015 Redistributable to the latest version.
+
+
 
 
 ## Previous releases

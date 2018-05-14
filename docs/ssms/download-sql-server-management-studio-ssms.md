@@ -155,7 +155,7 @@ If your SSMS installation is having *random* problems, and reinstalling SSMS isn
 
 5.	Reinstall SSMS.
 
-6.	If needed, update Microsoft Visual C++ 2015 Redistributable to the latest version.
+6.	If needed, update Microsoft Visual C++ 2015 Redistributable to the [latest version](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads).
 
 
 

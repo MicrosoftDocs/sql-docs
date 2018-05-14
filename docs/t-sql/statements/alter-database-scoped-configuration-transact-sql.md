@@ -40,9 +40,9 @@ manager: craigg
 - Enable or disable the identity cache at the database level.
 - Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.  
 - Enable or disable collection of execution statistics for natively compiled T-SQL modules.
-- Enable or disable online by default options for DDL statements that support the ONLINE= syntax
-- Enable or disable resumable by default options for DDL statements that support the RESUMABLE= syntax 
-  
+- Enable or disable online by default options for DDL statements that support the ONLINE= syntax.
+- Enable or disable resumable by default options for DDL statements that support the RESUMABLE= syntax. 
+
  ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -244,11 +244,11 @@ on the database. This permission can be granted by a user with CONTROL permissio
 
 **ELEVATE_ONLINE** 
 
-This option only applies to DDL statements that support the WITH(ONLINE= syntax. XML indexes are not affected 
+This option only applies to DDL statements that support the WITH(ONLINE= syntax). XML indexes are not affected 
 
 **ELEVATE_RESUMABLE**
 
-This option only applies to DDL statements that support the WITH(ONLINE= syntax. XML indexes are not affected 
+This option only applies to DDL statements that support the WITH(ONLINE= syntax). XML indexes are not affected 
 
   
 ## Metadata  
@@ -371,43 +371,6 @@ This example sets ELEVEATE_RESUMABLE to WHEN_SUPPORTED.  tsqlCopy
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
 ``` 
-
-### K. Query state of ALTER DATABASE SCOPED CONFIGURATION based on different statements
-
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
-
-```sql 
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|OFF|NULL|1|
-|12|ELEVATE_RESUMABLE|OFF|NULL|1|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
-
-```
 
 ## Additional Resources
 

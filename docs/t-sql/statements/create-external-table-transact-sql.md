@@ -1,7 +1,7 @@
 ﻿---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2017"
+ms.date: "5/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "t-sql|statements"
@@ -247,7 +247,7 @@ Example:
   
 -   The PolyBase query fails with 50% rejected rows after attempting to return the first 200 rows. Note that matching rows have been returned before the PolyBase query detects the reject threshold has been exceeded.  
   
-  REJECTED_ROW_LOCATION = *Directory Location*
+REJECTED_ROW_LOCATION = *Directory Location*
   
   Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
 If the specified path does not exist, PolyBase will create one on your behalf. A child directory is created with the name “_rejectedrows”. The “_” character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there is a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. 

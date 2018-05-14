@@ -143,17 +143,17 @@ If your SSMS installation is having *random* problems, and reinstalling SSMS isn
 
 2.	Uninstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:
    
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist  
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist```
 
-    vs_isoshell.exe /Uninstall /Force /PromptRestart```
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
 
 3.	Uninstall Microsoft Visual C++ 2015 Redistributable the same way you uninstall any application. Uninstall both x86 and x64 if they're on your computer.
 
 4.	Reinstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:  
 
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"  
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
  
-    vs_isoshell.exe /PromptRestart```
+    ```vs_isoshell.exe /PromptRestart```
 
 5.	Reinstall SSMS.
 

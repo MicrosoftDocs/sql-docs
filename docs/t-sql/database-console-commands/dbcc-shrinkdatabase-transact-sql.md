@@ -90,7 +90,7 @@ The following table describes the columns in the result set.
 ## Remarks  
 
 >[!NOTE]
-> Currently Azure SQL Data Warehouse does not support DBCC SHRINKDATABASE. Running this command is not recommended as this is an i/o intensive and can take your data warehouse offline. In addition, there will be costing implications to your data warehouse snapshots after running this command. 
+> Currently Azure SQL Data Warehouse does not support DBCC SHRINKDATABASE. Running this command is not recommended as this is an i/o intensive operation and can take your data warehouse offline. In addition, there will be costing implications to your data warehouse snapshots after running this command. 
 
 To shrink all data and log files for a specific database, execute the DBCC SHRINKDATABASE command. To shrink one data or log file at a time for a specific database, execute the [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) command.
   

@@ -32,7 +32,7 @@
 ### [Install the Stand-Alone Version of Report Builder](../install-windows/install-report-builder.md)
 ### [Uninstall the Stand-Alone Version of Report Builder](../install-windows/uninstall-report-builder.md)
 ### [Troubleshoot Report Builder](../troubleshoot-report-builder.md)
-## [Report Builder F1 Help +](report-builder-f1-help.md)
+## [Report Builder F1 Help](report-builder-f1-help.md)
 ## [Help for Dialog Boxes, Panes, and Wizards (F1)](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)
 ### [Action Properties Dialog Box](../action-properties-dialog-box-report-builder-and-ssrs.md)
 ### [Chart Dialog Boxes ((Report Builder and SSRS)](../chart-dialog-boxes-report-builder-and-ssrs.md)

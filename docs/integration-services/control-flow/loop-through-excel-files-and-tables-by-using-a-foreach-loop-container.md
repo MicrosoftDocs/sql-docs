@@ -1,7 +1,7 @@
 ---
 title: "Loop through Excel Files and Tables by Using a Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/02/2018"
+ms.date: "05/15/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.component: "control-flow"
@@ -57,15 +57,15 @@ manager: craigg
 10. In the Expression Builder, enter the following expression:  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
     ```  
   
      Note the use of the escape character "\\" to escape the inner quotation marks required around the value of the Extended Properties argument.  
   
-     The Extended Properties argument is not optional. If you do not use a variable to contain its value, then you must add it manually to the expression, as in the following example for an Excel 2003 file:  
+     The Extended Properties argument is not optional. If you do not use a variable to contain its value, then you must add it manually to the expression, as in the following example:  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 8.0"  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 12.0"  
     ```  
   
 11. Create tasks in the Foreach Loop container that use the Excel connection manager to perform the same operations on each Excel workbook that matches the specified file location and pattern.  

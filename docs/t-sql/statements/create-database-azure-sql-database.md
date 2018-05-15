@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 
-ms.date: "04/04/2018"
+ms.date: "05/15/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -61,8 +61,10 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' 
-      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 
+      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
+      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
+      | 'BC_Gen5_2'	| 'BC_Gen5_4'	| 'BC_Gen5_8'	| 'BC_Gen5_16' | 'BC_Gen5_24'	| 'BC_Gen5_32' | 'BC_Gen5_48'	| 'BC_Gen5_80' |
       | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
 
@@ -77,9 +79,10 @@ CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name  
     [ ( SERVICE_OBJECTIVE = 
       {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
-        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'  
-        | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' 
-        | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 
+      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
+      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
+      | 'BC_Gen5_2'	| 'BC_Gen5_4'	| 'BC_Gen5_8'	| 'BC_Gen5_16' | 'BC_Gen5_24'	| 'BC_Gen5_32' | 'BC_Gen5_48'	| 'BC_Gen5_80' |
         | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
   ]  
  [;] 
@@ -147,15 +150,26 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
  
 **vCore-based model**
 
-**General Purpose service tier**
-|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |
-|Max data size (GB)|1024|1024|1536|3072|4096|
+**General Purpose service tier - Generation 4 compute platform**
+|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
+|:--- | --: |--: |--: |--: |--: |--:|
+|Max data size (GB)|1024|1024|1536|3072|4096|4096|
 
-**Business Critical service tier**
+**General Purpose service tier - Generation 5 compute platform**
+|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
+|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
+|Max data size (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
+
+
+**Business Critical service tier - Generation 4 compute platform**
 |Performance level|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |
-|Max data size (GB)|1024|1024|1536|2048|2048|
+|:--- | --: |--: |--: |--: |--: |--: |
+|Max data size (GB)|1024|1024|1024|1024|1024|1024|
+
+**Business Critical service tier - Generation 5 compute platform**
+|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
+|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
+|Max data size (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
 If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitsations for  vCore-based model, see [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
@@ -166,7 +180,7 @@ The following rules apply to MAXSIZE and EDITION arguments:
 
 SERVICE_OBJECTIVE
 
-Specifies the performance level. Available values for service objective are:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`. 
+Specifies the performance level. Available values for service objective are:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,	`GP_Gen5_4`,	`GP_Gen5_8`,	`GP_Gen5_16`,	`GP_Gen5_24`,	`GP_Gen5_32`,	`GP_Gen5_48`,	`GP_Gen5_80`, `BC_Gen5_2`,	`BC_Gen5_4`,	`BC_Gen5_8`,	`BC_Gen5_16`,	`BC_Gen5_24`,	`BC_Gen5_32`,	`BC_Gen5_48`,	`BC_Gen5_80`. 
 
 For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers). If the specified SERVICE_OBJECTIVE is not supported by the EDITION, you receive an error. To change the SERVICE_OBJECTIVE value from one tier to another (for example from S1 to P1), you must also change the EDITION value. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com. 
   

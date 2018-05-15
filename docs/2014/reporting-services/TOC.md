@@ -14,7 +14,7 @@
 ### [Compare Business Intelligence Capabilities In Different Microsoft Environments](compare-business-intelligence-capabilities-in-different-microsoft-environments.md)
 ## [Reporting Services Features and Tasks](reporting-services-features-and-tasks-ssrs.md)
 ### [Reporting Services Report Server](reporting-services-report-server.md)
-#### [Report Server (SharePoint Mode) +](reporting-services-report-server-sharepoint-mode.md)
+#### [Report Server (SharePoint Mode) +](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)
 #### [Report Server (Native Mode) +](report-server/reporting-services-report-server-native-mode.md)
 #### [Configuration Files](report-server/reporting-services-configuration-files.md)
 ##### [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)

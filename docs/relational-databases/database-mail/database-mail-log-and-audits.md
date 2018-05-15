@@ -2,16 +2,15 @@
 title: "Database Mail Log and Audits | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "database-mail"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "auditing [SQL Server]"
   - "Database Mail [SQL Server], auditing"
@@ -22,8 +21,7 @@ ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Database Mail Log and Audits
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

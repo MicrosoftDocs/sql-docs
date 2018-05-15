@@ -1,29 +1,26 @@
 ---
 title: "Migrating Oracle Databases to SQL Server (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-oracle"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "04/22/2018"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Active"
 ---
 # Migrating Oracle Databases to SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle is a comprehensive environment that helps you quickly migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. By using SSMA for Oracle, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. Note that you cannot migrate SYS and SYSTEM Oracle schemas.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle is a comprehensive environment that helps you quickly migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB, or Azure SQL Data Warehouse. By using SSMA for Oracle, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB, or Azure SQL Data Warehouse, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB, or Azure SQL Data Warehouse. Note that you cannot migrate SYS and SYSTEM Oracle schemas.
   
 ## Recommended Migration Process  
-To successfully migrate objects and data from Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, use the following process:  
+To successfully migrate objects and data from Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB, or Azure SQL Data Warehouse, use the following process:
   
 1.  [Create a new SSMA project](http://msdn.microsoft.com/en-us/ee5d94c0-c7a6-4779-bd32-729bdaf61e1b).  
   

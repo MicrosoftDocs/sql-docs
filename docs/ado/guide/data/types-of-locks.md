@@ -1,17 +1,15 @@
 ---
 title: "Types of Locks | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "AdLockBatchOptimistic [ADO]"
   - "AdLockReadOnly [ADO]"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "AdLockPessimistic [ADO]"
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Types of Locks
 ## adLockBatchOptimistic  

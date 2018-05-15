@@ -1,17 +1,15 @@
 ---
 title: "CreateParameter Method (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Command15::raw_CreateParameter"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "CreateParameter method [RDS]"
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # CreateParameter Method (ADO)
 Creates a new [Parameter](../../../ado/reference/ado-api/parameter-object.md) object with the specified properties.  

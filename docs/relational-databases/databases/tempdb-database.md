@@ -1,9 +1,9 @@
----
+﻿---
 title: "tempdb Database | Microsoft Docs"
 description: This topic provides details regarding the configuration and use of the tempdb database in SQL Server and Azure SQL Database
 ms.custom: "P360"
 ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.service: 
 ms.component: "databases"
@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: 
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "temporary tables [SQL Server], tempdb database"
   - "tempdb database [SQL Server], about tempdb"
@@ -20,8 +20,9 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: "stevestein"
 ms.author: "sstein"
-manager: jhubbard
+manager: craigg
 ms.reviewer: carlrab
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # tempdb Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -2,27 +2,28 @@
 title: "High Availability and Disaster Recovery for Master Data Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "installing-mds-in-an-alwayson-group-environment"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ""
 caps.latest.revision: ""
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 
 
 
 # High Availability and Disaster Recovery for Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 **Summary:** This article describes a solution for Master Data Service
 (MDS) hosted on AlwaysOn Availability Group configuration. The article

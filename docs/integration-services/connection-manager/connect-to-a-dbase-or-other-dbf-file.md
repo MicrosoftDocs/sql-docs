@@ -2,16 +2,15 @@
 title: "Connect to a dBASE or Other DBF File | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "connection-manager"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to DBF files"
   - "dBase files"
@@ -20,8 +19,7 @@ ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Connect to a dBASE or Other DBF File
   You can connect to a dBASE or other .DBF database file in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package by using an OLE DB connection manager and selecting the Microsoft OLE DB Provider for Jet 4.0.  

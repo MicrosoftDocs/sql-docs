@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/17/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "manual Reporting Services migrations"
   - "Report Server Windows service"
@@ -26,7 +25,6 @@ caps.latest.revision: 54
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

@@ -4,19 +4,17 @@ description: Lists of third-party partners with development solutions for Server
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
+manager: craigg
 editor: ''
 ms.assetid: 
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
-ms.workload: sql-server
 ms.custom: ""
 ms.date: 17/09/2017    
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.author: mikeray
 

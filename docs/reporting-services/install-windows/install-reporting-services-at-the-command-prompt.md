@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "01/09/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "command line"
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
@@ -19,7 +18,6 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Install Reporting Services 2016 at the Command Prompt
 

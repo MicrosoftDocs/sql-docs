@@ -1,26 +1,23 @@
----
+﻿---
 title: "Clustered and Nonclustered Indexes Described | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/28/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "query optimizer [SQL Server], index usage"
   - "index concepts [SQL Server]"
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 caps.latest.revision: 36
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Clustered and Nonclustered Indexes Described
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,17 +1,15 @@
 ---
 title: "Stat Method | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "_Stream::Stat"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "Stat method [ADO]"
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Stat Method
 Retrieves information about a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

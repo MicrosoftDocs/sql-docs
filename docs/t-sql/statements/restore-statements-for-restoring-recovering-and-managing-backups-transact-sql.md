@@ -1,15 +1,13 @@
----
+﻿---
 title: "RESTORE Statements for Restoring, Recovering, Managing Backups (T-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], RESTORE statement"
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 caps.latest.revision: 15
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]

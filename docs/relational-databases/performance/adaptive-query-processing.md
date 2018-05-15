@@ -1,23 +1,22 @@
----
+﻿---
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
 ms.custom: ""
-ms.date: "11/13/2017"
-ms.prod: "sql-non-specified"
+ms.date: "05/08/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
 ms.assetid: 
 author: "joesackmsft"
 ms.author: "josack"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Adaptive query processing in SQL databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,6 +77,31 @@ You can track memory grant feedback events using the *memory_grant_updated_by_fe
 
 ### Memory grant feedback, resource governor and query hints
 The actual memory granted honors the query memory limit determined by the resource governor or query hint.
+
+### Disabling memory grant feedback without changing the compatibility level
+Memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher. To disable batch mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+When enabled, this setting will appear as enabled in sys.database_scoped_configurations.
+
+To re-enable batch mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+You can also disable batch mode memory grant feedback for a specific query by designating DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK as a USE HINT query hint.  For example:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## Batch mode Adaptive Joins
 The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.
@@ -162,6 +186,36 @@ The following chart shows an example intersection between the cost of a Hash Joi
 
 ![Join threshold](./media/6_AQPJoinThreshold.png)
 
+### Disabling adaptive joins without changing the compatibility level
+
+Adaptive joins can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  
+To disable adaptive joins for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+When enabled, this setting will appear as enabled in sys.database_scoped_configurations.
+To re-enable adaptive joins for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+You can also disable adaptive joins for a specific query by designating DISABLE_BATCH_MODE_ADAPTIVE_JOINS as a USE HINT query hint.  For example:
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
+
 ## Interleaved execution for multi-statement table valued functions
 Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.
 MSTVFs have a fixed cardinality guess of 100 in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], and 1 for earlier versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with multi-statement table valued functions.
@@ -222,6 +276,41 @@ A statement using `OPTION (RECOMPILE)` will create a new plan using interleaved 
 
 ### Interleaved execution and query store interoperability
 Plans using interleaved execution can be forced. The plan is the version that has corrected cardinality estimates based on initial execution.    
+
+### Disabling interleaved execution without changing the compatibility level
+
+Interleaved execution can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  To disable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+When enabled, this setting will appear as enabled in sys.database_scoped_configurations.
+To re-enable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+You can also disable interleaved execution for a specific query by designating DISABLE_INTERLEAVED_EXECUTION_TVF as a USE HINT query hint.  For example:
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## See Also
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

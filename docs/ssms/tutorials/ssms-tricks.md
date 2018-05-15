@@ -7,6 +7,8 @@ ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
 ms.suite: "sql"
+ms.prod: sql
+ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
@@ -17,8 +19,6 @@ helpviewer_keywords:
   - "Transact-SQL tutorials"
   - "SQL Server Management Studio [SQL Server], tutorials"
 ---
-
-
 
 # Tutorial: Additional Tips and Tricks for using SSMS
 This tutorial will provide you with some additional tricks for using SQL Server Management Studio. This article will teach you how to: 
@@ -33,9 +33,9 @@ This tutorial will provide you with some additional tricks for using SQL Server 
 ## Prerequisites
 To complete this Tutorial, you need SQL Server Management Studio, access to a SQL Server, and an AdventureWorks database. 
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## Comment / Uncomment your T-SQL Code
 Portions of your text can be commented and uncommented by using the comment button in the toolbar. Text that is commented out will not be executed. 

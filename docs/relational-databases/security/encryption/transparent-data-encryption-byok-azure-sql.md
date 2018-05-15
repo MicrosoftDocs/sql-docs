@@ -5,7 +5,7 @@ keywords: ""
 services: "sql-database"
 documentationcenter: ""
 author: "aliceku"
-manager: "craigg"
+manager: craigg
 ms.prod: 
 ms.reviewer: ""
 ms.suite: sql
@@ -13,14 +13,14 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.custom: 
 ms.component: "security"
-ms.workload: "On Demand"
 ms.tgt_pltfrm: ""
 
-ms.topic: "article"
-ms.date: "04/03/2018"
+ms.topic: conceptual
+ms.date: "04/19/2018"
 ms.author: "aliceku"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 --- 
-# Transparent Data Encryption with Bring Your Own Key (PREVIEW) support for Azure SQL Database and Data Warehouse
+# Transparent Data Encryption with Bring Your Own Key support for Azure SQL Database and Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Bring Your Own Key (BYOK) support for [Transparent Data Encryption (TDE)](transparent-data-encryption.md) allows you to encrypt the Database Encryption Key (DEK) with an asymmetric key called TDE Protector.  The TDE Protector is stored under your control in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), Azure’s cloud-based external key management system. Azure Key Vault is the first key management service with which TDE has integrated support for BYOK. The TDE DEK, which is stored on the boot page of a database is encrypted and decrypted by the TDE protector. The TDE Protector is stored in Azure Key Vault and never leaves the key vault. If the server's access to the key vault is revoked, a database cannot be decrypted and read into memory.  The TDE protector is set at the logical server level and is inherited by all databases associated with that server. 
@@ -61,9 +61,10 @@ When TDE is first configured to use a TDE protector from Key Vault, the server s
 
 ### Guidelines for configuring Azure Key Vault
 
-- Use a key vault with [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) enabled to protect from data loss in case of accidental key – or key vault – deletion:  
+- Create a key vault with [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) enabled to protect from data loss in case of accidental key – or key vault – deletion.  You must use [PowerShell to enable the “soft-delete” property](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vault (this option is not available from the AKV Portal yet – but required by SQL):  
   - Soft deleted resources are retained for a set period of time, 90 days unless they are recovered or purged.
   - The **recover** and **purge** actions have their own permissions associated in a key vault access policy. 
+
 - Grant the logical server access to the key vault using its Azure Active Directory (Azure AD) Identity.  When using the Portal UI, the Azure AD identity gets automatically created and the key vault access permissions are granted to the server.  Using PowerShell to configure TDE with BYOK, the Azure AD identity must be created and completion should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-azure-sql-configure.md) for detailed step-by-step instructions when using PowerShell.
 
   >[!NOTE]
@@ -119,7 +120,8 @@ The following section will go over the setup and configuration steps in more det
 ### Azure Key Vault Configuration Steps
 
 - Install [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
-- Create two Azure Key Vaults in two different regions using [PowerShell to enable the “soft-delete” property](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL) 
+- Create two Azure Key Vaults in two different regions using [PowerShell to enable the “soft-delete” property](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL).
+- Both Azure Key Vaults must be located in the two regions available in the same Azure Geo in order for backup and restore of keys to work.  If you need the two key vaults to be located in different geos to meet SQL Geo-DR requirements, follow the [BYOK Process](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys) that allows keys to be imported from an on-prem HSM.
 - Create a new key in the first key vault:  
   - RSA/RSA-HSA 2048 key 
   - No expiration dates 
@@ -135,7 +137,7 @@ Steps for a new deployment:
 - Select the logical server TDE pane, and for each logical SQL server:  
    - Select the AKV in the same region 
    - Select the key to use as TDE Protector – each server will use the local copy of the TDE Protector. 
-   - Doing this in the Portal will create an [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity.  Access can be revoked by removing the permissions in Azure Key Vault instead. for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity.  Access can be revoked by removing the permissions in Azure Key Vault instead. 
+   - Doing this in the Portal will create an [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity.  Access can be revoked by removing the permissions in Azure Key Vault instead. for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault.
 - Create the primary database. 
 - Follow the [active geo-replication guidance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) to complete the scenario, this step will create the secondary database.
 

@@ -2,14 +2,11 @@
 title: "DBCC CHECKDB (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -38,10 +35,9 @@ helpviewer_keywords:
   - "page count accuracy [SQL Server]"
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 caps.latest.revision: 144
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Active"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

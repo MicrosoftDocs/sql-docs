@@ -6,16 +6,14 @@ ms.date: 02/23/2018
 ms.author: meetb 
 manager: craigg
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: database-engine
 helpviewer_keywords: 
   - "Linux, AAD authentication"
-ms.workload: "On Demand"
 ---
 # Tutorial: Use Active Directory authentication with SQL Server on Linux
 

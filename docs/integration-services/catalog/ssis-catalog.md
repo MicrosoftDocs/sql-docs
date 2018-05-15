@@ -1,17 +1,16 @@
 ---
 title: "SSIS Catalog | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/30/2018"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "service"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
@@ -20,8 +19,7 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 
 # SSIS Catalog
@@ -615,9 +613,7 @@ Adding the SSISDB database to an Always On Availability Group is almost same as 
   
 Provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.
 
-When you're prompted to **Select your data synchronization preference**, select **Skip initial data synchronization**.
-  
- ![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
+![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
   
 ####  <a name="Step3"></a> Step 3: Enable SSIS support for Always On  
  After you create the Integration Service Catalog, right-click the **Integration Service Catalogs** node, and click **Enable Always On Support.** You should see the following **Enable Support for Always On** dialog box. If this menu item is disabled, confirm that you have all the prerequisites installed and click **Refresh**.  

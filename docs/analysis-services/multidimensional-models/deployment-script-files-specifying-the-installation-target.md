@@ -1,33 +1,14 @@
 ---
 title: "Specifying the Installation Target | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/27/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "input files [Analysis Services]"
-  - "installation targets [Analysis Services]"
-  - "Analysis Services deployments, installation targets"
-  - "Analysis Services Deployment Wizard, installation targets"
-  - "deploying [Analysis Services], installation targets"
-  - "modifying installation targets"
-ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Deployment Script Files - Specifying the Installation Target
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

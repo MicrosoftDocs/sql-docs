@@ -1,15 +1,13 @@
 ---
 title: "Query Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/11/2018"
-ms.prod: "sql-non-specified"
+ms.date: "05/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -60,8 +58,7 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 caps.latest.revision: 136
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # Hints (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -277,6 +274,12 @@ ms.workload: "Active"
  Causes SQL Server to generate a query plan using the Simple Containment assumption instead of the default Base Containment assumption for joins, under the query optimizer [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
  Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model that corresponds to the current database compatibility level. Use this hint to override [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting LEGACY_CARDINALITY_ESTIMATION=ON or [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+* 'DISABLE_INTERLEAVED_EXECUTION_TVF' 
+ Disables interleaved execution for multi-statement table valued functions.
+* 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK' 
+ Disables batch mode memory grant feedback.
+* 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS' 
+ Disables batch mode adaptive joins.
  
 > [!TIP]
 > Hint names are case-insensitive.

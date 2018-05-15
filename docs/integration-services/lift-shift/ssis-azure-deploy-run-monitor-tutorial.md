@@ -1,10 +1,9 @@
 ---
-title: "Deploy, run, and monitor an SSIS package on Azure | Microsoft Docs"
+title: "Deploy and run an SSIS package in Azure | Microsoft Docs"
 ms.date: "02/05/2018"
-ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
@@ -12,10 +11,9 @@ ms.technology:
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
-# Deploy, run, and monitor an SSIS package on Azure
+# Deploy and run an SSIS package in Azure
 This tutorial shows you how to deploy a SQL Server Integration Services project to the SSISDB Catalog database on Azure SQL Database, run a package in the Azure-SSIS Integration Runtime, and monitor the running package.
 
 ## Prerequisites

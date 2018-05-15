@@ -1,17 +1,15 @@
 ---
 title: "Value Property (ADO MD) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Value"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "Value property [ADO MD]"
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Value Property (ADO MD)
 Indicates the value of the current [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

@@ -1,56 +1,14 @@
 ---
 title: "Configure Measure Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "additivity [Analysis Services]"
-  - "ID property"
-  - "ErrorConfiguration property"
-  - "AggregateFunction property"
-  - "DisplayFolder property"
-  - "IgnoreUnrelatedDimensions property"
-  - "FormatString property"
-  - "Description property"
-  - "semiadditive"
-  - "properties [Analysis Services], measure groups"
-  - "aggregate functions [Analysis Services]"
-  - "DataType property"
-  - "ProcessingMode property"
-  - "MeasureExpression property"
-  - "AggregationPrefix property"
-  - "Visible property"
-  - "properties [Analysis Services], measures"
-  - "StorageLocation property"
-  - "StorageMode property"
-  - "formats [Analysis Services], measures"
-  - "Source property"
-  - "aggregations [Analysis Services], measures"
-  - "measures [Analysis Services], properties"
-  - "nonadditive [Analysis Services]"
-  - "Name property"
-  - "measures [Analysis Services], display formats"
-  - "ProcessingPriority property"
-  - "measure groups [Analysis Services], properties"
-  - "Type property"
-  - "ProactiveCaching property"
-ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
-caps.latest.revision: 50
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Measure Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

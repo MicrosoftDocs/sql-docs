@@ -1,30 +1,14 @@
 ---
 title: "Retrieving Data Using the AdomdDataReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "retrieving data"
-  - "AdomdDataReader object"
-  - "data retrieval [ADOMD.NET], AdomdDataReader object"
-ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: adomd
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Retrieving Data Using the AdomdDataReader
   When retrieving analytical data, the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> object provides a good balance between overhead and interactivity. The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> object retrieves a read-only, forward-only, flattened stream of data from an analytical data source. This unbuffered stream of data enables procedural logic to efficiently process results from an analytical data source sequentially. This makes the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> a good choice when retrieving large amounts of data for display purposes because the data is not cached in memory.  

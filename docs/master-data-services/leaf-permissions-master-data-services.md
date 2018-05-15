@@ -2,16 +2,15 @@
 title: "Leaf Permissions (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "attribute groups [Master Data Services], permissions"
   - "members [Master Data Services], leaf member permissions"
@@ -20,12 +19,14 @@ helpviewer_keywords:
   - "attributes [Master Data Services], leaf member attribute permissions"
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 9
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Leaf Permissions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Leaf permissions apply to the attribute values for all leaf members of an entity.  
   
  For entities without explicit hierarchies enabled, assigning permission to **Leaf** is the same as assigning permission to the entity.  

@@ -3,7 +3,7 @@ title: "Tutorial: Use the SQL Operations Studio (preview) Transact-SQL editor to
 description: This tutorial demonstrates the key features in SQL Operations Studio (preview) that simplify using T-SQL.
 ms.custom: "tools|sos"
 ms.date: "03/13/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
@@ -13,7 +13,6 @@ ms.topic: "tutorial"
 author: "erickangMSFT"
 ms.author: "erickang"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Tutorial: Use the Transact-SQL editor to create database objects - [!INCLUDE[name-sos](../includes/name-sos-short.md)]

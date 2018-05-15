@@ -1,27 +1,26 @@
----
+﻿---
 title: "Microsoft SQL samples | Microsoft Docs"
 description: Documentation for sample databases and links to samples for Microsoft SQL products.
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "samples"
-ms.technology: ""
-ms.topic: "article"
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
-robots: noindex,nofollow
-ms.workload: "On Demand"
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: samples
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # SQL samples
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Locations of sample databases and code samples for Microsoft SQL products.
 
 ## SQL samples repository
+
 Code samples for SQL products are in the [Microsoft SQL Server Samples](https://github.com/microsoft/sql-server-samples) GitHub repository. Each sample includes a README file that explains how to run and use the sample. The main README for the samples repository explains how to contribute. 
 
 The samples and templates are all licensed under the MIT license. See the license.txt file in the root.

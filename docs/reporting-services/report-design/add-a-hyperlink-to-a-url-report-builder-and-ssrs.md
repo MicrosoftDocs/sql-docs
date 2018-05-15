@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/07/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-design"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,13 +11,12 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Add a Hyperlink to a URL (Report Builder and SSRS)
 Learn how to add hyperlink actions to text boxes, images, charts, and gauges in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  paginated reports. Links can go to other reports, to bookmarks in a report, or to  static or dynamic URLs. 

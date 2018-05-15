@@ -2,9 +2,8 @@
 title: "Master Data Services Installation and Configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,12 +13,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 44
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Active"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Master Data Services Installation and Configuration
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This article covers how to install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 R2 machine, set up the MDS database and website, and deploy the sample models and data. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) enables your organization to manage a trusted version of data.   
   
 > [!NOTE] 

@@ -1,15 +1,13 @@
 ---
 title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2018"
-ms.prod: "sql-non-specified"
+ms.date: "04/16/2018"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,13 +22,12 @@ helpviewer_keywords:
   - "ALTER DATABASE ENCRYPTION KEY"
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Alters an encryption key and certificate that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -53,7 +50,7 @@ ALTER DATABASE ENCRYPTION KEY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  
     {  
@@ -80,7 +77,7 @@ ALTER DATABASE ENCRYPTION KEY
 ## Remarks  
  The certificate or asymmetric key that is used to encrypt the database encryption key must be located in the master system database.  
   
- The database encryption key does not have to be regenerated when a database owner (dbo) is changed.
+ When the database owner (dbo) is changed, the database encryption key does not have to be regenerated.
   
  After a database encryption key has been modified twice, a log backup must be performed before the database encryption key can be modified again.  
   

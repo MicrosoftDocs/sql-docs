@@ -31,13 +31,13 @@ manager: craigg
   
 1.  Create a string variable that will receive the current Excel path and file name on each iteration of the loop. To avoid validation issues, assign a valid Excel path and file name as the initial value of the variable. (The sample expression shown later in this procedure uses the variable name, `ExcelFile`.)  
   
-2.  Optionally, create another string variable that will hold the value for the Extended Properties argument of the Excel connection string. This argument contains a series of values that specify the Excel version and determine whether the first row contains column names, and whether import mode is used. (The sample expression shown later in this procedure uses the variable name `ExtProperties`, with an initial value of "`Excel 8.0;HDR=Yes`".)  
+2.  Optionally, create another string variable that will hold the value for the Extended Properties argument of the Excel connection string. This argument contains a series of values that specify the Excel version and determine whether the first row contains column names, and whether import mode is used. (The sample expression shown later in this procedure uses the variable name `ExtProperties`, with an initial value of "`Excel 12.0;HDR=Yes`".)  
   
      If you do not use a variable for the Extended Properties argument, then you must add it manually to the expression that contains the connection string.  
   
 3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop Container, see [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
-4.  On the **Collection** page of the **Foreach Loop Editor**, select the Foreach File enumerator, specify the folder in which the Excel workbooks are located, and specify the file filter (ordinarily *.xls).  
+4.  On the **Collection** page of the **Foreach Loop Editor**, select the Foreach File enumerator, specify the folder in which the Excel workbooks are located, and specify the file filter (ordinarily *.xlsx).  
   
 5.  On the **Variable Mapping** page, map Index 0 to a user-defined string variable that will receive the current Excel path and file name on each iteration of the loop. (The sample expression shown later in this procedure uses the variable name `ExcelFile`.)  
   
@@ -72,7 +72,7 @@ manager: craigg
   
 ## To loop through Excel tables by using the Foreach ADO.NET Schema Rowset enumerator  
   
-1.  Create an ADO.NET connection manager that uses the Microsoft Jet OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter Excel 8.0 as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Create an ADO.NET connection manager that uses the Microsoft ACE OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter the Excel version - in this case, Excel 12.0 - as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Create a string variable that will receive the name of the current table on each iteration of the loop.  
   

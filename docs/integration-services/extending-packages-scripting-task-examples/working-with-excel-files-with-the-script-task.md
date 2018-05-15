@@ -278,7 +278,7 @@ public class ScriptMain
 ```vb  
 Public Class ScriptMain  
   Public Sub Main()  
-    Const FILE_PATTERN As String = "*.xls"  
+    Const FILE_PATTERN As String = "*.xlsx"  
   
     Dim excelFolder As String  
     Dim excelFiles As String()  
@@ -298,7 +298,7 @@ public class ScriptMain
 {  
   public void Main()  
   {  
-    const string FILE_PATTERN = "*.xls";  
+    const string FILE_PATTERN = "*.xlsx";  
   
     string excelFolder;  
     string[] excelFiles;  

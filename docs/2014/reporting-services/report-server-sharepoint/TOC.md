@@ -1,4 +1,4 @@
-## [Add the Report Viewer Web Part to a Web Page](add-reporting-services-content-types-to-a-sharepoint-library.md)
+# [Add the Report Viewer Web Part to a Web Page](add-reporting-services-content-types-to-a-sharepoint-library.md)
 ## [Report Viewer Web Part on a SharePoint Site](../report-viewer-web-part-on-a-sharepoint-site.md)
 ### [Connect Filter or Documents Web Part](../connect-filter-or-documents-web-part-reporting-services-sharepoint-integrated-mode.md)
 ### [Customize the Report Viewer Web Part](../customize-the-report-viewer-web-part.md)

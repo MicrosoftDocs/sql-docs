@@ -83,7 +83,7 @@
 ##### [Install the Stand-Alone Version of Report Builder](install-windows/install-report-builder.md)
 ##### [Uninstall the Stand-Alone Version of Report Builder](install-windows/uninstall-report-builder.md)
 ##### [Troubleshoot Report Builder](troubleshoot-report-builder.md)
-#### [Help for Dialog Boxes, Panes, and Wizards (F1) +](report-builder-help-for-dialog-boxes-panes-and-wizards.md)
+#### [Report Builder F1 Help +](report-builder/report-builder-f1-help.md)
 #### [Glossary (Report Builder)](report-builder/glossary-report-builder.md)
 ### [Reporting Services Reports +](reports/reporting-services-reports-ssrs.md)
 ### [Report Data +](report-data/report-data-ssrs.md)

@@ -1,7 +1,7 @@
 ﻿---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/21/2017"
+ms.date: "05/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "t-sql|statements"
@@ -137,6 +137,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -457,7 +459,28 @@ Specifies whether underlying tables and associated indexes are available for que
  Table locks are applied for the duration of the index operation. An offline index operation that creates, rebuilds, or drops a clustered index, or rebuilds or drops a nonclustered index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation. An offline index operation that creates a nonclustered index acquires a Shared (S) lock on the table. This prevents updates to the underlying table but allows read operations, such as SELECT statements.  
   
  For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature
+
+ Specifies whether an online index operation is resumable.
+
+ ON
+Index operation is resumable.
+
+ OFF
+Index operation is not resumable.
+
+MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
+ 
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature 
+
+Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused. 
+
+> [!WARNING]
+>  For more detailed information about index operations that can be performed online, see [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
+
  Indexes, including indexes on global temp tables, can be created online with the following exceptions:  
   
 -   XML index  
@@ -644,7 +667,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Computed columns derived from **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml** data types can be indexed either as a key or included non-key column as long as the computed column data type is allowable as an index key column or non-key column. For example, you cannot create a primary XML index on a computed **xml** column. If the index key size exceeds 900 bytes, a warning message is displayed.  
   
- Creating an index on a computed column may cause the failure of an insert or update operation that previously worked. Such a failure may take place when the computed column results in arithmetic error. For example, in the following table, although computed column `c` results in an arithmetic error, the `INSERT` statement works.  
+ Creating an index on a computed column may cause the failure of an insert or update operation that previously worked. Such a failure may take place when the computed column results in arithmetic error. For example, in the following table, although computed column `c` results in an arithmetic error, the INSERT statement works.  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -692,7 +715,49 @@ INSERT INTO t1 VALUES (1, 0);
 -   Online operations can be performed on partitioned indexes and indexes that contain persisted computed columns, or included columns.  
   
  For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
+ 
+### <a name="resumable-indexes"></a>Resumable index operations
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature.
+
+The following guidelines apply for resumable index operations:
+
+- Online index create is specified as resumable using the RESUMABLE = ON option. 
+- The RESUMABLE option is not persisted in the metadata for a given index and applies only to the duration of a current DDL statement. Therefore, the RESUMABLE = ON clause must be specified explicitly to enable resumability.
+- MAX_DURATION option is only supported for RESUMABLE = ON option. 
+-  MAX_DURATION for RESUMABLE option specifies the time interval for an index being built. Once this time is used the index build is either paused or it completes its execution. User decides when a build for a paused index can be resumed. The **time** in minutes for MAX_DURATION must be greater than 0 minutes and less or equal one week (7 * 24 * 60 = 10080 minutes). Having a long pause for an index operation may impact the DML performance on a specific table as well as the database disk capacity since both indexes the original one and the newly created one require disk space and need to be updated during DML operations. If MAX_DURATION option is omitted, the index operation will continue until its completion or until a failure occurs. 
+- To pause immediately the index operation, you can stop (Ctrl-C) the ongoing command, execute the [ALTER INDEX](alter-index-transact-sql.md) PAUSE command, or execute the KILL `<session_id>` command. Once the command is paused, it can be resumed using [ALTER INDEX](alter-index-transact-sql.md) command. 
+- Re-executing the original CREATE INDEX statement for resumable index, automatically resumes a paused index create operation.
+- The SORT_IN_TEMPDB=ON option is not supported for resumable index. 
+- The DDL command with RESUMABLE=ON cannot be executed inside an explicit transaction (cannot be part of begin TRAN … COMMIT block).
+- To resume/abort an index build/rebuild, use the [ALTER INDEX](alter-index-transact-sql.md) T-SQL syntax
+
+> [!NOTE]
+> The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). As before in case of a failure an error will be issued as well. 
+
+To indicate that an index create is executed as resumable operation and to check its current execution state, see [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). For public preview, the following columns in this view are set to 0:
+- total_execution_time
+- percent_complete and page_count
+
+**Resources**
+The following resources are required for resumable online index create operation
+- Additional space required to keep the index being built, including the time when index is being paused
+- Additional log throughput during the sorting phase. The overall log space usage for resumable index is less compared to regular online index create and allows log truncation during this operation.
+- A DDL state preventing any DDL modification
+  -	Ghost cleanup is blocked on the in-build index for the duration of the operation both while paused and while the operation is running.
+
+**Current functional limitations**
+
+> [!IMPORTANT]
+> **Resumable Online Index Create** is currently only supported for non-clustered index.
+
+The following functionality is disabled for resumable index create operations
+- After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
+- DROP EXISTING clause is not supported
+- Create an index that contains 
+- Computed or TIMESTAMP column(s) as key columns
+- LOB column as included column for resumable index create
+ 
 ## Row and Page Locks Options  
  When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-, page-, and table-level locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock.  
   
@@ -1008,6 +1073,26 @@ CREATE INDEX IX_ProductVendor_VendorID
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID   
     ON Purchasing..ProductVendor (VendorID);   
 ```  
+### Create, resume, pause, and abort resumable index operations
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+```
   
 ## See Also  
  [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   

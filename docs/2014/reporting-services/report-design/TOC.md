@@ -26,6 +26,8 @@
 ### [Create a Stepped Report](create-a-stepped-report-report-builder-and-ssrs.md)
 ### [Add, Move, or Delete a Table, Matrix, or List](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)
 ## [Report Parts](../report-parts-report-builder-and-ssrs.md)
+### [Report Parts in Report Designer](report-parts-in-report-designer-ssrs.md)
+#### [Managing Report Parts](managing-report-parts.md)
 ### [Publish and Republish Report Parts (Report Builder and SSRS)](publish-and-republish-report-parts-report-builder-and-ssrs.md)
 ### [Check for Updates or Turn Updates Off (Report Builder and SSRS)](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)
 ### [Browse for Report Parts and Set a Default Folder (Report Builder and SSRS)](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)

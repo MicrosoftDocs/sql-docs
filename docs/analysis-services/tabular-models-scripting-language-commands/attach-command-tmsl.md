@@ -3,7 +3,7 @@ title: "Attach command (TMSL) | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tmsl
+ms.custom: tmsl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend

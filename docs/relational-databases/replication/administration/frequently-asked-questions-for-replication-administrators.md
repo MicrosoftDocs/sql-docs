@@ -159,7 +159,7 @@ manager: craigg
 ## Database Maintenance  
   
 ### Why can't I run TRUNCATE TABLE on a published table?  
- TRUNCATE TABLE is a non-logged operation that does not fire triggers. It is not permitted because replication cannot track the changes caused by the operation: transactional replication tracks changes through the transaction log; merge replication tracks changes through triggers on published tables.  
+ TRUNCATE TABLE is a DDL statement that does not log individual row deletions and does not fire DML triggers. It is not permitted because replication cannot track the changes caused by the operation: transactional replication tracks changes through the transaction log; merge replication tracks changes through DML triggers on published tables.  
   
 ### What is the effect of running a bulk insert command on a replicated database?  
  For transactional replication, bulk inserts are tracked and replicated like other inserts. For merge replication, you must ensure that change tracking metadata is updated properly.  

@@ -3,7 +3,7 @@ title: "Analysis Services tutorial lesson 1: Create a new tabular model project 
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: tutorial
 ms.author: owend
 ms.reviewer: owend

@@ -3,7 +3,7 @@ title: "Create Tables, Partitions, and Columns in a Tabular model | Microsoft Do
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend

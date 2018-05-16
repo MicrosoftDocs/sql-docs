@@ -88,7 +88,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Resumable index considerations
 
 > [!NOTE]
-> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create non-clustered index and index rebuild). See [Create Index](../../t-sql/statements/create- index-transact-sql.md) (currently in public preview for SQL Database only) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create non-clustered index and index rebuild). See [Create Index](../../t-sql/statements/create-index-transact-sql.md) (currently in public preview for SQL Database only) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 When you perform resumable online index create or rebuild, the following guidelines apply:
 -	Managing, planning and extending of index maintenance windows. You can pause and restart an index create or rebuild operation multiple times to fit your maintenance windows.

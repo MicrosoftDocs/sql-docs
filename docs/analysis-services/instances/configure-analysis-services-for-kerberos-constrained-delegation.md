@@ -3,7 +3,7 @@ title: "Configure Analysis Services for Kerberos constrained delegation | Micros
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component:
+ms.custom:
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend

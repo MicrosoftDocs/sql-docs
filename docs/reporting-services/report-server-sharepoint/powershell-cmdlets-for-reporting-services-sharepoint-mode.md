@@ -99,7 +99,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
 |Get-SPRSDatabaseRightsScript|Outputs the database rights script to the screen for a Reporting Services service application. It will prompt for desired user and database then returns transact SQL you can run to modify permissions. You can then run this script in SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Outputs a database upgrade script to the screen. The script will upgrade Reporting Services service application databases to the database version of the current Reporting Services installation.|  
   
-## Reporting Services custom runctionality cmdlets
+## Reporting Services custom functionality cmdlets
   
 |Cmdlet|Description|  
 |------------|-----------------|  

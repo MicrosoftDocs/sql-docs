@@ -26,7 +26,7 @@ manager: craigg
 # CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Returns the transaction ID of the current transaction in the current session.
+This function returns the transaction ID of the current transaction in the current session.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -41,13 +41,13 @@ CURRENT_TRANSACTION_ID( )
 **bigint**
   
 ## Return Value  
-Transaction ID of the current transaction in the current session, taken from [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
+The transaction ID of the current transaction in the current session, taken from [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
   
 ## Permissions  
-Any user can return the transaction ID of  the current session.
+Any user can return the transaction ID of the current session.
   
 ## Examples  
-The following example returns the transaction ID of  the current session:
+This example returns the transaction ID of the current session:
   
 ```sql
 SELECT CURRENT_TRANSACTION_ID();  

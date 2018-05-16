@@ -28,7 +28,7 @@ This Tutorial describes the  different window components within SQL Server Manag
 ## Prerequisites
 To complete this Tutorial, you need SQL Server Management Studio.  
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## SQL Server Management Studio Components
 This section covers the different window components available in the workspace, and their purpose. 

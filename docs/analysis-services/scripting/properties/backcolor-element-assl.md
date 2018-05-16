@@ -3,7 +3,7 @@ title: "BackColor Element (ASSL) | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
